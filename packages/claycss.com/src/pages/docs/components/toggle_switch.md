@@ -20,7 +20,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -58,7 +58,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1">
@@ -113,7 +113,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -208,7 +208,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -348,7 +348,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -444,7 +444,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -494,7 +494,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" disabled type="checkbox">

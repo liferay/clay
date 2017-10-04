@@ -73,7 +73,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline">
 	<li class="timeline-item">
 		<div aria-multiselectable="true" class="panel-group" id="accordion000" role="tablist">
@@ -180,7 +180,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -264,7 +264,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline timeline-right">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -362,7 +362,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline timeline-center">
 	<li class="timeline-item">
 		<div aria-multiselectable="true" class="panel-group" id="accordionTimelineCenter0" role="tablist">
@@ -463,7 +463,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline timeline-center timeline-even">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -557,7 +557,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline timeline-center timeline-odd">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -651,7 +651,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline timeline-center timeline-even timeline-right-xs-only">
 	<li class="timeline-item">
 		<div class="panel panel-default">
@@ -762,7 +762,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="timeline timeline-center timeline-spacing-xl">
 	<li class="timeline-item">
 		<div aria-multiselectable="true" class="panel-group" id="accordionTimelineSpacing0" role="tablist">

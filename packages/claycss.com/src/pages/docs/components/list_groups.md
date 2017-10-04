@@ -124,7 +124,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="list-group show-dropdown-action-on-active">
 	<li class="list-group-item list-group-item-flex">
 		<div class="flex-col">
@@ -345,7 +345,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="list-group list-group-bordered show-dropdown-action-on-active">
 	<li class="list-group-item list-group-item-flex">
 		<div class="flex-col">
@@ -574,7 +574,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="list-group show-dropdown-action-on-active">
 	<li class="list-group-header">
 		<h3 class="list-group-header-title">List Group Header 1</h3>
@@ -782,7 +782,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="list-group list-group-unstyled">
 	<li class="list-group-header">
 		<h3 class="list-group-header-title">List Group Header 1</h3>
@@ -880,7 +880,7 @@ weight: 100
 	<a class="list-group-item list-group-item-action" href="#1">List Item 4</a>
 </div>
 
-```xml
+```text/html
 <div class="list-group">
 	<a class="list-group-item list-group-item-action" href="#1">List Item 1</a>
 	<a class="list-group-item list-group-item-action" href="#1">List Item 2</a>
@@ -906,7 +906,7 @@ weight: 100
 	<li class="list-group-item list-group-item-dark">List Item Dark</li>
 </ul>
 
-```xml
+```text/html
 <ul class="list-group">
 	<li class="list-group-item">List Item Normal</li>
 	<li class="list-group-item list-group-item-success">List Item Success</li>
@@ -950,7 +950,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="list-group">
 	<a class="list-group-item list-group-item-action" href="#1">List Item Action Normal</a>
 	<a class="list-group-item list-group-item-action list-group-item-success" href="#1">List Item Action Success</a>

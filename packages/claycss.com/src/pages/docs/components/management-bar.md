@@ -420,7 +420,7 @@ weight: 100
 	</div>
 </nav>
 
-```xml
+```text/html
 <nav class="management-bar navbar navbar-expand-md navbar-light">
 	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
@@ -694,7 +694,7 @@ weight: 100
 	</div>
 </nav>
 
-```xml
+```text/html
 <nav class="management-bar navbar navbar-expand-md navbar-light">
 	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">

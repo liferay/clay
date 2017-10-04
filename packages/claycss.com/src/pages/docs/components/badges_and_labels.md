@@ -18,7 +18,7 @@ weight: 100
 <span class="badge badge-light">130</span>
 <span class="badge badge-dark">130</span>
 
-```xml
+```text/html
 <span class="badge badge-primary">8</span>
 <span class="badge badge-secondary">87</span>
 <span class="badge badge-success">999K</span>
@@ -27,6 +27,21 @@ weight: 100
 <span class="badge badge-danger">130</span>
 <span class="badge badge-light">130</span>
 <span class="badge badge-dark">130</span>
+```
+```soy
+{call ClayBadge.render}
+	{param: label: '8' /}
+{/param}
+
+{call ClayBadge.render}
+	{param: label: '87' /}
+	{param: style: 'secondary' /}
+{/param}
+
+{call ClayBadge.render}
+	{param: label: '999K' /}
+	{param: style: 'success' /}
+{/param}
 ```
 
 </article>
@@ -45,7 +60,7 @@ weight: 100
 <a class="badge badge-light" href="#1">Light</a>
 <a class="badge badge-dark" href="#1">Dark</a>
 
-```xml
+```text/html
 <a class="badge badge-primary" href="#1">Primary</a>
 <a class="badge badge-secondary" href="#1">Secondary</a>
 <a class="badge badge-success" href="#1">Success</a>
@@ -72,7 +87,7 @@ weight: 100
 <span class="badge badge-light badge-pill">130</span>
 <span class="badge badge-dark badge-pill">130</span>
 
-```xml
+```text/html
 <span class="badge badge-pill badge-primary">8</span>
 <span class="badge badge-pill badge-secondary">87</span>
 <span class="badge badge-pill badge-success">999K</span>
@@ -96,7 +111,7 @@ weight: 100
 <span class="badge badge-secondary">Normal Badge</span>
 <span class="badge badge-lg badge-success">Large Badge</span>
 
-```xml
+```text/html
 <span class="badge badge-primary badge-sm">Small Badge</span>
 <span class="badge badge-secondary">Normal Badge</span>
 <span class="badge badge-lg badge-success">Large Badge</span>
@@ -134,7 +149,7 @@ weight: 100
 	</button>
 </span>
 
-```xml
+```text/html
 <span class="badge badge-primary badge-sm">
 	<a href="#1">Small Badge</a>
 	<button aria-label="Close" class="close" type="button">
@@ -177,7 +192,7 @@ weight: 100
 <span class="label label-light">Light</span>
 <span class="label label-dark">Dark</span>
 
-```xml
+```text/html
 <span class="label label-primary">Primary</span>
 <span class="label label-secondary">Secondary</span>
 <span class="label label-success">Success</span>
@@ -186,6 +201,31 @@ weight: 100
 <span class="label label-danger">Danger</span>
 <span class="label label-light">Light</span>
 <span class="label label-dark">Dark</span>
+```
+```soy
+{call ClayLabel.render}
+	{param label: 'Label Text' /}
+{/call}
+
+{call ClayLabel.render}
+	{param label: 'Status' /}
+	{param style: 'info' /}
+{/call}
+
+{call ClayLabel.render}
+	{param label: 'Pending' /}
+	{param style: 'warning' /}
+{/call}
+
+{call ClayLabel.render}
+	{param label: 'Rejected' /}
+	{param style: 'danger' /}
+{/call}
+
+{call ClayLabel.render}
+	{param label: 'Approved' /}
+	{param style: 'success' /}
+{/call}
 ```
 
 </article>
@@ -204,7 +244,7 @@ weight: 100
 <a class="label label-light" href="#1">Light</a>
 <a class="label label-dark" href="#1">Dark</a>
 
-```xml
+```text/html
 <a class="label label-primary" href="#1">Primary</a>
 <a class="label label-secondary" href="#1">Secondary</a>
 <a class="label label-success" href="#1">Success</a>
@@ -213,6 +253,36 @@ weight: 100
 <a class="label label-danger" href="#1">Danger</a>
 <a class="label label-light" href="#1">Light</a>
 <a class="label label-dark" href="#1">Dark</a>
+```
+```soy
+{call ClayLabel.render}
+	{param href: '#1' /}
+	{param label: 'Label Text' /}
+{/call}
+
+{call ClayLabel.render}
+	{param href: '#1' /}
+	{param label: 'Status' /}
+	{param style: 'info' /}
+{/call}
+
+{call ClayLabel.render}
+	{param href: '#1' /}
+	{param label: 'Pending' /}
+	{param style: 'warning' /}
+{/call}
+
+{call ClayLabel.render}
+	{param href: '#1' /}
+	{param label: 'Rejected' /}
+	{param style: 'danger' /}
+{/call}
+
+{call ClayLabel.render}
+	{param href: '#1' /}
+	{param label: 'Approved' /}
+	{param style: 'success' /}
+{/call}
 ```
 
 </article>
@@ -228,10 +298,22 @@ weight: 100
 <span class="label label-secondary">Normal Label</span>
 <span class="label label-lg label-success">Large Label</span>
 
-```xml
+```text/html
 <span class="label label-primary label-sm">Small Label</span>
 <span class="label label-secondary">Normal Label</span>
 <span class="label label-lg label-success">Large Label</span>
+```
+```soy
+{call ClayLabel.render}
+	{param label: 'Small Label' /}
+	{param size: 'sm' /}
+	{param style: 'info' /}
+{/call}
+
+{call ClayLabel.render}
+	{param closeable: true /}
+	{param label: 'Normal Label' /}
+{/call}
 ```
 
 </article>
@@ -266,7 +348,7 @@ weight: 100
 	</button>
 </span>
 
-```xml
+```text/html
 <span class="label label-primary label-sm">
 	<a href="#1">Small Label</a>
 	<button aria-label="Close" class="close" type="button">
@@ -292,6 +374,21 @@ weight: 100
 	</button>
 </span>
 ```
+```soy
+{call ClayLabel.render}
+	{param closeable: true /}
+	{param label: 'Small Label' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param size: 'sm' /}
+	{param style: 'info' /}
+{/call}
+
+{call ClayLabel.render}
+	{param closeable: true /}
+	{param label: 'Normal Label' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
+```
 
 </article>
 
@@ -311,7 +408,7 @@ weight: 100
 <span class="sticker sticker-light">133</span>
 <span class="sticker sticker-dark">133</span>
 
-```xml
+```text/html
 <span class="sticker sticker-primary">133</span>
 <span class="sticker sticker-secondary">133</span>
 <span class="sticker sticker-success">133</span>
@@ -320,6 +417,47 @@ weight: 100
 <span class="sticker sticker-danger">133</span>
 <span class="sticker sticker-light">133</span>
 <span class="sticker sticker-dark">133</span>
+```
+```soy
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'primary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'secondary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'success' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'info' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'warning' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'danger' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'light' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'dark' /}
+{/call}
 ```
 
 </article>
@@ -358,7 +496,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="aspect-ratio">
 	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
 	<span class="sticker sticker-danger sticker-top-left">PDF</span>
@@ -376,6 +514,31 @@ weight: 100
 	<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
 </div>
 ```
+```soy
+{call ClaySticker.render}
+	{param label: 'PDF' /}
+	{param position: 'top-left' /}
+	{param style: 'danger' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: 'PDF' /}
+	{param position: 'bottom-left' /}
+	{param style: 'danger' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: 'PDF' /}
+	{param position: 'top-right' /}
+	{param style: 'danger' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: 'PDF' /}
+	{param position: 'bottom-right' /}
+	{param style: 'danger' /}
+{/call}
+```
 
 </article>
 
@@ -392,12 +555,36 @@ weight: 100
 <span class="sticker sticker-xl sticker-info">133</span>
 <span class="sticker sticker-xxl sticker-warning">133</span>
 
-```xml
+```text/html
 <span class="sticker sticker-primary sticker-sm">133</span>
 <span class="sticker sticker-secondary">133</span>
 <span class="sticker sticker-lg sticker-success">133</span>
 <span class="sticker sticker-xl sticker-info">133</span>
 <span class="sticker sticker-xxl sticker-warning">133</span>
+```
+```soy
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'sm' /}
+	{param style: 'primary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'secondary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'lg' /}
+	{param style: 'success' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'xl' /}
+	{param style: 'info' /}
+{/call}
 ```
 
 <span class="sticker sticker-xxl sticker-warning">
@@ -426,7 +613,7 @@ weight: 100
 	</svg>
 </span>
 
-```xml
+```text/html
 <span class="sticker sticker-xxl sticker-warning">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
 		<use xlink:href="/vendor/lexicon/icons.svg#magic" />
@@ -452,6 +639,42 @@ weight: 100
 		<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 	</svg>
 </span>
+```
+```soy
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'magic'
+	] /}
+	{param size: 'xl' /}
+	{param style: 'success' /}
+{/call}
+
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'picture'
+	] /}
+	{param size: 'lg' /}
+	{param style: 'success' /}
+{/call}
+
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'home'
+	] /}
+	{param style: 'secondary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'format'
+	] /}
+	{param size: 'sm' /}
+	{param style: 'primary' /}
+{/call}
 ```
 
 </article>
@@ -526,7 +749,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-primary" style="position:relative;">
 	Email
 	<span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-left">133</span>
@@ -543,6 +766,51 @@ weight: 100
 	Email
 	<span class="rounded-circle sticker sticker-bottom-right sticker-danger sticker-outside">133</span>
 </button>
+```
+```soy
+{call ClayButton.render}
+	{param label kind="xml"}
+		{call ClaySticker.render}
+			{param label: '133' /}
+			{param outside: 'top-left' /}
+			{param shape: 'circle' /}
+			{param style: 'danger' /}
+		{/call}
+	{/param}
+{/call}
+
+{call ClayButton.render}
+	{param label kind="xml"}
+		{call ClaySticker.render}
+			{param label: '133' /}
+			{param outside: 'bottom-left' /}
+			{param shape: 'circle' /}
+			{param style: 'danger' /}
+		{/call}
+	{/param}
+{/call}
+
+{call ClayButton.render}
+	{param label kind="xml"}
+		{call ClaySticker.render}
+			{param label: '133' /}
+			{param outside: 'top-right' /}
+			{param shape: 'circle' /}
+			{param style: 'danger' /}
+		{/call}
+	{/param}
+{/call}
+
+{call ClayButton.render}
+	{param label kind="xml"}
+		{call ClaySticker.render}
+			{param label: '133' /}
+			{param outside: 'bottom-right' /}
+			{param shape: 'circle' /}
+			{param style: 'danger' /}
+		{/call}
+	{/param}
+{/call}
 ```
 
 <div class="row">
@@ -596,7 +864,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <span class="sticker sticker-dark">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
 		<use xlink:href="/vendor/lexicon/icons.svg#picture" />
@@ -665,7 +933,7 @@ weight: 100
 	<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
 </span>
 
-```xml
+```text/html
 <span class="rounded-circle sticker sticker-primary sticker-sm">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
 </span>
@@ -692,12 +960,36 @@ weight: 100
 <span class="rounded-circle sticker sticker-primary sticker-xl">WW</span>
 <span class="rounded-circle sticker sticker-success sticker-xxl">TT</span>
 
-```xml
+```text/html
 <span class="rounded-circle sticker sticker-secondary sticker-sm">JB</span>
 <span class="rounded-circle sticker sticker-danger">TT</span>
 <span class="rounded-circle sticker sticker-info sticker-lg">SP</span>
 <span class="rounded-circle sticker sticker-primary sticker-xl">WW</span>
 <span class="rounded-circle sticker sticker-success sticker-xxl">TT</span>
+```
+```soy
+{call ClaySticker.render}
+	{param label: 'JB' /}
+	{param size: 'sm' /}
+	{param style: 'secondary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: 'TT' /}
+	{param style: 'danger' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: 'SP' /}
+	{param size: 'lg' /}
+	{param style: 'info' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: 'WW' /}
+	{param size: 'xl' /}
+	{param style: 'primary' /}
+{/call}
 ```
 
 </article>

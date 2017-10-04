@@ -56,7 +56,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="nav nav-tabs" role="tablist">
 	<li class="nav-item">
 		<a aria-controls="fields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#fields" id="fieldsTab" role="tab">Fields</a>
@@ -159,7 +159,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="nav nav-tabs" role="tablist">
 	<li class="nav-item">
 		<button aria-controls="buttonFields" aria-expanded="true" class="active btn btn-unstyled nav-link" data-target="#buttonFields" data-toggle="tab" id="buttonFieldsTab" role="tab" type="button">Fields</button>
@@ -262,7 +262,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="nav nav-justified nav-tabs" role="tablist">
 	<li class="nav-item">
 		<a aria-controls="navJustifiedFields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#navJustifiedFields" id="navJustifiedFieldsTab" role="tab">Fields</a>
@@ -367,7 +367,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="nav nav-tabs" role="tablist">
 	<li class="col-6 col-sm-3 nav-item">
 		<a aria-controls="navTabsGridFields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#navTabsGridFields" id="navTabsGridFieldsTab" role="tab">Fields</a>

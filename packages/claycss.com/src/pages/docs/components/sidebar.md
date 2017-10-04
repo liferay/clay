@@ -29,7 +29,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="sidebar">
 	<div class="sidebar-header">
 		Sidebar Header
@@ -260,7 +260,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="sidebar sidebar-light">
 	<div class="sidebar-header">
 		<div class="sidebar-section-flex">

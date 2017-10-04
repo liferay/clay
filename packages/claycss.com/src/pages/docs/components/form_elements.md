@@ -33,7 +33,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label>
 		Default text input
@@ -100,7 +100,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="checkbox" value="">
@@ -131,6 +131,41 @@ weight: 100
 		<span class="form-check-description">3</span>
 	</label>
 </div>
+```
+```soy
+{call ClayCheckbox.render}
+	{param hideLabel: true /}
+	{param label: 'Hidden Label Checkbox' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param label: 'Label' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param disabled: true /}
+	{param label: 'Disabled Check Box' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param disabled: true /}
+	{param label: 'Label' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param inline: true /}
+	{param label: 'Inline 1' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param inline: true /}
+	{param label: 'Inline 2' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param inline: true /}
+	{param label: 'Inline 3' /}
+{/call}
 ```
 
 </article>
@@ -175,7 +210,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="radio" value="">
@@ -203,6 +238,42 @@ weight: 100
 		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
 	</label>
 </div>
+```
+```soy
+{call ClayRadio.render}
+	{param hideLabel: true /}
+	{param label: 'Hidden Label Radio' /}
+{/call}
+
+{call ClayRadio.render}
+	{param label: 'Label' /}
+{/call}
+
+{call ClayRadio.render}
+	{param disabled: true /}
+	{param label: 'Disabled Radio Button' /}
+{/call}
+
+{call ClayRadio.render}
+	{param inline: true /}
+	{param label: '1' /}
+	{param name: 'inline-radio' /}
+	{param value: 'option1' /}
+{/call}
+
+{call ClayRadio.render}
+	{param inline: true /}
+	{param label: '2' /}
+	{param name: 'inline-radio' /}
+	{param value: 'option2' /}
+{/call}
+
+{call ClayRadio.render}
+	{param inline: true /}
+	{param label: '3' /}
+	{param name: 'inline-radio' /}
+	{param value: 'option3' /}
+{/call}
 ```
 
 </article>
@@ -237,7 +308,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <label for="regularSelectElement">Regular Select Element</label>
 <select class="form-control" id="regularSelectElement">
 	<option>Sample 1</option>
@@ -258,6 +329,54 @@ weight: 100
 	<option>Sample 8</option>
 </select>
 ```
+```soy
+{call ClaySelect.render}
+	{param id: 'regularSelectElement' /}
+	{param label: 'Regular Select Element' /}
+	{param options: [
+		[
+			'label': 'Sample 1',
+			'value': '1'
+		],
+		[
+			'label': 'Sample 2',
+			'value': '2'
+		],
+		[
+			'label': 'Sample 3',
+			'value': '3'
+		],
+		[
+			'label': 'Sample 4',
+			'value': '4'
+		],
+	] /}
+{/call}
+
+{call ClaySelect.render}
+	{param id: 'multipleSelectOptionsSelectElement' /}
+	{param label: 'Select Element with Multiple Select Options' /}
+	{param multiple: true /}
+	{param options: [
+		[
+			'label': 'Sample 1',
+			'value': '1'
+		],
+		[
+			'label': 'Sample 2',
+			'value': '2'
+		],
+		[
+			'label': 'Sample 3',
+			'value': '3'
+		],
+		[
+			'label': 'Sample 4',
+			'value': '4'
+		],
+	] /}
+{/call}
+```
 
 </article>
 
@@ -271,7 +390,7 @@ weight: 100
 	<input id="inputFile" type="file">
 </div>
 
-```xml
+```text/html
 <label class="sr-only" for="inputFile">FILE UPLOAD</label>
 <input id="inputFile" type="file">
 ```
@@ -322,7 +441,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <label class="disabled" for="disabledTextInput">Text Input</label>
 <input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
 
@@ -351,6 +470,56 @@ weight: 100
 	<option>Sample 7</option>
 	<option>Sample 8</option>
 </select>
+```
+```soy
+{call ClaySelect.render}
+	{param disabled: true /}
+	{param id: 'disabledSelectElement' /}
+	{param label: 'Select Element' /}
+	{param options: [
+		[
+			'label': 'Sample 1',
+			'value': '1'
+		],
+		[
+			'label': 'Sample 2',
+			'value': '2'
+		],
+		[
+			'label': 'Sample 3',
+			'value': '3'
+		],
+		[
+			'label': 'Sample 4',
+			'value': '4'
+		],
+	] /}
+{/call}
+
+{call ClaySelect.render}
+	{param disabled: true /}
+	{param id: 'disabledSelectElementMulti' /}
+	{param label: 'Select Element with Multiple Select Options' /}
+	{param multiple: true /}
+	{param options: [
+		[
+			'label': 'Sample 1',
+			'value': '1'
+		],
+		[
+			'label': 'Sample 2',
+			'value': '2'
+		],
+		[
+			'label': 'Sample 3',
+			'value': '3'
+		],
+		[
+			'label': 'Sample 4',
+			'value': '4'
+		],
+	] /}
+{/call}
 ```
 
 </article>
@@ -398,7 +567,7 @@ weight: 100
 	</form>
 </div>
 
-```xml
+```text/html
 <form>
 	<fieldset disabled>
 		<div class="form-group">
@@ -432,7 +601,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <label for="readonlyTextInput">Text Input (Read Only)</label>
 <input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 
@@ -462,7 +631,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <label for="smallTextInput">Small text input</label>
 <input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
 
@@ -499,7 +668,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label for="firstNameInput">First Name</label>
 	<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
@@ -533,7 +702,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-inline">
 	<label for="formInlineInput">Form Inline</label>
 	<input class="form-control" id="formInlineInput" type="text">
@@ -606,7 +775,7 @@ weight: 100
 	<a class="btn btn-danger" href="#1">Clear</a>
 </div>
 
-```xml
+```text/html
 <div class="form-inline form-inline-autofit">
 	<div class="form-inline-group">
 		<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
@@ -664,7 +833,7 @@ weight: 100
 	</form>
 </div>
 
-```xml
+```text/html
 <style>
 	@media (min-width: 576px) {
 		.my-custom-form label {

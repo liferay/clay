@@ -62,7 +62,7 @@ weight: 100
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
 
-```xml
+```text/html
 <div class="alert alert-primary" role="alert">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
 		<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
@@ -118,6 +118,46 @@ weight: 100
 	</svg>
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
+```
+```soy
+{call ClayAlert.render}
+	{param message kind="html"}
+		You just read the <a href="#">alert message</a> successfully.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'success' /}
+	{param title: 'Success' /}
+{/param}
+
+{call ClayAlert.render}
+	{param message kind="html"}
+		This <a href="#">alert</a> needs your attention.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Info' /}
+{/param}
+
+{call ClayAlert.render}
+	{param message kind="html"}
+		This alert is a <a href="#">warning message</a>.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'warning' /}
+	{param title: 'Warning' /}
+{/param}
+
+{call ClayAlert.render}
+	{param message kind="html"}
+		Something</a> is not right.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Danger' /}
+{/param}
 ```
 
 </article>
@@ -216,7 +256,7 @@ weight: 100
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
 
-```xml
+```text/html
 <div class="alert alert-dismissible alert-primary" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -313,6 +353,54 @@ weight: 100
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
 ```
+```soy
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		You just read the <a href="#">alert message</a> successfully.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'success' /}
+	{param title: 'Success' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This <a href="#">alert</a> needs your attention.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Info' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This alert is a <a href="#">warning message</a>.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'warning' /}
+	{param title: 'Warning' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		Something</a> is not right.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Danger' /}
+{/param}
+```
 
 </article>
 
@@ -346,7 +434,7 @@ weight: 100
 	<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
 
-```xml
+```text/html
 <div class="alert alert-fluid alert-primary" role="alert">
 	<strong class="lead">Primary</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
 </div>
@@ -378,6 +466,58 @@ weight: 100
 <div class="alert alert-dark alert-fluid" role="alert">
 	<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
+```
+```soy
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		You just read the <a href="#">alert message</a> successfully.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'success' /}
+	{param title: 'Success' /}
+	{param type: 'fluid' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This <a href="#">alert</a> needs your attention.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Info' /}
+	{param type: 'fluid' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This alert is a <a href="#">warning message</a>.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'warning' /}
+	{param title: 'Warning' /}
+	{param type: 'fluid' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		Something</a> is not right.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Danger' /}
+	{param type: 'fluid' /}
+{/param}
 ```
 
 </article>
@@ -472,7 +612,7 @@ weight: 100
 	<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a class="alert-link" href="#1">Log in</a></p>
 </div>
 
-```xml
+```text/html
 <div class="alert alert-dismissible alert-notification alert-success" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -562,6 +702,60 @@ weight: 100
 	<strong class="lead">Dark:</strong>
 	<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a class="alert-link" href="#1">Log in</a></p>
 </div>
+```
+```soy
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
+		<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'success' /}
+	{param title: 'Meeting Rescheduled' /}
+	{param type: 'notification' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
+		<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Meeting Rescheduled' /}
+	{param type: 'notification' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a href="#1">Extend</a>.</p>
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'warning' /}
+	{param title: 'Warning:' /}
+	{param type: 'notification' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a href="#1">Log in</a></p>
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Danger:' /}
+	{param type: 'notification' /}
+{/param}
 ```
 
 </article>

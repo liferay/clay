@@ -249,7 +249,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="card card-horizontal">
 	<div class="card-body">
 		<div class="card-row">
@@ -291,7 +291,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="card card-horizontal">
 	<div class="card-body">
 		<div class="card-row">
@@ -333,7 +333,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="card card-horizontal">
 	<div class="card-body">
 		<div class="card-row">
@@ -386,7 +386,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="card card-horizontal">
 	<div class="card-row">
 		<div class="justify-content-start flex-col flex-col-expand">top</div>
@@ -421,7 +421,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="card card-horizontal">
 	<div class="card-row">
 		<div class="flex-col">
@@ -473,7 +473,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="card card-horizontal rounded">
 	<div class="card-row">
 		<div class="flex-col flex-col-expand">flex-col-expand</div>
@@ -553,7 +553,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="card card-horizontal">
 	<div class="card-row">
 		<div class="flex-col flex-col-expand">
@@ -749,7 +749,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-check form-check-card form-check-top-left">
 	<label class="form-check-label">
 		<input class="form-check-input" type="checkbox">
@@ -972,7 +972,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-check form-check-card form-check-top-left">
 	<div class="custom-control custom-radio">
 		<label>
@@ -1153,7 +1153,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="active form-check form-check-card form-check-top-left">
 	<label class="form-check-label">
 		<input checked class="form-check-input" type="checkbox">
@@ -1331,7 +1331,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="active form-check form-check-card form-check-top-left">
 	<label class="form-check-label">
 		<input checked class="form-check-input" name="cardRadios1" type="radio" value="cardOption1">

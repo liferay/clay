@@ -60,7 +60,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group has-error">
 	<label for="inputError1">
 		has-error
@@ -160,7 +160,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="has-error">
 	<div class="custom-control custom-checkbox">
 		<label>
@@ -260,7 +260,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="has-error">
 	<div class="form-check">
 		<label class="form-check-label">
@@ -341,7 +341,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="has-error">
 	<div class="form-group">
 		<label for="selectElementError">
@@ -418,7 +418,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="has-error">
 	<div class="form-group">
 		<label for="multipleSelectElementError">
@@ -483,7 +483,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="has-error">
 	<div class="form-group">
 		<label for="readonlyError">Text Input (Read Only) with Error</label>
@@ -659,7 +659,7 @@ weight: 100
 	</form>
 </div>
 
-```xml
+```text/html
 <form class="was-validated">
 	<div class="form-group">
 		<label for="formValidationFirstName">

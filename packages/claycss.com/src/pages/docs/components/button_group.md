@@ -15,7 +15,7 @@ weight: 100
 	<button class="btn btn-secondary" type="button">Right</button>
 </div>
 
-```xml
+```text/html
 <div class="btn-group" role="group">
 	<button class="btn btn-secondary" type="button">Left</button>
 	<button class="btn btn-secondary" type="button">Middle</button>
@@ -109,7 +109,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -228,7 +228,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="btn-group dropup" role="group">
 	<button class="btn btn-primary" type="button">Right dropup</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -309,7 +309,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="btn-group-vertical" role="group">
 	<button class="btn btn-secondary" type="button">Button</button>
 	<button class="btn btn-secondary" type="button">Button</button>
@@ -380,7 +380,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-label="Toolbar with button groups" class="btn-toolbar" role="toolbar">
 	<div aria-label="First group" class="btn-group" role="group">
 		<button type="button" class="btn btn-secondary">1</button>
@@ -426,7 +426,7 @@ weight: 100
 	<button class="btn btn-secondary" type="button">Right</button>
 </div>
 
-```xml
+```text/html
 <div class="btn-group btn-group-sm" role="group">
 	<button class="btn btn-secondary" type="button">Left</button>
 	<button class="btn btn-secondary" type="button">Middle</button>
@@ -484,7 +484,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="btn-group btn-group-sm dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -647,7 +647,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="btn-group-vertical btn-group-sm" role="group">
 	<button class="btn btn-secondary" type="button">Button</button>
 	<button class="btn btn-secondary" type="button">Button</button>

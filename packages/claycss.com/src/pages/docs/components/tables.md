@@ -220,7 +220,7 @@ weight: 100
 	</tbody>
 </table>
 
-```xml
+```text/html
 <table class="show-dropdown-action-on-active table table-autofit table-list table-responsive-lg">
 	<thead>
 		<tr>
@@ -529,7 +529,7 @@ weight: 100
 	</tbody>
 </table>
 
-```xml
+```text/html
 <table class="show-dropdown-action-on-active table table-autofit table-list table-responsive-sm table-striped">
 	<thead>
 		<tr>
@@ -908,7 +908,7 @@ weight: 100
 	</tbody>
 </table>
 
-```xml
+```text/html
 <table class="show-dropdown-action-on-active table table-autofit table-hover table-list table-responsive-sm">
 	<thead>
 		<tr>
@@ -1203,7 +1203,7 @@ weight: 100
 	</tbody>
 </table>
 
-```xml
+```text/html
 <table class="show-dropdown-action-on-active table table-autofit table-bordered table-list table-responsive-sm">
 	<thead>
 		<tr>
@@ -1700,7 +1700,7 @@ weight: 100
 	</tbody>
 </table>
 
-```xml
+```text/html
 ```
 
 </article>
@@ -1777,7 +1777,7 @@ weight: 100
 	</tbody>
 </table>
 
-```xml
+```text/html
 ```
 
 </article>
@@ -1854,7 +1854,7 @@ weight: 100
 	</tbody>
 </table>
 
-```xml
+```text/html
 ```
 
 </article>
@@ -1933,7 +1933,7 @@ weight: 100
 	</table>
 </div>
 
-```xml
+```text/html
 ```
 
 </article>

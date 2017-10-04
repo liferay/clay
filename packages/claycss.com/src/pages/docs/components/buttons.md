@@ -20,7 +20,7 @@ weight: 100
 <button class="btn btn-link" type="button">Link</button>
 <button class="btn btn-unstyled" type="button">Unstyled</button>
 
-```xml
+```text/html
 <button class="btn btn-primary" type="button">Primary</button>
 <button class="btn btn-secondary" type="button">Secondary</button>
 <button class="btn btn-info" type="button">Info</button>
@@ -31,6 +31,36 @@ weight: 100
 <button class="btn btn-dark" type="button">Dark</button>
 <button class="btn btn-link" type="button">Link</button>
 <button class="btn btn-unstyled" type="button">Unstyled</button>
+```
+```soy
+{call ClayButton.render}
+	{param label: 'Primary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param label: 'Secondary' /}
+	{param style: 'secondary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param label: 'Link' /}
+	{param style: 'link' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param label: 'Borderless' /}
+	{param style: 'borderless' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param label: 'Unstyled' /}
+	{param style: 'unstyled' /}
+	{param type: 'button' /}
+{/call}
 ```
 
 ### Focus
@@ -59,7 +89,7 @@ weight: 100
 <button class="active btn btn-link" type="button">Link</button>
 <button class="active btn btn-unstyled" type="button">Unstyled</button>
 
-```xml
+```text/html
 <button class="active btn btn-primary" type="button">Primary</button>
 <button class="active btn btn-secondary" type="button">Secondary</button>
 <button class="active btn btn-info" type="button">Info</button>
@@ -70,6 +100,41 @@ weight: 100
 <button class="active btn btn-dark" type="button">Dark</button>
 <button class="active btn btn-link" type="button">Link</button>
 <button class="active btn btn-unstyled" type="button">Unstyled</button>
+```
+```soy
+{call ClayButton.render}
+	{param elementClasses: 'focus' /}
+	{param label: 'Primary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'focus' /}
+	{param label: 'Secondary' /}
+	{param style: 'secondary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'focus' /}
+	{param label: 'Link' /}
+	{param style: 'link' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'focus' /}
+	{param label: 'Borderless' /}
+	{param style: 'borderless' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'focus' /}
+	{param label: 'Unstyled' /}
+	{param style: 'unstyled' /}
+	{param type: 'button' /}
+{/call}
 ```
 
 ### Disabled
@@ -85,7 +150,7 @@ weight: 100
 <button class="btn btn-link" disabled type="button">Link</button>
 <button class="btn btn-unstyled" disabled type="button">Unstyled</button>
 
-```xml
+```text/html
 <button class="btn btn-primary" disabled type="button">Primary</button>
 <button class="btn btn-secondary" disabled type="button">Secondary</button>
 <button class="btn btn-info" disabled type="button">Info</button>
@@ -96,6 +161,41 @@ weight: 100
 <button class="btn btn-dark" disabled type="button">Dark</button>
 <button class="btn btn-link" disabled type="button">Link</button>
 <button class="btn btn-unstyled" disabled type="button">Unstyled</button>
+```
+```soy
+{call ClayButton.render}
+	{param disabled: true /}
+	{param label: 'Primary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param disabled: true /}
+	{param label: 'Secondary' /}
+	{param style: 'secondary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param disabled: true /}
+	{param label: 'Link' /}
+	{param style: 'link' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param disabled: true /}
+	{param label: 'Borderless' /}
+	{param style: 'borderless' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param disabled: true /}
+	{param label: 'Unstyled' /}
+	{param style: 'unstyled' /}
+	{param type: 'button' /}
+{/call}
 ```
 
 ### Anchor and Input Elements as Buttons
@@ -110,7 +210,7 @@ weight: 100
 <a class="btn btn-dark" href="#1" role="button">Anchor</a>
 <a class="btn btn-link" href="#1" role="button">Anchor</a>
 
-```xml
+```text/html
 <input class="btn btn-primary" type="button" value="Input" />
 <a class="btn btn-secondary" href="#1" role="button">Anchor</a>
 <input class="btn btn-info" type="submit" value="Submit" />
@@ -138,7 +238,7 @@ weight: 100
 <button class="btn btn-outline-light" type="button">Light</button>
 <button class="btn btn-outline-dark" type="button">Dark</button>
 
-```xml
+```text/html
 <button class="btn btn-outline-primary" type="button">Primary</button>
 <button class="btn btn-outline-secondary" type="button">Secondary</button>
 <button class="btn btn-outline-info" type="button">Info</button>
@@ -171,7 +271,7 @@ weight: 100
 <button class="active btn btn-outline-light" type="button">Light</button>
 <button class="active btn btn-outline-dark" type="button">Dark</button>
 
-```xml
+```text/html
 <button class="active btn btn-outline-primary" type="button">Primary</button>
 <button class="active btn btn-outline-secondary" type="button">Secondary</button>
 <button class="active btn btn-outline-info" type="button">Info</button>
@@ -193,7 +293,7 @@ weight: 100
 <button class="btn btn-outline-light" disabled type="button">Light</button>
 <button class="btn btn-outline-dark" disabled type="button">Dark</button>
 
-```xml
+```text/html
 <button class="btn btn-outline-primary" disabled type="button">Primary</button>
 <button class="btn btn-outline-secondary" disabled type="button">Secondary</button>
 <button class="btn btn-outline-info" disabled type="button">Info</button>
@@ -215,7 +315,7 @@ weight: 100
 <a class="btn btn-outline-light" href="#1" role="button">Anchor</a>
 <a class="btn btn-outline-dark" href="#1" role="button">Anchor</a>
 
-```xml
+```text/html
 <input class="btn btn-outline-primary" type="button" value="Input" />
 <a class="btn btn-outline-secondary" href="#1" role="button">Anchor</a>
 <input class="btn btn-outline-info" type="submit" value="Submit" />
@@ -243,7 +343,7 @@ weight: 100
 <button class="btn btn-monospaced btn-dark" type="button">H</button>
 <button class="btn btn-monospaced btn-link" type="button">I</button>
 
-```xml
+```text/html
 <button class="btn btn-monospaced btn-primary" type="button">A</button>
 <button class="btn btn-monospaced btn-secondary" type="button">B</button>
 <button class="btn btn-monospaced btn-info" type="button">C</button>
@@ -253,6 +353,41 @@ weight: 100
 <button class="btn btn-monospaced btn-light" type="button">G</button>
 <button class="btn btn-monospaced btn-dark" type="button">H</button>
 <button class="btn btn-monospaced btn-link" type="button">I</button>
+```
+```soy
+{call ClayButton.render}
+	{param elementClasses: 'btn-monospaced' /}
+	{param label: 'Primary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'btn-monospaced' /}
+	{param label: 'Secondary' /}
+	{param style: 'secondary' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'btn-monospaced' /}
+	{param label: 'Link' /}
+	{param style: 'link' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'btn-monospaced' /}
+	{param label: 'Borderless' /}
+	{param style: 'borderless' /}
+	{param type: 'button' /}
+{/call}
+
+{call ClayButton.render}
+	{param elementClasses: 'btn-monospaced' /}
+	{param label: 'Unstyled' /}
+	{param style: 'unstyled' /}
+	{param type: 'button' /}
+{/call}
 ```
 
 </article>
@@ -289,7 +424,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="dropdown">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
@@ -317,6 +452,27 @@ weight: 100
 	</div>
 </div>
 ```
+```soy
+{call ClayDropdown.render}
+	{param items: [
+		[
+			'label': 'Action',
+			'url': '#1'
+		],
+		[
+			'separator': true,
+			'type': 'group'
+		],
+		[
+			'label': 'Scope',
+			'url': '#1'
+		]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param triggerLabel: 'Primary' /}
+	{param triggerStyle: 'primary' /}
+{/call}
+```
 
 </article>
 
@@ -329,11 +485,21 @@ weight: 100
 <button class="btn btn-secondary" type="button">Default</button>
 <button class="btn btn-secondary btn-lg" type="button">Large</button>
 
-```xml
+```text/html
 <button class="btn btn-secondary btn-sm" type="button">Small</button>
 <button class="btn btn-secondary" type="button">Default</button>
 <button class="btn btn-secondary btn-lg" type="button">Large</button>
 ```
+```soy
+{call ClayButton.render}
+	{param label: 'Small' /}
+	{param size: 'sm' /}
+{/call}
+
+{call ClayButton.render}
+	{param label: 'Default' /}
+{/call}
+```
 
 <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
@@ -354,7 +520,7 @@ weight: 100
 	XL
 </button>
 
-```xml
+```text/html
 <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
@@ -374,15 +540,45 @@ weight: 100
 	XL
 </button>
 ```
+```soy
+{call ClayButton.render}
+	{param icon: [
+			'monospaced': true,
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'blogs'
+	] /}
+	{param size: 'sm' /}
+{/call}
+
+{call ClayButton.render}
+	{param icon: [
+			'monospaced': true,
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'plus'
+	] /}
+{/call}
+```
 
 <button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
 <button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
 <button class="btn btn-block btn-lg btn-secondary" type="button">Large Block Level Button</button>
 
-```xml
+```text/html
 <button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
 <button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
 <button class="btn btn-block btn-lg btn-secondary" type="button">Large Block Level Button</button>
+```
+```soy
+{call ClayButton.render}
+	{param block: true /}
+	{param label: 'Small Block Level Button' /}
+	{param size: 'sm' /}
+{/call}
+
+{call ClayButton.render}
+	{param block: true /}
+	{param label: 'Normal Block Level Button' /}
+{/call}
 ```
 
 </article>

@@ -97,7 +97,7 @@ weight: 100
 	</div>
 </nav>
 
-```xml
+```text/html
 <nav class="navbar navigation-bar navbar-collapse-absolute navbar-dark navbar-expand-md navbar-underline">
 	<div class="container-fluid container-fluid-max-xl">
 		<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse01" data-toggle="collapse" type="button">

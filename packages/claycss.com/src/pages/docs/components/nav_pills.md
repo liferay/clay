@@ -33,7 +33,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="nav nav-pills">
 	<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
@@ -88,7 +88,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="nav nav-justified nav-pills">
 	<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
@@ -150,7 +150,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="flex-column nav nav-pills">
 	<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
 	<li class="nav-item">
@@ -238,7 +238,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="flex-column nav nav-nested nav-pills">
 	<li class="nav-item">
 		<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse01">

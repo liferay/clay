@@ -15,10 +15,22 @@ weight: 100
 
 > We use SVG elements that link to an SVG sprite, like so:
 
-```xml
+```text/html
 <svg class="lexicon-icon">
 	<use xlink:href="path/to/icons.svg#add-column" />
 </svg>
+```
+```soy
+{call ClayIcon.render}
+	{param spritemap: 'path/to/icons.svg' /}
+	{param symbol: 'add-column' /}
+{/call}
+
+{call ClayIcon.render}
+	{param monospaced: true /}
+	{param spritemap: 'path/to/icons.svg' /}
+	{param symbol: 'add-column' /}
+{/call}
 ```
 
 > Note that the ID after the # symbol is the ID of the icon to use, so if you wanted to use plus icon, you would do change the `href` to `path/to/icons.svg#plus`.

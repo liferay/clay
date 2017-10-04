@@ -39,7 +39,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-info" data-target="#lexSmallModal" data-toggle="modal">Small Modal</button>
 <div aria-labelledby="lexSmallModalLabel" class="fade modal" id="lexSmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
@@ -109,7 +109,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-info" data-target="#lexDefaultModal" data-toggle="modal">Default Modal</button>
 <div aria-labelledby="lexDefaultModalLabel" class="fade modal" id="lexDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
@@ -182,7 +182,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-info" data-target="#lexLargeModal" data-toggle="modal">Large Modal</button>
 <div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
@@ -273,7 +273,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal">Small Modal Inline Scroller</button>
 <div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
@@ -448,7 +448,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-info" data-target="#lexFullScreenModal" data-toggle="modal">Full Screen Modal</button>
 <div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
@@ -636,7 +636,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-info" data-target="#lexModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
 <div aria-labelledby="lexModalFullScreenSmDownLabel" class="fade modal" id="lexModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
@@ -730,7 +730,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
 <button class="btn btn-info" data-target="#lexFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
@@ -910,7 +910,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <button class="btn btn-secondary" data-target="#clayModalInverse" data-toggle="modal">Modal Inverse</button>
 		<div aria-labelledby="clayModalInverseLabel" class="fade modal" id="clayModalInverse" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen-sm-down modal-inverse">

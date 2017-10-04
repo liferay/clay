@@ -65,7 +65,7 @@ weight: 100
 	</li>
 </ul>
 
-```xml
+```text/html
 <ul class="pagination">
 	<li class="disabled page-item">
 		<a class="page-link" href="#1">
@@ -190,7 +190,7 @@ weight: 100
 	</ul>
 </div>
 
-```xml
+```text/html
 <div class="pagination-bar">
 	<div class="dropdown pagination-items-per-page">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -323,7 +323,7 @@ weight: 100
 	</ul>
 </div>
 
-```xml
+```text/html
 <div class="pagination-bar pagination-sm">
 	<div class="dropdown pagination-items-per-page">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -447,7 +447,7 @@ weight: 100
 	</ul>
 </div>
 
-```xml
+```text/html
 <div class="pagination-bar">
 	<div class="dropdown pagination-items-per-page">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -571,7 +571,7 @@ weight: 100
 	</ul>
 </div>
 
-```xml
+```text/html
 <div class="pagination-bar pagination-lg">
 	<div class="dropdown pagination-items-per-page">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">

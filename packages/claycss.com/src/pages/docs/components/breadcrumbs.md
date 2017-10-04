@@ -48,7 +48,7 @@ weight: 100
 	</li>
 </ol>
 
-```xml
+```text/html
 <ol class="breadcrumb">
 	<li class="breadcrumb-item">
 		<a class="breadcrumb-link" href="#1" title="Home">
@@ -127,7 +127,7 @@ weight: 100
 	</li>
 </ol>
 
-```xml
+```text/html
 <ol class="breadcrumb">
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
@@ -217,7 +217,7 @@ weight: 100
 	</li>
 </ol>
 
-```xml
+```text/html
 <ol class="breadcrumb">
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb3Dropdown1" role="button" title="Dropdown">

@@ -59,7 +59,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="dropdown dropdown-action">
 	<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -183,7 +183,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-labelledby="" class="dropdown-menu">
 	<div class="dropdown-subheader">Order by</div>
 	<a class="active dropdown-item" href="#">Author</a>
@@ -237,7 +237,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-labelledby="" class="dropdown-menu dropdown-menu-indicator-start">
 	<div class="dropdown-header">Dropdown Header</div>
 	<div class="dropdown-divider"></div>
@@ -309,7 +309,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-labelledby="" class="dropdown-menu dropdown-menu-indicator-end">
 	<div class="dropdown-header">Folder</div>
 	<div class="dropdown-divider"></div>
@@ -409,7 +409,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-labelledby="" class="dropdown-menu">
 	<div class="dropdown-header">Dropdown Header</div>
 	<div class="inline-scroller">
@@ -485,7 +485,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-labelledby="" class="dropdown-wide dropdown-wide-container">
 	<div class="dropdown-menu">
 		<div class="row">
@@ -553,7 +553,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal">
 	<div class="dropdown-subheader">Order by</div>
 	<a class="active dropdown-item" href="#1">

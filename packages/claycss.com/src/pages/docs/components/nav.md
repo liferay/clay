@@ -16,7 +16,7 @@ weight: 100
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 
-```xml
+```text/html
 <ul class="nav">
 	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
@@ -45,7 +45,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="flex-column nav">
 	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
@@ -163,7 +163,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="nav nav-nested">
 	<li class="nav-item">
 		<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01">
@@ -362,7 +362,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <ul class="nav nav-nested-margins">
 	<li class="nav-item">
 		<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001">
@@ -472,7 +472,7 @@ weight: 100
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 
-```xml
+```text/html
 <ul class="nav nav-unstyled">
 	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>

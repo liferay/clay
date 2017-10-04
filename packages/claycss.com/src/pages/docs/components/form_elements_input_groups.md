@@ -39,7 +39,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<div class="input-group">
 		<span class="input-group-addon" id="basicAddon1">@</span>
@@ -104,7 +104,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="input-group input-group-sm">
 	<span class="input-group-addon input-group-constrain" id="inputGroupConstrain01">
 		<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
@@ -233,7 +233,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="input-group">
 	<span class="input-group-btn">
 		<button class="btn btn-secondary" type="button">Search</button>
@@ -407,7 +407,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label for="">Custom Checkbox</label>
 	<div class="input-group input-group-secondary">
@@ -455,7 +455,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label for="inputGroupTransparent">
 		Label
@@ -581,7 +581,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="input-group input-group-lg">
 	<span class="input-group-addon">$</span>
 	<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
@@ -678,7 +678,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<div class="input-group input-group-inset">
 		<div class="input-group-input">

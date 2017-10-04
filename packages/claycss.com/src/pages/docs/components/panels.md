@@ -26,7 +26,7 @@ weight: 100
 	<div class="panel-footer">Footer</div>
 </div>
 
-```xml
+```text/html
 <div class="panel panel-secondary">
 	<div class="panel-body">Body</div>
 </div>
@@ -106,7 +106,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="panel">
 	<div class="panel-header">panel</div>
 	<div class="panel-body">body</div>
@@ -192,7 +192,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
 	<div class="panel panel-secondary">
 		<a aria-controls="collapseOne" aria-expanded="true" class="panel-header panel-header-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="headingOne" role="tab">
@@ -361,7 +361,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div aria-multiselectable="true" class="panel-group" id="accordion03" role="tablist">
 	<div class="panel panel-secondary">
 		<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed panel-header panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">

@@ -64,7 +64,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="form-group">
 	<label for="customFile1">Attach File</label>
 	<div class="input-group">
@@ -169,7 +169,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="custom-control custom-checkbox">
 	<label>
 		<input class="custom-control-input" type="checkbox">
@@ -218,6 +218,38 @@ weight: 100
 	</label>
 </div>
 ```
+```soy
+{call ClayCheckbox.render}
+	{param label: 'Unchecked' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param checked: true /}
+	{param label: 'Checked' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param indeterminate: true /}
+	{param label: 'Indeterminate' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param disabled: true /}
+	{param label: 'Unchecked disabled' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param checked: true /}
+	{param disabled: true /}
+	{param label: 'Checked disabled' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param disabled: true /}
+	{param indeterminate: true /}
+	{param label: 'Indeterminate disabled' /}
+{/call}
+```
 
 </article>
 
@@ -243,7 +275,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="custom-control custom-radio">
 	<label>
 		<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
@@ -259,6 +291,20 @@ weight: 100
 		<span class="custom-control-description">Or toggle this other custom radio</span>
 	</label>
 </div>
+```
+```soy
+{call ClayRadio.render}
+	{param checked: true /}
+	{param id: 'radio1' /}
+	{param label: 'Toggle this custom radio' /}
+	{param name: 'radio' /}
+{/call}
+
+{call ClayRadio.render}
+	{param id: 'radio2' /}
+	{param label: 'Or toggle this other custom radio' /}
+	{param name: 'radio' /}
+{/call}
 ```
 
 </article>
@@ -285,7 +331,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="custom-control custom-control-inline custom-radio">
 	<label>
 		<input class="custom-control-input" disabled id="radioStacked3" name="radio-stacked" type="radio">
@@ -300,6 +346,20 @@ weight: 100
 		<span class="custom-control-description">Or toggle this other custom radio</span>
 	</label>
 </div>
+```
+```soy
+{call ClayRadio.render}
+	{param disabled: true /}
+	{param id: 'radioStacked3' /}
+	{param label: 'Toggle this custom radio' /}
+	{param name: 'radio-stacked' /}
+{/call}
+
+{call ClayRadio.render}
+	{param id: 'radioStacked4' /}
+	{param label: 'Or toggle this other custom radio' /}
+	{param name: 'radio-stacked' /}
+{/call}
 ```
 
 </article>
@@ -322,7 +382,7 @@ weight: 100
 	</select>
 </div>
 
-```xml
+```text/html
 <select class="custom-select">
 	<option selected="">Open this select menu</option>
 	<option value="1">One</option>
@@ -350,7 +410,7 @@ weight: 100
 	</label>
 </div>
 
-```xml
+```text/html
 <label class="custom-file">
 	<input class="custom-file-input" type="file">
 	<span class="custom-file-control"></span>

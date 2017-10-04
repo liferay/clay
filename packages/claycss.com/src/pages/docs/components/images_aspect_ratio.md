@@ -57,7 +57,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="aspect-ratio">
 	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
 </div>
@@ -119,7 +119,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="aspect-ratio">
 	<img alt="thumbnail" class="aspect-ratio-item-vertical-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
 </div>
@@ -158,7 +158,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="aspect-ratio aspect-ratio-16-to-9">
 	<img alt="thumbnail" class=" aspect-ratio-item aspect-ratio-item-center aspect-ratio-item-middle" src="/images/thumbnail_hot_air_ballon.jpg">
 </div>
@@ -228,7 +228,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="aspect-ratio aspect-ratio-16-to-9">
 	<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/liferay_logo_tagline.png">
 </div>
@@ -282,7 +282,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="aspect-ratio aspect-ratio-16-to-9 aspect-ratio-bg-cover" style="background-image: url(/images/thumbnail_hot_air_ballon.jpg);">
 </div>
 
@@ -323,7 +323,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="aspect-ratio aspect-ratio-16-to-9">
 	<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">

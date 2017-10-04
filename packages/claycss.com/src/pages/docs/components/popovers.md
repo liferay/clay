@@ -49,7 +49,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="popover bs-popover-top">
 	<div class="arrow"></div>
 	<div class="inline-scroller">
@@ -126,7 +126,7 @@ weight: 100
 	</div>
 </div>
 
-```xml
+```text/html
 <div class="tooltip bs-tooltip-right" role="tooltip">
 	<div class="arrow"></div>
 	<div class="tooltip-inner">

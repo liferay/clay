@@ -208,7 +208,7 @@ weight: 100
 	</div>
 </nav>
 
-```xml
+```text/html
 <nav class="navbar navbar-expand-md navbar-light">
 	<a class="navbar-brand" href="#1">
 		<span class="navbar-text-truncate">Brand</span>
@@ -558,7 +558,7 @@ weight: 100
 	</div>
 </nav>
 
-```xml
+```text/html
 <nav class="navbar navbar-expand-md navbar-light">
 	<a class="navbar-brand" href="#1">
 		<span class="navbar-text-truncate">Brand</span>
@@ -874,7 +874,7 @@ weight: 100
 	</div>
 </nav>
 
-```xml
+```text/html
 <nav class="navbar navbar-collapse-absolute navbar-dark navbar-expand-md navbar-underline">
 	<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-001a" data-toggle="collapse" type="button">
 		<span class="navbar-text-truncate">Message Boards</span>
@@ -1040,7 +1040,7 @@ weight: 100
 	</ul>
 </nav>
 
-```xml
+```text/html
 <nav class="navbar navbar-expand navbar-light">
 	<ul class="navbar-nav">
 		<li class="nav-item">
