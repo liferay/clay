@@ -47,6 +47,10 @@ $pagination-disabled-border-color: $pagination-disabled-bg !default;
 $pagination-disabled-color: map-get($theme-colors, secondary) !default;
 $pagination-disabled-opacity: 0.5 !default;
 
+$pagination-items-per-page-bg: !default;
 $pagination-items-per-page-color: $pagination-color !default;
+$pagination-items-per-page-hover-bg: !default;
+$pagination-items-per-page-hover-border-color: !default;
+$pagination-items-per-page-hover-color: !default;
 
 $pagination-results-color: $pagination-color !default;
