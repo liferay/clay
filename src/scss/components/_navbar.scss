@@ -8,8 +8,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding-left: 0;
-		padding-right: 0;
 	}
 }
 
@@ -165,13 +163,6 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	.container,
-	.container-fluid {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
 	.navbar-nav {
 		flex-wrap: wrap;
 	}
@@ -190,6 +181,15 @@
 
 			.nav-item .navbar-text-truncate {
 				max-width: $navbar-text-truncate-max-width;
+			}
+
+			.container,
+			.container-fluid {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding-left: $grid-gutter-width / 2;
+				padding-right: $grid-gutter-width / 2;
 			}
 
 			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
