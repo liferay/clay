@@ -362,3 +362,19 @@ th {
 		}
 	}
 }
+
+// Chrome 61.0.3163.100 bug, box-shadow on th td with .table-responsive causes
+// vertical scrollbar to appear.
+
+.table-responsive {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				overflow-y: hidden;
+			}
+		}
+	}
+}
