@@ -8,4 +8,21 @@
 			}
 		}
 	}
+
+	.container-no-gutters {
+		@include container-no-gutters;
+
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			$next: breakpoint-next($breakpoint, $grid-breakpoints);
+			$infix: breakpoint-infix($next, $grid-breakpoints);
+
+			@if not ($infix == '') { // .container-no-gutters-sm-down, md-down, lg-down, xl-down
+				&#{$infix}-down {
+					@include media-breakpoint-down($breakpoint) {
+						@include container-no-gutters;
+					}
+				}
+			}
+		}
+	}
 }
