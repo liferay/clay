@@ -1,8 +1,14 @@
+table {
+	border-collapse: separate;
+}
+
 th {
 	height: 20px;
 }
 
 .table {
+	border-collapse: collapse;
+
 	th {
 		color: $table-head-color;
 		font-size: $table-head-font-size;
