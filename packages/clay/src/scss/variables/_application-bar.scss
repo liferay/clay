@@ -4,6 +4,6 @@ $application-bar-size: map-merge((
 	height: 3.5rem,
 	height-mobile: 3rem,
 	link-padding-x: 0.25rem,
-	padding-x: 0.75rem,
+	padding-x: 0,
 	padding-y: 0
 ), $application-bar-size);
