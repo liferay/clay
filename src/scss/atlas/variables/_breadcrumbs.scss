@@ -1,5 +1,6 @@
 $breadcrumb-bg: transparent !default;
 $breadcrumb-font-size: 0.875rem !default; // 14px
+$breadcrumb-padding-x: 0.125rem !default; // 2px
 
 $breadcrumb-link-color: lighten(map-get($theme-colors, secondary), 7%) !default;
 $breadcrumb-link-hover-color: $breadcrumb-link-color !default;
