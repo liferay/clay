@@ -259,7 +259,7 @@ section.row {
 	display: inline;
 }
 
-@each $breakpoint, $value in $container-fluid-max-widths {
+@each $breakpoint, $value in $container-max-widths {
 	.container-fluid-max-#{$breakpoint} .clay-site-grid-width-#{$breakpoint} {
 		&:after {
 			content: ' #{$value}';
