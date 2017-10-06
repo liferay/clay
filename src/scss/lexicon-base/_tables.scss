@@ -1,8 +1,16 @@
+table {
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+
 th {
 	height: 20px;
 }
 
 .table {
+	border-collapse: collapse;
+	border-spacing: 0;
+
 	> thead,
 	> tbody,
 	> tfoot {
