@@ -275,6 +275,21 @@
 						}
 					}
 
+					.show-dropdown-on-collapse {
+						.dropdown-item {
+							// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+							padding: $nav-link-padding-y 0.5rem;
+						}
+
+						.dropdown-menu {
+							display: block;
+						}
+
+						.dropdown-toggle {
+							display: none;
+						}
+					}
+
 					.navbar-breakpoint-down-d-block {
 						display: block !important;
 					}
