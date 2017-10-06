@@ -267,6 +267,7 @@
 								border-width: 0;
 								box-shadow: none;
 								margin: 0;
+								max-height: none;
 								max-width: none;
 								overflow: visible;
 								padding: 0;
@@ -276,6 +277,7 @@
 					}
 
 					.show-dropdown-on-collapse {
+						.dropdown-header,
 						.dropdown-item {
 							// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
 							padding: $nav-link-padding-y 0.5rem;
