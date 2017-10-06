@@ -1,7 +1,7 @@
 $alert-border-style: solid !default;
 
-$alert-close-font-size: 1rem !default; // 16px
-$alert-close-height: 2.5rem !default;
+$alert-close-font-size: 0.875rem !default; // 14px
+$alert-close-height: 2rem !default; // 32px
 $alert-close-line-height: null !default;
 $alert-close-opacity: null !default;
 $alert-close-margin-left: null !default;
@@ -9,8 +9,8 @@ $alert-close-padding-bottom: 0 !default;
 $alert-close-padding-left: 0 !default;
 $alert-close-padding-right: 0 !default;
 $alert-close-padding-top: 0 !default;
-$alert-close-position-right: 0.1875rem !default; // 3px
-$alert-close-position-top: 0.4375rem !default; // 7px
+$alert-close-position-right: 0.5rem !default; // 8px
+$alert-close-position-top: 0.75rem !default; // 12px
 $alert-close-width: $alert-close-height !default;
 
 $alert-font-size: null !default;
