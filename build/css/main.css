@@ -1,5 +1,5 @@
 /**
-* Lexicon 1.0.24
+* Lexicon 1.0.25
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -75,6 +75,7 @@ section.row {
 #headerTopBar .navbar-toggle {
   float: left;
   margin-left: -10px;
+  margin-top: 10px;
 }
 
 #headerTopBar .navbar-toggle .icon-bar {

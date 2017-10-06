@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.24
+* Lexicon 1.0.25
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -11375,6 +11375,10 @@ button.list-group-heading {
   }
 }
 
+.management-bar-collapse .dropdown-backdrop {
+  position: relative;
+}
+
 .management-bar-nav {
   margin: 6.75px -15px;
 }
@@ -12599,8 +12603,18 @@ button.list-group-heading {
   background-color: #F5984C;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
 th {
   height: 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .table > thead tr td:first-child > .checkbox,
