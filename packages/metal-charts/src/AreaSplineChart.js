@@ -5,6 +5,7 @@ import Soy from 'metal-soy';
 
 import Chart from './Chart';
 import templates from './AreaSplineChart.soy.js';
+import types from './utils/types';
 
 /**
  * AreaSpline Chart Component
@@ -27,6 +28,7 @@ AreaSplineChart.STATE = {
 			data: Config.array().required(),
 			hide: Config.bool(),
 			id: Config.required().string(),
+			type: Config.oneOf(types.area),
 		}),
 	),
 
@@ -37,7 +39,7 @@ AreaSplineChart.STATE = {
 	 * @type {?string|undefined}
 	 * @default area-spline
 	 */
-	type: Config.string().value('area-spline'),
+	type: Config.oneOf(types.area).value('area-spline'),
 };
 
 Soy.register(AreaSplineChart, templates);
