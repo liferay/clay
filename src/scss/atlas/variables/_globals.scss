@@ -34,6 +34,13 @@ $font-size-lg-mobile: 1.125rem !default; // 18px
 $font-size-sm: 0.875rem !default; // 14px
 $font-size-sm-mobile: 0.75rem !default; // 12px
 
+$font-weight-light: 300 !default;
+$font-weight-normal: normal !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: bold !default;
+$font-weight-bolder: 900 !default;
+$headings-font-weight: $font-weight-semi-bold !default;
+
 $h1-font-size: 1.625rem !default; // 26px
 $h1-font-size-mobile: 1.75rem !default; // 28px
 $h2-font-size: 1.375rem !default; // 22px
