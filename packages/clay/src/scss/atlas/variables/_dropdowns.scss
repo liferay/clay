@@ -19,7 +19,7 @@ $dropdown-link-hover-color: $body-color !default;
 $dropdown-link-hover-bg: lighten(map-get($theme-colors, primary), 44%) !default;
 $dropdown-link-active-color: $dropdown-link-hover-color !default;
 $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
-$dropdown-link-active-font-weight: 500 !default;
+$dropdown-link-active-font-weight: $font-weight-semi-bold !default;
 $dropdown-link-disabled-color: lighten($body-color, 52%) !default;
 
 $dropdown-divider-bg: $dropdown-border-color !default;
