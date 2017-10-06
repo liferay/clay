@@ -1,3 +1,10 @@
+### v1.0.25 - October 5, 2017
+* Fix: Management Bar Collapse can't click form elements in dropdown
+* Update: Table move `border-collapse: collapse` and `border-spacing: 0` to `.table` and restore default values for `table`
+* Site: Management Bar Demo page can't fully scroll site pages
+* Site: Use rootPath instead of relative path for images and icons
+
+
 ### v1.0.24 - August 4, 2017
 * New: Lexicon Icons autosize, custom-size, order-arrow, and pages-tree
 * Update: Deprecate `$brand-*-*`, `$state-*-*`, `$inverse-*-*`, and `$box-shadow-default-*` will be removed in V2
