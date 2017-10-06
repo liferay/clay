@@ -4,13 +4,13 @@ $card-margin-bottom: 1.25rem !default;
 
 $card-title-color: null !default;
 $card-title-font-size: 1rem !default; // 16px
-$card-title-font-weight: 500 !default;
+$card-title-font-weight: $headings-font-weight !default;
 $card-title-margin-bottom: 0.5rem !default; // 8px
 $card-title-margin-top: null !default;
 
 $card-subtitle-color: map-get($theme-colors, secondary) !default;
 $card-subtitle-font-size: 0.875rem !default; // 14px
-$card-subtitle-font-weight: 400 !default;
+$card-subtitle-font-weight: null !default;
 $card-subtitle-margin-bottom: 0.5rem !default; // 8px
 $card-subtitle-margin-top: -$card-title-margin-bottom !default; // -8px
 
