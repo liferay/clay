@@ -192,6 +192,14 @@
 				padding-right: $grid-gutter-width / 2;
 			}
 
+			.navbar-collapse {
+				.container,
+				.container-fluid {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+
 			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
