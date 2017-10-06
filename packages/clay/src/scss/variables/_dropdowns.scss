@@ -17,7 +17,7 @@ $dropdown-header-padding-y: $dropdown-padding-y !default;
 
 $dropdown-subheader-color: $dropdown-header-color !default;
 $dropdown-subheader-font-size: 0.75rem !default; // 12px
-$dropdown-subheader-font-weight: 500 !default;
+$dropdown-subheader-font-weight: $headings-font-weight !default;
 $dropdown-subheader-text-transform: uppercase !default;
 
 $dropdown-caption-color: $dropdown-header-color !default;

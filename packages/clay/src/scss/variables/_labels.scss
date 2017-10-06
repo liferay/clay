@@ -2,7 +2,7 @@ $label-color: null !default;
 $label-link-hover-color: #FFF !default;
 
 $label-font-size: 75% !default;
-$label-font-weight: bold !default;
+$label-font-weight: $font-weight-bold !default;
 $label-height: 1.25rem !default; // 20px
 $label-lexicon-icon-height: 0.8em !default;
 $label-lexicon-icon-width: $label-lexicon-icon-height !default;

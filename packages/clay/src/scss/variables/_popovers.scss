@@ -3,7 +3,7 @@ $popover-inline-scroller-max-height: 14.75rem !default; // 236px
 
 $popover-header-border-color: null !default;
 $popover-header-font-size: $font-size-base !default;
-$popover-header-font-weight: 500 !default;
+$popover-header-font-weight: $headings-font-weight !default;
 $popover-header-margin-x: null !default;
 $popover-header-margin-y: null !default;
 
