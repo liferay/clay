@@ -5,11 +5,11 @@ $table-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 
 $table-head-color: map-get($theme-colors, secondary) !default;
 $table-head-font-size: 0.875rem !default; // 14px
-$table-head-font-weight: 500 !default;
+$table-head-font-weight: $font-weight-semi-bold !default;
 
 $table-divider-color: map-get($theme-colors, secondary) !default;
 $table-divider-font-size: 0.75rem !default; // 12px
-$table-divider-font-weight: 500 !default;
+$table-divider-font-weight: $font-weight-semi-bold !default;
 $table-divider-padding: 0.5rem 0.75rem !default;
 $table-divider-text-transform: uppercase !default;
 
@@ -23,4 +23,4 @@ $table-list-color: $body-color !default;
 
 $table-list-link-color: map-get($theme-colors, secondary) !default;
 
-$table-list-head-font-weight: 400 !default;
+$table-list-head-font-weight: $font-weight-normal !default;

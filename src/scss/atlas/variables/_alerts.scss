@@ -10,11 +10,11 @@ $alert-close-position-top: 0.5rem !default; // 8px
 $alert-font-size: 0.875rem !default; // 14px
 
 $alert-lead-font-size: $alert-font-size !default;
-$alert-lead-font-weight: bold !default;
+$alert-lead-font-weight: $font-weight-bold !default;
 
 $alert-link-decoration: underline !default;
 $alert-link-hover-decoration: none !default;
-$alert-link-font-weight: normal !default;
+$alert-link-font-weight: $font-weight-normal !default;
 
 $alert-notification-max-width: 360px !default;
 

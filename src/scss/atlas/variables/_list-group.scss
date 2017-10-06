@@ -13,7 +13,7 @@ $list-group-header-padding-y: 0.75rem !default; // 12px
 
 $list-group-header-title-color: map-get($theme-colors, secondary) !default;
 $list-group-header-title-font-size: 0.75rem !default; // 12px
-$list-group-header-title-font-weight: 500 !default;
+$list-group-header-title-font-weight: $font-weight-semi-bold !default;
 $list-group-header-title-text-transform: uppercase !default;
 
 $list-group-title-color: $body-color !default;
@@ -21,7 +21,6 @@ $list-group-title-font-size: 1rem !default; // 16px
 
 $list-group-subtitle-color: map-get($theme-colors, secondary) !default;
 $list-group-subtitle-font-size: 0.875rem !default; // 14px
-$list-group-subtitle-font-weight: 400 !default;
 
 $list-group-link-color: $body-color !default;
 $list-group-link-hover-color: $list-group-link-color !default;
