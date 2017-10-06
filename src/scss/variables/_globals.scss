@@ -1,13 +1,6 @@
 $enable-scaling-components: false !default;
 $scaling-breakpoint-down: sm !default;
 
-$container-fluid-max-widths: (
-	sm: 540px,
-	md: 720px,
-	lg: 960px,
-	xl: 1140px
-) !default;
-
 $rounded-border-radius: $border-radius !default;
 $rounded-circle-border-radius: 5000px !default;
 $rounded-0-border-radius: 0 !default;

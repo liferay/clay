@@ -1,6 +1,6 @@
 @if ($enable-grid-classes) {
 	.container-fluid-max {
-		@each $breakpoint, $max-width in $container-fluid-max-widths {
+		@each $breakpoint, $max-width in $container-max-widths {
 			$infix: '-#{$breakpoint}';
 
 			&#{$infix} {
