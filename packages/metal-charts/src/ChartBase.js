@@ -379,8 +379,6 @@ const ChartBase = {
 	 * @protected
 	 */
 	handleXChanged_: function({ newVal }) {
-		const { bbChart } = this;
-
 		const column = this.getColumn_(newVal);
 
 		this.bbChart.x(column.data);
@@ -424,6 +422,7 @@ const ChartBase = {
 			return removedIds;
 		}, []);
 	},
+
 };
 
 /**
