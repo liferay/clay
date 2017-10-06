@@ -9,7 +9,7 @@ $sidebar-title-font-size: 1.5rem !default; // 24px
 $sidebar-title-font-weight: $headings-font-weight !default;
 
 $sidebar-subtitle-font-size: 1.125rem !default; // 18px
-$sidebar-subtitle-font-weight: $headings-font-weight !default;
+$sidebar-subtitle-font-weight: $font-weight-semi-bold !default;
 $sidebar-subtitle-text-transform: null !default;
 
 $sidebar-caption-font-size: 0.875rem !default; // 14px
@@ -23,7 +23,7 @@ $sidebar-panel-margin-bottom: 1rem !default;
 // Sidebar Description List (dl, dt, dd)
 
 $sidebar-dt-font-size: 0.75rem !default; // 12px
-$sidebar-dt-font-weight: $headings-font-weight !default;
+$sidebar-dt-font-weight: $font-weight-semi-bold !default;
 $sidebar-dt-margin-bottom: 0.25rem !default; // 4px
 $sidebar-dt-text-transform: uppercase !default;
 
