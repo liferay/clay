@@ -197,16 +197,35 @@
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
 							left: 0;
-							margin-top: -$navbar-padding-y;
-							padding: 0 $navbar-padding-x $navbar-padding-y $navbar-padding-x;
+							padding: 0 $navbar-padding-x;
 							position: absolute;
 							right: 0;
 							top: 100%;
 							z-index: $zindex-navbar-collapse-absolute;
+
+							.container,
+							.container-fluid {
+								padding-left: $grid-gutter-width / 2;
+								padding-right: $grid-gutter-width / 2;
+							}
+
+							.navbar-nav,
+							.navbar-form {
+								&:last-child {
+									padding-bottom: $navbar-padding-y;
+								}
+							}
 						}
 					}
 
 					.navbar-collapse {
+						.container,
+						.container-fluid {
+							display: block;
+							padding-left: 0;
+							padding-right: 0;
+						}
+
 						.nav-item {
 							display: block;
 						}
