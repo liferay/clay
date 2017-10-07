@@ -162,29 +162,69 @@ section: Components
 	<div class="col-md-12">
 		<h3>Alert Fluid</h3>
 
+		<div class="alert alert-warning">
+			Must have nested <code>container</code> or <code>container-fluid</code> in <code>alert-fluid</code>.
+		</div>
+
 		<div class="alert alert-fluid alert-primary" role="alert">
-			<strong class="lead">Primary</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
+			<div class="container">
+				<strong class="lead">Primary</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
+			</div>
 		</div>
 		<div class="alert alert-fluid alert-secondary" role="alert">
-			<strong class="lead">Secondary</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
+			<div class="container">
+				<strong class="lead">Secondary</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
+			</div>
 		</div>
-		<div class="alert alert-fluid alert-success" role="alert">
-			<strong class="lead">Success</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
+		<div class="alert alert-dismissible alert-fluid alert-success" role="alert">
+			<div class="container">
+				<strong class="lead">Success</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
 		</div>
-		<div class="alert alert-fluid alert-info" role="alert">
-			<strong class="lead">Info</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
+		<div class="alert alert-dismissible alert-fluid alert-info" role="alert">
+			<div class="container">
+				<strong class="lead">Info</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
 		</div>
-		<div class="alert alert-fluid alert-warning" role="alert">
-			<strong class="lead">Warning</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
+		<div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
+			<div class="container">
+				<strong class="lead">Warning</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
 		</div>
-		<div class="alert alert-danger alert-fluid" role="alert">
-			<strong class="lead">Danger</strong> <a href="#1" class="alert-link">Something</a> is not right.
+		<div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
+			<div class="container">
+				<strong class="lead">Danger</strong> <a href="#1" class="alert-link">Something</a> is not right.
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
 		</div>
 		<div class="alert alert-fluid alert-light" role="alert">
-			<strong class="lead">Light</strong> This is a <a href="#1" class="alert-link">light alert</a>.
+			<div class="container">
+				<strong class="lead">Light</strong> This is a <a href="#1" class="alert-link">light alert</a>.
+			</div>
 		</div>
 		<div class="alert alert-dark alert-fluid" role="alert">
-			<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
+			<div class="container">
+				<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
+			</div>
 		</div>
 	</div>
 </div>
