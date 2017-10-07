@@ -17,6 +17,7 @@
 		padding-left: $alert-close-padding-left;
 		padding-right: $alert-close-padding-right;
 		padding-top: $alert-close-padding-top;
+		position: absolute;
 		right: $alert-close-position-right;
 		top: $alert-close-position-top;
 		width: $alert-close-width;
@@ -41,19 +42,44 @@
 	}
 }
 
-.alert-fluid {
-	@include border-radius(0);
-
-	border-width: $alert-fluid-border-width;
-}
-
-// Alert Dismissable
+// Alert Dismissible
 
 .alert-dismissible {
 	padding-bottom: $alert-dismissible-padding-bottom;
 	padding-left: $alert-dismissible-padding-left;
 	padding-right: $alert-dismissible-padding-right;
 	padding-top: $alert-dismissible-padding-top;
+}
+
+// Alert Fluid
+
+.alert-fluid {
+	@include border-radius(0);
+
+	border-width: $alert-fluid-border-width;
+	padding: 0;
+
+	&.alert-dismissible {
+		.container,
+		.container-fluid {
+			padding-bottom: $alert-dismissible-padding-bottom;
+			padding-left: $alert-dismissible-padding-left;
+			// Will be safe to use Sass arithmetic if https://github.com/twbs/bootstrap/pull/24283 makes it
+			padding-right: calc(#{$alert-dismissible-padding-right} + #{$grid-gutter-width / 2});
+			padding-top: $alert-dismissible-padding-top;
+			position: relative;
+		}
+	}
+
+	.container,
+	.container-fluid {
+		padding: $alert-padding-y $alert-padding-x;
+	}
+
+	.close {
+		// Will be safe to use Sass arithmetic if https://github.com/twbs/bootstrap/pull/24283 makes it
+		right: calc(#{$grid-gutter-width / 2} + #{$nav-btn-margin-x});
+	}
 }
 
 // Alert Notifications
