@@ -1,3 +1,125 @@
+### v2.0.0-alpha.10 October 6, 2017
+
+* Breaking: Alert Fluid should use have nested `.container` or `.container-fluid`
+* Breaking: Globals removed `$container-fluid-max-widths` Sass map, `.container-fluid-max-*` is now based on `$container-max-widths`
+* Breaking: Grid removed `.container-fluid-1280`
+* Breaking: Pagination renamed `$pagination-items-per-page-border` to `$pagination-items-per-page-border-color`
+* Breaking: Sticker removed `$sticker-font-size-sm`, `$sticker-size-sm`, `$sticker-font-size-lg`, `$sticker-size-lg`, `$sticker-font-size-xl`, `$sticker-size-xl`, `$sticker-font-size-xxl`, `$sticker-size-xxl`, `$sticker-outside-offset-sm`, `$sticker-outside-offset-lg` use sticker-size mixin instead
+* Breaking: Sticker removed mixins `sticker`, `sticker-sm`, `sticker-lg`, `sticker-xl`, `sticker-xxl`, removed `.sticker-lg`, `.sticker-xl`, `.sticker-xxl`, use `sticker-size($sassMap)` mixin to create custom sticker sizes
+* Breaking: Cards and List Group don't set sticker sizes
+* Breaking: Labels removed mixins `label`, `label-sm`, `label-lg` and replaced with mixin `label-size`, removed `.label-sm`, added sass map `$label-lg` for sizing large labels
+* Breaking: Labels now size based on height instead of padding, added option to configure `$label-height`, and adjust Atlas Labels to be smaller by default
+* Breaking: Labels removed `$label-font-size-mobile`, `$label-font-size-lg-mobile`, `$label-font-size-sm-mobile` and remove option to scale-component
+* Breaking: Badges removed `$badge-font-size-lg`, `$badge-lexicon-icon-height-lg`, `$badge-lexicon-icon-width-lg`, `$badge-padding-x-lg`, `$badge-padding-y-lg`, `$badge-font-size-sm`, `$badge-lexicon-icon-height-sm`, `$badge-lexicon-icon-width-sm`, `$badge-padding-x-sm`, `$badge-padding-y-sm`
+* Breaking: Badges removed mixins `badge`, `badge-lg`, and `badge-sm`. Mixin `badge-size` now accepts a Sass map of properties and values to create a specific badge size if needed.
+* Breaking: Badges removed `.badge-lg` and `.badge-sm`
+* Breaking: Alerts BS4 changed position from `relative` to `absolute` for `.alert-dismissible .close`. Changed `$alert-close-*` values and added `$alert-close-height`, `$alert-close-width`, `$alert-dismissible-padding-bottom`, `$alert-dismissible-padding-left`, `$alert-dismissible-padding-right`, `$alert-dismissible-padding-top`
+* Breaking: Update Bootstrap 4 to 527f55c
+* Breaking: Badges removed `$badge-font-size-mobile`, `$badge-font-size-lg-mobile`, `$badge-font-size-sm-mobile` and remove option to scale-component
+* Breaking: Removed `.icon-monospaced`
+* Breaking: Icons removed `$help-icon-secondary-bg`, `$help-icon-secondary-color`, `$help-icon-secondary-color-hover`
+* Breaking: Forms renamed `$input-label-reference-mark-vertical-alignment` to `$input-label-reference-mark-vertical-align` and added option to configure `$input-label-reference-mark-font-size`
+* Breaking: Form Validation removed `.form-feedback` use `.form-feedback-item` and `.form-feedback-indicator` instead
+* Breaking: Update Bootstrap 4 to 502ac7e
+* Breaking: Navbar removed `$navbar-primary-bg`, `$navbar-primary-border-color`, `$navbar-primary-active-bg`, `$navbar-primary-hover-bg`, `$navbar-primary-disabled-bg`, `$navbar-primary-active-highlight`, `$navbar-primary-brand-bg`, `$navbar-primary-brand-hover-bg`, `$navbar-primary-brand-color`, `$navbar-primary-brand-hover-color` use Sass map `$navbar-primary` instead
+* Breaking: Navbar removed `$navbar-dark-bg`, `$navbar-dark-border-color`, `$navbar-dark-active-bg`, `$navbar-dark-hover-bg`, `$navbar-dark-disabled-bg`, `$navbar-dark-active-highlight`, `$navbar-dark-brand-bg`, `$navbar-dark-brand-hover-bg`, `$navbar-dark-brand-color`, `$navbar-dark-brand-hover-color`, `$navbar-dark-toggler-border-color` use Sass map `$navbar-dark` instead
+* Breaking: Navbar removed `$navbar-light-bg`, `$navbar-light-border-color`, `$navbar-light-active-bg`, `$navbar-light-hover-bg`, `$navbar-light-disabled-bg`, `$navbar-light-active-highlight`, `$navbar-light-brand-bg`, `$navbar-light-brand-hover-bg`, `$navbar-light-brand-color`, `$navbar-light-brand-hover-color`, `$navbar-light-toggler-border-color` use Sass map `$navbar-light` instead
+* Breaking: Navbar renamed `$navbar-active-highlight` to `$navbar-underline-active-bg` and `.navbar-highlight` to `.navbar-underline` to match nav naming pattern
+* Breaking: Navbar removed `$navbar-brand-color`, `$navbar-brand-hover-color` should be configured through the navbar-variant mixin
+* Breaking: Navbar removed `$navbar-collapse-absolute-box-shadow`, box-shadows on Navbars should be implemented through the `navbar-size` mixin
+* New: Navbar added `.show-dropdown-on-collapse` for always expanded `.dropdown-menu`'s in mobile
+* New: Globals added `$font-weight-semi-bold` and `$font-weight-bolder` for easier adjusting of font weights
+* New: Utilities added `.page-header` and option to configure `$page-header-bg`
+* New: Grid added `.container-no-gutters` and `.container-no-gutters-{sm|md|lg|xl}-down`
+* New: Grid added mixin `container-no-gutters` for removing gutters on container, row, and col
+* New: Pagination added `$pagination-margin-bottom`
+* New: Globals added `$zindex-navbar-collapse-absolute` dropdowns should appear above it
+* New: Pagination added `$pagination-items-per-page-border-radius`, `$pagination-items-per-page-hover-bg`, `$pagination-items-per-page-hover-border-color`, `$pagination-items-per-page-hover-color`
+* New: Stickers added `$sticker-sm` Sass map
+* New: Labels added `.label-dismissible` and `$label-dismissible-text-transform`
+* New: Navbar added option to configure `$navbar-title-font-size`, `$navbar-title-font-weight`, `$navbar-title-margin-bottom`, `$navbar-title-text-transform` and added `.navbar-title`
+* New: Added `.application-bar`
+* New: Navbar added `.navbar-secondary` and added option to configure `$navbar-secondary`
+* New: Globals added `$font-import-url` for importing fonts
+* New: Reference Mark added option to configure `$reference-mark-vertical-align`
+* New: Form Validation added option to configure `$form-feedback-success-indicator-icon-color`, `$form-feedback-success-indicator-icon`, `$form-feedback-warning-indicator-icon-color`, `$form-feedback-warning-indicator-icon`, `$form-feedback-danger-indicator-icon-color`, `$form-feedback-danger-indicator-icon`
+* New: Form Validation added option to configure `$input-danger-select-icon-color`, `$input-danger-select-icon`, `$input-success-select-icon-color`, `$input-success-select-icon`, `$input-warning-select-icon-color`, `$input-warning-select-icon`
+* New: Navbar added variant `.navbar-transparent`
+* Update: Alert make `.alert .close` smaller and update position
+* Update: Navbar `.show-dropdown-on-collapse` should space `.dropdown-header` properly, and `.dropdown-menu` should be full size
+* Update: Globals change `$zindex-navbar-collapse-absolute` value to 500, gives space to customize z-index values
+* Update: Navbar `.container` and `.container-fluid` in `.navbar-collapse` shouldn't have padding when not collapsed
+* Update: Navbar Collapse Absolute should work with `.container`, `.container-fluid`
+* Update: Sidebar title should use `$font-weight-semi-bold` and unset redundant font-weight
+* Update: Map Atlas font-weights to global font-weight variables
+* Update: Atlas define font-weights
+* Update: Clay Base only use `$headings-font-weight` for headings, use `$font-weight-semi-bold` for the rest
+* Update: Clay Base map font-weight variables to global font-weight variables defined by BS4
+* Update: Table move `border-collapse: collapse` to `.table` and restore default value for `table`
+* Update: Normalize `.container` and `.container-fluid` spacing in Application Bar, Management Bar, Navigation Bar, Navbar, and Subnav
+* Update: Atlas Breadcrumb adjust padding-x
+* Update: Table Responsive add overflow-y: hidden, work around for Chrome 61 bug with box-shadow and td/th
+* Update: Dropdown `.show-dropdown-action-on-active` should be under `.navbar-collapse-absolute`
+* Update: Atlas Navbar `.navbar-dark` and `.navbar-secondary` colors
+* Update: Subnav Title font-weight
+* Update: Navbar variant should set `.navbar-toggler` color
+* Update: Atlas Pagination Items Per Page colors
+* Update: Pagination `.pagination-items-per-page` styles bleed into dropdown-items
+* Update: Pagination should use scale-component mixin
+* Update: Pagination border-radius should be able to be disabled through `$enable-rounded`
+* Update: Subnav should have no margin-bottom
+* Update: Atlas Globals container and container-fluid-max-* sizes
+* Update: Atlas Globals grid-gutter-width to 24px
+* Update: Atlas Dropdown don't set mobile sizes
+* Update: Alerts use scale-component mixin instead of hard coding media query
+* Update: Sticker re-add `.sticker-xxl` and `$sticker-xxl` Sass map
+* Update: Cards and List Group don't need to resize label they are smaller by default
+* Update: Atlas Badge size to be smaller
+* Update: Atlas adjust `$input-btn-padding-y` so buttons are 40px tall BS4 changed line-height on `.btn`
+* Update: Sort imports
+* Update: Application Bar use `.nav-link-monospaced`
+* Update: Subnav adjust spacing around `.subnav` and `.subnav .container-fluid`
+* Update: Navbar make `.navbar-text-truncate` more specific for `.navbar-brand`
+* Update: Navigation Bar adjust padding-x
+* Update: Application Bar added `$application-bar-size`
+* Update: Nav adjust `$nav-btn-margin-x` to be smaller
+* Update: Navbar Variant mixin add option to set color
+* Update: Atlas Globals don't need to set `$gray-200`, `$gray-400`
+* Update: Reference Mark removed `.lexicon-icon` styles it now scales with font size
+* Update: Form Validation group select styles with validation state styles
+* Update: Atlas Custom Checkbox change border-radius to 0.125rem
+* Update: Form File should be `display: flex`
+* Update: Collapsible Search and Side Navigation js plugins to use BS4 `Util.supportsTransitionEnd()`
+* Update: Atlas Nav disabled nav-link should use V2 color and Navbar disabled link can inherit from it
+* Update: Atlas Navbar change color of navbar-underline
+* Update: Subnav don't inherit from Clay navbar variables
+* Update: Navbar mobile dropdown styles moved to navbar-variant mixin
+* Update: Navbar Collapse Absolute move background and border colors to navbar-variant mixin
+* Site: Navbar and variant pages should use container and new navbar classes
+* Site: Visual Test pages to use container and new navbar classes
+* Site: Alert Fluid demos to have nested container
+* Site: Use container-fluid instead of container for demo pages template
+* Site: Grid demo use `$container-max-widths`
+* Site: Added test pages Card View Template and Table View Template
+* Site: Management Bar remove `.navbar-secondary` example
+* Site: Added Card View Template to visual tests
+* Site: Cards update card-type-asset class placement
+* Site: Stickers removed `.sticker-lg`, `.sticker-xl`, `.sticker-xxl` examples
+* Site: Labels remove `.label-sm` example and add `.label-dismissible` example
+* Site: Badges remove badge sizes demos
+* Site: Alerts change markup to follow new BS4 beta pattern
+* Site: Vertically align `.clay-site-light-container`
+* Site: Added `.application-bar` demo
+* Site: Navigation Bar remove management bar example to avoid confusion
+* Site: Update Navbars with `.navbar-secondary` examples
+* Site: Utilities remove references to icon-monospaced
+* Site: SF demo pages
+* Site: Cards page SF
+* Site: Form Elements update Form Inline Autofit markup to use BS4 flex utility
+* Site: Form Validation remove `.form-feedback` from demos
+* Site: Sidebar update navbar to use `.navbar-transparent`
+* Site: Navbars rename `.navbar-highlight` to `.navbar-underline`
+
 ### v2.0.0-alpha.9 September 27, 2017
 
 * Breaking: Sidebar removed `$sidebar-padding`, list out padding properties individually
