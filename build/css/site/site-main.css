@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-alpha.9
+* Clay 2.0.0-alpha.10
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -253,11 +253,11 @@ section.row {
 }
 
 .container-fluid-max-md .clay-site-grid-width-md:after {
-  content: " 800px";
+  content: " 720px";
 }
 
 [data-container-classes="container-fluid container-fluid-max-md main-nav-container"]:after {
-  content: " (800px)";
+  content: " (720px)";
 }
 
 .container-fluid-max-lg .clay-site-grid-width-lg:after {
@@ -269,11 +269,11 @@ section.row {
 }
 
 .container-fluid-max-xl .clay-site-grid-width-xl:after {
-  content: " 1280px";
+  content: " 1248px";
 }
 
 [data-container-classes="container-fluid container-fluid-max-xl main-nav-container"]:after {
-  content: " (1280px)";
+  content: " (1248px)";
 }
 
 .modal-open .main-nav-open {
@@ -798,13 +798,13 @@ body.sidenav-transition {
   margin: 2em 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .uxgl-lg-newline-demo {
     background-color: #FFFEDC;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1279px) {
   .uxgl-md-newline-demo {
     background-color: #FFFEDC;
   }

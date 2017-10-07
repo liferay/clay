@@ -15,7 +15,7 @@
 <body>
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
-			<div class="container">
+			<div class="container-fluid">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
 				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.9</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.10</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -63,7 +63,7 @@
 			</div>
 		</header>
 
-		<section class="container main-nav-container">
+		<section class="container-fluid main-nav-container">
 			<nav class="" id="mainNav">
 	<div class="main-nav-inner">
 			
@@ -182,6 +182,12 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
+</li>
 </ul>
 </div>
 </li>
@@ -232,23 +238,6 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="badges-as-anchor-tag"><a class="heading-anchor" href="#badges-as-anchor-tag"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badges as Anchor Tag</h3>
-
-		<a class="badge badge-primary" href="#1">Primary</a>
-		<a class="badge badge-secondary" href="#1">Secondary</a>
-		<a class="badge badge-success" href="#1">Success</a>
-		<a class="badge badge-info" href="#1">Info</a>
-		<a class="badge badge-warning" href="#1">Warning</a>
-		<a class="badge badge-danger" href="#1">Danger</a>
-		<div class="clay-site-light-container">
-			<a class="badge badge-light" href="#1">Light</a>
-		</div>
-		<a class="badge badge-dark" href="#1">Dark</a>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
 		<h3 id="badge-pill"><a class="heading-anchor" href="#badge-pill"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badge Pill</h3>
 
 		<span class="badge badge-pill badge-primary">8</span>
@@ -279,68 +268,45 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3 id="badges-as-anchor-tag"><a class="heading-anchor" href="#badges-as-anchor-tag"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badges as Anchor Tag</h3>
+
+		<a class="badge badge-primary" href="#1">Primary</a>
+		<a class="badge badge-secondary" href="#1">Secondary</a>
+		<a class="badge badge-success" href="#1">Success</a>
+		<a class="badge badge-info" href="#1">Info</a>
+		<a class="badge badge-warning" href="#1">Warning</a>
+		<a class="badge badge-danger" href="#1">Danger</a>
+		<div class="clay-site-light-container">
+			<a class="badge badge-light" href="#1">Light</a>
+		</div>
+		<a class="badge badge-dark" href="#1">Dark</a>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="badge-with-links-inside"><a class="heading-anchor" href="#badge-with-links-inside"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badge with Links Inside</h3>
+
+		<div>
+			<span class="badge badge-success">
+				<a href="#1">Badge</a>
+				<button aria-label="Close" class="close" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="../../images/icons/icons.svg#times">
+					</svg>
+				</button>
+			</span>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3 id="badge-sizes"><a class="heading-anchor" href="#badge-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badge Sizes</h3>
 
-		<blockquote class="blockquote">
-			<p>Use <code>badge-sm</code> and <code>badge-lg</code> to change the badge size.</p>
-		</blockquote>
-
-		<div>
-			<span class="badge badge-primary badge-sm">Small Badge</span>
-			<span class="badge badge-secondary">Normal Badge</span>
-			<span class="badge badge-lg badge-success">Large Badge</span>
+		<div class="alert alert-warning">
+			Badge Sizes have been removed, use the <code>badge-size($sassMap)</code> mixin to create custom badges sizes for your app.
 		</div>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="badge-with-links"><a class="heading-anchor" href="#badge-with-links"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badge with Links</h3>
-
-		<div>
-			<span class="badge badge-primary badge-sm">
-				<a href="#1">Small Badge</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times">
-					</svg>
-				</button>
-			</span>
-			<span class="badge badge-secondary">
-				<a href="#1">Normal Badge</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times">
-					</svg>
-				</button>
-			</span>
-			<span class="badge badge-lg badge-success">
-				<a href="#1">Large Badge</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times">
-					</svg>
-				</button>
-			</span>
-		</div>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="badge-examples"><a class="heading-anchor" href="#badge-examples"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badge Examples</h3>
-	</div>
-	<div class="col-md-4">
-		<ul class="flex-column nav nav-pills">
-			<li class="nav-item"><a class="nav-link" href="#1">Inbox <span class="badge badge-primary badge-sm">32</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Sent <span class="badge badge-secondary badge-sm">2</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Drafts <span class="badge badge-sm badge-success">53</span></a></li>
-			<li class="nav-item"><a class="active nav-link" href="#1">Spam <span class="badge badge-info badge-sm">12</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Starred <span class="badge badge-sm badge-warning">1</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Important <span class="badge badge-danger badge-sm">12</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">All Mail <span class="badge badge-light badge-sm">1</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Trash <span class="badge badge-dark badge-sm">12</span></a></li>
-		</ul>
 	</div>
 </div>
 
@@ -383,10 +349,9 @@
 		<h3 id="label-sizes"><a class="heading-anchor" href="#label-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Label Sizes</h3>
 
 		<blockquote class="blockquote">
-			<p>Use <code>label-sm</code> and <code>label-lg</code> to change the label size.</p>
+			<p>Use <code>label-lg</code> to make the label larger or use the mixin <code>label-size($sassMap)</code> to create a custom sized label.</p>
 		</blockquote>
 
-		<span class="label label-primary label-sm">Small Label</span>
 		<span class="label label-secondary">Normal Label</span>
 		<span class="label label-lg label-success">Large Label</span>
 	</div>
@@ -394,32 +359,37 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="label-with-links"><a class="heading-anchor" href="#label-with-links"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Label with Links</h3>
+		<h3 id="label-dismissible"><a class="heading-anchor" href="#label-dismissible"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Label Dismissible</h3>
+
+		<span class="label label-dismissible label-secondary">
+			Normal Label
+			<button aria-label="Close" class="close" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+			</button>
+		</span>
+		<span class="label label-dismissible label-lg label-success">
+			Large Label
+			<button aria-label="Close" class="close" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+			</button>
+		</span>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="label-with-links-inside"><a class="heading-anchor" href="#label-with-links-inside"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Label with Links Inside</h3>
 
 		<div>
-			<span class="label label-primary label-sm">
-				<a href="#1">Small Label</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times">
-					</svg>
-				</button>
-			</span>
 			<span class="label label-secondary">
 				<a href="#1">Normal Label</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times">
-					</svg>
-				</button>
 			</span>
 			<span class="label label-lg label-success">
 				<a href="#1">Large Label</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times">
-					</svg>
-				</button>
 			</span>
 		</div>
 	</div>
@@ -489,29 +459,11 @@
 		<h3 id="sticker-sizes"><a class="heading-anchor" href="#sticker-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sticker Sizes</h3>
 
 		<blockquote class="blockquote">
-			<p>Stickers come in 3 different sizes, small, regular and large. Create your own custom size by changing the <code>width</code>, <code>height</code>, <code>line-height</code>, and <code>font-size</code>. You can also use the sass monospace mixin to change the width and height e.g. <code>@include monospace(30px);</code>.</p>
+			<p>Stickers come in 2 sizes small and regular. Create your own custom size with the <code>sticker-size</code> mixin.</p>
 		</blockquote>
 
 		<span class="sticker sticker-primary sticker-sm">133</span>
 		<span class="sticker sticker-secondary">133</span>
-		<span class="sticker sticker-lg sticker-success">133</span>
-		<span class="sticker sticker-xl sticker-info">133</span>
-		<span class="sticker sticker-xxl sticker-warning">133</span>
-		<span class="sticker sticker-xxl sticker-warning">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-				<use xlink:href="../../images/icons/icons.svg#magic">
-			</svg>
-		</span>
-		<span class="sticker sticker-xl sticker-info">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="../../images/icons/icons.svg#picture">
-			</svg>
-		</span>
-		<span class="sticker sticker-lg sticker-success">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-home">
-				<use xlink:href="../../images/icons/icons.svg#home">
-			</svg>
-		</span>
 		<span class="sticker sticker-secondary">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
 				<use xlink:href="../../images/icons/icons.svg#format">
@@ -540,25 +492,6 @@
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coyote.jpg">
 			<span class="sticker-overlay">TT</span>
 		</span>
-		<span class="sticker sticker-primary sticker-lg">
-			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
-			<span class="sticker-overlay">SP</span>
-		</span>
-		<span class="sticker sticker-primary sticker-xl">
-			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coffee.jpg">
-			<span class="sticker-overlay">
-				TT
-			</span>
-		</span>
-		<span class="sticker sticker-primary sticker-xxl">
-			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
-			<span class="sticker-overlay">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="../../images/icons/icons.svg#folder">
-				</svg>
-			</span>
-		</span>
-
 	</div>
 </div>
 
@@ -658,40 +591,17 @@
 	<div class="col-md-12">
 		<h3 id="stickers-as-avatars-user-icon-replacement"><a class="heading-anchor" href="#stickers-as-avatars-user-icon-replacement"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Stickers as Avatars (User Icon Replacement)</h3>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<span class="rounded-circle sticker sticker-primary sticker-sm">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_dock.jpg">
 		</span>
 		<span class="rounded-circle sticker sticker-primary">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coyote.jpg">
 		</span>
-		<span class="rounded-circle sticker sticker-primary sticker-lg">
-			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
-		</span>
-		<span class="rounded-circle sticker sticker-primary sticker-xl">
-			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coffee.jpg">
-			<span class="sticker-overlay">
-				TT
-			</span>
-		</span>
-		<span class="rounded-circle sticker sticker-secondary sticker-xxl">
-			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
-		</span>
-	</div>
-	<div class="col-md-6">
 		<span class="rounded-circle sticker sticker-secondary sticker-sm">
 			JB
 		</span>
 		<span class="rounded-circle sticker sticker-danger">
-			TT
-		</span>
-		<span class="rounded-circle sticker sticker-info sticker-lg">
-			SP
-		</span>
-		<span class="rounded-circle sticker sticker-primary sticker-xl">
-			WW
-		</span>
-		<span class="rounded-circle sticker sticker-success sticker-xxl">
 			TT
 		</span>
 	</div>
