@@ -1,0 +1,88 @@
+/**
+* Clay 2.0.0-alpha.10
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$atlas-theme: true !default;
+
+$enable-scaling-components: true !default;
+$enable-shadows: true !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px
+) !default;
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1248px
+) !default;
+
+$grid-gutter-width: 24px !default;
+
+$font-size-base: 1rem !default; // 16px
+$font-size-base-mobile: 0.875rem !default; // 14px
+$font-size-lg: 1.25rem !default; // 20px
+$font-size-lg-mobile: 1.125rem !default; // 18px
+$font-size-sm: 0.875rem !default; // 14px
+$font-size-sm-mobile: 0.75rem !default; // 12px
+
+$font-weight-light: 300 !default;
+$font-weight-normal: normal !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: bold !default;
+$font-weight-bolder: 900 !default;
+$headings-font-weight: $font-weight-semi-bold !default;
+
+$h1-font-size: 1.625rem !default; // 26px
+$h1-font-size-mobile: 1.75rem !default; // 28px
+$h2-font-size: 1.375rem !default; // 22px
+$h2-font-size-mobile: 1.5rem !default; // 24px
+$h3-font-size: 1.1875rem !default; // 19px
+$h3-font-size-mobile: 1.3125rem !default; // 21px
+$h4-font-size: 1rem !default; // 16px
+$h4-font-size-mobile: 1rem !default; // 16px
+$h5-font-size: 0.875rem !default; // 14px
+$h5-font-size-mobile: 0.875rem !default; // 14px
+$h6-font-size: 0.8125rem !default; // 13px
+$h6-font-size-mobile: 0.6875rem !default; // 11px
+
+$line-height-base: 1.5 !default;
+
+$font-import-url: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i' !default;
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$theme-colors: (
+	primary: #1865FB,
+	secondary: #6B6C7E,
+	success: #2D7C3F,
+	info: #315CA9,
+	warning: #B75115,
+	danger: #D71921,
+	light: #F1F2F5,
+	dark: #31323F
+) !default;
+
+$border-radius: 0.25rem !default; // 4px
+$border-radius-lg: 0.375rem !default; // 6px
+$border-radius-sm: 0.1875rem !default; // 3px
+
+$body-bg: #F1F2F5 !default;
+$body-color: #272833 !default;
+$text-muted: lighten(map-get($theme-colors, secondary), 24%) !default;
+
+$component-active-bg: map-get($theme-colors, primary) !default;
+$component-active-color: #FFF !default;
+
+$link-color: map-get($theme-colors, primary) !default;
+$link-hover-color: darken(map-get($theme-colors, primary), 8%) !default;
+
+$close-text-shadow: none !default;

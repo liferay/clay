@@ -1,0 +1,47 @@
+/**
+* Clay 2.0.0-alpha.10
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$navbar-underline-active-bg: lighten(map-get($theme-colors, primary), 22%) !default;
+
+// Navbar Transparent
+
+$navbar-transparent: (
+	link-active-color: $body-color
+) !default;
+
+// Navbar Light
+
+$navbar-light-color: map-get($theme-colors, secondary) !default;
+$navbar-light-hover-color: map-get($theme-colors, secondary) !default;
+$navbar-light-active-color: $body-color !default;
+$navbar-light-disabled-color: $nav-link-disabled-color !default;
+
+$navbar-light: (
+	bg: #FFF
+) !default;
+
+// Navbar Secondary
+
+$navbar-secondary: () !default;
+$navbar-secondary: map-merge((
+	bg: lighten(map-get($theme-colors, dark), 4%),
+	link-color: lighten(map-get($theme-colors, secondary), 37%),
+	link-hover-color: lighten(map-get($theme-colors, secondary), 37%),
+	link-active-color: #FFF,
+	link-disabled-color: $nav-link-disabled-color
+), $navbar-secondary);
+
+// Navbar Dark
+
+$navbar-dark-color: #FFF !default;
+$navbar-dark-hover-color: $navbar-dark-color !default;
+$navbar-dark-active-color: $navbar-dark-color !default;
+$navbar-dark-disabled-color: $nav-link-disabled-color !default;
+
+$navbar-dark: (
+	bg: map-get($theme-colors, dark)
+) !default;
