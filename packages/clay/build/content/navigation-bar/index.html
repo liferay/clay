@@ -15,7 +15,7 @@
 <body>
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
-			<div class="container">
+			<div class="container-fluid">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
 				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.9</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.10</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -63,7 +63,7 @@
 			</div>
 		</header>
 
-		<section class="container main-nav-container">
+		<section class="container-fluid main-nav-container">
 			<nav class="" id="mainNav">
 	<div class="main-nav-inner">
 			
@@ -182,6 +182,12 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
+</li>
 </ul>
 </div>
 </li>
@@ -204,8 +210,12 @@
 	<div class="col-md-12">
 		<h3 id="navbar-navigation-bar"><a class="heading-anchor" href="#navbar-navigation-bar"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Navigation Bar</h3>
 
+		<div class="alert alert-warning">
+			You will need to adjust the z-index of <code>.navbar-collapse</code> in the collapsed state if there are multiple <code>.navbar-collapse-absolute</code>&apos;s near each other.
+		</div>
+
 		<nav class="navbar navigation-bar navbar-collapse-absolute navbar-light navbar-expand-md navbar-underline">
-			<div class="container-fluid container-fluid-max-xl">
+			<div class="container">
 				<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse00" data-toggle="collapse" type="button">
 					<span class="navbar-text-truncate">App Section 2</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
@@ -213,43 +223,45 @@
 					</svg>
 				</button>
 				<div aria-expanded="false" class="collapse navbar-collapse" id="navigationBarCollapse00">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="#1">
-								<span class="navbar-text-truncate">App Section 1</span>
-							</a>
-						</li>
-						<li aria-label="Current Page" class="nav-item">
-							<a class="active nav-link" href="#1">
-								<span class="navbar-text-truncate">App Section 2</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#1">
-								<span class="navbar-text-truncate">App Section 3</span>
-							</a>
-						</li>
-						<li class="dropdown nav-item">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1">
-								<span class="navbar-text-truncate">More</span>
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="../../images/icons/icons.svg#caret-bottom">
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu navbar-breakpoint-down-d-block">
-								<a class="dropdown-item" href="#1">App Section 4</a>
-								<a class="dropdown-item" href="#1">App Section 5</a>
-								<a class="dropdown-item" href="#1">App Section 6</a>
-								<a class="dropdown-item" href="#1">App Section 7</a>
-							</div>
-						</li>
-					</ul>
+					<div class="container">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#1">
+									<span class="navbar-text-truncate">App Section 1</span>
+								</a>
+							</li>
+							<li aria-label="Current Page" class="nav-item">
+								<a class="active nav-link" href="#1">
+									<span class="navbar-text-truncate">App Section 2</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#1">
+									<span class="navbar-text-truncate">App Section 3</span>
+								</a>
+							</li>
+							<li class="dropdown nav-item show-dropdown-on-collapse">
+								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+									<span class="navbar-text-truncate">More</span>
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+										<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+									</svg>
+								</a>
+								<div aria-labelledby="" class="dropdown-menu">
+									<a class="dropdown-item" href="#1">App Section 4</a>
+									<a class="dropdown-item" href="#1">App Section 5</a>
+									<a class="dropdown-item" href="#1">App Section 6</a>
+									<a class="dropdown-item" href="#1">App Section 7</a>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</nav>
 
 		<nav class="navbar navigation-bar navbar-collapse-absolute navbar-secondary navbar-expand-md navbar-underline">
-			<div class="container-fluid container-fluid-max-xl">
+			<div class="container">
 				<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse01" data-toggle="collapse" type="button">
 					<span class="navbar-text-truncate">App Section 2</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
@@ -257,37 +269,39 @@
 					</svg>
 				</button>
 				<div aria-expanded="false" class="collapse navbar-collapse" id="navigationBarCollapse01">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="#1">
-								<span class="navbar-text-truncate">App Section 1</span>
-							</a>
-						</li>
-						<li aria-label="Current Page" class="nav-item">
-							<a class="active nav-link" href="#1">
-								<span class="navbar-text-truncate">App Section 2</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#1">
-								<span class="navbar-text-truncate">App Section 3</span>
-							</a>
-						</li>
-						<li class="dropdown nav-item">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1">
-								<span class="navbar-text-truncate">More</span>
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="../../images/icons/icons.svg#caret-bottom">
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu navbar-breakpoint-down-d-block">
-								<a class="dropdown-item" href="#1">App Section 4</a>
-								<a class="dropdown-item" href="#1">App Section 5</a>
-								<a class="dropdown-item" href="#1">App Section 6</a>
-								<a class="dropdown-item" href="#1">App Section 7</a>
-							</div>
-						</li>
-					</ul>
+					<div class="container">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#1">
+									<span class="navbar-text-truncate">App Section 1</span>
+								</a>
+							</li>
+							<li aria-label="Current Page" class="nav-item">
+								<a class="active nav-link" href="#1">
+									<span class="navbar-text-truncate">App Section 2</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#1">
+									<span class="navbar-text-truncate">App Section 3</span>
+								</a>
+							</li>
+							<li class="dropdown nav-item show-dropdown-on-collapse">
+								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+									<span class="navbar-text-truncate">More</span>
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+										<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+									</svg>
+								</a>
+								<div aria-labelledby="" class="dropdown-menu">
+									<a class="dropdown-item" href="#1">App Section 4</a>
+									<a class="dropdown-item" href="#1">App Section 5</a>
+									<a class="dropdown-item" href="#1">App Section 6</a>
+									<a class="dropdown-item" href="#1">App Section 7</a>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</nav>
