@@ -3,7 +3,7 @@ $panel-border-left-width: 0 !default;
 $panel-border-right-width: 0 !default;
 $panel-border-top-width: 0 !default;
 
-$panel-box-shadow: 0 1px lighten(map-get($theme-colors, secondary), 46%) !default;
+$panel-box-shadow: 0 1px lighten(map-get($theme-colors, secondary), 46%), 0 -1px lighten(map-get($theme-colors, secondary), 46%) !default;
 
 // Panel Header
 
