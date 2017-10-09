@@ -9,6 +9,10 @@
 }
 
 .home {
+    .font-weight-bold {
+        font-weight: 900 !important;
+    }
+
     .card {
         border-bottom: 14px solid $brand-light;
         border-radius: 0;
@@ -58,7 +62,7 @@
 .intro {
     background-color: $brand-dark;
     background-image: url(/images/home/patternbg.svg);
-    background-size: contain;
+    background-size: auto;
     color: $brand-light;
     margin-bottom: 32px;
     padding: 88px 0;
@@ -70,7 +74,6 @@
     @include media-breakpoint-up(sm) {
         background-attachment: fixed;
         background-position: center -144px;
-        background-size: auto;
         padding: 184px 0 264px;
     }
 
@@ -79,19 +82,22 @@
         border-width: 2px;
         font-size: 1rem;
         font-weight: 700;
-        height: 64px;
-        padding: 20px 64px;
+        min-height: 64px;
+        padding: 18px 64px;
     }
 
     .btn-light {
+        border-color: $brand-light;
         color: $brand-dark;
         font-size: 13px;
         letter-spacing: 1.5px;
+        line-height: $base-size;
         text-transform: uppercase;
     }
 
     .btn-outline-light {
         font-size: 16px;
+        color: $brand-light;
 
         &:hover, &:focus {
             background-color: transparent;
