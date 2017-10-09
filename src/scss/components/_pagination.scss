@@ -8,10 +8,14 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	@include scale-component {
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.pagination {
 		@include scale-component {
 			margin-top: 0.5rem;
-			width: 100%;
 		}
 	}
 }
@@ -60,9 +64,6 @@
 	+ .pagination-results {
 		@include scale-component {
 			margin-left: auto;
-			margin-right: 0;
-			padding-left: 0;
-			padding-right: 0;
 		}
 	}
 }
