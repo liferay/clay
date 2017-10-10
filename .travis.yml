@@ -2,7 +2,7 @@ before_install:
   - nvm install 8
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.1.0
   - export PATH=$HOME/.yarn/bin:$PATH
-  - npm install -g lerna@2.2.0
+  - npm install -g lerna@2.4.0
 
 cache:
   yarn: true
