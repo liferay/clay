@@ -11,12 +11,12 @@ weight: 100
 
 <div class="row">
 	<div class="col-md-4">
-		<div class="form-check form-check-card form-check-top-left">
+		<div class="card-type-asset form-check form-check-card form-check-top-left">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
 					<span class="custom-control-indicator"></span>
-					<div class="card card-type-asset">
+					<div class="card">
 						<div class="aspect-ratio bg-checkered card-item-first">
 							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
 							<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
@@ -58,11 +58,9 @@ weight: 100
 		<div class="card card-type-asset">
 			<div class="aspect-ratio bg-checkered card-item-first">
 				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-					<span class="sticker">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-							<use xlink:href="/vendor/lexicon/icons.svg#camera" />
-						</svg>
-					</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+						<use xlink:href="/vendor/lexicon/icons.svg#camera" />
+					</svg>
 				</div>
 				<span class="sticker sticker-bottom-left sticker-danger">SVG</span>
 			</div>
@@ -100,11 +98,9 @@ weight: 100
 		<div class="card card-type-asset">
 			<div class="aspect-ratio card-item-first">
 				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-					<span class="sticker">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-web-content">
-							<use xlink:href="/vendor/lexicon/icons.svg#web-content" />
-						</svg>
-					</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-web-content">
+						<use xlink:href="/vendor/lexicon/icons.svg#web-content" />
+					</svg>
 				</div>
 				<span class="sticker sticker-bottom-left sticker-danger">SVG</span>
 			</div>
@@ -142,7 +138,7 @@ weight: 100
 		<div class="card card-type-asset">
 			<div class="aspect-ratio card-item-first">
 				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-					<span class="sticker sticker-danger">HS</span>
+					<span class="sticker sticker-danger sticker-xxl">HS</span>
 				</div>
 			</div>
 			<div class="card-body">
@@ -577,10 +573,10 @@ weight: 100
 
 <div class="row">
 	<div class="col-4">
-		<div class="form-check form-check-card form-check-top-left">
+		<div class="card-type-asset form-check form-check-card form-check-top-left">
 			<label class="form-check-label">
 				<input class="form-check-input" type="checkbox">
-				<div class="card card-type-asset">
+				<div class="card">
 					<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
 						<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
@@ -618,10 +614,10 @@ weight: 100
 		</div>
 	</div>
 	<div class="col-8">
-		<div class="form-check form-check-card form-check-middle-left">
+		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<label class="form-check-label">
 				<input class="form-check-input" type="checkbox">
-				<div class="card card-horizontal card-type-directory">
+				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
 							<div class="flex-col">
@@ -661,12 +657,12 @@ weight: 100
 
 <div class="row">
 	<div class="col-4">
-		<div class="form-check form-check-card form-check-top-left">
+		<div class="card-type-asset form-check form-check-card form-check-top-left">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
 					<span class="custom-control-indicator"></span>
-					<div class="card card-type-asset">
+					<div class="card">
 						<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
 							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
 							<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
@@ -705,12 +701,12 @@ weight: 100
 		</div>
 	</div>
 	<div class="col-8">
-		<div class="form-check form-check-card form-check-middle-left">
+		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
 					<span class="custom-control-indicator"></span>
-					<div class="card card-horizontal card-type-directory">
+					<div class="card card-horizontal">
 						<div class="card-body">
 							<div class="card-row">
 								<div class="flex-col">
@@ -750,235 +746,12 @@ weight: 100
 </div>
 
 ```text/html
-<div class="form-check form-check-card form-check-top-left">
-	<label class="form-check-label">
-		<input class="form-check-input" type="checkbox">
-		<div class="card card-type-asset">
-			<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
-				<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-				<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
-			</div>
-			<div class="card-body">
-				<div class="card-row">
-					<div class="flex-col flex-col-expand">
-						<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
-						<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-						<div>
-							<span class="label label-success">Approved</span>
-						</div>
-					</div>
-					<div class="flex-col">
-						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</label>
-</div>
-```
-
-</article>
-
-
-<article id="clickable-radio-card">
-
-### Clickable Radio Card
-
-<div class="row">
-	<div class="col-4">
-		<div class="form-check form-check-card form-check-top-left">
-			<label class="form-check-label">
-				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
-				<div class="card card-type-asset">
-					<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
-						<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
-					</div>
-					<div class="card-body">
-						<div class="card-row">
-							<div class="flex-col flex-col-expand">
-								<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
-								<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-								<div>
-									<span class="label label-success">Approved</span>
-								</div>
-							</div>
-							<div class="flex-col">
-								<div class="dropdown dropdown-action">
-									<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-										</svg>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right">
-										<a class="dropdown-item" href="#1">Download</a>
-										<a class="dropdown-item" href="#1">Edit</a>
-										<a class="dropdown-item" href="#1">Move</a>
-										<a class="dropdown-item" href="#1">Checkout</a>
-										<a class="dropdown-item" href="#1">Permissions</a>
-										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</label>
-		</div>
-	</div>
-	<div class="col-8">
-		<div class="form-check form-check-card form-check-middle-left">
-			<label class="form-check-label">
-				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption2">
-				<div class="card card-horizontal card-type-directory">
-					<div class="card-body">
-						<div class="card-row">
-							<div class="flex-col">
-								<span class="sticker">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-									</svg>
-								</span>
-							</div>
-							<div class="flex-col flex-col-expand flex-col-gutters">
-								<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
-							</div>
-							<div class="flex-col">
-								<div class="dropdown dropdown-action">
-									<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-										</svg>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right">
-										<a class="dropdown-item" href="#1">Download</a>
-										<a class="dropdown-item" href="#1">Edit</a>
-										<a class="dropdown-item" href="#1">Move</a>
-										<a class="dropdown-item" href="#1">Checkout</a>
-										<a class="dropdown-item" href="#1">Permissions</a>
-										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</label>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-4">
-		<div class="form-check form-check-card form-check-top-left">
-			<div class="custom-control custom-radio">
-				<label>
-					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption1">
-					<span class="custom-control-indicator"></span>
-					<div class="card card-type-asset">
-						<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
-							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-							<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
-						</div>
-						<div class="card-body">
-							<div class="card-row">
-								<div class="flex-col flex-col-expand">
-									<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
-									<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-									<div>
-										<span class="label label-success">Approved</span>
-									</div>
-								</div>
-								<div class="flex-col">
-									<div class="dropdown dropdown-action">
-										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-											</svg>
-										</a>
-										<div class="dropdown-menu dropdown-menu-right">
-											<a class="dropdown-item" href="#1">Download</a>
-											<a class="dropdown-item" href="#1">Edit</a>
-											<a class="dropdown-item" href="#1">Move</a>
-											<a class="dropdown-item" href="#1">Checkout</a>
-											<a class="dropdown-item" href="#1">Permissions</a>
-											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</label>
-			</div>
-		</div>
-	</div>
-	<div class="col-8">
-		<div class="form-check form-check-card form-check-middle-left">
-			<div class="custom-control custom-radio">
-				<label>
-					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption2">
-					<span class="custom-control-indicator"></span>
-					<div class="card card-horizontal card-type-directory">
-						<div class="card-body">
-							<div class="card-row">
-								<div class="flex-col">
-									<span class="sticker">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-											<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-										</svg>
-									</span>
-								</div>
-								<div class="flex-col flex-col-expand flex-col-gutters">
-									<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
-								</div>
-								<div class="flex-col">
-									<div class="dropdown dropdown-action">
-										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-											</svg>
-										</a>
-										<div class="dropdown-menu dropdown-menu-right">
-											<a class="dropdown-item" href="#1">Download</a>
-											<a class="dropdown-item" href="#1">Edit</a>
-											<a class="dropdown-item" href="#1">Move</a>
-											<a class="dropdown-item" href="#1">Checkout</a>
-											<a class="dropdown-item" href="#1">Permissions</a>
-											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</label>
-			</div>
-		</div>
-	</div>
-</div>
-
-```text/html
-<div class="form-check form-check-card form-check-top-left">
-	<div class="custom-control custom-radio">
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+	<div class="custom-control custom-checkbox">
 		<label>
-			<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption1">
+			<input class="custom-control-input" type="checkbox">
 			<span class="custom-control-indicator"></span>
-			<div class="card card-type-asset">
+			<div class="card">
 				<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
 					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
@@ -1020,356 +793,223 @@ weight: 100
 </article>
 
 
-<article id="checkbox-card">
+<article id="clickable-radio-card">
 
-### Checkbox Card
+### Clickable Radio Card
 
-<div class="alert alert-warning">
-	Requires javascript to add and remove the <code>active</code> class when the input is checked/unchecked.
+<div class="row">
+	<div class="col-4">
+		<div class="card-type-asset form-check form-check-card form-check-top-left">
+			<label class="form-check-label">
+				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
+				<div class="card">
+					<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
+						<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+						<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
+					</div>
+					<div class="card-body">
+						<div class="card-row">
+							<div class="flex-col flex-col-expand">
+								<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
+								<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
+								<div>
+									<span class="label label-success">Approved</span>
+								</div>
+							</div>
+							<div class="flex-col">
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+	<div class="col-8">
+		<div class="card-type-directory form-check form-check-card form-check-middle-left">
+			<label class="form-check-label">
+				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption2">
+				<div class="card card-horizontal">
+					<div class="card-body">
+						<div class="card-row">
+							<div class="flex-col">
+								<span class="sticker">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+										<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+									</svg>
+								</span>
+							</div>
+							<div class="flex-col flex-col-expand flex-col-gutters">
+								<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
+							</div>
+							<div class="flex-col">
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
 </div>
 
 <div class="row">
 	<div class="col-4">
-		<div class="active form-check form-check-card form-check-top-left">
-			<label class="form-check-label">
-				<input checked class="form-check-input" type="checkbox">
-			</label>
-			<div class="card card-type-asset">
-				<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
-					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-					<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
-				</div>
-				<div class="card-body">
-					<div class="card-row">
-						<div class="flex-col flex-col-expand">
-							<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
-							<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-							<div>
-								<span class="label label-success">Approved</span>
-							</div>
-						</div>
-						<div class="flex-col">
-							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-8">
-		<div class="form-check form-check-card form-check-middle-left">
-			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox">
-			</label>
-			<div class="card card-horizontal card-type-directory">
-				<div class="card-body">
-					<div class="card-row">
-						<div class="flex-col">
-							<span class="sticker">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-								</svg>
-							</span>
-						</div>
-						<div class="flex-col flex-col-expand flex-col-gutters">
-							<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
-						</div>
-						<div class="flex-col">
-							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="form-check form-check-card form-check-middle-left">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-			<div class="card card-horizontal card-type-directory">
-				<div class="card-body">
-					<div class="card-row">
-						<div class="flex-col">
-							<span class="sticker">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-								</svg>
-							</span>
-						</div>
-						<div class="flex-col flex-col-expand flex-col-gutters">
-							<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
-						</div>
-						<div class="flex-col">
-							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-```text/html
-<div class="active form-check form-check-card form-check-top-left">
-	<label class="form-check-label">
-		<input checked class="form-check-input" type="checkbox">
-	</label>
-	<div class="card card-type-asset">
-		<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
-			<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-			<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
-		</div>
-		<div class="card-body">
-			<div class="card-row">
-				<div class="flex-col flex-col-expand">
-					<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
-					<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-					<div>
-						<span class="label label-success">Approved</span>
-					</div>
-				</div>
-				<div class="flex-col">
-					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-							</svg>
-						</a>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1">Download</a>
-							<a class="dropdown-item" href="#1">Edit</a>
-							<a class="dropdown-item" href="#1">Move</a>
-							<a class="dropdown-item" href="#1">Checkout</a>
-							<a class="dropdown-item" href="#1">Permissions</a>
-							<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-```
-
-</article>
-
-
-<article id="radio-card">
-
-### Radio Card
-
-<div class="alert alert-warning">
-	Requires javascript to add and remove the <code>active</code> class when the input is checked/unchecked.
-</div>
-
-<div class="row">
-	<div class="col-4">
-		<div class="active form-check form-check-card form-check-top-left">
-			<label class="form-check-label">
-				<input checked class="form-check-input" name="cardRadios1" type="radio" value="cardOption1">
-			</label>
-			<div class="card card-type-asset">
-				<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
-					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-					<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
-				</div>
-				<div class="card-body">
-					<div class="card-row">
-						<div class="flex-col flex-col-expand">
-							<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
-							<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-							<div>
-								<span class="label label-success">Approved</span>
-							</div>
-						</div>
-						<div class="flex-col">
-							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-8">
-		<div class="form-check form-check-card form-check-middle-left">
-			<label class="form-check-label">
-				<input class="form-check-input" name="cardRadios1" type="radio" value="cardOption2">
-			</label>
-			<div class="card card-horizontal card-type-directory">
-				<div class="card-body">
-					<div class="card-row">
-						<div class="flex-col">
-							<span class="sticker">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-								</svg>
-							</span>
-						</div>
-						<div class="flex-col flex-col-expand flex-col-gutters">
-							<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
-						</div>
-						<div class="flex-col">
-							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="form-check form-check-card form-check-middle-left">
+		<div class="card-type-asset form-check form-check-card form-check-top-left">
 			<div class="custom-control custom-radio">
 				<label>
-					<input class="custom-control-input" name="cardRadios1" type="radio" value="cardOption3">
+					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption1">
 					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-			<div class="card card-horizontal card-type-directory">
-				<div class="card-body">
-					<div class="card-row">
-						<div class="flex-col">
-							<span class="sticker">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-								</svg>
-							</span>
+					<div class="card">
+						<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
+							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+							<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 						</div>
-						<div class="flex-col flex-col-expand flex-col-gutters">
-							<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
-						</div>
-						<div class="flex-col">
-							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+						<div class="card-body">
+							<div class="card-row">
+								<div class="flex-col flex-col-expand">
+									<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
+									<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
+									<div>
+										<span class="label label-success">Approved</span>
+									</div>
+								</div>
+								<div class="flex-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#1">Download</a>
+											<a class="dropdown-item" href="#1">Edit</a>
+											<a class="dropdown-item" href="#1">Move</a>
+											<a class="dropdown-item" href="#1">Checkout</a>
+											<a class="dropdown-item" href="#1">Permissions</a>
+											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="col-8">
+		<div class="card-type-directory form-check form-check-card form-check-middle-left">
+			<div class="custom-control custom-radio">
+				<label>
+					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption2">
+					<span class="custom-control-indicator"></span>
+					<div class="card card-horizontal">
+						<div class="card-body">
+							<div class="card-row">
+								<div class="flex-col">
+									<span class="sticker">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+											<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+										</svg>
+									</span>
+								</div>
+								<div class="flex-col flex-col-expand flex-col-gutters">
+									<div class="card-title text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
+								</div>
+								<div class="flex-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#1">Download</a>
+											<a class="dropdown-item" href="#1">Edit</a>
+											<a class="dropdown-item" href="#1">Move</a>
+											<a class="dropdown-item" href="#1">Checkout</a>
+											<a class="dropdown-item" href="#1">Permissions</a>
+											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</label>
 			</div>
 		</div>
 	</div>
 </div>
 
 ```text/html
-<div class="active form-check form-check-card form-check-top-left">
+<div class="card-type-asset form-check form-check-card form-check-top-left">
 	<label class="form-check-label">
-		<input checked class="form-check-input" name="cardRadios1" type="radio" value="cardOption1">
-	</label>
-	<div class="card card-type-asset">
-		<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
-			<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-			<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
-		</div>
-		<div class="card-body">
-			<div class="card-row">
-				<div class="flex-col flex-col-expand">
-					<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
-					<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-					<div>
-						<span class="label label-success">Approved</span>
+		<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
+		<div class="card">
+			<div class="aspect-ratio aspect-ratio-16-to-9 bg-checkered card-item-first">
+				<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+				<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
+			</div>
+			<div class="card-body">
+				<div class="card-row">
+					<div class="flex-col flex-col-expand">
+						<div class="card-title text-truncate">Aldcott Gage George Polwarth-Kitchener</div>
+						<div class="card-subtitle text-truncate" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
+						<div>
+							<span class="label label-success">Approved</span>
+						</div>
 					</div>
-				</div>
-				<div class="flex-col">
-					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-							</svg>
-						</a>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1">Download</a>
-							<a class="dropdown-item" href="#1">Edit</a>
-							<a class="dropdown-item" href="#1">Move</a>
-							<a class="dropdown-item" href="#1">Checkout</a>
-							<a class="dropdown-item" href="#1">Permissions</a>
-							<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+					<div class="flex-col">
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</label>
 </div>
 ```
 
