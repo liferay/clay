@@ -47,33 +47,6 @@ weight: 100
 </article>
 
 
-<article id="badges-as-anchor-tags">
-
-### Badges as Anchor Tags
-
-<a class="badge badge-primary" href="#1">Primary</a>{sp}
-<a class="badge badge-secondary" href="#1">Secondary</a>{sp}
-<a class="badge badge-success" href="#1">Success</a>{sp}
-<a class="badge badge-info" href="#1">Info</a>{sp}
-<a class="badge badge-warning" href="#1">Warning</a>{sp}
-<a class="badge badge-danger" href="#1">Danger</a>{sp}
-<a class="badge badge-light" href="#1">Light</a>{sp}
-<a class="badge badge-dark" href="#1">Dark</a>{sp}
-
-```text/html
-<a class="badge badge-primary" href="#1">Primary</a>
-<a class="badge badge-secondary" href="#1">Secondary</a>
-<a class="badge badge-success" href="#1">Success</a>
-<a class="badge badge-info" href="#1">Info</a>
-<a class="badge badge-warning" href="#1">Warning</a>
-<a class="badge badge-danger" href="#1">Danger</a>
-<a class="badge badge-light" href="#1">Light</a>
-<a class="badge badge-dark" href="#1">Dark</a>
-```
-
-</article>
-
-
 <article id="badge-pill">
 
 ### Badge Pill
@@ -101,80 +74,40 @@ weight: 100
 </article>
 
 
-<article id="badge-sizes">
+<article id="badges-as-anchor-tags">
 
-### Badge Sizes
+### Badges as Anchor Tags
 
-> Use `badge-sm` and `badge-lg` to change the badge size.
-
-<span class="badge badge-primary badge-sm">Small Badge</span>{sp}
-<span class="badge badge-secondary">Normal Badge</span>{sp}
-<span class="badge badge-lg badge-success">Large Badge</span>{sp}
+<a class="badge badge-primary" href="#1">Primary</a>{sp}
+<a class="badge badge-secondary" href="#1">Secondary</a>{sp}
+<a class="badge badge-success" href="#1">Success</a>{sp}
+<a class="badge badge-info" href="#1">Info</a>{sp}
+<a class="badge badge-warning" href="#1">Warning</a>{sp}
+<a class="badge badge-danger" href="#1">Danger</a>{sp}
+<a class="badge badge-light" href="#1">Light</a>{sp}
+<a class="badge badge-dark" href="#1">Dark</a>{sp}
 
 ```text/html
-<span class="badge badge-primary badge-sm">Small Badge</span>
-<span class="badge badge-secondary">Normal Badge</span>
-<span class="badge badge-lg badge-success">Large Badge</span>
+<a class="badge badge-primary" href="#1">Primary</a>
+<a class="badge badge-secondary" href="#1">Secondary</a>
+<a class="badge badge-success" href="#1">Success</a>
+<a class="badge badge-info" href="#1">Info</a>
+<a class="badge badge-warning" href="#1">Warning</a>
+<a class="badge badge-danger" href="#1">Danger</a>
+<a class="badge badge-light" href="#1">Light</a>
+<a class="badge badge-dark" href="#1">Dark</a>
 ```
 
 </article>
 
 
-<article id="badges-with-links">
+<article id="badge-sizes">
 
-### Badges with Links
+### Badge Sizes
 
-<span class="badge badge-primary badge-sm">
-	<a href="#1">Small Badge</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>{sp}
-<span class="badge badge-secondary">
-	<a href="#1">Normal Badge</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>{sp}
-<span class="badge badge-lg badge-success">
-	<a href="#1">Large Badge</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>{sp}
-
-```text/html
-<span class="badge badge-primary badge-sm">
-	<a href="#1">Small Badge</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>
-<span class="badge badge-secondary">
-	<a href="#1">Normal Badge</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>
-<span class="badge badge-lg badge-success">
-	<a href="#1">Large Badge</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>
-```
+<div class="alert alert-warning">
+	Badge Sizes have been removed, use the <code>badge-size($sassMap)</code> mixin to create custom badges sizes for your app.
+</div>
 
 </article>
 
@@ -292,55 +225,45 @@ weight: 100
 
 ### Label Sizes
 
-> Use `label-sm` and `label-lg` to change the label size.
+> Use `label-lg` to make the label larger or use the mixin `label-size($sassMap)` to create a custom sized label.
 
-<span class="label label-primary label-sm">Small Label</span>{sp}
 <span class="label label-secondary">Normal Label</span>{sp}
 <span class="label label-lg label-success">Large Label</span>{sp}
 
 ```text/html
-<span class="label label-primary label-sm">Small Label</span>
 <span class="label label-secondary">Normal Label</span>
 <span class="label label-lg label-success">Large Label</span>
 ```
 ```soy
 {call ClayLabel.render}
-	{param label: 'Small Label' /}
-	{param size: 'sm' /}
-	{param style: 'info' /}
+	{param closeable: true /}
+	{param label: 'Normal Label' /}
 {/call}
 
 {call ClayLabel.render}
-	{param closeable: true /}
-	{param label: 'Normal Label' /}
+	{param label: 'Large Label' /}
+	{param size: 'lg' /}
+	{param style: 'info' /}
 {/call}
 ```
 
 </article>
 
 
-<article id="label-with-links">
+<article id="label-dismissible">
 
-### Label with Links
+### Label Dismissible
 
-<span class="label label-primary label-sm">
-	<a href="#1">Small Label</a>
+<span class="label label-dismissible label-secondary">
+	Normal Label{sp}
 	<button aria-label="Close" class="close" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
 </span>{sp}
-<span class="label label-secondary">
-	<a href="#1">Normal Label</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>{sp}
-<span class="label label-lg label-success">
-	<a href="#1">Large Label</a>
+<span class="label label-dismissible label-lg label-success">
+	Large Label{sp}
 	<button aria-label="Close" class="close" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
@@ -349,24 +272,17 @@ weight: 100
 </span>{sp}
 
 ```text/html
-<span class="label label-primary label-sm">
-	<a href="#1">Small Label</a>
+<span class="label label-dismissible label-secondary">
+	Normal Label
 	<button aria-label="Close" class="close" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
 </span>
-<span class="label label-secondary">
-	<a href="#1">Normal Label</a>
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>
-<span class="label label-lg label-success">
-	<a href="#1">Large Label</a>
+
+<span class="label label-dismissible label-lg label-success">
+	Large Label
 	<button aria-label="Close" class="close" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
@@ -377,17 +293,41 @@ weight: 100
 ```soy
 {call ClayLabel.render}
 	{param closeable: true /}
-	{param label: 'Small Label' /}
+	{param label: 'Normal Label' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param size: 'sm' /}
-	{param style: 'info' /}
 {/call}
 
 {call ClayLabel.render}
 	{param closeable: true /}
-	{param label: 'Normal Label' /}
+	{param label: 'Large Label' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param size: 'lg' /}
+	{param style: 'info' /}
 {/call}
+```
+
+</article>
+
+
+<article id="label-with-links-inside">
+
+### Label with Links Inside
+
+<span class="label label-secondary">
+	<a href="#1">Normal Label</a>
+</span>{sp}
+<span class="label label-lg label-success">
+	<a href="#1">Large Label</a>
+</span>{sp}
+
+```text/html
+<span class="label label-secondary">
+	<a href="#1">Normal Label</a>
+</span>
+
+<span class="label label-lg label-success">
+	<a href="#1">Large Label</a>
+</span>
 ```
 
 </article>
