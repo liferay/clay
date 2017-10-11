@@ -1,0 +1,38 @@
+// Creates a Navbar color variant
+// @param $map - Sass map that contain Navbar Variant properties to modify
+
+@mixin panel-variant($map) {
+	$border-color: map-get($map, border-color);
+	$box-shadow: map-get($map, box-shadow);
+	$color: map-get($map, color);
+	$header-bg: map-get($map, header-bg);
+	$header-border-color: map-get($map, header-border-color);
+	$header-color: map-get($map, header-color);
+	$footer-bg: map-get($map, footer-bg);
+	$footer-border-color: map-get($map, footer-border-color);
+	$footer-color: map-get($map, footer-color);
+
+	border-color: $border-color;
+	box-shadow: $box-shadow;
+	color: $color;
+
+	.panel-header {
+		background-color: $header-bg;
+		border-color: $header-border-color;
+		color: $header-color;
+
+		.panel-group & {
+			+ .panel-collapse > .panel-body {
+				border-color: $border-color;
+			}
+		}
+	}
+
+	.panel-footer {
+		background-color: $footer-bg;
+		border-color: $footer-border-color;
+		color: $footer-color;
+	}
+
+	@content;
+}
