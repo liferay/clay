@@ -1,5 +1,5 @@
 ---
-title: Navbars
+title: Navbar
 description: Components
 layout: "guide"
 weight: 100
