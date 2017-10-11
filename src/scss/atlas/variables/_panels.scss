@@ -1,9 +1,9 @@
-$panel-border-bottom-width: 0 !default;
-$panel-border-left-width: 0 !default;
-$panel-border-right-width: 0 !default;
-$panel-border-top-width: 0 !default;
+$panel-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 
-$panel-box-shadow: 0 1px lighten(map-get($theme-colors, secondary), 46%), 0 -1px lighten(map-get($theme-colors, secondary), 46%) !default;
+$panel-border-bottom-width: 1px !default;
+$panel-border-left-width: 1px !default;
+$panel-border-right-width: 1px !default;
+$panel-border-top-width: 1px !default;
 
 // Panel Header
 
@@ -25,30 +25,36 @@ $panel-collapse-icon-font-size: 0.75rem !default; // 12px
 
 // Panel Group
 
-$panel-group-panel-margin-bottom: 1px !default;
+$panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
 // Panel Variants
 
+$panel-primary-border-color: !default;
 $panel-primary-header-color: map-get($theme-colors, primary) !default;
 $panel-primary-header-bg: lighten($panel-primary-header-color, 44%) !default;
 $panel-primary-header-border-color: lighten($panel-primary-header-color, 22%) !default;
 
+$panel-secondary-border-color: !default;
 $panel-secondary-color: map-get($theme-colors, secondary) !default;
 $panel-secondary-header-bg: #FFF !default;
 $panel-secondary-header-border-color: lighten($panel-secondary-color, 46%) !default;
 
+$panel-info-border-color: !default;
 $panel-info-header-color: map-get($theme-colors, info) !default;
 $panel-info-header-bg: lighten($panel-info-header-color, 53%) !default;
 $panel-info-header-border-color: lighten($panel-info-header-color, 28%) !default;
 
+$panel-success-border-color: !default;
 $panel-success-header-color: map-get($theme-colors, success) !default;
 $panel-success-header-bg: lighten($panel-success-header-color, 63%) !default;
 $panel-success-header-border-color: lighten($panel-success-header-color, 25%) !default;
 
+$panel-warning-border-color: !default;
 $panel-warning-header-color: map-get($theme-colors, warning) !default;
 $panel-warning-header-bg: lighten($panel-warning-header-color, 57%) !default;
 $panel-warning-header-border-color: lighten($panel-warning-header-color, 24%) !default;
 
+$panel-danger-border-color: !default;
 $panel-danger-header-color: map-get($theme-colors, danger) !default;
 $panel-danger-header-bg: lighten($panel-danger-header-color, 49.5%) !default;
 $panel-danger-header-border-color: lighten($panel-danger-header-color, 28%) !default;
