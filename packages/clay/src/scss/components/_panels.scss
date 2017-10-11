@@ -1,7 +1,7 @@
 .panel {
 	background-color: $panel-bg;
-	border-color: transparent;
-	border-style: solid;
+	border-color: $panel-border-color;
+	border-style: $panel-border-style;
 	border-width: $panel-border-width;
 
 	@include border-radius($panel-border-radius);
