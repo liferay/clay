@@ -14,12 +14,12 @@ weight: 100
 <div class="clay-site-form-container">
 	<div class="form-group">
 		<label>
-			Default text input
+			Default text input{sp}
 			<span class="reference-mark">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>
-			</span>
+			</span>{sp}
 		</label>
 		<input class="form-control" placeholder="Placeholder" type="text">
 	</div>

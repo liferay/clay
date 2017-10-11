@@ -9,14 +9,14 @@ weight: 100
 
 ### Badges
 
-<span class="badge badge-primary">8</span>
-<span class="badge badge-secondary">87</span>
-<span class="badge badge-success">999K</span>
-<span class="badge badge-info">91</span>
-<span class="badge badge-warning">21</span>
-<span class="badge badge-danger">130</span>
-<span class="badge badge-light">130</span>
-<span class="badge badge-dark">130</span>
+<span class="badge badge-primary">8</span>{sp}
+<span class="badge badge-secondary">87</span>{sp}
+<span class="badge badge-success">999K</span>{sp}
+<span class="badge badge-info">91</span>{sp}
+<span class="badge badge-warning">21</span>{sp}
+<span class="badge badge-danger">130</span>{sp}
+<span class="badge badge-light">130</span>{sp}
+<span class="badge badge-dark">130</span>{sp}
 
 ```text/html
 <span class="badge badge-primary">8</span>
@@ -51,14 +51,14 @@ weight: 100
 
 ### Badges as Anchor Tags
 
-<a class="badge badge-primary" href="#1">Primary</a>
-<a class="badge badge-secondary" href="#1">Secondary</a>
-<a class="badge badge-success" href="#1">Success</a>
-<a class="badge badge-info" href="#1">Info</a>
-<a class="badge badge-warning" href="#1">Warning</a>
-<a class="badge badge-danger" href="#1">Danger</a>
-<a class="badge badge-light" href="#1">Light</a>
-<a class="badge badge-dark" href="#1">Dark</a>
+<a class="badge badge-primary" href="#1">Primary</a>{sp}
+<a class="badge badge-secondary" href="#1">Secondary</a>{sp}
+<a class="badge badge-success" href="#1">Success</a>{sp}
+<a class="badge badge-info" href="#1">Info</a>{sp}
+<a class="badge badge-warning" href="#1">Warning</a>{sp}
+<a class="badge badge-danger" href="#1">Danger</a>{sp}
+<a class="badge badge-light" href="#1">Light</a>{sp}
+<a class="badge badge-dark" href="#1">Dark</a>{sp}
 
 ```text/html
 <a class="badge badge-primary" href="#1">Primary</a>
@@ -78,14 +78,14 @@ weight: 100
 
 ### Badge Pill
 
-<span class="badge badge-pill badge-primary">8</span>
-<span class="badge badge-pill badge-secondary">87</span>
-<span class="badge badge-pill badge-success">999K</span>
-<span class="badge badge-info badge-pill">91</span>
-<span class="badge badge-pill badge-warning">21</span>
-<span class="badge badge-danger badge-pill">130</span>
-<span class="badge badge-light badge-pill">130</span>
-<span class="badge badge-dark badge-pill">130</span>
+<span class="badge badge-pill badge-primary">8</span>{sp}
+<span class="badge badge-pill badge-secondary">87</span>{sp}
+<span class="badge badge-pill badge-success">999K</span>{sp}
+<span class="badge badge-info badge-pill">91</span>{sp}
+<span class="badge badge-pill badge-warning">21</span>{sp}
+<span class="badge badge-danger badge-pill">130</span>{sp}
+<span class="badge badge-light badge-pill">130</span>{sp}
+<span class="badge badge-dark badge-pill">130</span>{sp}
 
 ```text/html
 <span class="badge badge-pill badge-primary">8</span>
@@ -107,9 +107,9 @@ weight: 100
 
 > Use `badge-sm` and `badge-lg` to change the badge size.
 
-<span class="badge badge-primary badge-sm">Small Badge</span>
-<span class="badge badge-secondary">Normal Badge</span>
-<span class="badge badge-lg badge-success">Large Badge</span>
+<span class="badge badge-primary badge-sm">Small Badge</span>{sp}
+<span class="badge badge-secondary">Normal Badge</span>{sp}
+<span class="badge badge-lg badge-success">Large Badge</span>{sp}
 
 ```text/html
 <span class="badge badge-primary badge-sm">Small Badge</span>
@@ -131,7 +131,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
-</span>
+</span>{sp}
 <span class="badge badge-secondary">
 	<a href="#1">Normal Badge</a>
 	<button aria-label="Close" class="close" type="button">
@@ -139,7 +139,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
-</span>
+</span>{sp}
 <span class="badge badge-lg badge-success">
 	<a href="#1">Large Badge</a>
 	<button aria-label="Close" class="close" type="button">
@@ -147,7 +147,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
-</span>
+</span>{sp}
 
 ```text/html
 <span class="badge badge-primary badge-sm">
@@ -183,14 +183,14 @@ weight: 100
 
 ### Labels
 
-<span class="label label-primary">Primary</span>
-<span class="label label-secondary">Secondary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-<span class="label label-light">Light</span>
-<span class="label label-dark">Dark</span>
+<span class="label label-primary">Primary</span>{sp}
+<span class="label label-secondary">Secondary</span>{sp}
+<span class="label label-success">Success</span>{sp}
+<span class="label label-info">Info</span>{sp}
+<span class="label label-warning">Warning</span>{sp}
+<span class="label label-danger">Danger</span>{sp}
+<span class="label label-light">Light</span>{sp}
+<span class="label label-dark">Dark</span>{sp}
 
 ```text/html
 <span class="label label-primary">Primary</span>
@@ -235,14 +235,14 @@ weight: 100
 
 ### Labels as an Anchor Tag
 
-<a class="label label-primary" href="#1">Primary</a>
-<a class="label label-secondary" href="#1">Secondary</a>
-<a class="label label-success" href="#1">Success</a>
-<a class="label label-info" href="#1">Info</a>
-<a class="label label-warning" href="#1">Warning</a>
-<a class="label label-danger" href="#1">Danger</a>
-<a class="label label-light" href="#1">Light</a>
-<a class="label label-dark" href="#1">Dark</a>
+<a class="label label-primary" href="#1">Primary</a>{sp}
+<a class="label label-secondary" href="#1">Secondary</a>{sp}
+<a class="label label-success" href="#1">Success</a>{sp}
+<a class="label label-info" href="#1">Info</a>{sp}
+<a class="label label-warning" href="#1">Warning</a>{sp}
+<a class="label label-danger" href="#1">Danger</a>{sp}
+<a class="label label-light" href="#1">Light</a>{sp}
+<a class="label label-dark" href="#1">Dark</a>{sp}
 
 ```text/html
 <a class="label label-primary" href="#1">Primary</a>
@@ -294,9 +294,9 @@ weight: 100
 
 > Use `label-sm` and `label-lg` to change the label size.
 
-<span class="label label-primary label-sm">Small Label</span>
-<span class="label label-secondary">Normal Label</span>
-<span class="label label-lg label-success">Large Label</span>
+<span class="label label-primary label-sm">Small Label</span>{sp}
+<span class="label label-secondary">Normal Label</span>{sp}
+<span class="label label-lg label-success">Large Label</span>{sp}
 
 ```text/html
 <span class="label label-primary label-sm">Small Label</span>
@@ -330,7 +330,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
-</span>
+</span>{sp}
 <span class="label label-secondary">
 	<a href="#1">Normal Label</a>
 	<button aria-label="Close" class="close" type="button">
@@ -338,7 +338,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
-</span>
+</span>{sp}
 <span class="label label-lg label-success">
 	<a href="#1">Large Label</a>
 	<button aria-label="Close" class="close" type="button">
@@ -346,7 +346,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
 	</button>
-</span>
+</span>{sp}
 
 ```text/html
 <span class="label label-primary label-sm">
@@ -399,14 +399,14 @@ weight: 100
 
 > Stickers are monospaced badges/labels.
 
-<span class="sticker sticker-primary">133</span>
-<span class="sticker sticker-secondary">133</span>
-<span class="sticker sticker-success">133</span>
-<span class="sticker sticker-info">133</span>
-<span class="sticker sticker-warning">133</span>
-<span class="sticker sticker-danger">133</span>
-<span class="sticker sticker-light">133</span>
-<span class="sticker sticker-dark">133</span>
+<span class="sticker sticker-primary">133</span>{sp}
+<span class="sticker sticker-secondary">133</span>{sp}
+<span class="sticker sticker-success">133</span>{sp}
+<span class="sticker sticker-info">133</span>{sp}
+<span class="sticker sticker-warning">133</span>{sp}
+<span class="sticker sticker-danger">133</span>{sp}
+<span class="sticker sticker-light">133</span>{sp}
+<span class="sticker sticker-dark">133</span>{sp}
 
 ```text/html
 <span class="sticker sticker-primary">133</span>
@@ -549,11 +549,11 @@ weight: 100
 
 > Stickers come in 3 different sizes, small, regular and large. Create your own custom size by changing the `width`, `height`, `line-height`, and `font-size`. You can also use the sass monospace mixin to change the width and height e.g. `@include monospace(30px);`.
 
-<span class="sticker sticker-primary sticker-sm">133</span>
-<span class="sticker sticker-secondary">133</span>
-<span class="sticker sticker-lg sticker-success">133</span>
-<span class="sticker sticker-xl sticker-info">133</span>
-<span class="sticker sticker-xxl sticker-warning">133</span>
+<span class="sticker sticker-primary sticker-sm">133</span>{sp}
+<span class="sticker sticker-secondary">133</span>{sp}
+<span class="sticker sticker-lg sticker-success">133</span>{sp}
+<span class="sticker sticker-xl sticker-info">133</span>{sp}
+<span class="sticker sticker-xxl sticker-warning">133</span>{sp}
 
 ```text/html
 <span class="sticker sticker-primary sticker-sm">133</span>
@@ -591,27 +591,27 @@ weight: 100
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
 		<use xlink:href="/vendor/lexicon/icons.svg#magic" />
 	</svg>
-</span>
+</span>{sp}
 <span class="sticker sticker-xl sticker-info">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
 		<use xlink:href="/vendor/lexicon/icons.svg#picture" />
 	</svg>
-</span>
+</span>{sp}
 <span class="sticker sticker-lg sticker-success">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-home">
 		<use xlink:href="/vendor/lexicon/icons.svg#home" />
 	</svg>
-</span>
+</span>{sp}
 <span class="sticker sticker-secondary">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
 		<use xlink:href="/vendor/lexicon/icons.svg#format" />
 	</svg>
-</span>
+</span>{sp}
 <span class="sticker sticker-primary sticker-sm">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 		<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 	</svg>
-</span>
+</span>{sp}
 
 ```text/html
 <span class="sticker sticker-xxl sticker-warning">
@@ -689,21 +689,21 @@ weight: 100
 <span class="sticker sticker-primary sticker-sm">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
 	<span class="sticker-overlay">JB</span>
-</span>
+</span>{sp}
 <span class="sticker sticker-primary">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
 	<span class="sticker-overlay">TT</span>
-</span>
+</span>{sp}
 <span class="sticker sticker-primary sticker-lg">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
 	<span class="sticker-overlay">SP</span>
-</span>
+</span>{sp}
 <span class="sticker sticker-primary sticker-xl">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
 	<span class="sticker-overlay">
 		TT
 	</span>
-</span>
+</span>{sp}
 <span class="sticker sticker-primary sticker-xxl">
 	<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
 	<span class="sticker-overlay">
@@ -711,7 +711,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 		</svg>
 	</span>
-</span>
+</span>{sp}
 
 </article>
 
@@ -916,19 +916,19 @@ weight: 100
 
 <span class="rounded-circle sticker sticker-primary sticker-sm">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
-</span>
+</span>{sp}
 <span class="rounded-circle sticker sticker-primary">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
-</span>
+</span>{sp}
 <span class="rounded-circle sticker sticker-primary sticker-lg">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-</span>
+</span>{sp}
 <span class="rounded-circle sticker sticker-primary sticker-xl">
 	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
 	<span class="sticker-overlay">
 		TT
 	</span>
-</span>
+</span>{sp}
 <span class="rounded-circle sticker sticker-secondary sticker-xxl">
 	<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
 </span>

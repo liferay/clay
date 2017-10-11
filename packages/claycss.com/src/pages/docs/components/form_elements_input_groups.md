@@ -436,7 +436,7 @@ weight: 100
 <div class="clay-site-form-container">
 	<div class="form-group">
 		<label for="inputGroupTransparent">
-			Label
+			Label{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
@@ -508,7 +508,7 @@ weight: 100
 	</div>
 	<div class="form-group">
 		<label for="inputGroupTransparentLg">
-			Label Input Group Lg
+			Label Input Group Lg{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
@@ -527,7 +527,7 @@ weight: 100
 	</div>
 	<div class="form-group">
 		<label for="inputGroupTransparentNormal">
-			Label
+			Label{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
@@ -562,7 +562,7 @@ weight: 100
 	</div>
 	<div class="form-group">
 		<label for="inputGroupTransparentSm">
-			Label Input Group Sm
+			Label Input Group Sm{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
