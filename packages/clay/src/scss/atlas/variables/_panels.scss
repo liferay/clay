@@ -29,32 +29,11 @@ $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
 // Panel Variants
 
-$panel-primary-border-color: !default;
-$panel-primary-header-color: map-get($theme-colors, primary) !default;
-$panel-primary-header-bg: lighten($panel-primary-header-color, 44%) !default;
-$panel-primary-header-border-color: lighten($panel-primary-header-color, 22%) !default;
-
-$panel-secondary-border-color: !default;
-$panel-secondary-color: map-get($theme-colors, secondary) !default;
-$panel-secondary-header-bg: #FFF !default;
-$panel-secondary-header-border-color: lighten($panel-secondary-color, 46%) !default;
-
-$panel-info-border-color: !default;
-$panel-info-header-color: map-get($theme-colors, info) !default;
-$panel-info-header-bg: lighten($panel-info-header-color, 53%) !default;
-$panel-info-header-border-color: lighten($panel-info-header-color, 28%) !default;
-
-$panel-success-border-color: !default;
-$panel-success-header-color: map-get($theme-colors, success) !default;
-$panel-success-header-bg: lighten($panel-success-header-color, 63%) !default;
-$panel-success-header-border-color: lighten($panel-success-header-color, 25%) !default;
-
-$panel-warning-border-color: !default;
-$panel-warning-header-color: map-get($theme-colors, warning) !default;
-$panel-warning-header-bg: lighten($panel-warning-header-color, 57%) !default;
-$panel-warning-header-border-color: lighten($panel-warning-header-color, 24%) !default;
-
-$panel-danger-border-color: !default;
-$panel-danger-header-color: map-get($theme-colors, danger) !default;
-$panel-danger-header-bg: lighten($panel-danger-header-color, 49.5%) !default;
-$panel-danger-header-border-color: lighten($panel-danger-header-color, 28%) !default;
+$panel-secondary: (
+	border-color: null,
+	color: map-get($theme-colors, secondary),
+	header-bg: null,
+	header-border-color: lighten(map-get($theme-colors, secondary), 46%),
+	footer-bg: null,
+	footer-border-color: lighten(map-get($theme-colors, secondary), 46%)
+);
