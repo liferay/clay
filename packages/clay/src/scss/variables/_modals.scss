@@ -26,18 +26,6 @@ $modal-btn-monospaced-opacity: 0.5 !default;
 $modal-btn-monospaced-hover-opacity: 0.75 !default;
 $modal-btn-monospaced-spacer-x: 0.3125rem !default; // 5px
 
-// Modal Info
-
-$modal-info-header-bg: theme-color-level(info, -10) !default;
-$modal-info-header-border-color: theme-color-level(info, -9) !default;
-$modal-info-header-color: theme-color-level(info, 6) !default;
-$modal-info-header-close-color: theme-color-level(info, 6) !default;
-$modal-info-body-bg: null !default;
-$modal-info-body-color: null !default;
-$modal-info-footer-bg: theme-color-level(info, -10) !default;
-$modal-info-footer-border-color: theme-color-level(info, -9) !default;
-$modal-info-footer-color: theme-color-level(info, 6) !default;
-
 // Modal Success
 
 $modal-success: () !default;
@@ -47,6 +35,16 @@ $modal-success: map-merge((
 	header-color: theme-color-level(success, 6),
 	header-title-indicator: lx-icon(check-circle, theme-color-level(success, 6))
 ), $modal-success);
+
+// Modal Info
+
+$modal-info: () !default;
+$modal-info: map-merge((
+	header-bg: theme-color-level(info, -10),
+	header-border-color: theme-color-level(info, -9),
+	header-color: theme-color-level(info, 6),
+	header-title-indicator: lx-icon(info-circle, theme-color-level(info, 6))
+), $modal-info);
 
 // Modal Warning
 
@@ -71,18 +69,7 @@ $modal-danger: map-merge((
 $modal-palette: () !default;
 $modal-palette: map-merge((
 	success: $modal-success,
-	info: (
-		header-bg: $modal-info-header-bg,
-		header-border-color: $modal-info-header-border-color,
-		header-color: $modal-info-header-color,
-		header-close-color: $modal-info-header-close-color,
-		header-title-indicator: lx-icon(info-circle, $modal-info-header-close-color),
-		body-bg: $modal-info-body-bg,
-		body-color: $modal-info-body-color,
-		footer-bg: $modal-info-footer-bg,
-		footer-border-color: $modal-info-footer-border-color,
-		footer-color: $modal-info-footer-color
-	),
+	info: $modal-info,
 	warning: $modal-warning,
 	danger: $modal-danger
 ), $modal-palette);
