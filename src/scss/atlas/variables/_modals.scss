@@ -18,17 +18,6 @@ $modal-btn-monospaced-font-size: 0.875rem !default; // 14px
 $modal-btn-monospaced-opacity: 1 !default;
 $modal-btn-monospaced-hover-opacity: 1 !default;
 
-// Modal Info
-
-$modal-info-header-color: map-get($theme-colors, info) !default;
-$modal-info-header-bg: lighten($modal-info-header-color, 53%) !default;
-$modal-info-header-border-color: lighten($modal-info-header-color, 28%) !default;
-$modal-info-header-close-color: $modal-info-header-color !default;
-$modal-info-body-bg: #FFF !default;
-$modal-info-footer-bg: #FFF !default;
-$modal-info-footer-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
-$modal-info-footer-color: $body-color !default;
-
 // Modal Success
 
 $modal-success: (
@@ -36,6 +25,15 @@ $modal-success: (
 	header-border-color: lighten(map-get($theme-colors, success), 25%),
 	header-color: map-get($theme-colors, success),
 	header-title-indicator: lx-icon(check-circle, map-get($theme-colors, success))
+) !default;
+
+// Modal Info
+
+$modal-info: (
+	header-bg: lighten(map-get($theme-colors, info), 53%),
+	header-border-color: lighten(map-get($theme-colors, info), 28%),
+	header-color: map-get($theme-colors, info),
+	header-title-indicator: lx-icon(info-circle, map-get($theme-colors, info))
 ) !default;
 
 // Modal Warning
