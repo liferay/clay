@@ -7,6 +7,7 @@
 }
 
 .modal-header {
+	align-items: center;
 	background-color: $modal-header-bg;
 	border-color: $modal-header-border-color;
 	color: $modal-header-color;
@@ -17,6 +18,11 @@
 
 	@include scale-component {
 		height: $modal-header-height-mobile;
+	}
+
+	.close {
+		margin: 0;
+		padding: 0;
 	}
 }
 
