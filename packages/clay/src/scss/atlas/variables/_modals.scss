@@ -4,12 +4,12 @@ $modal-backdrop-opacity: 0.8 !default;
 $modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $modal-content-border-color: transparent !default;
 
-$modal-inner-padding-x: 24px !default;
-$modal-inner-padding-y: 16px !default;
+$modal-inner-padding-x: 1.5rem !default; // 24px
+$modal-inner-padding-y: 1rem !default; // 16px
 $modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x !default;
 
 $modal-header-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
-$modal-header-padding: $modal-inner-padding !default;
+$modal-header-padding: 1.5rem !default; // 24px
 
 $modal-title-font-size: 1.25rem !default; // 20px
 
