@@ -42,14 +42,12 @@ $modal-success-footer-color: $body-color !default;
 
 // Modal Warning
 
-$modal-warning-header-color: map-get($theme-colors, warning) !default;
-$modal-warning-header-bg: lighten($modal-warning-header-color, 57%) !default;
-$modal-warning-header-border-color: lighten($modal-warning-header-color, 24%) !default;
-$modal-warning-header-close-color: $modal-warning-header-color !default;
-$modal-warning-body-bg: #FFF !default;
-$modal-warning-footer-bg: #FFF !default;
-$modal-warning-footer-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
-$modal-warning-footer-color: $body-color !default;
+$modal-warning: (
+	header-bg: lighten(map-get($theme-colors, warning), 57%),
+	header-border-color: lighten(map-get($theme-colors, warning), 24%),
+	header-color: map-get($theme-colors, warning),
+	header-title-indicator: lx-icon(exclamation-full, map-get($theme-colors, warning))
+) !default;
 
 // Modal Danger
 
