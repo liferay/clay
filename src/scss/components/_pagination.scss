@@ -26,6 +26,14 @@
 	&:focus {
 		z-index: 3;
 	}
+
+	&.btn-unstyled {
+		background-color: $pagination-bg;
+		border-width: $pagination-border-width;
+		line-height: $pagination-line-height;
+		max-width: none;
+		padding: $pagination-padding-y $pagination-padding-x;
+	}
 }
 
 .page-item {
@@ -58,7 +66,8 @@
 		color: $pagination-items-per-page-hover-color;
 	}
 
-	> a {
+	> a,
+	> .btn-unstyled {
 		color: $pagination-items-per-page-color;
 		display: block;
 		padding: $pagination-padding-y $pagination-padding-x;
@@ -97,6 +106,7 @@
 	}
 
 	.pagination-items-per-page > a,
+	.pagination-items-per-page > .btn-unstyled,
 	.pagination-results {
 		font-size: $pagination-font-size-sm;
 		line-height: $pagination-line-height-sm;
@@ -106,6 +116,10 @@
 	.page-link {
 		font-size: $pagination-font-size-sm;
 		line-height: $pagination-line-height-sm;
+
+		&.btn-unstyled {
+			padding: $pagination-padding-y-sm $pagination-padding-x-sm;
+		}
 	}
 }
 
@@ -115,6 +129,7 @@
 	}
 
 	.pagination-items-per-page > a,
+	.pagination-items-per-page > .btn-unstyled,
 	.pagination-results {
 		font-size: $pagination-font-size-lg;
 		line-height: $pagination-line-height-lg;
@@ -124,5 +139,9 @@
 	.page-link {
 		font-size: $pagination-font-size-lg;
 		line-height: $pagination-line-height-lg;
+
+		&.btn-unstyled {
+			padding: $pagination-padding-y-lg $pagination-padding-x-lg;
+		}
 	}
 }
