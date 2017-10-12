@@ -22,6 +22,10 @@
 
 .page-link {
 	@include border-radius($pagination-link-border-radius);
+
+	&:focus {
+		z-index: 3;
+	}
 }
 
 .page-item {
