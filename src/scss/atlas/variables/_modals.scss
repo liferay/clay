@@ -31,14 +31,12 @@ $modal-info-footer-color: $body-color !default;
 
 // Modal Success
 
-$modal-success-header-color: map-get($theme-colors, success) !default;
-$modal-success-header-bg: lighten($modal-success-header-color, 63%) !default;
-$modal-success-header-border-color: lighten($modal-success-header-color, 25%) !default;
-$modal-success-header-close-color: $modal-success-header-color !default;
-$modal-success-body-bg: #FFF !default;
-$modal-success-footer-bg: #FFF !default;
-$modal-success-footer-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
-$modal-success-footer-color: $body-color !default;
+$modal-success: (
+	header-bg: lighten(map-get($theme-colors, success), 63%),
+	header-border-color: lighten(map-get($theme-colors, success), 25%),
+	header-color: map-get($theme-colors, success),
+	header-title-indicator: lx-icon(check-circle, map-get($theme-colors, success))
+) !default;
 
 // Modal Warning
 
