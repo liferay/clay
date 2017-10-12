@@ -1,5 +1,5 @@
-// Creates a Navbar color variant
-// @param $map - Sass map that contain Navbar Variant properties to modify
+// Creates a Panel color variant
+// @param $map - Sass map that contain Panel Variant properties to modify
 
 @mixin panel-variant($map) {
 	$border-color: map-get($map, border-color);
