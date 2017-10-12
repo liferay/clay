@@ -53,11 +53,9 @@ $modal-warning-footer-color: $body-color !default;
 
 // Modal Danger
 
-$modal-danger-header-color: map-get($theme-colors, danger) !default;
-$modal-danger-header-bg: lighten($modal-danger-header-color, 49.5%) !default;
-$modal-danger-header-border-color: lighten($modal-danger-header-color, 28%) !default;
-$modal-danger-header-close-color: $modal-danger-header-color !default;
-$modal-danger-body-bg: #FFF !default;
-$modal-danger-footer-bg: #FFF !default;
-$modal-danger-footer-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
-$modal-danger-footer-color: $body-color !default;
+$modal-danger: (
+	header-bg: lighten(map-get($theme-colors, danger), 49.5%),
+	header-border-color: lighten(map-get($theme-colors, danger), 28%),
+	header-color: map-get($theme-colors, danger),
+	header-title-indicator: lx-icon(exclamation-full, map-get($theme-colors, danger))
+) !default;

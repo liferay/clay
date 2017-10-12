@@ -64,15 +64,13 @@ $modal-warning-footer-color: theme-color-level(warning, 6) !default;
 
 // Modal Danger
 
-$modal-danger-header-bg: theme-color-level(danger, -10) !default;
-$modal-danger-header-border-color: theme-color-level(danger, -9) !default;
-$modal-danger-header-color: theme-color-level(danger, 6) !default;
-$modal-danger-header-close-color: theme-color-level(danger, 6) !default;
-$modal-danger-body-bg: null !default;
-$modal-danger-body-color: null !default;
-$modal-danger-footer-bg: theme-color-level(danger, -10) !default;
-$modal-danger-footer-border-color: theme-color-level(danger, -9) !default;
-$modal-danger-footer-color: theme-color-level(danger, 6) !default;
+$modal-danger: () !default;
+$modal-danger: map-merge((
+	header-bg: theme-color-level(danger, -10),
+	header-border-color: theme-color-level(danger, -9),
+	header-color: theme-color-level(danger, 6),
+	header-title-indicator: lx-icon(exclamation-full, theme-color-level(danger, 6))
+), $modal-danger);
 
 $modal-palette: () !default;
 $modal-palette: map-merge((
@@ -112,16 +110,5 @@ $modal-palette: map-merge((
 		footer-border-color: $modal-warning-footer-border-color,
 		footer-color: $modal-warning-footer-color
 	),
-	danger: (
-		header-bg: $modal-danger-header-bg,
-		header-border-color: $modal-danger-header-border-color,
-		header-color: $modal-danger-header-color,
-		header-close-color: $modal-danger-header-close-color,
-		header-title-indicator: lx-icon(exclamation-full, $modal-danger-header-close-color),
-		body-bg: $modal-danger-body-bg,
-		body-color: $modal-danger-body-color,
-		footer-bg: $modal-danger-footer-bg,
-		footer-border-color: $modal-danger-footer-border-color,
-		footer-color: $modal-danger-footer-color
-	)
+	danger: $modal-danger
 ), $modal-palette);
