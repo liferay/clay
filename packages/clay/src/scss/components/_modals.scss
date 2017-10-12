@@ -203,26 +203,6 @@
 
 @each $color, $value in $modal-palette {
 	.modal-#{$color} {
-		.btn-monospaced,
-		.close {
-			color: map-get($value, header-close-color);
-		}
-
-		.modal-header {
-			background-color: map-get($value, header-bg);
-			border-color: map-get($value, header-border-color);
-			color: map-get($value, header-color);
-		}
-
-		.modal-body {
-			background-color: map-get($value, body-bg);
-			color: map-get($value, body-color);
-		}
-
-		.modal-footer {
-			background-color: map-get($value, footer-bg);
-			border-color: map-get($value, footer-border-color);
-			color: map-get($value, footer-border-color);
-		}
+		@include modal-variant($value);
 	}
 }
