@@ -52,15 +52,13 @@ $modal-success-footer-color: theme-color-level(success, 6) !default;
 
 // Modal Warning
 
-$modal-warning-header-bg: theme-color-level(warning, -10) !default;
-$modal-warning-header-border-color: theme-color-level(warning, -9) !default;
-$modal-warning-header-color: theme-color-level(warning, 6) !default;
-$modal-warning-header-close-color: theme-color-level(warning, 6) !default;
-$modal-warning-body-bg: null !default;
-$modal-warning-body-color: null !default;
-$modal-warning-footer-bg: theme-color-level(warning, -10) !default;
-$modal-warning-footer-border-color: theme-color-level(warning, -9) !default;
-$modal-warning-footer-color: theme-color-level(warning, 6) !default;
+$modal-warning: () !default;
+$modal-warning: map-merge((
+	header-bg: theme-color-level(warning, -10),
+	header-border-color: theme-color-level(warning, -9),
+	header-color: theme-color-level(warning, 6),
+	header-title-indicator: lx-icon(exclamation-full, theme-color-level(warning, 6))
+), $modal-warning);
 
 // Modal Danger
 
@@ -98,17 +96,6 @@ $modal-palette: map-merge((
 		footer-border-color: $modal-info-footer-border-color,
 		footer-color: $modal-info-footer-color
 	),
-	warning: (
-		header-bg: $modal-warning-header-bg,
-		header-border-color: $modal-warning-header-border-color,
-		header-color: $modal-warning-header-color,
-		header-close-color: $modal-warning-header-close-color,
-		header-title-indicator: lx-icon(exclamation-full, $modal-warning-header-close-color),
-		body-bg: $modal-warning-body-bg,
-		body-color: $modal-warning-body-color,
-		footer-bg: $modal-warning-footer-bg,
-		footer-border-color: $modal-warning-footer-border-color,
-		footer-color: $modal-warning-footer-color
-	),
+	warning: $modal-warning,
 	danger: $modal-danger
 ), $modal-palette);
