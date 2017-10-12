@@ -53,6 +53,30 @@
 	}
 }
 
+// Modal Item
+
+.modal-item-first {
+	margin-right: auto;
+}
+
+.modal-item {
+	flex-grow: 1;
+}
+
+.modal-item-last {
+	margin-left: auto;
+}
+
+.modal-footer {
+	> .modal-item-first {
+		margin-right: auto;
+	}
+
+	> .modal-item-last {
+		margin-left: auto;
+	}
+}
+
 // Modal Title
 
 .modal-title {
