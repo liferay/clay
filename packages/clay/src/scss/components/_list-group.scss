@@ -183,50 +183,6 @@ a.list-group-subtitle,
 	}
 }
 
-// List Group Unstyled
-
-.list-group-unstyled {
-	@include box-shadow(none);
-
-	color: inherit;
-
-	.flex-col {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	.list-group-header,
-	.list-group-item {
-		background-color: transparent;
-		border-color: transparent;
-		padding: 0;
-	}
-
-	.list-group-item {
-		&.active {
-			color: $body-color;
-
-			+ .list-group-item {
-				border-top-color: transparent;
-			}
-
-			.list-group-link {
-				color: $link-color;
-			}
-		}
-	}
-
-	@if ($list-group-link-color) {
-		.list-group-link {
-			color: $link-color;
-
-			@include hover-focus {
-				color: $link-hover-color;
-			}
-		}
-	}
-}
-
 // Show Quick Action
 
 .show-quick-actions-on-hover {
