@@ -11,7 +11,7 @@ section: Components
 			<p>A table styled like a list. The active state can be invoked by adding class <code>table-active</code> to the <code>```<tr></tr>```</code> element.</p>
 		</blockquote>
 
-		<table class="show-dropdown-action-on-active table table-autofit table-list table-responsive-lg">
+		<table class="show-quick-actions-on-hover table table-autofit table-list table-responsive-lg">
 			<thead>
 				<tr>
 					<th></th>
@@ -50,28 +50,34 @@ section: Components
 					<td>Stanley Nelson</td>
 					<td>Folder</td>
 					<td>
+						<div class="quick-action-menu">
+							<button class="btn btn-unstyled quick-action-item" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</button>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -97,28 +103,34 @@ section: Components
 					<td>Stanley Nelson</td>
 					<td>Folder</td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -142,28 +154,34 @@ section: Components
 					<td>Stanley Nelson</td>
 					<td>Folder</td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -187,28 +205,34 @@ section: Components
 					<td>Stanley Nelson</td>
 					<td>Folder</td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -222,7 +246,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Table List with Table Striped</h3>
 
-		<table class="show-dropdown-action-on-active table table-autofit table-list table-responsive-sm table-striped">
+		<table class="show-quick-actions-on-hover table table-autofit table-list table-responsive-sm table-striped">
 			<thead>
 				<tr>
 					<th></th>
@@ -252,28 +276,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -294,28 +324,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -336,28 +372,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -378,28 +420,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -413,7 +461,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Table List with Table Hover</h3>
 
-		<table class="show-dropdown-action-on-active table table-autofit table-hover table-list table-responsive-sm">
+		<table class="show-quick-actions-on-hover table table-autofit table-hover table-list table-responsive-sm">
 			<thead>
 				<tr>
 					<th></th>
@@ -443,28 +491,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -485,28 +539,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -527,28 +587,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -569,28 +635,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -604,7 +676,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Table List with Table Bordered</h3>
 
-		<table class="show-dropdown-action-on-active table table-autofit table-bordered table-list table-responsive-sm">
+		<table class="show-quick-actions-on-hover table table-autofit table-bordered table-list table-responsive-sm">
 			<thead>
 				<tr>
 					<th></th>
@@ -634,28 +706,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -676,28 +754,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -718,28 +802,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -760,28 +850,34 @@ section: Components
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -892,226 +988,6 @@ section: Components
 
 			<p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table body.</p>
 		</blockquote>
-
-		<div class="clay-site-row-spacer">
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignBottom">table-valign-bottom</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignMiddle">table-valign-middle</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignTop">table-valign-top</a>
-		</div>
-
-		<div class="clay-site-row-spacer">
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignBottom">tbody-valign-bottom</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignMiddle">tbody-valign-middle</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignTop">tbody-valign-top</a>
-		</div>
-
-		<div class="clay-site-row-spacer">
-			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignBottom">thead-valign-bottom</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignMiddle">thead-valign-middle</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignTop">thead-valign-top</a>
-		</div>
-
-		<table class="show-dropdown-action-on-active table table-autofit table-heading-nowrap table-list table-responsive-xl" id="verticalAlignTableListDemo">
-			<thead>
-				<tr>
-					<th></th>
-					<th>ID</th>
-					<th class="table-cell-content">
-						<span class="text-truncate" title="Description">Title</span>
-					</th>
-					<th>Status</th>
-					<th>Modified Date</th>
-					<th>Display Date</th>
-					<th>Author</th>
-					<th>Type</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<div class="custom-control custom-checkbox">
-							<label>
-								<input class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
-							</label>
-						</div>
-					</td>
-					<td>21146</td>
-					<td class="table-cell-content">
-						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-					</td>
-					<td>--</td>
-					<td>2 Hours Ago</td>
-					<td>--</td>
-					<td>Stanley Nelson</td>
-					<td>Folder</td>
-					<td>
-						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr class="table-active">
-					<td>
-						<div class="custom-control custom-checkbox">
-							<label>
-								<input checked class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
-							</label>
-						</div>
-					</td>
-					<td>
-						21148
-					</td>
-					<td class="table-cell-content">
-						<span class="text-truncate" title="Frappuccino medium americano">Frappuccino medium americano</span>
-					</td>
-					<td>--</td>
-					<td>2 Hours Ago</td>
-					<td>--</td>
-					<td>Stanley Nelson</td>
-					<td>Folder</td>
-					<td>
-						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="custom-control custom-checkbox">
-							<label>
-								<input class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
-							</label>
-						</div>
-					</td>
-					<td>21149</td>
-					<td class="table-cell-content">
-						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
-					</td>
-					<td>--</td>
-					<td>2 Hours Ago</td>
-					<td>--</td>
-					<td>Stanley Nelson</td>
-					<td>Folder</td>
-					<td>
-						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="custom-control custom-checkbox">
-							<label>
-								<input class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
-							</label>
-						</div>
-					</td>
-					<td>21150</td>
-					<td class="table-cell-content">
-						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
-					</td>
-					<td>--</td>
-					<td>2 Hours Ago</td>
-					<td>--</td>
-					<td>Stanley Nelson</td>
-					<td>Folder</td>
-					<td>
-						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
-							</div>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
 	</div>
 </div>
 
@@ -1414,11 +1290,17 @@ section: Components
 		$this.closest('tr').toggleClass('table-active');
 	});
 
-	$(document).on('click', '.table-vertical-align-button', function(event) {
-		event.preventDefault();
+	$(document).on('focus', '.heading-anchor', function(event) {
+		$('.table').find('tr').removeClass('table-focus');
+	});
 
-		var className = $(this).text();
+	$(document).on('click', 'body', function(event) {
+		$('.table').find('tr').removeClass('table-focus');
+	});
 
-		$('#verticalAlignTableListDemo').removeClass().addClass('table table-list ' + className);
+	$('.table').on('focus', 'tr', function(event) {
+		var $this = $(this);
+		$this.closest('.table').find('tr').removeClass('table-focus');
+		$this.closest('tr').addClass('table-focus');
 	});
 </script>
