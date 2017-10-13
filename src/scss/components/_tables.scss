@@ -14,6 +14,11 @@ th {
 		font-size: $table-head-font-size;
 		font-weight: $table-head-font-weight;
 		height: $table-head-height;
+		position: relative;
+	}
+
+	td {
+		position: relative;
 	}
 
 	td,
@@ -37,7 +42,6 @@ th {
 	display: table-cell;
 	max-width: 100px;
 	min-width: 100px;
-	position: relative;
 	width: auto;
 	word-wrap: break-word;
 }
@@ -113,7 +117,6 @@ th {
 		box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
 					0 #{$table-list-border-width} $table-list-border-color; // bottom
 		padding-top: $table-list-border-width + $table-cell-padding;
-		position: relative;
 
 		&:first-child {
 			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
@@ -366,6 +369,122 @@ th {
 		th {
 			vertical-align: top;
 		}
+	}
+}
+
+// Show Quick Action
+
+.show-quick-actions-on-hover {
+	tr:not(.table-active) {
+		@include hover {
+			.quick-action-menu {
+				display: flex;
+				z-index: $zindex-dropdown - 2;
+			}
+		}
+	}
+
+	.table-focus:not(.table-active) {
+		.quick-action-menu {
+			display: flex;
+			z-index: $zindex-dropdown - 2;
+		}
+	}
+}
+
+.table {
+	.quick-action-menu {
+		align-items: $table-quick-action-menu-align-items;
+		background-color: $table-quick-action-menu-bg;
+		bottom: 0;
+		padding-bottom: $table-cell-padding;
+		padding-top: $table-cell-padding;
+		top: 0;
+	}
+}
+
+.table-striped {
+	tbody tr:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-quick-action-menu-accent-bg;
+		}
+	}
+
+	tbody .table-active:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-quick-action-menu-accent-active-bg;
+		}
+	}
+}
+
+.table-hover {
+	tbody tr {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-quick-action-menu-hover-bg;
+			}
+		}
+	}
+
+	tbody .table-active {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-quick-action-menu-active-bg;
+			}
+		}
+	}
+}
+
+.table-active {
+	.quick-action-menu {
+		background-color: $table-quick-action-menu-active-bg;
+	}
+}
+
+.table-list {
+	.quick-action-menu {
+		align-items: $table-list-quick-action-menu-align-items;
+		background-color: $table-list-quick-action-menu-bg;
+		bottom: 0;
+		top: $table-list-border-width;
+	}
+}
+
+.table-list.table-striped {
+	tbody tr:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-list-quick-action-menu-accent-bg;
+		}
+	}
+
+	tbody .table-active:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-list-quick-action-menu-accent-active-bg;
+		}
+	}
+}
+
+.table-list.table-hover {
+	tbody tr {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-list-quick-action-menu-hover-bg;
+			}
+		}
+	}
+
+	tbody .table-active {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-list-quick-action-menu-active-bg;
+			}
+		}
+	}
+}
+
+.table-list .table-active {
+	.quick-action-menu {
+		background-color: $table-list-quick-action-menu-active-bg;
 	}
 }
 
