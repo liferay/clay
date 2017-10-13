@@ -1,6 +1,7 @@
 .bb-grid {
   line {
-    stroke: #aaa;
+    stroke: rgb(229, 229, 235);
+    stroke-width: 0.5px;
   }
 
   text {
@@ -9,7 +10,7 @@
 }
 
 .bb-xgrid, .bb-ygrid {
-  stroke-dasharray: 3 3;
+
 }
 
 .bb-xgrid-focus {}
