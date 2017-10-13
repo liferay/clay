@@ -1,6 +1,6 @@
 .quick-action-menu {
 	align-items: center;
-	bottom: auto;
+	bottom: 0;
 	display: none;
 	left: auto;
 	padding-bottom: $quick-action-padding-y;
@@ -9,6 +9,7 @@
 	padding-top: $quick-action-padding-y;
 	position: absolute;
 	right: 100%;
+	top: 0;
 }
 
 .quick-action-item {
