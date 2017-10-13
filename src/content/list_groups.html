@@ -17,6 +17,10 @@ section: Components
 			Direct descendants of <code>flex-col</code> become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with a block level element such as a div.
 		</div>
 
+		<div class="alert alert-warning">
+			<code>show-quick-actions-on-hover</code> will need Javascript to add class <code>table-focus</code> on the table row when an item inside is focused to make it keyboard accessible.
+		</div>
+
 		<ul class="list-group show-quick-actions-on-hover">
 			<li class="list-group-item list-group-item-flex">
 				<div class="flex-col">
@@ -542,4 +546,18 @@ section: Components
 			$(this).closest('.list-group-item').toggleClass('active');
 		}
 	);
+
+	$(document).on('focus', '.heading-anchor', function(event) {
+		$('.list-group').find('.list-group-item-flex').removeClass('focus');
+	});
+
+	$(document).on('click', 'body', function(event) {
+		$('.list-group').find('.list-group-item-flex').removeClass('focus');
+	});
+
+	$('.list-group').on('focus', '.list-group-item-flex', function(event) {
+		var $this = $(this);
+		$this.closest('.list-group').find('.list-group-item-flex').removeClass('focus');
+		$this.closest('.list-group-item-flex').addClass('focus');
+	});
 </script>
