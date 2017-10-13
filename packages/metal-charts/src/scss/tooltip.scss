@@ -1,6 +1,4 @@
 .bb-tooltip-container {
-  z-index: 10;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -12,12 +10,7 @@
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
-  text-align: left;
   text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
   word-break: normal;
   word-spacing: normal;
   white-space: normal;
@@ -28,37 +21,30 @@
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
-
 }
 
 .bb-tooltip {
-  border-collapse: collapse;
   border-spacing: 0;
   background-color: #fff;
   empty-cells: show;
   opacity: 0.9;
-  -webkit-box-shadow: 7px 7px 12px -9px rgb(119,119,119);
-  -moz-box-shadow: 7px 7px 12px -9px rgb(119,119,119);
   box-shadow: 7px 7px 12px -9px rgb(119,119,119);
 
   tr {
-    // border:1px solid #CCC;
   }
 
   th {
-    // background-color: #aaa;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-size:14px;
     padding:2px 5px;
     text-align:left;
-    color:#FFF;
+    color: #000;
   }
 
   td {
     font-size:13px;
     padding: 3px 6px;
     background-color:#fff;
-    // border-left:1px dotted #999;
 
     > span {
       display: inline-block;
