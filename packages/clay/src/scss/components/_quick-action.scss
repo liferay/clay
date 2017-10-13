@@ -1,0 +1,29 @@
+.quick-action-menu {
+	align-items: center;
+	bottom: auto;
+	display: none;
+	left: auto;
+	padding-bottom: $quick-action-padding-y;
+	padding-left: $quick-action-padding-x;
+	padding-right: $quick-action-padding-x;
+	padding-top: $quick-action-padding-y;
+	position: absolute;
+	right: 100%;
+}
+
+.quick-action-item {
+	display: flex;
+	line-height: 1;
+	margin-bottom: $quick-action-item-margin-y;
+	margin-left: $quick-action-item-margin-x;
+	margin-right: $quick-action-item-margin-x;
+	margin-top: $quick-action-item-margin-y;
+	padding-bottom: $quick-action-item-padding-y;
+	padding-left: $quick-action-item-padding-x;
+	padding-right: $quick-action-item-padding-x;
+	padding-top: $quick-action-item-padding-y;
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
