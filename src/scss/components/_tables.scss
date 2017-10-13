@@ -349,7 +349,6 @@ th {
 		@include hover {
 			.quick-action-menu {
 				display: flex;
-				z-index: $zindex-dropdown - 2;
 			}
 		}
 	}
@@ -357,7 +356,6 @@ th {
 	.table-focus:not(.table-active) {
 		.quick-action-menu {
 			display: flex;
-			z-index: $zindex-dropdown - 2;
 		}
 	}
 }
