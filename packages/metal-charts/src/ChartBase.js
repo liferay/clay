@@ -15,6 +15,18 @@ const PROP_NAME_MAP = {
 	x: 'xs',
 };
 
+const DEFAULT_COLORS = [
+	'#4B9BFF',
+	'#FFD76E',
+	'#FF5F5F',
+	'#9CE269',
+	'#AF78FF',
+	'#50D2A0',
+	'#FF73C3',
+	'#FFB64E',
+	'#5FC8FF',
+];
+
 /**
  * Chart Base prototype.
  *
@@ -182,6 +194,7 @@ const ChartBase = {
 
 		const config = {
 			color: state.colorFormatter,
+			colors: state.colors,
 			empty: state.emptyLabelText,
 			groups: state.groups,
 			hide: state.hide,
@@ -563,6 +576,9 @@ ChartBase.STATE = {
 			value: Config.array(),
 			max: Config.number(),
 		}),
+	}).value({
+		pattern: DEFAULT_COLORS,
+		threshhold: null,
 	}),
 
 	/**
