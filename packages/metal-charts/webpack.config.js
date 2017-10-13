@@ -26,6 +26,7 @@ module.exports = {
 			})
 		}]
 	},
+	devtool: 'cheap-module-source-map',
 	output: {
 		library: 'metal',
 		libraryTarget: 'this',
