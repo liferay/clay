@@ -5,14 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Metal Charts</title>
 
-	<link rel="stylesheet" href="../node_modules/billboard.js/dist/billboard.css">
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas.css">
+	<link rel="stylesheet" href="../build/metal-charts.css">
 
 	<script src="../build/globals/metal-charts.js"></script>
 
 	<style>
 		body {
+			background-color: #EEE;
 			margin: 20px 40px;
-			background-color: #eee;
 		}
 
 		h2 {
@@ -21,8 +22,8 @@
 
 		.metal-chart-example {
 			background-color: #FFF;
-			padding: 10px;
 			margin: 20px;
+			padding: 10px;
 		}
 	</style>
 </head>
@@ -120,14 +121,21 @@
 		var dummyData = {
 			columns_1: [
 				{
-					color: 'red',
 					data: [30, 200, 100, 400, 150, 250],
-					id: 'data1',
-					name: 'Data 1'
+					id: 'sample_data_1',
+					name: 'Data 1',
 				},
 				{
 					data: [50, 20, 10, 40, 15, 25],
 					id: 'data2'
+				},
+				{
+					data: [150, 90, 30, 400, 15, 205],
+					id: 'data3'
+				},
+				{
+					data: [10, 30, 130, 200, 50, 20],
+					id: 'data4'
 				}
 			],
 			columns_2: [
@@ -245,7 +253,15 @@
 		};
 
 		var lineChart = new metal.LineChart({
-			columns: dummyData.columns_1
+			columns: dummyData.columns_1,
+			grid: {
+				x: {
+					show: true
+				}
+			},
+			tooltip: {
+				show: true
+			}
 		}, '#line');
 		createChartControls(lineChart, 'line');
 
