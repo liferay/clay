@@ -24,11 +24,6 @@ $dropdown-link-disabled-color: lighten($body-color, 52%) !default;
 
 $dropdown-divider-bg: $dropdown-border-color !default;
 
-// Dropdown Unstyled
-
-$dropdown-unstyled-link-color: !default;
-$dropdown-unstyled-link-hover-color: !default;
-
 // Dropdown Action
 
 $dropdown-action-toggle-color: map-get($theme-colors, secondary) !default;
