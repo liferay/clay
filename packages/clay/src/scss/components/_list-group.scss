@@ -226,3 +226,37 @@ a.list-group-subtitle,
 		}
 	}
 }
+
+// Show Quick Action
+
+.show-quick-actions-on-hover {
+	.list-group-item:not(.active) {
+		@include hover {
+			.quick-action-menu {
+				display: flex;
+			}
+		}
+	}
+
+	.focus:not(.active) {
+		.quick-action-menu {
+			display: flex;
+		}
+	}
+}
+
+.list-group {
+	.quick-action-menu {
+		background-color: $list-group-bg;
+	}
+}
+
+.list-group-item-flex.active {
+	.quick-action-menu {
+		background-color: $list-group-active-bg;
+	}
+
+	.quick-action-item {
+		color: $list-group-active-color;
+	}
+}
