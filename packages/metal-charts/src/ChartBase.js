@@ -83,6 +83,7 @@ const ChartBase = {
 			bindto: this.element,
 			color: state.color,
 			data,
+			grid: state.grid,
 			line: state.line,
 			padding: state.padding,
 			pie: state.pie,
