@@ -12,6 +12,7 @@
 }
 
 .quick-action-item {
+	color: $quick-action-item-color;
 	display: flex;
 	line-height: 1;
 	margin-bottom: $quick-action-item-margin-y;
@@ -22,6 +23,10 @@
 	padding-left: $quick-action-item-padding-x;
 	padding-right: $quick-action-item-padding-x;
 	padding-top: $quick-action-item-padding-y;
+
+	@include hover-focus {
+		color: $quick-action-item-hover-color;
+	}
 
 	.lexicon-icon {
 		margin-top: 0;
