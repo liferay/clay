@@ -13,6 +13,11 @@ $table-divider-font-weight: $font-weight-semi-bold !default;
 $table-divider-padding: 0.5rem 0.75rem !default;
 $table-divider-text-transform: uppercase !default;
 
+$table-quick-action-menu-accent-bg: $table-accent-bg !default;
+$table-quick-action-menu-accent-active-bg: $table-hover-bg !default;
+$table-quick-action-menu-active-bg: darken($table-hover-bg, 5%) !default;
+$table-quick-action-menu-hover-bg: $table-hover-bg !default;
+
 // Table List
 
 $table-list-accent-bg: lighten(map-get($theme-colors, secondary), 52%) !default;

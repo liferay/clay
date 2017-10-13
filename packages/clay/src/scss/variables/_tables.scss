@@ -11,6 +11,13 @@ $table-divider-font-size: null !default;
 $table-divider-padding: $table-cell-padding !default;
 $table-divider-text-transform: null !default;
 
+$table-quick-action-menu-align-items: flex-start !default;
+$table-quick-action-menu-bg: if($table-bg == transparent, $body-bg, $table-bg) !default;
+$table-quick-action-menu-accent-bg: #F2F2F2 !default;
+$table-quick-action-menu-accent-active-bg: #E0E0E0 !default;
+$table-quick-action-menu-active-bg: #DADADA !default;
+$table-quick-action-menu-hover-bg: #ECECEC !default;
+
 // Table List
 
 $table-list-bg: #FFF !default;
@@ -32,3 +39,10 @@ $table-list-head-font-size: null !default;
 $table-list-head-font-weight: null !default;
 $table-list-head-height: null !default;
 $table-list-head-vertical-alignment: null !default;
+
+$table-list-quick-action-menu-align-items: center !default;
+$table-list-quick-action-menu-bg: $table-list-bg !default;
+$table-list-quick-action-menu-accent-bg: $table-list-accent-bg !default;
+$table-list-quick-action-menu-accent-active-bg: $table-list-active-bg !default;
+$table-list-quick-action-menu-active-bg: $table-list-active-bg !default;
+$table-list-quick-action-menu-hover-bg: $table-list-hover-bg !default;
