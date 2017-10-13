@@ -194,7 +194,7 @@ section: Visual Tests
 
 <form class="mt-4">
 	<div class="container container-no-gutters-sm-down">
-		<table class="show-dropdown-action-on-active table table-autofit table-heading-nowrap table-list table-responsive-lg">
+		<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list table-responsive-lg">
 			<thead>
 				<tr>
 					<th></th>
@@ -234,28 +234,34 @@ section: Visual Tests
 					<td>6 days ago</td>
 					<td>4 days ago</td>
 					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
+						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="dropdown-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-									</svg>
-								</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
 							</div>
 						</div>
 					</td>
@@ -266,6 +272,26 @@ section: Visual Tests
 </form>
 
 <script>
+	$('.table').on('click', 'input[type="checkbox"]', function(event) {
+		var $this = $(this);
+
+		$this.closest('tr').toggleClass('table-active');
+	});
+
+	$(document).on('focus', '.navbar-nav', function(event) {
+		$('.table').find('tr').removeClass('table-focus');
+	});
+
+	$(document).on('click', 'body', function(event) {
+		$('.table').find('tr').removeClass('table-focus');
+	});
+
+	$('.table').on('focus', 'tr', function(event) {
+		var $this = $(this);
+		$this.closest('.table').find('tr').removeClass('table-focus');
+		$this.closest('tr').addClass('table-focus');
+	});
+
 	$('.clay-site-open-overlay-sm-down').on('click', function(event) {
 		$(this).closest('.navbar').find('.navbar-overlay-sm-down').addClass('show');
 	});
