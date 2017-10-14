@@ -21,6 +21,16 @@
 	}
 }
 
+.card-section-header {
+	color: $card-section-header-color;
+	font-size: $card-section-header-font-size;
+	font-weight: $card-section-header-font-weight;
+	line-height: $card-section-header-line-height;
+	margin-bottom: $card-section-header-margin-bottom;
+	padding: $card-section-header-padding;
+	text-transform: $card-section-header-text-transform;
+}
+
 .card-title {
 	color: $card-title-color;
 	font-size: $card-title-font-size;
@@ -93,7 +103,7 @@ button.card-link {
 	}
 
 	.flex-col-expand {
-		min-width: 50px;
+		min-width: 25px;
 	}
 }
 

@@ -2,6 +2,14 @@ $card-border-style: solid !default;
 $card-box-shadow: null !default;
 $card-margin-bottom: 1.25rem !default;
 
+$card-section-header-color: map-get($theme-colors, secondary) !default;
+$card-section-header-font-size: 0.75rem !default;
+$card-section-header-font-weight: null !default;
+$card-section-header-line-height: 2.5 !default;
+$card-section-header-margin-bottom: 1.5rem !default;
+$card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
+$card-section-header-text-transform: uppercase !default;
+
 $card-title-color: null !default;
 $card-title-font-size: 1rem !default; // 16px
 $card-title-font-weight: $font-weight-semi-bold !default;
