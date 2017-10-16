@@ -3,7 +3,7 @@ Clay components shareable config for Browserslist.
 
 ## Installation
 ```
-npm install browserslist-config-clay-components
+npm install browserslist-config-clay-components -D
 ```
 
 ## Usage
