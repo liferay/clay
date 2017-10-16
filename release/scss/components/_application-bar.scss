@@ -1,0 +1,21 @@
+/**
+* Clay 2.0.0-alpha.11
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.application-bar {
+	flex-wrap: nowrap;
+
+	@include navbar-size($application-bar-size);
+
+	.container,
+	.container-fluid {
+		flex-wrap: nowrap;
+	}
+
+	.navbar-nav {
+		flex-wrap: nowrap;
+	}
+}

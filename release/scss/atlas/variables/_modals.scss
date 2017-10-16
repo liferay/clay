@@ -1,0 +1,62 @@
+/**
+* Clay 2.0.0-alpha.11
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$modal-backdrop-bg: lighten($body-color, 8%) !default;
+$modal-backdrop-opacity: 0.8 !default;
+
+$modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+$modal-content-border-color: transparent !default;
+
+$modal-inner-padding-x: 1.5rem !default; // 24px
+$modal-inner-padding-y: 1rem !default; // 16px
+$modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x !default;
+
+$modal-header-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+$modal-header-padding: 1.5rem !default; // 24px
+
+$modal-title-font-size: 1.25rem !default; // 20px
+
+$modal-btn-monospaced-color: $body-color !default;
+$modal-btn-monospaced-font-size: 0.875rem !default; // 14px
+$modal-btn-monospaced-opacity: 1 !default;
+$modal-btn-monospaced-hover-opacity: 1 !default;
+
+// Modal Success
+
+$modal-success: (
+	header-bg: lighten(map-get($theme-colors, success), 63%),
+	header-border-color: lighten(map-get($theme-colors, success), 25%),
+	header-color: map-get($theme-colors, success),
+	header-title-indicator: lx-icon(check-circle, map-get($theme-colors, success))
+) !default;
+
+// Modal Info
+
+$modal-info: (
+	header-bg: lighten(map-get($theme-colors, info), 53%),
+	header-border-color: lighten(map-get($theme-colors, info), 28%),
+	header-color: map-get($theme-colors, info),
+	header-title-indicator: lx-icon(info-circle, map-get($theme-colors, info))
+) !default;
+
+// Modal Warning
+
+$modal-warning: (
+	header-bg: lighten(map-get($theme-colors, warning), 57%),
+	header-border-color: lighten(map-get($theme-colors, warning), 24%),
+	header-color: map-get($theme-colors, warning),
+	header-title-indicator: lx-icon(exclamation-full, map-get($theme-colors, warning))
+) !default;
+
+// Modal Danger
+
+$modal-danger: (
+	header-bg: lighten(map-get($theme-colors, danger), 49.5%),
+	header-border-color: lighten(map-get($theme-colors, danger), 28%),
+	header-color: map-get($theme-colors, danger),
+	header-title-indicator: lx-icon(exclamation-full, map-get($theme-colors, danger))
+) !default;

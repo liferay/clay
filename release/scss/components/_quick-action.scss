@@ -1,0 +1,42 @@
+/**
+* Clay 2.0.0-alpha.11
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.quick-action-menu {
+	align-items: center;
+	bottom: 0;
+	display: none;
+	left: auto;
+	padding-bottom: $quick-action-padding-y;
+	padding-left: $quick-action-padding-x;
+	padding-right: $quick-action-padding-x;
+	padding-top: $quick-action-padding-y;
+	position: absolute;
+	right: 100%;
+	top: 0;
+}
+
+.quick-action-item {
+	color: $quick-action-item-color;
+	display: flex;
+	line-height: 1;
+	margin-bottom: $quick-action-item-margin-y;
+	margin-left: $quick-action-item-margin-x;
+	margin-right: $quick-action-item-margin-x;
+	margin-top: $quick-action-item-margin-y;
+	padding-bottom: $quick-action-item-padding-y;
+	padding-left: $quick-action-item-padding-x;
+	padding-right: $quick-action-item-padding-x;
+	padding-top: $quick-action-item-padding-y;
+
+	@include hover-focus {
+		color: $quick-action-item-hover-color;
+	}
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}

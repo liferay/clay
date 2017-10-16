@@ -1,0 +1,154 @@
+/**
+* Clay 2.0.0-alpha.11
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.pagination {
+	flex-wrap: wrap;
+	margin-bottom: $pagination-margin-bottom;
+}
+
+.pagination-bar {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include scale-component {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.pagination {
+		@include scale-component {
+			margin-top: 0.5rem;
+		}
+	}
+}
+
+.page-link {
+	@include border-radius($pagination-link-border-radius);
+
+	&:focus {
+		z-index: 3;
+	}
+
+	&.btn-unstyled {
+		background-color: $pagination-bg;
+		border-width: $pagination-border-width;
+		line-height: $pagination-line-height;
+		max-width: none;
+		padding: $pagination-padding-y $pagination-padding-x;
+	}
+}
+
+.page-item {
+	&:first-child,
+	&:last-child {
+		.page-link {
+			@include border-radius($pagination-link-border-radius);
+		}
+	}
+
+	&.disabled .page-link {
+		opacity: $pagination-disabled-opacity;
+	}
+}
+
+.pagination-items-per-page {
+	background-color: $pagination-items-per-page-bg;
+	border-color: $pagination-items-per-page-border-color;
+
+	@include border-radius($pagination-items-per-page-border-radius);
+
+	border-style: solid;
+	border-width: $pagination-border-width;
+	line-height: $pagination-line-height;
+	margin-bottom: $pagination-margin-bottom;
+
+	@include hover-focus {
+		background-color: $pagination-items-per-page-hover-bg;
+		border-color: $pagination-items-per-page-hover-border-color;
+		color: $pagination-items-per-page-hover-color;
+	}
+
+	> a,
+	> .btn-unstyled {
+		color: $pagination-items-per-page-color;
+		display: block;
+		padding: $pagination-padding-y $pagination-padding-x;
+		text-decoration: none;
+	}
+
+	+ .pagination-results {
+		@include scale-component {
+			margin-left: auto;
+		}
+	}
+}
+
+.page-item .dropdown-menu,
+.pagination-items-per-page .dropdown-menu {
+	margin-bottom: $pagination-dropdown-menu-spacer-y;
+	margin-top: $pagination-dropdown-menu-spacer-y;
+}
+
+.pagination-results {
+	border-color: transparent;
+	border-style: solid;
+	border-width: $pagination-border-width;
+	color: $pagination-results-color;
+	line-height: $pagination-line-height;
+	margin-bottom: $pagination-margin-bottom;
+	margin-right: auto;
+	padding: $pagination-padding-y $pagination-padding-x;
+}
+
+// Pagination Sizes
+
+.pagination-sm {
+	.pagination-items-per-page {
+		@include border-radius($pagination-link-border-radius-sm);
+	}
+
+	.pagination-items-per-page > a,
+	.pagination-items-per-page > .btn-unstyled,
+	.pagination-results {
+		font-size: $pagination-font-size-sm;
+		line-height: $pagination-line-height-sm;
+		padding: $pagination-padding-y-sm $pagination-padding-x;
+	}
+
+	.page-link {
+		font-size: $pagination-font-size-sm;
+		line-height: $pagination-line-height-sm;
+
+		&.btn-unstyled {
+			padding: $pagination-padding-y-sm $pagination-padding-x-sm;
+		}
+	}
+}
+
+.pagination-lg {
+	.pagination-items-per-page {
+		@include border-radius($pagination-link-border-radius-lg);
+	}
+
+	.pagination-items-per-page > a,
+	.pagination-items-per-page > .btn-unstyled,
+	.pagination-results {
+		font-size: $pagination-font-size-lg;
+		line-height: $pagination-line-height-lg;
+		padding: $pagination-padding-y-lg $pagination-padding-x;
+	}
+
+	.page-link {
+		font-size: $pagination-font-size-lg;
+		line-height: $pagination-line-height-lg;
+
+		&.btn-unstyled {
+			padding: $pagination-padding-y-lg $pagination-padding-x-lg;
+		}
+	}
+}
