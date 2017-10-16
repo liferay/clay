@@ -143,8 +143,8 @@ fieldset[disabled] .btn {
 			color: map-get($value, focus-color);
 		}
 
-		&:active,
-		&.active,
+		&:not([disabled]):not(.disabled):active,
+		&:not([disabled]):not(.disabled).active,
 		.show > &.dropdown-toggle {
 			background-color: map-get($value, active-bg);
 			border-color: map-get($value, active-border-color);
