@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.10</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.11</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -205,7 +205,60 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-10-october-6-2017"><a class="heading-anchor" href="#v2-0-0-alpha-10-october-6-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.10 October 6, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-11-october-16-2017"><a class="heading-anchor" href="#v2-0-0-alpha-11-october-16-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.11 October 16, 2017</h3>
+<ul>
+<li>Breaking: Update Bootstrap 4 to 99eece1</li>
+<li>Breaking: List Group removed <code>.list-group-unstyled</code> use <code>.flex-col</code> and <code>.flex-col-expand</code> instead</li>
+<li>Breaking: Dropdowns removed <code>$dropdown-horizontal-min-height</code>, <code>$dropdown-unstyled-link-color</code>, <code>$dropdown-unstyled-link-hover-color</code></li>
+<li>Breaking: Dropdown removed support for <code>.show-dropdown-action-on-active</code>, <code>.dropdown-menu-horizontal</code>, and <code>.dropdown-menu-unstyled</code> replaced with Quick Action</li>
+<li>Breaking: Tables and List Group removed support for <code>.show-dropdown-action-on-active</code> and <code>.dropdown-menu-horizontal</code></li>
+<li>Breaking: Modals added <code>$modal-info</code> Sass map and removed <code>$modal-info-header-bg</code>, <code>$modal-info-header-border-color</code>, <code>$modal-info-header-color</code>, <code>$modal-info-header-close-color</code>, <code>$modal-info-body-bg</code>, <code>$modal-info-body-color</code>, <code>$modal-info-footer-bg</code>, <code>$modal-info-footer-border-color</code>, <code>$modal-info-footer-color</code></li>
+<li>Breaking: Modals added <code>$modal-success</code> Sass map and removed <code>$modal-success-header-bg</code>, <code>$modal-success-header-border-color</code>, <code>$modal-success-header-color</code>, <code>$modal-success-header-close-color</code>, <code>$modal-success-body-bg</code>, <code>$modal-success-body-color</code>, <code>$modal-success-footer-bg</code>, <code>$modal-success-footer-border-color</code>, <code>$modal-success-footer-color</code></li>
+<li>Breaking: Modals added <code>$modal-warning</code> Sass map and removed <code>$modal-warning-header-bg</code>, <code>$modal-warning-header-border-color</code>, <code>$modal-warning-header-color</code>, <code>$modal-warning-header-close-color</code>, <code>$modal-warning-body-bg</code>, <code>$modal-warning-body-color</code>, <code>$modal-warning-footer-bg</code>, <code>$modal-warning-footer-border-color</code>, <code>$modal-warning-footer-color</code></li>
+<li>Breaking: Modals added <code>$modal-danger</code> Sass map and removed <code>$modal-danger-header-bg</code>, <code>$modal-danger-header-border-color</code>, <code>$modal-danger-header-color</code>, <code>$modal-danger-header-close-color</code>, <code>$modal-danger-body-bg</code>, <code>$modal-danger-body-color</code>, <code>$modal-danger-footer-bg</code>, <code>$modal-danger-footer-border-color</code>, <code>$modal-danger-footer-color</code></li>
+<li>Breaking: Panels added Sass map <code>$panel-secondary</code> and removed <code>$panel-danger-border-color</code>, <code>$panel-danger-color</code>, <code>$panel-danger-header-bg</code>, <code>$panel-danger-header-border-color</code>, <code>$panel-danger-header-color</code>, <code>$panel-danger-footer-bg</code>, <code>$panel-danger-footer-border-color</code>, <code>$panel-danger-footer-color</code>, <code>$panel-info-border-color</code>,  <code>$panel-info-color</code>, <code>$panel-info-header-bg</code>, <code>$panel-info-header-border-color</code>, <code>$panel-info-header-color</code>, <code>$panel-info-footer-bg</code>, <code>$panel-info-footer-border-color</code>, <code>$panel-info-footer-color</code>, <code>$panel-primary-border-color</code>, <code>$panel-primary-color</code>, <code>$panel-primary-header-bg</code>, <code>$panel-primary-header-border-color</code>, <code>$panel-primary-header-color</code>, <code>$panel-primary-footer-bg</code>, <code>$panel-primary-footer-border-color</code>, <code>$panel-primary-footer-color</code>, <code>$panel-secondary-border-color</code>, <code>$panel-secondary-color</code>, <code>$panel-secondary-header-bg</code>, <code>$panel-secondary-header-border-color</code>, <code>$panel-secondary-header-color</code>, <code>$panel-secondary-footer-bg</code>, <code>$panel-secondary-footer-border-color</code>, <code>$panel-secondary-footer-color</code>, <code>$panel-success-border-color</code>, <code>$panel-success-color</code>, <code>$panel-success-header-bg</code>, <code>$panel-success-header-border-color</code>, <code>$panel-success-header-color</code>, <code>$panel-success-footer-bg</code>, <code>$panel-success-footer-border-color</code>, <code>$panel-success-footer-color</code>, <code>$panel-warning-border-color</code>, <code>$panel-warning-color</code>, <code>$panel-warning-header-bg</code>, <code>$panel-warning-header-border-color</code>, <code>$panel-warning-header-color</code>, <code>$panel-warning-footer-bg</code>, <code>$panel-warning-footer-border-color</code>, <code>$panel-warning-footer-color</code></li>
+<li>Breaking: Panels removed variants <code>.panel-primary</code>, <code>.panel-info</code>, <code>.panel-success</code>, <code>.panel-warning</code>, and <code>.panel-danger</code></li>
+<li>New: Card added <code>.card-section-header</code> and <code>$card-section-header-color</code>, <code>$card-section-header-font-size</code>, <code>$card-section-header-font-weight</code>, <code>$card-section-header-line-height</code>, <code>$card-section-header-margin-bottom</code>, <code>$card-section-header-padding</code>, <code>$card-section-header-text-transform</code></li>
+<li>New: Quick Action added option to configure <code>$quick-action-item-color</code>, <code>$quick-action-item-hover-color</code></li>
+<li>New: Tables added quick actions and option to configure <code>$table-quick-action-menu-align-items</code>, <code>$table-quick-action-menu-bg</code>, <code>$table-quick-action-menu-accent-bg</code>, <code>$table-quick-action-menu-accent-active-bg</code>, <code>$table-quick-action-menu-active-bg</code>, <code>$table-quick-action-menu-hover-bg</code>, <code>$table-list-quick-action-menu-align-items</code>, <code>$table-list-quick-action-menu-bg</code>, <code>$table-list-quick-action-menu-accent-bg</code>, <code>$table-list-quick-action-menu-accent-active-bg</code>, <code>$table-list-quick-action-menu-active-bg</code>, <code>$table-list-quick-action-menu-hover-bg</code></li>
+<li>New: Quick Action component and added options to customize <code>$quick-action-padding-x</code>, <code>$quick-action-padding-y</code>, <code>$quick-action-item-margin-x</code>, <code>$quick-action-item-margin-y</code>, <code>$quick-action-item-padding-x</code>, <code>$quick-action-item-padding-y</code></li>
+<li>New: Modals added <code>.modal-item-first</code>, <code>.modal-item</code>, and <code>.modal-item-last</code> to help align content left, middle, and right</li>
+<li>New: Modals added <code>modal-variant($map)</code> mixin</li>
+<li>New: Added <code>panel-variant($map)</code> mixin</li>
+<li>New: Panels added <code>.panel-group-fluid</code>, <code>.panel-group-fluid-first</code>, and <code>.panel-group-fluid-last</code></li>
+<li>New: Panels added option to configure <code>$panel-border-color</code>, <code>$panel-border-style</code> and update Atlas Panel border styles</li>
+<li>Update: Button Variant active selectors, BS4 changed selectors</li>
+<li>Update: Change z-index of <code>.navbar-overlay</code> to be less than <code>.navbar-collapse-absolute</code></li>
+<li>Update: List Group add support for Quick Actions</li>
+<li>Update: Move Quick Action positioning from Table to Quick Action</li>
+<li>Update: Table Quick Action removed z-index</li>
+<li>Update: Pagination support <code>.btn.btn-unstyled</code> for pagination links</li>
+<li>Update: Pagination <code>.page-link:focus</code> should appear above others</li>
+<li>Update: Panel Variant mixin header-close-color should inherit from header-color</li>
+<li>Update: Modals use <code>modal-variant</code> mixin and add indicator icons to <code>.modal-title</code>&#x2018;s in variants</li>
+<li>Update: Panel Variant mixin comments</li>
+<li>Update: Modals reset some breaking styles that were added in Bootstrap 4 3624025</li>
+<li>Update: Atlas Panel box-shadows to display on top also</li>
+<li>Update: Sidebar return padding to 1.5rem</li>
+<li>Update: Pagination Bar Items should be centered in mobile</li>
+<li>Site: Timelines update panels to <code>.panel-secondary</code> other panel variants were removed</li>
+<li>Site: Card View Template added horizontal cards and card section headers</li>
+<li>Site: List Group removed references to <code>.list-group-unstyled</code></li>
+<li>Site: Table and List Group add warning about making <code>.show-quick-actions-on-hover</code> keyboard accessible</li>
+<li>Site: List Group and Table View Template from <code>.show-dropdown-action-on-active</code> to <code>.show-quick-actions-on-hover</code></li>
+<li>Site: Table View Template replace <code>.show-dropdown-action-on-active</code> with <code>.show-quick-actions-on-hover</code></li>
+<li>Site: Tables replaced <code>.show-dropdown-action-on-active</code> with <code>.show-quick-action-on-hover</code> and removed vertical align demo</li>
+<li>Site: List Group remove references to <code>.show-dropdown-action-on-active</code></li>
+<li>Site: Card View Template use buttons for pagination links</li>
+<li>Site: Modal add docs for <code>.modal-item-first</code>, <code>.modal-item</code>, and <code>.modal-item-last</code></li>
+<li>Site: Panels page remove references to <code>.panel-primary</code>, <code>.panel-info</code>, <code>.panel-success</code>, <code>.panel-warning</code>, <code>.panel-danger</code></li>
+<li>Site: Source formatting</li>
+<li>Site: Panels added <code>.panel-group-fluid</code> docs</li>
+<li>Site: Users and Organizations demo to use <code>.panel-group-fluid-last</code></li>
+<li>Site: Subnav demos to use <code>.container</code> instead of <code>.container-fluid</code></li>
+<li>Site: Move <code>.card-type-directory</code> to top most element</li>
+</ul>
+<h3 id="v2-0-0-alpha-10-october-6-2017"><a class="heading-anchor" href="#v2-0-0-alpha-10-october-6-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.10 October 6, 2017</h3>
 <ul>
 <li>Breaking: Alert Fluid should use have nested <code>.container</code> or <code>.container-fluid</code></li>
 <li>Breaking: Globals removed <code>$container-fluid-max-widths</code> Sass map, <code>.container-fluid-max-*</code> is now based on <code>$container-max-widths</code></li>
