@@ -39,5 +39,8 @@
     "clay": "liferay/clay#develop",
     "metal-tools-soy": "^4.2.1",
     "webpack": "^3.0.0"
-  }
+  },
+  "browserslist": [
+    "extends browserslist-config-clay-components"
+  ]
 }
