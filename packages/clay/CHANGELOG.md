@@ -1,3 +1,56 @@
+### v2.0.0-alpha.11 October 16, 2017
+
+* Breaking: Update Bootstrap 4 to 99eece1
+* Breaking: List Group removed `.list-group-unstyled` use `.flex-col` and `.flex-col-expand` instead
+* Breaking: Dropdowns removed `$dropdown-horizontal-min-height`, `$dropdown-unstyled-link-color`, `$dropdown-unstyled-link-hover-color`
+* Breaking: Dropdown removed support for `.show-dropdown-action-on-active`, `.dropdown-menu-horizontal`, and `.dropdown-menu-unstyled` replaced with Quick Action
+* Breaking: Tables and List Group removed support for `.show-dropdown-action-on-active` and `.dropdown-menu-horizontal`
+* Breaking: Modals added `$modal-info` Sass map and removed `$modal-info-header-bg`, `$modal-info-header-border-color`, `$modal-info-header-color`, `$modal-info-header-close-color`, `$modal-info-body-bg`, `$modal-info-body-color`, `$modal-info-footer-bg`, `$modal-info-footer-border-color`, `$modal-info-footer-color`
+* Breaking: Modals added `$modal-success` Sass map and removed `$modal-success-header-bg`, `$modal-success-header-border-color`, `$modal-success-header-color`, `$modal-success-header-close-color`, `$modal-success-body-bg`, `$modal-success-body-color`, `$modal-success-footer-bg`, `$modal-success-footer-border-color`, `$modal-success-footer-color`
+* Breaking: Modals added `$modal-warning` Sass map and removed `$modal-warning-header-bg`, `$modal-warning-header-border-color`, `$modal-warning-header-color`, `$modal-warning-header-close-color`, `$modal-warning-body-bg`, `$modal-warning-body-color`, `$modal-warning-footer-bg`, `$modal-warning-footer-border-color`, `$modal-warning-footer-color`
+* Breaking: Modals added `$modal-danger` Sass map and removed `$modal-danger-header-bg`, `$modal-danger-header-border-color`, `$modal-danger-header-color`, `$modal-danger-header-close-color`, `$modal-danger-body-bg`, `$modal-danger-body-color`, `$modal-danger-footer-bg`, `$modal-danger-footer-border-color`, `$modal-danger-footer-color`
+* Breaking: Panels added Sass map `$panel-secondary` and removed `$panel-danger-border-color`, `$panel-danger-color`, `$panel-danger-header-bg`, `$panel-danger-header-border-color`, `$panel-danger-header-color`, `$panel-danger-footer-bg`, `$panel-danger-footer-border-color`, `$panel-danger-footer-color`, `$panel-info-border-color`,  `$panel-info-color`, `$panel-info-header-bg`, `$panel-info-header-border-color`, `$panel-info-header-color`, `$panel-info-footer-bg`, `$panel-info-footer-border-color`, `$panel-info-footer-color`, `$panel-primary-border-color`, `$panel-primary-color`, `$panel-primary-header-bg`, `$panel-primary-header-border-color`, `$panel-primary-header-color`, `$panel-primary-footer-bg`, `$panel-primary-footer-border-color`, `$panel-primary-footer-color`, `$panel-secondary-border-color`, `$panel-secondary-color`, `$panel-secondary-header-bg`, `$panel-secondary-header-border-color`, `$panel-secondary-header-color`, `$panel-secondary-footer-bg`, `$panel-secondary-footer-border-color`, `$panel-secondary-footer-color`, `$panel-success-border-color`, `$panel-success-color`, `$panel-success-header-bg`, `$panel-success-header-border-color`, `$panel-success-header-color`, `$panel-success-footer-bg`, `$panel-success-footer-border-color`, `$panel-success-footer-color`, `$panel-warning-border-color`, `$panel-warning-color`, `$panel-warning-header-bg`, `$panel-warning-header-border-color`, `$panel-warning-header-color`, `$panel-warning-footer-bg`, `$panel-warning-footer-border-color`, `$panel-warning-footer-color`
+* Breaking: Panels removed variants `.panel-primary`, `.panel-info`, `.panel-success`, `.panel-warning`, and `.panel-danger`
+* New: Card added `.card-section-header` and `$card-section-header-color`, `$card-section-header-font-size`, `$card-section-header-font-weight`, `$card-section-header-line-height`, `$card-section-header-margin-bottom`, `$card-section-header-padding`, `$card-section-header-text-transform`
+* New: Quick Action added option to configure `$quick-action-item-color`, `$quick-action-item-hover-color`
+* New: Tables added quick actions and option to configure `$table-quick-action-menu-align-items`, `$table-quick-action-menu-bg`, `$table-quick-action-menu-accent-bg`, `$table-quick-action-menu-accent-active-bg`, `$table-quick-action-menu-active-bg`, `$table-quick-action-menu-hover-bg`, `$table-list-quick-action-menu-align-items`, `$table-list-quick-action-menu-bg`, `$table-list-quick-action-menu-accent-bg`, `$table-list-quick-action-menu-accent-active-bg`, `$table-list-quick-action-menu-active-bg`, `$table-list-quick-action-menu-hover-bg`
+* New: Quick Action component and added options to customize `$quick-action-padding-x`, `$quick-action-padding-y`, `$quick-action-item-margin-x`, `$quick-action-item-margin-y`, `$quick-action-item-padding-x`, `$quick-action-item-padding-y`
+* New: Modals added `.modal-item-first`, `.modal-item`, and `.modal-item-last` to help align content left, middle, and right
+* New: Modals added `modal-variant($map)` mixin
+* New: Added `panel-variant($map)` mixin
+* New: Panels added `.panel-group-fluid`, `.panel-group-fluid-first`, and `.panel-group-fluid-last`
+* New: Panels added option to configure `$panel-border-color`, `$panel-border-style` and update Atlas Panel border styles
+* Update: Button Variant active selectors, BS4 changed selectors
+* Update: Change z-index of `.navbar-overlay` to be less than `.navbar-collapse-absolute`
+* Update: List Group add support for Quick Actions
+* Update: Move Quick Action positioning from Table to Quick Action
+* Update: Table Quick Action removed z-index
+* Update: Pagination support `.btn.btn-unstyled` for pagination links
+* Update: Pagination `.page-link:focus` should appear above others
+* Update: Panel Variant mixin header-close-color should inherit from header-color
+* Update: Modals use `modal-variant` mixin and add indicator icons to `.modal-title`'s in variants
+* Update: Panel Variant mixin comments
+* Update: Modals reset some breaking styles that were added in Bootstrap 4 3624025
+* Update: Atlas Panel box-shadows to display on top also
+* Update: Sidebar return padding to 1.5rem
+* Update: Pagination Bar Items should be centered in mobile
+* Site: Timelines update panels to `.panel-secondary` other panel variants were removed
+* Site: Card View Template added horizontal cards and card section headers
+* Site: List Group removed references to `.list-group-unstyled`
+* Site: Table and List Group add warning about making `.show-quick-actions-on-hover` keyboard accessible
+* Site: List Group and Table View Template from `.show-dropdown-action-on-active` to `.show-quick-actions-on-hover`
+* Site: Table View Template replace `.show-dropdown-action-on-active` with `.show-quick-actions-on-hover`
+* Site: Tables replaced `.show-dropdown-action-on-active` with `.show-quick-action-on-hover` and removed vertical align demo
+* Site: List Group remove references to `.show-dropdown-action-on-active`
+* Site: Card View Template use buttons for pagination links
+* Site: Modal add docs for `.modal-item-first`, `.modal-item`, and `.modal-item-last`
+* Site: Panels page remove references to `.panel-primary`, `.panel-info`, `.panel-success`, `.panel-warning`, `.panel-danger`
+* Site: Source formatting
+* Site: Panels added `.panel-group-fluid` docs
+* Site: Users and Organizations demo to use `.panel-group-fluid-last`
+* Site: Subnav demos to use `.container` instead of `.container-fluid`
+* Site: Move `.card-type-directory` to top most element
+
 ### v2.0.0-alpha.10 October 6, 2017
 
 * Breaking: Alert Fluid should use have nested `.container` or `.container-fluid`
