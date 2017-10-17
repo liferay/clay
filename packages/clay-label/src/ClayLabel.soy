@@ -17,6 +17,10 @@
 		label
 		{sp}label-{$style ?: 'secondary'}
 
+		{if $closeable}
+			{sp}label-dismissible
+		{/if}
+
 		{if $size}
 			{sp}label-{$size}
 		{/if}
