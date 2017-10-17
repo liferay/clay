@@ -96,6 +96,12 @@
 	max-width: calc(100% - 24px);
 }
 
+// Nav Stacked
+
+.nav-stacked {
+	flex-direction: column;
+}
+
 // Nav Unstyled
 
 .nav-unstyled {
