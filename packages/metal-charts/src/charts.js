@@ -13,7 +13,6 @@ import ScatterChart from './ScatterChart';
 import SplineChart from './SplineChart';
 import StepChart from './StepChart';
 import { bb, d3 } from './ChartBase';
-import './scss/main.scss';
 
 export {
 	AreaLineChart,

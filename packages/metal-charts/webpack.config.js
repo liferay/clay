@@ -4,7 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 	entry: {
 		charts: './src/charts.js',
-		'charts-jsx': './src/jsx/charts.js'
+		'charts-jsx': './src/jsx/charts.js',
+		styles: './src/scss/main.scss'
 	},
 	module: {
 		rules: [{
