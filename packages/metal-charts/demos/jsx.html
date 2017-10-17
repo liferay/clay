@@ -5,14 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Metal Charts</title>
 
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas.css">
 	<link rel="stylesheet" href="../build/metal-charts.css">
 
 	<script src="../build/globals/metal-charts-jsx.js"></script>
 
 	<style>
 		body {
+			background-color: #EEE;
 			margin: 20px 40px;
-			background-color: #eee;
 		}
 
 		h2 {
@@ -21,8 +22,8 @@
 
 		.metal-chart-example {
 			background-color: #FFF;
-			padding: 10px;
 			margin: 20px;
+			padding: 10px;
 		}
 	</style>
 </head>
@@ -52,12 +53,12 @@
 	</div>
 
 	<div class="metal-chart-example">
-		<h2>Area-spline</h2>
+		<h2>Area-Spline</h2>
 		<div id="area-spline"></div>
 	</div>
 
 	<div class="metal-chart-example">
-		<h2>Area-step</h2>
+		<h2>Area-Step</h2>
 		<div id="area-step"></div>
 	</div>
 
@@ -85,6 +86,8 @@
 		<h2>Gauge</h2>
 		<div id="gauge"></div>
 	</div>
+
+
 
 	<div id="controls" style="display: none;">
 		<label>
@@ -118,14 +121,21 @@
 		var dummyData = {
 			columns_1: [
 				{
-					color: 'red',
 					data: [30, 200, 100, 400, 150, 250],
-					id: 'data1',
-					name: 'Data 1'
+					id: 'sample_data_1',
+					name: 'Data 1',
 				},
 				{
 					data: [50, 20, 10, 40, 15, 25],
 					id: 'data2'
+				},
+				{
+					data: [150, 90, 30, 400, 15, 205],
+					id: 'data3'
+				},
+				{
+					data: [10, 30, 130, 200, 50, 20],
+					id: 'data4'
 				}
 			],
 			columns_2: [
@@ -243,7 +253,18 @@
 		};
 
 		var lineChart = new metal.LineChart({
-			columns: dummyData.columns_1
+			columns: dummyData.columns_1,
+			grid: {
+				x: {
+					show: true
+				},
+				y: {
+					show: true
+				},
+			},
+			tooltip: {
+				show: true
+			},
 		}, '#line');
 		createChartControls(lineChart, 'line');
 
@@ -257,51 +278,43 @@
 		}, '#step');
 		createChartControls(stepChart, 'step');
 
-		var areaChart = new metal.LineChart({
-			columns: dummyData.columns_1,
-			type: 'area'
+		var areaLineChart = new metal.AreaLineChart({
+			columns: dummyData.columns_1
 		}, '#area');
-		createChartControls(areaChart, 'area');
+		createChartControls(areaLineChart, 'area');
 
-		var areaSplineChart = new metal.SplineChart({
-			columns: dummyData.columns_1,
-			type: 'area-spline'
+		var areaSplineChart = new metal.AreaSplineChart({
+			columns: dummyData.columns_2
 		}, '#area-spline');
 		createChartControls(areaSplineChart, 'area-spline');
 
-		var areaStepChart = new metal.StepChart({
-			columns: dummyData.columns_1,
-			type: 'area-step'
+		var areaStepChart = new metal.AreaStepChart({
+			columns: dummyData.columns_3
 		}, '#area-step');
 		createChartControls(areaStepChart, 'area-step');
 
 		var barChart = new metal.BarChart({
-			columns: dummyData.columns_1,
-			type: 'bar'
+			columns: dummyData.columns_1
 		}, '#bar');
 		createChartControls(barChart, 'bar');
 
 		var scatterChart = new metal.ScatterChart({
-			columns: dummyData.columns_1,
-			type: 'scatter'
+			columns: dummyData.columns_1
 		}, '#scatter');
 		createChartControls(scatterChart, 'scatter');
 
 		var pieChart = new metal.PieChart({
-			columns: dummyPercentData.columns_1,
-			type: 'pie'
+			columns: dummyPercentData.columns_1
 		}, '#pie');
 		createChartControls(pieChart, 'pie', dummyPercentData);
 
 		var donutChart = new metal.DonutChart({
-			columns: dummyPercentData.columns_1,
-			type: 'donut'
+			columns: dummyPercentData.columns_1
 		}, '#donut');
 		createChartControls(donutChart, 'donut', dummyPercentData);
 
 		var gaugeChart = new metal.GaugeChart({
-			columns: dummyGaugeData.columns_1,
-			type: 'gauge'
+			columns: dummyGaugeData.columns_1
 		}, '#gauge');
 		createChartControls(gaugeChart, 'gauge', dummyGaugeData);
 
@@ -318,13 +331,13 @@
 			typeSelect.value = type;
 
 			typeSelect.addEventListener('change', function(event) {
-				chart.props.type = typeSelect.value;
+				chart.type = typeSelect.value;
 			});
 
 			var dataSelect = chartControls.querySelector('.data');
 
 			dataSelect.addEventListener('change', function(event) {
-				chart.props.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
+				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
 			});
 
 			element.parentNode.appendChild(chartControls);
