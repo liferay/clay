@@ -13,3 +13,9 @@
 .menubar-vertical-expand-md {
 	@include menubar-vertical-expand($menubar-vertical-expand-md);
 }
+
+// Menubar Variants
+
+.menubar-transparent.menubar-vertical-expand-md {
+	@include menubar-vertical-variant($menubar-vertical-transparent);
+}
