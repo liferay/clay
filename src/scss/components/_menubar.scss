@@ -1,0 +1,15 @@
+.menubar {
+	position: relative;
+}
+
+.menubar-toggler {
+	@extend %btn-unstyled;
+
+	display: none;
+}
+
+// Menubar Vertical
+
+.menubar-vertical-expand-md {
+	@include menubar-vertical-expand($menubar-vertical-expand-md);
+}
