@@ -78,6 +78,10 @@
 
 // Nav Item
 
+.nav-item {
+	word-wrap: break-word;
+}
+
 .nav-item[class*='col-'] {
 	padding-left: 0;
 	padding-right: 0;
