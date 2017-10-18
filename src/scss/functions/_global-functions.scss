@@ -69,6 +69,21 @@
 	@return $number;
 }
 
+// Returns name of previous breakpoint or null if first breakpoint
+// @param $name - breakpoint name {xs|sm|md|lg|xl}
+// @param $breakpoints - Sass map that defines the breakpoints to use
+// @param $breakpoint-names - A Sass list of all the keys in $breakpoints
+
+@function breakpoint-prev($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+	@each $value in $breakpoint-names {
+		@if (breakpoint-next($value) == $name) {
+			@return $value;
+		}
+	}
+
+	@return null;
+}
+
 // str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
 
 // Function to replace characters in a string
