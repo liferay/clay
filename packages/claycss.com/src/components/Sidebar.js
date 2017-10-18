@@ -11,7 +11,7 @@ class Sidebar extends Component {
 	attached() {
 		Toggler.CSS_EXPANDED = 'open'; /* Until metal-toggler can manage classenames on states */
 
-		new Toggler({
+		this._toggler = new Toggler({
 			content: '.sidebar-toggler-content',
 			header: '.sidebar-toggler'
 		});
@@ -19,6 +19,10 @@ class Sidebar extends Component {
 		this.createStorage_();
 
 		this.setAtlasFromStorage_();
+	}
+
+	disposed() {
+		this._toggler.dispose();
 	}
 
 	createStorage_() {
