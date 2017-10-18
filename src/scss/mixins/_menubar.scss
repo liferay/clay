@@ -1,0 +1,117 @@
+@mixin menubar-vertical-expand($map) {
+	$enabled: setter(map-get($map, enabled), true);
+	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
+	$breakpoint-down: breakpoint-prev($breakpoint-up);
+
+	// .menubar-vertical-expand-{md}
+
+	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$max-width: setter(map-get($map, max-width), 15.625rem); // 250px
+
+	$border-color-mobile: setter(map-get($map, border-color-mobile), transparent);
+	$border-style-mobile: setter(map-get($map, border-style-mobile), solid);
+	$border-width-mobile: setter(map-get($map, border-width-mobile), 0.0625rem); // 1px
+	$margin-bottom-mobile: setter(map-get($map, margin-bottom-mobile), 1rem);
+	$max-width-mobile: setter(map-get($map, max-width-mobile), none);
+	$min-height-mobile: setter(map-get($map, min-height-mobile), 3rem); // 48px
+	$padding-x-mobile: setter(map-get($map, padding-x-mobile), 0.5rem);
+	$padding-y-mobile: map-get($map, padding-y-mobile);
+
+	// .menubar-collapse
+
+	$collapse-border-color-mobile: setter(map-get($map, collapse-border-color-mobile), transparent);
+	$collapse-border-style-mobile: setter(map-get($map, collapse-border-style-mobile), solid);
+	$collapse-border-width-mobile: setter(map-get($map, collapse-border-width-mobile), 0.0625rem); // 1px
+	$collapse-inner-spacer-y-mobile: setter(map-get($map, collapse-inner-spacer-y-mobile), 0.5rem); // 8px
+	$collapse-margin-top-mobile: map-get($map, collapse-margin-top-mobile);
+	$collapse-max-width-mobile: map-get($map, collapse-max-width-mobile);
+	$collapse-left-mobile: setter(map-get($map, collapse-left-mobile), -0.0625rem); // -1px
+	$collapse-right-mobile: setter(map-get($map, collapse-right-mobile), -0.0625rem); // -1px
+
+	// .menubar-toggler
+
+	$toggler-border-color-mobile: setter(map-get($map, toggler-border-color), transparent);
+	$toggler-border-style-mobile: setter(map-get($map, toggler-border-style-mobile), solid);
+	$toggler-border-width-mobile: setter(map-get($map, toggler-border-width), 0.0625rem); // 1px
+	$toggler-height-mobile: setter(map-get($map, toggler-height-mobile), 2rem); // 32px
+	$toggler-padding-x-mobile: setter(map-get($map, toggler-padding-x-mobile), 0.5rem); // 8px
+	$toggler-padding-y-mobile: map-get($map, toggler-padding-y-mobile);
+
+	@if ($enabled) {
+		border-color: $border-color;
+		border-style: $border-style;
+		border-width: $border-width;
+		max-width: $max-width;
+
+		@include media-breakpoint-down($breakpoint-down) {
+			align-items: center;
+			border-color: $border-color-mobile;
+			border-style: $border-style-mobile;
+			border-width: $border-width-mobile;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: $margin-bottom-mobile;
+			max-width: $max-width-mobile;
+			min-height: $min-height-mobile;
+			padding-bottom: $padding-y-mobile;
+			padding-left: $padding-x-mobile;
+			padding-right: $padding-x-mobile;
+			padding-top: $padding-y-mobile;
+		}
+
+		.menubar-collapse {
+			display: block;
+
+			@include media-breakpoint-down($breakpoint-down) {
+				border-color: $collapse-border-color-mobile;
+				border-style: $collapse-border-style-mobile;
+				border-width: $collapse-border-width-mobile;
+				display: none;
+				left: $collapse-left-mobile;
+				margin-top: $collapse-margin-top-mobile;
+				max-width: $collapse-max-width-mobile;
+				position: absolute;
+				right: $collapse-right-mobile;
+				top: 100%;
+				z-index: $zindex-navbar-collapse-absolute;
+
+				> .nav {
+					margin-bottom: $collapse-inner-spacer-y-mobile;
+					margin-top: $collapse-inner-spacer-y-mobile;
+				}
+			}
+
+			&.collapsing,
+			&.show {
+				display: block;
+			}
+		}
+
+		.menubar-toggler {
+			@include media-breakpoint-down($breakpoint-down) {
+				align-items: center;
+				border-color: $toggler-border-color-mobile;
+				border-style: $toggler-border-style-mobile;
+				border-width: $toggler-border-width-mobile;
+				display: flex;
+				height: $toggler-height-mobile;
+				padding-bottom: $toggler-padding-y-mobile;
+				padding-left: $toggler-padding-x-mobile;
+				padding-right: $toggler-padding-x-mobile;
+				padding-top: $toggler-padding-y-mobile;
+
+				.lexicon-icon {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	@else {
+		.menubar-collapse {
+			display: block;
+		}
+	}
+}
