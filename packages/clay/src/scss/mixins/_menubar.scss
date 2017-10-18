@@ -13,7 +13,7 @@
 	$border-color-mobile: setter(map-get($map, border-color-mobile), transparent);
 	$border-style-mobile: setter(map-get($map, border-style-mobile), solid);
 	$border-width-mobile: setter(map-get($map, border-width-mobile), 0.0625rem); // 1px
-	$margin-bottom-mobile: setter(map-get($map, margin-bottom-mobile), 1rem);
+	$margin-bottom-mobile: map-get($map, margin-bottom-mobile);
 	$max-width-mobile: setter(map-get($map, max-width-mobile), none);
 	$min-height-mobile: setter(map-get($map, min-height-mobile), 3rem); // 48px
 	$padding-x-mobile: setter(map-get($map, padding-x-mobile), 0.5rem);
