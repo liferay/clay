@@ -1,0 +1,172 @@
+{namespace ClayModal}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? _handleClickButtonFooter: any}
+	{@param? _handleCloseModal: any}
+	{@param? _isTransitioning: bool}
+	{@param? body: string|html}
+	{@param? footer: list<?>}
+	{@param? id: string}
+	{@param? iframe: bool}
+	{@param? size: string}
+	{@param? spritemap: string}
+	{@param? status: string}
+	{@param? title: string}
+	{@param? visible: bool}
+
+	{let $classesSize kind="text"}
+		modal-dialog
+		{if $size}
+			{sp}modal-{$size}
+		{elseif $iframe}
+			{sp}modal-full-screen
+		{/if}
+
+		{if $status}
+			{sp}modal-{$status}
+		{/if}
+	{/let}
+
+	{let $attributes kind="attributes"}
+		class="
+			fade modal
+			{if $_isTransitioning}
+				{sp}show
+			{/if}
+		"
+
+		{if $visible}
+			style="display: block;"
+		{/if}
+
+		{if $id}
+			id="{$id}"
+		{/if}
+
+		role="dialog"
+
+		tabindex="-1"
+	{/let}
+
+	<div {$attributes}>
+		<div class="{$classesSize}">
+			<div class="modal-content">
+				{call .header}
+					{param _handleCloseModal: $_handleCloseModal /}
+					{param spritemap: $spritemap /}
+					{param title: $title /}
+				{/call}
+
+				{call .body}
+					{param body: $body /}
+					{param iframe: $iframe /}
+				{/call}
+
+				{call .footer}
+					{param _handleClickButtonFooter: $_handleClickButtonFooter /}
+					{param _handleCloseModal: $_handleCloseModal /}
+					{param footer: $footer /}
+				{/call}
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ * Render a header of the modal.
+ */
+{template .header}
+	{@param? _handleCloseModal: any}
+	{@param? spritemap: string}
+	{@param? title: string}
+
+	{if $title and $spritemap}
+		<div class="modal-header">
+			<h4 class="modal-title">{$title}</h4>
+
+			{call ClayButton.render}
+				{param elementClasses: 'close' /}
+				{param events: ['click': $_handleCloseModal] /}
+				{param icon: [
+					'alignment': 'left',
+					'monospaced': false,
+					'spritemap': $spritemap,
+					'symbol': 'times'
+				] /}
+				{param style: 'secondary' /}
+			{/call}
+		</div>
+	{/if}
+{/template}
+
+/**
+ * Render a body of the modal.
+ */
+{template .body}
+	{@param? body: string|html}
+	{@param? iframe: bool}
+
+	{let $classes kind="text"}
+		modal-body
+		{if $iframe}
+			{sp}modal-body-iframe
+		{/if}
+	{/let}
+
+	<div class="{$classes}">
+		{$body}
+	</div>
+{/template}
+
+/**
+ * Render a footer of the modal.
+ */
+{template .footer}
+	{@param? _handleClickButtonFooter: any}
+	{@param? _handleCloseModal: any}
+	{@param? footer: list<?>}
+
+	{if $footer}
+		<div class="modal-footer">
+			<div class="modal-item-first">
+				{foreach $item in $footer}
+					{if not $item.type}
+						{call ClayButton.render}
+							{param events: ['click': $_handleClickButtonFooter] /}
+							{param label: $item.label /}
+							{param style: $item.style ?: 'primary' /}
+							{param type: 'button' /}
+						{/call}
+						{sp}
+					{/if}
+				{/foreach}
+			</div>
+			<div class="modal-item"></div>
+			<div class="modal-item-last">
+				{foreach $item in $footer}
+					{if $item.type == 'close'}
+						{call ClayButton.render}
+							{param elementClasses: 'close-modal' /}
+							{param events: ['click': $_handleCloseModal] /}
+							{param label: $item.label /}
+							{param style: 'secondary' /}
+							{param type: 'button' /}
+						{/call}
+						{sp}
+					{elseif $item.type == 'save'}
+						{call ClayButton.render}
+							{param events: ['click': $_handleClickButtonFooter] /}
+							{param label: $item.label /}
+							{param style: 'primary' /}
+							{param type: 'button' /}
+						{/call}
+						{sp}
+					{/if}
+				{/foreach}
+			</div>
+		</div>
+	{/if}
+{/template}
