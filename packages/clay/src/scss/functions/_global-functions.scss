@@ -81,7 +81,7 @@
 		}
 	}
 
-	@return null;
+	@return nth($breakpoint-names, 1);
 }
 
 // str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
