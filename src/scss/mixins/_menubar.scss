@@ -32,9 +32,9 @@
 
 	// .menubar-toggler
 
-	$toggler-border-color-mobile: setter(map-get($map, toggler-border-color), transparent);
+	$toggler-border-color-mobile: setter(map-get($map, toggler-border-color-mobile), transparent);
 	$toggler-border-style-mobile: setter(map-get($map, toggler-border-style-mobile), solid);
-	$toggler-border-width-mobile: setter(map-get($map, toggler-border-width), 0.0625rem); // 1px
+	$toggler-border-width-mobile: setter(map-get($map, toggler-border-width-mobile), 0.0625rem); // 1px
 	$toggler-height-mobile: setter(map-get($map, toggler-height-mobile), 2rem); // 32px
 	$toggler-padding-x-mobile: setter(map-get($map, toggler-padding-x-mobile), 0.5rem); // 8px
 	$toggler-padding-y-mobile: map-get($map, toggler-padding-y-mobile);
@@ -112,6 +112,126 @@
 	@else {
 		.menubar-collapse {
 			display: block;
+		}
+	}
+}
+
+@mixin menubar-vertical-variant($map) {
+	$enable: setter(map-get($map, enable), true);
+	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
+	$breakpoint-down: breakpoint-prev($breakpoint-up);
+
+	// .menubar-vertical-expand-{md}.menubar-{variant}
+
+	$bg: map-get($map, bg);
+	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+
+	$bg-mobile: map-get($map, bg-mobile);
+	$border-color-mobile: map-get($map, border-color-mobile);
+	$border-style-mobile: map-get($map, border-style-mobile);
+
+	// .nav-link
+
+	$link-color: setter(map-get($map, link-color), $navbar-light-color);
+	$link-hover-color: setter(map-get($map, link-hover-color), $navbar-light-hover-color);
+	$link-active-color: setter(map-get($map, link-active-color), $navbar-light-active-color);
+	$link-active-font-weight: map-get($map, link-active-font-weight);
+	$link-disabled-color: setter(map-get($map, link-disabled-color), $navbar-light-disabled-color);
+
+	$link-color-mobile: setter(map-get($map, link-color-mobile), $dropdown-link-color);
+
+	$link-hover-bg-mobile: setter(map-get($map, link-hover-bg-mobile), $dropdown-link-hover-bg);
+	$link-hover-color-mobile: setter(map-get($map, link-hover-color-mobile), $dropdown-link-hover-color);
+
+	$link-active-bg-mobile: setter(map-get($map, link-active-bg-mobile), $dropdown-link-active-bg);
+	$link-active-font-weight-mobile: setter(map-get($map, link-active-font-weight-mobile), $dropdown-link-active-font-weight);
+	$link-active-color-mobile: setter(map-get($map, link-active-color-mobile), $dropdown-link-active-color);
+
+	$link-disabled-bg-mobile: setter(map-get($map, link-disabled-bg-mobile), transparent);
+	$link-disabled-color-mobile: setter(map-get($map, link-disabled-color-mobile), $dropdown-link-disabled-color);
+
+	// .menubar-collapse
+
+	$collapse-bg-mobile: setter(map-get($map, collapse-bg-mobile), $dropdown-bg);
+	$collapse-border-color-mobile: setter(map-get($map, collapse-border-color-mobile), $dropdown-border-color);
+	$collapse-border-radius-mobile: setter(map-get($map, collapse-border-radius-mobile), $border-radius);
+	$collapse-border-style-mobile: map-get($map, collapse-border-style-mobile);
+	$collapse-box-shadow-mobile: setter(map-get($map, collapse-box-shadow-mobile), $dropdown-box-shadow);
+
+	// .menubar-toggler
+
+	$toggler-border-color-mobile: map-get($map, toggler-border-color-mobile);
+	$toggler-border-style-mobile: map-get($map, toggler-border-style-mobile);
+	$toggler-color-mobile: setter(map-get($map, toggler-color-mobile), $link-active-color);
+	$toggler-font-weight-mobile: map-get($map, toggler-font-weight-mobile);
+
+	background-color: $bg;
+	border-color: $border-color;
+	border-style: $border-style;
+
+	@include media-breakpoint-down($breakpoint-down) {
+		background-color: $bg-mobile;
+		border-color: $border-color-mobile;
+		border-style: $border-style-mobile;
+	}
+
+	.menubar-collapse {
+		@include media-breakpoint-down($breakpoint-down) {
+			background-color: $collapse-bg-mobile;
+			border-color: $collapse-border-color-mobile;
+
+			@include border-radius($collapse-border-radius-mobile);
+
+			border-style: $collapse-border-style-mobile;
+
+			@include box-shadow($collapse-box-shadow-mobile);
+		}
+	}
+
+	.menubar-toggler {
+		@include media-breakpoint-down($breakpoint-down) {
+			border-color: $toggler-border-color-mobile;
+			border-style: $toggler-border-style-mobile;
+			color: $toggler-color-mobile;
+			font-weight: $toggler-font-weight-mobile;
+		}
+	}
+
+	.nav-link {
+		color: $link-color;
+
+		@include hover-focus {
+			color: $link-hover-color;
+		}
+
+		@include media-breakpoint-down($breakpoint-down) {
+			color: $link-color-mobile;
+
+			@include hover {
+				background-color: $link-hover-bg-mobile;
+				color: $link-hover-color-mobile;
+			}
+		}
+
+		&.active {
+			color: $link-active-color;
+			font-weight: $link-active-font-weight;
+
+			@include media-breakpoint-down($breakpoint-down) {
+				background-color: $link-active-bg-mobile;
+				color: $link-active-color-mobile;
+				font-weight: $link-active-font-weight-mobile;
+			}
+		}
+
+		&.disabled {
+			color: $link-disabled-color;
+
+			@include media-breakpoint-down($breakpoint-down) {
+				background-color: $link-disabled-bg-mobile;
+				color: $link-disabled-color-mobile;
+			}
 		}
 	}
 }
