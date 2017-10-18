@@ -61,7 +61,7 @@ fieldset[disabled] .btn {
 
 // Button Unstyled
 
-.btn-unstyled {
+%btn-unstyled {
 	background-color: transparent;
 
 	@include border-radius(1px);
@@ -69,6 +69,10 @@ fieldset[disabled] .btn {
 
 	line-height: inherit;
 	vertical-align: baseline;
+}
+
+.btn-unstyled {
+	@extend %btn-unstyled;
 }
 
 .show > .btn-unstyled.dropdown-toggle {
