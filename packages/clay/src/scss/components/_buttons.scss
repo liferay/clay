@@ -94,14 +94,6 @@ fieldset[disabled] .btn {
 		@include monospace($btn-monospaced-size-mobile);
 	}
 
-	&.btn-xl {
-		@include monospace($btn-monospaced-size-xl);
-
-		@include scale-component {
-			@include monospace($btn-monospaced-size-xl-mobile);
-		}
-	}
-
 	&.btn-lg {
 		@include monospace($btn-monospaced-size-lg);
 
