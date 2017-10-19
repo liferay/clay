@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Table View Template</title>
+	<title>Lexicon - List View Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -186,9 +186,9 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
+<li class="active"><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
+<li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
@@ -206,7 +206,7 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
-			Table View Template
+			List View Template
 
 			
 		</h1>
@@ -359,12 +359,12 @@
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-						<use xlink:href="../../images/icons/icons.svg#table">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+						<use xlink:href="../../images/icons/icons.svg#cards2">
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
-					<a class="dropdown-item" href="#1">
+					<a class="active dropdown-item" href="#1">
 						<span class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
 								<use xlink:href="../../images/icons/icons.svg#list">
@@ -372,7 +372,7 @@
 						</span>
 						List View
 					</a>
-					<a class="active dropdown-item" href="#1">
+					<a class="dropdown-item" href="#1">
 						<span class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
 								<use xlink:href="../../images/icons/icons.svg#table">
@@ -401,120 +401,358 @@
 	</div>
 </nav>
 
-<form class="mt-4">
-	<div class="container container-no-gutters-sm-down">
-		<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list table-responsive-lg">
-			<thead>
-				<tr>
-					<th></th>
-					<th colspan="2">
-						Item Title
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
-							<use xlink:href="../../images/icons/icons.svg#import-export">
+<form class="mt-4 mb-4">
+	<div class="container">
+		<ul class="list-group show-quick-actions-on-hover">
+			<li class="list-group-header">
+				<h3 class="list-group-header-title">Group 1</h3>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+						</label>
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="sticker sticker-secondary">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use xlink:href="../../images/icons/icons.svg#folder">
 						</svg>
-					</th>
-					<th>Size</th>
-					<th>Status</th>
-					<th>Creation Date</th>
-					<th>Modification Date</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<div class="custom-control custom-checkbox">
-							<label>
-								<input class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
-							</label>
+					</div>
+				</div>
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title truncate-text">
+						<a href="#1">Account Example One</a>
+					</h4>
+					<p class="list-group-subtitle truncate-text">Second Level Text</p>
+				</div>
+				<div class="flex-col">
+					<div class="quick-action-menu">
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="../../images/icons/icons.svg#download">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+							</svg>
+						</a>
+					</div>
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+							</svg>
+						</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#1">Remove</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
 						</div>
-					</td>
-					<td>
-						<span class="sticker sticker-danger">PNG</span>
-					</td>
-					<td class="table-cell-content">
-						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-					</td>
-					<td>700KB</td>
-					<td>
-						<span class="label label-success">Approved</span>
-					</td>
-					<td>6 days ago</td>
-					<td>4 days ago</td>
-					<td>
-						<div class="quick-action-menu">
-							<a class="quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-									<use xlink:href="../../images/icons/icons.svg#trash">
-								</svg>
-							</a>
-							<a class="quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-									<use xlink:href="../../images/icons/icons.svg#download">
-								</svg>
-							</a>
-							<a class="quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-									<use xlink:href="../../images/icons/icons.svg#info-circle-open">
-								</svg>
-							</a>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+						</label>
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="sticker sticker-secondary">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use xlink:href="../../images/icons/icons.svg#folder">
+						</svg>
+					</div>
+				</div>
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title">
+						<a href="#1">Account Example Two</a>
+					</h4>
+					<p class="list-group-subtitle">Second Level Text</p>
+				</div>
+				<div class="flex-col">
+					<div class="quick-action-menu">
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="../../images/icons/icons.svg#download">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+							</svg>
+						</a>
+					</div>
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+							</svg>
+						</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#1">Remove</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
 						</div>
-						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Remove</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-							</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-header">
+				<h3 class="list-group-header-title">Group 2</h3>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+						</label>
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="sticker sticker-secondary">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use xlink:href="../../images/icons/icons.svg#folder">
+						</svg>
+					</div>
+				</div>
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title truncate-text">
+						<a href="#1">Account Example One</a>
+					</h4>
+					<p class="list-group-subtitle truncate-text">Second Level Text</p>
+					<div>
+						<span class="label label-warning">Pending</span>
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="quick-action-menu">
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="../../images/icons/icons.svg#download">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+							</svg>
+						</a>
+					</div>
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+							</svg>
+						</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#1">Remove</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
 						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+						</label>
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="sticker sticker-secondary">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use xlink:href="../../images/icons/icons.svg#folder">
+						</svg>
+					</div>
+				</div>
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title">
+						<a href="#1">Account Example Two</a>
+					</h4>
+					<p class="list-group-subtitle">Second Level Text</p>
+					<div>
+						<span class="label label-info">Info</span>
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="quick-action-menu">
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="../../images/icons/icons.svg#download">
+							</svg>
+						</a>
+						<a class="quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+							</svg>
+						</a>
+					</div>
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+							</svg>
+						</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#1">Remove</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-header">
+				<h3 class="list-group-header-title">Group 3</h3>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title">
+						<a href="#1">Account Example One</a>
+					</h4>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title">
+						<a href="#1">Account Example Two</a>
+					</h4>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title">
+						<a href="#1">Account Example Three</a>
+					</h4>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col flex-col-expand">
+					<h4 class="list-group-title">
+						<a href="#1">Account Example Four</a>
+					</h4>
+				</div>
+			</li>
+		</ul>
 	</div>
 </form>
 
+<div class="container">
+	<div class="pagination-bar">
+		<div class="dropdown pagination-items-per-page">
+			<button class="btn btn-unstyled dropdown-toggle" data-toggle="dropdown" type="button">
+				10 entries
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+				</svg>
+			</button>
+			<div class="dropdown-menu dropdown-menu-top">
+				<a class="dropdown-item" href="#1">5</a>
+				<a class="dropdown-item" href="#1">10</a>
+				<a class="dropdown-item" href="#1">20</a>
+				<a class="dropdown-item" href="#1">30</a>
+				<a class="dropdown-item" href="#1">50</a>
+			</div>
+		</div>
+		<div class="pagination-results">Showing 223,922 to 223,932 of 1,292,203 entries.</div>
+		<ul class="pagination">
+			<li class="disabled page-item">
+				<button class="btn btn-unstyled page-link" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use xlink:href="../../images/icons/icons.svg#angle-left">
+					</svg>
+					<span class="sr-only">Previous</span>
+				</button>
+			</li>
+			<li class="active page-item"><a class="page-link" href="#1">22,392</a></li>
+			<li class="page-item"><a class="page-link" href="#1">22,393</a></li>
+			<li class="dropdown page-item">
+				<button class="btn btn-unstyled dropdown-toggle page-link" data-toggle="dropdown" type="button">...</button>
+				<div class="dropdown-menu dropdown-menu-top-center">
+					<div class="inline-scroller">
+						<a class="dropdown-item" href="#1">22,394</a>
+						<a class="dropdown-item" href="#1">22,395</a>
+						<a class="dropdown-item" href="#1">22,396</a>
+						<a class="dropdown-item" href="#1">22,397</a>
+						<a class="dropdown-item" href="#1">22,398</a>
+						<a class="dropdown-item" href="#1">22,399</a>
+						<a class="dropdown-item" href="#1">22,400</a>
+						<a class="dropdown-item" href="#1">22,401</a>
+						<a class="dropdown-item" href="#1">22,402</a>
+						<a class="dropdown-item" href="#1">22,403</a>
+						<a class="dropdown-item" href="#1">22,404</a>
+						<a class="dropdown-item" href="#1">22,405</a>
+						<a class="dropdown-item" href="#1">22,406</a>
+					</div>
+				</div>
+			</li>
+			<li class="page-item"><a class="page-link" href="#1">129,221</a></li>
+			<li class="page-item">
+				<button class="btn btn-unstyled page-link" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="../../images/icons/icons.svg#angle-right">
+					</svg>
+					<span class="sr-only">Next</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
 <script>
-	$('.table').on('click', 'input[type="checkbox"]', function(event) {
+	$('.list-group .list-group-item input[type="checkbox"]').on(
+		'click',
+		function(event) {
+			$(this).closest('.list-group-item').toggleClass('active');
+		}
+	);
+
+	$(document).on('focus', '.heading-anchor', function(event) {
+		$('.list-group').find('.list-group-item-flex').removeClass('focus');
+	});
+
+	$(document).on('click', 'body', function(event) {
+		$('.list-group').find('.list-group-item-flex').removeClass('focus');
+	});
+
+	$('.list-group').on('focus', '.list-group-item-flex', function(event) {
 		var $this = $(this);
-
-		$this.closest('tr').toggleClass('table-active');
-	});
-
-	$(document).on('focus', '.navbar-nav', function(event) {
-		$('.table').find('tr').removeClass('table-focus');
-	});
-
-	$(document).on('click', 'html', function(event) {
-		$('.table').find('tr').removeClass('table-focus');
-	});
-
-	$('.table').on('focus', 'tr', function(event) {
-		var $this = $(this);
-		$this.closest('.table').find('tr').removeClass('table-focus');
-		$this.closest('tr').addClass('table-focus');
-	});
-
-	$('.clay-site-open-overlay-sm-down').on('click', function(event) {
-		$(this).closest('.navbar').find('.navbar-overlay-sm-down').addClass('show');
-	});
-
-	$('.clay-site-close-overlay-sm-down').on('click', function(event) {
-		$(this).closest('.navbar-overlay-sm-down').removeClass('show');
-	});
-
-	$('.clay-site-open-overlay-up').on('click', function(event) {
-		$(this).closest('.navbar').find('.navbar-overlay-up').addClass('show');
-	});
-
-	$('.clay-site-close-overlay-up').on('click', function(event) {
-		$(this).closest('.navbar-overlay-up').removeClass('show');
+		$this.closest('.list-group').find('.list-group-item-flex').removeClass('focus');
+		$this.closest('.list-group-item-flex').addClass('focus');
 	});
 </script>
 	</div>
