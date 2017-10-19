@@ -707,6 +707,13 @@ ChartBase.STATE = {
 			}),
 		}),
 		ticks: Config.number(),
+	}).value({
+		x: {
+			show: true
+		},
+		y: {
+			show: true
+		}
 	}),
 
 	/**
