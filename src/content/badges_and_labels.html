@@ -265,19 +265,31 @@ section: Components
 		<h3>Sticker Sizes</h3>
 
 		<blockquote class="blockquote">
-			<p>Stickers come in 2 sizes small and regular. Create your own custom size with the <code>sticker-size</code> mixin.</p>
+			<p>Stickers come in 4 sizes sm, normal, lg, and xl . Create your own custom size with the <code>sticker-size</code> mixin.</p>
 		</blockquote>
 
 <span class="sticker sticker-primary sticker-sm">133</span>
 <span class="sticker sticker-secondary">133</span>
-<span class="sticker sticker-secondary">
+<span class="sticker sticker-lg sticker-success">133</span>
+<span class="sticker sticker-danger sticker-xl">133</span>
+<span class="sticker sticker-primary sticker-xl">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
 		<use xlink:href="{{rootPath}}/images/icons/icons.svg#format" />
 	</svg>
 </span>
-<span class="sticker sticker-primary sticker-sm">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-		<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+<span class="sticker sticker-lg sticker-secondary">
+	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
+		<use xlink:href="{{rootPath}}/images/icons/icons.svg#format" />
+	</svg>
+</span>
+<span class="sticker sticker-success">
+	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
+		<use xlink:href="{{rootPath}}/images/icons/icons.svg#format" />
+	</svg>
+</span>
+<span class="sticker sticker-danger sticker-sm">
+	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
+		<use xlink:href="{{rootPath}}/images/icons/icons.svg#format" />
 	</svg>
 </span>
 
@@ -298,6 +310,14 @@ section: Components
 		<span class="sticker sticker-primary">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coyote.jpg">
 			<span class="sticker-overlay">TT</span>
+		</span>
+		<span class="sticker sticker-primary sticker-lg">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<span class="sticker-overlay">SP</span>
+		</span>
+		<span class="sticker sticker-primary sticker-xl">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coffee.jpg">
+			<span class="sticker-overlay">BC</span>
 		</span>
 	</div>
 </div>
@@ -405,11 +425,23 @@ section: Components
 		<span class="rounded-circle sticker sticker-primary">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coyote.jpg">
 		</span>
-		<span class="rounded-circle sticker sticker-secondary sticker-sm">
+		<span class="rounded-circle sticker sticker-lg sticker-primary">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</span>
+		<span class="rounded-circle sticker sticker-primary sticker-xl">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coffee.jpg">
+		</span>
+		<span class="rounded-circle sticker sticker-danger sticker-xl">
 			JB
 		</span>
-		<span class="rounded-circle sticker sticker-danger">
+		<span class="rounded-circle sticker sticker-lg sticker-success">
 			TT
+		</span>
+		<span class="rounded-circle sticker sticker-secondary">
+			SP
+		</span>
+		<span class="rounded-circle sticker sticker-primary sticker-sm">
+			BC
 		</span>
 	</div>
 </div>
