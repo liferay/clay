@@ -1,6 +1,6 @@
 .code-container {
-	position: relative;
 	margin: calc(1rem * 1.5) 0;
+	position: relative;
 }
 
 .code-container.hide {
@@ -31,10 +31,10 @@
 }
 
 .code-container .CodeMirror-linenumber {
-	color: rgba($white, .40);
+	color: rgba($white, 0.40);
 	font-size: 13px;
-	line-height: 20px;
 	left: 24px !important;
+	line-height: 20px;
 	padding: 0;
 	text-align: left;
 	width: 36px !important;
@@ -49,7 +49,7 @@
 }
 
 .code-container pre {
-	border: 0;
+	border-width: 0;
 	font-size: 14px;
 	line-height: 20px;
 	margin: 0;
@@ -65,9 +65,9 @@
 .code-container .CodeMirror pre {
 	font-size: 13px;
 	line-height: 20px;
+	margin: 0;
 	opacity: 1;
 	padding: 0;
-	margin: 0;
 	z-index: 6;
 }
 
@@ -103,13 +103,13 @@
 }
 
 .nav.nav-tabs.nav-code-tabs {
-	border-width: 0px;
+	border-width: 0;
 	padding: 0 24px;
 }
 
 .nav.nav-tabs.nav-code-tabs > li > button {
 	background: transparent;
-	border-width: 0px;
+	border-width: 0;
 	color: rgba($brand-secondary, 0.8);
 	cursor: pointer;
 	font-size: 13px;
@@ -132,7 +132,7 @@
 }
 
 .nav.nav-tabs.nav-code-tabs > li.active > button {
-	border-width: 0px;
+	border-width: 0;
 	color: $brand-dark;
 }
 

@@ -18,8 +18,8 @@
         border-radius: 0;
         box-shadow: 4px 6px 36px rgba(48, 49, 63, 0.15);
         margin-bottom: 32px;
-        transition: all 0.4s;
         min-height: 100%;
+        transition: all 0.4s;
 
         &:hover {
             background-color: #FFF6F5;
@@ -96,8 +96,8 @@
     }
 
     .btn-outline-light {
-        font-size: 16px;
         color: $brand-light;
+        font-size: 16px;
 
         &:hover, &:focus {
             background-color: transparent;
