@@ -68,7 +68,7 @@ ClayLabel.STATE = {
     * @type {?string|undefined}
     * @default undefined
     */
-  size: Config.oneOf(['sm']),
+  size: Config.oneOf(['lg']),
 
   /**
     * The path to the SVG spritemap file containing the icons.

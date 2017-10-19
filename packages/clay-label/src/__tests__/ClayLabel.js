@@ -33,9 +33,9 @@ describe('ClayLabel', function() {
     expect(label).toMatchSnapshot();
   });
 
-  it('shound render a small label', () => {
+  it('shound render a large label', () => {
     label = new ClayLabel({
-      size: 'sm',
+      size: 'lg',
     });
 
     expect(label).toMatchSnapshot();
