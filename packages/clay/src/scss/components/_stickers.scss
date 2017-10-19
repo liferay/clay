@@ -114,8 +114,12 @@
 	@include sticker-size($sticker-sm);
 }
 
-.sticker-xxl {
-	@include sticker-size($sticker-xxl);
+.sticker-lg {
+	@include sticker-size($sticker-lg);
+}
+
+.sticker-xl {
+	@include sticker-size($sticker-xl);
 }
 
 // Sticker Variants

@@ -14,11 +14,17 @@ $sticker-sm: map-merge((
 	size: 1.5rem
 ), $sticker-sm);
 
-$sticker-xxl: () !default;
-$sticker-xxl: map-merge((
+$sticker-lg: () !default;
+$sticker-lg: map-merge((
+	font-size: 1.125rem,
+	size: 2.5rem
+), $sticker-lg);
+
+$sticker-xl: () !default;
+$sticker-xl: map-merge((
 	font-size: 1.25rem,
-	size: 5rem
-), $sticker-xxl);
+	size: 3rem
+), $sticker-xl);
 
 // Sticker Positions
 
