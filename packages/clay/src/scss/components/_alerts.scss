@@ -84,6 +84,50 @@
 
 // Alert Notifications
 
+.alert-container {
+	position: relative;
+}
+
+.alert-notifications-absolute {
+	height: 0;
+	position: absolute;
+	right: 8px;
+	top: 76px;
+	z-index: 1050;
+
+	@include scale-component {
+		left: 8px;
+		max-width: none;
+		right: 8px;
+		top: 68px;
+		width: auto;
+	}
+
+	.alert {
+		width: 360px;
+
+		@include scale-component {
+			width: 100%;
+		}
+	}
+
+	.alert:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.alert-notifications-fixed {
+	height: 0;
+	position: fixed;
+	right: 20px;
+	top: 76px;
+	z-index: 1050;
+
+	@include scale-component {
+		left: 20px;
+	}
+}
+
 .alert-notification {
 	max-width: $alert-notification-max-width;
 	width: 100%;
