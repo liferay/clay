@@ -55,10 +55,6 @@ fieldset[disabled] .btn {
 	}
 }
 
-.show > .btn-link.dropdown-toggle {
-	box-shadow: none;
-}
-
 // Button Unstyled
 
 %btn-unstyled {
@@ -73,10 +69,6 @@ fieldset[disabled] .btn {
 
 .btn-unstyled {
 	@extend %btn-unstyled;
-}
-
-.show > .btn-unstyled.dropdown-toggle {
-	box-shadow: none;
 }
 
 // Button Monospaced
