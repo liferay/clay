@@ -31,17 +31,6 @@ $btn-primary: (
 	active-bg: darken(map-get($theme-colors, primary), 11%)
 ) !default;
 
-$btn-primary-color: #FFF !default;
-$btn-primary-bg: map-get($theme-colors, primary) !default;
-$btn-primary-border-color: $btn-primary-bg !default;
-$btn-primary-hover-color: $btn-primary-color !default;
-$btn-primary-hover-bg: darken($btn-primary-bg, 11%) !default;
-$btn-primary-hover-border-color: $btn-primary-hover-bg !default;
-$btn-primary-focus-box-shadow: 0 0 0 2px rgba($btn-primary-hover-border-color, 0.5) !default;
-$btn-primary-active-color: $btn-primary-color !default;
-$btn-primary-active-bg: $btn-primary-hover-bg !default;
-$btn-primary-hover-border-color: $btn-primary-active-bg !default;
-
 $btn-secondary: (
 	bg: #FFF,
 	border-color: lighten(map-get($theme-colors, secondary), 37%),
