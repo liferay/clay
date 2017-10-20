@@ -7,3 +7,55 @@
 	padding: 0;
 	text-align: left;
 }
+
+@mixin clay-button-variant($map) {
+	$bg: map-get($map, bg);
+	$border-color: map-get($map, border-color);
+	$color: map-get($map, color);
+	$hover-bg: map-get($map, hover-bg);
+	$hover-border-color: map-get($map, hover-border-color);
+	$hover-color: map-get($map, hover-color);
+	$focus-bg: setter(map-get($map, focus-bg), $hover-bg);
+	$focus-border-color: setter(map-get($map, focus-border-color), $hover-border-color);
+	$focus-box-shadow: map-get($map, focus-box-shadow);
+	$focus-color: map-get($map, focus-color);
+	$disabled-bg: map-get($map, disabled-bg);
+	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-color: map-get($map, disabled-color);
+	$active-bg: map-get($map, active-bg);
+	$active-border-color: map-get($map, active-border-color);
+	$active-color: map-get($map, active-color);
+
+	background-color: $bg;
+	border-color: $border-color;
+	color: $color;
+
+	@include hover {
+		background-color: $hover-bg;
+		border-color: $hover-border-color;
+		color: $hover-color;
+	}
+
+	&:focus,
+	&.focus {
+		background-color: $focus-bg;
+		border-color: $focus-border-color;
+		box-shadow: $focus-box-shadow;
+		color: $focus-color;
+	}
+
+	&:disabled,
+	&.disabled {
+		background-color: $disabled-bg;
+		border-color: $disabled-border-color;
+		color: $disabled-color;
+	}
+
+	&:not([disabled]):not(.disabled):active,
+	&:not([disabled]):not(.disabled).active,
+	.show > &.dropdown-toggle {
+		background-color: $active-bg;
+		border-color: $active-border-color;
+		color: $active-color;
+	}
+}
