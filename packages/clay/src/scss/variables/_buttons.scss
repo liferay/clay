@@ -36,17 +36,6 @@ $btn-primary: () !default;
 $btn-primary: map-merge((
 ), $btn-primary);
 
-$btn-primary-bg: null !default;
-$btn-primary-border-color: null !default;
-$btn-primary-color: null !default;
-$btn-primary-hover-color: null !default;
-$btn-primary-hover-bg: null !default;
-$btn-primary-hover-border-color: null !default;
-$btn-primary-focus-box-shadow: null !default;
-$btn-primary-active-color: null !default;
-$btn-primary-active-bg: null !default;
-$btn-primary-active-border-color: null !default;
-
 $btn-secondary: () !default;
 $btn-secondary: map-merge((), $btn-secondary);
 
