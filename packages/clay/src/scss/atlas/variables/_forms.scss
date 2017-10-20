@@ -114,7 +114,7 @@ $input-group-addon-padding-x-sm: 0.5rem !default;
 // Input Group Secondary
 
 $input-group-secondary-addon-bg: #FFF !default;
-$input-group-secondary-addon-border-color: lighten($btn-secondary-color, 37%) !default;
+$input-group-secondary-addon-border-color: lighten(map-get($theme-colors, secondary), 37%) !default;
 
 // Input Group Transparent
 
