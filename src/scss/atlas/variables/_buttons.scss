@@ -25,6 +25,12 @@ $btn-monospaced-size-sm: 2rem !default; // 32px
 
 // Button Variants
 
+$btn-primary: (
+	hover-bg: darken(map-get($theme-colors, primary), 5.5%),
+	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, primary), 5.5%), 0.5),
+	active-bg: darken(map-get($theme-colors, primary), 11%)
+) !default;
+
 $btn-primary-color: #FFF !default;
 $btn-primary-bg: map-get($theme-colors, primary) !default;
 $btn-primary-border-color: $btn-primary-bg !default;
@@ -35,6 +41,23 @@ $btn-primary-focus-box-shadow: 0 0 0 2px rgba($btn-primary-hover-border-color, 0
 $btn-primary-active-color: $btn-primary-color !default;
 $btn-primary-active-bg: $btn-primary-hover-bg !default;
 $btn-primary-hover-border-color: $btn-primary-active-bg !default;
+
+$btn-secondary: (
+	bg: #FFF,
+	border-color: lighten(map-get($theme-colors, secondary), 37%),
+	color: map-get($theme-colors, secondary),
+	hover-bg: lighten(map-get($theme-colors, secondary), 50%),
+	hover-border-color: lighten(map-get($theme-colors, secondary), 37%),
+	hover-color: $body-color,
+	focus-box-shadow: 0 0 0 2px rgba(lighten(map-get($theme-colors, secondary), 37%), 0.5),
+	focus-color: $body-color,
+	disabled-bg: #FFF,
+	disabled-border-color: lighten(map-get($theme-colors, secondary), 37%),
+	disabled-color: map-get($theme-colors, secondary),
+	active-border-color: lighten(map-get($theme-colors, secondary), 37%),
+	active-color: $body-color,
+	active-bg: lighten(map-get($theme-colors, secondary), 48%)
+) !default;
 
 $btn-secondary-color: map-get($theme-colors, secondary) !default;
 $btn-secondary-bg: #FFF !default;
@@ -47,6 +70,12 @@ $btn-secondary-active-color: $btn-secondary-hover-color !default;
 $btn-secondary-active-bg: $btn-secondary-hover-bg !default;
 $btn-secondary-active-border-color: $btn-secondary-hover-border-color !default;
 
+$btn-success: (
+	hover-bg: darken(map-get($theme-colors, success), 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, success), 4%), 0.5),
+	active-bg: darken(map-get($theme-colors, success), 8%)
+) !default;
+
 $btn-success-color: #FFF !default;
 $btn-success-bg: map-get($theme-colors, success) !default;
 $btn-success-border-color: $btn-success-bg !default;
@@ -57,6 +86,12 @@ $btn-success-focus-box-shadow: 0 0 0 2px rgba($btn-success-hover-border-color, 0
 $btn-success-active-color: $btn-success-color !default;
 $btn-success-active-bg: darken($btn-success-hover-bg, 12%) !default;
 $btn-success-active-border-color: $btn-success-active-bg !default;
+
+$btn-info: (
+	hover-bg: darken(map-get($theme-colors, info), 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, info), 4%), 0.5),
+	active-bg: darken(map-get($theme-colors, info), 8%)
+) !default;
 
 $btn-info-color: #FFF !default;
 $btn-info-bg: map-get($theme-colors, info) !default;
@@ -69,6 +104,12 @@ $btn-info-active-color: $btn-info-color !default;
 $btn-info-active-bg: darken($btn-info-hover-bg, 12%) !default;
 $btn-info-active-border-color: $btn-info-active-bg !default;
 
+$btn-warning: (
+	hover-bg: darken(map-get($theme-colors, warning), 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, warning), 4%), 0.5),
+	active-bg: darken(map-get($theme-colors, warning), 8%)
+) !default;
+
 $btn-warning-color: #FFF !default;
 $btn-warning-bg: map-get($theme-colors, warning) !default;
 $btn-warning-border-color: $btn-warning-bg !default;
@@ -79,6 +120,12 @@ $btn-warning-focus-box-shadow: 0 0 0 2px rgba($btn-warning-hover-border-color, 0
 $btn-warning-active-color: $btn-warning-color !default;
 $btn-warning-active-bg: darken($btn-warning-hover-bg, 12%) !default;
 $btn-warning-active-border-color: $btn-warning-active-bg !default;
+
+$btn-danger: (
+	hover-bg: darken(map-get($theme-colors, danger), 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, danger), 4%), 0.5),
+	active-bg: darken(map-get($theme-colors, danger), 8%)
+) !default;
 
 $btn-danger-color: #FFF !default;
 $btn-danger-bg: map-get($theme-colors, danger) !default;
@@ -91,6 +138,13 @@ $btn-danger-active-color: $btn-danger-color !default;
 $btn-danger-active-bg: darken($btn-danger-hover-bg, 12%) !default;
 $btn-danger-active-border-color: $btn-danger-active-bg !default;
 
+$btn-light: (
+	color: $body-color,
+	hover-bg: darken(map-get($theme-colors, light), 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, light), 4%), 0.5),
+	active-bg: darken(map-get($theme-colors, light), 8%)
+) !default;
+
 $btn-light-color: map-get($theme-colors, secondary) !default;
 $btn-light-bg: #FFF !default;
 $btn-light-hover-color: $btn-light-color !default;
@@ -99,6 +153,12 @@ $btn-light-hover-border-color: $btn-light-hover-bg !default;
 $btn-light-focus-box-shadow: 0 0 0 2px rgba($btn-light-hover-bg, 0.5) !default;
 $btn-light-active-bg: darken($btn-light-hover-bg, 6%) !default;
 $btn-light-active-border-color: $btn-light-active-bg !default;
+
+$btn-dark: (
+	hover-bg: darken(map-get($theme-colors, dark), 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, dark), 4%), 0.5),
+	active-bg: darken(map-get($theme-colors, dark), 8%)
+) !default;
 
 $btn-dark-color: #FFF !default;
 $btn-dark-hover-color: $btn-dark-color !default;
