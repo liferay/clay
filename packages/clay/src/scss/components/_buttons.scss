@@ -121,37 +121,6 @@ fieldset[disabled] .btn {
 
 @each $color, $value in $btn-palette {
 	.btn-#{$color} {
-		background-color: map-get($value, bg);
-		border-color: map-get($value, border-color);
-		color: map-get($value, color);
-
-		&:hover {
-			background-color: map-get($value, hover-bg);
-			border-color: map-get($value, hover-border-color);
-			color: map-get($value, hover-color);
-		}
-
-		&:focus,
-		&.focus {
-			background-color: map-get($value, focus-bg);
-			border-color: map-get($value, focus-border-color);
-			box-shadow: map-get($value, focus-box-shadow);
-			color: map-get($value, focus-color);
-		}
-
-		&:not([disabled]):not(.disabled):active,
-		&:not([disabled]):not(.disabled).active,
-		.show > &.dropdown-toggle {
-			background-color: map-get($value, active-bg);
-			border-color: map-get($value, active-border-color);
-			color: map-get($value, active-color);
-		}
-
-		&:disabled,
-		&.disabled {
-			background-color: map-get($value, disabled-bg);
-			border-color: map-get($value, disabled-border-color);
-			color: map-get($value, disabled-color);
-		}
+		@include clay-button-variant($value);
 	}
 }

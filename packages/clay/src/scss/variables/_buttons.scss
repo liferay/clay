@@ -32,6 +32,10 @@ $btn-toolbar-spacer-y: 0.125rem !default; // 2px
 
 // Button Variants
 
+$btn-primary: () !default;
+$btn-primary: map-merge((
+), $btn-primary);
+
 $btn-primary-bg: null !default;
 $btn-primary-border-color: null !default;
 $btn-primary-color: null !default;
@@ -42,6 +46,9 @@ $btn-primary-focus-box-shadow: null !default;
 $btn-primary-active-color: null !default;
 $btn-primary-active-bg: null !default;
 $btn-primary-active-border-color: null !default;
+
+$btn-secondary: () !default;
+$btn-secondary: map-merge((), $btn-secondary);
 
 $btn-secondary-bg: null !default;
 $btn-secondary-border-color: null !default;
@@ -54,6 +61,9 @@ $btn-secondary-active-color: null !default;
 $btn-secondary-active-bg: null !default;
 $btn-secondary-active-border-color: null !default;
 
+$btn-success: () !default;
+$btn-success: map-merge((), $btn-success);
+
 $btn-success-bg: null !default;
 $btn-success-border-color: null !default;
 $btn-success-color: null !default;
@@ -64,6 +74,9 @@ $btn-success-focus-box-shadow: null !default;
 $btn-success-active-color: null !default;
 $btn-success-active-bg: null !default;
 $btn-success-active-border-color: null !default;
+
+$btn-info: () !default;
+$btn-info: map-merge((), $btn-info);
 
 $btn-info-bg: null !default;
 $btn-info-border-color: null !default;
@@ -76,6 +89,9 @@ $btn-info-active-color: null !default;
 $btn-info-active-bg: null !default;
 $btn-info-active-border-color: null !default;
 
+$btn-warning: () !default;
+$btn-warning: map-merge((), $btn-warning);
+
 $btn-warning-bg: null !default;
 $btn-warning-border-color: null !default;
 $btn-warning-color: null !default;
@@ -86,6 +102,9 @@ $btn-warning-focus-box-shadow: null !default;
 $btn-warning-active-color: null !default;
 $btn-warning-active-bg: null !default;
 $btn-warning-active-border-color: null !default;
+
+$btn-danger: () !default;
+$btn-danger: map-merge((), $btn-danger);
 
 $btn-danger-bg: null !default;
 $btn-danger-border-color: null !default;
@@ -98,6 +117,9 @@ $btn-danger-active-color: null !default;
 $btn-danger-active-bg: null !default;
 $btn-danger-active-border-color: null !default;
 
+$btn-light: () !default;
+$btn-light: map-merge((), $btn-light);
+
 $btn-light-bg: null !default;
 $btn-light-border-color: null !default;
 $btn-light-color: null !default;
@@ -108,6 +130,9 @@ $btn-light-focus-box-shadow: null !default;
 $btn-light-active-color: null !default;
 $btn-light-active-bg: null !default;
 $btn-light-active-border-color: null !default;
+
+$btn-dark: () !default;
+$btn-dark: map-merge((), $btn-dark);
 
 $btn-dark-bg: null !default;
 $btn-dark-border-color: null !default;
@@ -122,148 +147,12 @@ $btn-dark-active-border-color: null !default;
 
 $btn-palette: () !default;
 $btn-palette: map-merge((
-	primary: (
-		bg: $btn-primary-bg,
-		border-color: $btn-primary-border-color,
-		color: $btn-primary-color,
-		hover-bg: $btn-primary-hover-bg,
-		hover-border-color: $btn-primary-hover-border-color,
-		hover-color: $btn-primary-hover-color,
-		focus-bg: $btn-primary-hover-bg,
-		focus-border-color: $btn-primary-hover-border-color,
-		focus-box-shadow: $btn-primary-focus-box-shadow,
-		focus-color: $btn-primary-hover-color,
-		disabled-bg: $btn-primary-bg,
-		disabled-border-color: $btn-primary-border-color,
-		disabled-color: $btn-primary-color,
-		active-bg: $btn-primary-active-bg,
-		active-border-color: $btn-primary-active-border-color,
-		active-color: $btn-primary-active-color
-	),
-	secondary: (
-		bg: $btn-secondary-bg,
-		border-color: $btn-secondary-border-color,
-		color: $btn-secondary-color,
-		hover-bg: $btn-secondary-hover-bg,
-		hover-border-color: $btn-secondary-hover-border-color,
-		hover-color: $btn-secondary-hover-color,
-		focus-bg: $btn-secondary-hover-bg,
-		focus-border-color: $btn-secondary-hover-border-color,
-		focus-box-shadow: $btn-secondary-focus-box-shadow,
-		focus-color: $btn-secondary-hover-color,
-		disabled-bg: $btn-secondary-bg,
-		disabled-border-color: $btn-secondary-border-color,
-		disabled-color: $btn-secondary-color,
-		active-bg: $btn-secondary-active-bg,
-		active-border-color: $btn-secondary-active-border-color,
-		active-color: $btn-secondary-active-color
-	),
-	success: (
-		bg: $btn-success-bg,
-		border-color: $btn-success-border-color,
-		color: $btn-success-color,
-		hover-bg: $btn-success-hover-bg,
-		hover-border-color: $btn-success-hover-border-color,
-		hover-color: $btn-success-hover-color,
-		focus-bg: $btn-success-hover-bg,
-		focus-border-color: $btn-success-hover-border-color,
-		focus-box-shadow: $btn-success-focus-box-shadow,
-		focus-color: $btn-success-hover-color,
-		disabled-bg: $btn-success-bg,
-		disabled-border-color: $btn-success-border-color,
-		disabled-color: $btn-success-color,
-		active-bg: $btn-success-active-bg,
-		active-border-color: $btn-success-active-border-color,
-		active-color: $btn-success-active-color
-	),
-	info: (
-		bg: $btn-info-bg,
-		border-color: $btn-info-border-color,
-		color: $btn-info-color,
-		hover-bg: $btn-info-hover-bg,
-		hover-border-color: $btn-info-hover-border-color,
-		hover-color: $btn-info-hover-color,
-		focus-bg: $btn-info-hover-bg,
-		focus-border-color: $btn-info-hover-border-color,
-		focus-box-shadow: $btn-info-focus-box-shadow,
-		focus-color: $btn-info-hover-color,
-		disabled-bg: $btn-info-bg,
-		disabled-border-color: $btn-info-border-color,
-		disabled-color: $btn-info-color,
-		active-bg: $btn-info-active-bg,
-		active-border-color: $btn-info-active-border-color,
-		active-color: $btn-info-active-color
-	),
-	warning: (
-		bg: $btn-warning-bg,
-		border-color: $btn-warning-border-color,
-		color: $btn-warning-color,
-		hover-bg: $btn-warning-hover-bg,
-		hover-border-color: $btn-warning-hover-border-color,
-		hover-color: $btn-warning-hover-color,
-		focus-bg: $btn-warning-hover-bg,
-		focus-border-color: $btn-warning-hover-border-color,
-		focus-box-shadow: $btn-warning-focus-box-shadow,
-		focus-color: $btn-warning-hover-color,
-		disabled-bg: $btn-warning-bg,
-		disabled-border-color: $btn-warning-border-color,
-		disabled-color: $btn-warning-color,
-		active-bg: $btn-warning-active-bg,
-		active-border-color: $btn-warning-active-border-color,
-		active-color: $btn-warning-active-color
-	),
-	danger: (
-		bg: $btn-danger-bg,
-		border-color: $btn-danger-border-color,
-		color: $btn-danger-color,
-		hover-bg: $btn-danger-hover-bg,
-		hover-border-color: $btn-danger-hover-border-color,
-		hover-color: $btn-danger-hover-color,
-		focus-bg: $btn-danger-hover-bg,
-		focus-border-color: $btn-danger-hover-border-color,
-		focus-box-shadow: $btn-danger-focus-box-shadow,
-		focus-color: $btn-danger-hover-color,
-		disabled-bg: $btn-danger-bg,
-		disabled-border-color: $btn-danger-border-color,
-		disabled-color: $btn-danger-color,
-		active-bg: $btn-danger-active-bg,
-		active-border-color: $btn-danger-active-border-color,
-		active-color: $btn-danger-active-color
-	),
-	light: (
-		bg: $btn-light-bg,
-		border-color: $btn-light-border-color,
-		color: $btn-light-color,
-		hover-bg: $btn-light-hover-bg,
-		hover-border-color: $btn-light-hover-border-color,
-		hover-color: $btn-light-hover-color,
-		focus-bg: $btn-light-hover-bg,
-		focus-border-color: $btn-light-hover-border-color,
-		focus-box-shadow: $btn-light-focus-box-shadow,
-		focus-color: $btn-light-hover-color,
-		disabled-bg: $btn-light-bg,
-		disabled-border-color: $btn-light-border-color,
-		disabled-color: $btn-light-color,
-		active-bg: $btn-light-active-bg,
-		active-border-color: $btn-light-active-border-color,
-		active-color: $btn-light-active-color
-	),
-	dark: (
-		bg: $btn-dark-bg,
-		border-color: $btn-dark-border-color,
-		color: $btn-dark-color,
-		hover-bg: $btn-dark-hover-bg,
-		hover-border-color: $btn-dark-hover-border-color,
-		hover-color: $btn-dark-hover-color,
-		focus-bg: $btn-dark-hover-bg,
-		focus-border-color: $btn-dark-hover-border-color,
-		focus-box-shadow: $btn-dark-focus-box-shadow,
-		focus-color: $btn-dark-hover-color,
-		disabled-bg: $btn-dark-bg,
-		disabled-border-color: $btn-dark-border-color,
-		disabled-color: $btn-dark-color,
-		active-bg: $btn-dark-active-bg,
-		active-border-color: $btn-dark-active-border-color,
-		active-color: $btn-dark-active-color
-	)
+	primary: $btn-primary,
+	secondary: $btn-secondary,
+	success: $btn-success,
+	info: $btn-info,
+	warning: $btn-warning,
+	danger: $btn-danger,
+	light: $btn-light,
+	dark: $btn-dark
 ), $btn-palette);
