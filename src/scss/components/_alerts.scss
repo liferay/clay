@@ -85,6 +85,7 @@
 // Alert Notifications
 
 .alert-container {
+	height: 0;
 	position: relative;
 }
 
@@ -93,7 +94,7 @@
 	position: absolute;
 	right: 8px;
 	top: 76px;
-	z-index: 1050;
+	z-index: $zindex-alert-notifications;
 
 	@include scale-component {
 		left: 8px;
@@ -121,7 +122,7 @@
 	position: fixed;
 	right: 20px;
 	top: 76px;
-	z-index: 1050;
+	z-index: $zindex-alert-notifications;
 
 	@include scale-component {
 		left: 20px;
