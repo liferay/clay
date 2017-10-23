@@ -10,7 +10,6 @@
 	{@param? elementClasses: string}
 	{@param? icon: [
 		alignment: string,
-		monospaced: bool,
 		spritemap: string,
 		symbol: string
 	]}
@@ -53,7 +52,6 @@
 {template .content}
 	{@param? icon: [
 		alignment: string,
-		monospaced: bool,
 		spritemap: string,
 		symbol: string
 	]}
@@ -82,13 +80,11 @@
 {template .icon}
 	{@param? icon: [
 		alignment: string,
-		monospaced: bool,
 		spritemap: string,
 		symbol: string
 	]}
 
 	{call ClayIcon.render}
-		{param monospaced: $icon.monospaced /}
 		{param spritemap: $icon.spritemap /}
 		{param symbol: $icon.symbol /}
 	{/call}
@@ -104,7 +100,6 @@
 	{@param? elementClasses: string}
 	{@param? icon: [
 		alignment: string,
-		monospaced: bool,
 		spritemap: string,
 		symbol: string
 	]}
