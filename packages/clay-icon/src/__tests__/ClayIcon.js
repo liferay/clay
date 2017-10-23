@@ -20,26 +20,6 @@ describe('ClayIcon', function() {
     expect(clayIcon).toMatchSnapshot();
   });
 
-  it('should render a monospaced `add-cell` icon', () => {
-    clayIcon = new ClayIcon({
-      monospaced: true,
-      spritemap: spritemap,
-      symbol: 'add-cell',
-    });
-
-    expect(clayIcon).toMatchSnapshot();
-  });
-
-  it('should render a not monospaced `add-cell` icon', () => {
-    clayIcon = new ClayIcon({
-      monospaced: false,
-      spritemap: spritemap,
-      symbol: 'add-cell',
-    });
-
-    expect(clayIcon).toMatchSnapshot();
-  });
-
   it('should render a `add-cell` icon with id', () => {
     clayIcon = new ClayIcon({
       id: 'myIcon',
