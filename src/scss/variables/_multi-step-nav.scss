@@ -8,6 +8,10 @@ $multi-step-icon-border-radius: $border-radius !default;
 $multi-step-icon-font-size: $font-size-base !default;
 $multi-step-icon-size: 2rem !default;
 
+$multi-step-icon-hover-bg: $multi-step-icon-bg !default;
+$multi-step-icon-hover-color: rgba($black, 0.7) !default;
+$multi-step-icon-hover-text-decoration: none !default;
+
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
 $multi-step-divider-spacer-x: 0 !default;
