@@ -140,15 +140,6 @@
 	}
 }
 
-.alert-notification {
-	max-width: $alert-notification-max-width;
-	width: 100%;
-
-	@include scale-component {
-		max-width: none;
-	}
-}
-
 // Alert Variants
 
 @each $color, $value in $alert-palette {
