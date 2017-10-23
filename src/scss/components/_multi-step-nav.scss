@@ -46,6 +46,36 @@
 	margin-bottom: $multi-step-item-margin-bottom;
 	position: relative;
 
+	&.active {
+		.multi-step-icon {
+			background-color: $multi-step-icon-active-bg;
+			background-image: $multi-step-icon-active-bg-image;
+			background-position: $multi-step-icon-active-bg-position;
+			background-repeat: no-repeat;
+			background-size: $multi-step-icon-active-bg-size;
+			color: $multi-step-icon-active-color;
+
+			@if ($multi-step-icon-active-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+		}
+
+		.multi-step-divider {
+			background-color: $multi-step-divider-active-bg;
+		}
+	}
+
+	&.active.complete {
+		.multi-step-icon {
+			background-color: $multi-step-icon-active-bg;
+			color: $multi-step-icon-active-color;
+		}
+	}
+
 	&.complete {
 		.multi-step-icon {
 			background-color: $multi-step-icon-complete-bg;
@@ -71,29 +101,6 @@
 
 		.multi-step-divider {
 			background-color: $multi-step-divider-complete-bg;
-		}
-	}
-
-	&.active {
-		.multi-step-icon {
-			background-color: $multi-step-icon-active-bg;
-			background-image: $multi-step-icon-active-bg-image;
-			background-position: $multi-step-icon-active-bg-position;
-			background-repeat: no-repeat;
-			background-size: $multi-step-icon-active-bg-size;
-			color: $multi-step-icon-active-color;
-
-			@if ($multi-step-icon-active-bg-image) {
-				&[data-multi-step-icon] {
-					&:before {
-						content: normal;
-					}
-				}
-			}
-		}
-
-		.multi-step-divider {
-			background-color: $multi-step-divider-active-bg;
 		}
 	}
 }
