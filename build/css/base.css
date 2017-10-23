@@ -7943,9 +7943,33 @@ a.text-dark:focus, a.text-dark:hover {
   right: calc(15px + 0.25rem);
 }
 
-.alert-notification {
-  max-width: 280px;
-  width: 100%;
+.alert-container {
+  height: 0;
+  position: relative;
+}
+
+.alert-notifications .alert {
+  width: 22.5rem;
+}
+
+.alert-notifications .alert:last-child {
+  margin-bottom: 0;
+}
+
+.alert-notifications-absolute {
+  height: 0;
+  position: absolute;
+  right: 0.5rem;
+  top: 4.75rem;
+  z-index: 5000;
+}
+
+.alert-notifications-fixed {
+  height: 0;
+  position: fixed;
+  right: 1.25rem;
+  top: 4.75rem;
+  z-index: 5000;
 }
 
 .aspect-ratio {
@@ -8192,10 +8216,6 @@ a.text-dark:focus, a.text-dark:hover {
   text-decoration: underline;
 }
 
-.show > .btn-link.dropdown-toggle {
-  box-shadow: none;
-}
-
 .btn-unstyled, .menubar-toggler {
   background-color: transparent;
   border-radius: 1px;
@@ -8210,10 +8230,6 @@ a.text-dark:focus, a.text-dark:hover {
   vertical-align: baseline;
 }
 
-.show > .btn-unstyled.dropdown-toggle {
-  box-shadow: none;
-}
-
 .btn-monospaced {
   height: 2.375rem;
   line-height: 2.375rem;
@@ -8223,12 +8239,6 @@ a.text-dark:focus, a.text-dark:hover {
   text-align: center;
   white-space: normal;
   word-wrap: break-word;
-}
-
-.btn-monospaced.btn-xl {
-  height: 4rem;
-  line-height: 4rem;
-  width: 4rem;
 }
 
 .btn-monospaced.btn-lg, .btn-group-lg > .btn-monospaced.btn, .btn-group-lg .btn-group > .btn-monospaced.btn {
@@ -8824,10 +8834,6 @@ button.card-link {
   font-weight: inherit;
   max-width: 100%;
   padding: 0;
-}
-
-.show > button.dropdown-toggle {
-  outline: none;
 }
 
 .dropdown-menu-indicator-start .dropdown-item-indicator {
@@ -11171,6 +11177,7 @@ button.multi-step-link {
 
 .navbar-form-autofit .form-control {
   flex: 1;
+  min-width: 50px;
   width: 100%;
 }
 

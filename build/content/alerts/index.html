@@ -212,6 +212,58 @@
 		</h1>
 
 		
+<div class="clay-site-row-spacer row" id="alertNotifications">
+	<div class="col-md-12">
+		<h3 id="alert-notifications-fixed"><a class="heading-anchor" href="#alert-notifications-fixed"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Alert Notifications Fixed</h3>
+
+		<blockquote class="blockquote">
+			<p>A fixed positioned container for placing alerts on the top right corner of the page. This component can generally be placed anywhere on the page.</p>
+		</blockquote>
+
+<div class="alert-notifications alert-notifications-fixed">
+	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
+		<strong class="lead">Meeting Rescheduled:</strong>
+		<div>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</div>
+		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use xlink:href="../../images/icons/icons.svg#times">
+			</svg>
+		</button>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="alert-notifications-absolute"><a class="heading-anchor" href="#alert-notifications-absolute"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Alert Notifications Absolute</h3>
+
+		<blockquote class="blockquote">
+			<p>An absolute positioned container for placing alerts on the top right corner relative to <code>.alert-container</code>. Use this to create sticky positioned alerts with javascript, modifying the CSS property <code>transform: translateY();</code> or <code>margin-top</code> when <code>scrollY</code> reaches a specific threshold. This component should generally be placed at the top of the page for sticky alerts aligned at the top.</p>
+		</blockquote>
+
+<div id="claySiteAlertsNotificationsSpacer">
+	<div class="alert-container container">
+		<div class="alert-notifications alert-notifications-absolute">
+			<div class="alert alert-dismissible alert-danger" role="alert">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+					<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+				</svg>
+				<strong class="lead">Danger:</strong> Something is not right.
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="../../images/icons/icons.svg#times">
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
 <div class="clay-site-alerts clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="alerts-with-embedded-links"><a class="heading-anchor" href="#alerts-with-embedded-links"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Alerts with Embedded Links</h3>
@@ -374,9 +426,9 @@
 	<div class="col-md-12">
 		<h3 id="alert-fluid"><a class="heading-anchor" href="#alert-fluid"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Alert Fluid</h3>
 
-		<div class="alert alert-warning">
+		<blockquote class="blockquote">
 			Must have nested <code>container</code> or <code>container-fluid</code> in <code>alert-fluid</code>.
-		</div>
+		</blockquote>
 
 <div class="alert alert-fluid alert-primary" role="alert">
 	<div class="container">
@@ -436,110 +488,6 @@
 <div class="alert alert-dark alert-fluid" role="alert">
 	<div class="container">
 		<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
-	</div>
-</div>
-
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row" id="alertNotifications">
-	<div class="col-md-12">
-		<h3 id="alert-notification"><a class="heading-anchor" href="#alert-notification"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Alert Notification</h3>
-
-		<blockquote class="blockquote">
-			<p>Alternate alert style for notifications</p>
-		</blockquote>
-
-<div class="alert alert-dismissible alert-notification alert-success" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-		<use xlink:href="../../images/icons/icons.svg#check-circle">
-	</svg>
-	<strong class="lead">Success:</strong> This is a success message.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="../../images/icons/icons.svg#times">
-		</svg>
-	</button>
-</div>
-<div class="alert alert-dismissible alert-notification alert-info" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
-	<strong class="lead">Info:</strong> This is an info message.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="../../images/icons/icons.svg#times">
-		</svg>
-	</button>
-</div>
-<div class="alert alert-dismissible alert-notification alert-warning" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
-		<use xlink:href="../../images/icons/icons.svg#question-circle-full">
-	</svg>
-	<strong class="lead">Warning:</strong> This is a warning message.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="../../images/icons/icons.svg#times">
-		</svg>
-	</button>
-</div>
-<div class="alert alert-dismissible alert-notification alert-danger" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-		<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-	</svg>
-	<strong class="lead">Danger:</strong> This is a danger message.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="../../images/icons/icons.svg#times">
-		</svg>
-	</button>
-</div>
-<div class="clay-site-display-container">
-	<div class="alert alert-dismissible alert-notification alert-primary" role="alert">
-		<strong class="lead">Meeting Rescheduled:</strong>
-		<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
-		<p>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</p>
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="../../images/icons/icons.svg#times">
-			</svg>
-		</button>
-	</div>
-</div>
-<div class="clay-site-display-container">
-	<div class="alert alert-dismissible alert-notification alert-secondary" role="alert">
-		<strong class="lead">Meeting Rescheduled:</strong>
-		<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
-		<p>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</p>
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="../../images/icons/icons.svg#times">
-			</svg>
-		</button>
-	</div>
-</div>
-
-<div class="clay-site-display-container">
-	<div class="alert alert-dismissible alert-notification alert-light" role="alert">
-		<strong class="lead">Light:</strong>
-		<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a class="alert-link" href="#1">Log in</a></p>
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="../../images/icons/icons.svg#times">
-			</svg>
-		</button>
-	</div>
-</div>
-
-<div class="clay-site-display-container">
-	<div class="alert alert-dismissible alert-notification alert-dark" role="alert">
-		<strong class="lead">Dark:</strong>
-		<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a class="alert-link" href="#1">Log in</a></p>
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="../../images/icons/icons.svg#times">
-			</svg>
-		</button>
 	</div>
 </div>
 
