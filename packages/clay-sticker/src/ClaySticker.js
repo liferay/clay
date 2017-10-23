@@ -24,7 +24,6 @@ ClaySticker.STATE = {
    * @default undefined
    */
   icon: Config.shapeOf({
-    monospaced: Config.bool().value(false),
     spritemap: Config.string().required(),
     symbol: Config.string().required(),
   }),

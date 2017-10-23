@@ -18,7 +18,6 @@ describe('ClaySticker', function() {
   it('should render a sticker with icon', () => {
     sticker = new ClaySticker({
       icon: {
-        monospaced: true,
         spritemap: 'icons.svg',
         symbol: 'plus',
       },

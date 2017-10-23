@@ -5,7 +5,6 @@
  */
 {template .render}
 	{@param? icon: [
-		monospaced: bool,
 		spritemap: string,
 		symbol: string
 	]}
@@ -45,7 +44,6 @@
 	<span {$attributes}>
 		{if $icon}
 			{call ClayIcon.render}
-				{param monospaced: $icon.monospaced /}
 				{param spritemap: $icon.spritemap /}
 				{param symbol: $icon.symbol /}
 			{/call}
