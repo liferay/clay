@@ -98,14 +98,6 @@
 
 		new metal.ClayLabel(
 			{
-				label: 'Label text',
-				size: 'lg',
-			},
-			'#size-block'
-		);
-
-		new metal.ClayLabel(
-			{
 				label: 'Label text'
 			},
 			'#size-block'
@@ -115,13 +107,8 @@
 			{
 				label: 'Label text',
 				size: 'lg',
-				closeable: true,
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-				events: {
- 					'close': handleClick
- 				}
 			},
-			'#removable-block'
+			'#size-block'
 		);
 
 		new metal.ClayLabel(
@@ -140,6 +127,18 @@
 			{
 				label: 'Label text',
 				size: 'lg',
+				closeable: true,
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				events: {
+ 					'close': handleClick
+ 				}
+			},
+			'#removable-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Label text',
 				href: '#1'
 			},
 			'#link-block'
@@ -148,6 +147,7 @@
 		new metal.ClayLabel(
 			{
 				label: 'Label text',
+				size: 'lg',
 				href: '#1'
 			},
 			'#link-block'
