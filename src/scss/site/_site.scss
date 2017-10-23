@@ -72,14 +72,10 @@ section.row {
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	z-index: 5;
+	z-index: 5001;
 
 	.dropdown-menu {
 		width: 240px;
-
-		a {
-			color: initial;
-		}
 	}
 }
 
@@ -156,14 +152,8 @@ section.row {
 	}
 }
 
-#alertNotifications {
-	.clay-site-display-container {
-		@include media-breakpoint-up(md) { // min-width 768px
-			float: left;
-			margin-right: 15px;
-			min-height: 250px;
-		}
-	}
+#claySiteAlertsNotificationsSpacer {
+	padding-bottom: 175px;
 }
 
 // Cards Page
