@@ -11,18 +11,16 @@
 	{@param? body: string|html}
 	{@param? footer: list<?>}
 	{@param? id: string}
-	{@param? iframe: bool}
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? status: string}
 	{@param? title: string}
+	{@param? url: string}
 
 	{let $classesSize kind="text"}
 		modal-dialog
 		{if $size}
 			{sp}modal-{$size}
-		{elseif $iframe}
-			{sp}modal-full-screen
 		{/if}
 
 		{if $status}
@@ -61,10 +59,10 @@
 				{/call}
 
 				{call .body}
-					{param body: $body /}
-					{param iframe: $iframe /}
+						{param content: $body /}
+						{param url: $url /}
 				{/call}
-
+					
 				{call .footer}
 					{param _handleClickButtonFooter: $_handleClickButtonFooter /}
 					{param _handleCloseModal: $_handleCloseModal /}
@@ -106,19 +104,20 @@
  * Render a body of the modal.
  */
 {template .body}
-	{@param? body: string|html}
-	{@param? iframe: bool}
+	{@param? content: string|html}
+	{@param? url: string}
 
-	{let $classes kind="text"}
-		modal-body
-		{if $iframe}
-			{sp}modal-body-iframe
-		{/if}
-	{/let}
-
-	<div class="{$classes}">
-		{$body}
-	</div>
+	{if $url}
+		<div class="modal-body modal-body-iframe">
+			{call .iframe}
+				{param url: $url /}
+			{/call}
+		</div>
+	{elseif $content}
+		<div class="modal-body">
+			{$content}
+		</div>
+	{/if}
 {/template}
 
 /**
@@ -169,4 +168,13 @@
 			</div>
 		</div>
 	{/if}
+{/template}
+
+/**
+ * Renders an iframe.
+ */
+{template .iframe}
+	{@param url: string}
+
+	<iframe src="{$url}" title="{$url}"></iframe>
 {/template}

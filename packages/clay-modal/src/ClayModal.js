@@ -195,15 +195,6 @@ ClayModal.STATE = {
   id: Config.string(),
 
   /**
-   * Active use of the iframe in body.
-   * @instance
-   * @memberof ClayModal
-   * @type {?bool}
-   * @default false
-   */
-  iframe: Config.bool().value(false),
-
-  /**
    * The size of element modal.
    * @instance
    * @memberof ClayModal
@@ -238,6 +229,15 @@ ClayModal.STATE = {
    * @default undefined
    */
   title: Config.string(),
+
+  /**
+   * Url to place an iframe in the body of the modal.
+   * @instance
+   * @memberof ClayModal
+   * @type {?string|undefined}
+   * @default undefined
+   */
+  url: Config.string(),
 };
 
 Soy.register(ClayModal, templates);

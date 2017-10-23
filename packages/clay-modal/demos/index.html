@@ -164,7 +164,6 @@
 		 * Modal with iframe
 		 */
 		var modalIframe = new metal.ClayModal({
-				body: bodyIframe,
 				footer: [
 					{
 						label: 'Save',
@@ -175,9 +174,10 @@
 						type: 'close'
 					}
 				],
-				iframe: true,
+				size: 'full-screen',
 				spritemap: spritemap,
-				title: 'Title'
+				title: 'Title',
+				url: 'https://claycss.com'
 			},
 			'#modal-iframe-block'
 		);
