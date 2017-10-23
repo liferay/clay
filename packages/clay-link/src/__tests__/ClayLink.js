@@ -74,7 +74,6 @@ describe('ClayLink', function() {
   it('should render a link with icon', () => {
     link = new ClayLink({
       icon: {
-        monospaced: true,
         spritemap: 'icons.svg',
         symbol: 'plus',
       },
@@ -86,7 +85,6 @@ describe('ClayLink', function() {
   it('should render a link with icon and label', () => {
     link = new ClayLink({
       icon: {
-        monospaced: true,
         spritemap: 'icons.svg',
         symbol: 'plus',
       },
@@ -100,7 +98,6 @@ describe('ClayLink', function() {
     link = new ClayLink({
       icon: {
         alignment: 'right',
-        monospaced: true,
         spritemap: 'icons.svg',
         symbol: 'plus',
       },

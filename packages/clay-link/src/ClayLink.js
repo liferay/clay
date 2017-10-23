@@ -62,7 +62,6 @@ ClayLink.STATE = {
    */
   icon: Config.shapeOf({
     alignment: Config.oneOf(['left', 'right']),
-    monospaced: Config.bool(),
     spritemap: Config.string().required(),
     symbol: Config.string().required(),
   }),
