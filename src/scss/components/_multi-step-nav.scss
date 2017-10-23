@@ -138,6 +138,21 @@
 	}
 }
 
+button.multi-step-icon {
+	border-width: 0;
+	padding: 0;
+}
+
+.multi-step-icon.btn-link {
+	border-width: 0;
+	padding: 0;
+	vertical-align: baseline;
+
+	@include hover {
+		background-color: $multi-step-icon-bg;
+	}
+}
+
 .multi-step-icon {
 	align-items: center;
 	background-color: $multi-step-icon-bg;
@@ -159,28 +174,9 @@
 
 	.lexicon-icon {
 		height: $multi-step-icon-font-size;
+		margin-top: 0;
 		width: $multi-step-icon-font-size;
 	}
-
-	.multi-step-link {
-		color: inherit;
-		height: $multi-step-icon-size;
-		line-height: $multi-step-icon-size;
-		text-align: center;
-		width: $multi-step-icon-size;
-	}
-}
-
-.multi-step-link.btn-link {
-	border-width: 0;
-	padding: 0;
-	vertical-align: baseline;
-}
-
-button.multi-step-link {
-	background-color: transparent;
-	border-width: 0;
-	padding: 0;
 }
 
 .multi-step-item-fixed-width {
