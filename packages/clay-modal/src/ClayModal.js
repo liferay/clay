@@ -32,6 +32,24 @@ class ClayModal extends Component {
   }
 
   /**
+   * @inheritDoc
+   */
+  detached() {
+    super.detached();
+    this._eventHandler.removeAllListeners();
+  }
+
+  /**
+   * @inheritDoc
+   */
+  sync_visible() {
+    let willShowOverlay = this._visible;
+    dom[willShowOverlay ? 'enterDocument' : 'exitDocument'](
+      this._overlayElement
+    );
+  }
+
+  /**
    * Close modal and remove transitions.
    * @private
    */
@@ -41,18 +59,10 @@ class ClayModal extends Component {
     dom.removeClasses(document.body, 'modal-open');
 
     setTimeout(() => {
-      this.visible = false;
+      this._visible = false;
     }, 100);
 
     this._eventHandler.removeAllListeners();
-  }
-
-  /**
-   * Check if contain click target event in element and emit close modal.
-   * @private
-   */
-  _handleDocumentClick() {
-    if (dom.contains(event.target, this.element)) this.emit('hide');
   }
 
   /**
@@ -72,21 +82,13 @@ class ClayModal extends Component {
   }
 
   /**
-   * Open modal and add transition.
-   * @public
+   * Check if contain click target event in element and emit close modal.
+   * @private
    */
-  show() {
-    dom.addClasses(document.body, 'modal-open');
-    this.visible = true;
-
-    setTimeout(() => {
-      this._isTransitioning = true;
-      dom.addClasses(this._overlayElement, 'show');
-    }, 5);
-
-    this._eventHandler.add(
-      dom.on(document, 'keyup', this._handleKeyup.bind(this))
-    );
+  _handleDocumentClick() {
+    if (dom.contains(event.target, this.element)) {
+      this.emit('hide');
+    }
   }
 
   /**
@@ -95,17 +97,9 @@ class ClayModal extends Component {
    * @private
    */
   _handleKeyup(event) {
-    if (event.keyCode === KEY_CODE_ESC) this.emit('hide');
-  }
-
-  /**
-   * @inheritDoc
-   */
-  syncVisible() {
-    let willShowOverlay = this.visible;
-    dom[willShowOverlay ? 'enterDocument' : 'exitDocument'](
-      this._overlayElement
-    );
+    if (event.keyCode === KEY_CODE_ESC) {
+      this.emit('hide');
+    }
   }
 
   /**
@@ -119,11 +113,21 @@ class ClayModal extends Component {
   }
 
   /**
-   * @inheritDoc
+   * Open modal and add transition.
+   * @public
    */
-  detached() {
-    super.detached();
-    this._eventHandler.removeAllListeners();
+  show() {
+    dom.addClasses(document.body, 'modal-open');
+    this._visible = true;
+
+    setTimeout(() => {
+      this._isTransitioning = true;
+      dom.addClasses(this._overlayElement, 'show');
+    }, 5);
+
+    this._eventHandler.add(
+      dom.on(document, 'keyup', this._handleKeyup.bind(this))
+    );
   }
 }
 
@@ -133,6 +137,30 @@ class ClayModal extends Component {
  * @type {!Object}
  */
 ClayModal.STATE = {
+  /**
+   * Adds transitions when show is called.
+   * @instance
+   * @memberof ClayModal
+   * @type {?bool}
+   * @default false
+   * @private
+   */
+  _isTransitioning: Config.bool()
+    .value(false)
+    .internal(),
+
+  /**
+   * Modal visible when show is called.
+   * @instance
+   * @memberof ClayModal
+   * @type {?bool}
+   * @default false
+   * @private
+   */
+  _visible: Config.bool()
+    .value(false)
+    .internal(),
+
   /**
    * Body of the modal.
    * @instance
@@ -176,18 +204,6 @@ ClayModal.STATE = {
   iframe: Config.bool().value(false),
 
   /**
-   * Adds transitions when show is called.
-   * @instance
-   * @memberof ClayModal
-   * @type {?bool}
-   * @default false
-   * @private
-   */
-  _isTransitioning: Config.bool()
-    .value(false)
-    .internal(),
-
-  /**
    * The size of element modal.
    * @instance
    * @memberof ClayModal
@@ -222,18 +238,6 @@ ClayModal.STATE = {
    * @default undefined
    */
   title: Config.string(),
-
-  /**
-   * Modal visible when show is called.
-   * @instance
-   * @memberof ClayModal
-   * @type {?bool}
-   * @default false
-   * @private
-   */
-  visible: Config.bool()
-    .value(false)
-    .internal(),
 };
 
 Soy.register(ClayModal, templates);

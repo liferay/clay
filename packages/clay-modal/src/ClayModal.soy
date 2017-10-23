@@ -7,6 +7,7 @@
 	{@param? _handleClickButtonFooter: any}
 	{@param? _handleCloseModal: any}
 	{@param? _isTransitioning: bool}
+	{@param? _visible: bool}
 	{@param? body: string|html}
 	{@param? footer: list<?>}
 	{@param? id: string}
@@ -15,7 +16,6 @@
 	{@param? spritemap: string}
 	{@param? status: string}
 	{@param? title: string}
-	{@param? visible: bool}
 
 	{let $classesSize kind="text"}
 		modal-dialog
@@ -38,7 +38,7 @@
 			{/if}
 		"
 
-		{if $visible}
+		{if $_visible}
 			style="display: block;"
 		{/if}
 
