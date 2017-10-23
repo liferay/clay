@@ -7,15 +7,11 @@
 	{@param spritemap: string}
 	{@param symbol: string}
 	{@param? id: string}
-	{@param? monospaced: bool}
 
 	{let $attributes kind="attributes"}
 		aria-hidden="true"
 		class="lexicon-icon
 			{sp}lexicon-icon-{$symbol}
-			{if $monospaced}
-				{sp}icon-monospaced
-			{/if}
 		"
 		{if $id}
 			id="{$id}"

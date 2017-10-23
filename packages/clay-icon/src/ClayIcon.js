@@ -25,15 +25,6 @@ ClayIcon.STATE = {
   id: Config.string(),
 
   /**
-   * Flag to indicate if the icon should be monospaced.
-   * @instance
-   * @memberof ClayIcon
-   * @type {?bool}
-   * @default false
-   */
-  monospaced: Config.bool().value(false),
-
-  /**
    * The path to the SVG spritemap file containing the icons.
    * @instance
    * @memberof ClayIcon
