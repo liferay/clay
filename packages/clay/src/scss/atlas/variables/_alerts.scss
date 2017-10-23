@@ -15,8 +15,6 @@ $alert-link-decoration: underline !default;
 $alert-link-hover-decoration: none !default;
 $alert-link-font-weight: $font-weight-normal !default;
 
-$alert-notification-max-width: 360px !default;
-
 $alert-primary-color: map-get($theme-colors, primary) !default;
 $alert-primary-bg: lighten($alert-primary-color, 44%) !default;
 $alert-primary-border-color: lighten($alert-primary-color, 22%) !default;
