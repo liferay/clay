@@ -81,15 +81,11 @@ section.row {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  z-index: 5;
+  z-index: 5001;
 }
 
 #siteConfig .dropdown-menu {
   width: 240px;
-}
-
-#siteConfig .dropdown-menu a {
-  color: initial;
 }
 
 #skipTo {
@@ -157,12 +153,8 @@ section.row {
   margin-bottom: 5px;
 }
 
-@media (min-width: 768px) {
-  #alertNotifications .clay-site-display-container {
-    float: left;
-    margin-right: 15px;
-    min-height: 250px;
-  }
+#claySiteAlertsNotificationsSpacer {
+  padding-bottom: 175px;
 }
 
 .clay-site-vertical-card .card-header, .clay-site-vertical-card .card-footer {
