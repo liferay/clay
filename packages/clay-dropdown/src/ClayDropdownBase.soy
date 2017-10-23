@@ -83,12 +83,11 @@
 			<div class="input-group-input">
 				<input aria-label="Search for..." class="form-control" data-oninput="_handleSearch" placeholder="Search for..." type="text" ref="searchInput">
 			</div>
-			
+
 			<span class="input-group-inset-item">
 				{call ClayButton.render}
 					{param icon: [
 						'alignment': 'left',
-						'monospaced': false,
 						'spritemap': $spritemap,
 						'symbol': 'search'
 					] /}
@@ -246,7 +245,7 @@
 					{sp}disabled
 				{/if}
 			"
-			
+
 			{if $disabled}
 				href="javascript:;"
 			{else}
