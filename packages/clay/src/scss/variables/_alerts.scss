@@ -35,6 +35,28 @@ $alert-fluid-border-width: 0 0 1px 0 !default;
 
 // Alert Notification
 
+$alert-notifications-absolute-bottom: null !default;
+$alert-notifications-absolute-left: null !default;
+$alert-notifications-absolute-right: 0.5rem !default; // 8px
+$alert-notifications-absolute-top: 4.75rem !default; // 76px
+
+$alert-notifications-absolute-bottom-mobile: null !default;
+$alert-notifications-absolute-left-mobile: 0.5rem !default; // 8px
+$alert-notifications-absolute-right-mobile: 0.5rem !default; // 8px
+$alert-notifications-absolute-top-mobile: 4.25rem!default; // 68px
+
+$alert-notifications-fixed-bottom: null !default;
+$alert-notifications-fixed-left: null !default;
+$alert-notifications-fixed-right: 1.25rem !default; // 20px
+$alert-notifications-fixed-top: 4.75rem !default; // 76p
+
+$alert-notifications-fixed-bottom-mobile: null !default;
+$alert-notifications-fixed-left-mobile: 0.5rem !default; // 8px
+$alert-notifications-fixed-right-mobile: 0.5rem !default; // 8px
+$alert-notifications-fixed-top-mobile: 4.25rem !default; // 68px
+
+$alert-notifications-max-width: 22.5rem !default; // 360px
+
 $alert-notification-max-width: 280px !default;
 
 $alert-primary-bg: null !default;
