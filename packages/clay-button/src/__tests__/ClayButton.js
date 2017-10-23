@@ -83,7 +83,6 @@ describe('ClayButton', function() {
   it('should render a button with icon', function() {
     button = new ClayButton({
       icon: {
-        monospaced: true,
         spritemap: 'icons.svg',
         symbol: 'plus',
       },
@@ -92,10 +91,21 @@ describe('ClayButton', function() {
     expect(button).toMatchSnapshot();
   });
 
+  it('should render a button with icon and monospaced true', function() {
+    button = new ClayButton({
+      icon: {
+        spritemap: 'icons.svg',
+        symbol: 'plus',
+      },
+      monospaced: true,
+    });
+
+    expect(button).toMatchSnapshot();
+  });
+
   it('should render a button with icon and label', function() {
     button = new ClayButton({
       icon: {
-        monospaced: true,
         spritemap: 'icons.svg',
         symbol: 'plus',
       },
@@ -109,7 +119,6 @@ describe('ClayButton', function() {
     button = new ClayButton({
       icon: {
         alignment: 'right',
-        monospaced: true,
         spritemap: 'icons.svg',
         symbol: 'plus',
       },

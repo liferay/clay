@@ -8,7 +8,7 @@ exports[`ClayButton should render a button with custom classes 1`] = `<button cl
 
 exports[`ClayButton should render a button with icon 1`] = `
 <button class="btn btn-primary" aria-label="plus">
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus icon-monospaced">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <use xlink:href="icons.svg#plus"></use>
   </svg>
 </button>
@@ -16,9 +16,17 @@ exports[`ClayButton should render a button with icon 1`] = `
 
 exports[`ClayButton should render a button with icon and label 1`] = `
 <button class="btn btn-primary">
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus icon-monospaced">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <use xlink:href="icons.svg#plus"></use>
   </svg>Label</button>
+`;
+
+exports[`ClayButton should render a button with icon and monospaced true 1`] = `
+<button class="btn btn-monospaced btn-primary" aria-label="plus">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+    <use xlink:href="icons.svg#plus"></use>
+  </svg>
+</button>
 `;
 
 exports[`ClayButton should render a button with id 1`] = `<button class="btn btn-primary" id="myButton"></button>`;
@@ -29,7 +37,7 @@ exports[`ClayButton should render a button with label and ariaLabel 1`] = `<butt
 
 exports[`ClayButton should render a button with label and icon 1`] = `
 <button class="btn btn-primary">Label
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus icon-monospaced">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <use xlink:href="icons.svg#plus"></use>
   </svg>
 </button>
