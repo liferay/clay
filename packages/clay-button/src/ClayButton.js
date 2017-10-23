@@ -75,6 +75,15 @@ ClayButton.STATE = {
   label: Config.any(),
 
   /**
+   * Flag to indicate if button should be monospaced.
+   * @instance
+   * @memberof ClayButton
+   * @type {?bool}
+   * @default false
+   */
+  monospaced: Config.bool().value(false),
+
+  /**
    * The name attribute value of the element.
    * @instance
    * @memberof ClayButton

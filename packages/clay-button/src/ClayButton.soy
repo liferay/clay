@@ -15,6 +15,7 @@
 	]}
 	{@param? id: string}
 	{@param? label: html|string}
+	{@param? monospaced: bool}
 	{@param? name: string}
 	{@param? size: string}
 	{@param? style: string}
@@ -30,6 +31,7 @@
 			{param icon: $icon /}
 			{param id: $id /}
 			{param label: $label /}
+			{param monospaced: $monospaced /}
 			{param name: $name /}
 			{param size: $size /}
 			{param style: $style /}
@@ -105,6 +107,7 @@
 	]}
 	{@param? id: string}
 	{@param? label: html|string}
+	{@param? monospaced: bool}
 	{@param? name: string}
 	{@param? size: string}
 	{@param? style: string}
@@ -118,6 +121,9 @@
 		{/if}
 		{if $elementClasses}
 			{sp}{$elementClasses}
+		{/if}
+		{if $monospaced}
+			{sp}btn-monospaced
 		{/if}
 		{if $size}
 			{sp}btn-{$size}

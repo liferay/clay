@@ -66,6 +66,13 @@
 		</div>
 	</div>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button monospaced</h4>
+			<div id="monospaced-block"></div>
+		</div>
+	</div>
+
 	<script type="text/javascript">
 		/*
 		 * Button States.
@@ -163,7 +170,6 @@
 			{
 				label: 'Default Icon Position',
 				icon: {
-					monospaced: true,
 					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 					symbol: 'plus'
 				}
@@ -176,7 +182,6 @@
 				label: 'Icon positioned at right',
 				icon: {
 					alignment: 'right',
-					monospaced: true,
 					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 					symbol: 'plus'
 				}
@@ -187,13 +192,52 @@
 		new metal.ClayButton(
 			{
 				icon: {
-					monospaced: true,
 					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 					symbol: 'plus'
-				}
+				},
+				monospaced: true
 			},
 			'#icons-block'
 		);
+
+		/*
+		 * Button monospaced.
+		 */
+		 new metal.ClayButton(
+ 			{
+ 				label: 'A',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+ 		);
+
+ 		new metal.ClayButton(
+ 			{
+ 				style: 'secondary',
+ 				label: 'B',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+ 		);
+
+ 		new metal.ClayButton(
+ 			{
+ 				style: 'borderless',
+ 				label: 'C',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+ 		);
+
+ 		new metal.ClayButton(
+ 			{
+ 				ariaLabel: 'My Description',
+ 				style: 'link',
+ 				label: 'D',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+ 		);
 	</script>
 </body>
 </html>
