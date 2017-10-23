@@ -49,17 +49,22 @@
 	&.complete {
 		.multi-step-icon {
 			background-color: $multi-step-icon-complete-bg;
-			background-image: $multi-step-icon-complete-bg-image;
-			background-position: $multi-step-icon-complete-bg-position;
-			background-repeat: no-repeat;
-			background-size: $multi-step-icon-complete-bg-size;
 			color: $multi-step-icon-complete-color;
 
 			@if ($multi-step-icon-complete-bg-image) {
+				background-image: $multi-step-icon-complete-bg-image;
+				background-position: $multi-step-icon-complete-bg-position;
+				background-repeat: no-repeat;
+				background-size: $multi-step-icon-complete-bg-size;
+
 				&[data-multi-step-icon] {
 					&:before {
 						content: normal;
 					}
+				}
+
+				&:active {
+					background-image: $multi-step-icon-complete-bg-image;
 				}
 			}
 		}
@@ -139,17 +144,22 @@
 }
 
 button.multi-step-icon {
+	cursor: pointer;
 	border-width: 0;
 	padding: 0;
+
+	@include hover-focus {
+		background-color: $multi-step-icon-hover-bg;
+		color: $multi-step-icon-hover-color;
+		text-decoration: $multi-step-icon-hover-text-decoration;
+	}
 }
 
-.multi-step-icon.btn-link {
-	border-width: 0;
-	padding: 0;
-	vertical-align: baseline;
-
-	@include hover {
-		background-color: $multi-step-icon-bg;
+a.multi-step-icon {
+	@include hover-focus {
+		background-color: $multi-step-icon-hover-bg;
+		color: $multi-step-icon-hover-color;
+		text-decoration: $multi-step-icon-hover-text-decoration;
 	}
 }
 
@@ -170,6 +180,10 @@ button.multi-step-icon {
 		line-height: $multi-step-icon-size;
 		text-align: center;
 		width: $multi-step-icon-size;
+	}
+
+	.btn-link {
+		vertical-align: baseline;
 	}
 
 	.lexicon-icon {
