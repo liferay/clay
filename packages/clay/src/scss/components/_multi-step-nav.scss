@@ -140,6 +140,16 @@
 	position: relative;
 	width: $multi-step-indicator-width;
 
+	.complete .dropdown-item-indicator {
+		background-image: $multi-step-dropdown-indicator-complete-icon;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		display: block;
+		height: 1.5em;
+		width: $multi-step-dropdown-indicator-complete-width;
+	}
+
 	.multi-step-indicator-label {
 		color: $multi-step-indicator-label-color;
 		font-size: $multi-step-indicator-label-font-size;
