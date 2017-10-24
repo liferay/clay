@@ -44,6 +44,20 @@
 		border-width: 0;
 
 		@include clay-list-group-notification-item-border-variant($list-group-notification-item-border-variant);
+
+		&:first-child {
+			@if ($enable-rounded) {
+				border-top-left-radius: $list-group-notification-border-top-left-radius;
+				border-top-right-radius: $list-group-notification-border-top-right-radius;
+			}
+		}
+
+		&:last-child {
+			@if ($enable-rounded) {
+				border-bottom-left-radius: $list-group-notification-border-bottom-left-radius;
+				border-bottom-right-radius: $list-group-notification-border-bottom-right-radius;
+			}
+		}
 	}
 }
 
