@@ -114,6 +114,7 @@
 }
 
 .multi-step-title {
+	color: $multi-step-title-color;
 	font-size: $multi-step-title-font-size;
 	font-weight: $multi-step-title-font-weight;
 	line-height: normal;
@@ -140,6 +141,7 @@
 	width: $multi-step-indicator-width;
 
 	.multi-step-indicator-label {
+		color: $multi-step-indicator-label-color;
 		font-size: $multi-step-indicator-label-font-size;
 		font-weight: $multi-step-indicator-label-font-weight;
 		left: 50%;
