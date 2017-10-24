@@ -5,10 +5,6 @@ $list-group-active-bg: lighten(map-get($theme-colors, primary), 44%) !default;
 $list-group-active-border-color: $list-group-border-color !default;
 $list-group-active-color: !default;
 
-$list-group-action-color: $list-group-color !default;
-$list-group-action-active-color: $list-group-action-color !default;
-$list-group-action-active-bg: $list-group-active-bg !default;
-
 $list-group-header-padding-y: 0.75rem !default; // 12px
 
 $list-group-header-title-color: map-get($theme-colors, secondary) !default;
