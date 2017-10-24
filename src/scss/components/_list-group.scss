@@ -37,6 +37,16 @@
 	}
 }
 
+// List Group Notification
+
+.list-group-notification {
+	.list-group-item {
+		border-width: 0;
+
+		@include clay-list-group-notification-item-border-variant($list-group-notification-item-border-variant);
+	}
+}
+
 // List Group Header
 
 .list-group-header {
