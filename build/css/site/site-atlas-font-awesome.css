@@ -3133,7 +3133,7 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   min-height: 1.5rem;
-  padding-left: 1.5rem;
+  padding-left: 1.0625rem;
   margin-right: 1rem;
 }
 
@@ -4470,25 +4470,25 @@ tbody.collapse.show {
 
 .list-group-item-action {
   width: 100%;
-  color: #6B6C7E;
+  color: #495057;
   text-align: inherit;
 }
 
 .list-group-item-action:focus, .list-group-item-action:hover {
-  color: #6B6C7E;
+  color: #495057;
   text-decoration: none;
   background-color: #f5f8ff;
 }
 
 .list-group-item-action:active {
-  color: #6B6C7E;
-  background-color: #f5f8ff;
+  color: #272833;
+  background-color: #e9ecef;
 }
 
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.5rem;
   margin-bottom: -1px;
   background-color: #fff;
   border: 1px solid rgba(220, 220, 220, 0.5);
@@ -4845,14 +4845,14 @@ button.close {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .modal-footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   border-top: 1px solid #e8e8ec;
 }
 
@@ -9837,6 +9837,7 @@ fieldset[disabled] .form-control, .form-control[disabled] {
 
 .custom-control-description {
   line-height: 1.1875rem;
+  margin-left: 0.5rem;
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
@@ -9905,7 +9906,7 @@ fieldset[disabled] .form-control, .form-control[disabled] {
 .custom-control label {
   display: inline;
   margin-bottom: 0;
-  padding-left: 1.5rem;
+  padding-left: 1.0625rem;
 }
 
 .custom-control-input {
@@ -10679,13 +10680,30 @@ a.label:focus, a.label:hover {
   border-left: 1px solid rgba(220, 220, 220, 0.5);
   border-right: 1px solid rgba(220, 220, 220, 0.5);
   margin-left: -1px;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.5rem;
 }
 
 .list-group-bordered .flex-col:first-child, .list-group-bordered .flex-col:last-child {
   border-left-width: 0;
   border-right-width: 0;
   margin-left: 0;
+}
+
+.list-group-notification .list-group-item {
+  border-width: 0;
+  box-shadow: inset 0.5rem 0 #86affd, inset -0.0625rem 0 rgba(220, 220, 220, 0.5), inset 0 0.0625rem rgba(220, 220, 220, 0.5), inset 0 -0.0625rem rgba(220, 220, 220, 0.5);
+}
+
+.list-group-notification .list-group-item.active {
+  box-shadow: inset 0.5rem 0 #86affd, inset -0.0625rem 0 rgba(220, 220, 220, 0.5), inset 0 0.0625rem rgba(220, 220, 220, 0.5), inset 0 -0.0625rem rgba(220, 220, 220, 0.5);
+}
+
+.list-group-notification .list-group-item:first-child {
+  border-top-left-radius: 0;
+}
+
+.list-group-notification .list-group-item:last-child {
+  border-bottom-left-radius: 0;
 }
 
 .list-group-header {
@@ -10695,7 +10713,7 @@ a.label:focus, a.label:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: -1px;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .list-group-header:first-child {
@@ -10720,8 +10738,8 @@ a.label:focus, a.label:hover {
   color: #272833;
   font-size: 1rem;
   font-weight: 600;
-  line-height: normal;
-  margin-bottom: 0.25rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
 a.list-group-title,
@@ -10732,12 +10750,17 @@ a.list-group-title,
 .list-group-subtitle {
   color: #6B6C7E;
   font-size: 0.875rem;
-  margin-bottom: 0.25rem;
+  line-height: 1;
+  margin-bottom: 0;
 }
 
 a.list-group-subtitle,
 .list-group-subtitle a {
   color: #6B6C7E;
+}
+
+.list-group-detail {
+  margin-top: 0.25rem;
 }
 
 .show-dropdown-action-on-active .list-group-item.active .dropdown-action .dropdown-menu {
@@ -10754,14 +10777,14 @@ a.list-group-subtitle,
 
 .list-group-item-flex {
   display: flex;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .list-group-item-flex .flex-col {
-  justify-content: center;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  justify-content: flex-start;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .list-group-item-flex .flex-col .custom-control:only-child,
@@ -10790,7 +10813,13 @@ a.list-group-subtitle,
 }
 
 .list-group .quick-action-menu {
+  align-items: flex-start;
   background-color: #fff;
+}
+
+.list-group-bordered .quick-action-menu {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .list-group-item-flex.active .quick-action-menu {
@@ -10818,7 +10847,7 @@ a.list-group-subtitle,
 .modal-body.inline-scroller {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .modal-footer {
@@ -10895,18 +10924,8 @@ a.list-group-subtitle,
   margin-left: 0.3125rem;
 }
 
-.modal-iframe iframe {
-  border-width: 0;
-  float: left;
-  height: 300px;
-  width: 100%;
-}
-
-.modal-iframe .modal-body {
-  padding: 0;
-}
-
 .modal-body-iframe {
+  height: 160px;
   padding: 0;
 }
 
@@ -11093,23 +11112,6 @@ a.list-group-subtitle,
   position: relative;
 }
 
-.multi-step-item.complete .multi-step-icon {
-  background-color: #6B6C7E;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M502.091%2060.993c-9.909-9.91-25.962-9.91-35.843%200L129.26%20397.981%2045.752%20314.53c-9.881-9.909-25.962-9.909-35.843%200-9.909%209.909-9.909%2025.962%200%2035.843l98.257%2098.257c2.608%202.608%205.679%204.433%208.924%205.679%204.028%202.464%208.403%204.115%2012.952%204.115%206.49%200%2012.981-2.464%2017.936-7.418L502.09%2096.865c9.909-9.909%209.909-25.962%200-35.871v-.001z'%20fill='%23FFF'/%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1rem;
-  color: #FFF;
-}
-
-.multi-step-item.complete .multi-step-icon[data-multi-step-icon]:before {
-  content: normal;
-}
-
-.multi-step-item.complete .multi-step-divider {
-  background-color: #6B6C7E;
-}
-
 .multi-step-item.active .multi-step-icon {
   background-color: #1865FB;
   background-position: center;
@@ -11122,16 +11124,36 @@ a.list-group-subtitle,
   background-color: #e9ecef;
 }
 
-.multi-step-item-contract {
-  flex-grow: 0;
+.multi-step-item.active.complete .multi-step-icon {
+  background-color: #1865FB;
+  color: #FFF;
 }
 
-.multi-step-item-contract .multi-step-divider {
-  width: 0;
+.multi-step-item.complete .multi-step-icon {
+  background-color: #6B6C7E;
+  color: #FFF;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M502.091%2060.993c-9.909-9.91-25.962-9.91-35.843%200L129.26%20397.981%2045.752%20314.53c-9.881-9.909-25.962-9.909-35.843%200-9.909%209.909-9.909%2025.962%200%2035.843l98.257%2098.257c2.608%202.608%205.679%204.433%208.924%205.679%204.028%202.464%208.403%204.115%2012.952%204.115%206.49%200%2012.981-2.464%2017.936-7.418L502.09%2096.865c9.909-9.909%209.909-25.962%200-35.871v-.001z'%20fill='%23FFF'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+.multi-step-item.complete .multi-step-icon[data-multi-step-icon]:before {
+  content: normal;
+}
+
+.multi-step-item.complete .multi-step-icon:active {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M502.091%2060.993c-9.909-9.91-25.962-9.91-35.843%200L129.26%20397.981%2045.752%20314.53c-9.881-9.909-25.962-9.909-35.843%200-9.909%209.909-9.909%2025.962%200%2035.843l98.257%2098.257c2.608%202.608%205.679%204.433%208.924%205.679%204.028%202.464%208.403%204.115%2012.952%204.115%206.49%200%2012.981-2.464%2017.936-7.418L502.09%2096.865c9.909-9.909%209.909-25.962%200-35.871v-.001z'%20fill='%23FFF'/%3E%3C/svg%3E");
+}
+
+.multi-step-item.complete .multi-step-divider {
+  background-color: #6B6C7E;
 }
 
 .multi-step-title {
+  color: #6B6C7E;
   font-size: 1rem;
+  font-weight: 600;
   line-height: normal;
   margin-bottom: 0.625rem;
   word-wrap: break-word;
@@ -11156,8 +11178,20 @@ a.list-group-subtitle,
   width: 2rem;
 }
 
+.multi-step-indicator .complete .dropdown-item-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M502.091%2060.993c-9.909-9.91-25.962-9.91-35.843%200L129.26%20397.981%2045.752%20314.53c-9.881-9.909-25.962-9.909-35.843%200-9.909%209.909-9.909%2025.962%200%2035.843l98.257%2098.257c2.608%202.608%205.679%204.433%208.924%205.679%204.028%202.464%208.403%204.115%2012.952%204.115%206.49%200%2012.981-2.464%2017.936-7.418L502.09%2096.865c9.909-9.909%209.909-25.962%200-35.871v-.001z'%20fill='%23272833'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  height: 1.5em;
+  width: 0.875rem;
+}
+
 .multi-step-indicator .multi-step-indicator-label {
+  color: #6B6C7E;
   font-size: 1rem;
+  font-weight: 600;
   left: 50%;
   max-width: 100px;
   position: absolute;
@@ -11167,6 +11201,24 @@ a.list-group-subtitle,
   white-space: nowrap;
 }
 
+button.multi-step-icon {
+  cursor: pointer;
+  border-width: 0;
+  padding: 0;
+}
+
+button.multi-step-icon:focus, button.multi-step-icon:hover {
+  background-color: #e9ecef;
+  color: #6B6C7D;
+  text-decoration: none;
+}
+
+a.multi-step-icon:focus, a.multi-step-icon:hover {
+  background-color: #e9ecef;
+  color: #6B6C7D;
+  text-decoration: none;
+}
+
 .multi-step-icon {
   align-items: center;
   background-color: #e9ecef;
@@ -11174,6 +11226,7 @@ a.list-group-subtitle,
   color: #6B6C7D;
   display: flex;
   font-size: 1rem;
+  font-weight: 600;
   justify-content: center;
   height: 2rem;
   width: 2rem;
@@ -11187,29 +11240,14 @@ a.list-group-subtitle,
   width: 2rem;
 }
 
-.multi-step-icon .lexicon-icon {
-  height: 1rem;
-  width: 1rem;
-}
-
-.multi-step-icon .multi-step-link {
-  color: inherit;
-  height: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  width: 2rem;
-}
-
-.multi-step-link.btn-link {
-  border-width: 0;
-  padding: 0;
+.multi-step-icon .btn-link {
   vertical-align: baseline;
 }
 
-button.multi-step-link {
-  background-color: transparent;
-  border-width: 0;
-  padding: 0;
+.multi-step-icon .lexicon-icon {
+  height: 1rem;
+  margin-top: 0;
+  width: 1rem;
 }
 
 .multi-step-item-fixed-width.multi-step-item,
