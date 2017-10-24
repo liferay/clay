@@ -26,9 +26,10 @@ class ClayModal extends Component {
    * @inheritDoc
    */
   attached() {
-    this.addListener('hide', this._defaultHideModal, true);
     this.addListener('click', this._handleDocumentClick.bind(this), true);
+    this.addListener('hide', this._defaultHideModal, true);
     this.addListener('touchend', this._handleDocumentClick.bind(this), true);
+    this.addListener('transitionend', this._handleTransitionEnd, true);
   }
 
   /**
@@ -43,10 +44,22 @@ class ClayModal extends Component {
    * @inheritDoc
    */
   sync_visible() {
-    let willShowOverlay = this._visible;
-    dom[willShowOverlay ? 'enterDocument' : 'exitDocument'](
-      this._overlayElement
-    );
+    if (this._visible) {
+      dom.enterDocument(this._overlayElement);
+      this._overlayElement.offsetHeight;
+      dom.addClasses(this._overlayElement, 'show');
+    } else {
+      dom.exitDocument(this._overlayElement);
+    }
+  }
+
+  sync_isTransitioning() {
+    if (this._isTransitioning && !this._visible) {
+      this._isTransitioning = false;
+      this._visible = true;
+    } else if (this._isTransitioning && this._visible) {
+      this._visible = false;
+    }
   }
 
   /**
@@ -54,13 +67,10 @@ class ClayModal extends Component {
    * @private
    */
   _defaultHideModal() {
-    this._isTransitioning = false;
     dom.removeClasses(this._overlayElement, 'show');
     dom.removeClasses(document.body, 'modal-open');
 
-    setTimeout(() => {
-      this._visible = false;
-    }, 100);
+    this._isTransitioning = true;
 
     this._eventHandler.removeAllListeners();
   }
@@ -112,6 +122,21 @@ class ClayModal extends Component {
   }
 
   /**
+   * Handle css transition ends.
+   * @param {Object} event
+   * @private
+   */
+  _handleTransitionEnd(event) {
+    if (
+      event.target === this.element &&
+      this._isTransitioning &&
+      !this._visible
+    ) {
+      this._isTransitioning = false;
+    }
+  }
+
+  /**
    * Create fragment of the overlay modal.
    * @return {Element} The resulting document fragment.
    * @private
@@ -127,12 +152,8 @@ class ClayModal extends Component {
    */
   show() {
     dom.addClasses(document.body, 'modal-open');
-    this._visible = true;
 
-    setTimeout(() => {
-      this._isTransitioning = true;
-      dom.addClasses(this._overlayElement, 'show');
-    }, 5);
+    this._isTransitioning = true;
 
     this._eventHandler.add(
       dom.on(document, 'keyup', this._handleKeyup.bind(this))

@@ -30,16 +30,15 @@
 	{/let}
 
 	{let $attributes kind="attributes"}
-		class="
-			fade modal
-			{if $_isTransitioning}
+		class="fade modal
+			{if $_isTransitioning or $_visible}
+				{sp}d-block
+			{/if}
+
+			{if $_visible}
 				{sp}show
 			{/if}
 		"
-
-		{if $_visible}
-			style="display: block;"
-		{/if}
 
 		{if $id}
 			id="{$id}"
