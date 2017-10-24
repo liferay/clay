@@ -18,10 +18,13 @@ $custom-control-indicator-disabled-border-color: $input-disabled-border-color !d
 $custom-control-indicator-disabled-checked-bg: lighten(map-get($theme-colors, primary), 31%) !default;
 $custom-control-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-bg !default;
 
+$custom-control-gutter: $custom-control-indicator-size !default;
+
 // Custom Control Description
 
 $custom-control-description-disabled-color: $input-label-disabled-color !default;
 $custom-control-description-line-height: $custom-control-indicator-size + ($custom-control-indicator-border-width * 2) !default;
+$custom-control-description-margin-left: 0.5rem !default; // 8px
 
 // Custom Checkbox
 
