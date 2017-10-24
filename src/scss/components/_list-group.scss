@@ -150,13 +150,12 @@ a.list-group-subtitle,
 }
 
 .list-group-item-flex {
-	// Center content in this component by adding justify-content: center on .flex-col and .flex-col-expand
 	display: flex;
 	padding-left: $list-group-item-padding-x / 2;
 	padding-right: $list-group-item-padding-x / 2;
 
 	.flex-col {
-		justify-content: center;
+		justify-content: $list-group-item-flex-align-items;
 		padding-left: $list-group-item-padding-x / 2;
 		padding-right: $list-group-item-padding-x / 2;
 
@@ -203,8 +202,14 @@ a.list-group-subtitle,
 
 .list-group {
 	.quick-action-menu {
+		align-items: $list-group-item-flex-align-items;
 		background-color: $list-group-bg;
 	}
+}
+
+.list-group-bordered .quick-action-menu {
+	padding-bottom: $list-group-item-padding-y;
+	padding-top: $list-group-item-padding-y;
 }
 
 .list-group-item-flex.active {
