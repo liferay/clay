@@ -1,10 +1,10 @@
 import 'clay-button';
 import 'clay-icon';
-import Component from 'metal-component';
-import {EventHandler} from 'metal-events';
-import Soy from 'metal-soy';
 import {Config} from 'metal-state';
+import {EventHandler} from 'metal-events';
+import Component from 'metal-component';
 import dom from 'metal-dom';
+import Soy from 'metal-soy';
 
 import templates from './ClayModal.soy.js';
 

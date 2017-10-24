@@ -18,17 +18,6 @@
 	{@param? title: string}
 	{@param? url: string}
 
-	{let $classesSize kind="text"}
-		modal-dialog
-		{if $size}
-			{sp}modal-{$size}
-		{/if}
-
-		{if $status}
-			{sp}modal-{$status}
-		{/if}
-	{/let}
-
 	{let $attributes kind="attributes"}
 		class="fade modal
 			{if $_isTransitioning or $_visible}
@@ -45,11 +34,21 @@
 		{/if}
 
 		role="dialog"
-
 		tabindex="-1"
 	{/let}
 
 	<div {$attributes}>
+		{let $classesSize kind="text"}
+			modal-dialog
+			{if $size}
+				{sp}modal-{$size}
+			{/if}
+
+			{if $status}
+				{sp}modal-{$status}
+			{/if}
+		{/let}
+
 		<div class="{$classesSize}">
 			<div class="modal-content">
 				{call .header}
