@@ -6,6 +6,7 @@ $multi-step-icon-bg: $gray-200 !default;
 $multi-step-icon-color: rgba($black, 0.5) !default;
 $multi-step-icon-border-radius: $border-radius !default;
 $multi-step-icon-font-size: $font-size-base !default;
+$multi-step-icon-font-weight: null !default;
 $multi-step-icon-size: 2rem !default;
 
 $multi-step-icon-hover-bg: $multi-step-icon-bg !default;
@@ -24,6 +25,7 @@ $multi-step-indicator-label-font-weight: null !default;
 $multi-step-indicator-label-max-width: 100px !default;
 
 $multi-step-title-font-size: $font-size-base !default;
+$multi-step-title-font-weight: null !default;
 $multi-step-title-margin-bottom: 0.625rem !default; // 10px
 $multi-step-title-max-width: 100px !default;
 
