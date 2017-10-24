@@ -107,6 +107,13 @@ a.list-group-subtitle,
 	}
 }
 
+// List Group Details
+
+.list-group-detail {
+	margin-bottom: $list-group-detail-margin-bottom;
+	margin-top: $list-group-detail-margin-top;
+}
+
 // List Group Item
 
 .show-dropdown-action-on-active {
