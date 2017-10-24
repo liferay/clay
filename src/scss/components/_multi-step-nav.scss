@@ -115,6 +115,7 @@
 
 .multi-step-title {
 	font-size: $multi-step-title-font-size;
+	font-weight: $multi-step-title-font-weight;
 	line-height: normal;
 	margin-bottom: $multi-step-title-margin-bottom;
 	word-wrap: break-word;
@@ -177,6 +178,7 @@ a.multi-step-icon {
 	color: $multi-step-icon-color;
 	display: flex;
 	font-size: $multi-step-icon-font-size;
+	font-weight: $multi-step-icon-font-weight;
 	justify-content: center;
 	height: $multi-step-icon-size;
 	width: $multi-step-icon-size;
