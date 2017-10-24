@@ -77,8 +77,17 @@ class ClayModal extends Component {
    * Handle the click buttons and emit event.
    * @private
    */
-  _handleClickButtonFooter() {
-    this.emit('clickButton');
+  _handleClickFooterButton(event) {
+    this.emit('clickButton', event);
+  }
+
+  /**
+   * Handle the footer close button click and emits events.
+   * @private
+   */
+  _handleClickCloseButtonFooter(event) {
+    this.emit('clickButton', event);
+    this.emit('hide');
   }
 
   /**
@@ -177,11 +186,18 @@ ClayModal.STATE = {
    * @type {?array|undefined}
    * @default undefined
    */
-  footer: Config.arrayOf(
+  footerButtons: Config.arrayOf(
     Config.shapeOf({
+      alignment: Config.oneOf(['left', 'right']).value('right'),
       label: Config.string().required(),
-      style: Config.oneOf(['primary', 'secondary']).value('primary'),
-      type: Config.oneOf(['save', 'close']),
+      style: Config.oneOf([
+        'borderless',
+        'link',
+        'primary',
+        'secondary',
+        'unstyled',
+      ]),
+      type: Config.oneOf(['button', 'close', 'reset', 'submit']).value('button'),
     })
   ),
 

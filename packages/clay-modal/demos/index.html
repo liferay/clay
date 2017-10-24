@@ -92,10 +92,9 @@
 		 */
 		var modal = new metal.ClayModal({
 				body: body,
-				footer: [
+				footerButtons: [
 					{
 						label: 'Save',
-						type: 'save'
 					},
 					{
 						label: 'Cancel',
@@ -124,10 +123,9 @@
 		 */
 		var modalBodyAndFooter = new metal.ClayModal({
 				body: body,
-				footer: [
+				footerButtons: [
 					{
 						label: 'Save',
-						type: 'save'
 					},
 					{
 						label: 'Cancel',
@@ -143,10 +141,9 @@
 		 */
 		var modalStatus = new metal.ClayModal({
 				body: body,
-				footer: [
+				footerButtons: [
 					{
 						label: 'Save',
-						type: 'save'
 					},
 					{
 						label: 'Cancel',
@@ -164,10 +161,9 @@
 		 * Modal with iframe
 		 */
 		var modalIframe = new metal.ClayModal({
-				footer: [
+				footerButtons: [
 					{
 						label: 'Save',
-						type: 'save'
 					},
 					{
 						label: 'Cancel',
@@ -187,14 +183,13 @@
 		 */
 		var modalSize = new metal.ClayModal({
 				body: body,
-				footer: [
+				footerButtons: [
 					{
 						label: 'Cancel',
 						type: 'close'
 					},
 					{
 						label: 'Save',
-						type: 'save'
 					}
 				],
 				spritemap: spritemap,
@@ -206,14 +201,13 @@
 
 		var modalSizeLg = new metal.ClayModal({
 				body: body,
-				footer: [
+				footerButtons: [
 					{
 						label: 'Cancel',
 						type: 'close'
 					},
 					{
 						label: 'Save',
-						type: 'save'
 					}
 				],
 				spritemap: spritemap,
@@ -225,14 +219,13 @@
 
 		var modalSizeFs = new metal.ClayModal({
 				body: body,
-				footer: [
+				footerButtons: [
 					{
 						label: 'Cancel',
 						type: 'close'
 					},
 					{
 						label: 'Save',
-						type: 'save'
 					}
 				],
 				spritemap: spritemap,
@@ -251,20 +244,21 @@
 					'clickButton': handleClick,
 					'hide': handleClickHide
 				},
-				footer: [
+				footerButtons: [
 					{
 						label: 'Save',
-						type: 'save'
 					},
 					{
 						label: 'Cancel',
 						type: 'close'
 					},
 					{
-						label: 'All'
+						label: 'All',
+						position: 'left',
 					},
 					{
 						label: 'All',
+						position: 'left',
 						style: 'secondary'
 					}
 				],

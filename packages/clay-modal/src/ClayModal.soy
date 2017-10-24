@@ -4,12 +4,13 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param? _handleClickButtonFooter: any}
+	{@param? _handleClickCloseButtonFooter: any}
+	{@param? _handleClickFooterButton: any}
 	{@param? _handleCloseModal: any}
 	{@param? _isTransitioning: bool}
 	{@param? _visible: bool}
 	{@param? body: string|html}
-	{@param? footer: list<?>}
+	{@param? footerButtons: list<?>}
 	{@param? id: string}
 	{@param? size: string}
 	{@param? spritemap: string}
@@ -64,9 +65,9 @@
 				{/call}
 					
 				{call .footer}
-					{param _handleClickButtonFooter: $_handleClickButtonFooter /}
-					{param _handleCloseModal: $_handleCloseModal /}
-					{param footer: $footer /}
+					{param _handleClickCloseButtonFooter: $_handleClickCloseButtonFooter /}
+					{param _handleClickFooterButton: $_handleClickFooterButton /}
+					{param buttons: $footerButtons /}
 				{/call}
 			</div>
 		</div>
@@ -124,44 +125,44 @@
  * Render a footer of the modal.
  */
 {template .footer}
-	{@param? _handleClickButtonFooter: any}
-	{@param? _handleCloseModal: any}
-	{@param? footer: list<?>}
+	{@param? _handleClickCloseButtonFooter: any}
+	{@param? _handleClickFooterButton: any}
+	{@param? buttons: list<?>}
 
-	{if $footer}
+	{if $buttons}
 		<div class="modal-footer">
 			<div class="modal-item-first">
-				{foreach $item in $footer}
-					{if not $item.type}
+				{foreach $button in $buttons}
+					{if $button.alignment == 'left'}
 						{call ClayButton.render}
-							{param events: ['click': $_handleClickButtonFooter] /}
-							{param label: $item.label /}
-							{param style: $item.style ?: 'primary' /}
-							{param type: 'button' /}
+							{param events: ['click': $_handleClickFooterButton] /}
+							{param label: $button.label /}
+							{param style: $button.style ?: 'secondary' /}
+							{param type: not $button.type or $button.type == 'close' ? 'button' : $button.type /}
 						{/call}
 						{sp}
 					{/if}
 				{/foreach}
 			</div>
-			<div class="modal-item"></div>
 			<div class="modal-item-last">
-				{foreach $item in $footer}
-					{if $item.type == 'close'}
-						{call ClayButton.render}
-							{param elementClasses: 'close-modal' /}
-							{param events: ['click': $_handleCloseModal] /}
-							{param label: $item.label /}
-							{param style: 'secondary' /}
-							{param type: 'button' /}
-						{/call}
-						{sp}
-					{elseif $item.type == 'save'}
-						{call ClayButton.render}
-							{param events: ['click': $_handleClickButtonFooter] /}
-							{param label: $item.label /}
-							{param style: 'primary' /}
-							{param type: 'button' /}
-						{/call}
+				{foreach $button in $buttons}
+					{if not $button.alignment or $button.alignment == 'right'}
+						{if $button.type == 'close'}
+							{call ClayButton.render}
+								{param elementClasses: 'close-modal' /}
+								{param events: ['click': $_handleClickCloseButtonFooter] /}
+								{param label: $button.label /}
+								{param style: 'secondary' /}
+								{param type: 'button' /}
+							{/call}
+						{else}
+							{call ClayButton.render}
+								{param events: ['click': $_handleClickFooterButton] /}
+								{param label: $button.label /}
+								{param style: $button.style ?: 'primary' /}
+								{param type: $button.type /}
+							{/call}
+						{/if}
 						{sp}
 					{/if}
 				{/foreach}
