@@ -21,118 +21,239 @@ section: Components
 			<code>show-quick-actions-on-hover</code> will need Javascript to add class <code>table-focus</code> on the table row when an item inside is focused to make it keyboard accessible.
 		</div>
 
-		<ul class="list-group show-quick-actions-on-hover">
-			<li class="list-group-item list-group-item-flex">
-				<div class="flex-col">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-						</label>
-					</div>
+<ul class="list-group show-quick-actions-on-hover">
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox">
+					<span class="custom-control-indicator"></span>
+				</label>
+			</div>
+		</div>
+		<div class="flex-col">
+			<div class="sticker sticker-secondary">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+				</svg>
+			</div>
+		</div>
+		<div class="flex-col flex-col-expand">
+			<h4 class="list-group-title text-truncate">
+				<a href="#1">Account Example One</a>
+			</h4>
+			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+		</div>
+		<div class="flex-col">
+			<div class="quick-action-menu">
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="#1">Remove</a>
+					<a class="dropdown-item" href="#1">Edit</a>
+					<a class="dropdown-item" href="#1">Move</a>
+					<a class="dropdown-item" href="#1">Checkout</a>
 				</div>
-				<div class="flex-col">
-					<div class="sticker sticker-secondary">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
-						</svg>
-					</div>
+			</div>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox">
+					<span class="custom-control-indicator"></span>
+				</label>
+			</div>
+		</div>
+		<div class="flex-col">
+			<div class="sticker sticker-secondary">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+				</svg>
+			</div>
+		</div>
+		<div class="flex-col flex-col-expand">
+			<h4 class="list-group-title">
+				<a href="#1">Account Example Two</a>
+			</h4>
+			<p class="list-group-subtitle">Second Level Text</p>
+		</div>
+		<div class="flex-col">
+			<div class="quick-action-menu">
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="#1">Remove</a>
+					<a class="dropdown-item" href="#1">Edit</a>
+					<a class="dropdown-item" href="#1">Move</a>
+					<a class="dropdown-item" href="#1">Checkout</a>
 				</div>
-				<div class="flex-col flex-col-expand">
-					<h4 class="list-group-title text-truncate">
-						<a href="#1">Account Example One</a>
-					</h4>
-					<p class="list-group-subtitle text-truncate">Second Level Text</p>
+			</div>
+		</div>
+	</li>
+</ul>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>List Group Notification</h3>
+
+<ul class="list-group list-group-notification show-quick-actions-on-hover">
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox">
+					<span class="custom-control-indicator"></span>
+				</label>
+			</div>
+		</div>
+		<div class="flex-col">
+			<div class="sticker sticker-secondary">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+				</svg>
+			</div>
+		</div>
+		<div class="flex-col flex-col-expand">
+			<h4 class="list-group-title text-truncate">
+				<a href="#1">Account Example One</a>
+			</h4>
+			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+		</div>
+		<div class="flex-col">
+			<div class="quick-action-menu">
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="#1">Remove</a>
+					<a class="dropdown-item" href="#1">Edit</a>
+					<a class="dropdown-item" href="#1">Move</a>
+					<a class="dropdown-item" href="#1">Checkout</a>
 				</div>
-				<div class="flex-col">
-					<div class="quick-action-menu">
-						<a class="quick-action-item" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-							</svg>
-						</a>
-						<a class="quick-action-item" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-							</svg>
-						</a>
-						<a class="quick-action-item" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-							</svg>
-						</a>
-					</div>
-					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-							</svg>
-						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1">Remove</a>
-							<a class="dropdown-item" href="#1">Edit</a>
-							<a class="dropdown-item" href="#1">Move</a>
-							<a class="dropdown-item" href="#1">Checkout</a>
-						</div>
-					</div>
+			</div>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox">
+					<span class="custom-control-indicator"></span>
+				</label>
+			</div>
+		</div>
+		<div class="flex-col">
+			<div class="sticker sticker-secondary">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+				</svg>
+			</div>
+		</div>
+		<div class="flex-col flex-col-expand">
+			<h4 class="list-group-title">
+				<a href="#1">Account Example Two</a>
+			</h4>
+			<p class="list-group-subtitle">Second Level Text</p>
+		</div>
+		<div class="flex-col">
+			<div class="quick-action-menu">
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="#1">Remove</a>
+					<a class="dropdown-item" href="#1">Edit</a>
+					<a class="dropdown-item" href="#1">Move</a>
+					<a class="dropdown-item" href="#1">Checkout</a>
 				</div>
-			</li>
-			<li class="list-group-item list-group-item-flex">
-				<div class="flex-col">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-						</label>
-					</div>
-				</div>
-				<div class="flex-col">
-					<div class="sticker sticker-secondary">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
-						</svg>
-					</div>
-				</div>
-				<div class="flex-col flex-col-expand">
-					<h4 class="list-group-title">
-						<a href="#1">Account Example Two</a>
-					</h4>
-					<p class="list-group-subtitle">Second Level Text</p>
-				</div>
-				<div class="flex-col">
-					<div class="quick-action-menu">
-						<a class="quick-action-item" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
-							</svg>
-						</a>
-						<a class="quick-action-item" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
-							</svg>
-						</a>
-						<a class="quick-action-item" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
-							</svg>
-						</a>
-					</div>
-					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-							</svg>
-						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1">Remove</a>
-							<a class="dropdown-item" href="#1">Edit</a>
-							<a class="dropdown-item" href="#1">Move</a>
-							<a class="dropdown-item" href="#1">Checkout</a>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
+			</div>
+		</div>
+	</li>
+</ul>
+
 	</div>
 </div>
 
