@@ -71,7 +71,7 @@
 	color: $list-group-title-color;
 	font-size: $list-group-title-font-size;
 	font-weight: $list-group-title-font-weight;
-	line-height: normal;
+	line-height: 1;
 	margin-bottom: $list-group-title-margin-bottom;
 }
 
@@ -92,6 +92,7 @@ a.list-group-title,
 	color: $list-group-subtitle-color;
 	font-size: $list-group-subtitle-font-size;
 	font-weight: $list-group-subtitle-font-weight;
+	line-height: 1;
 	margin-bottom: $list-group-subtitle-margin-bottom;
 }
 
