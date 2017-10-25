@@ -10,37 +10,6 @@
 	@return $val;
 }
 
-// Helper for coloring hover states, compares two colors and returns a primary
-// or secondary color based on the lightness threshold between $fg and $bg
-// @param $color - Foreground color
-// @param $bg - Background color
-// @param $type - Values primary or secondary will return the primary or
-// secondary color, respectively
-// @param $amount - Amount to darken or lighten by
-
-@function lx-color-by-lightness($fg, $bg, $type: primary, $amount: 30%) {
-	@if not ($type == primary or $type == secondary) {
-		@error "argument `$type` of `color-by-lightness($fg, $bg, $type, $amount)` must be primary or secondary";
-	}
-
-	$colors: (
-		primary: $fg,
-		secondary: darken($fg, $amount)
-	);
-
-	$lightness-diff: abs(lightness($bg) - lightness($fg));
-
-	@if ($lightness-diff < 40 or $lightness-diff > 60) {
-		$colors: map-merge($colors, (primary: lighten($fg, $amount), secondary: $fg));
-	}
-
-	@return map-get($colors, $type);
-}
-
-@function lx-icon-padding($monospaced-size, $icon-size) {
-	@return calc((#{$monospaced-size} - #{$icon-size}) / 2);
-}
-
 // Converts a pixel value to rem based on the `$base` font size. If the return
 // value will be used inside a Sass arithmetic operation don't set `$add-unit`
 // to true
