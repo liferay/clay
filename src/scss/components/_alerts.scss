@@ -91,7 +91,7 @@
 	.alert {
 		width: $alert-notifications-max-width;
 
-		@include scale-component {
+		@include clay-scale-component {
 			clear: right;
 			float: right;
 			max-width: $alert-notifications-max-width;
@@ -113,7 +113,7 @@
 	top: $alert-notifications-absolute-top;
 	z-index: $zindex-alert-notifications;
 
-	@include scale-component {
+	@include clay-scale-component {
 		bottom: $alert-notifications-absolute-bottom-mobile;
 		left: $alert-notifications-absolute-left-mobile;
 		right: $alert-notifications-absolute-right-mobile;
@@ -130,7 +130,7 @@
 	top: $alert-notifications-fixed-top;
 	z-index: $zindex-alert-notifications;
 
-	@include scale-component {
+	@include clay-scale-component {
 		bottom: $alert-notifications-fixed-bottom-mobile;
 		left: $alert-notifications-fixed-left-mobile;
 		right: $alert-notifications-fixed-right-mobile;

@@ -22,7 +22,7 @@
 		padding-bottom: 0;
 		padding-top: 0;
 
-		@include scale-component {
+		@include clay-scale-component {
 			height: $input-height-mobile;
 		}
 	}
@@ -82,7 +82,7 @@
 		padding-right: $input-group-addon-padding-x;
 	}
 
-	@include scale-component {
+	@include clay-scale-component {
 		height: $input-height-mobile;
 	}
 
@@ -150,7 +150,7 @@
 	padding-left: 0;
 	padding-right: 0;
 
-	@include scale-component {
+	@include clay-scale-component {
 		line-height: $input-height-inner-mobile;
 		max-width: $input-group-constrain-max-width-mobile;
 	}
@@ -264,7 +264,7 @@
 		right: auto;
 
 		@if ($input-height-inner-mobile) {
-			@include scale-component {
+			@include clay-scale-component {
 				left: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
 			}
 		}
@@ -281,7 +281,7 @@
 	z-index: 5;
 
 	@if ($input-height-inner-mobile) {
-		@include scale-component {
+		@include clay-scale-component {
 			left: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
 		}
 	}
@@ -328,7 +328,7 @@
 		padding-left: 0;
 		padding-right: 0;
 
-		@include scale-component {
+		@include clay-scale-component {
 			line-height: $input-height-inner-lg-mobile;
 		}
 	}
@@ -345,7 +345,7 @@
 		padding-right: $input-btn-padding-x-lg;
 		padding-top: 0;
 
-		@include scale-component {
+		@include clay-scale-component {
 			height: $input-height-lg-mobile;
 			padding-bottom: 0;
 			padding-left: $input-btn-padding-x-lg-mobile;
@@ -370,7 +370,7 @@
 		font-size: $input-font-size-lg;
 		height: $input-height-lg;
 
-		@include scale-component {
+		@include clay-scale-component {
 			font-size: $input-font-size-lg-mobile;
 			height: $input-height-lg-mobile;
 		}
@@ -404,7 +404,7 @@
 		padding-left: 0;
 		padding-right: 0;
 
-		@include scale-component {
+		@include clay-scale-component {
 			line-height: $input-height-inner-sm-mobile;
 		}
 	}
@@ -421,7 +421,7 @@
 		padding-right: $input-btn-padding-x-sm;
 		padding-top: 0;
 
-		@include scale-component {
+		@include clay-scale-component {
 			height: $input-height-sm-mobile;
 			padding-bottom: 0;
 			padding-left: $input-btn-padding-x-sm-mobile;
@@ -446,7 +446,7 @@
 		font-size: $input-font-size-sm;
 		height: $input-height-sm;
 
-		@include scale-component {
+		@include clay-scale-component {
 			font-size: $input-font-size-sm-mobile;
 			height: $input-height-sm-mobile;
 		}

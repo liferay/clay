@@ -3,7 +3,7 @@ body {
 	-ms-overflow-style: scrollbar;
 	-webkit-font-smoothing: antialiased;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $font-size-base-mobile;
 	}
 }
@@ -14,7 +14,7 @@ h1,
 .h1 {
 	font-size: $h1-font-size;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $h1-font-size-mobile;
 	}
 }
@@ -23,7 +23,7 @@ h2,
 .h2 {
 	font-size: $h2-font-size;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $h2-font-size-mobile;
 	}
 }
@@ -32,7 +32,7 @@ h3,
 .h3 {
 	font-size: $h3-font-size;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $h3-font-size-mobile;
 	}
 }
@@ -41,7 +41,7 @@ h4,
 .h4 {
 	font-size: $h4-font-size;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $h4-font-size-mobile;
 	}
 }
@@ -50,7 +50,7 @@ h5,
 .h5 {
 	font-size: $h5-font-size;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $h5-font-size-mobile;
 	}
 }
@@ -59,7 +59,7 @@ h6,
 .h6 {
 	font-size: $h6-font-size;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $h6-font-size-mobile;
 	}
 }

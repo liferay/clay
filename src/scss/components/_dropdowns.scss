@@ -13,7 +13,7 @@
 		padding-right: $dropdown-header-padding-x;
 	}
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $dropdown-header-font-size-mobile;
 	}
 }
@@ -108,7 +108,7 @@
 		max-width: $dropdown-max-width-mobile;
 	}
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $dropdown-font-size-mobile;
 	}
 

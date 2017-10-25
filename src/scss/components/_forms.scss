@@ -26,7 +26,7 @@ label {
 	max-width: 100%;
 	word-wrap: break-word;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $input-label-font-size-mobile;
 	}
 
@@ -73,7 +73,7 @@ label {
 		padding-right: $input-padding-x;
 	}
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $input-font-size-mobile;
 		height: $input-height-mobile;
 	}
@@ -209,7 +209,7 @@ fieldset[disabled] label {
 		padding-right: $input-padding-x-lg;
 	}
 
-	@include scale-component {
+	@include clay-scale-component {
 		height: $input-height-lg-mobile;
 	}
 }
@@ -231,7 +231,7 @@ fieldset[disabled] label {
 		padding-right: $input-padding-x-sm;
 	}
 
-	@include scale-component {
+	@include clay-scale-component {
 		height: $input-height-sm-mobile;
 	}
 }
