@@ -133,7 +133,7 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 
-	@include make-nav-nested($nav-nested-spacer-x);
+	@include clay-nav-nested($nav-nested-spacer-x);
 }
 
 .nav-nested-margins {

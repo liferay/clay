@@ -4,7 +4,7 @@
 // @param $nav-class - class name of nav element
 // @param $i - start value
 
-@mixin make-nav-nested($indent: 15px, $nest-level: 15, $nav-class: ".nav", $i: 1) {
+@mixin clay-nav-nested($indent: 15px, $nest-level: 15, $nav-class: ".nav", $i: 1) {
 	@for $i from (1) through $nest-level {
 		#{$nav-class} > li {
 			> a {
