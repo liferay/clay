@@ -80,7 +80,8 @@
 // Modal Title
 
 .modal-title {
-	display: block;
+	align-items: center;
+	display: flex;
 	font-size: $modal-title-font-size;
 	font-weight: $modal-title-font-weight;
 	flex-grow: 1;
@@ -90,6 +91,16 @@
 
 	@include clay-scale-component {
 		font-size: $modal-title-font-size-mobile;
+	}
+}
+
+.modal-title-indicator {
+	font-size: $modal-title-indicator-font-size;
+	margin-right: $modal-title-indicator-spacer-x;
+	margin-top: -3px;
+
+	.lexicon-icon {
+		margin-top: 0;
 	}
 }
 
