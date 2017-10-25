@@ -53,6 +53,10 @@ class ClayModal extends Component {
     }
   }
 
+  /**
+   * @inheritDoc
+   */
+  // eslint-disable-next-line
   sync_isTransitioning() {
     if (this._isTransitioning && !this.visible) {
       this._isTransitioning = false;
@@ -85,6 +89,7 @@ class ClayModal extends Component {
 
   /**
    * Handle the click buttons and emit event.
+   * @param {!Event} event
    * @private
    */
   _handleClickFooterButton(event) {
@@ -93,6 +98,7 @@ class ClayModal extends Component {
 
   /**
    * Handle the footer close button click and emits events.
+   * @param {!Event} event
    * @private
    */
   _handleClickCloseButtonFooter(event) {
@@ -102,9 +108,10 @@ class ClayModal extends Component {
 
   /**
    * Check if contain click target event in element and emit close modal.
+   * @param {!Event} event
    * @private
    */
-  _handleDocumentClick() {
+  _handleDocumentClick(event) {
     if (dom.contains(event.target, this.element)) {
       this.emit('hide');
     }
@@ -112,7 +119,7 @@ class ClayModal extends Component {
 
   /**
    * Handle click key code esc and emit close modal.
-   * @param {Object} event
+   * @param {!Event} event
    * @private
    */
   _handleKeyup(event) {
@@ -123,7 +130,7 @@ class ClayModal extends Component {
 
   /**
    * Handle css transition ends.
-   * @param {Object} event
+   * @param {!Event} event
    * @private
    */
   _handleTransitionEnd(event) {
@@ -188,6 +195,7 @@ ClayModal.STATE = {
    */
   body: Config.any(),
 
+  /* eslint-disable */
   /**
    * Buttons of the footer.
    * @instance
@@ -204,11 +212,12 @@ ClayModal.STATE = {
         'link',
         'primary',
         'secondary',
-        'unstyled',
+        'unstyled'
       ]),
-      type: Config.oneOf(['button', 'close', 'reset', 'submit']).value('button'),
+      type: Config.oneOf(['button', 'close', 'reset', 'submit']).value('button')
     })
   ),
+  /* eslint-enable */
 
   /**
    * Id to be applied to the element.
