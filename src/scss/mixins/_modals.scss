@@ -1,7 +1,7 @@
 // Creates a Modal color variant
 // @param $map - Sass map that contain Modal Variant properties to modify
 
-@mixin modal-variant($map) {
+@mixin clay-modal-variant($map) {
 	$header-bg: map-get($map, header-bg);
 	$header-border-color: map-get($map, header-border-color);
 	$header-color: map-get($map, header-color);
