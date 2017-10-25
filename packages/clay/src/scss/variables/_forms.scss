@@ -68,7 +68,7 @@ $input-danger-focus-color: null !default;
 $input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
 $input-danger-label-color: null !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
-$input-danger-select-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$input-danger-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 $input-success-bg: null !default;
 $input-success-focus-bg: null !default;
@@ -82,7 +82,7 @@ $input-success-focus-color: null !default;
 $input-success-checkbox-label-color: $form-feedback-valid-color !default;
 $input-success-label-color: null !default;
 $input-success-select-icon-color: $input-success-border-color !default;
-$input-success-select-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$input-success-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 $input-warning-bg: null !default;
 $input-warning-focus-bg: null !default;
@@ -96,7 +96,7 @@ $input-warning-focus-color: null !default;
 $input-warning-checkbox-label-color: $form-feedback-warning-color !default;
 $input-warning-label-color: null !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
-$input-warning-select-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$input-warning-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 // Select Element
 
@@ -129,13 +129,13 @@ $form-text-font-size: $font-size-sm !default;
 $form-text-font-weight: null !default;
 
 $form-feedback-success-indicator-icon-color: $form-feedback-valid-color !default;
-$form-feedback-success-indicator-icon: lx-icon(check-circle, $form-feedback-success-indicator-icon-color) !default;
+$form-feedback-success-indicator-icon: clay-icon(check-circle, $form-feedback-success-indicator-icon-color) !default;
 
 $form-feedback-warning-indicator-icon-color: $form-feedback-warning-color !default;
-$form-feedback-warning-indicator-icon: lx-icon(info-circle, $form-feedback-warning-indicator-icon-color) !default;
+$form-feedback-warning-indicator-icon: clay-icon(info-circle, $form-feedback-warning-indicator-icon-color) !default;
 
 $form-feedback-danger-indicator-icon-color: $form-feedback-invalid-color !default;
-$form-feedback-danger-indicator-icon: lx-icon(exclamation-full, $form-feedback-danger-indicator-icon-color) !default;
+$form-feedback-danger-indicator-icon: clay-icon(exclamation-full, $form-feedback-danger-indicator-icon-color) !default;
 
 // Input Group
 

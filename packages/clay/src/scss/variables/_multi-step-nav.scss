@@ -37,11 +37,11 @@ $multi-step-item-fixed-width: 150px !default;
 
 $multi-step-icon-complete-color: #FFF !default;
 $multi-step-icon-complete-bg: map-get($theme-colors, secondary) !default;
-$multi-step-icon-complete-bg-image: lx-icon(check, $multi-step-icon-complete-color) !default;
+$multi-step-icon-complete-bg-image: clay-icon(check, $multi-step-icon-complete-color) !default;
 $multi-step-icon-complete-bg-position: center !default;
 $multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
 $multi-step-divider-complete-bg: $multi-step-icon-complete-bg !default;
-$multi-step-dropdown-indicator-complete-icon: lx-icon(check, $dropdown-link-active-color) !default;
+$multi-step-dropdown-indicator-complete-icon: clay-icon(check, $dropdown-link-active-color) !default;
 $multi-step-dropdown-indicator-complete-width: 0.875rem !default;
 
 $multi-step-icon-active-color: $component-active-color !default;
