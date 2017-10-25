@@ -61,7 +61,7 @@ a.label {
 }
 
 .label-lg {
-	@include label-size($label-lg);
+	@include clay-label-size($label-lg);
 }
 
 // Label Variants

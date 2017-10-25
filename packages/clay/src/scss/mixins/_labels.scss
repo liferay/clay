@@ -1,4 +1,4 @@
-@mixin label-size($map) {
+@mixin clay-label-size($map) {
 	$border-width: setter(map-get($map, border-width), $label-border-width);
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
