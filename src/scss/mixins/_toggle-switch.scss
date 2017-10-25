@@ -3,7 +3,7 @@
 // @param $toggle-switch-padding - Space between button and bar
 // @param $label-spacer-x - Space between toggle-switch-bar and data-label
 
-@function set-data-label-text-position($toggle-switch-width, $toggle-switch-padding, $label-spacer-x: 6px) {
+@function clay-data-label-text-position($toggle-switch-width, $toggle-switch-padding, $label-spacer-x: 6px) {
 	@if ($toggle-switch-padding < 0) {
 		$toggle-switch-width: $toggle-switch-width + abs($toggle-switch-padding);
 	}

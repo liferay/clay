@@ -81,7 +81,7 @@
 		.toggle-switch-handle {
 			&:after {
 				content: attr(data-label-off);
-				margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding);
+				margin-left: clay-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding);
 				transition: $toggle-switch-transition;
 				white-space: nowrap;
 			}
@@ -239,7 +239,7 @@
 			}
 
 			.toggle-switch-handle:after {
-				margin-left: set-data-label-text-position($toggle-switch-bar-width-mobile, $toggle-switch-bar-padding-mobile);
+				margin-left: clay-data-label-text-position($toggle-switch-bar-width-mobile, $toggle-switch-bar-padding-mobile);
 			}
 
 			.toggle-switch-icon {
@@ -264,7 +264,7 @@
 			}
 
 			.toggle-switch-handle:after {
-				margin-left: set-data-label-text-position($toggle-switch-bar-width-mobile, $toggle-switch-bar-padding-mobile);
+				margin-left: clay-data-label-text-position($toggle-switch-bar-width-mobile, $toggle-switch-bar-padding-mobile);
 			}
 
 			.button-icon {
