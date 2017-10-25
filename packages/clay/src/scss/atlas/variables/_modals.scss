@@ -22,7 +22,7 @@ $modal-success: (
 	header-bg: lighten(map-get($theme-colors, success), 63%),
 	header-border-color: lighten(map-get($theme-colors, success), 25%),
 	header-color: map-get($theme-colors, success),
-	header-title-indicator: lx-icon(check-circle, map-get($theme-colors, success))
+	header-title-indicator: lx-icon(check-circle-full, map-get($theme-colors, success))
 ) !default;
 
 // Modal Info
@@ -40,7 +40,7 @@ $modal-warning: (
 	header-bg: lighten(map-get($theme-colors, warning), 57%),
 	header-border-color: lighten(map-get($theme-colors, warning), 24%),
 	header-color: map-get($theme-colors, warning),
-	header-title-indicator: lx-icon(exclamation-full, map-get($theme-colors, warning))
+	header-title-indicator: lx-icon(warning-full, map-get($theme-colors, warning))
 ) !default;
 
 // Modal Danger
