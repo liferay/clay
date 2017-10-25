@@ -1,22 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayModal should generate the default markup 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
+<div class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body"></div>
-    </div>
+    <div class="modal-content"></div>
   </div>
 </div>
 `;
 
-exports[`ClayModal should render a full-screen modal 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-full-screen">
+exports[`ClayModal should render a modal opened 1`] = `
+<div class="fade modal d-block show" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="icons.svg#times"></use>
           </svg>
@@ -25,12 +23,30 @@ exports[`ClayModal should render a full-screen modal 1`] = `
       <div class="modal-body">
         <h4>Hello world!</h4>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with body 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">My body</div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with footer buttons 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
       <div class="modal-footer">
         <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
         <div class="modal-item-last">
           <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
+          <button class="btn btn-primary">Save</button>
         </div>
       </div>
     </div>
@@ -38,148 +54,64 @@ exports[`ClayModal should render a full-screen modal 1`] = `
 </div>
 `;
 
-exports[`ClayModal should render a large modal 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
+exports[`ClayModal should render a modal with footer buttons aligned to left and right 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-footer">
+        <div class="modal-item-first">
+          <button class="btn btn-secondary" type="button">My button 1</button>
+          <button class="btn btn-secondary" type="button">My button 2</button>
+        </div>
+        <div class="modal-item-last">
+          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
+          <button class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with iframe as body 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body modal-body-iframe">
+        <iframe src="http://www.claycss.com" title="http://www.claycss.com"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with size \`full-screen\` 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-full-screen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Hello world!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with size \`large\` 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal complete 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal open 1`] = `
-<div class=" fade modal show" role="dialog" tabindex="-1" style="display: block;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal with body and footer 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal with buttons in position right and left in footer 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first">
-          <button class="btn btn-primary" type="button">All</button>
-          <button class="btn btn-secondary" type="button">All</button>
-        </div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal with header and body 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="icons.svg#times"></use>
           </svg>
@@ -193,153 +125,13 @@ exports[`ClayModal should render a modal with header and body 1`] = `
 </div>
 `;
 
-exports[`ClayModal should render a modal with iframe 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-full-screen">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body modal-body-iframe">
-        <iframe title="Clay" src=""></iframe>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal with status \`danger\` 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-danger">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal with status \`info\` 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-info">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal with status \`success\` 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-success">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a modal with status \`warning\` 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-warning">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4>Hello world!</h4>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayModal should render a small modal 1`] = `
-<div class=" fade modal" role="dialog" tabindex="-1">
+exports[`ClayModal should render a modal with size \`small\` 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">My title</h4>
-        <button class="btn close btn-secondary" aria-label="times">
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="icons.svg#times"></use>
           </svg>
@@ -348,13 +140,114 @@ exports[`ClayModal should render a small modal 1`] = `
       <div class="modal-body">
         <h4>Hello world!</h4>
       </div>
-      <div class="modal-footer">
-        <div class="modal-item-first"></div>
-        <div class="modal-item"></div>
-        <div class="modal-item-last">
-          <button class="btn close-modal btn-secondary" type="button">Cancel</button>
-          <button class="btn btn-primary" type="button">Save</button>
-        </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with status \`danger\` and title 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-danger">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+          <use xlink:href="icons.svg#exclamation-full"></use>
+        </svg>
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with status \`info\` and title 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-info">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+          <use xlink:href="icons.svg#info-circle"></use>
+        </svg>
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with status \`success\` and title 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-success">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+          <use xlink:href="icons.svg#check-circle"></use>
+        </svg>
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with status \`warning\` and title 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-warning">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
+          <use xlink:href="icons.svg#question-circle-full"></use>
+        </svg>
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with title 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">My title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with title and header closing button 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">My title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
