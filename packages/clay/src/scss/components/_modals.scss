@@ -102,7 +102,7 @@
 		font-size: $modal-btn-monospaced-font-size;
 		min-width: $modal-btn-monospaced-size;
 
-		@include monospace($modal-btn-monospaced-size);
+		@include clay-monospace($modal-btn-monospaced-size);
 
 		opacity: $modal-btn-monospaced-opacity;
 

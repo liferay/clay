@@ -420,7 +420,7 @@ button.card-link {
 	.aspect-ratio {
 		border-bottom: 1px solid lighten(map-get($theme-colors, secondary), 46%);
 
-		@include aspect-ratio(16, 9);
+		@include clay-aspect-ratio(16, 9);
 	}
 
 	.aspect-ratio-item-fluid {
