@@ -1,3 +1,127 @@
+### v2.0.0-beta.0 October 25, 2017
+
+* Breaking: Form Validation removed option to customize `$form-feedback-success-indicator-icon-color`, `$form-feedback-success-indicator-icon`, `$form-feedback-warning-indicator-icon-color`, `$form-feedback-warning-indicator-icon`, `$form-feedback-danger-indicator-icon-color`, `$form-feedback-danger-indicator-icon`, use mixin `clay-indicator-bg` to use background-images on `.form-feedback-indicator`
+* Breaking: Form Validation reimplement `.form-feedback-indicator` to only be for icons
+* Breaking: Multi Step Nav should inline `.dropdown-item-indicator` icons, background-image is still supported through  mixin
+* Breaking: Nav Tabs should inline `.dropdown-item-indicator` icons rather than using background-image, background-image is still supported through `clay-indicator-bg` mixin
+* Breaking: Rename `clay-modal-title-indicator` mixin to `clay-indicator-bg`
+* Breaking: Modals remove `header-title-indicator` support from `clay-modal-variant` mixin
+* Breaking: Removed empty mixin partials _dropdown.scss and _forms.scss
+* Breaking: Rename `set-data-label-text-position` to `clay-data-label-text-position`
+* Breaking: Prefix functions `breakpoint-prev`, `str-replace`, `svg-url` with `clay-`, rename `lx-icon` to `clay-icon`, and rename `get-lx-icons` to `clay-get-icons`
+* Breaking: Removed functions `lx-color-by-lightness`, `lx-icon-padding`
+* Breaking: Remove mixin `color-blockquote`, `color-link`, and rename `highlight-text` to `clay-highlight-text`
+* Breaking: Prefix mixin `timeline-item-reverse`, `timeline-spacing` with `clay-`
+* Breaking: Prefix mixin `sticker-size` with `clay-`
+* Breaking: Prefix mixin `sidebar-variant` with `clay-`
+* Breaking: Prefix mixin `scale-component` with `clay-`
+* Breaking: Prefix mixin `panel-variant` with `clay-`
+* Breaking: Prefix mixin `navbar-size` with `clay-`
+* Breaking: Rename mixin `make-nav-nested` to `clay-nav-nested`
+* Breaking: Prefix mixin `monospace` with `clay-`
+* Breaking: Prefix mixin `modal-variant` with `clay-`
+* Breaking: Prefix mixins `menubar-vertical-expand`, `menubar-vertical-variant` with `clay-`
+* Breaking: Rename mixin `label-size` to `clay-label-size`
+* Breaking: Rename mixin `container-no-gutters` to `clay-container-no-gutters`
+* Breaking: Removed mixins `color-dropdown-toggle-link`, `color-dropdown-menu-links`
+* Breaking: Rename mixin `component-btn-link` to `clay-component-btn-link`
+* Breaking: Rename mixin `badge-size` to `clay-badge-size`
+* Breaking: Rename mixin `bg-checkered` to `clay-bg-checkered`
+* Breaking: Rename mixin `aspect-ratio` to `clay-aspect-ratio`
+* Breaking: Dropdown removed `$enable-dropdown-caret` BS4 added option to `$enable-caret`
+* Breaking: Bootstrap 4 06641ca renamed `$btn-focus-box-shadow` to `$input-btn-focus-box-shadow`
+* Breaking: Update Bootstrap 4 to 9611089
+* Breaking: Atlas List Group removed unused variables `$list-group-action-color`, `$list-group-action-active-color`, `$list-group-action-active-bg`
+* Breaking: Multi Step Nav removed `.multi-step-item-contract`
+* Breaking: Multi Step Nav reorganize dropdown pattern so we can get rid of `.multi-step-link`
+* Breaking: Atlas Modals removed `$modal-inner-padding-x`, `$modal-inner-padding-y` just use `$modal-inner-padding` instead and change spacing to 1.5rem
+* Breaking: Modals remove `.modal-iframe`
+* Breaking: Alerts removed `.alert-notification` and `$alert-notification-max-width`
+* Breaking: Buttons removed `$btn-secondary-bg`, `$btn-secondary-border-color`, `$btn-secondary-color`, `$btn-secondary-hover-color`, `$btn-secondary-hover-bg`, `$btn-secondary-hover-border-color`, `$btn-secondary-focus-box-shadow`, `$btn-secondary-active-color`, `$btn-secondary-active-bg`, `$btn-secondary-active-border-color`
+* Breaking: Buttons removed `$btn-primary-bg`, `$btn-primary-border-color`, `$btn-primary-color`, `$btn-primary-hover-color`, `$btn-primary-hover-bg`, `$btn-primary-hover-border-color`, `$btn-primary-focus-box-shadow`, `$btn-primary-active-color`, `$btn-primary-active-bg`, `$btn-primary-active-border-color`
+* Breaking: Buttons removed `$btn-monospaced-size-xl`, `$btn-monospaced-size-xl-mobile`
+* Breaking: Buttons removed `.btn-xl`
+* Breaking: Stickers removed `.sticker-xxl` and re-add `.sticker-lg` and `.sticker-xl`
+* Breaking: Remove mixin `color-tabular-list-group-item`
+* Breaking: Remove mixin `select-box-icon`
+* New: `clay-indicator-bg` mixin add option to customize `display`, `text-indent`, and `vertical-align`
+* New: Form Feedback Indicator added `$form-feedback-indicator-margin-x`, `$form-feedback-margin-top` and adjust spacing
+* New: Alerts added `.alert-indicator` for indicator icons and option to configure `$alert-indicator-font-size`
+* New: Modal added mixin `clay-modal-title-indicator` for customizing `.modal-title-indicator` via css
+* New: Modal added `.modal-title-indicator` and option to configure `$modal-title-indicator-font-size`, `$modal-title-indicator-spacer-x`
+* New: SVG Icons added caret-bottom-l, caret-left-l, caret-left, caret-right-l, caret-right, check-circle-full, order-arrow-down, order-arrow-up, warning-full, warning
+* New: Added variable file to overwrite BS4 defaults couldn't disable carets by default in https://github.com/twbs/bootstrap/pull/22926
+* New: Custom Control Description added option to configure `$custom-control-description-margin-left` and adjust spacing on Atlas
+* New: List Group added option to configure `$list-group-notification-border-bottom-left-radius`, `$list-group-notification-border-bottom-right-radius`, `$list-group-notification-border-top-left-radius`, `$list-group-notification-border-top-right-radius`
+* New: List Group added `.list-group-notification` variant
+* New: List Group added option to configure `$list-group-notification-item-border-bottom-color`, `$list-group-notification-item-border-left-color`, `$list-group-notification-item-border-right-color`, `$list-group-notification-item-border-top-color`, `$list-group-notification-item-active-border-bottom-color`, `$list-group-notification-item-active-border-left-color`, `$list-group-notification-item-active-border-right-color`, `$list-group-notification-item-active-border-top-color`, `$list-group-notification-item-border-bottom-width`, `$list-group-notification-item-border-left-width`, `$list-group-notification-item-border-right-width`, `$list-group-notification-item-border-top-width`, `$list-group-notification-item-border-variant`
+* New: List Group added mixin `clay-list-group-notification-item-border-variant($map)` for styling `.list-group-notification .list-group-item` borders
+* New: List Group added `.list-group-detail` container for various items inside `.list-group-item-flex .flex-col`'s and option to configure `$list-group-detail-margin-bottom`, `$list-group-detail-margin-top`
+* New: List Group added option to configure `$list-group-item-flex-align-items` for vertically aligning content
+* New: Multi Step Nav added `$multi-step-dropdown-indicator-complete-icon`, `$multi-step-dropdown-indicator-complete-width`
+* New: Multi Step Nav added option to configure `$multi-step-indicator-label-color`, `$multi-step-title-color`
+* New: Multi Step Nav added option to configure `$multi-step-icon-font-weight`, `$multi-step-title-font-weight` and adjust Atlas `$multi-step-indicator-label-font-weight`
+* New: Multi Step Nav added option to configure `$multi-step-icon-hover-bg`, `$multi-step-icon-hover-color`, `$multi-step-icon-hover-text-decoration`, and clean up `.multi-step-icon` as links
+* New: Alerts consolidate common styles to `.alert-notifications` and added options to configure `$alert-notifications-absolute-bottom`, `$alert-notifications-absolute-left`, `$alert-notifications-absolute-right`, `$alert-notifications-absolute-top`, `$alert-notifications-absolute-bottom-mobile`, `$alert-notifications-absolute-left-mobile`, `$alert-notifications-absolute-right-mobile`, `$alert-notifications-absolute-top-mobile`, `$alert-notifications-fixed-bottom`, `$alert-notifications-fixed-left`, `$alert-notifications-fixed-right`, `$alert-notifications-fixed-top`, `$alert-notifications-fixed-bottom-mobile`, `$alert-notifications-fixed-left-mobile`, `$alert-notifications-fixed-right-mobile`, `$alert-notifications-fixed-top-mobile`, `$alert-notifications-max-width`
+* New: Globals added `$zindex-alert-notificiations`
+* New: Alerts added `.alert-container`, `.alert-notifications-absolute`, `.alert-notifications-fixed` for aligning alerts
+* New: Buttons added `$btn-primary`, `$btn-secondary`, `$btn-success`, `$btn-info`, `$btn-warning`, `$btn-danger`, `$btn-light`, `$btn-dark` Sass maps for button variant styling
+* New: Buttons added mixin `clay-button-variant($map)` for more customizable button variants
+* New: Added Lexicon Icon Filter
+* New: Menubar added `.menubar-transparent` variant
+* New: Menubar added mixin `menubar-vertical-variant()`
+* New: Added Menubar component for collapsing vertical navigations
+* New: Menubar added Sass map `$menubar-vertical-expand-md`
+* New: Added mixin `menubar-vertical-expand()`
+* New: Global Functions added `breakpoint-prev($name, $breakpoints, $breakpoint-names)` to help retrieve previous breakpoint
+* New: Nav added `.nav-stacked` for stacked navs because BS4 `.flex-column` uses the important flag
+* Update: Modal don't use `display: flex` in `.modal-title` text isn't properly truncated
+* Update: Alerts adjust spacing
+* Update: Missed some mixins in cards, modals, stickers during mixin rename
+* Update: Modals `.modal-warning` and `.modal-success` should use proper icons
+* Update: Forms remove TODO comments
+* Update: Alerts remove TODO comment, BS4 won't change `$grid-gutter-width` to rem from px issue 23999
+* Update: Atlas List Group adjust space between each `.flex-col`
+* Update: List Group Item Flex content spacing
+* Update: Multi Step Nav `.active.complete` should be styled
+* Update: Modals add default height to `.modal-body-iframe`
+* Update: Buttons and Dropdowns with `.dropdown-toggle` show focus border when buttons are clicked
+* Update: Navbar form-inline-autofit should shrink in FF
+* Update: Atlas Button padding-x should be 0.9375rem
+* Update: `menubar-vertical-expand` mixin shouldn't set margin-bottom by default
+* Update: Atlas Menubar styles
+* Update: Nav Item with long text no white spaces should break to new line
+* Update: Move `.btn-unstyled` declaration block to Sass placeholder `%btn-unstyled`
+* Update: Global Functions `breakpoint-prev()` should work with xs
+* Update: Atlas $nav-nested-spacer-x to be larger
+* Update: Nav `.nav-stacked` use `display: block` instead of `flex-direction: column` messes up rendering when used with collapse plugin
+* Misc: Update svg build task to look in the right directory
+* Site: Form Validation use updated `.form-feedback-indicator` markup
+* Site: Alerts and User and Org Form Vertical Navigation pages to use `.alert-indicator` in alerts
+* Site: Mutli Step Nav inline `.dropdown-item-indicator` svg icons
+* Site: Nav Tabs and Nav Underline tab examples should inline svg in `.dropdown-item-indicator`
+* Site: Modal Iframe should point to page that exists
+* Site: Modals added `.modal-title-indicator` to variant demos and make aria support more clear
+* Site: Use renamed functions
+* Site: Remove old Test Assorted page
+* Site: Dropdowns remove references to `.dropdown-menu-horizontal`
+* Site: Timelines add `.rounded-circle` to stickers
+* Site: List Group added `.list-group-notification` demo
+* Site: List Group and List View Template update markup to include `.list-group-detail`
+* Site: Multi Step Nav added `.dropdown-item-indicator` support
+* Site: Multi Step Nav `.multi-step-icon` should use anchor tag
+* Site: Modals remove check button from `.modal-header`
+* Site: Alerts update docs to include demos of `.alert-notifications-fixed` and `.alert-notifications-absolute`
+* Site: Buttons removed `.btn-xl` example
+* Site: Management Bar change magic icon to filter icon
+* Site: Stickers re-add examples of `.sticker-lg` and `.sticker-xl`
+* Site: Test Page List View Template add example with List View Template 3
+* Site: Cards don't use sticker-xxl
+* Site: Test Page List View Template update
+* Site: Add Test Page Users and Organizations with Menubar
+* Site: Added demo for Menubar Vertical
+* Site: Vertical Navs to use `.nav-stacked` instead of `.flex-column`
+
 ### v2.0.0-alpha.11 October 16, 2017
 
 * Breaking: Update Bootstrap 4 to 99eece1
