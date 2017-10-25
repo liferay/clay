@@ -33,7 +33,7 @@ $modal-success: map-merge((
 	header-bg: theme-color-level(success, -10),
 	header-border-color: theme-color-level(success, -9),
 	header-color: theme-color-level(success, 6),
-	header-title-indicator: lx-icon(check-circle, theme-color-level(success, 6))
+	header-title-indicator: lx-icon(check-circle-full, theme-color-level(success, 6))
 ), $modal-success);
 
 // Modal Info
@@ -53,7 +53,7 @@ $modal-warning: map-merge((
 	header-bg: theme-color-level(warning, -10),
 	header-border-color: theme-color-level(warning, -9),
 	header-color: theme-color-level(warning, 6),
-	header-title-indicator: lx-icon(exclamation-full, theme-color-level(warning, 6))
+	header-title-indicator: lx-icon(warning-full, theme-color-level(warning, 6))
 ), $modal-warning);
 
 // Modal Danger
