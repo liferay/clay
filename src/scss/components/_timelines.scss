@@ -15,7 +15,7 @@
 	border-radius: $timeline-icon-border-radius;
 	display: block;
 
-	@include monospace($timeline-icon-size);
+	@include clay-monospace($timeline-icon-size);
 }
 
 .timeline-increment {

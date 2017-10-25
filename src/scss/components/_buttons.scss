@@ -74,7 +74,7 @@ fieldset[disabled] .btn {
 // Button Monospaced
 
 .btn-monospaced {
-	@include monospace($btn-monospaced-size);
+	@include clay-monospace($btn-monospaced-size);
 
 	overflow: hidden;
 	padding: 0;
@@ -83,22 +83,22 @@ fieldset[disabled] .btn {
 	word-wrap: break-word;
 
 	@include scale-component {
-		@include monospace($btn-monospaced-size-mobile);
+		@include clay-monospace($btn-monospaced-size-mobile);
 	}
 
 	&.btn-lg {
-		@include monospace($btn-monospaced-size-lg);
+		@include clay-monospace($btn-monospaced-size-lg);
 
 		@include scale-component {
-			@include monospace($btn-monospaced-size-lg-mobile);
+			@include clay-monospace($btn-monospaced-size-lg-mobile);
 		}
 	}
 
 	&.btn-sm {
-		@include monospace($btn-monospaced-size-sm);
+		@include clay-monospace($btn-monospaced-size-sm);
 
 		@include scale-component {
-			@include monospace($btn-monospaced-size-sm-mobile);
+			@include clay-monospace($btn-monospaced-size-sm-mobile);
 		}
 	}
 
