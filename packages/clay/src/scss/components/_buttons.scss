@@ -61,7 +61,7 @@ fieldset[disabled] .btn {
 	background-color: transparent;
 
 	@include border-radius(1px);
-	@include component-btn-link;
+	@include clay-component-btn-link;
 
 	line-height: inherit;
 	vertical-align: baseline;

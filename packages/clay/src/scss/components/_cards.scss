@@ -72,7 +72,7 @@
 	&.btn-link {
 		color: $card-link-color;
 
-		@include component-btn-link;
+		@include clay-component-btn-link;
 
 		line-height: normal;
 		text-decoration: $card-link-text-decoration;
@@ -87,7 +87,7 @@
 button.card-link {
 	background-color: transparent;
 
-	@include component-btn-link;
+	@include clay-component-btn-link;
 
 	line-height: normal;
 }
