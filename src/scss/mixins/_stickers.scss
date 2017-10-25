@@ -5,7 +5,7 @@
 
 	font-size: $font-size;
 
-	@include monospace($size);
+	@include clay-monospace($size);
 
 	&.sticker-outside {
 		left: $outside-offset;
