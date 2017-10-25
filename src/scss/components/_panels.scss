@@ -210,5 +210,5 @@
 // Panel Variants
 
 .panel-secondary {
-	@include panel-variant($panel-secondary);
+	@include clay-panel-variant($panel-secondary);
 }

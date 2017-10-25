@@ -1,7 +1,7 @@
 // Creates a Panel color variant
 // @param $map - Sass map that contain Panel Variant properties to modify
 
-@mixin panel-variant($map) {
+@mixin clay-panel-variant($map) {
 	$border-color: map-get($map, border-color);
 	$box-shadow: map-get($map, box-shadow);
 	$color: map-get($map, color);
