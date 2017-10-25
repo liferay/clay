@@ -65,7 +65,7 @@ module.exports = function(gulp, plugins, _, config) {
 						.pipe(plugins.rename(svgstore.rename))
 						.pipe(plugins.svgmin(svgstore.svgmin));
 
-		return gulp.src(['src/scss/lexicon-base/functions/_global-functions.scss'])
+		return gulp.src(['src/scss/functions/_global-functions.scss'])
 				// .pipe(plugins.debug())
 				.pipe(plugins.inject(svgFiles, {
 					starttag: '$lx-icons: (',
@@ -78,6 +78,6 @@ module.exports = function(gulp, plugins, _, config) {
 						return `'${basename}': '${contents}'${index + 1 < length ? ',' : ''}\n`;
 					}
 				}))
-				.pipe(gulp.dest('src/scss/lexicon-base/functions/'));
+				.pipe(gulp.dest('src/scss/functions/'));
 	});
 };
