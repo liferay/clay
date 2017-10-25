@@ -1,32 +1,8 @@
-// Color Blockquote
-// @param $color - Colors border and text inside
-
-@mixin color-blockquote ($color) {
-	border-color: $color;
-
-	footer, small, .small {
-		color: $color;
-	}
-}
-
-// Color Link
-// @param $color - Colors link
-// @param $hover-color - Colors link focus and hover state
-
-@mixin color-link($color, $hover-color) {
-	color: $color;
-
-	&:focus,
-	&:hover {
-		color: $hover-color;
-	}
-}
-
 // Highlight inline text
 // @param $bg-color - Color of the highlight
 // @param $color - Colors the text
 
-@mixin highlight-text($bg-color: theme-color-level(warning, -10), $color: $body-color) {
+@mixin clay-highlight-text($bg-color: theme-color-level(warning, -10), $color: $body-color) {
 	background-color: $bg-color;
 	box-decoration-break: clone;
 	box-shadow: -0.25em 0 0 $bg-color;
