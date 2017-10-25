@@ -94,7 +94,7 @@
 
 	vertical-align: bottom;
 
-	@include scale-component {
+	@include clay-scale-component {
 		max-width: $breadcrumb-text-truncate-max-width-mobile;
 	}
 }

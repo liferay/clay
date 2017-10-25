@@ -1,7 +1,7 @@
 .btn {
 	font-size: $btn-font-size;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $btn-font-size-mobile;
 		padding-bottom: $input-btn-padding-y-mobile;
 		padding-left: $input-btn-padding-x-mobile;
@@ -13,7 +13,7 @@
 .btn-lg {
 	font-size: $btn-font-size-lg;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $btn-font-size-lg-mobile;
 		padding-bottom: $input-btn-padding-y-lg-mobile;
 		padding-left: $input-btn-padding-x-lg-mobile;
@@ -25,7 +25,7 @@
 .btn-sm {
 	font-size: $btn-font-size-sm;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $btn-font-size-sm-mobile;
 		padding-bottom: $input-btn-padding-y-sm-mobile;
 		padding-left: $input-btn-padding-x-sm-mobile;
@@ -82,14 +82,14 @@ fieldset[disabled] .btn {
 	white-space: normal;
 	word-wrap: break-word;
 
-	@include scale-component {
+	@include clay-scale-component {
 		@include clay-monospace($btn-monospaced-size-mobile);
 	}
 
 	&.btn-lg {
 		@include clay-monospace($btn-monospaced-size-lg);
 
-		@include scale-component {
+		@include clay-scale-component {
 			@include clay-monospace($btn-monospaced-size-lg-mobile);
 		}
 	}
@@ -97,7 +97,7 @@ fieldset[disabled] .btn {
 	&.btn-sm {
 		@include clay-monospace($btn-monospaced-size-sm);
 
-		@include scale-component {
+		@include clay-scale-component {
 			@include clay-monospace($btn-monospaced-size-sm-mobile);
 		}
 	}

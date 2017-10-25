@@ -16,7 +16,7 @@
 	padding-bottom: 0;
 	padding-top: 0;
 
-	@include scale-component {
+	@include clay-scale-component {
 		height: $modal-header-height-mobile;
 	}
 
@@ -48,7 +48,7 @@
 	padding-bottom: 0;
 	padding-top: 0;
 
-	@include scale-component {
+	@include clay-scale-component {
 		height: $modal-footer-height-mobile;
 	}
 }
@@ -88,7 +88,7 @@
 
 	@include text-truncate;
 
-	@include scale-component {
+	@include clay-scale-component {
 		font-size: $modal-title-font-size-mobile;
 	}
 }
@@ -159,7 +159,7 @@
 	right: 45px;
 	top: 45px;
 
-	@include scale-component {
+	@include clay-scale-component {
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -174,7 +174,7 @@
 		border-width: $modal-content-border-width;
 		height: 100%;
 
-		@include scale-component {
+		@include clay-scale-component {
 			@include border-radius(0);
 
 			border-width: 0;

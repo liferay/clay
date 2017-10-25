@@ -8,13 +8,13 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	@include scale-component {
+	@include clay-scale-component {
 		flex-direction: column;
 		justify-content: center;
 	}
 
 	.pagination {
-		@include scale-component {
+		@include clay-scale-component {
 			margin-top: 0.5rem;
 		}
 	}
@@ -75,7 +75,7 @@
 	}
 
 	+ .pagination-results {
-		@include scale-component {
+		@include clay-scale-component {
 			margin-left: auto;
 		}
 	}
