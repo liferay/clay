@@ -43,8 +43,8 @@ class ClayModal extends Component {
   /**
    * @inheritDoc
    */
-  sync_visible() {
-    if (this._visible) {
+  syncVisible() {
+    if (this.visible) {
       dom.enterDocument(this._overlayElement);
       this._overlayElement.offsetHeight;
       dom.addClasses(this._overlayElement, 'show');
@@ -54,11 +54,11 @@ class ClayModal extends Component {
   }
 
   sync_isTransitioning() {
-    if (this._isTransitioning && !this._visible) {
+    if (this._isTransitioning && !this.visible) {
       this._isTransitioning = false;
-      this._visible = true;
-    } else if (this._isTransitioning && this._visible) {
-      this._visible = false;
+      this.visible = true;
+    } else if (this._isTransitioning && this.visible) {
+      this.visible = false;
     }
   }
 
@@ -130,7 +130,7 @@ class ClayModal extends Component {
     if (
       event.target === this.element &&
       this._isTransitioning &&
-      !this._visible
+      !this.visible
     ) {
       this._isTransitioning = false;
     }
@@ -176,18 +176,6 @@ ClayModal.STATE = {
    * @private
    */
   _isTransitioning: Config.bool()
-    .value(false)
-    .internal(),
-
-  /**
-   * Modal visible when show is called.
-   * @instance
-   * @memberof ClayModal
-   * @type {?bool}
-   * @default false
-   * @private
-   */
-  _visible: Config.bool()
     .value(false)
     .internal(),
 
@@ -275,6 +263,16 @@ ClayModal.STATE = {
    * @default undefined
    */
   url: Config.string(),
+
+  /**
+   * Modal visible when show is called.
+   * @instance
+   * @memberof ClayModal
+   * @type {?bool}
+   * @default false
+   * @private
+   */
+  visible: Config.bool().value(false),
 };
 
 Soy.register(ClayModal, templates);

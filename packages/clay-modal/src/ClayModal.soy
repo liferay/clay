@@ -8,7 +8,6 @@
 	{@param? _handleClickFooterButton: any}
 	{@param? _handleCloseModal: any}
 	{@param? _isTransitioning: bool}
-	{@param? _visible: bool}
 	{@param? body: string|html}
 	{@param? footerButtons: list<?>}
 	{@param? id: string}
@@ -17,14 +16,15 @@
 	{@param? status: string}
 	{@param? title: string}
 	{@param? url: string}
+	{@param? visible: bool}
 
 	{let $attributes kind="attributes"}
 		class="fade modal
-			{if $_isTransitioning or $_visible}
+			{if $_isTransitioning or $visible}
 				{sp}d-block
 			{/if}
 
-			{if $_visible}
+			{if $visible}
 				{sp}show
 			{/if}
 		"
@@ -54,6 +54,7 @@
 				{call .header}
 					{param _handleCloseModal: $_handleCloseModal /}
 					{param spritemap: $spritemap /}
+					{param status: $status /}
 					{param title: $title /}
 				{/call}
 
@@ -78,11 +79,33 @@
 {template .header}
 	{@param? _handleCloseModal: any}
 	{@param? spritemap: string}
+	{@param? status: string}
 	{@param? title: string}
 
 	{if $title}
 		<div class="modal-header">
+			{if $spritemap and $status}
+				{let $icon kind="text"}
+					{switch $status}
+						{case 'danger'}
+							exclamation-full
+						{case 'success'}
+							check-circle
+						{case 'warning'}
+							question-circle-full
+						{default}
+							info-circle
+					{/switch}
+				{/let}
+
+				{call ClayIcon.render}
+					{param spritemap: $spritemap /}
+					{param symbol: $icon /}
+				{/call}
+			{/if}
+
 			<div class="modal-title">{$title}</div>
+
 			{if $spritemap}
 				{call ClayButton.render}
 					{param elementClasses: 'close' /}
