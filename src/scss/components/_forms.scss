@@ -237,14 +237,11 @@ fieldset[disabled] label {
 }
 
 // Form Inline
-// TODO: Create form-inline-autofit screen sizes?
-// TODO: Create width classes to set widths of inputs in form-inline-autofit?
 
 .form-inline {
 	> .btn,
 	> .form-control,
 	> .form-inline-group {
-		// TODO: Use different selector hard to override
 		&:not(:last-child) {
 			margin-bottom: 1rem;
 		}
@@ -279,7 +276,6 @@ fieldset[disabled] label {
 @include media-breakpoint-up(sm) {
 	.form-inline {
 		> label {
-			// TODO: Use different selector hard to override
 			&:not(:last-child) {
 				margin-right: $grid-gutter-width / 2;
 			}
@@ -289,7 +285,6 @@ fieldset[disabled] label {
 		> .form-control,
 		> .form-file,
 		> .form-inline-group {
-			// TODO: Use different selector hard to override
 			&:not(:last-child) {
 				margin-bottom: 0;
 				margin-right: $grid-gutter-width / 2;
