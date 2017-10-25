@@ -1,4 +1,4 @@
-@mixin sticker-size($map) {
+@mixin clay-sticker-size($map) {
 	$font-size: map-get($map, font-size);
 	$outside-offset: setter(map-get($map, outside-offset), -(map-get($map, size) / 2));
 	$size: map-get($map, size);

@@ -111,15 +111,15 @@
 // Sticker Sizes
 
 .sticker-sm {
-	@include sticker-size($sticker-sm);
+	@include clay-sticker-size($sticker-sm);
 }
 
 .sticker-lg {
-	@include sticker-size($sticker-lg);
+	@include clay-sticker-size($sticker-lg);
 }
 
 .sticker-xl {
-	@include sticker-size($sticker-xl);
+	@include clay-sticker-size($sticker-xl);
 }
 
 // Sticker Variants
