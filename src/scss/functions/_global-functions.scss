@@ -43,7 +43,7 @@
 // @param $breakpoints - Sass map that defines the breakpoints to use
 // @param $breakpoint-names - A Sass list of all the keys in $breakpoints
 
-@function breakpoint-prev($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function clay-breakpoint-prev($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
 	@each $value in $breakpoint-names {
 		@if (breakpoint-next($value) == $name) {
 			@return $value;
@@ -60,13 +60,13 @@
 // @param $search - the character to replace
 // @param $replace - the character to replace $search with
 
-@function str-replace($string, $search, $replace: '') {
+@function clay-str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
 
 	@if $index {
 		$string: str-slice($string, 1, $index - 1) +
 			$replace +
-			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+			clay-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
 	}
 
 	@return $string;
@@ -75,7 +75,7 @@
 // Function to encode SVG and provide back a data url
 // @param $svg - The SVG markup to encode
 
-@function svg-url($svg) {
+@function clay-svg-url($svg) {
 	$encoded: '';
 	$index: 0;
 	$slice: 2000;
@@ -85,14 +85,14 @@
 	@for $i from 1 through $loops {
 		$chunk: str-slice($svg, $index, $index + $slice - 1);
 
-		$chunk: str-replace($chunk, '"', '\'');
-		$chunk: str-replace($chunk, ' ', '%20');
-		$chunk: str-replace($chunk, '{', '%7B');
-		$chunk: str-replace($chunk, '}', '%7D');
-		$chunk: str-replace($chunk, '<', '%3C');
-		$chunk: str-replace($chunk, '>', '%3E');
-		$chunk: str-replace($chunk, '&', '%26');
-		$chunk: str-replace($chunk, '#', '%23');
+		$chunk: clay-str-replace($chunk, '"', '\'');
+		$chunk: clay-str-replace($chunk, ' ', '%20');
+		$chunk: clay-str-replace($chunk, '{', '%7B');
+		$chunk: clay-str-replace($chunk, '}', '%7D');
+		$chunk: clay-str-replace($chunk, '<', '%3C');
+		$chunk: clay-str-replace($chunk, '>', '%3E');
+		$chunk: clay-str-replace($chunk, '&', '%26');
+		$chunk: clay-str-replace($chunk, '#', '%23');
 
 		$encoded: #{$encoded}#{$chunk};
 
@@ -106,13 +106,13 @@
 // @param $name - Icon name e.g. angle-right
 // @param $color - Color of icon
 
-@function lx-icon($name, $color) {
-	$lx-icons: get-lx-icons($color);
+@function clay-icon($name, $color) {
+	$lx-icons: clay-get-icons($color);
 
-	@return svg-url(map-get($lx-icons, $name));
+	@return clay-svg-url(map-get($lx-icons, $name));
 }
 
-@function get-lx-icons($color: '') {
+@function clay-get-icons($color: '') {
 	// Don't touch the $lx-icons variable. It's auto-generated to contain all of the icons from the icons directory
 	$lx-icons: (
 

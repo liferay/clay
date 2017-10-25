@@ -67,7 +67,7 @@ $input-danger-focus-box-shadow: none !default;
 $input-danger-color: $input-color !default;
 $input-danger-checkbox-label-color: map-get($theme-colors, danger) !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
-$input-danger-select-icon: lx-icon(caret-double-l, $input-danger-select-icon-color) !default;
+$input-danger-select-icon: clay-icon(caret-double-l, $input-danger-select-icon-color) !default;
 
 $input-success-bg: lighten(map-get($theme-colors, success), 63%) !default;
 $input-success-border-color: lighten(map-get($theme-colors, success), 25%) !default;
@@ -76,7 +76,7 @@ $input-success-focus-box-shadow: none !default;
 $input-success-color: $input-color !default;
 $input-success-checkbox-label-color: map-get($theme-colors, success) !default;
 $input-success-select-icon-color: $input-success-border-color !default;
-$input-success-select-icon: lx-icon(caret-double-l, $input-success-select-icon-color) !default;
+$input-success-select-icon: clay-icon(caret-double-l, $input-success-select-icon-color) !default;
 
 $input-warning-bg: lighten(map-get($theme-colors, warning), 57%) !default;
 $input-warning-border-color: lighten(map-get($theme-colors, warning), 24%) !default;
@@ -85,7 +85,7 @@ $input-warning-focus-box-shadow: none !default;
 $input-warning-color: $input-color !default;
 $input-warning-checkbox-label-color: map-get($theme-colors, warning) !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
-$input-warning-select-icon: lx-icon(caret-double-l, $input-warning-select-icon-color) !default;
+$input-warning-select-icon: clay-icon(caret-double-l, $input-warning-select-icon-color) !default;
 
 // Select Element
 
@@ -94,13 +94,13 @@ $input-select-bg-size: 24px auto !default;
 $input-select-padding-right: 32px !default;
 
 $input-select-icon-color: map-get($theme-colors, secondary) !default;
-$input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
+$input-select-icon: clay-icon(caret-double-l, $input-select-icon-color) !default;
 
 $input-select-icon-focus-color: $input-select-icon-color !default;
-$input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-focus-color) !default;
+$input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-color) !default;
 
 $input-select-icon-disabled-color: $text-muted !default;
-$input-select-icon-disabled: lx-icon(caret-double-l, $input-select-icon-disabled-color) !default;
+$input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
 // Input Groups
 
