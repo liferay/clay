@@ -1,4 +1,4 @@
-@mixin timeline-item-reverse() {
+@mixin clay-timeline-item-reverse() {
 	padding-left: 0;
 	padding-right: $timeline-inner-spacing;
 
@@ -22,7 +22,7 @@
 	}
 }
 
-@mixin timeline-spacing($outer-spacing, $inner-spacing, $item-padding-y: 10px) {
+@mixin clay-timeline-spacing($outer-spacing, $inner-spacing, $item-padding-y: 10px) {
 	&.timeline {
 		padding-left: $outer-spacing;
 	}
