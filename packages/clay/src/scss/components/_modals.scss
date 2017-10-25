@@ -215,6 +215,6 @@
 
 @each $color, $value in $modal-palette {
 	.modal-#{$color} {
-		@include modal-variant($value);
+		@include clay-modal-variant($value);
 	}
 }
