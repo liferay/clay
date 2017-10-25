@@ -1,4 +1,4 @@
-@mixin badge-size($map) {
+@mixin clay-badge-size($map) {
 	$border-width: setter(map-get($map, border-width), $badge-border-width);
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
