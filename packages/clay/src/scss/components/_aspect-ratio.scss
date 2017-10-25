@@ -3,7 +3,7 @@
 	overflow: hidden;
 	position: relative;
 
-	@include aspect-ratio;
+	@include clay-aspect-ratio;
 }
 
 .aspect-ratio-item {
@@ -56,19 +56,19 @@
 }
 
 .aspect-ratio-3-to-2 {
-	@include aspect-ratio(3, 2);
+	@include clay-aspect-ratio(3, 2);
 }
 
 .aspect-ratio-4-to-3 {
-	@include aspect-ratio(4, 3);
+	@include clay-aspect-ratio(4, 3);
 }
 
 .aspect-ratio-8-to-5 {
-	@include aspect-ratio(8, 5);
+	@include clay-aspect-ratio(8, 5);
 }
 
 .aspect-ratio-16-to-9 {
-	@include aspect-ratio(16, 9);
+	@include clay-aspect-ratio(16, 9);
 }
 
 .aspect-ratio-bg-cover {
