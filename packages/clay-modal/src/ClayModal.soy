@@ -80,21 +80,21 @@
 	{@param? spritemap: string}
 	{@param? title: string}
 
-	{if $title and $spritemap}
+	{if $title}
 		<div class="modal-header">
 			<div class="modal-title">{$title}</div>
-
-			{call ClayButton.render}
-				{param elementClasses: 'close' /}
-				{param events: ['click': $_handleCloseModal] /}
-				{param icon: [
-					'alignment': 'left',
-					'monospaced': false,
-					'spritemap': $spritemap,
-					'symbol': 'times'
-				] /}
-				{param style: 'secondary' /}
-			{/call}
+			{if $spritemap}
+				{call ClayButton.render}
+					{param elementClasses: 'close' /}
+					{param events: ['click': $_handleCloseModal] /}
+					{param icon: [
+						'alignment': 'left',
+						'spritemap': $spritemap,
+						'symbol': 'times'
+					] /}
+					{param style: 'unstyled' /}
+				{/call}
+			{/if}
 		</div>
 	{/if}
 {/template}
