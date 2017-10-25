@@ -8,7 +8,7 @@
 	font-size: $sticker-font-size;
 	font-weight: $sticker-font-weight;
 
-	@include monospace($sticker-size);
+	@include clay-monospace($sticker-size);
 
 	position: relative;
 	text-align: center;

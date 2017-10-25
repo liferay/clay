@@ -159,7 +159,7 @@
 		color: $dropdown-action-toggle-color;
 		display: block;
 
-		@include monospace($icon-monospaced-size);
+		@include clay-monospace($icon-monospaced-size);
 
 		text-align: center;
 
