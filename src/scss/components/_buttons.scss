@@ -46,7 +46,7 @@ fieldset[disabled] .btn {
 	@include border-radius(1px);
 
 	&:focus {
-		box-shadow: $btn-focus-box-shadow;
+		box-shadow: $input-btn-focus-box-shadow;
 		text-decoration: $link-decoration;
 	}
 
