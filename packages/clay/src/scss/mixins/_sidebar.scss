@@ -1,4 +1,4 @@
-@mixin sidebar-variant($map) {
+@mixin clay-sidebar-variant($map) {
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
 	$border-bottom-width: setter(map-get($map, border-bottom-width), 0);

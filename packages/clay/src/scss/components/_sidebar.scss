@@ -132,5 +132,5 @@
 // Sidebar Variants
 
 .sidebar-light {
-	@include sidebar-variant($sidebar-light);
+	@include clay-sidebar-variant($sidebar-light);
 }
