@@ -1,7 +1,7 @@
 // Sizes Navbar Desktop and Mobile based on height, font-size, and padding
 // @param $map - Sass map that contain Navbar properties to modify
 
-@mixin navbar-size($map) {
+@mixin clay-navbar-size($map) {
 	$enabled: setter(map-get($map, enabled), true);
 	$scaling-navbar: setter(map-get($map, scaling-navbar), false);
 	$container-padding-x: map-get($map, container-padding-x);
