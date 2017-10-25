@@ -1,4 +1,4 @@
-@mixin menubar-vertical-expand($map) {
+@mixin clay-menubar-vertical-expand($map) {
 	$enabled: setter(map-get($map, enabled), true);
 	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
 	$breakpoint-down: breakpoint-prev($breakpoint-up);
@@ -116,7 +116,7 @@
 	}
 }
 
-@mixin menubar-vertical-variant($map) {
+@mixin clay-menubar-vertical-variant($map) {
 	$enable: setter(map-get($map, enable), true);
 	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
 	$breakpoint-down: breakpoint-prev($breakpoint-up);
