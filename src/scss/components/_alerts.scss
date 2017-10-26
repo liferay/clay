@@ -28,10 +28,6 @@
 		font-weight: $alert-lead-font-weight;
 		margin-right: $alert-lead-spacer-x;
 	}
-
-	.lexicon-icon + .lead {
-		margin-left: $alert-lead-spacer-x;
-	}
 }
 
 .alert-link {
@@ -39,6 +35,14 @@
 
 	@include hover-focus {
 		text-decoration: $alert-link-hover-decoration;
+	}
+}
+
+.alert-indicator {
+	font-size: $alert-indicator-font-size;
+
+	+ .lead {
+		margin-left: $alert-lead-spacer-x;
 	}
 }
 
