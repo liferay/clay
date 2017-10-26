@@ -14,17 +14,23 @@
 
 @mixin clay-indicator-bg($map) {
 	$indicator: map-get($map, indicator);
-	$indicator-bg-position: setter(map-get($map, indicator-bg-position), center left);
+	$indicator-bg-position: setter(map-get($map, indicator-bg-position), top 0.125rem left);
 	$indicator-bg-size: setter(map-get($map, indicator-bg-size), 100%);
+	$indicator-display: setter(map-get($map, indicator-display), inline-block);
 	$indicator-height: setter(map-get($map, indicator-height), #{$line-height-base}em);
+	$indicator-text-indent: map-get($map, indicator-text-indent);
+	$indicator-vertical-align: setter(map-get($map, indicator-vertical-align), middle);
 	$indicator-width: setter(map-get($map, indicator-width), 1em);
 
 	background-image: $indicator;
 	background-position: $indicator-bg-position;
 	background-repeat: no-repeat;
 	background-size: $indicator-bg-size;
+	display: $indicator-display;
 	height: $indicator-height;
 	margin-top: 0;
+	text-indent: $indicator-text-indent;
+	vertical-align: $indicator-vertical-align;
 	width: $indicator-width;
 
 	.lexicon-icon {
