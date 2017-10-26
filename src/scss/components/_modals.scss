@@ -80,8 +80,6 @@
 // Modal Title
 
 .modal-title {
-	align-items: center;
-	display: flex;
 	font-size: $modal-title-font-size;
 	font-weight: $modal-title-font-weight;
 	flex-grow: 1;
@@ -95,13 +93,11 @@
 }
 
 .modal-title-indicator {
+	display: inline-block;
 	font-size: $modal-title-indicator-font-size;
 	margin-right: $modal-title-indicator-spacer-x;
-	margin-top: -3px;
-
-	.lexicon-icon {
-		margin-top: 0;
-	}
+	margin-top: -0.2em;
+	vertical-align: middle;
 }
 
 // Modal Buttons
