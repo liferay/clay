@@ -77,6 +77,12 @@
 	}
 
 	&.complete {
+		.dropdown .multi-step-icon {
+			&, &:active {
+				background-image: none;
+			}
+		}
+
 		.multi-step-icon {
 			background-color: $multi-step-icon-complete-bg;
 			color: $multi-step-icon-complete-color;
@@ -93,6 +99,7 @@
 					}
 				}
 
+				// BS4 resets background-image in buttons https://github.com/twbs/bootstrap/issues/23353
 				&:active {
 					background-image: $multi-step-icon-complete-bg-image;
 				}
@@ -132,14 +139,12 @@
 	position: relative;
 	width: $multi-step-indicator-width;
 
+	.dropdown-item-indicator {
+		display: none;
+	}
+
 	.complete .dropdown-item-indicator {
-		background-image: $multi-step-dropdown-indicator-complete-icon;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 100%;
 		display: block;
-		height: 1.5em;
-		width: $multi-step-dropdown-indicator-complete-width;
 	}
 
 	.multi-step-indicator-label {
