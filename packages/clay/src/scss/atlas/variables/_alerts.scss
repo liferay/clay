@@ -1,5 +1,5 @@
-$alert-padding-x: 1.125rem !default; // 18px
-$alert-padding-y: 1.125rem !default; // 18px
+$alert-padding-x: 1rem !default; // 16px
+$alert-padding-y: 1.03125rem !default; // 16.5px
 
 // For top only border use: 2px 0 0 0
 $alert-border-width: 0.0625rem !default;
@@ -9,11 +9,11 @@ $alert-close-opacity: 1 !default;
 $alert-font-size: 0.875rem !default; // 14px
 
 $alert-lead-font-size: $alert-font-size !default;
-$alert-lead-font-weight: $font-weight-bold !default;
+$alert-lead-font-weight: $font-weight-semi-bold !default;
 
 $alert-link-decoration: underline !default;
 $alert-link-hover-decoration: none !default;
-$alert-link-font-weight: $font-weight-normal !default;
+$alert-link-font-weight: $font-weight-semi-bold !default;
 
 $alert-indicator-font-size: !default;
 
