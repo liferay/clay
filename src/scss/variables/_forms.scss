@@ -128,15 +128,6 @@ $form-text-color: $text-muted !default;
 $form-text-font-size: $font-size-sm !default;
 $form-text-font-weight: null !default;
 
-$form-feedback-success-indicator-icon-color: $form-feedback-valid-color !default;
-$form-feedback-success-indicator-icon: clay-icon(check-circle, $form-feedback-success-indicator-icon-color) !default;
-
-$form-feedback-warning-indicator-icon-color: $form-feedback-warning-color !default;
-$form-feedback-warning-indicator-icon: clay-icon(info-circle, $form-feedback-warning-indicator-icon-color) !default;
-
-$form-feedback-danger-indicator-icon-color: $form-feedback-invalid-color !default;
-$form-feedback-danger-indicator-icon: clay-icon(exclamation-full, $form-feedback-danger-indicator-icon-color) !default;
-
 // Input Group
 
 $input-group-addon-border-radius: null !default;
