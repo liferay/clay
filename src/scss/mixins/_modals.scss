@@ -7,10 +7,6 @@
 	$header-color: map-get($map, header-color);
 
 	$header-close-color: setter(map-get($map, header-close-color), $header-color);
-	$header-title-indicator: map-get($map, header-title-indicator);
-	$header-title-indicator-position: setter(map-get($map, header-title-indicator-position), center left);
-	$header-title-indicator-size: setter(map-get($map, header-title-indicator-size), 0.875rem);
-	$header-title-indicator-spacer: setter(map-get($map, header-title-indicator-spacer), 10px);
 
 	$body-bg: map-get($map, body-bg);
 	$body-color: map-get($map, body-color);
@@ -27,16 +23,6 @@
 		background-color: $header-bg;
 		border-color: $header-border-color;
 		color: $header-color;
-
-		.modal-title {
-			@if ($header-title-indicator) {
-				background-image: $header-title-indicator;
-				background-position: $header-title-indicator-position;
-				background-repeat: no-repeat;
-				background-size: $header-title-indicator-size;
-				padding-left: calc(#{$header-title-indicator-size} + #{$header-title-indicator-spacer});
-			}
-		}
 	}
 
 	.modal-body {
