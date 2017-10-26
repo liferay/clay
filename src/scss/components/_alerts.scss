@@ -30,7 +30,9 @@
 	}
 }
 
-.alert-link {
+.alert-link,
+.alert-link.btn-unstyled {
+	font-weight: $alert-link-font-weight;
 	text-decoration: $alert-link-decoration;
 
 	@include hover-focus {
