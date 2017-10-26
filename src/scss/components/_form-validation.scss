@@ -1,7 +1,6 @@
 // Form Feedback
 
 .form-feedback-item,
-.form-feedback-indicator,
 .invalid-feedback,
 .valid-feedback {
 	font-size: $form-feedback-font-size;
@@ -9,8 +8,12 @@
 }
 
 .form-feedback-indicator {
-	font-size: $form-feedback-font-size;
-	font-weight: $form-feedback-font-weight;
+	margin-left: 0.3125rem;
+	margin-right: 0.3125rem;
+
+	&:first-child {
+		margin-left: 0;
+	}
 }
 
 .form-text {
@@ -81,15 +84,6 @@
 		color: $form-feedback-invalid-color;
 	}
 
-	.form-feedback-indicator {
-		background-image: $form-feedback-danger-indicator-icon;
-		background-position: left 2px center;
-		background-repeat: no-repeat;
-		background-size: 1em;
-		color: $form-feedback-invalid-color;
-		padding-left: 1.5em;
-	}
-
 	select.form-control:not([multiple]):not([size]) {
 		background-image: $input-danger-select-icon;
 	}
@@ -123,15 +117,6 @@
 		color: $form-feedback-warning-color;
 	}
 
-	.form-feedback-indicator {
-		background-image: $form-feedback-warning-indicator-icon;
-		background-position: left 2px center;
-		background-repeat: no-repeat;
-		background-size: 1em;
-		color: $form-feedback-warning-color;
-		padding-left: 1.5em;
-	}
-
 	select.form-control:not([multiple]):not([size]) {
 		background-image: $input-warning-select-icon;
 	}
@@ -163,15 +148,6 @@
 
 	.form-feedback-item {
 		color: $form-feedback-valid-color;
-	}
-
-	.form-feedback-indicator {
-		background-image: $form-feedback-success-indicator-icon;
-		background-position: left 2px center;
-		background-repeat: no-repeat;
-		background-size: 1em;
-		color: $form-feedback-valid-color;
-		padding-left: 1.5em;
 	}
 
 	select.form-control:not([multiple]):not([size]) {
