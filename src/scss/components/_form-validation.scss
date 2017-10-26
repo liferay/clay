@@ -1,15 +1,20 @@
 // Form Feedback
 
-.form-feedback-item,
 .invalid-feedback,
 .valid-feedback {
 	font-size: $form-feedback-font-size;
 	font-weight: $form-feedback-font-weight;
 }
 
+.form-feedback-item {
+	font-size: $form-feedback-font-size;
+	font-weight: $form-feedback-font-weight;
+	margin-top: $form-feedback-margin-top;
+}
+
 .form-feedback-indicator {
-	margin-left: 0.3125rem;
-	margin-right: 0.3125rem;
+	margin-left: $form-feedback-indicator-margin-x;
+	margin-right: $form-feedback-indicator-margin-x;
 
 	&:first-child {
 		margin-left: 0;
