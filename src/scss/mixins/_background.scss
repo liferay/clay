@@ -8,3 +8,26 @@
 	background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 	background-size: 20px 20px;
 }
+
+// Replace any *-indicator with another icon via background-image, e.g. 
+// .modal-title-indicator
+
+@mixin clay-indicator-bg($map) {
+	$indicator: map-get($map, indicator);
+	$indicator-bg-position: setter(map-get($map, indicator-bg-position), center left);
+	$indicator-bg-size: setter(map-get($map, indicator-bg-size), 100%);
+	$indicator-height: setter(map-get($map, indicator-height), #{$line-height-base}em);
+	$indicator-width: setter(map-get($map, indicator-width), 1em);
+
+	background-image: $indicator;
+	background-position: $indicator-bg-position;
+	background-repeat: no-repeat;
+	background-size: $indicator-bg-size;
+	height: $indicator-height;
+	margin-top: 0;
+	width: $indicator-width;
+
+	.lexicon-icon {
+		display: none;
+	}
+}
