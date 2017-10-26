@@ -36,21 +36,3 @@
 		color: $footer-border-color;
 	}
 }
-
-@mixin clay-modal-title-indicator($map) {
-	$indicator: map-get($map, indicator);
-	$indicator-bg-position: setter(map-get($map, indicator-bg-position), center left);
-	$indicator-bg-size: setter(map-get($map, indicator-bg-size), 100%);
-
-	background-image: $indicator;
-	background-position: $indicator-bg-position;
-	background-repeat: no-repeat;
-	background-size: $indicator-bg-size;
-	height: 1em;
-	margin-top: 0;
-	width: 1em;
-
-	.lexicon-icon {
-		display: none;
-	}
-}
