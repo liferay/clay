@@ -33,8 +33,7 @@ $btn-toolbar-spacer-y: 0.125rem !default; // 2px
 // Button Variants
 
 $btn-primary: () !default;
-$btn-primary: map-merge((
-), $btn-primary);
+$btn-primary: map-merge((), $btn-primary);
 
 $btn-secondary: () !default;
 $btn-secondary: map-merge((), $btn-secondary);
@@ -56,17 +55,6 @@ $btn-light: map-merge((), $btn-light);
 
 $btn-dark: () !default;
 $btn-dark: map-merge((), $btn-dark);
-
-$btn-dark-bg: null !default;
-$btn-dark-border-color: null !default;
-$btn-dark-color: null !default;
-$btn-dark-hover-color: null !default;
-$btn-dark-hover-bg: null !default;
-$btn-dark-hover-border-color: null !default;
-$btn-dark-focus-box-shadow: null !default;
-$btn-dark-active-color: null !default;
-$btn-dark-active-bg: null !default;
-$btn-dark-active-border-color: null !default;
 
 $btn-palette: () !default;
 $btn-palette: map-merge((
