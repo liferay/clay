@@ -65,17 +65,6 @@ $btn-warning: (
 	active-bg: darken(map-get($theme-colors, warning), 8%)
 ) !default;
 
-$btn-warning-color: #FFF !default;
-$btn-warning-bg: map-get($theme-colors, warning) !default;
-$btn-warning-border-color: $btn-warning-bg !default;
-$btn-warning-hover-color: $btn-warning-color !default;
-$btn-warning-hover-bg: darken($btn-warning-bg, 8%) !default;
-$btn-warning-hover-border-color: $btn-warning-hover-bg !default;
-$btn-warning-focus-box-shadow: 0 0 0 2px rgba($btn-warning-hover-border-color, 0.5) !default;
-$btn-warning-active-color: $btn-warning-color !default;
-$btn-warning-active-bg: darken($btn-warning-hover-bg, 12%) !default;
-$btn-warning-active-border-color: $btn-warning-active-bg !default;
-
 $btn-danger: (
 	hover-bg: darken(map-get($theme-colors, danger), 4%),
 	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, danger), 4%), 0.5),
