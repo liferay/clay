@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-beta.0
+* Clay 2.0.0-beta.1
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -9089,7 +9089,7 @@ label .reference-mark {
 }
 
 .form-control {
-  border-width: 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+  border-width: 1px;
   height: calc(2.25rem + 2px);
 }
 
@@ -9597,7 +9597,7 @@ a.collapse-icon {
 
 .input-group-addon {
   align-items: center;
-  border-width: 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+  border-width: 1px;
   color: #495057;
   display: flex;
   height: calc(2.25rem + 2px);
