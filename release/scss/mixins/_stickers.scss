@@ -1,0 +1,38 @@
+/**
+* Clay 2.0.0-beta.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin clay-sticker-size($map) {
+	$font-size: map-get($map, font-size);
+	$outside-offset: setter(map-get($map, outside-offset), -(map-get($map, size) / 2));
+	$size: map-get($map, size);
+
+	font-size: $font-size;
+
+	@include clay-monospace($size);
+
+	&.sticker-outside {
+		left: $outside-offset;
+		top: $outside-offset;
+
+		&.sticker-bottom-left {
+			bottom: $outside-offset;
+			top: auto;
+		}
+
+		&.sticker-bottom-right {
+			bottom: $outside-offset;
+			left: auto;
+			right: $outside-offset;
+			top: auto;
+		}
+
+		&.sticker-top-right {
+			left: auto;
+			right: $outside-offset;
+		}
+	}
+}
