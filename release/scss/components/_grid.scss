@@ -1,0 +1,35 @@
+/**
+* Clay 2.0.0-beta.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@if ($enable-grid-classes) {
+	.container-fluid-max {
+		@each $breakpoint, $max-width in $container-max-widths {
+			$infix: '-#{$breakpoint}';
+
+			&#{$infix} {
+				max-width: $max-width;
+			}
+		}
+	}
+
+	.container-no-gutters {
+		@include clay-container-no-gutters;
+
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			$next: breakpoint-next($breakpoint, $grid-breakpoints);
+			$infix: breakpoint-infix($next, $grid-breakpoints);
+
+			@if not ($infix == '') { // .container-no-gutters-sm-down, md-down, lg-down, xl-down
+				&#{$infix}-down {
+					@include media-breakpoint-down($breakpoint) {
+						@include clay-container-no-gutters;
+					}
+				}
+			}
+		}
+	}
+}

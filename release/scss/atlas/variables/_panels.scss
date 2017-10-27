@@ -1,0 +1,46 @@
+/**
+* Clay 2.0.0-beta.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$panel-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+
+$panel-border-bottom-width: 1px !default;
+$panel-border-left-width: 1px !default;
+$panel-border-right-width: 1px !default;
+$panel-border-top-width: 1px !default;
+
+// Panel Header
+
+$panel-header-border-bottom-width: 0 !default;
+$panel-header-link-text-decoration: none !default;
+
+// Panel Footer
+
+$panel-footer-border-top-width: 0 !default;
+
+// Panel Title
+
+$panel-title-font-size: 0.875rem !default;
+$panel-title-text-transform: uppercase !default;
+
+// Panel Collapse Icon
+
+$panel-collapse-icon-font-size: 0.75rem !default; // 12px
+
+// Panel Group
+
+$panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
+
+// Panel Variants
+
+$panel-secondary: (
+	border-color: null,
+	color: map-get($theme-colors, secondary),
+	header-bg: null,
+	header-border-color: lighten(map-get($theme-colors, secondary), 46%),
+	footer-bg: null,
+	footer-border-color: lighten(map-get($theme-colors, secondary), 46%)
+);
