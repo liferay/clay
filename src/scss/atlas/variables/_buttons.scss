@@ -84,9 +84,4 @@ $btn-dark: (
 	active-bg: darken(map-get($theme-colors, dark), 8%)
 ) !default;
 
-$btn-dark-color: #FFF !default;
-$btn-dark-hover-color: $btn-dark-color !default;
-$btn-dark-hover-bg: darken(map-get($theme-colors, dark), 8%) !default;
-$btn-dark-focus-box-shadow: 0 0 0 2px rgba($btn-dark-hover-bg, 0.5) !default;
-
 $btn-link-disabled-color: $link-color !default;
