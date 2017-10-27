@@ -53,17 +53,6 @@ $btn-success: (
 	active-bg: darken(map-get($theme-colors, success), 8%)
 ) !default;
 
-$btn-success-color: #FFF !default;
-$btn-success-bg: map-get($theme-colors, success) !default;
-$btn-success-border-color: $btn-success-bg !default;
-$btn-success-hover-color: $btn-success-color !default;
-$btn-success-hover-bg: darken($btn-success-bg, 8%) !default;
-$btn-success-hover-border-color: $btn-success-hover-bg !default;
-$btn-success-focus-box-shadow: 0 0 0 2px rgba($btn-success-hover-border-color, 0.5) !default;
-$btn-success-active-color: $btn-success-color !default;
-$btn-success-active-bg: darken($btn-success-hover-bg, 12%) !default;
-$btn-success-active-border-color: $btn-success-active-bg !default;
-
 $btn-info: (
 	hover-bg: darken(map-get($theme-colors, info), 4%),
 	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, info), 4%), 0.5),
