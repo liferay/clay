@@ -10,7 +10,7 @@ $sticker-size: 2rem !default; // 32px
 
 $sticker-sm: () !default;
 $sticker-sm: map-merge((
-	font-size: 0.625rem,
+	font-size: 0.75rem,
 	size: 1.5rem
 ), $sticker-sm);
 
