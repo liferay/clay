@@ -78,15 +78,6 @@ $btn-light: (
 	active-bg: darken(map-get($theme-colors, light), 8%)
 ) !default;
 
-$btn-light-color: map-get($theme-colors, secondary) !default;
-$btn-light-bg: #FFF !default;
-$btn-light-hover-color: $btn-light-color !default;
-$btn-light-hover-bg: #FCFEFF !default;
-$btn-light-hover-border-color: $btn-light-hover-bg !default;
-$btn-light-focus-box-shadow: 0 0 0 2px rgba($btn-light-hover-bg, 0.5) !default;
-$btn-light-active-bg: darken($btn-light-hover-bg, 6%) !default;
-$btn-light-active-border-color: $btn-light-active-bg !default;
-
 $btn-dark: (
 	hover-bg: darken(map-get($theme-colors, dark), 4%),
 	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, dark), 4%), 0.5),
