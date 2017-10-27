@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.11</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.0</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -209,7 +209,132 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-11-october-16-2017"><a class="heading-anchor" href="#v2-0-0-alpha-11-october-16-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.11 October 16, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-beta-0-october-27-2017"><a class="heading-anchor" href="#v2-0-0-beta-0-october-27-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.0 October 27, 2017</h3>
+<ul>
+<li>Breaking: Form Validation removed option to customize <code>$form-feedback-success-indicator-icon-color</code>, <code>$form-feedback-success-indicator-icon</code>, <code>$form-feedback-warning-indicator-icon-color</code>, <code>$form-feedback-warning-indicator-icon</code>, <code>$form-feedback-danger-indicator-icon-color</code>, <code>$form-feedback-danger-indicator-icon</code>, use mixin <code>clay-indicator-bg</code> to use background-images on <code>.form-feedback-indicator</code></li>
+<li>Breaking: Form Validation reimplement <code>.form-feedback-indicator</code> to only be for icons</li>
+<li>Breaking: Multi Step Nav should inline <code>.dropdown-item-indicator</code> icons, background-image is still supported through  mixin</li>
+<li>Breaking: Nav Tabs should inline <code>.dropdown-item-indicator</code> icons rather than using background-image, background-image is still supported through <code>clay-indicator-bg</code> mixin</li>
+<li>Breaking: Rename <code>clay-modal-title-indicator</code> mixin to <code>clay-indicator-bg</code></li>
+<li>Breaking: Modals remove <code>header-title-indicator</code> support from <code>clay-modal-variant</code> mixin</li>
+<li>Breaking: Removed empty mixin partials _dropdown.scss and _forms.scss</li>
+<li>Breaking: Rename <code>set-data-label-text-position</code> to <code>clay-data-label-text-position</code></li>
+<li>Breaking: Prefix functions <code>breakpoint-prev</code>, <code>str-replace</code>, <code>svg-url</code> with <code>clay-</code>, rename <code>lx-icon</code> to <code>clay-icon</code>, and rename <code>get-lx-icons</code> to <code>clay-get-icons</code></li>
+<li>Breaking: Removed functions <code>lx-color-by-lightness</code>, <code>lx-icon-padding</code></li>
+<li>Breaking: Remove mixin <code>color-blockquote</code>, <code>color-link</code>, and rename <code>highlight-text</code> to <code>clay-highlight-text</code></li>
+<li>Breaking: Prefix mixin <code>timeline-item-reverse</code>, <code>timeline-spacing</code> with <code>clay-</code></li>
+<li>Breaking: Prefix mixin <code>sticker-size</code> with <code>clay-</code></li>
+<li>Breaking: Prefix mixin <code>sidebar-variant</code> with <code>clay-</code></li>
+<li>Breaking: Prefix mixin <code>scale-component</code> with <code>clay-</code></li>
+<li>Breaking: Prefix mixin <code>panel-variant</code> with <code>clay-</code></li>
+<li>Breaking: Prefix mixin <code>navbar-size</code> with <code>clay-</code></li>
+<li>Breaking: Rename mixin <code>make-nav-nested</code> to <code>clay-nav-nested</code></li>
+<li>Breaking: Prefix mixin <code>monospace</code> with <code>clay-</code></li>
+<li>Breaking: Prefix mixin <code>modal-variant</code> with <code>clay-</code></li>
+<li>Breaking: Prefix mixins <code>menubar-vertical-expand</code>, <code>menubar-vertical-variant</code> with <code>clay-</code></li>
+<li>Breaking: Rename mixin <code>label-size</code> to <code>clay-label-size</code></li>
+<li>Breaking: Rename mixin <code>container-no-gutters</code> to <code>clay-container-no-gutters</code></li>
+<li>Breaking: Removed mixins <code>color-dropdown-toggle-link</code>, <code>color-dropdown-menu-links</code></li>
+<li>Breaking: Rename mixin <code>component-btn-link</code> to <code>clay-component-btn-link</code></li>
+<li>Breaking: Rename mixin <code>badge-size</code> to <code>clay-badge-size</code></li>
+<li>Breaking: Rename mixin <code>bg-checkered</code> to <code>clay-bg-checkered</code></li>
+<li>Breaking: Rename mixin <code>aspect-ratio</code> to <code>clay-aspect-ratio</code></li>
+<li>Breaking: Dropdown removed <code>$enable-dropdown-caret</code> BS4 added option to <code>$enable-caret</code></li>
+<li>Breaking: Bootstrap 4 06641ca renamed <code>$btn-focus-box-shadow</code> to <code>$input-btn-focus-box-shadow</code></li>
+<li>Breaking: Update Bootstrap 4 to 9611089</li>
+<li>Breaking: Atlas List Group removed unused variables <code>$list-group-action-color</code>, <code>$list-group-action-active-color</code>, <code>$list-group-action-active-bg</code></li>
+<li>Breaking: Multi Step Nav removed <code>.multi-step-item-contract</code></li>
+<li>Breaking: Multi Step Nav reorganize dropdown pattern so we can get rid of <code>.multi-step-link</code></li>
+<li>Breaking: Atlas Modals removed <code>$modal-inner-padding-x</code>, <code>$modal-inner-padding-y</code> just use <code>$modal-inner-padding</code> instead and change spacing to 1.5rem</li>
+<li>Breaking: Modals remove <code>.modal-iframe</code></li>
+<li>Breaking: Alerts removed <code>.alert-notification</code> and <code>$alert-notification-max-width</code></li>
+<li>Breaking: Buttons removed <code>$btn-secondary-bg</code>, <code>$btn-secondary-border-color</code>, <code>$btn-secondary-color</code>, <code>$btn-secondary-hover-color</code>, <code>$btn-secondary-hover-bg</code>, <code>$btn-secondary-hover-border-color</code>, <code>$btn-secondary-focus-box-shadow</code>, <code>$btn-secondary-active-color</code>, <code>$btn-secondary-active-bg</code>, <code>$btn-secondary-active-border-color</code></li>
+<li>Breaking: Buttons removed <code>$btn-primary-bg</code>, <code>$btn-primary-border-color</code>, <code>$btn-primary-color</code>, <code>$btn-primary-hover-color</code>, <code>$btn-primary-hover-bg</code>, <code>$btn-primary-hover-border-color</code>, <code>$btn-primary-focus-box-shadow</code>, <code>$btn-primary-active-color</code>, <code>$btn-primary-active-bg</code>, <code>$btn-primary-active-border-color</code></li>
+<li>Breaking: Buttons removed <code>$btn-monospaced-size-xl</code>, <code>$btn-monospaced-size-xl-mobile</code></li>
+<li>Breaking: Buttons removed <code>.btn-xl</code></li>
+<li>Breaking: Stickers removed <code>.sticker-xxl</code> and re-add <code>.sticker-lg</code> and <code>.sticker-xl</code></li>
+<li>Breaking: Remove mixin <code>color-tabular-list-group-item</code></li>
+<li>Breaking: Remove mixin <code>select-box-icon</code></li>
+<li>New: <code>clay-indicator-bg</code> mixin add option to customize <code>display</code>, <code>text-indent</code>, and <code>vertical-align</code></li>
+<li>New: Form Feedback Indicator added <code>$form-feedback-indicator-margin-x</code>, <code>$form-feedback-margin-top</code> and adjust spacing</li>
+<li>New: Alerts added <code>.alert-indicator</code> for indicator icons and option to configure <code>$alert-indicator-font-size</code></li>
+<li>New: Modal added mixin <code>clay-modal-title-indicator</code> for customizing <code>.modal-title-indicator</code> via css</li>
+<li>New: Modal added <code>.modal-title-indicator</code> and option to configure <code>$modal-title-indicator-font-size</code>, <code>$modal-title-indicator-spacer-x</code></li>
+<li>New: SVG Icons added caret-bottom-l, caret-left-l, caret-left, caret-right-l, caret-right, check-circle-full, order-arrow-down, order-arrow-up, warning-full, warning</li>
+<li>New: Added variable file to overwrite BS4 defaults couldn&#x2019;t disable carets by default in <a href="https://github.com/twbs/bootstrap/pull/22926">https://github.com/twbs/bootstrap/pull/22926</a></li>
+<li>New: Custom Control Description added option to configure <code>$custom-control-description-margin-left</code> and adjust spacing on Atlas</li>
+<li>New: List Group added option to configure <code>$list-group-notification-border-bottom-left-radius</code>, <code>$list-group-notification-border-bottom-right-radius</code>, <code>$list-group-notification-border-top-left-radius</code>, <code>$list-group-notification-border-top-right-radius</code></li>
+<li>New: List Group added <code>.list-group-notification</code> variant</li>
+<li>New: List Group added option to configure <code>$list-group-notification-item-border-bottom-color</code>, <code>$list-group-notification-item-border-left-color</code>, <code>$list-group-notification-item-border-right-color</code>, <code>$list-group-notification-item-border-top-color</code>, <code>$list-group-notification-item-active-border-bottom-color</code>, <code>$list-group-notification-item-active-border-left-color</code>, <code>$list-group-notification-item-active-border-right-color</code>, <code>$list-group-notification-item-active-border-top-color</code>, <code>$list-group-notification-item-border-bottom-width</code>, <code>$list-group-notification-item-border-left-width</code>, <code>$list-group-notification-item-border-right-width</code>, <code>$list-group-notification-item-border-top-width</code>, <code>$list-group-notification-item-border-variant</code></li>
+<li>New: List Group added mixin <code>clay-list-group-notification-item-border-variant($map)</code> for styling <code>.list-group-notification .list-group-item</code> borders</li>
+<li>New: List Group added <code>.list-group-detail</code> container for various items inside <code>.list-group-item-flex .flex-col</code>&#x2018;s and option to configure <code>$list-group-detail-margin-bottom</code>, <code>$list-group-detail-margin-top</code></li>
+<li>New: List Group added option to configure <code>$list-group-item-flex-align-items</code> for vertically aligning content</li>
+<li>New: Multi Step Nav added <code>$multi-step-dropdown-indicator-complete-icon</code>, <code>$multi-step-dropdown-indicator-complete-width</code></li>
+<li>New: Multi Step Nav added option to configure <code>$multi-step-indicator-label-color</code>, <code>$multi-step-title-color</code></li>
+<li>New: Multi Step Nav added option to configure <code>$multi-step-icon-font-weight</code>, <code>$multi-step-title-font-weight</code> and adjust Atlas <code>$multi-step-indicator-label-font-weight</code></li>
+<li>New: Multi Step Nav added option to configure <code>$multi-step-icon-hover-bg</code>, <code>$multi-step-icon-hover-color</code>, <code>$multi-step-icon-hover-text-decoration</code>, and clean up <code>.multi-step-icon</code> as links</li>
+<li>New: Alerts consolidate common styles to <code>.alert-notifications</code> and added options to configure <code>$alert-notifications-absolute-bottom</code>, <code>$alert-notifications-absolute-left</code>, <code>$alert-notifications-absolute-right</code>, <code>$alert-notifications-absolute-top</code>, <code>$alert-notifications-absolute-bottom-mobile</code>, <code>$alert-notifications-absolute-left-mobile</code>, <code>$alert-notifications-absolute-right-mobile</code>, <code>$alert-notifications-absolute-top-mobile</code>, <code>$alert-notifications-fixed-bottom</code>, <code>$alert-notifications-fixed-left</code>, <code>$alert-notifications-fixed-right</code>, <code>$alert-notifications-fixed-top</code>, <code>$alert-notifications-fixed-bottom-mobile</code>, <code>$alert-notifications-fixed-left-mobile</code>, <code>$alert-notifications-fixed-right-mobile</code>, <code>$alert-notifications-fixed-top-mobile</code>, <code>$alert-notifications-max-width</code></li>
+<li>New: Globals added <code>$zindex-alert-notificiations</code></li>
+<li>New: Alerts added <code>.alert-container</code>, <code>.alert-notifications-absolute</code>, <code>.alert-notifications-fixed</code> for aligning alerts</li>
+<li>New: Buttons added <code>$btn-primary</code>, <code>$btn-secondary</code>, <code>$btn-success</code>, <code>$btn-info</code>, <code>$btn-warning</code>, <code>$btn-danger</code>, <code>$btn-light</code>, <code>$btn-dark</code> Sass maps for button variant styling</li>
+<li>New: Buttons added mixin <code>clay-button-variant($map)</code> for more customizable button variants</li>
+<li>New: Added Lexicon Icon Filter</li>
+<li>New: Menubar added <code>.menubar-transparent</code> variant</li>
+<li>New: Menubar added mixin <code>menubar-vertical-variant()</code></li>
+<li>New: Added Menubar component for collapsing vertical navigations</li>
+<li>New: Menubar added Sass map <code>$menubar-vertical-expand-md</code></li>
+<li>New: Added mixin <code>menubar-vertical-expand()</code></li>
+<li>New: Global Functions added <code>breakpoint-prev($name, $breakpoints, $breakpoint-names)</code> to help retrieve previous breakpoint</li>
+<li>New: Nav added <code>.nav-stacked</code> for stacked navs because BS4 <code>.flex-column</code> uses the important flag</li>
+<li>Update: Modal don&#x2019;t use <code>display: flex</code> in <code>.modal-title</code> text isn&#x2019;t properly truncated</li>
+<li>Update: Alerts adjust spacing</li>
+<li>Update: Missed some mixins in cards, modals, stickers during mixin rename</li>
+<li>Update: Modals <code>.modal-warning</code> and <code>.modal-success</code> should use proper icons</li>
+<li>Update: Forms remove TODO comments</li>
+<li>Update: Alerts remove TODO comment, BS4 won&#x2019;t change <code>$grid-gutter-width</code> to rem from px issue 23999</li>
+<li>Update: Atlas List Group adjust space between each <code>.flex-col</code></li>
+<li>Update: List Group Item Flex content spacing</li>
+<li>Update: Multi Step Nav <code>.active.complete</code> should be styled</li>
+<li>Update: Modals add default height to <code>.modal-body-iframe</code></li>
+<li>Update: Buttons and Dropdowns with <code>.dropdown-toggle</code> show focus border when buttons are clicked</li>
+<li>Update: Navbar form-inline-autofit should shrink in FF</li>
+<li>Update: Atlas Button padding-x should be 0.9375rem</li>
+<li>Update: <code>menubar-vertical-expand</code> mixin shouldn&#x2019;t set margin-bottom by default</li>
+<li>Update: Atlas Menubar styles</li>
+<li>Update: Nav Item with long text no white spaces should break to new line</li>
+<li>Update: Move <code>.btn-unstyled</code> declaration block to Sass placeholder <code>%btn-unstyled</code></li>
+<li>Update: Global Functions <code>breakpoint-prev()</code> should work with xs</li>
+<li>Update: Atlas $nav-nested-spacer-x to be larger</li>
+<li>Update: Nav <code>.nav-stacked</code> use <code>display: block</code> instead of <code>flex-direction: column</code> messes up rendering when used with collapse plugin</li>
+<li>Misc: Don&#x2019;t run maven-publish task for now</li>
+<li>Misc: Update svg build task to look in the right directory</li>
+<li>Site: Form Validation use updated <code>.form-feedback-indicator</code> markup</li>
+<li>Site: Alerts and User and Org Form Vertical Navigation pages to use <code>.alert-indicator</code> in alerts</li>
+<li>Site: Mutli Step Nav inline <code>.dropdown-item-indicator</code> svg icons</li>
+<li>Site: Nav Tabs and Nav Underline tab examples should inline svg in <code>.dropdown-item-indicator</code></li>
+<li>Site: Modal Iframe should point to page that exists</li>
+<li>Site: Modals added <code>.modal-title-indicator</code> to variant demos and make aria support more clear</li>
+<li>Site: Use renamed functions</li>
+<li>Site: Remove old Test Assorted page</li>
+<li>Site: Dropdowns remove references to <code>.dropdown-menu-horizontal</code></li>
+<li>Site: Timelines add <code>.rounded-circle</code> to stickers</li>
+<li>Site: List Group added <code>.list-group-notification</code> demo</li>
+<li>Site: List Group and List View Template update markup to include <code>.list-group-detail</code></li>
+<li>Site: Multi Step Nav added <code>.dropdown-item-indicator</code> support</li>
+<li>Site: Multi Step Nav <code>.multi-step-icon</code> should use anchor tag</li>
+<li>Site: Modals remove check button from <code>.modal-header</code></li>
+<li>Site: Alerts update docs to include demos of <code>.alert-notifications-fixed</code> and <code>.alert-notifications-absolute</code></li>
+<li>Site: Buttons removed <code>.btn-xl</code> example</li>
+<li>Site: Management Bar change magic icon to filter icon</li>
+<li>Site: Stickers re-add examples of <code>.sticker-lg</code> and <code>.sticker-xl</code></li>
+<li>Site: Test Page List View Template add example with List View Template 3</li>
+<li>Site: Cards don&#x2019;t use sticker-xxl</li>
+<li>Site: Test Page List View Template update</li>
+<li>Site: Add Test Page Users and Organizations with Menubar</li>
+<li>Site: Added demo for Menubar Vertical</li>
+<li>Site: Vertical Navs to use <code>.nav-stacked</code> instead of <code>.flex-column</code></li>
+</ul>
+<h3 id="v2-0-0-alpha-11-october-16-2017"><a class="heading-anchor" href="#v2-0-0-alpha-11-october-16-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.11 October 16, 2017</h3>
 <ul>
 <li>Breaking: Update Bootstrap 4 to 99eece1</li>
 <li>Breaking: List Group removed <code>.list-group-unstyled</code> use <code>.flex-col</code> and <code>.flex-col-expand</code> instead</li>

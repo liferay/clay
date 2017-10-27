@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.11</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.0</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -224,7 +224,14 @@
 				</label>
 				<input class="form-control" id="successInput1" type="text">
 				<div class="form-feedback-item">This is a form-feedback-item.</div>
-				<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+				<div class="form-feedback-item">
+					<span class="form-feedback-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
+							<use xlink:href="../../images/icons/icons.svg#question-circle-full">
+						</svg>
+					</span>
+					This is a form-feedback-indicator.
+				</div>
 				<div class="form-text">This is form-text.</div>
 			</div>
 			<div class="form-group has-success">
@@ -236,7 +243,14 @@
 				</label>
 				<input class="form-control" id="successInput1" type="text">
 				<div class="form-feedback-item">This is a form-feedback-item.</div>
-				<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+				<div class="form-feedback-item">
+					<span class="form-feedback-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+							<use xlink:href="../../images/icons/icons.svg#check-circle-full">
+						</svg>
+					</span>
+					This is a form-feedback-indicator.
+				</div>
 				<div class="form-text">This is form-text.</div>
 			</div>
 			<div class="form-group has-warning">
@@ -248,7 +262,14 @@
 				</label>
 				<input class="form-control" id="inputWarning1" type="text">
 				<div class="form-feedback-item">This is a form-feedback-item.</div>
-				<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+				<div class="form-feedback-item">
+					<span class="form-feedback-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+							<use xlink:href="../../images/icons/icons.svg#warning-full">
+						</svg>
+					</span>
+					This is a form-feedback-indicator.
+				</div>
 				<div class="form-text">This is form-text.</div>
 			</div>
 			<div class="form-group has-error">
@@ -260,7 +281,14 @@
 				</label>
 				<input class="form-control" id="inputError1" type="text">
 				<div class="form-feedback-item">This is a form-feedback-item.</div>
-				<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+				<div class="form-feedback-item">
+					<span class="form-feedback-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+							<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+						</svg>
+					</span>
+					This is a form-feedback-indicator.
+				</div>
 				<div class="form-text">This is form-text.</div>
 			</div>
 		</div>
@@ -606,9 +634,11 @@
 						</label>
 						<input class="form-control" id="formValidationFirstName" placeholder="First Name" required type="text" value="Space">
 						<div class="invalid-feedback">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-							</svg>
+							<span class="form-feedback-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+									<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+								</svg>
+							</span>
 							Please enter first name.
 						</div>
 					</div>
@@ -621,9 +651,11 @@
 						</label>
 						<input class="form-control" id="formValidationLastName" placeholder="Last Name" required type="text" value="Program">
 						<div class="invalid-feedback">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-							</svg>
+							<span class="form-feedback-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+									<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+								</svg>
+							</span>
 							Please enter last name.
 						</div>
 					</div>
@@ -638,9 +670,11 @@
 						</label>
 						<input class="form-control" id="formValidationCity" placeholder="City" required type="text">
 						<div class="invalid-feedback">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-							</svg>
+							<span class="form-feedback-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+									<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+								</svg>
+							</span>
 							Please enter city.
 						</div>
 					</div>
@@ -653,9 +687,11 @@
 						</label>
 						<input class="form-control" id="formValidationState" placeholder="State" required type="text">
 						<div class="invalid-feedback">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-							</svg>
+							<span class="form-feedback-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+									<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+								</svg>
+							</span>
 							Please enter state.
 						</div>
 					</div>
@@ -668,9 +704,11 @@
 						</label>
 						<input class="form-control" id="formValidationZipCode" placeholder="Zip" required type="text">
 						<div class="invalid-feedback">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-							</svg>
+							<span class="form-feedback-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+									<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+								</svg>
+							</span>
 							Please enter zip code.
 						</div>
 					</div>
@@ -684,9 +722,11 @@
 					</label>
 					<input class="form-control" id="formValidationPassword" minlength="6" placeholder="Password" required type="password">
 					<div class="invalid-feedback">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-							<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-						</svg>
+						<span class="form-feedback-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+								<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+							</svg>
+						</span>
 						Use atleast 6 characters.
 					</div>
 				</div>

@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.11</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.0</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -220,6 +220,11 @@
 
 <div class="alert-notifications alert-notifications-fixed">
 	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use xlink:href="../../images/icons/icons.svg#info-circle">
+			</svg>
+		</span>
 		<strong class="lead">Meeting Rescheduled:</strong>
 		<div>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</div>
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
@@ -245,9 +250,11 @@
 	<div class="alert-container container">
 		<div class="alert-notifications alert-notifications-absolute">
 			<div class="alert alert-dismissible alert-danger" role="alert">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-					<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-				</svg>
+				<span class="alert-indicator">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+						<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+					</svg>
+				</span>
 				<strong class="lead">Danger:</strong> Something is not right.
 				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -273,51 +280,67 @@
 		</blockquote>
 
 <div class="alert alert-primary" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Primary:</strong> This is a <a href="#1" class="alert-link">primary alert</a>. <button class="alert-link btn btn-unstyled">Button as link</button>.
 </div>
 <div class="alert alert-secondary" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Secondary:</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
 </div>
 <div class="alert alert-success" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-		<use xlink:href="../../images/icons/icons.svg#check-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+			<use xlink:href="../../images/icons/icons.svg#check-circle-full">
+		</svg>
+	</span>
 	<strong class="lead">Success:</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
 </div>
 <div class="alert alert-info" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Info:</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
 </div>
 <div class="alert alert-warning" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
-		<use xlink:href="../../images/icons/icons.svg#question-circle-full">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use xlink:href="../../images/icons/icons.svg#warning-full">
+		</svg>
+	</span>
 	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
 </div>
 <div class="alert alert-danger" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-		<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+			<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+		</svg>
+	</span>
 	<strong class="lead">Danger:</strong> <a href="#1" class="alert-link">Something</a> is not right.
 </div>
 <div class="alert alert-light" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Light:</strong> This is a <a href="#1" class="alert-link">light alert</a>.
 </div>
 <div class="alert alert-dark" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
 
@@ -329,9 +352,11 @@
 		<h3 id="dismissible-alerts"><a class="heading-anchor" href="#dismissible-alerts"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dismissible Alerts</h3>
 
 <div class="alert alert-dismissible alert-primary" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Primary:</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -340,9 +365,11 @@
 	</button>
 </div>
 <div class="alert alert-dismissible alert-secondary" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Secondary:</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -351,9 +378,11 @@
 	</button>
 </div>
 <div class="alert alert-dismissible alert-success" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-		<use xlink:href="../../images/icons/icons.svg#check-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+			<use xlink:href="../../images/icons/icons.svg#check-circle-full">
+		</svg>
+	</span>
 	<strong class="lead">Success:</strong> You just read the alert message successfully.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -362,9 +391,11 @@
 	</button>
 </div>
 <div class="alert alert-dismissible alert-info" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Info:</strong> This alert needs your attention.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -373,9 +404,11 @@
 	</button>
 </div>
 <div class="alert alert-dismissible alert-warning" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
-		<use xlink:href="../../images/icons/icons.svg#question-circle-full">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use xlink:href="../../images/icons/icons.svg#warning-full">
+		</svg>
+	</span>
 	<strong class="lead">Warning:</strong> This alert is a warning message.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -384,9 +417,11 @@
 	</button>
 </div>
 <div class="alert alert-dismissible alert-danger" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-		<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+			<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+		</svg>
+	</span>
 	<strong class="lead">Danger:</strong> Something is not right.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -395,9 +430,11 @@
 	</button>
 </div>
 <div class="alert alert-dismissible alert-light" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Light:</strong> This is a <a href="#1" class="alert-link">light alert</a>.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -406,9 +443,11 @@
 	</button>
 </div>
 <div class="alert alert-dismissible alert-dark" role="alert">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-		<use xlink:href="../../images/icons/icons.svg#info-circle">
-	</svg>
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="../../images/icons/icons.svg#info-circle">
+		</svg>
+	</span>
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -430,16 +469,31 @@
 
 <div class="alert alert-fluid alert-primary" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use xlink:href="../../images/icons/icons.svg#info-circle">
+			</svg>
+		</span>
 		<strong class="lead">Primary</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
 	</div>
 </div>
 <div class="alert alert-fluid alert-secondary" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use xlink:href="../../images/icons/icons.svg#info-circle">
+			</svg>
+		</span>
 		<strong class="lead">Secondary</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
 	</div>
 </div>
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+				<use xlink:href="../../images/icons/icons.svg#check-circle-full">
+			</svg>
+		</span>
 		<strong class="lead">Success</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -450,6 +504,11 @@
 </div>
 <div class="alert alert-dismissible alert-fluid alert-info" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use xlink:href="../../images/icons/icons.svg#info-circle">
+			</svg>
+		</span>
 		<strong class="lead">Info</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -460,6 +519,11 @@
 </div>
 <div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+				<use xlink:href="../../images/icons/icons.svg#warning-full">
+			</svg>
+		</span>
 		<strong class="lead">Warning</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -470,6 +534,11 @@
 </div>
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+			</svg>
+		</span>
 		<strong class="lead">Danger</strong> <a href="#1" class="alert-link">Something</a> is not right.
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -480,11 +549,21 @@
 </div>
 <div class="alert alert-fluid alert-light" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use xlink:href="../../images/icons/icons.svg#info-circle">
+			</svg>
+		</span>
 		<strong class="lead">Light</strong> This is a <a href="#1" class="alert-link">light alert</a>.
 	</div>
 </div>
 <div class="alert alert-dark alert-fluid" role="alert">
 	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use xlink:href="../../images/icons/icons.svg#info-circle">
+			</svg>
+		</span>
 		<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 	</div>
 </div>

@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-alpha.11
+* Clay 2.0.0-beta.0
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -7930,7 +7930,22 @@ a.text-dark:focus, a.text-dark:hover {
   margin-right: 0.3125rem;
 }
 
-.alert .lexicon-icon + .lead {
+.alert-link,
+.alert-link.btn-unstyled {
+  font-weight: 700;
+}
+
+.alert-link:focus, .alert-link:hover,
+.alert-link.btn-unstyled:focus,
+.alert-link.btn-unstyled:hover {
+  text-decoration: underline;
+}
+
+.alert-indicator {
+  font-size: 1.25rem;
+}
+
+.alert-indicator + .lead {
   margin-left: 0.3125rem;
 }
 
@@ -9363,15 +9378,23 @@ fieldset[disabled] label .form-control {
   margin-left: 1rem;
 }
 
-.form-feedback-item,
-.form-feedback-indicator,
 .invalid-feedback,
 .valid-feedback {
   font-size: 0.875rem;
 }
 
-.form-feedback-indicator {
+.form-feedback-item {
   font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-feedback-indicator {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+
+.form-feedback-indicator:first-child {
+  margin-left: 0;
 }
 
 .form-text {
@@ -9416,15 +9439,6 @@ fieldset[disabled] label .form-control {
   color: #dc3545;
 }
 
-.has-error .form-feedback-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M256%200C114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256S397.4%200%20256%200zm0%20384c-17.7%200-32-14.3-32-32s14.3-32%2032-32%2032%2014.3%2032%2032-14.3%2032-32%2032zm16-96h-32l-16-160h64l-16%20160z'%20fill='%23dc3545'/%3E%3C/svg%3E");
-  background-position: left 2px center;
-  background-repeat: no-repeat;
-  background-size: 1em;
-  color: #dc3545;
-  padding-left: 1.5em;
-}
-
 .has-error select.form-control:not([multiple]):not([size]) {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23dc3545' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
 }
@@ -9446,15 +9460,6 @@ fieldset[disabled] label .form-control {
   color: #ffc107;
 }
 
-.has-warning .form-feedback-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M437%2075C388.7%2026.6%20324.4%200%20256%200S123.3%2026.6%2075%2075C26.6%20123.3%200%20187.6%200%20256s26.6%20132.7%2075%20181c48.4%2048.4%20112.6%2075%20181%2075s132.7-26.6%20181-75c48.4-48.4%2075-112.6%2075-181s-26.6-132.7-75-181zM288%20384c0%2017.7-14.3%2032-32%2032s-32-14.3-32-32V224c0-17.7%2014.3-32%2032-32s32%2014.3%2032%2032v160zm-32-224c-17.7%200-32-14.3-32-32s14.3-32%2032-32%2032%2014.3%2032%2032-14.3%2032-32%2032z'%20fill='%23ffc107'/%3E%3C/svg%3E");
-  background-position: left 2px center;
-  background-repeat: no-repeat;
-  background-size: 1em;
-  color: #ffc107;
-  padding-left: 1.5em;
-}
-
 .has-warning select.form-control:not([multiple]):not([size]) {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23ffc107' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
 }
@@ -9474,15 +9479,6 @@ fieldset[disabled] label .form-control {
 
 .has-success .form-feedback-item {
   color: #28a745;
-}
-
-.has-success .form-feedback-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M254.2%20304.9c49.9-58.2%20134-156.4%20169.5-197.8%205.9-6.8%2014.6-11.2%2024.3-11.2%2017.7%200%2032%2014.3%2032%2032%200%208-2.9%2015.2-7.7%2020.8-41.7%2048.6-150.3%20175.4-192%20224-5.9%206.8-14.6%2011.2-24.3%2011.2-8.8%200-16.8-3.6-22.6-9.4l-96-96c-5.8-5.8-9.4-13.8-9.4-22.6%200-17.7%2014.3-32%2032-32%208.8%200%2016.8%203.6%2022.6%209.4l71.6%2071.6zm253.1-97.8c-18.3%2021.4-39.5%2046.1-60.6%2070.6C435.9%20373.6%20354.7%20448%20256%20448c-106%200-192-86-192-192S150%2064%20256%2064c35.5%200%2068.7%209.6%2097.2%2026.4%2015.1-17.6%2029.5-34.4%2042.1-49.2C355.3%2015.2%20307.4%200%20256%200%20114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256c0-16.7-1.6-33-4.7-48.9z'%20fill='%2328a745'/%3E%3C/svg%3E");
-  background-position: left 2px center;
-  background-repeat: no-repeat;
-  background-size: 1em;
-  color: #28a745;
-  padding-left: 1.5em;
 }
 
 .has-success select.form-control:not([multiple]):not([size]) {
@@ -10253,13 +10249,20 @@ a.label {
 }
 
 .modal-title {
-  display: block;
   font-size: 1.25rem;
   font-weight: 500;
   flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.modal-title-indicator {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  margin-top: -0.2em;
+  vertical-align: middle;
 }
 
 .modal .btn-monospaced,
@@ -10363,14 +10366,6 @@ a.label {
   color: #155724;
 }
 
-.modal-success .modal-header .modal-title {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M484.1%20139.7c-54.4%2062.6-167%20190-203.8%20233-5.9%206.8-14.6%2011.2-24.3%2011.2-8.8%200-16.8-3.6-22.6-9.4l-96-96c-5.8-5.8-9.4-13.8-9.4-22.6%200-17.7%2014.3-32%2032-32%208.8%200%2016.8%203.6%2022.6%209.4l71.6%2071.6c47-54.8%20150.9-171.7%20192.5-219.7C399.8%2032.9%20331.8%200%20256%200%20114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256c0-41.9-10.1-81.4-27.9-116.3z'%20fill='%23155724'/%3E%3C/svg%3E");
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: 0.875rem;
-  padding-left: calc(0.875rem + 10px);
-}
-
 .modal-info .btn-monospaced,
 .modal-info .close {
   color: #0c5460;
@@ -10380,14 +10375,6 @@ a.label {
   background-color: #d1ecf1;
   border-color: #bee5eb;
   color: #0c5460;
-}
-
-.modal-info .modal-header .modal-title {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M437%2075C388.7%2026.6%20324.4%200%20256%200S123.3%2026.6%2075%2075C26.6%20123.3%200%20187.6%200%20256s26.6%20132.7%2075%20181c48.4%2048.4%20112.6%2075%20181%2075s132.7-26.6%20181-75c48.4-48.4%2075-112.6%2075-181s-26.6-132.7-75-181zM288%20384c0%2017.7-14.3%2032-32%2032s-32-14.3-32-32V224c0-17.7%2014.3-32%2032-32s32%2014.3%2032%2032v160zm-32-224c-17.7%200-32-14.3-32-32s14.3-32%2032-32%2032%2014.3%2032%2032-14.3%2032-32%2032z'%20fill='%230c5460'/%3E%3C/svg%3E");
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: 0.875rem;
-  padding-left: calc(0.875rem + 10px);
 }
 
 .modal-warning .btn-monospaced,
@@ -10401,14 +10388,6 @@ a.label {
   color: #856404;
 }
 
-.modal-warning .modal-header .modal-title {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M506.3%20409.3l-214-353.7c-16.8-30.6-55.8-32.6-72.6%200L5.7%20409.3C-8%20436.5%205%20480%2042%20480h428c36%200%2052.5-43.5%2036.3-70.7zM224%20392c0-42.5%2064-42%2064%200%200%2041.5-64%2042.5-64%200zm64-104c0%2042.5-64%2040.5-64%200V184c0-43%2064-43.5%2064%200v104z'%20fill='%23856404'/%3E%3C/svg%3E");
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: 0.875rem;
-  padding-left: calc(0.875rem + 10px);
-}
-
 .modal-danger .btn-monospaced,
 .modal-danger .close {
   color: #721c24;
@@ -10418,14 +10397,6 @@ a.label {
   background-color: #f8d7da;
   border-color: #f5c6cb;
   color: #721c24;
-}
-
-.modal-danger .modal-header .modal-title {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M256%200C114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256S397.4%200%20256%200zm0%20384c-17.7%200-32-14.3-32-32s14.3-32%2032-32%2032%2014.3%2032%2032-14.3%2032-32%2032zm16-96h-32l-16-160h64l-16%20160z'%20fill='%23721c24'/%3E%3C/svg%3E");
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: 0.875rem;
-  padding-left: calc(0.875rem + 10px);
 }
 
 .multi-step-nav {
@@ -10488,6 +10459,10 @@ a.label {
   color: #fff;
 }
 
+.multi-step-item.complete .dropdown .multi-step-icon, .multi-step-item.complete .dropdown .multi-step-icon:active {
+  background-image: none;
+}
+
 .multi-step-item.complete .multi-step-icon {
   background-color: #868e96;
   color: #FFF;
@@ -10535,14 +10510,12 @@ a.label {
   width: 2rem;
 }
 
+.multi-step-indicator .dropdown-item-indicator {
+  display: none;
+}
+
 .multi-step-indicator .complete .dropdown-item-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M502.091%2060.993c-9.909-9.91-25.962-9.91-35.843%200L129.26%20397.981%2045.752%20314.53c-9.881-9.909-25.962-9.909-35.843%200-9.909%209.909-9.909%2025.962%200%2035.843l98.257%2098.257c2.608%202.608%205.679%204.433%208.924%205.679%204.028%202.464%208.403%204.115%2012.952%204.115%206.49%200%2012.981-2.464%2017.936-7.418L502.09%2096.865c9.909-9.909%209.909-25.962%200-35.871v-.001z'%20fill='%23fff'/%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
   display: block;
-  height: 1.5em;
-  width: 0.875rem;
 }
 
 .multi-step-indicator .multi-step-indicator-label {
@@ -10937,16 +10910,11 @@ a.multi-step-icon:focus, a.multi-step-icon:hover {
 }
 
 .dropdown-item[data-toggle="tab"] .dropdown-item-indicator {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  display: block;
-  height: 1.5em;
-  width: 0.875em;
+  display: none;
 }
 
 .dropdown-item[data-toggle="tab"].active .dropdown-item-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M502.091%2060.993c-9.909-9.91-25.962-9.91-35.843%200L129.26%20397.981%2045.752%20314.53c-9.881-9.909-25.962-9.909-35.843%200-9.909%209.909-9.909%2025.962%200%2035.843l98.257%2098.257c2.608%202.608%205.679%204.433%208.924%205.679%204.028%202.464%208.403%204.115%2012.952%204.115%206.49%200%2012.981-2.464%2017.936-7.418L502.09%2096.865c9.909-9.909%209.909-25.962%200-35.871v-.001z'%20fill='%23fff'/%3E%3C/svg%3E");
+  display: block;
 }
 
 .nav-underline .nav-link {
