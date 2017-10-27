@@ -1,4 +1,4 @@
-### v2.0.0-beta.0 October 25, 2017
+### v2.0.0-beta.0 October 27, 2017
 
 * Breaking: Form Validation removed option to customize `$form-feedback-success-indicator-icon-color`, `$form-feedback-success-indicator-icon`, `$form-feedback-warning-indicator-icon-color`, `$form-feedback-warning-indicator-icon`, `$form-feedback-danger-indicator-icon-color`, `$form-feedback-danger-indicator-icon`, use mixin `clay-indicator-bg` to use background-images on `.form-feedback-indicator`
 * Breaking: Form Validation reimplement `.form-feedback-indicator` to only be for icons
@@ -95,6 +95,7 @@
 * Update: Global Functions `breakpoint-prev()` should work with xs
 * Update: Atlas $nav-nested-spacer-x to be larger
 * Update: Nav `.nav-stacked` use `display: block` instead of `flex-direction: column` messes up rendering when used with collapse plugin
+* Misc: Don't run maven-publish task for now
 * Misc: Update svg build task to look in the right directory
 * Site: Form Validation use updated `.form-feedback-indicator` markup
 * Site: Alerts and User and Org Form Vertical Navigation pages to use `.alert-indicator` in alerts
