@@ -45,17 +45,6 @@ $btn-success: map-merge((), $btn-success);
 $btn-info: () !default;
 $btn-info: map-merge((), $btn-info);
 
-$btn-info-bg: null !default;
-$btn-info-border-color: null !default;
-$btn-info-color: null !default;
-$btn-info-hover-color: null !default;
-$btn-info-hover-bg: null !default;
-$btn-info-hover-border-color: null !default;
-$btn-info-focus-box-shadow: null !default;
-$btn-info-active-color: null !default;
-$btn-info-active-bg: null !default;
-$btn-info-active-border-color: null !default;
-
 $btn-warning: () !default;
 $btn-warning: map-merge((), $btn-warning);
 

@@ -59,17 +59,6 @@ $btn-info: (
 	active-bg: darken(map-get($theme-colors, info), 8%)
 ) !default;
 
-$btn-info-color: #FFF !default;
-$btn-info-bg: map-get($theme-colors, info) !default;
-$btn-info-border-color: $btn-info-bg !default;
-$btn-info-hover-color: $btn-info-color !default;
-$btn-info-hover-bg: darken($btn-info-bg, 8%) !default;
-$btn-info-hover-border-color: $btn-info-hover-bg !default;
-$btn-info-focus-box-shadow: 0 0 0 2px rgba($btn-info-hover-border-color, 0.5) !default;
-$btn-info-active-color: $btn-info-color !default;
-$btn-info-active-bg: darken($btn-info-hover-bg, 12%) !default;
-$btn-info-active-border-color: $btn-info-active-bg !default;
-
 $btn-warning: (
 	hover-bg: darken(map-get($theme-colors, warning), 4%),
 	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, warning), 4%), 0.5),
