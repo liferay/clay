@@ -71,17 +71,6 @@ $btn-danger: (
 	active-bg: darken(map-get($theme-colors, danger), 8%)
 ) !default;
 
-$btn-danger-color: #FFF !default;
-$btn-danger-bg: map-get($theme-colors, danger) !default;
-$btn-danger-border-color: $btn-danger-bg !default;
-$btn-danger-hover-color: $btn-danger-color !default;
-$btn-danger-hover-bg: darken($btn-danger-bg, 8%) !default;
-$btn-danger-hover-border-color: $btn-danger-hover-bg !default;
-$btn-danger-focus-box-shadow: 0 0 0 2px rgba($btn-danger-hover-border-color, 0.5) !default;
-$btn-danger-active-color: $btn-danger-color !default;
-$btn-danger-active-bg: darken($btn-danger-hover-bg, 12%) !default;
-$btn-danger-active-border-color: $btn-danger-active-bg !default;
-
 $btn-light: (
 	color: $body-color,
 	hover-bg: darken(map-get($theme-colors, light), 4%),
