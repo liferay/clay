@@ -54,17 +54,6 @@ $btn-danger: map-merge((), $btn-danger);
 $btn-light: () !default;
 $btn-light: map-merge((), $btn-light);
 
-$btn-light-bg: null !default;
-$btn-light-border-color: null !default;
-$btn-light-color: null !default;
-$btn-light-hover-color: null !default;
-$btn-light-hover-bg: null !default;
-$btn-light-hover-border-color: null !default;
-$btn-light-focus-box-shadow: null !default;
-$btn-light-active-color: null !default;
-$btn-light-active-bg: null !default;
-$btn-light-active-border-color: null !default;
-
 $btn-dark: () !default;
 $btn-dark: map-merge((), $btn-dark);
 
