@@ -63,12 +63,12 @@ label {
 
 	height: $input-height;
 
-	@if not ($input-padding-y == $input-btn-padding-y) {
+	@if not ($input-padding-y == $btn-padding-y) {
 		padding-bottom: $input-padding-y;
 		padding-top: $input-padding-y;
 	}
 
-	@if not ($input-padding-x == $input-btn-padding-x) {
+	@if not ($input-padding-x == $btn-padding-x) {
 		padding-left: $input-padding-x;
 		padding-right: $input-padding-x;
 	}
@@ -199,12 +199,12 @@ fieldset[disabled] label {
 
 	height: $input-height-lg;
 
-	@if not ($input-padding-y-lg == $input-btn-padding-y-lg) {
+	@if not ($input-padding-y-lg == $btn-padding-y-lg) {
 		padding-bottom: $input-padding-y-lg;
 		padding-top: $input-padding-y-lg;
 	}
 
-	@if not ($input-padding-x-lg == $input-btn-padding-x-lg) {
+	@if not ($input-padding-x-lg == $btn-padding-x-lg) {
 		padding-left: $input-padding-x-lg;
 		padding-right: $input-padding-x-lg;
 	}
@@ -221,12 +221,12 @@ fieldset[disabled] label {
 
 	height: $input-height-sm;
 
-	@if not ($input-padding-y-sm == $input-btn-padding-y-sm) {
+	@if not ($input-padding-y-sm == $btn-padding-y-sm) {
 		padding-bottom: $input-padding-y-sm;
 		padding-top: $input-padding-y-sm;
 	}
 
-	@if not ($input-padding-x-sm == $input-btn-padding-x-sm) {
+	@if not ($input-padding-x-sm == $btn-padding-x-sm) {
 		padding-left: $input-padding-x-sm;
 		padding-right: $input-padding-x-sm;
 	}

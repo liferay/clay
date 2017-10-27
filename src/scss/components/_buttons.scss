@@ -3,10 +3,10 @@
 
 	@include clay-scale-component {
 		font-size: $btn-font-size-mobile;
-		padding-bottom: $input-btn-padding-y-mobile;
-		padding-left: $input-btn-padding-x-mobile;
-		padding-right: $input-btn-padding-x-mobile;
-		padding-top: $input-btn-padding-y-mobile;
+		padding-bottom: $btn-padding-y-mobile;
+		padding-left: $btn-padding-x-mobile;
+		padding-right: $btn-padding-x-mobile;
+		padding-top: $btn-padding-y-mobile;
 	}
 }
 
@@ -15,10 +15,10 @@
 
 	@include clay-scale-component {
 		font-size: $btn-font-size-lg-mobile;
-		padding-bottom: $input-btn-padding-y-lg-mobile;
-		padding-left: $input-btn-padding-x-lg-mobile;
-		padding-right: $input-btn-padding-x-lg-mobile;
-		padding-top: $input-btn-padding-y-lg-mobile;
+		padding-bottom: $btn-padding-y-lg-mobile;
+		padding-left: $btn-padding-x-lg-mobile;
+		padding-right: $btn-padding-x-lg-mobile;
+		padding-top: $btn-padding-y-lg-mobile;
 	}
 }
 
@@ -27,10 +27,10 @@
 
 	@include clay-scale-component {
 		font-size: $btn-font-size-sm-mobile;
-		padding-bottom: $input-btn-padding-y-sm-mobile;
-		padding-left: $input-btn-padding-x-sm-mobile;
-		padding-right: $input-btn-padding-x-sm-mobile;
-		padding-top: $input-btn-padding-y-sm-mobile;
+		padding-bottom: $btn-padding-y-sm-mobile;
+		padding-left: $btn-padding-x-sm-mobile;
+		padding-right: $btn-padding-x-sm-mobile;
+		padding-top: $btn-padding-y-sm-mobile;
 	}
 }
 
@@ -46,7 +46,7 @@ fieldset[disabled] .btn {
 	@include border-radius(1px);
 
 	&:focus {
-		box-shadow: $input-btn-focus-box-shadow;
+		box-shadow: $btn-focus-box-shadow;
 		text-decoration: $link-decoration;
 	}
 
