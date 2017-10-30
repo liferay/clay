@@ -222,36 +222,44 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
       <div class="dropdown-subheader">Group 1</div>
       <div aria-label="Group 1" role="radiogroup">
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 1</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 1</span>
+            </label>
+          </div>
         </div>
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 2</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 2</span>
+            </label>
+          </div>
         </div>
       </div>
       <div class="dropdown-divider"></div>
       <div class="dropdown-subheader">Group 2</div>
       <div aria-label="Group 2" role="radiogroup">
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item2radio" value="4" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 4</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item2radio" value="4" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 4</span>
+            </label>
+          </div>
         </div>
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item2radio" value="5" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item2radio" value="5" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 5</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -267,36 +275,44 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
       <div class="dropdown-subheader">Group 1</div>
       <div aria-label="Group 1" role="radiogroup">
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 1</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 1</span>
+            </label>
+          </div>
         </div>
         <div class="dropdown-item active">
-          <label class="custom-control custom-radio">
-            <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 2</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 2</span>
+            </label>
+          </div>
         </div>
       </div>
       <div class="dropdown-divider"></div>
       <div class="dropdown-subheader">Group 2</div>
       <div aria-label="Group 2" role="radiogroup">
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item2radio" value="4" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 4</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item2radio" value="4" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 4</span>
+            </label>
+          </div>
         </div>
         <div class="dropdown-item active">
-          <label class="custom-control custom-radio">
-            <input checked="" class="custom-control-input" name="item2radio" value="5" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input checked="" class="custom-control-input" name="item2radio" value="5" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 5</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -312,36 +328,44 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
       <div class="dropdown-subheader">Group 1</div>
       <div aria-label="Group 1" role="radiogroup">
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 1</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 1</span>
+            </label>
+          </div>
         </div>
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input disabled="" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 3</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input disabled="" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 3</span>
+            </label>
+          </div>
         </div>
       </div>
       <div class="dropdown-divider"></div>
       <div class="dropdown-subheader">Group 2</div>
       <div aria-label="Group 2" role="radiogroup">
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input class="custom-control-input" name="item2radio" value="4" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 4</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item2radio" value="4" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 4</span>
+            </label>
+          </div>
         </div>
         <div class="dropdown-item">
-          <label class="custom-control custom-radio">
-            <input disabled="" class="custom-control-input" name="item2radio" value="6" ref="input" type="radio" role="radio">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 6</span>
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input disabled="" class="custom-control-input" name="item2radio" value="6" ref="input" type="radio" role="radio">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Item 6</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
