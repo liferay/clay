@@ -36,27 +36,24 @@
 		role="alert"
 	{/let}
 
+	{let $content kind="html"}
+		{call .content}
+			{param _handleCloseClick: $_handleCloseClick /}
+			{param closeable: $closeable /}
+			{param message: $message /}
+			{param spritemap: $spritemap /}
+			{param style: $style /}
+			{param title: $title /}
+		{/call}
+	{/let}
+
 	<div {$attributes}>
 		{if $type == 'fluid'}
 			<div class="container">
-				{call .content}
-					{param _handleCloseClick: $_handleCloseClick /}
-					{param closeable: $closeable /}
-					{param message: $message /}
-					{param spritemap: $spritemap /}
-					{param style: $style /}
-					{param title: $title /}
-				{/call}
+				{$content}
 			</div>
 		{else}
-			{call .content}
-				{param _handleCloseClick: $_handleCloseClick /}
-				{param closeable: $closeable /}
-				{param message: $message /}
-				{param spritemap: $spritemap /}
-				{param style: $style /}
-				{param title: $title /}
-			{/call}
+			{$content}
 		{/if}
 	</div>
 {/template}
