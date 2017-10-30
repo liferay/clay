@@ -48,6 +48,20 @@ label {
 	}
 }
 
+.form-container {
+	background-color: $form-container-bg;
+	border-color: $form-container-border-color;
+	border-style: $form-container-border-style;
+	border-width: $form-container-border-width;
+
+	@include border-radius($form-container-border-radius);
+
+	padding-bottom: $form-container-padding-y;
+	padding-left:  $form-container-padding-x;
+	padding-right:  $form-container-padding-x;
+	padding-top: $form-container-padding-y;
+}
+
 .form-group {
 	position: relative;
 }
