@@ -11,7 +11,7 @@ weight: 100
 
 > Multi Step Progress Bar replacement for Clay V2.
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<ol class="multi-step-nav">
 		<li class="complete multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
@@ -89,7 +89,7 @@ weight: 100
 </ol>
 ```
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<ol class="multi-step-nav multi-step-indicator-label-top">
 		<li class="complete multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
@@ -285,7 +285,7 @@ weight: 100
 </ol>
 ```
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<ol class="multi-step-nav multi-step-indicator-label-bottom">
 		<li class="complete multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
@@ -400,7 +400,7 @@ weight: 100
 
 ### Multi Step Nav Fixed Width Items
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<ol class="multi-step-nav multi-step-indicator-label-bottom multi-step-item-fixed-width">
 		<li class="complete multi-step-item multi-step-item-expand">
 			<div class="multi-step-title">Ticket Buyer Information</div>
@@ -509,7 +509,7 @@ weight: 100
 
 ### Multi Step Nav Collapse (sm, md, lg, xl)
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top">
 		<li class="complete multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
@@ -639,7 +639,7 @@ weight: 100
 </ol>
 ```
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-bottom">
 		<li class="complete multi-step-item multi-step-item-expand">
 			<div class="multi-step-title">Ticket Buyer Information</div>

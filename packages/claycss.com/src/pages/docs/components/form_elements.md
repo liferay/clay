@@ -11,7 +11,7 @@ weight: 100
 
 > Add class `focus` on the label to change the color of the label.
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label>
 			Default text input{sp}
@@ -62,7 +62,7 @@ weight: 100
 
 ### Checkboxes
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-check">
 		<label class="form-check-label">
 			<input class="form-check-input" type="checkbox" value="">
@@ -175,7 +175,7 @@ weight: 100
 
 ### Radio
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-check">
 		<label class="form-check-label">
 			<input class="form-check-input" type="radio" value="">
@@ -283,7 +283,7 @@ weight: 100
 
 ### Select Element
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label for="regularSelectElement">Regular Select Element</label>
 		<select class="form-control" id="regularSelectElement">
@@ -385,7 +385,7 @@ weight: 100
 
 ### File Upload
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<label class="sr-only" for="inputFile">FILE UPLOAD</label>
 	<input id="inputFile" type="file">
 </div>
@@ -404,7 +404,7 @@ weight: 100
 
 > Add class `disabled` on the label to match the opacity to disabled input.
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label class="disabled" for="disabledTextInput">Text Input</label>
 		<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
@@ -529,7 +529,7 @@ weight: 100
 
 ### Disabled Fieldset
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<form>
 		<fieldset disabled>
 			<div class="form-group">
@@ -590,7 +590,7 @@ weight: 100
 
 ### Read Only States
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label for="readonlyTextInput">Text Input (Read Only)</label>
 		<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
@@ -616,7 +616,7 @@ weight: 100
 
 ### Form Element Sizes
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label for="smallTextInput">Small text input</label>
 		<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
@@ -649,7 +649,7 @@ weight: 100
 
 ### Form Group
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label for="firstNameInput">First Name</label>
 		<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
@@ -694,7 +694,7 @@ weight: 100
 
 ### Form Inline
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-inline">
 		<label for="formInlineInput">Form Inline</label>
 		<input class="form-control" id="formInlineInput" type="text">
@@ -719,7 +719,7 @@ weight: 100
 
 > Equally spaced form inputs. To set a fixed width use `flex-grow: 0; flex-basis: 200px;` on `.form-inline-group` or any direct descendant of `.form-inline-autofit`.
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group form-inline form-inline-autofit">
 		<div class="form-inline-group">
 			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
@@ -811,7 +811,7 @@ weight: 100
 {/literal}
 </style>
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<form class="my-custom-form">
 		<div class="form-group form-inline form-inline-autofit">
 			<label>Name</label>

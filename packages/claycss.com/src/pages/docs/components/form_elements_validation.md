@@ -9,7 +9,7 @@ weight: 100
 
 ### Input Validation States (Non HTML5)
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label for="inputSuccess1">
 			normal{sp}
@@ -82,7 +82,7 @@ weight: 100
 
 ### Custom Checkbox and Radio Validation States
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="row">
 		<div class="col-md-6">
 			<div class="has-success">
@@ -194,7 +194,7 @@ weight: 100
 
 ### Select Element Validation States
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="has-success">
 		<div class="form-group">
 			<label for="selectElementSuccess">
@@ -271,7 +271,7 @@ weight: 100
 
 ### Multiple Select Element Validation States
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="has-success">
 		<div class="form-group">
 			<label for="multipleSelectElementSuccess">
@@ -348,7 +348,7 @@ weight: 100
 
 ### Readonly Validation States
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="has-success">
 		<div class="form-group">
 			<label for="readonlySuccess">Text Input (Read Only) with Success</label>

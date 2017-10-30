@@ -15,7 +15,7 @@ weight: 100
 	Form File needs custom javascript to change the input value to the file selected.
 </div>
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<label for="customFile1">Attach File</label>
 		<div class="input-group">
@@ -120,7 +120,7 @@ weight: 100
 
 ### Custom Checkbox
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="form-group">
 		<div class="custom-control custom-checkbox">
 			<label>
@@ -258,7 +258,7 @@ weight: 100
 
 ### Custom Radio
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="custom-control custom-radio">
 		<label>
 			<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
@@ -314,7 +314,7 @@ weight: 100
 
 ### Custom Controls Inline
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<div class="custom-control custom-control-inline custom-radio">
 		<label>
 			<input class="custom-control-input" disabled id="radioStacked3" name="radio-stacked" type="radio">
@@ -373,7 +373,7 @@ weight: 100
 	It's recommended to use <code>select.form-control</code> instead. This is only here for documentation purposes.
 </div>
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<select class="custom-select">
 		<option selected="">Open this select menu</option>
 		<option value="1">One</option>
@@ -403,7 +403,7 @@ weight: 100
 	To get <code>custom-file-control</code> styles to display, you'll need to add <code>lang="en"</code> to the html element or set the Content-Language HTTP header.
 </div>
 
-<div class="clay-site-form-container">
+<div class="form-container">
 	<label class="custom-file">
 		<input class="custom-file-input" type="file">
 		<span class="custom-file-control"></span>
