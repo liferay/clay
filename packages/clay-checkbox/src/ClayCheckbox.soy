@@ -15,58 +15,12 @@
 	{@param? name: string}
 	{@param? value: string}
 
-	{if $inline}
-		{call .input}
-			{param checked: $indeterminate or $checked /}
-			{param disabled: $disabled /}
-			{param elementClasses: $elementClasses /}
-			{param hideLabel: $hideLabel /}
-			{param id: $id /}
-			{param label: $label /}
-			{param name: $name /}
-			{param value: $value /}
-		{/call}
-	{else}
-		{let $wrapperAttributes kind="attributes"}
-			class="form-check
-				{if $elementClasses}
-					{sp}{$elementClasses}
-				{/if}
-			"
-
-			{if $id}
-				id="{$id}"
-			{/if}
-		{/let}
-
-		<div {$wrapperAttributes}>
-			{call .input}
-				{param checked: $indeterminate or $checked /}
-				{param disabled: $disabled /}
-				{param hideLabel: $hideLabel /}
-				{param label: $label /}
-				{param name: $name /}
-				{param value: $value /}
-			{/call}
-		</div>
-	{/if}
-{/template}
-
-/**
- * This renders the checkbox input
- **/
-{template .input}
-	{@param label: html | string}
-	{@param? checked: bool}
-	{@param? disabled: bool}
-	{@param? elementClasses: string}
-	{@param? hideLabel: bool}
-	{@param? id: string}
-	{@param? name: string}
-	{@param? value: string}
-
-	{let $labelAttributes kind="attributes"}
+	{let $attributes kind="attributes"}
 		class="custom-control custom-checkbox
+			{if $inline}
+				{sp}custom-control-inline
+			{/if}
+
 			{if $elementClasses}
 				{sp}{$elementClasses}
 			{/if}
@@ -77,7 +31,30 @@
 		{/if}
 	{/let}
 
-	<label {$labelAttributes}>
+	<div {$attributes}>
+		{call .input}
+			{param checked: $indeterminate or $checked /}
+			{param disabled: $disabled /}
+			{param hideLabel: $hideLabel /}
+			{param label: $label /}
+			{param name: $name /}
+			{param value: $value /}
+		{/call}
+	</div>
+{/template}
+
+/**
+ * This renders the checkbox input
+ **/
+{template .input}
+	{@param label: html | string}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? hideLabel: bool}
+	{@param? name: string}
+	{@param? value: string}
+
+	<label>
 		{let $inputAttributes kind="attributes"}
 			{if $checked}
 				checked="checked"
