@@ -28,6 +28,7 @@ class ClayModal extends Component {
   attached() {
     this.addListener('click', this._handleDocumentClick.bind(this), true);
     this.addListener('hide', this._defaultHideModal, true);
+    this.addListener('show', this._defaultShowModal, true);
     this.addListener('touchend', this._handleDocumentClick.bind(this), true);
     this.addListener('transitionend', this._handleTransitionEnd, true);
   }
@@ -77,6 +78,20 @@ class ClayModal extends Component {
     this._isTransitioning = true;
 
     this._eventHandler.removeAllListeners();
+  }
+
+  /**
+   * Open modal and add transition.
+   * @private
+   */
+  _defaultShowModal() {
+    dom.addClasses(document.body, 'modal-open');
+
+    this._isTransitioning = true;
+
+    this._eventHandler.add(
+      dom.on(document, 'keyup', this._handleKeyup.bind(this))
+    );
   }
 
   /**
@@ -154,17 +169,11 @@ class ClayModal extends Component {
   }
 
   /**
-   * Open modal and add transition.
+   * Emit open modal.
    * @public
    */
   show() {
-    dom.addClasses(document.body, 'modal-open');
-
-    this._isTransitioning = true;
-
-    this._eventHandler.add(
-      dom.on(document, 'keyup', this._handleKeyup.bind(this))
-    );
+    this.emit('show');
   }
 }
 
