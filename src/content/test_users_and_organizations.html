@@ -100,57 +100,55 @@ section: Visual Tests
 	<div class="row">
 		<div class="col-md-12">
 			<form style="max-width:800px;margin-left:auto;margin-right:auto;">
-				<div class="card">
-					<div class="card-body">
-						<div class="alert alert-dismissible alert-info" role="alert">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+				<div class="form-container">
+					<div class="alert alert-dismissible alert-info" role="alert">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+						</svg>
+						<strong class="lead">Info:</strong> Street 1 and city are required fields. Postal Code could be required in some countries.
+						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 							</svg>
-							<strong class="lead">Info:</strong> Street 1 and city are required fields. Postal Code could be required in some countries.
-							<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-								</svg>
-							</button>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>
-										Street 1
-										<span class="reference-mark">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
-											</svg>
-										</span>
-									</label>
-									<input class="form-control" placeholder="Street 1" type="text" value="Paseo de la castellana, 280">
-								</div>
-								<div class="form-group">
-									<label>
-										Street 2
-									</label>
-									<input class="form-control" placeholder="Street 2" type="text">
-								</div>
+						</button>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>
+									Street 1
+									<span class="reference-mark">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
+										</svg>
+									</span>
+								</label>
+								<input class="form-control" placeholder="Street 1" type="text" value="Paseo de la castellana, 280">
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>
-										Postal Code
-									</label>
-									<input class="form-control" placeholder="Postal Code" type="text" value="28046">
-								</div>
-								<div class="form-group">
-									<label>
-										City
-										<span class="reference-mark">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
-											</svg>
-										</span>
-									</label>
-									<input class="form-control" placeholder="City" type="text" value="Madrid">
-								</div>
+							<div class="form-group">
+								<label>
+									Street 2
+								</label>
+								<input class="form-control" placeholder="Street 2" type="text">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>
+									Postal Code
+								</label>
+								<input class="form-control" placeholder="Postal Code" type="text" value="28046">
+							</div>
+							<div class="form-group">
+								<label>
+									City
+									<span class="reference-mark">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
+										</svg>
+									</span>
+								</label>
+								<input class="form-control" placeholder="City" type="text" value="Madrid">
 							</div>
 						</div>
 					</div>
