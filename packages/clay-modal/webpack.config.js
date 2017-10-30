@@ -12,16 +12,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             compact: false,
-            presets: [
-              [
-                'babel-preset-env',
-                {
-                  targets: {
-                    browsers: ['last 2 versions'],
-                  },
-                },
-              ],
-            ],
+            presets: ['babel-preset-env'],
             plugins: ['babel-plugin-transform-node-env-inline'],
           },
         },
