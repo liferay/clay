@@ -37,43 +37,79 @@
 	{/let}
 
 	<div {$attributes}>
-		{if $closeable}
-			{call ClayButton.render}
-				{param ariaLabel: 'Close' /}
-				{param elementClasses: 'close' /}
-				{param events: [ 'click': $_handleCloseClick ] /}
-				{param icon: [
-					'alignment': 'right',
-					'spritemap': $spritemap,
-					'symbol': 'times'
-					] /}
-				{param style: 'unstyled' /}
-				{param type: 'button' /}
+		{if $type == 'fluid'}
+			<div class="container">
+				{call .content}
+					{param _handleCloseClick: $_handleCloseClick /}
+					{param closeable: $closeable /}
+					{param message: $message /}
+					{param spritemap: $spritemap /}
+					{param style: $style /}
+					{param title: $title /}
+				{/call}
+			</div>
+		{else}
+			{call .content}
+				{param _handleCloseClick: $_handleCloseClick /}
+				{param closeable: $closeable /}
+				{param message: $message /}
+				{param spritemap: $spritemap /}
+				{param style: $style /}
+				{param title: $title /}
 			{/call}
 		{/if}
+	</div>
+{/template}
 
-		{let $icon kind="text"}
-			{switch $style}
-				{case 'danger'}
-					exclamation-full
-				{case 'success'}
-					check-circle
-				{case 'warning'}
-					question-circle-full
-				{default}
-					info-circle
-			{/switch}
-		{/let}
+/**
+ * Render an alert content.
+ */
+{template .content}
+	{@param message: html|string}
+	{@param spritemap: string}
+	{@param title: string}
+	{@param? _handleCloseClick: any}
+	{@param? closeable: bool}
+	{@param? style: string}
 
+	{if $closeable}
+		{call ClayButton.render}
+			{param ariaLabel: 'Close' /}
+			{param elementClasses: 'close' /}
+			{param events: [ 'click': $_handleCloseClick ] /}
+			{param icon: [
+				'alignment': 'right',
+				'spritemap': $spritemap,
+				'symbol': 'times'
+				] /}
+			{param style: 'unstyled' /}
+			{param type: 'button' /}
+		{/call}
+	{/if}
+
+	{let $icon kind="text"}
+		{switch $style}
+			{case 'danger'}
+				exclamation-full
+			{case 'success'}
+				check-circle-full
+			{case 'warning'}
+				warning-full
+			{default}
+				info-circle
+		{/switch}
+	{/let}
+
+	<span class="alert-indicator">
 		{call ClayIcon.render}
 			{param spritemap: $spritemap /}
 			{param symbol: $icon /}
 		{/call}
+	</span>
 
-		<strong class="lead">
-			{$title}
-		</strong>
+	<strong class="lead">
+		{$title}
+	</strong>
 
-		{$message}
-	</div>
+	{$message}
 {/template}
