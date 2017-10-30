@@ -83,7 +83,7 @@ weight: 100
 
 <ol class="breadcrumb">
 	<li class="breadcrumb-item dropdown">
-		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
+		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb2Dropdown1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
 				<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
 			</svg>
@@ -92,21 +92,6 @@ weight: 100
 			</svg>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
-			<a class="dropdown-item" href="#1">Home</a>
-			<a class="dropdown-item" href="#1">Components</a>
-			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-		</div>
-	</li>
-	<li class="breadcrumb-item dropdown">
-		<button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb2Dropdown2" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
-			</svg>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
-			</svg>
-		</button>
-		<div aria-labelledby="breadcrumb2Dropdown2" class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Home</a>
 			<a class="dropdown-item" href="#1">Components</a>
 			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
@@ -139,107 +124,6 @@ weight: 100
 			</svg>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
-			<a class="dropdown-item" href="#1">Home</a>
-			<a class="dropdown-item" href="#1">Components</a>
-			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-		</div>
-	</li>
-	<li class="breadcrumb-item dropdown">
-		<button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb2Dropdown2" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
-			</svg>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
-			</svg>
-		</button>
-		<div aria-labelledby="breadcrumb2Dropdown2" class="dropdown-menu">
-			<a class="dropdown-item" href="#1">Home</a>
-			<a class="dropdown-item" href="#1">Components</a>
-			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-		</div>
-	</li>
-	<li class="breadcrumb-item">
-		<a class="breadcrumb-link" href="#1" title="Page">
-			<span class="breadcrumb-text-truncate">Page</span>
-		</a>
-	</li>
-	<li class="breadcrumb-item">
-		<a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-			<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-		</a>
-	</li>
-	<li class="active breadcrumb-item">
-		<span class="breadcrumb-text-truncate" title="Active">Active</span>
-	</li>
-</ol>
-```
-
-<ol class="breadcrumb">
-	<li class="breadcrumb-item dropdown">
-		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb3Dropdown1" role="button" title="Dropdown">
-			<span class="breadcrumb-text-truncate">Dropdown</span>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
-			</svg>
-		</a>
-		<div aria-labelledby="breadcrumb3Dropdown1" class="dropdown-menu">
-			<a class="dropdown-item" href="#1">Home</a>
-			<a class="dropdown-item" href="#1">Components</a>
-			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-		</div>
-	</li>
-	<li class="breadcrumb-item dropdown">
-		<button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb3Dropdown2" title="Dropdown" type="button">
-			<span class="breadcrumb-text-truncate">Dropdown</span>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
-			</svg>
-		</button>
-		<div aria-labelledby="breadcrumb3Dropdown2" class="dropdown-menu">
-			<a class="dropdown-item" href="#1">Home</a>
-			<a class="dropdown-item" href="#1">Components</a>
-			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-		</div>
-	</li>
-	<li class="breadcrumb-item">
-		<a class="breadcrumb-link" href="#1" title="Page">
-			<span class="breadcrumb-text-truncate">Page</span>
-		</a>
-	</li>
-	<li class="breadcrumb-item">
-		<a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-			<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-		</a>
-	</li>
-	<li class="active breadcrumb-item">
-		<span class="breadcrumb-text-truncate" title="Active">Active</span>
-	</li>
-</ol>
-
-```text/html
-<ol class="breadcrumb">
-	<li class="breadcrumb-item dropdown">
-		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb3Dropdown1" role="button" title="Dropdown">
-			<span class="breadcrumb-text-truncate">Dropdown</span>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
-			</svg>
-		</a>
-		<div aria-labelledby="breadcrumb3Dropdown1" class="dropdown-menu">
-			<a class="dropdown-item" href="#1">Home</a>
-			<a class="dropdown-item" href="#1">Components</a>
-			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-		</div>
-	</li>
-	<li class="breadcrumb-item dropdown">
-		<button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb3Dropdown2" title="Dropdown" type="button">
-			<span class="breadcrumb-text-truncate">Dropdown</span>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
-			</svg>
-		</button>
-		<div aria-labelledby="breadcrumb3Dropdown2" class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Home</a>
 			<a class="dropdown-item" href="#1">Components</a>
 			<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
