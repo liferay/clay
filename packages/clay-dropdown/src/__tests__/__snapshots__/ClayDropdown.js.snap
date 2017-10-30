@@ -22,25 +22,31 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
         <a class="dropdown-item disabled" href="javascript:;">Item 4</a>
       </li>
       <li class="dropdown-item">
-        <label class="custom-control custom-checkbox">
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Item 5</span>
-        </label>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <label>
+            <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 5</span>
+          </label>
+        </div>
       </li>
       <li class="dropdown-item active">
-        <label class="custom-control custom-checkbox">
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Item 7</span>
-        </label>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <label>
+            <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 7</span>
+          </label>
+        </div>
       </li>
       <li class="dropdown-item">
-        <label class="custom-control custom-checkbox">
-          <input disabled="" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Item 7</span>
-        </label>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <label>
+            <input disabled="" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 7</span>
+          </label>
+        </div>
       </li>
       <div class="dropdown-subheader">Radio Group</div>
       <div aria-label="Radio Group" role="radiogroup">

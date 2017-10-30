@@ -112,18 +112,22 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox 1
   <form>
     <div class="dropdown-menu">
       <div class="dropdown-item">
-        <label class="custom-control custom-checkbox">
-          <input class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Item 1</span>
-        </label>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <label>
+            <input class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 1</span>
+          </label>
+        </div>
       </div>
       <div class="dropdown-item">
-        <label class="custom-control custom-checkbox">
-          <input class="custom-control-input" name="checkbox2name" value="checkbox2value" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Item 2</span>
-        </label>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <label>
+            <input class="custom-control-input" name="checkbox2name" value="checkbox2value" ref="input" type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 2</span>
+          </label>
+        </div>
       </div>
     </div>
   </form>
@@ -136,11 +140,13 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
   <form>
     <div class="dropdown-menu">
       <div class="dropdown-item active">
-        <label class="custom-control custom-checkbox">
-          <input checked="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Item 1</span>
-        </label>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <label>
+            <input checked="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 1</span>
+          </label>
+        </div>
       </div>
     </div>
   </form>
@@ -153,11 +159,13 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
   <form>
     <div class="dropdown-menu">
       <div class="dropdown-item">
-        <label class="custom-control custom-checkbox">
-          <input disabled="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Item 1</span>
-        </label>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <label>
+            <input disabled="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 1</span>
+          </label>
+        </div>
       </div>
     </div>
   </form>
