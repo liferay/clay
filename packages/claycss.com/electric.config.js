@@ -26,6 +26,9 @@ module.exports = {
 		return generateIconData(data);
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
+	deployOptions: {
+		branch: 'gh-pages'
+	},
 	metalComponents: ['electric-quartz-components'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths]
