@@ -19,7 +19,14 @@ weight: 100
 		</label>
 		<input class="form-control" id="successInput1" type="text">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
-		<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+		<div class="form-feedback-item">
+			<span class="form-feedback-indicator">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
+					<use xlink:href="/vendor/lexicon/icons.svg#question-circle-full" />
+				</svg>
+			</span>
+			This is a form-feedback-indicator.
+		</div>
 		<div class="form-text">This is form-text.</div>
 	</div>
 	<div class="form-group has-success">
@@ -31,7 +38,14 @@ weight: 100
 		</label>
 		<input class="form-control" id="successInput1" type="text">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
-		<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+		<div class="form-feedback-item">
+			<span class="form-feedback-indicator">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+					<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full" />
+				</svg>
+			</span>
+			This is a form-feedback-indicator.
+		</div>
 		<div class="form-text">This is form-text.</div>
 	</div>
 	<div class="form-group has-warning">
@@ -43,7 +57,14 @@ weight: 100
 		</label>
 		<input class="form-control" id="inputWarning1" type="text">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
-		<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+		<div class="form-feedback-item">
+			<span class="form-feedback-indicator">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+					<use xlink:href="/vendor/lexicon/icons.svg#warning-full" />
+				</svg>
+			</span>
+			This is a form-feedback-indicator.
+		</div>
 		<div class="form-text">This is form-text.</div>
 	</div>
 	<div class="form-group has-error">
@@ -55,7 +76,14 @@ weight: 100
 		</label>
 		<input class="form-control" id="inputError1" type="text">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
-		<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+		<div class="form-feedback-item">
+			<span class="form-feedback-indicator">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+					<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full" />
+				</svg>
+			</span>
+			This is a form-feedback-indicator.
+		</div>
 		<div class="form-text">This is form-text.</div>
 	</div>
 </div>
@@ -70,7 +98,14 @@ weight: 100
 	</label>
 	<input class="form-control" id="inputError1" type="text">
 	<div class="form-feedback-item">This is a form-feedback-item.</div>
-	<div class="form-feedback-indicator">This is a form-feedback-indicator.</div>
+	<div class="form-feedback-item">
+		<span class="form-feedback-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full" />
+			</svg>
+		</span>
+		This is a form-feedback-indicator.
+	</div>
 	<div class="form-text">This is form-text.</div>
 </div>
 ```
