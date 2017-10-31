@@ -12,31 +12,84 @@ weight: 100
 > Add class `focus` on the label to change the color of the label.
 
 <div class="form-container">
+	<h4 class="section-header">Section Header</h4>
 	<div class="form-group">
 		<label>
-			Default text input{sp}
+			Text
 			<span class="reference-mark">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>
-			</span>{sp}
+			</span>
 		</label>
 		<input class="form-control" placeholder="Placeholder" type="text">
 	</div>
 	<div class="form-group">
-		<label>Password input</label>
+		<label>Password</label>
 		<input class="form-control" placeholder="Enter password" type="password">
 	</div>
 	<div class="form-group">
 		<label>Textarea</label>
 		<textarea class="form-control" placeholder="Placeholder"></textarea>
 	</div>
+	<div class="form-group">
+		<label>Url</label>
+		<input class="form-control" type="url">
+	</div>
+	<div class="form-group">
+		<label>Tel</label>
+		<input class="form-control" type="tel">
+	</div>
+	<div class="form-group">
+		<label>Email</label>
+		<input class="form-control" type="email">
+	</div>
+	<div class="form-group">
+		<label>Search</label>
+		<input class="form-control" type="search">
+	</div>
+	<div class="form-group">
+		<label>Number</label>
+		<input class="form-control" type="number">
+	</div>
+	<div class="form-group">
+		<label>Datetime</label>
+		<input class="form-control" type="datetime">
+	</div>
+	<div class="form-group">
+		<label>Datetime-local</label>
+		<input class="form-control" type="datetime-local">
+	</div>
+	<div class="form-group">
+		<label>Date</label>
+		<input class="form-control" type="date">
+	</div>
+	<div class="form-group">
+		<label>Time</label>
+		<input class="form-control" type="time">
+	</div>
+	<div class="form-group">
+		<label>Week</label>
+		<input class="form-control" type="week">
+	</div>
+	<div class="form-group">
+		<label>Month</label>
+		<input class="form-control" type="month">
+	</div>
+	<div class="form-group">
+		<label>Color</label>
+		<input class="form-control" type="color">
+	</div>
+	<div class="form-group">
+		<label>Range</label>
+		<input class="form-control" type="range">
+	</div>
 </div>
 
 ```text/html
 <div class="form-group">
 	<label>
-		Default text input
+		Text
 		<span class="reference-mark">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
@@ -44,14 +97,6 @@ weight: 100
 		</span>
 	</label>
 	<input class="form-control" placeholder="Placeholder" type="text">
-</div>
-<div class="form-group">
-	<label>Password input</label>
-	<input class="form-control" placeholder="Enter password" type="password">
-</div>
-<div class="form-group">
-	<label>Textarea</label>
-	<textarea class="form-control" placeholder="Placeholder"></textarea>
 </div>
 ```
 
@@ -104,27 +149,37 @@ weight: 100
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="checkbox" value="">
+	</label>
+</div>
+
+<div class="form-check">
+	<label class="form-check-label">
+		<input class="form-check-input" type="checkbox" value="">
 		<span class="form-check-description">Label</span>
 	</label>
 </div>
+
 <div class="form-check">
 	<label class="form-check-label">
 		<input checked class="form-check-input" disabled type="checkbox" value="">
 		<span class="form-check-description">Disabled Check Box</span>
 	</label>
 </div>
+
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
 		<span class="form-check-description">1</span>
 	</label>
 </div>
+
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
 		<span class="form-check-description">2</span>
 	</label>
 </div>
+
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
@@ -214,25 +269,35 @@ weight: 100
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="radio" value="">
+	</label>
+</div>
+
+<div class="form-check">
+	<label class="form-check-label">
+		<input class="form-check-input" type="radio" value="">
 		<span class="form-check-description">Label</span>
 	</label>
 </div>
+
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" disabled type="radio">
 		<span class="form-check-description">Disabled Radio Button</span>
 	</label>
 </div>
+
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
 	</label>
 </div>
+
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
 	</label>
 </div>
+
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
@@ -309,25 +374,29 @@ weight: 100
 </div>
 
 ```text/html
-<label for="regularSelectElement">Regular Select Element</label>
-<select class="form-control" id="regularSelectElement">
-	<option>Sample 1</option>
-	<option>Sample 2</option>
-	<option>Sample 3</option>
-	<option>Sample 4</option>
-</select>
+<div class="form-group">
+	<label for="regularSelectElement">Regular Select Element</label>
+	<select class="form-control" id="regularSelectElement">
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+	</select>
+</div>
 
-<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
-<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
-	<option>Sample 1</option>
-	<option>Sample 2</option>
-	<option>Sample 3</option>
-	<option>Sample 4</option>
-	<option>Sample 5</option>
-	<option>Sample 6</option>
-	<option>Sample 7</option>
-	<option>Sample 8</option>
-</select>
+<div class="form-group">
+	<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
+	<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+		<option>Sample 5</option>
+		<option>Sample 6</option>
+		<option>Sample 7</option>
+		<option>Sample 8</option>
+	</select>
+</div>
 ```
 ```soy
 {call ClaySelect.render}
@@ -386,13 +455,17 @@ weight: 100
 ### File Upload
 
 <div class="form-container">
-	<label class="sr-only" for="inputFile">FILE UPLOAD</label>
-	<input id="inputFile" type="file">
+	<div class="form-group">
+		<label class="sr-only" for="inputFile">FILE UPLOAD</label>
+		<input id="inputFile" type="file">
+	</div>
 </div>
 
 ```text/html
-<label class="sr-only" for="inputFile">FILE UPLOAD</label>
-<input id="inputFile" type="file">
+<div class="form-group">
+	<label class="sr-only" for="inputFile">FILE UPLOAD</label>
+	<input id="inputFile" type="file">
+</div>
 ```
 
 </article>
@@ -442,34 +515,44 @@ weight: 100
 </div>
 
 ```text/html
-<label class="disabled" for="disabledTextInput">Text Input</label>
-<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+<div class="form-group">
+	<label class="disabled" for="disabledTextInput">Text Input</label>
+	<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+</div>
 
-<label class="disabled" for="disabledPasswordInput">Password Input</label>
-<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password">
+<div class="form-group">
+	<label class="disabled" for="disabledPasswordInput">Password Input</label>
+	<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password">
+</div>
 
-<label class="disabled" for="disabledTextarea">Textarea</label>
-<textarea class="form-control" disabled id="disabledTextarea" placeholder="Placeholder">Plunger pot, extra siphon latte</textarea>
+<div class="form-group">
+	<label class="disabled" for="disabledTextarea">Textarea</label>
+	<textarea class="form-control" disabled id="disabledTextarea" placeholder="Placeholder">Plunger pot, extra siphon latte</textarea>
+</div>
 
-<label class="disabled" for="disabledSelectElement">Select Element</label>
-<select class="form-control" disabled id="disabledSelectElement">
-	<option>Sample 1</option>
-	<option>Sample 2</option>
-	<option>Sample 3</option>
-	<option>Sample 4</option>
-</select>
+<div class="form-group">
+	<label class="disabled" for="disabledSelectElement">Select Element</label>
+	<select class="form-control" disabled id="disabledSelectElement">
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+	</select>
+</div>
 
-<label class="disabled" for="disabledSelectElementMulti">Select Element with Multiple Select Options</label>
-<select class="form-control" disabled id="disabledSelectElementMulti" multiple>
-	<option>Sample 1</option>
-	<option>Sample 2</option>
-	<option>Sample 3</option>
-	<option>Sample 4</option>
-	<option>Sample 5</option>
-	<option>Sample 6</option>
-	<option>Sample 7</option>
-	<option>Sample 8</option>
-</select>
+<div class="form-group">
+	<label class="disabled" for="disabledSelectElementMulti">Select Element with Multiple Select Options</label>
+	<select class="form-control" disabled id="disabledSelectElementMulti" multiple>
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+		<option>Sample 5</option>
+		<option>Sample 6</option>
+		<option>Sample 7</option>
+		<option>Sample 8</option>
+	</select>
+</div>
 ```
 ```soy
 {call ClaySelect.render}
@@ -602,11 +685,15 @@ weight: 100
 </div>
 
 ```text/html
-<label for="readonlyTextInput">Text Input (Read Only)</label>
-<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+<div class="form-group">
+	<label for="readonlyTextInput">Text Input (Read Only)</label>
+	<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+</div>
 
-<label for="readonlyTextarea">Textarea (Read Only)</label>
-<textarea class="form-control" id="readonlyTextarea" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+<div class="form-group">
+	<label for="readonlyTextarea">Textarea (Read Only)</label>
+	<textarea class="form-control" id="readonlyTextarea" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+</div>
 ```
 
 </article>
@@ -625,65 +712,17 @@ weight: 100
 		<label for="normalTextInput">Normal text input</label>
 		<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text">
 	</div>
-	<div class="form-group">
-		<label for="largeTextInput">Large text input</label>
-		<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text">
-	</div>
-</div>
-
-```text/html
-<label for="smallTextInput">Small text input</label>
-<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
-
-<label for="normalTextInput">Normal text input</label>
-<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text">
-
-<label for="largeTextInput">Large text input</label>
-<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text">
-```
-
-</article>
-
-
-<article id="form-group">
-
-### Form Group
-
-<div class="form-container">
-	<div class="form-group">
-		<label for="firstNameInput">First Name</label>
-		<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
-	</div>
-	<div class="form-group">
-		<label for="lastNameInput">Last Name</label>
-		<input class="form-control" id="lastNameInput" placeholder="Last Name" type="text">
-	</div>
-	<div class="form-group">
-		<label for="address1Input">Address 1</label>
-		<input class="form-control" id="address1Input" placeholder="Address 1" type="text">
-	</div>
-	<div class="form-group">
-		<label for="address2Input">Address 2</label>
-		<input class="form-control" id="address2Input" placeholder="Address 2" type="text">
-	</div>
 </div>
 
 ```text/html
 <div class="form-group">
-	<label for="firstNameInput">First Name</label>
-	<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
+	<label for="smallTextInput">Small text input</label>
+	<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
 </div>
+
 <div class="form-group">
-	<label for="lastNameInput">Last Name</label>
-	<input class="form-control" id="lastNameInput" placeholder="Last Name" type="text">
-</div>
-<div class="form-group">
-	<label for="address1Input">Address 1</label>
-	<input class="form-control" id="address1Input" placeholder="Address 1" type="text">
-</div>
-<div class="form-group">
-	<label for="address2Input">Address 2</label>
-	<input class="form-control" id="address2Input" placeholder="Address 2" type="text">
+	<label for="normalTextInput">Normal text input</label>
+	<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text">
 </div>
 ```
 
@@ -770,8 +809,7 @@ weight: 100
 			</div>
 		</div>
 	</div>
-	<button class="btn btn-primary" type="submit">Submit</button>
-	&nbsp;
+	<button class="btn btn-primary" type="submit">Submit</button>{sp}
 	<a class="btn btn-danger" href="#1">Clear</a>
 </div>
 
