@@ -73,63 +73,6 @@ weight: 100
 </article>
 
 
-<article id="input-group-addon-constrain">
-
-### Input Group Addon Constrain
-
-<div class="form-container">
-	<div class="form-group">
-		<div class="input-group input-group-sm">
-			<span class="input-group-addon input-group-constrain" id="inputGroupConstrain01">
-				<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-			</span>
-			<input aria-describedby="inputGroupConstrain01" aria-label="Change Default URL" class="form-control" placeholder="Change Default URL" type="text">
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<span class="input-group-addon input-group-constrain" id="inputGroupConstrain02">
-				<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-			</span>
-			<input aria-describedby="inputGroupConstrain02" aria-label="Change Default URL second one" class="form-control" placeholder="Change Default URL" type="text">
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group input-group-lg">
-			<span class="input-group-addon input-group-constrain" id="inputGroupConstrain03">
-				<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-			</span>
-			<input aria-describedby="inputGroupConstrain03" aria-label="Change Default URL third one" class="form-control" placeholder="Change Default URL" type="text">
-		</div>
-	</div>
-</div>
-
-```text/html
-<div class="input-group input-group-sm">
-	<span class="input-group-addon input-group-constrain" id="inputGroupConstrain01">
-		<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-	</span>
-	<input aria-describedby="inputGroupConstrain01" aria-label="Change Default URL" class="form-control" placeholder="Change Default URL" type="text">
-</div>
-
-<div class="input-group">
-	<span class="input-group-addon input-group-constrain" id="inputGroupConstrain02">
-		<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-	</span>
-	<input aria-describedby="inputGroupConstrain02" aria-label="Change Default URL second one" class="form-control" placeholder="Change Default URL" type="text">
-</div>
-
-<div class="input-group input-group-lg">
-	<span class="input-group-addon input-group-constrain" id="inputGroupConstrain03">
-		<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-	</span>
-	<input aria-describedby="inputGroupConstrain03" aria-label="Change Default URL third one" class="form-control" placeholder="Change Default URL" type="text">
-</div>
-```
-
-</article>
-
-
 <article id="input-group-buttons">
 
 ### Input Group Buttons
@@ -486,9 +429,9 @@ weight: 100
 
 <div class="form-container">
 	<div class="form-group">
-		<div class="input-group input-group-lg">
+		<div class="input-group input-group-sm">
 			<span class="input-group-addon">$</span>
-			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+			<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
 			<span class="input-group-addon">.00</span>
 		</div>
 	</div>
@@ -497,67 +440,6 @@ weight: 100
 			<span class="input-group-addon">$</span>
 			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
 			<span class="input-group-addon">.00</span>
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group input-group-sm">
-			<span class="input-group-addon">$</span>
-			<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
-			<span class="input-group-addon">.00</span>
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputGroupTransparentLg">
-			Label Input Group Lg{sp}
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
-			</svg>
-		</label>
-		<div class="input-group input-group-transparent input-group-lg">
-			<span class="input-group-addon">$</span>
-			<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupTransparentLg" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
-				<button class="btn btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</button>
-			</span>
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputGroupTransparentNormal">
-			Label{sp}
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
-			</svg>
-		</label>
-		<div class="input-group input-group-transparent">
-			<span class="input-group-btn">
-				<button class="btn btn-primary" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</button>
-				<button class="btn btn-primary" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</button>
-				<button class="btn btn-primary" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</button>
-			</span>
-			<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
-				<button class="btn btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</button>
-			</span>
 		</div>
 	</div>
 	<div class="form-group">
@@ -579,24 +461,37 @@ weight: 100
 			</span>
 		</div>
 	</div>
+	<div class="form-group">
+		<label for="inputGroupTransparentNormal">
+			Label{sp}
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+			</svg>
+		</label>
+		<div class="input-group input-group-transparent">
+			<span class="input-group-addon">$</span>
+			<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
+			<span class="input-group-btn">
+				<button class="btn btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+			</span>
+		</div>
+	</div>
 </div>
 
 ```text/html
-<div class="input-group input-group-lg">
+<div class="input-group input-group-sm">
 	<span class="input-group-addon">$</span>
-	<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+	<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
 	<span class="input-group-addon">.00</span>
 </div>
 
 <div class="input-group">
 	<span class="input-group-addon">$</span>
 	<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-	<span class="input-group-addon">.00</span>
-</div>
-
-<div class="input-group input-group-sm">
-	<span class="input-group-addon">$</span>
-	<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
 	<span class="input-group-addon">.00</span>
 </div>
 ```
