@@ -174,4 +174,27 @@ describe('ClayModal', function() {
 
     expect(clayModal).toMatchSnapshot();
   });
+
+  it('should render a modal opened using the method show', () => {
+    jest.useFakeTimers();
+    clayModal = new ClayModal({
+      body: body,
+      spritemap: spritemap,
+      title: 'My Title',
+    });
+    const spy = jest.spyOn(clayModal, 'show');
+
+    expect(clayModal).toMatchSnapshot();
+
+    clayModal.show();
+    jest.runAllTimers();
+
+    expect(spy).toHaveBeenCalled();
+    expect(clayModal.visible).toBeTruthy();
+    expect(clayModal._isTransitioning).toBeFalsy();
+    expect(clayModal).toMatchSnapshot();
+
+    spy.mockReset();
+    spy.mockRestore();
+  });
 });

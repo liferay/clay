@@ -28,6 +28,46 @@ exports[`ClayModal should render a modal opened 1`] = `
 </div>
 `;
 
+exports[`ClayModal should render a modal opened using the method show 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Hello world!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal opened using the method show 2`] = `
+<div class="fade modal d-block show" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">My Title</div>
+        <button class="btn close btn-unstyled" aria-label="times">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+            <use xlink:href="icons.svg#times"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Hello world!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayModal should render a modal with body 1`] = `
 <div class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
