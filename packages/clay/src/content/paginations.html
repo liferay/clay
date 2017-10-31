@@ -67,7 +67,7 @@ section: Components
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Pagination Bar</h3>
 
@@ -138,7 +138,7 @@ section: Components
 </div>
 
 <div id="pagination">
-	<div class="row">
+	<div class="clay-site-row-spacer row">
 		<div class="col-md-12">
 
 			<h3>Pagination Sizes</h3>
@@ -332,6 +332,78 @@ section: Components
 					</li>
 				</ul>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3>With Buttons</h3>
+
+		<div class="pagination-bar">
+			<div class="dropdown pagination-items-per-page">
+				<button class="btn btn-unstyled dropdown-toggle" data-toggle="dropdown" type="button">
+					10 entries
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
+					</svg>
+				</button>
+				<div class="dropdown-menu dropdown-menu-top">
+					<a class="dropdown-item" href="#1">5</a>
+					<a class="dropdown-item" href="#1">10</a>
+					<a class="dropdown-item" href="#1">20</a>
+					<a class="dropdown-item" href="#1">30</a>
+					<a class="dropdown-item" href="#1">50</a>
+				</div>
+			</div>
+			<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
+			<ul class="pagination">
+				<li class="disabled page-item">
+					<button class="btn btn-unstyled page-link" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+						</svg>
+						<span class="sr-only">Previous</span>
+					</button>
+				</li>
+				<li class="active page-item">
+					<button class="btn btn-unstyled page-link" type="button">1</button>
+				</li>
+				<li class="page-item">
+					<button class="btn btn-unstyled page-link" type="button">2</button>
+				</li>
+				<li class="dropdown page-item">
+					<button class="btn btn-unstyled dropdown-toggle page-link" data-toggle="dropdown" type="button">...</button>
+					<div class="dropdown-menu dropdown-menu-top-center">
+						<div class="inline-scroller">
+							<a class="dropdown-item" href="#1">3</a>
+							<a class="dropdown-item" href="#1">4</a>
+							<a class="dropdown-item" href="#1">5</a>
+							<a class="dropdown-item" href="#1">6</a>
+							<a class="dropdown-item" href="#1">7</a>
+							<a class="dropdown-item" href="#1">8</a>
+							<a class="dropdown-item" href="#1">9</a>
+							<a class="dropdown-item" href="#1">10</a>
+							<a class="dropdown-item" href="#1">11</a>
+							<a class="dropdown-item" href="#1">12</a>
+							<a class="dropdown-item" href="#1">13</a>
+							<a class="dropdown-item" href="#1">14</a>
+							<a class="dropdown-item" href="#1">15</a>
+						</div>
+					</div>
+				</li>
+				<li class="page-item">
+					<button class="btn btn-unstyled page-link" type="button">16</button>
+				</li>
+				<li class="page-item">
+					<button class="btn btn-unstyled page-link" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+						</svg>
+						<span class="sr-only">Next</span>
+					</button>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
