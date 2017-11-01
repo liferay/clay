@@ -2,6 +2,11 @@ $card-border-style: solid !default;
 $card-box-shadow: null !default;
 $card-margin-bottom: 1.25rem !default;
 
+$card-body-padding-bottom: null !default;
+$card-body-padding-left: null !default;
+$card-body-padding-right: null !default;
+$card-body-padding-top: null !default;
+
 $card-section-header-color: map-get($theme-colors, secondary) !default;
 $card-section-header-font-size: 0.75rem !default;
 $card-section-header-font-weight: null !default;
@@ -39,6 +44,6 @@ $card-rounded-circle-inner-border-radius: if($card-border-width > 0, calc(#{$rou
 $checkbox-left-card-padding: 40px !default;
 $checkbox-right-card-padding: $checkbox-left-card-padding !default;
 
-$checkbox-position: 15px !default;
+$checkbox-position: 1rem !default;
 
 $form-check-card-checked-box-shadow: $input-btn-focus-box-shadow !default;

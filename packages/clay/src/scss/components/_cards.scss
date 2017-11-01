@@ -21,6 +21,13 @@
 	}
 }
 
+.card-body {
+	padding-bottom: $card-body-padding-bottom;
+	padding-left: $card-body-padding-left;
+	padding-right: $card-body-padding-right;
+	padding-top: $card-body-padding-top;
+}
+
 .card-section-header {
 	color: $card-section-header-color;
 	font-size: $card-section-header-font-size;
@@ -280,6 +287,7 @@ button.card-link {
 		position: static;
 
 		> label {
+			font-weight: $font-weight-normal;
 			padding-left: 0;
 		}
 	}
@@ -299,6 +307,7 @@ button.card-link {
 	.form-check-label {
 		color: $body-color;
 		display: inline;
+		font-weight: $font-weight-normal;
 		padding-left: 0;
 		position: static;
 	}
