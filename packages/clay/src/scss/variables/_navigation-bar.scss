@@ -5,6 +5,7 @@ $navigation-bar-size: map-merge((
 	height: 3rem,
 	padding-x: 0,
 	padding-y: 0,
+	link-padding-x: 1rem,
 	nav-item-dropdown-margin-top: 0,
 	active-border-bottom-width: 0.25rem
 ), $navigation-bar-size);
