@@ -18,7 +18,7 @@ $input-padding-y: 0.5rem !default; // 8px
 $input-padding-x-lg: $input-padding-x !default;
 $input-padding-y-lg: $input-padding-y !default;
 
-$input-padding-x-sm: $input-padding-x !default;
+$input-padding-x-sm: 0.75rem !default; // 12px
 $input-padding-y-sm: $input-padding-y !default;
 
 $input-height-border: $input-border-bottom-width + $input-border-top-width !default;
