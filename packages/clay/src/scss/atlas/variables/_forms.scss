@@ -36,7 +36,12 @@ $form-text-color: map-get($theme-colors, secondary) !default;
 
 $form-group-margin-bottom: 1.25rem !default; // 20px
 
+// Form Check
+
+$form-check-input-gutter: 0.875rem !default;
 $form-check-input-margin-y: 0.41667em !default;
+
+$form-check-description-margin-left: 0.5rem !default;
 
 // Skin
 
