@@ -155,6 +155,10 @@ textarea.form-control {
 	position: relative;
 }
 
+.form-check-description {
+	margin-left: $form-check-description-margin-left;
+}
+
 // Disabled State
 
 fieldset[disabled] label,
