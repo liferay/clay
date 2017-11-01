@@ -23,6 +23,7 @@ $nav-pills-active-link-color: #FFF !default;
 // Nav Tabs
 
 $nav-tabs-border-color: transparent !default;
+$nav-tabs-font-size: 0.875rem !default; // 14px
 $nav-tabs-link-color: map-get($theme-colors, secondary) !default;
 
 $nav-tabs-link-hover-border-color: transparent !default;
@@ -33,6 +34,8 @@ $nav-tabs-link-active-bg: #FFF !default;
 $nav-tabs-link-active-border-color: transparent transparent $body-bg !default;
 $nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 $nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color transparent !default;
+
+$nav-tabs-link-padding-y: 0.1875rem !default; // 3px
 
 $nav-tabs-tab-pane-bg: #FFF !default;
 $nav-tabs-tab-pane-border-radius: 4px !default;
