@@ -161,7 +161,10 @@
 
 	.nav-link {
 		color: $nav-tabs-link-color;
-		padding: $nav-tabs-link-padding-y $nav-tabs-link-padding-x;
+		padding-bottom: $nav-tabs-link-padding-y;
+		padding-left: $nav-tabs-link-padding-x;
+		padding-right: $nav-tabs-link-padding-x;
+		padding-top: $nav-tabs-link-padding-y;
 		white-space: nowrap;
 	}
 
