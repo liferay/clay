@@ -155,6 +155,10 @@ textarea.form-control {
 	position: relative;
 }
 
+.form-check-input:disabled + .form-check-description {
+	color: $input-label-disabled-color;
+}
+
 .form-check-description {
 	margin-left: $form-check-description-margin-left;
 }
