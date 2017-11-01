@@ -156,6 +156,7 @@
 	}
 
 	.nav-item.show .nav-link {
+		background-color: $nav-tabs-link-show-bg;
 		border-color: $nav-tabs-link-show-border-color;
 		color: $nav-tabs-link-show-color;
 	}
