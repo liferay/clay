@@ -3,6 +3,7 @@ $navbar-underline-active-bg: lighten(map-get($theme-colors, primary), 22%) !defa
 // Navbar Transparent
 
 $navbar-transparent: (
+	border-color: darken($body-bg, 6.5%),
 	link-active-color: $body-color
 ) !default;
 
