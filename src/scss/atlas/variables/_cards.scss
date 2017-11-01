@@ -2,6 +2,11 @@ $card-border-radius: $border-radius !default;
 $card-border-width: 0 !default;
 $card-box-shadow: 0 1px 10px -4px rgba(0, 0, 0, 0.6) !default;
 
+$card-body-padding-bottom: 1rem !default;
+$card-body-padding-left: 1rem !default;
+$card-body-padding-right: 1rem !default;
+$card-body-padding-top: 0.75rem !default;
+
 $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius} - #{$card-border-width}), $card-border-radius) !default;
 
 $card-link-color: map-get($theme-colors, secondary) !default;
