@@ -11,25 +11,30 @@ section: Components
 			<p>Place an addon on either side of a progress component with <code>progress-group</code> and <code>progress-group-addon</code>.</p>
 		</blockquote>
 
-		<div class="progress-group">
-			<div class="progress">
-				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
-			</div>
-			<div class="progress-group-addon">60%</div>
+<div class="progress-group">
+	<div class="progress">
+		<div aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 30%;"></div>
+	</div>
+	<div class="progress-group-addon">30%</div>
+</div>
+<div class="progress-group progress-warning">
+	<div class="progress">
+		<div aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 70%;"></div>
+	</div>
+	<div class="progress-group-addon">70%</div>
+</div>
+<div class="progress-group progress-success">
+	<div class="progress">
+		<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
+	</div>
+	<div class="progress-group-addon">
+		<div class="progress-group-feedback">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
+			</svg>
 		</div>
-
-		<div class="progress-group">
-			<div class="progress">
-				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
-			</div>
-			<div class="progress-group-addon">
-				<div class="progress-group-feedback">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
-					</svg>
-				</div>
-			</div>
-		</div>
+	</div>
+</div>
 
 		<div class="progress-group">
 			<div class="progress-group-addon">
