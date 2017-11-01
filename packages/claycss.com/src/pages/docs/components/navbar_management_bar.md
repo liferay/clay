@@ -22,14 +22,14 @@ weight: 100
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-					<span class="navbar-text-truncate">Filter and Order</span>
+					<span class="navbar-text-truncate">Filter and Order</span>{sp}
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
+						<use xlink:href="/vendor/lexicon/icons.svg#filter" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -134,7 +134,7 @@ weight: 100
 			</li>
 			<li class="nav-item">
 				<span class="navbar-text">
-					3 of 7
+					3 of 7{sp}
 					<span class="navbar-breakpoint-down-d-none">items selected</span>
 				</span>
 			</li>
@@ -210,14 +210,14 @@ weight: 100
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-					<span class="navbar-text-truncate">Filter and Order</span>
+					<span class="navbar-text-truncate">Filter and Order</span>{sp}
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
+						<use xlink:href="/vendor/lexicon/icons.svg#filter" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -309,25 +309,6 @@ weight: 100
 	</div>
 </nav>
 ```
-
-</article>
-
-
-<article id="navbar-overlay">
-
-### Navbar Overlay
-
-> Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to create an overlay on top of the navbar with alternate content, useful for expanding search bars or an alternate navbar that depends on some state in your application. Toggle the `navbar-overlay`'s visibility by adding or removing the class `show` to `navbar-overlay`.
-
-> `navbar-overlay-up` overlays the navbar at all screen widths.
-
-> `navbar-overlay-lg-down`: 1199px and below
-
-> `navbar-overlay-md-down`: 991px and below
-
-> `navbar-overlay-sm-down`: 767px and below
-
-> `navbar-overlay-xs-down`: 575px and below
 
 </article>
 
