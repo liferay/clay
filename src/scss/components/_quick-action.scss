@@ -13,6 +13,10 @@
 }
 
 .quick-action-item {
+	background-color: $quick-action-item-bg;
+
+	@include border-radius($quick-action-item-border-radius);
+
 	color: $quick-action-item-color;
 	display: flex;
 	line-height: 1;
@@ -26,6 +30,7 @@
 	padding-top: $quick-action-item-padding-y;
 
 	@include hover-focus {
+		background-color: $quick-action-item-hover-bg;
 		color: $quick-action-item-hover-color;
 	}
 
