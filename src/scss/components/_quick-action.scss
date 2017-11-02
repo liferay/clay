@@ -42,6 +42,12 @@
 		opacity: $quick-action-item-disabled-opacity;
 	}
 
+	&:active,
+	&.active {
+		background-color: $quick-action-item-active-bg;
+		color: $quick-action-item-active-color;
+	}
+
 	.lexicon-icon {
 		margin-top: 0;
 	}

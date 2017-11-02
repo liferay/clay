@@ -1,5 +1,8 @@
 $quick-action-item-hover-bg: rgba(0, 0, 0, 0.02) !default;
 $quick-action-item-hover-color: $body-color !default;
 
-$quick-action-item-disabled-color: $body-color !default;
+$quick-action-item-disabled-color: $quick-action-item-hover-color !default;
 $quick-action-item-disabled-opacity: $btn-disabled-opacity !default;
+
+$quick-action-item-active-bg: rgba(0, 0, 0, 0.04) !default;
+$quick-action-item-active-color: $quick-action-item-hover-color !default;
