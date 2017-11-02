@@ -156,6 +156,10 @@
 	vertical-align: middle;
 
 	> .dropdown-toggle {
+		background-color: $dropdown-action-toggle-bg;
+
+		@include border-radius($dropdown-action-toggle-border-radius);
+
 		color: $dropdown-action-toggle-color;
 		display: block;
 
@@ -164,8 +168,24 @@
 		text-align: center;
 
 		@include hover-focus {
+			background-color: $dropdown-action-toggle-hover-bg;
 			color: $dropdown-action-toggle-hover-color;
 		}
+
+		&:disabled,
+		&.disabled {
+			background-color: $dropdown-action-toggle-disabled-bg;
+			color: $dropdown-action-toggle-disabled-color;
+			cursor: $dropdown-action-toggle-disabled-cursor;
+			opacity: $dropdown-action-toggle-disabled-opacity;
+		}
+	}
+
+	&.show > .dropdown-toggle,
+	> .dropdown-toggle:active,
+	> .dropdown-toggle.active {
+		background-color: $dropdown-action-toggle-active-bg;
+		color: $dropdown-action-toggle-active-color;
 	}
 
 	> button.dropdown-toggle {
