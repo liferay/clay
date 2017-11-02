@@ -187,16 +187,6 @@
 		background-color: $dropdown-action-toggle-active-bg;
 		color: $dropdown-action-toggle-active-color;
 	}
-
-	> button.dropdown-toggle {
-		background-color: transparent;
-		border-width: 0;
-		cursor: pointer;
-		font-size: inherit;
-		font-weight: inherit;
-		max-width: 100%;
-		padding: 0;
-	}
 }
 
 // Dropdown Menu with Indicators
