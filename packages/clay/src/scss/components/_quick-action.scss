@@ -34,6 +34,14 @@
 		color: $quick-action-item-hover-color;
 	}
 
+	&:disabled,
+	&.disabled {
+		background-color: $quick-action-item-disabled-bg;
+		color: $quick-action-item-disabled-color;
+		cursor: $quick-action-item-disabled-cursor;
+		opacity: $quick-action-item-disabled-opacity;
+	}
+
 	.lexicon-icon {
 		margin-top: 0;
 	}
