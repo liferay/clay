@@ -55,28 +55,28 @@
 }
 
 .pagination-items-per-page {
-	background-color: $pagination-items-per-page-bg;
-	border-color: $pagination-items-per-page-border-color;
-
-	@include border-radius($pagination-items-per-page-border-radius);
-
-	border-style: solid;
-	border-width: $pagination-border-width;
-	line-height: $pagination-line-height;
 	margin-bottom: $pagination-margin-bottom;
-
-	@include hover-focus {
-		background-color: $pagination-items-per-page-hover-bg;
-		border-color: $pagination-items-per-page-hover-border-color;
-		color: $pagination-items-per-page-hover-color;
-	}
 
 	> a,
 	> .btn-unstyled {
+		background-color: $pagination-items-per-page-bg;
+		border-color: $pagination-items-per-page-border-color;
+
+		@include border-radius($pagination-items-per-page-border-radius);
+
+		border-style: solid;
+		border-width: $pagination-border-width;
 		color: $pagination-items-per-page-color;
 		display: block;
+		line-height: $pagination-line-height;
 		padding: $pagination-padding-y $pagination-padding-x;
 		text-decoration: none;
+
+		@include hover-focus {
+			background-color: $pagination-items-per-page-hover-bg;
+			border-color: $pagination-items-per-page-hover-border-color;
+			color: $pagination-items-per-page-hover-color;
+		}
 	}
 
 	+ .pagination-results {

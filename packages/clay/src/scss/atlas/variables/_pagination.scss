@@ -11,9 +11,9 @@ $pagination-padding-x: 10px !default;
 $pagination-padding-y: 0 !default;
 $pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
 
-$pagination-hover-bg: transparent !default;
-$pagination-hover-border-color: $pagination-hover-bg !default;
-$pagination-hover-color: $pagination-color !default;
+$pagination-hover-bg: rgba(0, 0, 0, 0.02) !default;
+$pagination-hover-border-color: transparent !default;
+$pagination-hover-color: $body-color !default;
 
 $pagination-active-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
 $pagination-active-border-color: $pagination-active-bg !default;
@@ -25,13 +25,6 @@ $pagination-disabled-color: map-get($theme-colors, secondary) !default;
 $pagination-disabled-opacity: 0.5 !default;
 
 $pagination-dropdown-menu-spacer-y: 10px !default;
-
-$pagination-items-per-page-bg: !default;
-$pagination-items-per-page-color: $pagination-color !default;
-
-$pagination-items-per-page-hover-bg: !default;
-$pagination-items-per-page-hover-border-color: !default;
-$pagination-items-per-page-hover-color: !default;
 
 $pagination-results-color: $pagination-color !default;
 
