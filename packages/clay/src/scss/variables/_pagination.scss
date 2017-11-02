@@ -1,23 +1,13 @@
-$pagination-margin-bottom: 0.5rem !default;
-
 $pagination-item-margin-x: null !default;
 $pagination-item-margin-y: null !default;
 
-$pagination-dropdown-menu-spacer-y: null !default;
+$pagination-link-border-radius: null !default;
 
-$pagination-font-size-sm: $font-size-sm !default;
-$pagination-line-height-sm: $line-height-sm !default;
-
-$pagination-font-size-lg: $font-size-lg !default;
-$pagination-line-height-lg: $line-height-lg !default;
-
-// Skin
+$pagination-margin-bottom: 0.5rem !default;
 
 $pagination-disabled-opacity: null !default;
 
-$pagination-link-border-radius: null !default;
-$pagination-link-border-radius-lg: null !default;
-$pagination-link-border-radius-sm: null !default;
+$pagination-dropdown-menu-spacer-y: null !default;
 
 $pagination-items-per-page-bg: null !default;
 $pagination-items-per-page-border-color: $pagination-border-color !default;
@@ -29,3 +19,13 @@ $pagination-items-per-page-hover-border-color: $pagination-hover-border-color !d
 $pagination-items-per-page-hover-color: $pagination-hover-color !default;
 
 $pagination-results-color: null !default;
+
+// Sizes
+
+$pagination-font-size-sm: $font-size-sm !default;
+$pagination-line-height-sm: $line-height-sm !default;
+$pagination-link-border-radius-sm: null !default;
+
+$pagination-font-size-lg: $font-size-lg !default;
+$pagination-line-height-lg: $line-height-lg !default;
+$pagination-link-border-radius-lg: null !default;

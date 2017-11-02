@@ -1,39 +1,15 @@
-// Structure
-
 $pagination-item-height: 32px !default;
 $pagination-item-margin-x: 0.125rem !default;
 
-$pagination-border-width: 1px !default;
-
-$pagination-padding-x: 10px !default;
-$pagination-padding-y: 0 !default;
-
-$pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
-
-$pagination-dropdown-menu-spacer-y: 10px !default;
-
-$pagination-font-size-sm: 12px !default;
-$pagination-item-height-sm: 24px !default;
-$pagination-line-height-sm: $pagination-item-height-sm - ($pagination-border-width * 2) !default;
-
-$pagination-padding-y-sm: 0 !default;
-
-$pagination-font-size-lg: 18px !default;
-$pagination-item-height-lg: 44px !default;
-$pagination-line-height-lg: $pagination-item-height-lg - ($pagination-border-width * 2) !default;
-
-$pagination-padding-x-lg: 16px !default;
-$pagination-padding-y-lg: 0 !default;
-
-// Skin
-
 $pagination-link-border-radius: 4px !default;
-$pagination-link-border-radius-lg: 5px !default;
-$pagination-link-border-radius-sm: 3px !default;
 
 $pagination-bg: transparent !default;
 $pagination-border-color: $pagination-bg !default;
+$pagination-border-width: 1px !default;
 $pagination-color: map-get($theme-colors, secondary) !default;
+$pagination-padding-x: 10px !default;
+$pagination-padding-y: 0 !default;
+$pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
 
 $pagination-hover-bg: transparent !default;
 $pagination-hover-border-color: $pagination-hover-bg !default;
@@ -48,10 +24,28 @@ $pagination-disabled-border-color: $pagination-disabled-bg !default;
 $pagination-disabled-color: map-get($theme-colors, secondary) !default;
 $pagination-disabled-opacity: 0.5 !default;
 
+$pagination-dropdown-menu-spacer-y: 10px !default;
+
 $pagination-items-per-page-bg: !default;
 $pagination-items-per-page-color: $pagination-color !default;
+
 $pagination-items-per-page-hover-bg: !default;
 $pagination-items-per-page-hover-border-color: !default;
 $pagination-items-per-page-hover-color: !default;
 
 $pagination-results-color: $pagination-color !default;
+
+// Sizes
+
+$pagination-link-border-radius-sm: 3px !default;
+$pagination-font-size-sm: 12px !default;
+$pagination-item-height-sm: 24px !default;
+$pagination-line-height-sm: $pagination-item-height-sm - ($pagination-border-width * 2) !default;
+$pagination-padding-y-sm: 0 !default;
+
+$pagination-link-border-radius-lg: 5px !default;
+$pagination-font-size-lg: 18px !default;
+$pagination-item-height-lg: 44px !default;
+$pagination-line-height-lg: $pagination-item-height-lg - ($pagination-border-width * 2) !default;
+$pagination-padding-x-lg: 16px !default;
+$pagination-padding-y-lg: 0 !default;
