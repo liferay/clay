@@ -86,6 +86,17 @@
 	}
 }
 
+.show {
+	&.page-item,
+	&.pagination-items-per-page {
+		.dropdown-toggle {
+			background-color: $pagination-active-bg;
+			border-color: $pagination-active-border-color;
+			color: $pagination-active-color;
+		}
+	}
+}
+
 .page-item .dropdown-menu,
 .pagination-items-per-page .dropdown-menu {
 	margin-bottom: $pagination-dropdown-menu-spacer-y;
