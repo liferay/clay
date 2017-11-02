@@ -28,11 +28,9 @@ $dropdown-divider-bg: $dropdown-border-color !default;
 
 $dropdown-action-toggle-color: map-get($theme-colors, secondary) !default;
 
-$dropdown-action-toggle-hover-bg: rgba(0, 0, 0, 0.02) !default;
-$dropdown-action-toggle-hover-color: $body-color !default;
+$dropdown-action-toggle-hover-color: $dropdown-action-toggle-color !default;
 
-$dropdown-action-toggle-disabled-color: $dropdown-action-toggle-hover-color !default;
+$dropdown-action-toggle-disabled-color: $dropdown-action-toggle-color !default;
 $dropdown-action-toggle-disabled-opacity: $btn-disabled-opacity !default;
 
-$dropdown-action-toggle-active-bg: rgba(0, 0, 0, 0.04) !default;
-$dropdown-action-toggle-active-color: $dropdown-action-toggle-hover-color !default;
+// $dropdown-action-toggle-active-color: $dropdown-action-toggle-hover-color !default;
