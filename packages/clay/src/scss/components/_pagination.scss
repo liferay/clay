@@ -37,6 +37,11 @@
 }
 
 .page-item {
+	margin-bottom: $pagination-item-margin-y;
+	margin-left: $pagination-item-margin-x;
+	margin-right: $pagination-item-margin-x;
+	margin-top: $pagination-item-margin-y;
+
 	&:first-child,
 	&:last-child {
 		.page-link {
