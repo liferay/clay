@@ -27,7 +27,6 @@ weight: 100
 {/call}
 
 {call ClayIcon.render}
-	{param monospaced: true /}
 	{param spritemap: 'path/to/icons.svg' /}
 	{param symbol: 'add-column' /}
 {/call}

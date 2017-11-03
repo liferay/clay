@@ -187,41 +187,6 @@ weight: 100
 	</label>
 </div>
 ```
-```soy
-{call ClayCheckbox.render}
-	{param hideLabel: true /}
-	{param label: 'Hidden Label Checkbox' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param label: 'Label' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param disabled: true /}
-	{param label: 'Disabled Check Box' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param disabled: true /}
-	{param label: 'Label' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param inline: true /}
-	{param label: 'Inline 1' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param inline: true /}
-	{param label: 'Inline 2' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param inline: true /}
-	{param label: 'Inline 3' /}
-{/call}
-```
 
 </article>
 
@@ -303,42 +268,6 @@ weight: 100
 		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
 	</label>
 </div>
-```
-```soy
-{call ClayRadio.render}
-	{param hideLabel: true /}
-	{param label: 'Hidden Label Radio' /}
-{/call}
-
-{call ClayRadio.render}
-	{param label: 'Label' /}
-{/call}
-
-{call ClayRadio.render}
-	{param disabled: true /}
-	{param label: 'Disabled Radio Button' /}
-{/call}
-
-{call ClayRadio.render}
-	{param inline: true /}
-	{param label: '1' /}
-	{param name: 'inline-radio' /}
-	{param value: 'option1' /}
-{/call}
-
-{call ClayRadio.render}
-	{param inline: true /}
-	{param label: '2' /}
-	{param name: 'inline-radio' /}
-	{param value: 'option2' /}
-{/call}
-
-{call ClayRadio.render}
-	{param inline: true /}
-	{param label: '3' /}
-	{param name: 'inline-radio' /}
-	{param value: 'option3' /}
-{/call}
 ```
 
 </article>

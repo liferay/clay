@@ -107,29 +107,29 @@ weight: 100
 ```
 ```soy
 {call ClayButton.render}
-	{param elementClasses: 'btn-monospaced' /}
-	{param label: 'Primary' /}
+	{param label: 'A' /}
+	{param monospaced: true /}
 	{param type: 'button' /}
 {/call}
 
 {call ClayButton.render}
-	{param elementClasses: 'btn-monospaced' /}
-	{param label: 'Secondary' /}
+	{param label: 'B' /}
 	{param style: 'secondary' /}
+	{param monospaced: true /}
 	{param type: 'button' /}
 {/call}
 
 {call ClayButton.render}
-	{param elementClasses: 'btn-monospaced' /}
-	{param label: 'Link' /}
+	{param label: 'C' /}
 	{param style: 'link' /}
+	{param monospaced: true /}
 	{param type: 'button' /}
 {/call}
 
 {call ClayButton.render}
-	{param elementClasses: 'btn-monospaced' /}
-	{param label: 'Unstyled' /}
+	{param label: 'D' /}
 	{param style: 'unstyled' /}
+	{param monospaced: true /}
 	{param type: 'button' /}
 {/call}
 ```
@@ -271,19 +271,19 @@ weight: 100
 ```soy
 {call ClayButton.render}
 	{param icon: [
-			'monospaced': true,
 			'spritemap': '/vendor/lexicon/icons.svg',
 			'symbol': 'blogs'
 	] /}
+	{param monospaced: true /}
 	{param size: 'sm' /}
 {/call}
 
 {call ClayButton.render}
 	{param icon: [
-			'monospaced': true,
 			'spritemap': '/vendor/lexicon/icons.svg',
 			'symbol': 'plus'
 	] /}
+	{param monospaced: true /}
 {/call}
 ```
 
