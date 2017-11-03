@@ -4,7 +4,4 @@ $sticker-inside-offset: 1rem !default; // 16px
 
 // Sticker Variants
 
-$sticker-secondary-color: #FFF !default;
-$sticker-secondary-bg: map-get($theme-colors, secondary) !default;
-
-$sticker-light-color: $body-color !default;
+$sticker-light-color: $dark !default;
