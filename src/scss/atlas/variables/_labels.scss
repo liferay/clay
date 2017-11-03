@@ -17,42 +17,42 @@ $label-lg: (
 // Label Variants
 
 $label-primary-color: $primary !default;
+$label-primary-hover-color: $label-primary-color !default;
 $label-primary-border-color: lighten(saturate($label-primary-color, 3.40), 21.18) !default;
 $label-primary-hover-border-color: $label-primary-border-color !default;
-$label-primary-hover-color: $label-primary-color !default;
 
 $label-secondary-color: $secondary !default;
+$label-secondary-hover-color: $label-secondary-color !default;
 $label-secondary-border-color: lighten(saturate(adjust-hue($label-secondary-color, -2), 5.48), 37.06) !default;
 $label-secondary-hover-border-color: $label-secondary-border-color !default;
-$label-secondary-hover-color: $label-secondary-color !default;
 
 $label-success-color: $success !default;
+$label-success-hover-color: $label-success-color !default;
 $label-success-border-color: lighten(desaturate($label-success-color, 0.14), 24.90) !default;
 $label-success-hover-border-color: $label-success-border-color !default;
-$label-success-hover-color: $label-success-color !default;
 
 $label-info-color: $info !default;
+$label-info-hover-color: $label-info-color !default;
 $label-info-border-color: lighten(saturate($label-info-color, 0.59), 28.04) !default;
 $label-info-hover-border-color: $label-info-border-color !default;
-$label-info-hover-color: $label-info-color !default;
 
 $label-warning-color: $warning !default;
+$label-warning-hover-color: $label-warning-color !default;
 $label-warning-border-color: lighten($label-warning-color, 24.90) !default;
 $label-warning-hover-border-color: $label-warning-border-color !default;
-$label-warning-hover-color: $label-warning-color !default;
 
 $label-danger-color: $danger !default;
+$label-danger-hover-color: $label-danger-color !default;
 $label-danger-border-color: lighten(desaturate($label-danger-color, 0.25), 28.04) !default;
 $label-danger-hover-border-color: $label-danger-border-color !default;
-$label-danger-hover-color: $label-danger-color !default;
 
 $label-light-color: $light !default;
+$label-light-hover-color: $label-light-color !default;
 $label-light-bg: $dark !default;
 $label-light-border-color: $light !default;
 $label-light-hover-border-color: $label-light-border-color !default;
-$label-light-hover-color: $label-light-color !default;
 
 $label-dark-color: $dark !default;
+$label-dark-hover-color: $label-dark-color !default;
 $label-dark-border-color: $dark !default;
 $label-dark-hover-border-color: $label-dark-border-color !default;
-$label-dark-hover-color: $label-dark-color !default;
