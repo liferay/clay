@@ -35,35 +35,35 @@ $sticker-outside-offset: -($sticker-size / 2) !default;
 
 $sticker-primary-bg: $primary !default;
 $sticker-primary-border-color: null !default;
-$sticker-primary-color: $white !default;
+$sticker-primary-color: color-yiq($sticker-primary-bg) !default;
 
 $sticker-secondary-bg: $secondary !default;
 $sticker-secondary-border-color: null !default;
-$sticker-secondary-color: $white !default;
+$sticker-secondary-color: color-yiq($sticker-secondary-bg) !default;
 
 $sticker-info-bg: $info !default;
 $sticker-info-border-color: null !default;
-$sticker-info-color: $white !default;
+$sticker-info-color: color-yiq($sticker-info-bg) !default;
 
 $sticker-success-bg: $success !default;
 $sticker-success-border-color: null !default;
-$sticker-success-color: $white !default;
+$sticker-success-color: color-yiq($sticker-success-bg) !default;
 
 $sticker-warning-bg: $warning !default;
 $sticker-warning-border-color: null !default;
-$sticker-warning-color: $white !default;
+$sticker-warning-color: color-yiq($sticker-warning-bg) !default;
 
 $sticker-danger-bg: $danger !default;
 $sticker-danger-border-color: null !default;
-$sticker-danger-color: $white !default;
+$sticker-danger-color: color-yiq($sticker-danger-bg) !default;
 
 $sticker-light-bg: $light !default;
 $sticker-light-border-color: null !default;
-$sticker-light-color: #111 !default;
+$sticker-light-color: color-yiq($sticker-light-bg) !default;
 
 $sticker-dark-bg: $dark !default;
 $sticker-dark-border-color: null !default;
-$sticker-dark-color: $white !default;
+$sticker-dark-color: color-yiq($sticker-dark-bg) !default;
 
 $sticker-palette: () !default;
 $sticker-palette: map-merge((

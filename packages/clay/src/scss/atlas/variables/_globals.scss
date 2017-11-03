@@ -75,6 +75,9 @@ $theme-colors: (
 	dark: $dark
 ) !default;
 
+$yiq-text-dark: #272833 !default;
+$yiq-text-light: #FFF !default;
+
 $border-radius: 0.25rem !default; // 4px
 $border-radius-lg: 0.375rem !default; // 6px
 $border-radius-sm: 0.1875rem !default; // 3px
