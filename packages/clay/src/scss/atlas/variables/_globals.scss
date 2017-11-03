@@ -53,15 +53,26 @@ $font-import-url: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,3
 
 $font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
+// Theme Base Colors
+
+$primary: #1865FB !default;
+$secondary: #6B6C7E !default;
+$success: #287D3D !default;
+$info: #2E5AAC !default;
+$warning: #B95000 !default;
+$danger: #DA1414 !default;
+$light: #F1F2F5 !default;
+$dark: #272834 !default;
+
 $theme-colors: (
-	primary: #1865FB,
-	secondary: #6B6C7E,
-	success: #2D7C3F,
-	info: #315CA9,
-	warning: #B75115,
-	danger: #D71921,
-	light: #F1F2F5,
-	dark: #31323F
+	primary: $primary,
+	secondary: $secondary,
+	success: $success,
+	info: $info,
+	warning: $warning,
+	danger: $danger,
+	light: $light,
+	dark: $dark
 ) !default;
 
 $border-radius: 0.25rem !default; // 4px
