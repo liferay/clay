@@ -33,35 +33,35 @@ $sticker-outside-offset: -($sticker-size / 2) !default;
 
 // Sticker Variants
 
-$sticker-primary-bg: map-get($theme-colors, primary) !default;
+$sticker-primary-bg: $primary !default;
 $sticker-primary-border-color: null !default;
 $sticker-primary-color: $white !default;
 
-$sticker-secondary-bg: map-get($theme-colors, secondary) !default;
+$sticker-secondary-bg: $secondary !default;
 $sticker-secondary-border-color: null !default;
 $sticker-secondary-color: $white !default;
 
-$sticker-info-bg: map-get($theme-colors, info) !default;
+$sticker-info-bg: $info !default;
 $sticker-info-border-color: null !default;
 $sticker-info-color: $white !default;
 
-$sticker-success-bg: map-get($theme-colors, success) !default;
+$sticker-success-bg: $success !default;
 $sticker-success-border-color: null !default;
 $sticker-success-color: $white !default;
 
-$sticker-warning-bg: map-get($theme-colors, warning) !default;
+$sticker-warning-bg: $warning !default;
 $sticker-warning-border-color: null !default;
 $sticker-warning-color: $white !default;
 
-$sticker-danger-bg: map-get($theme-colors, danger) !default;
+$sticker-danger-bg: $danger !default;
 $sticker-danger-border-color: null !default;
 $sticker-danger-color: $white !default;
 
-$sticker-light-bg: map-get($theme-colors, light) !default;
+$sticker-light-bg: $light !default;
 $sticker-light-border-color: null !default;
 $sticker-light-color: #111 !default;
 
-$sticker-dark-bg: map-get($theme-colors, dark) !default;
+$sticker-dark-bg: $dark !default;
 $sticker-dark-border-color: null !default;
 $sticker-dark-color: $white !default;
 
