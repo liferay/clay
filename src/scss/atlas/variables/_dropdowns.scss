@@ -1,4 +1,4 @@
-$dropdown-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+$dropdown-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $dropdown-border-width: 0 !default;
 $dropdown-box-shadow: 0 1px 10px -3px transparentize(#000, 0.7) !default;
 
@@ -11,26 +11,24 @@ $dropdown-max-width: 240px !default;
 $dropdown-item-padding-x: 1.25rem !default; // 20px
 $dropdown-item-padding-y: 0.5rem !default; // 8px
 
-$dropdown-header-color: map-get($theme-colors, secondary) !default;
+$dropdown-header-color: $secondary !default;
 $dropdown-header-font-size: $font-size-sm !default; // 14px
 
-$dropdown-link-color: map-get($theme-colors, secondary) !default;
+$dropdown-link-color: $secondary !default;
 $dropdown-link-hover-color: $body-color !default;
-$dropdown-link-hover-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$dropdown-link-hover-bg: lighten(saturate($primary, 3.40), 43.14) !default;
 $dropdown-link-active-color: $dropdown-link-hover-color !default;
 $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
 $dropdown-link-active-font-weight: $font-weight-semi-bold !default;
-$dropdown-link-disabled-color: lighten($body-color, 52%) !default;
+$dropdown-link-disabled-color: lighten(desaturate(adjust-hue($body-color, -1), 0.74), 51.76) !default;
 
 $dropdown-divider-bg: $dropdown-border-color !default;
 
 // Dropdown Action
 
-$dropdown-action-toggle-color: map-get($theme-colors, secondary) !default;
+$dropdown-action-toggle-color: $secondary !default;
 
 $dropdown-action-toggle-hover-color: $dropdown-action-toggle-color !default;
 
 $dropdown-action-toggle-disabled-color: $dropdown-action-toggle-color !default;
 $dropdown-action-toggle-disabled-opacity: $btn-disabled-opacity !default;
-
-// $dropdown-action-toggle-active-color: $dropdown-action-toggle-hover-color !default;
