@@ -1,7 +1,7 @@
 $list-group-border-color: rgba(220, 220, 220, 0.5) !default;
-$list-group-color: map-get($theme-colors, secondary) !default;
-$list-group-hover-bg: lighten(map-get($theme-colors, primary), 44%) !default;
-$list-group-active-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$list-group-color: $secondary !default;
+$list-group-hover-bg: lighten(saturate($primary, 3.40), 43.14) !default;
+$list-group-active-bg: $list-group-hover-bg !default;
 $list-group-active-border-color: $list-group-border-color !default;
 $list-group-active-color: !default;
 
@@ -10,7 +10,7 @@ $list-group-item-padding-y: 1rem !default; // 16px
 
 $list-group-header-padding-y: 0.75rem !default; // 12px
 
-$list-group-header-title-color: map-get($theme-colors, secondary) !default;
+$list-group-header-title-color: $secondary !default;
 $list-group-header-title-font-size: 0.75rem !default; // 12px
 $list-group-header-title-font-weight: $font-weight-semi-bold !default;
 $list-group-header-title-text-transform: uppercase !default;
@@ -18,7 +18,7 @@ $list-group-header-title-text-transform: uppercase !default;
 $list-group-title-color: $body-color !default;
 $list-group-title-font-size: 1rem !default; // 16px
 
-$list-group-subtitle-color: map-get($theme-colors, secondary) !default;
+$list-group-subtitle-color: $secondary !default;
 $list-group-subtitle-font-size: 0.875rem !default; // 14px
 
 $list-group-link-color: $body-color !default;
@@ -27,4 +27,4 @@ $list-group-link-active-color: $list-group-link-color !default;
 
 // List Group Notification
 
-$list-group-notification-item-border-left-color: lighten(map-get($theme-colors, primary), 22%) !default;
+$list-group-notification-item-border-left-color: lighten(saturate($primary, 3.40), 21.18) !default;
