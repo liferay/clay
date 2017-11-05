@@ -37,6 +37,7 @@
 .btn[disabled],
 .btn.disabled,
 fieldset[disabled] .btn {
+	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24680 is merged
 	opacity: $btn-disabled-opacity;
 }
 
