@@ -26,7 +26,7 @@ $alert-primary-link-color: $link-color !default;
 
 $alert-secondary-color: $secondary !default;
 $alert-secondary-bg: lighten(saturate(adjust-hue($alert-secondary-color, 3), 6.13), 46.08) !default;
-$alert-secondary-border-color: lighten(saturate(adjust-hue($alert-secondary-color, -2), 5.48), 37.06) !default;
+$alert-secondary-border-color: lighten(saturate(adjust-hue($alert-secondary-color, -3), 5.39), 23.92) !default;
 $alert-secondary-close-color: $alert-secondary-color !default;
 $alert-secondary-lead-color: $alert-secondary-color !default;
 $alert-secondary-link-color: $link-color !default;
@@ -61,13 +61,13 @@ $alert-danger-link-color: $link-color !default;
 
 $alert-light-color: $dark !default;
 $alert-light-bg: lighten(adjust-hue($alert-light-color, -25), 79.41) !default;
-$alert-light-border-color: lighten(saturate(adjust-hue($alert-light-color, -10), 2.38), 77.45) !default;
+$alert-light-border-color: lighten(desaturate($alert-light-color, 0.65), 64.90) !default;
 $alert-light-close-color: $alert-light-color !default;
 $alert-light-lead-color: $alert-light-color !default;
 $alert-light-link-color: $link-color !default;
 
 $alert-dark-color: $light !default;
-$alert-dark-bg: darken(desaturate(adjust-hue($alert-dark-color, 11), 3.15), 73.53) !default;
+$alert-dark-bg: darken(desaturate(adjust-hue($alert-dark-color, 11), 3.69), 69.61) !default;
 $alert-dark-border-color: darken(desaturate(adjust-hue($alert-dark-color, 10), 2.38), 77.45) !default;
 $alert-dark-close-color: $alert-dark-color !default;
 $alert-dark-lead-color: $alert-dark-color !default;
