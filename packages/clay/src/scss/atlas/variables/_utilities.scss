@@ -1,2 +1,2 @@
-$bg-checkered-fg: lighten(map-get($theme-colors, secondary), 46%) !default;
+$bg-checkered-fg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $page-header-bg: #FFF !default;
