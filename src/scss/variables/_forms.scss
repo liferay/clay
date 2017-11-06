@@ -43,7 +43,7 @@ $input-label-font-size-mobile: null !default;
 $input-label-font-weight: null !default;
 $input-label-margin-bottom: null !default;
 
-$input-label-reference-mark-color: map-get($theme-colors, warning) !default;
+$input-label-reference-mark-color: $warning !default;
 $input-label-reference-mark-font-size: null !default;
 $input-label-reference-mark-spacer: null !default;
 $input-label-reference-mark-vertical-align: null !default;
@@ -61,7 +61,7 @@ $form-check-description-margin-left: null !default;
 
 // Input Variants
 
-$form-feedback-warning-color: map-get($theme-colors, warning) !default;
+$form-feedback-warning-color: $warning !default;
 
 $input-danger-bg: null !default;
 $input-danger-focus-bg: null !default;
@@ -158,8 +158,8 @@ $input-group-constrain-max-width-mobile: 150px !default;
 
 // Input Group Secondary
 
-$input-group-secondary-addon-bg: map-get($theme-colors, secondary) !default;
-$input-group-secondary-addon-border-color: map-get($theme-colors, secondary) !default;
+$input-group-secondary-addon-bg: $secondary !default;
+$input-group-secondary-addon-border-color: $secondary !default;
 $input-group-secondary-addon-border-width: 0.0625rem !default; // 1px
 
 // Input Group Transparent
