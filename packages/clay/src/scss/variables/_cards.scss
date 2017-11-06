@@ -7,7 +7,7 @@ $card-body-padding-left: null !default;
 $card-body-padding-right: null !default;
 $card-body-padding-top: null !default;
 
-$card-section-header-color: map-get($theme-colors, secondary) !default;
+$card-section-header-color: $secondary !default;
 $card-section-header-font-size: 0.75rem !default;
 $card-section-header-font-weight: null !default;
 $card-section-header-line-height: 2.5 !default;
@@ -21,7 +21,7 @@ $card-title-font-weight: $font-weight-semi-bold !default;
 $card-title-margin-bottom: 0.5rem !default; // 8px
 $card-title-margin-top: null !default;
 
-$card-subtitle-color: map-get($theme-colors, secondary) !default;
+$card-subtitle-color: $card-section-header-color !default;
 $card-subtitle-font-size: 0.875rem !default; // 14px
 $card-subtitle-font-weight: null !default;
 $card-subtitle-margin-bottom: 0.5rem !default; // 8px
