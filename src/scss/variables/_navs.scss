@@ -48,6 +48,6 @@ $nav-underline-link-disabled-color: null !default;
 $nav-underline-link-disabled-highlight: null !default;
 
 $nav-underline-link-active-color: null !default;
-$nav-underline-link-active-highlight: map-get($theme-colors, primary) !default;
+$nav-underline-link-active-highlight: $primary !default;
 $nav-underline-link-active-content: '' !default;
 $nav-underline-link-active-highlight-height: 2px !default;

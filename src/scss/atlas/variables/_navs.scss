@@ -1,7 +1,7 @@
 $nav-link-color: $body-color !default;
 $nav-link-hover-color: inherit !default;
-$nav-link-active-color: map-get($theme-colors, primary) !default;
-$nav-link-disabled-color: lighten(map-get($theme-colors, secondary), 24%) !default;
+$nav-link-active-color: $primary !default;
+$nav-link-disabled-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
 
 $nav-link-padding-x: 1rem !default; // 16px
 $nav-link-padding-y: 0.625rem !default; // 10px
@@ -17,14 +17,14 @@ $nav-nested-spacer-x: 1rem !default; // 16px
 
 $nav-pills-border-radius: 5px !default;
 
-$nav-pills-active-link-bg: map-get($theme-colors, secondary) !default;
+$nav-pills-active-link-bg: $secondary !default;
 $nav-pills-active-link-color: #FFF !default;
 
 // Nav Tabs
 
 $nav-tabs-border-color: transparent !default;
 $nav-tabs-font-size: 0.875rem !default; // 14px
-$nav-tabs-link-color: map-get($theme-colors, secondary) !default;
+$nav-tabs-link-color: $secondary !default;
 
 $nav-tabs-link-hover-border-color: transparent !default;
 
@@ -44,7 +44,7 @@ $nav-tabs-tab-pane-padding: 2rem !default;
 
 // Nav Underline
 
-$nav-underline-link-color: map-get($theme-colors, secondary) !default;
+$nav-underline-link-color: $secondary !default;
 
 $nav-underline-link-highlight-left: 0 !default;
 $nav-underline-link-highlight-right: 0 !default;
@@ -52,5 +52,5 @@ $nav-underline-link-highlight-right: 0 !default;
 $nav-underline-link-disabled-color: $nav-link-disabled-color !default;
 
 $nav-underline-link-active-color: $body-color !default;
-$nav-underline-link-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
+$nav-underline-link-active-highlight: lighten(saturate($primary, 3.40), 21.18) !default;
 $nav-underline-link-active-highlight-height: 0.25rem !default; // 4px
