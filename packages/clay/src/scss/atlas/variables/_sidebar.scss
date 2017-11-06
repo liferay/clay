@@ -3,8 +3,8 @@
 $sidebar-light: (
 	link-color: $body-color,
 	header-title-color: $body-color,
-	subtitle-color: map-get($theme-colors, secondary),
-	caption-color: map-get($theme-colors, secondary),
-	actions-link-color: map-get($theme-colors, secondary),
-	dt-color: map-get($theme-colors, secondary)
+	subtitle-color: $secondary,
+	caption-color: $secondary,
+	actions-link-color: $secondary,
+	dt-color: $secondary
 ) !default;
