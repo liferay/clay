@@ -1,16 +1,16 @@
-$navbar-underline-active-bg: lighten(map-get($theme-colors, primary), 22%) !default;
+$navbar-underline-active-bg: lighten(saturate($primary, 3.40), 21.18) !default;
 
 // Navbar Transparent
 
 $navbar-transparent: (
-	border-color: darken($body-bg, 6.5%),
+	border-color: darken(desaturate(adjust-hue($light, 10), 3.03), 12.55),
 	link-active-color: $body-color
 ) !default;
 
 // Navbar Light
 
-$navbar-light-color: map-get($theme-colors, secondary) !default;
-$navbar-light-hover-color: map-get($theme-colors, secondary) !default;
+$navbar-light-color: $secondary !default;
+$navbar-light-hover-color: $navbar-light-color !default;
 $navbar-light-active-color: $body-color !default;
 $navbar-light-disabled-color: $nav-link-disabled-color !default;
 
@@ -22,9 +22,9 @@ $navbar-light: (
 
 $navbar-secondary: () !default;
 $navbar-secondary: map-merge((
-	bg: lighten(map-get($theme-colors, dark), 4%),
-	link-color: lighten(map-get($theme-colors, secondary), 37%),
-	link-hover-color: lighten(map-get($theme-colors, secondary), 37%),
+	bg: darken(saturate($secondary, 4.82), 20.00),
+	link-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
+	link-hover-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
 	link-active-color: #FFF,
 	link-disabled-color: $nav-link-disabled-color
 ), $navbar-secondary);
@@ -37,5 +37,5 @@ $navbar-dark-active-color: $navbar-dark-color !default;
 $navbar-dark-disabled-color: $nav-link-disabled-color !default;
 
 $navbar-dark: (
-	bg: map-get($theme-colors, dark)
+	bg: lighten(desaturate(adjust-hue($dark, 1), 0.77), 3.92)
 ) !default;
