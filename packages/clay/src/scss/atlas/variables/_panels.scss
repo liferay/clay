@@ -1,4 +1,4 @@
-$panel-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+$panel-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 
 $panel-border-bottom-width: 1px !default;
 $panel-border-left-width: 1px !default;
@@ -31,9 +31,9 @@ $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
 $panel-secondary: (
 	border-color: null,
-	color: map-get($theme-colors, secondary),
+	color: $secondary,
 	header-bg: null,
-	header-border-color: lighten(map-get($theme-colors, secondary), 46%),
+	header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
 	footer-bg: null,
-	footer-border-color: lighten(map-get($theme-colors, secondary), 46%)
+	footer-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
 );
