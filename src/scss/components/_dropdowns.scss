@@ -167,7 +167,7 @@
 
 		text-align: center;
 
-		@include hover-focus {
+		@include hover {
 			background-color: $dropdown-action-toggle-hover-bg;
 			color: $dropdown-action-toggle-hover-color;
 		}
