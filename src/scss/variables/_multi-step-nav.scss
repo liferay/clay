@@ -36,7 +36,7 @@ $multi-step-item-width: 75px !default;
 $multi-step-item-fixed-width: 150px !default;
 
 $multi-step-icon-complete-color: #FFF !default;
-$multi-step-icon-complete-bg: map-get($theme-colors, secondary) !default;
+$multi-step-icon-complete-bg: $secondary !default;
 $multi-step-icon-complete-bg-image: clay-icon(check, $multi-step-icon-complete-color) !default;
 $multi-step-icon-complete-bg-position: center !default;
 $multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
