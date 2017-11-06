@@ -22,7 +22,7 @@ $subnav-item-padding-y: 0 !default;
 // Subnav Light
 
 $subnav-light-color: $navbar-light-color !default;
-$subnav-light-bg: map-get($theme-colors, light) !default;
+$subnav-light-bg: $light !default;
 
 $subnav-light-link-color: null !default;
 $subnav-light-link-hover-color: null !default;
@@ -33,7 +33,7 @@ $subnav-light-item-link-hover-color: rgba(0, 0, 0, 0.7) !default;
 // Subnav Dark
 
 $subnav-dark-color: $navbar-dark-color !default;
-$subnav-dark-bg: map-get($theme-colors, dark) !default;
+$subnav-dark-bg: $dark !default;
 
 $subnav-dark-link-color: null !default;
 $subnav-dark-link-hover-color: null !default;
@@ -44,7 +44,7 @@ $subnav-dark-item-link-hover-color: rgba(255, 255, 255, 0.75) !default;
 // Subnav Primary
 
 $subnav-primary-color: rgba(255, 255, 255, 0.5) !default;
-$subnav-primary-bg: map-get($theme-colors, primary) !default;
+$subnav-primary-bg: $primary !default;
 
 $subnav-primary-link-color: #FFF !default;
 $subnav-primary-link-hover-color: rgba(255, 255, 255, 0.75) !default;
