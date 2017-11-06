@@ -29,7 +29,7 @@
 	padding-right: $quick-action-item-padding-x;
 	padding-top: $quick-action-item-padding-y;
 
-	@include hover-focus {
+	@include hover {
 		background-color: $quick-action-item-hover-bg;
 		color: $quick-action-item-hover-color;
 	}
