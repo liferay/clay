@@ -12,7 +12,7 @@ $toggle-switch-bar-width: 60px !default; // width of switch bar
 $toggle-switch-bar-width-mobile: 44px !default; // width of switch bar
 // must all be same units--end
 
-$toggle-switch-bar-bg: lighten(map-get($theme-colors, secondary), 24%) !default;
+$toggle-switch-bar-bg: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
 $toggle-switch-bar-border-color: $toggle-switch-bar-bg !default;
 $toggle-switch-bar-border-radius: 20px !default;
 $toggle-switch-bar-border-width: 1px !default;
@@ -30,7 +30,7 @@ $toggle-switch-button-font-size-mobile: $toggle-switch-bar-font-size-mobile !def
 $toggle-switch-button-icon-color: $body-color !default;
 
 // Toggle Switch On
-$toggle-switch-bar-on-bg: map-get($theme-colors, primary) !default;
+$toggle-switch-bar-on-bg: $primary !default;
 $toggle-switch-bar-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-bar-on-icon-color: #FFF !default;
 
