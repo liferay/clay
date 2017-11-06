@@ -16,19 +16,19 @@ $progress-group-addon-spacer-x: 1rem !default;
 
 // Progress Variants
 
-$progress-group-feedback-color: map-get($theme-colors, primary) !default;
+$progress-group-feedback-color: $primary !default;
 
-$progress-bar-danger-bg: map-get($theme-colors, danger) !default;
-$progress-group-feedback-danger-color: map-get($theme-colors, danger) !default;
+$progress-bar-danger-bg: $danger !default;
+$progress-group-feedback-danger-color: $progress-bar-danger-bg !default;
 
-$progress-bar-info-bg: map-get($theme-colors, info) !default;
-$progress-group-feedback-info-color: map-get($theme-colors, info) !default;
+$progress-bar-info-bg: $info !default;
+$progress-group-feedback-info-color: $progress-bar-info-bg !default;
 
-$progress-bar-success-bg: map-get($theme-colors, success) !default;
-$progress-group-feedback-success-color: map-get($theme-colors, success) !default;
+$progress-bar-success-bg: $success !default;
+$progress-group-feedback-success-color: $progress-bar-success-bg !default;
 
-$progress-bar-warning-bg: map-get($theme-colors, warning) !default;
-$progress-group-feedback-warning-color: map-get($theme-colors, warning) !default;
+$progress-bar-warning-bg: $warning !default;
+$progress-group-feedback-warning-color: $progress-bar-warning-bg !default;
 
 $progress-palette: () !default;
 $progress-palette: map-merge((
