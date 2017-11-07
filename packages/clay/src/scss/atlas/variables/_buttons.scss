@@ -1,7 +1,13 @@
+$btn-box-shadow: none !default;
 $btn-font-weight: $font-weight-semi-bold !default;
 $btn-padding-x: 0.9375rem !default; // 15px
 $btn-padding-y: 0.4375rem !default; // 7px
 
+$btn-disabled-opacity: 0.26 !default;
+
+$btn-active-box-shadow: inset 0 0 rgba(#000, 0) !default;
+
+$btn-border-radius-lg: $border-radius !default;
 $btn-font-size-lg: 1.25rem !default; // 20px
 $btn-padding-x-lg: 1.25rem !default; // 20px
 $btn-padding-y-lg: 0.5rem !default; // 8px
@@ -9,12 +15,6 @@ $btn-padding-y-lg: 0.5rem !default; // 8px
 $btn-font-size-sm: 0.875rem !default; // 14px
 $btn-padding-x-sm: 0.6875rem !default; // 11px
 $btn-padding-y-sm: 0.28125rem !default; // 4.5px
-
-$btn-disabled-opacity: 0.26 !default;
-
-$btn-border-radius-lg: $border-radius !default;
-$btn-box-shadow: none !default;
-$btn-active-box-shadow: inset 0 0 rgba(#000, 0) !default;
 
 // Button Monospaced
 
@@ -24,63 +24,63 @@ $btn-monospaced-size-sm: 2rem !default; // 32px
 // Button Variants
 
 $btn-primary: (
-	hover-bg: darken(map-get($theme-colors, primary), 5.5%),
-	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, primary), 5.5%), 0.5),
-	active-bg: darken(map-get($theme-colors, primary), 11%)
+	hover-bg: darken(saturate($primary, 3.40), 6.86),
+	focus-box-shadow: 0 0 0 2px rgba(darken(saturate($primary, 3.40), 6.86), 0.5),
+	active-bg: darken(saturate($primary, 3.40), 11.76)
 ) !default;
 
 $btn-secondary: (
 	bg: #FFF,
-	border-color: lighten(map-get($theme-colors, secondary), 37%),
-	color: map-get($theme-colors, secondary),
-	hover-bg: lighten(map-get($theme-colors, secondary), 50%),
-	hover-border-color: lighten(map-get($theme-colors, secondary), 37%),
+	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
+	color: $secondary,
+	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	hover-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
 	hover-color: $body-color,
-	focus-box-shadow: 0 0 0 2px rgba(lighten(map-get($theme-colors, secondary), 37%), 0.5),
+	focus-box-shadow: 0 0 0 2px rgba(lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06), 0.5),
 	focus-color: $body-color,
 	disabled-bg: #FFF,
-	disabled-border-color: lighten(map-get($theme-colors, secondary), 37%),
-	disabled-color: map-get($theme-colors, secondary),
-	active-border-color: lighten(map-get($theme-colors, secondary), 37%),
+	disabled-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
+	disabled-color: $secondary,
+	active-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
 	active-color: $body-color,
-	active-bg: lighten(map-get($theme-colors, secondary), 48%)
+	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61)
 ) !default;
 
 $btn-success: (
-	hover-bg: darken(map-get($theme-colors, success), 4%),
-	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, success), 4%), 0.5),
-	active-bg: darken(map-get($theme-colors, success), 8%)
+	hover-bg: darken($success, 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken($success, 4%), 0.5),
+	active-bg: darken($success, 8%)
 ) !default;
 
 $btn-info: (
-	hover-bg: darken(map-get($theme-colors, info), 4%),
-	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, info), 4%), 0.5),
-	active-bg: darken(map-get($theme-colors, info), 8%)
+	hover-bg: darken($info, 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken($info, 4%), 0.5),
+	active-bg: darken($info, 8%)
 ) !default;
 
 $btn-warning: (
-	hover-bg: darken(map-get($theme-colors, warning), 4%),
-	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, warning), 4%), 0.5),
-	active-bg: darken(map-get($theme-colors, warning), 8%)
+	hover-bg: darken($warning, 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken($warning, 4%), 0.5),
+	active-bg: darken($warning, 8%)
 ) !default;
 
 $btn-danger: (
-	hover-bg: darken(map-get($theme-colors, danger), 4%),
-	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, danger), 4%), 0.5),
-	active-bg: darken(map-get($theme-colors, danger), 8%)
+	hover-bg: darken($danger, 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken($danger, 4%), 0.5),
+	active-bg: darken($danger, 8%)
 ) !default;
 
 $btn-light: (
 	color: $body-color,
-	hover-bg: darken(map-get($theme-colors, light), 4%),
-	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, light), 4%), 0.5),
-	active-bg: darken(map-get($theme-colors, light), 8%)
+	hover-bg: darken($light, 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken($light, 4%), 0.5),
+	active-bg: darken($light, 8%)
 ) !default;
 
 $btn-dark: (
-	hover-bg: darken(map-get($theme-colors, dark), 4%),
-	focus-box-shadow: 0 0 0 2px rgba(darken(map-get($theme-colors, dark), 4%), 0.5),
-	active-bg: darken(map-get($theme-colors, dark), 8%)
+	hover-bg: darken($dark, 4%),
+	focus-box-shadow: 0 0 0 2px rgba(darken($dark, 4%), 0.5),
+	active-bg: darken($dark, 8%)
 ) !default;
 
 $btn-link-disabled-color: $link-color !default;
