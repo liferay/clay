@@ -40,7 +40,7 @@ ClayLabel.STATE = {
    * @instance
    * @memberof ClayLabel
    * @type {?string|undefined}
-   * default undefined
+   * @default undefined
    */
   href: Config.string(),
 
@@ -49,7 +49,7 @@ ClayLabel.STATE = {
    * @instance
    * @memberof ClayLabel
    * @type {?string|undefined}
-   * default undefined
+   * @default undefined
    */
   id: Config.string(),
 
@@ -58,7 +58,7 @@ ClayLabel.STATE = {
    * @instance
    * @memberof ClayLabel
    * @type {?string|undefined}
-   * default undefined
+   * @default undefined
    */
   label: Config.string(),
 
@@ -85,7 +85,7 @@ ClayLabel.STATE = {
    * @instance
    * @memberof ClayLabel
    * @type {?string}
-   * default secondary
+   * @default secondary
    */
   style: Config.oneOf([
     'danger',
