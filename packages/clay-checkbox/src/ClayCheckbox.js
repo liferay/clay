@@ -1,4 +1,5 @@
 import Component from 'metal-component';
+import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
@@ -112,6 +113,8 @@ ClayCheckbox.STATE = {
    */
   value: Config.string(),
 };
+
+defineWebComponent('clay-checkbox', ClayCheckbox);
 
 Soy.register(ClayCheckbox, templates);
 

@@ -1,6 +1,7 @@
 import 'clay-icon';
 import './ClayDropdownBase';
 import Component from 'metal-component';
+import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
@@ -105,6 +106,8 @@ ClayDropdown.STATE = {
    */
   type: Config.oneOf(['form', 'list']).value('list'),
 };
+
+defineWebComponent('clay-dropdown', ClayDropdown);
 
 Soy.register(ClayDropdown, templates);
 

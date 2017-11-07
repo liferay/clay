@@ -109,7 +109,7 @@ class ClayCollapse extends State {
    * Checks to see if browser supports CSS3 Transitions and returns the name
    * of the transitionend event; returns false if it's not supported
    * @protected
-   * @return {string|boolean} The name of the transitionend event or false 
+   * @return {string|boolean} The name of the transitionend event or false
    * if not supported
    */
   getTransitionEndEvent_() {
