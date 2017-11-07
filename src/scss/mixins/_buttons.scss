@@ -56,6 +56,7 @@
 	.show > &.dropdown-toggle {
 		background-color: $active-bg;
 		border-color: $active-border-color;
+		box-shadow: $focus-box-shadow;
 		color: $active-color;
 	}
 }
