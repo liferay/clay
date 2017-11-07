@@ -13,20 +13,25 @@
 	{@param? spritemap: string}
 	{@param? style: string}
 
-	{let $classes kind="text"}
-		label
-		{sp}label-{$style ?: 'secondary'}
+	{let $attributes kind="attributes"}
+		class="label
+			{sp}label-{$style ?: 'secondary'}
 
-		{if $closeable}
-			{sp}label-dismissible
-		{/if}
+			{if $closeable}
+				{sp}label-dismissible
+			{/if}
 
-		{if $size}
-			{sp}label-{$size}
+			{if $size}
+				{sp}label-{$size}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
 		{/if}
 	{/let}
 
-	<span class="{$classes}" id="{$id}">
+	<span {$attributes}>
 		{call .content}
 			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 			{param closeable: $closeable /}
