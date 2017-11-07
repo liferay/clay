@@ -8,14 +8,14 @@ $custom-control-indicator-box-shadow: none !default;
 $custom-control-indicator-active-bg: #FFF !default;
 $custom-control-indicator-active-border-color: $custom-control-indicator-border-color !default;
 $custom-control-indicator-active-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1) !default;
-$custom-control-indicator-active-checked-bg: $primary !default;
+$custom-control-indicator-active-checked-bg: $component-active-bg !default;
 $custom-control-indicator-active-checked-border-color: $custom-control-indicator-active-checked-bg !default;
-$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px lighten(saturate($primary, 3.40), 21.18) !default;
+$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px lighten(saturate($component-active-bg, 3.40), 21.18) !default;
 $custom-control-indicator-checked-border-color: $custom-control-indicator-active-checked-bg !default;
 $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-active-checked-bg !default;
 $custom-control-indicator-disabled-bg: $input-disabled-bg !default;
 $custom-control-indicator-disabled-border-color: $input-disabled-border-color !default;
-$custom-control-indicator-disabled-checked-bg: lighten(saturate($primary, 3.40), 31.18) !default;
+$custom-control-indicator-disabled-checked-bg: lighten(saturate($component-active-bg, 3.40), 31.18) !default;
 $custom-control-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-bg !default;
 
 $custom-control-gutter: $custom-control-indicator-size !default;
@@ -28,11 +28,11 @@ $custom-control-description-margin-left: 0.5rem !default; // 8px
 
 // Custom Checkbox
 
-$custom-checkbox-indicator-icon-checked: clay-icon(check, #FFF) !default;
+$custom-checkbox-indicator-icon-checked: clay-icon(check, $component-active-color) !default;
 $custom-checkbox-indicator-icon-checked-bg-size: 0.6em !default; // 12px
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 0.5em !default; // 10px
 
-$custom-checkbox-indicator-indeterminate-bg: $primary !default;
+$custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
 $custom-checkbox-indicator-border-radius: 0.125rem !default; // 2px
 
 // Custom Radio

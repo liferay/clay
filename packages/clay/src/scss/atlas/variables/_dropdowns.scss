@@ -16,7 +16,7 @@ $dropdown-header-font-size: $font-size-sm !default; // 14px
 
 $dropdown-link-color: $secondary !default;
 $dropdown-link-hover-color: $body-color !default;
-$dropdown-link-hover-bg: lighten(saturate($primary, 3.40), 43.14) !default;
+$dropdown-link-hover-bg: lighten(saturate($component-active-bg, 3.40), 43.14) !default;
 $dropdown-link-active-color: $dropdown-link-hover-color !default;
 $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
 $dropdown-link-active-font-weight: $font-weight-semi-bold !default;
