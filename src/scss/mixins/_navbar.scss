@@ -16,9 +16,12 @@
 	$font-size: setter(map-get($map, font-size), $font-size-base);
 	$padding-x: setter(map-get($map, padding-x), $navbar-padding-x);
 	$padding-y: setter(map-get($map, padding-y), $navbar-padding-y);
+	$link-height: setter(map-get($map, link-height), $height - $border-bottom-width - $border-top-width - ($padding-y * 2));
+	$link-margin-x: map-get($map, link-margin-x);
+	$link-margin-y: setter(map-get($map, link-margin-y), (($height - $border-bottom-width - $border-top-width) - $link-height) / 2);
 	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
 	$link-padding-x: setter(map-get($map, link-padding-x), 0.5rem);
-	$link-padding-y: setter(map-get($map, link-padding-y), ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2);
+	$link-padding-y: setter(map-get($map, link-padding-y), ($link-height - ($font-size * $line-height-base)) / 2);
 	$btn-min-height: setter(map-get($map, btn-min-height), 2rem);
 	$btn-min-width: setter(map-get($map, btn-min-width), 2rem);
 	$btn-margin-x: setter(map-get($map, btn-margin-x), $link-padding-x);
@@ -39,8 +42,11 @@
 
 	$height-mobile: setter(map-get($map, height-mobile), $height);
 	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size);
+	$link-height-mobile: setter(map-get($map, link-height-mobile), $height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2));
+	$link-margin-x-mobile: setter(map-get($map, link-margin-x-mobile), $link-margin-x);
+	$link-margin-y-mobile: setter(map-get($map, link-margin-y-mobile), (($height-mobile - $border-bottom-width - $border-top-width) - $link-height-mobile) / 2);
 	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), $link-padding-x);
-	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2);
+	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($link-height-mobile - ($font-size-mobile * $line-height-base)) / 2);
 	$btn-min-height-mobile: setter(map-get($map, btn-min-height-mobile), $btn-min-height);
 	$btn-min-width-mobile: setter(map-get($map, btn-min-width-mobile), $btn-min-width);
 	$btn-margin-x-mobile: setter(map-get($map, btn-margin-x-mobile), $link-padding-x-mobile);
@@ -148,6 +154,10 @@
 
 			.nav-link,
 			.navbar-text {
+				margin-bottom: $link-margin-y-mobile;
+				margin-left: $link-margin-x-mobile;
+				margin-right: $link-margin-x-mobile;
+				margin-top: $link-margin-y-mobile;
 				padding-bottom: $link-padding-y-mobile;
 				padding-left: $link-padding-x-mobile;
 				padding-right: $link-padding-x-mobile;
@@ -281,6 +291,10 @@
 						.nav-link,
 						.navbar-text {
 							@if ($scaling-navbar) {
+								margin-bottom: $link-margin-y;
+								margin-left: $link-margin-x;
+								margin-right: $link-margin-x;
+								margin-top: $link-margin-y;
 								padding-bottom: $link-padding-y;
 								padding-left: $link-padding-x;
 								padding-right: $link-padding-x;
@@ -332,7 +346,7 @@
 		&.navbar-underline {
 			.navbar-toggler-link {
 				&:after {
-					bottom: -$border-bottom-width - $padding-y;
+					bottom: -$border-bottom-width - $padding-y - $link-margin-y-mobile;
 					height: $active-border-bottom-width;
 					left: $active-border-offset-x;
 					right: $active-border-offset-x;
@@ -349,7 +363,7 @@
 					@include media-breakpoint-up($next) {
 						.navbar-nav .nav-link {
 							&.active:after {
-								bottom: -$border-bottom-width - $padding-y;
+								bottom: -$border-bottom-width - $padding-y - $link-margin-y;
 								height: $active-border-bottom-width;
 								left: $active-border-offset-x;
 								right: $active-border-offset-x;
