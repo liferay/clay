@@ -37,6 +37,17 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Alerts with WebComponents</h4>
+
+			<clay-alert message="This <a href='#'>alert</a> needs your attention." spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Info"></clay-alert>
+			<clay-alert style="success" message='You just read the <a href="#">alert message</a> successfully.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Success"></clay-alert>
+			<clay-alert style="warning" message='This alert is a <a href="#">warning message</a>.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Warning"></clay-alert>
+			<clay-alert style="danger" message='Something</a> is not right.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Danger"></clay-alert>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Dismissible Alerts</h4>
 
 			<div id="closeable-alert-success"></div>
@@ -94,7 +105,7 @@
 
 	<script type="text/javascript">
 		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
-	
+
 		/*
 		 * Normal Alerts
 		 */
@@ -196,7 +207,7 @@
 			},
 			'#closeable-destroyable-alert-info'
 		);
-		
+
 		new metal.ClayAlert(
 			{
 				closeable: true,
@@ -208,7 +219,7 @@
 			},
 			'#closeable-destroyable-alert-success'
 		);
-		
+
 		new metal.ClayAlert(
 			{
 				closeable: true,
@@ -220,7 +231,7 @@
 			},
 			'#closeable-destroyable-alert-warning'
 		);
-		
+
 		new metal.ClayAlert(
 			{
 				closeable: true,
