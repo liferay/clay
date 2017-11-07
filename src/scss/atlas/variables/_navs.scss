@@ -1,6 +1,6 @@
 $nav-link-color: $body-color !default;
 $nav-link-hover-color: inherit !default;
-$nav-link-active-color: $primary !default;
+$nav-link-active-color: $component-active-bg !default;
 $nav-link-disabled-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
 
 $nav-link-padding-x: 1rem !default; // 16px
@@ -52,5 +52,5 @@ $nav-underline-link-highlight-right: 0 !default;
 $nav-underline-link-disabled-color: $nav-link-disabled-color !default;
 
 $nav-underline-link-active-color: $body-color !default;
-$nav-underline-link-active-highlight: lighten(saturate($primary, 3.40), 21.18) !default;
+$nav-underline-link-active-highlight: lighten(saturate($component-active-bg, 3.40), 21.18) !default;
 $nav-underline-link-active-highlight-height: 0.25rem !default; // 4px

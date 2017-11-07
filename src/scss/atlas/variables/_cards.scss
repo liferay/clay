@@ -14,4 +14,4 @@ $card-link-hover-color: $card-link-color !default;
 
 $checkbox-left-card-padding: 50px !default;
 
-$form-check-card-checked-box-shadow: 0 0 0 2px lighten($primary, 22%) !default;
+$form-check-card-checked-box-shadow: 0 0 0 2px lighten(saturate($component-active-bg, 3.40), 21.18) !default;

@@ -30,7 +30,7 @@ $toggle-switch-button-font-size-mobile: $toggle-switch-bar-font-size-mobile !def
 $toggle-switch-button-icon-color: $body-color !default;
 
 // Toggle Switch On
-$toggle-switch-bar-on-bg: $primary !default;
+$toggle-switch-bar-on-bg: $component-active-bg !default;
 $toggle-switch-bar-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-bar-on-icon-color: #FFF !default;
 
