@@ -1,6 +1,6 @@
 {
   "name": "clay-dropdown",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Clay Dropdown Component",
   "license": "BSD",
   "repository": "metal/metal-clay-components",
@@ -25,10 +25,10 @@
     "metal"
   ],
   "dependencies": {
-    "clay-button": "^1.0.0-alpha.1",
-    "clay-checkbox": "^1.0.0-alpha.1",
-    "clay-icon": "^1.0.0-alpha.1",
-    "clay-radio": "^1.0.0-alpha.1",
+    "clay-button": "^1.0.0-alpha.2",
+    "clay-checkbox": "^1.0.0-alpha.2",
+    "clay-icon": "^1.0.0-alpha.2",
+    "clay-radio": "^1.0.0-alpha.2",
     "metal": "^2.13.2",
     "metal-debounce": "^2.0.0",
     "metal-dropdown": "^3.0.0",
@@ -41,7 +41,7 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay-components": "^1.0.0",
+    "browserslist-config-clay-components": "^1.0.0-alpha.2",
     "clay": "^2.0.0-beta.1",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^4.2.1",
