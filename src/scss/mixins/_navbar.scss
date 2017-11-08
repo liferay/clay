@@ -385,6 +385,7 @@
 	$border-color: setter(map-get($map, border-color), transparent);
 	$border-style: setter(map-get($map, border-style), solid);
 	$color: map-get($map, color);
+	$link-border-radius: map-get($map, link-border-radius);
 	$link-color: map-get($map, link-color);
 	$link-hover-color: map-get($map, link-hover-color);
 	$link-active-color: map-get($map, link-active-color);
@@ -409,6 +410,9 @@
 		.nav-link,
 		.navbar-nav .btn-unstyled {
 			background-color: $link-bg;
+
+			@include border-radius($link-border-radius);
+
 			color: $link-color;
 
 			@include hover-focus {
