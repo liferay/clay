@@ -11,13 +11,13 @@ $pagination-padding-x: 10px !default;
 $pagination-padding-y: 0 !default;
 $pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
 
-$pagination-hover-bg: rgba(0, 0, 0, 0.02) !default;
+$pagination-hover-bg: $dropdown-action-toggle-hover-bg !default;
 $pagination-hover-border-color: transparent !default;
-$pagination-hover-color: $body-color !default;
+$pagination-hover-color: $dropdown-action-toggle-hover-color !default;
 
-$pagination-active-bg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
-$pagination-active-border-color: $pagination-active-bg !default;
-$pagination-active-color: $body-color !default;
+$pagination-active-bg: $dropdown-action-toggle-active-bg !default;
+$pagination-active-border-color: transparent !default;
+$pagination-active-color: $pagination-hover-color !default;
 
 $pagination-disabled-bg: transparent !default;
 $pagination-disabled-border-color: $pagination-disabled-bg !default;
