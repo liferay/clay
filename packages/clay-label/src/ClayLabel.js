@@ -1,6 +1,7 @@
 import 'clay-button';
 import 'clay-link';
 import Component from 'metal-component';
+import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
@@ -26,21 +27,21 @@ class ClayLabel extends Component {
  */
 ClayLabel.STATE = {
   /**
-    * True or false to activate the close button.
-    * @instance
-    * @memberof ClayLabel
-    * @type {?bool}
-    * @default false
-    */
+   * True or false to activate the close button.
+   * @instance
+   * @memberof ClayLabel
+   * @type {?bool}
+   * @default false
+   */
   closeable: Config.bool().value(false),
 
   /**
-    * HREF in label.
-    * @instance
-    * @memberof ClayLabel
-    * @type {?string|undefined}
-    * default undefined
-    */
+   * HREF in label.
+   * @instance
+   * @memberof ClayLabel
+   * @type {?string|undefined}
+   * @default undefined
+   */
   href: Config.string(),
 
   /**
@@ -48,7 +49,7 @@ ClayLabel.STATE = {
    * @instance
    * @memberof ClayLabel
    * @type {?string|undefined}
-   * default undefined
+   * @default undefined
    */
   id: Config.string(),
 
@@ -57,26 +58,26 @@ ClayLabel.STATE = {
    * @instance
    * @memberof ClayLabel
    * @type {?string|undefined}
-   * default undefined
+   * @default undefined
    */
   label: Config.string(),
 
   /**
-    * The size of the label element.
-    * @instance
-    * @memberof ClayLabel
-    * @type {?string|undefined}
-    * @default undefined
-    */
+   * The size of the label element.
+   * @instance
+   * @memberof ClayLabel
+   * @type {?string|undefined}
+   * @default undefined
+   */
   size: Config.oneOf(['lg']),
 
   /**
-    * The path to the SVG spritemap file containing the icons.
-    * @instance
-    * @memberof ClayLabel
-    * @type {?string|undefined}
-    * @default undefined
-    */
+   * The path to the SVG spritemap file containing the icons.
+   * @instance
+   * @memberof ClayLabel
+   * @type {?string|undefined}
+   * @default undefined
+   */
   spritemap: Config.string(),
 
   /**
@@ -84,7 +85,7 @@ ClayLabel.STATE = {
    * @instance
    * @memberof ClayLabel
    * @type {?string}
-   * default secondary
+   * @default secondary
    */
   style: Config.oneOf([
     'danger',
@@ -94,6 +95,8 @@ ClayLabel.STATE = {
     'warning',
   ]).value('secondary'),
 };
+
+defineWebComponent('clay-label', ClayLabel);
 
 Soy.register(ClayLabel, templates);
 

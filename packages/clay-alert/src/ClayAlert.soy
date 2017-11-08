@@ -15,7 +15,7 @@
 	{@param? type: string}
 
 	{let $attributes kind="attributes"}
-		class="alert alert-{$style} fade
+		class="alert alert-{$style ?: 'info'} fade
 			{if $closeable}
 				{sp}alert-dismissible
 			{/if}

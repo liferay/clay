@@ -3,6 +3,7 @@ import 'clay-icon';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 import Component from 'metal-component';
+import defineWebComponent from 'metal-web-component';
 import dom from 'metal-dom';
 import Soy from 'metal-soy';
 
@@ -292,6 +293,8 @@ ClayModal.STATE = {
    */
   visible: Config.bool().value(false),
 };
+
+defineWebComponent('clay-modal', ClayModal);
 
 Soy.register(ClayModal, templates);
 

@@ -8,12 +8,17 @@
 	{@param? id: string}
 	{@param? style: string}
 
-	{let $classes kind="text"}
-		badge
-		{sp}badge-{$style ?: 'primary'}
+	{let $attributes kind="attributes"}
+		class="badge
+			{sp}badge-{$style ?: 'primary'}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
 	{/let}
 
-	<span class="{$classes}" id="{$id}">
+	<span {$attributes}>
 		{$label}
 	</span>
 {/template}

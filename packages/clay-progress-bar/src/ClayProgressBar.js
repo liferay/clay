@@ -1,5 +1,6 @@
 import 'clay-icon';
 import Component from 'metal-component';
+import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
@@ -26,7 +27,7 @@ ClayProgressBar.STATE = {
   id: Config.string(),
 
   /**
-  * The maximum value of the progress bar.
+   * The maximum value of the progress bar.
    * @instance
    * @memberof ClayProgressBar
    * @type {?number}
@@ -35,7 +36,7 @@ ClayProgressBar.STATE = {
   maxValue: Config.number(),
 
   /**
-  * The minimum value of the progress bar.
+   * The minimum value of the progress bar.
    * @instance
    * @memberof ClayProgressBar
    * @type {?number}
@@ -44,7 +45,7 @@ ClayProgressBar.STATE = {
   minValue: Config.number(),
 
   /**
-  * The path to the SVG spritemap file containing the icons.
+   * The path to the SVG spritemap file containing the icons.
    * @instance
    * @memberof ClayProgressBar
    * @type {!string}
@@ -71,6 +72,8 @@ ClayProgressBar.STATE = {
    */
   value: Config.number(),
 };
+
+defineWebComponent('clay-progress-bar', ClayProgressBar);
 
 Soy.register(ClayProgressBar, templates);
 

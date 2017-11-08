@@ -91,6 +91,7 @@ module.exports = yeoman.generators.Base.extend({
         componentName: this.componentName,
         templateLanguage: this.templateLanguage,
         kebabCaseName: this.kebabCaseName,
+        repoName: this.repoName,
       }
     );
 
@@ -148,7 +149,9 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function() {
-    const ps = this.spawnCommand('yarn', ['install', '--no-lockfile'], {stdio: 'ignore'});
+    const ps = this.spawnCommand('yarn', ['install', '--no-lockfile'], {
+      stdio: 'ignore',
+    });
     ps.on('close', code => console.log(`yarn install exited with ${code}`));
   },
 });

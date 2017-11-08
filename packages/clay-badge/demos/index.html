@@ -13,22 +13,36 @@
 			body {
 				background-color: #FFF;
 			}
-	
+
 			.row {
 				margin-bottom: 20px;
 			}
 		</style>
 </head>
 <body class="container">
-	<h1 class="page-title">
-			Badges
-	</h1>
+	<div class="row row-spacing">
+			<h1>Badges</h1>
+	</div>
 
-	<div class="clay-site-row-spacer row">
-		<div class="col-md-12">
-			<h3 id="badges"><a class="heading-anchor" href="#badges">Badges</a></h3>
-
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Badges default</h4>
 			<div id="styles-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Badges default with WebComponents</h4>
+
+			<clay-badge label='"10"'></clay-badge>
+			<clay-badge label='"500"' style="secondary"></clay-badge>
+			<clay-badge label='"32"' style="success"></clay-badge>
+			<clay-badge label='"56"' style="info"></clay-badge>
+			<clay-badge label='"87"' style="warning"></clay-badge>
+			<clay-badge label='"999"' style="danger"></clay-badge>
+			<clay-badge label='"600"' style="light"></clay-badge>
+			<clay-badge label='"800"' style="dark"></clay-badge>
 		</div>
 	</div>
 
