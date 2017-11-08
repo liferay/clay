@@ -45,7 +45,7 @@ $panel-collapse-icon-font-size: 0.875rem !default; // 14px
 
 // Panel Group
 
-$panel-group-panel-margin-bottom: 0 !default;
+$panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
 // Panel Variants
 
