@@ -7,6 +7,7 @@ $table-head-color: $secondary !default;
 $table-head-font-size: 0.875rem !default; // 14px
 $table-head-font-weight: $font-weight-semi-bold !default;
 
+$table-divider-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $table-divider-color: $secondary !default;
 $table-divider-font-size: 0.75rem !default; // 12px
 $table-divider-font-weight: $font-weight-semi-bold !default;
