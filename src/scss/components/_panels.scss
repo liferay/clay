@@ -119,7 +119,7 @@
 	}
 
 	.panel-header {
-		border-bottom: 0;
+		border-bottom-width: 0;
 
 		+ .panel-collapse > .panel-body {
 			border-top: $panel-header-border-bottom-width solid transparent;
