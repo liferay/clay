@@ -84,6 +84,7 @@ const ChartBase = {
 			color: state.color,
 			data,
 			grid: state.grid,
+			legend: state.legend,
 			line: state.line,
 			padding: state.padding,
 			pie: state.pie,
