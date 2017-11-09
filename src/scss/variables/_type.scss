@@ -1,13 +1,13 @@
 $reference-mark-font-size: 0.75rem !default;
 $reference-mark-vertical-align: super !default;
 
-$section-header-border-color: $secondary !default;
+$section-header-border-color: null !default;
 $section-header-border-style: solid !default;
 $section-header-border-width: 0 0 1px 0 !default;
-$section-header-color: $secondary !default;
+$section-header-color: null !default;
 $section-header-font-size: 0.875rem !default; // 14px
 $section-header-font-weight: null !default;
-$section-header-line-height: 2.5 !default;
+$section-header-line-height: $headings-line-height !default; // 1.2
 $section-header-margin-bottom: 1.5rem !default; // 24px
-$section-header-padding: null !default;
+$section-header-padding: 0.3125rem 0 !default; // 5px 0
 $section-header-text-transform: uppercase !default;

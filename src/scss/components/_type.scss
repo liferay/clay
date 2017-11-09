@@ -74,7 +74,9 @@ h6,
 	line-height: $section-header-line-height;
 	margin-bottom: $section-header-margin-bottom;
 	padding: $section-header-padding;
+	position: relative;
 	text-transform: $section-header-text-transform;
+	word-wrap: break-word;
 }
 
 // Reference Mark
