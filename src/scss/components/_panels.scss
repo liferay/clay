@@ -35,6 +35,10 @@
 		text-decoration: $panel-header-link-hover-text-decoration;
 	}
 
+	&:focus {
+		z-index: 1;
+	}
+
 	.collapse-icon {
 		padding-left: $collapse-icon-padding-left;
 		padding-right: $collapse-icon-padding-right;
