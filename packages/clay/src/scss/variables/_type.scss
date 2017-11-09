@@ -1,6 +1,8 @@
 $reference-mark-font-size: 0.75rem !default;
 $reference-mark-vertical-align: super !default;
 
+// Section Header
+
 $section-header-border-color: null !default;
 $section-header-border-style: solid !default;
 $section-header-border-width: 0 0 1px 0 !default;
@@ -24,3 +26,6 @@ $section-header-collapse-icon-bottom: null !default;
 $section-header-collapse-icon-left: null !default;
 $section-header-collapse-icon-right: 0 !default;
 $section-header-collapse-icon-top: $section-header-padding-y !default;
+
+$section-header-collapse-icon-padding-left: null !default;
+$section-header-collapse-icon-padding-right: null !default;
