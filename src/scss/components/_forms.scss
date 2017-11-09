@@ -258,9 +258,13 @@ fieldset[disabled] label {
 	}
 }
 
-// Form Inline
+// Form Inline Autofit
 
-.form-inline {
+.form-inline-autofit {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+
 	> .btn,
 	> .form-control,
 	> .form-inline-group {
@@ -268,11 +272,6 @@ fieldset[disabled] label {
 			margin-bottom: 1rem;
 		}
 	}
-}
-
-.form-inline-autofit {
-	align-items: flex-start;
-	flex-direction: column;
 
 	.form-inline-group {
 		flex: 1;
@@ -296,7 +295,11 @@ fieldset[disabled] label {
 }
 
 @include media-breakpoint-up(sm) {
-	.form-inline {
+	.form-inline-autofit {
+		flex: 1;
+		flex-direction: row;
+		width: 100%;
+
 		> label {
 			&:not(:last-child) {
 				margin-right: $grid-gutter-width / 2;
@@ -312,12 +315,6 @@ fieldset[disabled] label {
 				margin-right: $grid-gutter-width / 2;
 			}
 		}
-	}
-
-	.form-inline-autofit {
-		flex: 1;
-		flex-direction: row;
-		width: 100%;
 
 		.form-control {
 			flex: 1;
