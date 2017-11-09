@@ -79,6 +79,16 @@ h6,
 	word-wrap: break-word;
 }
 
+a.section-header {
+	color: $section-header-link-color;
+	text-decoration: $section-header-link-text-decoration;
+
+	@include hover {
+		color: $section-header-link-hover-color;
+		text-decoration: $section-header-link-hover-text-decoration;
+	}
+}
+
 // Reference Mark
 
 .reference-mark {

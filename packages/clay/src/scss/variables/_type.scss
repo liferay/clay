@@ -11,3 +11,9 @@ $section-header-line-height: $headings-line-height !default; // 1.2
 $section-header-margin-bottom: 1.5rem !default; // 24px
 $section-header-padding: 0.3125rem 0 !default; // 5px 0
 $section-header-text-transform: uppercase !default;
+
+$section-header-link-color: $section-header-color !default;
+$section-header-link-text-decoration: null !default;
+
+$section-header-link-hover-color: null !default;
+$section-header-link-hover-text-decoration: none !default;
