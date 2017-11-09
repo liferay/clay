@@ -10,6 +10,33 @@
 	@return $val;
 }
 
+// Builds the calc string used in the CSS top property for
+// `.collapse-icon-closed` and `.collapse-icon-open`
+// @param $container-padding-top - Padding-top of containing element (e.g.,
+// $nav-link-padding-y)
+// @param $offset - Additional offset to add to $container-padding-top
+// @param $font-size - Font-size of containing element (e.g. font-size of
+// `.nav-link`)
+// @param $line-height - Line-height of containing element (e.g., line-height of
+// `.nav-link`)
+
+@function clay-collapse-icon-align($container-padding-top: 0, $offset: 0, $font-size: 1rem, $line-height: 1.5) {
+	$str1: '';
+	$str2: '';
+
+	@if ($container-padding-top != 0) {
+		$str1: '#{$container-padding-top} + ';
+	}
+
+	@if ($offset != 0) {
+		$str1: '#{$str1}#{$offset} + ';
+	}
+
+	$str2: '(((#{$font-size} * #{$line-height}) - 1em) / 2)';
+
+	@return(calc(#{$str1}#{$str2}));
+}
+
 // Converts a pixel value to rem based on the `$base` font size. If the return
 // value will be used inside a Sass arithmetic operation don't set `$add-unit`
 // to true
