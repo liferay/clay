@@ -58,6 +58,26 @@ weight: 100
 	</div>
 </div>
 ```
+```soy
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal Body</h4>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Primary'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			]
+	] /}
+	{param size: 'sm' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Modal Title' /}
+{/call}
+```
 
 </article>
 
@@ -113,6 +133,25 @@ weight: 100
 		</div>
 	</div>
 </div>
+```
+```soy
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal Body</h4>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Primary'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Modal Title' /}
+{/call}
 ```
 
 </article>
@@ -171,6 +210,26 @@ weight: 100
 		</div>
 	</div>
 </div>
+```
+```soy
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal Body</h4>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Primary'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			]
+	] /}
+	{param size: 'lg' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Modal Title' /}
+{/call}
 ```
 
 </article>
@@ -484,6 +543,106 @@ weight: 100
 	</div>
 </div>
 ```
+```soy
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal Body</h4>
+		<div>
+			<p>
+				<a href="#1">Crema coffee</a> a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+			<p>
+				Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+		</div>
+		<div>
+			<p>
+				Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+			<p>
+				Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+		</div>
+		<div>
+			<p>
+				Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+			<p>
+				Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+		</div>
+		<div>
+			<p>
+				Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+			<p>
+				Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+			</p>
+			<p>
+				Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant café au lait whipped extra at percolator.
+			</p>
+			<p>
+				Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at café au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+			</p>
+		</div>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Add'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			]
+	] /}
+	{param size: 'full-screen' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
+{/call}
+```
 
 </article>
 
@@ -631,6 +790,23 @@ weight: 100
 		</div>
 	</div>
 </div>
+```
+```soy
+{call ClayModal.render}
+	{param footerButtons: [
+			[
+				'label': 'Add'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			]
+	] /}
+	{param size: 'full-screen' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
+	{param url: 'https://claycss.com' /}
+{/call}
 ```
 
 </article>
@@ -805,6 +981,103 @@ weight: 100
 		</div>
 	</div>
 </div>
+```
+```soy
+/**
+ * Modal danger
+ */
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal body</h4>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Add'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			],
+			[
+				'label': 'Primary',
+				'position': 'left'
+			]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param status: 'danger' /}
+	{param title: 'Modal Title' /}
+{/call}
+
+/**
+ * Modal info
+ */
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal body</h4>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Add'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param status: 'info' /}
+	{param title: 'Modal Title' /}
+{/call}
+
+/**
+ * Modal Success
+ */
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal body</h4>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Add'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			],
+			[
+				'label': 'Primary',
+				'position': 'left'
+			]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param status: 'success' /}
+	{param title: 'Modal Title' /}
+{/call}
+
+/**
+ * Modal warning
+ */
+{call ClayModal.render}
+	{param body kind="html"}
+		<h4>Modal body</h4>
+	{/param}
+
+	{param footerButtons: [
+			[
+				'label': 'Add'
+			],
+			[
+				'label': 'Close',
+				'type': 'close'
+			]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param status: 'warning' /}
+	{param title: 'Modal Title' /}
+{/call}
 ```
 
 </article>
