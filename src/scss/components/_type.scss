@@ -89,12 +89,14 @@ h6,
 	.collapse-icon-closed,
 	.collapse-icon-open {
 		bottom: $section-header-collapse-icon-bottom;
+		height: 1em;
 		left: $section-header-collapse-icon-left;
 		right: $section-header-collapse-icon-right;
 		top: $section-header-collapse-icon-top;
+		width: 1em;
 
 		.lexicon-icon {
-			margin-top: calc(((#{$section-header-font-size} * #{$section-header-line-height}) - 1em) / 2);
+			margin-top: 0;
 		}
 	}
 }
