@@ -111,6 +111,20 @@ a.section-header {
 	}
 }
 
+.section-subheader {
+	color: $section-subheader-color;
+	font-size: $section-subheader-font-size;
+	font-weight: $section-subheader-font-weight;
+	line-height: $section-subheader-line-height;
+	margin-bottom: $section-subheader-margin-bottom;
+	padding-bottom: $section-subheader-padding-y;
+	padding-left: $section-subheader-padding-x;
+	padding-right: $section-subheader-padding-x;
+	padding-top: $section-subheader-padding-y;
+	text-transform: $section-subheader-text-transform;
+	word-wrap: break-word;
+}
+
 // Reference Mark
 
 .reference-mark {

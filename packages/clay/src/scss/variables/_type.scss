@@ -29,3 +29,14 @@ $section-header-collapse-icon-top: calc(( #{$section-header-padding-y} + ((#{$se
 
 $section-header-collapse-icon-padding-left: null !default;
 $section-header-collapse-icon-padding-right: null !default;
+
+// Section Subheader
+
+$section-subheader-color: $section-header-color !default;
+$section-subheader-font-size: $section-header-font-size !default;
+$section-subheader-font-weight: $section-header-font-weight !default;
+$section-subheader-line-height: $section-header-line-height !default;
+$section-subheader-margin-bottom: $section-header-margin-bottom !default;
+$section-subheader-padding-x: $section-header-padding-x !default;
+$section-subheader-padding-y: $section-header-padding-y !default;
+$section-subheader-text-transform: $section-header-text-transform !default;
