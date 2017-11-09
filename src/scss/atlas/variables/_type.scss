@@ -1,2 +1,3 @@
 $section-header-color: $secondary !default;
 $section-header-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+$section-header-padding-y: 0.46875rem !default; // 7.5px
