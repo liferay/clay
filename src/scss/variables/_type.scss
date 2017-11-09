@@ -9,7 +9,8 @@ $section-header-font-size: 0.875rem !default; // 14px
 $section-header-font-weight: null !default;
 $section-header-line-height: $headings-line-height !default; // 1.2
 $section-header-margin-bottom: 1.5rem !default; // 24px
-$section-header-padding: 0.3125rem 0 !default; // 5px 0
+$section-header-padding-x: null !default;
+$section-header-padding-y: 0.3125rem !default; // 5px
 $section-header-text-transform: uppercase !default;
 
 $section-header-link-color: $section-header-color !default;
