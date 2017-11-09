@@ -37,13 +37,15 @@ a.collapse-icon {
 	.collapse-icon-closed,
 	.collapse-icon-open {
 		bottom: $collapse-icon-position-bottom;
+		height: 1em;
 		left: $collapse-icon-position-left;
 		position: absolute;
 		right: $collapse-icon-position-right;
 		top: $collapse-icon-position-top;
+		width: 1em;
 
 		.lexicon-icon {
-			margin-top: calc(((1em * #{$line-height-base}) - #{$lexicon-icon-size}) / 2);
+			margin-top: 0;
 		}
 	}
 

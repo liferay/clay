@@ -25,7 +25,7 @@ $section-header-link-hover-text-decoration: none !default;
 $section-header-collapse-icon-bottom: null !default;
 $section-header-collapse-icon-left: null !default;
 $section-header-collapse-icon-right: 0 !default;
-$section-header-collapse-icon-top: calc(( #{$section-header-padding-y} + ((#{$section-header-font-size} * #{$section-header-line-height}) - 1em) / 2)) !default;
+$section-header-collapse-icon-top: clay-collapse-icon-align($section-header-padding-y, 0, $section-header-font-size, $section-header-line-height) !default;
 
 $section-header-collapse-icon-padding-left: null !default;
 $section-header-collapse-icon-padding-right: null !default;
