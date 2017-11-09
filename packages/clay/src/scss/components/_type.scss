@@ -73,10 +73,22 @@ h6,
 	font-weight: $section-header-font-weight;
 	line-height: $section-header-line-height;
 	margin-bottom: $section-header-margin-bottom;
-	padding: $section-header-padding;
+	padding-bottom: $section-header-padding-y;
+	padding-left: $section-header-padding-x;
+	padding-right: $section-header-padding-x;
+	padding-top: $section-header-padding-y;
 	position: relative;
 	text-transform: $section-header-text-transform;
 	word-wrap: break-word;
+
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		top: $section-header-padding-y;
+
+		.lexicon-icon {
+			margin-top: calc(((#{$section-header-font-size} * #{$section-header-line-height}) - 1em) / 2);
+		}
+	}
 }
 
 a.section-header {
