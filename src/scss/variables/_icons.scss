@@ -4,7 +4,7 @@ $collapse-icon-padding-right: 2.28125rem !default; // 45px
 $collapse-icon-position-bottom: null !default;
 $collapse-icon-position-left: null !default;
 $collapse-icon-position-right: 0.9375rem !default; // 15px
-$collapse-icon-position-top: 0.75rem !default; // 12px
+$collapse-icon-position-top: clay-collapse-icon-align($nav-link-padding-y, 1px) !default;
 
 $icon-monospaced-size: 2rem !default; // 32px
 
