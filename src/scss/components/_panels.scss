@@ -91,7 +91,10 @@
 		&:last-child:not(:first-child) {
 			@include border-top-radius(0);
 
-			overflow: hidden;
+			> .panel-header.collapsed {
+				@include border-bottom-radius($panel-border-radius);
+				@include transition(border-radius 1s ease);
+			}
 		}
 
 		&:not(:first-child):not(:last-child) {
