@@ -174,8 +174,8 @@ const ChartBase = {
 						config.hide.push(column.id);
 					}
 				} else {
-					config[PROP_NAME_MAP[key]] =
-						config[PROP_NAME_MAP[key]] || {};
+					config[PROP_NAME_MAP[key]] = config[PROP_NAME_MAP[key]] || {
+					};
 
 					config[PROP_NAME_MAP[key]][id] = column[key];
 				}
@@ -437,7 +437,6 @@ const ChartBase = {
 			return removedIds;
 		}, []);
 	},
-
 };
 
 /**
@@ -710,11 +709,11 @@ ChartBase.STATE = {
 		ticks: Config.number(),
 	}).value({
 		x: {
-			show: true
+			show: true,
 		},
 		y: {
-			show: true
-		}
+			show: true,
+		},
 	}),
 
 	/**
@@ -782,23 +781,21 @@ ChartBase.STATE = {
 	 * @type {?boolean|function|undefined}
 	 * @default undefined
 	 */
-	labels: Config.bool()
-		.func()
-		.setter(value => {
-			if (!value) {
-				return value;
-			} else if (typeof value === 'boolean') {
-				return {
-					labels: value,
-				};
-			} else {
-				return {
-					labels: {
-						format: value,
-					},
-				};
-			}
-		}),
+	labels: Config.bool().func().setter(value => {
+		if (!value) {
+			return value;
+		} else if (typeof value === 'boolean') {
+			return {
+				labels: value,
+			};
+		} else {
+			return {
+				labels: {
+					format: value,
+				},
+			};
+		}
+	}),
 
 	/**
 	 * Legend display options.

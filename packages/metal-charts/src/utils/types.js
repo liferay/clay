@@ -15,11 +15,7 @@ const types = {
 		'step',
 	],
 
-	area: [
-		'area',
-		'area-spline',
-		'area-step',
-	],
+	area: ['area', 'area-spline', 'area-step'],
 
 	gauge: ['gauge'],
 
