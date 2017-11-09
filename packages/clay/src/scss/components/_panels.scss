@@ -30,10 +30,9 @@
 	padding: $panel-header-padding-y $panel-header-padding-x;
 	text-decoration: $panel-header-link-text-decoration;
 
-	&:hover,
-	&:focus {
+	@include hover {
 		color: inherit;
-		text-decoration: $panel-header-link-text-decoration;
+		text-decoration: $panel-header-link-hover-text-decoration;
 	}
 
 	.collapse-icon {
