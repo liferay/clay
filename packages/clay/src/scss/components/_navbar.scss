@@ -438,29 +438,29 @@
 // Navbar Transparent
 
 .navbar-transparent {
-	@include navbar-variant($navbar-transparent);
+	@include clay-navbar-variant($navbar-transparent);
 }
 
 // Navbar Light
 
 .navbar-light {
-	@include navbar-variant($navbar-light);
+	@include clay-navbar-variant($navbar-light);
 }
 
 // Navbar Secondary
 
 .navbar-secondary {
-	@include navbar-variant($navbar-secondary);
+	@include clay-navbar-variant($navbar-secondary);
 }
 
 // Navbar Dark
 
 .navbar-dark {
-	@include navbar-variant($navbar-dark);
+	@include clay-navbar-variant($navbar-dark);
 }
 
 // Navbar Primary
 
 .navbar-primary {
-	@include navbar-variant($navbar-primary);
+	@include clay-navbar-variant($navbar-primary);
 }

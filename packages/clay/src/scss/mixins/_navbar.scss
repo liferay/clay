@@ -379,7 +379,7 @@
 // Creates a Navbar color variant
 // @param $map - Sass map that contain Navbar Variant properties to modify
 
-@mixin navbar-variant($map) {
+@mixin clay-navbar-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 	$bg: map-get($map, bg);
 	$border-color: setter(map-get($map, border-color), transparent);
