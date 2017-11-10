@@ -4,7 +4,6 @@ import dom from 'metal-dom';
 import {EventHandler} from 'metal-events';
 
 const KEY_CODE_ENTER = 13;
-
 const KEY_CODE_SPACE = 32;
 
 /**
@@ -133,10 +132,9 @@ class ClayCollapse extends State {
 
 	/**
 	 * Handles a `click` event on the headers.
-	 * @param {!Event} event
 	 * @protected
 	 */
-	handleClick_(event) {
+	handleClick_() {
 		this.toggle();
 	}
 
@@ -162,6 +160,7 @@ class ClayCollapse extends State {
 	 * @protected
 	 */
 	handleKeydown_(event) {
+		// eslint-disable-next-line
 		if (event.keyCode === KEY_CODE_ENTER || event.keyCode === KEY_CODE_SPACE) {
 			this.toggle();
 			event.preventDefault();
@@ -170,10 +169,9 @@ class ClayCollapse extends State {
 
 	/**
 	 * Handles the `transitionend` event on the content.
-	 * @param {!Event} event
 	 * @protected
 	 */
-	handleTransitionEnd_(event) {
+	handleTransitionEnd_() {
 		this.content.transitionType ? this.open_() : this.close_();
 	}
 

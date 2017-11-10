@@ -41,28 +41,25 @@ class ClayAlert extends Component {
 
 	/**
 	 * Handles onclick event for the close button in case of closeable alert.
-	 * @param {!Event} event
 	 * @private
 	 */
-	_handleCloseClick(event) {
+	_handleCloseClick() {
 		this.close();
 	}
 
 	/**
 	 * Handles mouseot event for the alert.
-	 * @param {!Event} event
 	 * @private
 	 */
-	_handleMouseOut(event) {
+	_handleMouseOut() {
 		this._resumeTimeout();
 	}
 
 	/**
 	 * Handles mouseover event for the alert.
-	 * @param {!Event} event
 	 * @private
 	 */
-	_handleMouseOver(event) {
+	_handleMouseOver() {
 		this._pauseTimeout();
 	}
 
