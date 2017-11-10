@@ -1,3 +1,119 @@
+### v2.0.0-beta.2 November 10, 2017
+
+* Breaking: Navbar removed Clay versions of `.navbar-light`, `.navbar-dark`, `.navbar-secondary`, `.navbar-primary` and corresponding Sass map variables `$navbar-light`, `$navbar-dark`, `$navbar-secondary`, `$navbar-primary`
+* Breaking: Rename `navbar-variant()` mixin to `clay-navbar-variant()`
+* Breaking: `.form-inline-autofit` removed dependence on `.form-inline` too many quirks
+* Breaking: Section Header split up `$section-header-padding` into `$section-header-padding-x` and `$section-header-padding-y` and add collapse support with collapse icon to `.section-header`
+* Breaking: Dropdown Action remove `button` element support, use `.btn-unstyled` pattern if you want to use buttons
+* New: Navigation Bar added `.navigation-bar-light`, `.navigation-bar-secondary`, `-bar-light`, and `$navigation-bar-secondary`
+* New: Application Bar added `.application-bar-dark` and `$application-bar-dark`
+* New: Management Bar added `.management-bar-light`, `.management-bar-primary`, `$management-bar-light`, and `$management-bar-primary`
+* New: Global Functions added function `clay-collapse-icon-align()` to build the calc string used in the CSS top property for `.collapse-icon-closed` and `.collapse-icon-open`
+* New: Panel added option to configure `$panel-header-link-hover-text-decoration` and don't combine `.panel-header-link` hover and focus styles
+* New: Added `.section-subheader` and option to configure `$section-subheader-color`, `$section-subheader-font-size`, `$section-subheader-font-weight`, `$section-subheader-line-height`, `$section-subheader-margin-bottom`, `$section-subheader-padding-x`, `$section-subheader-padding-y`, `$section-subheader-text-transform`
+* New: Section Header added option to configure `$section-header-collapse-icon-padding-left`, `$section-header-collapse-icon-padding-right` and change section-header-padding-y in Atlas
+* New: Section Header added option to configure `$section-header-collapse-icon-bottom`, `$section-header-collapse-icon-left`, `$section-header-collapse-icon-right`, `$section-header-collapse-icon-top`
+* New: Section Header added option to configure `$section-header-link-color`, `$section-header-link-text-decoration`, `$section-header-link-hover-color`, `$section-header-link-hover-text-decoration`
+* New: Icons added drag.svg
+* New: Navbar Variant add option to configure `link-border-radius`
+* New: Navbar Size mixin to allow setting `link-height` and `link-height-mobile`
+* New: Dropdown Action added option to configure `$dropdown-action-toggle-bg`, `$dropdown-action-toggle-border-radius`, `$dropdown-action-toggle-hover-bg`, `$dropdown-action-toggle-disabled-bg`, `$dropdown-action-toggle-disabled-color`, `$dropdown-action-toggle-disabled-cursor`, `$dropdown-action-toggle-disabled-opacity`, `$dropdown-action-toggle-active-bg`, `$dropdown-action-toggle-active-color`
+* New: Quick Action added option to configure `$quick-action-item-active-bg`, `$quick-action-item-active-color`
+* New: Quick Action added option to configure `$quick-action-item-disabled-bg`, `$quick-action-item-disabled-color`, `$quick-action-item-disabled-cursor`, `$quick-action-item-disabled-opacity`
+* New: Quick Action added option to configure `$quick-action-item-bg`, `$quick-action-item-border-radius`, `$quick-action-item-hover-bg` and set colors for Atlas Quick Action
+* New: Pagination added option to configure `$pagination-item-margin-x`, `$pagination-item-margin-y`
+* New: Nav Tabs added option to customize `$nav-tabs-link-show-bg`
+* New: Form Check added option to configure `$form-check-description-margin-left` and adjust `.form-check-description` spacing in Atlas
+* New: Card added option to configure `$card-body-padding-bottom`, `$card-body-padding-left`, `$card-body-padding-right`, `$card-body-padding-top` and adjust spacing on checkboxes in cards
+* New: Forms added `.form-container` and option to configure `$form-container-bg`, `$form-container-border-color`, `$form-container-border-style`, `$form-container-border-width`, `$form-container-border-radius`, `$form-container-padding-x`, `$form-container-padding-y`
+* Update: Atlas don't set mobile font sizes on `body`, `h1`-`h6`, and `labels`
+* Update: Remove duplicate font-size property from `h1`-`h6` tags already defined in BS4
+* Update: Atlas Management Bar and Navigation Bar add hover styles on links
+* Update: `clay-navbar-variant` mixin to only style hover state, focus state should use browser default outline
+* Update: Atlas Management Bar forgot to commit variable file
+* Update: Panels `.panel-header-link` focus border should show above other panels
+* Update: `.collapse-icon` clean up styles and use `clay-collapse-icon-align` function
+* Update: Panel Group `.panel:last-child` should show focus border
+* Update: Section Header Collapse Icon redo position calculation so icon can be customized through background image
+* Update: Clay Base Section Header reset color and line-height styles and long text should wrap
+* Update: Atlas Panels allow unstyled panels to work in accordions
+* Update: Atlas add _type variables file and update section-header-border-color
+* Update: Section Header font size to be bigger 0.875rem
+* Update: Atlas List Group Header and Table Divider bg should be #F7F8F9
+* Update: Application Bar set `.nav-link` height
+* Update: Pagination and Quick Actions base hover and active styles on Dropdown Action hover and active styles
+* Update: Management Bar set height on `.nav-link`'s
+* Update: Clay Base Toggle Switch on bg should use `$component-active-bg`
+* Update: Clay Base Nav Underline active highlight height and color should inherit from `$component-active-bg`
+* Update: Custom Form `$custom-checkbox-indicator-icon-checked` shouldn't use `$component-active-color`
+* Update: Atlas Nav Pills don't overwrite BS4 nav-pills variables
+* Update: Atlas active / hover states should be based on `$component-active-bg`
+* Update: Atlas Globals specifiy `$link-color`, `$component-active-bg` separate from theme colors, `$text-muted` color should be based on `$body-color`, and SF
+* Update: Button Variant mixin to overwrite BS4 quirky shadows on `.btn:active`
+* Update: Atlas Input Group Addon padding should use the same padding as input
+* Update: Dropdown Action and Quick Action remove hover state styles on focus
+* Update: Atlas Label Lg make font size a little smaller to properly align close icon
+* Update: Use BS4 theme color variables (e.g., `$primary`) instead of `$theme-colors` Sass map in Buttons, Cards, Custom Checkbox and Radio, Forms, Multi Step Nav, Nav, Navbar, Pagination, Panels, Popovers, Progress Bar, Sidebar, Subnav, Tables, Timelines, Toggle Switch, Type, Utilities
+* Update: Atlas Globals `$link-hover-color` should be based on `$link-color`
+* Update: Atlas Alert adjust secondary, light, dark colors so they fit better with other alert variants
+* Update: Btn Disabled add note about BS4 feature request
+* Update: Clay Base Label hover colors should match badges and SF
+* Update: Clay Base stickers should use `color-yiq()` function
+* Update: Atlas colors for Globals, Alert, Badge, Label, Stickers, Breadcrumb link, Dropdown, Form, List Group, Modal should match Lexicon colors exactly
+* Update: Atlas `$theme-colors` to follow BS4 theme color pattern
+* Update: Atlas Dropdown Action colors
+* Update: Add note about the _bs4-variable-overwrites.scss file
+* Update: Pagination added active state to dropdown-toggles
+* Update: Atlas Pagination add hover state styles
+* Update: Pagination Variables Source Formatting
+* Update: Toggle Switch spacing
+* Update: Navigation Bar adjust link-padding-x
+* Update: Atlas Button adjust `$btn-active-box-shadow`
+* Update: Nav Tabs add comment about waiting for BS4 to change `$nav-tabs-link-active-border-color`
+* Update: Atlas Nav Tabs adjust nav-tabs-link-padding-y and nav-tabs-font-size
+* Update: Atlas Forms adjust input-padding-x-sm
+* Update: Forms added disabled style to `.form-check-description`
+* Update: Navigation Bar added border-bottom and tweak some styles
+* Update: Panel Group added support for `.panel-group-fluid` in `.form-container`
+* Update: Sticker change `.sticker-sm` font-size to 12px and Atlas `.sticker` to 14px
+* Update: Atlas Button `$input-btn-padding-x-sm` should be 11px
+* Update: Atlas Sticker `$sticker-inside-offset` should be 16px
+* Site: Form Elements Custom use `.form-inline-autofit`
+* Site: Update pages that use a navbar or navbar variant to use new variant classes
+* Site: Navigation Bar use `.navigation-bar-light` and `.navigation-bar-dark`
+* Site: Application Bar use `.application-bar-dark`
+* Site: Management Bar use `.management-bar-light` and `.management-bar-primary`
+* Site: `.form-inline-autofit` shouldn't use `.form-inline`
+* Site: Users and Organizations Form Vertical Navigation page added more content and new form panel markup
+* Site: Users and Orgs page added more content
+* Site: Panels remove `aria-multiselectable` property from accordions, requires setting selected descendants have the aria-selected attribute set to true which isn't applied by BS4 collapse plugin
+* Site: Card View Template and List View Template use pagination with anchor tags instead of buttons
+* Site: Update aria attributes on `[data-toggle="collapse"]`
+* Site: Update aria attributes on `.dropdown-toggle`s
+* Site: Menubar (Vertical) use anchor tag with aria attributes for `.menubar-toggler`
+* Site: Navigation Bar should only have `.navbar-secondary` variant
+* Site: Management Bar change primary demo buttons to links
+* Site: Form Validation add missing `.form-check-description` to radio with error
+* Site: Dropdown Action removed `button` element only demo
+* Site: Table View Template change icon on Item Title
+* Site: Forms add `.form-check-description` to radio inline example
+* Site: Toggle Switch update disabled example
+* Site: Sidebar manually add spacing to sidebar light demo, can't safely include it in Clay
+* Site: Sidebar demo added tabs for nav
+* Site: Progress Bar add more examples
+* Site: Menubar change icons to caret
+* Site: Nav Nested change icons to caret
+* Site: Add examples only using buttons in Multi Step Nav, List Group, Panels, Pagination, Navigation Bar, Management Bar, Application Bar
+* Site: Source Format Form Custom, Panels, Pagination, Progress Bar, Navigation Bar, Management Bar, Nav Underline, Nav Tabs, Multi Step Nav, Form Validation, List Group, Modals, Input Groups, Tables, Toggle Switch
+* Site: Forms added HTML 5 form elements
+* Site: Removed `.clay-site-form-container` use `.form-container` instead
+* Site: Dropdowns updated aria-labelledby to be more descriptive and reorder some content
+* Site: Card added more `.card-type-asset` demos to match Lexicon's examples and update the content inside
+* Site: Buttons use BS4 pattern `.btn-group` for bs4 dropdowns
+* Site: Breadcrumbs reorganize demos
+* Site: Badges reorganize demo order, add some space in markup, and use `.clay-site-positional-sticker` to keep position stickers within the limits of image
+* Site: Alerts add some space in markup
+
 ### v2.0.0-beta.1 October 27, 2017
 
 * Breaking: Buttons removed `$btn-dark-bg`, `$btn-dark-border-color`, `$btn-dark-color`, `$btn-dark-hover-color`, `$btn-dark-hover-bg`, `$btn-dark-hover-border-color`, `$btn-dark-focus-box-shadow`, `$btn-dark-active-color`, `$btn-dark-active-bg`, `$btn-dark-active-border-color` use `$btn-dark: ()` Sass map instead
