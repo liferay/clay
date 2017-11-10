@@ -1,4 +1,4 @@
-# metal-charts
+# clay-charts
 
 Metal.js wrapper for D3 and billboard.js
 
