@@ -14,3 +14,23 @@ $management-bar-size: map-merge((
 	active-border-bottom-width: 0.25rem,
 	nav-item-dropdown-margin-top: 0
 ), $management-bar-size);
+
+$management-bar-light: () !default;
+$management-bar-light: map-merge((
+	bg: $light,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $management-bar-light);
+
+$management-bar-primary: () !default;
+$management-bar-primary: map-merge((
+	bg: lighten(saturate($primary, 3.40), 43.14),
+	border-color: $primary,
+	color: $navbar-light-color,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $management-bar-primary);
