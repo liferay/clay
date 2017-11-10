@@ -2323,15 +2323,15 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-google@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-google/-/eslint-config-google-0.7.1.tgz#5598f8498e9e078420f34b80495b8d959f651fb2"
+eslint-config-google@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-google/-/eslint-config-google-0.9.1.tgz#83353c3dba05f72bb123169a4094f4ff120391eb"
 
-eslint-config-liferay@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-liferay/-/eslint-config-liferay-1.0.2.tgz#d072bf713e8a1e197b1829161a1ed2404309462b"
+eslint-config-liferay@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-liferay/-/eslint-config-liferay-2.0.7.tgz#5bc8d8a8125b57c73df0f5f27dab4301ab1ffc90"
   dependencies:
-    eslint-config-google "^0.7.1"
+    eslint-config-google "^0.9.1"
 
 eslint-scope@^3.7.1:
   version "3.7.1"
@@ -2340,7 +2340,7 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.1.1, eslint@^4.5.0:
+eslint@^4.10.0, eslint@^4.5.0:
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.10.0.tgz#f25d0d7955c81968c2309aa5c9a229e045176bb7"
   dependencies:
