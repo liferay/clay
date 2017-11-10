@@ -16,86 +16,86 @@ class ClayRadio extends Component {}
  * @static
  */
 ClayRadio.STATE = {
-  /**
-   * Flag to indicate if checkbox is checked.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?bool}
-   * @default false
-   */
-  checked: Config.bool().value(false),
+	/**
+	 * Flag to indicate if checkbox is checked.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?bool}
+	 * @default false
+	 */
+	checked: Config.bool().value(false),
 
-  /**
-   * Flag to indicate if checkbox is disabled.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?bool}
-   * @default false
-   */
-  disabled: Config.bool().value(false),
+	/**
+	 * Flag to indicate if checkbox is disabled.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?bool}
+	 * @default false
+	 */
+	disabled: Config.bool().value(false),
 
-  /**
-   * CSS classes to be applied to the element.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?string}
-   * @default undefined
-   */
-  elementClasses: Config.string(),
+	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?string}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
 
-  /**
-   * Flag to indicate if label should be hide.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?bool}
-   * @default false
-   */
-  hideLabel: Config.bool().value(false),
+	/**
+	 * Flag to indicate if label should be hide.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?bool}
+	 * @default false
+	 */
+	hideLabel: Config.bool().value(false),
 
-  /**
-   * Id to be applied to the element.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?string}
-   * @default undefined
-   */
-  id: Config.string(),
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?string}
+	 * @default undefined
+	 */
+	id: Config.string(),
 
-  /**
-   * Flag to indicate if input should be wrapped to be inline or not.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?bool}
-   * @default false
-   */
-  inline: Config.bool().value(false),
+	/**
+	 * Flag to indicate if input should be wrapped to be inline or not.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?bool}
+	 * @default false
+	 */
+	inline: Config.bool().value(false),
 
-  /**
-   * Label of the input. Required for accesibility.
-   * @instance
-   * @memberof ClayRadio
-   * @type {!string|html}
-   * @default undefined
-   */
-  label: Config.any().required(),
+	/**
+	 * Label of the input. Required for accesibility.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {!string|html}
+	 * @default undefined
+	 */
+	label: Config.any().required(),
 
-  /**
-   * Name to be applied to the element.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?string}
-   * @default undefined
-   */
-  name: Config.string(),
+	/**
+	 * Name to be applied to the element.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?string}
+	 * @default undefined
+	 */
+	name: Config.string(),
 
-  /**
-   * Value to be applied to the element.
-   * @instance
-   * @memberof ClayRadio
-   * @type {?string}
-   * @default undefined
-   */
-  value: Config.string(),
+	/**
+	 * Value to be applied to the element.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?string}
+	 * @default undefined
+	 */
+	value: Config.string(),
 };
 
 defineWebComponent('clay-radio', ClayRadio);

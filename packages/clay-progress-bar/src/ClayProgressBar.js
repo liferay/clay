@@ -17,60 +17,60 @@ class ClayProgressBar extends Component {}
  * @type {!Object}
  */
 ClayProgressBar.STATE = {
-  /**
-   * Id to be applied to the element.
-   * @instance
-   * @memberof ClayProgressBar
-   * @type {?string|undefined}
-   * @default undefined
-   */
-  id: Config.string(),
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
 
-  /**
-   * The maximum value of the progress bar.
-   * @instance
-   * @memberof ClayProgressBar
-   * @type {?number}
-   * @default undefined
-   */
-  maxValue: Config.number(),
+	/**
+	 * The maximum value of the progress bar.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?number}
+	 * @default undefined
+	 */
+	maxValue: Config.number(),
 
-  /**
-   * The minimum value of the progress bar.
-   * @instance
-   * @memberof ClayProgressBar
-   * @type {?number}
-   * @default undefined
-   */
-  minValue: Config.number(),
+	/**
+	 * The minimum value of the progress bar.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?number}
+	 * @default undefined
+	 */
+	minValue: Config.number(),
 
-  /**
-   * The path to the SVG spritemap file containing the icons.
-   * @instance
-   * @memberof ClayProgressBar
-   * @type {!string}
-   * @default undefined
-   */
-  spritemap: Config.string(),
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {!string}
+	 * @default undefined
+	 */
+	spritemap: Config.string(),
 
-  /**
-   * Progress bar state. Completed state can be defined here but also is
-   * automatically set if value is equal to maxValue.
-   * @instance
-   * @memberof ClayProgressBar
-   * @type {?string}
-   * @default undefined
-   */
-  status: Config.oneOf(['complete', 'warning']),
+	/**
+	 * Progress bar state. Completed state can be defined here but also is
+	 * automatically set if value is equal to maxValue.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?string}
+	 * @default undefined
+	 */
+	status: Config.oneOf(['complete', 'warning']),
 
-  /**
-   * The progress value of the bar.
-   * @instance
-   * @memberof ClayProgressBar
-   * @type {?number}
-   * @default undefined
-   */
-  value: Config.number(),
+	/**
+	 * The progress value of the bar.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?number}
+	 * @default undefined
+	 */
+	value: Config.number(),
 };
 
 defineWebComponent('clay-progress-bar', ClayProgressBar);

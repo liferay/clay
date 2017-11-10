@@ -16,41 +16,41 @@ class ClayBadge extends Component {}
  * #type {!Object}
  */
 ClayBadge.STATE = {
-  /**
-   * Id to be applied to the element.
-   * @instance
-   * @memberof ClayBadge
-   * @type {?string|undefined}
-   * default undefined
-   */
-  id: Config.string(),
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayBadge
+	 * @type {?string|undefined}
+	 * default undefined
+	 */
+	id: Config.string(),
 
-  /**
-   * The label of the badge element.
-   * @instance
-   * @memberof ClayBadge
-   * @type {!string}
-   * default undefined
-   */
-  label: Config.string().required(),
+	/**
+	 * The label of the badge element.
+	 * @instance
+	 * @memberof ClayBadge
+	 * @type {!string}
+	 * default undefined
+	 */
+	label: Config.string().required(),
 
-  /**
-   * Badge style color.
-   * @instance
-   * @memberof ClayBadge
-   * @type {?string}
-   * default primary
-   */
-  style: Config.oneOf([
-    'danger',
-    'dark',
-    'info',
-    'light',
-    'primary',
-    'secondary',
-    'success',
-    'warning',
-  ]).value('primary'),
+	/**
+	 * Badge style color.
+	 * @instance
+	 * @memberof ClayBadge
+	 * @type {?string}
+	 * default primary
+	 */
+	style: Config.oneOf([
+		'danger',
+		'dark',
+		'info',
+		'light',
+		'primary',
+		'secondary',
+		'success',
+		'warning',
+	]).value('primary'),
 };
 
 defineWebComponent('clay-badge', ClayBadge);

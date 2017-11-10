@@ -19,63 +19,63 @@ class ClayActionsDropdown extends Component {}
  * @type {!Object}
  */
 ClayActionsDropdown.STATE = {
-  /**
-   * Button configuration to place a button at dropdown footer.
-   * @instance
-   * @memberof ClayActionsDropdown
-   * @type {?string}
-   * @default undefined
-   */
-  button: Config.shapeOf({
-    label: Config.string().required(),
-    style: Config.oneOf(['primary', 'secondary']).value('primary'),
-    type: Config.oneOf(['button', 'reset', 'submit']),
-  }),
+	/**
+	 * Button configuration to place a button at dropdown footer.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?string}
+	 * @default undefined
+	 */
+	button: Config.shapeOf({
+		label: Config.string().required(),
+		style: Config.oneOf(['primary', 'secondary']).value('primary'),
+		type: Config.oneOf(['button', 'reset', 'submit']),
+	}),
 
-  /**
-   * Caption text of the dropdown.
-   * @instance
-   * @memberof ClayActionsDropdown
-   * @type {?string}
-   * @default undefined
-   */
-  caption: Config.string(),
+	/**
+	 * Caption text of the dropdown.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?string}
+	 * @default undefined
+	 */
+	caption: Config.string(),
 
-  /**
-   * Flag to indicate if menu is expanded.
-   * @instance
-   * @memberof ClayActionsDropdown
-   * @type {?bool}
-   * @default false
-   */
-  expanded: Config.bool().value(false),
+	/**
+	 * Flag to indicate if menu is expanded.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?bool}
+	 * @default false
+	 */
+	expanded: Config.bool().value(false),
 
-  /**
-   * Help text to be shown on top of the open dropdown.
-   * @instance
-   * @memberof ClayActionsDropdown
-   * @type {?string}
-   * @default undefined
-   */
-  helpText: Config.string(),
+	/**
+	 * Help text to be shown on top of the open dropdown.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?string}
+	 * @default undefined
+	 */
+	helpText: Config.string(),
 
-  /**
-   * List of menu items.
-   * @instance
-   * @memberof ClayActionsDropdown
-   * @type {!Array}
-   * @default undefined
-   */
-  items: itemsValidator.required(),
+	/**
+	 * List of menu items.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {!Array}
+	 * @default undefined
+	 */
+	items: itemsValidator.required(),
 
-  /**
-   * The path to the SVG spritemap file containing the icons.
-   * @instance
-   * @memberof ClayActionsDropdown
-   * @type {!string}
-   * @default undefined
-   */
-  spritemap: Config.string().required(),
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {!string}
+	 * @default undefined
+	 */
+	spritemap: Config.string().required(),
 };
 
 defineWebComponent('clay-actions-dropdown', ClayActionsDropdown);
