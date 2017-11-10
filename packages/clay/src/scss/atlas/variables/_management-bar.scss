@@ -1,0 +1,12 @@
+$management-bar-light: (
+	bg: #FFF,
+	link-border-radius: $border-radius,
+	link-hover-bg: $dropdown-action-toggle-hover-bg,
+	link-active-bg: $dropdown-action-toggle-active-bg
+) !default;
+
+$management-bar-primary: (
+	link-border-radius: $border-radius,
+	link-hover-bg: $dropdown-action-toggle-hover-bg,
+	link-active-bg: $dropdown-action-toggle-active-bg
+) !default;
