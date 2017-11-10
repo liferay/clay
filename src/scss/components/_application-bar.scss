@@ -12,3 +12,7 @@
 		flex-wrap: nowrap;
 	}
 }
+
+.application-bar-dark {
+	@include clay-navbar-variant($application-bar-dark);
+}
