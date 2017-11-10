@@ -191,7 +191,7 @@ describe('ClayModal', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(clayModal.visible).toBeTruthy();
-		expect(clayModal._isTransitioning).toBeFalsy();
+		expect(clayModal.isTransitioning_).toBeFalsy();
 		expect(clayModal).toMatchSnapshot();
 
 		spy.mockReset();

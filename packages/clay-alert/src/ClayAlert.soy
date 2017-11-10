@@ -7,12 +7,12 @@
 	{@param message: html|string}
 	{@param spritemap: string}
 	{@param title: string}
-	{@param? _handleCloseClick: any}
-	{@param? _visible: bool}
 	{@param? autoClose: bool}
 	{@param? closeable: bool}
+	{@param? handleCloseClick_: any}
 	{@param? style: string}
 	{@param? type: string}
+	{@param? visible_: bool}
 
 	{let $attributes kind="attributes"}
 		class="alert alert-{$style ?: 'info'} fade
@@ -24,13 +24,13 @@
 				{sp}alert-{$type}
 			{/if}
 
-			{if $_visible != false}
+			{if $visible_ != false}
 				{sp}show
 			{/if}
 		"
-		{if $autoClose and ($type == 'fluid' or $type == 'notification') and $_visible}
-			data-onmouseover="_handleMouseOver"
-			data-onmouseout="_handleMouseOut"
+		{if $autoClose and ($type == 'fluid' or $type == 'notification') and $visible_}
+			data-onmouseover="handleMouseOver_"
+			data-onmouseout="handleMouseOut_"
 		{/if}
 
 		role="alert"
@@ -38,8 +38,8 @@
 
 	{let $content kind="html"}
 		{call .content}
-			{param _handleCloseClick: $_handleCloseClick /}
 			{param closeable: $closeable /}
+			{param handleCloseClick_: $handleCloseClick_ /}
 			{param message: $message /}
 			{param spritemap: $spritemap /}
 			{param style: $style /}
@@ -65,15 +65,15 @@
 	{@param message: html|string}
 	{@param spritemap: string}
 	{@param title: string}
-	{@param? _handleCloseClick: any}
 	{@param? closeable: bool}
+	{@param? handleCloseClick_: any}
 	{@param? style: string}
 
 	{if $closeable}
 		{call ClayButton.render}
 			{param ariaLabel: 'Close' /}
 			{param elementClasses: 'close' /}
-			{param events: [ 'click': $_handleCloseClick ] /}
+			{param events: [ 'click': $handleCloseClick_ ] /}
 			{param icon: [
 				'alignment': 'right',
 				'spritemap': $spritemap,

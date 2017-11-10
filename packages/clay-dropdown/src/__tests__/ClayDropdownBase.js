@@ -480,7 +480,7 @@ describe('ClayDropdownBase', function() {
 		let input = clayDropdownBase.refs['searchInput'];
 		input.value = 'Item 1';
 
-		clayDropdownBase._handleSearch({
+		clayDropdownBase.handleSearch_({
 			delegateTarget: input,
 		});
 

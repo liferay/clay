@@ -4,8 +4,8 @@
  * This renders a label.
  */
 {template .render}
-	{@param? _handleCloseButtonClick: any}
 	{@param? closeable: bool}
+	{@param? handleCloseButtonClick_: any}
 	{@param? href: string}
 	{@param? id: string}
 	{@param? label: string}
@@ -33,8 +33,8 @@
 
 	<span {$attributes}>
 		{call .content}
-			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 			{param closeable: $closeable /}
+			{param handleCloseButtonClick_: $handleCloseButtonClick_ /}
 			{param href: $href /}
 			{param label: $label /}
 			{param spritemap: $spritemap /}
@@ -46,8 +46,8 @@
  * Render icon and label content.
  */
 {template .content}
-	{@param? _handleCloseButtonClick: any}
 	{@param? closeable: bool}
+	{@param? handleCloseButtonClick_: any}
 	{@param? href: string}
 	{@param? label: string}
 	{@param? spritemap: string}
@@ -65,7 +65,7 @@
 		{call ClayButton.render}
 			{param ariaLabel: 'Close' /}
 			{param elementClasses: 'close' /}
-			{param events: [ 'click': $_handleCloseButtonClick] /}
+			{param events: [ 'click': $handleCloseButtonClick_] /}
 			{param icon: [
 				'alignment': 'right',
 				'spritemap': $spritemap,

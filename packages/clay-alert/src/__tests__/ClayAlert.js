@@ -107,7 +107,7 @@ describe('ClayAlert', function() {
 
 		alert.element.querySelector('button').click();
 
-		expect(alert._visible).toBeFalsy();
+		expect(alert.visible_).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -127,7 +127,7 @@ describe('ClayAlert', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(5000);
 
 		jest.runAllTimers();
-		expect(alert._visible).toBeFalsy();
+		expect(alert.visible_).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -147,7 +147,7 @@ describe('ClayAlert', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(10000);
 
 		jest.runAllTimers();
-		expect(alert._visible).toBeFalsy();
+		expect(alert.visible_).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -167,7 +167,7 @@ describe('ClayAlert', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(5000);
 
 		jest.runAllTimers();
-		expect(alert._visible).toBeFalsy();
+		expect(alert.visible_).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -187,7 +187,7 @@ describe('ClayAlert', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(10000);
 
 		jest.runAllTimers();
-		expect(alert._visible).toBeFalsy();
+		expect(alert.visible_).toBeFalsy();
 	});
 
 	it('should close and destroy alert', function() {

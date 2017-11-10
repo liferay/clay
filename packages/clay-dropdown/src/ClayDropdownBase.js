@@ -18,15 +18,15 @@ class ClayDropdownBase extends Dropdown {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	_handleSearch(event) {
+	handleSearch_(event) {
 		let searchValue = event.delegateTarget.value.toLowerCase();
 
-		if (!this._originalItems) {
-			this._originalItems = this.items;
+		if (!this.originalItems_) {
+			this.originalItems_ = this.items;
 		}
 
 		if (searchValue !== '') {
-			this.items = this._originalItems.filter(item => {
+			this.items = this.originalItems_.filter(item => {
 				return (
 					item.label &&
 					item.type !== 'separator' &&
@@ -35,11 +35,11 @@ class ClayDropdownBase extends Dropdown {
 				);
 			});
 		} else {
-			this.items = this._originalItems;
+			this.items = this.originalItems_;
 		}
 
 		this.emit('itemsFiltered', {
-			originalItems: this._originalItems,
+			originalItems: this.originalItems_,
 			filteredItems: this.items,
 		});
 	}

@@ -19,11 +19,11 @@ class ClayAlert extends Component {
 			this.autoClose &&
 			(this.type === 'fluid' || this.type === 'notification')
 		) {
-			if (this._delayTime === undefined || this._delayTime > 0) {
-				this._delayTime = (this.element.querySelector('a') ? 10 : 5) * 1000;
+			if (this.delayTime_ === undefined || this.delayTime_ > 0) {
+				this.delayTime_ = (this.element.querySelector('a') ? 10 : 5) * 1000;
 			}
 
-			this._resumeTimeout();
+			this.resumeTimeout_();
 		}
 	}
 
@@ -31,61 +31,12 @@ class ClayAlert extends Component {
 	 * @inheritDoc
 	 */
 	disposed() {
-		if (this._timer) {
-			clearTimeout(this._timer);
-			this._timer = undefined;
+		if (this.timer_) {
+			clearTimeout(this.timer_);
+			this.timer_ = undefined;
 		}
-		this._delayTime = undefined;
-		this._startDelayTime = undefined;
-	}
-
-	/**
-	 * Handles onclick event for the close button in case of closeable alert.
-	 * @private
-	 */
-	_handleCloseClick() {
-		this.close();
-	}
-
-	/**
-	 * Handles mouseot event for the alert.
-	 * @private
-	 */
-	_handleMouseOut() {
-		this._resumeTimeout();
-	}
-
-	/**
-	 * Handles mouseover event for the alert.
-	 * @private
-	 */
-	_handleMouseOver() {
-		this._pauseTimeout();
-	}
-
-	/**
-	 * Pauses the closing delay time.
-	 * @private
-	 */
-	_pauseTimeout() {
-		if (this._timer) {
-			clearTimeout(this._timer);
-			this._timer = undefined;
-			this._delayTime -= new Date() - this._startDelayTime;
-		}
-	}
-
-	/**
-	 * Resumes the closing delay time.
-	 * @private
-	 */
-	_resumeTimeout() {
-		if (this._delayTime > 0) {
-			this._startDelayTime = new Date();
-			this._timer = setTimeout(() => {
-				this.close();
-			}, this._delayTime);
-		}
+		this.delayTime_ = undefined;
+		this.startDelayTime_ = undefined;
 	}
 
 	/**
@@ -93,15 +44,64 @@ class ClayAlert extends Component {
 	 * @private
 	 */
 	close() {
-		this._delayTime = 0;
-		this._visible = false;
+		this.delayTime_ = 0;
+		this.visible_ = false;
 
-		if (this._timer) {
-			clearTimeout(this._timer);
+		if (this.timer_) {
+			clearTimeout(this.timer_);
 		}
 
 		if (this.destroyOnHide) {
 			this.dispose();
+		}
+	}
+
+	/**
+	 * Handles onclick event for the close button in case of closeable alert.
+	 * @private
+	 */
+	handleCloseClick_() {
+		this.close();
+	}
+
+	/**
+	 * Handles mouseot event for the alert.
+	 * @private
+	 */
+	handleMouseOut_() {
+		this.resumeTimeout_();
+	}
+
+	/**
+	 * Handles mouseover event for the alert.
+	 * @private
+	 */
+	handleMouseOver_() {
+		this.pauseTimeout_();
+	}
+
+	/**
+	 * Pauses the closing delay time.
+	 * @private
+	 */
+	pauseTimeout_() {
+		if (this.timer_) {
+			clearTimeout(this.timer_);
+			this.timer_ = undefined;
+			this.delayTime_ -= new Date() - this.startDelayTime_;
+		}
+	}
+
+	/**
+	 * Resumes the closing delay time.
+	 * @private
+	 */
+	resumeTimeout_() {
+		if (this.delayTime_ > 0) {
+			this.startDelayTime_ = new Date();
+			this.timer_ = setTimeout(() => {
+				this.close();
+			}, this.delayTime_);
 		}
 	}
 }
@@ -190,7 +190,7 @@ ClayAlert.STATE = {
 	 * @type {?bool}
 	 * @default true
 	 */
-	_visible: Config.bool()
+	visible_: Config.bool()
 		.internal()
 		.value(true),
 };
