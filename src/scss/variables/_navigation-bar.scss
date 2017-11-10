@@ -9,3 +9,24 @@ $navigation-bar-size: map-merge((
 	nav-item-dropdown-margin-top: 0,
 	active-border-bottom-width: 0.25rem
 ), $navigation-bar-size);
+
+$navigation-bar-light: () !default;
+$navigation-bar-light: map-merge((
+	bg: $light,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $navigation-bar-light);
+
+$navigation-bar-secondary: () !default;
+$navigation-bar-secondary: map-merge((
+	bg: $secondary,
+	color: #FFF,
+	link-color: rgba(255, 255, 255, 0.65),
+	link-hover-color: rgba(255, 255, 255, 0.9),
+	link-active-color: rgba(255, 255, 255, 0.9),
+	link-disabled-color: rgba(255, 255, 255, 0.25),
+	brand-color: rgba(255, 255, 255, 0.9),
+	brand-hover-color: rgba(255, 255, 255, 0.9)
+), $navigation-bar-secondary);

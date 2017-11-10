@@ -1,3 +1,11 @@
 .navigation-bar {
 	@include clay-navbar-size($navigation-bar-size);
 }
+
+.navigation-bar-light {
+	@include clay-navbar-variant($navigation-bar-light);
+}
+
+.navigation-bar-secondary {
+	@include clay-navbar-variant($navigation-bar-secondary);
+}
