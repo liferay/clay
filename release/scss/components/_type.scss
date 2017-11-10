@@ -1,0 +1,137 @@
+/**
+* Clay 2.0.0-beta.2
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+	-webkit-font-smoothing: antialiased;
+
+	@include clay-scale-component {
+		font-size: $font-size-base-mobile;
+	}
+}
+
+// Headings
+
+h1,
+.h1 {
+	@include clay-scale-component {
+		font-size: $h1-font-size-mobile;
+	}
+}
+
+h2,
+.h2 {
+	@include clay-scale-component {
+		font-size: $h2-font-size-mobile;
+	}
+}
+
+h3,
+.h3 {
+	@include clay-scale-component {
+		font-size: $h3-font-size-mobile;
+	}
+}
+
+h4,
+.h4 {
+	@include clay-scale-component {
+		font-size: $h4-font-size-mobile;
+	}
+}
+
+h5,
+.h5 {
+	@include clay-scale-component {
+		font-size: $h5-font-size-mobile;
+	}
+}
+
+h6,
+.h6 {
+	@include clay-scale-component {
+		font-size: $h6-font-size-mobile;
+	}
+}
+
+.section-header {
+	border-color: $section-header-border-color;
+	border-style: $section-header-border-style;
+	border-width: $section-header-border-width;
+	color: $section-header-color;
+	font-size: $section-header-font-size;
+	font-weight: $section-header-font-weight;
+	line-height: $section-header-line-height;
+	margin-bottom: $section-header-margin-bottom;
+	padding-bottom: $section-header-padding-y;
+	padding-left: $section-header-padding-x;
+	padding-right: $section-header-padding-x;
+	padding-top: $section-header-padding-y;
+	position: relative;
+	text-transform: $section-header-text-transform;
+	word-wrap: break-word;
+
+	&.collapse-icon {
+		padding-left: $section-header-collapse-icon-padding-left;
+		padding-right: $section-header-collapse-icon-padding-right;
+	}
+
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		bottom: $section-header-collapse-icon-bottom;
+		left: $section-header-collapse-icon-left;
+		right: $section-header-collapse-icon-right;
+		top: $section-header-collapse-icon-top;
+	}
+}
+
+a.section-header {
+	color: $section-header-link-color;
+	text-decoration: $section-header-link-text-decoration;
+
+	@include hover {
+		color: $section-header-link-hover-color;
+		text-decoration: $section-header-link-hover-text-decoration;
+	}
+}
+
+.section-subheader {
+	color: $section-subheader-color;
+	font-size: $section-subheader-font-size;
+	font-weight: $section-subheader-font-weight;
+	line-height: $section-subheader-line-height;
+	margin-bottom: $section-subheader-margin-bottom;
+	padding-bottom: $section-subheader-padding-y;
+	padding-left: $section-subheader-padding-x;
+	padding-right: $section-subheader-padding-x;
+	padding-top: $section-subheader-padding-y;
+	text-transform: $section-subheader-text-transform;
+	word-wrap: break-word;
+}
+
+// Reference Mark
+
+.reference-mark {
+	display: inline-block;
+	font-size: $reference-mark-font-size;
+	position: relative;
+	vertical-align: $reference-mark-vertical-align;
+}
+
+// Marked Text
+
+mark,
+.mark {
+	@include clay-highlight-text;
+}
+
+// Text Truncate
+
+.text-truncate {
+	display: block;
+}
