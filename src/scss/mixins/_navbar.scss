@@ -415,7 +415,7 @@
 
 			color: $link-color;
 
-			@include hover-focus {
+			@include hover {
 				background-color: $link-hover-bg;
 				color: $link-hover-color;
 			}
@@ -436,7 +436,7 @@
 			background-color: $brand-bg;
 			color: $brand-color;
 
-			@include hover-focus {
+			@include hover {
 				background-color: $brand-bg;
 				color: $brand-hover-color;
 			}
@@ -480,7 +480,7 @@
 								}
 
 								.dropdown-item {
-									@include hover-focus {
+									@include hover {
 										color: $link-hover-color;
 									}
 
