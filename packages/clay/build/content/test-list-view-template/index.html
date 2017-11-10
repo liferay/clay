@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.1</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.2</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -210,7 +210,7 @@
 		</h1>
 
 		
-<nav class="application-bar navbar navbar-dark navbar-expand-md">
+<nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -224,7 +224,7 @@
 		<div class="navbar-title navbar-text-truncate">My Application Name</div>
 		<ul class="navbar-nav">
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 						<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 					</svg>
@@ -241,15 +241,15 @@
 	</div>
 </nav>
 
-<nav class="navbar navigation-bar navbar-collapse-absolute navbar-secondary navbar-expand-md navbar-underline">
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
 	<div class="container">
-		<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse01" data-toggle="collapse" type="button">
+		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">App Section 2</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="../../images/icons/icons.svg#caret-bottom">
 			</svg>
-		</button>
-		<div aria-expanded="false" class="collapse navbar-collapse" id="navigationBarCollapse01">
+		</a>
+		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
 			<div class="container">
 				<ul class="navbar-nav">
 					<li class="nav-item">
@@ -268,7 +268,7 @@
 						</a>
 					</li>
 					<li class="dropdown nav-item show-dropdown-on-collapse">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 							<span class="navbar-text-truncate">More</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
@@ -287,7 +287,7 @@
 	</div>
 </nav>
 
-<nav class="management-bar navbar navbar-expand-md navbar-light">
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -306,8 +306,8 @@
 					</svg>
 				</a>
 				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-						<use xlink:href="../../images/icons/icons.svg#magic">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
+						<use xlink:href="../../images/icons/icons.svg#filter">
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -357,8 +357,8 @@
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-						<use xlink:href="../../images/icons/icons.svg#cards2">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+						<use xlink:href="../../images/icons/icons.svg#list">
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
@@ -672,12 +672,12 @@
 <div class="container">
 	<div class="pagination-bar">
 		<div class="dropdown pagination-items-per-page">
-			<button class="btn btn-unstyled dropdown-toggle" data-toggle="dropdown" type="button">
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 				10 entries
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
 					<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 				</svg>
-			</button>
+			</a>
 			<div class="dropdown-menu dropdown-menu-top">
 				<a class="dropdown-item" href="#1">5</a>
 				<a class="dropdown-item" href="#1">10</a>
@@ -689,17 +689,17 @@
 		<div class="pagination-results">Showing 223,922 to 223,932 of 1,292,203 entries.</div>
 		<ul class="pagination">
 			<li class="disabled page-item">
-				<button class="btn btn-unstyled page-link" type="button">
+				<a class="page-link" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
 						<use xlink:href="../../images/icons/icons.svg#angle-left">
 					</svg>
 					<span class="sr-only">Previous</span>
-				</button>
+				</a>
 			</li>
 			<li class="active page-item"><a class="page-link" href="#1">22,392</a></li>
 			<li class="page-item"><a class="page-link" href="#1">22,393</a></li>
 			<li class="dropdown page-item">
-				<button class="btn btn-unstyled dropdown-toggle page-link" data-toggle="dropdown" type="button">...</button>
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
 				<div class="dropdown-menu dropdown-menu-top-center">
 					<div class="inline-scroller">
 						<a class="dropdown-item" href="#1">22,394</a>
@@ -720,12 +720,12 @@
 			</li>
 			<li class="page-item"><a class="page-link" href="#1">129,221</a></li>
 			<li class="page-item">
-				<button class="btn btn-unstyled page-link" type="button">
+				<a class="page-link" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 						<use xlink:href="../../images/icons/icons.svg#angle-right">
 					</svg>
 					<span class="sr-only">Next</span>
-				</button>
+				</a>
 			</li>
 		</ul>
 	</div>
@@ -751,6 +751,22 @@
 		var $this = $(this);
 		$this.closest('.list-group').find('.list-group-item-flex').removeClass('focus');
 		$this.closest('.list-group-item-flex').addClass('focus');
+	});
+
+	$('.clay-site-open-overlay-sm-down').on('click', function(event) {
+		$(this).closest('.navbar').find('.navbar-overlay-sm-down').addClass('show');
+	});
+
+	$('.clay-site-close-overlay-sm-down').on('click', function(event) {
+		$(this).closest('.navbar-overlay-sm-down').removeClass('show');
+	});
+
+	$('.clay-site-open-overlay-up').on('click', function(event) {
+		$(this).closest('.navbar').find('.navbar-overlay-up').addClass('show');
+	});
+
+	$('.clay-site-close-overlay-up').on('click', function(event) {
+		$(this).closest('.navbar-overlay-up').removeClass('show');
 	});
 </script>
 	</div>
