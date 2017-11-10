@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-beta.1
+* Clay 2.0.0-beta.2
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -141,12 +141,6 @@ section.row {
   display: inline-block;
   padding: 4px;
   vertical-align: baseline;
-}
-
-.clay-site-form-container {
-  background-color: #FFF;
-  box-shadow: 0 1px 10px -4px rgba(0, 0, 0, 0.6);
-  padding: 1.25rem;
 }
 
 .clay-site-alerts .alert {
@@ -418,6 +412,10 @@ section.row {
 
 .clay-site-progress-bar-page .progress-group .progress {
   margin-bottom: 0;
+}
+
+.clay-site-positional-sticker {
+  max-width: 300px;
 }
 
 #verticalAlignTableListDemo {

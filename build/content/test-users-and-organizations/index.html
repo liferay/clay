@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.1</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.2</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -210,7 +210,7 @@
 		</h1>
 
 		
-<nav class="application-bar navbar navbar-dark navbar-expand-md">
+<nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -224,7 +224,7 @@
 		<h1 class="navbar-title navbar-text-truncate">Users and Organizations</h1>
 		<ul class="navbar-nav">
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 						<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 					</svg>
@@ -241,15 +241,15 @@
 	</div>
 </nav>
 
-<nav class="navbar navigation-bar navbar-collapse-absolute navbar-secondary navbar-expand-md navbar-underline">
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
 	<div class="container">
-		<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse01" data-toggle="collapse" type="button">
+		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">Users</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="../../images/icons/icons.svg#caret-bottom">
 			</svg>
-		</button>
-		<div aria-expanded="false" class="collapse navbar-collapse" id="navigationBarCollapse01">
+		</a>
+		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
 			<div class="container">
 				<ul class="navbar-nav">
 					<li class="nav-item">
@@ -307,63 +307,104 @@
 	<div class="row">
 		<div class="col-md-12">
 			<form style="max-width:800px;margin-left:auto;margin-right:auto;">
-				<div class="card">
-					<div class="card-body">
-						<div class="alert alert-dismissible alert-info" role="alert">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-								<use xlink:href="../../images/icons/icons.svg#info-circle">
+				<div class="form-container">
+					<div class="alert alert-dismissible alert-info" role="alert">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+							<use xlink:href="../../images/icons/icons.svg#info-circle">
+						</svg>
+						<strong class="lead">Info:</strong> Street 1 and City are required fields. Postal Code could be required in some countries.
+						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
-							<strong class="lead">Info:</strong> Street 1 and city are required fields. Postal Code could be required in some countries.
-							<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="../../images/icons/icons.svg#times">
-								</svg>
-							</button>
+						</button>
+					</div>
+					<div class="form-group form-inline-autofit">
+						<div class="form-inline-group">
+							<label>
+								Street 1
+								<span class="reference-mark">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+										<use xlink:href="../../images/icons/icons.svg#asterisk">
+									</svg>
+								</span>
+							</label>
+							<input class="form-control" placeholder="Street 1" type="text" value="1400 Montefino Ave">
 						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>
-										Street 1
-										<span class="reference-mark">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-												<use xlink:href="../../images/icons/icons.svg#asterisk">
-											</svg>
-										</span>
-									</label>
-									<input class="form-control" placeholder="Street 1" type="text" value="Paseo de la castellana, 280">
-								</div>
-								<div class="form-group">
-									<label>
-										Street 2
-									</label>
-									<input class="form-control" placeholder="Street 2" type="text">
-								</div>
+						<div class="form-inline-group">
+							<label>
+								Street 2
+							</label>
+							<input class="form-control" placeholder="Street 2" type="text">
+						</div>
+					</div>
+					<div class="form-group form-inline-autofit">
+						<div class="form-inline-group">
+							<label>
+								City
+								<span class="reference-mark">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+										<use xlink:href="../../images/icons/icons.svg#asterisk">
+									</svg>
+								</span>
+							</label>
+							<input class="form-control" placeholder="City" type="text" value="Diamond Bar">
+						</div>
+						<div class="form-inline-group">
+							<label>
+								State
+							</label>
+							<input class="form-control" placeholder="State" type="text" value="CA">
+						</div>
+						<div class="form-inline-group">
+							<label>
+								Postal Code
+							</label>
+							<input class="form-control" placeholder="Postal Code" type="text" value="91765">
+						</div>
+					</div>
+					<h4 class="section-header">Section Header ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+					<div class="form-group form-inline-autofit">
+						<div class="form-inline-group">
+							<label>Input Label 1</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+					<div class="form-group form-inline-autofit">
+						<div class="form-inline-group">
+							<label>Input Label 2</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+					<h5 class="section-subheader">Section Subheader</h5>
+					<div class="form-group form-inline-autofit">
+						<div class="form-inline-group">
+							<div class="custom-control custom-radio">
+								<label>
+									<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Radio 1 Label</span>
+								</label>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>
-										Postal Code
-									</label>
-									<input class="form-control" placeholder="Postal Code" type="text" value="28046">
-								</div>
-								<div class="form-group">
-									<label>
-										City
-										<span class="reference-mark">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-												<use xlink:href="../../images/icons/icons.svg#asterisk">
-											</svg>
-										</span>
-									</label>
-									<input class="form-control" placeholder="City" type="text" value="Madrid">
-								</div>
+							<div class="custom-control custom-radio">
+								<label>
+									<input class="custom-control-input" id="radio2" name="radio" type="radio">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Radio 2 Label</span>
+								</label>
+							</div>
+							<div class="custom-control custom-radio">
+								<label>
+									<input checked class="custom-control-input" id="radio3" name="radio" type="radio">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Radio 3 Label</span>
+								</label>
 							</div>
 						</div>
 					</div>
-					<div class="panel-group panel-group-fluid-last">
-						<div class="panel panel-secondary">
-							<a aria-controls="collapseTwo" aria-expanded="true" class="collapse-icon panel-header panel-header-link" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
+					<div aria-orientation="vertical" class="panel-group" role="tablist">
+						<div class="panel">
+							<a aria-controls="accordion03CollapseTwo" aria-expanded="true" class="collapse-icon section-header" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 								<span class="panel-title">Password</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
@@ -418,8 +459,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-secondary">
-							<a aria-controls="accordion03CollapseOne" aria-expanded="false" class="collapse-icon collapsed panel-header panel-header-link" data-toggle="collapse" href="#accordion03CollapseOne" id="accordion03HeadingOne" role="tab">
+						<div class="panel">
+							<a aria-controls="accordion03CollapseOne" aria-expanded="false" class="collapse-icon collapsed section-header" data-toggle="collapse" href="#accordion03CollapseOne" id="accordion03HeadingOne" role="tab">
 								<span class="panel-title">Organizations</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
@@ -438,9 +479,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-secondary">
-							<a aria-controls="collapseThree" aria-expanded="false" class="collapse-icon collapsed panel-header panel-header-link" data-toggle="collapse" href="#accordion03CollapseThree" id="accordion03HeadingThree" role="tab">
-								<span class="panel-title">User Groups</span>
+						<div class="panel">
+							<a aria-controls="accordion03CollapseThree" aria-expanded="false" class="collapse-icon collapsed section-header" data-toggle="collapse" href="#accordion03CollapseThree" id="accordion03HeadingThree" role="tab">
+								<span class="panel-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual User Groups</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 										<use xlink:href="../../images/icons/icons.svg#angle-right">
@@ -458,8 +499,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-secondary">
-							<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapse-icon collapsed panel-header panel-header-link" data-toggle="collapse" href="#accordion03CollapseFour" id="accordion03HeadingFour" role="tab">
+						<div class="panel">
+							<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapse-icon collapsed section-header" data-toggle="collapse" href="#accordion03CollapseFour" id="accordion03HeadingFour" role="tab">
 								<span class="panel-title">Roles</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
