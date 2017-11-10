@@ -440,27 +440,3 @@
 .navbar-transparent {
 	@include clay-navbar-variant($navbar-transparent);
 }
-
-// Navbar Light
-
-.navbar-light {
-	@include clay-navbar-variant($navbar-light);
-}
-
-// Navbar Secondary
-
-.navbar-secondary {
-	@include clay-navbar-variant($navbar-secondary);
-}
-
-// Navbar Dark
-
-.navbar-dark {
-	@include clay-navbar-variant($navbar-dark);
-}
-
-// Navbar Primary
-
-.navbar-primary {
-	@include clay-navbar-variant($navbar-primary);
-}

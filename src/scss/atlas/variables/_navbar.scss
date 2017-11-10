@@ -14,28 +14,9 @@ $navbar-light-hover-color: $navbar-light-color !default;
 $navbar-light-active-color: $body-color !default;
 $navbar-light-disabled-color: $nav-link-disabled-color !default;
 
-$navbar-light: (
-	bg: #FFF
-) !default;
-
-// Navbar Secondary
-
-$navbar-secondary: () !default;
-$navbar-secondary: map-merge((
-	bg: darken(saturate($secondary, 4.82), 20.00),
-	link-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
-	link-hover-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
-	link-active-color: #FFF,
-	link-disabled-color: $nav-link-disabled-color
-), $navbar-secondary);
-
 // Navbar Dark
 
 $navbar-dark-color: #FFF !default;
 $navbar-dark-hover-color: $navbar-dark-color !default;
 $navbar-dark-active-color: $navbar-dark-color !default;
 $navbar-dark-disabled-color: $nav-link-disabled-color !default;
-
-$navbar-dark: (
-	bg: lighten(desaturate(adjust-hue($dark, 1), 0.77), 3.92)
-) !default;
