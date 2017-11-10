@@ -1,3 +1,11 @@
 .management-bar {
 	@include clay-navbar-size($management-bar-size);
 }
+
+.management-bar-light {
+	@include clay-navbar-variant($management-bar-light);
+}
+
+.management-bar-primary {
+	@include clay-navbar-variant($management-bar-primary);
+}
