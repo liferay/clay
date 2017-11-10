@@ -17,9 +17,18 @@ class ClayIcon extends Component {}
  */
 ClayIcon.STATE = {
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayIcon
+	 * @type {?string}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayButton
+	 * @memberof ClayIcon
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */

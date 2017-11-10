@@ -6,12 +6,17 @@
 {template .render}
 	{@param spritemap: string}
 	{@param symbol: string}
+	{@param? elementClasses: string}
 	{@param? id: string}
 
 	{let $attributes kind="attributes"}
 		aria-hidden="true"
 		class="lexicon-icon
 			{sp}lexicon-icon-{$symbol}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
 		"
 		{if $id}
 			id="{$id}"
