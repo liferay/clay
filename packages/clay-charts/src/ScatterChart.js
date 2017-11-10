@@ -1,6 +1,6 @@
 'use strict';
 
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 import Soy from 'metal-soy';
 
 import Chart from './Chart';
@@ -33,7 +33,7 @@ ScatterChart.STATE = {
 			regions: Config.array(),
 			type: Config.oneOf(types.point),
 			x: Config.string(),
-		}),
+		})
 	),
 
 	/**
@@ -48,5 +48,5 @@ ScatterChart.STATE = {
 
 Soy.register(ScatterChart, templates);
 
-export { ScatterChart };
+export {ScatterChart};
 export default ScatterChart;

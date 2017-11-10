@@ -1,7 +1,7 @@
 'use strict';
 
-import { Config } from 'metal-state';
-import { bb, d3 } from 'billboard.js';
+import {Config} from 'metal-state';
+import {bb, d3} from 'billboard.js';
 
 import types from './utils/types';
 
@@ -147,7 +147,7 @@ const ChartBase = {
 	 * @protected
 	 */
 	constructColumnsConfig_: function() {
-		const { columns } = this.getStateObj_();
+		const {columns} = this.getStateObj_();
 
 		const config = {
 			columns: this.createColumnsArray_(columns),
@@ -156,7 +156,7 @@ const ChartBase = {
 		for (let i = 0; i < columns.length; i++) {
 			const column = columns[i];
 
-			const { id } = column;
+			const {id} = column;
 
 			const keys = Object.keys(column);
 
@@ -174,8 +174,8 @@ const ChartBase = {
 						config.hide.push(column.id);
 					}
 				} else {
-					config[PROP_NAME_MAP[key]] = config[PROP_NAME_MAP[key]] || {
-					};
+					// eslint-disable-next-line
+					config[PROP_NAME_MAP[key]] = config[PROP_NAME_MAP[key]] || {};
 
 					config[PROP_NAME_MAP[key]][id] = column[key];
 				}
@@ -250,10 +250,7 @@ const ChartBase = {
 			 * @event dataUnselected
 			 * @memberof ChartBase
 			 */
-			config.onunselected = this.emitChartEvent_.bind(
-				this,
-				'dataUnselected',
-			);
+			config.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
 		}
 
 		return config;
@@ -300,7 +297,7 @@ const ChartBase = {
 	 * @protected
 	 */
 	createColumnsArray_: function(columns) {
-		return columns.map(({ data, id }) => {
+		return columns.map(({data, id}) => {
 			return [id].concat(data);
 		});
 	},
@@ -310,7 +307,7 @@ const ChartBase = {
 	 * @protected
 	 */
 	emitChartEvent_: function() {
-		this.emit.apply(this, arguments);
+		this.emit.apply(this, arguments); // eslint-disable-line
 	},
 
 	/**
@@ -338,7 +335,7 @@ const ChartBase = {
 	 * Maps `columns` state to chart via `bb.load` method.
 	 * @protected
 	 */
-	handleColumnsChanged_: function({ prevVal }) {
+	handleColumnsChanged_: function({prevVal}) {
 		const data = this.constructDataConfig_(false);
 
 		const newVal = data.columns;
@@ -361,7 +358,7 @@ const ChartBase = {
 	 * Maps `groups` state to chart via `bb.groups` method.
 	 * @protected
 	 */
-	handleGroupsChanged_: function({ newVal }) {
+	handleGroupsChanged_: function({newVal}) {
 		this.bbChart.groups(newVal);
 	},
 
@@ -369,7 +366,7 @@ const ChartBase = {
 	 * Maps `regions` state to chart via `bb.regions` method.
 	 * @protected
 	 */
-	handleRegionsChanged_: function({ newVal }) {
+	handleRegionsChanged_: function({newVal}) {
 		this.bbChart.regions(newVal);
 	},
 
@@ -377,7 +374,7 @@ const ChartBase = {
 	 * Maps `size` state to chart via `bb.resize` method.
 	 * @protected
 	 */
-	handleSizeChanged_: function({ newVal }) {
+	handleSizeChanged_: function({newVal}) {
 		this.bbChart.resize(newVal);
 	},
 
@@ -385,7 +382,7 @@ const ChartBase = {
 	 * Maps `type` state to chart via `bb.transform` method.
 	 * @protected
 	 */
-	handleTypeChanged_: function({ newVal }) {
+	handleTypeChanged_: function({newVal}) {
 		this.bbChart.transform(newVal);
 	},
 
@@ -393,7 +390,7 @@ const ChartBase = {
 	 * Maps `x` state to chart via `bb.x` method.
 	 * @protected
 	 */
-	handleXChanged_: function({ newVal }) {
+	handleXChanged_: function({newVal}) {
 		const column = this.getColumn_(newVal);
 
 		this.bbChart.x(column.data);
@@ -610,7 +607,7 @@ ChartBase.STATE = {
 			regions: Config.array(),
 			type: Config.oneOf(types.all),
 			x: Config.string(),
-		}),
+		})
 	),
 
 	/**
@@ -643,12 +640,12 @@ ChartBase.STATE = {
 	emptyLabelText: Config.string().setter(value => {
 		return value
 			? {
-					empty: {
-						label: {
-							text: value,
-						},
+				empty: {
+					label: {
+						text: value,
 					},
-				}
+				},
+			}
 			: value;
 	}),
 
@@ -769,8 +766,8 @@ ChartBase.STATE = {
 	keys: Config.array().setter(value => {
 		return value
 			? {
-					value,
-				}
+				value,
+			}
 			: value;
 	}),
 
@@ -781,21 +778,23 @@ ChartBase.STATE = {
 	 * @type {?boolean|function|undefined}
 	 * @default undefined
 	 */
-	labels: Config.bool().func().setter(value => {
-		if (!value) {
-			return value;
-		} else if (typeof value === 'boolean') {
-			return {
-				labels: value,
-			};
-		} else {
-			return {
-				labels: {
-					format: value,
-				},
-			};
-		}
-	}),
+	labels: Config.bool()
+		.func()
+		.setter(value => {
+			if (!value) {
+				return value;
+			} else if (typeof value === 'boolean') {
+				return {
+					labels: value,
+				};
+			} else {
+				return {
+					labels: {
+						format: value,
+					},
+				};
+			}
+		}),
 
 	/**
 	 * Legend display options.
@@ -930,8 +929,8 @@ ChartBase.STATE = {
 	resizeAuto: Config.bool().setter(value => {
 		return value
 			? {
-					auto: value,
-				}
+				auto: value,
+			}
 			: value;
 	}),
 
@@ -982,10 +981,10 @@ ChartBase.STATE = {
 	splineInterpolationType: Config.string().setter(value => {
 		return value
 			? {
-					interpolation: {
-						type: value,
-					},
-				}
+				interpolation: {
+					type: value,
+				},
+			}
 			: value;
 	}),
 
@@ -1014,8 +1013,8 @@ ChartBase.STATE = {
 	svgClassname: Config.string().setter(value => {
 		return value
 			? {
-					classname: value,
-				}
+				classname: value,
+			}
 			: value;
 	}),
 
@@ -1065,8 +1064,8 @@ ChartBase.STATE = {
 	transitionDuration: Config.number().setter(value => {
 		return value
 			? {
-					duration: value,
-				}
+				duration: value,
+			}
 			: value;
 	}),
 
@@ -1138,5 +1137,5 @@ ChartBase.STATE = {
 	}),
 };
 
-export { bb, d3, ChartBase };
+export {bb, d3, ChartBase};
 export default ChartBase;

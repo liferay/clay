@@ -1,6 +1,6 @@
 'use strict';
 
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 import Soy from 'metal-soy';
 
 import Chart from './Chart';
@@ -29,7 +29,7 @@ AreaStepChart.STATE = {
 			hide: Config.bool(),
 			id: Config.required().string(),
 			type: Config.oneOf(types.area),
-		}),
+		})
 	),
 
 	/**
@@ -44,5 +44,5 @@ AreaStepChart.STATE = {
 
 Soy.register(AreaStepChart, templates);
 
-export { AreaStepChart };
+export {AreaStepChart};
 export default AreaStepChart;

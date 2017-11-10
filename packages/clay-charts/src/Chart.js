@@ -18,5 +18,5 @@ Chart.STATE = ChartBase.STATE;
 
 Soy.register(Chart, templates);
 
-export { Chart };
+export {Chart};
 export default Chart;

@@ -1,6 +1,6 @@
 'use strict';
 
-import { StepChart as StepChartBase } from '../StepChart';
+import {StepChart as StepChartBase} from '../StepChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class StepChart extends Chart {}
 
 StepChart.PROPS = StepChartBase.STATE;
 
-export { StepChart };
+export {StepChart};
 export default StepChart;

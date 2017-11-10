@@ -1,6 +1,6 @@
 'use strict';
 
-import { SplineChart as SplineChartBase } from '../SplineChart';
+import {SplineChart as SplineChartBase} from '../SplineChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class SplineChart extends Chart {}
 
 SplineChart.PROPS = SplineChartBase.STATE;
 
-export { SplineChart };
+export {SplineChart};
 export default SplineChart;

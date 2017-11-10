@@ -1,6 +1,6 @@
 'use strict';
 
-import { LineChart as LineChartBase } from '../LineChart';
+import {LineChart as LineChartBase} from '../LineChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class LineChart extends Chart {}
 
 LineChart.PROPS = LineChartBase.STATE;
 
-export { LineChart };
+export {LineChart};
 export default LineChart;

@@ -1,6 +1,6 @@
 'use strict';
 
-import { ScatterChart as ScatterChartBase } from '../ScatterChart';
+import {ScatterChart as ScatterChartBase} from '../ScatterChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class ScatterChart extends Chart {}
 
 ScatterChart.PROPS = ScatterChartBase.STATE;
 
-export { ScatterChart };
+export {ScatterChart};
 export default ScatterChart;

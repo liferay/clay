@@ -1,6 +1,6 @@
 'use strict';
 
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 import Soy from 'metal-soy';
 
 import Chart from './Chart';
@@ -33,7 +33,7 @@ DonutChart.STATE = {
 			regions: Config.array(),
 			type: Config.oneOf(types.percentage),
 			x: Config.string(),
-		}),
+		})
 	),
 
 	/**
@@ -48,5 +48,5 @@ DonutChart.STATE = {
 
 Soy.register(DonutChart, templates);
 
-export { DonutChart };
+export {DonutChart};
 export default DonutChart;

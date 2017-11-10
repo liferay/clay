@@ -1,6 +1,6 @@
 'use strict';
 
-import { DonutChart as DonutChartBase } from '../DonutChart';
+import {DonutChart as DonutChartBase} from '../DonutChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class DonutChart extends Chart {}
 
 DonutChart.PROPS = DonutChartBase.STATE;
 
-export { DonutChart };
+export {DonutChart};
 export default DonutChart;

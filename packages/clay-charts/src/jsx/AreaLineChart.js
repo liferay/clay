@@ -1,6 +1,6 @@
 'use strict';
 
-import { AreaLineChart as AreaLineChartBase } from '../AreaLineChart';
+import {AreaLineChart as AreaLineChartBase} from '../AreaLineChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class AreaLineChart extends Chart {}
 
 AreaLineChart.PROPS = AreaLineChartBase.STATE;
 
-export { AreaLineChart };
+export {AreaLineChart};
 export default AreaLineChart;

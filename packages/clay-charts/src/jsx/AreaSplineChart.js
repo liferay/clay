@@ -1,6 +1,6 @@
 'use strict';
 
-import { AreaSplineChart as AreaSplineChartBase } from '../AreaSplineChart';
+import {AreaSplineChart as AreaSplineChartBase} from '../AreaSplineChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class AreaSplineChart extends Chart {}
 
 AreaSplineChart.PROPS = AreaSplineChartBase.STATE;
 
-export { AreaSplineChart };
+export {AreaSplineChart};
 export default AreaSplineChart;

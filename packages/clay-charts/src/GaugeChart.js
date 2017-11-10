@@ -1,6 +1,6 @@
 'use strict';
 
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 import Soy from 'metal-soy';
 
 import Chart from './Chart';
@@ -33,7 +33,7 @@ GaugeChart.STATE = {
 			regions: Config.array(),
 			type: Config.oneOf(types.gauge),
 			x: Config.string(),
-		}),
+		})
 	),
 
 	/**
@@ -48,5 +48,5 @@ GaugeChart.STATE = {
 
 Soy.register(GaugeChart, templates);
 
-export { GaugeChart };
+export {GaugeChart};
 export default GaugeChart;

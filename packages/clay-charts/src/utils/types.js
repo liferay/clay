@@ -33,5 +33,5 @@ const types = {
 	],
 };
 
-export { types };
+export {types};
 export default types;

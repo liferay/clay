@@ -1,6 +1,6 @@
 'use strict';
 
-import { bb } from 'billboard.js';
+import {bb} from 'billboard.js';
 
 import PieChart from '../PieChart';
 

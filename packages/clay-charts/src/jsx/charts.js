@@ -12,7 +12,7 @@ import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
 import SplineChart from './SplineChart';
 import StepChart from './StepChart';
-import { bb, d3 } from '../ChartBase';
+import {bb, d3} from '../ChartBase';
 
 export {
 	AreaLineChart,

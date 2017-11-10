@@ -1,6 +1,6 @@
 'use strict';
 
-import { GaugeChart as GaugeChartBase } from '../GaugeChart';
+import {GaugeChart as GaugeChartBase} from '../GaugeChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class GaugeChart extends Chart {}
 
 GaugeChart.PROPS = GaugeChartBase.STATE;
 
-export { GaugeChart };
+export {GaugeChart};
 export default GaugeChart;

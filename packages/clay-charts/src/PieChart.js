@@ -1,6 +1,6 @@
 'use strict';
 
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 import Soy from 'metal-soy';
 
 import Chart from './Chart';
@@ -33,7 +33,7 @@ PieChart.STATE = {
 			regions: Config.array(),
 			type: Config.oneOf(types.percentage),
 			x: Config.string(),
-		}),
+		})
 	),
 
 	/**
@@ -48,5 +48,5 @@ PieChart.STATE = {
 
 Soy.register(PieChart, templates);
 
-export { PieChart };
+export {PieChart};
 export default PieChart;

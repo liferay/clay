@@ -1,6 +1,6 @@
 'use strict';
 
-import { PieChart as PieChartBase } from '../PieChart';
+import {PieChart as PieChartBase} from '../PieChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class PieChart extends Chart {}
 
 PieChart.PROPS = PieChartBase.STATE;
 
-export { PieChart };
+export {PieChart};
 export default PieChart;

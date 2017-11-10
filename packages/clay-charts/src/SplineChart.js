@@ -1,6 +1,6 @@
 'use strict';
 
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 import Soy from 'metal-soy';
 
 import Chart from './Chart';
@@ -33,7 +33,7 @@ SplineChart.STATE = {
 			regions: Config.array(),
 			type: Config.oneOf(types.point),
 			x: Config.string(),
-		}),
+		})
 	),
 
 	/**
@@ -48,5 +48,5 @@ SplineChart.STATE = {
 
 Soy.register(SplineChart, templates);
 
-export { SplineChart };
+export {SplineChart};
 export default SplineChart;

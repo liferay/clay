@@ -1,6 +1,6 @@
 'use strict';
 
-import { JSXComponent } from 'metal-jsx';
+import {JSXComponent} from 'metal-jsx';
 
 import ChartBase from '../ChartBase';
 
@@ -39,5 +39,5 @@ ChartJSX.prototype.getStateObj_ = function() {
 	return this.props;
 };
 
-export { ChartJSX };
+export {ChartJSX};
 export default ChartJSX;

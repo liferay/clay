@@ -1,6 +1,6 @@
 'use strict';
 
-import { BarChart as BarChartBase } from '../BarChart';
+import {BarChart as BarChartBase} from '../BarChart';
 import Chart from './Chart';
 
 /**
@@ -11,5 +11,5 @@ class BarChart extends Chart {}
 
 BarChart.PROPS = BarChartBase.STATE;
 
-export { BarChart };
+export {BarChart};
 export default BarChart;
