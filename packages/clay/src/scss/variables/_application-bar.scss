@@ -10,3 +10,13 @@ $application-bar-size: map-merge((
 	padding-x: 0,
 	padding-y: 0
 ), $application-bar-size);
+
+$application-bar-dark: () !default;
+$application-bar-dark: map-merge((
+	bg: $dark,
+	color: $navbar-dark-color,
+	link-color: $navbar-dark-color,
+	link-hover-color: $navbar-dark-hover-color,
+	link-active-color: $navbar-dark-active-color,
+	link-disabled-color: $navbar-dark-disabled-color
+), $application-bar-dark);
