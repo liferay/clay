@@ -48,7 +48,7 @@ $input-color: $body-color !default;
 $input-bg: $body-bg !default;
 $input-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $input-box-shadow: none !default;
-$input-color-placeholder: $secondary !default;
+$input-placeholder-color: $secondary !default;
 $input-label-color: $body-color !default;
 
 $input-focus-bg: lighten(saturate($component-active-bg, 3.40), 43.14) !default;
