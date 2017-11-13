@@ -150,11 +150,6 @@
 .nav-tabs {
 	font-size: $nav-tabs-font-size;
 
-	.nav-link.active {
-		// Will need to be revisted if https://github.com/twbs/bootstrap/pull/24639 is merged
-		border-color: $nav-tabs-link-active-border-color;
-	}
-
 	.nav-item.show .nav-link {
 		background-color: $nav-tabs-link-show-bg;
 		border-color: $nav-tabs-link-show-border-color;
