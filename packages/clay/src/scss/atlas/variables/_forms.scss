@@ -111,6 +111,7 @@ $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabl
 $input-group-addon-bg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $input-group-addon-border-color: $input-group-addon-bg !default;
 $input-group-addon-color: $secondary !default;
+$input-group-addon-font-weight: $font-weight-semi-bold !default;
 
 // Input Group Secondary
 
