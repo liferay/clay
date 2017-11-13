@@ -13,3 +13,6 @@ $lexicon-icon-size: 1em !default; // 16px
 $lexicon-icon-sm-font-size: 0.5rem !default; // 8px
 $lexicon-icon-lg-font-size: 2rem !default; // 32px
 $lexicon-icon-xl-font-size: 8rem !default; // 128px
+
+$order-arrow-down-active-color: rgba($black, 0.9) !default;
+$order-arrow-up-active-color: $order-arrow-down-active-color !default;
