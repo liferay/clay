@@ -215,17 +215,20 @@ weight: 100
 	</div>
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
-			<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
+			<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
+			<span class="form-check-description">1</span>
 		</label>
 	</div>
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
-			<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
+			<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
+			<span class="form-check-description">2</span>
 		</label>
 	</div>
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
-			<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
+			<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
+			<span class="form-check-description">3</span>
 		</label>
 	</div>
 </div>
@@ -253,19 +256,22 @@ weight: 100
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
+		<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
+		<span class="form-check-description">1</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
+		<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
+		<span class="form-check-description">2</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
+		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
+		<span class="form-check-description">3</span>
 	</label>
 </div>
 ```
@@ -658,29 +664,6 @@ weight: 100
 </article>
 
 
-<article id="form-inline">
-
-### Form Inline
-
-<div class="form-container">
-	<div class="form-inline">
-		<label for="formInlineInput">Form Inline</label>
-		<input class="form-control" id="formInlineInput" type="text">
-		<button class="btn btn-primary" type="submit">Submit</button>
-	</div>
-</div>
-
-```text/html
-<div class="form-inline">
-	<label for="formInlineInput">Form Inline</label>
-	<input class="form-control" id="formInlineInput" type="text">
-	<button class="btn btn-primary" type="submit">Submit</button>
-</div>
-```
-
-</article>
-
-
 <article id="form-inline-autofit">
 
 ### Form Inline Autofit
@@ -688,7 +671,7 @@ weight: 100
 > Equally spaced form inputs. To set a fixed width use `flex-grow: 0; flex-basis: 200px;` on `.form-inline-group` or any direct descendant of `.form-inline-autofit`.
 
 <div class="form-container">
-	<div class="form-group form-inline form-inline-autofit">
+	<div class="form-group form-inline-autofit">
 		<div class="form-inline-group">
 			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
 			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
@@ -702,7 +685,7 @@ weight: 100
 			</select>
 		</div>
 	</div>
-	<div class="align-items-end form-group form-inline form-inline-autofit">
+	<div class="align-items-end form-group form-inline-autofit">
 		<div class="form-inline-group">
 			<label for="formInlineAutofitTextInput2">First Name</label>
 			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
@@ -717,7 +700,7 @@ weight: 100
 			<div class="input-group-addon">.00</div>
 		</div>
 	</div>
-	<div class="align-items-end form-group form-inline form-inline-autofit">
+	<div class="align-items-end form-group form-inline-autofit">
 		<label for="formInlineAutofitCity">City</label>
 		<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
 		<select class="form-control">
@@ -739,11 +722,11 @@ weight: 100
 		</div>
 	</div>
 	<button class="btn btn-primary" type="submit">Submit</button>{sp}
-	<a class="btn btn-danger" href="#1">Clear</a>
+	<a class="btn btn-danger" href="#1" role="button">Clear</a>
 </div>
 
 ```text/html
-<div class="form-inline form-inline-autofit">
+<div class="form-inline-autofit">
 	<div class="form-inline-group">
 		<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
 		<input class="form-control" id="formInlineAutofitTextInput1" type="text">
@@ -780,23 +763,22 @@ weight: 100
 
 <div class="form-container">
 	<form class="my-custom-form">
-		<div class="form-group form-inline form-inline-autofit">
+		<div class="form-group form-inline-autofit">
 			<label>Name</label>
 			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
 			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
 			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
 		</div>
-		<div class="form-group form-inline form-inline-autofit">
+		<div class="form-group form-inline-autofit">
 			<label for="formInlineAutofitCustomAddress1">Address 1</label>
 			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
 		</div>
-		<div class="form-group form-inline form-inline-autofit">
+		<div class="form-group form-inline-autofit">
 			<label for="formInlineAutofitCustomAddress2">Address 2</label>
 			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
 		</div>
-		<button class="btn btn-primary" type="submit">Submit</button>
-		&nbsp;
-		<a class="btn btn-danger" href="#1">Clear</a>
+		<button class="btn btn-primary" type="submit">Submit</button>{sp}
+		<a class="btn btn-danger" href="#1" role="button">Clear</a>
 	</form>
 </div>
 
@@ -808,24 +790,26 @@ weight: 100
 		}
 	}
 </style>
-<form class="my-custom-form">
-	<div class="form-group form-inline form-inline-autofit">
-		<label>Name</label>
-		<input class="form-control" placeholder="First" type="text">
-		<input class="form-control" placeholder="Middle" type="text">
-		<input class="form-control" placeholder="Last" type="text">
-	</div>
-	<div class="form-group form-inline form-inline-autofit">
-		<label for="formInlineAutofitCustomAddress1">Address 1</label>
-		<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
-	</div>
-	<div class="form-group form-inline form-inline-autofit">
-		<label for="formInlineAutofitCustomAddress2">Address 2</label>
-		<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
-	</div>
-	<button class="btn btn-primary" type="submit">Submit</button>
-	<a class="btn btn-danger" href="#1">Clear</a>
-</form>
+<div class="form-container">
+	<form class="my-custom-form">
+		<div class="form-group form-inline-autofit">
+			<label>Name</label>
+			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+		</div>
+		<div class="form-group form-inline-autofit">
+			<label for="formInlineAutofitCustomAddress1">Address 1</label>
+			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+		</div>
+		<div class="form-group form-inline-autofit">
+			<label for="formInlineAutofitCustomAddress2">Address 2</label>
+			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+		</div>
+		<button class="btn btn-primary" type="submit">Submit</button>
+		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+	</form>
+</div>
 ```
 
 </article>

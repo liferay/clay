@@ -20,7 +20,7 @@ weight: 100
 		<a aria-controls="documents" class="disabled nav-link" href="#documents" id="documentsTab" role="tab">Documents</a>
 	</li>
 	<li class="dropdown nav-item">
-		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
@@ -76,7 +76,7 @@ weight: 100
 		<a aria-controls="documents" class="disabled nav-link" href="#documents" id="documentsTab" role="tab">Documents</a>
 	</li>
 	<li class="dropdown nav-item">
-		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />

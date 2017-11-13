@@ -71,7 +71,7 @@ weight: 100
 	<div class="col-md-6">
 		<ul class="nav nav-nested">
 			<li class="nav-item">
-				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01">
+				<a aria-controls="navCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01" role="button">
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -89,7 +89,7 @@ weight: 100
 						<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 						<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 						<li class="nav-item">
-							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse02">
+							<a aria-controls="navCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse02" role="button">
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -116,7 +116,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse03">
+				<a aria-controls="navCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse03" role="button">
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -137,7 +137,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse04">
+				<a aria-controls="navCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse04" role="button">
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -166,7 +166,7 @@ weight: 100
 ```text/html
 <ul class="nav nav-nested">
 	<li class="nav-item">
-		<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01">
+		<a aria-controls="navCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01" role="button">
 			Basic Information
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -184,7 +184,7 @@ weight: 100
 				<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 				<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 				<li class="nav-item">
-					<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse02">
+					<a aria-controls="navCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse02" role="button">
 						Documents and Media
 						<span class="collapse-icon-closed">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -211,7 +211,7 @@ weight: 100
 		</div>
 	</li>
 	<li class="nav-item">
-		<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse03">
+		<a aria-controls="navCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse03" role="button">
 			SEO
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -232,7 +232,7 @@ weight: 100
 		</div>
 	</li>
 	<li class="nav-item">
-		<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse04">
+		<a aria-controls="navCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse04" role="button">
 			Advanced
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -270,7 +270,7 @@ weight: 100
 	<div class="col-md-6">
 		<ul class="nav nav-nested-margins">
 			<li class="nav-item">
-				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001">
+				<a aria-controls="navCollapse001" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001" role="button">
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -288,7 +288,7 @@ weight: 100
 						<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 						<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 						<li class="nav-item">
-							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse002">
+							<a aria-controls="navCollapse002" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse002" role="button">
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -315,7 +315,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse003">
+				<a aria-controls="navCollapse003" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse003" role="button">
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -336,7 +336,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse004">
+				<a aria-controls="navCollapse004" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse004" role="button">
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -365,7 +365,7 @@ weight: 100
 ```text/html
 <ul class="nav nav-nested-margins">
 	<li class="nav-item">
-		<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001">
+		<a aria-controls="navCollapse001" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001" role="button">
 			Basic Information
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -383,7 +383,7 @@ weight: 100
 				<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 				<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 				<li class="nav-item">
-					<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse002">
+					<a aria-controls="navCollapse002" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse002" role="button">
 						Documents and Media
 						<span class="collapse-icon-closed">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -410,7 +410,7 @@ weight: 100
 		</div>
 	</li>
 	<li class="nav-item">
-		<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse003">
+		<a aria-controls="navCollapse003" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse003" role="button">
 			SEO
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -431,7 +431,7 @@ weight: 100
 		</div>
 	</li>
 	<li class="nav-item">
-		<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse004">
+		<a aria-controls="navCollapse004" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse004" role="button">
 			Advanced
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">

@@ -9,15 +9,15 @@ weight: 100
 
 ### Navbar (Navigation Bar)
 
-<nav class="navbar navigation-bar navbar-collapse-absolute navbar-light navbar-expand-md navbar-underline">
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
 	<div class="container">
-		<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse00" data-toggle="collapse" type="button">
+		<a aria-controls="navigationBarCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse00" role="button">
 			<span class="navbar-text-truncate">App Section 2</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
-		</button>
-		<div aria-expanded="false" class="collapse navbar-collapse" id="navigationBarCollapse00">
+		</a>
+		<div class="collapse navbar-collapse" id="navigationBarCollapse00">
 			<div class="container">
 				<ul class="navbar-nav">
 					<li class="nav-item">
@@ -36,7 +36,7 @@ weight: 100
 						</a>
 					</li>
 					<li class="dropdown nav-item show-dropdown-on-collapse">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 							<span class="navbar-text-truncate">More</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 								<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
@@ -55,15 +55,15 @@ weight: 100
 	</div>
 </nav>
 
-<nav class="navbar navigation-bar navbar-collapse-absolute navbar-secondary navbar-expand-md navbar-underline">
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
 	<div class="container">
-		<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse01" data-toggle="collapse" type="button">
+		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">App Section 2</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
-		</button>
-		<div aria-expanded="false" class="collapse navbar-collapse" id="navigationBarCollapse01">
+		</a>
+		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
 			<div class="container">
 				<ul class="navbar-nav">
 					<li class="nav-item">
@@ -82,7 +82,7 @@ weight: 100
 						</a>
 					</li>
 					<li class="dropdown nav-item show-dropdown-on-collapse">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 							<span class="navbar-text-truncate">More</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 								<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
@@ -102,15 +102,15 @@ weight: 100
 </nav>
 
 ```text/html
-<nav class="navbar navigation-bar navbar-collapse-absolute navbar-secondary navbar-expand-md navbar-underline">
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
 	<div class="container">
-		<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navigationBarCollapse01" data-toggle="collapse" type="button">
+		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">App Section 2</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
-		</button>
-		<div aria-expanded="false" class="collapse navbar-collapse" id="navigationBarCollapse01">
+		</a>
+		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
 			<div class="container">
 				<ul class="navbar-nav">
 					<li class="nav-item">
@@ -129,7 +129,7 @@ weight: 100
 						</a>
 					</li>
 					<li class="dropdown nav-item show-dropdown-on-collapse">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 							<span class="navbar-text-truncate">More</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 								<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />

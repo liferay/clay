@@ -9,7 +9,7 @@ weight: 100
 
 ### Accordions with Open and Close Icon
 
-<div aria-multiselectable="true" class="panel-group" id="accordion03" role="tablist">
+<div aria-orientation="vertical" class="panel-group" id="accordion03" role="tablist">
 	<div class="panel panel-secondary">
 		<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed panel-header panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 			<span class="panel-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
@@ -31,7 +31,7 @@ weight: 100
 		</div>
 	</div>
 	<div class="panel panel-secondary">
-		<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon panel-header panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" id="accordion03HeadingOne" role="tab">
+		<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon collapse-icon-middle panel-header panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" id="accordion03HeadingOne" role="tab">
 			<span class="panel-title">Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
@@ -133,7 +133,7 @@ weight: 100
 </div>
 
 ```text/html
-<div aria-multiselectable="true" class="panel-group" id="accordion03" role="tablist">
+<div aria-orientation="vertical" class="panel-group" id="accordion03" role="tablist">
 	<div class="panel panel-secondary">
 		<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed panel-header panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 			<span class="panel-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
@@ -155,7 +155,7 @@ weight: 100
 		</div>
 	</div>
 	<div class="panel panel-secondary">
-		<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon panel-header panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" id="accordion03HeadingOne" role="tab">
+		<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon collapse-icon-middle panel-header panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" id="accordion03HeadingOne" role="tab">
 			<span class="panel-title">Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">

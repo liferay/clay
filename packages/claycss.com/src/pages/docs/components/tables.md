@@ -51,17 +51,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<button class="btn btn-unstyled quick-action-item" type="button">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
-					</button>
-					<a class="quick-action-item" href="#1">
+					</a>
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -74,10 +74,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -104,17 +104,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -127,10 +127,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -155,17 +155,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -178,10 +178,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -206,17 +206,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -229,10 +229,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -281,17 +281,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<button class="btn btn-unstyled quick-action-item" type="button">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
-					</button>
-					<a class="quick-action-item" href="#1">
+					</a>
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -304,10 +304,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -334,17 +334,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -357,10 +357,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -385,17 +385,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -408,10 +408,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -436,17 +436,17 @@ weight: 100
 			<td>Folder</td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -459,10 +459,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -509,17 +509,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -532,10 +532,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -557,17 +557,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -580,10 +580,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -605,17 +605,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -628,10 +628,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -653,17 +653,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -676,10 +676,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -719,17 +719,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -742,10 +742,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -767,17 +767,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -790,10 +790,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -815,17 +815,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -838,10 +838,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>
@@ -863,17 +863,17 @@ weight: 100
 			<td><a href="#1">jpg</a></td>
 			<td>
 				<div class="quick-action-menu">
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 							<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
 							<use xlink:href="/vendor/lexicon/icons.svg#download" />
 						</svg>
 					</a>
-					<a class="quick-action-item" href="#1">
+					<a class="quick-action-item" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
 							<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
 						</svg>
@@ -886,10 +886,10 @@ weight: 100
 						</svg>
 					</a>
 					<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#1">Remove</a>
-						<a class="dropdown-item" href="#1">Edit</a>
-						<a class="dropdown-item" href="#1">Move</a>
-						<a class="dropdown-item" href="#1">Checkout</a>
+						<a class="dropdown-item" href="#1" role="button">Remove</a>
+						<a class="dropdown-item" href="#1" role="button">Edit</a>
+						<a class="dropdown-item" href="#1" role="button">Move</a>
+						<a class="dropdown-item" href="#1" role="button">Checkout</a>
 					</div>
 				</div>
 			</td>

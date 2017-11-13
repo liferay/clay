@@ -9,18 +9,18 @@ weight: 100
 
 ### Navbar (Application Bar)
 
-<nav class="application-bar navbar navbar-dark navbar-expand-md">
+<nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
 						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
 						<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 					</svg>
@@ -30,28 +30,28 @@ weight: 100
 		<div class="navbar-title navbar-text-truncate">My Application Name</div>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
 						<use xlink:href="/vendor/lexicon/icons.svg#cog" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
 						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-simulation-menu-closed">
 						<use xlink:href="/vendor/lexicon/icons.svg#simulation-menu-closed" />
 					</svg>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
@@ -69,18 +69,18 @@ weight: 100
 </nav>
 
 ```text/html
-<nav class="application-bar navbar navbar-dark navbar-expand-md">
+<nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
 						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
 						<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 					</svg>
@@ -90,28 +90,28 @@ weight: 100
 		<div class="navbar-title navbar-text-truncate">My Application Name</div>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
 						<use xlink:href="/vendor/lexicon/icons.svg#cog" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
 						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-simulation-menu-closed">
 						<use xlink:href="/vendor/lexicon/icons.svg#simulation-menu-closed" />
 					</svg>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>

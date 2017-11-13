@@ -12,16 +12,16 @@ weight: 100
 <div class="clay-site-row-spacer row">
 	<div class="col-md-6">
 		<nav class="menubar menubar-transparent menubar-vertical-expand-md">
-			<button class="menubar-toggler" data-target="#menubarVerticalCollapse01" data-toggle="collapse">
+			<a aria-controls="menubarVerticalCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalCollapse01" role="button">
 				Details
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 				</svg>
-			</button>
+			</a>
 			<div class="collapse menubar-collapse" id="menubarVerticalCollapse01">
 				<ul class="nav nav-nested">
 					<li class="nav-item">
-						<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse01">
+						<a aria-controls="menubarVerticalNestedCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse01" role="button">
 							Basic Information
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -39,7 +39,7 @@ weight: 100
 								<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 								<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 								<li class="nav-item">
-									<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse02">
+									<a aria-controls="menubarVerticalNestedCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse02" role="button">
 										Documents and Media
 										<span class="collapse-icon-closed">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -66,7 +66,7 @@ weight: 100
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse03">
+						<a aria-controls="menubarVerticalNestedCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse03" role="button">
 							SEO
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -87,7 +87,7 @@ weight: 100
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse04">
+						<a aria-controls="menubarVerticalNestedCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse04" role="button">
 							Advanced
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -117,16 +117,16 @@ weight: 100
 
 ```text/html
 <nav class="menubar menubar-transparent menubar-vertical-expand-md">
-	<button class="menubar-toggler" data-target="#menubarVerticalCollapse01" data-toggle="collapse">
+	<a aria-controls="menubarVerticalCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalCollapse01" role="button">
 		Details
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 		</svg>
-	</button>
+	</a>
 	<div class="collapse menubar-collapse" id="menubarVerticalCollapse01">
 		<ul class="nav nav-nested">
 			<li class="nav-item">
-				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse01">
+				<a aria-controls="menubarVerticalNestedCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse01" role="button">
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -144,7 +144,7 @@ weight: 100
 						<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 						<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 						<li class="nav-item">
-							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse02">
+							<a aria-controls="menubarVerticalNestedCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse02" role="button">
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -171,7 +171,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse03">
+				<a aria-controls="menubarVerticalNestedCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse03" role="button">
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
@@ -192,7 +192,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse04">
+				<a aria-controls="menubarVerticalNestedCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse04" role="button">
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">

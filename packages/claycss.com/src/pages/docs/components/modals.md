@@ -11,7 +11,7 @@ weight: 100
 
 > 300px wide modal window, expands full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal">Small Modal</button>
+<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -35,7 +35,7 @@ weight: 100
 </div>
 
 ```text/html
-<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal">Small Modal</button>
+<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -87,7 +87,7 @@ weight: 100
 
 > 500px wide modal window, expands full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal">Default Modal</button>
+<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -111,7 +111,7 @@ weight: 100
 </div>
 
 ```text/html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal">Default Modal</button>
+<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -164,7 +164,7 @@ weight: 100
 > 500px wide modal in window sizes between 576px and 991px.
 > Full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal">Large Modal</button>
+<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -188,7 +188,7 @@ weight: 100
 </div>
 
 ```text/html
-<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal">Large Modal</button>
+<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -240,13 +240,13 @@ weight: 100
 
 `inline-scroller` is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.
 
-<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal">Small Modal Inline Scroller</button>
+<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal" type="button">Small Modal Inline Scroller</button>
 <div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -284,13 +284,13 @@ weight: 100
 </div>
 
 ```text/html
-<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal">Small Modal Inline Scroller</button>
+<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal" type="button">Small Modal Inline Scroller</button>
 <div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -326,6 +326,7 @@ weight: 100
 		</div>
 	</div>
 </div>
+
 ```
 
 </article>
@@ -336,13 +337,13 @@ weight: 100
 
 > A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.
 
-<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal">Full Screen Modal</button>
+<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -440,13 +441,13 @@ weight: 100
 </div>
 
 ```text/html
-<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal">Full Screen Modal</button>
+<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -652,13 +653,13 @@ weight: 100
 
 > Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the browser window at screen widths 767px and below.
 
-<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
+<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -693,13 +694,13 @@ weight: 100
 </div>
 
 ```text/html
-<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
+<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -744,13 +745,13 @@ weight: 100
 
 <div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
-<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
+<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -760,7 +761,7 @@ weight: 100
 				<iframe src="/"></iframe>
 			</div>
 			<div class="modal-footer">
-				<a class="btn btn-secondary" data-dismiss="modal" href="#1">Cancel</a>
+				<a class="btn btn-secondary" data-dismiss="modal" href="#1" role="button">Cancel</a>
 				<button class="btn btn-primary" type="button">Add</button>
 			</div>
 		</div>
@@ -768,23 +769,23 @@ weight: 100
 </div>
 
 ```text/html
-<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
+<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
 			<div class="modal-body modal-body-iframe">
-				<iframe src="http://liferay.com"></iframe>
+				<iframe src="/"></iframe>
 			</div>
 			<div class="modal-footer">
-				<a class="btn btn-secondary" data-dismiss="modal" href="#1">Cancel</a>
+				<a class="btn btn-secondary" data-dismiss="modal" href="#1" role="button">Cancel</a>
 				<button class="btn btn-primary" type="button">Add</button>
 			</div>
 		</div>
@@ -817,7 +818,7 @@ weight: 100
 
 `modal-danger`, `modal-info`, `modal-success`, or `modal-warning` are helper classes that style a modal based on that state, add it to modal-dialog.
 
-<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal">Modal Danger</button>{sp}
+<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>{sp}
 <div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">
 	<div class="modal-danger modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -830,7 +831,7 @@ weight: 100
 					</span>
 					Modal Title
 				</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -841,18 +842,18 @@ weight: 100
 			</div>
 			<div class="modal-footer">
 				<div class="modal-item-first">
-					<button class="btn btn-primary" type="button">Primary</button>
+					<button class="btn btn-primary" type="button">Primary</button>{sp}
 				</div>
-				<div class="modal-item">Some other content</div>
+				<div class="modal-item">Some other content</div>{sp}
 				<div class="modal-item-last">
-					<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
 					<button class="btn btn-primary" type="button">Primary</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal">Modal Info</button>{sp}
+<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>{sp}
 <div aria-labelledby="clayModalInfoLabel" class="fade modal" id="clayModalInfo" role="dialog" tabindex="-1">
 	<div class="modal-info modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -865,7 +866,7 @@ weight: 100
 					</span>
 					Modal Title
 				</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -875,13 +876,13 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
 				<button class="btn btn-primary" type="button">Primary</button>
 			</div>
 		</div>
 	</div>
 </div>
-<button class="btn btn-success" data-target="#clayModalSuccess" data-toggle="modal">Modal Success</button>{sp}
+<button class="btn btn-success" data-target="#clayModalSuccess" data-toggle="modal" type="button">Modal Success</button>{sp}
 <div aria-labelledby="clayModalSuccessLabel" class="fade modal" id="clayModalSuccess" role="dialog" tabindex="-1">
 	<div class="modal-success modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -894,7 +895,7 @@ weight: 100
 					</span>
 					Modal Title
 				</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -905,17 +906,17 @@ weight: 100
 			</div>
 			<div class="modal-footer">
 				<div class="modal-item-first">
-					<button class="btn btn-primary" type="button">Primary</button>
+					<button class="btn btn-primary" type="button">Primary</button>{sp}
 				</div>
 				<div class="modal-item-last">
-					<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
 					<button class="btn btn-primary" type="button">Primary</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<button class="btn btn-warning" data-target="#clayModalWarning" data-toggle="modal">Modal Warning</button>{sp}
+<button class="btn btn-warning" data-target="#clayModalWarning" data-toggle="modal" type="button">Modal Warning</button>{sp}
 <div aria-labelledby="clayModalWarningLabel" class="fade modal" id="clayModalWarning" role="dialog" tabindex="-1">
 	<div class="modal-warning modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -928,7 +929,7 @@ weight: 100
 					</span>
 					Modal Title
 				</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>
@@ -938,15 +939,16 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
 				<button class="btn btn-primary" type="button">Primary</button>
 			</div>
 		</div>
 	</div>
 </div>
 
+
 ```text/html
-<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal">Modal Danger</button>
+<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>
 <div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">
 	<div class="modal-danger modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -959,7 +961,7 @@ weight: 100
 					</span>
 					Modal Title
 				</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="/vendor/lexicon/icons.svg#times" />
 					</svg>

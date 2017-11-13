@@ -13,7 +13,7 @@ weight: 100
 
 <ul class="pagination">
 	<li class="disabled page-item">
-		<a class="page-link" href="#1">
+		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
 				<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 			</svg>
@@ -31,7 +31,7 @@ weight: 100
 	<li class="page-item"><a class="page-link" href="#1">9</a></li>
 	<li class="page-item"><a class="page-link" href="#1">10</a></li>
 	<li class="dropdown page-item">
-		<a class="dropdown-toggle page-link" data-toggle="dropdown" href="#1">...</a>
+		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
 		<div class="dropdown-menu dropdown-menu-top-center">
 			<div class="inline-scroller">
 				<a class="dropdown-item" href="#1">11</a>
@@ -44,7 +44,7 @@ weight: 100
 	</li>
 	<li class="page-item"><a class="page-link" href="#1">16</a></li>
 	<li class="page-item">
-		<a class="page-link" href="#1">
+		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 				<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 			</svg>
@@ -56,7 +56,7 @@ weight: 100
 ```text/html
 <ul class="pagination">
 	<li class="disabled page-item">
-		<a class="page-link" href="#1">
+		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
 				<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 			</svg>
@@ -74,7 +74,7 @@ weight: 100
 	<li class="page-item"><a class="page-link" href="#1">9</a></li>
 	<li class="page-item"><a class="page-link" href="#1">10</a></li>
 	<li class="dropdown page-item">
-		<a class="dropdown-toggle page-link" data-toggle="dropdown" href="#1">...</a>
+		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
 		<div class="dropdown-menu dropdown-menu-top-center">
 			<div class="inline-scroller">
 				<a class="dropdown-item" href="#1">11</a>
@@ -87,7 +87,7 @@ weight: 100
 	</li>
 	<li class="page-item"><a class="page-link" href="#1">16</a></li>
 	<li class="page-item">
-		<a class="page-link" href="#1">
+		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 				<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 			</svg>
@@ -108,7 +108,7 @@ weight: 100
 
 <div class="pagination-bar">
 	<div class="dropdown pagination-items-per-page">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
@@ -125,7 +125,7 @@ weight: 100
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1">
+			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
 					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
@@ -135,7 +135,7 @@ weight: 100
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
 		<li class="page-item"><a class="page-link" href="#1">2</a></li>
 		<li class="dropdown page-item">
-			<a class="dropdown-toggle page-link" data-toggle="dropdown" href="#1">...</a>
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
 			<div class="dropdown-menu dropdown-menu-top-center">
 				<div class="inline-scroller">
 					<a class="dropdown-item" href="#1">3</a>
@@ -156,7 +156,7 @@ weight: 100
 		</li>
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
-			<a class="page-link" href="#1">
+			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
@@ -169,7 +169,7 @@ weight: 100
 ```text/html
 <div class="pagination-bar">
 	<div class="dropdown pagination-items-per-page">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
@@ -186,7 +186,7 @@ weight: 100
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1">
+			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
 					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
@@ -196,7 +196,7 @@ weight: 100
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
 		<li class="page-item"><a class="page-link" href="#1">2</a></li>
 		<li class="dropdown page-item">
-			<a class="dropdown-toggle page-link" data-toggle="dropdown" href="#1">...</a>
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
 			<div class="dropdown-menu dropdown-menu-top-center">
 				<div class="inline-scroller">
 					<a class="dropdown-item" href="#1">3</a>
@@ -217,7 +217,7 @@ weight: 100
 		</li>
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
-			<a class="page-link" href="#1">
+			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>

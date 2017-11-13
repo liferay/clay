@@ -43,7 +43,7 @@ weight: 100
 			<div class="multi-step-divider"></div>
 			<div class="dropdown multi-step-indicator">
 				<div class="multi-step-indicator-label">Step 05</div>
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
 						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
 					</svg>
@@ -135,7 +135,7 @@ weight: 100
 		<div class="multi-step-divider"></div>
 		<div class="dropdown multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 05</div>
-			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1">
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
 					<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
 				</svg>

@@ -9,7 +9,7 @@ weight: 100
 
 ### Navbar (Management Bar)
 
-<nav class="management-bar navbar navbar-expand-md navbar-light">
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -21,25 +21,25 @@ weight: 100
 				</div>
 			</li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-					<span class="navbar-text-truncate">Filter and Order</span>{sp}
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
+					<span class="navbar-text-truncate">Filter and Order</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
-				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
+				<a aria-expanded="false" aria-haspopup="true" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
 						<use xlink:href="/vendor/lexicon/icons.svg#filter" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" href="#1">Filter Action 1</a>
-					<a class="dropdown-item" href="#1">Filter Action 2</a>
-					<a class="dropdown-item" href="#1">Filter Action 3</a>
+					<a class="dropdown-item" href="#1" role="button">Filter Action 1</a>
+					<a class="dropdown-item" href="#1" role="button">Filter Action 2</a>
+					<a class="dropdown-item" href="#1" role="button">Filter Action 3</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
 						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
 					</svg>
@@ -71,14 +71,14 @@ weight: 100
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-d-none">
-				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1">
+				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 						<use xlink:href="/vendor/lexicon/icons.svg#search" />
 					</svg>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
 						<use xlink:href="/vendor/lexicon/icons.svg#list" />
 					</svg>
@@ -111,17 +111,17 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+				<button class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
 						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
 					</svg>
-				</a>
+				</button>
 			</li>
 		</ul>
 	</div>
 </nav>
 
-<nav class="management-bar navbar navbar-expand-md navbar-primary">
+<nav class="management-bar management-bar-primary navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -134,7 +134,7 @@ weight: 100
 			</li>
 			<li class="nav-item">
 				<span class="navbar-text">
-					3 of 7{sp}
+					3 of 7
 					<span class="navbar-breakpoint-down-d-none">items selected</span>
 				</span>
 			</li>
@@ -146,25 +146,25 @@ weight: 100
 		</ul>
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-down-d-none">
-				<button class="btn btn-unstyled nav-btn nav-btn-monospaced" type="button">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 					</svg>
-				</button>
+				</a>
 			</li>
 			<li class="nav-item navbar-breakpoint-down-d-none">
-				<button class="btn btn-unstyled nav-btn nav-btn-monospaced" type="button">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
 						<use xlink:href="/vendor/lexicon/icons.svg#paste" />
 					</svg>
-				</button>
+				</a>
 			</li>
 			<li class="dropdown nav-item">
-				<button aria-expanded="false" class="btn btn-unstyled dropdown-toggle nav-btn nav-btn-monospaced" data-toggle="dropdown" type="button">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
-				</button>
+				</a>
 				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
 					<a class="active dropdown-item" href="#1">
 						<span class="dropdown-item-indicator">
@@ -197,7 +197,7 @@ weight: 100
 </nav>
 
 ```text/html
-<nav class="management-bar navbar navbar-expand-md navbar-light">
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -209,25 +209,25 @@ weight: 100
 				</div>
 			</li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-					<span class="navbar-text-truncate">Filter and Order</span>{sp}
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
+					<span class="navbar-text-truncate">Filter and Order</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
-				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
+				<a aria-expanded="false" aria-haspopup="true" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
 						<use xlink:href="/vendor/lexicon/icons.svg#filter" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" href="#1">Filter Action 1</a>
-					<a class="dropdown-item" href="#1">Filter Action 2</a>
-					<a class="dropdown-item" href="#1">Filter Action 3</a>
+					<a class="dropdown-item" href="#1" role="button">Filter Action 1</a>
+					<a class="dropdown-item" href="#1" role="button">Filter Action 2</a>
+					<a class="dropdown-item" href="#1" role="button">Filter Action 3</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
 						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
 					</svg>
@@ -259,14 +259,14 @@ weight: 100
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-d-none">
-				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1">
+				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 						<use xlink:href="/vendor/lexicon/icons.svg#search" />
 					</svg>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
 						<use xlink:href="/vendor/lexicon/icons.svg#list" />
 					</svg>
@@ -299,11 +299,11 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+				<button class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
 						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
 					</svg>
-				</a>
+				</button>
 			</li>
 		</ul>
 	</div>
