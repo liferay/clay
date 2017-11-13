@@ -19,6 +19,18 @@
 	font-size: $lexicon-icon-xl-font-size;
 }
 
+.order-arrow-down-active {
+	.order-arrow-arrow-down {
+		fill: $order-arrow-down-active-color;
+	}
+}
+
+.order-arrow-up-active {
+	.order-arrow-arrow-up {
+		fill: $order-arrow-up-active-color;
+	}
+}
+
 // Collapse Icon
 
 a.collapse-icon {
