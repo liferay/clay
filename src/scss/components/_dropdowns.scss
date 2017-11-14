@@ -54,6 +54,8 @@
 
 	&.disabled,
 	&:disabled {
+		cursor: $dropdown-item-disabled-cursor;
+
 		label,
 		.form-check-label {
 			color: $dropdown-link-disabled-color;

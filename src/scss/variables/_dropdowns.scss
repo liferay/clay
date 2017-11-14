@@ -33,6 +33,7 @@ $dropdown-max-width-mobile: 230px !default;
 $dropdown-inline-scroller-max-height: 200px !default;
 $dropdown-inline-scroller-max-height-mobile: none !default;
 
+$dropdown-item-disabled-cursor: $disabled-cursor !default;
 $dropdown-item-indicator-size: 1rem !default;
 $dropdown-item-indicator-spacer-x: 1rem !default;
 
@@ -47,7 +48,7 @@ $dropdown-action-toggle-hover-color: $link-hover-color !default;
 
 $dropdown-action-toggle-disabled-bg: null !default;
 $dropdown-action-toggle-disabled-color: $btn-link-disabled-color !default;
-$dropdown-action-toggle-disabled-cursor: null !default;
+$dropdown-action-toggle-disabled-cursor: $disabled-cursor !default;
 $dropdown-action-toggle-disabled-opacity: 0.65 !default;
 
 $dropdown-action-toggle-active-bg: null !default;
