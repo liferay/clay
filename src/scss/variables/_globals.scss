@@ -5,6 +5,12 @@ $rounded-border-radius: $border-radius !default;
 $rounded-circle-border-radius: 5000px !default;
 $rounded-0-border-radius: 0 !default;
 
+// Cursors
+
+$disabled-cursor: not-allowed !default;
+
+// Fonts
+
 $font-import-url: null !default;
 
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
@@ -22,7 +28,7 @@ $h4-font-size-mobile: null !default;
 $h5-font-size-mobile: null !default;
 $h6-font-size-mobile: null !default;
 
-// z-index variables
+// Z-Index Variables
 
 $zindex-alert-notifications: 5000 !default;
 $zindex-input-group-hover: 3 !default;
