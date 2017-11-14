@@ -48,6 +48,16 @@ $panel-collapse-icon-font-size: 0.875rem !default; // 14px
 
 $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
+// Panel Group Flush
+
+$panel-group-flush-body-margin-bottom: 1.5rem !default;
+$panel-group-flush-body-padding: 0 !default;
+
+$panel-group-flush-collapse-icon-left: null !default;
+$panel-group-flush-collapse-icon-right: 0 !default;
+$panel-group-flush-collapse-icon-padding-left: null !default;
+$panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
+
 // Panel Variants
 
 $panel-secondary: () !default;

@@ -129,7 +129,8 @@
 
 // Panel Group Fluid
 
-.panel-group-fluid {
+.panel-group-fluid,
+.panel-group-flush {
 	.panel {
 		@if ($panel-border-left-width > 0) {
 			border-left-width: 0;
@@ -223,6 +224,32 @@
 		margin-bottom: -$form-container-padding-y;
 		margin-left: -$form-container-padding-x;
 		margin-right: -$form-container-padding-x;
+	}
+}
+
+// Panel Group Flush
+
+.panel-group-flush {
+	.panel-header,
+	.panel-header-link {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.panel-body {
+		margin-bottom: $panel-group-flush-body-margin-bottom;
+		padding: $panel-group-flush-body-padding;
+	}
+
+	.collapse-icon {
+		padding-left: $panel-group-flush-collapse-icon-padding-left;
+		padding-right: $panel-group-flush-collapse-icon-padding-right;
+	}
+
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		left: $panel-group-flush-collapse-icon-left;
+		right: $panel-group-flush-collapse-icon-right;
 	}
 }
 
