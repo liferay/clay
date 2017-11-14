@@ -1016,10 +1016,6 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bootstrap@^3.3.6:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
-
 brace-expansion@^1.0.0, brace-expansion@^1.1.7:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.8.tgz#c07b211c7c952ec1f8efd51a77ef0d1d3990a292"
@@ -5441,7 +5437,7 @@ metal-anim@^2.0.0:
     metal "^2.0.0"
     metal-dom "^2.0.0"
 
-metal-component@^2.0.0, metal-component@^2.13.2, metal-component@^2.14.0:
+metal-component@^2.13.2, metal-component@^2.14.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/metal-component/-/metal-component-2.14.0.tgz#fe2de44b6c5be5b73988fe5c61f1a408d011430a"
   dependencies:
@@ -5450,28 +5446,12 @@ metal-component@^2.0.0, metal-component@^2.13.2, metal-component@^2.14.0:
     metal-events "^2.14.0"
     metal-state "^2.14.0"
 
-metal-debounce@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/metal-debounce/-/metal-debounce-2.0.0.tgz#24cf659a8f7884a59ea4319e210734293d94f0ad"
-
 metal-dom@^2.0.0, metal-dom@^2.13.2, metal-dom@^2.14.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/metal-dom/-/metal-dom-2.14.0.tgz#39a42c9293fd748038f83d2a57f898ee42357ee5"
   dependencies:
     metal "^2.14.0"
     metal-events "^2.14.0"
-
-metal-dropdown@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/metal-dropdown/-/metal-dropdown-3.0.0.tgz#cb983ea97cecb230abd23cdf5446ce3c260cec1f"
-  dependencies:
-    bootstrap "^3.3.6"
-    metal "^2.0.0"
-    metal-component "^2.0.0"
-    metal-dom "^2.0.0"
-    metal-events "^2.0.0"
-    metal-position "^2.0.0"
-    metal-soy "^2.0.0"
 
 metal-events@^2.0.0, metal-events@^2.14.0, metal-events@^2.6.4:
   version "2.14.0"
@@ -5505,7 +5485,7 @@ metal-jsx@^2.13.2:
     metal-incremental-dom "^2.14.0"
     metal-state "^2.14.0"
 
-metal-position@^2.0.0:
+metal-position@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/metal-position/-/metal-position-2.1.0.tgz#31dc735613f9e53ce7a537e13029fc0e948ff085"
   dependencies:
