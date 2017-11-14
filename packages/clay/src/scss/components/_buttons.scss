@@ -8,6 +8,13 @@
 		padding-right: $btn-padding-x-mobile;
 		padding-top: $btn-padding-y-mobile;
 	}
+
+	// Will need to be revisited if action is taken on https://github.com/twbs/bootstrap/issues/24156
+
+	&.disabled,
+	&:disabled {
+		cursor: $btn-disabled-cursor;
+	}
 }
 
 .btn-lg {
