@@ -98,6 +98,7 @@ class ClayDropdownBase extends Component {
 	 */
 	syncExpanded(expanded) {
 		if (expanded && this.alignElementSelector) {
+			// eslint-disable-next-line
 			let alignElement = this.element.querySelector(this.alignElementSelector);
 			if (alignElement) {
 				let bodyElement = this.element.querySelector('.dropdown-menu');
