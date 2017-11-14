@@ -19,6 +19,16 @@
 		@include border-top-radius($panel-header-offset-border-radius);
 	}
 
+	&.collapsed {
+		@if not ($panel-header-offset-border-radius == 0) {
+			@include border-bottom-radius($panel-header-offset-border-radius);
+		}
+
+		@include transition(border-radius 1s ease, border-width 1s ease);
+
+		border-bottom-width: 0;
+	}
+
 	line-height: normal;
 	padding: $panel-header-padding-y $panel-header-padding-x;
 	position: relative;
@@ -81,40 +91,33 @@
 	.panel {
 		margin-bottom: $panel-group-panel-margin-bottom;
 
-		&:first-child:not(:last-child) {
+		&:first-child,
+		&:first-child .panel-header {
 			@include border-bottom-radius(0);
 		}
 
-		&:last-child:not(:first-child) {
-			@include border-top-radius(0);
+		&:not(:first-child) {
+			@include border-radius(0);
 
-			> .panel-header.collapsed {
-				@include border-bottom-radius($panel-border-radius);
+			@if ($panel-border-bottom-width > 0) {
+				margin-top: -$panel-border-bottom-width;
+			}
+
+			.panel-header {
+				@include border-radius(0);
+			}
+		}
+
+		&:last-child {
+			@include border-bottom-radius($panel-border-radius);
+
+			.panel-header.collapsed {
+				@if not ($panel-header-offset-border-radius == 0) {
+					@include border-bottom-radius($panel-header-offset-border-radius);
+				}
+
 				@include transition(border-radius 1s ease);
 			}
-		}
-
-		&:not(:first-child):not(:last-child) {
-			@include border-radius(0);
-		}
-
-		&:only-child {
-			.panel-header {
-				&.collapsed {
-					@include border-radius($panel-border-radius);
-					@include transition(border-radius 1s ease);
-				}
-			}
-		}
-	}
-
-	.panel:not(:first-child) {
-		@if ($panel-border-bottom-width > 0) {
-			margin-top: -$panel-border-bottom-width;
-		}
-
-		.panel-header {
-			@include border-top-radius(0);
 		}
 	}
 
