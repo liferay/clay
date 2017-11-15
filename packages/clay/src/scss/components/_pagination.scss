@@ -50,7 +50,13 @@
 	}
 
 	&.disabled .page-link {
+		cursor: $pagination-disabled-cursor;
 		opacity: $pagination-disabled-opacity;
+		pointer-events: $pagination-disabled-pointer-events;
+	}
+
+	&.active .page-link {
+		cursor: default;
 	}
 }
 

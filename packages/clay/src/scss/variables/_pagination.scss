@@ -5,7 +5,9 @@ $pagination-link-border-radius: null !default;
 
 $pagination-margin-bottom: 0.5rem !default;
 
+$pagination-disabled-cursor: $disabled-cursor !default;
 $pagination-disabled-opacity: null !default;
+$pagination-disabled-pointer-events: auto !default;
 
 $pagination-dropdown-menu-spacer-y: null !default;
 
