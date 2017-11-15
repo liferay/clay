@@ -1,4 +1,5 @@
 .btn {
+	cursor: $btn-cursor;
 	font-size: $btn-font-size;
 
 	@include clay-scale-component {
