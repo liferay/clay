@@ -171,8 +171,8 @@
 	&:disabled,
 	&.disabled {
 		~ .toggle-switch-bar {
-			cursor: not-allowed;
-			opacity: 0.4;
+			cursor: $toggle-switch-disabled-cursor;
+			opacity: $toggle-switch-disabled-opacity;
 		}
 	}
 
