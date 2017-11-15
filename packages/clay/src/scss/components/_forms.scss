@@ -34,6 +34,10 @@ label {
 		color: $input-label-focus-color;
 	}
 
+	&[for] {
+		cursor: $input-label-for-cursor;
+	}
+
 	+ .form-text {
 		margin-bottom: $input-label-margin-bottom;
 		margin-top: 0;
