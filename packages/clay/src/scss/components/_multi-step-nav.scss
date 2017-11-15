@@ -110,6 +110,38 @@
 			background-color: $multi-step-divider-complete-bg;
 		}
 	}
+
+	&.disabled {
+		.multi-step-title {
+			color: $multi-step-title-disabled-color;
+		}
+
+		.multi-step-icon {
+			background-color: $multi-step-icon-disabled-bg;
+			background-image: $multi-step-icon-disabled-bg-image;
+			background-position: $multi-step-icon-disabled-bg-position;
+			background-repeat: no-repeat;
+			background-size: $multi-step-icon-disabled-bg-size;
+			color: $multi-step-icon-disabled-color;
+			cursor: $multi-step-icon-disabled-cursor;
+
+			@if ($multi-step-icon-disabled-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+		}
+
+		.multi-step-indicator-label {
+			color: $multi-step-indicator-label-disabled-color;
+		}
+
+		.multi-step-divider {
+			background-color: $multi-step-divider-disabled-bg;
+		}
+	}
 }
 
 .multi-step-title {
