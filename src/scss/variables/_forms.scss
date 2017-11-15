@@ -62,7 +62,10 @@ $input-textarea-height: 150px !default;
 
 // Form Check
 
+$form-check-input-cursor: $link-cursor !default;
 $form-check-input-disabled-cursor: $disabled-cursor !default;
+
+$form-check-label-cursor: $input-label-for-cursor !default;
 
 $form-check-description-margin-left: -0.3125rem !default; // 5px
 $form-check-description-padding-left: 0.5rem !default; // 8px
