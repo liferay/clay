@@ -1,3 +1,4 @@
+$multi-step-icon-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61) !default;
 $multi-step-icon-color: $secondary !default;
 $multi-step-icon-border-radius: 100px !default;
 $multi-step-icon-font-weight: $font-weight-semi-bold !default;
@@ -10,5 +11,5 @@ $multi-step-indicator-label-font-weight: $font-weight-semi-bold !default;
 $multi-step-title-color: $secondary !default;
 $multi-step-title-font-weight: $font-weight-semi-bold !default;
 
-$multi-step-icon-disabled-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61) !default;
+$multi-step-icon-disabled-bg: $multi-step-icon-bg !default;
 $multi-step-icon-disabled-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
