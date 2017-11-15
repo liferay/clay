@@ -83,10 +83,18 @@
 		border-color: $custom-control-indicator-checked-border-color;
 	}
 
-	&:disabled ~ .custom-control-indicator {
-		background-color: $custom-control-indicator-disabled-bg;
-		border-color: $custom-control-indicator-disabled-border-color;
-		box-shadow: none;
+	&:disabled {
+		cursor: $custom-control-indicator-disabled-cursor;
+
+		~ .custom-control-indicator {
+			background-color: $custom-control-indicator-disabled-bg;
+			border-color: $custom-control-indicator-disabled-border-color;
+			box-shadow: none;
+		}
+
+		~ .custom-control-description {
+			cursor: $custom-control-description-disabled-cursor;
+		}
 	}
 
 	&:disabled:checked ~ .custom-control-indicator {
