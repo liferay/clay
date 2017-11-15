@@ -49,6 +49,14 @@
 			box-shadow: 0 0 0 0.075rem #FFF, $btn-focus-box-shadow;
 		}
 	}
+
+	&:disabled {
+		cursor: $input-disabled-cursor;
+
+		&::-webkit-file-upload-button {
+			cursor: $input-disabled-cursor;
+		}
+	}
 }
 
 .custom-file-input:focus + .custom-file-control {
