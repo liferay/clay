@@ -158,8 +158,13 @@ textarea.form-control {
 .form-check-input {
 	position: static;
 
-	&:disabled + .form-check-description {
-		color: $input-label-disabled-color;
+	&:disabled {
+		cursor: $form-check-input-disabled-cursor;
+
+		+ .form-check-description {
+			color: $input-label-disabled-color;
+			cursor: $form-check-description-disabled-cursor;
+		}
 	}
 }
 
