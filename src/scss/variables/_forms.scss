@@ -30,6 +30,7 @@ $input-height-inner-sm-mobile: null !default;
 
 $input-disabled-border-color: null !default;
 $input-disabled-color: null !default;
+$input-disabled-cursor: $disabled-cursor !default;
 $input-disabled-opacity: null !default;
 $input-placeholder-disabled-color: null !default;
 
@@ -38,6 +39,7 @@ $input-placeholder-focus-color: null !default;
 $input-label-color: null !default;
 $input-label-focus-color: null !default;
 $input-label-disabled-color: $text-muted !default;
+$input-label-disabled-cursor: $disabled-cursor !default;
 $input-label-font-size: null !default;
 $input-label-font-size-mobile: null !default;
 $input-label-font-weight: null !default;

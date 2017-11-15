@@ -178,6 +178,7 @@ textarea.form-control {
 fieldset[disabled] label,
 label.disabled {
 	color: $input-label-disabled-color;
+	cursor: $input-label-disabled-cursor;
 	opacity: $input-disabled-opacity;
 }
 
@@ -193,6 +194,7 @@ fieldset[disabled] label {
 	&[disabled] {
 		border-color: $input-disabled-border-color;
 		color: $input-disabled-color;
+		cursor: $input-disabled-cursor;
 		opacity: $input-disabled-opacity;
 
 		&::placeholder {
