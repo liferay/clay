@@ -50,3 +50,13 @@ $multi-step-icon-active-bg-image: null !default;
 $multi-step-icon-active-bg-position: center !default;
 $multi-step-icon-active-bg-size: $multi-step-icon-font-size !default;
 $multi-step-divider-active-bg: $multi-step-divider-bg !default;
+
+$multi-step-icon-disabled-bg: $gray-100 !default;
+$multi-step-icon-disabled-bg-image: null !default;
+$multi-step-icon-disabled-bg-position: null !default;
+$multi-step-icon-disabled-bg-size: null !default;
+$multi-step-icon-disabled-color: $gray-400 !default;
+$multi-step-icon-disabled-cursor: $disabled-cursor !default;
+$multi-step-divider-disabled-bg: $multi-step-icon-disabled-bg !default;
+$multi-step-title-disabled-color: $multi-step-icon-disabled-color !default;
+$multi-step-indicator-label-disabled-color: $multi-step-title-disabled-color !default;
