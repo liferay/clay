@@ -10,11 +10,13 @@ $custom-control-indicator-indeterminate-border-color: null !default;
 $custom-control-indicator-disabled-border-color: null !default;
 $custom-control-indicator-disabled-checked-bg: null !default;
 $custom-control-indicator-disabled-checked-border-color: null !default;
+$custom-control-indicator-disabled-cursor: $disabled-cursor !default;
 
 // Custom Description
 
 $custom-control-description-line-height: $custom-control-indicator-size !default;
 $custom-control-description-padding-left: 0.5rem !default; // 8px
+$custom-control-description-disabled-cursor: $disabled-cursor !default;
 
 // Custom Checkbox
 
