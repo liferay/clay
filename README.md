@@ -6,31 +6,37 @@
 
 1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
 
-2. Install lerna and yarn global dependencies:
+2. Install global dependencies:
 
   ```
-  [sudo] npm install -g lerna yarn
+  [sudo] npm install -g yarn
   ```
 
-3. Run the bootstrap script to install local dependencies and link packages together:
+3. Install project dependencies:
+
+  ```
+  yarn install
+  ```
+
+4. Install dependencies for each package and link them together:
 
   ```
   npm run lerna
   ```
 
-4. Build all packages
+5. Build all packages
 
   ```
   npm run build
   ```
 
-5. Start a local server on port 4000
+6. Start a local server on port 4000
 
   ```
   npm run start
   ```
 
-6. Run tests:
+7. Run tests:
 
   ```
   npm run test
