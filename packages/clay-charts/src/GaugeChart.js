@@ -37,6 +37,11 @@ GaugeChart.STATE = {
 	),
 
 	/**
+	 * Sets the `loading` state.
+	 */
+	loading: Config.bool().value(false),
+
+	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof GaugeChart

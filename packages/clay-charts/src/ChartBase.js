@@ -43,10 +43,18 @@ const ChartBase = {
 
 		this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
 		this.on('groupsChanged', this.handleGroupsChanged_.bind(this));
+		this.on('loadingChanged', this.handleLoadingChanged_.bind(this));
 		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
 		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
 		this.on('xChanged', this.handleXChanged_.bind(this));
+	},
+
+	/**
+	 * @inheritDoc
+	 */
+	shouldUpdate() {
+		return false;
 	},
 
 	/**
@@ -80,12 +88,13 @@ const ChartBase = {
 		const config = {
 			area: state.area,
 			axis,
-			bindto: this.element,
+			bindto: this.refs.chart,
 			color: state.color,
 			data,
 			grid: state.grid,
 			legend: state.legend,
 			line: state.line,
+			loading: state.loading,
 			padding: state.padding,
 			pie: state.pie,
 			point: state.point,
@@ -360,6 +369,20 @@ const ChartBase = {
 	 */
 	handleGroupsChanged_: function({newVal}) {
 		this.bbChart.groups(newVal);
+	},
+
+	/**
+	 * Handles `loading` state.
+	 * @protected
+	 */
+	handleLoadingChanged_: function({newVal}) {
+		if (!newVal) {
+			this.refs.chart.removeAttribute('hidden');
+			this.refs.placeholder.setAttribute('hidden', 'hidden');
+		} else {
+			this.refs.chart.setAttribute('hidden', 'hidden');
+			this.refs.placeholder.removeAttribute('hidden');
+		}
 	},
 
 	/**
@@ -833,6 +856,11 @@ ChartBase.STATE = {
 			type: Config.oneOf(['step', 'step-after', 'step-before']),
 		}),
 	}),
+
+	/**
+	 * Sets the `loading` state.
+	 */
+	loading: Config.bool().value(false),
 
 	/**
 	 * Sets billboard's data.mimeType config.
