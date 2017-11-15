@@ -38,3 +38,8 @@ $toggle-switch-button-on-bg: #FFF !default;
 $toggle-switch-button-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-button-on-border-radius: 0 3px 3px 0 !default;
 $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
+
+// Toggle Switch Disabled
+
+$toggle-switch-disabled-cursor: $disabled-cursor !default;
+$toggle-switch-disabled-opacity: 0.4 !default;
