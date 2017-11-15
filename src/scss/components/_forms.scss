@@ -152,6 +152,16 @@ textarea.form-control {
 	height: $input-textarea-height;
 }
 
+// File
+
+.form-control-file {
+	cursor: $input-file-cursor;
+
+	&::-webkit-file-upload-button {
+		cursor: $input-file-cursor;
+	}
+}
+
 // Checkbox and Radio
 
 .form-check-label {
