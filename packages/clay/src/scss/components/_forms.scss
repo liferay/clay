@@ -215,6 +215,14 @@ fieldset[disabled] label {
 	}
 }
 
+.form-control-file:disabled {
+	cursor: $input-disabled-cursor;
+
+	&::-webkit-file-upload-button {
+		cursor: $input-disabled-cursor;
+	}
+}
+
 // Readonly State
 
 .form-control[readonly] {
