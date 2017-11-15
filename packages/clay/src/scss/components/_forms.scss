@@ -1,11 +1,11 @@
 [type="checkbox"] {
-	cursor: pointer;
+	cursor: $form-check-input-cursor;
 	height: 14px;
 	width: 14px;
 }
 
 [type="radio"] {
-	cursor: pointer;
+	cursor: $form-check-input-cursor;
 	height: 15px;
 	width: 14px;
 }
@@ -155,6 +155,7 @@ textarea.form-control {
 // Checkbox and Radio
 
 .form-check-label {
+	cursor: $form-check-label-cursor;
 	display: inline;
 	position: relative;
 }
