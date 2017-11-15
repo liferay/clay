@@ -57,7 +57,8 @@ $input-textarea-height: 150px !default;
 
 // Form Check
 
-$form-check-description-margin-left: null !default;
+$form-check-description-margin-left: -0.3125rem !default; // 5px
+$form-check-description-padding-left: 0.5rem !default; // 8px
 
 // Input Variants
 

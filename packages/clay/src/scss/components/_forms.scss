@@ -155,12 +155,17 @@ textarea.form-control {
 	position: relative;
 }
 
-.form-check-input:disabled + .form-check-description {
-	color: $input-label-disabled-color;
+.form-check-input {
+	position: static;
+
+	&:disabled + .form-check-description {
+		color: $input-label-disabled-color;
+	}
 }
 
 .form-check-description {
 	margin-left: $form-check-description-margin-left;
+	padding-left: $form-check-description-padding-left;
 }
 
 // Disabled State
