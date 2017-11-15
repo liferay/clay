@@ -13,6 +13,7 @@
 
 	&.disabled {
 		color: $nav-link-disabled-color;
+		cursor: $nav-link-disabled-cursor;
 	}
 
 	&.active {
