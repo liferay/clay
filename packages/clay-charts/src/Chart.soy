@@ -4,20 +4,6 @@
  * This renders the component's whole content.
  */
 {template .render}
-	<div class="metal-chart" ref="chart"></div>
-{/template}
-
-/**
- * This renders the component's loading graphic.
- */
-{template .loading}
-	<pre>loading...</pre>
-{/template}
-
-/**
- * This renders the chart's content.
- */
-{template .chart}
 	{@param? loading:  bool}
 
 	<div class="metal-chart-container">
@@ -36,7 +22,14 @@
 		{/let}
 
 		<div ref="placeholder" {$placeholderAttrs}>
-			{call Chart.loading data="all" /}
+			{call .loading /}
 		</div>
 	</div>
+{/template}
+
+/**
+ * This renders the component's loading graphic.
+ */
+{template .loading}
+	<pre>loading...</pre>
 {/template}
