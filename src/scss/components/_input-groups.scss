@@ -137,7 +137,13 @@
 		border-color: $input-group-secondary-addon-border-color;
 		border-style: solid;
 		border-width: $input-group-secondary-addon-border-width;
+		color: $input-group-secondary-addon-color;
 		margin-right: -$input-border-left-width;
+
+		.custom-control-description,
+		.form-check-description {
+			color: $input-group-secondary-addon-color;
+		}
 	}
 
 	.form-control + .input-group-addon:not(:first-child) {
