@@ -9,11 +9,16 @@
 }
 
 .form-file-input {
+	cursor: $input-file-cursor;
 	height: 100%;
 	opacity: 0;
 	position: absolute;
 	width: 100%;
 	z-index: 10;
+
+	&::-webkit-file-upload-button {
+		cursor: $input-file-cursor;
+	}
 
 	&:focus {
 		+ .btn-primary {
@@ -73,11 +78,14 @@
 }
 
 .custom-control-description {
+	cursor: $form-check-label-cursor;
 	line-height: $custom-control-description-line-height;
 	padding-left: $custom-control-description-padding-left;
 }
 
 .custom-control-input {
+	cursor: $form-check-input-cursor;
+
 	&:active ~ .custom-control-indicator {
 		border-color: $custom-control-indicator-active-border-color;
 	}
