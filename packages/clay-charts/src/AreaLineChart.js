@@ -37,6 +37,5 @@ AreaLineChart.STATE = {
 	type: Config.oneOf(types.area).value('area'),
 };
 
-
 export {AreaLineChart};
 export default AreaLineChart;
