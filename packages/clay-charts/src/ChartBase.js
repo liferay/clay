@@ -1,9 +1,6 @@
-'use strict';
-
+import types from './utils/types';
 import {Config} from 'metal-state';
 import {bb, d3} from 'billboard.js';
-
-import types from './utils/types';
 
 const PROP_NAME_MAP = {
 	axis: 'axes',

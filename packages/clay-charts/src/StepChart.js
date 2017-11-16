@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './StepChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * Step Chart component.
@@ -37,11 +32,6 @@ StepChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof StepChart
@@ -50,8 +40,6 @@ StepChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('step'),
 };
-
-Soy.register(StepChart, templates);
 
 export {StepChart};
 export default StepChart;

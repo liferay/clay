@@ -1,10 +1,5 @@
-'use strict';
-
 import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './AreaLineChart.soy.js';
 import types from './utils/types';
 
 /**
@@ -33,11 +28,6 @@ AreaLineChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof AreaLineChart
@@ -47,7 +37,6 @@ AreaLineChart.STATE = {
 	type: Config.oneOf(types.area).value('area'),
 };
 
-Soy.register(AreaLineChart, templates);
 
 export {AreaLineChart};
 export default AreaLineChart;

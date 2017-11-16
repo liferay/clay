@@ -1,8 +1,5 @@
-'use strict';
-
-import {JSXComponent} from 'metal-jsx';
-
 import ChartBase from '../ChartBase';
+import {JSXComponent} from 'metal-jsx';
 
 /**
  * Metal Chart component for use with JSX.

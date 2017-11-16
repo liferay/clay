@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './GaugeChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * Guage Chart component.
@@ -37,11 +32,6 @@ GaugeChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof GaugeChart
@@ -50,8 +40,6 @@ GaugeChart.STATE = {
 	 */
 	type: Config.oneOf(types.gauge).value('gauge'),
 };
-
-Soy.register(GaugeChart, templates);
 
 export {GaugeChart};
 export default GaugeChart;

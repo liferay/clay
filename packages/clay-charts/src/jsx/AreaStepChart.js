@@ -1,7 +1,5 @@
-'use strict';
-
-import {AreaStepChart as AreaStepChartBase} from '../AreaStepChart';
 import Chart from './Chart';
+import {AreaStepChart as AreaStepChartBase} from '../AreaStepChart';
 
 /**
  * AreaStep Chart component.

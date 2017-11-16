@@ -1,7 +1,5 @@
-'use strict';
-
-import {SplineChart as SplineChartBase} from '../SplineChart';
 import Chart from './Chart';
+import {SplineChart as SplineChartBase} from '../SplineChart';
 
 /**
  * Spline Chart component.

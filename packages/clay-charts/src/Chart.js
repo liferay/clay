@@ -1,9 +1,6 @@
-'use strict';
-
+import ChartBase from './ChartBase';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
-
-import ChartBase from './ChartBase';
 import templates from './Chart.soy.js';
 
 /**

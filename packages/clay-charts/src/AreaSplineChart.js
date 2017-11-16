@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './AreaSplineChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * AreaSpline Chart Component
@@ -33,11 +28,6 @@ AreaSplineChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof AreaSplineChart
@@ -46,8 +36,6 @@ AreaSplineChart.STATE = {
 	 */
 	type: Config.oneOf(types.area).value('area-spline'),
 };
-
-Soy.register(AreaSplineChart, templates);
 
 export {AreaSplineChart};
 export default AreaSplineChart;

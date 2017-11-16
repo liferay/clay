@@ -1,7 +1,5 @@
-'use strict';
-
-import {ScatterChart as ScatterChartBase} from '../ScatterChart';
 import Chart from './Chart';
+import {ScatterChart as ScatterChartBase} from '../ScatterChart';
 
 /**
  * Scatter Chart component.

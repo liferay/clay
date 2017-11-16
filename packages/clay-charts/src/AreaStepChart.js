@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './AreaStepChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * AreaStep Chart Component
@@ -33,11 +28,6 @@ AreaStepChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof AreaStepChart
@@ -46,8 +36,6 @@ AreaStepChart.STATE = {
 	 */
 	type: Config.oneOf(types.area).value('area-step'),
 };
-
-Soy.register(AreaStepChart, templates);
 
 export {AreaStepChart};
 export default AreaStepChart;

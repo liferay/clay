@@ -1,7 +1,5 @@
-'use strict';
-
-import {DonutChart as DonutChartBase} from '../DonutChart';
 import Chart from './Chart';
+import {DonutChart as DonutChartBase} from '../DonutChart';
 
 /**
  * Donut Chart component.

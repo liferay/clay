@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './SplineChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * Spline Chart component.
@@ -37,11 +32,6 @@ SplineChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof SplineChart
@@ -50,8 +40,6 @@ SplineChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('spline'),
 };
-
-Soy.register(SplineChart, templates);
 
 export {SplineChart};
 export default SplineChart;

@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './DonutChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * Donut Chart component.
@@ -37,11 +32,6 @@ DonutChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof DonutChart
@@ -50,8 +40,6 @@ DonutChart.STATE = {
 	 */
 	type: Config.oneOf(types.percentage).value('donut'),
 };
-
-Soy.register(DonutChart, templates);
 
 export {DonutChart};
 export default DonutChart;

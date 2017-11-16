@@ -1,7 +1,5 @@
-'use strict';
-
-import {LineChart as LineChartBase} from '../LineChart';
 import Chart from './Chart';
+import {LineChart as LineChartBase} from '../LineChart';
 
 /**
  * Line Chart component.

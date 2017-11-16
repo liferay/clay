@@ -25,7 +25,7 @@ describe('Chart', function() {
 
 		const config = bb.generate.mock.calls[0][0];
 
-		expect(config.bindto).toBe(chart.element);
+		expect(config.bindto).toBe(chart.refs.chart);
 
 		config.bindto = undefined;
 

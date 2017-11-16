@@ -1,7 +1,5 @@
-'use strict';
-
-import {AreaLineChart as AreaLineChartBase} from '../AreaLineChart';
 import Chart from './Chart';
+import {AreaLineChart as AreaLineChartBase} from '../AreaLineChart';
 
 /**
  * AreaLine Chart component.

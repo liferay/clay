@@ -1,7 +1,5 @@
-'use strict';
-
-import {GaugeChart as GaugeChartBase} from '../GaugeChart';
 import Chart from './Chart';
+import {GaugeChart as GaugeChartBase} from '../GaugeChart';
 
 /**
  * Guage Chart component.

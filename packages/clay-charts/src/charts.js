@@ -1,5 +1,3 @@
-'use strict';
-
 import AreaLineChart from './AreaLineChart';
 import AreaSplineChart from './AreaSplineChart';
 import AreaStepChart from './AreaStepChart';

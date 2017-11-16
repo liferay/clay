@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './BarChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * Bar Chart component.
@@ -37,11 +32,6 @@ BarChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof BarChart
@@ -50,8 +40,6 @@ BarChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('bar'),
 };
-
-Soy.register(BarChart, templates);
 
 export {BarChart};
 export default BarChart;

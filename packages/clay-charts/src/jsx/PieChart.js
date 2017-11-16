@@ -1,7 +1,5 @@
-'use strict';
-
-import {PieChart as PieChartBase} from '../PieChart';
 import Chart from './Chart';
+import {PieChart as PieChartBase} from '../PieChart';
 
 /**
  * Pie Chart component.

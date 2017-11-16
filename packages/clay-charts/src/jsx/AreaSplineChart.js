@@ -1,7 +1,5 @@
-'use strict';
-
-import {AreaSplineChart as AreaSplineChartBase} from '../AreaSplineChart';
 import Chart from './Chart';
+import {AreaSplineChart as AreaSplineChartBase} from '../AreaSplineChart';
 
 /**
  * AreaSpline Chart component.

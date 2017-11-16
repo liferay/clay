@@ -1,11 +1,6 @@
-'use strict';
-
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-
 import Chart from './Chart';
-import templates from './LineChart.soy.js';
 import types from './utils/types';
+import {Config} from 'metal-state';
 
 /**
  * Line Chart component.
@@ -37,11 +32,6 @@ LineChart.STATE = {
 	),
 
 	/**
-	 * Sets the `loading` state.
-	 */
-	loading: Config.bool().value(false),
-
-	/**
 	 * The variety of chart that will be rendered.
 	 * @instance
 	 * @memberof LineChart
@@ -50,8 +40,6 @@ LineChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('line'),
 };
-
-Soy.register(LineChart, templates);
 
 export {LineChart};
 export default LineChart;

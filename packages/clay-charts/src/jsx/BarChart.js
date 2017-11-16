@@ -1,7 +1,5 @@
-'use strict';
-
-import {BarChart as BarChartBase} from '../BarChart';
 import Chart from './Chart';
+import {BarChart as BarChartBase} from '../BarChart';
 
 /**
  * Bar Chart component.

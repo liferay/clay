@@ -1,7 +1,5 @@
-'use strict';
-
-import {StepChart as StepChartBase} from '../StepChart';
 import Chart from './Chart';
+import {StepChart as StepChartBase} from '../StepChart';
 
 /**
  * Step Chart component.
