@@ -58,6 +58,38 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayCheckbox.render}
+	{param label: 'Unchecked' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param checked: true /}
+	{param label: 'Checked' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param indeterminate: true /}
+	{param label: 'Indeterminate' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param disabled: true /}
+	{param label: 'Unchecked disabled' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param checked: true /}
+	{param disabled: true /}
+	{param label: 'Checked disabled' /}
+{/call}
+
+{call ClayCheckbox.render}
+	{param disabled: true /}
+	{param indeterminate: true /}
+	{param label: 'Indeterminate disabled' /}
+{/call}
+```
 ```text/html
 <div class="custom-control custom-checkbox">
 	<label>
@@ -107,38 +139,6 @@ weight: 100
 	</label>
 </div>
 ```
-```soy
-{call ClayCheckbox.render}
-	{param label: 'Unchecked' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param checked: true /}
-	{param label: 'Checked' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param indeterminate: true /}
-	{param label: 'Indeterminate' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param disabled: true /}
-	{param label: 'Unchecked disabled' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param checked: true /}
-	{param disabled: true /}
-	{param label: 'Checked disabled' /}
-{/call}
-
-{call ClayCheckbox.render}
-	{param disabled: true /}
-	{param indeterminate: true /}
-	{param label: 'Indeterminate disabled' /}
-{/call}
-```
 
 </article>
 
@@ -164,6 +164,20 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayRadio.render}
+	{param checked: true /}
+	{param id: 'radio1' /}
+	{param label: 'Toggle this custom radio' /}
+	{param name: 'radio' /}
+{/call}
+
+{call ClayRadio.render}
+	{param id: 'radio2' /}
+	{param label: 'Or toggle this other custom radio' /}
+	{param name: 'radio' /}
+{/call}
+```
 ```text/html
 <div class="custom-control custom-radio">
 	<label>
@@ -180,20 +194,6 @@ weight: 100
 		<span class="custom-control-description">Or toggle this other custom radio</span>
 	</label>
 </div>
-```
-```soy
-{call ClayRadio.render}
-	{param checked: true /}
-	{param id: 'radio1' /}
-	{param label: 'Toggle this custom radio' /}
-	{param name: 'radio' /}
-{/call}
-
-{call ClayRadio.render}
-	{param id: 'radio2' /}
-	{param label: 'Or toggle this other custom radio' /}
-	{param name: 'radio' /}
-{/call}
 ```
 
 </article>
@@ -220,6 +220,20 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayRadio.render}
+	{param disabled: true /}
+	{param id: 'radioStacked3' /}
+	{param label: 'Toggle this custom radio' /}
+	{param name: 'radio-stacked' /}
+{/call}
+
+{call ClayRadio.render}
+	{param id: 'radioStacked4' /}
+	{param label: 'Or toggle this other custom radio' /}
+	{param name: 'radio-stacked' /}
+{/call}
+```
 ```text/html
 <div class="custom-control custom-control-inline custom-radio">
 	<label>
@@ -235,20 +249,6 @@ weight: 100
 		<span class="custom-control-description">Or toggle this other custom radio</span>
 	</label>
 </div>
-```
-```soy
-{call ClayRadio.render}
-	{param disabled: true /}
-	{param id: 'radioStacked3' /}
-	{param label: 'Toggle this custom radio' /}
-	{param name: 'radio-stacked' /}
-{/call}
-
-{call ClayRadio.render}
-	{param id: 'radioStacked4' /}
-	{param label: 'Or toggle this other custom radio' /}
-	{param name: 'radio-stacked' /}
-{/call}
 ```
 
 </article>

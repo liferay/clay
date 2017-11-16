@@ -140,43 +140,6 @@ weight: 100
 	<strong class="lead">Danger:</strong> <a href="#1" class="alert-link">Something</a> is not right.
 </div>
 
-```text/html
-<div class="alert alert-success" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Success:</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
-</div>
-
-<div class="alert alert-info" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
-		</svg>
-	</span>
-	<strong class="lead">Info:</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
-</div>
-
-<div class="alert alert-warning" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
-</div>
-
-<div class="alert alert-danger" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Danger:</strong> <a href="#1" class="alert-link">Something</a> is not right.
-</div>
-```
 ```soy
 {call ClayAlert.render}
 	{param message kind="html"}
@@ -216,6 +179,43 @@ weight: 100
 	{param style: 'danger' /}
 	{param title: 'Danger' /}
 {/param}
+```
+```text/html
+<div class="alert alert-success" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Success:</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
+</div>
+
+<div class="alert alert-info" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+		</svg>
+	</span>
+	<strong class="lead">Info:</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
+</div>
+
+<div class="alert alert-warning" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
+</div>
+
+<div class="alert alert-danger" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Danger:</strong> <a href="#1" class="alert-link">Something</a> is not right.
+</div>
 ```
 
 </article>
@@ -278,6 +278,54 @@ weight: 100
 	</button>
 </div>
 
+```soy
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		You just read the <a href="#">alert message</a> successfully.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'success' /}
+	{param title: 'Success' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This <a href="#">alert</a> needs your attention.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Info' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This alert is a <a href="#">warning message</a>.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'warning' /}
+	{param title: 'Warning' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		Something</a> is not right.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Danger' /}
+{/param}
+```
 ```text/html
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
@@ -334,54 +382,6 @@ weight: 100
 		</svg>
 	</button>
 </div>
-```
-```soy
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		You just read the <a href="#">alert message</a> successfully.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'success' /}
-	{param title: 'Success' /}
-{/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		This <a href="#">alert</a> needs your attention.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param title: 'Info' /}
-{/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		This alert is a <a href="#">warning message</a>.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'warning' /}
-	{param title: 'Warning' /}
-{/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		Something</a> is not right.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'danger' /}
-	{param title: 'Danger' /}
-{/param}
 ```
 
 </article>
@@ -452,6 +452,58 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		You just read the <a href="#">alert message</a> successfully.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'success' /}
+	{param title: 'Success' /}
+	{param type: 'fluid' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This <a href="#">alert</a> needs your attention.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'Info' /}
+	{param type: 'fluid' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		This alert is a <a href="#">warning message</a>.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'warning' /}
+	{param title: 'Warning' /}
+	{param type: 'fluid' /}
+{/param}
+
+{call ClayAlert.render}
+	{param closeable: true /}
+
+	{param message kind="html"}
+		Something</a> is not right.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Danger' /}
+	{param type: 'fluid' /}
+{/param}
+```
 ```text/html
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
@@ -516,58 +568,6 @@ weight: 100
 		</button>
 	</div>
 </div>
-```
-```soy
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		You just read the <a href="#">alert message</a> successfully.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'success' /}
-	{param title: 'Success' /}
-	{param type: 'fluid' /}
-{/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		This <a href="#">alert</a> needs your attention.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param title: 'Info' /}
-	{param type: 'fluid' /}
-{/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		This alert is a <a href="#">warning message</a>.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'warning' /}
-	{param title: 'Warning' /}
-	{param type: 'fluid' /}
-{/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		Something</a> is not right.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'danger' /}
-	{param title: 'Danger' /}
-	{param type: 'fluid' /}
-{/param}
 ```
 
 </article>

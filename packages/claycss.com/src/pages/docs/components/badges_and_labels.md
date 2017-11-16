@@ -16,14 +16,6 @@ weight: 100
 <span class="badge badge-warning">21</span>{sp}
 <span class="badge badge-danger">130</span>
 
-```text/html
-<span class="badge badge-primary">8</span>
-<span class="badge badge-secondary">87</span>
-<span class="badge badge-success">999K</span>
-<span class="badge badge-info">91</span>
-<span class="badge badge-warning">21</span>
-<span class="badge badge-danger">130</span>
-```
 ```soy
 {call ClayBadge.render}
 	{param label: '8' /}
@@ -38,6 +30,14 @@ weight: 100
 	{param label: '999K' /}
 	{param style: 'success' /}
 {/call}
+```
+```text/html
+<span class="badge badge-primary">8</span>
+<span class="badge badge-secondary">87</span>
+<span class="badge badge-success">999K</span>
+<span class="badge badge-info">91</span>
+<span class="badge badge-warning">21</span>
+<span class="badge badge-danger">130</span>
 ```
 
 </article>
@@ -54,14 +54,6 @@ weight: 100
 <span class="label label-warning">Warning</span>{sp}
 <span class="label label-danger">Danger</span>
 
-```text/html
-<span class="label label-primary">Primary</span>
-<span class="label label-secondary">Secondary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-```
 ```soy
 {call ClayLabel.render}
 	{param label: 'Label Text' /}
@@ -86,6 +78,14 @@ weight: 100
 	{param label: 'Approved' /}
 	{param style: 'success' /}
 {/call}
+```
+```text/html
+<span class="label label-primary">Primary</span>
+<span class="label label-secondary">Secondary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
 ```
 
 </article>
@@ -102,14 +102,6 @@ weight: 100
 <a class="label label-warning" href="#1">Warning</a>{sp}
 <a class="label label-danger" href="#1">Danger</a>
 
-```text/html
-<a class="label label-primary" href="#1">Primary</a>
-<a class="label label-secondary" href="#1">Secondary</a>
-<a class="label label-success" href="#1">Success</a>
-<a class="label label-info" href="#1">Info</a>
-<a class="label label-warning" href="#1">Warning</a>
-<a class="label label-danger" href="#1">Danger</a>
-```
 ```soy
 {call ClayLabel.render}
 	{param href: '#1' /}
@@ -139,6 +131,14 @@ weight: 100
 	{param label: 'Approved' /}
 	{param style: 'success' /}
 {/call}
+```
+```text/html
+<a class="label label-primary" href="#1">Primary</a>
+<a class="label label-secondary" href="#1">Secondary</a>
+<a class="label label-success" href="#1">Success</a>
+<a class="label label-info" href="#1">Info</a>
+<a class="label label-warning" href="#1">Warning</a>
+<a class="label label-danger" href="#1">Danger</a>
 ```
 
 </article>
@@ -165,6 +165,21 @@ weight: 100
 	</button>
 </span>
 
+```soy
+{call ClayLabel.render}
+	{param closeable: true /}
+	{param label: 'Normal Label' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
+
+{call ClayLabel.render}
+	{param closeable: true /}
+	{param label: 'Large Label' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param size: 'lg' /}
+	{param style: 'info' /}
+{/call}
+```
 ```text/html
 <span class="label label-dismissible label-secondary">
 	Normal Label
@@ -184,21 +199,6 @@ weight: 100
 	</button>
 </span>
 ```
-```soy
-{call ClayLabel.render}
-	{param closeable: true /}
-	{param label: 'Normal Label' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-{/call}
-
-{call ClayLabel.render}
-	{param closeable: true /}
-	{param label: 'Large Label' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param size: 'lg' /}
-	{param style: 'info' /}
-{/call}
-```
 
 </article>
 
@@ -212,10 +212,6 @@ weight: 100
 <span class="label label-secondary">Normal Label</span>{sp}
 <span class="label label-lg label-success">Large Label</span>{sp}
 
-```text/html
-<span class="label label-secondary">Normal Label</span>
-<span class="label label-lg label-success">Large Label</span>
-```
 ```soy
 {call ClayLabel.render}
 	{param closeable: true /}
@@ -227,6 +223,10 @@ weight: 100
 	{param size: 'lg' /}
 	{param style: 'info' /}
 {/call}
+```
+```text/html
+<span class="label label-secondary">Normal Label</span>
+<span class="label label-lg label-success">Large Label</span>
 ```
 
 </article>
@@ -245,14 +245,6 @@ weight: 100
 <span class="sticker sticker-warning">133</span>{sp}
 <span class="sticker sticker-danger">133</span>
 
-```text/html
-<span class="sticker sticker-primary">133</span>
-<span class="sticker sticker-secondary">133</span>
-<span class="sticker sticker-success">133</span>
-<span class="sticker sticker-info">133</span>
-<span class="sticker sticker-warning">133</span>
-<span class="sticker sticker-danger">133</span>
-```
 ```soy
 {call ClaySticker.render}
 	{param label: '133' /}
@@ -283,6 +275,14 @@ weight: 100
 	{param label: '133' /}
 	{param style: 'danger' /}
 {/call}
+```
+```text/html
+<span class="sticker sticker-primary">133</span>
+<span class="sticker sticker-secondary">133</span>
+<span class="sticker sticker-success">133</span>
+<span class="sticker sticker-info">133</span>
+<span class="sticker sticker-warning">133</span>
+<span class="sticker sticker-danger">133</span>
 ```
 
 </article>
@@ -329,24 +329,6 @@ weight: 100
 	</div>
 </div>
 
-```text/html
-<div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-	<span class="sticker sticker-danger sticker-top-left">PDF</span>
-</div>
-<div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-	<span class="sticker sticker-bottom-left sticker-danger">PDF</span>
-</div>
-<div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-	<span class="sticker sticker-danger sticker-top-right">PDF</span>
-</div>
-<div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-	<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
-</div>
-```
 ```soy
 {call ClaySticker.render}
 	{param label: 'PDF' /}
@@ -372,6 +354,24 @@ weight: 100
 	{param style: 'danger' /}
 {/call}
 ```
+```text/html
+<div class="aspect-ratio">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<span class="sticker sticker-danger sticker-top-left">PDF</span>
+</div>
+<div class="aspect-ratio">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<span class="sticker sticker-bottom-left sticker-danger">PDF</span>
+</div>
+<div class="aspect-ratio">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<span class="sticker sticker-danger sticker-top-right">PDF</span>
+</div>
+<div class="aspect-ratio">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
+</div>
+```
 
 </article>
 
@@ -387,36 +387,36 @@ weight: 100
 <span class="sticker sticker-lg sticker-success">133</span>{sp}
 <span class="sticker sticker-danger sticker-xl">133</span>
 
+```soy
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'sm' /}
+	{param style: 'primary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'secondary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'lg' /}
+	{param style: 'success' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'xl' /}
+	{param style: 'danger' /}
+{/call}
+```
 ```text/html
 <span class="sticker sticker-primary sticker-sm">133</span>
 <span class="sticker sticker-secondary">133</span>
 <span class="sticker sticker-lg sticker-success">133</span>
 <span class="sticker sticker-danger sticker-xl">133</span>
 ```
-```soy
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param size: 'sm' /}
-	{param style: 'primary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param style: 'secondary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param size: 'lg' /}
-	{param style: 'success' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param size: 'xl' /}
-	{param style: 'danger' /}
-{/call}
-```
 
 <span class="sticker sticker-primary sticker-sm">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
@@ -439,6 +439,42 @@ weight: 100
 	</svg>
 </span>
 
+```soy
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'format'
+	] /}
+	{param size: 'sm' /}
+	{param style: 'primary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'format'
+	] /}
+	{param style: 'secondary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'format'
+	] /}
+	{param size: 'lg' /}
+	{param style: 'success' /}
+{/call}
+
+{call ClaySticker.render}
+	{param icon: [
+			'spritemap': '/vendor/lexicon/icons.svg',
+			'symbol': 'format'
+	] /}
+	{param size: 'xl' /}
+	{param style: 'danger' /}
+{/call}
+```
 ```text/html
 <span class="sticker sticker-primary sticker-sm">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
@@ -460,42 +496,6 @@ weight: 100
 		<use xlink:href="/vendor/lexicon/icons.svg#format" />
 	</svg>
 </span>
-```
-```soy
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param size: 'sm' /}
-	{param style: 'primary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param style: 'secondary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param size: 'lg' /}
-	{param style: 'success' /}
-{/call}
-
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param size: 'xl' /}
-	{param style: 'danger' /}
-{/call}
 ```
 
 </article>
@@ -538,12 +538,6 @@ weight: 100
 <span class="rounded-circle sticker sticker-lg sticker-success">SP</span>{sp}
 <span class="rounded-circle sticker sticker-danger sticker-xl">WW</span>{sp}
 
-```text/html
-<span class="rounded-circle sticker sticker-primary sticker-sm">JB</span>
-<span class="rounded-circle sticker sticker-secondary">TT</span>
-<span class="rounded-circle sticker sticker-lg sticker-success">SP</span>
-<span class="rounded-circle sticker sticker-danger sticker-xl">WW</span>
-```
 ```soy
 {call ClaySticker.render}
 	{param label: 'JB' /}
@@ -567,6 +561,12 @@ weight: 100
 	{param size: 'xl' /}
 	{param style: 'danger' /}
 {/call}
+```
+```text/html
+<span class="rounded-circle sticker sticker-primary sticker-sm">JB</span>
+<span class="rounded-circle sticker sticker-secondary">TT</span>
+<span class="rounded-circle sticker sticker-lg sticker-success">SP</span>
+<span class="rounded-circle sticker sticker-danger sticker-xl">WW</span>
 ```
 
 </article>

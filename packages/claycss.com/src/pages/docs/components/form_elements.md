@@ -308,31 +308,6 @@ weight: 100
 	</div>
 </div>
 
-```text/html
-<div class="form-group">
-	<label for="regularSelectElement">Regular Select Element</label>
-	<select class="form-control" id="regularSelectElement">
-		<option>Sample 1</option>
-		<option>Sample 2</option>
-		<option>Sample 3</option>
-		<option>Sample 4</option>
-	</select>
-</div>
-
-<div class="form-group">
-	<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
-	<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
-		<option>Sample 1</option>
-		<option>Sample 2</option>
-		<option>Sample 3</option>
-		<option>Sample 4</option>
-		<option>Sample 5</option>
-		<option>Sample 6</option>
-		<option>Sample 7</option>
-		<option>Sample 8</option>
-	</select>
-</div>
-```
 ```soy
 {call ClaySelect.render}
 	{param id: 'regularSelectElement' /}
@@ -380,6 +355,31 @@ weight: 100
 		],
 	] /}
 {/call}
+```
+```text/html
+<div class="form-group">
+	<label for="regularSelectElement">Regular Select Element</label>
+	<select class="form-control" id="regularSelectElement">
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+	</select>
+</div>
+
+<div class="form-group">
+	<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
+	<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+		<option>Sample 5</option>
+		<option>Sample 6</option>
+		<option>Sample 7</option>
+		<option>Sample 8</option>
+	</select>
+</div>
 ```
 
 </article>

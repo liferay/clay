@@ -42,6 +42,27 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayProgressBar.render}
+	{param minValue: 0 /}
+	{param maxValue: 100 /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param value: 30 /}
+{/call}
+
+{call ClayProgressBar.render}
+	{param minValue: 0 /}
+	{param maxValue: 100 /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param status: 'warning' /}
+	{param value: 70 /}
+{/call}
+
+{call ClayProgressBar.render}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param status: 'complete' /}
+{/call}
+```
 ```text/html
 <div class="progress-group">
 	<div class="progress">
@@ -69,27 +90,6 @@ weight: 100
 		</div>
 	</div>
 </div>
-```
-```soy
-{call ClayProgressBar.render}
-	{param minValue: 0 /}
-	{param maxValue: 100 /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param value: 30 /}
-{/call}
-
-{call ClayProgressBar.render}
-	{param minValue: 0 /}
-	{param maxValue: 100 /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param status: 'warning' /}
-	{param value: 70 /}
-{/call}
-
-{call ClayProgressBar.render}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param status: 'complete' /}
-{/call}
 ```
 
 </article>
