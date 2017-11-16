@@ -117,6 +117,7 @@ $input-group-addon-font-weight: $font-weight-semi-bold !default;
 
 $input-group-secondary-addon-bg: #FFF !default;
 $input-group-secondary-addon-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+$input-group-secondary-addon-color: $secondary !default;
 
 // Input Group Transparent
 
