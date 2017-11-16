@@ -117,6 +117,14 @@ label {
 	height: auto;
 }
 
+select.form-control {
+	cursor: $input-select-cursor;
+
+	option {
+		cursor: $input-select-cursor;
+	}
+}
+
 // Will need to be revisted if action is taken on https://github.com/twbs/bootstrap/issues/23058
 select.form-control:not([multiple]):not([size]) {
 	-moz-appearance: none;
