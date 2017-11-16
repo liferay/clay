@@ -3,13 +3,12 @@ import 'clay-checkbox';
 import 'clay-icon';
 import 'clay-radio';
 import {Align} from 'metal-position';
-import {core, object} from 'metal';
-import {Config} from 'metal-state';
 import Component from 'metal-component';
+import {Config} from 'metal-state';
 import dom from 'metal-dom';
 import {EventHandler} from 'metal-events';
-import Soy from 'metal-soy';
 import itemsValidator from './items_validator';
+import Soy from 'metal-soy';
 import templates from './ClayDropdownBase.soy.js';
 
 /**
@@ -19,26 +18,8 @@ class ClayDropdownBase extends Component {
 	/**
 	 * @inheritDoc
 	 */
-	attached() {
-		super.attached();
-		this.eventHandler_.add(
-			dom.on(document, 'click', this.handleDocClick_.bind(this))
-		);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	created() {
 		this.eventHandler_ = new EventHandler();
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	detached() {
-		super.attached();
-		this.eventHandler_.removeAllListeners();
 	}
 
 	/**
@@ -47,6 +28,14 @@ class ClayDropdownBase extends Component {
 	 */
 	close_() {
 		this.expanded = false;
+		this.eventHandler_.removeAllListeners();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	detached() {
+		this.eventHandler_.removeAllListeners();
 	}
 
 	/**
@@ -59,94 +48,6 @@ class ClayDropdownBase extends Component {
 			return;
 		}
 		this.close_();
-	}
-
-	/**
-	 * Toggles the dropdown, closing it when open or opening it when closed.
-	 */
-	toggle() {
-		this.expanded = !this.expanded;
-	}
-
-	/**
-	 * The setter function for the `classMap_` staet.
-	 * @param {Object} value
-	 * @return {!object}
-	 * @protected
-	 */
-	setterClassMapFn_(value) {
-		return object.mixin(this.valueClassMapFn_(), value);
-	}
-
-	/**
-	 * The setter function for the `position` state. Converts the supported
-	 * string positions into the appropriate `Align` position constants.
-	 * @param {string|number} value
-	 * @return {number}
-	 * @protected
-	 */
-	setterPositionFn_(value) {
-		if (core.isNumber(value)) {
-			return value;
-		}
-		return value.toLowerCase() === 'up' ? Align.TopLeft : Align.BottomLeft;
-	}
-
-	/**
-	 * Synchronization logic for `expanded` state.
-	 * @param {boolean} expanded
-	 */
-	syncExpanded(expanded) {
-		if (expanded && this.alignElementSelector) {
-			// eslint-disable-next-line
-			let alignElement = this.element.querySelector(this.alignElementSelector);
-			if (alignElement) {
-				let bodyElement = this.element.querySelector('.dropdown-menu');
-				this.alignedPosition_ = Align.align(
-					bodyElement,
-					alignElement,
-					this.position_
-				);
-			}
-		}
-	}
-
-	/**
-	 * Validator for the `position` state.
-	 * @param {string|number} position
-	 * @return {boolean}
-	 * @protected
-	 */
-	validatePosition_(position) {
-		if (Align.isValidPosition(position)) {
-			return true;
-		}
-
-		switch (position.toLowerCase()) {
-		case 'up':
-		case 'down':
-			return true;
-		default:
-			return false;
-		}
-	}
-
-	/**
-	 * Gets the default value for the `classMap_` state.
-	 * @return {!Object}
-	 * @protected
-	 */
-	valueClassMapFn_() {
-		return {
-			[Align.TopLeft]: 'dropup',
-			[Align.TopCenter]: 'dropup',
-			[Align.TopRight]: 'dropup',
-			[Align.BottomLeft]: 'dropdown',
-			[Align.BottomCenter]: 'dropdown',
-			[Align.BottomRight]: 'dropdown',
-			[Align.RightCenter]: 'dropright',
-			[Align.LeftCenter]: 'dropleft',
-		};
 	}
 
 	/**
@@ -178,6 +79,40 @@ class ClayDropdownBase extends Component {
 			originalItems: this.originalItems_,
 			filteredItems: this.items,
 		});
+	}
+
+	/**
+	 * Synchronization logic for `expanded` state.
+	 * @param {boolean} expanded
+	 */
+	syncExpanded(expanded) {
+		if (expanded && this.alignElementSelector) {
+			// eslint-disable-next-line
+			let alignElement = this.element.querySelector(this.alignElementSelector);
+			if (alignElement) {
+				let bodyElement = this.element.querySelector('.dropdown-menu');
+				this.alignedPosition_ = Align.align(
+					bodyElement,
+					alignElement,
+					Align.BottomLeft
+				);
+			}
+		}
+	}
+
+	/**
+	 * Toggles the dropdown, closing it when open or opening it when closed.
+	 */
+	toggle() {
+		if (!this.expanded) {
+			this.expanded = true;
+			this.eventHandler_.add(
+				dom.on(document, 'click', this.handleDocClick_.bind(this))
+			);
+		} else {
+			this.expanded = false;
+			this.eventHandler_.removeAllListeners();
+		}
 	}
 }
 
@@ -230,28 +165,13 @@ ClayDropdownBase.STATE = {
 	caption: Config.string(),
 
 	/**
-	 * A map from `Align` position constants to the CSS class that should be
-	 * added to the dropdown when it's aligned in that position.
-	 * @instance
-	 * @memberof ClayDropdownBase
-	 * @type {!Object}
-	 * @default valueClassMapFn_
-	 */
-	classMap_: Config.validator(object)
-		.setter('setterClassMapFn_')
-		.valueFn('valueClassMapFn_')
-		.internal(),
-
-	/**
 	 * Flag to indicate if menu is expanded.
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?bool}
 	 * @default false
 	 */
-	expanded: Config.bool()
-		.value(false)
-		.internal(),
+	expanded: Config.bool().value(false),
 
 	/**
 	 * Help text to be shown on top of the open dropdown.
@@ -280,19 +200,6 @@ ClayDropdownBase.STATE = {
 	 * @default undefined
 	 */
 	items: itemsValidator.required(),
-
-	/**
-	 * The position of the dropdown (either 'up', 'down' or any of the position
-	 * constants available in `Align`).
-	 * @instance
-	 * @memberof ClayDropdownBase
-	 * @type {string|number}
-	 * @default Align.BottomLeft
-	 */
-	position_: Config.setter('setterPositionFn_')
-		.validator('validatePosition_')
-		.value(Align.BottomLeft)
-		.internal(),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements
