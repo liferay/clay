@@ -455,6 +455,49 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should open dropdown', () => {
+		jest.useFakeTimers();
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+			],
+			spritemap: 'icons.svg',
+			triggerLabel: 'Trigger',
+		});
+
+		expect(clayDropdownBase.expanded).toBeFalsy();
+
+		clayDropdownBase.toggle();
+		jest.runAllTimers();
+
+		expect(clayDropdownBase.expanded).toBeTruthy();
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
+	it('should close dropdown', () => {
+		jest.useFakeTimers();
+		clayDropdownBase = new ClayDropdownBase({
+			expanded: true,
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+			],
+			spritemap: 'icons.svg',
+			triggerLabel: 'Trigger',
+		});
+
+		clayDropdownBase.toggle();
+		jest.runAllTimers();
+
+		expect(clayDropdownBase.expanded).toBeFalsy();
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should filter items', () => {
 		let item1 = {
 			label: 'Item 1',

@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayDropdownBase should close dropdown 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu" style="top: 0px; left: 0px;">
+    <ul class="list-unstyled">
+      <li>
+        <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`ClayDropdownBase should open dropdown 1`] = `
+<div class="dropdown show">
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu show" style="top: 0px; left: 0px;">
+    <ul class="list-unstyled">
+      <li>
+        <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
