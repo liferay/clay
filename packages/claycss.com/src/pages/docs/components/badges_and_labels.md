@@ -26,18 +26,18 @@ weight: 100
 ```
 ```soy
 {call ClayBadge.render}
-	{param: label: '8' /}
-{/param}
+	{param label: '8' /}
+{/call}
 
 {call ClayBadge.render}
-	{param: label: '87' /}
-	{param: style: 'secondary' /}
-{/param}
+	{param label: '87' /}
+	{param style: 'secondary' /}
+{/call}
 
 {call ClayBadge.render}
-	{param: label: '999K' /}
-	{param: style: 'success' /}
-{/param}
+	{param label: '999K' /}
+	{param style: 'success' /}
+{/call}
 ```
 
 </article>
