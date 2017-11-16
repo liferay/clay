@@ -18,6 +18,13 @@
 	border-radius: $rounded-0-border-radius !important;
 }
 
+// Close
+
+.close {
+	cursor: $btn-cursor;
+	text-align: center;
+}
+
 // Flex Col
 
 .flex-col {
