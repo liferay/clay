@@ -5,7 +5,7 @@ let assert = require('yeoman-generator').assert;
 let helpers = require('yeoman-generator').test;
 
 describe('clay-generator:app', function() {
-  before(function(done) {
+  beforeAll(function(done) {
     helpers
       .run(path.join(__dirname, '../app'))
       .withOptions({skipInstall: true})

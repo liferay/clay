@@ -96,7 +96,7 @@ module.exports = yeoman.generators.Base.extend({
     );
 
     this.fs.copyTpl(
-      this.templatePath('src/__tests__/_Boilerplate.js'),
+      this.templatePath('src/tests/_Boilerplate.js'),
       this.destinationPath('src/__tests__/' + this.componentName + '.js'),
       {
         componentName: this.componentName,
@@ -104,7 +104,7 @@ module.exports = yeoman.generators.Base.extend({
       }
     );
     this.fs.copyTpl(
-      this.templatePath('src/__tests__/__snapshots__/_Boilerplate.js.snap'),
+      this.templatePath('src/tests/__snapshots__/_Boilerplate.js.snap'),
       this.destinationPath(
         'src/__tests__/__snapshots__/' + this.componentName + '.js.snap'
       ),
