@@ -9,7 +9,7 @@ describe('<%= componentName %>', function() {
     }
   });
 
-  it('shound generate the default markup', () => {
+  it('should generate the default markup', () => {
     component = new <%= componentName %>();
 
     expect(component).toMatchSnapshot();
