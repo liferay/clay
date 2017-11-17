@@ -23,6 +23,7 @@
 	$disabled-color: map-get($map, disabled-color);
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
+	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
 
 	background-color: $bg;
@@ -55,7 +56,7 @@
 	.show > &.dropdown-toggle {
 		background-color: $active-bg;
 		border-color: $active-border-color;
-		box-shadow: $focus-box-shadow;
+		box-shadow: $active-box-shadow;
 		color: $active-color;
 	}
 }
