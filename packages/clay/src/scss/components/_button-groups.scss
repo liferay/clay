@@ -1,3 +1,17 @@
+.btn-group,
+.btn-group-vertical {
+	> .btn {
+		&:focus {
+			z-index: 3;
+		}
+
+		&:active,
+		&.active {
+			z-index: 2;
+		}
+	}
+}
+
 .btn-toolbar {
 	.btn-group,
 	.input-group {
