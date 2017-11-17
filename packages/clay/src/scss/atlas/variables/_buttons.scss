@@ -26,8 +26,10 @@ $btn-monospaced-size-sm: 2rem !default; // 32px
 
 $btn-primary: (
 	hover-bg: darken(saturate($primary, 3.40), 6.86),
+	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken(saturate($primary, 3.40), 6.86), 0.5),
 	active-bg: darken(saturate($primary, 3.40), 11.76),
+	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
 
@@ -51,44 +53,56 @@ $btn-secondary: (
 
 $btn-success: (
 	hover-bg: darken($success, 4%),
+	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($success, 4%), 0.5),
 	active-bg: darken($success, 8%),
+	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
 
 $btn-info: (
 	hover-bg: darken($info, 4%),
+	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($info, 4%), 0.5),
 	active-bg: darken($info, 8%),
+	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
 
 $btn-warning: (
 	hover-bg: darken($warning, 4%),
+	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($warning, 4%), 0.5),
 	active-bg: darken($warning, 8%),
+	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
 
 $btn-danger: (
 	hover-bg: darken($danger, 4%),
+	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($danger, 4%), 0.5),
 	active-bg: darken($danger, 8%),
+	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
 
 $btn-light: (
 	color: $body-color,
 	hover-bg: darken($light, 4%),
+	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($light, 4%), 0.5),
 	active-bg: darken($light, 8%),
+	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
 
 $btn-dark: (
 	hover-bg: darken($dark, 4%),
+	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($dark, 4%), 0.5),
 	active-bg: darken($dark, 8%),
+	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
 
