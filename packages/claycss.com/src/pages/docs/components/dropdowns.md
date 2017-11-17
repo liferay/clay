@@ -65,16 +65,14 @@ weight: 100
 </div>
 
 ```text/html
-<div class="clay-site-dropdown-menu-container">
-	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-		<div class="dropdown-subheader">Order by</div>
-		<a class="active dropdown-item" href="#">Author</a>
-		<a class="disabled dropdown-item" href="#">Title Entry</a>
-		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#">Date</a>
-		<a class="dropdown-item" href="#">Description</a>
-		<a class="dropdown-item" href="#">Status</a>
-	</div>
+<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+	<div class="dropdown-subheader">Order by</div>
+	<a class="active dropdown-item" href="#">Author</a>
+	<a class="disabled dropdown-item" href="#">Title Entry</a>
+	<div class="dropdown-divider"></div>
+	<a class="dropdown-item" href="#">Date</a>
+	<a class="dropdown-item" href="#">Description</a>
+	<a class="dropdown-item" href="#">Status</a>
 </div>
 ```
 

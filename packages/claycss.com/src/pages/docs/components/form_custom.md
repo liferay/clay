@@ -139,7 +139,7 @@ weight: 100
 
 <div class="custom-control custom-checkbox">
 	<label>
-		<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+		<input class="custom-control-input" type="checkbox">
 		<span class="custom-control-indicator"></span>
 		<span class="custom-control-description">Indeterminate</span>
 	</label>
@@ -163,7 +163,7 @@ weight: 100
 
 <div class="custom-control custom-checkbox">
 	<label>
-		<input class="clay-site-custom-checkbox-indeterminate custom-control-input" disabled type="checkbox">
+		<input class="custom-control-input" disabled type="checkbox">
 		<span class="custom-control-indicator"></span>
 		<span class="custom-control-description">Indeterminate Disabled</span>
 	</label>

@@ -242,7 +242,7 @@ weight: 100
 							<input class="form-control" placeholder="Search for..." type="text">
 						</div>
 						<span class="input-group-inset-item">
-							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+							<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 									<use xlink:href="/vendor/lexicon/icons.svg#times" />
 								</svg>
@@ -259,7 +259,7 @@ weight: 100
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-d-none">
-				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1" role="button">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 						<use xlink:href="/vendor/lexicon/icons.svg#search" />
 					</svg>
