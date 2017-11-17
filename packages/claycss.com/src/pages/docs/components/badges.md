@@ -1,5 +1,5 @@
 ---
-title: Badges, Labels, and Stickers
+title: Badges
 description: Components
 layout: "guide"
 weight: 100
