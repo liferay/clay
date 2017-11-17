@@ -1,6 +1,6 @@
 {
   "name": "clay-charts",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Metal.js wrapper for D3 and billboard.js",
   "license": "BSD",
   "repository": "metal/metal-clay-components",
@@ -48,9 +48,9 @@
     "babel-preset-metal": "^4.0.0",
     "babel-preset-metal-jsx": "^0.1.1",
     "browserslist-config-clay-components": "^1.0.0-alpha.2",
+    "clay": "^2.0.0-beta.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.1",
-    "clay": "^2.0.0-beta.1",
     "metal-tools-soy": "^4.2.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
