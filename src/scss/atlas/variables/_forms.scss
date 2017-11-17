@@ -61,8 +61,6 @@ $input-disabled-border-color: $input-bg !default;
 $input-label-disabled-color: $text-muted !default;
 
 $input-readonly-bg: $input-border-color !default;
-$input-readonly-border-color: $input-readonly-bg !default;
-$input-readonly-cursor: default !default;
 
 $input-danger-bg: lighten(saturate($danger, 5.04), 50.00) !default;
 $input-danger-border-color: lighten(desaturate($danger, 0.25), 28.04) !default;
