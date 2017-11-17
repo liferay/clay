@@ -253,6 +253,12 @@ fieldset[disabled] label {
 	border-color: $input-readonly-border-color;
 	color: $input-readonly-color;
 	cursor: $input-readonly-cursor;
+
+	&:focus {
+		background-color: $input-readonly-focus-bg;
+		border-color: $input-readonly-focus-border-color;
+		color: $input-readonly-focus-color;
+	}
 }
 
 // Input Sizes
