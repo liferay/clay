@@ -38,6 +38,15 @@ weight: 100
 	{param type: 'button' /}
 {/call}
 ```
+```webcomponents
+<clay-button label="Primary" type="button"></clay-button>
+
+<clay-button label="Secondary" style="secondary" type="button"></clay-button>
+
+<clay-button label="Link" style="borderless" type="button"></clay-button>
+
+<clay-button label="Unstyled" style="link" type="button"></clay-button>
+```
 ```text/html
 <button class="btn btn-primary" type="button">Primary</button>
 <button class="btn btn-secondary" type="button">Secondary</button>
@@ -79,6 +88,34 @@ weight: 100
 	{param style: 'unstyled' /}
 	{param type: 'button' /}
 {/call}
+```
+```webcomponents
+<clay-button
+	disabled="true"
+	label="Primary"
+	type="button">
+</clay-button>
+
+<clay-button
+	disabled="true"
+	label="Secondary"
+	style="secondary"
+	type="button">
+</clay-button>
+
+<clay-button
+	disabled="true"
+	label="Link"
+	style="borderless"
+	type="button">
+</clay-button>
+
+<clay-button
+	disabled="true"
+	label="Unstyled"
+	style="link"
+	type="button">
+</clay-button>
 ```
 ```text/html
 <button class="btn btn-primary" disabled type="button">Primary</button>
@@ -126,6 +163,34 @@ weight: 100
 	{param monospaced: true /}
 	{param type: 'button' /}
 {/call}
+```
+```webcomponents
+<clay-button
+	label="A"
+	monospaced="true"
+	type="button">
+</clay-button>
+
+<clay-button
+	label="B"
+	style="secondary"
+	monospaced="true"
+	type="button">
+</clay-button>
+
+<clay-button
+	label="C"
+	style="borderless"
+	monospaced="true"
+	type="button">
+</clay-button>
+
+<clay-button
+	label="D"
+	style="link"
+	monospaced="true"
+	type="button">
+</clay-button>
 ```
 ```text/html
 <button class="btn btn-monospaced btn-primary" type="button">A</button>
@@ -189,6 +254,14 @@ weight: 100
 	{param triggerStyle: 'primary' /}
 {/call}
 ```
+```webcomponents
+<clay-dropdown
+	items='[{"label": "Action", "url": "#1"},{"separator": true, "type": : "group"},{"label": "Scope", "url": "#1"}]'
+	spritemap="/vendor/lexicon/icons.svg"
+	triggerLabel="Primary"
+	triggerStyle="primary">
+</clay-dropdown>
+```
 ```text/html
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
@@ -238,6 +311,11 @@ weight: 100
 	{param label: 'Default' /}
 {/call}
 ```
+```webcomponents
+<clay-button label="Small" size="sm"></clay-button>
+
+<clay-button label="Default"></clay-button>
+```
 ```text/html
 <button class="btn btn-secondary btn-sm" type="button">Small</button>
 
@@ -273,6 +351,16 @@ weight: 100
 	{param monospaced: true /}
 {/call}
 ```
+```webcomponents
+<clay-button
+	icon='{"spritemap": "/vendor/lexicon/icons.svg", "symbol": "blogs"}' monospaced="true"
+	size="sm">
+</clay-button>
+
+<clay-button
+	icon='{"spritemap": "/vendor/lexicon/icons.svg", "symbol": "plus"}' monospaced="true">
+</clay-button>
+```
 ```text/html
 <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
@@ -301,6 +389,11 @@ weight: 100
 	{param block: true /}
 	{param label: 'Normal Block Level Button' /}
 {/call}
+```
+```webcomponents
+<clay-button block="true" label="Small Block Level Button" size="sm"></clay-button>
+
+<clay-button block="true" label="Normal Block Level Button"></clay-button>
 ```
 ```text/html
 <button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>

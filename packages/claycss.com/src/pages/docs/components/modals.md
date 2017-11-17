@@ -54,6 +54,14 @@ weight: 100
 	{param title: 'Modal Title' /}
 {/call}
 ```
+```webcomponents
+<clay-modal
+	body="<h4>Modal Body</h4>"
+	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' size="sm"
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Modal Title">
+</clay-modal>
+```
 ```text/html
 <button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
@@ -128,6 +136,13 @@ weight: 100
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param title: 'Modal Title' /}
 {/call}
+```
+```webcomponents
+<clay-modal
+	body="<h4>Modal Body</h4>"
+	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/vendor/lexicon/icons.svg"
+	title="Modal Title">
+</clay-modal>
 ```
 ```text/html
 <button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
@@ -206,6 +221,14 @@ weight: 100
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param title: 'Modal Title' /}
 {/call}
+```
+```webcomponents
+<clay-modal
+	body="<h4>Modal Body</h4>"
+	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' size="lg"
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Modal Title">
+</clay-modal>
 ```
 ```text/html
 <button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
@@ -540,6 +563,14 @@ weight: 100
 	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
 {/call}
 ```
+```webcomponents
+<clay-modal
+	body="..."
+	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Add Picture to Documents and Media Library in Liferay Seven">
+</clay-modal>
+```
 ```text/html
 <button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
@@ -784,6 +815,13 @@ weight: 100
 	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
 	{param url: 'https://claycss.com' /}
 {/call}
+```
+```webcomponents
+<clay-modal
+	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Add Picture to Documents and Media Library in Liferay Seven" url="https://claycss.com">
+</clay-modal>
 ```
 ```text/html
 <button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
@@ -1042,6 +1080,35 @@ weight: 100
 	{param status: 'warning' /}
 	{param title: 'Modal Title' /}
 {/call}
+```
+```webcomponents
+<clay-modal
+	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
+	spritemap="/vendor/lexicon/icons.svg"
+	status="danger"
+	title="Modal Title">
+</clay-modal>
+
+<clay-modal
+	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
+	spritemap="/vendor/lexicon/icons.svg"
+	status="info"
+	title="Modal Title">
+</clay-modal>
+
+<clay-modal
+	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
+	spritemap="/vendor/lexicon/icons.svg"
+	status="success"
+	title="Modal Title">
+</clay-modal>
+
+<clay-modal
+	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
+	spritemap="/vendor/lexicon/icons.svg"
+	status="warning"
+	title="Modal Title">
+</clay-modal>
 ```
 ```text/html
 <button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>

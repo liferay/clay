@@ -356,6 +356,20 @@ weight: 100
 	] /}
 {/call}
 ```
+```webcomponents
+<clay-select
+	id="regularSelectElement"
+	label="Regular Select Element"
+	options='[{"label":"Sample 1", "value": "1", "label":"Sample 2", "value": "2"}]'>
+</clay-select>
+
+<clay-select
+	id="multipleSelectOptionsSelectElement"
+	label="Select Element with Multiple Select Options"
+	multiple="true"
+	options='[{"label":"Sample 1", "value": "1", "label":"Sample 2", "value": "2"}]'>
+</clay-select>
+```
 ```text/html
 <div class="form-group">
 	<label for="regularSelectElement">Regular Select Element</label>

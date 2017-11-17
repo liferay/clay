@@ -63,6 +63,27 @@ weight: 100
 	{param status: 'complete' /}
 {/call}
 ```
+```webcomponents
+<clay-progress-bar
+	minValue="0"
+	maxValue="100"
+	spritemap="/vendor/lexicon/icons.svg"
+	value="30">
+</clay-progress-bar>
+
+<clay-progress-bar
+	minValue="0"
+	maxValue="100"
+	spritemap="/vendor/lexicon/icons.svg"
+	status="warning"
+	value="70">
+</clay-progress-bar>
+
+<clay-progress-bar
+	spritemap="/vendor/lexicon/icons.svg"
+	status="complete">
+</clay-progress-bar>
+```
 ```text/html
 <div class="progress-group">
 	<div class="progress">

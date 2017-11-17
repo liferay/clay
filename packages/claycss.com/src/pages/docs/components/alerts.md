@@ -180,6 +180,31 @@ weight: 100
 	{param title: 'Danger' /}
 {/param}
 ```
+```webcomponents
+<clay-alert
+	style="success"
+	message='You just read the <a href="#">alert message</a> successfully.' spritemap="/vendor/lexicon/icons.svg"
+	title="Success">
+</clay-alert>
+
+<clay-alert
+	message="This <a href='#'>alert</a> needs your attention." spritemap="/vendor/lexicon/icons.svg"
+	title="Info">
+</clay-alert>
+
+<clay-alert
+	style="warning"
+	message='This alert is a <a href="#">warning message</a>.' spritemap="/vendor/lexicon/icons.svg"
+	title="Warning">
+</clay-alert>
+
+<clay-alert
+	style="danger"
+	message='Something</a> is not right.'
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Danger">
+</clay-alert>
+```
 ```text/html
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
@@ -325,6 +350,37 @@ weight: 100
 	{param style: 'danger' /}
 	{param title: 'Danger' /}
 {/param}
+```
+```webcomponents
+<clay-alert
+	closeable="true"
+	style="success"
+	message='You just read the alert message successfully.' spritemap="/vendor/lexicon/icons.svg"
+	title="Success">
+</clay-alert>
+
+<clay-alert
+	closeable="true"
+	message="This alert needs your attention."
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Info">
+</clay-alert>
+
+<clay-alert
+	closeable="true"
+	style="warning"
+	message='This alert is a warning message.'
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Warning">
+</clay-alert>
+
+<clay-alert
+	closeable="true"
+	style="danger"
+	message='Something is not right.'
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Danger">
+</clay-alert>
 ```
 ```text/html
 <div class="alert alert-dismissible alert-success" role="alert">
@@ -503,6 +559,39 @@ weight: 100
 	{param title: 'Danger' /}
 	{param type: 'fluid' /}
 {/param}
+```
+```webcomponents
+<clay-alert
+	closeable="true"
+	style="success"
+	message='You just read the <a href="#">alert message</a> successfully.' spritemap="/vendor/lexicon/icons.svg"
+	title="Success"
+	type="fluid"
+></clay-alert>
+
+<clay-alert
+	closeable="true"
+	message="This <a href='#'>alert</a> needs your attention." spritemap="/vendor/lexicon/icons.svg"
+	title="Info"
+	type="fluid">
+</clay-alert>
+
+<clay-alert
+	closeable="true"
+	style="warning"
+	message='This alert is a <a href="#">warning message</a>.' spritemap="/vendor/lexicon/icons.svg"
+	title="Warning"
+	type="fluid">
+</clay-alert>
+
+<clay-alert
+	closeable="true"
+	style="danger"
+	message='Something</a> is not right.'
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Danger"
+	type="fluid">
+</clay-alert>
 ```
 ```text/html
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">

@@ -31,6 +31,19 @@ weight: 100
 	{param style: 'success' /}
 {/call}
 ```
+```webcomponents
+<clay-badge label="8"></clay-badge>
+
+<clay-badge label="87" style="secondary"></clay-badge>
+
+<clay-badge label="999K" style="success"></clay-badge>
+
+<clay-badge label="91" style="info"></clay-badge>
+
+<clay-badge label="21" style="warning"></clay-badge>
+
+<clay-badge label="130" style="danger"></clay-badge>
+```
 ```text/html
 <span class="badge badge-primary">8</span>
 <span class="badge badge-secondary">87</span>
@@ -78,6 +91,17 @@ weight: 100
 	{param label: 'Approved' /}
 	{param style: 'success' /}
 {/call}
+```
+```webcomponents
+<clay-label label="Label text"></clay-label>
+
+<clay-label label="Status" style="info"></clay-label>
+
+<clay-label label="Pending" style="warning"></clay-label>
+
+<clay-label label="Rejected" style="danger"></clay-label>
+
+<clay-label label="Approved" style="success"></clay-label>
 ```
 ```text/html
 <span class="label label-primary">Primary</span>
@@ -132,6 +156,17 @@ weight: 100
 	{param style: 'success' /}
 {/call}
 ```
+```webcomponents
+<clay-label href="#1" label="Label text"></clay-label>
+
+<clay-label href="#1" label="Status" style="info"></clay-label>
+
+<clay-label href="#1" label="Pending" style="warning"></clay-label>
+
+<clay-label href="#1" label="Rejected" style="danger"></clay-label>
+
+<clay-label href="#1" label="Approved" style="success"></clay-label>
+```
 ```text/html
 <a class="label label-primary" href="#1">Primary</a>
 <a class="label label-secondary" href="#1">Secondary</a>
@@ -180,6 +215,21 @@ weight: 100
 	{param style: 'info' /}
 {/call}
 ```
+```webcomponents
+<clay-label
+	closeable="true"
+	label="Normal Label"
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-label>
+
+<clay-label
+	closeable="true"
+	label="Large Label"
+	spritemap="/vendor/lexicon/icons.svg"
+	size="lg"
+	style="info">
+</clay-label>
+```
 ```text/html
 <span class="label label-dismissible label-secondary">
 	Normal Label
@@ -223,6 +273,19 @@ weight: 100
 	{param size: 'lg' /}
 	{param style: 'info' /}
 {/call}
+```
+```webcomponents
+<clay-label
+	label="Normal Label"
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-label>
+
+<clay-label
+	label="Large Label"
+	spritemap="/vendor/lexicon/icons.svg"
+	size="lg"
+	style="info">
+</clay-label>
 ```
 ```text/html
 <span class="label label-secondary">Normal Label</span>
@@ -275,6 +338,19 @@ weight: 100
 	{param label: '133' /}
 	{param style: 'danger' /}
 {/call}
+```
+```webcomponents
+<clay-sticker label="133"></clay-sticker>
+
+<clay-sticker label="133" style="secondary"></clay-sticker>
+
+<clay-sticker label="133" style="success"></clay-sticker>
+
+<clay-sticker label="133" style="info"></clay-sticker>
+
+<clay-sticker label="133" style="warning"></clay-sticker>
+
+<clay-sticker label="133" style="danger"></clay-sticker>
 ```
 ```text/html
 <span class="sticker sticker-primary">133</span>
@@ -354,6 +430,31 @@ weight: 100
 	{param style: 'danger' /}
 {/call}
 ```
+```webcomponents
+<clay-sticker
+	label="133"
+	position="top-left"
+	style="danger">
+</clay-sticker>
+
+<clay-sticker
+	label="133"
+	position="bottom-left"
+	style="danger">
+</clay-sticker>
+
+<clay-sticker
+	label="133"
+	position="top-right"
+	style="danger">
+</clay-sticker>
+
+<clay-sticker
+	label="133"
+	position="bottom-right"
+	style="danger">
+</clay-sticker>
+```
 ```text/html
 <div class="aspect-ratio">
 	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
@@ -410,6 +511,27 @@ weight: 100
 	{param size: 'xl' /}
 	{param style: 'danger' /}
 {/call}
+```
+```webcomponents
+<clay-sticker
+	label="133"
+	size="sm"
+	style="primary">
+</clay-sticker>
+
+<clay-sticker label="133" style="secondary"></clay-sticker>
+
+<clay-sticker
+	label="133"
+	size="lg"
+	style="success">
+</clay-sticker>
+
+<clay-sticker
+	label="133"
+	size="xl"
+	style="danger">
+</clay-sticker>
 ```
 ```text/html
 <span class="sticker sticker-primary sticker-sm">133</span>
@@ -474,6 +596,30 @@ weight: 100
 	{param size: 'xl' /}
 	{param style: 'danger' /}
 {/call}
+```
+```webcomponents
+<clay-sticker
+	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
+	size="sm"
+	style="primary">
+</clay-sticker>
+
+<clay-sticker
+	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
+	style="secondary">
+</clay-sticker>
+
+<clay-sticker
+	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
+	size="lg"
+	style="success">
+</clay-sticker>
+
+<clay-sticker
+	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
+	size="xl"
+	style="danger">
+</clay-sticker>
 ```
 ```text/html
 <span class="sticker sticker-primary sticker-sm">
@@ -541,26 +687,58 @@ weight: 100
 ```soy
 {call ClaySticker.render}
 	{param label: 'JB' /}
+	{param shape: 'circle' /}
 	{param size: 'sm' /}
 	{param style: 'primary' /}
 {/call}
 
 {call ClaySticker.render}
 	{param label: 'TT' /}
+	{param shape: 'circle' /}
 	{param style: 'secondary' /}
 {/call}
 
 {call ClaySticker.render}
 	{param label: 'SP' /}
+	{param shape: 'circle' /}
 	{param size: 'lg' /}
 	{param style: 'success' /}
 {/call}
 
 {call ClaySticker.render}
 	{param label: 'WW' /}
+	{param shape: 'circle' /}
 	{param size: 'xl' /}
 	{param style: 'danger' /}
 {/call}
+```
+```webcomponents
+<clay-sticker
+	label="JB"
+	shape="circle"
+	size="sm"
+	style="primary">
+</clay-sticker>
+
+<clay-sticker
+	label="TT"
+	shape="circle"
+	style="secondary">
+</clay-sticker>
+
+<clay-sticker
+	label="SP"
+	shape="circle"
+	size="lg"
+	style="success">
+</clay-sticker>
+
+<clay-sticker
+	label="WW"
+	shape="circle"
+	size="xl"
+	style="danger">
+</clay-sticker>
 ```
 ```text/html
 <span class="rounded-circle sticker sticker-primary sticker-sm">JB</span>

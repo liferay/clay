@@ -90,6 +90,36 @@ weight: 100
 	{param label: 'Indeterminate disabled' /}
 {/call}
 ```
+```webcomponents
+<clay-checkbox label="Unchecked"></clay-checkbox>
+
+<clay-checkbox
+	checked="true"
+	label="Checked">
+</clay-checkbox>
+
+<clay-checkbox
+	indeterminate="true"
+	label="Indeterminate">
+</clay-checkbox>
+
+<clay-checkbox
+	disable="true"
+	label="Unchecked disabled">
+</clay-checkbox>
+
+<clay-checkbox
+	hecked="true"
+	disabled="true"
+	label="Checked disabled">
+</clay-checkbox>
+
+<clay-checkbox
+	disabled="true"
+	indeterminate="true"
+	label="Indeterminate disabled">
+</clay-checkbox>
+```
 ```text/html
 <div class="custom-control custom-checkbox">
 	<label>
@@ -178,6 +208,20 @@ weight: 100
 	{param name: 'radio' /}
 {/call}
 ```
+```webcomponents
+<clay-radio
+	checked="true"
+	id="radio1"
+	label="Toggle this custom radio"
+	name="radio">
+</clay-radio>
+
+<clay-radio
+	id="radio2"
+	label="Or toggle this other custom radio"
+	name="radio">
+</clay-radio>
+```
 ```text/html
 <div class="custom-control custom-radio">
 	<label>
@@ -233,6 +277,20 @@ weight: 100
 	{param label: 'Or toggle this other custom radio' /}
 	{param name: 'radio-stacked' /}
 {/call}
+```
+```webcomponents
+<clay-radio
+	disabled="true"
+	id="radioStacked3"
+	label="Toggle this custom radio"
+	name="radio-stacked">
+</clay-radio>
+
+<clay-radio
+	id="radioStacked4"
+	label="Or toggle this other custom radio"
+	name="radio-stacked">
+</clay-radio>
 ```
 ```text/html
 <div class="custom-control custom-control-inline custom-radio">

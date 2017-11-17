@@ -23,8 +23,13 @@ weight: 100
 
 {call ClayIcon.render}
 	{param spritemap: 'path/to/icons.svg' /}
-	{param symbol: 'add-column' /}
+	{param symbol: 'add-cell' /}
 {/call}
+```
+```webcomponents
+<clay-icon spritemap="path/to/icons.svg" symbol="add-column"></clay-icon>
+
+<clay-icon spritemap="path/to/icons.svg" symbol="add-cell"></clay-icon>
 ```
 ```text/html
 <svg class="lexicon-icon">
