@@ -1,13 +1,13 @@
 .sheet {
-	background-color: $form-container-bg;
-	border-color: $form-container-border-color;
-	border-style: $form-container-border-style;
-	border-width: $form-container-border-width;
+	background-color: $sheet-bg;
+	border-color: $sheet-border-color;
+	border-style: $sheet-border-style;
+	border-width: $sheet-border-width;
 
-	@include border-radius($form-container-border-radius);
+	@include border-radius($sheet-border-radius);
 
-	padding-bottom: $form-container-padding-y;
-	padding-left:  $form-container-padding-x;
-	padding-right:  $form-container-padding-x;
-	padding-top: $form-container-padding-y;
+	padding-bottom: $sheet-padding-y;
+	padding-left:  $sheet-padding-x;
+	padding-right:  $sheet-padding-x;
+	padding-top: $sheet-padding-y;
 }
