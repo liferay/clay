@@ -213,20 +213,20 @@
 
 .sheet {
 	> .panel-group-fluid {
-		margin-left: -$form-container-padding-x;
-		margin-right: -$form-container-padding-x;
+		margin-left: -$sheet-padding-x;
+		margin-right: -$sheet-padding-x;
 	}
 
 	> .panel-group-fluid-first {
-		margin-left: -$form-container-padding-x;
-		margin-right: -$form-container-padding-x;
-		margin-top: -$form-container-padding-y;
+		margin-left: -$sheet-padding-x;
+		margin-right: -$sheet-padding-x;
+		margin-top: -$sheet-padding-y;
 	}
 
 	> .panel-group-fluid-last {
-		margin-bottom: -$form-container-padding-y;
-		margin-left: -$form-container-padding-x;
-		margin-right: -$form-container-padding-x;
+		margin-bottom: -$sheet-padding-y;
+		margin-left: -$sheet-padding-x;
+		margin-right: -$sheet-padding-x;
 	}
 }
 
