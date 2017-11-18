@@ -1,76 +1,101 @@
 ---
 title: Alerts
-description: Components
+description: "Alerts are used to capture the attention of the user in an intrusive way. Sometimes just to say that something went right, others to say that something needs to be reviewed."
 layout: "guide"
+pattern: "alerts"
 weight: 100
 ---
 
-<article id="alert-notifications-fixed">
+### Description
 
-### Alert Notifications Fixed
+{$page.description}
 
-> A fixed positioned container for placing alerts on the top right corner of the page. This component can generally be placed anywhere on the page.
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<div class="alert-notifications alert-notifications-fixed">
-	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
-		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
-			</svg>
-		</span>
-		<strong class="lead">Meeting Rescheduled:</strong>
-		<div>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</div>
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
-			</svg>
-		</button>
-	</div>
-</div>
+<article id="clay-alert-toast">
 
-```text/html
-<div class="alert-notifications alert-notifications-fixed">
-	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
-		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
-			</svg>
-		</span>
-		<strong class="lead">Meeting Rescheduled:</strong>
-		<div>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</div>
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
-			</svg>
-		</button>
-	</div>
-</div>
-```
+### TOAST
 
-</article>
-
-
-<article id="alert-notifications-absolute">
-
-### Alert Notifications Absolute
-
-> An absolute positioned container for placing alerts on the top right corner relative to `.alert-container`. Use this to create sticky positioned alerts with javascript, modifying the CSS property `transform: translateY();` or `margin-top` when `scrollY` reaches a specific threshold. This component should generally be placed at the top of the page for sticky alerts aligned at the top.
+> This type of alert is specific for toast messages. This type of messages appear on the top right corner of the screen. The maximum width of a toast message is 360px and the height can vary depending on the number of rows. It always have a close action.
 
 <div id="claySiteAlertsNotificationsSpacer">
-	<div class="alert-container container">
-		<div class="alert-notifications alert-notifications-absolute">
-			<div class="alert alert-dismissible alert-danger" role="alert">
-				<span class="alert-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-						<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
-					</svg>
-				</span>
-				<strong class="lead">Danger:</strong> Something is not right.
-				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
-					</svg>
-				</button>
+	<div class="row">
+		<div class="col-6">
+			<div class="alert-container container">
+				<div class="alert-notifications alert-notifications-absolute">
+					<div class="alert alert-dismissible alert-danger" role="alert">
+						<span class="alert-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+								<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+							</svg>
+						</span>
+						<strong class="lead">Error:</strong> This is an error message
+						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="alert-container container">
+				<div class="alert-notifications alert-notifications-absolute">
+					<div class="alert alert-dismissible alert-info" role="alert">
+						<span class="alert-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+							</svg>
+						</span>
+						<strong class="lead">Info:</strong> This is an info message.
+						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<div class="alert-container container">
+				<div class="alert-notifications alert-notifications-absolute">
+					<div class="alert alert-dismissible alert-success" role="alert">
+						<span class="alert-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+								<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+							</svg>
+						</span>
+						<strong class="lead">Success:</strong> This is a success message
+						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="alert-container container">
+				<div class="alert-notifications alert-notifications-absolute">
+					<div class="alert alert-dismissible alert-warning" role="alert">
+						<span class="alert-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+								<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+							</svg>
+						</span>
+						<strong class="lead">Warning:</strong> This is a warning message.
+						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -80,17 +105,7 @@ weight: 100
 <div class="alert-container container">
 	<div class="alert-notifications alert-notifications-absolute">
 		<div class="alert alert-dismissible alert-danger" role="alert">
-			<span class="alert-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-					<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
-				</svg>
-			</span>
-			<strong class="lead">Danger:</strong> Something is not right.
-			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/vendor/lexicon/icons.svg#times" />
-				</svg>
-			</button>
+			...
 		</div>
 	</div>
 </div>
@@ -98,121 +113,28 @@ weight: 100
 
 </article>
 
+<article id="clay-alert-embedded">
 
-<article id="alerts-with-embedded-links">
+### EMBEDDED
 
-### Alerts with Embedded Links
+> Embedded alerts are thought to be used inside context as forms. Usually you will only need to use the information one. Its width depends on the container with you use it, always respecting the container margins to the content. The close action is not of mandatory use.
 
-> Use `.lead` inside of an alert to make the beginning of your message stand out.
-
-> Use `.alert-link` to style a link inside your alert.
-
-<div class="alert alert-success" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Success:</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
-</div>
-<div class="alert alert-info" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
-		</svg>
-	</span>
-	<strong class="lead">Info:</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
-</div>
-<div class="alert alert-warning" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
-</div>
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
 		</svg>
 	</span>
-	<strong class="lead">Danger:</strong> <a href="#1" class="alert-link">Something</a> is not right.
+	<strong class="lead">Error:</strong> This is an error message
 </div>
 
-```soy
-{call ClayAlert.render}
-	{param message kind="html"}
-		You just read the <a href="#">alert message</a> successfully.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'success' /}
-	{param title: 'Success' /}
-{/param}
-
-{call ClayAlert.render}
-	{param message kind="html"}
-		This <a href="#">alert</a> needs your attention.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param title: 'Info' /}
-{/param}
-
-{call ClayAlert.render}
-	{param message kind="html"}
-		This alert is a <a href="#">warning message</a>.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'warning' /}
-	{param title: 'Warning' /}
-{/param}
-
-{call ClayAlert.render}
-	{param message kind="html"}
-		Something</a> is not right.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'danger' /}
-	{param title: 'Danger' /}
-{/param}
-```
-```webcomponents
-<clay-alert
-	style="success"
-	message='You just read the <a href="#">alert message</a> successfully.' spritemap="/vendor/lexicon/icons.svg"
-	title="Success">
-</clay-alert>
-
-<clay-alert
-	message="This <a href='#'>alert</a> needs your attention." spritemap="/vendor/lexicon/icons.svg"
-	title="Info">
-</clay-alert>
-
-<clay-alert
-	style="warning"
-	message='This alert is a <a href="#">warning message</a>.' spritemap="/vendor/lexicon/icons.svg"
-	title="Warning">
-</clay-alert>
-
-<clay-alert
-	style="danger"
-	message='Something</a> is not right.'
-	spritemap="/vendor/lexicon/icons.svg"
-	title="Danger">
-</clay-alert>
-```
-```text/html
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
 			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
 		</svg>
 	</span>
-	<strong class="lead">Success:</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
+	<strong class="lead">Error:</strong> This is a success message
 </div>
 
 <div class="alert alert-info" role="alert">
@@ -221,7 +143,7 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
 		</svg>
 	</span>
-	<strong class="lead">Info:</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
+	<strong class="lead">Error:</strong> This is an info message
 </div>
 
 <div class="alert alert-warning" role="alert">
@@ -230,222 +152,124 @@ weight: 100
 			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
 		</svg>
 	</span>
-	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
-</div>
-
-<div class="alert alert-danger" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Danger:</strong> <a href="#1" class="alert-link">Something</a> is not right.
-</div>
-```
-
-</article>
-
-
-<article id="dismissible-alerts">
-
-### Dismissible Alerts
-
-<div class="alert alert-dismissible alert-success" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Success:</strong> You just read the alert message successfully.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
-		</svg>
-	</button>
-</div>
-<div class="alert alert-dismissible alert-info" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
-		</svg>
-	</span>
-	<strong class="lead">Info:</strong> This alert needs your attention.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
-		</svg>
-	</button>
-</div>
-<div class="alert alert-dismissible alert-warning" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Warning:</strong> This alert is a warning message.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
-		</svg>
-	</button>
-</div>
-<div class="alert alert-dismissible alert-danger" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Danger:</strong> Something is not right.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
-		</svg>
-	</button>
+	<strong class="lead">Error:</strong> This is a warning message
 </div>
 
 ```soy
 {call ClayAlert.render}
-	{param closeable: true /}
+	{param message: This is an error message /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Error' /}
+{/param}
 
-	{param message kind="html"}
-		You just read the <a href="#">alert message</a> successfully.
-	{/param}
-
+{call ClayAlert.render}
+	{param message: This is a success message /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
 {/param}
 
 {call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		This <a href="#">alert</a> needs your attention.
-	{/param}
-
+	{param message: This is an info message /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param title: 'Info' /}
 {/param}
 
 {call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		This alert is a <a href="#">warning message</a>.
-	{/param}
-
+	{param message: This is a warning message /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
 {/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		Something</a> is not right.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'danger' /}
-	{param title: 'Danger' /}
-{/param}
 ```
-```webcomponents
+```text/html
 <clay-alert
-	closeable="true"
+	style="danger"
+	message='This is an error message'
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Error">
+</clay-alert>
+
+<clay-alert
 	style="success"
-	message='You just read the alert message successfully.' spritemap="/vendor/lexicon/icons.svg"
+	message='This is a success message'
+	spritemap="/vendor/lexicon/icons.svg"
 	title="Success">
 </clay-alert>
 
 <clay-alert
-	closeable="true"
-	message="This alert needs your attention."
+	message="This is an info message"
 	spritemap="/vendor/lexicon/icons.svg"
 	title="Info">
 </clay-alert>
 
 <clay-alert
-	closeable="true"
 	style="warning"
-	message='This alert is a warning message.'
+	message='This alert is a warning message'
 	spritemap="/vendor/lexicon/icons.svg"
 	title="Warning">
 </clay-alert>
-
-<clay-alert
-	closeable="true"
-	style="danger"
-	message='Something is not right.'
-	spritemap="/vendor/lexicon/icons.svg"
-	title="Danger">
-</clay-alert>
 ```
 ```text/html
-<div class="alert alert-dismissible alert-success" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Success:</strong> You just read the alert message successfully.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
-		</svg>
-	</button>
-</div>
-
-<div class="alert alert-dismissible alert-info" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
-		</svg>
-	</span>
-	<strong class="lead">Info:</strong> This alert needs your attention.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
-		</svg>
-	</button>
-</div>
-
-<div class="alert alert-dismissible alert-warning" role="alert">
-	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
-		</svg>
-	</span>
-	<strong class="lead">Warning:</strong> This alert is a warning message.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
-		</svg>
-	</button>
-</div>
-
-<div class="alert alert-dismissible alert-danger" role="alert">
+<div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
 		</svg>
 	</span>
-	<strong class="lead">Danger:</strong> Something is not right.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
+	<strong class="lead">Error:</strong>This is an error message
+</div>
+
+<div class="alert alert-success" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
 		</svg>
-	</button>
+	</span>
+	<strong class="lead">Error:</strong>This is a success message
+</div>
+
+<div class="alert alert-info" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+		</svg>
+	</span>
+	<strong class="lead">Error:</strong>This is an info message
+</div>
+
+<div class="alert alert-warning" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Error:</strong>This is a warning message
 </div>
 ```
 
-</article>
+### STRIPE
 
+<article id="clay-alert-stripe">
 
-<article id="alert-fluid">
+> Stripe alerts are always placed below the last navigation element, either the header or the navigation bar. This alert appears usually on "Save" action communicating the status of the action once received from the server. The close action is mandatory in this alert type. Its width is always full container width and pushes all the content below it.
 
-### Alert Fluid
+<div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
+	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+			</svg>
+		</span>
+		<strong class="lead">Danger</strong> This is an error message
+		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+			</svg>
+		</button>
+	</div>
+</div>
 
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
@@ -454,7 +278,7 @@ weight: 100
 				<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
 			</svg>
 		</span>
-		<strong class="lead">Success</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
+		<strong class="lead">Success</strong> This is a success message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 				<use xlink:href="/vendor/lexicon/icons.svg#times" />
@@ -462,6 +286,7 @@ weight: 100
 		</button>
 	</div>
 </div>
+
 <div class="alert alert-dismissible alert-fluid alert-info" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
@@ -469,7 +294,7 @@ weight: 100
 				<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
 			</svg>
 		</span>
-		<strong class="lead">Info</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
+		<strong class="lead">Info</strong> This is an info message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 				<use xlink:href="/vendor/lexicon/icons.svg#times" />
@@ -477,6 +302,7 @@ weight: 100
 		</button>
 	</div>
 </div>
+
 <div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
@@ -484,22 +310,7 @@ weight: 100
 				<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
 			</svg>
 		</span>
-		<strong class="lead">Warning</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
-			</svg>
-		</button>
-	</div>
-</div>
-<div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
-	<div class="container">
-		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
-			</svg>
-		</span>
-		<strong class="lead">Danger</strong> <a href="#1" class="alert-link">Something</a> is not right.
+		<strong class="lead">Warning</strong> This is a warning message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 				<use xlink:href="/vendor/lexicon/icons.svg#times" />
@@ -511,11 +322,16 @@ weight: 100
 ```soy
 {call ClayAlert.render}
 	{param closeable: true /}
+	{param message: 'This is an error message' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'danger' /}
+	{param title: 'Error' /}
+	{param type: 'fluid' /}
+{/param}
 
-	{param message kind="html"}
-		You just read the <a href="#">alert message</a> successfully.
-	{/param}
-
+{call ClayAlert.render}
+	{param closeable: true /}
+	{param message: 'This is a success message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
@@ -524,11 +340,7 @@ weight: 100
 
 {call ClayAlert.render}
 	{param closeable: true /}
-
-	{param message kind="html"}
-		This <a href="#">alert</a> needs your attention.
-	{/param}
-
+	{param message: 'This is an info message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param title: 'Info' /}
 	{param type: 'fluid' /}
@@ -536,42 +348,36 @@ weight: 100
 
 {call ClayAlert.render}
 	{param closeable: true /}
-
-	{param message kind="html"}
-		This alert is a <a href="#">warning message</a>.
-	{/param}
-
+	{param message: 'This is a warning message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
 	{param type: 'fluid' /}
 {/param}
-
-{call ClayAlert.render}
-	{param closeable: true /}
-
-	{param message kind="html"}
-		Something</a> is not right.
-	{/param}
-
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param style: 'danger' /}
-	{param title: 'Danger' /}
-	{param type: 'fluid' /}
-{/param}
 ```
-```webcomponents
+```text/html
+<clay-alert
+	closeable="true"
+	style="danger"
+	message='This is an error message'
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Error"
+	type="fluid">
+</clay-alert>
+
 <clay-alert
 	closeable="true"
 	style="success"
-	message='You just read the <a href="#">alert message</a> successfully.' spritemap="/vendor/lexicon/icons.svg"
+	message='This is a success message'
+	spritemap="/vendor/lexicon/icons.svg"
 	title="Success"
 	type="fluid"
 ></clay-alert>
 
 <clay-alert
 	closeable="true"
-	message="This <a href='#'>alert</a> needs your attention." spritemap="/vendor/lexicon/icons.svg"
+	message='This is an info message'
+	spritemap="/vendor/lexicon/icons.svg"
 	title="Info"
 	type="fluid">
 </clay-alert>
@@ -579,21 +385,29 @@ weight: 100
 <clay-alert
 	closeable="true"
 	style="warning"
-	message='This alert is a <a href="#">warning message</a>.' spritemap="/vendor/lexicon/icons.svg"
-	title="Warning"
-	type="fluid">
-</clay-alert>
-
-<clay-alert
-	closeable="true"
-	style="danger"
-	message='Something</a> is not right.'
+	message='This is a warning message'
 	spritemap="/vendor/lexicon/icons.svg"
-	title="Danger"
+	title="Warning"
 	type="fluid">
 </clay-alert>
 ```
 ```text/html
+<div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
+	<div class="container">
+		<span class="alert-indicator">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+			</svg>
+		</span>
+		<strong class="lead">Danger</strong> This is an error message
+		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+			</svg>
+		</button>
+	</div>
+</div>
+
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
@@ -601,7 +415,7 @@ weight: 100
 				<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
 			</svg>
 		</span>
-		<strong class="lead">Success</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
+		<strong class="lead">Success</strong> This is a success message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 				<use xlink:href="/vendor/lexicon/icons.svg#times" />
@@ -617,7 +431,7 @@ weight: 100
 				<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
 			</svg>
 		</span>
-		<strong class="lead">Info</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
+		<strong class="lead">Info</strong> This is an info message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 				<use xlink:href="/vendor/lexicon/icons.svg#times" />
@@ -633,7 +447,7 @@ weight: 100
 				<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
 			</svg>
 		</span>
-		<strong class="lead">Warning</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
+		<strong class="lead">Warning</strong> This is a warning message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 				<use xlink:href="/vendor/lexicon/icons.svg#times" />
@@ -641,20 +455,124 @@ weight: 100
 		</button>
 	</div>
 </div>
+```
 
-<div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
-	<div class="container">
-		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
-			</svg>
-		</span>
-		<strong class="lead">Danger</strong> <a href="#1" class="alert-link">Something</a> is not right.
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
-			</svg>
-		</button>
+</article>
+
+### ADDITIONAL OPTIONS
+
+<article id="clay-alert-mixed-html-content">
+
+#### Mixed HTML Content
+
+> All alerts accept html as their content. You can use the following modifiers:
+> - `.lead` inside of an alert to make the beginning of your message stand out
+> - `.alert-link` to style a link inside your alert
+
+<div class="alert alert-warning" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
+</div>
+
+```soy
+{call ClayAlert.render}
+	{param message kind="html"}
+		This alert is a <a href="#">warning message</a>.
+	{/param}
+
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'warning' /}
+	{param title: 'Warning' /}
+{/param}
+```
+```text/html
+<clay-alert
+	style="warning"
+	message='This alert is a <a href="#">warning message</a>.' spritemap="/vendor/lexicon/icons.svg"
+	title="Warning">
+</clay-alert>
+```
+```text/html
+<div class="alert alert-warning" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
+</div>
+```
+
+</article>
+
+<article id="dismissible-alerts">
+
+#### Dismissible Alerts
+
+<div class="alert alert-dismissible alert-success" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Success:</strong> This is a success closeable alert
+	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
+		</svg>
+	</button>
+</div>
+
+```soy
+{call ClayAlert.render}
+	{param closeable: true /}
+	{param message: This is a success closeable alert /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'success' /}
+	{param title: 'Success' /}
+{/param}
+```
+```text/html
+<clay-alert
+	closeable="true"
+	style="success"
+	message='This is a success closeable alert'
+	spritemap="/vendor/lexicon/icons.svg"
+	title="Success">
+</clay-alert>
+```
+```text/html
+<div class="alert alert-dismissible alert-success" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Success:</strong> This is a success closeable alert
+	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
+		</svg>
+	</button>
+</div>
+```
+
+</article>
+
+<article id="alert-notifications-fixed">
+
+#### Fixed Notifications
+
+> A fixed positioned container for placing alerts on the top right corner of the page. This component can generally be placed anywhere on the page.
+
+```text/html
+<div class="alert-notifications alert-notifications-fixed">
+	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
+		...
 	</div>
 </div>
 ```

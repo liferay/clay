@@ -16,14 +16,34 @@
 		> h3 {
 			font-size: $base-size * 0.7;
 			font-weight: 700;
-			margin-bottom: $base-size * 2.66;
-			padding-top: $base-size * 2;
+			margin-bottom: $base-size * 1.2;
+			padding-top: $base-size * 1.5;
+			text-transform: uppercase;
+		}
+
+		> h4 {
+			font-weight: 600;
+			margin: $base-size * 1.2 0 $base-size * 1.1 0;
+			padding-top: $base-size * 1.1;
 			text-transform: uppercase;
 		}
 
 		> p {
 			margin-bottom: $base-size * 2;
 		}
+	}
+
+	blockquote {
+		border-left: 0.25em solid #dfe2e5;
+		color: #6a737d;
+		margin-bottom: 2em;
+		padding: 0 1em;
+	}
+
+	table {
+		@extend .table;
+		@extend .table-sm;
+		@extend .table-list;
 	}
 }
 

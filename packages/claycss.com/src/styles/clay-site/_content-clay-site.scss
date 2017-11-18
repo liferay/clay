@@ -5,7 +5,13 @@
 // Alerts
 
 #claySiteAlertsNotificationsSpacer {
-	padding-bottom: 175px;
+	height: 210px;
+	margin-top: -4.75rem;
+
+	.alert-container.container {
+		height: 56px;
+		padding: 36px 0;
+	}
 }
 
 // Sticker
