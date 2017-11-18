@@ -52,8 +52,18 @@
 	}
 
 	&:not([disabled]):not(.disabled):active,
-	&:not([disabled]):not(.disabled).active,
 	.show > &.dropdown-toggle {
+		background-color: $active-bg;
+		border-color: $active-border-color;
+		box-shadow: $focus-box-shadow;
+		color: $active-color;
+	}
+
+	&:not([disabled]):not(.disabled).active:focus {
+		box-shadow: $focus-box-shadow;
+	}
+
+	&:not([disabled]):not(.disabled).active {
 		background-color: $active-bg;
 		border-color: $active-border-color;
 		box-shadow: $active-box-shadow;
