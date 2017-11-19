@@ -249,6 +249,8 @@ weight: 100
 </div>
 ```
 
+</article>
+
 ### STRIPE
 
 <article id="clay-alert-stripe">
@@ -509,7 +511,7 @@ weight: 100
 
 </article>
 
-<article id="dismissible-alerts">
+<article id="clay-alert-dismissible">
 
 #### Dismissible Alerts
 
@@ -563,7 +565,7 @@ weight: 100
 
 </article>
 
-<article id="alert-notifications-fixed">
+<article id="clay-alert-notifications-fixed">
 
 #### Fixed Notifications
 

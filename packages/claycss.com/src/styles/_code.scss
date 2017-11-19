@@ -140,3 +140,18 @@
 .nav.nav-tabs.nav-code-tabs ~ .code-container {
 	margin: 0 0 calc(1rem * 1.5);
 }
+
+#clay-alert-embedded, #clay-alert-stripe, #clay-alert-mixed-html-content, #clay-alert-dismissible,
+#clay-badges {
+	.nav.nav-tabs.nav-code-tabs  {
+		li:nth-of-type(2) > button {
+			margin-right: -20px;
+			visibility: hidden;
+
+			&:before {
+				content: 'WEB COMPONENTS';
+				visibility: visible;
+			}
+		}
+	}
+}
