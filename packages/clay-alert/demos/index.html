@@ -94,11 +94,9 @@
 		<div class="col">
 			<h4>Toast Alerts</h4>
 
-			<div class="d-table">
-				<div id="toast-alert-info" class="align-top card-body d-inline-block"></div>
-				<div id="toast-alert-success" class="align-top d-inline-block card-body"></div>
-				<div id="toast-alert-warning" class="align-top d-inline-block card-body"></div>
-				<div id="toast-alert-danger" class="align-top d-inline-block card-body"></div>
+			<p>They are the alerts on the top right corner of the screen.</p>
+			
+			<div class="alert-notifications alert-notifications-fixed" id="toast-alerts">
 			</div>
 		</div>
 	</div>
@@ -352,7 +350,7 @@
 				title: 'Meeting Rescheduled',
 				type: 'toast',
 			},
-			'#toast-alert-info'
+			'#toast-alerts'
 		);
 
 		new metal.ClayAlert(
@@ -364,7 +362,7 @@
 				title: 'Meeting Rescheduled',
 				type: 'toast',
 			},
-			'#toast-alert-success'
+			'#toast-alerts'
 		);
 
 		new metal.ClayAlert(
@@ -375,7 +373,7 @@
 				title: 'Warning:',
 				type: 'toast',
 			},
-			'#toast-alert-warning'
+			'#toast-alerts'
 		);
 
 		new metal.ClayAlert(
@@ -386,7 +384,7 @@
 				title: 'Danger:',
 				type: 'toast',
 			},
-			'#toast-alert-danger'
+			'#toast-alerts'
 		);
 
 	</script>
