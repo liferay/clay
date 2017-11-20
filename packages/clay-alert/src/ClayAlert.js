@@ -15,9 +15,13 @@ class ClayAlert extends Component {
 	 * @inheritDoc
 	 */
 	rendered() {
-		if (this.autoClose && (this.type === 'stripe' || this.type === 'toast')) {
+		if (
+			this.autoClose &&
+			(this.type === 'stripe' || this.type === 'toast')
+		) {
 			if (this.delayTime_ === undefined || this.delayTime_ > 0) {
-				this.delayTime_ = (this.element.querySelector('a') ? 10 : 5) * 1000;
+				this.delayTime_ =
+					(this.element.querySelector('a') ? 10 : 5) * 1000;
 			}
 
 			this.resumeTimeout_();
@@ -167,9 +171,9 @@ ClayAlert.STATE = {
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?string}
-	 * @default undefined
+	 * @default embedded
 	 */
-	type: Config.oneOf(['stripe', 'toast']),
+	type: Config.oneOf(['embedded', 'stripe', 'toast']).value('embedded'),
 
 	/**
 	 * The title of alert
