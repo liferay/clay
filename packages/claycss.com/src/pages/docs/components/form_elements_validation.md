@@ -11,13 +11,13 @@ weight: 100
 
 <div class="sheet">
 	<div class="form-group">
-		<label for="inputSuccess1">
+		<label for="inputNormal1">
 			normal{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="successInput1" type="text">
+		<input class="form-control" id="inputNormal1" type="text">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
