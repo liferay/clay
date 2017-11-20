@@ -36,7 +36,7 @@ weight: 100
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="successInput1" type="text">
+		<input class="form-control" id="inputSuccess1" type="text">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
