@@ -102,15 +102,15 @@ weight: 100
 </nav>
 
 ```text/html
-<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
 	<div class="container">
-		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
+		<a aria-controls="navigationBarCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse00" role="button">
 			<span class="navbar-text-truncate">App Section 2</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
 		</a>
-		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
+		<div class="collapse navbar-collapse" id="navigationBarCollapse00">
 			<div class="container">
 				<ul class="navbar-nav">
 					<li class="nav-item">
