@@ -14,7 +14,7 @@ weight: 100
 <div class="sheet">
 	<h4 class="section-header">Section Header</h4>
 	<div class="form-group">
-		<label>
+		<label for="basicInputTypeText">
 			Text
 			<span class="reference-mark">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
@@ -22,67 +22,39 @@ weight: 100
 				</svg>
 			</span>
 		</label>
-		<input class="form-control" placeholder="Placeholder" type="text">
+		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
 	</div>
 	<div class="form-group">
-		<label>Password</label>
-		<input class="form-control" placeholder="Enter password" type="password">
+		<label for="basicInputTypePassword">Password</label>
+		<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="password">
 	</div>
 	<div class="form-group">
-		<label>Textarea</label>
-		<textarea class="form-control" placeholder="Placeholder"></textarea>
+		<label for="basicInputTypeTextarea">Textarea</label>
+		<textarea class="form-control" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
 	</div>
 	<div class="form-group">
-		<label>Url</label>
-		<input class="form-control" type="url">
+		<label for="basicInputTypeUrl">Url</label>
+		<input class="form-control" id="basicInputTypeUrl" type="url">
 	</div>
 	<div class="form-group">
-		<label>Tel</label>
-		<input class="form-control" type="tel">
+		<label for="basicInputTypeTel">Tel</label>
+		<input class="form-control" id="basicInputTypeTel" type="tel">
 	</div>
 	<div class="form-group">
-		<label>Email</label>
-		<input class="form-control" type="email">
+		<label for="basicInputTypeEmail">Email</label>
+		<input class="form-control" id="basicInputTypeEmail" type="email">
 	</div>
 	<div class="form-group">
-		<label>Search</label>
-		<input class="form-control" type="search">
+		<label for="basicInputTypeSearch">Search</label>
+		<input class="form-control" id="basicInputTypeSearch" type="search">
 	</div>
 	<div class="form-group">
-		<label>Number</label>
-		<input class="form-control" type="number">
+		<label for="basicInputTypeNumber">Number</label>
+		<input class="form-control" id="basicInputTypeNumber" type="number">
 	</div>
 	<div class="form-group">
-		<label>Datetime</label>
-		<input class="form-control" type="datetime">
-	</div>
-	<div class="form-group">
-		<label>Datetime-local</label>
-		<input class="form-control" type="datetime-local">
-	</div>
-	<div class="form-group">
-		<label>Date</label>
-		<input class="form-control" type="date">
-	</div>
-	<div class="form-group">
-		<label>Time</label>
-		<input class="form-control" type="time">
-	</div>
-	<div class="form-group">
-		<label>Week</label>
-		<input class="form-control" type="week">
-	</div>
-	<div class="form-group">
-		<label>Month</label>
-		<input class="form-control" type="month">
-	</div>
-	<div class="form-group">
-		<label>Color</label>
-		<input class="form-control" type="color">
-	</div>
-	<div class="form-group">
-		<label>Range</label>
-		<input class="form-control" type="range">
+		<label for="basicInputTypeRange">Range</label>
+		<input class="form-control" id="basicInputTypeRange" type="range">
 	</div>
 </div>
 
