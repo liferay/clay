@@ -84,7 +84,7 @@ weight: 100
 				</div>
 			</div>
 		</li>
-		<li class="multi-step-item multi-step-item-expand">
+		<li class="disabled multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
 			<div class="multi-step-indicator">
 				<div class="multi-step-indicator-label">Step 09</div>
@@ -176,7 +176,7 @@ weight: 100
 			</div>
 		</div>
 	</li>
-	<li class="multi-step-item multi-step-item-expand">
+	<li class="disabled multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 09</div>
