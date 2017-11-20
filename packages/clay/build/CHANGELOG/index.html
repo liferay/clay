@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.2</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -209,7 +209,79 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-beta-2-november-10-2017"><a class="heading-anchor" href="#v2-0-0-beta-2-november-10-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.2 November 10, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-beta-3-november-20-2017"><a class="heading-anchor" href="#v2-0-0-beta-3-november-20-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.3 November 20, 2017</h3>
+<ul>
+<li>Breaking: Rename <code>$form-container-bg</code>, <code>$form-container-border-color</code>, <code>$form-container-border-style</code>, <code>$form-container-border-width</code>, <code>$form-container-border-radius</code>, <code>$form-container-padding-x</code>, <code>$form-container-padding-y</code> to <code>$sheet-bg</code>, <code>$sheet-border-color</code>, <code>$sheet-border-style</code>, <code>$sheet-border-width</code>, <code>$sheet-border-radius</code>, <code>$sheet-padding-x</code>, <code>$sheet-padding-y</code></li>
+<li>Breaking: Rename <code>.form-container</code> to <code>.sheet</code></li>
+<li>Breaking: Custom Control rename <code>$custom-control-description-margin-left</code> to <code>$custom-control-description-padding-left</code> and don&#x2019;t use <code>$custom-control-gutter</code> for spacing</li>
+<li>New: Clay Button Variant mixin added option to configure <code>active-box-shadow</code> on button variant and set Atlas button variant active box shadow to none</li>
+<li>New: Forms added option to configure <code>$input-readonly-focus-bg</code>, <code>$input-readonly-focus-border-color</code>, <code>$input-readonly-focus-color</code></li>
+<li>New: Form added option to customize <code>$input-select-cursor</code> and set cursor to pointer</li>
+<li>New: Input Group added option to configure <code>$input-group-secondary-addon-color</code></li>
+<li>New: Form added option to configure <code>$input-file-cursor</code> for <code>.form-control-file</code> and set cursor to pointer</li>
+<li>New: Form Check added option to configure <code>$form-check-input-cursor</code>, <code>$form-check-label-cursor</code> and set cursor to pointer</li>
+<li>New: Form added option to configure <code>$input-label-for-cursor</code> (labels with <code>for</code> attribute) and set cursor to pointer</li>
+<li>New: Buttons added option to configure <code>$btn-cursor</code> and change cursor to pointer</li>
+<li>New: Globals add option to configure <code>$link-cursor</code></li>
+<li>New: Toggle Switch add option to configure <code>$toggle-switch-disabled-cursor</code>, <code>$toggle-switch-disabled-opacity</code></li>
+<li>New: Multi Step Nav added option to configure <code>$multi-step-icon-disabled-bg</code>, <code>$multi-step-icon-disabled-bg-image</code>, <code>$multi-step-icon-disabled-bg-position</code>, <code>$multi-step-icon-disabled-bg-size</code>, <code>$multi-step-icon-disabled-color</code>, <code>$multi-step-icon-disabled-cursor</code>, <code>$multi-step-divider-disabled-bg</code>, <code>$multi-step-title-disabled-color</code>, <code>$multi-step-indicator-label-disabled-color</code></li>
+<li>New: Pagination added option to configure <code>$pagination-disabled-cursor</code>, <code>$pagination-disabled-pointer-events</code> and set disabled cursor to <code>not-allowed</code></li>
+<li>New: Nav added option to configure <code>$nav-link-disabled-cursor</code> and set disabled cursor to <code>not-allowed</code></li>
+<li>New: Forms added option to configure <code>$input-disabled-cursor</code>, <code>$input-label-disabled-cursor</code> and set disabled cursor to be <code>not-allowed</code></li>
+<li>New: Form Check added option to configure <code>$form-check-input-disabled-cursor</code>, <code>$form-check-description-disabled-cursor</code>, set disabled <code>.form-check</code> cursor to be not-allowed, and set <code>$input-label-disabled-color</code></li>
+<li>New: Form Check added option to configure <code>$form-check-description-padding-left</code> and match <code>.form-check</code> to behave like <code>.custom-control</code></li>
+<li>New: Custom Control added option to configure <code>$custom-control-indicator-disabled-cursor</code>, <code>$custom-control-description-disabled-cursor</code> and set disabled cursor to not-allowed</li>
+<li>New: Dropdown added <code>$dropdown-item-disabled-cursor</code> and change disabled cursor to <code>not-allowed</code></li>
+<li>New: Button added option to configure <code>$btn-disabled-cursor</code> and change disabled cursor to <code>not-allowed</code></li>
+<li>New: Globals added <code>$disabled-cursor</code></li>
+<li>New: Lexicon Icon added Check Square</li>
+<li>New: Panel Group added <code>.panel-group-flush</code> and option to configure <code>$panel-group-flush-body-margin-bottom</code>, <code>$panel-group-flush-body-padding</code>, <code>$panel-group-flush-collapse-icon-left</code>, <code>$panel-group-flush-collapse-icon-right</code>, <code>$panel-group-flush-collapse-icon-padding-left</code>, <code>$panel-group-flush-collapse-icon-padding-right</code></li>
+<li>New: Lexicon Icons Decimal, Document, Globe, Integer, Number, Rules, Select, Separator, Textbox, Upload and update Text icon</li>
+<li>New: Icons added <code>.order-arrow-down-active</code>, <code>.order-arrow-up-active</code> and option to configure <code>$order-arrow-down-active-color</code>,  <code>$order-arrow-up-active-color</code> for styling <code>.lexicon-icon-order-arrow</code>&#x2018;s in Management Bar</li>
+<li>New: Input Group added option to configure <code>$input-group-addon-font-weight</code> and update Atlas <code>.input-group-addon</code> font-weight to be 600</li>
+<li>Update: Move <code>.form-container</code> styles and variables to _sheets.scss</li>
+<li>Update: Clay Button Variant mixin to split up <code>:active</code> and <code>.active</code> BS4 state styles are weird with button groups</li>
+<li>Update: Atlas Button variants shouldn&#x2019;t use active and hover colors when disabled</li>
+<li>Update: Button Group active and focus state z-index to prevent styles from overlapping</li>
+<li>Update: Atlas Button Variants should have same border color as background color</li>
+<li>Update: Input Group Secondary don&#x2019;t need to reset so many styles for <code>.custom-control</code> and <code>.form-check</code> after normalizing styles</li>
+<li>Update: <code>.close</code> cursor should inherit from <code>.btn</code></li>
+<li>Update: Custom Forms <code>.form-file-input</code>, <code>.custom-control-input</code>, and <code>.custom-control-indicator</code> should inherit cursor from regular form equivalent</li>
+<li>Update: Multi Step Nav <code>.multi-step-icon</code> background-color should match Lexicon&#x2019;s</li>
+<li>Update: Quick Action Item disabled cursor to <code>not-allowed</code></li>
+<li>Update: Custom Forms <code>.form-file</code> add disabled cursor <code>not-allowed</code></li>
+<li>Update: Form make checkbox and radio selector less specific</li>
+<li>Update: Single collapsible panels should properly round borders if <code>$panel-border-radius</code> is set</li>
+<li>Update: Type don&#x2019;t set <code>$section-header-collapse-icon-right</code> already set by <code>.panel-group-flush</code></li>
+<li>Update: Lexicon Icon Web Content</li>
+<li>Update: Nav Tabs BS4 fixed <code>$nav-tabs-active-border-color</code> at <a href="https://github.com/twbs/bootstrap/pull/24639">https://github.com/twbs/bootstrap/pull/24639</a>, don&#x2019;t need extra <code>.nav-tabs .nav-link.active</code> styles anymore</li>
+<li>Update: Button <code>$btn-disabled-opacity</code> was added by BS4 at <a href="https://github.com/twbs/bootstrap/pull/24680">https://github.com/twbs/bootstrap/pull/24680</a>, don&#x2019;t need the extra button styles anymore</li>
+<li>Update: Bootstrap 4 to 9a0bba9</li>
+<li>Update: Atlas Nav Tabs should be 32px tall</li>
+<li>Update: Atlas Forms <code>$input-color-placeholder</code> was renamed to <code>$input-placeholder-color</code> by BS4</li>
+<li>Site: <code>.form-container</code> was renamed to <code>.sheet</code></li>
+<li>Site: Button Group added example with active and disabled state</li>
+<li>Site: Form removed sparsly supported HTML5 input types datetime-local, date, time, week, month, color and for attribute should point to right input</li>
+<li>Site: Multi Step Nav add disabled example</li>
+<li>Site: Form Validation success input label should point to the right input</li>
+<li>Site: Forms add BS4 class <code>.form-control-file</code> for <code>input[type=&quot;file&quot;]</code></li>
+<li>Site: Form Validation normal label should point to the right input</li>
+<li>Site: Panels and Users and Organizations pages added <code>.panel-group-flush</code></li>
+<li>Site: Add <code>order-arrow-*-active</code> classes to Management Bar examples</li>
+<li>Site: Users and Organizations pages removed BS4 grid from form in panel</li>
+<li>Site: Utilities page position dropdown-menu on the right</li>
+<li>Site: Timelines remove panel-group div for collapsible panels and update aria attributes</li>
+<li>Site: Tables add role button to links that need it</li>
+<li>Site: Sidebar add role button to links that need it</li>
+<li>Site: Pagination add role button to links that need it</li>
+<li>Site: Modal add role button to links that need it and remove it from buttons</li>
+<li>Site: List Group add role button to links and buttons for dropdown-items in With Buttons demo</li>
+<li>Site: Form Elements added role button to links that function like buttons</li>
+<li>Site: Navigation Bar forgot to remove <code>navbar-secondary</code>, <code>navbar-light</code> from markup and make With Buttons examples all buttons</li>
+<li>Site: Management Bar add role button to links that function like buttons, <code>aria-haspopup=&quot;true&quot;</code> on dropdown-toggles, change links with btn class to actual buttons</li>
+<li>Site: Application Bar add role button to links with icons</li>
+</ul>
+<h3 id="v2-0-0-beta-2-november-10-2017"><a class="heading-anchor" href="#v2-0-0-beta-2-november-10-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.2 November 10, 2017</h3>
 <ul>
 <li>Breaking: Navbar removed Clay versions of <code>.navbar-light</code>, <code>.navbar-dark</code>, <code>.navbar-secondary</code>, <code>.navbar-primary</code> and corresponding Sass map variables <code>$navbar-light</code>, <code>$navbar-dark</code>, <code>$navbar-secondary</code>, <code>$navbar-primary</code></li>
 <li>Breaking: Rename <code>navbar-variant()</code> mixin to <code>clay-navbar-variant()</code></li>

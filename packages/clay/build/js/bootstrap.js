@@ -2458,6 +2458,28 @@ var bootstrap = (function (exports,$,Popper) {
 $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
 
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0-beta.2): util.js
@@ -2538,6 +2560,13 @@ var Util = function ($$$1) {
       $$$1.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
     }
   }
+
+  function escapeId(selector) {
+    // we escape IDs in case of special selectors (selector = '#myId:something')
+    // $.escapeSelector does not exist in jQuery < 3
+    selector = typeof $$$1.escapeSelector === 'function' ? $$$1.escapeSelector(selector).substr(1) : selector.replace(/(:|\.|\[|\]|,|=|@)/g, '\\$1');
+    return selector;
+  }
   /**
    * --------------------------------------------------------------------------
    * Public Util Api
@@ -2560,6 +2589,11 @@ var Util = function ($$$1) {
 
       if (!selector || selector === '#') {
         selector = element.getAttribute('href') || '';
+      } // if it's an ID
+
+
+      if (selector.charAt(0) === '#') {
+        selector = escapeId(selector);
       }
 
       try {
@@ -2598,32 +2632,6 @@ var Util = function ($$$1) {
   setTransitionEndSupport();
   return Util;
 }($);
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-var createClass = _createClass;
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
-}
-
-var inheritsLoose = _inheritsLoose;
 
 /**
  * --------------------------------------------------------------------------
@@ -2764,7 +2772,7 @@ var Alert = function ($$$1) {
       };
     };
 
-    createClass(Alert, null, [{
+    _createClass(Alert, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -2915,7 +2923,7 @@ var Button = function ($$$1) {
       });
     };
 
-    createClass(Button, null, [{
+    _createClass(Button, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -3415,7 +3423,7 @@ var Carousel = function ($$$1) {
       event.preventDefault();
     };
 
-    createClass(Carousel, null, [{
+    _createClass(Carousel, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -3774,7 +3782,7 @@ var Collapse = function ($$$1) {
       });
     };
 
-    createClass(Collapse, null, [{
+    _createClass(Collapse, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -3836,19 +3844,10 @@ var Collapse = function ($$$1) {
 
 var Dropdown = function ($$$1) {
   /**
-   * Check for Popper dependency
-   * Popper - https://popper.js.org
-   */
-  if (typeof Popper === 'undefined') {
-    throw new Error('Bootstrap dropdown require Popper.js (https://popper.js.org)');
-  }
-  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
-
-
   var NAME = 'dropdown';
   var VERSION = '4.0.0-beta.2';
   var DATA_KEY = 'bs.dropdown';
@@ -3882,6 +3881,8 @@ var Dropdown = function ($$$1) {
     DISABLED: 'disabled',
     SHOW: 'show',
     DROPUP: 'dropup',
+    DROPRIGHT: 'dropright',
+    DROPLEFT: 'dropleft',
     MENURIGHT: 'dropdown-menu-right',
     MENULEFT: 'dropdown-menu-left'
   };
@@ -3896,7 +3897,11 @@ var Dropdown = function ($$$1) {
     TOP: 'top-start',
     TOPEND: 'top-end',
     BOTTOM: 'bottom-start',
-    BOTTOMEND: 'bottom-end'
+    BOTTOMEND: 'bottom-end',
+    RIGHT: 'right-start',
+    RIGHTEND: 'right-end',
+    LEFT: 'left-start',
+    LEFTEND: 'left-end'
   };
   var Default = {
     offset: 0,
@@ -3953,20 +3958,32 @@ var Dropdown = function ($$$1) {
 
       if (showEvent.isDefaultPrevented()) {
         return;
-      }
+      } // Disable totally Popper.js for Dropdown in Navbar
 
-      var element = this._element; // for dropup with alignment we use the parent as popper container
 
-      if ($$$1(parent).hasClass(ClassName.DROPUP)) {
-        if ($$$1(this._menu).hasClass(ClassName.MENULEFT) || $$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
-          element = parent;
+      if (!this._inNavbar) {
+        /**
+         * Check for Popper dependency
+         * Popper - https://popper.js.org
+         */
+        if (typeof Popper === 'undefined') {
+          throw new Error('Bootstrap dropdown require Popper.js (https://popper.js.org)');
         }
-      }
 
-      this._popper = new Popper(element, this._menu, this._getPopperConfig()); // if this is a touch-enabled device we add extra
+        var element = this._element; // for dropup with alignment we use the parent as popper container
+
+        if ($$$1(parent).hasClass(ClassName.DROPUP)) {
+          if ($$$1(this._menu).hasClass(ClassName.MENULEFT) || $$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
+            element = parent;
+          }
+        }
+
+        this._popper = new Popper(element, this._menu, this._getPopperConfig());
+      } // if this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+
 
       if ('ontouchstart' in document.documentElement && !$$$1(parent).closest(Selector.NAVBAR_NAV).length) {
         $$$1('body').children().on('mouseover', null, $$$1.noop);
@@ -3988,9 +4005,9 @@ var Dropdown = function ($$$1) {
 
       if (this._popper !== null) {
         this._popper.destroy();
-      }
 
-      this._popper = null;
+        this._popper = null;
+      }
     };
 
     _proto.update = function update() {
@@ -4039,6 +4056,10 @@ var Dropdown = function ($$$1) {
         if ($$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
           placement = AttachmentMap.TOPEND;
         }
+      } else if ($parentDropdown.hasClass(ClassName.DROPRIGHT)) {
+        placement = AttachmentMap.RIGHT;
+      } else if ($parentDropdown.hasClass(ClassName.DROPLEFT)) {
+        placement = AttachmentMap.LEFT;
       } else if ($$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
         placement = AttachmentMap.BOTTOMEND;
       }
@@ -4071,16 +4092,8 @@ var Dropdown = function ($$$1) {
           flip: {
             enabled: this._config.flip
           }
-        } // Disable Popper.js for Dropdown in Navbar
-
+        }
       };
-
-      if (this._inNavbar) {
-        popperConfig.modifiers.applyStyle = {
-          enabled: !this._inNavbar
-        };
-      }
-
       return popperConfig;
     }; // static
 
@@ -4166,7 +4179,14 @@ var Dropdown = function ($$$1) {
     };
 
     Dropdown._dataApiKeydownHandler = function _dataApiKeydownHandler(event) {
-      if (!REGEXP_KEYDOWN.test(event.which) || /button/i.test(event.target.tagName) && event.which === SPACE_KEYCODE || /input|textarea/i.test(event.target.tagName)) {
+      // If not input/textarea:
+      //  - And not a key in REGEXP_KEYDOWN => not a dropdown command
+      // If input/textarea:
+      //  - If space key => not a dropdown command
+      //  - If key is other than escape
+      //    - If key is not up or down => not a dropdown command
+      //    - If trigger inside the menu => not a dropdown command
+      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $$$1(event.target).closest(Selector.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
         return;
       }
 
@@ -4216,7 +4236,7 @@ var Dropdown = function ($$$1) {
       items[index].focus();
     };
 
-    createClass(Dropdown, null, [{
+    _createClass(Dropdown, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -4774,7 +4794,7 @@ var Modal = function ($$$1) {
       });
     };
 
-    createClass(Modal, null, [{
+    _createClass(Modal, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -4851,19 +4871,10 @@ var Modal = function ($$$1) {
 
 var Tooltip = function ($$$1) {
   /**
-   * Check for Popper dependency
-   * Popper - https://popper.js.org
-   */
-  if (typeof Popper === 'undefined') {
-    throw new Error('Bootstrap tooltips require Popper.js (https://popper.js.org)');
-  }
-  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
-
-
   var NAME = 'tooltip';
   var VERSION = '4.0.0-beta.2';
   var DATA_KEY = 'bs.tooltip';
@@ -4947,7 +4958,15 @@ var Tooltip = function ($$$1) {
   /*#__PURE__*/
   function () {
     function Tooltip(element, config) {
-      // private
+      /**
+       * Check for Popper dependency
+       * Popper - https://popper.js.org
+       */
+      if (typeof Popper === 'undefined') {
+        throw new Error('Bootstrap tooltips require Popper.js (https://popper.js.org)');
+      } // private
+
+
       this._isEnabled = true;
       this._timeout = 0;
       this._hoverState = '';
@@ -5447,7 +5466,7 @@ var Tooltip = function ($$$1) {
       });
     };
 
-    createClass(Tooltip, null, [{
+    _createClass(Tooltip, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -5562,7 +5581,7 @@ var Popover = function ($$$1) {
   var Popover =
   /*#__PURE__*/
   function (_Tooltip) {
-    inheritsLoose(Popover, _Tooltip);
+    _inheritsLoose(Popover, _Tooltip);
 
     function Popover() {
       return _Tooltip.apply(this, arguments) || this;
@@ -5588,13 +5607,20 @@ var Popover = function ($$$1) {
       var $tip = $$$1(this.getTipElement()); // we use append for html objects to maintain js events
 
       this.setElementContent($tip.find(Selector.TITLE), this.getTitle());
-      this.setElementContent($tip.find(Selector.CONTENT), this._getContent());
+
+      var content = this._getContent();
+
+      if (typeof content === 'function') {
+        content = content.call(this.element);
+      }
+
+      this.setElementContent($tip.find(Selector.CONTENT), content);
       $tip.removeClass(ClassName.FADE + " " + ClassName.SHOW);
     }; // private
 
 
     _proto._getContent = function _getContent() {
-      return this.element.getAttribute('data-content') || (typeof this.config.content === 'function' ? this.config.content.call(this.element) : this.config.content);
+      return this.element.getAttribute('data-content') || this.config.content;
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {
@@ -5632,7 +5658,7 @@ var Popover = function ($$$1) {
       });
     };
 
-    createClass(Popover, null, [{
+    _createClass(Popover, null, [{
       key: "VERSION",
       // getters
       get: function get() {
@@ -5954,7 +5980,7 @@ var ScrollSpy = function ($$$1) {
       });
     };
 
-    createClass(ScrollSpy, null, [{
+    _createClass(ScrollSpy, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -6218,7 +6244,7 @@ var Tab = function ($$$1) {
       });
     };
 
-    createClass(Tab, null, [{
+    _createClass(Tab, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
