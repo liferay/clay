@@ -9,7 +9,7 @@ weight: 100
 
 ### Multi Step Nav Collapsed Sm
 
-<div class="form-container">
+<div class="sheet">
 	<ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top">
 		<li class="complete multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>

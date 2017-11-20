@@ -11,7 +11,7 @@ weight: 100
 
 > Append or prepend different things to your form elements with input-group.
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<div class="input-group">
 			<span class="input-group-addon" id="basicAddon1">@</span>
@@ -77,7 +77,7 @@ weight: 100
 
 ### Input Group Buttons
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<div class="input-group">
 			<span class="input-group-btn">
@@ -277,7 +277,7 @@ weight: 100
 
 > Different skin for Input Group
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label for="">Custom Checkbox</label>
 		<div class="input-group input-group-secondary">
@@ -376,7 +376,7 @@ weight: 100
 
 > Another skin for Input Group
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label for="inputGroupTransparent">
 			Label{sp}
@@ -427,7 +427,7 @@ weight: 100
 
 ### Input Group Sizes
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon">$</span>
@@ -511,7 +511,7 @@ weight: 100
 	You will need to adjust <code>padding-left</code>, <code>padding-right</code>, or both on <code>.input-group-input .form-control</code> depending on what is inside <code>.input-group-inset</code>.
 </div>
 
-<div class="form-container">
+<div class="sheet">
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">

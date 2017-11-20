@@ -11,7 +11,7 @@ weight: 100
 
 > Add class `focus` on the label to change the color of the label.
 
-<div class="form-container">
+<div class="sheet">
 	<h4 class="section-header">Section Header</h4>
 	<div class="form-group">
 		<label>
@@ -107,7 +107,7 @@ weight: 100
 
 ### Checkboxes
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-check">
 		<label class="form-check-label">
 			<input class="form-check-input" type="checkbox" value="">
@@ -195,7 +195,7 @@ weight: 100
 
 ### Radio
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-check">
 		<label class="form-check-label">
 			<input class="form-check-input" type="radio" value="">
@@ -283,7 +283,7 @@ weight: 100
 
 ### Select Element
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label for="regularSelectElement">Regular Select Element</label>
 		<select class="form-control" id="regularSelectElement">
@@ -403,7 +403,7 @@ weight: 100
 
 ### File Upload
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label class="sr-only" for="inputFile">FILE UPLOAD</label>
 		<input id="inputFile" type="file">
@@ -426,7 +426,7 @@ weight: 100
 
 > Add class `disabled` on the label to match the opacity to disabled input.
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label class="disabled" for="disabledTextInput">Text Input</label>
 		<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
@@ -561,7 +561,7 @@ weight: 100
 
 ### Disabled Fieldset
 
-<div class="form-container">
+<div class="sheet">
 	<form>
 		<fieldset disabled>
 			<div class="form-group">
@@ -622,7 +622,7 @@ weight: 100
 
 ### Read Only States
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label for="readonlyTextInput">Text Input (Read Only)</label>
 		<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
@@ -652,7 +652,7 @@ weight: 100
 
 ### Form Element Sizes
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label for="smallTextInput">Small text input</label>
 		<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
@@ -684,7 +684,7 @@ weight: 100
 
 > Equally spaced form inputs. To set a fixed width use `flex-grow: 0; flex-basis: 200px;` on `.form-inline-group` or any direct descendant of `.form-inline-autofit`.
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group form-inline-autofit">
 		<div class="form-inline-group">
 			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
@@ -775,7 +775,7 @@ weight: 100
 {/literal}
 </style>
 
-<div class="form-container">
+<div class="sheet">
 	<form class="my-custom-form">
 		<div class="form-group form-inline-autofit">
 			<label>Name</label>
@@ -804,7 +804,7 @@ weight: 100
 		}
 	}
 </style>
-<div class="form-container">
+<div class="sheet">
 	<form class="my-custom-form">
 		<div class="form-group form-inline-autofit">
 			<label>Name</label>

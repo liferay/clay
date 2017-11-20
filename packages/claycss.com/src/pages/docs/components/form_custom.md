@@ -9,7 +9,7 @@ weight: 100
 
 ### Custom Checkbox
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<div class="custom-control custom-checkbox">
 			<label>
@@ -177,7 +177,7 @@ weight: 100
 
 ### Custom Radio
 
-<div class="form-container">
+<div class="sheet">
 	<div class="custom-control custom-radio">
 		<label>
 			<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
@@ -247,7 +247,7 @@ weight: 100
 
 ### Custom Controls Inline
 
-<div class="form-container">
+<div class="sheet">
 	<div class="custom-control custom-control-inline custom-radio">
 		<label>
 			<input class="custom-control-input" disabled id="radioStacked3" name="radio-stacked" type="radio">

@@ -11,7 +11,7 @@ weight: 100
 
 > Use data attributes `data-label-on=""` and `data-label-off=""` on `<span class="toggle-switch-handle"></span>` to display specific text when the switch is on and off.
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
 			<input class="toggle-switch-check" type="checkbox">
@@ -66,7 +66,7 @@ weight: 100
 
 > Add additional text with class `toggle-switch-text`.
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
 			<input class="toggle-switch-check" type="checkbox">
@@ -123,7 +123,7 @@ weight: 100
 
 ### Toggle Switches with Icons
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
 			<input class="toggle-switch-check" type="checkbox">
@@ -258,7 +258,7 @@ weight: 100
 
 > Disable a toggle-switch by adding the attribute `disabled` to `<input type="checkbox">`.
 
-<div class="form-container">
+<div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
 			<input class="toggle-switch-check" disabled type="checkbox">
