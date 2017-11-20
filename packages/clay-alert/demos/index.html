@@ -70,23 +70,23 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Fluid Alerts</h4>
+			<h4>Stripe Alerts</h4>
 
-			<div id="fluid-alert-success"></div>
-			<div id="fluid-alert-info"></div>
-			<div id="fluid-alert-warning"></div>
-			<div id="fluid-alert-danger"></div>
+			<div id="stripe-alert-success"></div>
+			<div id="stripe-alert-info"></div>
+			<div id="stripe-alert-warning"></div>
+			<div id="stripe-alert-danger"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Auto Closeable Fluid Alerts</h4>
+			<h4>Auto Closeable Stripe Alerts</h4>
 
-			<div id="autocloseable-fluid-alert-success"></div>
-			<div id="autocloseable-fluid-alert-info"></div>
-			<div id="autocloseable-fluid-alert-warning"></div>
-			<div id="autocloseable-fluid-alert-danger"></div>
+			<div id="autocloseable-stripe-alert-success"></div>
+			<div id="autocloseable-stripe-alert-info"></div>
+			<div id="autocloseable-stripe-alert-warning"></div>
+			<div id="autocloseable-stripe-alert-danger"></div>
 		</div>
 	</div>
 
@@ -149,8 +149,8 @@
 		);
 
 		/*
- 		* Closeable Alerts
- 		*/
+ 		 * Closeable Alerts
+ 		 */
 		 new metal.ClayAlert(
 			{
 				closeable: true,
@@ -195,8 +195,8 @@
 		);
 
 		/*
- 		* Closeable and Destroyable Alerts
- 		*/
+ 		 * Closeable and Destroyable Alerts
+ 		 */
 		new metal.ClayAlert(
 			{
 				closeable: true,
@@ -245,16 +245,16 @@
 		);
 
 		/*
-		 * Fluid Alerts
+		 * Stripe Alerts
 		 */
 		 new metal.ClayAlert(
 			{
 				message: 'This <a href="#">alert</a> needs your attention.',
 				spritemap: spritemap,
 				title: 'Info',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#fluid-alert-info'
+			'#stripe-alert-info'
 		);
 
 		new metal.ClayAlert(
@@ -263,9 +263,9 @@
 				spritemap: spritemap,
 				style: 'success',
 				title: 'Success',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#fluid-alert-success'
+			'#stripe-alert-success'
 		);
 
 		new metal.ClayAlert(
@@ -274,9 +274,9 @@
 				spritemap: spritemap,
 				style: 'warning',
 				title: 'Warning',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#fluid-alert-warning'
+			'#stripe-alert-warning'
 		);
 
 		new metal.ClayAlert(
@@ -285,14 +285,14 @@
 				spritemap: spritemap,
 				style: 'danger',
 				title: 'Danger',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#fluid-alert-danger'
+			'#stripe-alert-danger'
 		);
 
 
 		/*
-		 * AutoCloseable Fluid Alerts
+		 * AutoCloseable Stripe Alerts
 		 */
 		 new metal.ClayAlert(
 			{
@@ -300,9 +300,9 @@
 				message: 'This <a href="#">alert</a> needs your attention.',
 				spritemap: spritemap,
 				title: 'Info',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#autocloseable-fluid-alert-info'
+			'#autocloseable-stripe-alert-info'
 		);
 
 		new metal.ClayAlert(
@@ -312,9 +312,9 @@
 				spritemap: spritemap,
 				style: 'success',
 				title: 'Success',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#autocloseable-fluid-alert-success'
+			'#autocloseable-stripe-alert-success'
 		);
 
 		new metal.ClayAlert(
@@ -324,9 +324,9 @@
 				spritemap: spritemap,
 				style: 'warning',
 				title: 'Warning',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#autocloseable-fluid-alert-warning'
+			'#autocloseable-stripe-alert-warning'
 		);
 
 		new metal.ClayAlert(
@@ -336,9 +336,9 @@
 				spritemap: spritemap,
 				style: 'danger',
 				title: 'Danger',
-				type: 'fluid',
+				type: 'stripe',
 			},
-			'#autocloseable-fluid-alert-danger'
+			'#autocloseable-stripe-alert-danger'
 		);
 
 		/*

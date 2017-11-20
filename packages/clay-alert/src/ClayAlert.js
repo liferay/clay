@@ -17,7 +17,7 @@ class ClayAlert extends Component {
 	rendered() {
 		if (
 			this.autoClose &&
-			(this.type === 'fluid' || this.type === 'notification')
+			(this.type === 'stripe' || this.type === 'notification')
 		) {
 			if (this.delayTime_ === undefined || this.delayTime_ > 0) {
 				this.delayTime_ = (this.element.querySelector('a') ? 10 : 5) * 1000;
@@ -172,7 +172,7 @@ ClayAlert.STATE = {
 	 * @type {?string}
 	 * @default undefined
 	 */
-	type: Config.oneOf(['fluid', 'notification']),
+	type: Config.oneOf(['stripe', 'notification']),
 
 	/**
 	 * The title of alert

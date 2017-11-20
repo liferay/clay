@@ -20,7 +20,9 @@
 				{sp}alert-dismissible
 			{/if}
 
-			{if $type}
+			{if $type == 'stripe'}
+				{sp}alert-fluid
+			{elseif $type}
 				{sp}alert-{$type}
 			{/if}
 
@@ -28,7 +30,7 @@
 				{sp}show
 			{/if}
 		"
-		{if $autoClose and ($type == 'fluid' or $type == 'notification') and $visible_}
+		{if $autoClose and ($type == 'stripe' or $type == 'notification') and $visible_}
 			data-onmouseover="handleMouseOver_"
 			data-onmouseout="handleMouseOut_"
 		{/if}
@@ -38,7 +40,7 @@
 
 	{let $content kind="html"}
 		{call .content}
-			{param closeable: $closeable /}
+			{param closeable: $type == 'stripe' ? true : $closeable /}
 			{param handleCloseClick_: $handleCloseClick_ /}
 			{param message: $message /}
 			{param spritemap: $spritemap /}
@@ -48,7 +50,7 @@
 	{/let}
 
 	<div {$attributes}>
-		{if $type == 'fluid'}
+		{if $type == 'stripe'}
 			<div class="container">
 				{$content}
 			</div>
