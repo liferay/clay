@@ -34,6 +34,11 @@ exports[`ClayAlert should render a stripe alert 1`] = `
 
 exports[`ClayAlert should render a toast alert 1`] = `
 <div class="alert alert-info fade alert-toast show" role="alert">
+  <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
+    </svg>
+  </button>
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
       <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>

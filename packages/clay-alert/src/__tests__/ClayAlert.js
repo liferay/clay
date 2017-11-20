@@ -116,7 +116,6 @@ describe('ClayAlert', function() {
 
 		alert = new ClayAlert({
 			autoClose: true,
-			closeable: true,
 			message: 'message',
 			spritemap: spritemap,
 			title: 'success',
@@ -136,7 +135,6 @@ describe('ClayAlert', function() {
 
 		alert = new ClayAlert({
 			autoClose: true,
-			closeable: true,
 			message: 'message<a href="#">Link</a>',
 			spritemap: spritemap,
 			title: 'success',
