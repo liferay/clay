@@ -1,3 +1,75 @@
+### v2.0.0-beta.3 November 20, 2017
+
+* Breaking: Rename `$form-container-bg`, `$form-container-border-color`, `$form-container-border-style`, `$form-container-border-width`, `$form-container-border-radius`, `$form-container-padding-x`, `$form-container-padding-y` to `$sheet-bg`, `$sheet-border-color`, `$sheet-border-style`, `$sheet-border-width`, `$sheet-border-radius`, `$sheet-padding-x`, `$sheet-padding-y`
+* Breaking: Rename `.form-container` to `.sheet`
+* Breaking: Custom Control rename `$custom-control-description-margin-left` to `$custom-control-description-padding-left` and don't use `$custom-control-gutter` for spacing
+* New: Clay Button Variant mixin added option to configure `active-box-shadow` on button variant and set Atlas button variant active box shadow to none
+* New: Forms added option to configure `$input-readonly-focus-bg`, `$input-readonly-focus-border-color`, `$input-readonly-focus-color`
+* New: Form added option to customize `$input-select-cursor` and set cursor to pointer
+* New: Input Group added option to configure `$input-group-secondary-addon-color`
+* New: Form added option to configure `$input-file-cursor` for `.form-control-file` and set cursor to pointer
+* New: Form Check added option to configure `$form-check-input-cursor`, `$form-check-label-cursor` and set cursor to pointer
+* New: Form added option to configure `$input-label-for-cursor` (labels with `for` attribute) and set cursor to pointer
+* New: Buttons added option to configure `$btn-cursor` and change cursor to pointer
+* New: Globals add option to configure `$link-cursor`
+* New: Toggle Switch add option to configure `$toggle-switch-disabled-cursor`, `$toggle-switch-disabled-opacity`
+* New: Multi Step Nav added option to configure `$multi-step-icon-disabled-bg`, `$multi-step-icon-disabled-bg-image`, `$multi-step-icon-disabled-bg-position`, `$multi-step-icon-disabled-bg-size`, `$multi-step-icon-disabled-color`, `$multi-step-icon-disabled-cursor`, `$multi-step-divider-disabled-bg`, `$multi-step-title-disabled-color`, `$multi-step-indicator-label-disabled-color`
+* New: Pagination added option to configure `$pagination-disabled-cursor`, `$pagination-disabled-pointer-events` and set disabled cursor to `not-allowed`
+* New: Nav added option to configure `$nav-link-disabled-cursor` and set disabled cursor to `not-allowed`
+* New: Forms added option to configure `$input-disabled-cursor`, `$input-label-disabled-cursor` and set disabled cursor to be `not-allowed`
+* New: Form Check added option to configure `$form-check-input-disabled-cursor`, `$form-check-description-disabled-cursor`, set disabled `.form-check` cursor to be not-allowed, and set `$input-label-disabled-color`
+* New: Form Check added option to configure `$form-check-description-padding-left` and match `.form-check` to behave like `.custom-control`
+* New: Custom Control added option to configure `$custom-control-indicator-disabled-cursor`, `$custom-control-description-disabled-cursor` and set disabled cursor to not-allowed
+* New: Dropdown added `$dropdown-item-disabled-cursor` and change disabled cursor to `not-allowed`
+* New: Button added option to configure `$btn-disabled-cursor` and change disabled cursor to `not-allowed`
+* New: Globals added `$disabled-cursor`
+* New: Lexicon Icon added Check Square
+* New: Panel Group added `.panel-group-flush` and option to configure `$panel-group-flush-body-margin-bottom`, `$panel-group-flush-body-padding`, `$panel-group-flush-collapse-icon-left`, `$panel-group-flush-collapse-icon-right`, `$panel-group-flush-collapse-icon-padding-left`, `$panel-group-flush-collapse-icon-padding-right`
+* New: Lexicon Icons Decimal, Document, Globe, Integer, Number, Rules, Select, Separator, Textbox, Upload and update Text icon
+* New: Icons added `.order-arrow-down-active`, `.order-arrow-up-active` and option to configure `$order-arrow-down-active-color`,  `$order-arrow-up-active-color` for styling `.lexicon-icon-order-arrow`'s in Management Bar
+* New: Input Group added option to configure `$input-group-addon-font-weight` and update Atlas `.input-group-addon` font-weight to be 600
+* Update: Move `.form-container` styles and variables to _sheets.scss
+* Update: Clay Button Variant mixin to split up `:active` and `.active` BS4 state styles are weird with button groups
+* Update: Atlas Button variants shouldn't use active and hover colors when disabled
+* Update: Button Group active and focus state z-index to prevent styles from overlapping
+* Update: Atlas Button Variants should have same border color as background color
+* Update: Input Group Secondary don't need to reset so many styles for `.custom-control` and `.form-check` after normalizing styles
+* Update: `.close` cursor should inherit from `.btn`
+* Update: Custom Forms `.form-file-input`, `.custom-control-input`, and `.custom-control-indicator` should inherit cursor from regular form equivalent
+* Update: Multi Step Nav `.multi-step-icon` background-color should match Lexicon's
+* Update: Quick Action Item disabled cursor to `not-allowed`
+* Update: Custom Forms `.form-file` add disabled cursor `not-allowed`
+* Update: Form make checkbox and radio selector less specific
+* Update: Single collapsible panels should properly round borders if `$panel-border-radius` is set
+* Update: Type don't set `$section-header-collapse-icon-right` already set by `.panel-group-flush`
+* Update: Lexicon Icon Web Content
+* Update: Nav Tabs BS4 fixed `$nav-tabs-active-border-color` at https://github.com/twbs/bootstrap/pull/24639, don't need extra `.nav-tabs .nav-link.active` styles anymore
+* Update: Button `$btn-disabled-opacity` was added by BS4 at https://github.com/twbs/bootstrap/pull/24680, don't need the extra button styles anymore
+* Update: Bootstrap 4 to 9a0bba9
+* Update: Atlas Nav Tabs should be 32px tall
+* Update: Atlas Forms `$input-color-placeholder` was renamed to `$input-placeholder-color` by BS4
+* Site: `.form-container` was renamed to `.sheet`
+* Site: Button Group added example with active and disabled state
+* Site: Form removed sparsly supported HTML5 input types datetime-local, date, time, week, month, color and for attribute should point to right input
+* Site: Multi Step Nav add disabled example
+* Site: Form Validation success input label should point to the right input
+* Site: Forms add BS4 class `.form-control-file` for `input[type="file"]`
+* Site: Form Validation normal label should point to the right input
+* Site: Panels and Users and Organizations pages added `.panel-group-flush`
+* Site: Add `order-arrow-*-active` classes to Management Bar examples
+* Site: Users and Organizations pages removed BS4 grid from form in panel
+* Site: Utilities page position dropdown-menu on the right
+* Site: Timelines remove panel-group div for collapsible panels and update aria attributes
+* Site: Tables add role button to links that need it
+* Site: Sidebar add role button to links that need it
+* Site: Pagination add role button to links that need it
+* Site: Modal add role button to links that need it and remove it from buttons
+* Site: List Group add role button to links and buttons for dropdown-items in With Buttons demo
+* Site: Form Elements added role button to links that function like buttons
+* Site: Navigation Bar forgot to remove `navbar-secondary`, `navbar-light` from markup and make With Buttons examples all buttons
+* Site: Management Bar add role button to links that function like buttons, `aria-haspopup="true"` on dropdown-toggles, change links with btn class to actual buttons
+* Site: Application Bar add role button to links with icons
+
 ### v2.0.0-beta.2 November 10, 2017
 
 * Breaking: Navbar removed Clay versions of `.navbar-light`, `.navbar-dark`, `.navbar-secondary`, `.navbar-primary` and corresponding Sass map variables `$navbar-light`, `$navbar-dark`, `$navbar-secondary`, `$navbar-primary`
