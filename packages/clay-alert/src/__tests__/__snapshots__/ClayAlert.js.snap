@@ -15,16 +15,6 @@ exports[`ClayAlert should render a closeable alert 1`] = `
   <strong class="lead">success</strong>message</div>
 `;
 
-exports[`ClayAlert should render a notification alert 1`] = `
-<div class="alert alert-info fade alert-notification show" role="alert">
-  <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
-    </svg>
-  </span>
-  <strong class="lead">info</strong>message</div>
-`;
-
 exports[`ClayAlert should render a stripe alert 1`] = `
 <div class="alert alert-info fade alert-fluid show" role="alert">
   <div class="container">
@@ -40,6 +30,16 @@ exports[`ClayAlert should render a stripe alert 1`] = `
     </span>
     <strong class="lead">info</strong>message</div>
 </div>
+`;
+
+exports[`ClayAlert should render a toast alert 1`] = `
+<div class="alert alert-info fade alert-toast show" role="alert">
+  <span class="alert-indicator">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+    </svg>
+  </span>
+  <strong class="lead">info</strong>message</div>
 `;
 
 exports[`ClayAlert should render an alert style "danger" 1`] = `

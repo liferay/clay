@@ -15,10 +15,7 @@ class ClayAlert extends Component {
 	 * @inheritDoc
 	 */
 	rendered() {
-		if (
-			this.autoClose &&
-			(this.type === 'stripe' || this.type === 'notification')
-		) {
+		if (this.autoClose && (this.type === 'stripe' || this.type === 'toast')) {
 			if (this.delayTime_ === undefined || this.delayTime_ > 0) {
 				this.delayTime_ = (this.element.querySelector('a') ? 10 : 5) * 1000;
 			}
@@ -172,7 +169,7 @@ ClayAlert.STATE = {
 	 * @type {?string}
 	 * @default undefined
 	 */
-	type: Config.oneOf(['stripe', 'notification']),
+	type: Config.oneOf(['stripe', 'toast']),
 
 	/**
 	 * The title of alert

@@ -92,13 +92,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Notification Alerts</h4>
+			<h4>Toast Alerts</h4>
 
 			<div class="d-table">
-				<div id="notification-alert-info" class="align-top card-body d-inline-block"></div>
-				<div id="notification-alert-success" class="align-top d-inline-block card-body"></div>
-				<div id="notification-alert-warning" class="align-top d-inline-block card-body"></div>
-				<div id="notification-alert-danger" class="align-top d-inline-block card-body"></div>
+				<div id="toast-alert-info" class="align-top card-body d-inline-block"></div>
+				<div id="toast-alert-success" class="align-top d-inline-block card-body"></div>
+				<div id="toast-alert-warning" class="align-top d-inline-block card-body"></div>
+				<div id="toast-alert-danger" class="align-top d-inline-block card-body"></div>
 			</div>
 		</div>
 	</div>
@@ -342,7 +342,7 @@
 		);
 
 		/*
- 		* Notification Alerts
+ 		* Toast Alerts
  		*/
 		new metal.ClayAlert(
 			{
@@ -351,9 +351,9 @@
 						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
 				spritemap: spritemap,
 				title: 'Meeting Rescheduled',
-				type: 'notification',
+				type: 'toast',
 			},
-			'#notification-alert-info'
+			'#toast-alert-info'
 		);
 
 		new metal.ClayAlert(
@@ -364,9 +364,9 @@
 				spritemap: spritemap,
 				style: 'success',
 				title: 'Meeting Rescheduled',
-				type: 'notification',
+				type: 'toast',
 			},
-			'#notification-alert-success'
+			'#toast-alert-success'
 		);
 
 		new metal.ClayAlert(
@@ -376,9 +376,9 @@
 				spritemap: spritemap,
 				style: 'warning',
 				title: 'Warning:',
-				type: 'notification',
+				type: 'toast',
 			},
-			'#notification-alert-warning'
+			'#toast-alert-warning'
 		);
 
 		new metal.ClayAlert(
@@ -388,9 +388,9 @@
 				spritemap: spritemap,
 				style: 'danger',
 				title: 'Danger:',
-				type: 'notification',
+				type: 'toast',
 			},
-			'#notification-alert-danger'
+			'#toast-alert-danger'
 		);
 
 	</script>
