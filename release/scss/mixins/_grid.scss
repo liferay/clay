@@ -1,0 +1,22 @@
+/**
+* Clay 2.0.0-beta.3
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin clay-container-no-gutters {
+	padding-left: 0;
+	padding-right: 0;
+
+	> .row {
+		margin-left: 0;
+		margin-right: 0;
+
+		> .col,
+		> [class*="col-"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}

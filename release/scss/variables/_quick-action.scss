@@ -1,0 +1,29 @@
+/**
+* Clay 2.0.0-beta.3
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$quick-action-padding-x: null !default;
+$quick-action-padding-y: null !default;
+
+$quick-action-item-margin-x: 0.5rem !default; // 8px
+$quick-action-item-margin-y: null !default;
+$quick-action-item-padding-x: 0.5rem !default; // 8px
+$quick-action-item-padding-y: 0.5rem !default; // 8px
+
+$quick-action-item-bg: null !default;
+$quick-action-item-border-radius: $border-radius !default;
+$quick-action-item-color: $dropdown-action-toggle-color !default;
+
+$quick-action-item-hover-bg: null !default;
+$quick-action-item-hover-color: $dropdown-action-toggle-hover-color !default;
+
+$quick-action-item-disabled-bg: null !default;
+$quick-action-item-disabled-color: $btn-link-disabled-color !default;
+$quick-action-item-disabled-cursor: $disabled-cursor !default;
+$quick-action-item-disabled-opacity: 0.65 !default;
+
+$quick-action-item-active-bg: null !default;
+$quick-action-item-active-color: null !default;

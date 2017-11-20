@@ -1,0 +1,335 @@
+/**
+* Clay 2.0.0-beta.3
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.multi-step-nav {
+	align-items: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-bottom: $multi-step-nav-margin-bottom;
+	padding: $multi-step-nav-padding-y $multi-step-nav-padding-x;
+	position: relative;
+}
+
+.multi-step-indicator-label-bottom {
+	.multi-step-item {
+		padding-bottom: $multi-step-indicator-label-font-size * $line-height-base;
+	}
+
+	.multi-step-indicator-label {
+		top: $multi-step-icon-size;
+	}
+}
+
+.multi-step-indicator-label-top {
+	.multi-step-item {
+		padding-top: $multi-step-indicator-label-font-size * $line-height-base;
+	}
+
+	.multi-step-indicator-label {
+		bottom: $multi-step-icon-size + $multi-step-divider-height;
+	}
+}
+
+.multi-step-title-center {
+	.multi-step-title {
+		margin-left: $multi-step-icon-size / 2;
+		max-width: $multi-step-title-max-width;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		text-overflow: ellipsis;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		width: auto;
+	}
+}
+
+.multi-step-item {
+	margin-bottom: $multi-step-item-margin-bottom;
+	position: relative;
+
+	&.active {
+		.multi-step-icon {
+			background-color: $multi-step-icon-active-bg;
+			background-image: $multi-step-icon-active-bg-image;
+			background-position: $multi-step-icon-active-bg-position;
+			background-repeat: no-repeat;
+			background-size: $multi-step-icon-active-bg-size;
+			color: $multi-step-icon-active-color;
+
+			@if ($multi-step-icon-active-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+		}
+
+		.multi-step-divider {
+			background-color: $multi-step-divider-active-bg;
+		}
+	}
+
+	&.active.complete {
+		.multi-step-icon {
+			background-color: $multi-step-icon-active-bg;
+			color: $multi-step-icon-active-color;
+		}
+	}
+
+	&.complete {
+		.dropdown .multi-step-icon {
+			&, &:active {
+				background-image: none;
+			}
+		}
+
+		.multi-step-icon {
+			background-color: $multi-step-icon-complete-bg;
+			color: $multi-step-icon-complete-color;
+
+			@if ($multi-step-icon-complete-bg-image) {
+				background-image: $multi-step-icon-complete-bg-image;
+				background-position: $multi-step-icon-complete-bg-position;
+				background-repeat: no-repeat;
+				background-size: $multi-step-icon-complete-bg-size;
+
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+
+				// BS4 resets background-image in buttons https://github.com/twbs/bootstrap/issues/23353
+				&:active {
+					background-image: $multi-step-icon-complete-bg-image;
+				}
+			}
+		}
+
+		.multi-step-divider {
+			background-color: $multi-step-divider-complete-bg;
+		}
+	}
+
+	&.disabled {
+		.multi-step-title {
+			color: $multi-step-title-disabled-color;
+		}
+
+		.multi-step-icon {
+			background-color: $multi-step-icon-disabled-bg;
+			background-image: $multi-step-icon-disabled-bg-image;
+			background-position: $multi-step-icon-disabled-bg-position;
+			background-repeat: no-repeat;
+			background-size: $multi-step-icon-disabled-bg-size;
+			color: $multi-step-icon-disabled-color;
+			cursor: $multi-step-icon-disabled-cursor;
+
+			@if ($multi-step-icon-disabled-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+		}
+
+		.multi-step-indicator-label {
+			color: $multi-step-indicator-label-disabled-color;
+		}
+
+		.multi-step-divider {
+			background-color: $multi-step-divider-disabled-bg;
+		}
+	}
+}
+
+.multi-step-title {
+	color: $multi-step-title-color;
+	font-size: $multi-step-title-font-size;
+	font-weight: $multi-step-title-font-weight;
+	line-height: normal;
+	margin-bottom: $multi-step-title-margin-bottom;
+	word-wrap: break-word;
+}
+
+.multi-step-item-expand {
+	flex-grow: 1;
+	width: $multi-step-item-width;
+}
+
+.multi-step-divider {
+	background-color: $multi-step-divider-bg;
+	height: $multi-step-divider-height;
+	margin-left: $multi-step-icon-size;
+	margin-top: -$multi-step-divider-height;
+	position: relative;
+	top: $multi-step-divider-top;
+}
+
+.multi-step-indicator {
+	position: relative;
+	width: $multi-step-indicator-width;
+
+	.dropdown-item-indicator {
+		display: none;
+	}
+
+	.complete .dropdown-item-indicator {
+		display: block;
+	}
+
+	.multi-step-indicator-label {
+		color: $multi-step-indicator-label-color;
+		font-size: $multi-step-indicator-label-font-size;
+		font-weight: $multi-step-indicator-label-font-weight;
+		left: 50%;
+		max-width: $multi-step-indicator-label-max-width;
+		position: absolute;
+		transform: translateX(-50%);
+
+		@include text-truncate;
+	}
+}
+
+button.multi-step-icon {
+	cursor: pointer;
+	border-width: 0;
+	padding: 0;
+
+	@include hover-focus {
+		background-color: $multi-step-icon-hover-bg;
+		color: $multi-step-icon-hover-color;
+		text-decoration: $multi-step-icon-hover-text-decoration;
+	}
+}
+
+a.multi-step-icon {
+	@include hover-focus {
+		background-color: $multi-step-icon-hover-bg;
+		color: $multi-step-icon-hover-color;
+		text-decoration: $multi-step-icon-hover-text-decoration;
+	}
+}
+
+.multi-step-icon {
+	align-items: center;
+	background-color: $multi-step-icon-bg;
+	border-radius: $multi-step-icon-border-radius;
+	color: $multi-step-icon-color;
+	display: flex;
+	font-size: $multi-step-icon-font-size;
+	font-weight: $multi-step-icon-font-weight;
+	justify-content: center;
+	height: $multi-step-icon-size;
+	width: $multi-step-icon-size;
+
+	&[data-multi-step-icon]:before {
+		content: attr(data-multi-step-icon);
+		height: $multi-step-icon-size;
+		line-height: $multi-step-icon-size;
+		text-align: center;
+		width: $multi-step-icon-size;
+	}
+
+	.btn-link {
+		vertical-align: baseline;
+	}
+
+	.lexicon-icon {
+		height: $multi-step-icon-font-size;
+		margin-top: 0;
+		width: $multi-step-icon-font-size;
+	}
+}
+
+.multi-step-item-fixed-width {
+	&.multi-step-item,
+	.multi-step-item-expand {
+		flex-grow: 0;
+		width: $multi-step-item-fixed-width;
+	}
+}
+
+.multi-step-nav-collapse-sm {
+	@include media-breakpoint-down(sm) {
+		flex-wrap: nowrap;
+
+		&.multi-step-indicator-label-top {
+			.multi-step-indicator-label {
+				bottom: auto;
+				top: 0;
+			}
+		}
+
+		&.multi-step-indicator-label-bottom {
+			.multi-step-indicator-label {
+				bottom: 0;
+				top: auto;
+			}
+		}
+
+		&.multi-step-title-center {
+			.multi-step-title {
+				margin-left: 0;
+				max-width: none;
+				transform: none;
+			}
+		}
+
+		.active {
+			&.multi-step-item {
+				position: static;
+			}
+
+			.multi-step-title {
+				display: block;
+				left: 0;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+
+				+ .multi-step-indicator {
+					margin-top: calc(1rem * #{$line-height-base});
+				}
+			}
+
+			.multi-step-indicator {
+				position: static;
+			}
+
+			.multi-step-indicator-label {
+				display: block;
+				left: 0;
+				max-width: none;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				transform: none;
+				width: auto;
+			}
+		}
+
+		.multi-step-item {
+			margin-bottom: 0;
+			min-width: $multi-step-icon-size;
+			padding-top: $multi-step-title-font-size + $multi-step-title-margin-bottom + ($multi-step-divider-height / 2);
+		}
+
+		.multi-step-title {
+			display: none;
+		}
+
+		.multi-step-indicator-label {
+			display: none;
+		}
+	}
+}

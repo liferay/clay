@@ -1,0 +1,42 @@
+/**
+* Clay 2.0.0-beta.3
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin clay-badge-size($map) {
+	$border-width: setter(map-get($map, border-width), $badge-border-width);
+	$font-size: map-get($map, font-size);
+	$height: map-get($map, height);
+	$padding-x: map-get($map, padding-x);
+	$padding-y: setter(map-get($map, padding-y), 0);
+
+	$close-margin-left: map-get($map, close-margin-left);
+	$close-vertical-align: map-get($map, close-vertical-align);
+
+	$lexicon-icon-height: setter(map-get($map, lexicon-icon-height), map-get($map, lexicon-icon-width));
+	$lexicon-icon-width: map-get($map, lexicon-icon-width);
+
+	border-width: $border-width;
+	font-size: $font-size;
+
+	@if ($height) {
+		line-height: $height - ($border-width * 2);
+	}
+
+	padding-bottom: $padding-y;
+	padding-left: $padding-x;
+	padding-right: $padding-x;
+	padding-top: $padding-y;
+
+	.close {
+		margin-left: $close-margin-left;
+		vertical-align: $close-vertical-align;
+	}
+
+	.lexicon-icon {
+		height: $lexicon-icon-height;
+		width: $lexicon-icon-width;
+	}
+}
