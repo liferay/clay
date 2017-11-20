@@ -1,6 +1,6 @@
-## Notice: 2.0.0-alpha Release
+## Notice: 2.0.0-beta Release
 
-> This project is under active development, we recommended not using alpha
+> This project is under active development, we recommended not using beta
 releases in your project.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
