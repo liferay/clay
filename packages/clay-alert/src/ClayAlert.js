@@ -167,15 +167,6 @@ ClayAlert.STATE = {
 	style: Config.oneOf(['danger', 'info', 'success', 'warning']).value('info'),
 
 	/**
-	 * The type of alert
-	 * @instance
-	 * @memberof ClayAlert
-	 * @type {?string}
-	 * @default embedded
-	 */
-	type: Config.oneOf(['embedded', 'stripe', 'toast']).value('embedded'),
-
-	/**
 	 * The title of alert
 	 * @instance
 	 * @memberof ClayAlert
@@ -183,6 +174,15 @@ ClayAlert.STATE = {
 	 * @default undefined
 	 */
 	title: Config.string().required(),
+
+	/**
+	 * The type of alert
+	 * @instance
+	 * @memberof ClayAlert
+	 * @type {?string}
+	 * @default embedded
+	 */
+	type: Config.oneOf(['embedded', 'stripe', 'toast']).value('embedded'),
 
 	/**
 	 * Flag to indicate the visibility of the alert
