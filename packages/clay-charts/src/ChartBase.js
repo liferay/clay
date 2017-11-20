@@ -181,7 +181,8 @@ const ChartBase = {
 					}
 				} else {
 					// eslint-disable-next-line
-					config[PROP_NAME_MAP[key]] = config[PROP_NAME_MAP[key]] || {};
+					config[PROP_NAME_MAP[key]] =
+						config[PROP_NAME_MAP[key]] || {};
 
 					config[PROP_NAME_MAP[key]][id] = column[key];
 				}
@@ -256,7 +257,10 @@ const ChartBase = {
 			 * @event dataUnselected
 			 * @memberof ChartBase
 			 */
-			config.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
+			config.onunselected = this.emitChartEvent_.bind(
+				this,
+				'dataUnselected'
+			);
 		}
 
 		return config;

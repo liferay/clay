@@ -30,7 +30,11 @@ class ClayModal extends Component {
 		this.addListener('click', this.handleDocumentClick_.bind(this), true);
 		this.addListener('hide', this.defaultHideModal_, true);
 		this.addListener('show', this.defaultShowModal_, true);
-		this.addListener('touchend', this.handleDocumentClick_.bind(this), true);
+		this.addListener(
+			'touchend',
+			this.handleDocumentClick_.bind(this),
+			true
+		);
 		this.addListener('transitionend', this.handleTransitionEnd_, true);
 	}
 
@@ -210,7 +214,9 @@ ClayModal.STATE = {
 				'secondary',
 				'unstyled',
 			]),
-			type: Config.oneOf(['button', 'close', 'reset', 'submit']).value('button'),
+			type: Config.oneOf(['button', 'close', 'reset', 'submit']).value(
+				'button'
+			),
 		})
 	),
 

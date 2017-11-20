@@ -161,7 +161,10 @@ class ClayCollapse extends State {
 	 */
 	handleKeydown_(event) {
 		// eslint-disable-next-line
-		if (event.keyCode === KEY_CODE_ENTER || event.keyCode === KEY_CODE_SPACE) {
+		if (
+			event.keyCode === KEY_CODE_ENTER ||
+			event.keyCode === KEY_CODE_SPACE
+		) {
 			this.toggle();
 			event.preventDefault();
 		}

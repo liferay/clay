@@ -109,7 +109,9 @@ describe('ClayCollapse', () => {
 		it('should accept an element as a value', () => {
 			component = new ClayCollapse({
 				content: '#collapseExample1',
-				headers: document.querySelector('[aria-controls="collapseExample1"]'),
+				headers: document.querySelector(
+					'[aria-controls="collapseExample1"]'
+				),
 			});
 
 			expect(core.isElement(component.headers)).toBeTruthy();
