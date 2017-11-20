@@ -10,16 +10,18 @@ weight: 100
 ### Button Group
 
 <div class="btn-group" role="group">
-	<button class="btn btn-secondary" type="button">Left</button>
-	<button class="btn btn-secondary" type="button">Middle</button>
-	<button class="btn btn-secondary" type="button">Right</button>
+	<button class="btn btn-secondary" type="button">Day</button>
+	<button class="active btn btn-secondary" type="button">Month</button>
+	<button class="btn btn-secondary" type="button">Year</button>
+	<button class="btn btn-secondary" disabled type="button">Agenda</button>
 </div>
 
 ```text/html
 <div class="btn-group" role="group">
-	<button class="btn btn-secondary" type="button">Left</button>
-	<button class="btn btn-secondary" type="button">Middle</button>
-	<button class="btn btn-secondary" type="button">Right</button>
+	<button class="btn btn-secondary" type="button">Day</button>
+	<button class="active btn btn-secondary" type="button">Month</button>
+	<button class="btn btn-secondary" type="button">Year</button>
+	<button class="btn btn-secondary" disabled type="button">Agenda</button>
 </div>
 ```
 
