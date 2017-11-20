@@ -378,7 +378,7 @@ weight: 100
 <div class="sheet">
 	<div class="form-group">
 		<label class="sr-only" for="inputFile">FILE UPLOAD</label>
-		<input id="inputFile" type="file">
+		<input class="form-control-file" id="inputFile" type="file">
 	</div>
 </div>
 
