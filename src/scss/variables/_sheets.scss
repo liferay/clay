@@ -6,3 +6,53 @@ $sheet-border-width: 0.0625rem !default; // 1px
 $sheet-border-radius: $border-radius !default;
 $sheet-padding-x: 1.5rem !default; // 24px
 $sheet-padding-y: 1.5rem !default; // 24px
+
+// Section Title
+
+$section-title-color: null !default;
+$section-title-font-size: 1.5rem !default; // 24px
+$section-title-font-weight: $font-weight-semi-bold !default;
+$section-title-margin-bottom: 1.5rem !default; // 24px
+
+$section-title-font-size-mobile: 1.25rem !default; // 20px
+$section-title-margin-bottom-mobile: null !default;
+
+// Section Header
+
+$section-header-border-color: null !default;
+$section-header-border-style: solid !default;
+$section-header-border-width: 0 0 1px 0 !default;
+$section-header-color: null !default;
+$section-header-font-size: 0.875rem !default; // 14px
+$section-header-font-weight: $font-weight-semi-bold !default;
+$section-header-line-height: $headings-line-height !default; // 1.2
+$section-header-margin-bottom: 1.5rem !default; // 24px
+$section-header-padding-x: null !default;
+$section-header-padding-y: 0.3125rem !default; // 5px
+$section-header-text-transform: uppercase !default;
+
+// Section Header as Panel Header
+
+$section-header-link-color: $section-header-color !default;
+$section-header-link-text-decoration: null !default;
+$section-header-link-hover-color: null !default;
+$section-header-link-hover-text-decoration: none !default;
+
+$section-header-collapse-icon-bottom: null !default;
+$section-header-collapse-icon-left: null !default;
+$section-header-collapse-icon-right: null !default;
+$section-header-collapse-icon-top: clay-collapse-icon-align($section-header-padding-y, 0, $section-header-font-size, $section-header-line-height) !default;
+
+$section-header-collapse-icon-padding-left: null !default;
+$section-header-collapse-icon-padding-right: null !default;
+
+// Section Subheader
+
+$section-subheader-color: $section-header-color !default;
+$section-subheader-font-size: $section-header-font-size !default;
+$section-subheader-font-weight: $section-header-font-weight !default;
+$section-subheader-line-height: $section-header-line-height !default;
+$section-subheader-margin-bottom: $section-header-margin-bottom !default;
+$section-subheader-padding-x: $section-header-padding-x !default;
+$section-subheader-padding-y: $section-header-padding-y !default;
+$section-subheader-text-transform: $section-header-text-transform !default;
