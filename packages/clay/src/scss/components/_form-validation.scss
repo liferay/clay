@@ -10,6 +10,7 @@
 	font-size: $form-feedback-font-size;
 	font-weight: $form-feedback-font-weight;
 	margin-top: $form-feedback-margin-top;
+	word-wrap: break-word;
 }
 
 .form-feedback-indicator {
@@ -25,6 +26,7 @@
 	color: $form-text-color;
 	font-size: $form-text-font-size;
 	font-weight: $form-text-font-weight;
+	word-wrap: break-word;
 }
 
 // HTML 5 Form Validator
