@@ -310,6 +310,7 @@ fieldset[disabled] label {
 
 	.form-inline-group {
 		flex: 1;
+		min-width: 25px;
 		position: relative;
 		width: 100%;
 	}
