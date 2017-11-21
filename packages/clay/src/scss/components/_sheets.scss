@@ -12,7 +12,11 @@
 	padding-top: $sheet-padding-y;
 
 	.panel-group-flush .panel-body {
-		margin-bottom: 3rem;
+		margin-bottom: $sheet-section-margin-bottom;
+
+		@include clay-scale-component {
+			margin-bottom: $sheet-section-margin-bottom-mobile;
+		}
 	}
 }
 
