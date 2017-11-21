@@ -58,6 +58,18 @@ h6,
 	}
 }
 
+.section-title {
+	color: $section-title-color;
+	font-size: $section-title-font-size;
+	font-weight: $section-title-font-weight;
+	margin-bottom: $section-title-margin-bottom;
+
+	@include clay-scale-component {
+		font-size: $section-title-font-size-mobile;
+		margin-bottom: $section-title-margin-bottom-mobile;
+	}
+}
+
 .section-header {
 	border-color: $section-header-border-color;
 	border-style: $section-header-border-style;
