@@ -12,15 +12,15 @@
 	padding-top: $sheet-padding-y;
 }
 
-.section-title {
-	color: $section-title-color;
-	font-size: $section-title-font-size;
-	font-weight: $section-title-font-weight;
-	margin-bottom: $section-title-margin-bottom;
+.sheet-title {
+	color: $sheet-title-color;
+	font-size: $sheet-title-font-size;
+	font-weight: $sheet-title-font-weight;
+	margin-bottom: $sheet-title-margin-bottom;
 
 	@include clay-scale-component {
-		font-size: $section-title-font-size-mobile;
-		margin-bottom: $section-title-margin-bottom-mobile;
+		font-size: $sheet-title-font-size-mobile;
+		margin-bottom: $sheet-title-margin-bottom-mobile;
 	}
 }
 
