@@ -24,44 +24,44 @@
 	}
 }
 
-.section-header {
-	border-color: $section-header-border-color;
-	border-style: $section-header-border-style;
-	border-width: $section-header-border-width;
-	color: $section-header-color;
-	font-size: $section-header-font-size;
-	font-weight: $section-header-font-weight;
-	line-height: $section-header-line-height;
-	margin-bottom: $section-header-margin-bottom;
-	padding-bottom: $section-header-padding-y;
-	padding-left: $section-header-padding-x;
-	padding-right: $section-header-padding-x;
-	padding-top: $section-header-padding-y;
+.sheet-header {
+	border-color: $sheet-header-border-color;
+	border-style: $sheet-header-border-style;
+	border-width: $sheet-header-border-width;
+	color: $sheet-header-color;
+	font-size: $sheet-header-font-size;
+	font-weight: $sheet-header-font-weight;
+	line-height: $sheet-header-line-height;
+	margin-bottom: $sheet-header-margin-bottom;
+	padding-bottom: $sheet-header-padding-y;
+	padding-left: $sheet-header-padding-x;
+	padding-right: $sheet-header-padding-x;
+	padding-top: $sheet-header-padding-y;
 	position: relative;
-	text-transform: $section-header-text-transform;
+	text-transform: $sheet-header-text-transform;
 	word-wrap: break-word;
 
 	&.collapse-icon {
-		padding-left: $section-header-collapse-icon-padding-left;
-		padding-right: $section-header-collapse-icon-padding-right;
+		padding-left: $sheet-header-collapse-icon-padding-left;
+		padding-right: $sheet-header-collapse-icon-padding-right;
 	}
 
 	.collapse-icon-closed,
 	.collapse-icon-open {
-		bottom: $section-header-collapse-icon-bottom;
-		left: $section-header-collapse-icon-left;
-		right: $section-header-collapse-icon-right;
-		top: $section-header-collapse-icon-top;
+		bottom: $sheet-header-collapse-icon-bottom;
+		left: $sheet-header-collapse-icon-left;
+		right: $sheet-header-collapse-icon-right;
+		top: $sheet-header-collapse-icon-top;
 	}
 }
 
-a.section-header {
-	color: $section-header-link-color;
-	text-decoration: $section-header-link-text-decoration;
+a.sheet-header {
+	color: $sheet-header-link-color;
+	text-decoration: $sheet-header-link-text-decoration;
 
 	@include hover {
-		color: $section-header-link-hover-color;
-		text-decoration: $section-header-link-hover-text-decoration;
+		color: $sheet-header-link-hover-color;
+		text-decoration: $sheet-header-link-hover-text-decoration;
 	}
 }
 
