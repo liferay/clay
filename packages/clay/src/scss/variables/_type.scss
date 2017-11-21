@@ -18,7 +18,7 @@ $section-header-border-style: solid !default;
 $section-header-border-width: 0 0 1px 0 !default;
 $section-header-color: null !default;
 $section-header-font-size: 0.875rem !default; // 14px
-$section-header-font-weight: null !default;
+$section-header-font-weight: $font-weight-semi-bold !default;
 $section-header-line-height: $headings-line-height !default; // 1.2
 $section-header-margin-bottom: 1.5rem !default; // 24px
 $section-header-padding-x: null !default;
