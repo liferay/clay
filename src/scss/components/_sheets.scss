@@ -10,6 +10,10 @@
 	padding-left:  $sheet-padding-x;
 	padding-right:  $sheet-padding-x;
 	padding-top: $sheet-padding-y;
+
+	.panel-group-flush .panel-body {
+		margin-bottom: 3rem;
+	}
 }
 
 .sheet-title {
@@ -65,17 +69,17 @@ a.sheet-header {
 	}
 }
 
-.sheet-subheader {
-	color: $sheet-subheader-color;
-	font-size: $sheet-subheader-font-size;
-	font-weight: $sheet-subheader-font-weight;
-	line-height: $sheet-subheader-line-height;
-	margin-bottom: $sheet-subheader-margin-bottom;
-	padding-bottom: $sheet-subheader-padding-y;
-	padding-left: $sheet-subheader-padding-x;
-	padding-right: $sheet-subheader-padding-x;
-	padding-top: $sheet-subheader-padding-y;
-	text-transform: $sheet-subheader-text-transform;
+.sheet-tertiary-title {
+	color: $sheet-tertiary-title-color;
+	font-size: $sheet-tertiary-title-font-size;
+	font-weight: $sheet-tertiary-title-font-weight;
+	line-height: $sheet-tertiary-title-line-height;
+	margin-bottom: $sheet-tertiary-title-margin-bottom;
+	padding-bottom: $sheet-tertiary-title-padding-y;
+	padding-left: $sheet-tertiary-title-padding-x;
+	padding-right: $sheet-tertiary-title-padding-x;
+	padding-top: $sheet-tertiary-title-padding-y;
+	text-transform: $sheet-tertiary-title-text-transform;
 	word-wrap: break-word;
 }
 
@@ -90,4 +94,8 @@ a.sheet-header {
 		font-size: $sheet-text-font-size-mobile;
 		margin-bottom: $sheet-text-margin-bottom-mobile;
 	}
+}
+
+.sheet-section {
+	margin-bottom: 3rem;
 }
