@@ -55,6 +55,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Disabled Checked Radio</h4>
+			<div id="disabled-checked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Inline Radio</h4>
 			<div id="inline-block" role="radiogroup" aria-label="Inline Radio"></div>
 		</div>
@@ -89,6 +96,15 @@
 				label: 'Disabled Radio'
 			},
 			'#disabled-block'
+		);
+
+		new metal.ClayRadio(
+			{
+				checked: true,
+				disabled: true,
+				label: 'Disabled Checked Radio'
+			},
+			'#disabled-checked-block'
 		);
 
 		new metal.ClayRadio(

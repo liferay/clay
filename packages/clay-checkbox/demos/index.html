@@ -61,6 +61,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Disabled Checked Checkbox</h4>
+			<div id="disabled-checked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Inline Checkbox</h4>
 			<div id="inline-block"></div>
 		</div>
@@ -103,6 +110,15 @@
 				label: 'Disabled Checkbox'
 			},
 			'#disabled-block'
+		);
+
+		new metal.ClayCheckbox(
+			{
+				checked: true,
+				disabled: true,
+				label: 'Disabled Checked Checkbox'
+			},
+			'#disabled-checked-block'
 		);
 
 		new metal.ClayCheckbox(
