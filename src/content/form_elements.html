@@ -374,7 +374,11 @@ section: Components
 		<h3>Form Inline Autofit</h3>
 
 		<blockquote class="blockquote">
-			Equally spaced form inputs. To set a fixed width use <code>flex-grow: 0; flex-basis: 200px;</code> on <code>.form-inline-group</code> or any direct descendant of <code>.form-inline-autofit</code>.
+			Equally spaced form inputs based on the number of items inside <code>.form-inline-autofit</code>. Each <code>input</code> and <code>label</code> group should, generally, be wrapped inside <code>.form-inline-group</code>. <code>form-inline-autofit</code> stacks all inputs at max-width: 575px (breakpoint sm).
+		</blockquote>
+
+		<blockquote class="blockquote">
+			To set a fixed width on <code>.form-inline-group</code> or any direct descendant of <code>.form-inline-autofit</code> use <code>max-width: 200px;</code> or <code>flex-grow: 0; flex-basis: 200px;</code>. For <code>labels</code> or anything that doesn't have <code>width: 100%;</code> by default, you will need to set <code>width</code> instead of <code>max-width</code>.
 		</blockquote>
 
 <div class="sheet">
