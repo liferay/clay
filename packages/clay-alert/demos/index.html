@@ -117,6 +117,17 @@
 	</div>
 
 	<div class="row row-spacing">
+		<div class="col">
+			<h4>Stripe Alerts with WebComponents</h4>
+
+			<clay-stripe message="This <a href='#'>alert</a> needs your attention." spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Info"></clay-stripe>
+			<clay-stripe style="success" message='You just read the <a href="#">alert message</a> successfully.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Success"></clay-stripe>
+			<clay-stripe style="warning" message='This alert is a <a href="#">warning message</a>.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Warning"></clay-stripe>
+			<clay-stripe style="danger" message='Something</a> is not right.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Danger"></clay-stripe>
+		</div>
+	</div>
+	
+	<div class="row row-spacing">
 		<h1>Toast Alerts</h1>
 	</div>
 
@@ -152,6 +163,19 @@
 			<h4>Auto Closeable Toast Alerts (Destroyed on dismiss)</h4>
 
 			<div class="alert-notifications" id="autocloseable-destroyable-toast-alerts">
+			</div>
+		</div>
+	</div>
+	
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Toast Alerts with WebComponents</h4>
+			
+			<div class="alert-notifications">
+				<clay-toast message="This <a href='#'>alert</a> needs your attention." spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Info"></clay-toast>
+				<clay-toast style="success" message='You just read the <a href="#">alert message</a> successfully.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Success"></clay-toast>
+				<clay-toast style="warning" message='This alert is a <a href="#">warning message</a>.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Warning"></clay-toast>
+				<clay-toast style="danger" message='Something</a> is not right.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Danger"></clay-toast>
 			</div>
 		</div>
 	</div>
