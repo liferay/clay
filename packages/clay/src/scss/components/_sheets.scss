@@ -78,3 +78,16 @@ a.sheet-header {
 	text-transform: $sheet-subheader-text-transform;
 	word-wrap: break-word;
 }
+
+.sheet-text {
+	color: $sheet-text-color;
+	font-size: $sheet-text-font-size;
+	font-weight: $sheet-text-font-weight;
+	margin-bottom: $sheet-text-margin-bottom;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $sheet-text-font-size-mobile;
+		margin-bottom: $sheet-text-margin-bottom-mobile;
+	}
+}
