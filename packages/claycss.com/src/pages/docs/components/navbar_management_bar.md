@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="navbar-management-bar">
+<article class="clay-site-open-overlay" id="navbar-management-bar">
 
 ### Navbar (Management Bar)
 
@@ -22,7 +22,7 @@ weight: 100
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-					<span class="navbar-text-truncate">Filter and Order</span>
+					<span class="navbar-text-truncate">Filter and Order</span>{sp}
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
@@ -39,7 +39,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1" role="button">
+				<a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
 						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
 					</svg>
@@ -54,7 +54,7 @@ weight: 100
 							<input class="form-control" placeholder="Search for..." type="text">
 						</div>
 						<span class="input-group-inset-item">
-							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+							<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 									<use xlink:href="/vendor/lexicon/icons.svg#times" />
 								</svg>
@@ -71,7 +71,7 @@ weight: 100
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-d-none">
-				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1" role="button">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 						<use xlink:href="/vendor/lexicon/icons.svg#search" />
 					</svg>
@@ -227,7 +227,7 @@ weight: 100
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1" role="button">
+				<a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
 						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
 					</svg>
@@ -315,19 +315,13 @@ weight: 100
 
 <script>
 {literal}
-window.onload = function() {
-	$('.clay-site-open-overlay-sm-down').on('click', function(event) {
+$(function() {
+	$('.clay-site-open-overlay .navbar-nav .navbar-breakpoint-d-none:first-child .nav-link').on('click', function(event) {
 		$(this).closest('.navbar').find('.navbar-overlay-sm-down').addClass('show');
 	});
-	$('.clay-site-close-overlay-sm-down').on('click', function(event) {
+	$('.clay-site-open-overlay .input-group-inset-item .btn-unstyled').on('click', function(event) {
 		$(this).closest('.navbar-overlay-sm-down').removeClass('show');
 	});
-	$('.clay-site-open-overlay-up').on('click', function(event) {
-		$(this).closest('.navbar').find('.navbar-overlay-up').addClass('show');
-	});
-	$('.clay-site-close-overlay-up').on('click', function(event) {
-		$(this).closest('.navbar-overlay-up').removeClass('show');
-	});
-}
+});
 {/literal}
 </script>
