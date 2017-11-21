@@ -8,13 +8,11 @@
 	{@param spritemap: string}
 	{@param title: string}
 	{@param? closeable: bool}
-	{@param? destroyOnHide: bool}
 	{@param? handleHide_: any}
 	{@param? style: string}
 
   {call ClayAlertBase.render}
     {param closeable: $closeable /}
-    {param destroyOnHide: $destroyOnHide /}
     {param events: ['hide': $handleHide_ ] /}
     {param message: $message /}
     {param ref: 'alertBase' /}

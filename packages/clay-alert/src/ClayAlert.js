@@ -10,8 +10,28 @@ import templates from './ClayAlert.soy.js';
  * Metal Clay Alert component.
  */
 class ClayAlert extends Component {
-	handleHide_(event) {
-		this.emit('hide', event);
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this.addListener('hide', this.defaultHideAlert_, true);
+	}
+
+	/**
+	 * Hides the alert and destroy it if proceed.
+	 * @private
+	 */
+	defaultHideAlert_() {
+		if (this.destroyOnHide) {
+			this.dispose();
+		}
+	}
+
+	/**
+	 * Continues the propagation of the hide event
+	 */
+	handleHide_() {
+		return !this.emit('hide');
 	}
 }
 
