@@ -8,7 +8,7 @@
     "format": "npm run prettier -- --write",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
-    "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay-components,generator-metal-clay,clay-dropdown,node_modules}/**'",
+    "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay-components,generator-metal-clay,clay-dropdown,clay-alert,node_modules}/**'",
     "precommit": "lint-staged",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "start": "http-server . -p 4000",
