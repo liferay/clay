@@ -16,6 +16,16 @@
 	}
 }
 
+.sheet-section {
+	margin-bottom: $sheet-section-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $sheet-section-margin-bottom-mobile;
+	}
+}
+
+// Sheet Title
+
 .sheet-title {
 	color: $sheet-title-color;
 	font-size: $sheet-title-font-size;
@@ -27,6 +37,8 @@
 		margin-bottom: $sheet-title-margin-bottom-mobile;
 	}
 }
+
+// Sheet Subtitle
 
 .sheet-subtitle {
 	border-color: $sheet-subtitle-border-color;
@@ -69,6 +81,8 @@ a.sheet-subtitle {
 	}
 }
 
+// Sheet Tertiary Title
+
 .sheet-tertiary-title {
 	color: $sheet-tertiary-title-color;
 	font-size: $sheet-tertiary-title-font-size;
@@ -83,6 +97,8 @@ a.sheet-subtitle {
 	word-wrap: break-word;
 }
 
+// Sheet Text
+
 .sheet-text {
 	color: $sheet-text-color;
 	font-size: $sheet-text-font-size;
@@ -94,8 +110,4 @@ a.sheet-subtitle {
 		font-size: $sheet-text-font-size-mobile;
 		margin-bottom: $sheet-text-margin-bottom-mobile;
 	}
-}
-
-.sheet-section {
-	margin-bottom: 3rem;
 }
