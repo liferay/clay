@@ -65,16 +65,16 @@ a.sheet-header {
 	}
 }
 
-.section-subheader {
-	color: $section-subheader-color;
-	font-size: $section-subheader-font-size;
-	font-weight: $section-subheader-font-weight;
-	line-height: $section-subheader-line-height;
-	margin-bottom: $section-subheader-margin-bottom;
-	padding-bottom: $section-subheader-padding-y;
-	padding-left: $section-subheader-padding-x;
-	padding-right: $section-subheader-padding-x;
-	padding-top: $section-subheader-padding-y;
-	text-transform: $section-subheader-text-transform;
+.sheet-subheader {
+	color: $sheet-subheader-color;
+	font-size: $sheet-subheader-font-size;
+	font-weight: $sheet-subheader-font-weight;
+	line-height: $sheet-subheader-line-height;
+	margin-bottom: $sheet-subheader-margin-bottom;
+	padding-bottom: $sheet-subheader-padding-y;
+	padding-left: $sheet-subheader-padding-x;
+	padding-right: $sheet-subheader-padding-x;
+	padding-top: $sheet-subheader-padding-y;
+	text-transform: $sheet-subheader-text-transform;
 	word-wrap: break-word;
 }
