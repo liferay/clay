@@ -16,6 +16,14 @@
 	}
 }
 
+.sheet-header {
+	margin-bottom: $sheet-header-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $sheet-header-margin-bottom-mobile;
+	}
+}
+
 .sheet-section {
 	margin-bottom: $sheet-section-margin-bottom;
 
