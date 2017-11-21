@@ -44,6 +44,16 @@ describe('ClayCheckbox', function() {
 		expect(clayCheckbox).toMatchSnapshot();
 	});
 
+	it('should generate a checked and disabled checkbox', () => {
+		clayCheckbox = new ClayCheckbox({
+			checked: true,
+			disabled: true,
+			label: 'My Checkbox',
+		});
+
+		expect(clayCheckbox).toMatchSnapshot();
+	});
+
 	it('should generate a checkbox with hidden label', () => {
 		clayCheckbox = new ClayCheckbox({
 			hideLabel: true,
