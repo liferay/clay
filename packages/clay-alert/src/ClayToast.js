@@ -29,6 +29,7 @@ class ClayToast extends Component {
 
 	/**
 	 * Continues the propagation of the hide event
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	handleHide_() {
 		return !this.emit('hide');
