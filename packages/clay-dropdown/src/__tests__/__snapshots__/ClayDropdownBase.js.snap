@@ -187,7 +187,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
       <div class="dropdown-item">
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
-            <input disabled="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
+            <input disabled="disabled" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">Item 1</span>
           </label>
@@ -365,7 +365,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
         <div class="dropdown-item">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
-              <input disabled="" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
+              <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Item 3</span>
             </label>
@@ -387,7 +387,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
         <div class="dropdown-item">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
-              <input disabled="" class="custom-control-input" name="item2radio" value="6" ref="input" type="radio" role="radio">
+              <input disabled="disabled" class="custom-control-input" name="item2radio" value="6" ref="input" type="radio" role="radio">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Item 6</span>
             </label>

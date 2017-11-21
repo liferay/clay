@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayRadio should generate a checked and disabled radio 1`] = `
+<div class="custom-control custom-radio">
+  <label>
+    <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="radio" role="radio">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Radio</span>
+  </label>
+</div>
+`;
+
 exports[`ClayRadio should generate a checked radio 1`] = `
 <div class="custom-control custom-radio">
   <label>
@@ -13,7 +23,7 @@ exports[`ClayRadio should generate a checked radio 1`] = `
 exports[`ClayRadio should generate a disabled radio 1`] = `
 <div class="custom-control custom-radio">
   <label>
-    <input disabled="" class="custom-control-input" ref="input" type="radio" role="radio">
+    <input disabled="disabled" class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>

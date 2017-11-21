@@ -42,7 +42,7 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
       <li class="dropdown-item">
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
-            <input disabled="" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+            <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">Item 7</span>
           </label>
@@ -71,7 +71,7 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
         <div class="dropdown-item">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
-              <input disabled="" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+              <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Item 10</span>
             </label>

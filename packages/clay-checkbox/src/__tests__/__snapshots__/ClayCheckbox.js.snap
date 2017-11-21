@@ -50,6 +50,16 @@ exports[`ClayCheckbox should generate a checkbox with value 1`] = `
 </div>
 `;
 
+exports[`ClayCheckbox should generate a checked and disabled checkbox 1`] = `
+<div class="custom-control custom-checkbox">
+  <label>
+    <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
+  </label>
+</div>
+`;
+
 exports[`ClayCheckbox should generate a checked checkbox 1`] = `
 <div class="custom-control custom-checkbox">
   <label>
@@ -63,7 +73,7 @@ exports[`ClayCheckbox should generate a checked checkbox 1`] = `
 exports[`ClayCheckbox should generate a disabled checkbox 1`] = `
 <div class="custom-control custom-checkbox">
   <label>
-    <input disabled="" class="custom-control-input" ref="input" type="checkbox">
+    <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Checkbox</span>
   </label>
