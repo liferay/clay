@@ -7,6 +7,12 @@ $sheet-border-radius: $border-radius !default;
 $sheet-padding-x: 1.5rem !default; // 24px
 $sheet-padding-y: 1.5rem !default; // 24px
 
+// Sheet Header
+
+$sheet-header-margin-bottom: null !default;
+
+$sheet-header-margin-bottom-mobile: null !default;
+
 // Sheet Section
 
 $sheet-section-margin-bottom: null !default;
