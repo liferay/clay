@@ -35,6 +35,16 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
+	it('should generate a checked and disabled radio', () => {
+		clayRadio = new ClayRadio({
+			checked: true,
+			disabled: true,
+			label: 'My Radio',
+		});
+
+		expect(clayRadio).toMatchSnapshot();
+	});
+
 	it('should generate a radio with hidden label', () => {
 		clayRadio = new ClayRadio({
 			hideLabel: true,
