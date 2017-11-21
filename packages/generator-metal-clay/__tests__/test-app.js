@@ -11,7 +11,7 @@ describe('clay-generator:app', function() {
 			.withOptions({skipInstall: true})
 			.withPrompts({
 				componentName: 'ClayComponent',
-				repoDescription: 'My awesome Clay componentc',
+				repoDescription: 'My awesome Clay component',
 			})
 			.on('end', done);
 	});
