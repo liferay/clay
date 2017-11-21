@@ -5,12 +5,12 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import templates from './ClayAlert.soy.js';
+import templates from './ClayAlertBase.soy.js';
 
 /**
- * Metal Clay Alert component.
+ * Metal Clay Alert Base component.
  */
-class ClayAlert extends Component {
+class ClayAlertBase extends Component {
 	/**
 	 * @inheritDoc
 	 */
@@ -127,11 +127,11 @@ class ClayAlert extends Component {
  * @static
  * @type {!Object}
  */
-ClayAlert.STATE = {
+ClayAlertBase.STATE = {
 	/**
 	 * Flag to indicate if alert should be automatically closed.
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -140,7 +140,7 @@ ClayAlert.STATE = {
 	/**
 	 * Flag to indicate if the alert is closeable.
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -149,7 +149,7 @@ ClayAlert.STATE = {
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -158,7 +158,7 @@ ClayAlert.STATE = {
 	/**
 	 * The message of alert
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {!html|string}
 	 */
 	message: Config.any().required(),
@@ -175,7 +175,7 @@ ClayAlert.STATE = {
 	/**
 	 * The style of alert
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {?string}
 	 * @default info
 	 */
@@ -184,7 +184,7 @@ ClayAlert.STATE = {
 	/**
 	 * The title of alert
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {!string}
 	 * @default undefined
 	 */
@@ -193,7 +193,7 @@ ClayAlert.STATE = {
 	/**
 	 * The type of alert
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {?string}
 	 * @default embedded
 	 */
@@ -202,7 +202,7 @@ ClayAlert.STATE = {
 	/**
 	 * Flag to indicate the visibility of the alert
 	 * @instance
-	 * @memberof ClayAlert
+	 * @memberof ClayAlertBase
 	 * @type {?bool}
 	 * @default true
 	 */
@@ -211,9 +211,9 @@ ClayAlert.STATE = {
 		.value(true),
 };
 
-defineWebComponent('clay-alert', ClayAlert);
+defineWebComponent('clay-alert-base', ClayAlertBase);
 
-Soy.register(ClayAlert, templates);
+Soy.register(ClayAlertBase, templates);
 
-export {ClayAlert};
-export default ClayAlert;
+export {ClayAlertBase};
+export default ClayAlertBase;
