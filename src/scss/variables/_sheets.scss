@@ -56,3 +56,13 @@ $sheet-subheader-margin-bottom: $sheet-header-margin-bottom !default;
 $sheet-subheader-padding-x: $sheet-header-padding-x !default;
 $sheet-subheader-padding-y: $sheet-header-padding-y !default;
 $sheet-subheader-text-transform: $sheet-header-text-transform !default;
+
+// Sheet Text
+
+$sheet-text-color: null !default;
+$sheet-text-font-size: null !default;
+$sheet-text-font-weight: null !default;
+$sheet-text-margin-bottom: 1.5rem !default; // 24px
+
+$sheet-text-font-size-mobile: null !default;
+$sheet-text-margin-bottom-mobile: null !default;
