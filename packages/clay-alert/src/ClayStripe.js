@@ -10,8 +10,28 @@ import templates from './ClayStripe.soy.js';
  * Metal Clay Stripe component.
  */
 class ClayStripe extends Component {
-	handleHide_(event) {
-		this.emit('hide', event);
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this.addListener('hide', this.defaultHideStripe_, true);
+	}
+
+	/**
+	 * Hides the alert and destroy it if proceed.
+	 * @private
+	 */
+	defaultHideStripe_() {
+		if (this.destroyOnHide) {
+			this.dispose();
+		}
+	}
+
+	/**
+	 * Continues the propagation of the hide event
+	 */
+	handleHide_() {
+		return !this.emit('hide');
 	}
 }
 
