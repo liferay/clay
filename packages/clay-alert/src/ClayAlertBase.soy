@@ -38,7 +38,7 @@
 
 	{let $content kind="html"}
 		{call .content}
-			{param closeable: (not $type or $type == 'embeded') ? $closeable : true /}
+			{param closeable: $closeable /}
 			{param handleCloseClick_: $handleCloseClick_ /}
 			{param message: $message /}
 			{param spritemap: $spritemap /}
