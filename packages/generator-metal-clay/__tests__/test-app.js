@@ -4,7 +4,7 @@ let path = require('path');
 let assert = require('yeoman-generator').assert;
 let helpers = require('yeoman-generator').test;
 
-describe('clay-generator:app', function() {
+describe('metal-clay-generator:app', function() {
 	beforeAll(function(done) {
 		helpers
 			.run(path.join(__dirname, '../app'))
