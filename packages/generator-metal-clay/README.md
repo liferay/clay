@@ -21,7 +21,7 @@ Then, install this generator:
 Just run the following command on the directory you wish to use for your project:
 
 ```sh
-yo clay
+yo metal-clay
 ```
 
 The generator will ask you a few questions about the package. Once you've answered all of them it will automatically generate a starting structure for you, as well as download all the local dependencies.
