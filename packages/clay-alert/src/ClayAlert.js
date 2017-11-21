@@ -14,6 +14,13 @@ class ClayAlert extends Component {
 	/**
 	 * @inheritDoc
 	 */
+	attached() {
+		this.addListener('hide', this.defaultHideAlert_, true);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
 	rendered() {
 		if (
 			this.autoClose &&
@@ -44,7 +51,7 @@ class ClayAlert extends Component {
 	 * Hides the alert and destroy it if proceed.
 	 * @private
 	 */
-	close() {
+	defaultHideAlert_() {
 		this.delayTime_ = 0;
 		this.visible_ = false;
 
@@ -55,6 +62,14 @@ class ClayAlert extends Component {
 		if (this.destroyOnHide) {
 			this.dispose();
 		}
+	}
+
+	/**
+	 * Emits hide alert.
+	 * @private
+	 */
+	close() {
+		this.emit('hide');
 	}
 
 	/**
