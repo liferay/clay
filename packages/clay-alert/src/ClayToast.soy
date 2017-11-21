@@ -1,0 +1,26 @@
+{namespace ClayToast}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param message: html|string}
+	{@param spritemap: string}
+	{@param title: string}
+	{@param? autoClose: bool}
+	{@param? destroyOnHide: bool}
+	{@param? handleHide_: any}
+	{@param? style: string}
+
+  {call ClayAlertBase.render}
+    {param autoClose: $autoClose /}
+    {param closeable: true /}
+    {param destroyOnHide: $destroyOnHide /}
+    {param events: ['hide': $handleHide_ ] /}
+    {param message: $message /}
+    {param spritemap: $spritemap /}
+    {param style: $style /}
+    {param title: $title /}
+    {param type: 'toast' /}
+  {/call}
+{/template}
