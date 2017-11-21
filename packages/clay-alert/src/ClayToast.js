@@ -10,8 +10,28 @@ import templates from './ClayToast.soy.js';
  * Metal Clay Toast component.
  */
 class ClayToast extends Component {
-	handleHide_(event) {
-		this.emit('hide', event);
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this.addListener('hide', this.defaultHideToast_, true);
+	}
+
+	/**
+	 * Hides the toast and destroy it if proceed.
+	 * @private
+	 */
+	defaultHideToast_() {
+		if (this.destroyOnHide) {
+			this.dispose();
+		}
+	}
+
+	/**
+	 * Continues the propagation of the hide event
+	 */
+	handleHide_() {
+		return !this.emit('hide');
 	}
 }
 
