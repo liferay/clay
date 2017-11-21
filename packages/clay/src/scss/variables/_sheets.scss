@@ -19,43 +19,43 @@ $sheet-title-margin-bottom-mobile: null !default;
 
 // Sheet Header
 
-$sheet-header-border-color: null !default;
-$sheet-header-border-style: solid !default;
-$sheet-header-border-width: 0 0 1px 0 !default;
-$sheet-header-color: null !default;
-$sheet-header-font-size: 0.875rem !default; // 14px
-$sheet-header-font-weight: $font-weight-semi-bold !default;
-$sheet-header-line-height: $headings-line-height !default; // 1.2
-$sheet-header-margin-bottom: 1.5rem !default; // 24px
-$sheet-header-padding-x: null !default;
-$sheet-header-padding-y: 0.3125rem !default; // 5px
-$sheet-header-text-transform: uppercase !default;
+$sheet-subtitle-border-color: null !default;
+$sheet-subtitle-border-style: solid !default;
+$sheet-subtitle-border-width: 0 0 1px 0 !default;
+$sheet-subtitle-color: null !default;
+$sheet-subtitle-font-size: 0.875rem !default; // 14px
+$sheet-subtitle-font-weight: $font-weight-semi-bold !default;
+$sheet-subtitle-line-height: $headings-line-height !default; // 1.2
+$sheet-subtitle-margin-bottom: 1.5rem !default; // 24px
+$sheet-subtitle-padding-x: null !default;
+$sheet-subtitle-padding-y: 0.3125rem !default; // 5px
+$sheet-subtitle-text-transform: uppercase !default;
 
 // Sheet Header as Panel Header
 
-$sheet-header-link-color: $sheet-header-color !default;
-$sheet-header-link-text-decoration: null !default;
-$sheet-header-link-hover-color: null !default;
-$sheet-header-link-hover-text-decoration: none !default;
+$sheet-subtitle-link-color: $sheet-subtitle-color !default;
+$sheet-subtitle-link-text-decoration: null !default;
+$sheet-subtitle-link-hover-color: null !default;
+$sheet-subtitle-link-hover-text-decoration: none !default;
 
-$sheet-header-collapse-icon-bottom: null !default;
-$sheet-header-collapse-icon-left: null !default;
-$sheet-header-collapse-icon-right: null !default;
-$sheet-header-collapse-icon-top: clay-collapse-icon-align($sheet-header-padding-y, 0, $sheet-header-font-size, $sheet-header-line-height) !default;
+$sheet-subtitle-collapse-icon-bottom: null !default;
+$sheet-subtitle-collapse-icon-left: null !default;
+$sheet-subtitle-collapse-icon-right: null !default;
+$sheet-subtitle-collapse-icon-top: clay-collapse-icon-align($sheet-subtitle-padding-y, 0, $sheet-subtitle-font-size, $sheet-subtitle-line-height) !default;
 
-$sheet-header-collapse-icon-padding-left: null !default;
-$sheet-header-collapse-icon-padding-right: null !default;
+$sheet-subtitle-collapse-icon-padding-left: null !default;
+$sheet-subtitle-collapse-icon-padding-right: null !default;
 
 // Sheet Tertiary Title
 
-$sheet-tertiary-title-color: $sheet-header-color !default;
-$sheet-tertiary-title-font-size: $sheet-header-font-size !default;
-$sheet-tertiary-title-font-weight: $sheet-header-font-weight !default;
-$sheet-tertiary-title-line-height: $sheet-header-line-height !default;
-$sheet-tertiary-title-margin-bottom: $sheet-header-margin-bottom !default;
-$sheet-tertiary-title-padding-x: $sheet-header-padding-x !default;
-$sheet-tertiary-title-padding-y: $sheet-header-padding-y !default;
-$sheet-tertiary-title-text-transform: $sheet-header-text-transform !default;
+$sheet-tertiary-title-color: $sheet-subtitle-color !default;
+$sheet-tertiary-title-font-size: $sheet-subtitle-font-size !default;
+$sheet-tertiary-title-font-weight: $sheet-subtitle-font-weight !default;
+$sheet-tertiary-title-line-height: $sheet-subtitle-line-height !default;
+$sheet-tertiary-title-margin-bottom: $sheet-subtitle-margin-bottom !default;
+$sheet-tertiary-title-padding-x: $sheet-subtitle-padding-x !default;
+$sheet-tertiary-title-padding-y: $sheet-subtitle-padding-y !default;
+$sheet-tertiary-title-text-transform: $sheet-subtitle-text-transform !default;
 
 // Sheet Text
 

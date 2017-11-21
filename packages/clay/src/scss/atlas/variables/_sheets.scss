@@ -1,7 +1,7 @@
 $sheet-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 
-// Sheet Header
+// Sheet Subtitle
 
-$sheet-header-color: $secondary !default;
-$sheet-header-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
-$sheet-header-padding-y: 0.46875rem !default; // 7.5px
+$sheet-subtitle-color: $secondary !default;
+$sheet-subtitle-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+$sheet-subtitle-padding-y: 0.46875rem !default; // 7.5px

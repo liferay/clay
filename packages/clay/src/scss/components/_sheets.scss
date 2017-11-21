@@ -28,44 +28,44 @@
 	}
 }
 
-.sheet-header {
-	border-color: $sheet-header-border-color;
-	border-style: $sheet-header-border-style;
-	border-width: $sheet-header-border-width;
-	color: $sheet-header-color;
-	font-size: $sheet-header-font-size;
-	font-weight: $sheet-header-font-weight;
-	line-height: $sheet-header-line-height;
-	margin-bottom: $sheet-header-margin-bottom;
-	padding-bottom: $sheet-header-padding-y;
-	padding-left: $sheet-header-padding-x;
-	padding-right: $sheet-header-padding-x;
-	padding-top: $sheet-header-padding-y;
+.sheet-subtitle {
+	border-color: $sheet-subtitle-border-color;
+	border-style: $sheet-subtitle-border-style;
+	border-width: $sheet-subtitle-border-width;
+	color: $sheet-subtitle-color;
+	font-size: $sheet-subtitle-font-size;
+	font-weight: $sheet-subtitle-font-weight;
+	line-height: $sheet-subtitle-line-height;
+	margin-bottom: $sheet-subtitle-margin-bottom;
+	padding-bottom: $sheet-subtitle-padding-y;
+	padding-left: $sheet-subtitle-padding-x;
+	padding-right: $sheet-subtitle-padding-x;
+	padding-top: $sheet-subtitle-padding-y;
 	position: relative;
-	text-transform: $sheet-header-text-transform;
+	text-transform: $sheet-subtitle-text-transform;
 	word-wrap: break-word;
 
 	&.collapse-icon {
-		padding-left: $sheet-header-collapse-icon-padding-left;
-		padding-right: $sheet-header-collapse-icon-padding-right;
+		padding-left: $sheet-subtitle-collapse-icon-padding-left;
+		padding-right: $sheet-subtitle-collapse-icon-padding-right;
 	}
 
 	.collapse-icon-closed,
 	.collapse-icon-open {
-		bottom: $sheet-header-collapse-icon-bottom;
-		left: $sheet-header-collapse-icon-left;
-		right: $sheet-header-collapse-icon-right;
-		top: $sheet-header-collapse-icon-top;
+		bottom: $sheet-subtitle-collapse-icon-bottom;
+		left: $sheet-subtitle-collapse-icon-left;
+		right: $sheet-subtitle-collapse-icon-right;
+		top: $sheet-subtitle-collapse-icon-top;
 	}
 }
 
-a.sheet-header {
-	color: $sheet-header-link-color;
-	text-decoration: $sheet-header-link-text-decoration;
+a.sheet-subtitle {
+	color: $sheet-subtitle-link-color;
+	text-decoration: $sheet-subtitle-link-text-decoration;
 
 	@include hover {
-		color: $sheet-header-link-hover-color;
-		text-decoration: $sheet-header-link-hover-text-decoration;
+		color: $sheet-subtitle-link-hover-color;
+		text-decoration: $sheet-subtitle-link-hover-text-decoration;
 	}
 }
 
