@@ -36,6 +36,20 @@
 	}
 }
 
+.sheet-footer {
+	margin-bottom: $sheet-footer-margin-bottom;
+	margin-left: $sheet-footer-margin-left;
+	margin-right: $sheet-footer-margin-right;
+	margin-top: $sheet-footer-margin-top;
+
+	@include clay-scale-component {
+		margin-bottom: $sheet-footer-margin-bottom-mobile;
+		margin-left: $sheet-footer-margin-left-mobile;
+		margin-right: $sheet-footer-margin-right-mobile;
+		margin-top: $sheet-footer-margin-top-mobile;
+	}
+}
+
 // Sheet Title
 
 .sheet-title {
