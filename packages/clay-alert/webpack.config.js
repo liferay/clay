@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: ['./src/all.js'],
+	entry: ['./src/all/alert.js'],
 	module: {
 		rules: [
 			{

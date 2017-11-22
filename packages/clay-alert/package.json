@@ -8,9 +8,9 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/all.js",
-  "esnext:main": "src/all.js",
-  "jsnext:main": "src/all.js",
+  "main": "lib/all/alert.js",
+  "esnext:main": "src/all/alert.js",
+  "jsnext:main": "src/all/alert.js",
   "files": [
     "lib",
     "src",
