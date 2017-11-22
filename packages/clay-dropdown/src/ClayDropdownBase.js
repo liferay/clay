@@ -207,7 +207,7 @@ ClayDropdownBase.STATE = {
 	 * Label of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {!string}
+	 * @type {!html|string}
 	 * @default undefined
 	 */
 	label: Config.any().required(),

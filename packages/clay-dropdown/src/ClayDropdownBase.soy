@@ -5,7 +5,7 @@
  */
 {template .render}
 	{@param items: list<?>}
-	{@param label: any}
+	{@param label: html|string}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? expanded: bool}
@@ -189,7 +189,7 @@
  * Renders the trigger button
  */
 {template .trigger}
-	{@param label: any}
+	{@param label: html|string}
 	{@param? classes: string}
 	{@param? expanded: bool}
 	{@param? style: string}
