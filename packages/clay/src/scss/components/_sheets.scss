@@ -6,10 +6,10 @@
 
 	@include border-radius($sheet-border-radius);
 
-	padding-bottom: $sheet-padding-y;
-	padding-left:  $sheet-padding-x;
-	padding-right:  $sheet-padding-x;
-	padding-top: $sheet-padding-y;
+	padding-bottom: $sheet-padding-bottom;
+	padding-left:  $sheet-padding-left;
+	padding-right:  $sheet-padding-right;
+	padding-top: $sheet-padding-top;
 
 	.panel-group-flush .panel-body {
 		margin-bottom: $sheet-section-margin-bottom;
