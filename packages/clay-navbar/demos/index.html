@@ -34,7 +34,7 @@
 	<div class="row row-spacing">
 		<div class="col">
 			<h4>Navbar with WebComponents</h4>
-			<clay-navbar items='[{"active": true, "title": "Page 1", "url": "#1"}]'></clay-navbar>
+			<clay-navbar items='[{"active": true, "title": "Page 1", "url": "#1"}]' spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-navbar>
 		</div>
 	</div>
 
@@ -46,6 +46,8 @@
 	</div>
 
 	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
 		/*
 		 * Normal Navbar
 		 */
@@ -58,7 +60,8 @@
 
 		new metal.ClayNavbar(
 			{
-				items: items
+				items: items,
+				spritemap: spritemap
 			},
 			'#normal-navbar-block'
 		);
@@ -69,7 +72,8 @@
 		 new metal.ClayNavbar(
 			{
 				inverted: true,
-				items: items
+				items: items,
+				spritemap: spritemap
 			},
 			'#inverted-navbar-block'
 		);
