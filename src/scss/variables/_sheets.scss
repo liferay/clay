@@ -44,7 +44,7 @@ $sheet-title-margin-bottom: 1.5rem !default; // 24px
 $sheet-title-font-size-mobile: 1.25rem !default; // 20px
 $sheet-title-margin-bottom-mobile: null !default;
 
-// Sheet Header
+// Sheet Subtitle
 
 $sheet-subtitle-border-color: null !default;
 $sheet-subtitle-border-style: solid !default;
@@ -58,7 +58,10 @@ $sheet-subtitle-padding-x: null !default;
 $sheet-subtitle-padding-y: 0.3125rem !default; // 5px
 $sheet-subtitle-text-transform: uppercase !default;
 
-// Sheet Header as Panel Header
+$sheet-subtitle-font-size-mobile: null !default;
+$sheet-subtitle-margin-bottom-mobile: null !default;
+
+// Sheet Subtitle as Panel Header
 
 $sheet-subtitle-link-color: $sheet-subtitle-color !default;
 $sheet-subtitle-link-text-decoration: null !default;
