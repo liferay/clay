@@ -126,6 +126,11 @@ a.sheet-subtitle {
 	padding-top: $sheet-tertiary-title-padding-y;
 	text-transform: $sheet-tertiary-title-text-transform;
 	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $sheet-tertiary-title-font-size-mobile;
+		margin-bottom: $sheet-tertiary-title-margin-bottom-mobile;
+	}
 }
 
 // Sheet Text
