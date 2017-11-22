@@ -5,22 +5,35 @@
  */
 {template .render}
 	{@param items: list<?>}
-	{@param label: any}
 	{@param spritemap: string}
 	{@param? button: ?}
 	{@param? expanded: bool}
+	{@param? icon: string}
 	{@param? indicatorsPosition: string}
+	{@param? label: html|string}
 	{@param? searchable: bool}
 	{@param? style: string}
 	{@param? triggerClasses: string}
 	{@param? type: string}
 
   {let $trigger kind="html"}
-    {$label}
-    {call ClayIcon.render}
-      {param spritemap: $spritemap /}
-      {param symbol: 'caret-bottom' /}
-    {/call}
+    {if $icon}
+      {call ClayIcon.render}
+        {param spritemap: $spritemap /}
+        {param symbol: $icon /}
+      {/call}
+    {/if}
+
+    {if $label}
+      {$label}
+    {/if}
+
+    {if not $icon}
+      {call ClayIcon.render}
+        {param spritemap: $spritemap /}
+        {param symbol: 'caret-bottom' /}
+      {/call}
+    {/if}
   {/let}
 
 	{call ClayDropdownBase.render}

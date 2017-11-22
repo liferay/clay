@@ -42,6 +42,15 @@ ClayDropdown.STATE = {
 	expanded: Config.bool().value(false),
 
 	/**
+	 * Icon to use in the trigger.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?string}
+	 * @default undefined
+	 */
+	icon: Config.string(),
+
+	/**
 	 * Position in which item indicator symbols will be placed. Needed if any
 	 * item has indicators.
 	 * @instance
@@ -64,10 +73,10 @@ ClayDropdown.STATE = {
 	 * Label of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {!string}
+	 * @type {?html|string}
 	 * @default undefined
 	 */
-	label: Config.string().required(),
+	label: Config.any(),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements
