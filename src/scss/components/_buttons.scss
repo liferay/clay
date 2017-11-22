@@ -126,3 +126,16 @@
 		@include clay-button-variant($value);
 	}
 }
+
+.btn-borderless {
+	border-color: transparent;
+
+	@include hover-focus {
+		border-color: transparent;
+	}
+
+	&:disabled,
+	&.disabled {
+		border-color: transparent;
+	}
+}
