@@ -4,6 +4,7 @@
  * This renders an anchor element.
  */
 {template .render}
+	{@param? areaExpanded: bool}
 	{@param? ariaLabel: string}
 	{@param? buttonStyle: string}
 	{@param? download: string}
@@ -22,6 +23,12 @@
 	{let $attributes kind="attributes"}
 		{if $ariaLabel}
 			aria-label="{$ariaLabel}"
+		{/if}
+
+		{if $areaExpanded}
+			aria-expanded="true"
+		{elseif $areaExpanded == false}
+			aria-expanded="false"
 		{/if}
 
 		{let $classes kind="text"}

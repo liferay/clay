@@ -27,6 +27,15 @@ ClayLink.STATE = {
 	ariaLabel: Config.string(),
 
 	/**
+	 * Aria Expanded attribute for the anchor element.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?bool|undefined}
+	 * @default undefined
+	 */
+	areaExpanded: Config.bool(),
+
+	/**
 	 * The css class to act as a button. If this is defined `style` param is
 	 * ignored.
 	 * @instance
