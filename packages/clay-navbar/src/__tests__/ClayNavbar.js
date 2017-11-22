@@ -3,6 +3,7 @@
 import ClayNavbar from '../ClayNavbar';
 
 let navbar;
+const spritemap = 'icons.svg';
 
 describe('ClayNavbar', function() {
 	afterEach(() => {
@@ -14,6 +15,7 @@ describe('ClayNavbar', function() {
 	it('should render a navbar with one element', function() {
 		navbar = new ClayNavbar({
 			items: [{title: 'Page 1', url: '#1'}],
+			spritemap: spritemap,
 		});
 
 		expect(navbar).toMatchSnapshot();
@@ -23,6 +25,7 @@ describe('ClayNavbar', function() {
 		navbar = new ClayNavbar({
 			inverted: true,
 			items: [{title: 'Page 1', url: '#1'}],
+			spritemap: spritemap,
 		});
 
 		expect(navbar).toMatchSnapshot();
@@ -31,6 +34,7 @@ describe('ClayNavbar', function() {
 	it('should render a navbar with one active element', function() {
 		navbar = new ClayNavbar({
 			items: [{active: true, title: 'Page 1', url: '#1'}],
+			spritemap: spritemap,
 		});
 
 		expect(navbar).toMatchSnapshot();
@@ -42,6 +46,7 @@ describe('ClayNavbar', function() {
 				{title: 'Page 1', url: '#1'},
 				{title: 'Page 2', url: '#2'},
 			],
+			spritemap: spritemap,
 		});
 
 		expect(navbar).toMatchSnapshot();
@@ -49,7 +54,9 @@ describe('ClayNavbar', function() {
 
 	it('should fail when no items are passed', function() {
 		expect(() => {
-			navbar = new ClayNavbar();
+			navbar = new ClayNavbar({
+				spritemap: spritemap,
+			});
 		}).toThrow();
 	});
 
@@ -57,6 +64,7 @@ describe('ClayNavbar', function() {
 		expect(() => {
 			navbar = new ClayNavbar({
 				items: [{url: '#1'}],
+				spritemap: spritemap,
 			});
 		}).toThrow();
 	});
@@ -65,6 +73,7 @@ describe('ClayNavbar', function() {
 		expect(() => {
 			navbar = new ClayNavbar({
 				items: [{title: 'Page 1'}],
+				spritemap: spritemap,
 			});
 		}).toThrow();
 	});
