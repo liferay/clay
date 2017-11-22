@@ -74,8 +74,8 @@ describe('ClayActionsDropdown', function() {
 					type: 'group',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayActionsDropdown).toMatchSnapshot();
@@ -147,8 +147,8 @@ describe('ClayActionsDropdown', function() {
 					type: 'group',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayActionsDropdown).toMatchSnapshot();

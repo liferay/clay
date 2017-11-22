@@ -21,8 +21,8 @@ describe('ClayDropdownBase', function() {
 					url: 'item2url',
 				},
 			],
+			label: 'Trigger',
 			triggerClasses: 'my-cutsom-class',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -40,7 +40,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item2url',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -70,7 +70,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -92,7 +92,7 @@ describe('ClayDropdownBase', function() {
 					type: 'checkbox',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 			type: 'form',
 		});
 
@@ -110,7 +110,7 @@ describe('ClayDropdownBase', function() {
 					type: 'checkbox',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 			type: 'form',
 		});
 
@@ -129,7 +129,7 @@ describe('ClayDropdownBase', function() {
 					type: 'checkbox',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 			type: 'form',
 		});
 
@@ -171,8 +171,8 @@ describe('ClayDropdownBase', function() {
 					type: 'radiogroup',
 				},
 			],
+			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger Label',
 			type: 'form',
 		});
 
@@ -216,8 +216,8 @@ describe('ClayDropdownBase', function() {
 					type: 'radiogroup',
 				},
 			],
+			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger Label',
 			type: 'form',
 		});
 
@@ -261,8 +261,8 @@ describe('ClayDropdownBase', function() {
 					type: 'radiogroup',
 				},
 			],
+			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger Label',
 			type: 'form',
 		});
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -302,8 +302,8 @@ describe('ClayDropdownBase', function() {
 					type: 'group',
 				},
 			],
+			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger Label',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -337,8 +337,8 @@ describe('ClayDropdownBase', function() {
 					url: '#4',
 				},
 			],
+			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger Label',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -359,8 +359,8 @@ describe('ClayDropdownBase', function() {
 					url: 'item2url',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -381,8 +381,8 @@ describe('ClayDropdownBase', function() {
 					url: 'item2url',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -397,7 +397,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -415,7 +415,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -433,7 +433,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -448,7 +448,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
-			triggerLabel: 'Trigger',
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -466,9 +466,9 @@ describe('ClayDropdownBase', function() {
 					url: 'item2url',
 				},
 			],
+			label: 'Trigger',
 			searchable: true,
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -483,8 +483,8 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdownBase.expanded).toBeFalsy();
@@ -506,8 +506,8 @@ describe('ClayDropdownBase', function() {
 					url: 'item1url',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		clayDropdownBase.toggle();
@@ -532,9 +532,9 @@ describe('ClayDropdownBase', function() {
 
 		clayDropdownBase = new ClayDropdownBase({
 			items: items,
+			label: 'Trigger',
 			searchable: true,
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdownBase.items).toEqual(items);

@@ -73,8 +73,8 @@ describe('ClayDropdown', function() {
 					type: 'radiogroup',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdown).toMatchSnapshot();
@@ -89,8 +89,8 @@ describe('ClayDropdown', function() {
 					url: 'item1url',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdown).toMatchSnapshot();
@@ -104,9 +104,9 @@ describe('ClayDropdown', function() {
 					url: 'item1url',
 				},
 			],
+			label: 'Trigger',
 			searchable: true,
 			spritemap: 'icons.svg',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdown).toMatchSnapshot();
@@ -120,9 +120,9 @@ describe('ClayDropdown', function() {
 					url: 'item1url',
 				},
 			],
+			label: 'Trigger',
 			spritemap: 'icons.svg',
 			triggerClasses: 'my-custom-class',
-			triggerLabel: 'Trigger',
 		});
 
 		expect(clayDropdown).toMatchSnapshot();
