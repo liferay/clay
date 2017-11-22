@@ -31,6 +31,20 @@ describe('ClayLink', function() {
 		expect(link).toMatchSnapshot();
 	});
 
+	it('should render a link with area expanded', () => {
+		link = new ClayLink({
+			areaExpanded: true,
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link without the area expanded', () => {
+		link = new ClayLink();
+
+		expect(link).toMatchSnapshot();
+	});
+
 	it('should render a link with href', () => {
 		link = new ClayLink({
 			href: 'http://www.liferay.com',

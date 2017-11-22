@@ -6,6 +6,8 @@ exports[`ClayLink should render a downloadable link 1`] = `<a download="download
 
 exports[`ClayLink should render a link with a label 1`] = `<a>My Link</a>`;
 
+exports[`ClayLink should render a link with area expanded 1`] = `<a aria-expanded="true"></a>`;
+
 exports[`ClayLink should render a link with aria label 1`] = `<a aria-label="My Link"></a>`;
 
 exports[`ClayLink should render a link with button borderless style 1`] = `<a class="btn btn-borderless"></a>`;
@@ -48,3 +50,5 @@ exports[`ClayLink should render a link with label and icon 1`] = `
 exports[`ClayLink should render a link with secondary style 1`] = `<a class="link-secondary"></a>`;
 
 exports[`ClayLink should render a link with target 1`] = `<a target="_blank"></a>`;
+
+exports[`ClayLink should render a link without the area expanded 1`] = `<a></a>`;
