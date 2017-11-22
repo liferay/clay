@@ -1,7 +1,22 @@
 $sheet-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 
-// Sheet Subtitle
+$sheet-header-margin-bottom-mobile: 2rem !default; // 32px
+
+$sheet-section-margin-bottom-mobile: 2rem !default; // 32px
+
+$sheet-footer-margin-bottom-mobile: 1rem !default; // 16px
+$sheet-footer-margin-top-mobile: 1rem !default; // 16px
+
+$sheet-title-margin-bottom-mobile: 1rem !default; // 16px
 
 $sheet-subtitle-color: $secondary !default;
 $sheet-subtitle-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
 $sheet-subtitle-padding-y: 0.46875rem !default; // 7.5px
+
+$sheet-subtitle-margin-bottom-mobile: 1rem !default; // 16px
+
+$sheet-tertiary-title-margin-bottom-mobile: 0.5rem !default; // 8px
+
+$sheet-text-color: $secondary !default;
+
+$sheet-text-margin-bottom-mobile: 1rem !default; // 16px
