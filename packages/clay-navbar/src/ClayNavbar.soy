@@ -9,24 +9,78 @@
 		title: string,
 		url: string
 	]>}
+	{@param spritemap: string}
+	{@param? handleClickToggler_: any}
 	{@param? inverted: bool}
+	{@param? isTransitioning_: bool}
+	{@param? visible_: bool}
 
 	{let $classes kind="text"}
-		navbar navbar-expand-md
+		navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar
 		{if $inverted}
-			{sp}navbar-dark navbar-dark-bg
+			{sp}navigation-bar-secondary
+		{else}
+			{sp}navigation-bar-light
 		{/if}
 	{/let}
 
 	<nav class="{$classes}">
-		<div aria-expanded="false" class="collapse navbar-collapse">
+		<div class="container">
+			{if $items}
+				{call .toggler}
+					{param handleClickToggler_: $handleClickToggler_ /}
+					{param items: $items /}
+					{param spritemap: $spritemap /}
+					{param visible_: $visible_ /}
+				{/call}
+			{/if}
+			{call .content}
+				{param isTransitioning_: $isTransitioning_ /}
+				{param items: $items /}
+				{param spritemap: $spritemap /}
+				{param visible_: $visible_ /}
+			{/call}
+		</div>
+	</nav>
+{/template}
+
+/**
+ * This renders a navbar content.
+ */
+{template .content}
+	{@param items: list<[
+		active: bool,
+		title: string,
+		url: string
+	]>}
+	{@param spritemap: string}
+	{@param? isTransitioning_: bool}
+	{@param? visible_: bool}
+
+	{let $classes kind="text"}
+		navbar-collapse
+
+		{if $isTransitioning_}
+			{sp}collapsing
+		{else}
+			{sp}collapse
+		{/if}
+
+		{if $visible_}
+			{sp}show
+		{/if}
+	{/let}
+
+	<div class="{$classes}">
+		<div class="container">
 			{if $items}
 				{call .navmenu}
 					{param items: $items /}
+					{param spritemap: $spritemap /}
 				{/call}
 			{/if}
 		</div>
-	</nav>
+	</div>
 {/template}
 
 /**
@@ -41,7 +95,7 @@
 		{call ClayLink.render}
 			{param ariaLabel kind="text"}
 				{if $active}
-					Current
+					Current Page
 				{/if}
 			{/param}
 
@@ -80,4 +134,46 @@
 			{/call}
 		{/foreach}
 	</ul>
+{/template}
+
+/**
+ * This makes a toggler when viewing on the mobile.
+ */
+{template .toggler}
+	{@param items: list<[
+		active: bool,
+		title: string,
+		url: string
+	]>}
+	{@param spritemap: string}
+	{@param? handleClickToggler_: any}
+	{@param? visible_: bool}
+
+	{let $classes kind="text"}
+		navbar-toggler navbar-toggler-link
+		{if not $visible_}
+			{sp}collapsed
+		{/if}
+	{/let}
+
+	{call ClayLink.render}
+		{param areaExpanded: $visible_ /}
+		{param ariaLabel: 'Toggle Navigation' /}
+		{param elementClasses: $classes /}
+		{param events: ['click': $handleClickToggler_] /}
+		{param href: '#' /}
+		{param icon: [
+			'alignment': 'right',
+			'spritemap': $spritemap,
+			'symbol': 'caret-bottom'
+		] /}
+
+		{param label kind="text"}
+			{foreach $item in $items}
+				{if $item.active == true}
+					{$item.title}
+				{/if}
+			{/foreach}
+		{/param}
+	{/call}
 {/template}
