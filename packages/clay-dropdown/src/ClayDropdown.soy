@@ -5,14 +5,14 @@
  */
 {template .render}
 	{@param items: list<?>}
-	{@param spritemap: string}
 	{@param label: any}
+	{@param spritemap: string}
 	{@param? button: ?}
 	{@param? expanded: bool}
 	{@param? indicatorsPosition: string}
 	{@param? searchable: bool}
-	{@param? triggerClasses: string}
 	{@param? style: string}
+	{@param? triggerClasses: string}
 	{@param? type: string}
 
   {let $trigger kind="html"}
@@ -28,11 +28,11 @@
     {param expanded: $expanded /}
     {param indicatorsPosition: $indicatorsPosition /}
     {param items: $items /}
+    {param label: $trigger /}
     {param searchable: $searchable /}
     {param spritemap: $spritemap /}
-    {param triggerClasses: $triggerClasses /}
-    {param label: $trigger /}
     {param style: $style /}
+    {param triggerClasses: $triggerClasses /}
     {param type: $type /}
   {/call}
 {/template}

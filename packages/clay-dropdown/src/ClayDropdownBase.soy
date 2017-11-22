@@ -13,8 +13,8 @@
 	{@param? indicatorsPosition: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
-	{@param? triggerClasses: string}
 	{@param? style: string}
+	{@param? triggerClasses: string}
 	{@param? type: string}
 
 	{let $wrapperClasses kind="text"}
@@ -26,8 +26,8 @@
 
 	<div class="{$wrapperClasses}">
 		{call .trigger}
-			{param expanded: $expanded /}
 			{param classes: $triggerClasses /}
+			{param expanded: $expanded /}
 			{param label: $label /}
 			{param style: $style /}
 		{/call}

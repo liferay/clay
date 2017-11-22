@@ -204,6 +204,15 @@ ClayDropdownBase.STATE = {
 	items: itemsValidator.required(),
 
 	/**
+	 * Label of the trigger button.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {!string}
+	 * @default undefined
+	 */
+	label: Config.any().required(),
+
+	/**
 	 * Flag to indicate if menu has a search field and search through elements
 	 * is possible.
 	 * @instance
@@ -223,24 +232,6 @@ ClayDropdownBase.STATE = {
 	spritemap: Config.string(),
 
 	/**
-	 * CSS classes to be applied to the trigger element.
-	 * @instance
-	 * @memberof ClayDropdownBase
-	 * @type {?string}
-	 * @default undefined
-	 */
-	triggerClasses: Config.string(),
-
-	/**
-	 * Label of the trigger button.
-	 * @instance
-	 * @memberof ClayDropdownBase
-	 * @type {!string}
-	 * @default undefined
-	 */
-	label: Config.any().required(),
-
-	/**
 	 * Style of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdownBase
@@ -254,6 +245,15 @@ ClayDropdownBase.STATE = {
 		'secondary',
 		'unstyled',
 	]).value('unstyled'),
+
+	/**
+	 * CSS classes to be applied to the trigger element.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?string}
+	 * @default undefined
+	 */
+	triggerClasses: Config.string(),
 
 	/**
 	 * Type of the dropdown menu.

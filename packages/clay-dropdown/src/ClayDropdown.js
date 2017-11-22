@@ -61,6 +61,15 @@ ClayDropdown.STATE = {
 	items: itemsValidator.required(),
 
 	/**
+	 * Label of the trigger button.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {!string}
+	 * @default undefined
+	 */
+	label: Config.string().required(),
+
+	/**
 	 * Flag to indicate if menu has a search field and search through elements
 	 * is possible.
 	 * @instance
@@ -80,24 +89,6 @@ ClayDropdown.STATE = {
 	spritemap: Config.string().required(),
 
 	/**
-	 * CSS classes to be applied to the trigger element.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?string}
-	 * @default undefined
-	 */
-	triggerClasses: Config.string(),
-
-	/**
-	 * Label of the trigger button.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {!string}
-	 * @default undefined
-	 */
-	label: Config.string().required(),
-
-	/**
 	 * Style of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdown
@@ -105,6 +96,15 @@ ClayDropdown.STATE = {
 	 * @default unstyled
 	 */
 	style: Config.oneOf(['secondary', 'unstyled']).value('unstyled'),
+
+	/**
+	 * CSS classes to be applied to the trigger element.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?string}
+	 * @default undefined
+	 */
+	triggerClasses: Config.string(),
 
 	/**
 	 * Type of the dropdown menu.
