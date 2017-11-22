@@ -111,4 +111,20 @@ describe('ClayDropdown', function() {
 
 		expect(clayDropdown).toMatchSnapshot();
 	});
+
+	it('should render a dropdown with trigger custom classes', () => {
+		clayDropdown = new ClayDropdown({
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+			],
+			spritemap: 'icons.svg',
+			triggerClasses: 'my-custom-class',
+			triggerLabel: 'Trigger',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
 });

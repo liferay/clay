@@ -9,6 +9,25 @@ describe('ClayDropdownBase', function() {
 		}
 	});
 
+	it('should render a dropdown with trigger custom classes', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+				{
+					label: 'Item 2',
+					url: 'item2url',
+				},
+			],
+			triggerClasses: 'my-cutsom-class',
+			triggerLabel: 'Trigger',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with items of type item', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
