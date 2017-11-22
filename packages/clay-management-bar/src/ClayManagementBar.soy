@@ -17,12 +17,10 @@
 		<div class="container">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
-						</label>
-					</div>
+					{call ClayCheckbox.render}
+						{param hideLabel: true /}
+						{param label: 'Select All' /}
+					{/call}
 				</li>
 				<li class="dropdown nav-item">
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
