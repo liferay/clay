@@ -13,6 +13,7 @@
 	{@param? indicatorsPosition: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
+	{@param? triggerClasses: string}
 	{@param? triggerStyle: string}
 	{@param? type: string}
 
@@ -26,6 +27,7 @@
 	<div class="{$wrapperClasses}">
 		{call .trigger}
 			{param expanded: $expanded /}
+			{param triggerClasses: $triggerClasses /}
 			{param triggerLabel: $triggerLabel /}
 			{param triggerStyle: $triggerStyle /}
 		{/call}
@@ -189,6 +191,7 @@
 {template .trigger}
 	{@param triggerLabel: any}
 	{@param? expanded: bool}
+	{@param? triggerClasses: string}
 	{@param? triggerStyle: string}
 
 	{let $buttonAttributes kind="attributes"}
@@ -201,6 +204,10 @@
 		aria-haspopup="true"
 		aria-label="toggle"
 		class="dropdown-toggle btn
+			{if $triggerClasses}
+				{sp}{$triggerClasses}
+			{/if}
+
 			{if $triggerStyle}
 				{sp}btn-{$triggerStyle}
 			{else}

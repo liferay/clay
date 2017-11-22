@@ -223,6 +223,15 @@ ClayDropdownBase.STATE = {
 	spritemap: Config.string(),
 
 	/**
+	 * CSS classes to be applied to the trigger element.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?string}
+	 * @default undefined
+	 */
+	triggerClasses: Config.string(),
+
+	/**
 	 * Label of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdownBase
