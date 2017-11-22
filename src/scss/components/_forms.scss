@@ -54,6 +54,10 @@ label {
 
 .form-group {
 	position: relative;
+
+	@include clay-scale-component {
+		margin-bottom: $form-group-margin-bottom-mobile;
+	}
 }
 
 // Inputs
