@@ -27,8 +27,11 @@
 	<div id="container"></div>
 
 	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 
-		new metal.ClayManagementBar({}, '#container');
+		new metal.ClayManagementBar({
+			spritemap: spritemap
+		}, '#container');
 
 	</script>
 </body>

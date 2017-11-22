@@ -4,6 +4,8 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param spritemap: string}
+	{@param? filterItems: list<?>}
 	{@param? id: string}
 
 	{let $navAttributes kind="attributes"}
@@ -23,22 +25,14 @@
 					{/call}
 				</li>
 				<li class="dropdown nav-item">
-					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-						<span class="navbar-text-truncate">Filter and Order</span>
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-						</svg>
-					</a>
-					<a aria-expanded="false" aria-haspopup="true" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
-								<use xlink:href="/vendor/lexicon/icons.svg#filter" />
-						</svg>
-					</a>
-					<div class="dropdown-menu" role="menu">
-						<a class="dropdown-item" href="#1" role="button">Filter Action 1</a>
-						<a class="dropdown-item" href="#1" role="button">Filter Action 2</a>
-						<a class="dropdown-item" href="#1" role="button">Filter Action 3</a>
-					</div>
+					{if $filterItems and $spritemap}
+						{call ClayDropdown.render}
+							{param items: $filterItems /}
+							{param spritemap: $spritemap /}
+							{param triggerClasses: 'nav-link navbar-breakpoint-down-d-none' /}
+							{param triggerLabel: 'Filter and Order' /}
+						{/call}
+					{/if}
 				</li>
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
