@@ -83,6 +83,11 @@
 	text-transform: $sheet-subtitle-text-transform;
 	word-wrap: break-word;
 
+	@include clay-scale-component {
+		font-size: $sheet-subtitle-font-size-mobile;
+		margin-bottom: $sheet-subtitle-margin-bottom-mobile;
+	}
+
 	&.collapse-icon {
 		padding-left: $sheet-subtitle-collapse-icon-padding-left;
 		padding-right: $sheet-subtitle-collapse-icon-padding-right;
