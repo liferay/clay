@@ -118,3 +118,11 @@
 		@include clay-button-variant($value);
 	}
 }
+
+// Button Outline Variants
+
+@each $color, $value in $btn-outline-palette {
+	.btn-outline-#{$color} {
+		@include clay-button-variant($value);
+	}
+}

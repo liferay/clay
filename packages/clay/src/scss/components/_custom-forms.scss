@@ -22,31 +22,31 @@
 
 	&:focus {
 		+ .btn-primary {
-			@extend .btn-primary.focus;
+			@extend .btn-primary.focus !optional;
 		}
 
 		+ .btn-secondary {
-			@extend .btn-secondary.focus;
+			@extend .btn-secondary.focus !optional;
 		}
 
 		+ .btn-success {
-			@extend .btn-success.focus;
+			@extend .btn-success.focus !optional;
 		}
 
 		+ .btn-warning {
-			@extend .btn-warning.focus;
+			@extend .btn-warning.focus !optional;
 		}
 
 		+ .btn-danger {
-			@extend .btn-danger.focus;
+			@extend .btn-danger.focus !optional;
 		}
 
 		+ .btn-light {
-			@extend .btn-light.focus;
+			@extend .btn-light.focus !optional;
 		}
 
 		+ .btn-dark {
-			@extend .btn-dark.focus;
+			@extend .btn-dark.focus !optional;
 		}
 
 		+ .input-group {
