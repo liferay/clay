@@ -8,9 +8,9 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/all.js",
-  "esnext:main": "src/all.js",
-  "jsnext:main": "src/all.js",
+  "main": "lib/all/dropdown.js",
+  "esnext:main": "src/all/dropdown.js",
+  "jsnext:main": "src/all/dropdown.js",
   "files": [
     "lib",
     "src",
