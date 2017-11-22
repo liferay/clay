@@ -17,7 +17,9 @@
     "test"
   ],
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
+    "prepublish": "npm run compile"
   },
   "keywords": [
     "clay",
