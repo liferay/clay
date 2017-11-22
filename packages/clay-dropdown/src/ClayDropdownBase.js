@@ -86,10 +86,10 @@ class ClayDropdownBase extends Component {
 	 * @param {boolean} expanded
 	 */
 	syncExpanded(expanded) {
-		if (expanded && this.alignElementSelector) {
+		if (expanded && this.alignElementSelector_) {
 			// eslint-disable-next-line
 			let alignElement = this.element.querySelector(
-				this.alignElementSelector
+				this.alignElementSelector_
 			);
 			if (alignElement) {
 				let bodyElement = this.element.querySelector('.dropdown-menu');
@@ -140,7 +140,7 @@ ClayDropdownBase.STATE = {
 	 * @type {?string}
 	 * @default .dropdown-toggle
 	 */
-	alignElementSelector: Config.string()
+	alignElementSelector_: Config.string()
 		.value('.dropdown-toggle')
 		.internal(),
 
