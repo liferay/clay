@@ -64,6 +64,56 @@ weight: 100
 	</div>
 </nav>
 
+```soy
+{call ClayNavbar.render}
+	{param items: [
+		[
+			'title': 'App Section 1',
+			'url': '#1'
+		],
+		[
+			'active'; true,
+			'title': 'App Section 2',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 3',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 4',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 5',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 6',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 7',
+			'url': '#1'
+		]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
+```
+```text/html
+<clay-navbar
+	items='[
+		{"title": "App Section 1", "url": "#1"},
+		{"title": "App Section 2", "url": "#1"},
+		{"title": "App Section 3", "url": "#1"},
+		{"title": "App Section 4", "url": "#1"},
+		{"title": "App Section 5", "url": "#1"},
+		{"title": "App Section 6", "url": "#1"},
+		{"title": "App Section 7", "url": "#1"}
+	]'
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-navbar>
+```
 ```text/html
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
 	<div class="container">
@@ -166,6 +216,58 @@ weight: 100
 	</div>
 </nav>
 
+```soy
+{call ClayNavbar.render}
+	{param inverted: true /}
+	{param items: [
+		[
+			'title': 'App Section 1',
+			'url': '#1'
+		],
+		[
+			'active'; true,
+			'title': 'App Section 2',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 3',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 4',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 5',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 6',
+			'url': '#1'
+		],
+		[
+			'title': 'App Section 7',
+			'url': '#1'
+		]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
+```
+```text/html
+<clay-navbar
+	inverted="true"
+	items='[
+		{"title": "App Section 1", "url": "#1"},
+		{"title": "App Section 2", "url": "#1"},
+		{"title": "App Section 3", "url": "#1"},
+		{"title": "App Section 4", "url": "#1"},
+		{"title": "App Section 5", "url": "#1"},
+		{"title": "App Section 6", "url": "#1"},
+		{"title": "App Section 7", "url": "#1"}
+	]'
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-navbar>
+```
 ```text/html
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
 	<div class="container">
