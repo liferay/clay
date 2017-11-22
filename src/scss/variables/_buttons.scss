@@ -70,3 +70,26 @@ $btn-palette: map-merge((
 	light: $btn-light,
 	dark: $btn-dark
 ), $btn-palette);
+
+// Button Outline Variants
+
+$btn-outline-primary: () !default;
+$btn-outline-secondary: () !default;
+$btn-outline-success: () !default;
+$btn-outline-info: () !default;
+$btn-outline-warning: () !default;
+$btn-outline-danger: () !default;
+$btn-outline-light: () !default;
+$btn-outline-dark: () !default;
+
+$btn-outline-palette: () !default;
+$btn-outline-palette: map-merge((
+	primary: $btn-outline-primary,
+	secondary: $btn-outline-secondary,
+	success: $btn-outline-success,
+	info: $btn-outline-info,
+	warning: $btn-outline-warning,
+	danger: $btn-outline-danger,
+	light: $btn-outline-light,
+	dark: $btn-outline-dark
+), $btn-outline-palette);
