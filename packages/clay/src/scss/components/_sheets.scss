@@ -56,7 +56,9 @@
 	color: $sheet-title-color;
 	font-size: $sheet-title-font-size;
 	font-weight: $sheet-title-font-weight;
+	line-height: $sheet-title-line-height;
 	margin-bottom: $sheet-title-margin-bottom;
+	word-wrap: break-word;
 
 	@include clay-scale-component {
 		font-size: $sheet-title-font-size-mobile;
