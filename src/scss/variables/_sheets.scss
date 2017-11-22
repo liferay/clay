@@ -4,8 +4,11 @@ $sheet-border-style: solid !default;
 $sheet-border-width: 0.0625rem !default; // 1px
 
 $sheet-border-radius: $border-radius !default;
-$sheet-padding-x: 1.5rem !default; // 24px
-$sheet-padding-y: 1.5rem !default; // 24px
+
+$sheet-padding-bottom: 0.0625rem !default; // 1px
+$sheet-padding-left: 1.5rem !default; // 24px
+$sheet-padding-right: 1.5rem !default; // 24px
+$sheet-padding-top: 1.5rem !default; // 24px
 
 // Sheet Header
 
