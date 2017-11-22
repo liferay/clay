@@ -5,7 +5,7 @@
  */
 {template .render}
 	{@param items: list<?>}
-	{@param triggerLabel: any}
+	{@param label: any}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? expanded: bool}
@@ -14,7 +14,7 @@
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? triggerClasses: string}
-	{@param? triggerStyle: string}
+	{@param? style: string}
 	{@param? type: string}
 
 	{let $wrapperClasses kind="text"}
@@ -27,9 +27,9 @@
 	<div class="{$wrapperClasses}">
 		{call .trigger}
 			{param expanded: $expanded /}
-			{param triggerClasses: $triggerClasses /}
-			{param triggerLabel: $triggerLabel /}
-			{param triggerStyle: $triggerStyle /}
+			{param classes: $triggerClasses /}
+			{param label: $label /}
+			{param style: $style /}
 		{/call}
 
 		{call .sections}
@@ -189,10 +189,10 @@
  * Renders the trigger button
  */
 {template .trigger}
-	{@param triggerLabel: any}
+	{@param label: any}
+	{@param? classes: string}
 	{@param? expanded: bool}
-	{@param? triggerClasses: string}
-	{@param? triggerStyle: string}
+	{@param? style: string}
 
 	{let $buttonAttributes kind="attributes"}
 		{if $expanded}
@@ -204,12 +204,12 @@
 		aria-haspopup="true"
 		aria-label="toggle"
 		class="dropdown-toggle btn
-			{if $triggerClasses}
-				{sp}{$triggerClasses}
+			{if $classes}
+				{sp}{$classes}
 			{/if}
 
-			{if $triggerStyle}
-				{sp}btn-{$triggerStyle}
+			{if $style}
+				{sp}btn-{$style}
 			{else}
 				{sp}btn-unstyled
 			{/if}
@@ -219,7 +219,7 @@
 	{/let}
 
 	<button {$buttonAttributes}>
-		{$triggerLabel}
+		{$label}
 	</button>
 {/template}
 

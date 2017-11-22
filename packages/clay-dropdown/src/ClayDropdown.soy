@@ -6,17 +6,17 @@
 {template .render}
 	{@param items: list<?>}
 	{@param spritemap: string}
-	{@param triggerLabel: any}
+	{@param label: any}
 	{@param? button: ?}
 	{@param? expanded: bool}
 	{@param? indicatorsPosition: string}
 	{@param? searchable: bool}
 	{@param? triggerClasses: string}
-	{@param? triggerStyle: string}
+	{@param? style: string}
 	{@param? type: string}
 
   {let $trigger kind="html"}
-    {$triggerLabel}
+    {$label}
     {call ClayIcon.render}
       {param spritemap: $spritemap /}
       {param symbol: 'caret-bottom' /}
@@ -31,8 +31,8 @@
     {param searchable: $searchable /}
     {param spritemap: $spritemap /}
     {param triggerClasses: $triggerClasses /}
-    {param triggerLabel: $trigger /}
-    {param triggerStyle: $triggerStyle /}
+    {param label: $trigger /}
+    {param style: $style /}
     {param type: $type /}
   {/call}
 {/template}

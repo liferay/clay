@@ -238,7 +238,7 @@ ClayDropdownBase.STATE = {
 	 * @type {!string}
 	 * @default undefined
 	 */
-	triggerLabel: Config.any().required(),
+	label: Config.any().required(),
 
 	/**
 	 * Style of the trigger button.
@@ -247,7 +247,7 @@ ClayDropdownBase.STATE = {
 	 * @type {?string}
 	 * @default unstyled
 	 */
-	triggerStyle: Config.oneOf([
+	style: Config.oneOf([
 		'borderless',
 		'link',
 		'primary',

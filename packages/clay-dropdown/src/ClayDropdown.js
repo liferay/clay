@@ -95,7 +95,7 @@ ClayDropdown.STATE = {
 	 * @type {!string}
 	 * @default undefined
 	 */
-	triggerLabel: Config.string().required(),
+	label: Config.string().required(),
 
 	/**
 	 * Style of the trigger button.
@@ -104,7 +104,7 @@ ClayDropdown.STATE = {
 	 * @type {?string}
 	 * @default unstyled
 	 */
-	triggerStyle: Config.oneOf(['secondary', 'unstyled']).value('unstyled'),
+	style: Config.oneOf(['secondary', 'unstyled']).value('unstyled'),
 
 	/**
 	 * Type of the dropdown menu.
