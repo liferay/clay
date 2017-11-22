@@ -24,6 +24,7 @@
 						{param label: 'Select All' /}
 					{/call}
 				</li>
+
 				<li class="dropdown nav-item">
 					{if $filterItems and $spritemap}
 						{call ClayDropdown.render}
@@ -34,14 +35,20 @@
 						{/call}
 					{/if}
 				</li>
+
 				<li class="nav-item">
-					<a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
-							<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
-						</svg>
-					</a>
+					{call ClayButton.render}
+						{param elementClasses: 'nav-link nav-link-monospaced order-arrow-down-active' /}
+						{param icon: [
+							'alignment': 'left',
+							'spritemap': $spritemap,
+							'symbol': 'order-arrow'
+						] /}
+						{param style: 'unstyled' /}
+					{/call}
 				</li>
 			</ul>
+
 			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<div class="container">
 					<form role="search">
