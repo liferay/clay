@@ -33,6 +33,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Dropdown with icon trigger</h4>
+			<div id="icon-trigger-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Default Dropdown with WebComponents</h4>
 			<clay-dropdown items='[{"label": "Item 1"},{"label": "Item 2"}]' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" label="Trigger label"></clay-dropdown>
 		</div>
@@ -141,6 +148,37 @@
 				label: 'Trigger Label',
 			},
 			'#default-block'
+		);
+
+		/**
+		 * Icon Trigger Dropdown
+		 **/
+		new metal.ClayDropdown(
+			{
+				icon: 'list',
+				items: [
+					{
+						label: 'Item 1',
+						url: '#1',
+					},
+					{
+						active: true,
+						label: 'Item 2',
+						url: '#2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						url: '#3',
+					},
+					{
+						label: 'Item 4',
+						url: '#4',
+					},
+				],
+				spritemap: spritemap,
+			},
+			'#icon-trigger-block'
 		);
 
 		/**
