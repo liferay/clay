@@ -46,6 +46,15 @@ ClayManagementBar.STATE = {
 	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
+
+	/**
+	 * List of view items.
+	 * @instance
+	 * @memberof ClayManagementBar
+	 * @type {?Array|undefined}
+	 * @default undefined
+	 */
+	viewTypes: itemsValidator,
 };
 
 defineWebComponent('clay-management-bar', ClayManagementBar);
