@@ -51,9 +51,9 @@ ClayManagementBar.STATE = {
 	]).value('unchecked'),
 
 	/**
-	 * List of menu items.
+	 * List of filter menu items.
 	 * @instance
-	 * @memberof ClayDropdown
+	 * @memberof ClayManagementBar
 	 * @type {?Array}
 	 * @default undefined
 	 */
