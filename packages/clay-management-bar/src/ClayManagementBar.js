@@ -39,6 +39,16 @@ ClayManagementBar.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Flag to indicate if the managment toolbar will control the selection of
+	 * elements.
+	 * @instance
+	 * @memberof ClayManagementBar
+	 * @type {?bool|undefined}
+	 * @default undefined
+	 */
+	selectable: Config.bool(),
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayManagementBar
