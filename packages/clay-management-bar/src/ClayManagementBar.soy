@@ -44,6 +44,13 @@
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link navbar-breakpoint-down-d-none' /}
 						{/call}
+
+						{call ClayDropdown.render}
+							{param icon: 'filter' /}
+							{param items: $filterItems /}
+							{param spritemap: $spritemap /}
+							{param triggerClasses: 'nav-link nav-link-monospaced navbar-breakpoint-d-none' /}
+						{/call}
 					</li>
 				{/if}
 
@@ -87,7 +94,7 @@
 						{/call}
 					{else}
 						{call ClayButton.render}
-							{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+							{param elementClasses: 'nav-btn nav-btn-monospaced' /}
 							{param events: ['click': $handlePlusButtonClicked_ ] /}
 							{param icon: [
 								'alignment': 'left',
