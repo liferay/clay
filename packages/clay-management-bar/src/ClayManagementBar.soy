@@ -41,6 +41,83 @@
  * This renders the component's active content.
  */
 {template .active}
+	<nav class="management-bar management-bar-primary navbar navbar-expand-md">
+		<div class="container">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+						</label>
+					</div>
+				</li>
+				<li class="nav-item">
+					<span class="navbar-text">3 of 7
+						<span class="navbar-breakpoint-down-d-none">items selected</span>
+					</span>
+				</li>
+				<li class="nav-item">
+					<button class="btn btn-link nav-btn" type="button">Select all</button>
+				</li>
+			</ul>
+			
+			<ul class="navbar-nav">
+				<li class="nav-item navbar-breakpoint-down-d-none">
+					<a class="nav-link nav-link-monospaced" href="#1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#trash"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="nav-item navbar-breakpoint-down-d-none">
+					<a class="nav-link nav-link-monospaced" href="#1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#paste">
+							</use>
+						</svg>
+					</a>
+				</li>
+				<li class="dropdown nav-item">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#ellipsis-v">
+							</use>
+						</svg>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
+						<a class="active dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#list">
+									</use>
+								</svg>
+							</span>
+							List View
+						</a>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#table">
+									</use>
+								</svg>
+							</span>
+							Table View
+						</a>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#cards2">
+									</use>
+								</svg>
+							</span>
+							Card View
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
 {/template}
 
 /**
