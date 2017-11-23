@@ -20,6 +20,8 @@
 
 	{if $isActive}
 		{call .active}
+			{param checkboxState: $checkboxState /}
+			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
 		{/call}
 	{else}
 		{call .default}
@@ -41,16 +43,28 @@
  * This renders the component's active content.
  */
 {template .active}
-	<nav class="management-bar management-bar-primary navbar navbar-expand-md">
+	{@param? checkboxState: string}
+	{@param? handleCheckboxChanged_: any}
+	{@param? id: string}
+
+	{let $navAttributes kind="attributes"}
+		class="management-bar management-bar-light navbar navbar-expand-md"
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<nav {$navAttributes}>
 		<div class="container">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-						</label>
-					</div>
+					{call ClayCheckbox.render}
+						{param checked: $checkboxState == 'checked' /}
+						{param events: ['change': $handleCheckboxChanged_] /}
+						{param hideLabel: true /}
+						{param indeterminate: $checkboxState == 'indeterminate' /}
+						{param label: 'Select All' /}
+					{/call}
 				</li>
 				<li class="nav-item">
 					<span class="navbar-text">3 of 7
