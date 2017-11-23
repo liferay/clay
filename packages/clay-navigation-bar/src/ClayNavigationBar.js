@@ -19,7 +19,6 @@ class ClayNavigationBar extends Component {
 
 	/**
 	 * Check the click and set transition true.
-	 * @param {!Event} event
 	 * @private
 	 */
 	handleClickToggler_() {
@@ -78,7 +77,7 @@ ClayNavigationBar.STATE = {
 	/**
 	 * The display style attribute.
 	 * @instance
-	 * @memberof ClayNavbar
+	 * @memberof ClayNavigationBar
 	 * @type {?boolean}
 	 * @default false
 	 */
@@ -87,7 +86,7 @@ ClayNavigationBar.STATE = {
 	/**
 	 * The toggle animation.
 	 * @instance
-	 * @memberof ClayNavbar
+	 * @memberof ClayNavigationBar
 	 * @type {?boolean}
 	 * @default false
 	 * @private
@@ -99,7 +98,7 @@ ClayNavigationBar.STATE = {
 	/**
 	 * List of items to show in the Navbar.
 	 * @instance
-	 * @memberof ClayNavbar
+	 * @memberof ClayNavigationBar
 	 * @type {!Array}
 	 * @default undefined
 	 */
@@ -114,7 +113,7 @@ ClayNavigationBar.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayNavbar
+	 * @memberof ClayNavigationBar
 	 * @type {!string}
 	 * @default undefined
 	 */
@@ -123,7 +122,7 @@ ClayNavigationBar.STATE = {
 	/**
 	 * Navmenus visible in mobile when click in the button.
 	 * @instance
-	 * @memberof ClayNavbar
+	 * @memberof ClayNavigationBar
 	 * @type {?bool}
 	 * @default false
 	 * @private
