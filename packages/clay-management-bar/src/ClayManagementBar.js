@@ -84,6 +84,8 @@ ClayManagementBar.STATE = {
 	 */
 	selectable: Config.bool(),
 
+	selectedItems: Config.number(),
+
 	/**
 	 * Sorting order.
 	 * @instance
@@ -101,6 +103,8 @@ ClayManagementBar.STATE = {
 	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
+
+	totalItems: Config.number(),
 
 	/**
 	 * List of view items.

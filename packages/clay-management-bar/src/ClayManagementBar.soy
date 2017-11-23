@@ -13,7 +13,9 @@
 	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
 	{@param? selectable: bool}
+	{@param? selectedItems: number}
 	{@param? sortingOrder: string}
+	{@param? totalItems: number}
 	{@param? viewTypes: list<?>}
 
 	{let $isActive: $checkboxState == 'checked' or $checkboxState == 'indeterminate' /}
@@ -22,6 +24,8 @@
 		{call .active}
 			{param checkboxState: $checkboxState /}
 			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
+			{param selectedItems: $selectedItems /}
+			{param totalItems: $totalItems /}
 		{/call}
 	{else}
 		{call .default}
@@ -46,6 +50,8 @@
 	{@param? checkboxState: string}
 	{@param? handleCheckboxChanged_: any}
 	{@param? id: string}
+	{@param? selectedItems: number}
+	{@param? totalItems: number}
 
 	{let $navAttributes kind="attributes"}
 		class="management-bar management-bar-light navbar navbar-expand-md"
@@ -67,12 +73,17 @@
 					{/call}
 				</li>
 				<li class="nav-item">
-					<span class="navbar-text">3 of 7
+					<span class="navbar-text">
+						{$selectedItems} of {$totalItems}{sp}
 						<span class="navbar-breakpoint-down-d-none">items selected</span>
 					</span>
 				</li>
 				<li class="nav-item">
-					<button class="btn btn-link nav-btn" type="button">Select all</button>
+					{call ClayButton.render}
+						{param elementClasses: 'nav-btn' /}
+						{param label: 'Select all' /}
+						{param style: 'link' /}
+					{/call}
 				</li>
 			</ul>
 			
