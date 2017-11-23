@@ -158,13 +158,13 @@
 // Modal Full Screen
 
 .modal-full-screen {
-	bottom: 45px;
-	left: 45px;
+	bottom: 48px;
+	left: 48px;
 	margin: 0;
 	max-width: none;
 	position: absolute;
-	right: 45px;
-	top: 45px;
+	right: 48px;
+	top: 48px;
 
 	@include clay-scale-component {
 		bottom: 0;
