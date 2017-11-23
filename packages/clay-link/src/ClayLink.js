@@ -33,7 +33,7 @@ ClayLink.STATE = {
 	 * @type {?bool|undefined}
 	 * @default undefined
 	 */
-	areaExpanded: Config.bool(),
+	ariaExpanded: Config.bool(),
 
 	/**
 	 * The css class to act as a button. If this is defined `style` param is
