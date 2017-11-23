@@ -5,7 +5,9 @@
  */
 {template .render}
 	{@param spritemap: string}
+	{@param? checkboxState: string}
 	{@param? filterItems: list<?>}
+	{@param? handleCheckboxChanged_: any}
 	{@param? id: string}
 	{@param? selectable: bool}
 	{@param? viewTypes: list<?>}
@@ -23,7 +25,10 @@
 				{if $selectable}
 					<li class="nav-item">
 						{call ClayCheckbox.render}
+							{param checked: $checkboxState == 'checked' /}
+							{param events: ['change': $handleCheckboxChanged_] /}
 							{param hideLabel: true /}
+							{param indeterminate: $checkboxState == 'indeterminate' /}
 							{param label: 'Select All' /}
 						{/call}
 					</li>

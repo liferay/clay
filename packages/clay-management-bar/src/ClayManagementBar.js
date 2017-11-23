@@ -12,7 +12,11 @@ import templates from './ClayManagementBar.soy.js';
 /**
  * Metal ClayManagementBar component.
  */
-class ClayManagementBar extends Component {}
+class ClayManagementBar extends Component {
+	handleCheckboxChanged_(event) {
+		this.emit('checkboxChanged', event);
+	}
+}
 
 /**
  * State definition.
@@ -20,6 +24,19 @@ class ClayManagementBar extends Component {}
  * @type {!Object}
  */
 ClayManagementBar.STATE = {
+	/**
+	 * The state of the selection checkbox.
+	 * @instance
+	 * @memberof ClayManagementBar
+	 * @type {?string|undefined}
+	 * @default unchecked
+	 */
+	checkboxState: Config.oneOf([
+		'checked',
+		'indeterminate',
+		'unchecked',
+	]).value('unchecked'),
+
 	/**
 	 * List of menu items.
 	 * @instance
