@@ -12,6 +12,48 @@
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
+	{@param? selectable: bool}
+	{@param? sortingOrder: string}
+	{@param? viewTypes: list<?>}
+
+	{let $isActive: $checkboxState == 'checked' or $checkboxState == 'indeterminate' /}
+
+	{if $isActive}
+		{call .active}
+		{/call}
+	{else}
+		{call .default}
+			{param actionItems: $actionItems /}
+			{param filterItems: $filterItems /}
+			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
+			{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
+			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
+			{param id: $id /}
+			{param selectable: $selectable /}
+			{param sortingOrder: $sortingOrder /}
+			{param spritemap: $spritemap /}
+			{param viewTypes: $viewTypes /}
+		{/call}
+	{/if}
+{/template}
+
+/**
+ * This renders the component's active content.
+ */
+{template .active}
+{/template}
+
+/**
+ * This renders the component's active content.
+ */
+{template .default}
+	{@param spritemap: string}
+	{@param? actionItems: list<?>}
+	{@param? filterItems: list<?>}
+	{@param? handleCheckboxChanged_: any}
+	{@param? handlePlusButtonClicked_: any}
+	{@param? handleSortingButtonClicked_: any}
+	{@param? id: string}
 	{@param? sortingOrder: string}
 	{@param? selectable: bool}
 	{@param? viewTypes: list<?>}
@@ -29,10 +71,8 @@
 				{if $selectable}
 					<li class="nav-item">
 						{call ClayCheckbox.render}
-							{param checked: $checkboxState == 'checked' /}
 							{param events: ['change': $handleCheckboxChanged_] /}
 							{param hideLabel: true /}
-							{param indeterminate: $checkboxState == 'indeterminate' /}
 							{param label: 'Select All' /}
 						{/call}
 					</li>
