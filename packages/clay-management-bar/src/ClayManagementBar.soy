@@ -10,6 +10,7 @@
 	{@param? filterItems: list<?>}
 	{@param? handleCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
+	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
 	{@param? sortingOrder: string}
 	{@param? selectable: bool}
@@ -67,6 +68,7 @@
 
 					{call ClayButton.render}
 						{param elementClasses: $orderClasses /}
+						{param events: ['click': $handleSortingButtonClicked_] /}
 						{param icon: [
 							'alignment': 'left',
 							'spritemap': $spritemap,

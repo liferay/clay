@@ -20,6 +20,12 @@ class ClayManagementBar extends Component {
 	handlePlusButtonClicked_(event) {
 		this.emit('plusButtonClicked', event);
 	}
+
+	handleSortingButtonClicked_(event) {
+		this.emit('sortingButtonClicked', {
+			sortingOrder: this.sortingOrder,
+		});
+	}
 }
 
 /**
