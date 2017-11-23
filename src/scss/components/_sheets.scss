@@ -6,8 +6,146 @@
 
 	@include border-radius($sheet-border-radius);
 
-	padding-bottom: $sheet-padding-y;
-	padding-left:  $sheet-padding-x;
-	padding-right:  $sheet-padding-x;
-	padding-top: $sheet-padding-y;
+	padding-bottom: $sheet-padding-bottom;
+	padding-left:  $sheet-padding-left;
+	padding-right:  $sheet-padding-right;
+	padding-top: $sheet-padding-top;
+
+	.panel-group-flush .panel-body {
+		margin-bottom: $sheet-section-margin-bottom;
+
+		@include clay-scale-component {
+			margin-bottom: $sheet-section-margin-bottom-mobile;
+		}
+	}
+}
+
+.sheet-header {
+	margin-bottom: $sheet-header-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $sheet-header-margin-bottom-mobile;
+	}
+}
+
+.sheet-section {
+	margin-bottom: $sheet-section-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $sheet-section-margin-bottom-mobile;
+	}
+}
+
+.sheet-footer {
+	margin-bottom: $sheet-footer-margin-bottom;
+	margin-left: $sheet-footer-margin-left;
+	margin-right: $sheet-footer-margin-right;
+	margin-top: $sheet-footer-margin-top;
+
+	@include clay-scale-component {
+		margin-bottom: $sheet-footer-margin-bottom-mobile;
+		margin-left: $sheet-footer-margin-left-mobile;
+		margin-right: $sheet-footer-margin-right-mobile;
+		margin-top: $sheet-footer-margin-top-mobile;
+	}
+}
+
+// Sheet Title
+
+.sheet-title {
+	color: $sheet-title-color;
+	font-size: $sheet-title-font-size;
+	font-weight: $sheet-title-font-weight;
+	line-height: $sheet-title-line-height;
+	margin-bottom: $sheet-title-margin-bottom;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $sheet-title-font-size-mobile;
+		margin-bottom: $sheet-title-margin-bottom-mobile;
+	}
+}
+
+// Sheet Subtitle
+
+.sheet-subtitle {
+	border-color: $sheet-subtitle-border-color;
+	border-style: $sheet-subtitle-border-style;
+	border-width: $sheet-subtitle-border-width;
+	color: $sheet-subtitle-color;
+	font-size: $sheet-subtitle-font-size;
+	font-weight: $sheet-subtitle-font-weight;
+	line-height: $sheet-subtitle-line-height;
+	margin-bottom: $sheet-subtitle-margin-bottom;
+	padding-bottom: $sheet-subtitle-padding-y;
+	padding-left: $sheet-subtitle-padding-x;
+	padding-right: $sheet-subtitle-padding-x;
+	padding-top: $sheet-subtitle-padding-y;
+	position: relative;
+	text-transform: $sheet-subtitle-text-transform;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $sheet-subtitle-font-size-mobile;
+		margin-bottom: $sheet-subtitle-margin-bottom-mobile;
+	}
+
+	&.collapse-icon {
+		padding-left: $sheet-subtitle-collapse-icon-padding-left;
+		padding-right: $sheet-subtitle-collapse-icon-padding-right;
+	}
+
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		bottom: $sheet-subtitle-collapse-icon-bottom;
+		left: $sheet-subtitle-collapse-icon-left;
+		right: $sheet-subtitle-collapse-icon-right;
+		top: $sheet-subtitle-collapse-icon-top;
+	}
+}
+
+a.sheet-subtitle {
+	color: $sheet-subtitle-link-color;
+	text-decoration: $sheet-subtitle-link-text-decoration;
+
+	@include hover {
+		color: $sheet-subtitle-link-hover-color;
+		text-decoration: $sheet-subtitle-link-hover-text-decoration;
+	}
+}
+
+// Sheet Tertiary Title
+
+.sheet-tertiary-title {
+	color: $sheet-tertiary-title-color;
+	font-size: $sheet-tertiary-title-font-size;
+	font-weight: $sheet-tertiary-title-font-weight;
+	line-height: $sheet-tertiary-title-line-height;
+	margin-bottom: $sheet-tertiary-title-margin-bottom;
+	padding-bottom: $sheet-tertiary-title-padding-y;
+	padding-left: $sheet-tertiary-title-padding-x;
+	padding-right: $sheet-tertiary-title-padding-x;
+	padding-top: $sheet-tertiary-title-padding-y;
+	text-transform: $sheet-tertiary-title-text-transform;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $sheet-tertiary-title-font-size-mobile;
+		margin-bottom: $sheet-tertiary-title-margin-bottom-mobile;
+	}
+}
+
+// Sheet Text
+
+.sheet-text {
+	color: $sheet-text-color;
+	font-size: $sheet-text-font-size;
+	font-weight: $sheet-text-font-weight;
+	margin-bottom: $sheet-text-margin-bottom;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $sheet-text-font-size-mobile;
+		margin-bottom: $sheet-text-margin-bottom-mobile;
+	}
 }

@@ -54,6 +54,10 @@ label {
 
 .form-group {
 	position: relative;
+
+	@include clay-scale-component {
+		margin-bottom: $form-group-margin-bottom-mobile;
+	}
 }
 
 // Inputs
@@ -310,6 +314,7 @@ fieldset[disabled] label {
 
 	.form-inline-group {
 		flex: 1;
+		min-width: 25px;
 		position: relative;
 		width: 100%;
 	}
