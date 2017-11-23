@@ -26,16 +26,16 @@
 					{/call}
 				</li>
 
-				<li class="dropdown nav-item">
-					{if $filterItems and $spritemap}
+				{if $filterItems}
+					<li class="dropdown nav-item">
 						{call ClayDropdown.render}
 							{param items: $filterItems /}
 							{param label: 'Filter and Order' /}
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link navbar-breakpoint-down-d-none' /}
 						{/call}
-					{/if}
-				</li>
+					</li>
+				{/if}
 
 				<li class="nav-item">
 					{call ClayButton.render}
