@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayNavbar should render a navbar with more than one element 1`] = `
+exports[`ClayNavigationBar should render a navigatiom bar with more than one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container">
     <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
@@ -28,7 +28,7 @@ exports[`ClayNavbar should render a navbar with more than one element 1`] = `
 </nav>
 `;
 
-exports[`ClayNavbar should render a navbar with one active element 1`] = `
+exports[`ClayNavigationBar should render a navigatiom bar with one active element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container">
     <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">Page 1
@@ -51,7 +51,7 @@ exports[`ClayNavbar should render a navbar with one active element 1`] = `
 </nav>
 `;
 
-exports[`ClayNavbar should render a navbar with one element 1`] = `
+exports[`ClayNavigationBar should render a navigatiom bar with one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container">
     <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
@@ -74,7 +74,7 @@ exports[`ClayNavbar should render a navbar with one element 1`] = `
 </nav>
 `;
 
-exports[`ClayNavbar should render an inverted colored navbar with one element 1`] = `
+exports[`ClayNavigationBar should render an inverted colored navigatiom bar with one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
   <div class="container">
     <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">

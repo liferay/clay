@@ -2,46 +2,46 @@
 
 import ClayNavigationBar from '../ClayNavigationBar';
 
-let navbar;
+let navigationbar;
 const spritemap = 'icons.svg';
 
 describe('ClayNavigationBar', function() {
 	afterEach(() => {
-		if (navbar) {
-			navbar.dispose();
+		if (navigationbar) {
+			navigationbar.dispose();
 		}
 	});
 
-	it('should render a navbar with one element', function() {
-		navbar = new ClayNavbar({
+	it('should render a navigatiom bar with one element', function() {
+		navigationbar = new ClayNavigationBar({
 			items: [{title: 'Page 1', url: '#1'}],
 			spritemap: spritemap,
 		});
 
-		expect(navbar).toMatchSnapshot();
+		expect(navigationbar).toMatchSnapshot();
 	});
 
-	it('should render an inverted colored navbar with one element', function() {
-		navbar = new ClayNavbar({
+	it('should render an inverted colored navigatiom bar with one element', function() {
+		navigationbar = new ClayNavigationBar({
 			inverted: true,
 			items: [{title: 'Page 1', url: '#1'}],
 			spritemap: spritemap,
 		});
 
-		expect(navbar).toMatchSnapshot();
+		expect(navigationbar).toMatchSnapshot();
 	});
 
-	it('should render a navbar with one active element', function() {
-		navbar = new ClayNavbar({
+	it('should render a navigatiom bar with one active element', function() {
+		navigationbar = new ClayNavigationBar({
 			items: [{active: true, title: 'Page 1', url: '#1'}],
 			spritemap: spritemap,
 		});
 
-		expect(navbar).toMatchSnapshot();
+		expect(navigationbar).toMatchSnapshot();
 	});
 
-	it('should render a navbar with more than one element', function() {
-		navbar = new ClayNavbar({
+	it('should render a navigatiom bar with more than one element', function() {
+		navigationbar = new ClayNavigationBar({
 			items: [
 				{title: 'Page 1', url: '#1'},
 				{title: 'Page 2', url: '#2'},
@@ -49,12 +49,12 @@ describe('ClayNavigationBar', function() {
 			spritemap: spritemap,
 		});
 
-		expect(navbar).toMatchSnapshot();
+		expect(navigationbar).toMatchSnapshot();
 	});
 
 	it('should fail when no items are passed', function() {
 		expect(() => {
-			navbar = new ClayNavbar({
+			navigationbar = new ClayNavigationBar({
 				spritemap: spritemap,
 			});
 		}).toThrow();
@@ -62,7 +62,7 @@ describe('ClayNavigationBar', function() {
 
 	it('should fail when no title is passed on each page', function() {
 		expect(() => {
-			navbar = new ClayNavbar({
+			navigationbar = new ClayNavigationBar({
 				items: [{url: '#1'}],
 				spritemap: spritemap,
 			});
@@ -71,7 +71,7 @@ describe('ClayNavigationBar', function() {
 
 	it('should fail when no url is passed on each page', function() {
 		expect(() => {
-			navbar = new ClayNavbar({
+			navigationbar = new ClayNavigationBar({
 				items: [{title: 'Page 1'}],
 				spritemap: spritemap,
 			});
