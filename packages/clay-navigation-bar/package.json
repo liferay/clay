@@ -1,16 +1,16 @@
 {
-  "name": "clay-navbar",
+  "name": "clay-navigation-bar",
   "version": "1.0.0-alpha.3",
-  "description": "Metal Clay Navbar component.",
+  "description": "Metal Clay Navigation Bar component.",
   "license": "BSD",
   "repository": "https://github.com/metal/metal-clay-components/tree/master/packages/clay-navbar",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/ClayNavbar.js",
-  "esnext:main": "src/ClayNavbar.js",
-  "jsnext:main": "src/ClayNavbar.js",
+  "main": "lib/ClayNavigationBar.js",
+  "esnext:main": "src/ClayNavigationBar.js",
+  "jsnext:main": "src/ClayNavigationBar.js",
   "files": [
     "lib",
     "src",

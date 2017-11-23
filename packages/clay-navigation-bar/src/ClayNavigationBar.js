@@ -4,12 +4,12 @@ import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
-import templates from './ClayNavbar.soy.js';
+import templates from './ClayNavigationBar.soy.js';
 
 /**
  * Metal Clay Navbar component.
  */
-class ClayNavbar extends Component {
+class ClayNavigationBar extends Component {
 	/**
 	 * @inheritDoc
 	 */
@@ -74,7 +74,7 @@ class ClayNavbar extends Component {
  * @static
  * @type {!Object}
  */
-ClayNavbar.STATE = {
+ClayNavigationBar.STATE = {
 	/**
 	 * The display style attribute.
 	 * @instance
@@ -133,9 +133,9 @@ ClayNavbar.STATE = {
 		.internal(),
 };
 
-defineWebComponent('clay-navbar', ClayNavbar);
+defineWebComponent('clay-navigation-bar', ClayNavigationBar);
 
-Soy.register(ClayNavbar, templates);
+Soy.register(ClayNavigationBar, templates);
 
-export {ClayNavbar};
-export default ClayNavbar;
+export {ClayNavigationBar};
+export default ClayNavigationBar;

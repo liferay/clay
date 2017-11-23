@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Demo: Navbar</title>
+	<title>Demo: Navigation Bar</title>
 
 	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
 
-	<script src="../build/globals/clay-navbar.js"></script>
+	<script src="../build/globals/clay-navigation-bar.js"></script>
 
 	<style>
 			body {
@@ -21,27 +21,27 @@
 </head>
 <body class="container">
 	<div class="row row-spacing">
-		<h1>Navbar</h1>
+		<h1>Navigation Bar</h1>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Navbar</h4>
-			<div id="normal-navbar-block"></div>
+			<h4>Navigation Bar</h4>
+			<div id="normal-navigation-bar-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Navbar with WebComponents</h4>
+			<h4>Navigation Bar with WebComponents</h4>
 			<clay-navbar items='[{"active": true, "title": "Page 1", "url": "#1"}]' spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-navbar>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Inverted Navbar</h4>
-			<div id="inverted-navbar-block"></div>
+			<h4>Inverted Navigation Bar</h4>
+			<div id="inverted-navigation-bar-block"></div>
 		</div>
 	</div>
 
@@ -49,7 +49,7 @@
 		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 
 		/*
-		 * Normal Navbar
+		 * Normal Navigation Bar
 		 */
 		var items = [
 			{ active: true, title: 'Page 1', url: '#1'},
@@ -58,24 +58,24 @@
 			{ title: 'Page 4', url: '#4'}
 		];
 
-		new metal.ClayNavbar(
+		new metal.ClayNavigationBar(
 			{
 				items: items,
 				spritemap: spritemap
 			},
-			'#normal-navbar-block'
+			'#normal-navigation-bar-block'
 		);
 
 		/*
-		 * Inverted Navbar
+		 * Inverted Navigation Bar
 		 */
-		 new metal.ClayNavbar(
+		 new metal.ClayNavigationBar(
 			{
 				inverted: true,
 				items: items,
 				spritemap: spritemap
 			},
-			'#inverted-navbar-block'
+			'#inverted-navigation-bar-block'
 		);
 
 	</script>

@@ -1,11 +1,11 @@
 'use strict';
 
-import ClayNavbar from '../ClayNavbar';
+import ClayNavigationBar from '../ClayNavigationBar';
 
 let navbar;
 const spritemap = 'icons.svg';
 
-describe('ClayNavbar', function() {
+describe('ClayNavigationBar', function() {
 	afterEach(() => {
 		if (navbar) {
 			navbar.dispose();

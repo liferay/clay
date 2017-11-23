@@ -1,6 +1,6 @@
-# clay-button
+# clay-navigation-bar
 
-Clay Navbar
+Clay Navigation Bar
 
 ## Setup
 
