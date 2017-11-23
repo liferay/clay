@@ -1,5 +1,5 @@
 ---
-title: Navbar (Management Bar)
+title: Management Toolbar
 description: Components
 layout: "guide"
 weight: 100
@@ -7,7 +7,7 @@ weight: 100
 
 <article class="clay-site-open-overlay" id="navbar-management-bar">
 
-### Navbar (Management Bar)
+### Management Toolbar
 
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container">

@@ -1,5 +1,5 @@
 ---
-title: Navbar (Application Bar)
+title: Header
 description: Components
 layout: "guide"
 weight: 100
@@ -7,7 +7,7 @@ weight: 100
 
 <article id="navbar-application-bar">
 
-### Navbar (Application Bar)
+### Header
 
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">

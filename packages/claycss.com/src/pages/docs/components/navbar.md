@@ -1,5 +1,5 @@
 ---
-title: Navbar (Navigation Bar)
+title: Navigation Bar
 description: "A navigation bar, navbar, is an horizontal bar that provides several access points to different parts of a system."
 layout: "guide"
 pattern: "Navigation/horizontalNav"
