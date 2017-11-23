@@ -16,6 +16,10 @@ class ClayManagementBar extends Component {
 	handleCheckboxChanged_(event) {
 		this.emit('checkboxChanged', event);
 	}
+
+	handlePlusButtonClicked_(event) {
+		this.emit('plusButtonClicked', event);
+	}
 }
 
 /**
@@ -24,6 +28,15 @@ class ClayManagementBar extends Component {
  * @type {!Object}
  */
 ClayManagementBar.STATE = {
+	/**
+	 * List of items to display in the plus button dropdown.
+	 * @instance
+	 * @memberof ClayManagementBar
+	 * @type {?Array}
+	 * @default undefined
+	 */
+	actionItems: itemsValidator,
+
 	/**
 	 * The state of the selection checkbox.
 	 * @instance

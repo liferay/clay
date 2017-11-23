@@ -5,9 +5,11 @@
  */
 {template .render}
 	{@param spritemap: string}
+	{@param? actionItems: list<?>}
 	{@param? checkboxState: string}
 	{@param? filterItems: list<?>}
 	{@param? handleCheckboxChanged_: any}
+	{@param? handlePlusButtonClicked_: any}
 	{@param? id: string}
 	{@param? selectable: bool}
 	{@param? viewTypes: list<?>}
@@ -78,11 +80,22 @@
 				{/if}
 
 				<li class="nav-item">
-					<button class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-							<use xlink:href="/vendor/lexicon/icons.svg#plus" />
-						</svg>
-					</button>
+					{if $actionItems}
+						{call ClayActionsDropdown.render}
+							{param items: $actionItems /}
+							{param spritemap: $spritemap /}
+						{/call}
+					{else}
+						{call ClayButton.render}
+							{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+							{param events: ['click': $handlePlusButtonClicked_ ] /}
+							{param icon: [
+								'alignment': 'left',
+								'spritemap': $spritemap,
+								'symbol': 'plus'
+							] /}
+						{/call}
+					{/if}
 				</li>
 			</ul>
 		</div>
