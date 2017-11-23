@@ -79,6 +79,15 @@ ClayManagementBar.STATE = {
 	selectable: Config.bool(),
 
 	/**
+	 * Sorting order.
+	 * @instance
+	 * @memberof ClayManagementBar
+	 * @type {?string|undefined}
+	 * @default asc
+	 */
+	sortingOrder: Config.oneOf(['asc', 'desc']).value('asc'),
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayManagementBar

@@ -11,6 +11,7 @@
 	{@param? handleCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? id: string}
+	{@param? sortingOrder: string}
 	{@param? selectable: bool}
 	{@param? viewTypes: list<?>}
 
@@ -55,8 +56,17 @@
 				{/if}
 
 				<li class="nav-item">
+					{let $orderClasses kind="text"}
+						nav-link nav-link-monospaced
+						{if $sortingOrder == 'desc'}
+							{sp}order-arrow-down-active
+						{else}
+							{sp}order-arrow-up-active
+						{/if}
+					{/let}
+
 					{call ClayButton.render}
-						{param elementClasses: 'nav-link nav-link-monospaced order-arrow-down-active' /}
+						{param elementClasses: $orderClasses /}
 						{param icon: [
 							'alignment': 'left',
 							'spritemap': $spritemap,
