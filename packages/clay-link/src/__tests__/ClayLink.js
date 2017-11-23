@@ -31,15 +31,15 @@ describe('ClayLink', function() {
 		expect(link).toMatchSnapshot();
 	});
 
-	it('should render a link with area expanded', () => {
+	it('should render a link with aria expanded', () => {
 		link = new ClayLink({
-			areaExpanded: true,
+			ariaExpanded: true,
 		});
 
 		expect(link).toMatchSnapshot();
 	});
 
-	it('should render a link without the area expanded', () => {
+	it('should render a link without the aria expanded', () => {
 		link = new ClayLink();
 
 		expect(link).toMatchSnapshot();
