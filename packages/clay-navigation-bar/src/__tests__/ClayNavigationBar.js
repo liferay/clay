@@ -21,6 +21,26 @@ describe('ClayNavigationBar', function() {
 		expect(navigationbar).toMatchSnapshot();
 	});
 
+	it('should render a navigatiom bar with classes', function() {
+		navigationbar = new ClayNavigationBar({
+			elementClasses: 'my-custom-class',
+			items: [{title: 'Page 1', url: '#1'}],
+			spritemap: spritemap,
+		});
+
+		expect(navigationbar).toMatchSnapshot();
+	});
+
+	it('should render a navigatiom bar with id', function() {
+		navigationbar = new ClayNavigationBar({
+			id: 'myId',
+			items: [{title: 'Page 1', url: '#1'}],
+			spritemap: spritemap,
+		});
+
+		expect(navigationbar).toMatchSnapshot();
+	});
+
 	it('should render an inverted colored navigatiom bar with one element', function() {
 		navigationbar = new ClayNavigationBar({
 			inverted: true,

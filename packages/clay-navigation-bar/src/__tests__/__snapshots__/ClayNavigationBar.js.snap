@@ -1,5 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayNavigationBar should render a navigatiom bar with classes 1`] = `
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light my-custom-class">
+  <div class="container">
+    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <use xlink:href="icons.svg#caret-bottom"></use>
+      </svg>
+    </a>
+    <div class="navbar-collapse collapse">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class=" nav-link" href="#1">
+              <span class="navbar-text-truncate">Page 1</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavigationBar should render a navigatiom bar with id 1`] = `
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light" id="myId">
+  <div class="container">
+    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <use xlink:href="icons.svg#caret-bottom"></use>
+      </svg>
+    </a>
+    <div class="navbar-collapse collapse">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class=" nav-link" href="#1">
+              <span class="navbar-text-truncate">Page 1</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`ClayNavigationBar should render a navigatiom bar with more than one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container">
