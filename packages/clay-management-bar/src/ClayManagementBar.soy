@@ -6,7 +6,6 @@
 {template .render}
 	{@param spritemap: string}
 	{@param? actionItems: list<?>}
-	{@param? checkboxState: string}
 	{@param? filterItems: list<?>}
 	{@param? handleCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
@@ -19,11 +18,10 @@
 	{@param? totalItems: number}
 	{@param? viewTypes: list<?>}
 
-	{let $isActive: $checkboxState == 'checked' or $checkboxState == 'indeterminate' /}
+	{let $isActive: $selectedItems and $selectedItems > 0 /}
 
 	{if $isActive}
 		{call .active}
-			{param checkboxState: $checkboxState /}
 			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
 			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
 			{param selectedItems: $selectedItems /}
@@ -49,7 +47,6 @@
  * This renders the component's active content.
  */
 {template .active}
-	{@param? checkboxState: string}
 	{@param? handleCheckboxChanged_: any}
 	{@param? handleSelectAllClicked_: any}
 	{@param? id: string}
@@ -68,10 +65,10 @@
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					{call ClayCheckbox.render}
-						{param checked: $checkboxState == 'checked' /}
+						{param checked: true /}
 						{param events: ['change': $handleCheckboxChanged_] /}
 						{param hideLabel: true /}
-						{param indeterminate: $checkboxState == 'indeterminate' /}
+						{param indeterminate: $selectedItems < $totalItems /}
 						{param label: 'Select All' /}
 					{/call}
 				</li>

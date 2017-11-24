@@ -64,19 +64,6 @@ ClayManagementBar.STATE = {
 	actionItems: itemsValidator,
 
 	/**
-	 * The state of the selection checkbox.
-	 * @instance
-	 * @memberof ClayManagementBar
-	 * @type {?string|undefined}
-	 * @default unchecked
-	 */
-	checkboxState: Config.oneOf([
-		'checked',
-		'indeterminate',
-		'unchecked',
-	]).value('unchecked'),
-
-	/**
 	 * List of filter menu items.
 	 * @instance
 	 * @memberof ClayManagementBar
@@ -104,6 +91,13 @@ ClayManagementBar.STATE = {
 	 */
 	selectable: Config.bool(),
 
+	/**
+	 * Number of selected items.
+	 * @instance
+	 * @memberof ClayManagementBar
+	 * @type {?number}
+	 * @default undefined
+	 */
 	selectedItems: Config.number(),
 
 	/**
@@ -124,6 +118,13 @@ ClayManagementBar.STATE = {
 	 */
 	spritemap: Config.string().required(),
 
+	/**
+	 * Total number of items.
+	 * @instance
+	 * @memberof ClayManagementBar
+	 * @type {?int}
+	 * @default undefined
+	 */
 	totalItems: Config.number(),
 
 	/**
