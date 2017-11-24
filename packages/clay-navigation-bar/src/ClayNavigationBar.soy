@@ -10,21 +10,33 @@
 		url: string
 	]>}
 	{@param spritemap: string}
+	{@param? elementClasses: string}
 	{@param? handleClickToggler_: any}
+	{@param? id: string}
 	{@param? inverted: bool}
 	{@param? isTransitioning_: bool}
 	{@param? visible_: bool}
 
-	{let $classes kind="text"}
-		navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar
-		{if $inverted}
-			{sp}navigation-bar-secondary
-		{else}
-			{sp}navigation-bar-light
+	{let $attributes kind="text"}
+		class="
+			navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar
+			{if $inverted}
+				{sp}navigation-bar-secondary
+			{else}
+				{sp}navigation-bar-light
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
 		{/if}
 	{/let}
 
-	<nav class="{$classes}">
+	<nav {$attributes}>
 		<div class="container">
 			{if $items}
 				{call .toggler}

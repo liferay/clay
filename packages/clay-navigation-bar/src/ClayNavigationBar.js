@@ -75,6 +75,24 @@ class ClayNavigationBar extends Component {
  */
 ClayNavigationBar.STATE = {
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayNavigationBar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayNavigationBar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * The display style attribute.
 	 * @instance
 	 * @memberof ClayNavigationBar
