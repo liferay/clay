@@ -9,7 +9,9 @@
 	{@param title: string}
 	{@param? autoClose: bool}
 	{@param? closeable: bool}
+	{@param? elementClasses: string}
 	{@param? handleCloseClick_: any}
+	{@param? id: string}
 	{@param? style: string}
 	{@param? type: string}
 	{@param? visible_: bool}
@@ -18,6 +20,10 @@
 		class="alert alert-{$style ?: 'info'} fade
 			{if $closeable}
 				{sp}alert-dismissible
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
 			{/if}
 
 			{if $type == 'stripe'}
@@ -31,6 +37,10 @@
 		{if $autoClose and ($type == 'stripe' or $type == 'toast') and $visible_}
 			data-onmouseover="handleMouseOver_"
 			data-onmouseout="handleMouseOut_"
+		{/if}
+
+		{if $id}
+			id="{$id}"
 		{/if}
 
 		role="alert"

@@ -61,6 +61,24 @@ ClayToast.STATE = {
 	destroyOnHide: Config.bool().value(false),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayToast
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayToast
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * The message of alert
 	 * @instance
 	 * @memberof ClayToast
@@ -71,7 +89,7 @@ ClayToast.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayIcon
+	 * @memberof ClayToast
 	 * @type {!string}
 	 * @default undefined
 	 */

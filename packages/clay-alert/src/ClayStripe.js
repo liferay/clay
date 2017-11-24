@@ -61,6 +61,24 @@ ClayStripe.STATE = {
 	destroyOnHide: Config.bool().value(false),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayStripe
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayStripe
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * The message of alert
 	 * @instance
 	 * @memberof ClayStripe
@@ -71,7 +89,7 @@ ClayStripe.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayIcon
+	 * @memberof ClayStripe
 	 * @type {!string}
 	 * @default undefined
 	 */

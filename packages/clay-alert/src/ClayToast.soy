@@ -8,18 +8,22 @@
 	{@param spritemap: string}
 	{@param title: string}
 	{@param? autoClose: bool}
+	{@param? elementClasses: string}
 	{@param? handleHide_: any}
+	{@param? id: string}
 	{@param? style: string}
 
-  {call ClayAlertBase.render}
-    {param autoClose: $autoClose /}
-    {param closeable: true /}
-    {param events: ['hide': $handleHide_ ] /}
-    {param message: $message /}
-    {param ref: 'alertBase' /}
-    {param spritemap: $spritemap /}
-    {param style: $style /}
-    {param title: $title /}
-    {param type: 'toast' /}
-  {/call}
+	{call ClayAlertBase.render}
+		{param autoClose: $autoClose /}
+		{param closeable: true /}
+		{param elementClasses: $elementClasses /}
+		{param events: ['hide': $handleHide_ ] /}
+		{param id: $id /}
+		{param message: $message /}
+		{param ref: 'alertBase' /}
+		{param spritemap: $spritemap /}
+		{param style: $style /}
+		{param title: $title /}
+		{param type: 'toast' /}
+	{/call}
 {/template}
