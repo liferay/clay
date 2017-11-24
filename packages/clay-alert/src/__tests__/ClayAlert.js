@@ -21,6 +21,28 @@ describe('ClayAlert', function() {
 		expect(alert).toMatchSnapshot();
 	});
 
+	it('should render an alert with classes', function() {
+		alert = new ClayAlert({
+			elementClasses: 'my-custom-class',
+			message: 'message',
+			spritemap: spritemap,
+			title: 'info',
+		});
+
+		expect(alert).toMatchSnapshot();
+	});
+
+	it('should render an alert with id', function() {
+		alert = new ClayAlert({
+			id: 'myId',
+			message: 'message',
+			spritemap: spritemap,
+			title: 'info',
+		});
+
+		expect(alert).toMatchSnapshot();
+	});
+
 	it('should render a "danger" style alert', function() {
 		alert = new ClayAlert({
 			message: 'message',

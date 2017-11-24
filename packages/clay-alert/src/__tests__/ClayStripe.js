@@ -21,6 +21,28 @@ describe('ClayStripe', function() {
 		expect(stripe).toMatchSnapshot();
 	});
 
+	it('should render an stripe with classes', function() {
+		stripe = new ClayStripe({
+			elementClasses: 'my-custom-class',
+			message: 'message',
+			spritemap: spritemap,
+			title: 'info',
+		});
+
+		expect(stripe).toMatchSnapshot();
+	});
+
+	it('should render an stripe with id', function() {
+		stripe = new ClayStripe({
+			id: 'myId',
+			message: 'message',
+			spritemap: spritemap,
+			title: 'info',
+		});
+
+		expect(stripe).toMatchSnapshot();
+	});
+
 	it('should render a "danger" style stripe', function() {
 		stripe = new ClayStripe({
 			message: 'message',

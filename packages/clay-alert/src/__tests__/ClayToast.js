@@ -21,6 +21,28 @@ describe('ClayToast', function() {
 		expect(toast).toMatchSnapshot();
 	});
 
+	it('should render an toast with classes', function() {
+		toast = new ClayToast({
+			elementClasses: 'my-custom-class',
+			message: 'message',
+			spritemap: spritemap,
+			title: 'info',
+		});
+
+		expect(toast).toMatchSnapshot();
+	});
+
+	it('should render an toast with id', function() {
+		toast = new ClayToast({
+			id: 'myId',
+			message: 'message',
+			spritemap: spritemap,
+			title: 'info',
+		});
+
+		expect(toast).toMatchSnapshot();
+	});
+
 	it('should render a "danger" style toast', function() {
 		toast = new ClayToast({
 			message: 'message',
