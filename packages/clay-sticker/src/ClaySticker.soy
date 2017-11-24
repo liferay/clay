@@ -4,6 +4,7 @@
  * This renders a sticker.
  */
 {template .render}
+	{@param? elementClasses: string}
 	{@param? icon: [
 		spritemap: string,
 		symbol: string
@@ -33,6 +34,10 @@
 
 			{if $size}
 				{sp}sticker-{$size}
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
 			{/if}
 		"
 

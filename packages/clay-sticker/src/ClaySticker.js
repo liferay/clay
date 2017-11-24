@@ -18,6 +18,15 @@ class ClaySticker extends Component {}
  */
 ClaySticker.STATE = {
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClaySticker
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * Render ClayIcon in the ClaySticker element.
 	 * @instance
 	 * @memberof ClaySticker
