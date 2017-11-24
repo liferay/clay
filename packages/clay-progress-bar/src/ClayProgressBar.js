@@ -18,15 +18,6 @@ class ClayProgressBar extends Component {}
  */
 ClayProgressBar.STATE = {
 	/**
-	 * Id to be applied to the element.
-	 * @instance
-	 * @memberof ClayProgressBar
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	id: Config.string(),
-
-	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayProgressBar
@@ -34,6 +25,15 @@ ClayProgressBar.STATE = {
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
+
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
 
 	/**
 	 * The maximum value of the progress bar.

@@ -86,7 +86,7 @@ ClayLink.STATE = {
 	}),
 
 	/**
-	 * Id to be applied to the anchor tag.
+	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?string|undefined}
