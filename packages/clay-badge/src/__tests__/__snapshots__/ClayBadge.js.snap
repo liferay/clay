@@ -20,6 +20,8 @@ exports[`ClayBadge should render a \`success color\` badge 1`] = `<span class="b
 
 exports[`ClayBadge should render a \`warning color\` badge 1`] = `<span class="badge badge-warning">Foo</span>`;
 
-exports[`ClayBadge should render a badge with id 1`] = `<span class="badge badge-primary" id="myBadge">Foo</span>`;
+exports[`ClayBadge should render a badge with classes 1`] = `<span class="badge badge-primary my-custom-class">Foo</span>`;
+
+exports[`ClayBadge should render a badge with id 1`] = `<span class="badge badge-primary" id="myId">Foo</span>`;
 
 exports[`ClayBadge should render a badge with label 1`] = `<span class="badge badge-primary">Bar</span>`;

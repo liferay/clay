@@ -17,9 +17,10 @@ describe('ClayBadge', function() {
 		expect(badge).toMatchSnapshot();
 	});
 
-	it('should render a badge with label', () => {
+	it('should render a badge with classes', () => {
 		badge = new ClayBadge({
-			label: 'Bar',
+			elementClasses: 'my-custom-class',
+			label: 'Foo',
 		});
 
 		expect(badge).toMatchSnapshot();
@@ -27,8 +28,16 @@ describe('ClayBadge', function() {
 
 	it('should render a badge with id', () => {
 		badge = new ClayBadge({
+			id: 'myId',
 			label: 'Foo',
-			id: 'myBadge',
+		});
+
+		expect(badge).toMatchSnapshot();
+	});
+
+	it('should render a badge with label', () => {
+		badge = new ClayBadge({
+			label: 'Bar',
 		});
 
 		expect(badge).toMatchSnapshot();
