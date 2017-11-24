@@ -13,18 +13,34 @@ import templates from './ClayManagementBar.soy.js';
  * Metal ClayManagementBar component.
  */
 class ClayManagementBar extends Component {
+	/**
+	 * Continues the propagation of the checkbox changed event
+	 * @private
+	 */
 	handleCheckboxChanged_(event) {
 		this.emit('checkboxChanged', event);
 	}
 
+	/**
+	 * Continues the propagation of the plus button clicked event
+	 * @private
+	 */
 	handlePlusButtonClicked_(event) {
 		this.emit('plusButtonClicked', event);
 	}
 
+	/**
+	 * Continues the propagation of the select all button clicked event
+	 * @private
+	 */
 	handleSelectAllClicked_(event) {
 		this.emit('selectAllClicked', event);
 	}
 
+	/**
+	 * Continues the propagation of the sorting button clicked event
+	 * @private
+	 */
 	handleSortingButtonClicked_(event) {
 		this.emit('sortingButtonClicked', {
 			sortingOrder: this.sortingOrder,
