@@ -17,6 +17,15 @@ class ClayBadge extends Component {}
  */
 ClayBadge.STATE = {
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayBadge
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayBadge
