@@ -15,4 +15,20 @@ describe('<%= componentName %>', function() {
     expect(component).toMatchSnapshot();
   });
 
+  it('should generate a <%= componentName %> with classes', () => {
+    component = new <%= componentName %>({
+      elementClasses: 'my-custom-class',
+    });
+
+    expect(component).toMatchSnapshot();
+  });
+
+  it('should generate a <%= componentName %> with id', () => {
+    component = new <%= componentName %>({
+      id: 'myId',
+    });
+
+    expect(component).toMatchSnapshot();
+  });
+
 });
