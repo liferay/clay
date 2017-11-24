@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayButton should generate the default markup 1`] = `<button class="btn btn-primary"></button>`;
-
 exports[`ClayButton should render a block button 1`] = `<button class="btn btn-block btn-primary"></button>`;
 
 exports[`ClayButton should render a button with classes 1`] = `<button class="btn my-custom-class btn-primary"></button>`;
@@ -52,3 +50,5 @@ exports[`ClayButton should render a secondary button 1`] = `<button class="btn b
 exports[`ClayButton should render a small button 1`] = `<button class="btn btn-sm btn-primary"></button>`;
 
 exports[`ClayButton should render a submit button 1`] = `<button class="btn btn-primary" type="submit"></button>`;
+
+exports[`ClayButton should render the default markup 1`] = `<button class="btn btn-primary"></button>`;

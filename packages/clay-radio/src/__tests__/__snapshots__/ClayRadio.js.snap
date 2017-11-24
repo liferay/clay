@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayRadio should generate a checked and disabled radio 1`] = `
+exports[`ClayRadio should render a checked and disabled radio 1`] = `
 <div class="custom-control custom-radio">
   <label>
     <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="radio" role="radio">
@@ -10,7 +10,7 @@ exports[`ClayRadio should generate a checked and disabled radio 1`] = `
 </div>
 `;
 
-exports[`ClayRadio should generate a checked radio 1`] = `
+exports[`ClayRadio should render a checked radio 1`] = `
 <div class="custom-control custom-radio">
   <label>
     <input checked="" class="custom-control-input" ref="input" type="radio" role="radio">
@@ -20,60 +20,10 @@ exports[`ClayRadio should generate a checked radio 1`] = `
 </div>
 `;
 
-exports[`ClayRadio should generate a disabled radio 1`] = `
+exports[`ClayRadio should render a disabled radio 1`] = `
 <div class="custom-control custom-radio">
   <label>
     <input disabled="disabled" class="custom-control-input" ref="input" type="radio" role="radio">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">My Radio</span>
-  </label>
-</div>
-`;
-
-exports[`ClayRadio should generate a radio with hidden label 1`] = `
-<div class="custom-control custom-radio">
-  <label>
-    <input class="custom-control-input" ref="input" type="radio" role="radio">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description sr-only">My Radio</span>
-  </label>
-</div>
-`;
-
-exports[`ClayRadio should generate a radio with name 1`] = `
-<div class="custom-control custom-radio">
-  <label>
-    <input class="custom-control-input" name="myradio" ref="input" type="radio" role="radio">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">My Radio</span>
-  </label>
-</div>
-`;
-
-exports[`ClayRadio should generate a radio with value 1`] = `
-<div class="custom-control custom-radio">
-  <label>
-    <input class="custom-control-input" value="myradio" ref="input" type="radio" role="radio">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">My Radio</span>
-  </label>
-</div>
-`;
-
-exports[`ClayRadio should generate an inline radio 1`] = `
-<div class="custom-control custom-radio custom-control-inline">
-  <label>
-    <input class="custom-control-input" ref="input" type="radio" role="radio">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">My Radio</span>
-  </label>
-</div>
-`;
-
-exports[`ClayRadio should generate default markup 1`] = `
-<div class="custom-control custom-radio">
-  <label>
-    <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
@@ -90,8 +40,58 @@ exports[`ClayRadio should render a radio with classes 1`] = `
 </div>
 `;
 
+exports[`ClayRadio should render a radio with hidden label 1`] = `
+<div class="custom-control custom-radio">
+  <label>
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description sr-only">My Radio</span>
+  </label>
+</div>
+`;
+
 exports[`ClayRadio should render a radio with id 1`] = `
 <div class="custom-control custom-radio" id="myId">
+  <label>
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Radio</span>
+  </label>
+</div>
+`;
+
+exports[`ClayRadio should render a radio with name 1`] = `
+<div class="custom-control custom-radio">
+  <label>
+    <input class="custom-control-input" name="myradio" ref="input" type="radio" role="radio">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Radio</span>
+  </label>
+</div>
+`;
+
+exports[`ClayRadio should render a radio with value 1`] = `
+<div class="custom-control custom-radio">
+  <label>
+    <input class="custom-control-input" value="myradio" ref="input" type="radio" role="radio">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Radio</span>
+  </label>
+</div>
+`;
+
+exports[`ClayRadio should render an inline radio 1`] = `
+<div class="custom-control custom-radio custom-control-inline">
+  <label>
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Radio</span>
+  </label>
+</div>
+`;
+
+exports[`ClayRadio should render default markup 1`] = `
+<div class="custom-control custom-radio">
   <label>
     <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>

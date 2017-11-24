@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayLink should generate the default markup 1`] = `<a></a>`;
-
 exports[`ClayLink should render a downloadable link 1`] = `<a download="downloadLink"></a>`;
 
 exports[`ClayLink should render a link with a label 1`] = `<a>My Link</a>`;
@@ -52,3 +50,5 @@ exports[`ClayLink should render a link with secondary style 1`] = `<a class="lin
 exports[`ClayLink should render a link with target 1`] = `<a target="_blank"></a>`;
 
 exports[`ClayLink should render a link without the aria expanded 1`] = `<a></a>`;
+
+exports[`ClayLink should render the default markup 1`] = `<a></a>`;

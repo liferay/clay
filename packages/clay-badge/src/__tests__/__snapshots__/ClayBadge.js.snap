@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayBadge should generate the default markup 1`] = `<span class="badge badge-primary">Foo</span>`;
-
 exports[`ClayBadge should render a \`danger color\` badge 1`] = `<span class="badge badge-danger">Foo</span>`;
 
 exports[`ClayBadge should render a \`dark color\` badge 1`] = `<span class="badge badge-dark">Foo</span>`;
@@ -25,3 +23,5 @@ exports[`ClayBadge should render a badge with classes 1`] = `<span class="badge 
 exports[`ClayBadge should render a badge with id 1`] = `<span class="badge badge-primary" id="myId">Foo</span>`;
 
 exports[`ClayBadge should render a badge with label 1`] = `<span class="badge badge-primary">Bar</span>`;
+
+exports[`ClayBadge should render the default markup 1`] = `<span class="badge badge-primary">Foo</span>`;

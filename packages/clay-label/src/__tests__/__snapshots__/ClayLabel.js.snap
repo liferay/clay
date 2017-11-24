@@ -1,30 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayLabel shound generate the default markup 1`] = `<span class="label label-secondary"></span>`;
+exports[`ClayLabel should render a \`danger color\` label 1`] = `<span class="label label-danger"></span>`;
 
-exports[`ClayLabel shound render a \`danger color\` label 1`] = `<span class="label label-danger"></span>`;
+exports[`ClayLabel should render a \`default color\` label 1`] = `<span class="label label-secondary"></span>`;
 
-exports[`ClayLabel shound render a \`default color\` label 1`] = `<span class="label label-secondary"></span>`;
+exports[`ClayLabel should render a \`info color\` label 1`] = `<span class="label label-info"></span>`;
 
-exports[`ClayLabel shound render a \`info color\` label 1`] = `<span class="label label-info"></span>`;
+exports[`ClayLabel should render a \`success color\` label 1`] = `<span class="label label-success"></span>`;
 
-exports[`ClayLabel shound render a \`success color\` label 1`] = `<span class="label label-success"></span>`;
+exports[`ClayLabel should render a \`warning color\` label 1`] = `<span class="label label-warning"></span>`;
 
-exports[`ClayLabel shound render a \`warning color\` label 1`] = `<span class="label label-warning"></span>`;
+exports[`ClayLabel should render a label with classes 1`] = `<span class="label label-secondary my-custom-class"></span>`;
 
-exports[`ClayLabel shound render a label with classes 1`] = `<span class="label label-secondary my-custom-class"></span>`;
+exports[`ClayLabel should render a label with id 1`] = `<span class="label label-secondary" id="myId"></span>`;
 
-exports[`ClayLabel shound render a label with id 1`] = `<span class="label label-secondary" id="myId"></span>`;
+exports[`ClayLabel should render a label with label 1`] = `<span class="label label-secondary">Foo</span>`;
 
-exports[`ClayLabel shound render a label with label 1`] = `<span class="label label-secondary">Foo</span>`;
-
-exports[`ClayLabel shound render a label with link 1`] = `
+exports[`ClayLabel should render a label with link 1`] = `
 <span class="label label-secondary">
   <a class="link-secondary" href="#1">Foo</a>
 </span>
 `;
 
-exports[`ClayLabel shound render a label with removable 1`] = `
+exports[`ClayLabel should render a label with removable 1`] = `
 <span class="label label-secondary label-dismissible">Foo
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -34,4 +32,6 @@ exports[`ClayLabel shound render a label with removable 1`] = `
 </span>
 `;
 
-exports[`ClayLabel shound render a large label 1`] = `<span class="label label-secondary label-lg"></span>`;
+exports[`ClayLabel should render a large label 1`] = `<span class="label label-secondary label-lg"></span>`;
+
+exports[`ClayLabel should render the default markup 1`] = `<span class="label label-secondary"></span>`;

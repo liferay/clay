@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayModal should generate the default markup 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content"></div>
-  </div>
-</div>
-`;
-
 exports[`ClayModal should render a modal opened 1`] = `
 <div class="fade modal d-block show" role="dialog" tabindex="-1">
   <div class="modal-dialog">
@@ -306,6 +298,14 @@ exports[`ClayModal should render a modal with title and header closing button 1`
         </button>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render the default markup 1`] = `
+<div class="fade modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
   </div>
 </div>
 `;

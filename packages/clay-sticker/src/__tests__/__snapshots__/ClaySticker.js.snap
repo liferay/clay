@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClaySticker should generate the default markup 1`] = `<span class="sticker sticker-primary"></span>`;
-
 exports[`ClaySticker should render a \`danger color\` sticker 1`] = `<span class="sticker sticker-danger"></span>`;
 
 exports[`ClaySticker should render a \`dark color\` sticker 1`] = `<span class="sticker sticker-dark"></span>`;
@@ -59,3 +57,5 @@ exports[`ClaySticker should render an outside bottom right positioned sticker 1`
 exports[`ClaySticker should render an outside top left positioned sticker 1`] = `<span class="sticker sticker-primary sticker-outside sticker-top-left"></span>`;
 
 exports[`ClaySticker should render an outside top right positioned sticker 1`] = `<span class="sticker sticker-primary sticker-outside sticker-top-right"></span>`;
+
+exports[`ClaySticker should render the default markup 1`] = `<span class="sticker sticker-primary"></span>`;
