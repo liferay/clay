@@ -10,6 +10,7 @@
 	{@param? caption: string}
 	{@param? expanded: bool}
 	{@param? helpText: string}
+	{@param? id: string}
 	{@param? indicatorsPosition: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
@@ -17,14 +18,19 @@
 	{@param? triggerClasses: string}
 	{@param? type: string}
 
-	{let $wrapperClasses kind="text"}
-		dropdown
-		{if $expanded}
-			{sp}show
+	{let $attributes kind="attributes"}
+		classes="dropdown
+			{if $expanded}
+				{sp}show
+			{/if}
+		"
+		
+		{if $id}
+			id="{$id}"
 		{/if}
 	{/let}
 
-	<div class="{$wrapperClasses}">
+	<div $attributes>
 		{call .trigger}
 			{param classes: $triggerClasses /}
 			{param expanded: $expanded /}

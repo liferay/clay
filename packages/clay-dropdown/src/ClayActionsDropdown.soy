@@ -10,6 +10,7 @@
 	{@param? caption: string}
 	{@param? expanded: bool}
 	{@param? helpText: string}
+	{@param? id: string}
 
   {let $trigger kind="html"}
     {call ClayIcon.render}
@@ -24,6 +25,7 @@
     {param elementClasses: 'dropdown-action' /}
     {param expanded: $expanded /}
     {param helpText: $helpText /}
+    {param id: $id /}
     {param items: $items /}
     {param spritemap: $spritemap /}
     {param label: $trigger /}

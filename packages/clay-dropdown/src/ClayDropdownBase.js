@@ -185,6 +185,15 @@ ClayDropdownBase.STATE = {
 	helpText: Config.string(),
 
 	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * Position in which item indicator symbols will be placed. Needed if any
 	 * item has indicators.
 	 * @instance

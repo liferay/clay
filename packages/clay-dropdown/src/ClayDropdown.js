@@ -42,6 +42,15 @@ ClayDropdown.STATE = {
 	expanded: Config.bool().value(false),
 
 	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * Icon to use in the trigger.
 	 * @instance
 	 * @memberof ClayDropdown

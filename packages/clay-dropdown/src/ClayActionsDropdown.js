@@ -60,6 +60,15 @@ ClayActionsDropdown.STATE = {
 	helpText: Config.string(),
 
 	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * List of menu items.
 	 * @instance
 	 * @memberof ClayActionsDropdown
