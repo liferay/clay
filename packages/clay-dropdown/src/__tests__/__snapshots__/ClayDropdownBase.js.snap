@@ -40,6 +40,22 @@ exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
 </div>
 `;
 
+exports[`ClayDropdownBase should render a dropdown with classes 1`] = `
+<div class="dropdown my-cutsom-class">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <ul class="list-unstyled">
+      <li>
+        <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="item2url">Item 2</a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`ClayDropdownBase should render a dropdown with groups 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger Label</button>
@@ -72,6 +88,22 @@ exports[`ClayDropdownBase should render a dropdown with help text 1`] = `
     <ul class="list-unstyled">
       <li>
         <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`ClayDropdownBase should render a dropdown with id 1`] = `
+<div class="dropdown" id="myId">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <ul class="list-unstyled">
+      <li>
+        <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="item2url">Item 2</a>
       </li>
     </ul>
   </div>

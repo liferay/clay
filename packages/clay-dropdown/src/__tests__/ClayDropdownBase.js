@@ -9,6 +9,44 @@ describe('ClayDropdownBase', function() {
 		}
 	});
 
+	it('should render a dropdown with classes', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			elementClasses: 'my-cutsom-class',
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+				{
+					label: 'Item 2',
+					url: 'item2url',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
+	it('should render a dropdown with id', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			id: 'myId',
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+				{
+					label: 'Item 2',
+					url: 'item2url',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with trigger custom classes', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
