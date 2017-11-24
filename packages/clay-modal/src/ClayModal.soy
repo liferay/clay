@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param? body: string|html}
+	{@param? elementClasses: string}
 	{@param? footerButtons: list<?>}
 	{@param? handleClickCloseButtonFooter_: any}
 	{@param? handleClickFooterButton_: any}
@@ -26,6 +27,10 @@
 
 			{if $visible}
 				{sp}show
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
 			{/if}
 		"
 

@@ -197,6 +197,15 @@ ClayModal.STATE = {
 	body: Config.any(),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayModal
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * Buttons of the footer.
 	 * @instance
 	 * @memberof ClayModal
