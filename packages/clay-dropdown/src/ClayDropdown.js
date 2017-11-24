@@ -33,6 +33,15 @@ ClayDropdown.STATE = {
 	}),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * Flag to indicate if menu is expanded.
 	 * @instance
 	 * @memberof ClayDropdown

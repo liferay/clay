@@ -7,6 +7,7 @@
 	{@param items: list<?>}
 	{@param spritemap: string}
 	{@param? button: ?}
+	{@param? elementClasses: string}
 	{@param? expanded: bool}
 	{@param? icon: string}
 	{@param? id: string}
@@ -39,6 +40,7 @@
 
 	{call ClayDropdownBase.render}
     {param button: $button /}
+    {param elementClasses: $elementClasses /}
     {param expanded: $expanded /}
     {param id: $id /}
     {param indicatorsPosition: $indicatorsPosition /}

@@ -8,9 +8,17 @@
 	{@param spritemap: string}
 	{@param? button: ?}
 	{@param? caption: string}
+	{@param? elementClasses: string}
 	{@param? expanded: bool}
 	{@param? helpText: string}
 	{@param? id: string}
+
+  {let $dropdownElementClasses kind="text"}
+    dropdown-action
+    {if $elementClasses}
+      {sp}{$elementClasses}
+    {/if}
+  {/let}
 
   {let $trigger kind="html"}
     {call ClayIcon.render}
@@ -22,7 +30,7 @@
 	{call ClayDropdownBase.render}
     {param button: $button /}
     {param caption: $caption /}
-    {param elementClasses: 'dropdown-action' /}
+    {param elementClasses: $dropdownElementClasses /}
     {param expanded: $expanded /}
     {param helpText: $helpText /}
     {param id: $id /}

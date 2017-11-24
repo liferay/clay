@@ -8,6 +8,7 @@
 	{@param label: html|string}
 	{@param? button: ?}
 	{@param? caption: string}
+	{@param? elementClasses: string}
 	{@param? expanded: bool}
 	{@param? helpText: string}
 	{@param? id: string}
@@ -19,7 +20,11 @@
 	{@param? type: string}
 
 	{let $attributes kind="attributes"}
-		classes="dropdown
+		class="dropdown
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+
 			{if $expanded}
 				{sp}show
 			{/if}
@@ -30,7 +35,7 @@
 		{/if}
 	{/let}
 
-	<div $attributes>
+	<div {$attributes}>
 		{call .trigger}
 			{param classes: $triggerClasses /}
 			{param expanded: $expanded /}
