@@ -11,7 +11,7 @@ describe('ClayModal', function() {
 		}
 	});
 
-	it('should generate the default markup', () => {
+	it('should render the default markup', () => {
 		clayModal = new ClayModal();
 
 		expect(clayModal).toMatchSnapshot();

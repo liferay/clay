@@ -9,13 +9,13 @@ describe('<%= componentName %>', function() {
     }
   });
 
-  it('should generate the default markup', () => {
+  it('should render the default markup', () => {
     component = new <%= componentName %>();
 
     expect(component).toMatchSnapshot();
   });
 
-  it('should generate a <%= componentName %> with classes', () => {
+  it('should render a <%= componentName %> with classes', () => {
     component = new <%= componentName %>({
       elementClasses: 'my-custom-class',
     });
@@ -23,7 +23,7 @@ describe('<%= componentName %>', function() {
     expect(component).toMatchSnapshot();
   });
 
-  it('should generate a <%= componentName %> with id', () => {
+  it('should render a <%= componentName %> with id', () => {
     component = new <%= componentName %>({
       id: 'myId',
     });

@@ -11,13 +11,13 @@ describe('ClayLabel', function() {
 		}
 	});
 
-	it('shound generate the default markup', () => {
+	it('should render the default markup', () => {
 		label = new ClayLabel();
 
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a label with classes', () => {
+	it('should render a label with classes', () => {
 		label = new ClayLabel({
 			elementClasses: 'my-custom-class',
 		});
@@ -25,7 +25,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a label with id', () => {
+	it('should render a label with id', () => {
 		label = new ClayLabel({
 			id: 'myId',
 		});
@@ -33,7 +33,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a label with label', () => {
+	it('should render a label with label', () => {
 		label = new ClayLabel({
 			label: 'Foo',
 		});
@@ -41,7 +41,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a large label', () => {
+	it('should render a large label', () => {
 		label = new ClayLabel({
 			size: 'lg',
 		});
@@ -49,7 +49,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a label with removable', () => {
+	it('should render a label with removable', () => {
 		label = new ClayLabel({
 			label: 'Foo',
 			closeable: true,
@@ -59,7 +59,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a label with link', () => {
+	it('should render a label with link', () => {
 		label = new ClayLabel({
 			label: 'Foo',
 			href: '#1',
@@ -68,7 +68,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a `default color` label', () => {
+	it('should render a `default color` label', () => {
 		label = new ClayLabel({
 			style: 'secondary',
 		});
@@ -76,7 +76,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a `info color` label', () => {
+	it('should render a `info color` label', () => {
 		label = new ClayLabel({
 			style: 'info',
 		});
@@ -84,7 +84,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a `warning color` label', () => {
+	it('should render a `warning color` label', () => {
 		label = new ClayLabel({
 			style: 'warning',
 		});
@@ -92,7 +92,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a `danger color` label', () => {
+	it('should render a `danger color` label', () => {
 		label = new ClayLabel({
 			style: 'danger',
 		});
@@ -100,7 +100,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a `success color` label', () => {
+	it('should render a `success color` label', () => {
 		label = new ClayLabel({
 			style: 'success',
 		});

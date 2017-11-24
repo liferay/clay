@@ -9,7 +9,7 @@ describe('ClayButton', function() {
 		}
 	});
 
-	it('should generate the default markup', function() {
+	it('should render the default markup', function() {
 		button = new ClayButton();
 
 		expect(button).toMatchSnapshot();

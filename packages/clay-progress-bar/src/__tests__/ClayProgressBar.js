@@ -11,7 +11,7 @@ describe('ClayProgressBar', function() {
 		}
 	});
 
-	it('should generate a progress bar with classes', function() {
+	it('should render a progress bar with classes', function() {
 		progressBar = new ClayProgressBar({
 			elementClasses: 'my-custom-class',
 		});
@@ -19,7 +19,7 @@ describe('ClayProgressBar', function() {
 		expect(progressBar).toMatchSnapshot();
 	});
 
-	it('should generate a progress bar with id', function() {
+	it('should render a progress bar with id', function() {
 		progressBar = new ClayProgressBar({
 			id: 'myId',
 		});
@@ -27,7 +27,7 @@ describe('ClayProgressBar', function() {
 		expect(progressBar).toMatchSnapshot();
 	});
 
-	it('should generate an in progress bar', function() {
+	it('should render an in progress bar', function() {
 		progressBar = new ClayProgressBar({
 			minValue: 0,
 			maxValue: 100,
@@ -38,7 +38,7 @@ describe('ClayProgressBar', function() {
 		expect(progressBar).toMatchSnapshot();
 	});
 
-	it('should generate a progress bar at 0% of progress', function() {
+	it('should render a progress bar at 0% of progress', function() {
 		progressBar = new ClayProgressBar({
 			minValue: 0,
 			maxValue: 100,
@@ -49,13 +49,13 @@ describe('ClayProgressBar', function() {
 		expect(progressBar).toMatchSnapshot();
 	});
 
-	it('should generate a progress bar at 0% of progress', function() {
+	it('should render a progress bar at 0% of progress', function() {
 		progressBar = new ClayProgressBar({});
 
 		expect(progressBar).toMatchSnapshot();
 	});
 
-	it('should generate a progress bar with warning', function() {
+	it('should render a progress bar with warning', function() {
 		progressBar = new ClayProgressBar({
 			minValue: 0,
 			maxValue: 100,
@@ -67,7 +67,7 @@ describe('ClayProgressBar', function() {
 		expect(progressBar).toMatchSnapshot();
 	});
 
-	it('should generate a completed progress bar', function() {
+	it('should render a completed progress bar', function() {
 		progressBar = new ClayProgressBar({
 			minValue: 0,
 			maxValue: 100,
@@ -78,7 +78,7 @@ describe('ClayProgressBar', function() {
 		expect(progressBar).toMatchSnapshot();
 	});
 
-	it('should generate a completed progress bar', function() {
+	it('should render a completed progress bar', function() {
 		progressBar = new ClayProgressBar({
 			spritemap: spritemap,
 			status: 'complete',

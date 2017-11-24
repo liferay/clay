@@ -9,7 +9,7 @@ describe('ClayRadio', function() {
 		}
 	});
 
-	it('should generate default markup', () => {
+	it('should render default markup', () => {
 		clayRadio = new ClayRadio({
 			label: 'My Radio',
 		});
@@ -35,7 +35,7 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
-	it('should generate a checked radio', () => {
+	it('should render a checked radio', () => {
 		clayRadio = new ClayRadio({
 			checked: true,
 			label: 'My Radio',
@@ -44,7 +44,7 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
-	it('should generate a disabled radio', () => {
+	it('should render a disabled radio', () => {
 		clayRadio = new ClayRadio({
 			disabled: true,
 			label: 'My Radio',
@@ -53,7 +53,7 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
-	it('should generate a checked and disabled radio', () => {
+	it('should render a checked and disabled radio', () => {
 		clayRadio = new ClayRadio({
 			checked: true,
 			disabled: true,
@@ -63,7 +63,7 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
-	it('should generate a radio with hidden label', () => {
+	it('should render a radio with hidden label', () => {
 		clayRadio = new ClayRadio({
 			hideLabel: true,
 			label: 'My Radio',
@@ -72,7 +72,7 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
-	it('should generate an inline radio', () => {
+	it('should render an inline radio', () => {
 		clayRadio = new ClayRadio({
 			inline: true,
 			label: 'My Radio',
@@ -81,7 +81,7 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
-	it('should generate a radio with name', () => {
+	it('should render a radio with name', () => {
 		clayRadio = new ClayRadio({
 			name: 'myradio',
 			label: 'My Radio',
@@ -90,7 +90,7 @@ describe('ClayRadio', function() {
 		expect(clayRadio).toMatchSnapshot();
 	});
 
-	it('should generate a radio with value', () => {
+	it('should render a radio with value', () => {
 		clayRadio = new ClayRadio({
 			label: 'My Radio',
 			value: 'myradio',

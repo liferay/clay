@@ -9,7 +9,7 @@ describe('ClaySticker', function() {
 		}
 	});
 
-	it('should generate the default markup', () => {
+	it('should render the default markup', () => {
 		sticker = new ClaySticker();
 
 		expect(sticker).toMatchSnapshot();

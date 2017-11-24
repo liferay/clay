@@ -20,7 +20,7 @@ describe('ClaySelect', function() {
 		}
 	});
 
-	it('should generate a select element', function() {
+	it('should render a select element', function() {
 		select = new ClaySelect({
 			options: options,
 		});
@@ -28,7 +28,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a select element with classes', function() {
+	it('should render a select element with classes', function() {
 		select = new ClaySelect({
 			elementClasses: 'my-custom-class',
 			options: options,
@@ -37,7 +37,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a select element with id', function() {
+	it('should render a select element with id', function() {
 		select = new ClaySelect({
 			id: 'myId',
 			options: options,
@@ -46,7 +46,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a select element with label', function() {
+	it('should render a select element with label', function() {
 		select = new ClaySelect({
 			label: 'My Select',
 			options: options,
@@ -55,7 +55,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a select element with name', function() {
+	it('should render a select element with name', function() {
 		select = new ClaySelect({
 			name: 'myselectname',
 			options: options,
@@ -64,7 +64,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a select element with id', function() {
+	it('should render a select element with id', function() {
 		select = new ClaySelect({
 			id: 'myselectid',
 			options: options,
@@ -73,7 +73,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate an inline group select element', function() {
+	it('should render an inline group select element', function() {
 		select = new ClaySelect({
 			label: 'My Select',
 			options: options,
@@ -83,7 +83,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a select element with preselected option', function() {
+	it('should render a select element with preselected option', function() {
 		select = new ClaySelect({
 			options: [
 				{
@@ -101,7 +101,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a disabled select element', function() {
+	it('should render a disabled select element', function() {
 		select = new ClaySelect({
 			disabled: true,
 			options: options,
@@ -110,7 +110,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate a multiple select element', function() {
+	it('should render a multiple select element', function() {
 		select = new ClaySelect({
 			multiple: true,
 			options: options,
@@ -119,7 +119,7 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate an inline group multiple select element', function() {
+	it('should render an inline group multiple select element', function() {
 		select = new ClaySelect({
 			multiple: true,
 			options: options,

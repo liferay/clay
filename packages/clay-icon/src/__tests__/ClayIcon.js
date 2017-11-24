@@ -11,7 +11,7 @@ describe('ClayIcon', function() {
 		}
 	});
 
-	it('should generate markup for icon `add-cell`', () => {
+	it('should render markup for icon `add-cell`', () => {
 		clayIcon = new ClayIcon({
 			spritemap: spritemap,
 			symbol: 'add-cell',

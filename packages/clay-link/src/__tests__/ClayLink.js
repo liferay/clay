@@ -9,7 +9,7 @@ describe('ClayLink', function() {
 		}
 	});
 
-	it('should generate the default markup', () => {
+	it('should render the default markup', () => {
 		link = new ClayLink();
 
 		expect(link).toMatchSnapshot();
