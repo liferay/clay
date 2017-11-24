@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param? closeable: bool}
+	{@param? elementClasses: string}
 	{@param? handleCloseButtonClick_: any}
 	{@param? href: string}
 	{@param? id: string}
@@ -19,6 +20,10 @@
 
 			{if $closeable}
 				{sp}label-dismissible
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
 			{/if}
 
 			{if $size}

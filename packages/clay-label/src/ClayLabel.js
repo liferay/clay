@@ -36,6 +36,15 @@ ClayLabel.STATE = {
 	closeable: Config.bool().value(false),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayLabel
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * HREF in label.
 	 * @instance
 	 * @memberof ClayLabel
