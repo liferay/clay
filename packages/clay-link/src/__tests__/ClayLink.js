@@ -15,6 +15,22 @@ describe('ClayLink', function() {
 		expect(link).toMatchSnapshot();
 	});
 
+	it('should render a link with classes', () => {
+		link = new ClayLink({
+			elementClasses: 'my-custom-class',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with id', () => {
+		link = new ClayLink({
+			id: 'myId',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
 	it('should render a link with a label', () => {
 		link = new ClayLink({
 			label: 'My Link',
@@ -48,22 +64,6 @@ describe('ClayLink', function() {
 	it('should render a link with href', () => {
 		link = new ClayLink({
 			href: 'http://www.liferay.com',
-		});
-
-		expect(link).toMatchSnapshot();
-	});
-
-	it('should render a link with id', () => {
-		link = new ClayLink({
-			id: 'myLink',
-		});
-
-		expect(link).toMatchSnapshot();
-	});
-
-	it('should render a link with custom classes', () => {
-		link = new ClayLink({
-			elementClasses: 'my-custom-class',
 		});
 
 		expect(link).toMatchSnapshot();

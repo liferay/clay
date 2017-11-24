@@ -18,7 +18,7 @@ exports[`ClayLink should render a link with button primary style 1`] = `<a class
 
 exports[`ClayLink should render a link with button secondary style 1`] = `<a class="btn btn-secondary"></a>`;
 
-exports[`ClayLink should render a link with custom classes 1`] = `<a class=" my-custom-class"></a>`;
+exports[`ClayLink should render a link with classes 1`] = `<a class=" my-custom-class"></a>`;
 
 exports[`ClayLink should render a link with href 1`] = `<a href="http://www.liferay.com"></a>`;
 
@@ -37,7 +37,7 @@ exports[`ClayLink should render a link with icon and label 1`] = `
   </svg>My Link</a>
 `;
 
-exports[`ClayLink should render a link with id 1`] = `<a id="myLink"></a>`;
+exports[`ClayLink should render a link with id 1`] = `<a id="myId"></a>`;
 
 exports[`ClayLink should render a link with label and icon 1`] = `
 <a>My Link
