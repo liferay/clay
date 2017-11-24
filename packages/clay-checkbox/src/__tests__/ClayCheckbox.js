@@ -17,6 +17,24 @@ describe('ClayCheckbox', function() {
 		expect(clayCheckbox).toMatchSnapshot();
 	});
 
+	it('should generate a checkbox with classes', () => {
+		clayCheckbox = new ClayCheckbox({
+			elementClasses: 'my-custom-class',
+			label: 'My Checkbox',
+		});
+
+		expect(clayCheckbox).toMatchSnapshot();
+	});
+
+	it('should generate a checkbox with id', () => {
+		clayCheckbox = new ClayCheckbox({
+			id: 'myId',
+			label: 'My Checkbox',
+		});
+
+		expect(clayCheckbox).toMatchSnapshot();
+	});
+
 	it('should generate a checked checkbox', () => {
 		clayCheckbox = new ClayCheckbox({
 			checked: true,
@@ -72,28 +90,10 @@ describe('ClayCheckbox', function() {
 		expect(clayCheckbox).toMatchSnapshot();
 	});
 
-	it('should generate a checkbox with custom classes', () => {
-		clayCheckbox = new ClayCheckbox({
-			elementClasses: 'my-custom-class',
-			label: 'My Checkbox',
-		});
-
-		expect(clayCheckbox).toMatchSnapshot();
-	});
-
 	it('should generate an inline checkbox with classes', () => {
 		clayCheckbox = new ClayCheckbox({
 			elementClasses: 'my-custom-class',
 			inline: true,
-			label: 'My Checkbox',
-		});
-
-		expect(clayCheckbox).toMatchSnapshot();
-	});
-
-	it('should generate a checkbox with custom id', () => {
-		clayCheckbox = new ClayCheckbox({
-			id: 'myCheckbox',
 			label: 'My Checkbox',
 		});
 
