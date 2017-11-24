@@ -85,7 +85,7 @@ ClaySticker.STATE = {
 	 * Shape of the sticker. Available shapes are `circle`, `rounded`.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?string}
 	 * @default rounded
 	 */
 	shape: Config.oneOf(['circle', 'rounded']).value('rounded'),
@@ -95,8 +95,8 @@ ClaySticker.STATE = {
 	 * `primary`, `secondary`, `success`, `warning`.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
-	 * @default default
+	 * @type {?string}
+	 * @default primary
 	 */
 	style: Config.oneOf([
 		'danger',

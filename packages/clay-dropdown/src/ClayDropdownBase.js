@@ -148,7 +148,7 @@ ClayDropdownBase.STATE = {
 	 * Button configuration to place a button at dropdown footer.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
@@ -161,7 +161,7 @@ ClayDropdownBase.STATE = {
 	 * Caption text of the dropdown.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	caption: Config.string(),
@@ -179,7 +179,7 @@ ClayDropdownBase.STATE = {
 	 * Help text to be shown on top of the open dropdown.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	helpText: Config.string(),
@@ -189,7 +189,7 @@ ClayDropdownBase.STATE = {
 	 * item has indicators.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	indicatorsPosition: Config.oneOf(['left', 'right']),
@@ -226,7 +226,7 @@ ClayDropdownBase.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -250,7 +250,7 @@ ClayDropdownBase.STATE = {
 	 * CSS classes to be applied to the trigger element.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),

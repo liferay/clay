@@ -20,7 +20,7 @@ ClayIcon.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),

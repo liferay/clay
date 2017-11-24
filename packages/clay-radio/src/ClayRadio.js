@@ -38,7 +38,7 @@ ClayRadio.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -56,7 +56,7 @@ ClayRadio.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -83,7 +83,7 @@ ClayRadio.STATE = {
 	 * Name to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	name: Config.string(),
@@ -92,7 +92,7 @@ ClayRadio.STATE = {
 	 * Value to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	value: Config.string(),

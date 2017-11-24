@@ -45,7 +45,7 @@ ClayCheckbox.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -63,7 +63,7 @@ ClayCheckbox.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -99,7 +99,7 @@ ClayCheckbox.STATE = {
 	 * Name to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	name: Config.string(),
@@ -108,7 +108,7 @@ ClayCheckbox.STATE = {
 	 * Value to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	value: Config.string(),

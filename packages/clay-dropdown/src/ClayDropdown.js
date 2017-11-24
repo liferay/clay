@@ -23,7 +23,7 @@ ClayDropdown.STATE = {
 	 * Button configuration to place a button at dropdown footer.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
@@ -45,7 +45,7 @@ ClayDropdown.STATE = {
 	 * Icon to use in the trigger.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	icon: Config.string(),
@@ -55,7 +55,7 @@ ClayDropdown.STATE = {
 	 * item has indicators.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	indicatorsPosition: Config.oneOf(['left', 'right']),
@@ -73,7 +73,7 @@ ClayDropdown.STATE = {
 	 * Label of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?html|string}
+	 * @type {?html|string|undefined}
 	 * @default undefined
 	 */
 	label: Config.any(),
@@ -110,7 +110,7 @@ ClayDropdown.STATE = {
 	 * CSS classes to be applied to the trigger element.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),

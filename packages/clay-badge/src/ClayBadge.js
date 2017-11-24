@@ -13,7 +13,7 @@ class ClayBadge extends Component {}
 /**
  * State definition.
  * @static
- * #type {!Object}
+ * @type {!Object}
  */
 ClayBadge.STATE = {
 	/**
@@ -48,7 +48,7 @@ ClayBadge.STATE = {
 	 * @instance
 	 * @memberof ClayBadge
 	 * @type {?string}
-	 * default primary
+	 * @default primary
 	 */
 	style: Config.oneOf([
 		'danger',
