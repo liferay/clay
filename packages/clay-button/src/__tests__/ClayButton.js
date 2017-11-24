@@ -15,6 +15,22 @@ describe('ClayButton', function() {
 		expect(button).toMatchSnapshot();
 	});
 
+	it('should render a button with classes', function() {
+		button = new ClayButton({
+			elementClasses: 'my-custom-class',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
+	it('should render a button with id', function() {
+		button = new ClayButton({
+			id: 'myId',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
 	it('should render a submit button', function() {
 		button = new ClayButton({
 			type: 'submit',
@@ -123,22 +139,6 @@ describe('ClayButton', function() {
 				symbol: 'plus',
 			},
 			label: 'Label',
-		});
-
-		expect(button).toMatchSnapshot();
-	});
-
-	it('should render a button with id', function() {
-		button = new ClayButton({
-			id: 'myButton',
-		});
-
-		expect(button).toMatchSnapshot();
-	});
-
-	it('should render a button with custom classes', function() {
-		button = new ClayButton({
-			elementClasses: 'my-custom-class',
 		});
 
 		expect(button).toMatchSnapshot();

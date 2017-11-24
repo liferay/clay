@@ -4,7 +4,7 @@ exports[`ClayButton should generate the default markup 1`] = `<button class="btn
 
 exports[`ClayButton should render a block button 1`] = `<button class="btn btn-block btn-primary"></button>`;
 
-exports[`ClayButton should render a button with custom classes 1`] = `<button class="btn my-custom-class btn-primary"></button>`;
+exports[`ClayButton should render a button with classes 1`] = `<button class="btn my-custom-class btn-primary"></button>`;
 
 exports[`ClayButton should render a button with icon 1`] = `
 <button class="btn btn-primary" aria-label="plus">
@@ -29,7 +29,7 @@ exports[`ClayButton should render a button with icon and monospaced true 1`] = `
 </button>
 `;
 
-exports[`ClayButton should render a button with id 1`] = `<button class="btn btn-primary" id="myButton"></button>`;
+exports[`ClayButton should render a button with id 1`] = `<button class="btn btn-primary" id="myId"></button>`;
 
 exports[`ClayButton should render a button with label 1`] = `<button class="btn btn-primary">Label</button>`;
 
