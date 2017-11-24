@@ -11,6 +11,22 @@ describe('ClayProgressBar', function() {
 		}
 	});
 
+	it('should generate a progress bar with classes', function() {
+		progressBar = new ClayProgressBar({
+			elementClasses: 'my-custom-class',
+		});
+
+		expect(progressBar).toMatchSnapshot();
+	});
+
+	it('should generate a progress bar with id', function() {
+		progressBar = new ClayProgressBar({
+			id: 'myId',
+		});
+
+		expect(progressBar).toMatchSnapshot();
+	});
+
 	it('should generate an in progress bar', function() {
 		progressBar = new ClayProgressBar({
 			minValue: 0,
