@@ -78,6 +78,14 @@ exports[`ClayModal should render a modal with body 1`] = `
 </div>
 `;
 
+exports[`ClayModal should render a modal with classes 1`] = `
+<div class="fade modal my-custom-class" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
+  </div>
+</div>
+`;
+
 exports[`ClayModal should render a modal with footer buttons 1`] = `
 <div class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
@@ -109,6 +117,14 @@ exports[`ClayModal should render a modal with footer buttons aligned to left and
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should render a modal with id 1`] = `
+<div class="fade modal" id="myId" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
   </div>
 </div>
 `;

@@ -17,6 +17,22 @@ describe('ClayModal', function() {
 		expect(clayModal).toMatchSnapshot();
 	});
 
+	it('should render a modal with classes', () => {
+		clayModal = new ClayModal({
+			elementClasses: 'my-custom-class',
+		});
+
+		expect(clayModal).toMatchSnapshot();
+	});
+
+	it('should render a modal with id', () => {
+		clayModal = new ClayModal({
+			id: 'myId',
+		});
+
+		expect(clayModal).toMatchSnapshot();
+	});
+
 	it('should render a modal with title', () => {
 		clayModal = new ClayModal({
 			title: 'My title',
