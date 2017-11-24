@@ -27,6 +27,15 @@ ClayProgressBar.STATE = {
 	id: Config.string(),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * The maximum value of the progress bar.
 	 * @instance
 	 * @memberof ClayProgressBar

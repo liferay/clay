@@ -4,6 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param? elementClasses: string}
 	{@param? id: string}
 	{@param? maxValue: int}
 	{@param? minValue: int}
@@ -26,6 +27,10 @@
 				{sp}progress-warning
 			{else}
 				{sp}progress-info
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
 			{/if}
 		"
 
