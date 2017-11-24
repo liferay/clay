@@ -71,7 +71,7 @@ ClayAlert.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayIcon
+	 * @memberof ClayAlert
 	 * @type {!string}
 	 * @default undefined
 	 */

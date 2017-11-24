@@ -71,7 +71,7 @@ ClayButton.STATE = {
 	 * @instance
 	 * @memberof ClayButton
 	 * @type {?string|undefined}
-	 * default undefined
+	 * @default undefined
 	 */
 	id: Config.string(),
 
