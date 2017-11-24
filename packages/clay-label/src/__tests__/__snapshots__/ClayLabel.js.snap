@@ -12,7 +12,9 @@ exports[`ClayLabel shound render a \`success color\` label 1`] = `<span class="l
 
 exports[`ClayLabel shound render a \`warning color\` label 1`] = `<span class="label label-warning"></span>`;
 
-exports[`ClayLabel shound render a label with id 1`] = `<span class="label label-secondary" id="Foo"></span>`;
+exports[`ClayLabel shound render a label with classes 1`] = `<span class="label label-secondary my-custom-class"></span>`;
+
+exports[`ClayLabel shound render a label with id 1`] = `<span class="label label-secondary" id="myId"></span>`;
 
 exports[`ClayLabel shound render a label with label 1`] = `<span class="label label-secondary">Foo</span>`;
 

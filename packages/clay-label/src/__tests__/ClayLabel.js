@@ -17,9 +17,9 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('shound render a label with label', () => {
+	it('shound render a label with classes', () => {
 		label = new ClayLabel({
-			label: 'Foo',
+			elementClasses: 'my-custom-class',
 		});
 
 		expect(label).toMatchSnapshot();
@@ -27,7 +27,15 @@ describe('ClayLabel', function() {
 
 	it('shound render a label with id', () => {
 		label = new ClayLabel({
-			id: 'Foo',
+			id: 'myId',
+		});
+
+		expect(label).toMatchSnapshot();
+	});
+
+	it('shound render a label with label', () => {
+		label = new ClayLabel({
+			label: 'Foo',
 		});
 
 		expect(label).toMatchSnapshot();
