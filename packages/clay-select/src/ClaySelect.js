@@ -26,6 +26,15 @@ ClaySelect.STATE = {
 	disabled: Config.bool().value(false),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClaySelect
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClaySelect

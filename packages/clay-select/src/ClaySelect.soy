@@ -6,21 +6,32 @@
 {template .render}
 	{@param options: list<?>}
 	{@param? disabled: bool}
+	{@param? elementClasses: string}
 	{@param? id: string}
 	{@param? label: string}
 	{@param? multiple: bool}
 	{@param? name: string}
 	{@param? wrapperType: string}
 
-	{let $classes kind="text"}
-		{if $wrapperType}
-			form-{$wrapperType}
-		{else}
-			form-group
+	{let $attributes kind="text"}
+		class="
+			{if $wrapperType}
+				form-{$wrapperType}
+			{else}
+				form-group
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
 		{/if}
 	{/let}
 
-	<div class="{$classes}" id="{$id}">
+	<div {$attributes}>
 		{if $label}
 			<label>{$label}</label>
 		{/if}
