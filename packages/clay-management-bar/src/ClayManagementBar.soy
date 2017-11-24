@@ -10,6 +10,7 @@
 	{@param? filterItems: list<?>}
 	{@param? handleCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
+	{@param? handleSelectAllClicked_: any}
 	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
 	{@param? selectable: bool}
@@ -23,6 +24,7 @@
 	{if $isActive}
 		{call .active}
 			{param checkboxState: $checkboxState /}
+			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
 			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
 			{param selectedItems: $selectedItems /}
 			{param totalItems: $totalItems /}
@@ -49,6 +51,7 @@
 {template .active}
 	{@param? checkboxState: string}
 	{@param? handleCheckboxChanged_: any}
+	{@param? handleSelectAllClicked_: any}
 	{@param? id: string}
 	{@param? selectedItems: number}
 	{@param? totalItems: number}
@@ -81,6 +84,7 @@
 				<li class="nav-item">
 					{call ClayButton.render}
 						{param elementClasses: 'nav-btn' /}
+						{param events: ['click': $handleSelectAllClicked_] /}
 						{param label: 'Select all' /}
 						{param style: 'link' /}
 					{/call}
