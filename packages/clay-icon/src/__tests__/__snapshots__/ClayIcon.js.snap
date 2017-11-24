@@ -6,8 +6,14 @@ exports[`ClayIcon should generate markup for icon \`add-cell\` 1`] = `
 </svg>
 `;
 
-exports[`ClayIcon should render a \`add-cell\` icon with id 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" id="myIcon">
+exports[`ClayIcon should render an icon with classes 1`] = `
+<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell my-custom-class">
+  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
+</svg>
+`;
+
+exports[`ClayIcon should render an icon with id 1`] = `
+<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" id="myId">
   <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
 </svg>
 `;

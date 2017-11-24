@@ -20,9 +20,19 @@ describe('ClayIcon', function() {
 		expect(clayIcon).toMatchSnapshot();
 	});
 
-	it('should render a `add-cell` icon with id', () => {
+	it('should render an icon with classes', () => {
 		clayIcon = new ClayIcon({
-			id: 'myIcon',
+			elementClasses: 'my-custom-class',
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
+
+	it('should render an icon with id', () => {
+		clayIcon = new ClayIcon({
+			id: 'myId',
 			spritemap: spritemap,
 			symbol: 'add-cell',
 		});
