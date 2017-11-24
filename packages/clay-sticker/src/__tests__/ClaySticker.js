@@ -15,12 +15,9 @@ describe('ClaySticker', function() {
 		expect(sticker).toMatchSnapshot();
 	});
 
-	it('should render a sticker with icon', () => {
+	it('should render a sticker with classes', () => {
 		sticker = new ClaySticker({
-			icon: {
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
+			elementClasses: 'my-custom-class',
 		});
 
 		expect(sticker).toMatchSnapshot();
@@ -28,7 +25,18 @@ describe('ClaySticker', function() {
 
 	it('should render a sticker with id', () => {
 		sticker = new ClaySticker({
-			id: 'mySticker',
+			id: 'myId',
+		});
+
+		expect(sticker).toMatchSnapshot();
+	});
+
+	it('should render a sticker with icon', () => {
+		sticker = new ClaySticker({
+			icon: {
+				spritemap: 'icons.svg',
+				symbol: 'plus',
+			},
 		});
 
 		expect(sticker).toMatchSnapshot();

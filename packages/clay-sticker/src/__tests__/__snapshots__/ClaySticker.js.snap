@@ -30,6 +30,8 @@ exports[`ClaySticker should render a large sticker 1`] = `<span class="sticker s
 
 exports[`ClaySticker should render a small sticker 1`] = `<span class="sticker sticker-primary sticker-sm"></span>`;
 
+exports[`ClaySticker should render a sticker with classes 1`] = `<span class="sticker sticker-primary my-custom-class"></span>`;
+
 exports[`ClaySticker should render a sticker with icon 1`] = `
 <span class="sticker sticker-primary">
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
@@ -38,7 +40,7 @@ exports[`ClaySticker should render a sticker with icon 1`] = `
 </span>
 `;
 
-exports[`ClaySticker should render a sticker with id 1`] = `<span class="sticker sticker-primary" id="mySticker"></span>`;
+exports[`ClaySticker should render a sticker with id 1`] = `<span class="sticker sticker-primary" id="myId"></span>`;
 
 exports[`ClaySticker should render a sticker with label 1`] = `
 <span class="sticker sticker-primary">
