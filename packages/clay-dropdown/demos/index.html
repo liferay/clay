@@ -115,6 +115,13 @@
 		</div>
 	</div>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Actions Dropdown with events in items</h4>
+			<div id="actions-events-block"></div>
+		</div>
+	</div>
+
 
 	<script>
 		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
@@ -617,6 +624,49 @@
 				label: 'Trigger Label',
 			},
 			'#actions-caption-button-block'
+		);
+
+		/**
+		 * Dropdown with events in items
+		 **/
+		const handleItemClick = (event) => {
+			alert('Item clicked!');
+		};
+
+		new metal.ClayActionsDropdown(
+			{
+				items: [
+					{
+						events: {
+							'click': handleItemClick
+						},
+						label: 'Item 1',
+					},
+					{
+						active: true,
+						events: {
+							'click': handleItemClick
+						},
+						label: 'Item 2',
+					},
+					{
+						disabled: true,
+						events: {
+							'click': handleItemClick
+						},
+						label: 'Item 3',
+					},
+					{
+						events: {
+							'click': handleItemClick
+						},
+						label: 'Item 4',
+					},
+				],
+				spritemap: spritemap,
+				label: 'Trigger Label',
+			},
+			'#actions-event-block'
 		);
 	</script>
 </body>
