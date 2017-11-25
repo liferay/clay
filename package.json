@@ -3,8 +3,9 @@
   "scripts": {
     "a11y": "metal-a11y --packages ./packages -c demos/index.html",
     "build": "lerna run build",
-    "ci": "npm run build && npm run checkFormat && npm run lint && npm run test",
+    "ci": "npm run build && npm run checkFormat && npm run lint && npm run test && npm run coveralls",
     "checkFormat": "npm run prettier -- --list-different",
+    "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
     "format": "npm run prettier -- --write",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
+    "coveralls": "^3.0.0",
     "eslint": "^4.10.0",
     "eslint-config-liferay": "^2.0.8",
     "eslint-plugin-react": "^7.4.0",
@@ -31,7 +33,10 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcov"],
+    "coverageReporters": [
+      "json",
+      "lcov"
+    ],
     "resolver": "./jest-clay-lerna-resolver",
     "snapshotSerializers": [
       "metal-jest-serializer"
