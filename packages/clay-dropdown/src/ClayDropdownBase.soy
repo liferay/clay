@@ -253,8 +253,9 @@
 	{@param? url: string}
 
 	{let $itemContent kind="html"}
-		{let $linkAttriubtes kind="attributes"}
-			class="dropdown-item
+		{call ClayLink.render}
+			{param elementClasses kind="text"}
+				dropdown-item
 				{if $active}
 					{sp}active
 				{/if}
@@ -262,37 +263,39 @@
 				{if $disabled}
 					{sp}disabled
 				{/if}
-			"
+			{/param}
 
-			{if $disabled}
-				href="javascript:;"
-			{else}
-				href="{$url}"
-			{/if}
-		{/let}
-
-		<a {$linkAttriubtes}>
-			{let $iconContent kind="html"}
-				{if $indicatorSymbol and $spritemap}
-					<div class="dropdown-item-indicator">
-						{call ClayIcon.render}
-							{param spritemap: $spritemap /}
-							{param symbol: $indicatorSymbol /}
-						{/call}
-					</div>
+			{param href kind="text"}
+				{if $disabled}
+					javascript:;
+				{else}
+					{$url}
 				{/if}
-			{/let}
+			{/param}
 
-			{if $indicatorSymbol and $indicatorsPosition == 'left'}
-				{$iconContent}
-			{/if}
+			{param label kind="html"}
+				{let $iconContent kind="html"}
+					{if $indicatorSymbol and $spritemap}
+						<div class="dropdown-item-indicator">
+							{call ClayIcon.render}
+								{param spritemap: $spritemap /}
+								{param symbol: $indicatorSymbol /}
+							{/call}
+						</div>
+					{/if}
+				{/let}
 
-			{$label}
+				{if $indicatorSymbol and $indicatorsPosition == 'left'}
+					{$iconContent}
+				{/if}
 
-			{if $indicatorSymbol and $indicatorsPosition == 'right'}
-				{$iconContent}
-			{/if}
-		</a>
+				{$label}
+
+				{if $indicatorSymbol and $indicatorsPosition == 'right'}
+					{$iconContent}
+				{/if}
+			{/param}
+		{/call}
 	{/let}
 
 	{if $isInList}

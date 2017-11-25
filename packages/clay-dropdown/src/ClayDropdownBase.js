@@ -1,6 +1,7 @@
 import 'clay-button';
 import 'clay-checkbox';
 import 'clay-icon';
+import 'clay-link';
 import 'clay-radio';
 import {Align} from 'metal-position';
 import Component from 'metal-component';
