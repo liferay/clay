@@ -30,6 +30,8 @@
     "prettier-eslint-cli": "^4.3.2"
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "lcov"],
     "resolver": "./jest-clay-lerna-resolver",
     "snapshotSerializers": [
       "metal-jest-serializer"
