@@ -6,7 +6,7 @@ exports[`ClayDropdownBase should close dropdown 1`] = `
   <div class="dropdown-menu" style="top: 0px; left: 0px;">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
     </ul>
   </div>
@@ -19,7 +19,7 @@ exports[`ClayDropdownBase should open dropdown 1`] = `
   <div class="dropdown-menu show" style="top: 0px; left: 0px;">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
     </ul>
   </div>
@@ -32,7 +32,7 @@ exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
     </ul>
     <div class="dropdown-caption">My caption!</div>
@@ -46,10 +46,10 @@ exports[`ClayDropdownBase should render a dropdown with classes 1`] = `
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2</a>
+        <a class=" dropdown-item" href="item2url">Item 2</a>
       </li>
     </ul>
   </div>
@@ -63,17 +63,17 @@ exports[`ClayDropdownBase should render a dropdown with groups 1`] = `
     <ul class="list-unstyled">
       <li class="dropdown-subheader">Group 1</li>
       <li>
-        <a class="dropdown-item active" href="#1">Item 1</a>
+        <a class=" dropdown-item active" href="#1">Item 1</a>
       </li>
       <li>
-        <a class="dropdown-item" href="#2">Item 2</a>
+        <a class=" dropdown-item" href="#2">Item 2</a>
       </li>
       <li class="dropdown-subheader">Group 2</li>
       <li>
-        <a class="dropdown-item" href="#3">Item 3</a>
+        <a class=" dropdown-item" href="#3">Item 3</a>
       </li>
       <li>
-        <a class="dropdown-item disabled" href="javascript:;">Item 3</a>
+        <a class=" dropdown-item disabled" href="javascript:;">Item 3</a>
       </li>
     </ul>
   </div>
@@ -87,7 +87,7 @@ exports[`ClayDropdownBase should render a dropdown with help text 1`] = `
     <div class="alert alert-fluid alert-info" role="alert">Help!</div>
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
     </ul>
   </div>
@@ -100,10 +100,10 @@ exports[`ClayDropdownBase should render a dropdown with id 1`] = `
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2</a>
+        <a class=" dropdown-item" href="item2url">Item 2</a>
       </li>
     </ul>
   </div>
@@ -116,7 +116,7 @@ exports[`ClayDropdownBase should render a dropdown with indicators on the left 1
   <div class="dropdown-menu dropdown-menu-indicator-start">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">
+        <a class=" dropdown-item" href="item1url">
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
               <use xlink:href="icons.svg#check"></use>
@@ -124,7 +124,7 @@ exports[`ClayDropdownBase should render a dropdown with indicators on the left 1
           </div>Item 1</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">
+        <a class=" dropdown-item" href="item2url">
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
               <use xlink:href="icons.svg#check"></use>
@@ -142,7 +142,7 @@ exports[`ClayDropdownBase should render a dropdown with indicators on the right 
   <div class="dropdown-menu dropdown-menu-indicator-end">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1
+        <a class=" dropdown-item" href="item1url">Item 1
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
               <use xlink:href="icons.svg#check"></use>
@@ -151,7 +151,7 @@ exports[`ClayDropdownBase should render a dropdown with indicators on the right 
         </a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2
+        <a class=" dropdown-item" href="item2url">Item 2
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
               <use xlink:href="icons.svg#check"></use>
@@ -236,10 +236,10 @@ exports[`ClayDropdownBase should render a dropdown with items of type item 1`] =
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2</a>
+        <a class=" dropdown-item" href="item2url">Item 2</a>
       </li>
     </ul>
   </div>
@@ -252,7 +252,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and a
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item active" href="item1url">Item 1</a>
+        <a class=" dropdown-item active" href="item1url">Item 1</a>
       </li>
     </ul>
   </div>
@@ -265,7 +265,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and d
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item disabled" href="javascript:;">Item 1</a>
+        <a class=" dropdown-item disabled" href="javascript:;">Item 1</a>
       </li>
     </ul>
   </div>
@@ -437,18 +437,18 @@ exports[`ClayDropdownBase should render a dropdown with items with separators 1`
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="#1">Element 1</a>
+        <a class=" dropdown-item" href="#1">Element 1</a>
       </li>
       <li class="dropdown-subheader">Group 1</li>
       <li>
-        <a class="dropdown-item" href="#2">Item 2</a>
+        <a class=" dropdown-item" href="#2">Item 2</a>
       </li>
       <li>
-        <a class="dropdown-item" href="#3">Item 3</a>
+        <a class=" dropdown-item" href="#3">Item 3</a>
       </li>
       <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
       <li>
-        <a class="dropdown-item" href="#4">Element 4</a>
+        <a class=" dropdown-item" href="#4">Element 4</a>
       </li>
     </ul>
   </div>
@@ -461,7 +461,7 @@ exports[`ClayDropdownBase should render a dropdown with primary button 1`] = `
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
     </ul>
     <div class="dropdown-section">
@@ -477,7 +477,7 @@ exports[`ClayDropdownBase should render a dropdown with secondary button 1`] = `
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
     </ul>
     <div class="dropdown-section">
@@ -493,10 +493,10 @@ exports[`ClayDropdownBase should render a dropdown with trigger custom classes 1
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2</a>
+        <a class=" dropdown-item" href="item2url">Item 2</a>
       </li>
     </ul>
   </div>
@@ -523,10 +523,10 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
     </div>
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2</a>
+        <a class=" dropdown-item" href="item2url">Item 2</a>
       </li>
     </ul>
   </div>
