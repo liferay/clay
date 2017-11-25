@@ -4,6 +4,7 @@ let itemShape = {
 	active: Config.bool().value(false),
 	checked: Config.bool().value(false),
 	disabled: Config.bool().value(false),
+	events: Config.object(),
 	indicatorSymbol: Config.string(),
 	inputName: Config.string(),
 	inputValue: Config.string(),

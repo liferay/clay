@@ -71,6 +71,7 @@
 			{param active: $item.active /}
 			{param checked: $item.checked /}
 			{param disabled: $item.disabled /}
+			{param events: $item.events /}
 			{param indicatorSymbol: $item.indicatorSymbol /}
 			{param indicatorsPosition: $indicatorsPosition /}
 			{param inputName: $item.inputName /}
@@ -242,6 +243,7 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
+	{@param? events: ?}
 	{@param? indicatorsPosition: string}
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
@@ -265,10 +267,12 @@
 				{/if}
 			{/param}
 
+			{param events: $events /}
+
 			{param href kind="text"}
 				{if $disabled}
 					javascript:;
-				{else}
+				{elseif $url}
 					{$url}
 				{/if}
 			{/param}
@@ -317,6 +321,7 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
+	{@param? events: ?}
 	{@param? indicatorsPosition: string}
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
@@ -372,6 +377,7 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
+	{@param? events: ?}
 	{@param? indicatorsPosition: string}
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
@@ -420,6 +426,7 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
+	{@param? events: ?}
 	{@param? indicatorsPosition: string}
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
