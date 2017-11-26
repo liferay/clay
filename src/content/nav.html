@@ -7,6 +7,14 @@ section: Components
 	<div class="col-md-12">
 		<h3>Base Nav</h3>
 
+		<blockquote class="blockquote">
+			Bootstrap 4's Navigations share general markup and styles from the base <code>.nav</code> class, therefore the components Nav Pills, Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code>.nav</code> as its base.
+		</blockquote>
+
+		<blockquote class="blockquote">
+			<code>.nav-link</code> and <code>.active.nav-link</code> in the Base Nav doesn't have any special styling to make it easier to overwrite via color modifiers used in Clay's components above. If you would like to use a custom color scheme for the Base Nav, create a custom color modifier class and use the <code>clay-nav-variant($map)</code> mixin.
+		</blockquote>
+
 		<ul class="nav">
 			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
