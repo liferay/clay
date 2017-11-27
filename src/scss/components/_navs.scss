@@ -1,23 +1,14 @@
 .nav-btn.btn-unstyled,
 .nav-link {
-	color: $nav-link-color;
 	position: relative;
 
 	&:focus {
 		z-index: 1;
 	}
 
-	@include hover-focus {
-		color: $nav-link-hover-color;
-	}
-
 	&.disabled {
 		color: $nav-link-disabled-color;
 		cursor: $nav-link-disabled-cursor;
-	}
-
-	&.active {
-		color: $nav-link-active-color;
 	}
 }
 
