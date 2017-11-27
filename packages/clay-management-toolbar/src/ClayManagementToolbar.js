@@ -64,6 +64,15 @@ ClayManagementToolbar.STATE = {
 	actionItems: itemsValidator,
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * List of filter menu items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
