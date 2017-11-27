@@ -15,6 +15,7 @@ import templates from './ClayManagementToolbar.soy.js';
 class ClayManagementToolbar extends Component {
 	/**
 	 * Continues the propagation of the checkbox changed event
+	 * @param {!Event} event
 	 * @private
 	 */
 	handleSelectPageCheckboxChanged_(event) {
@@ -23,6 +24,7 @@ class ClayManagementToolbar extends Component {
 
 	/**
 	 * Continues the propagation of the plus button clicked event
+	 * @param {!Event} event
 	 * @private
 	 */
 	handlePlusButtonClicked_(event) {
@@ -31,6 +33,7 @@ class ClayManagementToolbar extends Component {
 
 	/**
 	 * Continues the propagation of the select all button clicked event
+	 * @param {!Event} event
 	 * @private
 	 */
 	handleSelectAllClicked_(event) {
@@ -41,7 +44,7 @@ class ClayManagementToolbar extends Component {
 	 * Continues the propagation of the sorting button clicked event
 	 * @private
 	 */
-	handleSortingButtonClicked_(event) {
+	handleSortingButtonClicked_() {
 		this.emit('sortingButtonClicked', {
 			sortingOrder: this.sortingOrder,
 		});
