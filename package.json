@@ -3,7 +3,7 @@
   "scripts": {
     "a11y": "metal-a11y --packages ./packages -c demos/index.html",
     "build": "lerna run build",
-    "ci": "npm run build && npm run checkFormat && npm run lint && npm run test && npm run coveralls",
+    "ci": "npm run build && npm run checkFormat && npm run lint && npm run test",
     "checkFormat": "npm run prettier -- --list-different",
     "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
     "format": "npm run prettier -- --write",
