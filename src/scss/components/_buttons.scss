@@ -76,31 +76,36 @@
 // Button Monospaced
 
 .btn-monospaced {
-	@include clay-monospace($btn-monospaced-size);
-
+	height: $btn-monospaced-size;
 	overflow: hidden;
 	padding: 0;
 	text-align: center;
 	white-space: normal;
+	width: $btn-monospaced-size;
 	word-wrap: break-word;
 
 	@include clay-scale-component {
-		@include clay-monospace($btn-monospaced-size-mobile);
+		height: $btn-monospaced-size-mobile;
+		width: $btn-monospaced-size-mobile;
 	}
 
 	&.btn-lg {
-		@include clay-monospace($btn-monospaced-size-lg);
+		height: $btn-monospaced-size-lg;
+		width: $btn-monospaced-size-lg;
 
 		@include clay-scale-component {
-			@include clay-monospace($btn-monospaced-size-lg-mobile);
+			height: $btn-monospaced-size-lg-mobile;
+			width: $btn-monospaced-size-lg-mobile;
 		}
 	}
 
 	&.btn-sm {
-		@include clay-monospace($btn-monospaced-size-sm);
+		height: $btn-monospaced-size-sm;
+		width: $btn-monospaced-size-sm;
 
 		@include clay-scale-component {
-			@include clay-monospace($btn-monospaced-size-sm-mobile);
+			height: $btn-monospaced-size-sm-mobile;
+			width: $btn-monospaced-size-sm-mobile;
 		}
 	}
 
