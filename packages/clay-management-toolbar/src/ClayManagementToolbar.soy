@@ -8,7 +8,7 @@
 	{@param? actionItems: list<?>}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<?>}
-	{@param? handleCheckboxChanged_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSelectAllClicked_: any}
 	{@param? handleSortingButtonClicked_: any}
@@ -25,7 +25,7 @@
 		{call .active}
 			{param actionItems: $actionItems /}
 			{param elementClasses: $elementClasses /}
-			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
+			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
 			{param selectedItems: $selectedItems /}
 			{param spritemap: $spritemap /}
@@ -35,7 +35,7 @@
 		{call .default}
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
-			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
+			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
 			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
 			{param id: $id /}
@@ -54,7 +54,7 @@
 	{@param spritemap: string}
 	{@param? actionItems: list<?>}
 	{@param? elementClasses: string}
-	{@param? handleCheckboxChanged_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleSelectAllClicked_: any}
 	{@param? id: string}
 	{@param? selectedItems: number}
@@ -78,10 +78,11 @@
 				<li class="nav-item">
 					{call ClayCheckbox.render}
 						{param checked: true /}
-						{param events: ['change': $handleCheckboxChanged_] /}
+						{param events: ['change': $handleSelectPageCheckboxChanged_] /}
 						{param hideLabel: true /}
 						{param indeterminate: $selectedItems < $totalItems /}
-						{param label: 'Select All' /}
+						{param label: 'Select Page' /}
+						{param ref: 'selectPageCheckbox' /}
 					{/call}
 				</li>
 				<li class="nav-item">
@@ -95,6 +96,7 @@
 						{param elementClasses: 'nav-btn' /}
 						{param events: ['click': $handleSelectAllClicked_] /}
 						{param label: 'Select all' /}
+						{param ref: 'selectAllButton' /}
 						{param style: 'link' /}
 					{/call}
 				</li>
@@ -119,7 +121,7 @@
 	{@param spritemap: string}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<?>}
-	{@param? handleCheckboxChanged_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
@@ -145,9 +147,10 @@
 				{if $selectable}
 					<li class="nav-item">
 						{call ClayCheckbox.render}
-							{param events: ['change': $handleCheckboxChanged_] /}
+							{param events: ['change': $handleSelectPageCheckboxChanged_] /}
 							{param hideLabel: true /}
-							{param label: 'Select All' /}
+							{param label: 'Select Page' /}
+							{param ref: 'selectPageCheckbox' /}
 						{/call}
 					</li>
 				{/if}
@@ -188,6 +191,7 @@
 							'spritemap': $spritemap,
 							'symbol': 'order-arrow'
 						] /}
+						{param ref: 'sortingButton' /}
 						{param style: 'unstyled' /}
 					{/call}
 				</li>
@@ -221,6 +225,7 @@
 							'spritemap': $spritemap,
 							'symbol': 'plus'
 						] /}
+						{param ref: 'plusButton' /}
 					{/call}
 				</li>
 			</ul>

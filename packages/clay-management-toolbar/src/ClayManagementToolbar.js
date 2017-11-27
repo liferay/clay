@@ -17,8 +17,8 @@ class ClayManagementToolbar extends Component {
 	 * Continues the propagation of the checkbox changed event
 	 * @private
 	 */
-	handleCheckboxChanged_(event) {
-		this.emit('checkboxChanged', event);
+	handleSelectPageCheckboxChanged_(event) {
+		this.emit('selectPageCheckboxChanged', event);
 	}
 
 	/**
