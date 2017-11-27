@@ -1,8 +1,8 @@
-import ClayManagementBar from '../ClayManagementBar';
+import ClayManagementToolbar from '../ClayManagementToolbar';
 
 let component;
 
-describe('ClayManagementBar', function() {
+describe('ClayManagementToolbar', function() {
 	afterEach(() => {
 		if (component) {
 			component.dispose();
@@ -10,7 +10,7 @@ describe('ClayManagementBar', function() {
 	});
 
 	it('should generate the default markup', () => {
-		component = new ClayManagementBar();
+		component = new ClayManagementToolbar();
 
 		expect(component).toMatchSnapshot();
 	});

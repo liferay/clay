@@ -7,12 +7,12 @@ import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
 import itemsValidator from './items_validator';
-import templates from './ClayManagementBar.soy.js';
+import templates from './ClayManagementToolbar.soy.js';
 
 /**
- * Metal ClayManagementBar component.
+ * Metal ClayManagementToolbar component.
  */
-class ClayManagementBar extends Component {
+class ClayManagementToolbar extends Component {
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @private
@@ -53,11 +53,11 @@ class ClayManagementBar extends Component {
  * @static
  * @type {!Object}
  */
-ClayManagementBar.STATE = {
+ClayManagementToolbar.STATE = {
 	/**
 	 * List of items to display in the actions menu on active state.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?Array}
 	 * @default undefined
 	 */
@@ -66,7 +66,7 @@ ClayManagementBar.STATE = {
 	/**
 	 * List of filter menu items.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?Array}
 	 * @default undefined
 	 */
@@ -75,7 +75,7 @@ ClayManagementBar.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -85,7 +85,7 @@ ClayManagementBar.STATE = {
 	 * Flag to indicate if the managment toolbar will control the selection of
 	 * elements.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?bool|undefined}
 	 * @default undefined
 	 */
@@ -94,7 +94,7 @@ ClayManagementBar.STATE = {
 	/**
 	 * Number of selected items.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?number}
 	 * @default undefined
 	 */
@@ -103,7 +103,7 @@ ClayManagementBar.STATE = {
 	/**
 	 * Sorting order.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?string|undefined}
 	 * @default asc
 	 */
@@ -112,7 +112,7 @@ ClayManagementBar.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?string}
 	 * @default undefined
 	 */
@@ -121,7 +121,7 @@ ClayManagementBar.STATE = {
 	/**
 	 * Total number of items.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?int}
 	 * @default undefined
 	 */
@@ -130,16 +130,16 @@ ClayManagementBar.STATE = {
 	/**
 	 * List of view items.
 	 * @instance
-	 * @memberof ClayManagementBar
+	 * @memberof ClayManagementToolbar
 	 * @type {?Array|undefined}
 	 * @default undefined
 	 */
 	viewTypes: itemsValidator,
 };
 
-defineWebComponent('clay-management-bar', ClayManagementBar);
+defineWebComponent('clay-management-toolbar', ClayManagementToolbar);
 
-Soy.register(ClayManagementBar, templates);
+Soy.register(ClayManagementToolbar, templates);
 
-export {ClayManagementBar};
-export default ClayManagementBar;
+export {ClayManagementToolbar};
+export default ClayManagementToolbar;

@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './src/ClayManagementBar.js',
+	entry: './src/ClayManagementToolbar.js',
 	module: {
 		rules: [
 			{
@@ -22,7 +22,7 @@ module.exports = {
 	output: {
 		library: 'metal',
 		libraryTarget: 'this',
-		filename: './build/globals/clay-management-bar.js',
+		filename: './build/globals/clay-management-toolbar.js',
 	},
 	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
 	resolve: {

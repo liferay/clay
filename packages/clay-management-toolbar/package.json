@@ -1,16 +1,16 @@
 {
-  "name": "clay-management-bar",
+  "name": "clay-management-toolbar",
   "version": "1.0.0-alpha.3",
-  "description": "Metal Clay Management Bar component",
+  "description": "Metal Clay Management Toolbar component",
   "license": "BSD",
   "repository": "metal/metal-clay-components",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/ClayManagementBar.js",
-  "esnext:main": "src/ClayManagementBar.js",
-  "jsnext:main": "src/ClayManagementBar.js",
+  "main": "lib/ClayManagementToolbar.js",
+  "esnext:main": "src/ClayManagementToolbar.js",
+  "jsnext:main": "src/ClayManagementToolbar.js",
   "files": [
     "lib",
     "src",

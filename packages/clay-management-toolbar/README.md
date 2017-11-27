@@ -1,6 +1,6 @@
-# clay-management-bar
+# clay-management-toolbar
 
-Clay Management Bar Component
+Clay Management Toolbar Component
 
 ## Setup
 
