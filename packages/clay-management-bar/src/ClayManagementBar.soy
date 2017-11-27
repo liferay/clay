@@ -22,14 +22,15 @@
 
 	{if $isActive}
 		{call .active}
+			{param actionItems: $actionItems /}
 			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
 			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
 			{param selectedItems: $selectedItems /}
+			{param spritemap: $spritemap /}
 			{param totalItems: $totalItems /}
 		{/call}
 	{else}
 		{call .default}
-			{param actionItems: $actionItems /}
 			{param filterItems: $filterItems /}
 			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
 			{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
@@ -47,6 +48,8 @@
  * This renders the component's active content.
  */
 {template .active}
+	{@param spritemap: string}
+	{@param? actionItems: list<?>}
 	{@param? handleCheckboxChanged_: any}
 	{@param? handleSelectAllClicked_: any}
 	{@param? id: string}
@@ -88,60 +91,14 @@
 				</li>
 			</ul>
 			
-			<ul class="navbar-nav">
-				<li class="nav-item navbar-breakpoint-down-d-none">
-					<a class="nav-link nav-link-monospaced" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#trash"></use>
-						</svg>
-					</a>
-				</li>
-				<li class="nav-item navbar-breakpoint-down-d-none">
-					<a class="nav-link nav-link-monospaced" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#paste">
-							</use>
-						</svg>
-					</a>
-				</li>
-				<li class="dropdown nav-item">
-					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#ellipsis-v">
-							</use>
-						</svg>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
-						<a class="active dropdown-item" href="#1">
-							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#list">
-									</use>
-								</svg>
-							</span>
-							List View
-						</a>
-						<a class="dropdown-item" href="#1">
-							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#table">
-									</use>
-								</svg>
-							</span>
-							Table View
-						</a>
-						<a class="dropdown-item" href="#1">
-							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#cards2">
-									</use>
-								</svg>
-							</span>
-							Card View
-						</a>
-					</div>
-				</li>
-			</ul>
+			{if $actionItems}
+				<ul class="navbar-nav">
+					{call ClayActionsDropdown.render}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</ul>
+			{/if}
 		</div>
 	</nav>
 {/template}
@@ -151,7 +108,6 @@
  */
 {template .default}
 	{@param spritemap: string}
-	{@param? actionItems: list<?>}
 	{@param? filterItems: list<?>}
 	{@param? handleCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
@@ -242,22 +198,15 @@
 				{/if}
 
 				<li class="nav-item">
-					{if $actionItems}
-						{call ClayActionsDropdown.render}
-							{param items: $actionItems /}
-							{param spritemap: $spritemap /}
-						{/call}
-					{else}
-						{call ClayButton.render}
-							{param elementClasses: 'nav-btn nav-btn-monospaced' /}
-							{param events: ['click': $handlePlusButtonClicked_ ] /}
-							{param icon: [
-								'alignment': 'left',
-								'spritemap': $spritemap,
-								'symbol': 'plus'
-							] /}
-						{/call}
-					{/if}
+					{call ClayButton.render}
+						{param elementClasses: 'nav-btn nav-btn-monospaced' /}
+						{param events: ['click': $handlePlusButtonClicked_ ] /}
+						{param icon: [
+							'alignment': 'left',
+							'spritemap': $spritemap,
+							'symbol': 'plus'
+						] /}
+					{/call}
 				</li>
 			</ul>
 		</div>
