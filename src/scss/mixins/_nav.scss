@@ -1,0 +1,44 @@
+@mixin clay-nav-variant($map) {
+	$link-bg: map-get($map, link-bg);
+	$link-border-radius: map-get($map, link-border-radius);
+	$link-color: map-get($map, link-color);
+	$link-hover-bg: map-get($map, link-hover-bg);
+	$link-hover-color: map-get($map, link-hover-color);
+	$link-focus-bg: map-get($map, link-focus-bg);
+	$link-focus-color: map-get($map, link-focus-color);
+	$link-disabled-bg: setter(map-get($map, link-disabled-bg), transparent);
+	$link-disabled-color: setter(map-get($map, link-disabled-color), $nav-link-disabled-color);
+	$link-disabled-opacity: map-get($map, link-disabled-opacity);
+	$link-active-bg: map-get($map, link-active-bg);
+	$link-active-color: map-get($map, link-active-color);
+
+	.nav-btn.btn-unstyled,
+	.nav-link {
+		background-color: $link-bg;
+
+		@include border-radius($link-border-radius);
+
+		color: $link-color;
+
+		@include hover {
+			background-color: $link-hover-bg;
+			color: $link-hover-color;
+		}
+
+		&:focus {
+			background-color: $link-focus-bg;
+			color: $link-focus-color;
+		}
+
+		&.disabled {
+			background-color: $link-disabled-bg;
+			color: $link-disabled-color;
+			opacity: $link-disabled-opacity;
+		}
+
+		&.active {
+			background-color: $link-active-bg;
+			color: $link-active-color;
+		}
+	}
+}
