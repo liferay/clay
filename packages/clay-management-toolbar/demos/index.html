@@ -24,14 +24,154 @@
 		ClayManagementToolbar
 	</h1>
 
-	<div id="container"></div>
+	<div id="container0"></div>
+	<div id="container1"></div>
+	<div id="container2"></div>
 
 	<script type="text/javascript">
 		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		
+		new metal.ClayManagementToolbar({
+			filterItems: [
+				{
+					label: 'Item 1',
+					inputName: 'item11checkbox',
+					inputValue: '1',
+					type: 'checkbox',
+				},
+				{
+					checked: true,
+					label: 'Item 2',
+					inputName: 'item12checkbox',
+					inputValue: '2',
+					type: 'checkbox',
+				},
+				{
+					disabled: true,
+					label: 'Item 3',
+					inputName: 'item13checkbox',
+					inputValue: '3',
+					separator: true,
+					type: 'checkbox',
+				},
+				{
+					items: [
+						{
+							label: 'Item 1',
+							inputValue: '1',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputValue: '2',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputValue: '3',
+						},
+					],
+					inputName: 'item1radio',
+					label: 'Group 1',
+					type: 'radiogroup',
+				}
+			],
+			selectable: true,
+			sortingOrder: 'desc',
+			spritemap: spritemap,
+			viewTypes: [
+				{
+					active: true,
+					indicatorSymbol: 'list',
+					label: 'List',
+				},
+				{
+					indicatorSymbol: 'table',
+					label: 'Table',
+				},
+				{
+					indicatorSymbol: 'cards2',
+					label: 'Card',
+				},
+			]
+		}, '#container1');
 
 		new metal.ClayManagementToolbar({
-			spritemap: spritemap
-		}, '#container');
+			actionItems: [
+				{
+					label: 'Edit',
+					url: '#1'
+				},
+				{
+					label: 'Preview',
+					url: '#1'
+				},
+			],
+			filterItems: [
+				{
+					label: 'Item 1',
+					inputName: 'item11checkbox',
+					inputValue: '1',
+					type: 'checkbox',
+				},
+				{
+					checked: true,
+					label: 'Item 2',
+					inputName: 'item12checkbox',
+					inputValue: '2',
+					type: 'checkbox',
+				},
+				{
+					disabled: true,
+					label: 'Item 3',
+					inputName: 'item13checkbox',
+					inputValue: '3',
+					separator: true,
+					type: 'checkbox',
+				},
+				{
+					items: [
+						{
+							label: 'Item 1',
+							inputValue: '1',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputValue: '2',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputValue: '3',
+						},
+					],
+					inputName: 'item1radio',
+					label: 'Group 1',
+					type: 'radiogroup',
+				}
+			],
+			selectable: true,
+			selectedItems: 14,
+			sortingOrder: 'desc',
+			spritemap: spritemap,
+			totalItems: 14,
+			viewTypes: [
+				{
+					active: true,
+					indicatorSymbol: 'list',
+					label: 'List',
+				},
+				{
+					indicatorSymbol: 'table',
+					label: 'Table',
+				},
+				{
+					indicatorSymbol: 'cards2',
+					label: 'Card',
+				},
+			]
+		}, '#container2');
 
 	</script>
 </body>
