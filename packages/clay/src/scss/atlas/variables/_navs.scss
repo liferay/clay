@@ -1,6 +1,3 @@
-$nav-link-color: $body-color !default;
-$nav-link-hover-color: inherit !default;
-$nav-link-active-color: $component-active-bg !default;
 $nav-link-disabled-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
 
 $nav-link-padding-x: 1rem !default; // 16px
