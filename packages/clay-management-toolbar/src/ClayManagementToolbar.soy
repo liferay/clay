@@ -23,8 +23,8 @@
 	{if $isActive}
 		{call .active}
 			{param actionItems: $actionItems /}
-			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
 			{param handleCheckboxChanged_: $handleCheckboxChanged_ /}
+			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
 			{param selectedItems: $selectedItems /}
 			{param spritemap: $spritemap /}
 			{param totalItems: $totalItems /}
@@ -113,8 +113,8 @@
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
-	{@param? sortingOrder: string}
 	{@param? selectable: bool}
+	{@param? sortingOrder: string}
 	{@param? viewTypes: list<?>}
 
 	{let $navAttributes kind="attributes"}
