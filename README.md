@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/metal/metal-clay-components.svg?branch=master)](https://travis-ci.org/metal/metal-clay-components)
 
+[![Coverage Status](https://coveralls.io/repos/github/metal/metal-clay-components/badge.svg)](https://coveralls.io/github/metal/metal-clay-components)
+
 ## Setup
 
 1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
