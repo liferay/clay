@@ -14,6 +14,7 @@
 		]>,
 		description: string,
 		icon: string,
+		selected: bool,
 		title: html|string
 	]>}
 	{@param? elementClasses: string}
@@ -58,9 +59,17 @@
 	{@param? description: string}
 	{@param? icon: string}
 	{@param? selectable: bool}
+	{@param? selected: bool}
 	{@param? spritemap: string}
 
-	<li class="list-group-item list-group-item-flex">
+	{let $listItemClasses kind="text"}
+		list-group-item list-group-item-flex
+		{if $selected}
+			{sp}active
+		{/if}
+	{/let}
+
+	<li class="{$listItemClasses}">
 		{let $isSimple: not $description and not $selectable and not $icon /}
 
 		{if $isSimple}
@@ -69,6 +78,7 @@
 			{if $selectable}
 				<div class="flex-col">
 					{call ClayCheckbox.render}
+						{param checked: $selected /}
 						{param hideLabel: true /}
 						{param label: 'select' /}
 						{param ref: 'selectItem' + $index + 'Checkbox' /}
@@ -117,6 +127,7 @@
 		]>,
 		description: string,
 		icon: string,
+		selected: bool,
 		title: html|string
 	]>}
 	{@param? selectable: bool}
@@ -129,6 +140,7 @@
 			{param icon: $item.icon /}
 			{param index: index($item) /}
 			{param selectable: $selectable /}
+			{param selected: $item.selected /}
 			{param spritemap: $spritemap /}
 			{param title: $item.title /}
 		{/call}

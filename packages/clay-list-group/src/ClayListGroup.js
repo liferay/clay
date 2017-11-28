@@ -58,6 +58,7 @@ ClayListGroup.STATE = {
 			),
 			description: Config.string(),
 			icon: Config.string(),
+			selected: Config.bool().value(false),
 			title: Config.any().required(),
 		})
 	).required(),
