@@ -21,6 +21,7 @@
 		title: html|string
 	]>}
 	{@param? elementClasses: string}
+	{@param? handleItemCheckboxClick_: any}
 	{@param? id: string}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
@@ -39,6 +40,7 @@
 
 	<ul {$attributes}>
 		{call .items}
+			{param handleItemCheckboxClick_: $handleItemCheckboxClick_ /}
 			{param items: $items /}
 			{param selectable: $selectable /}
 			{param spritemap: $spritemap /}
@@ -62,6 +64,7 @@
 			url: string
 	]>}
 	{@param? description: string}
+	{@param? handleItemCheckboxClick_: any}
 	{@param? icon: string}
 	{@param? iconShape: string}
 	{@param? selectable: bool}
@@ -85,6 +88,7 @@
 				<div class="flex-col">
 					{call ClayCheckbox.render}
 						{param checked: $selected /}
+						{param events: ['change': $handleItemCheckboxClick_] /}
 						{param hideLabel: true /}
 						{param label: 'select' /}
 						{param ref: 'selectItem' + $index + 'Checkbox' /}
@@ -147,6 +151,7 @@
 		selected: bool,
 		title: html|string
 	]>}
+	{@param? handleItemCheckboxClick_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
 
@@ -154,6 +159,7 @@
 		{call .item}
 			{param actionItems: $item.actionItems /}
 			{param description: $item.description /}
+			{param handleItemCheckboxClick_: $handleItemCheckboxClick_ /}
 			{param icon: $item.icon /}
 			{param iconShape: $item.iconShape /}
 			{param index: index($item) /}

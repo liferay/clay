@@ -14,7 +14,16 @@ import templates from './ClayListGroup.soy.js';
 /**
  * Metal ClayListGroup component.
  */
-class ClayListGroup extends Component {}
+class ClayListGroup extends Component {
+	/**
+	 * Continues the propagation of the checkbox changed event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleItemCheckboxClick_(event) {
+		this.emit('itemToggled', event);
+	}
+}
 
 /**
  * State definition.
