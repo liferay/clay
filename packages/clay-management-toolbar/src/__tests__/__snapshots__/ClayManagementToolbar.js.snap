@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayManagementToolbar should render a management toolbar with actions in active state 1`] = `
-<nav class="management-bar management-bar-light navbar navbar-expand-md">
+<nav class="management-bar management-bar-primary navbar navbar-expand-md">
   <div class="container">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -98,7 +98,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with classes in active state 1`] = `
-<nav class="management-bar management-bar-light navbar navbar-expand-md my-custom-class">
+<nav class="management-bar management-bar-primary navbar navbar-expand-md my-custom-class">
   <div class="container">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -233,7 +233,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with id in active state 1`] = `
-<nav class="management-bar management-bar-light navbar navbar-expand-md" id="myId">
+<nav class="management-bar management-bar-primary navbar navbar-expand-md" id="myId">
   <div class="container">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -293,7 +293,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with state active 1`] = `
-<nav class="management-bar management-bar-light navbar navbar-expand-md">
+<nav class="management-bar management-bar-primary navbar navbar-expand-md">
   <div class="container">
     <ul class="navbar-nav">
       <li class="nav-item">
