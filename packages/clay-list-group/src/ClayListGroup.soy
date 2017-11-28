@@ -8,7 +8,9 @@
 		actionItems: list<[
 			disabled: bool,
 			events: ?,
+			indicatorSymbol: string,
 			label: string,
+			quickAction: bool,
 			separator: bool,
 			url: string
 		]>,
@@ -24,7 +26,7 @@
 	{@param? spritemap: string}
 
 	{let $attributes kind="attributes"}
-		class="list-group
+		class="list-group show-quick-actions-on-hover
 			{if $elementClasses}
 				{sp}elementClasses
 			{/if}
@@ -53,7 +55,9 @@
 	{@param? actionItems: list<[
 			disabled: bool,
 			events: ?,
+			indicatorSymbol: string,
 			label: string,
+			quickAction: bool,
 			separator: bool,
 			url: string
 	]>}
@@ -107,10 +111,17 @@
 			</div>
 
 			{if $actionItems and $spritemap}
-				{call ClayActionsDropdown.render}
-					{param items: $actionItems /}
-					{param spritemap: $spritemap /}
-				{/call}
+				<div class="flex-col">
+					{call .quickMenu}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+
+					{call ClayActionsDropdown.render}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</div>
 			{/if}
 		{/if}
 	</li>
@@ -124,7 +135,9 @@
 		actionItems: list<[
 			disabled: bool,
 			events: ?,
+			indicatorSymbol: string,
 			label: string,
+			quickAction: bool,
 			separator: bool,
 			url: string
 		]>,
@@ -150,4 +163,33 @@
 			{param title: $item.title /}
 		{/call}
 	{/foreach}
+{/template}
+
+{template .quickMenu}
+	{@param items: list<[
+		disabled: bool,
+		events: ?,
+		indicatorSymbol: string,
+		label: string,
+		quickAction: bool,
+		separator: bool,
+		url: string
+	]>}
+	{@param spritemap: string}
+
+	<div class="quick-action-menu">
+		{foreach $item in $items}
+			{if $item.quickAction and $item.indicatorSymbol}
+				{call ClayLink.render}
+					{param elementClasses: 'quick-action-item' /}
+					{param label kind="html"}
+						{call ClayIcon.render}
+							{param spritemap: $spritemap /}
+							{param symbol: $item.indicatorSymbol /}
+						{/call}
+					{/param}
+				{/call}
+			{/if}
+		{/foreach}
+	</div>
 {/template}
