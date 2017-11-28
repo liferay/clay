@@ -30,13 +30,10 @@ ClaySticker.STATE = {
 	 * Render ClayIcon in the ClaySticker element.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?Object|undefined}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	icon: Config.shapeOf({
-		spritemap: Config.string().required(),
-		symbol: Config.string().required(),
-	}),
+	icon: Config.string(),
 
 	/**
 	 * Id to be applied to the sticker element.
@@ -98,6 +95,15 @@ ClaySticker.STATE = {
 	 * @default rounded
 	 */
 	shape: Config.oneOf(['circle', 'rounded']).value('rounded'),
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClaySticker
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	spritemap: Config.string(),
 
 	/**
 	 * Sticker style. Available sizes are: `danger`, `dark`, `info`, `light`,

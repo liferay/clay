@@ -5,16 +5,14 @@
  */
 {template .render}
 	{@param? elementClasses: string}
-	{@param? icon: [
-		spritemap: string,
-		symbol: string
-	]}
+	{@param? icon: string}
 	{@param? id: string}
 	{@param? label: html|string}
 	{@param? outside: bool}
 	{@param? position: string}
 	{@param? shape: string}
 	{@param? size: string}
+	{@param? spritemap: string}
 	{@param? style: string}
 
 	{let $attributes kind="attributes"}
@@ -47,10 +45,10 @@
 	{/let}
 
 	<span {$attributes}>
-		{if $icon}
+		{if $icon and $spritemap}
 			{call ClayIcon.render}
-				{param spritemap: $icon.spritemap /}
-				{param symbol: $icon.symbol /}
+				{param spritemap: $spritemap /}
+				{param symbol: $icon /}
 			{/call}
 		{elseif $label}
 			{$label}
