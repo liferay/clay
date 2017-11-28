@@ -63,6 +63,7 @@
 	@include border-radius(0);
 
 	border-width: $alert-fluid-border-width;
+	margin-bottom: $alert-fluid-margin-bottom;
 	padding: 0;
 
 	&.alert-dismissible {
