@@ -33,11 +33,9 @@ gulp.task('default', ['build']);
 
 gulp.task('build', function(cb) {
 	runSequence(
-		'build:patch-bootstrap',
 		'build:svg',
 		'build:svg:scss-icons',
 		'build:metalsmith',
-		'build:clean-bootstrap-patch',
 		function(err) {
 			gulp.emit('build:finished', err);
 
@@ -52,12 +50,10 @@ gulp.task(
 	'release:files',
 	function(cb) {
 		runSequence(
-			'build:patch-bootstrap',
 			'release:clean',
 			'release:build',
 			'release:svg',
 			'release:zip',
-			'build:clean-bootstrap-patch',
 			cb
 		);
 	}
@@ -67,14 +63,12 @@ gulp.task(
 	'release:npm',
 	function(cb) {
 		runSequence(
-			'build:patch-bootstrap',
 			'release:npm-clean',
 			'release:npm-build-files',
 			'release:npm-src-files',
 			'release:npm-index',
 			'release:npm-package',
 			'release:npm-publish',
-			'build:clean-bootstrap-patch',
 			cb
 		);
 	}
