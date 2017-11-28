@@ -95,6 +95,15 @@ ClayListGroup.STATE = {
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
+
+	/**
+	 * Header of the list group.
+	 * @instance
+	 * @memberof ClayListGroup
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	title: Config.string(),
 };
 
 defineWebComponent('clay-list-group', ClayListGroup);

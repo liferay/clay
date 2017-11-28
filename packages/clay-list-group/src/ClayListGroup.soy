@@ -26,6 +26,7 @@
 	{@param? id: string}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
+	{@param? title: string}
 
 	{let $attributes kind="attributes"}
 		class="list-group show-quick-actions-on-hover
@@ -40,6 +41,12 @@
 	{/let}
 
 	<ul {$attributes}>
+		{if $title}
+			<li class="list-group-header">
+				<h3 class="list-group-header-title">{$title}</h3>
+			</li>
+		{/if}
+
 		{call .items}
 			{param handleItemCheckboxClick_: $handleItemCheckboxClick_ /}
 			{param items: $items /}
