@@ -33,6 +33,19 @@ ClayListGroup.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
+
+	/**
+	 * List of items.
+	 * @instance
+	 * @memberof ClayListGroup
+	 * @type {!array}
+	 * @default undefined
+	 */
+	items: Config.arrayOf(
+		Config.shapeOf({
+			title: Config.any().required(),
+		})
+	).required(),
 };
 
 defineWebComponent('clay-list-group', ClayListGroup);

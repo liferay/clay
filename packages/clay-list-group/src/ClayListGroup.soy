@@ -4,6 +4,9 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param items: list<[
+		title: html|string
+	]>}
 	{@param? elementClasses: string}
 	{@param? id: string}
 
@@ -20,6 +23,34 @@
 	{/let}
 
 	<ul {$attributes}>
-
+		{call .items}
+			{param items: $items /}
+		{/call}
 	</ul>
+{/template}
+
+/**
+ * This renders a single item
+ */
+{template .item}
+	{@param title: html|string}
+
+	<li class="list-group-item list-group-item-flex">
+		{$title}
+	</li>
+{/template}
+
+/**
+ * This renders the whole list of items.
+ */
+{template .items}
+	{@param items: list<[
+		title: html|string
+	]>}
+
+	{foreach $item in $items}
+		{call .item}
+			{param title: $item.title /}
+		{/call}
+	{/foreach}
 {/template}
