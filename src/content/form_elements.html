@@ -85,23 +85,25 @@ section: Components
 		<span class="form-check-description">Disabled Check Box</span>
 	</label>
 </div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-		<span class="form-check-description">1</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-		<span class="form-check-description">2</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-		<span class="form-check-description">3</span>
-	</label>
+<div class="form-group">
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
+			<span class="form-check-description">1</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
+			<span class="form-check-description">2</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
+			<span class="form-check-description">3</span>
+		</label>
+	</div>
 </div>
 
 		</div>
@@ -126,23 +128,25 @@ section: Components
 		<span class="form-check-description">Disabled Radio Button</span>
 	</label>
 </div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
-		<span class="form-check-description">1</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
-		<span class="form-check-description">2</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
-		<span class="form-check-description">3</span>
-	</label>
+<div class="form-group">
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
+			<span class="form-check-description">1</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
+			<span class="form-check-description">2</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
+			<span class="form-check-description">3</span>
+		</label>
+	</div>
 </div>
 
 		</div>
@@ -268,19 +272,23 @@ section: Components
 					<option>Sample 4</option>
 				</select>
 			</div>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input checked class="form-check-input" type="checkbox" value="">
-					<span class="form-check-description">Disabled Checkbox</span>
-				</label>
+			<div class="form-group">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input checked class="form-check-input" type="checkbox" value="">
+						<span class="form-check-description">Disabled Checkbox</span>
+					</label>
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="radio" value="">
+						<span class="form-check-description">Disabled Radio</span>
+					</label>
+				</div>
 			</div>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="radio" value="">
-					<span class="form-check-description">Disabled Radio</span>
-				</label>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Submit</button>
 			</div>
-			<button class="btn btn-primary" type="submit">Submit</button>
 		</fieldset>
 	</form>
 </div>
@@ -359,7 +367,7 @@ section: Components
 		<h3>Form Inline</h3>
 
 <div class="sheet">
-	<div class="form-inline">
+	<div class="form-group form-inline">
 		<label for="formInlineInput">Form Inline</label>
 		<input class="form-control" id="formInlineInput" type="text">
 		<button class="btn btn-primary" type="submit">Submit</button>
@@ -432,8 +440,10 @@ section: Components
 			</div>
 		</div>
 	</div>
-	<button class="btn btn-primary" type="submit">Submit</button>
-	<a class="btn btn-danger" href="#1" role="button">Clear</a>
+	<div class="form-group">
+		<button class="btn btn-primary" type="submit">Submit</button>
+		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+	</div>
 </div>
 
 	</div>
@@ -470,8 +480,10 @@ section: Components
 			<label for="formInlineAutofitCustomAddress2">Address 2</label>
 			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
 		</div>
-		<button class="btn btn-primary" type="submit">Submit</button>
-		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit">Submit</button>
+			<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		</div>
 	</form>
 </div>
 
