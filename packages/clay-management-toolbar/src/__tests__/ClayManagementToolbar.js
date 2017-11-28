@@ -255,4 +255,31 @@ describe('ClayManagementToolbar', function() {
 			expect.any(Object)
 		);
 	});
+
+	it('should render a management toolbar and emit an event on filter done button click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterItems: [
+				{
+					label: 'Item 1',
+					inputName: 'item1checkbox',
+					inputValue: '1',
+					type: 'checkbox',
+				},
+				{
+					label: 'Item 2',
+					inputName: 'item2checkbox',
+					inputValue: '2',
+					type: 'checkbox',
+				},
+			],
+			spritemap: spritemap,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.filters.refs.dropdown.refs.dropdownButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('filterDone', expect.any(Object));
+	});
 });
