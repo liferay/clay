@@ -31,28 +31,59 @@
 	<script type="text/javascript">
 		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 		
-		new metal.ClayManagementToolbar({
+		window.prueba = new metal.ClayManagementToolbar({
 			filterItems: [
 				{
-					label: 'Item 1',
-					inputName: 'item11checkbox',
-					inputValue: '1',
-					type: 'checkbox',
+					items: [
+						{
+							label: 'Item 1',
+							inputName: 'filteritem1checkbox',
+							inputValue: '1',
+							type: 'checkbox',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputName: 'filteritem2checkbox',
+							inputValue: '2',
+							type: 'checkbox',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputName: 'filteritem3checkbox',
+							inputValue: '3',
+							type: 'checkbox',
+						},
+					],
+					label: 'Filter By',
+					type: 'group',
 				},
 				{
-					checked: true,
-					label: 'Item 2',
-					inputName: 'item12checkbox',
-					inputValue: '2',
-					type: 'checkbox',
-				},
-				{
-					disabled: true,
-					label: 'Item 3',
-					inputName: 'item13checkbox',
-					inputValue: '3',
-					separator: true,
-					type: 'checkbox',
+					items: [
+						{
+							label: 'Item 1',
+							inputName: 'orderitem1checkbox',
+							inputValue: '1',
+							type: 'checkbox',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputName: 'orderitem2checkbox',
+							inputValue: '2',
+							type: 'checkbox',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputName: 'orderitem3checkbox',
+							inputValue: '3',
+							type: 'checkbox',
+						},
+					],
+					label: 'Order By',
+					type: 'group',
 				},
 				{
 					items: [
@@ -107,70 +138,11 @@
 					url: '#1'
 				},
 			],
-			filterItems: [
-				{
-					label: 'Item 1',
-					inputName: 'item11checkbox',
-					inputValue: '1',
-					type: 'checkbox',
-				},
-				{
-					checked: true,
-					label: 'Item 2',
-					inputName: 'item12checkbox',
-					inputValue: '2',
-					type: 'checkbox',
-				},
-				{
-					disabled: true,
-					label: 'Item 3',
-					inputName: 'item13checkbox',
-					inputValue: '3',
-					separator: true,
-					type: 'checkbox',
-				},
-				{
-					items: [
-						{
-							label: 'Item 1',
-							inputValue: '1',
-						},
-						{
-							checked: true,
-							label: 'Item 2',
-							inputValue: '2',
-						},
-						{
-							disabled: true,
-							label: 'Item 3',
-							inputValue: '3',
-						},
-					],
-					inputName: 'item1radio',
-					label: 'Group 1',
-					type: 'radiogroup',
-				}
-			],
 			selectable: true,
 			selectedItems: 14,
 			sortingOrder: 'desc',
 			spritemap: spritemap,
 			totalItems: 14,
-			viewTypes: [
-				{
-					active: true,
-					indicatorSymbol: 'list',
-					label: 'List',
-				},
-				{
-					indicatorSymbol: 'table',
-					label: 'Table',
-				},
-				{
-					indicatorSymbol: 'cards2',
-					label: 'Card',
-				},
-			]
 		}, '#container2');
 
 	</script>
