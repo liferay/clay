@@ -9,9 +9,9 @@
 	{@param? elementClasses: string}
 	{@param? filterItems: list<?>}
 	{@param? handleFilterDoneButtonClick_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSelectAllClicked_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
 	{@param? selectable: bool}
@@ -26,8 +26,8 @@
 		{call .active}
 			{param actionItems: $actionItems /}
 			{param elementClasses: $elementClasses /}
-			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
+			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param selectedItems: $selectedItems /}
 			{param spritemap: $spritemap /}
 			{param totalItems: $totalItems /}
@@ -37,8 +37,8 @@
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
 			{param handleFilterDoneButtonClick_: $handleFilterDoneButtonClick_ /}
-			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
+			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
 			{param id: $id /}
 			{param selectable: $selectable /}
@@ -56,14 +56,14 @@
 	{@param spritemap: string}
 	{@param? actionItems: list<?>}
 	{@param? elementClasses: string}
-	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleSelectAllClicked_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? id: string}
 	{@param? selectedItems: number}
 	{@param? totalItems: number}
 
 	{let $navAttributes kind="attributes"}
-		class="management-bar management-bar-light navbar navbar-expand-md
+		class="management-bar management-bar-primary navbar navbar-expand-md
 			{if $elementClasses}
 				{sp}{$elementClasses}
 			{/if}
@@ -126,8 +126,8 @@
 	{@param? elementClasses: string}
 	{@param? filterItems: list<?>}
 	{@param? handleFilterDoneButtonClick_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleSortingButtonClicked_: any}
 	{@param? id: string}
 	{@param? selectable: bool}

@@ -18,15 +18,6 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleSelectPageCheckboxChanged_(event) {
-		this.emit('selectPageCheckboxChanged', event);
-	}
-
-	/**
-	 * Continues the propagation of the checkbox changed event
-	 * @param {!Event} event
-	 * @private
-	 */
 	handleFilterDoneButtonClick_(event) {
 		this.emit('filterDone', event);
 	}
@@ -50,6 +41,15 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the checkbox changed event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleSelectPageCheckboxChanged_(event) {
+		this.emit('selectPageCheckboxChanged', event);
+	}
+
+	/**
 	 * Continues the propagation of the sorting button clicked event
 	 * @private
 	 */
@@ -70,7 +70,7 @@ ClayManagementToolbar.STATE = {
 	 * List of items to display in the actions menu on active state.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?Array}
+	 * @type {?array|undefined}
 	 * @default undefined
 	 */
 	actionItems: itemsValidator,
@@ -88,7 +88,7 @@ ClayManagementToolbar.STATE = {
 	 * List of filter menu items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?Array}
+	 * @type {?array|undefined}
 	 * @default undefined
 	 */
 	filterItems: itemsValidator,
@@ -110,13 +110,13 @@ ClayManagementToolbar.STATE = {
 	 * @type {?bool|undefined}
 	 * @default undefined
 	 */
-	selectable: Config.bool(),
+	selectable: Config.bool().value(false),
 
 	/**
 	 * Number of selected items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?number}
+	 * @type {?number|undefined}
 	 * @default undefined
 	 */
 	selectedItems: Config.number(),
@@ -134,7 +134,7 @@ ClayManagementToolbar.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
@@ -143,7 +143,7 @@ ClayManagementToolbar.STATE = {
 	 * Total number of items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?int}
+	 * @type {?number|undefined}
 	 * @default undefined
 	 */
 	totalItems: Config.number(),
@@ -152,7 +152,7 @@ ClayManagementToolbar.STATE = {
 	 * List of view items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?Array|undefined}
+	 * @type {?array|undefined}
 	 * @default undefined
 	 */
 	viewTypes: itemsValidator,
