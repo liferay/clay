@@ -6,6 +6,9 @@ $quick-action-item-margin-y: null !default;
 $quick-action-item-padding-x: 0.5rem !default; // 8px
 $quick-action-item-padding-y: 0.5rem !default; // 8px
 
+$quick-action-item-min-height: 2rem !default; // 32px
+$quick-action-item-min-width: 2rem !default; // 32px
+
 $quick-action-item-bg: null !default;
 $quick-action-item-border-radius: $border-radius !default;
 $quick-action-item-color: $dropdown-action-toggle-color !default;
