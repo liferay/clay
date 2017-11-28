@@ -43,7 +43,7 @@
 	.list-group-item {
 		border-width: 0;
 
-		@include clay-list-group-notification-item-border-variant($list-group-notification-item-border-variant);
+		@include clay-list-group-notification-item-border-variant($list-group-notification-item);
 
 		&:first-child {
 			@if ($enable-rounded) {
