@@ -47,7 +47,9 @@
 	{@param? spritemap: string}
 
 	<li class="list-group-item list-group-item-flex">
-		{if not $description and not $selectable and not $icon}
+		{let $isSimple: not $description and not $selectable and not $icon /}
+
+		{if $isSimple}
 			{$title}
 		{else}
 			{if $selectable}
