@@ -10,6 +10,7 @@
 	]>}
 	{@param? elementClasses: string}
 	{@param? id: string}
+	{@param? selectable: bool}
 
 	{let $attributes kind="attributes"}
 		class="list-group
@@ -26,6 +27,7 @@
 	<ul {$attributes}>
 		{call .items}
 			{param items: $items /}
+			{param selectable: $selectable /}
 		{/call}
 	</ul>
 {/template}
@@ -34,13 +36,25 @@
  * This renders a single item
  */
 {template .item}
+	{@param index: number}
 	{@param title: html|string}
 	{@param? description: string}
+	{@param? selectable: bool}
 
 	<li class="list-group-item list-group-item-flex">
-		{if not $description}
+		{if not $description and not $selectable}
 			{$title}
 		{else}
+			{if $selectable}
+				<div class="flex-col">
+					{call ClayCheckbox.render}
+						{param hideLabel: true /}
+						{param label: 'select' /}
+						{param ref: 'selectItem' + $index + 'Checkbox' /}
+					{/call}
+				</div>
+			{/if}
+
 			<div class="flex-col flex-col-expand">
 				<h4 class="list-group-title text-truncate">{$title}</h4>
 
@@ -60,10 +74,13 @@
 		description: string,
 		title: html|string
 	]>}
+	{@param? selectable: bool}
 
 	{foreach $item in $items}
 		{call .item}
 			{param description: $item.description /}
+			{param index: index($item) /}
+			{param selectable: $selectable /}
 			{param title: $item.title /}
 		{/call}
 	{/foreach}

@@ -1,3 +1,5 @@
+import 'clay-checkbox';
+
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -47,6 +49,15 @@ ClayListGroup.STATE = {
 			title: Config.any().required(),
 		})
 	).required(),
+
+	/**
+	 * Flag to indicate if the list group items are selectable.
+	 * @instance
+	 * @memberof ClayListGroup
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selectable: Config.bool().value(false),
 };
 
 defineWebComponent('clay-list-group', ClayListGroup);
