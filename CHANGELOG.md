@@ -1,3 +1,7 @@
+### v1.0.26 - November 27, 2017
+* Update: (Fixes [#379](https://github.com/liferay/clay/issues/379)) Glyphicon Font path should point to the right directory
+* Misc: Don't need to patch Bootstrap Variable file anymore
+
 ### v1.0.25 - October 5, 2017
 * Fix: Management Bar Collapse can't click form elements in dropdown
 * Update: Table move `border-collapse: collapse` and `border-spacing: 0` to `.table` and restore default values for `table`
