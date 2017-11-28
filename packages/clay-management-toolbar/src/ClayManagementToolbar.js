@@ -23,6 +23,15 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the checkbox changed event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleFilterDoneButtonClick_(event) {
+		this.emit('filterDone', event);
+	}
+
+	/**
 	 * Continues the propagation of the plus button clicked event
 	 * @param {!Event} event
 	 * @private

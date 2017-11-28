@@ -8,6 +8,7 @@
 	{@param? actionItems: list<?>}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<?>}
+	{@param? handleFilterDoneButtonClick_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSelectAllClicked_: any}
@@ -35,6 +36,7 @@
 		{call .default}
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
+			{param handleFilterDoneButtonClick_: $handleFilterDoneButtonClick_ /}
 			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
 			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
@@ -121,6 +123,7 @@
 	{@param spritemap: string}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<?>}
+	{@param? handleFilterDoneButtonClick_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSortingButtonClicked_: any}
@@ -158,17 +161,18 @@
 				{if $filterItems}
 					<li class="dropdown nav-item">
 						{call ClayDropdown.render}
+							{param button: [
+								'events': [
+									'click': $handleFilterDoneButtonClick_,
+								],									
+								'label': 'Done'
+							] /}
 							{param items: $filterItems /}
 							{param label: 'Filter and Order' /}
+							{param ref: 'filters' /}
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link navbar-breakpoint-down-d-none' /}
-						{/call}
-
-						{call ClayDropdown.render}
-							{param icon: 'filter' /}
-							{param items: $filterItems /}
-							{param spritemap: $spritemap /}
-							{param triggerClasses: 'nav-link nav-link-monospaced navbar-breakpoint-d-none' /}
+							{param type: 'form' /}
 						{/call}
 					</li>
 				{/if}
