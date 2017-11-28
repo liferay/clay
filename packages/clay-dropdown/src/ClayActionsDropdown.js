@@ -27,6 +27,7 @@ ClayActionsDropdown.STATE = {
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
+		events: Config.object(),
 		label: Config.string().required(),
 		style: Config.oneOf(['primary', 'secondary']).value('primary'),
 		type: Config.oneOf(['button', 'reset', 'submit']),
