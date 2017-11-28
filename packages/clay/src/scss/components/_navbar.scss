@@ -62,6 +62,7 @@
 .navbar-text-truncate {
 	display: inline-block;
 	max-width: 100%;
+	pointer-events: none;
 
 	@include text-truncate;
 

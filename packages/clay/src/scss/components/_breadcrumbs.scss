@@ -89,6 +89,7 @@
 .breadcrumb-text-truncate {
 	display: inline-block;
 	max-width: $breadcrumb-text-truncate-max-width;
+	pointer-events: none;
 
 	@include text-truncate;
 
