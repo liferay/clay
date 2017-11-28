@@ -59,6 +59,10 @@
 			}
 		}
 	}
+
+	.list-group-item-primary {
+		@include clay-list-group-notification-item-border-variant($list-group-notification-item-primary);
+	}
 }
 
 // List Group Header

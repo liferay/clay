@@ -1,4 +1,5 @@
 @mixin clay-list-group-notification-item-border-variant($map) {
+	$bg: setter(map-get($map, bg), $list-group-bg);
 	$border-bottom-color: setter(map-get($map, border-bottom-color), $list-group-notification-item-border-bottom-color);
 	$border-left-color: setter(map-get($map, border-left-color), $list-group-notification-item-border-left-color);
 	$border-right-color: setter(map-get($map, border-right-color), $list-group-notification-item-border-right-color);
@@ -14,6 +15,7 @@
 	$box-shadow-right: inset -#{$border-right-width} 0 #{$border-right-color};
 	$box-shadow-top: inset 0 #{$border-top-width} #{$border-top-color};
 
+	$active-bg: setter(map-get($map, active-bg), $list-group-active-bg);
 	$active-border-bottom-color: setter(map-get($map, active-border-bottom-color), $list-group-notification-item-active-border-bottom-color);
 	$active-border-left-color: setter(map-get($map, active-border-left-color), $list-group-notification-item-active-border-left-color);
 	$active-border-right-color: setter(map-get($map, active-border-right-color), $list-group-notification-item-active-border-right-color);
@@ -24,9 +26,11 @@
 	$active-box-shadow-right: inset -#{$border-right-width} 0 #{$active-border-right-color};
 	$active-box-shadow-top: inset 0 #{$border-top-width} #{$active-border-top-color};
 
+	background-color: $bg;
 	box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top, $box-shadow-bottom;
 
 	&.active {
+		background-color: $active-bg;
 		box-shadow: $active-box-shadow-left, $active-box-shadow-right, $active-box-shadow-top, $active-box-shadow-bottom;
 	}
 }
