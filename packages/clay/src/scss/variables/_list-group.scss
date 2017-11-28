@@ -57,7 +57,6 @@ $list-group-notification-item-border-right-width: 0.0625rem !default;
 $list-group-notification-item-border-top-width: 0.0625rem !default;
 
 $list-group-notification-item: () !default;
-$list-group-notification-item: map-merge((), $list-group-notification-item);
 
 $list-group-notification-item-primary: () !default;
 $list-group-notification-item-primary: map-merge((
