@@ -6,11 +6,13 @@
 {template .render}
 	{@param items: list<[
 		description: string,
+		icon: string,
 		title: html|string
 	]>}
 	{@param? elementClasses: string}
 	{@param? id: string}
 	{@param? selectable: bool}
+	{@param? spritemap: string}
 
 	{let $attributes kind="attributes"}
 		class="list-group
@@ -28,6 +30,7 @@
 		{call .items}
 			{param items: $items /}
 			{param selectable: $selectable /}
+			{param spritemap: $spritemap /}
 		{/call}
 	</ul>
 {/template}
@@ -39,10 +42,12 @@
 	{@param index: number}
 	{@param title: html|string}
 	{@param? description: string}
+	{@param? icon: string}
 	{@param? selectable: bool}
+	{@param? spritemap: string}
 
 	<li class="list-group-item list-group-item-flex">
-		{if not $description and not $selectable}
+		{if not $description and not $selectable and not $icon}
 			{$title}
 		{else}
 			{if $selectable}
@@ -51,6 +56,15 @@
 						{param hideLabel: true /}
 						{param label: 'select' /}
 						{param ref: 'selectItem' + $index + 'Checkbox' /}
+					{/call}
+				</div>
+			{/if}
+
+			{if $icon and $spritemap}
+				<div class="flex-col">
+					{call ClaySticker.render}
+						{param icon: $icon /}
+						{param spritemap: $spritemap /}
 					{/call}
 				</div>
 			{/if}
@@ -72,15 +86,19 @@
 {template .items}
 	{@param items: list<[
 		description: string,
+		icon: string,
 		title: html|string
 	]>}
 	{@param? selectable: bool}
+	{@param? spritemap: string}
 
 	{foreach $item in $items}
 		{call .item}
 			{param description: $item.description /}
+			{param icon: $item.icon /}
 			{param index: index($item) /}
 			{param selectable: $selectable /}
+			{param spritemap: $spritemap /}
 			{param title: $item.title /}
 		{/call}
 	{/foreach}

@@ -1,4 +1,5 @@
 import 'clay-checkbox';
+import 'clay-sticker';
 
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
@@ -46,6 +47,7 @@ ClayListGroup.STATE = {
 	items: Config.arrayOf(
 		Config.shapeOf({
 			description: Config.string(),
+			icon: Config.string(),
 			title: Config.any().required(),
 		})
 	).required(),
@@ -58,6 +60,15 @@ ClayListGroup.STATE = {
 	 * @default false
 	 */
 	selectable: Config.bool().value(false),
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayListGroup
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	spritemap: Config.string(),
 };
 
 defineWebComponent('clay-list-group', ClayListGroup);
