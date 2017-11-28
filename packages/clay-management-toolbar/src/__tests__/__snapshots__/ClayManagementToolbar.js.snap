@@ -23,23 +23,25 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
       </li>
     </ul>
     <ul class="navbar-nav">
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#editurl">Edit</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#deleteurl">Delete</a>
-            </li>
-          </ul>
+      <li class="nav-item">
+        <div class="dropdown dropdown-action">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <ul class="list-unstyled">
+              <li>
+                <a class=" dropdown-item" href="#editurl">Edit</a>
+              </li>
+              <li>
+                <a class=" dropdown-item" href="#deleteurl">Delete</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </li>
     </ul>
   </div>
 </nav>
