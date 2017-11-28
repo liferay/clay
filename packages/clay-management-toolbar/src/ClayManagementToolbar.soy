@@ -106,10 +106,12 @@
 			
 			{if $actionItems}
 				<ul class="navbar-nav">
-					{call ClayActionsDropdown.render}
-						{param items: $actionItems /}
-						{param spritemap: $spritemap /}
-					{/call}
+					<li class="nav-item">
+						{call ClayActionsDropdown.render}
+							{param items: $actionItems /}
+							{param spritemap: $spritemap /}
+						{/call}
+					</li>
 				</ul>
 			{/if}
 		</div>
