@@ -1,0 +1,828 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Sidenav</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Sidenav
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A jQuery plugin that creates a slideout navigation on the right or left, for the sidebar css component see <a href="../sidebar">Sidebar</a>.</p>
+		</blockquote>
+
+		<h5>Syntax with Options:</h5>
+
+<pre><code class="html">&lt;head&gt;
+    &lt;script src=&quot;side-navigation.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;sidenav-container&quot; id=&quot;mySidenavContainerId&quot;&gt;
+        &lt;a class=&quot;btn btn-default sidenav-toggler&quot; href=&quot;#mySidenavContainerId&quot;&gt;
+            &lt;span aria-hidden=&quot;true&quot; class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt; Toggle
+        &lt;/a&gt;
+
+        &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
+            &lt;div class=&quot;sidenav-menu&quot;&gt;
+                ... Your Side Nav Content ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;sidenav-content&quot;&gt;
+            ... Your Main Content ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        $(&apos;.sidenav-toggler&apos;).sideNavigation({
+            breakpoint: 768, // The window width that defines the desktop size. Default: 768.
+            container: null, // The class or ID of the container. Default: null.
+            content: &apos;.sidenav-content&apos;, // The class or ID of the content. Default: &apos;.sidenav-content&apos;.
+            equalHeight: true, // The height of content and navigation should be equal.
+            gutter: &apos;15px&apos;, // The space between the sidenav-slider and the sidenav-content. Default: 15px.
+            loadingIndicatorTPL: &apos;&lt;div class=&quot;loading-animation loading-animation-md&quot;&gt;&lt;/div&gt;&apos;, // Loading indicator template
+            navigation: &apos;.sidenav-menu-slider&apos;, // The class or ID of the slider. Default: &apos;.sidenav-menu-slider&apos;.
+            position: &apos;left&apos;, // The position of the sidenav-slider. Possible values: left, right. Default: &apos;left&apos;.
+            type: &apos;relative&apos;, // The type of sidenav in desktop. Possible values: relative, fixed, fixed-push. Default: &apos;relative&apos;.
+            typeMobile: &apos;relative&apos;, // The type of sidenav in mobile. Possible values: relative, fixed, fixed-push. Default: &apos;relative&apos;.
+            url: null, // The URL or $.ajax config object to fetch the content to inject into .sidebar-body. Default: null.
+            useDelegate: true, // The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
+            width: &apos;225px&apos; // The width of the side navigation. Default: &apos;225px&apos;.
+        });
+    &lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing sidenav-demo-container">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above and pass the sidenav-container element to the plugin with the <code>href</code> attribute or the <code>data-target</code> attribute on the toggler. The <code>container</code> option also allows you to pass the container via javascript if <code>href</code> or <code>data-target</code> can&apos;t be used. The options above are optional.</p>
+		</blockquote>
+
+		<div class="alert alert-info">
+			Avoid the flash of unstyled content when using the Javascript api by adding the class <span class="text-danger">sidenav-js-fouc</span> to the <span class="text-danger">sidenav-container</span>.
+		</div>
+
+		<button class="active btn btn-default open sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
+			Sidenav Toggler
+		</button>
+
+		<div class="open sidenav-container sidenav-js-fouc" id="mySidenavContainerId">
+			<div class="sidenav-menu-slider" style="background:#FFF;">
+				<div class="sidenav-menu">
+					<div class="col-md-12">
+						<a class="pull-right sidenav-close" href="#1">X</a>
+						<p>... Your Side Nav Content ...</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="sidenav-content" style="background:#EEE;">
+				<div class="col-md-12">... Your Main Content ...</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+  <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+<pre><code class="html">&lt;button class=&quot;btn btn-default sidenav-toggler&quot; data-target=&quot;#mySidenavContainerId&quot;&gt;
+    Sidenav Toggler
+&lt;/button&gt;
+
+&lt;div class=&quot;sidenav-container&quot; id=&quot;mySidenavContainerId&quot;&gt;
+    &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
+        &lt;div class=&quot;sidenav-menu&quot;&gt;
+            &lt;div class=&quot;col-md-12&quot;&gt;... Your Side Nav Content ...&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sidenav-content&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;... Your Main Content ...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    $(&apos;.sidenav-toggler&apos;).sideNavigation();
+&lt;/script&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing sidenav-demo-container">
+	<div class="col-md-12">
+		<button class="active btn btn-default open sidenav-toggler1" style="margin-bottom:5px;">
+			Sidenav Toggler 1
+		</button>
+
+		<div class="open sidenav-container sidenav-js-fouc" id="mySidenavContainerId1">
+			<div class="sidenav-menu-slider" style="background:#FFF;">
+				<div class="sidenav-menu">
+					<div class="col-md-12">
+						<a class="pull-right sidenav-close" href="#1">X</a>
+						<p>... Your Side Nav Content ...</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="sidenav-content" style="background:#EEE;">
+				<div class="col-md-12">... Your Main Content ...</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;button class=&quot;btn btn-default sidenav-toggler1&quot;&gt;
+    Sidenav Toggler 1
+&lt;/button&gt;
+
+&lt;div class=&quot;sidenav-container&quot; id=&quot;mySidenavContainerId1&quot;&gt;
+    &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
+        &lt;div class=&quot;sidenav-menu&quot;&gt;
+            &lt;div class=&quot;col-md-12&quot;&gt;... Your Side Nav Content ...&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sidenav-content&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;... Your Main Content ...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    $(&apos;.sidenav-toggler1&apos;).sideNavigation({
+        container: &apos;#mySidenavContainerId1&apos;,
+        position: &apos;right&apos;
+    });
+&lt;/script&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="side-navigation-data-api"><a class="heading-anchor" href="#side-navigation-data-api"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Side Navigation Data API</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The Side Navigation data api was added for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
+
+			<p>The minimum amount of attributes required is <code>data-toggle=&quot;sidenav&quot;</code> and <code>href=&quot;#target&quot;</code> or <code>data-target=&quot;#target&quot;</code>. This will open and close a fixed position sidenav provided the markup below. The width of the <code>sidenav-slider</code>, <code>sidenav-menu</code>, and position of the sidenav must be set through css. When using <code>fixed-push</code>, padding must also be set via css on open to push the content over.</p>
+		</blockquote>
+
+		<div class="side-navigation-data-api-buttons">
+			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" id="simpleToggle1">Simple Sidenav Toggler</a>
+
+			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav">
+				Another Simple Sidenav Toggler
+			</a>
+		</div>
+
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
+			<div class="sidebar sidebar-default sidenav-menu">
+				<div class="sidebar-header">
+					<ul class="sidebar-actions">
+						<li>
+							<a class="sidenav-close" href="#1" id="sidenavClose1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
+									<use xlink:href="../../images/icons/icons.svg#times">
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+					<a class="sidebar-title" href="#1">
+						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-staging sticker sticker-default sticker-static">
+							<use xlink:href="../../images/icons/icons.svg#staging">
+						</svg>
+						<span>Simple Sidenav</span>
+					</a>
+				</div>
+
+				<div class="sidebar-body"></div>
+
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
+							</div>
+						</div>
+
+						<div class="nameplate-content">
+							Joe Bloggs<br>
+							Subheading
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
+
+			<p>The open class name can be customized through the attribute <code>data-open-class</code> and will be added to toggler and content on open. </p>
+		</blockquote>
+
+		<div class="side-navigation-data-api-buttons">
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
+
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-type-mobile="fixed-push" href="#simpleSidenav2">
+				Another Simple Sidenav 2 Toggler
+			</a>
+
+			<a class="btn btn-default" href="#1" id="showSimpleSidenav2">
+				Show Simple Sidenav 2
+			</a>
+
+			<a class="btn btn-default" href="#1" id="hideSimpleSidenav2">
+				Hide Simple Sidenav 2
+			</a>
+		</div>
+
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
+			<div class="sidebar sidebar-default sidenav-menu">
+				<div class="sidebar-header">
+					<ul class="sidebar-actions">
+						<li>
+							<a class="sidenav-close" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
+									<use xlink:href="../../images/icons/icons.svg#times">
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+					<a class="sidebar-title" href="#1">
+						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-home sticker sticker-danger sticker-static">
+							<use xlink:href="../../images/icons/icons.svg#home">
+						</svg>
+						<span>Simple Sidenav 2</span>
+					</a>
+				</div>
+
+				<div class="sidebar-body"></div>
+
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
+							</div>
+						</div>
+
+						<div class="nameplate-content">
+							Joe Bloggs<br>
+							Subheading
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<pre><code>&lt;head&gt;
+    &lt;script src=&quot;side-navigation.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;div id=&quot;#wrapper&quot;&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-content=&quot;body&quot; data-toggle=&quot;sidenav&quot; data-type=&quot;fixed-push&quot; href=&quot;#simpleSidenav2&quot;&gt;Simple Sidenav 2 Toggler&lt;/a&gt;
+
+    &lt;div class=&quot;closed sidenav-fixed sidenav-menu-slider&quot; id=&quot;simpleSidenav2&quot;&gt;
+        &lt;div class=&quot;sidebar sidebar-default sidenav-menu&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="lazy-loading-side-navigation-content"><a class="heading-anchor" href="#lazy-loading-side-navigation-content"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Lazy Loading Side Navigation Content</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>You can load content into the sidebar of the Side Navigation in one of two ways. At the very minimum, the only two things you need are a URL and that the sidebar has a child element with the <code>sidebar-body</code> class. Data fetched from the URL will be appended to the <code>sidebar-body</code> element.</p>
+		</blockquote>
+
+		<h4>Using the Data API</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use attribute <code>data-url</code> on the toggle to load content into <code>.sidenav-body</code> when the side navigation is opened.</p>
+		</blockquote>
+
+		<div>
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-url="../../partials/alerts" href="#simpleSidenav3">Simple Sidenav 3 Toggler</a>
+		</div>
+
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav3">
+			<div class="sidebar sidebar-default sidenav-menu">
+				<div class="sidebar-header">
+					<ul class="sidebar-actions">
+						<li>
+							<a class="sidenav-close" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
+									<use xlink:href="../../images/icons/icons.svg#times">
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+					<a class="sidebar-title" href="#1">
+						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-home sticker sticker-static sticker-warning">
+							<use xlink:href="../../images/icons/icons.svg#home">
+						</svg>
+						<span>Simple Sidenav 3</span>
+					</a>
+				</div>
+
+				<div class="sidebar-body"></div>
+
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
+							</div>
+						</div>
+
+						<div class="nameplate-content">
+							Joe Bloggs<br>
+							Subheading
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h4>Using the Options API</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			When configuring your sidenav, you can specify the url using either a string or a configuration object that will be passed to <code>$.ajax</code> (though make sure the config object contains the url property).
+		</blockquote>
+
+		<pre><code class="html">&lt;div class=&quot;sidenav-container&quot;&gt;
+    &lt;a class=&quot;btn btn-default sidenav-toggler&quot; href=&quot;&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt; Toggle
+    &lt;/a&gt;
+
+    &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
+        &lt;div class=&quot;sidenav-menu&quot;&gt;
+            &lt;div class=&quot;sidebar-body&quot;&gt;
+                Dynamic Content will be appended here...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;sidenav-content&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;... Your Main Content ...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    $(&apos;.sidenav-toggler&apos;).sideNavigation({
+        ...
+        // url can be either a string
+        url: &apos;/foo.html&apos;,
+
+        // or it can be an ajax config object
+        url: {
+            url: &apos;/foo.html&apos;,
+            type: &apos;POST&apos;,
+            success: function(response) {
+                // runs before the content is appended
+            },
+            // ...etc...
+        },
+        ...
+    });
+&lt;/script&gt;</code></pre>
+
+		<h4>Lazy Loading Events and State</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>When using the <code>url</code> or <code>data-url</code> options, the plugin will fire an event when the content is loaded <code>urlLoaded.lexicon.sidenav</code>.</p>
+			<p>Also, while the content is being loaded, an element <code>.sidebar-loading</code> containing a loading animation will be added to the <code>.sidebar-body</code> element. The <code>.sidebar-loading</code> element will be removed when the content is done loading.</p>
+			<p>The loading animation defaults to <a href="../../content/loaders/#dotted-spinner">dotted spinner</a> but can be customized through <code>loadingIndicatorTPL</code> in the options API or <code>data-loading-indicator-tpl</code> in the data API.</p>
+			<p>If using the options API, the class will be added to the <code>.sidenav-menu</code> element.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="row row-spacing side-navigation-events">
+	<div class="col-md-12">
+		<h3 id="events"><a class="heading-anchor" href="#events"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Events</h3>
+
+		<p><code>openStart.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation begins to open.</p>
+		</blockquote>
+
+		<p><code>open.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation is fully opened.</p>
+		</blockquote>
+
+		<p><code>closedStart.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation begins to close.</p>
+		</blockquote>
+
+		<p><code>closed.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation is fully closed.</p>
+		</blockquote>
+
+		<pre><code class="hljs">// Listen directly on the side navigation element
+
+$(SIDENAV).on(&apos;closed.lexicon.sidenav&apos;, function(event) {
+    var sidenav = $(event.target);
+    var toggler = event.toggler;
+});
+
+// Listen for it on the document (will not work with event.stopPropagation())
+
+$(document).on(&apos;closed.lexicon.sidenav&apos;, function(event) {
+    var sidenav = $(event.target);
+    var toggler = event.toggler;
+});</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing side-navigation-methods">
+	<div class="col-md-12">
+		<h3 id="methods"><a class="heading-anchor" href="#methods"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Methods</h3>
+
+		<h4><code>.sideNavigation(&apos;toggle&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown or hidden.</b></p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;toggle&apos;)</code></pre></p>
+
+		<h4><code>.sideNavigation(&apos;show&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually shows the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown.</b></p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;show&apos;)</code></pre></p>
+
+		<h4><code>.sideNavigation(&apos;hide&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been hidden.</b></p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;hide&apos;)</code></pre></p>
+
+		<h4><code>.sideNavigation(&apos;destroy&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Destroys the Side Navigation instance for the items in the jQuery collection, and removes any attached event handlers and any associated data added by the plugin.</p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;destroy&apos;)</code></pre></p>
+
+		<h4><code>.sideNavigation(&apos;instance&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Returns the Side Navigation instance for the first item in the jQuery collection (similar to how any other jQuery getter method works). If the plugin hasn&apos;t been initialized, it will return null.</p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;instance&apos;)</code></pre></p>
+
+		<h4><code>.sideNavigation(&apos;visible&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Returns the visible state of the sidenav.</p>
+			<p>If the sidenav is in the middle of transitioning, this will report what the visible state <b>will be after</b> the transition is finished. This allows you to call it in any state and accurately get the state of the sidenav.</p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;show&apos;).sideNavigation(&apos;visible&apos;); // returns true
+
+$(&apos;#myTogglerId&apos;).sideNavigation(&apos;hide&apos;).sideNavigation(&apos;visible&apos;); // returns false</code></pre></p>
+	</div>
+</div>
+
+<script>
+	$('.sidenav-toggler').sideNavigation();
+
+	$('.sidenav-toggler1').sideNavigation({
+		container: '#mySidenavContainerId1',
+		position: 'right'
+	});
+
+	$('#showSimpleSidenav2').on('click', function(event) {
+		event.preventDefault();
+
+		$('[href="#simpleSidenav2"]').first().sideNavigation('show');
+	});
+
+	$('#hideSimpleSidenav2').on('click', function(event) {
+		event.preventDefault();
+
+		$('[href="#simpleSidenav2"]').first().sideNavigation('hide');
+	});
+</script>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

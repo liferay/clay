@@ -1,0 +1,714 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Panels</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Panels
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Panels help separate your content.</p>
+		</blockquote>
+
+		<div class="panel panel-default">
+			<div class="panel-body">Body</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">Heading</div>
+			<div class="panel-body">Body</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">Panel Title</h3></div>
+			<div class="panel-body">Body</div>
+			<div class="panel-footer">Footer</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="panel-states"><a class="heading-anchor" href="#panel-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Panel States</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Different colors for different states.</p>
+		</blockquote>
+	</div>
+
+	<div class="clearfix">
+		<div class="col-md-4">
+			<div class="panel">
+				<div class="panel-heading">panel</div>
+				<div class="panel-body">body</div>
+				<div class="panel-footer">footer</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-blank">
+				<div class="panel-heading">panel-blank</div>
+				<div class="panel-body">body</div>
+				<div class="panel-footer">footer</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">panel-default</div>
+				<div class="panel-body">body</div>
+				<div class="panel-footer">footer</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">panel-primary</div>
+				<div class="panel-body">body</div>
+				<div class="panel-footer">footer</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-success">
+				<div class="panel-heading">panel-success</div>
+				<div class="panel-body">body</div>
+				<div class="panel-footer">footer</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-warning">
+				<div class="panel-heading">panel-warning</div>
+				<div class="panel-body">body</div>
+				<div class="panel-footer">footer</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-danger">
+				<div class="panel-heading">panel-danger</div>
+				<div class="panel-body">body</div>
+				<div class="panel-footer">footer</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="accordions-with-panels-and-collapse-plugin"><a class="heading-anchor" href="#accordions-with-panels-and-collapse-plugin"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Accordions with Panels and Collapse Plugin</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Combine the panel component with collapse to create accordions. Collapsible panels must be wrapped inside a <code>panel-group</code> element to avoid styling issues related to the collapsing body.</p>
+		</blockquote>
+
+		<div aria-multiselectable="true" class="panel-group" id="accordion00" role="tablist">
+			<div class="panel panel-default">
+				<div class="panel-heading" id="heading00" role="tab">
+					<div class="panel-title">
+						<a aria-controls="collapseOne" aria-expanded="true" data-toggle="collapse" data-parent="#accordion00" href="#panelCollapse00" role="button">
+							Single Collapsible Panel
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="heading00" class="panel-collapse collapse in" id="panelCollapse00" role="tabpanel">
+					<div class="panel-body">
+						In organic dripper so, body, robust medium pumpkin spice cup, in aged dripper latte extra cup white. And viennese redeye carajillo, beans, mug viennese, carajillo id breve decaffeinated americano crema chicory whipped arabica variety aged robusta. Affogato lungo eu, cultivar at, aged breve and blue mountain roast breve americano aged. Sugar acerbic sweet variety aged caf&#xE9; au lait chicory, java, single shot percolator aromatic brewed wings, a, sugar, body, aftertaste organic barista espresso dripper to go. Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse00"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse00">
+	<pre><code class="html">&lt;div aria-multiselectable=&quot;true&quot; class=&quot;panel-group&quot; id=&quot;accordion00&quot; role=&quot;tablist&quot;&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+        &lt;div class=&quot;panel-heading&quot; id=&quot;heading00&quot; role=&quot;tab&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
+                &lt;a aria-controls=&quot;collapseOne&quot; aria-expanded=&quot;true&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion00&quot; href=&quot;#panelCollapse00&quot; role=&quot;button&quot;&gt;
+                  Single Collapsible Panel
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div aria-labelledby=&quot;heading00&quot; class=&quot;panel-collapse collapse in&quot; id=&quot;panelCollapse00&quot; role=&quot;tabpanel&quot;&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                In organic dripper so, body, robust medium pumpkin spice cup, in aged dripper latte extra cup white. And viennese redeye carajillo, beans, mug viennese, carajillo id breve decaffeinated americano crema chicory whipped arabica variety aged robusta. Affogato lungo eu, cultivar at, aged breve and blue mountain roast breve americano aged. Sugar acerbic sweet variety aged caf&#xE9; au lait chicory, java, single shot percolator aromatic brewed wings, a, sugar, body, aftertaste organic barista espresso dripper to go. Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+			<div class="panel panel-default">
+				<div class="panel-heading" id="headingOne" role="tab">
+					<div class="panel-title">
+						<a aria-controls="collapseOne" aria-expanded="true" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" role="button">
+							Collapsible Group Item #1
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="headingOne" class="panel-collapse collapse in" id="collapseOne" role="tabpanel">
+					<div class="panel-body">
+						In organic dripper so, body, robust medium pumpkin spice cup, in aged dripper latte extra cup white. And viennese redeye carajillo, beans, mug viennese, carajillo id breve decaffeinated americano crema chicory whipped arabica variety aged robusta. Affogato lungo eu, cultivar at, aged breve and blue mountain roast breve americano aged. Sugar acerbic sweet variety aged caf&#xE9; au lait chicory, java, single shot percolator aromatic brewed wings, a, sugar, body, aftertaste organic barista espresso dripper to go. Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" id="headingTwo" role="tab">
+					<div class="panel-title">
+						<a aria-controls="collapseTwo" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" role="button">
+							Collapsible Group Item #2
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="headingTwo" class="panel-collapse collapse" id="collapseTwo" role="tabpanel">
+					<div class="panel-body">
+						Flavour filter fair trade kopi-luwak robusta viennese, trifecta grinder, grounds lungo beans, half and half cup steamed cappuccino cinnamon. Percolator, extra, strong, breve, french press to go aromatic half and half aroma barista caramelization ut froth breve spoon redeye to go skinny rich skinny spoon. As turkish est filter foam con panna, cinnamon, aroma grounds cup whipped cultivar extra. Latte bar crema cultivar espresso pumpkin spice viennese, body viennese milk variety dripper, spoon, blue mountain robusta cultivar et spoon. Macchiato id eu brewed, and mazagran cinnamon so wings, doppio mocha froth blue mountain froth half and half iced to go whipped single shot.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" id="headingThree" role="tab">
+					<div class="panel-title">
+						<a aria-controls="collapseThree" aria-expanded="false" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" role="button">
+							Collapsible Group Item #3
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="headingThree" class="panel-collapse collapse" id="collapseThree" role="tabpanel">
+					<div class="panel-body">
+						Eu ristretto ut sugar rich saucer milk aftertaste, froth dark, cultivar blue mountain as coffee cappuccino. Saucer grounds mocha, aroma, half and half coffee eu robusta roast, doppio skinny gal&#xE3;o, extraction, frappuccino aromatic breve crema frappuccino aroma. Froth half and half so java, grounds half and half, macchiato at est sugar mug redeye, strong, cream seasonal qui doppio robusta. Wings, at, cup dark, a, breve french press decaffeinated acerbic, black extra, and, saucer barista rich seasonal barista blue mountain. Roast mazagran a and id mug in est trifecta pumpkin spice coffee and mug trifecta, ut breve, mug frappuccino mug, breve mocha qui aged aftertaste.
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse01"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse01">
+	<pre><code class="html">&lt;div aria-multiselectable=&quot;true&quot; class=&quot;panel-group&quot; id=&quot;accordion&quot; role=&quot;tablist&quot;&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+        &lt;div class=&quot;panel-heading&quot; id=&quot;headingOne&quot; role=&quot;tab&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
+                &lt;a aria-controls=&quot;collapseOne&quot; aria-expanded=&quot;true&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseOne&quot; role=&quot;button&quot;&gt;
+                    Collapsible Group Item #1
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div aria-labelledby=&quot;headingOne&quot; class=&quot;panel-collapse collapse in&quot; id=&quot;collapseOne&quot; role=&quot;tabpanel&quot;&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                In organic dripper so, body, robust medium pumpkin spice cup, in aged dripper latte extra cup white. And viennese redeye carajillo, beans, mug viennese, carajillo id breve decaffeinated americano crema chicory whipped arabica variety aged robusta. Affogato lungo eu, cultivar at, aged breve and blue mountain roast breve americano aged. Sugar acerbic sweet variety aged caf&#xE9; au lait chicory, java, single shot percolator aromatic brewed wings, a, sugar, body, aftertaste organic barista espresso dripper to go. Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+        &lt;div class=&quot;panel-heading&quot; id=&quot;headingTwo&quot; role=&quot;tab&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
+                &lt;a aria-controls=&quot;collapseTwo&quot; aria-expanded=&quot;false&quot; class=&quot;collapsed&quot; data-parent=&quot;#accordion&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseTwo&quot; role=&quot;button&quot;&gt;
+                    Collapsible Group Item #2
+              &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div aria-labelledby=&quot;headingTwo&quot; class=&quot;panel-collapse collapse&quot; id=&quot;collapseTwo&quot; role=&quot;tabpanel&quot;&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                Flavour filter fair trade kopi-luwak robusta viennese, trifecta grinder, grounds lungo beans, half and half cup steamed cappuccino cinnamon. Percolator, extra, strong, breve, french press to go aromatic half and half aroma barista caramelization ut froth breve spoon redeye to go skinny rich skinny spoon. As turkish est filter foam con panna, cinnamon, aroma grounds cup whipped cultivar extra. Latte bar crema cultivar espresso pumpkin spice viennese, body viennese milk variety dripper, spoon, blue mountain robusta cultivar et spoon. Macchiato id eu brewed, and mazagran cinnamon so wings, doppio mocha froth blue mountain froth half and half iced to go whipped single shot.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+        &lt;div class=&quot;panel-heading&quot; id=&quot;headingThree&quot; role=&quot;tab&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
+                &lt;a aria-controls=&quot;collapseThree&quot; aria-expanded=&quot;false&quot; class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseThree&quot; role=&quot;button&quot;&gt;
+                    Collapsible Group Item #3
+              &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div aria-labelledby=&quot;headingThree&quot; class=&quot;panel-collapse collapse&quot; id=&quot;collapseThree&quot; role=&quot;tabpanel&quot;&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                Eu ristretto ut sugar rich saucer milk aftertaste, froth dark, cultivar blue mountain as coffee cappuccino. Saucer grounds mocha, aroma, half and half coffee eu robusta roast, doppio skinny gal&#xE3;o, extraction, frappuccino aromatic breve crema frappuccino aroma. Froth half and half so java, grounds half and half, macchiato at est sugar mug redeye, strong, cream seasonal qui doppio robusta. Wings, at, cup dark, a, breve french press decaffeinated acerbic, black extra, and, saucer barista rich seasonal barista blue mountain. Roast mazagran a and id mug in est trifecta pumpkin spice coffee and mug trifecta, ut breve, mug frappuccino mug, breve mocha qui aged aftertaste.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="accordions-with-open-and-close-icon"><a class="heading-anchor" href="#accordions-with-open-and-close-icon"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Accordions with Open and Close Icon</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add icons to the open and close states in an accordion. The class <code>collapse-icon-closed</code> displays the icon in the collapsed state. The class <code>collapse-icon-open</code> displays the icon in the open state.</p>
+
+			<p>Add class <code>collapse-icon</code> to the [data-toggle=&quot;collapse&quot;] element to create space for the icons and vertically center it with the class <code>collapse-icon-middle</code>.</p>
+		</blockquote>
+
+		<div aria-multiselectable="true" class="panel-group" id="accordion03" role="tablist">
+			<div class="panel panel-blank">
+				<div class="panel-heading" id="accordion03HeadingTwo" role="tab">
+					<div class="panel-title">
+						<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" role="button">
+							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+
+							<span class="collapse-icon-closed">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="accordion03HeadingTwo" class="panel-collapse collapse" id="accordion03CollapseTwo" role="tabpanel">
+					<div class="panel-body">
+						Flavour filter fair trade kopi-luwak robusta viennese, trifecta grinder, grounds lungo beans, half and half cup steamed cappuccino cinnamon. Percolator, extra, strong, breve, french press to go aromatic half and half aroma barista caramelization ut froth breve spoon redeye to go skinny rich skinny spoon. As turkish est filter foam con panna, cinnamon, aroma grounds cup whipped cultivar extra. Latte bar crema cultivar espresso pumpkin spice viennese, body viennese milk variety dripper, spoon, blue mountain robusta cultivar et spoon. Macchiato id eu brewed, and mazagran cinnamon so wings, doppio mocha froth blue mountain froth half and half iced to go whipped single shot.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" id="accordion03HeadingOne" role="tab">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon collapse-icon-middle" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" role="button">
+							Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)
+
+							<span class="collapse-icon-closed">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="accordion03HeadingOne" class="panel-collapse collapse in" id="accordion03CollapseOne" role="tabpanel">
+					<div class="panel-body">
+						In organic dripper so, body, robust medium pumpkin spice cup, in aged dripper latte extra cup white. And viennese redeye carajillo, beans, mug viennese, carajillo id breve decaffeinated americano crema chicory whipped arabica variety aged robusta. Affogato lungo eu, cultivar at, aged breve and blue mountain roast breve americano aged. Sugar acerbic sweet variety aged caf&#xE9; au lait chicory, java, single shot percolator aromatic brewed wings, a, sugar, body, aftertaste organic barista espresso dripper to go. Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-primary">
+				<div class="panel-heading" id="accordion03HeadingThree" role="tab">
+					<div class="panel-title">
+						<a aria-controls="collapseThree" aria-expanded="false" class="collapse-icon collapsed" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseThree" role="button">
+							Collapsible Group Item #3
+
+							<span class="collapse-icon-closed">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="accordion03HeadingThree" class="panel-collapse collapse" id="accordion03CollapseThree" role="tabpanel">
+					<div class="panel-body">
+						Flavour filter fair trade kopi-luwak robusta viennese, trifecta grinder, grounds lungo beans, half and half cup steamed cappuccino cinnamon. Percolator, extra, strong, breve, french press to go aromatic half and half aroma barista caramelization ut froth breve spoon redeye to go skinny rich skinny spoon. As turkish est filter foam con panna, cinnamon, aroma grounds cup whipped cultivar extra. Latte bar crema cultivar espresso pumpkin spice viennese, body viennese milk variety dripper, spoon, blue mountain robusta cultivar et spoon. Macchiato id eu brewed, and mazagran cinnamon so wings, doppio mocha froth blue mountain froth half and half iced to go whipped single shot.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading" id="accordion03HeadingFour" role="tab">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFour" role="button">
+							Collapsible Group Item #4
+
+							<span class="collapse-icon-closed">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="accordion03HeadingFour" class="panel-collapse collapse" id="accordion03CollapseFour" role="tabpanel">
+					<div class="panel-body">
+						Eu ristretto ut sugar rich saucer milk aftertaste, froth dark, cultivar blue mountain as coffee cappuccino. Saucer grounds mocha, aroma, half and half coffee eu robusta roast, doppio skinny gal&#xE3;o, extraction, frappuccino aromatic breve crema frappuccino aroma. Froth half and half so java, grounds half and half, macchiato at est sugar mug redeye, strong, cream seasonal qui doppio robusta. Wings, at, cup dark, a, breve french press decaffeinated acerbic, black extra, and, saucer barista rich seasonal barista blue mountain. Roast mazagran a and id mug in est trifecta pumpkin spice coffee and mug trifecta, ut breve, mug frappuccino mug, breve mocha qui aged aftertaste.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-warning">
+				<div class="panel-heading" id="accordion03HeadingFive" role="tab">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseFive" aria-expanded="false" class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFive" role="button">
+							Collapsible Group Item #5
+
+							<span class="collapse-icon-closed">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="accordion03HeadingFive" class="panel-collapse collapse" id="accordion03CollapseFive" role="tabpanel">
+					<div class="panel-body">
+						In organic dripper so, body, robust medium pumpkin spice cup, in aged dripper latte extra cup white. And viennese redeye carajillo, beans, mug viennese, carajillo id breve decaffeinated americano crema chicory whipped arabica variety aged robusta. Affogato lungo eu, cultivar at, aged breve and blue mountain roast breve americano aged. Sugar acerbic sweet variety aged caf&#xE9; au lait chicory, java, single shot percolator aromatic brewed wings, a, sugar, body, aftertaste organic barista espresso dripper to go. Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-danger">
+				<div class="panel-heading" id="accordion03HeadingSix" role="tab">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseSix" aria-expanded="false" class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseSix" role="button">
+							Collapsible Group Item #6
+
+							<span class="collapse-icon-closed">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div aria-labelledby="accordion03HeadingSix" class="panel-collapse collapse" id="accordion03CollapseSix" role="tabpanel">
+					<div class="panel-body">
+						In organic dripper so, body, robust medium pumpkin spice cup, in aged dripper latte extra cup white. And viennese redeye carajillo, beans, mug viennese, carajillo id breve decaffeinated americano crema chicory whipped arabica variety aged robusta. Affogato lungo eu, cultivar at, aged breve and blue mountain roast breve americano aged. Sugar acerbic sweet variety aged caf&#xE9; au lait chicory, java, single shot percolator aromatic brewed wings, a, sugar, body, aftertaste organic barista espresso dripper to go. Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

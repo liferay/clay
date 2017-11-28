@@ -1,0 +1,605 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Form Elements (Validation)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Form Elements (Validation)
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="input-validation-states"><a class="heading-anchor" href="#input-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Validation States</h3>
+
+		<div class="form-group has-success">
+			<label class="control-label" for="inputSuccess1">
+				Input with success
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark text-warning">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
+			</label>
+			<input class="form-control" id="successInput1" type="text">
+			<div class="help-block">This input is a success!</div>
+		</div>
+
+		<div class="form-group has-warning">
+			<label class="control-label" for="inputWarning1">
+				Input with warning
+
+				<span aria-hidden="true" class="icon-asterisk reference-mark text-warning"></span>
+			</label>
+			<input class="form-control" id="inputWarning1" type="text">
+			<div class="help-block">Warning this input is a warning!</div>
+		</div>
+
+		<div class="form-group has-error">
+			<label class="control-label" for="inputError1">
+				Input with error
+				<span class="reference-mark text-warning">
+					<span aria-hidden="true" class="glyphicon glyphicon-asterisk"></span>
+				</span>
+			</label>
+			<input class="form-control" id="inputError1" type="text">
+			<div class="help-block">This input is invalid!</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="checkbox-and-radio-validation-states"><a class="heading-anchor" href="#checkbox-and-radio-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Checkbox and Radio Validation States</h3>
+	</div>
+
+	<div class="col-md-6">
+		<div class="has-success">
+			<div class="checkbox">
+				<label>
+					<input id="checkboxSuccess1" type="checkbox" value="option1">
+					Checkbox with success
+				</label>
+			</div>
+		</div>
+
+		<div class="has-warning">
+			<div class="checkbox">
+				<label>
+					<input id="checkboxWarning1" type="checkbox" value="option2">
+					Checkbox with warning
+				</label>
+			</div>
+		</div>
+
+		<div class="has-error">
+			<div class="checkbox">
+				<label>
+					<input id="checkboxError1" type="checkbox" value="option3">
+					Checkbox with error
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="has-success">
+			<div class="radio">
+				<label>
+					<input id="radioSuccess1" type="radio" value="option1">
+					Radio with success
+				</label>
+			</div>
+		</div>
+
+		<div class="has-warning">
+			<div class="radio">
+				<label>
+					<input id="radioWarning1" type="radio" value="option2">
+					Radio with warning
+				</label>
+			</div>
+		</div>
+
+		<div class="has-error">
+			<div class="radio">
+				<label>
+					<input id="radioError1" type="radio" value="option3">
+					Radio with error
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="select-box-validation-states"><a class="heading-anchor" href="#select-box-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Select Box Validation States</h3>
+
+		<div class="has-success">
+			<div class="form-group">
+				<label class="control-label">Select Box with Success</label>
+				<select class="form-control">
+					<option>Sample 1</option>
+					<option>Sample 2</option>
+					<option>Sample 3</option>
+					<option>Sample 4</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="has-warning">
+			<div class="form-group">
+				<label class="control-label">Select Box with Warning</label>
+				<select class="form-control">
+					<option>Sample 1</option>
+					<option>Sample 2</option>
+					<option>Sample 3</option>
+					<option>Sample 4</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="has-error">
+			<div class="form-group">
+				<label class="control-label">Select Box with Error</label>
+				<select class="form-control">
+					<option>Sample 1</option>
+					<option>Sample 2</option>
+					<option>Sample 3</option>
+					<option>Sample 4</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="multiple-select-box-validation-states"><a class="heading-anchor" href="#multiple-select-box-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Multiple Select Box Validation States</h3>
+
+		<div class="has-success">
+			<div class="form-group">
+				<label class="control-label">Multiple Select Box with Success</label>
+				<select class="form-control" multiple>
+					<option>Sample 1</option>
+					<option>Sample 2</option>
+					<option>Sample 3</option>
+					<option>Sample 4</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="has-warning">
+			<div class="form-group">
+				<label class="control-label">Multiple Select Box with Warning</label>
+				<select class="form-control" multiple>
+					<option>Sample 1</option>
+					<option>Sample 2</option>
+					<option>Sample 3</option>
+					<option>Sample 4</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="has-error">
+			<div class="form-group">
+				<label class="control-label">Multiple Select Box with Error</label>
+				<select class="form-control" multiple>
+					<option>Sample 1</option>
+					<option>Sample 2</option>
+					<option>Sample 3</option>
+					<option>Sample 4</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="readonly-validation-states"><a class="heading-anchor" href="#readonly-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Readonly Validation States</h3>
+
+		<div class="has-success">
+			<div class="form-group">
+				<label class="control-label">Text Input (Read Only) with Success</label>
+				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+			</div>
+		</div>
+
+		<div class="has-warning">
+			<div class="form-group">
+				<label class="control-label">Text Input (Read Only) with Warning</label>
+				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+			</div>
+		</div>
+
+		<div class="has-error">
+			<div class="form-group">
+				<label class="control-label">Text Input (Read Only) with Error</label>
+				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+			</div>
+		</div>
+
+		<div class="has-success">
+			<div class="form-group">
+				<label class="control-label">Textarea (Read Only) with Success</label>
+				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+			</div>
+		</div>
+
+		<div class="has-warning">
+			<div class="form-group">
+				<label class="control-label">Textarea (Read Only) with Warning</label>
+				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+			</div>
+		</div>
+
+		<div class="has-error">
+			<div class="form-group">
+				<label class="control-label">Textarea (Read Only) with Error</label>
+				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="inputs-with-feedback-icons"><a class="heading-anchor" href="#inputs-with-feedback-icons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inputs with Feedback Icons</h3>
+
+		<div class="form-group has-feedback">
+			<label class="control-label" for="inputSuccess2">Label
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark text-warning">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
+			</label>
+			<input aria-describedby="inputSuccess2Status" class="form-control" id="inputSuccess2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
+			</span>
+			<span class="sr-only" id="inputSuccess2Status">(success)</span>
+		</div>
+
+		<div class="form-group has-feedback has-success">
+			<label class="control-label" for="inputSuccess2">
+				Success Label
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark text-warning">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
+			</label>
+			<input aria-describedby="inputSuccess2Status" class="form-control" id="inputSuccess2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+					<use xlink:href="../../images/icons/icons.svg#check">
+				</svg>
+			</span>
+			<span class="sr-only" id="inputSuccess2Status">(success)</span>
+		</div>
+
+		<div class="form-group has-feedback has-warning">
+			<label class="control-label" for="inputWarning2">Warning Label</label>
+			<input aria-describedby="inputWarning2Status" class="form-control" id="inputWarning2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+					<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+				</svg>
+			</span>
+			<span class="sr-only" id="inputWarning2Status">(warning)</span>
+		</div>
+
+		<div class="form-group has-error has-feedback">
+			<label class="control-label" for="inputError2">Error Label</label>
+			<input aria-describedby="inputError2Status" class="form-control" id="inputError2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+			</span>
+			<span class="sr-only" id="inputError2Status">(error)</span>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;div&gt;&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

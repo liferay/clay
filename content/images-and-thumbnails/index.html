@@ -1,0 +1,686 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Images, Thumbnails, and Aspect Ratios</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Images, Thumbnails, and Aspect Ratios
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="responsive-image"><a class="heading-anchor" href="#responsive-image"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Responsive Image</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.img-responsive</code> to make an image shrink with its container.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-3">
+		<img alt="responsive image" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;img alt=&quot;...&quot; class=&quot;img-responsive&quot; src=&quot;...&quot;&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing" id="imageShapes">
+	<div class="col-md-12">
+		<h3 id="image-shapes"><a class="heading-anchor" href="#image-shapes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Image Shapes</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.img-rounded</code>, <code>.img-circle</code>, or <code>.img-thumbnail</code> on <code>&lt;img&gt;</code> to quickly style the borders.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-xs-4">
+		<img alt="responsive image with rouded edges" class="img-responsive img-rounded" src="../../images/thumbnail_placeholder.gif">
+	</div>
+
+	<div class="col-xs-4">
+		<img alt="responsive circle image" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
+	</div>
+
+	<div class="col-xs-4">
+		<img alt="responsive thumbnail image" class="img-thumbnail img-responsive" src="../../images/thumbnail_placeholder.gif">
+	</div>
+
+
+	<div class="col-md-12 col-xs-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;img alt=&quot;...&quot; class=&quot;img-rounded&quot; src=&quot;...&quot;&gt;
+&lt;img alt=&quot;...&quot; class=&quot;img-circle&quot; src=&quot;...&quot;&gt;
+&lt;img alt=&quot;...&quot; class=&quot;img-thumbnail&quot; src=&quot;...&quot;&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="image-aspect-ratios"><a class="heading-anchor" href="#image-aspect-ratios"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Image Aspect Ratios</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Sometimes you can&apos;t control the size of an image, define a specific size for your images with aspect-ratios. The base class <code>aspect-ratio</code> maintains a 1 to 1 ratio relative to its container&apos;s width, add class <code>aspect-ratio-vertical</code> to maintain a 1 to 1 ratio relative to its container&apos;s height.</p>
+
+			<p>Use <code>aspect-ratio-3-to-2</code>, <code>aspect-ratio-4-to-3</code>, <code>aspect-ratio-8-to-5</code>, or <code>aspect-ratio-16-to-9</code> to maintain the specific ratio relative to its container or create your own by setting <code>padding-bottom</code> to the ratio you want e.g. 2 to 1 <code>.aspect-ratio-2-to-1 { padding-bottom: 50% }</code>.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="horizontal-aspect-ratio"><a class="heading-anchor" href="#horizontal-aspect-ratio"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal Aspect Ratio</h3>
+	</div>
+
+	<div class="col-md-3 col-xs-3">
+		<p>1:1</p>
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>3:2</p>
+		<div class="aspect-ratio aspect-ratio-3-to-2">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>4:3</p>
+		<div class="aspect-ratio aspect-ratio-4-to-3">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>8:5</p>
+		<div class="aspect-ratio aspect-ratio-8-to-5">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-3 col-xs-3">
+		<p>16:9</p>
+		<div class="aspect-ratio aspect-ratio-16-to-9">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse00001"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse00001">
+<pre><code class="html">&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-3-to-2&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-4-to-3&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-8-to-5&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-16-to-9&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="vertical-aspect-ratio"><a class="heading-anchor" href="#vertical-aspect-ratio"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Aspect Ratio</h3>
+	</div>
+
+	<div class="col-md-3 col-xs-3">
+		<p>1:1</p>
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>3:2</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-3-to-2">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>4:3</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-4-to-3">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>8:5</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-8-to-5">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-3 col-xs-3">
+		<p>16:9</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-16-to-9">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse00002"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse00002">
+	<pre><code class="html">&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-3-to-2&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-4-to-3&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-8-to-5&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-16-to-9&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="horizontal-11-aspect-ratio-with-varying-image-sizes"><a class="heading-anchor" href="#horizontal-11-aspect-ratio-with-varying-image-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal 1:1 Aspect Ratio with Varying Image Sizes</h3>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_graph1.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_graph2.png">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Images inside <code>aspect-ratio</code> are aligned bottom by default. Use class <code>aspect-ratio-top</code> or <code>aspect-ratio-middle</code> to align top or vertically center, respectively.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_graph1.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-top">
+			<img alt="thumbnail" src="../../images/thumbnail_graph1.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-middle">
+			<img alt="thumbnail" src="../../images/thumbnail_graph2.png">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="vertical-11-aspect-ratio-with-varying-image-sizes"><a class="heading-anchor" href="#vertical-11-aspect-ratio-with-varying-image-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical 1:1 Aspect Ratio with Varying Image Sizes</h3>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/switch_components.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/thumbnail_graph2.png">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Images inside <code>aspect-ratio-vertical</code> are aligned left by default. Use class <code>aspect-ratio-right</code> or <code>aspect-ratio-center</code> to align right or horizontally center, respectively.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/switch_components.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-right ">
+			<img alt="thumbnail" src="../../images/switch_components.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-center">
+			<img alt="thumbnail" src="../../images/switch_components.png">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing" id="cropImage">
+	<div class="col-md-12">
+		<h3 id="crop-img"><a class="heading-anchor" href="#crop-img"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Crop Img</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use the component <code>crop-img</code> to crop an image based on its container size, the container&apos;s position must be set to relative, absolute, or fixed, or set width and height on <code>crop-img</code> directly.</p>
+		</blockquote>
+
+		<div class="crop-img" style="width:150px;height:150px;">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="horizontal-crop-img-alignment"><a class="heading-anchor" href="#horizontal-crop-img-alignment"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal Crop Img Alignment</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Horizontally align the image inside crop-img with classes <code>crop-img-center</code> and <code>crop-img-right</code>, default alignment is to the left.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-xs-4">
+		<h6>Default</h6>
+		<div class="crop-img" style="width:150px;height:150px;">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+
+	<div class="col-xs-4">
+		<h6>Center</h6>
+		<div class="crop-img crop-img-center" style="width:150px;height:150px;">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+
+	<div class="col-xs-4">
+		<h6>Right</h6>
+		<div class="crop-img crop-img-right" style="width:150px;height:150px;">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="vertical-crop-img-alignment"><a class="heading-anchor" href="#vertical-crop-img-alignment"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Crop Img Alignment</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Vertically align the image inside crop-img with classes <code>crop-img-middle</code> and <code>crop-img-bottom</code>, default alignment is to the top.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-xs-4">
+		<h6>Default</h6>
+		<div class="crop-img" style="width:150px;height:150px;">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+
+	<div class="col-xs-4">
+		<h6>Middle</h6>
+		<div class="crop-img crop-img-middle" style="width:150px;height:150px;">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+
+	<div class="col-xs-4">
+		<h6>Bottom</h6>
+		<div class="crop-img crop-img-bottom" style="width:150px;height:150px;">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

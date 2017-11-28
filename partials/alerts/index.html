@@ -1,0 +1,163 @@
+<div class="row row-spacing uxgl-alerts">
+	<div class="col-md-12">
+		<h3 id="alerts-with-embedded-links"><a class="heading-anchor" href="#alerts-with-embedded-links"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="{{rootPath}}/images/icons/icons.svg#link"></svg></a>Alerts with Embedded Links</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.lead</code> inside of an alert to make the beginning of your message stand out.</p>
+
+			<p>Use <code>.alert-link</code> to style a link inside your alert.</p>
+		</blockquote>
+
+		<div class="alert alert-default">
+			<strong class="lead">Default</strong>You just read the <a href="#" class="alert-link">alert message</a> successfully.
+		</div>
+
+		<div class="alert alert-success">
+			<strong class="lead">Success</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
+		</div>
+
+		<div class="alert alert-info">
+			<strong class="lead">Info</strong> This <a href="#" class="alert-link">alert</a> needs your attention.
+		</div>
+
+		<div class="alert alert-warning">
+			<strong class="lead">Warning</strong> This alert is a <a href="#" class="alert-link">warning message</a>.
+		</div>
+
+		<div class="alert alert-danger">
+			<strong class="lead">Danger</strong> <a href="#" class="alert-link">Something</a> is not right.
+		</div>
+
+	</div>
+</div>
+
+<div class="row uxgl-alerts">
+	<div class="col-md-12">
+		<h3 id="dismissible-alerts"><a class="heading-anchor" href="#dismissible-alerts"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="{{rootPath}}/images/icons/icons.svg#link"></svg></a>Dismissible Alerts</h3>
+
+		<div class="alert alert-dismissible alert-default" data-dismiss="alert">
+			<button class="close" type="button">
+				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+				<span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Default</strong> You just read the alert message successfully.
+		</div>
+
+		<div class="alert alert-dismissible alert-success" data-dismiss="alert" role="alert">
+			<button class="close" type="button">
+				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+				<span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Success</strong> You just read the alert message successfully.
+		</div>
+
+		<div class="alert alert-dismissible alert-info" data-dismiss="alert" role="alert">
+			<button class="close" type="button">
+				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+				<span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Info</strong> This alert needs your attention.
+		</div>
+
+		<div class="alert alert-dismissible alert-warning" data-dismiss="alert" role="alert">
+			<button class="close" type="button">
+				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+				<span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Warning</strong> This alert is a warning message.
+		</div>
+
+		<div class="alert alert-dismissible alert-danger" data-dismiss="alert" role="alert">
+			<button class="close" type="button">
+				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#times">
+				</svg>
+				<span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Danger</strong> Something is not right.
+		</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing" id="alertNotifications">
+	<div class="col-md-12">
+		<h3 id="alert-notification"><a class="heading-anchor" href="#alert-notification"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="{{rootPath}}/images/icons/icons.svg#link"></svg></a>Alert Notification</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Alternate alert style for notifications</p>
+		</blockquote>
+
+		<div class="lexicon-site-display-container">
+			<div class="alert alert-dismissible alert-notification alert-danger" data-dismiss="alert" role="alert">
+				<button class="close" type="button">
+					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#times">
+					</svg>
+					<span class="sr-only">Close</span>
+				</button>
+
+				<strong class="lead">Danger:</strong>
+				<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a class="alert-link" href="#1">Log in</a></p>
+			</div>
+		</div>
+
+		<div class="lexicon-site-display-container">
+			<div class="alert alert-dismissible alert-notification alert-warning" data-dismiss="alert" role="alert">
+				<button class="close" type="button">
+					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#times">
+					</svg>
+					<span class="sr-only">Close</span>
+				</button>
+
+				<strong class="lead">Warning:</strong>
+				<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a class="alert-link" href="#1">Extend</a>.</p>
+			</div>
+		</div>
+
+		<div class="lexicon-site-display-container">
+			<div class="alert alert-dismissible alert-notification alert-info" data-dismiss="alert" role="alert">
+				<button class="close" type="button">
+					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#times">
+					</svg>
+					<span class="sr-only">Close</span>
+				</button>
+
+				<strong class="lead">Meeting Rescheduled:</strong>
+				<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
+				<p>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</p>
+			</div>
+		</div>
+
+		<div class="lexicon-site-display-container">
+			<div class="alert alert-dismissible alert-notification alert-success" data-dismiss="alert" role="alert">
+				<button class="close" type="button">
+					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#times">
+					</svg>
+					<span class="sr-only">Close</span>
+				</button>
+
+				<strong class="lead">Meeting Rescheduled:</strong>
+				<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
+				<p>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</p>
+			</div>
+		</div>
+
+	</div>
+</div>

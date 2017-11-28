@@ -1,0 +1,821 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Extending List Groups</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Extending List Groups
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+
+		<h3 id="collapsible-list-group"><a class="heading-anchor" href="#collapsible-list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Collapsible List Group</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Create collapsible list groups with <a href="/liferay-ux-guidelines/content/list-groups/#listGroups">List Group</a> and the Collapse module.</p>
+		</blockquote>
+
+		<div class="list-group">
+			<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse4">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="../../images/icons/icons.svg#angle-right">
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+						<use xlink:href="../../images/icons/icons.svg#angle-down">
+					</svg>
+				</span>
+			</a>
+			<div class="collapse" id="listGroupCollapse4">
+				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+			</div>
+
+			<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse5">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="../../images/icons/icons.svg#angle-right">
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+						<use xlink:href="../../images/icons/icons.svg#angle-down">
+					</svg>
+				</span>
+			</a>
+			<div class="collapse in" id="listGroupCollapse5">
+				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+			</div>
+
+			<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse6">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="../../images/icons/icons.svg#angle-right">
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+						<use xlink:href="../../images/icons/icons.svg#angle-down">
+					</svg>
+				</span>
+			</a>
+			<div class="collapse" id="listGroupCollapse6">
+				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
+    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse4&quot;&gt;
+        List Group Heading
+        &lt;span class=&quot;list-group-collapse-icon&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse4&quot;&gt;
+        &lt;div class=&quot;list-group-item&quot; style=&quot;padding: 24px 24px 30px&quot;&gt;Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;a aria-expanded=&quot;true&quot; class=&quot;list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse5&quot;&gt;
+        List Group Heading
+        &lt;span class=&quot;list-group-collapse-icon&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;collapse in&quot; id=&quot;listGroupCollapse5&quot;&gt;
+        &lt;div class=&quot;list-group-item&quot; style=&quot;padding: 24px 24px 30px&quot;&gt;Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse6&quot;&gt;
+        List Group Heading
+        &lt;span class=&quot;list-group-collapse-icon&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse6&quot;&gt;
+        &lt;div class=&quot;list-group-item&quot;style=&quot;padding: 24px 24px 30px&quot;&gt;Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+
+		<h3 id="collapsible-linked-list-groups"><a class="heading-anchor" href="#collapsible-linked-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Collapsible Linked List Groups</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Create collapsible lists of links with <a href="/liferay-ux-guidelines/content/list-groups/#linkedListGroups">Linked List Group</a> and the Collapse module.</p>
+		</blockquote>
+
+		<div class="list-group">
+			<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse1">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<span aria-hidden="true" class="icon-caret-right"></span>
+				</span>
+				<span class="collapse-icon-open">
+					<span aria-hidden="true" class="icon-caret-down"></span>
+				</span>
+			</a>
+			<div class="collapse" id="listGroupCollapse1">
+				<a href="#" class="list-group-item">List Item 1</a>
+				<a href="#" class="list-group-item">List Item 2</a>
+				<a href="#" class="list-group-item">List Item 3</a>
+				<a href="#" class="list-group-item">List Item 4</a>
+			</div>
+
+			<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse2">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<span aria-hidden="true" class="icon-caret-right"></span>
+				</span>
+				<span class="collapse-icon-open">
+					<span aria-hidden="true" class="icon-caret-down"></span>
+				</span>
+			</a>
+			<div class="collapse in" id="listGroupCollapse2">
+				<a href="#" class="list-group-item">List Item 1</a>
+				<a href="#" class="list-group-item">List Item 2</a>
+				<a href="#" class="list-group-item">List Item 3</a>
+				<a href="#" class="list-group-item">List Item 4</a>
+			</div>
+
+			<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse3">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<span aria-hidden="true" class="icon-caret-right"></span>
+				</span>
+				<span class="collapse-icon-open">
+					<span aria-hidden="true" class="icon-caret-down"></span>
+				</span>
+			</a>
+			<div class="collapse" id="listGroupCollapse3">
+				<a href="#" class="list-group-item">List Item 1</a>
+				<a href="#" class="list-group-item">List Item 2</a>
+				<a href="#" class="list-group-item">List Item 3</a>
+				<a href="#" class="list-group-item">List Item 4</a>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
+    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse1&quot;&gt;List Group Heading&lt;/a&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse1&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 1&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 2&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 3&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 4&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;a aria-expanded=&quot;true&quot; class=&quot;list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse2&quot;&gt;List Group Heading&lt;/a&gt;
+    &lt;div class=&quot;collapse in&quot; id=&quot;listGroupCollapse2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 1&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 2&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 3&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 4&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse3&quot;&gt;List Group Heading&lt;/a&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse3&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 1&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 2&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 3&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 4&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="collapsible-tabular-list-groups"><a class="heading-anchor" href="#collapsible-tabular-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Collapsible Tabular List Groups</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Insert <a href="/liferay-ux-guidelines/content/list-groups/#tabularListGroups">Tabular List Groups</a> inside <code>.collapse</code> to create collapsible Tabular List Groups.</p>
+		</blockquote>
+
+		<div class="list-group">
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse1">List Group Heading</a>
+			<div class="collapse" id="tabularListGroupCollapse1">
+				<ul class="tabular-list-group">
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Larry Bird the best power forward in Celtic&apos;s history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse2">List Group Heading</a>
+			<div class="collapse in" id="tabularListGroupCollapse2">
+				<ul class="tabular-list-group">
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Larry Bird the best power forward in Celtic&apos;s history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse3">List Group Heading</a>
+			<div class="collapse" id="tabularListGroupCollapse3">
+				<ul class="tabular-list-group">
+					<li class="list-group-item list-group-item-success">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Larry Bird the best power forward in Celtic&apos;s history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Approved</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-warning">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Pending</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-info">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Dennis Rodman the best power forward in Bulls history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Draft</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-default">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">LeBron James the best power forward in Heat history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Expired</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-primary">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Tim Duncan the best power forward in Spurs&apos; history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Scheduled</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-danger">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-folder">
+								<use xlink:href="../../images/icons/icons.svg#folder">
+							</svg>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Kevin Garnett the best power forward in Pistons&apos; history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Rejected</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
+    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#tabularListGroupCollapse1&quot;&gt;List Group Heading&lt;/a&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;tabularListGroupCollapse1&quot;&gt;
+        &lt;ul class=&quot;tabular-list-group&quot;&gt;
+          ...
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;a aria-expanded=&quot;true&quot; class=&quot;list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#tabularListGroupCollapse2&quot;&gt;List Group Heading&lt;/a&gt;
+    &lt;div class=&quot;collapse in&quot; id=&quot;tabularListGroupCollapse2&quot;&gt;
+        &lt;ul class=&quot;tabular-list-group&quot;&gt;
+          ...
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#tabularListGroupCollapse3&quot;&gt;List Group Heading&lt;/a&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;tabularListGroupCollapse3&quot;&gt;
+        &lt;ul class=&quot;tabular-list-group&quot;&gt;
+          ...
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

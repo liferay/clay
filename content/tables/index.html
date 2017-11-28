@@ -1,0 +1,1440 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Tables</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Tables
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-list"><a class="heading-anchor" href="#table-list"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Table List</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>&lt;tr&gt;&lt;/tr&gt;</code> element. It is recommended that table-list&apos;s columns containing information of lesser importance be hidden in smaller screen sizes with <a href="http://getbootstrap.com/css/#responsive-utilities">Responsive Utilities</a> due to space constraints.</p>
+			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
+		</blockquote>
+
+		<table class="table table-autofit table-list">
+			<thead>
+				<tr>
+					<th></th>
+					<th class="hidden-sm hidden-xs">ID</th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
+					</th>
+					<th class="hidden-sm hidden-xs">Status</th>
+					<th class="hidden-sm hidden-xs">Modified Date</th>
+					<th class="hidden-sm hidden-xs">Display Date</th>
+					<th>Author</th>
+					<th class="hidden-sm hidden-xs">Type</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr class="active">
+					<td>
+						<div class="checkbox">
+							<label>
+								<input checked type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">
+						21148
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21149</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21150</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-list-striped"><a class="heading-anchor" href="#table-list-striped"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Table List Striped</h3>
+
+		<table class="table table-autofit table-list table-striped">
+			<thead>
+				<tr>
+					<th></th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Description</span>
+					</th>
+					<th>Format</th>
+					<th>Label</th>
+					<th>Label</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-list-hover"><a class="heading-anchor" href="#table-list-hover"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Table List Hover</h3>
+
+		<table class="table table-autofit table-hover table-list">
+			<thead>
+				<tr>
+					<th></th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Description</span>
+					</th>
+					<th>Format</th>
+					<th>Label</th>
+					<th>Label</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr class="active">
+					<td>
+						<div class="checkbox">
+							<label>
+								<input checked type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-helpers"><a class="heading-anchor" href="#table-helpers"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Table Helpers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>table-autofit</code> constrains table columns to be only as wide as its content, but must be used with <code>table-cell-content</code>. <code>table-cell-content</code> will fill the remaining space.</p>
+		</blockquote>
+
+		<div class="table-responsive">
+			<table class="table table-autofit">
+				<thead>
+					<tr>
+						<th></th>
+						<th>ID</th>
+						<th class="table-cell-content">
+							<span class="truncate-text" title="Description">Title</span>
+						</th>
+						<th>Status</th>
+						<th>Modified Date</th>
+						<th>Display Date</th>
+						<th>Author</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">
+								</label>
+							</div>
+						</td>
+						<td>21146</td>
+						<td class="table-cell-content">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</td>
+						<td>--</td>
+						<td>2 Hours Ago</td>
+						<td>--</td>
+						<td>Stanley Nelson</td>
+						<td>Folder</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>table-heading-nowrap</code> keeps headings on one line.</p>
+		</blockquote>
+
+		<div class="table-responsive">
+			<table class="table table-autofit table-heading-nowrap">
+				<thead>
+					<tr>
+						<th></th>
+						<th>ID</th>
+						<th class="table-cell-content">
+							<span class="truncate-text" title="Description">Title</span>
+						</th>
+						<th>Status</th>
+						<th>Modified Date</th>
+						<th>Display Date</th>
+						<th>Author</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">
+								</label>
+							</div>
+						</td>
+						<td>21146</td>
+						<td class="table-cell-content">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</td>
+						<td>--</td>
+						<td>2 Hours Ago</td>
+						<td>--</td>
+						<td>Stanley Nelson</td>
+						<td>Folder</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="vertical-alignment"><a class="heading-anchor" href="#vertical-alignment"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Alignment</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>&lt;table&gt;</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
+
+			<p>The classes <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> on <code>&lt;table&gt;</code> will vertically align the contents inside the table head.</p>
+
+			<p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>&lt;table&gt;</code> will vertically align the contents inside the table body.</p>
+		</blockquote>
+
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignBottom">table-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignMiddle">table-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignTop">table-valign-top</a>
+		</div>
+
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignBottom">tbody-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignMiddle">tbody-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignTop">tbody-valign-top</a>
+		</div>
+
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignBottom">thead-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignMiddle">thead-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignTop">thead-valign-top</a>
+		</div>
+
+		<table class="table table-autofit table-heading-nowrap table-list" id="verticalAlignTableListDemo">
+			<thead>
+				<tr>
+					<th></th>
+					<th class="hidden-sm hidden-xs">ID</th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
+					</th>
+					<th class="hidden-sm hidden-xs">Status</th>
+					<th class="hidden-sm hidden-xs">Modified Date</th>
+					<th class="hidden-sm hidden-xs">Display Date</th>
+					<th>Author</th>
+					<th class="hidden-sm hidden-xs">Type</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr class="active">
+					<td>
+						<div class="checkbox">
+							<label>
+								<input checked type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">
+						21148
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21149</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21150</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="default-table"><a class="heading-anchor" href="#default-table"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Default Table</h3>
+
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Purchasing Power Parity</th>
+						<th>Official Exchange Rate</th>
+						<th>Real Growth Rate</th>
+						<th>Household Consumption</th>
+						<th>Government Consumption</th>
+						<th>Fixed Capital Investment</th>
+						<th>Inventories Investment</th>
+						<th>Exports</th>
+						<th>Imports</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><a href="#1">Afganistan</a></td>
+						<td>$45.3 billion</td>
+						<td>$20.65 billion</td>
+						<td>3.1%</td>
+						<td>96.5%</td>
+						<td>23.3%</td>
+						<td>25.4%</td>
+						<td>0%</td>
+						<td>18.1%</td>
+						<td>-63.4%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Brazil</a></td>
+						<td>$2.416 trillion</td>
+						<td>$2.19 trillion</td>
+						<td>2.3%</td>
+						<td>62.5%</td>
+						<td>21.7%</td>
+						<td>18.3%</td>
+						<td>0%</td>
+						<td>12.4%</td>
+						<td>-14.9%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Congo, Democratic Republic of the</a></td>
+						<td>$29.39 billion</td>
+						<td>$18.56 billion</td>
+						<td>6.2%</td>
+						<td>65.9%</td>
+						<td>12.5%</td>
+						<td>27.9%</td>
+						<td>1%</td>
+						<td>49.9%</td>
+						<td>-56.3%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Spain</a></td>
+						<td>$1.389 trillion</td>
+						<td>$1.356 trillion</td>
+						<td>-1.3%</td>
+						<td>59%</td>
+						<td>19.9%</td>
+						<td>18.4%</td>
+						<td>0.4%</td>
+						<td>32.8%</td>
+						<td>-30.4%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table&quot;&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-striped"><a class="heading-anchor" href="#table-striped"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Table Striped</h3>
+
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Purchasing Power Parity</th>
+						<th>Official Exchange Rate</th>
+						<th>Real Growth Rate</th>
+						<th>Household Consumption</th>
+						<th>Government Consumption</th>
+						<th>Fixed Capital Investment</th>
+						<th>Inventories Investment</th>
+						<th>Exports</th>
+						<th>Imports</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><a href="#1">Afganistan</a></td>
+						<td>$45.3 billion</td>
+						<td>$20.65 billion</td>
+						<td>3.1%</td>
+						<td>96.5%</td>
+						<td>23.3%</td>
+						<td>25.4%</td>
+						<td>0%</td>
+						<td>18.1%</td>
+						<td>-63.4%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Brazil</a></td>
+						<td>$2.416 trillion</td>
+						<td>$2.19 trillion</td>
+						<td>2.3%</td>
+						<td>62.5%</td>
+						<td>21.7%</td>
+						<td>18.3%</td>
+						<td>0%</td>
+						<td>12.4%</td>
+						<td>-14.9%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Congo, Democratic Republic of the</a></td>
+						<td>$29.39 billion</td>
+						<td>$18.56 billion</td>
+						<td>6.2%</td>
+						<td>65.9%</td>
+						<td>12.5%</td>
+						<td>27.9%</td>
+						<td>1%</td>
+						<td>49.9%</td>
+						<td>-56.3%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Spain</a></td>
+						<td>$1.389 trillion</td>
+						<td>$1.356 trillion</td>
+						<td>-1.3%</td>
+						<td>59%</td>
+						<td>19.9%</td>
+						<td>18.4%</td>
+						<td>0.4%</td>
+						<td>32.8%</td>
+						<td>-30.4%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table table-striped&quot;&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-bordered"><a class="heading-anchor" href="#table-bordered"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Table Bordered</h3>
+
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Purchasing Power Parity</th>
+						<th>Official Exchange Rate</th>
+						<th>Real Growth Rate</th>
+						<th>Household Consumption</th>
+						<th>Government Consumption</th>
+						<th>Fixed Capital Investment</th>
+						<th>Inventories Investment</th>
+						<th>Exports</th>
+						<th>Imports</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><a href="#1">Afganistan</a></td>
+						<td>$45.3 billion</td>
+						<td>$20.65 billion</td>
+						<td>3.1%</td>
+						<td>96.5%</td>
+						<td>23.3%</td>
+						<td>25.4%</td>
+						<td>0%</td>
+						<td>18.1%</td>
+						<td>-63.4%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Albania</a></td>
+						<td>$28.34 billion</td>
+						<td>$12.8 billion</td>
+						<td>3.1%</td>
+						<td>87.6%</td>
+						<td>8.4%</td>
+						<td>25%</td>
+						<td>-2.6%</td>
+						<td>36%</td>
+						<td>-54.4%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Brazil</a></td>
+						<td>$2.416 trillion</td>
+						<td>$2.19 trillion</td>
+						<td>2.3%</td>
+						<td>62.5%</td>
+						<td>21.7%</td>
+						<td>18.3%</td>
+						<td>0%</td>
+						<td>12.4%</td>
+						<td>-14.9%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Spain</a></td>
+						<td>$1.389 trillion</td>
+						<td>$1.356 trillion</td>
+						<td>-1.3%</td>
+						<td>59%</td>
+						<td>19.9%</td>
+						<td>18.4%</td>
+						<td>0.4%</td>
+						<td>32.8%</td>
+						<td>-30.4%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code class="html">&lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table table-bordered&quot;&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-hover"><a class="heading-anchor" href="#table-hover"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Table Hover</h3>
+
+		<div class="table-responsive">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Purchasing Power Parity</th>
+						<th>Official Exchange Rate</th>
+						<th>Real Growth Rate</th>
+						<th>Household Consumption</th>
+						<th>Government Consumption</th>
+						<th>Fixed Capital Investment</th>
+						<th>Inventories Investment</th>
+						<th>Exports</th>
+						<th>Imports</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><a href="#1">Afganistan</a></td>
+						<td>$45.3 billion</td>
+						<td>$20.65 billion</td>
+						<td>3.1%</td>
+						<td>96.5%</td>
+						<td>23.3%</td>
+						<td>25.4%</td>
+						<td>0%</td>
+						<td>18.1%</td>
+						<td>-63.4%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Brazil</a></td>
+						<td>$2.416 trillion</td>
+						<td>$2.19 trillion</td>
+						<td>2.3%</td>
+						<td>62.5%</td>
+						<td>21.7%</td>
+						<td>18.3%</td>
+						<td>0%</td>
+						<td>12.4%</td>
+						<td>-14.9%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Congo, Democratic Republic of the</a></td>
+						<td>$29.39 billion</td>
+						<td>$18.56 billion</td>
+						<td>6.2%</td>
+						<td>65.9%</td>
+						<td>12.5%</td>
+						<td>27.9%</td>
+						<td>1%</td>
+						<td>49.9%</td>
+						<td>-56.3%</td>
+					</tr>
+					<tr>
+						<td><a href="#1">Spain</a></td>
+						<td>$1.389 trillion</td>
+						<td>$1.356 trillion</td>
+						<td>-1.3%</td>
+						<td>59%</td>
+						<td>19.9%</td>
+						<td>18.4%</td>
+						<td>0.4%</td>
+						<td>32.8%</td>
+						<td>-30.4%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table table-bordered table-hover&quot;&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<script>
+	$('.table-list').on('click', 'input[type="checkbox"]', function(event) {
+		var $this = $(this);
+
+		$this.closest('tr').toggleClass('active');
+	});
+
+	$(document).on('click', '.table-vertical-align-button', function(event) {
+		event.preventDefault();
+
+		var className = $(this).text();
+
+		$('#verticalAlignTableListDemo').removeClass().addClass('table table-list ' + className);
+	});
+</script>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Management Bar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Management Bar
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="management-bar"><a class="heading-anchor" href="#management-bar"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Management Bar</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Management Bar is an extension of Navbar. Combine different management-bar components to create a toolbar that fits your needs.</p>
+		</blockquote>
+
+		<div class="management-bar">
+			<div class="management-bar-header">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+					</label>
+				</div>
+
+				<a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse00">
+					<span class="management-bar-item-title">Label</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+						<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+					</svg>
+				</a>
+			</div>
+
+			<div class="collapse management-bar-collapse" id="mgmtBarCollapse00">
+				<ul class="nav management-bar-nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+							</svg>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<form>
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail3">Email address</label>
+										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Approved
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Draft
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Pending
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Expired
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Scheduled
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Rejected
+										</label>
+									</div>
+								</form>
+							</li>
+							<li><a href="#1">Something Outside</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Recent</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+							</svg>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">All</a></li>
+							<li class="active"><a href="#1">Recent</a></li>
+							<li><a href="#1">Mine</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Order By: Modified Date</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+							</svg>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Name</a></li>
+							<li><a href="#1">Create Date</a></li>
+							<li class="active"><a href="#1">Modified Date</a></li>
+							<li><a href="#1">Downloads</a></li>
+							<li><a href="#1">Size</a></li>
+						</ul>
+					</li>
+					<li class="disabled">
+						<a href="#">Link <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="management-bar-header-right">
+				<a class="btn btn-link" href="#">
+					<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-cards2">
+						<use xlink:href="../../images/icons/icons.svg#cards2">
+					</svg>
+				</a>
+				<a class="btn btn-link" href="#">
+					<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-list">
+						<use xlink:href="../../images/icons/icons.svg#list">
+					</svg>
+				</a>
+				<a class="btn btn-link hidden-xs" href="#">
+					<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-table2">
+						<use xlink:href="../../images/icons/icons.svg#table2">
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="management-bar-default"><a class="heading-anchor" href="#management-bar-default"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Management Bar Default</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Default Skin for Management Bar</p>
+		</blockquote>
+
+		<div class="management-bar management-bar-default">
+			<div class="management-bar-header">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+					</label>
+				</div>
+
+				<a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse0">
+					<span class="management-bar-item-title">Label</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+						<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+					</svg>
+				</a>
+			</div>
+
+			<div class="collapse management-bar-collapse" id="mgmtBarCollapse0">
+				<ul class="nav management-bar-nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+							</svg>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<form>
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail3">Email address</label>
+										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Approved
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Draft
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Pending
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Expired
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Scheduled
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Rejected
+										</label>
+									</div>
+								</form>
+							</li>
+							<li><a href="#1">Something Outside</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Recent</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+							</svg>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">All</a></li>
+							<li class="active"><a href="#1">Recent</a></li>
+							<li><a href="#1">Mine</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Order By: Modified Date</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
+							</svg>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Name</a></li>
+							<li><a href="#1">Create Date</a></li>
+							<li class="active"><a href="#1">Modified Date</a></li>
+							<li><a href="#1">Downloads</a></li>
+							<li><a href="#1">Size</a></li>
+						</ul>
+					</li>
+					<li class="disabled">
+						<a href="#">Link <span class="sr-only">(current)</span></a>
+					</li>
+					<li>
+						<a class="btn btn-default hidden-xs" href="#1">
+							<span class="icon-monospaced">
+								<span aria-hidden="true" class="icon-caret-up"></span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a class="btn btn-default hidden-xs" href="#1">
+							<span class="icon-monospaced">
+								<span aria-hidden="true" class="icon-caret-down"></span>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="management-bar-header-right">
+				<a class="btn btn-default" href="#">
+					<span class="icon-monospaced">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+							<use xlink:href="../../images/icons/icons.svg#cards2">
+						</svg>
+					</span>
+				</a>
+				<a class="btn btn-default" href="#">
+					<span class="icon-monospaced">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+							<use xlink:href="../../images/icons/icons.svg#list">
+						</svg>
+					</span>
+				</a>
+				<a class="btn btn-default hidden-xs" href="#">
+					<span class="icon-monospaced">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table2">
+							<use xlink:href="../../images/icons/icons.svg#table2">
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;div class=&quot;management-bar management-bar-default&quot;&gt;
+    &lt;div class=&quot;management-bar-header&quot;&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;a class=&quot;management-bar-toggle management-bar-toggle-link collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#mgmtBarCollapse0&quot;&gt;
+            &lt;span class=&quot;management-bar-item-title&quot;&gt;Label&lt;/span&gt;
+            &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-sort&quot;&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;management-bar-header-right&quot;&gt;
+        &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-th-large icon-monospaced&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-th-list icon-monospaced&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;a class=&quot;btn hidden-xs&quot; href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-th icon-monospaced&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;collapse management-bar-collapse&quot; id=&quot;mgmtBarCollapse0&quot;&gt;
+        &lt;ul class=&quot;nav management-bar-nav&quot;&gt;
+            &lt;li class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    &lt;span class=&quot;management-bar-item-title&quot;&gt;Status: Approved, Draft, Pending, Expired&lt;/span&gt;
+                    &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-sort&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;
+                        &lt;form&gt;
+                            &lt;div class=&quot;form-group&quot;&gt;
+                                &lt;select class=&quot;form-control&quot;&gt;
+                                    &lt;option&gt;1&lt;/option&gt;
+                                    &lt;option&gt;2&lt;/option&gt;
+                                    &lt;option&gt;3&lt;/option&gt;
+                                    &lt;option&gt;4&lt;/option&gt;
+                                    &lt;option&gt;5&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;form-group&quot;&gt;
+                                &lt;label for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
+                                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Email&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Approved&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Draft&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Pending&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Expired&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox&quot;&gt;
+                                &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt; Scheduled&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox&quot;&gt;
+                                &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt; Rejected&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Something Outside&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    &lt;span class=&quot;management-bar-item-title&quot;&gt;Recent&lt;/span&gt;
+                    &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-sort&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#1&quot;&gt;Recent&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Mine&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    &lt;span class=&quot;management-bar-item-title&quot;&gt;Order By: Modified Date&lt;/span&gt;
+                    &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-sort&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Create Date&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#1&quot;&gt;Modified Date&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Downloads&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Size&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;btn hidden-xs&quot; href=&quot;#1&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-caret-up icon-monospaced&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;btn hidden-xs&quot; href=&quot;#1&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-caret-down icon-monospaced&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="management-bar-no-collapse"><a class="heading-anchor" href="#management-bar-no-collapse"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Management Bar No Collapse</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Use class <code>management-bar-no-collapse</code> on <code>management-bar</code> to preserve desktop management-bar styles in mobile.</p>
+		</blockquote>
+
+		<div class="management-bar management-bar-default management-bar-no-collapse">
+			<ul class="nav management-bar-nav">
+				<li>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" value="">
+						</label>
+					</div>
+				</li>
+				<li>
+					<span class="management-bar-text">4 items selected</span>
+				</li>
+				<li class="disabled">
+					<a href="#">Link <span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+
+			<ul class="nav management-bar-nav management-bar-nav-right">
+				<li>
+					<a class="btn btn-default" href="#">
+						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-trash">
+							<use xlink:href="../../images/icons/icons.svg#trash">
+						</svg>
+					</a>
+				</li>
+				<li class="dropdown">
+					<a aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+						</svg>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right" role="menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;div class=&quot;management-bar management-bar-default management-bar-no-collapse&quot;&gt;
+    &lt;ul class=&quot;nav management-bar-nav&quot;&gt;
+        &lt;li&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+                &lt;label&gt;
+                    &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;span class=&quot;management-bar-text&quot;&gt;4 items selected&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class=&quot;nav management-bar-nav management-bar-nav-right&quot;&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-trash icon-monospaced&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-ellipsis-vertical icon-monospaced&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<script>
+	$('select').on('focus', function(event) {
+		$(this).closest('.form-group').addClass('focus');
+	});
+
+	$('input[type="email"]').on('focus', function(event) {
+		$(this).closest('.form-group').addClass('focus');
+	});
+
+	$('input[type="checkbox"]').on('focus', function(event) {
+		$(this).closest('.checkbox').addClass('focus');
+	});
+
+	$('input[type="checkbox"]').change(function(event) {
+		var $this = $(this);
+
+		if ($this.prop('checked')) {
+			$this.closest('.checkbox').addClass('active');
+		}
+		else {
+			$this.closest('.checkbox').removeClass('active');
+		}
+	});
+
+	$('select').on('blur', function(event) {
+		$(this).closest('.form-group').removeClass('focus');
+	});
+
+	$('input[type="email"]').on('blur', function(event) {
+		$(this).closest('.form-group').removeClass('focus');
+	});
+
+	$('input[type="checkbox"]').on('blur', function(event) {
+		$(this).closest('.checkbox').removeClass('focus');
+	});
+</script>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

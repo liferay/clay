@@ -1,0 +1,674 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Sidebar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Sidebar
+
+			
+		</h1>
+
+		
+<blockquote class="blockquote-sm blockquote-success">
+	<p>Documentation for the Sidebar CSS component, for the Sidenav javascript component see <a href="../sidenav">Sidenav</a>.</p>
+</blockquote>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="sidebar"><a class="heading-anchor" href="#sidebar"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sidebar</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>An opinionated container to display related content.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="sidebar">
+			<div class="sidebar-header">
+				Sidebar Header
+			</div>
+			<div class="sidebar-body">
+				Sidebar Body
+			</div>
+			<div class="sidebar-footer">
+				Sidebar Footer
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="sidebar-fixed"><a class="heading-anchor" href="#sidebar-fixed"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sidebar Fixed</h3>
+
+		<blockquote class="blockquote-sm blockquote-warning">
+			<p>There is no fixed positioned sidebar. The <a href="../sidenav">Sidenav</a> javascript plugin handles slideout drawer variations.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="sidebar-default"><a class="heading-anchor" href="#sidebar-default"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sidebar Default</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>sidebar-default</code> to <code>sidebar</code> to apply a light theme.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="sidebar sidebar-default">
+			<div class="sidebar-header">
+				<ul class="sidebar-actions">
+					<li>
+						<a href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-star-o">
+								<use xlink:href="../../images/icons/icons.svg#star-o">
+							</svg>
+						</a>
+					</li>
+					<li>
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</li>
+				</ul>
+
+				<h4 class="sidebar-title"><a href="#1">Image1.jpg</a></h4>
+
+				<h5>Approved</h5>
+
+				<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
+			</div>
+
+			<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active dropdown">
+						<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Details</a></li>
+							<li><a href="#">Versions</a></li>
+							<li><a href="#">Comments (17)</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="sidebar-body">
+				<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
+					<img alt="thumbnail" class="img-responsive" src="../../images/DeathtoStock_Desk4.jpg">
+					<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
+				</div>
+
+				<ul class="sidebar-block tabular-list-group-unstyled">
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<div class="h4 sidebar-title">Version 1.1</div>
+							<div class="h6 sidebar-caption">By <a href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<h4 class="sidebar-title">Version 1.0</h4>
+							<h6 class="sidebar-caption">By <a href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<dl class="sidebar-block">
+					<dt class="h5">Size</dt>
+					<dd class="h6 sidebar-caption">136 KB</dd>
+					<dt class="h5">Dimensions</dt>
+					<dd class="h6 sidebar-caption">1024 x 768</dd>
+					<dt class="h5">Created</dt>
+					<dd class="h6 sidebar-caption">By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
+					<dt class="h5">Last Modification</dt>
+					<dd class="h6 sidebar-caption">By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
+				</dl>
+
+				<div class="sidebar-block">
+					<span>Tags: </span>
+					<span class="badge badge-default badge-sm">
+						History
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Flat
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Default
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+
+					<div style="margin-bottom: 20px;margin-top:20px;">
+						<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="sidebar-inverse"><a class="heading-anchor" href="#sidebar-inverse"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sidebar Inverse</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>sidebar-inverse</code> to <code>sidebar</code> to apply a darker theme.</p>
+		</blockquote>
+	</div>
+	<div class="col-md-6">
+		<div class="sidebar sidebar-inverse">
+			<div class="sidebar-header">
+				<ul class="sidebar-actions">
+					<li>
+						<a href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-star-o">
+								<use xlink:href="../../images/icons/icons.svg#star-o">
+							</svg>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+							</svg>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Download</a></li>
+							<li><a href="#1">Edit</a></li>
+							<li><a href="#1">Move</a></li>
+							<li><a href="#1">Checkout</a></li>
+							<li><a href="#1">Permissions</a></li>
+							<li><a href="#1">Move to Recycle Bin</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</li>
+				</ul>
+
+				<h4 class="sidebar-title"><a href="#1">Image1.jpg</a></h4>
+
+				<h5>Approved</h5>
+
+				<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
+			</div>
+			<nav class="collapse-basic-search navbar navbar-inverse navbar-no-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active dropdown">
+						<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Details</a></li>
+							<li><a href="#">Versions</a></li>
+							<li><a href="#">Comments (17)</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="sidebar-body">
+				<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
+					<img alt="thumbnail" class="img-responsive" src="../../images/DeathtoStock_Spring10.jpg">
+					<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
+				</div>
+
+				<ul class="sidebar-block tabular-list-group-unstyled">
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<div class="h4 sidebar-title">Version 1.1</div>
+							<div class="h6 sidebar-caption">By <a href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<h4 class="sidebar-title">Version 1.0</h4>
+							<h6 class="sidebar-caption">By <a href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<dl class="sidebar-block">
+					<dt class="h5">Size</dt>
+					<dd class="h6 sidebar-caption">136 KB</dd>
+					<dt class="h5">Dimensions</dt>
+					<dd class="h6 sidebar-caption">1024 x 768</dd>
+					<dt class="h5">Created</dt>
+					<dd class="h6 sidebar-caption">By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
+					<dt class="h5">Last Modification</dt>
+					<dd class="h6 sidebar-caption">By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
+				</dl>
+
+				<div class="sidebar-block">
+					<span>Tags: </span>
+					<span class="badge badge-default badge-sm">
+						History
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Flat
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Default
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+
+					<div style="margin-bottom: 20px;margin-top:20px;">
+						<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>

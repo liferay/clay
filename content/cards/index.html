@@ -1,0 +1,1222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Cards</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.26</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Example Pages</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Experimental</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
+			Cards
+
+			
+		</h1>
+
+		
+<div class="row row-spacing uxgl-vertical-card">
+	<div class="col-md-12">
+		<h3 id="card"><a class="heading-anchor" href="#card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A container styled like a card for your stuff. Combine different Lexicon components inside a card to create a variety of cards.</p>
+		</blockquote>
+
+		<div class="card" style="max-width: 300px;">
+			<div class="crop-img crop-img-bottom crop-img-center" style="height: 150px;">
+				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			</div>
+			<div class="user-icon user-icon-danger user-icon-xxl" style="border: 4px solid #FFF; line-height:120px; margin: -64px auto 0; position: relative;"><span>JB</span></div>
+			<div class="card-block" style="text-align: center;">
+				<h3 style="margin:0;">Joe Bloggs
+				<h5 class="text-default" style="margin-top:0;">Administrator</h5>
+				<p>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</p>
+			</h3></div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="horizontal-card-with-simple-grid"><a class="heading-anchor" href="#horizontal-card-with-simple-grid"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal Card with Simple Grid</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>card-row</code> with <code>card-col-content</code> and <code>card-col-field</code> to create a number of custom horizontal cards. <code>card-col-content</code> fills the remaining space when used in conjunction with <code>card-col-field</code>. <code>card-col-field</code> will only be as wide as the content inside.
+		</p></blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<span>This text will fill the remaining space.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse001"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse001">
+	<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row card-row-padded&quot;&gt;
+        &lt;div class=&quot;card-col-field&quot;&gt;
+            &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-folder-close-alt sticker sticker-default sticker-static sticker-lg&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-col-content card-col-gutters&quot;&gt;
+            &lt;span&gt;This text will fill the remaining space.&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="horizontal-cards-with-fixed-width-content"><a class="heading-anchor" href="#horizontal-cards-with-fixed-width-content"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal Cards with Fixed Width Content</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Set a fixed width on the content inside <code>card-col-field</code>.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 121px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 121px;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-8">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<span>Really super insanely just incredibly long and totally not possible word. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</div>
+				<div class="card-col-field">
+					<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing" id="truncatingText">
+	<div class="col-md-12">
+		<h3 id="truncating-text-inside-card"><a class="heading-anchor" href="#truncating-text-inside-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Truncating Text Inside Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>truncate-text</code> on whatever text you want to be truncated.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+					<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="list-unstyled" style="clear:both;">
+		<li class="col-md-6">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
+						<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+					</div>
+					<div class="card-col-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="col-md-6">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
+						<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 title="Folder 01">Folder 01</h4>
+					</div>
+					<div class="card-col-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="col-md-6">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
+						<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 title="Folder 02">Folder 02</h4>
+					</div>
+					<div class="card-col-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="col-md-6">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
+						<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 title="Folder 03">Folder 03</h4>
+					</div>
+					<div class="card-col-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div class="row row-spacing uxgl-horizontal-card">
+	<div class="col-md-12">
+		<h3 id="card-row-vertical-alignment-helpers"><a class="heading-anchor" href="#card-row-vertical-alignment-helpers"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Card Row Vertical Alignment Helpers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code> or use the helper classes <code>card-row-valign-bottom</code>and <code>card-row-valign-top</code> on the <code>card-row</code> to vertically align all columns inside the row.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field" style="vertical-align: top;">top</div>
+				<div class="card-col-field">middle</div>
+				<div class="card-col-field" style="vertical-align: bottom;">bottom</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field" style="text-align:left;">left</div>
+				<div class="card-col-field">center</div>
+				<div class="card-col-field" style="text-align:right;">right</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+		<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row&quot;&gt;
+        &lt;div class=&quot;card-col-field&quot; style=&quot;vertical-align: top;&quot;&gt;top&lt;/div&gt;
+        &lt;div class=&quot;card-col-field&quot;&gt;middle&lt;/div&gt;
+        &lt;div class=&quot;card-col-field&quot; style=&quot;vertical-align: bottom;&quot;&gt;bottom&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add gutters to a specific card card column by using the class <code>card-col-gutters</code>.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+		<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row&quot;&gt;
+        &lt;div class=&quot;card-col-field&quot;&gt;
+            &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_coffee.jpg&quot; style=&quot;width: 150px;&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;card-col-content card-col-gutters&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>card-row-padded</code> on <code>card-row</code> to add some spacing around a horizontal card.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 121px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row card-row-padded&quot;&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="card-helper-classes"><a class="heading-anchor" href="#card-helper-classes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Card Helper Classes</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use classes <code>card-rounded</code>, <code>card-circle</code>, or <code>card-square</code> on the card to quickly shape the borders.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-horizontal card-rounded">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-circle card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-horizontal card-square">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span aria-hidden="true" class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code class="html">&lt;div class=&quot;card card-horizontal card-rounded&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;card card-circle card-horizontal&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;card card-horizontal card-square&quot;&gt;...&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			We didn&apos;t add <code>overflow: hidden</code> to the <code>card</code> class because it prevents nested dropdowns, popups, and tooltips from fully displaying. You can work around this by adding <code>border-radius</code> to the image or <code>overflow: hidden</code> to the card.
+		</blockquote>
+
+		<div class="alert alert-warning">
+			When using card border helper classes with images as the first or last item, add the css property <span class="text-danger">overflow: hidden</span> to the card or <span class="text-danger">border-radius</span> to the image.
+		</div>
+	</div>
+
+	<div class="col-md-4 col-xs-6">
+		<div class="card card-rounded" style="overflow: hidden;">
+			<div class="aspect-ratio aspect-ratio-16-to-9">
+				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			</div>
+
+			<div class="card-row card-row-padded card-row-valign-top">
+				<div class="card-col-content" style="height: 125px; text-align: center;">
+					<h3 style="margin:0;">Joe Bloggs</h3>
+					<h5 class="text-default" style="margin-top:0;">Administrator</h5>
+					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6 col-sm-12 col-xs-12">
+		<div class="card card-horizontal card-rounded">
+			<div class="card-row card-row-valign-top">
+				<div class="card-col-field">
+					<img src="../../images/thumbnail_dock.jpg" style="border-radius: 4px 0 0 4px;width: 150px;">
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<h4>Space Program</h4>
+					<div class="divider"></div>
+					<p>Because you live life on the edge of space.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="card-dividers"><a class="heading-anchor" href="#card-dividers"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Card Dividers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;</code> to create a horizontal division between content inside a card.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6 uxgl-horizontal-card">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field">
+					card-col-field
+				</div>
+				<div class="card-col-field card-col-gutters">
+					<h4>Title</h4>
+					<div class="divider"></div>
+					<p>card-col-field</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="checkbox-card"><a class="heading-anchor" href="#checkbox-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Checkbox Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>We have created a pattern to add checkboxes to cards, just wrap the checkbox and card in:</p>
+		</blockquote>
+		<pre><code>&lt;div class=&quot;checkbox checkbox-card checkbox-top-left&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/label&gt;
+    &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="checkbox checkbox-card checkbox-top-left">
+			<label>
+				<input type="checkbox">
+			</label>
+			<div class="card">
+				<div class="aspect-ratio">
+					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
+					<span class="sticker sticker-bottom sticker-warning">PNG</span>
+				</div>
+				<div class="card-row card-row-padded card-row-valign-top">
+					<div class="card-col-content">
+						<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+						<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+						<span class="truncate-text">Approved</span>
+					</div>
+
+					<div class="card-col-field">
+						<div class="dropdown" style="margin-right: -8px;">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-8">
+		<div class="checkbox checkbox-card checkbox-middle-left">
+			<label>
+				<input type="checkbox" value="">
+			</label>
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
+						<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</div>
+					<div class="card-col-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="clickable-checkbox-card"><a class="heading-anchor" href="#clickable-checkbox-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Clickable Checkbox Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>To make the whole card clickable just wrap the checkbox and card in:</p>
+		</blockquote>
+
+		<pre><code>&lt;div class=&quot;checkbox checkbox-card checkbox-top-left&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="checkbox checkbox-card checkbox-top-left">
+			<label>
+				<input type="checkbox">
+				<div class="card">
+					<div class="aspect-ratio">
+						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
+					</div>
+					<div class="card-row card-row-padded card-row-valign-top">
+						<div class="card-col-content">
+							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+							<span class="truncate-text">Approved</span>
+						</div>
+
+						<div class="card-col-field">
+							<div class="dropdown" style="margin-right: -8px;">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-xs-8">
+		<div class="checkbox checkbox-card checkbox-middle-left">
+			<label>
+				<input type="checkbox" value="">
+				<div class="card card-horizontal">
+					<div class="card-row card-row-padded">
+						<div class="card-col-field">
+							<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+						</div>
+						<div class="card-col-content card-col-gutters">
+							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+						</div>
+						<div class="card-col-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="radio-card"><a class="heading-anchor" href="#radio-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Radio Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>We have created a pattern to add radio inputs to cards, just wrap the radio input and card in:</p>
+		</blockquote>
+		<pre><code>&lt;div class=&quot;radio radio-card radio-top-left&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;radio&quot;&gt;
+    &lt;/label&gt;
+    &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="radio radio-card radio-top-left">
+			<label>
+				<input name="cardRadios1" type="radio" value="cardOption1">
+			</label>
+			<div class="card">
+				<div class="aspect-ratio">
+					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
+					<span class="sticker sticker-bottom sticker-warning">PNG</span>
+				</div>
+				<div class="card-row card-row-padded card-row-valign-top">
+					<div class="card-col-content">
+						<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+						<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+						<span class="truncate-text">Approved</span>
+					</div>
+
+					<div class="card-col-field">
+						<div class="dropdown" style="margin-right: -8px;">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-8">
+		<div class="radio radio-card radio-middle-left">
+			<label>
+				<input name="cardRadios1" type="radio" value="cardOption2">
+			</label>
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
+						<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</div>
+					<div class="card-col-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="clickable-radio-card"><a class="heading-anchor" href="#clickable-radio-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Clickable Radio Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>To make the whole card clickable just wrap the radio input and card in:</p>
+		</blockquote>
+
+		<pre><code>&lt;div class=&quot;radio radio-card radio-top-left&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;radio&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="radio radio-card radio-top-left">
+			<label>
+				<input name="cardRadios" type="radio" value="cardOption1">
+				<div class="card">
+					<div class="aspect-ratio">
+						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
+					</div>
+					<div class="card-row card-row-padded card-row-valign-top">
+						<div class="card-col-content">
+							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+							<span class="truncate-text">Approved</span>
+						</div>
+
+						<div class="card-col-field">
+							<div class="dropdown" style="margin-right: -8px;">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-xs-8">
+		<div class="radio radio-card radio-middle-left">
+			<label>
+				<input name="cardRadios" type="radio" value="cardOption2">
+				<div class="card card-horizontal">
+					<div class="card-row card-row-padded">
+						<div class="card-col-field">
+							<span aria-hidden="true" class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+						</div>
+						<div class="card-col-content card-col-gutters">
+							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+						</div>
+						<div class="card-col-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>
