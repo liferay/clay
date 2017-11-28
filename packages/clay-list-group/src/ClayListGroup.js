@@ -1,4 +1,5 @@
 import 'clay-checkbox';
+import 'clay-dropdown';
 import 'clay-sticker';
 
 import Component from 'metal-component';
@@ -46,6 +47,15 @@ ClayListGroup.STATE = {
 	 */
 	items: Config.arrayOf(
 		Config.shapeOf({
+			actionItems: Config.arrayOf(
+				Config.shapeOf({
+					disabled: Config.bool().value(false),
+					events: Config.object(),
+					label: Config.string().required(),
+					separator: Config.bool().value(false),
+					url: Config.string().required(),
+				})
+			),
 			description: Config.string(),
 			icon: Config.string(),
 			title: Config.any().required(),

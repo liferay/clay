@@ -5,6 +5,13 @@
  */
 {template .render}
 	{@param items: list<[
+		actionItems: list<[
+			disabled: bool,
+			events: ?,
+			label: string,
+			separator: bool,
+			url: string
+		]>,
 		description: string,
 		icon: string,
 		title: html|string
@@ -41,6 +48,13 @@
 {template .item}
 	{@param index: number}
 	{@param title: html|string}
+	{@param? actionItems: list<[
+			disabled: bool,
+			events: ?,
+			label: string,
+			separator: bool,
+			url: string
+	]>}
 	{@param? description: string}
 	{@param? icon: string}
 	{@param? selectable: bool}
@@ -78,6 +92,13 @@
 					<p class="list-group-subtitle text-truncate">{$description}</p>
 				{/if}
 			</div>
+
+			{if $actionItems and $spritemap}
+				{call ClayActionsDropdown.render}
+					{param items: $actionItems /}
+					{param spritemap: $spritemap /}
+				{/call}
+			{/if}
 		{/if}
 	</li>
 {/template}
@@ -87,6 +108,13 @@
  */
 {template .items}
 	{@param items: list<[
+		actionItems: list<[
+			disabled: bool,
+			events: ?,
+			label: string,
+			separator: bool,
+			url: string
+		]>,
 		description: string,
 		icon: string,
 		title: html|string
@@ -96,6 +124,7 @@
 
 	{foreach $item in $items}
 		{call .item}
+			{param actionItems: $item.actionItems /}
 			{param description: $item.description /}
 			{param icon: $item.icon /}
 			{param index: index($item) /}
