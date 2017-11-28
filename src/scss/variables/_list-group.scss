@@ -47,17 +47,17 @@ $list-group-notification-border-top-left-radius: 0 !default;
 $list-group-notification-border-top-right-radius: null !default;
 
 $list-group-notification-item-border-bottom-color: $list-group-border-color !default;
-$list-group-notification-item-border-left-color: $component-active-bg !default;
+$list-group-notification-item-border-left-color: $list-group-border-color !default;
 $list-group-notification-item-border-right-color: $list-group-border-color !default;
 $list-group-notification-item-border-top-color: $list-group-border-color !default;
 
 $list-group-notification-item-active-border-bottom-color: $list-group-active-border-color !default;
-$list-group-notification-item-active-border-left-color: $list-group-notification-item-border-left-color !default;
+$list-group-notification-item-active-border-left-color: $list-group-active-border-color !default;
 $list-group-notification-item-active-border-right-color: $list-group-active-border-color !default;
 $list-group-notification-item-active-border-top-color: $list-group-active-border-color !default;
 
 $list-group-notification-item-border-bottom-width: 0.0625rem !default;
-$list-group-notification-item-border-left-width: 0.5rem !default;
+$list-group-notification-item-border-left-width: 0.0625rem !default;
 $list-group-notification-item-border-right-width: 0.0625rem !default;
 $list-group-notification-item-border-top-width: 0.0625rem !default;
 
