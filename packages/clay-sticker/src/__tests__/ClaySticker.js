@@ -33,10 +33,8 @@ describe('ClaySticker', function() {
 
 	it('should render a sticker with icon', () => {
 		sticker = new ClaySticker({
-			icon: {
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
+			icon: 'plus',
+			spritemap: 'icons.svg',
 		});
 
 		expect(sticker).toMatchSnapshot();
