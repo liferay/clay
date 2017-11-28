@@ -58,6 +58,7 @@ ClayListGroup.STATE = {
 			),
 			description: Config.string(),
 			icon: Config.string(),
+			iconShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
 			selected: Config.bool().value(false),
 			title: Config.any().required(),
 		})
