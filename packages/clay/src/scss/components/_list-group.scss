@@ -160,7 +160,10 @@ a.list-group-subtitle,
 
 .list-group-item {
 	&.active {
-		z-index: auto;
+		&:focus,
+		&.focus {
+			z-index: 2;
+		}
 
 		.dropdown-action .dropdown-toggle,
 		.list-group-link {
