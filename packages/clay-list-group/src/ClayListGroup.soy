@@ -4,5 +4,22 @@
  * This renders the component's whole content.
  */
 {template .render}
-	<div class="clay-list-group">Hello World</div>
+	{@param? elementClasses: string}
+	{@param? id: string}
+
+	{let $attributes kind="attributes"}
+		class="list-group
+			{if $elementClasses}
+				{sp}elementClasses
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<ul {$attributes}>
+
+	</ul>
 {/template}
