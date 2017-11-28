@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param items: list<[
+		description: string,
 		title: html|string
 	]>}
 	{@param? elementClasses: string}
@@ -34,9 +35,20 @@
  */
 {template .item}
 	{@param title: html|string}
+	{@param? description: string}
 
 	<li class="list-group-item list-group-item-flex">
-		{$title}
+		{if not $description}
+			{$title}
+		{else}
+			<div class="flex-col flex-col-expand">
+				<h4 class="list-group-title text-truncate">{$title}</h4>
+
+				{if $description}
+					<p class="list-group-subtitle text-truncate">{$description}</p>
+				{/if}
+			</div>
+		{/if}
 	</li>
 {/template}
 
@@ -45,11 +57,13 @@
  */
 {template .items}
 	{@param items: list<[
+		description: string,
 		title: html|string
 	]>}
 
 	{foreach $item in $items}
 		{call .item}
+			{param description: $item.description /}
 			{param title: $item.title /}
 		{/call}
 	{/foreach}

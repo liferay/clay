@@ -43,6 +43,7 @@ ClayListGroup.STATE = {
 	 */
 	items: Config.arrayOf(
 		Config.shapeOf({
+			description: Config.string(),
 			title: Config.any().required(),
 		})
 	).required(),
