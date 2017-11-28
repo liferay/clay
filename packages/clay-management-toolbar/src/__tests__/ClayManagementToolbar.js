@@ -277,7 +277,8 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
-		managementToolbar.refs.filters.refs.dropdown.refs.dropdownButton.element.click();
+		let filtersDropdown = managementToolbar.refs.filters.refs.dropdown;
+		filtersDropdown.refs.dropdownButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('filterDone', expect.any(Object));
