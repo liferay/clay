@@ -10,6 +10,11 @@
 	$border-right-width: setter(map-get($map, border-right-width), $list-group-notification-item-border-right-width);
 	$border-top-width: setter(map-get($map, border-top-width), $list-group-notification-item-border-top-width);
 
+	$border-bottom-left-radius: map-get($map, border-bottom-left-radius);
+	$border-bottom-right-radius: map-get($map, border-bottom-right-radius);
+	$border-top-left-radius: map-get($map, border-top-left-radius);
+	$border-top-right-radius: map-get($map, border-top-right-radius);
+
 	$box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$border-bottom-color};
 	$box-shadow-left: inset #{$border-left-width} 0 #{$border-left-color};
 	$box-shadow-right: inset -#{$border-right-width} 0 #{$border-right-color};
@@ -27,6 +32,14 @@
 	$active-box-shadow-top: inset 0 #{$border-top-width} #{$active-border-top-color};
 
 	background-color: $bg;
+
+	@if ($enable-rounded) {
+		border-bottom-left-radius: $border-bottom-left-radius;
+		border-bottom-right-radius: $border-bottom-right-radius;
+		border-top-left-radius: $border-top-left-radius;
+		border-top-right-radius: $border-top-right-radius;
+	}
+
 	box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top, $box-shadow-bottom;
 
 	&.active {
