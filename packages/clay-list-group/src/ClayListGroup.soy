@@ -17,6 +17,8 @@
 		description: string,
 		icon: string,
 		iconShape: string,
+		label: string,
+		labelStyle: string,
 		selected: bool,
 		title: string,
 		url: string
@@ -75,6 +77,8 @@
 	{@param? handleItemCheckboxClick_: any}
 	{@param? icon: string}
 	{@param? iconShape: string}
+	{@param? label: string}
+	{@param? labelStyle: string}
 	{@param? selectable: bool}
 	{@param? selected: bool}
 	{@param? spritemap: string}
@@ -137,6 +141,15 @@
 				{if $description}
 					<p class="list-group-subtitle text-truncate">{$description}</p>
 				{/if}
+
+				{if $label}
+					<div class="list-group-detail">
+						{call ClayLabel.render}
+							{param label: $label /}
+							{param style: $labelStyle /}
+						{/call}
+					</div>
+				{/if}
 			</div>
 
 			{if $actionItems and $spritemap}
@@ -173,6 +186,8 @@
 		description: string,
 		icon: string,
 		iconShape: string,
+		label: string,
+		labelStyle: string,
 		selected: bool,
 		title: string,
 		url: string
@@ -189,6 +204,8 @@
 			{param icon: $item.icon /}
 			{param iconShape: $item.iconShape /}
 			{param index: index($item) /}
+			{param label: $item.label /}
+			{param labelStyle: $item.labelStyle /}
 			{param selectable: $selectable /}
 			{param selected: $item.selected /}
 			{param spritemap: $spritemap /}

@@ -1,6 +1,7 @@
 import 'clay-checkbox';
 import 'clay-dropdown';
 import 'clay-icon';
+import 'clay-label';
 import 'clay-link';
 import 'clay-sticker';
 
@@ -72,11 +73,29 @@ ClayListGroup.STATE = {
 			description: Config.string(),
 			icon: Config.string(),
 			iconShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
+			label: Config.string(),
+			labelStyle: Config.oneOf([
+				'danger',
+				'info',
+				'secondary',
+				'success',
+				'warning',
+			]).value('secondary'),
 			selected: Config.bool().value(false),
 			title: Config.string().required(),
 			url: Config.string(),
 		})
 	).required(),
+
+	label: Config.string(),
+
+	labelStyle: Config.oneOf([
+		'danger',
+		'info',
+		'secondary',
+		'success',
+		'warning',
+	]).value('secondary'),
 
 	/**
 	 * Flag to indicate if the list group items are selectable.
