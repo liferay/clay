@@ -6,7 +6,6 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import itemsValidator from './items_validator';
 import templates from './ClayManagementToolbar.soy.js';
 
 let filterItemShape = {
