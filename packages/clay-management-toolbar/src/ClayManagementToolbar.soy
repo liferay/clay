@@ -164,11 +164,9 @@
 					<li class="dropdown nav-item">
 						{call ClayDropdown.render}
 							{param button: [
-								'events': [
-									'click': $handleFilterDoneButtonClick_,
-								],									
 								'label': 'Done'
 							] /}
+							{param events: ['buttonClicked': $handleFilterDoneButtonClick_] /}
 							{param items: $filterItems /}
 							{param label: 'Filter and Order' /}
 							{param ref: 'filters' /}

@@ -9,6 +9,20 @@ import {Config} from 'metal-state';
 import itemsValidator from './items_validator';
 import templates from './ClayManagementToolbar.soy.js';
 
+let filterItemShape = {
+	checked: Config.bool().value(false),
+	disabled: Config.bool().value(false),
+	inputName: Config.string(),
+	inputValue: Config.string(),
+	label: Config.string().required(),
+	separator: Config.bool().value(false),
+	type: Config.oneOf(['checkbox', 'group', 'radiogroup']),
+};
+
+const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
+
+filterItemShape.items = filterItemsValidator;
+
 /**
  * Metal ClayManagementToolbar component.
  */
@@ -91,7 +105,7 @@ ClayManagementToolbar.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	filterItems: itemsValidator,
+	filterItems: filterItemsValidator,
 
 	/**
 	 * Id to be applied to the element.
