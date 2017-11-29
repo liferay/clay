@@ -605,6 +605,22 @@ describe('ClayDropdownBase', function() {
 		});
 
 		expect(clayDropdownBase.items).toEqual([item1]);
+
+		input.value = 'Item 2';
+
+		clayDropdownBase.handleSearch_({
+			delegateTarget: input,
+		});
+
+		expect(clayDropdownBase.items).toEqual([item2]);
+
+		input.value = '';
+
+		clayDropdownBase.handleSearch_({
+			delegateTarget: input,
+		});
+
+		expect(clayDropdownBase.items).toEqual([item1, item2]);
 	});
 
 	it('should render a dropdown and emit an event on button click', () => {
