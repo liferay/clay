@@ -555,6 +555,26 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should close dropdown on document click', () => {
+		jest.useFakeTimers();
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+			],
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		document.body.click();
+		jest.runAllTimers();
+
+		expect(clayDropdownBase.expanded).toBeFalsy();
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should filter items', () => {
 		let item1 = {
 			label: 'Item 1',

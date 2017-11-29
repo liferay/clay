@@ -13,6 +13,19 @@ exports[`ClayDropdownBase should close dropdown 1`] = `
 </div>
 `;
 
+exports[`ClayDropdownBase should close dropdown on document click 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="item1url">Item 1</a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`ClayDropdownBase should open dropdown 1`] = `
 <div class="dropdown show">
   <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
