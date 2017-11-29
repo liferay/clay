@@ -40,3 +40,17 @@
 		padding-top: $container-form-padding-top-mobile;
 	}
 }
+
+.container-view {
+	padding-bottom: $container-view-padding-bottom;
+	padding-left: $container-view-padding-left;
+	padding-right: $container-view-padding-right;
+	padding-top: $container-view-padding-top;
+
+	@include clay-scale-component {
+		padding-bottom: $container-view-padding-bottom-mobile;
+		padding-left: $container-view-padding-left-mobile;
+		padding-right: $container-view-padding-right-mobile;
+		padding-top: $container-view-padding-top-mobile;
+	}
+}
