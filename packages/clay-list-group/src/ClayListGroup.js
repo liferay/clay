@@ -1,4 +1,3 @@
-import 'clay-checkbox';
 import 'clay-dropdown';
 import 'clay-icon';
 import 'clay-label';
