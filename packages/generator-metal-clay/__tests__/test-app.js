@@ -51,7 +51,7 @@ describe('metal-clay-generator:app', function() {
 		);
 		assert.fileContent(
 			'src/ClayComponent.soy',
-			/<div class="clay-component">Hello World<\/div>/
+			/<div {\$attributes}>Hello World<\/div>/
 		);
 	});
 });
