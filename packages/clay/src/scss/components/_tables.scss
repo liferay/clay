@@ -9,6 +9,14 @@ th {
 .table {
 	border-collapse: collapse;
 
+	thead {
+		td,
+		th {
+			border-bottom-width: $table-head-border-bottom-width;
+			border-top-width: $table-head-border-top-width;
+		}
+	}
+
 	th {
 		color: $table-head-color;
 		font-size: $table-head-font-size;
@@ -49,6 +57,19 @@ th {
 .table-cell-field {
 	display: table-cell;
 	width: 1%;
+}
+
+// Table Bordered
+
+.table-bordered {
+	thead {
+		td,
+		th {
+			@if ($table-head-border-top-width == 0 && $table-head-border-top-width) {
+				border-top-width: $table-border-width;
+			}
+		}
+	}
 }
 
 // Table List Skin
