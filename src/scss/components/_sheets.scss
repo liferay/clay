@@ -62,6 +62,7 @@
 
 .sheet-title {
 	color: $sheet-title-color;
+	display: block;
 	font-size: $sheet-title-font-size;
 	font-weight: $sheet-title-font-weight;
 	line-height: $sheet-title-line-height;
@@ -81,6 +82,7 @@
 	border-style: $sheet-subtitle-border-style;
 	border-width: $sheet-subtitle-border-width;
 	color: $sheet-subtitle-color;
+	display: block;
 	font-size: $sheet-subtitle-font-size;
 	font-weight: $sheet-subtitle-font-weight;
 	line-height: $sheet-subtitle-line-height;
@@ -126,6 +128,7 @@ a.sheet-subtitle {
 
 .sheet-tertiary-title {
 	color: $sheet-tertiary-title-color;
+	display: block;
 	font-size: $sheet-tertiary-title-font-size;
 	font-weight: $sheet-tertiary-title-font-weight;
 	line-height: $sheet-tertiary-title-line-height;
