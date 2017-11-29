@@ -21,6 +21,17 @@ class ClayDropdownBase extends Component {
 	 */
 	created() {
 		this.eventHandler_ = new EventHandler();
+
+		this.eventHandler_.add(
+			dom.on(document, 'click', this.handleDocClick_.bind(this))
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		this.eventHandler_.removeAllListeners();
 	}
 
 	/**
@@ -29,7 +40,6 @@ class ClayDropdownBase extends Component {
 	 */
 	close_() {
 		this.expanded = false;
-		this.eventHandler_.removeAllListeners();
 	}
 
 	/**
@@ -118,12 +128,8 @@ class ClayDropdownBase extends Component {
 	toggle() {
 		if (!this.expanded) {
 			this.expanded = true;
-			this.eventHandler_.add(
-				dom.on(document, 'click', this.handleDocClick_.bind(this))
-			);
 		} else {
 			this.expanded = false;
-			this.eventHandler_.removeAllListeners();
 		}
 	}
 }
