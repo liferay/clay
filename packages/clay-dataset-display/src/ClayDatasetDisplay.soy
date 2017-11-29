@@ -1,0 +1,24 @@
+{namespace ClayDatasetDisplay}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? elementClasses: string}
+	{@param? id: string}
+
+	{let $attributes kind="attributes"}
+		class="clay-dataset-display
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<div {$attributes}>
+	</div>
+{/template}
