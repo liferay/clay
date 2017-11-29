@@ -35,6 +35,42 @@ ClayDatasetDisplay.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Items of the dataset.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?array|undefined}
+	 * @default undefined
+	 */
+	items: Config.array(),
+
+	/**
+	 * Flag to indicate if the dataset is selectable.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selectable: Config.bool().value(false),
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	spritemap: Config.string(),
+
+	/**
+	 * Header of the list.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	title: Config.string(),
+
+	/**
 	 * Type of the view of the list.
 	 * @instance
 	 * @memberof ClayDatasetDisplay

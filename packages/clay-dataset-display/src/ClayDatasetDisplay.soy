@@ -6,6 +6,10 @@
 {template .render}
 	{@param? elementClasses: string}
 	{@param? id: string}
+	{@param? items: list<?>}
+	{@param? selectable: bool}
+	{@param? spritemap: string}
+	{@param? title: string}
 	{@param? viewType: string}
 
 	{let $attributes kind="attributes"}
@@ -21,8 +25,14 @@
 	{/let}
 
 	<div {$attributes}>
-		{delcall ClayDatasetDisplay.List variant="$viewType"}
-		{/delcall}
+		{if $items}
+			{delcall ClayDatasetDisplay.List variant="$viewType"}
+				{param items: $items /}
+				{param selectable: $selectable /}
+				{param spritemap: $spritemap /}
+				{param title: $title /}
+			{/delcall}
+		{/if}
 	</div>
 {/template}
 
