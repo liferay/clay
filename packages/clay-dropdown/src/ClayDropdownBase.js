@@ -52,6 +52,15 @@ class ClayDropdownBase extends Component {
 	}
 
 	/**
+	 * Handles footer button click.
+	 * @param {!Event} event
+	 * @protected
+	 */
+	handleButtonClick_(event) {
+		this.emit('buttonClicked', event);
+	}
+
+	/**
 	 * Handles Search in Dropdown.
 	 * @param {!Event} event
 	 * @protected
@@ -153,7 +162,6 @@ ClayDropdownBase.STATE = {
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
-		events: Config.object(),
 		label: Config.string().required(),
 		style: Config.oneOf(['primary', 'secondary']).value('primary'),
 		type: Config.oneOf(['button', 'reset', 'submit']).value('button'),

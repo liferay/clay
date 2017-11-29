@@ -10,6 +10,7 @@
 	{@param? caption: string}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
+	{@param? handleButtonClick_: any}
 	{@param? helpText: string}
 	{@param? id: string}
 	{@param? iconsPosition: string}
@@ -47,6 +48,7 @@
 			{param button: $button /}
 			{param caption: $caption /}
 			{param expanded: $expanded /}
+			{param handleButtonClick_: $handleButtonClick_ /}
 			{param helpText: $helpText /}
 			{param iconsPosition: $iconsPosition /}
 			{param items: $items /}
@@ -120,6 +122,7 @@
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? expanded: bool}
+	{@param? handleButtonClick_: any}
 	{@param? helpText: string}
 	{@param? iconsPosition: string}
 	{@param? searchable: bool}
@@ -179,7 +182,7 @@
 				<div class="dropdown-section">
 					{call ClayButton.render}
 						{param block: true /}
-						{param events: $button.events /}
+						{param events: ['click': $handleButtonClick_ ]/}
 						{param label: $button.label /}
 						{param ref: 'dropdownButton' /}
 						{param style: $button.style /}

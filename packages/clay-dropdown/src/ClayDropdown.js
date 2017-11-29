@@ -11,7 +11,16 @@ import templates from './ClayDropdown.soy.js';
 /**
  * Implementation for Metal Clay Dropdown.
  */
-class ClayDropdown extends Component {}
+class ClayDropdown extends Component {
+	/**
+	 * Handles footer button click.
+	 * @param {!Event} event
+	 * @protected
+	 */
+	handleButtonClick_(event) {
+		this.emit('buttonClicked', event);
+	}
+}
 
 /**
  * State definition.
@@ -27,7 +36,6 @@ ClayDropdown.STATE = {
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
-		events: Config.object(),
 		label: Config.string().required(),
 		style: Config.oneOf(['primary', 'secondary']),
 		type: Config.oneOf(['button', 'reset', 'submit']),
