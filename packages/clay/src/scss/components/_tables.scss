@@ -60,7 +60,8 @@ th {
 
 	color: $table-list-color;
 	font-size: $table-list-font-size;
-	margin-bottom: $spacer + $table-list-border-width;
+	margin-bottom: $table-list-margin-bottom;
+	margin-top: $table-list-margin-top;
 
 	thead,
 	tbody,
