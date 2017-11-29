@@ -10,6 +10,18 @@ $rounded-0-border-radius: 0 !default;
 $link-cursor: pointer !default;
 $disabled-cursor: not-allowed !default;
 
+// Containers
+
+$container-form-padding-bottom: 3rem !default;
+$container-form-padding-left: null !default;
+$container-form-padding-right: null !default;
+$container-form-padding-top: 3rem !default;
+
+$container-form-padding-bottom-mobile: null !default;
+$container-form-padding-left-mobile: null !default;
+$container-form-padding-right-mobile: null !default;
+$container-form-padding-top-mobile: null !default;
+
 // Fonts
 
 $font-import-url: null !default;
