@@ -586,4 +586,27 @@ describe('ClayDropdownBase', function() {
 
 		expect(clayDropdownBase.items).toEqual([item1]);
 	});
+
+	it('should render a dropdown and emit an event on button click', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			button: {
+				label: 'Button',
+				style: 'primary',
+			},
+			items: [
+				{
+					label: 'Item 1',
+					url: 'item1url',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		const spy = jest.spyOn(clayDropdownBase, 'emit');
+
+		clayDropdownBase.refs.dropdownButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));
+	});
 });
