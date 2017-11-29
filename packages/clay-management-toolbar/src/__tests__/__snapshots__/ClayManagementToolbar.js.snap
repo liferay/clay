@@ -349,7 +349,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
                   </div>List</a>
               </li>
               <li>
-                <a class=" dropdown-item">
+                <a class=" dropdown-item disabled" href="javascript:;">
                   <div class="dropdown-item-indicator">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
                       <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#table"></use>
