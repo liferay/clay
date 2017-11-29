@@ -86,16 +86,6 @@ ClayListGroup.STATE = {
 		})
 	).required(),
 
-	label: Config.string(),
-
-	labelStyle: Config.oneOf([
-		'danger',
-		'info',
-		'secondary',
-		'success',
-		'warning',
-	]).value('secondary'),
-
 	/**
 	 * Flag to indicate if the list group items are selectable.
 	 * @instance
