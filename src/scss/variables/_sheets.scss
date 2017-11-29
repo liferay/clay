@@ -36,7 +36,7 @@ $sheet-footer-margin-top-mobile: null !default;
 
 // Sheet Sizes
 
-$sheet-lg-max-width: 50rem !default; // 800px
+$sheet-lg-max-width: ceil(map-get($container-max-widths, lg) * 0.83333) !default; // 800px
 
 // Sheet Title
 
