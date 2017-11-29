@@ -3,6 +3,8 @@ $table-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !d
 $table-hover-bg: lighten(saturate($component-active-bg, 3.40), 43.14) !default;
 $table-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 
+$table-head-border-bottom-width: 1px !default;
+$table-head-border-top-width: 0 !default;
 $table-head-color: $secondary !default;
 $table-head-font-size: 0.875rem !default; // 14px
 $table-head-font-weight: $font-weight-semi-bold !default;
