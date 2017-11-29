@@ -4,6 +4,7 @@
 	$height: map-get($map, height);
 	$padding-x: map-get($map, padding-x);
 	$padding-y: map-get($map, padding-y);
+	$text-transform: map-get($map, text-transform);
 
 	$close-margin-left: map-get($map, close-margin-left);
 	$close-vertical-align: map-get($map, close-vertical-align);
@@ -22,6 +23,7 @@
 	padding-left: $padding-x;
 	padding-right: $padding-x;
 	padding-top: $padding-y;
+	text-transform: $text-transform;
 
 	.close {
 		margin-left: $close-margin-left;
