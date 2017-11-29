@@ -6,6 +6,7 @@
 {template .render}
 	{@param? elementClasses: string}
 	{@param? id: string}
+	{@param? viewType: string}
 
 	{let $attributes kind="attributes"}
 		class="clay-dataset-display
@@ -20,5 +21,16 @@
 	{/let}
 
 	<div {$attributes}>
+		{delcall ClayDatasetDisplay.List variant="$viewType"}
+		{/delcall}
 	</div>
 {/template}
+
+/**
+ * Default ClayDatasetDisplay.List implementation. This implementation serves
+ * as a mere placeholder for the incr-dom compiler. Tools are expected to
+ * provide their own ClayDatasetDisplay.List implementation to activate their
+ * UIs and components.
+ */
+{deltemplate ClayDatasetDisplay.List}
+{/deltemplate}

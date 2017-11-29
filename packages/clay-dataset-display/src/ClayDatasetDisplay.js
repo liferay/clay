@@ -33,6 +33,15 @@ ClayDatasetDisplay.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
+
+	/**
+	 * Type of the view of the list.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	viewType: Config.string(),
 };
 
 defineWebComponent('clay-dataset-display', ClayDatasetDisplay);
