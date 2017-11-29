@@ -27,7 +27,8 @@ $label-lg: () !default;
 $label-lg: map-merge((
 	font-size: 0.875rem, // 14px
 	height: 1.875rem, // 30px
-	padding-x: 1rem // 16px
+	padding-x: 1rem, // 16px
+	text-transform: none
 ), $label-lg);
 
 // Label Variants
