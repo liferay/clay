@@ -245,6 +245,40 @@ describe('ClayListGroup', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a selectable ClayListGroup with list elements with label', () => {
+		component = new ClayListGroup({
+			items: [
+				{
+					description: 'Description 1',
+					icon: 'folder',
+					label: 'Status',
+					title: 'Item 1',
+					url: '#1',
+				},
+				{
+					description: 'Description 2',
+					icon: 'folder',
+					label: 'Pending',
+					labelStyle: 'warning',
+					title: 'Item 2',
+					url: '#2',
+				},
+				{
+					description: 'Description 3',
+					icon: 'folder',
+					label: 'Aproved',
+					labelStyle: 'success',
+					title: 'Item 3',
+					url: '#3',
+				},
+			],
+			selectable: true,
+			spritemap: spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a selectable ClayListGroup with list elements with action menu', () => {
 		component = new ClayListGroup({
 			items: [
