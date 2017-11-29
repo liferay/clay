@@ -2,7 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './src/ClayDatasetDisplay.js',
+	entry: {
+		'clay-dataset-display': './src/ClayDatasetDisplay.js',
+		'demo': './demos/demo.js',
+	},
 	module: {
 		rules: [
 			{
@@ -22,7 +25,7 @@ module.exports = {
 	output: {
 		library: 'metal',
 		libraryTarget: 'this',
-		filename: './build/globals/clay-dataset-display.js',
+		filename: './build/globals/[name].js',
 	},
 	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
 	resolve: {
