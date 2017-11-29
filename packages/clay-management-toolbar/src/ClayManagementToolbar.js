@@ -23,6 +23,17 @@ const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
 
 filterItemShape.items = filterItemsValidator;
 
+let actionItemShape = {
+	disabled: Config.bool().value(false),
+	label: Config.string().required(),
+	separator: Config.bool().value(false),
+	type: Config.oneOf(['group', 'item']).value('item'),
+};
+
+const actionItemsValidator = Config.arrayOf(Config.shapeOf(actionItemShape));
+
+actionItemShape.items = actionItemsValidator;
+
 /**
  * Metal ClayManagementToolbar component.
  */
@@ -87,7 +98,7 @@ ClayManagementToolbar.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	actionItems: itemsValidator,
+	actionItems: actionItemsValidator,
 
 	/**
 	 * CSS classes to be applied to the element.
