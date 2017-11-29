@@ -70,14 +70,13 @@ ClayDropdown.STATE = {
 	icon: Config.string(),
 
 	/**
-	 * Position in which item indicator symbols will be placed. Needed if any
-	 * item has indicators.
+	 * Position in which item icon will be placed. Needed if any item has icons.
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	indicatorsPosition: Config.oneOf(['left', 'right']),
+	iconsPosition: Config.oneOf(['left', 'right']),
 
 	/**
 	 * List of menu items.

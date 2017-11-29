@@ -382,17 +382,17 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
-	it('should render a dropdown with indicators on the left', () => {
+	it('should render a dropdown with icons on the left', () => {
 		clayDropdownBase = new ClayDropdownBase({
-			indicatorsPosition: 'left',
+			iconsPosition: 'left',
 			items: [
 				{
-					indicatorSymbol: 'check',
+					icon: 'check',
 					label: 'Item 1',
 					url: 'item1url',
 				},
 				{
-					indicatorSymbol: 'check',
+					icon: 'check',
 					label: 'Item 2',
 					url: 'item2url',
 				},
@@ -404,17 +404,17 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
-	it('should render a dropdown with indicators on the right', () => {
+	it('should render a dropdown with icons on the right', () => {
 		clayDropdownBase = new ClayDropdownBase({
-			indicatorsPosition: 'right',
+			iconsPosition: 'right',
 			items: [
 				{
-					indicatorSymbol: 'check',
+					icon: 'check',
 					label: 'Item 1',
 					url: 'item1url',
 				},
 				{
-					indicatorSymbol: 'check',
+					icon: 'check',
 					label: 'Item 2',
 					url: 'item2url',
 				},

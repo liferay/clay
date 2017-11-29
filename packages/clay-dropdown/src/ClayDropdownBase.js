@@ -196,6 +196,15 @@ ClayDropdownBase.STATE = {
 	helpText: Config.string(),
 
 	/**
+	 * Position in which item icons will be placed. Needed if any item has icons.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	iconsPosition: Config.oneOf(['left', 'right']),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdownBase
@@ -203,16 +212,6 @@ ClayDropdownBase.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
-
-	/**
-	 * Position in which item indicator symbols will be placed. Needed if any
-	 * item has indicators.
-	 * @instance
-	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	indicatorsPosition: Config.oneOf(['left', 'right']),
 
 	/**
 	 * List of menu items.

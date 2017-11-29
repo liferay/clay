@@ -12,7 +12,7 @@
 	{@param? expanded: bool}
 	{@param? helpText: string}
 	{@param? id: string}
-	{@param? indicatorsPosition: string}
+	{@param? iconsPosition: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? style: string}
@@ -48,7 +48,7 @@
 			{param caption: $caption /}
 			{param expanded: $expanded /}
 			{param helpText: $helpText /}
-			{param indicatorsPosition: $indicatorsPosition /}
+			{param iconsPosition: $iconsPosition /}
 			{param items: $items /}
 			{param searchable: $searchable /}
 			{param spritemap: $spritemap /}
@@ -62,7 +62,7 @@
  */
 {template .items}
 	{@param items: list<?>}
-	{@param? indicatorsPosition: string}
+	{@param? iconsPosition: string}
 	{@param? isInList: bool}
 	{@param? spritemap: string}
 
@@ -72,8 +72,8 @@
 			{param checked: $item.checked /}
 			{param disabled: $item.disabled /}
 			{param events: $item.events /}
-			{param indicatorSymbol: $item.indicatorSymbol /}
-			{param indicatorsPosition: $indicatorsPosition /}
+			{param icon: $item.icon /}
+			{param iconsPosition: $iconsPosition /}
 			{param inputName: $item.inputName /}
 			{param inputValue: $item.inputValue /}
 			{param isInList: $isInList /}
@@ -121,16 +121,16 @@
 	{@param? caption: string}
 	{@param? expanded: bool}
 	{@param? helpText: string}
-	{@param? indicatorsPosition: string}
+	{@param? iconsPosition: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? type: string}
 
 	{let $listAttributes kind="attributes"}
 		class="dropdown-menu
-			{if $indicatorsPosition == 'left'}
+			{if $iconsPosition == 'left'}
 				{sp}dropdown-menu-indicator-start
-			{elseif $indicatorsPosition == 'right'}
+			{elseif $iconsPosition == 'right'}
 				{sp}dropdown-menu-indicator-end
 			{/if}
 
@@ -156,7 +156,7 @@
 
 			{let $itemList kind="html"}
 				{call .items}
-					{param indicatorsPosition: $indicatorsPosition /}
+					{param iconsPosition: $iconsPosition /}
 					{param isInList: $type == 'list' /}
 					{param items: $items /}
 					{param spritemap: $spritemap /}
@@ -246,8 +246,8 @@
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? events: ?}
-	{@param? indicatorsPosition: string}
-	{@param? indicatorSymbol: string}
+	{@param? iconsPosition: string}
+	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
@@ -281,23 +281,23 @@
 
 			{param label kind="html"}
 				{let $iconContent kind="html"}
-					{if $indicatorSymbol and $spritemap}
+					{if $icon and $spritemap}
 						<div class="dropdown-item-indicator">
 							{call ClayIcon.render}
 								{param spritemap: $spritemap /}
-								{param symbol: $indicatorSymbol /}
+								{param symbol: $icon /}
 							{/call}
 						</div>
 					{/if}
 				{/let}
 
-				{if $indicatorSymbol and $indicatorsPosition == 'left'}
+				{if $icon and $iconsPosition == 'left'}
 					{$iconContent}
 				{/if}
 
 				{$label}
 
-				{if $indicatorSymbol and $indicatorsPosition == 'right'}
+				{if $icon and $iconsPosition == 'right'}
 					{$iconContent}
 				{/if}
 			{/param}
@@ -324,8 +324,8 @@
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? events: ?}
-	{@param? indicatorsPosition: string}
-	{@param? indicatorSymbol: string}
+	{@param? iconsPosition: string}
+	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
@@ -380,8 +380,8 @@
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? events: ?}
-	{@param? indicatorsPosition: string}
-	{@param? indicatorSymbol: string}
+	{@param? iconsPosition: string}
+	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
@@ -404,7 +404,7 @@
 
 	{if $items}
 		{call .items}
-			{param indicatorsPosition: $indicatorsPosition /}
+			{param iconsPosition: $iconsPosition /}
 			{param isInList: $isInList /}
 			{param items: $items /}
 			{param spritemap: $spritemap /}
@@ -429,8 +429,8 @@
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? events: ?}
-	{@param? indicatorsPosition: string}
-	{@param? indicatorSymbol: string}
+	{@param? iconsPosition: string}
+	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
