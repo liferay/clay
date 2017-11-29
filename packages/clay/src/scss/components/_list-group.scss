@@ -3,6 +3,8 @@
 	@include box-shadow($list-group-box-shadow);
 
 	color: $list-group-color;
+	margin-bottom: $list-group-margin-bottom;
+	margin-top: $list-group-margin-top;
 
 	.list-group {
 		@if ($list-group-box-shadow != null) {
