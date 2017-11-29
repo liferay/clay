@@ -276,6 +276,14 @@ describe('ClayManagementToolbar', function() {
 			spritemap: spritemap,
 		});
 
-		expect(true).toBeTruthy();
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.filters.refs.dropdown.refs.dropdownButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'filterDoneClicked',
+			expect.any(Object)
+		);
 	});
 });

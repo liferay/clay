@@ -43,7 +43,7 @@ class ClayManagementToolbar extends Component {
 	 * @private
 	 */
 	handleFilterDoneButtonClick_(event) {
-		this.emit('filterDone', event);
+		this.emit('filterDoneClicked', event);
 	}
 
 	/**
