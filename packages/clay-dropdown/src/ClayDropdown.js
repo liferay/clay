@@ -78,15 +78,6 @@ ClayDropdown.STATE = {
 	icon: Config.string(),
 
 	/**
-	 * Position in which item icon will be placed. Needed if any item has icons.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	iconsPosition: Config.oneOf(['left', 'right']),
-
-	/**
 	 * List of menu items.
 	 * @instance
 	 * @memberof ClayDropdown
@@ -94,6 +85,15 @@ ClayDropdown.STATE = {
 	 * @default undefined
 	 */
 	items: itemsValidator.required(),
+
+	/**
+	 * Position in which item icon will be placed. Needed if any item has icons.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
 	 * Label of the trigger button.

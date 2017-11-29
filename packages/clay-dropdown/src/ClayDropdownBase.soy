@@ -13,7 +13,7 @@
 	{@param? handleButtonClick_: any}
 	{@param? helpText: string}
 	{@param? id: string}
-	{@param? iconsPosition: string}
+	{@param? itemsIconAlignment: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? style: string}
@@ -50,8 +50,8 @@
 			{param expanded: $expanded /}
 			{param handleButtonClick_: $handleButtonClick_ /}
 			{param helpText: $helpText /}
-			{param iconsPosition: $iconsPosition /}
 			{param items: $items /}
+			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param searchable: $searchable /}
 			{param spritemap: $spritemap /}
 			{param type: $type ?: 'list' /}
@@ -64,7 +64,7 @@
  */
 {template .items}
 	{@param items: list<?>}
-	{@param? iconsPosition: string}
+	{@param? itemsIconAlignment: string}
 	{@param? isInList: bool}
 	{@param? spritemap: string}
 
@@ -74,11 +74,11 @@
 			{param checked: $item.checked /}
 			{param disabled: $item.disabled /}
 			{param icon: $item.icon /}
-			{param iconsPosition: $iconsPosition /}
 			{param inputName: $item.inputName /}
 			{param inputValue: $item.inputValue /}
 			{param isInList: $isInList /}
 			{param items: $item.items /}
+			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param label: $item.label ?: '' /}
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
@@ -123,16 +123,16 @@
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
 	{@param? helpText: string}
-	{@param? iconsPosition: string}
+	{@param? itemsIconAlignment: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? type: string}
 
 	{let $listAttributes kind="attributes"}
 		class="dropdown-menu
-			{if $iconsPosition == 'left'}
+			{if $itemsIconAlignment == 'left'}
 				{sp}dropdown-menu-indicator-start
-			{elseif $iconsPosition == 'right'}
+			{elseif $itemsIconAlignment == 'right'}
 				{sp}dropdown-menu-indicator-end
 			{/if}
 
@@ -158,9 +158,9 @@
 
 			{let $itemList kind="html"}
 				{call .items}
-					{param iconsPosition: $iconsPosition /}
 					{param isInList: $type == 'list' /}
 					{param items: $items /}
+					{param itemsIconAlignment: $itemsIconAlignment /}
 					{param spritemap: $spritemap /}
 				{/call}
 			{/let}
@@ -247,12 +247,12 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
-	{@param? iconsPosition: string}
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}
@@ -290,13 +290,13 @@
 					{/if}
 				{/let}
 
-				{if $icon and $iconsPosition == 'left'}
+				{if $icon and $itemsIconAlignment == 'left'}
 					{$iconContent}
 				{/if}
 
 				{$label}
 
-				{if $icon and $iconsPosition == 'right'}
+				{if $icon and $itemsIconAlignment == 'right'}
 					{$iconContent}
 				{/if}
 			{/param}
@@ -322,12 +322,12 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
-	{@param? iconsPosition: string}
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}
@@ -377,12 +377,12 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
-	{@param? iconsPosition: string}
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}
@@ -401,9 +401,9 @@
 
 	{if $items}
 		{call .items}
-			{param iconsPosition: $iconsPosition /}
 			{param isInList: $isInList /}
 			{param items: $items /}
+			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param spritemap: $spritemap /}
 		{/call}
 	{/if}
@@ -425,12 +425,12 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
-	{@param? iconsPosition: string}
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}

@@ -78,15 +78,6 @@ ClayActionsDropdown.STATE = {
 	helpText: Config.string(),
 
 	/**
-	 * Position in which item icon will be placed. Needed if any item has icons.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	iconsPosition: Config.oneOf(['left', 'right']),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayActionsDropdown
@@ -103,6 +94,15 @@ ClayActionsDropdown.STATE = {
 	 * @default undefined
 	 */
 	items: itemsValidator.required(),
+
+	/**
+	 * Position in which item icon will be placed. Needed if any item has icons.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

@@ -12,8 +12,8 @@
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
 	{@param? helpText: string}
-	{@param? iconsPosition: string}
 	{@param? id: string}
+	{@param? itemsIconAlignment: string}
 
   {let $dropdownElementClasses kind="text"}
     dropdown-action
@@ -36,8 +36,8 @@
     {param expanded: $expanded /}
     {param events: ['buttonClicked': $handleButtonClick_] /}
     {param helpText: $helpText /}
-    {param iconsPosition: $iconsPosition /}
     {param id: $id /}
+    {param itemsIconAlignment: $itemsIconAlignment /}
     {param items: $items /}
     {param ref: 'dropdown' /}
     {param spritemap: $spritemap /}

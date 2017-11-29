@@ -360,7 +360,6 @@
 		 **/
 		 new metal.ClayDropdown(
 			{
-				iconsPosition: 'left',
 				items: [
 					{
 						label: 'Item 1',
@@ -385,6 +384,7 @@
 						url: '#4',
 					},
 				],
+				itemsIconAlignment: 'left',
 				spritemap: spritemap,
 				label: 'Trigger Label',
 			},
@@ -396,7 +396,6 @@
 		 **/
 		 new metal.ClayDropdown(
 			{
-				iconsPosition: 'right',
 				items: [
 					{
 						label: 'Item 1',
@@ -421,8 +420,9 @@
 						url: '#4',
 					},
 				],
-				spritemap: spritemap,
+				itemsIconAlignment: 'right',
 				label: 'Trigger Label',
+				spritemap: spritemap,
 			},
 			'#right-icons-block'
 		);

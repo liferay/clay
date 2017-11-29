@@ -468,7 +468,6 @@ describe('ClayDropdownBase', function() {
 
 	it('should render a dropdown with icons on the left', () => {
 		clayDropdownBase = new ClayDropdownBase({
-			iconsPosition: 'left',
 			items: [
 				{
 					icon: 'check',
@@ -481,6 +480,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item2url',
 				},
 			],
+			itemsIconAlignment: 'left',
 			label: 'Trigger',
 			spritemap: 'icons.svg',
 		});
@@ -490,7 +490,6 @@ describe('ClayDropdownBase', function() {
 
 	it('should render a dropdown with icons on the right', () => {
 		clayDropdownBase = new ClayDropdownBase({
-			iconsPosition: 'right',
 			items: [
 				{
 					icon: 'check',
@@ -503,6 +502,7 @@ describe('ClayDropdownBase', function() {
 					url: 'item2url',
 				},
 			],
+			itemsIconAlignment: 'right',
 			label: 'Trigger',
 			spritemap: 'icons.svg',
 		});
