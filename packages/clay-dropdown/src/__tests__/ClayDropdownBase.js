@@ -114,6 +114,22 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should render a dropdown of type form with items', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					disabled: true,
+					label: 'Item 1',
+					url: 'item1url',
+				},
+			],
+			label: 'Trigger',
+			type: 'form',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with items of type checkbox', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
@@ -127,11 +143,36 @@ describe('ClayDropdownBase', function() {
 					inputName: 'checkbox2name',
 					inputValue: 'checkbox2value',
 					label: 'Item 2',
+					separator: true,
 					type: 'checkbox',
 				},
 			],
 			label: 'Trigger',
 			type: 'form',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
+	it('should render a dropdown with type list with items of type checkbox', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					inputName: 'checkbox1name',
+					inputValue: 'checkbox1value',
+					label: 'Item 1',
+					separator: true,
+					type: 'checkbox',
+				},
+				{
+					inputName: 'checkbox2name',
+					inputValue: 'checkbox2value',
+					label: 'Item 2',
+					separator: true,
+					type: 'checkbox',
+				},
+			],
+			label: 'Trigger',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -342,6 +383,49 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
+	it('should render a dropdown of type form with groups', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					label: 'Group 1',
+					items: [
+						{
+							active: true,
+							label: 'Item 1',
+							url: '#1',
+						},
+						{
+							label: 'Item 2',
+							url: '#2',
+						},
+					],
+					separator: true,
+					type: 'group',
+				},
+				{
+					label: 'Group 2',
+					items: [
+						{
+							label: 'Item 3',
+							url: '#3',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							url: '#4',
+						},
+					],
+					type: 'group',
+				},
+			],
+			label: 'Trigger Label',
+			spritemap: 'icons.svg',
+			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
