@@ -17,10 +17,10 @@
 .nav-btn {
 	align-items: center;
 	display: flex;
+	height: $nav-item-monospaced-size;
 	justify-content: center;
 	line-height: $line-height-base;
 	margin: $nav-btn-margin-y $nav-btn-margin-x;
-	min-height: $nav-item-monospaced-size;
 	min-width: $nav-item-monospaced-size;
 	padding-bottom: 0;
 	padding-top: 0;
@@ -57,9 +57,9 @@
 .nav-link-monospaced {
 	align-items: center;
 	display: flex;
+	height: $nav-item-monospaced-size;
 	justify-content: center;
 	margin: $nav-btn-margin-y $nav-btn-margin-x;
-	min-height: $nav-item-monospaced-size;
 	min-width: $nav-item-monospaced-size;
 	padding: 0;
 
