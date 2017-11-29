@@ -6,8 +6,6 @@
 
 	@include border-radius($panel-border-radius);
 
-	display: flex;
-	flex-direction: column;
 	margin-bottom: $panel-margin-bottom;
 	word-wrap: break-word;
 }
@@ -18,6 +16,9 @@
 	@if not ($panel-header-offset-border-radius == 0) {
 		@include border-top-radius($panel-header-offset-border-radius);
 	}
+
+	display: block;
+	width: 100%;
 
 	&.collapsed {
 		@if not ($panel-header-offset-border-radius == 0) {
