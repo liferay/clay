@@ -169,7 +169,14 @@ ClayManagementToolbar.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	viewTypes: itemsValidator,
+	viewTypes: Config.arrayOf(
+		Config.shapeOf({
+			active: Config.bool().value(false),
+			disabled: Config.bool().value(false),
+			icon: Config.string().required(),
+			label: Config.string().required(),
+		})
+	),
 };
 
 defineWebComponent('clay-management-toolbar', ClayManagementToolbar);

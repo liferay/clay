@@ -208,11 +208,11 @@
 							{param icon kind="text"}
 								{foreach $viewType in $viewTypes}
 									{if $viewType.active}
-										{$viewType.indicatorSymbol}
+										{$viewType.icon}
 									{/if}
 								{/foreach}
 							{/param}
-							{param indicatorsPosition: 'left' /}
+							{param iconsPosition: 'left' /}
 							{param items: $viewTypes /}
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link nav-link-monospaced' /}
