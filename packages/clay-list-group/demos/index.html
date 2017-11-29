@@ -68,29 +68,36 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Action Menu</h4>
+			<h4>Selectable ListGroup with Label</h4>
 			<div id="container7"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Quick Action Menu</h4>
+			<h4>Selectable ListGroup with Action Menu</h4>
 			<div id="container8"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Header Title</h4>
+			<h4>Selectable ListGroup with Quick Action Menu</h4>
 			<div id="container9"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Selected Items</h4>
+			<h4>Selectable ListGroup with Header Title</h4>
 			<div id="container10"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable ListGroup with Selected Items</h4>
+			<div id="container11"></div>
 		</div>
 	</div>
 
@@ -263,23 +270,25 @@
 		new metal.ClayListGroup({
 			items: [
 				{
-					actionItems: actionItems,
 					description: 'Description 1',
 					icon: 'folder',
+					label: 'Status',
 					title: 'Item 1',
 					url: '#1',
 				},
 				{
-					actionItems: actionItems,
 					description: 'Description 2',
 					icon: 'folder',
+					label: 'Peding',
+					labelStyle: 'warning',
 					title: 'Item 2',
 					url: '#2',
 				},
 				{
-					actionItems: actionItems,
 					description: 'Description 3',
 					icon: 'folder',
+					label: 'Aproved',
+					labelStyle: 'success',
 					title: 'Item 3',
 					url: '#3',
 				},
@@ -291,23 +300,28 @@
 		new metal.ClayListGroup({
 			items: [
 				{
-					actionItems: actionItemsWithQuickItems,
+					actionItems: actionItems,
 					description: 'Description 1',
 					icon: 'folder',
+					label: 'Status',
 					title: 'Item 1',
 					url: '#1',
 				},
 				{
-					actionItems: actionItemsWithQuickItems,
+					actionItems: actionItems,
 					description: 'Description 2',
 					icon: 'folder',
+					label: 'Peding',
+					labelStyle: 'warning',
 					title: 'Item 2',
 					url: '#2',
 				},
 				{
-					actionItems: actionItemsWithQuickItems,
+					actionItems: actionItems,
 					description: 'Description 3',
 					icon: 'folder',
+					label: 'Aproved',
+					labelStyle: 'success',
 					title: 'Item 3',
 					url: '#3',
 				},
@@ -322,6 +336,7 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 1',
 					icon: 'folder',
+					label: 'Status',
 					title: 'Item 1',
 					url: '#1',
 				},
@@ -329,6 +344,8 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 2',
 					icon: 'folder',
+					label: 'Peding',
+					labelStyle: 'warning',
 					title: 'Item 2',
 					url: '#2',
 				},
@@ -336,6 +353,41 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 3',
 					icon: 'folder',
+					label: 'Aproved',
+					labelStyle: 'success',
+					title: 'Item 3',
+					url: '#3',
+				},
+			],
+			selectable: true,
+			spritemap: spritemap,
+		}, '#container9');
+
+		new metal.ClayListGroup({
+			items: [
+				{
+					actionItems: actionItemsWithQuickItems,
+					description: 'Description 1',
+					icon: 'folder',
+					label: 'Status',
+					title: 'Item 1',
+					url: '#1',
+				},
+				{
+					actionItems: actionItemsWithQuickItems,
+					description: 'Description 2',
+					icon: 'folder',
+					label: 'Peding',
+					labelStyle: 'warning',
+					title: 'Item 2',
+					url: '#2',
+				},
+				{
+					actionItems: actionItemsWithQuickItems,
+					description: 'Description 3',
+					icon: 'folder',
+					label: 'Aproved',
+					labelStyle: 'success',
 					title: 'Item 3',
 					url: '#3',
 				},
@@ -343,7 +395,7 @@
 			selectable: true,
 			spritemap: spritemap,
 			title: 'Group Header 1',
-		}, '#container9');
+		}, '#container10');
 
 		new metal.ClayListGroup({
 			items: [
@@ -351,6 +403,7 @@
 					actionItems: actionItems,
 					description: 'Description 1',
 					icon: 'folder',
+					label: 'Status',
 					selected: true,
 					title: 'Item 1',
 					url: '#1',
@@ -359,6 +412,8 @@
 					actionItems: actionItems,
 					description: 'Description 2',
 					icon: 'folder',
+					label: 'Peding',
+					labelStyle: 'warning',
 					selected: true,
 					title: 'Item 2',
 					url: '#2',
@@ -367,6 +422,8 @@
 					actionItems: actionItems,
 					description: 'Description 3',
 					icon: 'folder',
+					label: 'Aproved',
+					labelStyle: 'success',
 					selected: true,
 					title: 'Item 3',
 					url: '#3',
@@ -374,7 +431,7 @@
 			],
 			selectable: true,
 			spritemap: spritemap,
-		}, '#container10');
+		}, '#container11');
 	</script>
 </body>
 </html>
