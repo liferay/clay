@@ -14,6 +14,8 @@ exports[`ClaySticker should render a \`secondary color\` sticker 1`] = `<span cl
 
 exports[`ClaySticker should render a \`success color\` sticker 1`] = `<span class="sticker sticker-success"></span>`;
 
+exports[`ClaySticker should render a \`unstyled\` sticker 1`] = `<span class="sticker sticker-unstyled"></span>`;
+
 exports[`ClaySticker should render a \`warning color\` sticker 1`] = `<span class="sticker sticker-warning"></span>`;
 
 exports[`ClaySticker should render a bottom left positioned sticker 1`] = `<span class="sticker sticker-primary sticker-bottom-left"></span>`;

@@ -204,6 +204,14 @@ describe('ClaySticker', function() {
 		expect(sticker).toMatchSnapshot();
 	});
 
+	it('should render a `unstyled` sticker', () => {
+		sticker = new ClaySticker({
+			style: 'unstyled',
+		});
+
+		expect(sticker).toMatchSnapshot();
+	});
+
 	it('should render a `warning color` sticker', () => {
 		sticker = new ClaySticker({
 			style: 'warning',
