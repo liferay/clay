@@ -1,0 +1,78 @@
+.widget {
+	border-radius: 6px;
+	box-shadow: 0 0 0 1px #EEE;
+}
+
+.widget-toolbar {
+	align-items: center;
+	background-color: $light;
+	border-color: #EEE;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	display: flex;
+	padding-bottom: 4px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 4px;
+}
+
+.widget-header {
+	@include clearfix;
+
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+}
+
+.widget-controls {
+	float: right;
+	margin-left: 0.5rem;
+}
+
+.widget-body {
+	@include clearfix;
+
+	padding-bottom: 0.1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+}
+
+.widget-title {
+	display: inline-block;
+	margin-bottom: 0;
+	max-width: 100%;
+}
+
+.widget-subtitle {
+	display: block;
+	font-size: 50%;
+	color: $secondary;
+	margin-top: 8px;
+	word-wrap: break-word;
+}
+
+// Widget Article
+
+.widget-article {
+	margin-bottom: 15px;
+}
+
+.widget-article-header {
+	@include clearfix;
+
+	margin-bottom: 15px;
+}
+
+.widget-article-body {
+	@include clearfix;
+
+	margin-bottom: 15px;
+}
+
+.widget-article-footer {
+	@include clearfix;
+}

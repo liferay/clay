@@ -21,6 +21,8 @@
 }
 
 .sheet-header {
+	@include clearfix;
+
 	margin-bottom: $sheet-header-margin-bottom;
 
 	@include clay-scale-component {
@@ -29,6 +31,8 @@
 }
 
 .sheet-section {
+	@include clearfix;
+
 	margin-bottom: $sheet-section-margin-bottom;
 
 	@include clay-scale-component {
@@ -37,6 +41,8 @@
 }
 
 .sheet-footer {
+	@include clearfix;
+
 	margin-bottom: $sheet-footer-margin-bottom;
 	margin-left: $sheet-footer-margin-left;
 	margin-right: $sheet-footer-margin-right;
