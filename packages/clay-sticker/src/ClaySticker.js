@@ -121,6 +121,7 @@ ClaySticker.STATE = {
 		'primary',
 		'secondary',
 		'success',
+		'unstyled',
 		'warning',
 	]).value('primary'),
 };
