@@ -17,4 +17,8 @@ jdk:
 
 language: java
 
-script: npm run ci
+script: 
+  - npm run build
+  - npm run checkFormat
+  - npm run lint
+  - npm run jest

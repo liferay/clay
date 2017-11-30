@@ -3,17 +3,17 @@
   "scripts": {
     "a11y": "metal-a11y --packages ./packages -c demos/index.html",
     "build": "lerna run build",
-    "ci": "npm run build && npm run checkFormat && npm run lint && npm run test",
     "checkFormat": "npm run prettier -- --list-different",
     "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
     "format": "npm run prettier -- --write",
+    "jest": "jest",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
     "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay-components,generator-metal-clay,clay-dropdown,clay-alert,clay-list-group,clay-management-toolbar,node_modules}/**'",
     "precommit": "lint-staged",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "start": "http-server . -p 4000",
-    "test": "lerna run soy && jest && npm run a11y"
+    "test": "npm run build && npm run jest"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
