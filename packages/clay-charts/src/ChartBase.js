@@ -604,6 +604,15 @@ ChartBase.STATE = {
 	}),
 
 	/**
+	 * Defines a custom colors for data in chart.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Object|undefined}
+	 * @default undefined
+	 */
+	colors: Config.object().value({}),
+
+	/**
 	 * Sets billboard's data.color config.
 	 * @instance
 	 * @memberof ChartBase
