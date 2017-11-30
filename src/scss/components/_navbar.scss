@@ -26,6 +26,8 @@
 }
 
 .navbar-nav .nav-item {
+	word-wrap: normal;
+
 	> .custom-control,
 	> .form-check {
 		margin-bottom: 0;
