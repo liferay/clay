@@ -340,6 +340,10 @@
 	> .input-group-input .form-control {
 		font-size: $input-font-size-lg;
 		height: $input-height-lg;
+		padding-bottom: $input-padding-y-lg;
+		padding-left: $input-padding-x-lg;
+		padding-right: $input-padding-x-lg;
+		padding-top: $input-padding-y-lg;
 
 		@include clay-scale-component {
 			font-size: $input-font-size-lg-mobile;
@@ -416,6 +420,10 @@
 	> .input-group-input .form-control {
 		font-size: $input-font-size-sm;
 		height: $input-height-sm;
+		padding-bottom: $input-padding-y-sm;
+		padding-left: $input-padding-x-sm;
+		padding-right: $input-padding-x-sm;
+		padding-top: $input-padding-y-sm;
 
 		@include clay-scale-component {
 			font-size: $input-font-size-sm-mobile;
