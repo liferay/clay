@@ -90,10 +90,20 @@ ClayCheckbox.STATE = {
 	 * Label of the input. Required for accesibility.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {!string|html}
+	 * @type {?string}
 	 * @default undefined
 	 */
-	label: Config.any().required(),
+	label: Config.string(),
+
+	/**
+	 * Custom content of the checkbox label. Use it to use your custom html.
+	 * If this is used label and hideLabel params are ignored.
+	 * @instance
+	 * @memberof ClayCheckbox
+	 * @type {?html}
+	 * @default undefined
+	 */
+	labelContent: Config.any(),
 
 	/**
 	 * Name to be applied to the element.
