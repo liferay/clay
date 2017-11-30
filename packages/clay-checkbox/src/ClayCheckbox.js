@@ -90,7 +90,7 @@ ClayCheckbox.STATE = {
 	 * Label of the input. Required for accesibility.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	label: Config.string(),
@@ -100,7 +100,7 @@ ClayCheckbox.STATE = {
 	 * If this is used label and hideLabel params are ignored.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?html}
+	 * @type {?html|undefined}
 	 * @default undefined
 	 */
 	labelContent: Config.any(),
