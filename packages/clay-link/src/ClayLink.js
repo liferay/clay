@@ -3,13 +3,23 @@ import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
+import {domData} from 'metal-dom';
 
 import templates from './ClayLink.soy.js';
 
 /**
  * Implementation of the Metal Clay Link.
  */
-class ClayLink extends Component {}
+class ClayLink extends Component {
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		for (let dataKey in this.data) {
+			domData.get(this.element, dataKey, this.data[dataKey]);
+		}
+	}
+}
 
 /**
  * State definition.
@@ -44,6 +54,15 @@ ClayLink.STATE = {
 	 * @default undefined
 	 */
 	buttonStyle: Config.oneOf(['borderless', 'link', 'primary', 'secondary']),
+
+	/**
+	 * Data to add to the element.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?object}
+	 * @default undefined
+	 */
+	data: Config.object(),
 
 	/**
 	 * Sets the download attribute on the anchor tag.
