@@ -127,4 +127,12 @@ describe('ClayCheckbox', function() {
 
 		expect(clayCheckbox).toMatchSnapshot();
 	});
+
+	it('should render a checkbox with custom label content', () => {
+		clayCheckbox = new ClayCheckbox({
+			labelContent: '<div><h4>My Checkbox</h4></div>',
+		});
+
+		expect(clayCheckbox).toMatchSnapshot();
+	});
 });
