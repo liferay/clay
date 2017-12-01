@@ -210,7 +210,7 @@ describe('ClayCard', function() {
 
 	it('should render a ClayCard with title', () => {
 		component = new ClayCard({
-			subtitle: 'empty-background.png',
+			title: 'empty-background.png',
 			spritemap: spritemap,
 		});
 

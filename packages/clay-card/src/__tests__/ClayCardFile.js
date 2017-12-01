@@ -192,7 +192,7 @@ describe('ClayCardFile', function() {
 
 	it('should render a ClayCardFile with title', () => {
 		component = new ClayCardFile({
-			subtitle: 'empty-background.png',
+			title: 'empty-background.png',
 			spritemap: spritemap,
 		});
 

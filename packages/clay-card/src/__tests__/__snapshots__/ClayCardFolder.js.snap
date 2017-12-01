@@ -188,7 +188,9 @@ exports[`ClayCardFolder should render a ClayCardFolder with title 1`] = `
           <use xlink:href="icons.svg#folder"></use>
         </svg>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+      <div class="flex-col flex-col-expand flex-col-gutters">
+        <div class="card-title text-truncate" title="empty-background.png">empty-background.png</div>
+      </div>
     </div>
   </div>
 </div>

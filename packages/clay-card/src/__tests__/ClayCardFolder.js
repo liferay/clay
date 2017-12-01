@@ -115,7 +115,7 @@ describe('ClayCardFolder', function() {
 
 	it('should render a ClayCardFolder with title', () => {
 		component = new ClayCardFolder({
-			subtitle: 'empty-background.png',
+			title: 'empty-background.png',
 			spritemap: spritemap,
 		});
 
