@@ -4,6 +4,7 @@
 	@include border-radius($widget-border-radius);
 
 	box-shadow: 0 0 0 $widget-border-width $widget-border-color;
+	word-wrap: break-word;
 }
 
 .widget-toolbar {
@@ -82,7 +83,6 @@
 	display: block;
 	font-size: $widget-article-subtitle-font-size;
 	margin-top: $widget-article-subtitle-margin-top;
-	word-wrap: break-word;
 }
 
 .widget-article-header {
