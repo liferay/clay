@@ -123,6 +123,32 @@ a.list-group-subtitle,
 	}
 }
 
+// List Group Text
+
+.list-group-text {
+	@include clay-text-typography($list-group-text);
+}
+
+a.list-group-text,
+.list-group-text a {
+	@include clay-link($list-group-text-link);
+
+	display: inline-block;
+}
+
+// List Group Subtext
+
+.list-group-subtext {
+	@include clay-text-typography($list-group-subtext);
+}
+
+a.list-group-subtext,
+.list-group-subtext a {
+	@include clay-link($list-group-subtext-link);
+
+	display: inline-block;
+}
+
 // List Group Details
 
 .list-group-detail {

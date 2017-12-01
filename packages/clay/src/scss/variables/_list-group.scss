@@ -35,6 +35,28 @@ $list-group-subtitle-hover-color: null !default;
 $list-group-subtitle-hover-text-decoration: null !default;
 $list-group-subtitle-active-color: $list-group-active-color !default;
 
+// List Group Text
+
+$list-group-text: (
+	color: $body-color
+) !default;
+
+$list-group-text-link: (
+	color: $body-color
+) !default;
+
+// List Group Subtext
+
+$list-group-subtext: (
+	color: $secondary
+) !default;
+
+$list-group-subtext-link: (
+	color: $secondary
+) !default;
+
+// List Group Detail
+
 $list-group-detail-margin-bottom: null !default;
 $list-group-detail-margin-top: 0.25rem !default; // 4px
 
