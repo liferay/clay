@@ -79,6 +79,8 @@
 	font-weight: $list-group-header-title-font-weight;
 	margin-bottom: $list-group-header-title-margin-bottom;
 	text-transform: $list-group-header-title-text-transform;
+
+	@include clay-text-typography($list-group-header-title);
 }
 
 // List Group Title
