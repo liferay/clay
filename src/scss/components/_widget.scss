@@ -1,4 +1,6 @@
 .widget {
+	background-color: $widget-bg;
+
 	@include border-radius($widget-border-radius);
 
 	box-shadow: 0 0 0 $widget-border-width $widget-border-color;
