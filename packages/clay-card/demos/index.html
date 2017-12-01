@@ -76,47 +76,44 @@
 	<script type="text/javascript">
 		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 		var image = 'https://claycss.com//images/thumbnail_coffee.jpg';
+		var items = [
+			{
+				label: 'Edit',
+				separator: true,
+				url: '#1'
+			},
+			{
+				label: 'Save',
+				url: '#1'
+			}
+		];
 
 		/*
 		 * Card default
 		 */
 		new metal.ClayCard({
-			actionsItems: [
-				{
-					label: 'Edit'
-				},
-				{
-					label: 'Save'
-				}
-			],
-			title: 'thumbnail_coffee.jpg',
-			subtitle: 'Author Action',
-			imageSrc: image,
+			actionsItems: items,
 			imageAlt: 'thumbnail',
-			type: 'JPG',
-			url: '#1',
-			typeStyle: 'danger',
+			imageSrc: image,
 			spritemap: spritemap
+			subtitle: 'Author Action',
+			title: 'thumbnail_coffee.jpg',
+			type: 'JPG',
+			typeStyle: 'danger',
+			url: '#1',
 		}, '#card-block');
 
 		new metal.ClayCard({
-			actionsItems: [
-				{
-					label: 'Edit'
-				},
-				{
-					label: 'Save'
-				}
-			],
+			actionsItems: items,
 			checkbox: {
 				checked: true
 			},
-			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-			subtitle: 'Author Action',
 			icon: 'camera',
+			spritemap: spritemap
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
 			type: 'SVG',
 			typeStyle: 'warning',
-			spritemap: spritemap
 		}, '#card-icon-block');
 
 		new metal.ClayCard({
@@ -124,12 +121,12 @@
 				checked: true,
 				disabled: true
 			},
-			title: 'empty-background.png',
-			subtitle: 'Author Action',
 			imageAlt: 'thumbnail',
-			spritemap: spritemap,
 			label: 'Approved',
 			labelStyle: 'success',
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'empty-background.png',
 			type: 'PNG',
 			typeStyle: 'primary'
 		}, '#checkbox-block');
@@ -138,12 +135,12 @@
 		 * Card File
 		 */
 		new metal.ClayCardFile({
-			title: 'deliverable.doc',
-			subtitle: 'Stevie Ray Vaughn',
-			spritemap: spritemap,
 			icon: 'documents-and-media',
 			label: 'Approved',
 			labelStyle: 'success',
+			spritemap: spritemap,
+			subtitle: 'Stevie Ray Vaughn',
+			title: 'deliverable.doc',
 			type: 'DOC',
 			typeStyle: 'danger'
 		}, '#file-block');
@@ -152,9 +149,9 @@
 		 * User card
 		 */
 		new metal.ClayCardUser({
-			title: 'User Name',
-			subtitle: 'Latest Action',
 			spritemap: spritemap,
+			subtitle: 'Latest Action',
+			title: 'User Name',
 			type: 'HS',
 			typeStyle: 'danger'
 		}, '#user-block');
@@ -164,36 +161,29 @@
 				checked: true,
 				disabled: true
 			},
-			title: 'User name',
-			subtitle: 'Latest Action',
-			spritemap: spritemap,
-			imageSrc: image,
 			imageAlt: 'thumbnail',
+			imageSrc: image,
+			spritemap: spritemap,
+			subtitle: 'Latest Action',
+			title: 'User name',
 		}, '#user-image-block');
 
 		/*
 		 * Folder card
 		 */
 		new metal.ClayCardFolder({
-			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 			spritemap: spritemap
+			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 		}, '#directory-block');
 
 		new metal.ClayCardFolder({
-			actionsItems: [
-				{
-					label: 'Edit'
-				},
-				{
-					label: 'Save'
-				}
-			],
+			actionsItems: items,
 			checkbox: {
 				checked: true,
 				indeterminate: true
 			},
-			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 			spritemap: spritemap
+			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 		}, '#directory-checkbox-block');
 
 	</script>
