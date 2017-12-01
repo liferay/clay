@@ -90,6 +90,12 @@
 	margin-bottom: $widget-article-body-margin-bottom;
 }
 
+.widget-article-section {
+	@include clearfix;
+
+	margin-bottom: $widget-article-section-margin-bottom;
+}
+
 .widget-article-footer {
 	@include clearfix;
 }
