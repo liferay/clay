@@ -17,13 +17,15 @@ $list-group-header-title-font-weight: null !default;
 $list-group-header-title-margin-bottom: 0 !default;
 $list-group-header-title-text-transform: null !default;
 
-$list-group-title-color: null !default;
-$list-group-title-font-size: 1.25rem !default; // 20px
-$list-group-title-font-weight: $font-weight-semi-bold !default;
-$list-group-title-margin-bottom: 0.5rem !default; // 8px
-$list-group-title-text-decoration: null !default;
-$list-group-title-hover-color: null !default;
-$list-group-title-hover-text-decoration: null !default;
+// List Group Title
+
+$list-group-title: (
+	font-size: 1.25rem,
+	font-weight: $font-weight-semi-bold
+) !default;
+
+$list-group-title-link: () !default;
+
 $list-group-title-active-color: $list-group-active-color !default;
 
 // List Group Text
