@@ -1,44 +1,54 @@
 .widget {
-	border-radius: 6px;
-	box-shadow: 0 0 0 1px #EEE;
+	@include border-radius($widget-border-radius);
+
+	box-shadow: 0 0 0 $widget-border-width $widget-border-color;
 }
 
 .widget-toolbar {
 	align-items: center;
-	background-color: $light;
-	border-color: #EEE;
+	background-color: $widget-toolbar-bg;
+	border-color: $widget-border-color;
 	border-style: solid;
-	border-width: 0 0 1px 0;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-width: $widget-toolbar-border-width;
+
+	@include border-top-radius($widget-border-radius);
+
 	display: flex;
-	padding-bottom: 4px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 4px;
+	padding-bottom: $widget-toolbar-padding-y;
+	padding-left: $widget-toolbar-padding-x;
+	padding-right: $widget-toolbar-padding-x;
+	padding-top: $widget-toolbar-padding-y;
 }
 
 .widget-header {
 	@include clearfix;
 
-	padding-bottom: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
+	padding-bottom: $widget-header-padding-y;
+	padding-left: $widget-header-padding-x;
+	padding-right: $widget-header-padding-x;
+	padding-top: $widget-header-padding-y;
+
+	.widget-title {
+		color: $widget-header-title-color;
+		font-size: $widget-header-title-font-size;
+		margin-bottom: $widget-header-title-margin-bottom;
+		margin-top: $widget-header-title-margin-top;
+		text-transform: $widget-header-title-text-transform;
+	}
 }
 
 .widget-controls {
 	float: right;
-	margin-left: 0.5rem;
+	margin-left: $widget-controls-margin-left;
 }
 
 .widget-body {
 	@include clearfix;
 
-	padding-bottom: 0.1px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
+	padding-bottom: $widget-body-padding-bottom;
+	padding-left: $widget-body-padding-left;
+	padding-right: $widget-body-padding-right;
+	padding-top: $widget-body-padding-top;
 }
 
 .widget-title {
@@ -49,28 +59,39 @@
 
 .widget-subtitle {
 	display: block;
-	font-size: 50%;
-	color: $secondary;
-	margin-top: 8px;
 	word-wrap: break-word;
 }
 
 // Widget Article
 
 .widget-article {
-	margin-bottom: 15px;
+	margin-bottom: $widget-article-margin-bottom;
+
+	.widget-title {
+		color: $widget-article-title-color;
+		font-size: $widget-article-title-font-size;
+		margin-bottom: $widget-article-title-margin-bottom;
+		margin-top: $widget-article-title-margin-top;
+	}
+
+	.widget-subtitle {
+		color: $widget-article-subtitle-color;
+		font-size: $widget-article-subtitle-font-size;
+		margin-top: $widget-article-subtitle-margin-top;
+
+	}
 }
 
 .widget-article-header {
 	@include clearfix;
 
-	margin-bottom: 15px;
+	margin-bottom: $widget-article-margin-bottom;
 }
 
 .widget-article-body {
 	@include clearfix;
 
-	margin-bottom: 15px;
+	margin-bottom: $widget-article-body-margin-bottom;
 }
 
 .widget-article-footer {
