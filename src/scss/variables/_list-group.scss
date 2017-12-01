@@ -7,15 +7,11 @@ $list-group-margin-top: null !default;
 // Use values flex-start, flex-end, or center
 $list-group-item-flex-align-items: flex-start !default;
 
+// List Group Header
+
 $list-group-header-bg: $list-group-bg !default;
 $list-group-header-padding-x: $list-group-item-padding-x !default;
 $list-group-header-padding-y: $list-group-item-padding-y !default;
-
-$list-group-header-title-color: null !default;
-$list-group-header-title-font-size: 1rem !default;
-$list-group-header-title-font-weight: null !default;
-$list-group-header-title-margin-bottom: 0 !default;
-$list-group-header-title-text-transform: null !default;
 
 $list-group-header-title: (
 	font-size: 1rem
