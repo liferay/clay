@@ -1,0 +1,11 @@
+$widget-spacer: 1.5rem !default; // 24px
+
+$widget-header-title-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
+$widget-header-title-font-size: 1rem !default;
+$widget-header-title-margin-bottom: 0.40625rem !default; // 6.5px
+$widget-header-title-margin-top: 0.40625rem !default; // 6.5px
+
+$widget-article-title-font-weight: $font-weight-bold !default;
+
+$widget-admin-border-color: rgba(24, 101, 251, 0.25) !default;
+$widget-admin-toolbar-bg: lighten(saturate($primary, 3.40), 43.14) !default;

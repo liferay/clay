@@ -4,17 +4,19 @@ $widget-border-width: 1px !default;
 
 $widget-border-radius: $border-radius !default;
 
+$widget-spacer: 1rem !default;
+
 // Widget Toolbar
 
 $widget-toolbar-bg: $light !default;
 $widget-toolbar-border-width: 0 0 $widget-border-width 0 !default;
-$widget-toolbar-padding-x: ($grid-gutter-width / 2) !default; // 15px
+$widget-toolbar-padding-x: $widget-spacer !default; // 15px
 $widget-toolbar-padding-y: 0.25rem !default; // 4px
 
 // Widget Header
 
-$widget-header-padding-x: ($grid-gutter-width / 2) !default;
-$widget-header-padding-y: ($grid-gutter-width / 2) !default;
+$widget-header-padding-x: $widget-spacer !default;
+$widget-header-padding-y: $widget-spacer !default;
 
 $widget-header-title-color: $secondary !default;
 $widget-header-title-font-size: 1.25rem !default; // 20px
@@ -27,19 +29,19 @@ $widget-controls-margin-left: 0.5rem !default;
 // Widget Body
 
 $widget-body-padding-bottom: 0.1px !default;
-$widget-body-padding-left: ($grid-gutter-width / 2) !default; // 15px
-$widget-body-padding-right: ($grid-gutter-width / 2) !default; // 15px
-$widget-body-padding-top: ($grid-gutter-width / 2) !default; // 15px
+$widget-body-padding-left: $widget-spacer !default; // 15px
+$widget-body-padding-right: $widget-spacer !default; // 15px
+$widget-body-padding-top: $widget-spacer !default; // 15px
 
 // Widget Article
 
-$widget-article-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
+$widget-article-margin-bottom: $widget-spacer !default; // 15px
 
-$widget-article-header-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
+$widget-article-header-margin-bottom: $widget-spacer !default; // 15px
 
-$widget-article-body-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
+$widget-article-body-margin-bottom: $widget-spacer !default; // 15px
 
-$widget-article-section-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
+$widget-article-section-margin-bottom: $widget-spacer !default; // 15px
 
 $widget-article-divider-width: 1px !default;
 $widget-article-divider-color: $gray-200 !default;
