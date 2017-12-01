@@ -1,0 +1,422 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayCardFile should render a ClayCardFile with actionsItems 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col">
+        <div class="dropdown dropdown-action">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+              <use xlink:href="icons.svg#ellipsis-v"></use>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <ul class="list-unstyled">
+              <li>
+                <a class=" dropdown-item" href="#1">Edit</a>
+              </li>
+              <li>
+                <a class=" dropdown-item" href="#1">Save</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with checkbox \`name\` 1`] = `
+<div class="form-check form-check-card form-check-top-left card-type-asset">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with checkbox \`value\` 1`] = `
+<div class="form-check form-check-card form-check-top-left card-type-asset">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" value="checkbox" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with checkbox checked 1`] = `
+<div class="form-check form-check-card form-check-top-left card-type-asset">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with checkbox disabled 1`] = `
+<div class="form-check form-check-card form-check-top-left card-type-asset">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with checkbox indeterminate 1`] = `
+<div class="form-check form-check-card form-check-top-left card-type-asset">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with classes 1`] = `
+<div class="card card-type-asset my-custom-class">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with icon 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents">
+        <use xlink:href="icons.svg#documents"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with id 1`] = `
+<div class="card card-type-asset" id="myId">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with label 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-detail">
+          <span class="label label-secondary">Approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with labelStyle \`danger color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-detail">
+          <span class="label label-danger">Approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with labelStyle \`info color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-detail">
+          <span class="label label-info">Approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with labelStyle \`secondary color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-detail">
+          <span class="label label-secondary">Approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with labelStyle \`success color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-detail">
+          <span class="label label-success">Approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with labelStyle \`warning color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-detail">
+          <span class="label label-warning">Approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with subtitle 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with title 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-subtitle text-truncate" title="empty-background.png">empty-background.png</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`danger color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-danger sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`dark color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-dark sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`info color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-info sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`light color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-light sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`primary color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`secondary color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-secondary sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`success color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-success sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type \`warning color\` 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-warning sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with type 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render a ClayCardFile with url 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <a class=" card-title text-truncate" href="#1"></a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFile should render the default markup 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand"></div>
+    </div>
+  </div>
+</div>
+`;
