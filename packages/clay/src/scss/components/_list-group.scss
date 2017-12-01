@@ -99,7 +99,7 @@ a.list-group-title,
 }
 
 a.list-group-text,
-.list-group-text a {
+.list-group-text.text-truncate a {
 	@include clay-link($list-group-text-link);
 
 	display: inline-block;
@@ -113,7 +113,7 @@ a.list-group-text,
 }
 
 a.list-group-subtext,
-.list-group-subtext a {
+.list-group-subtext.text-truncate a {
 	@include clay-link($list-group-subtext-link);
 
 	display: inline-block;
