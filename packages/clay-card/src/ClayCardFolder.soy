@@ -1,0 +1,32 @@
+{namespace ClayCardFolder}
+
+{template .render}
+    {@param spritemap: string}
+    {@param? actionsItems: list<[
+        label: string,
+        separator: bool,
+        url: string
+    ]>}
+    {@param? checkbox: [
+		checked: bool,
+		disabled: bool,
+		indeterminate: bool,
+		name: string,
+		value: string
+	]}
+    {@param? elementClasses: string}
+    {@param? id: string}
+    {@param? title: string}
+    {@param? url: string}
+
+    {call ClayCardBase.render}
+        {param actionsItems: $actionsItems /}
+        {param checkbox: $checkbox /}
+        {param elementClasses: $elementClasses /}
+        {param id: $id /}
+        {param spritemap: $spritemap /}
+        {param title: $title /}
+        {param url: $url /}
+        {param variant: 'folder' /}
+    {/call}
+{/template}

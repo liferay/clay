@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayCard should render a ClayCard with classes 1`] = `
+<div class="card card-type-asset my-custom-class">
+  <div class="aspect-ratio card-item-first bg-checkered">
+    <span class="sticker sticker-danger sticker-bottom-left">PNG</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate"></div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard should render a ClayCard with id 1`] = `
+<div class="card card-type-asset" id="myId">
+  <div class="aspect-ratio card-item-first bg-checkered">
+    <span class="sticker sticker-danger sticker-bottom-left">PNG</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate"></div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard should render the default markup 1`] = `
+<div class="card card-type-asset">
+  <div class="aspect-ratio card-item-first bg-checkered">
+    <span class="sticker sticker-danger sticker-bottom-left">PNG</span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate"></div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

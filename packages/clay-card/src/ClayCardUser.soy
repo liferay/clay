@@ -1,0 +1,48 @@
+{namespace ClayCardUser}
+
+{template .render}
+    {@param spritemap: string}
+    {@param? actionsItems: list<[
+        label: string,
+        separator: bool,
+        url: string
+    ]>}
+    {@param? checkbox: [
+		checked: bool,
+		disabled: bool,
+		indeterminate: bool,
+		name: string,
+		value: string
+	]}
+    {@param? elementClasses: string}
+    {@param? icon: string}
+    {@param? id: string}
+    {@param? imageAlt: string}
+	{@param? imageSrc: string}
+    {@param? label: string}
+	{@param? labelStyle: string}
+    {@param? subtitle: string}
+    {@param? title: string}
+    {@param? type: string}
+	{@param? typeStyle: string}
+    {@param? url: string}
+
+    {call ClayCardBase.render}
+        {param actionsItems: $actionsItems /}
+        {param checkbox: $checkbox /}
+        {param elementClasses: $elementClasses /}
+        {param icon: $icon /}
+        {param id: $id /}
+        {param imageAlt: $imageAlt /}
+        {param imageSrc: $imageSrc /}
+        {param label: $label /}
+        {param labelStyle: $labelStyle /}
+        {param spritemap: $spritemap /}
+        {param subtitle: $subtitle /}
+        {param title: $title /}
+        {param type: $type /}
+        {param typeStyle: $typeStyle /}
+        {param url: $url /}
+        {param variant: 'user' /}
+    {/call}
+{/template}

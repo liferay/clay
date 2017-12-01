@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayCard</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-card.js"></script>
+</head>
+<body class="container">
+	<h1 class="page-title">
+		ClayCard
+	</h1>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Card default</h4>
+			<div class="row">
+				<div class="col-md-4" id="card-block"></div>
+				<div class="col-md-4" id="card-icon-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Card with checkbox</h4>
+			<div class="row">
+				<div class="col-md-4" id="checkbox-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>File card</h4>
+			<div class="row">
+				<div class="col-md-4" id="file-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>User card</h4>
+			<div class="row">
+				<div class="col-md-4" id="user-block"></div>
+				<div class="col-md-4" id="user-image-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Folder card</h4>
+			<div class="row">
+				<div class="col-md-4" id="directory-block"></div>
+				<div class="col-md-4" id="directory-checkbox-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		var image = 'https://claycss.com//images/thumbnail_coffee.jpg';
+
+		/*
+		 * Card default
+		 */
+		new metal.ClayCard({
+			actionsItems: [
+				{
+					label: 'Edit'
+				},
+				{
+					label: 'Save'
+				}
+			],
+			title: 'thumbnail_coffee.jpg',
+			subtitle: 'Author Action',
+			imageSrc: image,
+			imageAlt: 'thumbnail',
+			type: 'JPG',
+			url: '#1',
+			typeStyle: 'danger',
+			spritemap: spritemap
+		}, '#card-block');
+
+		new metal.ClayCard({
+			actionsItems: [
+				{
+					label: 'Edit'
+				},
+				{
+					label: 'Save'
+				}
+			],
+			checkbox: {
+				checked: true
+			},
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+			subtitle: 'Author Action',
+			icon: 'camera',
+			type: 'SVG',
+			typeStyle: 'warning',
+			spritemap: spritemap
+		}, '#card-icon-block');
+
+		new metal.ClayCard({
+			checkbox: {
+				checked: true,
+				disabled: true
+			},
+			title: 'empty-background.png',
+			subtitle: 'Author Action',
+			imageAlt: 'thumbnail',
+			spritemap: spritemap,
+			label: 'Approved',
+			labelStyle: 'success',
+			type: 'PNG',
+			typeStyle: 'primary'
+		}, '#checkbox-block');
+
+		/*
+		 * Card File
+		 */
+		new metal.ClayCardFile({
+			title: 'deliverable.doc',
+			subtitle: 'Stevie Ray Vaughn',
+			spritemap: spritemap,
+			icon: 'documents-and-media',
+			label: 'Approved',
+			labelStyle: 'success',
+			type: 'DOC',
+			typeStyle: 'danger'
+		}, '#file-block');
+
+		/*
+		 * User card
+		 */
+		new metal.ClayCardUser({
+			title: 'User Name',
+			subtitle: 'Latest Action',
+			spritemap: spritemap,
+			type: 'HS',
+			typeStyle: 'danger'
+		}, '#user-block');
+
+		new metal.ClayCardUser({
+			checkbox: {
+				checked: true,
+				disabled: true
+			},
+			title: 'User name',
+			subtitle: 'Latest Action',
+			spritemap: spritemap,
+			imageSrc: image,
+			imageAlt: 'thumbnail',
+		}, '#user-image-block');
+
+		/*
+		 * Folder card
+		 */
+		new metal.ClayCardFolder({
+			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+			spritemap: spritemap
+		}, '#directory-block');
+
+		new metal.ClayCardFolder({
+			actionsItems: [
+				{
+					label: 'Edit'
+				},
+				{
+					label: 'Save'
+				}
+			],
+			checkbox: {
+				checked: true,
+				indeterminate: true
+			},
+			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+			spritemap: spritemap
+		}, '#directory-checkbox-block');
+
+	</script>
+</body>
+</html>
