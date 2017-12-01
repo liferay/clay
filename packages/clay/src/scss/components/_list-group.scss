@@ -102,27 +102,6 @@ a.list-group-title,
 	}
 }
 
-// List Group Subtitle
-
-.list-group-subtitle {
-	color: $list-group-subtitle-color;
-	font-size: $list-group-subtitle-font-size;
-	font-weight: $list-group-subtitle-font-weight;
-	line-height: 1;
-	margin-bottom: $list-group-subtitle-margin-bottom;
-}
-
-a.list-group-subtitle,
-.list-group-subtitle a {
-	color: $list-group-subtitle-color;
-	text-decoration: $list-group-subtitle-text-decoration;
-
-	@include hover-focus {
-		color: $list-group-subtitle-hover-color;
-		text-decoration: $list-group-subtitle-hover-text-decoration;
-	}
-}
-
 // List Group Text
 
 .list-group-text {
@@ -188,12 +167,6 @@ a.list-group-subtext,
 		a.list-group-title,
 		.list-group-title a {
 			color: $list-group-title-active-color;
-		}
-
-		.list-group-subtitle,
-		a.list-group-subtitle,
-		.list-group-subtitle a {
-			color: $list-group-subtitle-active-color;
 		}
 
 		.list-group-text,
