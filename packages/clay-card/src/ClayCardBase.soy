@@ -28,8 +28,8 @@
 	{@param? title: string}
 	{@param? type: string}
 	{@param? typeStyle: string}
-	{@param? variant: string}
 	{@param? url: string}
+	{@param? variant: string}
 
 	{let $attributes kind="attributes"}
 		class="
@@ -87,8 +87,8 @@
 			{param spritemap: $spritemap /}
 			{param subtitle: $subtitle /}
 			{param title: $title /}
-			{param variant: $variant /}
 			{param url: $url /}
+			{param variant: $variant /}
 		{/call}
 	{/let}
 
@@ -139,8 +139,8 @@
 	{@param? labelStyle: string}
 	{@param? subtitle: string}
 	{@param? title: string}
-	{@param? variant: string}
 	{@param? url: string}
+	{@param? variant: string}
 
 	<div class="card-body">
 		<div class="card-row">
@@ -166,7 +166,7 @@
 						{param href: $url /}
 						{param label: $title /}
 					{/call}
-				{else}
+				{elseif $title}
 					<div class="card-title text-truncate" title="{$title}">{$title}</div>
 				{/if}
 
@@ -249,7 +249,7 @@
 					{param style: $stickerStyle /}
 				{/call}
 			</div>
-		{else}
+		{elseif $type}
 			{call ClaySticker.render}
 				{param label: $type /}
 				{param position: 'bottom-left' /}
