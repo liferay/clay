@@ -43,6 +43,7 @@
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
+	$text-transform: map-get($map, text-transform);
 
 	color: $color;
 	font-family: $font-family;
@@ -58,6 +59,7 @@
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
+	text-transform: $text-transform;
 }
 
 // A mixin for creating link states.
