@@ -36,7 +36,6 @@
 	display: inline-block;
 	font-size: $widget-header-title-font-size;
 	margin-bottom: $widget-header-title-margin-bottom;
-	margin-bottom: 0;
 	margin-top: $widget-header-title-margin-top;
 	max-width: 100%;
 	text-transform: $widget-header-title-text-transform;
@@ -71,6 +70,7 @@
 	color: $widget-article-title-color;
 	display: inline-block;
 	font-size: $widget-article-title-font-size;
+	font-weight: $widget-article-title-font-weight;
 	margin-bottom: $widget-article-title-margin-bottom;
 	margin-bottom: 0;
 	margin-top: $widget-article-title-margin-top;
