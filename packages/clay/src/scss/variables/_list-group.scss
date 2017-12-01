@@ -45,6 +45,8 @@ $list-group-text-link: (
 	color: $body-color
 ) !default;
 
+$list-group-text-active-color: $list-group-active-color !default;
+
 // List Group Subtext
 
 $list-group-subtext: (
@@ -54,6 +56,8 @@ $list-group-subtext: (
 $list-group-subtext-link: (
 	color: $secondary
 ) !default;
+
+$list-group-subtext-active-color: $list-group-active-color !default;
 
 // List Group Detail
 
