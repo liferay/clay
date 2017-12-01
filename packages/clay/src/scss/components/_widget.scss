@@ -58,6 +58,11 @@
 
 .widget-article {
 	margin-bottom: $widget-article-margin-bottom;
+
+	+ .widget-article {
+		border-top: $widget-article-divider-width solid $widget-article-divider-color;
+		padding-top: $widget-article-margin-bottom;
+	}
 }
 
 .widget-article-title {
@@ -98,4 +103,15 @@
 
 .widget-article-footer {
 	@include clearfix;
+}
+
+// Widget Variant
+
+.widget-admin {
+	box-shadow: 0 0 0 $widget-admin-border-width $widget-admin-border-color;
+
+	.widget-toolbar {
+		border-color: $widget-admin-border-color;
+		border-width: $widget-admin-toolbar-border-width;
+	}
 }
