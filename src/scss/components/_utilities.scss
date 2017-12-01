@@ -27,6 +27,13 @@
 
 // Flex Col
 
+.autofit-row {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .flex-col {
 	display: flex;
 	flex-direction: column;
@@ -41,6 +48,8 @@
 	width: 100%;
 	word-wrap: break-word;
 }
+
+.flex-col-section {}
 
 // Inline Scroller
 
