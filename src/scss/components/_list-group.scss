@@ -196,6 +196,18 @@ a.list-group-subtext,
 			color: $list-group-subtitle-active-color;
 		}
 
+		.list-group-text,
+		a.list-group-text,
+		.list-group-text a {
+			color: $list-group-text-active-color;
+		}
+
+		.list-group-subtext,
+		a.list-group-subtext,
+		.list-group-subtext a {
+			color: $list-group-subtext-active-color;
+		}
+
 		.list-group-link {
 			color: $list-group-link-active-color;
 		}
