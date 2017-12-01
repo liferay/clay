@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayCardFolder should render a ClayCardFolder with actionsItems 1`] = `
+<div class="card card-type-directory card-horizontal">
+  <div class="card-body">
+    <div class="card-row">
+      <span class="sticker sticker-unstyled">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <use xlink:href="icons.svg#folder"></use>
+        </svg>
+      </span>
+      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+      <div class="flex-col">
+        <div class="dropdown dropdown-action">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+              <use xlink:href="icons.svg#ellipsis-v"></use>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <ul class="list-unstyled">
+              <li>
+                <a class=" dropdown-item" href="#1">Edit</a>
+              </li>
+              <li>
+                <a class=" dropdown-item" href="#1">Save</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with checkbox \`name\` 1`] = `
+<div class="form-check form-check-card form-check-middle-left card-type-directory">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with checkbox \`value\` 1`] = `
+<div class="form-check form-check-card form-check-middle-left card-type-directory">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" value="checkbox" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with checkbox checked 1`] = `
+<div class="form-check form-check-card form-check-middle-left card-type-directory">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with checkbox disabled 1`] = `
+<div class="form-check form-check-card form-check-middle-left card-type-directory">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with checkbox indeterminate 1`] = `
+<div class="form-check form-check-card form-check-middle-left card-type-directory">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with classes 1`] = `
+<div class="card card-type-directory card-horizontal my-custom-class">
+  <div class="card-body">
+    <div class="card-row">
+      <span class="sticker sticker-unstyled">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <use xlink:href="icons.svg#folder"></use>
+        </svg>
+      </span>
+      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with id 1`] = `
+<div class="card card-type-directory card-horizontal" id="myId">
+  <div class="card-body">
+    <div class="card-row">
+      <span class="sticker sticker-unstyled">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <use xlink:href="icons.svg#folder"></use>
+        </svg>
+      </span>
+      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with title 1`] = `
+<div class="card card-type-directory card-horizontal">
+  <div class="card-body">
+    <div class="card-row">
+      <span class="sticker sticker-unstyled">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <use xlink:href="icons.svg#folder"></use>
+        </svg>
+      </span>
+      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render a ClayCardFolder with url 1`] = `
+<div class="card card-type-directory card-horizontal">
+  <div class="card-body">
+    <div class="card-row">
+      <span class="sticker sticker-unstyled">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <use xlink:href="icons.svg#folder"></use>
+        </svg>
+      </span>
+      <div class="flex-col flex-col-expand flex-col-gutters">
+        <a class=" card-title text-truncate" href="#1"></a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardFolder should render the default markup 1`] = `
+<div class="card card-type-directory card-horizontal">
+  <div class="card-body">
+    <div class="card-row">
+      <span class="sticker sticker-unstyled">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <use xlink:href="icons.svg#folder"></use>
+        </svg>
+      </span>
+      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+    </div>
+  </div>
+</div>
+`;
