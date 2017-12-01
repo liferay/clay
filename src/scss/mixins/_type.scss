@@ -66,7 +66,11 @@
 	$color: map-get($map, color);
 	$text-decoration: map-get($map, text-decoration);
 
-	$hover-color: setter(map-get($map, hover-color), darken($color, 15%));
+	$hover-color: setter(
+		map-get($map, hover-color),
+		if($color, darken($color, 15%), null)
+	);
+
 	$hover-text-decoration: map-get($map, hover-text-decoration);
 
 	$focus-box-shadow: map-get($map, focus-box-shadow);
