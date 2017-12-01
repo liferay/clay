@@ -5,7 +5,7 @@ $list-group-active-bg: $list-group-hover-bg !default;
 $list-group-active-border-color: $list-group-border-color !default;
 $list-group-active-color: !default;
 
-$list-group-item-padding-x: 1.5rem !default; // 24px
+$list-group-item-padding-x: 1rem !default; // 16px
 $list-group-item-padding-y: 1rem !default; // 16px
 
 $list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
