@@ -491,6 +491,7 @@ exports[`ClayDropdownBase should render a dropdown with items with separators 1`
       <li>
         <a class=" dropdown-item" href="#1">Element 1</a>
       </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
       <li class="dropdown-subheader">Group 1</li>
       <li>
         <a class=" dropdown-item" href="#2">Item 2</a>
