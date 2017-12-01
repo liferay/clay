@@ -30,7 +30,7 @@
 				{sp}show
 			{/if}
 		"
-		
+
 		{if $id}
 			id="{$id}"
 		{/if}
@@ -307,10 +307,18 @@
 		<li>
 			{$itemContent}
 		</li>
+
+		{if $separator}
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+		{/if}
 	{else}
 		<li>
 			{$itemContent}
 		</li>
+
+		{if $separator}
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+		{/if}
 	{/if}
 {/deltemplate}
 
