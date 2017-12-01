@@ -1,0 +1,48 @@
+$widget-border-color: $gray-400 !default;
+$widget-border-width: 0.0625rem !default; // 1px
+
+$widget-border-radius: $border-radius !default;
+
+// Widget Toolbar
+
+$widget-toolbar-bg: $light !default;
+$widget-toolbar-border-width: 0 0 1px 0 !default;
+$widget-toolbar-padding-x: ($grid-gutter-width / 2) !default; // 15px
+$widget-toolbar-padding-y: 0.25rem !default; // 4px
+
+// Widget Header
+
+$widget-header-padding-x: ($grid-gutter-width / 2) !default;
+$widget-header-padding-y: ($grid-gutter-width / 2) !default;
+
+$widget-header-title-color: $secondary !default;
+$widget-header-title-font-size: 1.25rem !default; // 20px
+$widget-header-title-margin-bottom: 0.25rem !default; // 4px
+$widget-header-title-margin-top: 0.25rem !default; // 4px
+$widget-header-title-text-transform: uppercase !default;
+
+$widget-controls-margin-left: 0.5rem !default;
+
+// Widget Body
+
+$widget-body-padding-bottom: 0.1px !default;
+$widget-body-padding-left: ($grid-gutter-width / 2) !default; // 15px
+$widget-body-padding-right: ($grid-gutter-width / 2) !default; // 15px
+$widget-body-padding-top: ($grid-gutter-width / 2) !default; // 15px
+
+// Widget Article
+
+$widget-article-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
+
+$widget-article-header-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
+
+$widget-article-body-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
+
+$widget-article-title-color: null !default;
+$widget-article-title-font-size: 1.5rem !default; // 24px
+$widget-article-title-margin-bottom: 0.125rem !default; // 2px
+$widget-article-title-margin-top: 0.125rem !default; // 2px
+
+$widget-article-subtitle-color: $secondary !default;
+$widget-article-subtitle-font-size: 50% !default;
+$widget-article-subtitle-margin-top: 0.5rem !default; // 8px
