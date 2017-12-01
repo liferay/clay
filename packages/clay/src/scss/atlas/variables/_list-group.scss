@@ -13,11 +13,6 @@ $list-group-item-padding-y: 1rem !default; // 16px
 $list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $list-group-header-padding-y: 0.75rem !default; // 12px
 
-$list-group-header-title-color: $secondary !default;
-$list-group-header-title-font-size: 0.75rem !default; // 12px
-$list-group-header-title-font-weight: $font-weight-semi-bold !default;
-$list-group-header-title-text-transform: uppercase !default;
-
 $list-group-header-title: (
 	color: $secondary,
 	font-size: 0.75rem,
