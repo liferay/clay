@@ -113,6 +113,7 @@
 	box-shadow: 0 0 0 $widget-admin-border-width $widget-admin-border-color;
 
 	.widget-toolbar {
+		background-color: $widget-admin-toolbar-bg;
 		border-color: $widget-admin-border-color;
 		border-width: $widget-admin-toolbar-border-width;
 	}
