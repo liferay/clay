@@ -1,12 +1,12 @@
 $widget-border-color: $gray-400 !default;
-$widget-border-width: 0.0625rem !default; // 1px
+$widget-border-width: 1px !default;
 
 $widget-border-radius: $border-radius !default;
 
 // Widget Toolbar
 
 $widget-toolbar-bg: $light !default;
-$widget-toolbar-border-width: 0 0 1px 0 !default;
+$widget-toolbar-border-width: 0 0 $widget-border-width 0 !default;
 $widget-toolbar-padding-x: ($grid-gutter-width / 2) !default; // 15px
 $widget-toolbar-padding-y: 0.25rem !default; // 4px
 
@@ -40,6 +40,9 @@ $widget-article-body-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
 
 $widget-article-section-margin-bottom: ($grid-gutter-width / 2) !default; // 15px
 
+$widget-article-divider-width: 1px !default;
+$widget-article-divider-color: $gray-200 !default;
+
 $widget-article-title-color: null !default;
 $widget-article-title-font-size: 1.5rem !default; // 24px
 $widget-article-title-margin-bottom: 0.125rem !default; // 2px
@@ -48,3 +51,9 @@ $widget-article-title-margin-top: 0.125rem !default; // 2px
 $widget-article-subtitle-color: $secondary !default;
 $widget-article-subtitle-font-size: 50% !default;
 $widget-article-subtitle-margin-top: 0.5rem !default; // 8px
+
+// Widget Variant
+
+$widget-admin-border-color: $gray-200 !default;
+$widget-admin-border-width: 3px !default;
+$widget-admin-toolbar-border-width: 0 0 $widget-admin-border-width 0 !default;
