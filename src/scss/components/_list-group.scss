@@ -84,26 +84,16 @@
 // List Group Title
 
 .list-group-title {
-	// color: $list-group-title-color;
-	// font-size: $list-group-title-font-size;
-	// font-weight: $list-group-title-font-weight;
-	// line-height: 1;
-	// margin-bottom: $list-group-title-margin-bottom;
 
 	@include clay-text-typography($list-group-title);
 }
 
 a.list-group-title,
 .list-group-title a {
-	// color: $list-group-title-color;
-	// text-decoration: $list-group-title-text-decoration;
-
-	// @include hover-focus {
-	// 	color: $list-group-title-hover-color;
-	// 	text-decoration: $list-group-title-hover-text-decoration;
-	// }
-
 	@include clay-link($list-group-title-link);
+
+	display: inline-block;
+	max-width: 100%;
 }
 
 // List Group Text
@@ -117,6 +107,7 @@ a.list-group-text,
 	@include clay-link($list-group-text-link);
 
 	display: inline-block;
+	max-width: 100%;
 }
 
 // List Group Subtext
@@ -130,6 +121,7 @@ a.list-group-subtext,
 	@include clay-link($list-group-subtext-link);
 
 	display: inline-block;
+	max-width: 100%;
 }
 
 // List Group Details
