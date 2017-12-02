@@ -81,12 +81,6 @@
 
 .list-group-title {
 	@include clay-text-typography($list-group-title);
-
-	&:only-child {
-		align-items: center;
-		display: flex;
-		height: 32px;
-	}
 }
 
 a.list-group-title,
@@ -194,11 +188,39 @@ a.list-group-subtext,
 		padding-left: $list-group-item-padding-x / 2;
 		padding-right: $list-group-item-padding-x / 2;
 
-		.custom-control,
-		.form-check {
-			&:only-child {
-				margin-bottom: 0;
+		.custom-control:only-child {
+			margin-bottom: 0;
+			margin-top: $list-group-item-flex-offset-top;
+
+			.custom-control-input,
+			.custom-control-indicator {
+				margin-top: $list-group-item-flex-checkbox-offset-top;
 			}
+		}
+
+		.form-check:only-child {
+			margin-bottom: 0;
+			margin-top: $list-group-item-flex-offset-top;
+			padding-top: $list-group-item-flex-checkbox-offset-top;
+		}
+
+		.sticker:only-child {
+			margin-top: $list-group-item-flex-offset-top;
+		}
+
+		.list-group-title:only-child {
+			align-items: center;
+			display: flex;
+			height: 32px;
+			margin-top: $list-group-item-flex-offset-top;
+		}
+
+		.dropdown-action {
+			margin-top: $list-group-item-flex-offset-top;
+		}
+
+		.quick-action-item {
+			margin-top: $list-group-item-flex-offset-top;
 		}
 	}
 }
