@@ -80,8 +80,13 @@
 // List Group Title
 
 .list-group-title {
-
 	@include clay-text-typography($list-group-title);
+
+	&:only-child {
+		align-items: center;
+		display: flex;
+		height: 32px;
+	}
 }
 
 a.list-group-title,
