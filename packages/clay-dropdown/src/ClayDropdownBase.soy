@@ -303,22 +303,12 @@
 		{/call}
 	{/let}
 
-	{if $isInList}
-		<li>
-			{$itemContent}
-		</li>
+	<li>
+		{$itemContent}
+	</li>
 
-		{if $separator}
-			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-		{/if}
-	{else}
-		<li>
-			{$itemContent}
-		</li>
-
-		{if $separator}
-			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-		{/if}
+	{if $separator}
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 	{/if}
 {/deltemplate}
 
