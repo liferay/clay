@@ -98,4 +98,12 @@ describe('ClayRadio', function() {
 
 		expect(clayRadio).toMatchSnapshot();
 	});
+
+	it('should render a radio with custom label content', () => {
+		clayRadio = new ClayRadio({
+			labelContent: '<div><p>My Radio</p></div>',
+		});
+
+		expect(clayRadio).toMatchSnapshot();
+	});
 });
