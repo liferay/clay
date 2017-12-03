@@ -4,13 +4,14 @@
  * This renders an icon element based on the Clay Checkbox definition.
  */
 {template .render}
-	{@param label: html | string}
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? hideLabel: bool}
 	{@param? id: string}
 	{@param? inline: bool}
+	{@param? label: string}
+	{@param? labelContent: html}
 	{@param? name: string}
 	{@param? value: string}
 
@@ -36,6 +37,7 @@
 			{param disabled: $disabled /}
 			{param hideLabel: $hideLabel /}
 			{param label: $label /}
+			{param labelContent: $labelContent /}
 			{param name: $name /}
 			{param value: $value /}
 		{/call}
@@ -46,10 +48,11 @@
  * This renders the checkbox input
  **/
 {template .input}
-	{@param label: html | string}
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? hideLabel: bool}
+	{@param? label: string}
+	{@param? labelContent: html}
 	{@param? name: string}
 	{@param? value: string}
 
@@ -82,13 +85,17 @@
 
 		<span class="custom-control-indicator"></span>
 
-		{let $spanLabelClasses kind="text"}
-			custom-control-description
-			{if $hideLabel}
-				{sp}sr-only
-			{/if}
-		{/let}
+		{if $labelContent}
+			{$labelContent}
+		{else}
+			{let $spanLabelClasses kind="text"}
+				custom-control-description
+				{if $hideLabel}
+					{sp}sr-only
+				{/if}
+			{/let}
 
-		<span class="{$spanLabelClasses}">{$label}</span>
+			<span class="{$spanLabelClasses}">{$label}</span>
+		{/if}
 	</label>
 {/template}

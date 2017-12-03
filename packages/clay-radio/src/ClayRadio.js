@@ -74,10 +74,20 @@ ClayRadio.STATE = {
 	 * Label of the input. Required for accesibility.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {!string|html}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	label: Config.any().required(),
+	label: Config.string(),
+
+	/**
+	 * Custom content of the radio label. Use it to use your custom html.
+	 * If this is used label and hideLabel params are ignored.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?html|undefined}
+	 * @default undefined
+	 */
+	labelContent: Config.any(),
 
 	/**
 	 * Name to be applied to the element.
