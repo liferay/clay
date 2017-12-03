@@ -40,6 +40,18 @@ exports[`ClayRadio should render a radio with classes 1`] = `
 </div>
 `;
 
+exports[`ClayRadio should render a radio with custom label content 1`] = `
+<div class="custom-control custom-radio">
+  <label>
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
+    <span class="custom-control-indicator"></span>
+    <div>
+      <p>My Radio</p>
+    </div>
+  </label>
+</div>
+`;
+
 exports[`ClayRadio should render a radio with hidden label 1`] = `
 <div class="custom-control custom-radio">
   <label>
