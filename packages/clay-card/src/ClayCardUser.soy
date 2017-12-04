@@ -14,8 +14,6 @@
 	{@param? imageSrc: string}
     {@param? inputName: string}
     {@param? inputValue: string}
-    {@param? label: string}
-	{@param? labelStyle: string}
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? subtitle: string}
@@ -34,8 +32,6 @@
         {param imageSrc: $imageSrc /}
         {param inputName: $inputName /}
         {param inputValue: $inputValue /}
-        {param label: $label /}
-        {param labelStyle: $labelStyle /}
         {param ref: 'cardUser' /}
         {param selectable: $selectable /}
         {param selected: $selected /}
@@ -48,6 +44,52 @@
         {param variant: 'user' /}
     {/call}
 {/template}
+
+/**
+ * This renders the information area of the card.
+ */
+{deltemplate ClayCardBase.DescriptiveArea variant="'user'"}
+	{@param spritemap: string}
+	{@param? actionItems: list<[
+		label: string,
+		separator: bool,
+		url: string
+	]>}
+	{@param? label: string}
+	{@param? labelStyle: string}
+	{@param? subtitle: string}
+	{@param? title: string}
+	{@param? url: string}
+
+	<div class="card-body">
+		<div class="card-row">
+			<div class="flex-col flex-col-expand">
+				{if $url}
+					{call ClayLink.render}
+						{param elementClasses: 'card-title text-truncate' /}
+						{param href: $url /}
+						{param label: $title /}
+					{/call}
+				{elseif $title}
+					<div class="card-title text-truncate" title="{$title}">{$title}</div>
+				{/if}
+
+				{if $subtitle}
+					<div class="card-subtitle text-truncate" title="{$subtitle}">{$subtitle}</div>
+				{/if}
+			</div>
+
+			{if $actionItems}
+				<div class="flex-col">
+					{call ClayActionsDropdown.render}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</div>
+			{/if}
+		</div>
+	</div>
+{/deltemplate}
 
 /**
  * Render the visual area of the card.

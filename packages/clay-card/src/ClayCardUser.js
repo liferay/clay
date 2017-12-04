@@ -96,30 +96,6 @@ ClayCardUser.STATE = {
 	inputValue: Config.string(),
 
 	/**
-	 * Render label in the ClayLabel element.
-	 * @instance
-	 * @memberof ClayCardUser
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	label: Config.string(),
-
-	/**
-	 * Style of the ClayLabel.
-	 * @instance
-	 * @memberof ClayCardUser
-	 * @type {?string}
-	 * @default secondary
-	 */
-	labelStyle: Config.oneOf([
-		'danger',
-		'info',
-		'secondary',
-		'success',
-		'warning',
-	]).value('secondary'),
-
-	/**
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
 	 * @memberof ClayCardUser
