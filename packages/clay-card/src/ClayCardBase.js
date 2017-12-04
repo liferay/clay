@@ -156,7 +156,7 @@ ClayCardBase.STATE = {
 	 * @type {!string}
 	 * @default undefined
 	 */
-	spritemap: Config.string().required(),
+	spritemap: Config.string(),
 
 	/**
 	 * Subtitle of the card.

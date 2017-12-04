@@ -1,7 +1,6 @@
 {namespace ClayCardUser}
 
 {template .render}
-    {@param spritemap: string}
     {@param? actionItems: list<[
         label: string,
         separator: bool,
@@ -11,15 +10,16 @@
     {@param? elementClasses: string}
     {@param? id: string}
     {@param? imageAlt: string}
-	{@param? imageSrc: string}
+		{@param? imageSrc: string}
     {@param? inputName: string}
     {@param? inputValue: string}
     {@param? selectable: bool}
     {@param? selected: bool}
+    {@param? spritemap: string}
     {@param? subtitle: string}
     {@param? title: string}
     {@param? type: string}
-	{@param? typeStyle: string}
+		{@param? typeStyle: string}
     {@param? url: string}
 
 
@@ -49,7 +49,6 @@
  * This renders the information area of the card.
  */
 {deltemplate ClayCardBase.DescriptiveArea variant="'user'"}
-	{@param spritemap: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -57,6 +56,7 @@
 	]>}
 	{@param? label: string}
 	{@param? labelStyle: string}
+	{@param? spritemap: string}
 	{@param? subtitle: string}
 	{@param? title: string}
 	{@param? url: string}
@@ -79,7 +79,7 @@
 				{/if}
 			</div>
 
-			{if $actionItems}
+			{if $actionItems and $spritemap}
 				<div class="flex-col">
 					{call ClayActionsDropdown.render}
 						{param items: $actionItems /}
@@ -95,10 +95,10 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'user'"}
-	{@param spritemap: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
+	{@param? spritemap: string}
 	{@param? type: string}
 	{@param? typeStyle: string}
 	{@param? variant: string}

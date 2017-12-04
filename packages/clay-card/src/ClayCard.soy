@@ -1,7 +1,6 @@
 {namespace ClayCard}
 
 {template .render}
-    {@param spritemap: string}
     {@param? actionItems: list<[
         label: string,
         separator: bool,
@@ -19,6 +18,7 @@
 	{@param? labelStyle: string}
     {@param? selectable: bool}
     {@param? selected: bool}
+    {@param? spritemap: string}
     {@param? subtitle: string}
     {@param? title: string}
     {@param? type: string}
@@ -55,10 +55,10 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'image'"}
-	{@param spritemap: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
+    {@param? spritemap: string}
 	{@param? type: string}
 	{@param? typeStyle: string}
 

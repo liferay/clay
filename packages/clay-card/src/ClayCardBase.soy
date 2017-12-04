@@ -4,7 +4,6 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param spritemap: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -22,6 +21,7 @@
 	{@param? labelStyle: string}
   {@param? selectable: bool}
   {@param? selected: bool}
+	{@param? spritemap: string}
 	{@param? subtitle: string}
 	{@param? title: string}
 	{@param? type: string}
@@ -101,7 +101,6 @@
  * This renders the information area of the card.
  */
 {deltemplate ClayCardBase.DescriptiveArea}
-	{@param spritemap: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -109,6 +108,7 @@
 	]>}
 	{@param? label: string}
 	{@param? labelStyle: string}
+	{@param? spritemap: string}
 	{@param? subtitle: string}
 	{@param? title: string}
 	{@param? url: string}
@@ -140,7 +140,7 @@
 				{/if}
 			</div>
 
-			{if $actionItems}
+			{if $actionItems and $spritemap}
 				<div class="flex-col">
 					{call ClayActionsDropdown.render}
 						{param items: $actionItems /}
@@ -156,10 +156,10 @@
  * This renders the visual area of the card
  */
 {deltemplate ClayCardBase.VisualArea}
-	{@param spritemap: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
+	{@param? spritemap: string}
 	{@param? type: string}
 	{@param? typeStyle: string}
 {/deltemplate}
