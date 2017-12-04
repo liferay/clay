@@ -127,7 +127,11 @@ describe('ClayCard', function() {
 
 	it('should render a ClayCard with label', () => {
 		component = new ClayCard({
-			label: 'Approved',
+			labels: [
+				{
+					label: 'Approved',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -136,8 +140,12 @@ describe('ClayCard', function() {
 
 	it('should render a ClayCard with labelStyle `danger color`', () => {
 		component = new ClayCard({
-			label: 'Approved',
-			labelStyle: 'danger',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'danger',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -146,8 +154,12 @@ describe('ClayCard', function() {
 
 	it('should render a ClayCard with labelStyle `info color`', () => {
 		component = new ClayCard({
-			label: 'Approved',
-			labelStyle: 'info',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'info',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -156,8 +168,12 @@ describe('ClayCard', function() {
 
 	it('should render a ClayCard with labelStyle `secondary color`', () => {
 		component = new ClayCard({
-			label: 'Approved',
-			labelStyle: 'secondary',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'secondary',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -166,8 +182,12 @@ describe('ClayCard', function() {
 
 	it('should render a ClayCard with labelStyle `success color`', () => {
 		component = new ClayCard({
-			label: 'Approved',
-			labelStyle: 'success',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -176,8 +196,12 @@ describe('ClayCard', function() {
 
 	it('should render a ClayCard with labelStyle `warning color`', () => {
 		component = new ClayCard({
-			label: 'Approved',
-			labelStyle: 'warning',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'warning',
+				},
+			],
 			spritemap: spritemap,
 		});
 

@@ -109,7 +109,11 @@ describe('ClayCardFile', function() {
 
 	it('should render a ClayCardFile with label', () => {
 		component = new ClayCardFile({
-			label: 'Approved',
+			labels: [
+				{
+					label: 'Approved',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -118,8 +122,12 @@ describe('ClayCardFile', function() {
 
 	it('should render a ClayCardFile with labelStyle `danger color`', () => {
 		component = new ClayCardFile({
-			label: 'Approved',
-			labelStyle: 'danger',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'danger',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -128,8 +136,12 @@ describe('ClayCardFile', function() {
 
 	it('should render a ClayCardFile with labelStyle `info color`', () => {
 		component = new ClayCardFile({
-			label: 'Approved',
-			labelStyle: 'info',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'info',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -138,8 +150,12 @@ describe('ClayCardFile', function() {
 
 	it('should render a ClayCardFile with labelStyle `secondary color`', () => {
 		component = new ClayCardFile({
-			label: 'Approved',
-			labelStyle: 'secondary',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'secondary',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -148,8 +164,12 @@ describe('ClayCardFile', function() {
 
 	it('should render a ClayCardFile with labelStyle `success color`', () => {
 		component = new ClayCardFile({
-			label: 'Approved',
-			labelStyle: 'success',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+			],
 			spritemap: spritemap,
 		});
 
@@ -158,8 +178,12 @@ describe('ClayCardFile', function() {
 
 	it('should render a ClayCardFile with labelStyle `warning color`', () => {
 		component = new ClayCardFile({
-			label: 'Approved',
-			labelStyle: 'warning',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'warning',
+				},
+			],
 			spritemap: spritemap,
 		});
 
