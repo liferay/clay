@@ -55,58 +55,43 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with checkbox checked', () => {
+	it('should render a selected ClayCardFile', () => {
 		component = new ClayCardFile({
-			checkbox: {
-				checked: true,
-			},
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with checkbox disabled', () => {
+	it('should render a disabled ClayCardFile', () => {
 		component = new ClayCardFile({
-			checkbox: {
-				checked: true,
-				disabled: true,
-			},
+			disabled: true,
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with checkbox indeterminate', () => {
+	it('should render a ClayCardFile with input `name`', () => {
 		component = new ClayCardFile({
-			checkbox: {
-				indeterminate: true,
-			},
+			inputName: 'checkbox01',
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with checkbox `name`', () => {
+	it('should render a ClayCardFile with input `value`', () => {
 		component = new ClayCardFile({
-			checkbox: {
-				checked: true,
-				name: 'checkbox01',
-			},
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayCardFile with checkbox `value`', () => {
-		component = new ClayCardFile({
-			checkbox: {
-				checked: true,
-				value: 'checkbox',
-			},
+			inputValue: 'checkbox',
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 

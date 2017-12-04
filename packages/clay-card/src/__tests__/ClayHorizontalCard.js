@@ -55,58 +55,43 @@ describe('ClayHorizontalCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayHorizontalCard with checkbox checked', () => {
+	it('should render a selected ClayHorizontalCard', () => {
 		component = new ClayHorizontalCard({
-			checkbox: {
-				checked: true,
-			},
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayHorizontalCard with checkbox disabled', () => {
+	it('should render a disabled ClayHorizontalCard', () => {
 		component = new ClayHorizontalCard({
-			checkbox: {
-				checked: true,
-				disabled: true,
-			},
+			disabled: true,
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayHorizontalCard with checkbox indeterminate', () => {
+	it('should render a ClayHorizontalCard with input `name`', () => {
 		component = new ClayHorizontalCard({
-			checkbox: {
-				indeterminate: true,
-			},
+			inputName: 'checkbox01',
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayHorizontalCard with checkbox `name`', () => {
+	it('should render a ClayHorizontalCard with input `value`', () => {
 		component = new ClayHorizontalCard({
-			checkbox: {
-				checked: true,
-				name: 'checkbox01',
-			},
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayHorizontalCard with checkbox `value`', () => {
-		component = new ClayHorizontalCard({
-			checkbox: {
-				checked: true,
-				value: 'checkbox',
-			},
+			inputValue: 'checkbox',
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 		});
 
