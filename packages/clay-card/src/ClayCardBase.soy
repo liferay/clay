@@ -60,7 +60,7 @@
 	{/let}
 
 	{let $body kind="html"}
-		{call .body}
+		{delcall ClayCardBase.DescriptiveArea variant="$variant"}
 			{param actionItems: $actionItems /}
 			{param label: $label /}
 			{param labelStyle: $labelStyle /}
@@ -68,7 +68,7 @@
 			{param subtitle: $subtitle /}
 			{param title: $title /}
 			{param url: $url /}
-		{/call}
+		{/delcall}
 	{/let}
 
 	<div {$attributes}>
@@ -97,11 +97,10 @@
 	</div>
 {/template}
 
-
 /**
- * The content the element.
+ * This renders the information area of the card.
  */
-{template .body}
+{deltemplate ClayCardBase.DescriptiveArea}
 	{@param spritemap: string}
 	{@param? actionItems: list<[
 		label: string,
@@ -151,7 +150,7 @@
 			{/if}
 		</div>
 	</div>
-{/template}
+{/deltemplate}
 
 /**
  * This renders the visual area of the card
