@@ -228,7 +228,7 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
+			fileType: 'DOC',
 			spritemap: spritemap,
 		});
 
@@ -237,8 +237,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `danger color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'danger',
+			fileType: 'DOC',
+			fileTypeStyle: 'danger',
 			spritemap: spritemap,
 		});
 
@@ -247,8 +247,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `dark color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'dark',
+			fileType: 'DOC',
+			fileTypeStyle: 'dark',
 			spritemap: spritemap,
 		});
 
@@ -257,8 +257,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `info color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'info',
+			fileType: 'DOC',
+			fileTypeStyle: 'info',
 			spritemap: spritemap,
 		});
 
@@ -267,8 +267,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `light color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'light',
+			fileType: 'DOC',
+			fileTypeStyle: 'light',
 			spritemap: spritemap,
 		});
 
@@ -277,8 +277,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `primary color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'primary',
+			fileType: 'DOC',
+			fileTypeStyle: 'primary',
 			spritemap: spritemap,
 		});
 
@@ -287,8 +287,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `secondary color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'secondary',
+			fileType: 'DOC',
+			fileTypeStyle: 'secondary',
 			spritemap: spritemap,
 		});
 
@@ -297,8 +297,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `success color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'success',
+			fileType: 'DOC',
+			fileTypeStyle: 'success',
 			spritemap: spritemap,
 		});
 
@@ -307,8 +307,8 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with type `warning color`', () => {
 		component = new ClayImageCard({
-			type: 'DOC',
-			typeStyle: 'warning',
+			fileType: 'DOC',
+			fileTypeStyle: 'warning',
 			spritemap: spritemap,
 		});
 

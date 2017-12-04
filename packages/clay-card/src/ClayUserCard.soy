@@ -38,8 +38,8 @@
         {param spritemap: $spritemap /}
         {param subtitle: $subtitle /}
         {param title: $name /}
-        {param type: $initials /}
-        {param typeStyle: $userColor /}
+        {param fileType: $initials /}
+        {param fileTypeStyle: $userColor /}
         {param url: $url /}
         {param variant: 'user' /}
     {/call}
@@ -95,15 +95,13 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCard.VisualArea variant="'user'"}
+	{@param? fileType: string}
+	{@param? fileTypeStyle: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? spritemap: string}
-	{@param? type: string}
-	{@param? typeStyle: string}
 	{@param? variant: string}
-
-	{let $stickerStyle: $typeStyle ?: 'primary' /}
 
 	{let $classesAspectRatio kind="text"}
 		aspect-ratio-item-center-middle aspect-ratio-item-fluid
@@ -126,14 +124,14 @@
 						{/let}
 
 						<img {$imageAttributes} />
-					{elseif $type}
-						{$type}
+					{elseif $fileType}
+						{$fileType}
 					{/if}
 				{/param}
 
 				{param shape: 'circle' /}
 				{param size: 'xl' /}
-				{param style: $stickerStyle /}
+				{param style: $fileTypeStyle ?: 'primary' /}
 			{/call}
 		</div>
 	</div>

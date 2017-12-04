@@ -208,89 +208,89 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type', () => {
+	it('should render a ClayFileCard with file type', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
+			fileType: 'DOC',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `danger color`', () => {
+	it('should render a ClayFileCard with file type style `danger color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'danger',
+			fileType: 'DOC',
+			fileTypeStyle: 'danger',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `dark color`', () => {
+	it('should render a ClayFileCard with file type style `dark color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'dark',
+			fileType: 'DOC',
+			fileTypeStyle: 'dark',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `info color`', () => {
+	it('should render a ClayFileCard with file type style `info color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'info',
+			fileType: 'DOC',
+			fileTypeStyle: 'info',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `light color`', () => {
+	it('should render a ClayFileCard with file type style `light color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'light',
+			fileType: 'DOC',
+			fileTypeStyle: 'light',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `primary color`', () => {
+	it('should render a ClayFileCard with file type style `primary color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'primary',
+			fileType: 'DOC',
+			fileTypeStyle: 'primary',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `secondary color`', () => {
+	it('should render a ClayFileCard with file type style `secondary color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'secondary',
+			fileType: 'DOC',
+			fileTypeStyle: 'secondary',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `success color`', () => {
+	it('should render a ClayFileCard with file type style `success color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'success',
+			fileType: 'DOC',
+			fileTypeStyle: 'success',
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with type `warning color`', () => {
+	it('should render a ClayFileCard with file type style `warning color`', () => {
 		component = new ClayFileCard({
-			type: 'DOC',
-			typeStyle: 'warning',
+			fileType: 'DOC',
+			fileTypeStyle: 'warning',
 			spritemap: spritemap,
 		});
 

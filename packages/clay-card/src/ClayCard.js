@@ -55,6 +55,33 @@ ClayCard.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Type of the file represented in the card.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	fileType: Config.string(),
+
+	/**
+	 * Style of type of the file represented in the card.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?string}
+	 * @default primary
+	 */
+	fileTypeStyle: Config.oneOf([
+		'danger',
+		'dark',
+		'info',
+		'light',
+		'primary',
+		'secondary',
+		'success',
+		'warning',
+	]).value('primary'),
+
+	/**
 	 * Render ClayIcon in the background element.
 	 * @instance
 	 * @memberof ClayCard
@@ -172,33 +199,6 @@ ClayCard.STATE = {
 	 * @default undefined
 	 */
 	title: Config.string(),
-
-	/**
-	 * Render label in the ClaySticker element.
-	 * @instance
-	 * @memberof ClayCard
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	type: Config.string(),
-
-	/**
-	 * Style of the ClaySticker element.
-	 * @instance
-	 * @memberof ClayCard
-	 * @type {?string}
-	 * @default primary
-	 */
-	typeStyle: Config.oneOf([
-		'danger',
-		'dark',
-		'info',
-		'light',
-		'primary',
-		'secondary',
-		'success',
-		'warning',
-	]).value('primary'),
 
 	/**
 	 * Transform title in the url.

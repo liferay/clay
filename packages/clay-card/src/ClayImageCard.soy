@@ -8,6 +8,8 @@
     ]>}
     {@param? disabled: bool}
     {@param? elementClasses: string}
+    {@param? fileType: string}
+	{@param? fileTypeStyle: string}
     {@param? icon: string}
     {@param? id: string}
     {@param? imageAlt: string}
@@ -23,14 +25,14 @@
     {@param? spritemap: string}
     {@param? subtitle: string}
     {@param? title: string}
-    {@param? type: string}
-	{@param? typeStyle: string}
     {@param? url: string}
 
     {call ClayCard.render}
         {param actionItems: $actionItems /}
         {param disabled: $disabled /}
         {param elementClasses: $elementClasses /}
+        {param fileType: $fileType /}
+        {param fileTypeStyle: $fileTypeStyle /}
         {param icon: $icon /}
         {param id: $id /}
         {param imageAlt: $imageAlt /}
@@ -44,8 +46,6 @@
         {param spritemap: $spritemap /}
         {param subtitle: $subtitle /}
         {param title: $title /}
-        {param type: $type /}
-        {param typeStyle: $typeStyle /}
         {param url: $url /}
         {param variant: 'image' /}
     {/call}
@@ -59,8 +59,8 @@
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
     {@param? spritemap: string}
-	{@param? type: string}
-	{@param? typeStyle: string}
+	{@param? fileType: string}
+	{@param? fileTypeStyle: string}
 
 	<div class="aspect-ratio card-item-first bg-checkered">
 		{let $aspectRatioClasses kind="text"}
@@ -89,11 +89,11 @@
 			</div>
 		{/if}
 
-		{if $type}
+		{if $fileType}
 			{call ClaySticker.render}
-				{param label: $type /}
+				{param label: $fileType /}
 				{param position: 'bottom-left' /}
-				{param style: $typeStyle ?: 'primary' /}
+				{param style: $fileTypeStyle ?: 'primary' /}
 			{/call}
 		{/if}
 	</div>
