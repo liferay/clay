@@ -51,15 +51,6 @@ ClayCardUser.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Render ClayIcon in the background element.
-	 * @instance
-	 * @memberof ClayCardUser
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	icon: Config.string(),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCardUser
