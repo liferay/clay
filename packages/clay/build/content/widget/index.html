@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Clay - Images and Thumbnails</title>
+	<title>Clay - Widget</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -102,7 +102,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -158,7 +158,7 @@
 <li class=""><span class="nav-title">Components (For Sites)</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
+<li class="active"><a class="nav-title" href="../../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -218,7 +218,7 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
-			Images and Thumbnails
+			Widget
 
 			
 		</h1>
@@ -226,46 +226,129 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="responsive-image"><a class="heading-anchor" href="#responsive-image"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Responsive Image</h3>
+		<h3 id="widget"><a class="heading-anchor" href="#widget"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Widget</h3>
 
-		<blockquote class="blockquote">
-			<p>Use <code>.img-fluid</code> to make an image fit with its container.</p>
-		</blockquote>
-
-		<div class="row">
-			<div class="col-6 col-sm-3">
-				<img alt="responsive image" class="img-fluid" src="../../images/thumbnail_placeholder.gif">
-			</div>
-			<div class="col-3 col-sm-2">
-				<img alt="responsive image" class="img-fluid" src="../../images/thumbnail_placeholder.gif">
-			</div>
-		</div>
+		<article class="widget">
+			<header class="widget-header">
+				<h3 class="widget-header-title">This is a Widget Header Title</h3>
+			</header>
+			<section class="widget-body">
+				<article class="widget-article">
+					<header class="widget-article-header">
+						<section class="widget-article-section">
+							<h2 class="widget-article-title">
+								Widget Article Title
+								<small class="widget-article-subtitle">Widget Article Subtitle</small>
+							</h2>
+						</section>
+						<section class="d-flex widget-article-section">
+							<div class="flex-col">
+								<div class="rounded-circle sticker sticker-lg sticker-warning">
+									DA
+								</div>
+							</div>
+							<div class="flex-col flex-col-expand">
+								<div>David Atregrne</div>
+								<div>Sep 25 - 3 Views</div>
+							</div>
+						</section>
+					</header>
+					<section class="widget-article-body">
+						<p>Widget Article Body: Aged eu, affogato aroma java latte aromatic crema foam shop breve. Americano whipped americano id whipped wings aroma. White whipped barista, as irish caf&#xE9; au lait mazagran acerbic dark. Caf&#xE9; au lait crema a plunger pot fair trade americano doppio. Robust bar espresso aged dark a aged. Caf&#xE9; au lait that, froth seasonal ut coffee crema cup white spoon...</p>
+					</section>
+					<footer class="widget-article-footer">
+						<a href="#1">View in Context</a>
+						<div class="widget-controls">
+							<button class="btn btn-borderless btn-outline-secondary btn-sm" type="button">Like (8)</button>
+							<button class="btn btn-borderless btn-outline-secondary btn-sm" type="button">Flag</button>
+							<button class="btn btn-borderless btn-outline-secondary btn-sm" type="button">Share</button>
+						</div>
+					</footer>
+				</article>
+			</section>
+		</article>
 	</div>
 </div>
 
-<div class="clay-site-row-spacer row" id="imageShapes">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="image-shapes"><a class="heading-anchor" href="#image-shapes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Image Shapes</h3>
+		<h3 id="widget-admin"><a class="heading-anchor" href="#widget-admin"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Widget Admin</h3>
 
-		<blockquote class="blockquote">
-			<p>Use <code>.rounded</code>, <code>.rounded-circle</code>, or <code>.img-thumbnail</code> on <code>&lt;img&gt;</code> to quickly style the borders.</p>
-
-			<p><code>.rounded-0</code> will remove the <code>border-radius</code> styles.</p>
-		</blockquote>
-
-		<div class="row">
-			<div class="col-4">
-				<img alt="responsive image with rounded edges" class="img-fluid rounded" src="../../images/thumbnail_placeholder.gif">
-			</div>
-
-			<div class="col-4">
-				<img alt="responsive circle image" class="img-fluid rounded-circle" src="../../images/thumbnail_placeholder.gif">
-			</div>
-
-			<div class="col-4">
-				<img alt="responsive thumbnail image" class="img-fluid img-thumbnail" src="../../images/thumbnail_placeholder.gif">
-			</div>
-		</div>
+		<article class="widget widget-admin">
+			<header class="widget-toolbar">
+				<div class="flex-col flex-col-expand">
+					Widget Toolbar
+				</div>
+				<div class="flex-col">
+					<div class="dropdown dropdown-action">
+						<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-sm btn-unstyled dropdown-toggle" data-toggle="dropdown" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+								<use xlink:href="../../images/icons/icons.svg#cog">
+							</svg>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#1">Widget Action 1</a>
+							<a class="dropdown-item" href="#1">Widget Action 2</a>
+							<a class="dropdown-item" href="#1">Widget Action 3</a>
+							<a class="dropdown-item" href="#1">Widget Action 4</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<header class="widget-header">
+				<h3 class="widget-header-title">Asset Publisher</h3>
+				<div class="widget-controls">
+					<button class="btn btn-borderless btn-outline-primary btn-sm" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+							<use xlink:href="../../images/icons/icons.svg#check-circle">
+						</svg>
+						Subscribe
+					</button>
+				</div>
+			</header>
+			<section class="widget-body">
+				<article class="widget-article">
+					<header class="widget-article-header">
+						<section class="widget-article-section">
+							<h2 class="widget-article-title">
+								Knowledge Base Article One
+								<small class="widget-article-subtitle">0 Subfolders - 2 Bookmarks</small>
+							</h2>
+							<div class="widget-controls">
+								<button class="btn btn-borderless btn-monospaced btn-outline-primary btn-sm" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+										<use xlink:href="../../images/icons/icons.svg#pencil">
+									</svg>
+									Subscribe
+								</button>
+							</div>
+						</section>
+						<section class="d-flex widget-article-section">
+							<div class="flex-col">
+								<div class="rounded-circle sticker sticker-lg sticker-warning">
+									DA
+								</div>
+							</div>
+							<div class="flex-col flex-col-expand">
+								<div>David Atregrne</div>
+								<div>Sep 25 - 3 Views</div>
+							</div>
+						</section>
+					</header>
+					<section class="widget-article-body">
+						<p>Widget Article Body: Aged eu, affogato aroma java latte aromatic crema foam shop breve. Americano whipped americano id whipped wings aroma. White whipped barista, as irish caf&#xE9; au lait mazagran acerbic dark. Caf&#xE9; au lait crema a plunger pot fair trade americano doppio. Robust bar espresso aged dark a aged. Caf&#xE9; au lait that, froth seasonal ut coffee crema cup white spoon...</p>
+					</section>
+					<footer class="widget-article-footer">
+						<a href="#1">View in Context</a>
+						<div class="widget-controls">
+							<button class="btn btn-borderless btn-outline-secondary btn-sm" type="button">Like (8)</button>
+							<button class="btn btn-borderless btn-outline-secondary btn-sm" type="button">Flag</button>
+							<button class="btn btn-borderless btn-outline-secondary btn-sm" type="button">Share</button>
+						</div>
+					</footer>
+				</article>
+			</section>
+		</article>
 	</div>
 </div>
 	</div>

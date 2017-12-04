@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Utilities</title>
+	<title>Clay - Utilities</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -138,6 +138,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
@@ -149,6 +151,14 @@
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (For Sites)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -184,6 +194,8 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
@@ -191,6 +203,8 @@
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -215,11 +229,11 @@
 		<h3 id="flex-col-and-flex-col-expand"><a class="heading-anchor" href="#flex-col-and-flex-col-expand"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Flex Col and Flex Col Expand</h3>
 
 		<blockquote class="blockquote">
-			<p>An addition to Bootstrap 4&apos;s flexbox utility to help make content expand to fill remaining space or create equally spaced content. <code>.d-flex</code>, <code>.flex-col</code>, and <code>.flex-col-expand</code>.</p>
+			<p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.flex-col</code>, and <code>.flex-col-expand</code>.</p>
 		</blockquote>
 
 		<div class="alert alert-warning">
-			Flex Col and Flex Col Expand shouldn&apos;t be used for laying out site pages, rather it&apos;s most useful for small chunks of content inside other components e.g. cards or list-groups.
+			<code>.autofit-row</code>, <code>.flex-col</code>, <code>.flex-col-expand</code> shouldn&apos;t be used for laying out site pages, rather it&apos;s most useful for small chunks of content inside other components e.g. cards or list-groups.
 		</div>
 
 		<div class="clay-site-row-spacer d-flex">
@@ -231,8 +245,10 @@
 				</div>
 			</div>
 			<div class="flex-col flex-col-expand">
-				<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-				<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+				<div class="flex-col-section">
+					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
+					<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+				</div>
 			</div>
 			<div class="flex-col">
 				<div class="dropdown dropdown-action">
@@ -261,32 +277,32 @@
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<div class="alert alert-warning">
-			Direct descendants of <code>flex-col</code> become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with a block level element such as a div.
+			Direct descendants of <code>.flex-col</code> become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with a block level element such as a div or <code>&lt;div class=&quot;flex-col-section&quot;&gt;&lt;/div&gt;</code>.
 		</div>
 
-		<div class="d-flex">
+		<div class="autofit-row">
 			<div class="flex-col flex-col-expand" style="background-color: aliceblue;">
-				<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-				<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
-				<div>
+				<div class="flex-col-section">
+					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
+					<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
 					<span class="label label-success">Approved</span>
 					<span class="label label-info">Pending</span>
 					<span class="label label-danger">Rejected</span>
 				</div>
 			</div>
 			<div class="flex-col flex-col-expand" style="background-color: antiquewhite;">
-				<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-				<h4><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
-				<div>
+				<div class="flex-col-section">
+					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
+					<h4><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
 					<span class="label label-success">Approved</span>
 					<span class="label label-info">Pending</span>
 					<span class="label label-danger">Rejected</span>
 				</div>
 			</div>
 			<div class="flex-col flex-col-expand" style="background-color: aqua;">
-				<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-				<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
-				<div>
+				<div class="flex-col-section">
+					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
+					<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
 					<span class="label label-success">Approved</span>
 					<span class="label label-info">Pending</span>
 					<span class="label label-danger">Rejected</span>

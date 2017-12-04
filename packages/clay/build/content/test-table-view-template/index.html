@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Table View Template</title>
+	<title>Clay - Table View Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -138,6 +138,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
@@ -149,6 +151,14 @@
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (For Sites)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -184,6 +194,8 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
@@ -191,6 +203,8 @@
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -399,87 +413,89 @@
 	</div>
 </nav>
 
-<form class="mt-4">
-	<div class="container container-no-gutters-sm-down">
-		<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list table-responsive-lg">
-			<thead>
-				<tr>
-					<th></th>
-					<th colspan="2">
-						Item Title
-						<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
-							<use xlink:href="../../images/icons/icons.svg#order-arrow-up">
-						</svg>
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-							<use xlink:href="../../images/icons/icons.svg#order-arrow-down">
-						</svg>
-					</th>
-					<th>Size</th>
-					<th>Status</th>
-					<th>Creation Date</th>
-					<th>Modification Date</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<div class="custom-control custom-checkbox">
-							<label>
-								<input class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
-							</label>
-						</div>
-					</td>
-					<td>
-						<span class="sticker sticker-danger">PNG</span>
-					</td>
-					<td class="table-cell-content">
-						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-					</td>
-					<td>700KB</td>
-					<td>
-						<span class="label label-success">Approved</span>
-					</td>
-					<td>6 days ago</td>
-					<td>4 days ago</td>
-					<td>
-						<div class="quick-action-menu">
-							<a class="quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-									<use xlink:href="../../images/icons/icons.svg#trash">
-								</svg>
-							</a>
-							<a class="quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-									<use xlink:href="../../images/icons/icons.svg#download">
-								</svg>
-							</a>
-							<a class="quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-									<use xlink:href="../../images/icons/icons.svg#info-circle-open">
-								</svg>
-							</a>
-						</div>
-						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-								</svg>
-							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Remove</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
+<div class="container container-no-gutters-sm-down container-view">
+	<form>
+		<div class="table-responsive-lg">
+			<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
+				<thead>
+					<tr>
+						<th></th>
+						<th colspan="2">
+							Item Title
+							<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
+								<use xlink:href="../../images/icons/icons.svg#order-arrow-up">
+							</svg>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+								<use xlink:href="../../images/icons/icons.svg#order-arrow-down">
+							</svg>
+						</th>
+						<th>Size</th>
+						<th>Status</th>
+						<th>Creation Date</th>
+						<th>Modification Date</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="custom-control custom-checkbox">
+								<label>
+									<input class="custom-control-input" type="checkbox">
+									<span class="custom-control-indicator"></span>
+								</label>
 							</div>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</form>
+						</td>
+						<td>
+							<span class="sticker sticker-danger">PNG</span>
+						</td>
+						<td class="table-cell-content">
+							<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</td>
+						<td>700KB</td>
+						<td>
+							<span class="label label-success">Approved</span>
+						</td>
+						<td>6 days ago</td>
+						<td>4 days ago</td>
+						<td>
+							<div class="quick-action-menu">
+								<a class="quick-action-item" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+										<use xlink:href="../../images/icons/icons.svg#trash">
+									</svg>
+								</a>
+								<a class="quick-action-item" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+										<use xlink:href="../../images/icons/icons.svg#download">
+									</svg>
+								</a>
+								<a class="quick-action-item" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+										<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+									</svg>
+								</a>
+							</div>
+							<div class="dropdown dropdown-action">
+								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Remove</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</div>
 
 <script>
 	$('.table').on('click', 'input[type="checkbox"]', function(event) {

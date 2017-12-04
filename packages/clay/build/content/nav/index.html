@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Nav</title>
+	<title>Clay - Nav</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -138,6 +138,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
@@ -149,6 +151,14 @@
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (For Sites)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -184,6 +194,8 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
@@ -191,6 +203,8 @@
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -214,9 +228,17 @@
 	<div class="col-md-12">
 		<h3 id="base-nav"><a class="heading-anchor" href="#base-nav"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Base Nav</h3>
 
+		<blockquote class="blockquote">
+			Bootstrap 4&apos;s Navigations share general markup and styles from the base <code>.nav</code> class, therefore the components Nav Pills, Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code>.nav</code> as its base.
+		</blockquote>
+
+		<blockquote class="blockquote">
+			<code>.nav-link</code> and <code>.active.nav-link</code> in the Base Nav doesn&apos;t have any special styling to make it easier to overwrite via color modifiers used in Clay&apos;s components above. If you would like to use a custom color scheme for the Base Nav, create a custom color modifier class and use the <code>clay-nav-variant($map)</code> mixin.
+		</blockquote>
+
 		<ul class="nav">
 			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
 			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 		</ul>
@@ -231,7 +253,7 @@
 	<div class="col-md-4">
 		<ul class="nav nav-stacked">
 			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
 			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Configuration</a></li>
@@ -268,7 +290,7 @@
 				<div class="collapse show" id="navCollapse01">
 					<ul class="nav nav-stacked">
 						<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
-						<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
 						<li class="nav-item">
 							<a aria-controls="navCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse02" role="button">
 								Documents and Media
@@ -286,7 +308,7 @@
 							<div class="collapse" id="navCollapse02">
 								<ul class="nav nav-stacked">
 									<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
-									<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
 									<li class="nav-item"><a class="nav-link" href="#1">Documents and Media</a></li>
 									<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 								</ul>
@@ -372,7 +394,7 @@
 				<div class="collapse show" id="navCollapse001">
 					<ul class="nav nav-stacked">
 						<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
-						<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
 						<li class="nav-item">
 							<a aria-controls="navCollapse002" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse002" role="button">
 								Documents and Media
@@ -390,7 +412,7 @@
 							<div class="collapse" id="navCollapse002">
 								<ul class="nav nav-stacked">
 									<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
-									<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
 									<li class="nav-item"><a class="nav-link" href="#1">Documents and Media</a></li>
 									<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 								</ul>
@@ -458,7 +480,7 @@
 
 		<ul class="nav nav-unstyled">
 			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
 			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 		</ul>
@@ -495,7 +517,7 @@
 			<li class="nav-item">
 				<button class="btn btn-primary nav-btn nav-btn-monospaced" type="button">De</button>
 			</li>
-			<li class="nav-item"><a class="disabled nav-link" href="#1">Catagorization</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1">Categorization</a></li>
 			<li class="dropdown nav-item">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link" data-toggle="dropdown" type="button">
 					More

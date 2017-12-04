@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Form Elements (Validation)</title>
+	<title>Clay - Form Elements (Validation)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -138,6 +138,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
@@ -149,6 +151,14 @@
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (For Sites)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -184,6 +194,8 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
@@ -191,6 +203,8 @@
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -305,75 +319,79 @@
 <div class="sheet clay-site-row-spacer">
 	<div class="row">
 		<div class="col-md-6">
-			<div class="has-success">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">
-							Custom Checkbox with Success
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-								<use xlink:href="../../images/icons/icons.svg#asterisk">
-							</svg>
-						</span>
-					</label>
+			<div class="form-group">
+				<div class="has-success">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">
+								Custom Checkbox with Success
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+									<use xlink:href="../../images/icons/icons.svg#asterisk">
+								</svg>
+							</span>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-warning">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">
-							Custom Checkbox with Warning
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-								<use xlink:href="../../images/icons/icons.svg#asterisk">
-							</svg>
-						</span>
-					</label>
+				<div class="has-warning">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">
+								Custom Checkbox with Warning
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+									<use xlink:href="../../images/icons/icons.svg#asterisk">
+								</svg>
+							</span>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-error">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">
-							Custom Checkbox with Error
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-								<use xlink:href="../../images/icons/icons.svg#asterisk">
-							</svg>
-						</span>
-					</label>
+				<div class="has-error">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">
+								Custom Checkbox with Error
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+									<use xlink:href="../../images/icons/icons.svg#asterisk">
+								</svg>
+							</span>
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-6">
-			<div class="has-success">
-				<div class="custom-control custom-radio">
-					<label>
-						<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Custom Radio with Success</span>
-					</label>
+			<div class="form-group">
+				<div class="has-success">
+					<div class="custom-control custom-radio">
+						<label>
+							<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Custom Radio with Success</span>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-warning">
-				<div class="custom-control custom-radio">
-					<label>
-						<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Custom Radio with Warning</span>
-					</label>
+				<div class="has-warning">
+					<div class="custom-control custom-radio">
+						<label>
+							<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Custom Radio with Warning</span>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-error">
-				<div class="custom-control custom-radio">
-					<label>
-						<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Custom Radio with Error</span>
-					</label>
+				<div class="has-error">
+					<div class="custom-control custom-radio">
+						<label>
+							<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Custom Radio with Error</span>
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -389,63 +407,67 @@
 <div class="sheet clay-site-row-spacer">
 	<div class="row">
 		<div class="col-md-6">
-			<div class="has-success">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" id="checkboxSuccess1" type="checkbox" value="option1">
-						<span class="form-check-description">Checkbox with Success</span>
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-							<use xlink:href="../../images/icons/icons.svg#asterisk">
-						</svg>
-					</label>
+			<div class="form-group">
+				<div class="has-success">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" id="checkboxSuccess1" type="checkbox" value="option1">
+							<span class="form-check-description">Checkbox with Success</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+								<use xlink:href="../../images/icons/icons.svg#asterisk">
+							</svg>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-warning">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" id="checkboxWarning1" type="checkbox" value="option2">
-						<span class="form-check-description">Checkbox with Warning</span>
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-							<use xlink:href="../../images/icons/icons.svg#asterisk">
-						</svg>
-					</label>
+				<div class="has-warning">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" id="checkboxWarning1" type="checkbox" value="option2">
+							<span class="form-check-description">Checkbox with Warning</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+								<use xlink:href="../../images/icons/icons.svg#asterisk">
+							</svg>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-error">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" id="checkboxError1" type="checkbox" value="option3">
-						<span class="form-check-description">Checkbox with Error</span>
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-							<use xlink:href="../../images/icons/icons.svg#asterisk">
-						</svg>
-					</label>
+				<div class="has-error">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" id="checkboxError1" type="checkbox" value="option3">
+							<span class="form-check-description">Checkbox with Error</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+								<use xlink:href="../../images/icons/icons.svg#asterisk">
+							</svg>
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-6">
-			<div class="has-success">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" id="radioSuccess1" type="radio" value="option1">
-						<span class="form-check-description">Radio with Success</span>
-					</label>
+			<div class="form-group">
+				<div class="has-success">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" id="radioSuccess1" type="radio" value="option1">
+							<span class="form-check-description">Radio with Success</span>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-warning">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" id="radioWarning1" type="radio" value="option2">
-						<span class="form-check-description">Radio with Warning</span>
-					</label>
+				<div class="has-warning">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" id="radioWarning1" type="radio" value="option2">
+							<span class="form-check-description">Radio with Warning</span>
+						</label>
+					</div>
 				</div>
-			</div>
-			<div class="has-error">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" id="radioError1" type="radio" value="option3">
-						<span class="form-check-description">Radio with Error</span>
-					</label>
+				<div class="has-error">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" id="radioError1" type="radio" value="option3">
+							<span class="form-check-description">Radio with Error</span>
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>

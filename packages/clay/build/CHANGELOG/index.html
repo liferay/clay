@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - CHANGELOG</title>
+	<title>Clay - CHANGELOG</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../css/site/site-main.css" />
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
+				<h4 class="title"><a href="..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -138,6 +138,8 @@
 </li>
 <li class=""><a class="nav-title" href="../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../content/sheet">Sheet</a>
+</li>
 <li class=""><a class="nav-title" href="../content/sidebar">Sidebar</a>
 </li>
 <li class=""><a class="nav-title" href="../content/subnav">Subnav</a>
@@ -149,6 +151,14 @@
 <li class=""><a class="nav-title" href="../content/toggle-switch">Toggle Switch</a>
 </li>
 <li class=""><a class="nav-title" href="../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (For Sites)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -184,6 +194,8 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
 <li class=""><a class="nav-title" href="../content/test-list-view-template">List View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../content/test-table-view-template">Table View Template</a>
@@ -191,6 +203,8 @@
 <li class=""><a class="nav-title" href="../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+<li class=""><a class="nav-title" href="../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -209,7 +223,115 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-beta-3-november-20-2017"><a class="heading-anchor" href="#v2-0-0-beta-3-november-20-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.3 November 20, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-beta-4-december-4-2017"><a class="heading-anchor" href="#v2-0-0-beta-4-december-4-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.4 December 4, 2017</h3>
+<ul>
+<li>Breaking: List Group removed <code>$list-group-header-title-color</code>, <code>$list-group-header-title-font-size</code>, <code>$list-group-header-title-font-weight</code>, <code>$list-group-header-title-margin-bottom</code>, <code>$list-group-header-title-text-transform</code> use <code>$list-group-header-title</code> Sass map instead</li>
+<li>Breaking: List Group removed <code>$list-group-title-color</code>, <code>$list-group-title-font-size</code>, <code>$list-group-title-font-weight</code>, <code>$list-group-title-margin-bottom</code>, <code>$list-group-title-text-decoration</code>, <code>$list-group-title-hover-color</code>, <code>$list-group-title-hover-text-decoration</code> use <code>$list-group-title</code> Sass map instead</li>
+<li>Breaking: Removed <code>.list-group-subtitle</code> and related variables use <code>.list-group-subtext</code> instead</li>
+<li>Breaking: <code>clay-navbar-size</code> mixin renamed <code>btn-min-height</code>, <code>btn-min-width</code> to <code>btn-monospaced-size</code> and <code>btn-min-height-mobile</code>, <code>btn-min-width-mobile</code> to <code>btn-monospaced-size-mobile</code></li>
+<li>Breaking: List Group Notification remove <code>$list-group-notification-border-bottom-left-radius</code>, <code>$list-group-notification-border-bottom-right-radius</code>, <code>$list-group-notification-border-top-left-radius</code>, <code>$list-group-notification-border-top-right-radius</code></li>
+<li>Breaking: List Group Notification rename <code>$list-group-notification-item-border-variant</code> to <code>`-group-notification-item</code></li>
+<li>Breaking: (Fixes <a href="https://github.com/liferay/clay/issues/380">#380</a>) Button Monospaced use button size line-height</li>
+<li>Breaking: (<a href="https://github.com/liferay/clay/issues/381">#381</a>) Nav removed option to configure <code>$nav-link-color</code>, <code>$nav-link-hover-color</code>, <code>$nav-link-active-color</code>, <code>.nav</code> should be a base component with minimal styling we will create a mixin for those that need color variants</li>
+<li>Breaking: Sheet split up <code>$sheet-padding-x</code> into <code>$sheet-padding-left</code> and <code>$sheet-padding-right</code>, <code>$sheet-padding-y</code> into <code>$sheet-padding-bottom</code> and <code>$sheet-padding-top</code></li>
+<li>Breaking: Atlas move and rename <code>$section-*</code> variables to <code>$sheet-*</code></li>
+<li>Breaking: Rename <code>.section-subheader</code> to <code>.sheet-tertiary-title</code> and variables <code>$section-subheader-color</code>, <code>$section-subheader-font-size</code>, <code>$section-subheader-font-weight</code>, <code>$section-subheader-line-height</code>, <code>$section-subheader-margin-bottom</code>, <code>$section-subheader-padding-x</code>, <code>$section-subheader-padding-y</code>, <code>$section-subheader-text-transform</code>, to <code>$sheet-tertiary-title-color</code>, <code>$sheet-tertiary-title-font-size</code>, <code>$sheet-tertiary-title-font-weight</code>, <code>$sheet-tertiary-title-line-height</code>, <code>$sheet-tertiary-title-margin-bottom</code>, <code>$sheet-tertiary-title-padding-x</code>, <code>$sheet-tertiary-title-padding-y</code>, <code>$sheet-tertiary-title-text-transform</code></li>
+<li>Breaking: Rename <code>.section-header</code> to <code>.sheet-subtitle</code> and variables <code>$section-header-border-color</code>, <code>$section-header-border-style</code>, <code>$section-header-border-width</code>, <code>$section-header-color</code>, <code>$section-header-font-size</code>, <code>$section-header-font-weight</code>, <code>$section-header-line-height</code>, <code>$section-header-margin-bottom</code>, <code>$section-header-padding-x</code>, <code>$section-header-padding-y</code>, <code>$section-header-text-transform</code>, <code>$section-header-link-color</code>, <code>$section-header-link-text-decoration</code>, <code>$section-header-link-hover-color</code>, <code>$section-header-link-hover-text-decoration</code>, <code>$section-header-collapse-icon-bottom</code>, <code>$section-header-collapse-icon-left</code>, <code>$section-header-collapse-icon-right</code>, <code>$section-header-collapse-icon-top</code>, <code>$section-header-collapse-icon-padding-left</code>, <code>$section-header-collapse-icon-padding-right</code>, to <code>$sheet-subtitle-border-color</code>, <code>$sheet-subtitle-border-style</code>, <code>$sheet-subtitle-border-width</code>, <code>$sheet-subtitle-color</code>, <code>$sheet-subtitle-font-size</code>, <code>$sheet-subtitle-font-weight</code>, <code>$sheet-subtitle-line-height</code>, <code>$sheet-subtitle-margin-bottom</code>, <code>$sheet-subtitle-padding-x</code>, <code>$sheet-subtitle-padding-y</code>, <code>$sheet-subtitle-text-transform</code>, <code>$sheet-subtitle-link-color</code>, <code>$sheet-subtitle-link-text-decoration</code>, <code>$sheet-subtitle-link-hover-color</code>, <code>$sheet-subtitle-link-hover-text-decoration</code>, <code>$sheet-subtitle-collapse-icon-bottom</code>, <code>$sheet-subtitle-collapse-icon-left</code>, <code>$sheet-subtitle-collapse-icon-right</code>, <code>$sheet-subtitle-collapse-icon-top</code>, <code>$sheet-subtitle-collapse-icon-padding-left</code>, <code>$sheet-subtitle-collapse-icon-padding-right</code></li>
+<li>Breaking: Rename <code>.section-title</code> to <code>.sheet-title</code> and variables <code>$section-title-color</code>, <code>$section-title-font-size</code>, <code>$section-title-font-weight</code>, <code>$section-title-margin-bottom</code>, <code>$section-title-font-size-mobile</code>, <code>$section-title-margin-bottom-mobile</code> to <code>$sheet-title-color</code>, <code>$sheet-title-font-size</code>, <code>$sheet-title-font-weight</code>, <code>$sheet-title-margin-bottom</code>, <code>$sheet-title-font-size-mobile</code>, <code>$sheet-title-margin-bottom-mobile</code></li>
+<li>New: List Group added option to configure <code>$list-group-item-flex-checkbox-offset-top</code>, <code>$list-group-item-flex-offset-top</code></li>
+<li>New: Utilities added <code>.autofit-row</code> to be used as the container for <code>.flex-col</code> and added <code>.flex-col-section</code> for content inside <code>.flex-col</code></li>
+<li>New: List Group added <code>$list-group-header-title</code> Sass map to use with <code>clay-text-typography</code> mixin</li>
+<li>New: Added option to configure <code>text-tranform</code> to <code>clay-text-typography</code> mixin</li>
+<li>New: List Group added option to configure <code>$list-group-text-active-color</code>, <code>$list-group-subtext-active-color</code></li>
+<li>New: List Group added <code>.list-group-text</code>, <code>.list-group-subtext</code> and option to configure <code>$list-group-text</code>, <code>$list-group-text-link</code>, <code>$list-group-subtext</code>, <code>$list-group-subtext-link</code> Sass maps</li>
+<li>New: Added mixins <code>clay-text-typography($map)</code> and <code>clay-link($map)</code> to help with styling text, headings, and links</li>
+<li>New: Widget added <code>$widget-spacer</code> to quickly set spacing between elements inside <code>.widget</code> and update Atlas Widget colors and spacing</li>
+<li>New: Widget added option to configure <code>$widget-admin-toolbar-bg</code></li>
+<li>New: Widget add option to configure <code>$widget-article-title-font-weight</code></li>
+<li>New: Widget add option to configure <code>$widget-bg</code></li>
+<li>New: Widget added <code>.widget-admin</code> variant and option to configure <code>$widget-admin-border-color</code>, <code>$widget-admin-border-width</code>, <code>$widget-admin-toolbar-border-width</code></li>
+<li>New: Widget added <code>.widget-article-section</code> and option to configure <code>$widget-article-section-margin-bottom</code></li>
+<li>New: Widget added options to configure <code>$widget-border-color</code>, <code>$widget-border-width</code>, <code>$widget-border-radius</code>, <code>$widget-toolbar-bg</code>, <code>$widget-toolbar-border-width</code>, <code>$widget-toolbar-padding-x</code>, <code>$widget-toolbar-padding-y</code>, <code>$widget-header-padding-x</code>, <code>$widget-header-padding-y</code>, <code>$widget-header-title-color</code>, <code>$widget-header-title-font-size</code>, <code>$widget-header-title-margin-bottom</code>, <code>$widget-header-title-margin-top</code>, <code>$widget-header-title-text-transform</code>, <code>$widget-body-padding-bottom</code>, <code>$widget-body-padding-left</code>, <code>$widget-body-padding-right</code>, <code>$widget-body-padding-top</code>, <code>$widget-article-margin-bottom</code>, <code>$widget-article-header-margin-bottom</code>, <code>$widget-article-body-margin-bottom</code>, <code>$widget-article-title-color</code>, <code>$widget-article-title-font-size</code>, <code>$widget-article-title-margin-bottom</code>, <code>$widget-article-title-margin-top</code>, <code>$widget-article-subtitle-color</code>, <code>$widget-article-subtitle-font-size</code>, <code>$widget-article-subtitle-margin-top</code></li>
+<li>New: Widget component added <code>.widget</code>, <code>.widget-toolbar</code>, <code>.widget-header</code>, <code>.widget-controls</code>, <code>.widget-body</code>, <code>.widget-title</code>, <code>.widget-subtitle</code>, <code>.widget-article</code>, <code>.widget-article-header</code>, <code>.widget-article-body</code>, <code>.widget-article-footer</code></li>
+<li>New: Table added option to configure <code>$table-head-border-bottom-width</code>, <code>$table-head-border-top-width</code> for <code>.table</code></li>
+<li>New: Lexicon Icon caret-top-l.svg</li>
+<li>New: Grid added <code>.container-view</code> and option to configure <code>$container-view-padding-bottom</code>, <code>$container-view-padding-left</code>, <code>$container-view-padding-right</code>, <code>$container-view-padding-top</code>, <code>$container-view-padding-bottom-mobile</code>, <code>$container-view-padding-left-mobile</code>, <code>$container-view-padding-right-mobile</code>, <code>$container-view-padding-top-mobile</code></li>
+<li>New: List Group added option to configure <code>$list-group-margin-bottom</code>, <code>$list-group-margin-top</code></li>
+<li>New: Table List added option to configure <code>$table-list-margin-bottom</code>, <code>$table-list-margin-top</code></li>
+<li>New: Grid added <code>.container-form</code> and option to configure <code>$container-form-padding-bottom</code>, <code>$container-form-padding-left</code>, <code>$container-form-padding-right</code>, <code>$container-form-padding-top</code>, <code>$container-form-padding-bottom-mobile</code>, <code>$container-form-padding-left-mobile</code>, <code>$container-form-padding-right-mobile</code>, <code>$container-form-padding-top-mobile</code></li>
+<li>New: Sheet added <code>.sheet-lg</code> and option to configure <code>$sheet-lg-max-width</code></li>
+<li>New: (Fixes <a href="https://github.com/liferay/clay/issues/386">#386</a>) List Group Notification added <code>$list-group-notification-item-primary</code> Sass map to configure <code>.list-group-item-primary</code> styles, add option to configure bg colors in <code>clay-list-group-notification-item-border-variant</code> mixin</li>
+<li>New: Alert add option to configure <code>$alert-fluid-margin-bottom</code> and set it to 0</li>
+<li>New: Quick Action added option to configure <code>$quick-action-item-min-height</code>, <code>$quick-action-item-min-width</code></li>
+<li>New: Added <code>clay-nav-variant($map)</code> mixin for customizing nav colors</li>
+<li>New: Form added option to configure <code>$form-group-margin-bottom-mobile</code></li>
+<li>New: Button added utility class <code>.btn-borderless</code> to make <code>border-color: transparent</code> on <code>.btn-outline-*</code></li>
+<li>New: Buttons added <code>$btn-outline-primary</code>, <code>$btn-outline-secondary</code>, <code>$btn-outline-success</code>, <code>$btn-outline-info</code>, <code>$btn-outline-warning</code>, <code>$btn-outline-danger</code>, <code>$btn-outline-light</code>, <code>$btn-outline-dark</code>, <code>$btn-outline-palette</code> Sass maps to configure <code>.btn-outline-*</code> styles they are based on clay-button-variant mixin, and adjust Atlas <code>.btn-outline-*</code> styles</li>
+<li>New: Sheet added option to configure <code>$sheet-title-line-height</code> and long text without white space in <code>.sheet-title</code> should wrap</li>
+<li>New: Sheet added option to configure <code>$sheet-tertiary-title-font-size-mobile</code>, <code>$sheet-tertiary-title-margin-bottom-mobile</code></li>
+<li>New: Sheet added option to configure <code>$sheet-subtitle-font-size-mobile</code>, <code>$sheet-subtitle-margin-bottom-mobile</code></li>
+<li>New: Sheet added <code>.sheet-footer</code> and option to configure <code>$sheet-footer-margin-bottom</code>, <code>$sheet-footer-margin-left</code>, <code>$sheet-footer-margin-right</code>, <code>$sheet-footer-margin-top</code>, <code>$sheet-footer-margin-bottom-mobile</code>, <code>$sheet-footer-margin-left-mobile</code>, <code>$sheet-footer-margin-right-mobile</code>, <code>$sheet-footer-margin-top-mobile</code></li>
+<li>New: Sheet added <code>.sheet-header</code> and option to configure <code>$sheet-header-margin-bottom</code>, <code>$sheet-header-margin-bottom-mobile</code></li>
+<li>New: Sheet added <code>.sheet-section</code> and option to configure <code>$sheet-section-margin-bottom</code>, <code>$sheet-section-margin-bottom-mobile</code></li>
+<li>New: Sheet added <code>.sheet-text</code> and option to configure <code>$sheet-text-color</code>, <code>$sheet-text-font-size</code>, <code>$sheet-text-font-weight</code>, <code>$sheet-text-margin-bottom</code>, <code>$sheet-text-font-size-mobile</code>, <code>$sheet-text-margin-bottom-mobile</code></li>
+<li>New: Type added <code>.section-title</code> and option to configure <code>$section-title-color</code>, <code>$section-title-font-size</code>, <code>$section-title-font-weight</code>, <code>$section-title-margin-bottom</code>, <code>$section-title-font-size-mobile</code>, <code>$section-title-margin-bottom-mobile</code></li>
+<li>Update: List Group center <code>.list-group-title:only-child</code></li>
+<li>Update: <code>.list-group-text</code> and <code>.list-group-subtext</code> allow more variations of links inside them</li>
+<li>Update: Atlas List Group <code>.list-group-title</code>, <code>.list-group-text</code>, and <code>.list-group-subtext</code> styles</li>
+<li>Update: Mixin <code>clay-link</code> hover-color should be able to accept a null value</li>
+<li>Update: Atas List Group make spacing between items smaller</li>
+<li>Update: Widget rename <code>.widget-article .widget-title</code>, <code>.widget-article .widget-subtitle</code>, <code>.widget-header .widget-title</code>, to <code>.widget-article-title</code>, <code>.widget-article-subtitle</code>, <code>.widget-header-title</code> respectively</li>
+<li>Update: <code>.navbar-nav .nav-item</code> <code>word-wrap: normal</code> so text will truncate when used with <code>.navbar-text-truncate</code> in IE10</li>
+<li>Update: Buttons with transparent backgrounds don&#x2019;t overlay inputs in IE10</li>
+<li>Update: Input Group <code>.input-group-sm</code> and <code>.input-group-lg</code> should set <code>.form-control</code> padding to respective sizes in <code>.input-group-inset</code></li>
+<li>Update: Set <code>display: block</code> on <code>.panel-header</code>, <code>.sheet-title</code>, <code>sheet-subtitle</code>, and <code>.sheet-tertiary-title</code></li>
+<li>Update: Dropdown Wide / Full should expand in IE10</li>
+<li>Update: <code>.nav-btn</code> and <code>.nav-link-monospaced</code> to set <code>height</code> instead of <code>min-height</code> flexbox and min-height don&#x2019;t work too well in IE10 - 11</li>
+<li>Update: Nav Unstyled don&#x2019;t need to set <code>min-height</code> on <code>.nav-unstyled .nav-btn</code> already covered by <code>.nav-btn</code></li>
+<li>Update: (Fixes <a href="https://github.com/liferay/clay/issues/385">#385</a>) Labels add option to set <code>text-transform</code> in <code>clay-label-size</code> mixin and set <code>.label-lg</code> <code>text-transform: none</code></li>
+<li>Update: <code>$sheet-lg-max-width</code> should be a function of <code>map-get($container-max-width, lg)</code></li>
+<li>Update: Atlas Sheet Subtitle colors</li>
+<li>Update: List Group Notification don&#x2019;t need to map-merge <code>$list-group-notification-item</code></li>
+<li>Update: <code>clay-list-group-notification-item-border-variant</code> mixin to configure border-radius</li>
+<li>Update: List Group Item <code>.active:focus</code> should win over other <code>.active</code></li>
+<li>Update: List Group Notification set borders to match regular <code>.list-group</code></li>
+<li>Update: Added <code>pointer-events: none</code> to <code>.navbar-text-truncate</code>, <code>.breadcrumb-text-truncate</code>, and <code>.lexicon-icon</code> to prevent focus highlight in IE11 when clicking links that contain those elements</li>
+<li>Update: Modal <code>.modal-full-screen</code> position adjustment</li>
+<li>Update: Atlas <code>.btn-outline-secondary</code> should have same hover, focus, active states as <code>.btn-secondary</code></li>
+<li>Update: Atlas Sheet set colors and set spacing in mobile</li>
+<li>Update: Form Group margin-bottom to 24px</li>
+<li>Update: Set values for <code>.sheet-header</code>, <code>.sheet-section</code> margin-bottom and <code>.panel-group-flush .panel-body</code> in <code>.sheet</code> should share <code>.sheet-section</code> margin-bottom</li>
+<li>Update: Move <code>.section-title</code>, <code>.section-header</code>, <code>.section-subheader</code> components to sheets</li>
+<li>Update: Type set <code>$section-header-font-weight</code> to semi-bold so that <code>.section-header</code> and <code>.section-subheader</code> will still be semi-bold if h1-6 element isnt used</li>
+<li>Update: Form Inline Autofit should size correctly when there is long content inside</li>
+<li>Update: <code>.form-text</code> and <code>.form-feedback-item</code> should <code>word-wrap: break-word;</code></li>
+<li>Site: Move <code>.table-responsive-*</code> from <code>table</code> element to a <code>div</code> that wraps the <code>table</code> element.</li>
+<li>Site: List Group add example of <code>.list-group-title:only-child</code></li>
+<li>Site: List Group use <code>.list-group-text</code> and <code>.list-group-subtext</code> and <code>.flex-col-section</code></li>
+<li>Site: Added Widget page and Widget Test page</li>
+<li>Site: Sheet update <code>.sheet-lg</code> docs to reflect max-width is a function of <code>$container-max-width</code></li>
+<li>Site: Grid add <code>.container-view</code> docs and use <code>.container-view</code> in test pages</li>
+<li>Site: Grid added docs for <code>.container-form</code> and use <code>.container-form</code> on test pages</li>
+<li>Site: Added docs for <code>.sheet-lg</code> and use <code>.sheet-lg</code> instead of inline styles for test pages</li>
+<li>Site: List Group Notification added <code>.list-group-item-primary</code></li>
+<li>Site: Forms wrap form elements in <code>.form-group</code></li>
+<li>Site: Test pages remove BS4 utilities around main content and move container to outermost element</li>
+<li>Site: (Fixes <a href="https://github.com/liferay/clay/issues/384">#384</a>) Added plus button example with dropdown</li>
+<li>Site: (Fixes <a href="https://github.com/liferay/clay/issues/377">#377</a> and <a href="https://github.com/liferay/clay/issues/381">#381</a>) Add note about BS4 utilities and change site name to Clay</li>
+<li>Site: (<a href="https://github.com/liferay/clay/issues/381">#381</a>) Add blurb explaining Navbar</li>
+<li>Site: Fix typo in navs</li>
+<li>Site: (<a href="https://github.com/liferay/clay/issues/381">#381</a>) Add explanation about Base <code>.nav</code> class and its purpose</li>
+<li>Site: Added Sheet page</li>
+<li>Site: Button add examples of <code>.btn-outline-*.btn-borderless</code></li>
+<li>Site: Added test page for Form Hierarchy</li>
+<li>Site: <code>.sheet-header</code>, <code>.sheet-subheader</code> were renamed to <code>.sheet-subtitle</code> and <code>.sheet-tertiary-title</code></li>
+<li>Site: Renamed <code>.section-title</code>, <code>.section-header</code>, <code>.section-subheader</code> to <code>.sheet-title</code>, <code>.sheet-header</code>, <code>.sheet-subheader</code></li>
+<li>Site: Typography add example of <code>.section-title</code>, <code>.section-header</code>, and <code>.section-subheader</code></li>
+<li>Site: Form explain <code>.form-inline-autofit</code> better</li>
+<li>Site: Management Bar move <code>.clay-site-open-overlay</code> to the outer most element because claycss.com</li>
+<li>Site: Multi Step Nav add disabled state to Multi Step Nav Collapse example</li>
+</ul>
+<h3 id="v2-0-0-beta-3-november-20-2017"><a class="heading-anchor" href="#v2-0-0-beta-3-november-20-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.3 November 20, 2017</h3>
 <ul>
 <li>Breaking: Rename <code>$form-container-bg</code>, <code>$form-container-border-color</code>, <code>$form-container-border-style</code>, <code>$form-container-border-width</code>, <code>$form-container-border-radius</code>, <code>$form-container-padding-x</code>, <code>$form-container-padding-y</code> to <code>$sheet-bg</code>, <code>$sheet-border-color</code>, <code>$sheet-border-style</code>, <code>$sheet-border-width</code>, <code>$sheet-border-radius</code>, <code>$sheet-padding-x</code>, <code>$sheet-padding-y</code></li>
 <li>Breaking: Rename <code>.form-container</code> to <code>.sheet</code></li>

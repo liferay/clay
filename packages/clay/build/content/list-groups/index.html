@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - List Groups</title>
+	<title>Clay - List Groups</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -138,6 +138,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
@@ -149,6 +151,14 @@
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (For Sites)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -184,6 +194,8 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
@@ -191,6 +203,8 @@
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -246,10 +260,13 @@
 			</div>
 		</div>
 		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title text-truncate">
-				<a href="#1">Account Example One</a>
-			</h4>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+			<div class="flex-col-section">
+				<h4 class="list-group-title text-truncate">
+					<a href="#1">Account Example One</a>
+				</h4>
+				<p class="list-group-text">Second Level Text (list-group-text)</p>
+				<p class="list-group-subtext">Third Level (list-group-subtext)</p>
+			</div>
 		</div>
 		<div class="flex-col">
 			<div class="quick-action-menu">
@@ -301,10 +318,68 @@
 			</div>
 		</div>
 		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title">
-				<a href="#1">Account Example Two</a>
-			</h4>
-			<p class="list-group-subtitle">Second Level Text</p>
+			<div class="flex-col-section">
+				<h4 class="list-group-title">
+					<a href="#1">Account Example Two</a>
+				</h4>
+				<p class="list-group-subtext">List Group Subtext</p>
+			</div>
+		</div>
+		<div class="flex-col">
+			<div class="quick-action-menu">
+				<a class="quick-action-item" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="../../images/icons/icons.svg#trash">
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use xlink:href="../../images/icons/icons.svg#download">
+					</svg>
+				</a>
+				<a class="quick-action-item" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="#1" role="button">Remove</a>
+					<a class="dropdown-item" href="#1" role="button">Edit</a>
+					<a class="dropdown-item" href="#1" role="button">Move</a>
+					<a class="dropdown-item" href="#1" role="button">Checkout</a>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox">
+					<span class="custom-control-indicator"></span>
+				</label>
+			</div>
+		</div>
+		<div class="flex-col">
+			<div class="sticker sticker-secondary">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="../../images/icons/icons.svg#folder">
+				</svg>
+			</div>
+		</div>
+		<div class="flex-col flex-col-expand">
+			<div class="flex-col-section">
+				<h4 class="list-group-title">
+					<a href="#1">Account Example Three</a>
+				</h4>
+			</div>
 		</div>
 		<div class="flex-col">
 			<div class="quick-action-menu">
@@ -349,7 +424,7 @@
 		<h3 id="list-group-notification"><a class="heading-anchor" href="#list-group-notification"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group Notification</h3>
 
 <ul class="list-group list-group-notification show-quick-actions-on-hover">
-	<li class="list-group-item list-group-item-flex">
+	<li class="list-group-item list-group-item-flex list-group-item-primary">
 		<div class="flex-col">
 			<div class="custom-control custom-checkbox">
 				<label>
@@ -366,10 +441,12 @@
 			</div>
 		</div>
 		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title text-truncate">
-				<a href="#1">Account Example One</a>
-			</h4>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+			<div class="flex-col-section">
+				<h4 class="list-group-title text-truncate">
+					<a href="#1">Account Example One</a>
+				</h4>
+				<p class="list-group-subtext text-truncate">List Group Subtext</p>
+			</div>
 		</div>
 		<div class="flex-col">
 			<div class="quick-action-menu">
@@ -421,10 +498,12 @@
 			</div>
 		</div>
 		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title">
-				<a href="#1">Account Example Two</a>
-			</h4>
-			<p class="list-group-subtitle">Second Level Text</p>
+			<div class="flex-col-section">
+				<h4 class="list-group-title">
+					<a href="#1">Account Example Two</a>
+				</h4>
+				<p class="list-group-subtext">List Group Subtext</p>
+			</div>
 		</div>
 		<div class="flex-col">
 			<div class="quick-action-menu">
@@ -490,12 +569,19 @@
 					</div>
 				</div>
 				<div class="flex-col flex-col-expand">
-					<h4 class="list-group-title truncate-text">
-						<a href="#1">Account Example One</a>
-					</h4>
-					<p class="list-group-subtitle truncate-text">Second Level Text</p>
-					<div class="list-group-detail">
-						<span class="label label-warning">Pending</span>
+					<div class="flex-col-section">
+						<h4 class="list-group-title truncate-text">
+							<a href="#1">Account Example One</a>
+						</h4>
+						<p class="list-group-text">This is an example of .list-group-text and a <a href="#1">link</a>.</p>
+						<p class="list-group-text text-truncate"><a href="#1">list-group-text.text-truncate a</a></p>
+						<a class="list-group-text" href="#1">a.list-group-text</a>
+						<p class="list-group-subtext">This is .list-group-subtext and a <a href="#1">link</a>.</p>
+						<p class="list-group-subtext text-truncate"><a href="#1">list-group-subtext.text-truncate a</a></p>
+						<a class="list-group-subtext" href="#1">a.list-group-subtext</a>
+						<div class="list-group-detail">
+							<span class="label label-warning">Pending</span>
+						</div>
 					</div>
 				</div>
 				<div class="flex-col">
@@ -548,12 +634,14 @@
 					</div>
 				</div>
 				<div class="flex-col flex-col-expand">
-					<h4 class="list-group-title">
-						<a href="#1">Account Example Two</a>
-					</h4>
-					<p class="list-group-subtitle">Second Level Text</p>
-					<div class="list-group-detail">
-						<span class="label label-info">Info</span>
+					<div class="flex-col-section">
+						<h4 class="list-group-title">
+							<a href="#1">Account Example Two</a>
+						</h4>
+						<p class="list-group-subtext">List Group Subtext</p>
+						<div class="list-group-detail">
+							<span class="label label-info">Info</span>
+						</div>
 					</div>
 				</div>
 				<div class="flex-col">
@@ -625,12 +713,14 @@
 			</div>
 		</div>
 		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title text-truncate">
-				<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
-			</h4>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
-			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
+			<div class="flex-col-section">
+				<h4 class="list-group-title text-truncate">
+					<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+				</h4>
+				<p class="list-group-subtext text-truncate">List Group Subtext</p>
+				<div class="list-group-detail">
+					<span class="label label-success">Approved</span>
+				</div>
 			</div>
 		</div>
 		<div class="flex-col">
@@ -683,12 +773,14 @@
 			</div>
 		</div>
 		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title">
-				<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a>
-			</h4>
-			<p class="list-group-subtitle">Second Level Text</p>
-			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
+			<div class="flex-col-section">
+				<h4 class="list-group-title">
+					<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a>
+				</h4>
+				<p class="list-group-subtext">List Group Subtext</p>
+				<div class="list-group-detail">
+					<span class="label label-success">Approved</span>
+				</div>
 			</div>
 		</div>
 		<div class="flex-col">
@@ -813,10 +905,12 @@
 					</div>
 				</div>
 				<div class="flex-col flex-col-expand">
-					<h4 class="list-group-title text-truncate">
-						<a href="#1">Account Example One</a>
-					</h4>
-					<p class="list-group-subtitle text-truncate">Second Level Text</p>
+					<div class="flex-col-section">
+						<h4 class="list-group-title text-truncate">
+							<a href="#1">Account Example One</a>
+						</h4>
+						<p class="list-group-subtext text-truncate">List Group Subtext</p>
+					</div>
 				</div>
 				<div class="flex-col">
 					<div class="quick-action-menu">
@@ -868,10 +962,13 @@
 					</div>
 				</div>
 				<div class="flex-col flex-col-expand">
-					<h4 class="list-group-title">
-						<a href="#1">Account Example Two</a>
-					</h4>
-					<p class="list-group-subtitle">Second Level Text</p>
+					<div class="flex-col-section">
+						<h4 class="list-group-title">
+							<a href="#1">Account Example Two</a>
+						</h4>
+						<p class="list-group-text">List Group Text</p>
+						<p class="list-group-subtext">List Group Subtext</p>
+					</div>
 				</div>
 				<div class="flex-col">
 					<div class="quick-action-menu">

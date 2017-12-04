@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Form Elements</title>
+	<title>Clay - Form Elements</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -138,6 +138,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
@@ -149,6 +151,14 @@
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (For Sites)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
 </li>
 </ul>
 </div>
@@ -184,6 +194,8 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
@@ -191,6 +203,8 @@
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -215,7 +229,7 @@
 		<h3 id="basic-form-elements"><a class="heading-anchor" href="#basic-form-elements"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Basic Form Elements</h3>
 
 <div class="sheet">
-	<h4 class="section-header">Section Header</h4>
+	<h4 class="sheet-subtitle">Sheet Subtitle</h4>
 	<div class="form-group">
 		<label for="basicInputTypeText">
 			Text
@@ -292,23 +306,25 @@
 		<span class="form-check-description">Disabled Check Box</span>
 	</label>
 </div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-		<span class="form-check-description">1</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-		<span class="form-check-description">2</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-		<span class="form-check-description">3</span>
-	</label>
+<div class="form-group">
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
+			<span class="form-check-description">1</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
+			<span class="form-check-description">2</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
+			<span class="form-check-description">3</span>
+		</label>
+	</div>
 </div>
 
 		</div>
@@ -333,23 +349,25 @@
 		<span class="form-check-description">Disabled Radio Button</span>
 	</label>
 </div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
-		<span class="form-check-description">1</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
-		<span class="form-check-description">2</span>
-	</label>
-</div>
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
-		<span class="form-check-description">3</span>
-	</label>
+<div class="form-group">
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
+			<span class="form-check-description">1</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
+			<span class="form-check-description">2</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
+			<span class="form-check-description">3</span>
+		</label>
+	</div>
 </div>
 
 		</div>
@@ -475,19 +493,23 @@
 					<option>Sample 4</option>
 				</select>
 			</div>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input checked class="form-check-input" type="checkbox" value="">
-					<span class="form-check-description">Disabled Checkbox</span>
-				</label>
+			<div class="form-group">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input checked class="form-check-input" type="checkbox" value="">
+						<span class="form-check-description">Disabled Checkbox</span>
+					</label>
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="radio" value="">
+						<span class="form-check-description">Disabled Radio</span>
+					</label>
+				</div>
 			</div>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="radio" value="">
-					<span class="form-check-description">Disabled Radio</span>
-				</label>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Submit</button>
 			</div>
-			<button class="btn btn-primary" type="submit">Submit</button>
 		</fieldset>
 	</form>
 </div>
@@ -566,7 +588,7 @@
 		<h3 id="form-inline"><a class="heading-anchor" href="#form-inline"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline</h3>
 
 <div class="sheet">
-	<div class="form-inline">
+	<div class="form-group form-inline">
 		<label for="formInlineInput">Form Inline</label>
 		<input class="form-control" id="formInlineInput" type="text">
 		<button class="btn btn-primary" type="submit">Submit</button>
@@ -581,7 +603,11 @@
 		<h3 id="form-inline-autofit"><a class="heading-anchor" href="#form-inline-autofit"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline Autofit</h3>
 
 		<blockquote class="blockquote">
-			Equally spaced form inputs. To set a fixed width use <code>flex-grow: 0; flex-basis: 200px;</code> on <code>.form-inline-group</code> or any direct descendant of <code>.form-inline-autofit</code>.
+			Equally spaced form inputs based on the number of items inside <code>.form-inline-autofit</code>. Each <code>input</code> and <code>label</code> group should, generally, be wrapped inside <code>.form-inline-group</code>. <code>form-inline-autofit</code> stacks all inputs at max-width: 575px (breakpoint sm).
+		</blockquote>
+
+		<blockquote class="blockquote">
+			To set a fixed width on <code>.form-inline-group</code> or any direct descendant of <code>.form-inline-autofit</code> use <code>max-width: 200px;</code> or <code>flex-grow: 0; flex-basis: 200px;</code>. For <code>labels</code> or anything that doesn&apos;t have <code>width: 100%;</code> by default, you will need to set <code>width</code> instead of <code>max-width</code>.
 		</blockquote>
 
 <div class="sheet">
@@ -635,8 +661,10 @@
 			</div>
 		</div>
 	</div>
-	<button class="btn btn-primary" type="submit">Submit</button>
-	<a class="btn btn-danger" href="#1" role="button">Clear</a>
+	<div class="form-group">
+		<button class="btn btn-primary" type="submit">Submit</button>
+		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+	</div>
 </div>
 
 	</div>
@@ -673,8 +701,10 @@
 			<label for="formInlineAutofitCustomAddress2">Address 2</label>
 			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
 		</div>
-		<button class="btn btn-primary" type="submit">Submit</button>
-		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit">Submit</button>
+			<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		</div>
 	</form>
 </div>
 
