@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayCard should render a ClayCard with actionItems 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with actionItems 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -30,7 +30,7 @@ exports[`ClayCard should render a ClayCard with actionItems 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with classes 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with classes 1`] = `
 <div class="card-type-asset card my-custom-class">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -41,7 +41,7 @@ exports[`ClayCard should render a ClayCard with classes 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with icon 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with icon 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -58,7 +58,7 @@ exports[`ClayCard should render a ClayCard with icon 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with id 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with id 1`] = `
 <div class="card-type-asset card" id="myId">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -69,7 +69,7 @@ exports[`ClayCard should render a ClayCard with id 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with imageAlt 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with imageAlt 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -80,7 +80,7 @@ exports[`ClayCard should render a ClayCard with imageAlt 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with imageSrc 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with imageSrc 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <img alt="" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="thumbnail_coffee.jpg">
@@ -93,7 +93,7 @@ exports[`ClayCard should render a ClayCard with imageSrc 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with input \`name\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with input \`name\` 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -112,7 +112,7 @@ exports[`ClayCard should render a ClayCard with input \`name\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with input \`value\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with input \`value\` 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -131,7 +131,7 @@ exports[`ClayCard should render a ClayCard with input \`value\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with label 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with label 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -146,7 +146,7 @@ exports[`ClayCard should render a ClayCard with label 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with labelStyle \`danger color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with labelStyle \`danger color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -161,7 +161,7 @@ exports[`ClayCard should render a ClayCard with labelStyle \`danger color\` 1`] 
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with labelStyle \`info color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with labelStyle \`info color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -176,7 +176,7 @@ exports[`ClayCard should render a ClayCard with labelStyle \`info color\` 1`] = 
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with labelStyle \`secondary color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with labelStyle \`secondary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -191,7 +191,7 @@ exports[`ClayCard should render a ClayCard with labelStyle \`secondary color\` 1
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with labelStyle \`success color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with labelStyle \`success color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -206,7 +206,7 @@ exports[`ClayCard should render a ClayCard with labelStyle \`success color\` 1`]
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with labelStyle \`warning color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with labelStyle \`warning color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -221,7 +221,7 @@ exports[`ClayCard should render a ClayCard with labelStyle \`warning color\` 1`]
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with subtitle 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with subtitle 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -234,7 +234,7 @@ exports[`ClayCard should render a ClayCard with subtitle 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with title 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with title 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -247,7 +247,7 @@ exports[`ClayCard should render a ClayCard with title 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`danger color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`danger color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-danger sticker-bottom-left">DOC</span>
@@ -260,7 +260,7 @@ exports[`ClayCard should render a ClayCard with type \`danger color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`dark color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`dark color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-dark sticker-bottom-left">DOC</span>
@@ -273,7 +273,7 @@ exports[`ClayCard should render a ClayCard with type \`dark color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`info color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`info color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-info sticker-bottom-left">DOC</span>
@@ -286,7 +286,7 @@ exports[`ClayCard should render a ClayCard with type \`info color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`light color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`light color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-light sticker-bottom-left">DOC</span>
@@ -299,7 +299,7 @@ exports[`ClayCard should render a ClayCard with type \`light color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`primary color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`primary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
@@ -312,7 +312,7 @@ exports[`ClayCard should render a ClayCard with type \`primary color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`secondary color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`secondary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-secondary sticker-bottom-left">DOC</span>
@@ -325,7 +325,7 @@ exports[`ClayCard should render a ClayCard with type \`secondary color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`success color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`success color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-success sticker-bottom-left">DOC</span>
@@ -338,7 +338,7 @@ exports[`ClayCard should render a ClayCard with type \`success color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type \`warning color\` 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type \`warning color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-warning sticker-bottom-left">DOC</span>
@@ -351,7 +351,7 @@ exports[`ClayCard should render a ClayCard with type \`warning color\` 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with type 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with type 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
     <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
@@ -364,7 +364,7 @@ exports[`ClayCard should render a ClayCard with type 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with url 1`] = `
+exports[`ClayImageCard should render a ClayImageCard with url 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
@@ -377,7 +377,7 @@ exports[`ClayCard should render a ClayCard with url 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a disabled ClayCard 1`] = `
+exports[`ClayImageCard should render a disabled ClayImageCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -396,7 +396,7 @@ exports[`ClayCard should render a disabled ClayCard 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a selected ClayCard 1`] = `
+exports[`ClayImageCard should render a selected ClayImageCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -415,7 +415,7 @@ exports[`ClayCard should render a selected ClayCard 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render the default markup 1`] = `
+exports[`ClayImageCard should render the default markup 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
