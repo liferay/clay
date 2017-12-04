@@ -24,7 +24,7 @@ ClayCard.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	actionsItems: Config.arrayOf(
+	actionItems: Config.arrayOf(
 		Config.shapeOf({
 			label: Config.string().required(),
 			separator: Config.bool().value(false),

@@ -5,7 +5,7 @@
  */
 {template .render}
 	{@param spritemap: string}
-	{@param? actionsItems: list<[
+	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
 		url: string
@@ -81,7 +81,7 @@
 
 	{let $body kind="html"}
 		{call .body}
-			{param actionsItems: $actionsItems /}
+			{param actionItems: $actionItems /}
 			{param label: $label /}
 			{param labelStyle: $labelStyle /}
 			{param spritemap: $spritemap /}
@@ -130,7 +130,7 @@
  */
 {template .body}
 	{@param spritemap: string}
-	{@param? actionsItems: list<[
+	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
 		url: string
@@ -184,10 +184,10 @@
 				{/if}
 			</div>
 
-			{if $actionsItems}
+			{if $actionItems}
 				<div class="flex-col">
 					{call ClayActionsDropdown.render}
-						{param items: $actionsItems /}
+						{param items: $actionItems /}
 						{param spritemap: $spritemap /}
 					{/call}
 				</div>

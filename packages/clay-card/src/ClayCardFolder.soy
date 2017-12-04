@@ -2,7 +2,7 @@
 
 {template .render}
     {@param spritemap: string}
-    {@param? actionsItems: list<[
+    {@param? actionItems: list<[
         label: string,
         separator: bool,
         url: string
@@ -20,7 +20,7 @@
     {@param? url: string}
 
     {call ClayCardBase.render}
-        {param actionsItems: $actionsItems /}
+        {param actionItems: $actionItems /}
         {param checkbox: $checkbox /}
         {param elementClasses: $elementClasses /}
         {param id: $id /}
