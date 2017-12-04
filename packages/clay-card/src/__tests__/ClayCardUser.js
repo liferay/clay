@@ -2,7 +2,7 @@ import ClayCardUser from '../ClayCardUser';
 
 let component;
 let spritemap = 'icons.svg';
-let actionsItems = [
+let actionItems = [
 	{
 		label: 'Edit',
 		url: '#1',
@@ -46,9 +46,9 @@ describe('ClayCardUser', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardUser with actionsItems', () => {
+	it('should render a ClayCardUser with actionItems', () => {
 		component = new ClayCardUser({
-			actionsItems: actionsItems,
+			actionItems: actionItems,
 			spritemap: spritemap,
 		});
 
