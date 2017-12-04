@@ -36,7 +36,7 @@
         {param inputName: $inputName /}
         {param inputValue: $inputValue /}
         {param labels: $labels /}
-        {param ref: 'cardFile' /}
+        {param ref: 'card' /}
         {param selectable: $selectable /}
         {param selected: $selected /}
         {param spritemap: $spritemap /}
@@ -51,12 +51,12 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCard.VisualArea variant="'file'"}
+	{@param? fileType: string}
+	{@param? fileTypeStyle: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? spritemap: string}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
 	{@param? variant: string}
 
 	<div class="aspect-ratio card-item-first">

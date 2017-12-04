@@ -39,7 +39,7 @@
 		{/if}
 	{/let}
 
-	{let $body kind="html"}
+	{let $descriptiveArea kind="html"}
 		{call .descriptiveArea}
 			{param actionItems: $actionItems /}
 			{param icon: $icon /}
@@ -56,7 +56,7 @@
 				{param disabled: $disabled /}
 				{param labelContent kind="html"}
 					<div class="card card-horizontal">
-						{$body}
+						{$descriptiveArea}
 					</div>
 				{/param}
 
@@ -64,11 +64,10 @@
 				{param value: $inputValue /}
 			{/call}
 		{else}
-			{$body}
+			{$descriptiveArea}
 		{/if}
 	</div>
 {/template}
-
 
 /**
  * The content the element.

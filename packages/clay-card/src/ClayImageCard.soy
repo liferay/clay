@@ -55,12 +55,12 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCard.VisualArea variant="'image'"}
+	{@param? fileType: string}
+	{@param? fileTypeStyle: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
     {@param? spritemap: string}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
 
 	<div class="aspect-ratio card-item-first bg-checkered">
 		{let $aspectRatioClasses kind="text"}

@@ -11,6 +11,8 @@
 	]>}
   {@param? disabled: bool}
 	{@param? elementClasses: string}
+	{@param? fileType: string}
+	{@param? fileTypeStyle: string}
 	{@param? icon: string}
 	{@param? id: string}
   {@param? inputName: string}
@@ -26,11 +28,8 @@
 	{@param? spritemap: string}
 	{@param? subtitle: string}
 	{@param? title: string}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
 	{@param? url: string}
 	{@param? variant: string}
-
 
 	{let $attributes kind="attributes"}
 		class="card-type-asset
@@ -50,29 +49,29 @@
 		{/if}
 	{/let}
 
-	{let $header kind="html"}
-		{delcall ClayCard.VisualArea variant="$variant"}
-			{param icon: $icon /}
-			{param imageAlt: $imageAlt /}
-			{param imageSrc: $imageSrc /}
-			{param spritemap: $spritemap /}
-			{param fileType: $fileType /}
-			{param fileTypeStyle: $fileTypeStyle /}
-		{/delcall}
-	{/let}
-
-	{let $body kind="html"}
-		{delcall ClayCard.DescriptiveArea variant="$variant"}
-			{param actionItems: $actionItems /}
-			{param labels: $labels /}
-			{param spritemap: $spritemap /}
-			{param subtitle: $subtitle /}
-			{param title: $title /}
-			{param url: $url /}
-		{/delcall}
-	{/let}
-
 	<div {$attributes}>
+		{let $visualArea kind="html"}
+			{delcall ClayCard.VisualArea variant="$variant"}
+				{param fileType: $fileType /}
+				{param fileTypeStyle: $fileTypeStyle /}
+				{param icon: $icon /}
+				{param imageAlt: $imageAlt /}
+				{param imageSrc: $imageSrc /}
+				{param spritemap: $spritemap /}
+			{/delcall}
+		{/let}
+
+		{let $descriptiveArea kind="html"}
+			{delcall ClayCard.DescriptiveArea variant="$variant"}
+				{param actionItems: $actionItems /}
+				{param labels: $labels /}
+				{param spritemap: $spritemap /}
+				{param subtitle: $subtitle /}
+				{param title: $title /}
+				{param url: $url /}
+			{/delcall}
+		{/let}
+
 		{if $selectable}
 			{call ClayCheckbox.render}
 				{param checked: $selected /}
@@ -83,8 +82,8 @@
 					{/let}
 
 					<div class="{$classesCard}">
-						{$header}
-						{$body}
+						{$visualArea}
+						{$descriptiveArea}
 					</div>
 				{/param}
 
@@ -92,8 +91,8 @@
 				{param value: $inputValue /}
 			{/call}
 		{else}
-			{$header}
-			{$body}
+			{$visualArea}
+			{$descriptiveArea}
 		{/if}
 	</div>
 {/template}
