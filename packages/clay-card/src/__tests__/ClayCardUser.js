@@ -125,65 +125,6 @@ describe('ClayCardUser', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardUser with label', () => {
-		component = new ClayCardUser({
-			label: 'Approved',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayCardUser with labelStyle `danger color`', () => {
-		component = new ClayCardUser({
-			label: 'Approved',
-			labelStyle: 'danger',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayCardUser with labelStyle `info color`', () => {
-		component = new ClayCardUser({
-			label: 'Approved',
-			labelStyle: 'info',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayCardUser with labelStyle `secondary color`', () => {
-		component = new ClayCardUser({
-			label: 'Approved',
-			labelStyle: 'secondary',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayCardUser with labelStyle `success color`', () => {
-		component = new ClayCardUser({
-			label: 'Approved',
-			labelStyle: 'success',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayCardUser with labelStyle `warning color`', () => {
-		component = new ClayCardUser({
-			label: 'Approved',
-			labelStyle: 'warning',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render a ClayCardUser with subtitle', () => {
 		component = new ClayCardUser({
 			subtitle: 'Author Action',
