@@ -30,7 +30,7 @@
 			<div class="row">
 				<div class="col-md-4" id="card-block"></div>
 				<div class="col-md-4" id="card-icon-block"></div>
-				<div class="col-md-4"><clay-card actionsItems='[{"label": "Edit"},{"label": "Save"}]' title="thumbnail_coffee.jpg" subtitle="Author Action" imageAlt="thumbnail" type="JPG" url="#1" typeStyle="danger" spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-card></div>
+				<div class="col-md-4"><clay-card actionItems='[{"label": "Edit"},{"label": "Save"}]' title="thumbnail_coffee.jpg" subtitle="Author Action" imageAlt="thumbnail" type="JPG" url="#1" typeStyle="danger" spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-card></div>
 			</div>
 		</div>
 	</div>
@@ -92,10 +92,10 @@
 		 * Card default
 		 */
 		new metal.ClayCard({
-			actionsItems: items,
+			actionItems: items,
 			imageAlt: 'thumbnail',
 			imageSrc: image,
-			spritemap: spritemap
+			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'thumbnail_coffee.jpg',
 			type: 'JPG',
@@ -104,12 +104,12 @@
 		}, '#card-block');
 
 		new metal.ClayCard({
-			actionsItems: items,
+			actionItems: items,
 			checkbox: {
 				checked: true
 			},
 			icon: 'camera',
-			spritemap: spritemap
+			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
 			type: 'SVG',
@@ -172,17 +172,17 @@
 		 * Folder card
 		 */
 		new metal.ClayCardFolder({
-			spritemap: spritemap
+			spritemap: spritemap,
 			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 		}, '#directory-block');
 
 		new metal.ClayCardFolder({
-			actionsItems: items,
+			actionItems: items,
 			checkbox: {
 				checked: true,
 				indeterminate: true
 			},
-			spritemap: spritemap
+			spritemap: spritemap,
 			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 		}, '#directory-checkbox-block');
 
