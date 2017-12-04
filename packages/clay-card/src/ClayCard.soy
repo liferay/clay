@@ -1,4 +1,4 @@
-{namespace ClayCardBase}
+{namespace ClayCard}
 
 /**
  * This renders the component's whole content.
@@ -51,7 +51,7 @@
 	{/let}
 
 	{let $header kind="html"}
-		{delcall ClayCardBase.VisualArea variant="$variant"}
+		{delcall ClayCard.VisualArea variant="$variant"}
 			{param icon: $icon /}
 			{param imageAlt: $imageAlt /}
 			{param imageSrc: $imageSrc /}
@@ -62,7 +62,7 @@
 	{/let}
 
 	{let $body kind="html"}
-		{delcall ClayCardBase.DescriptiveArea variant="$variant"}
+		{delcall ClayCard.DescriptiveArea variant="$variant"}
 			{param actionItems: $actionItems /}
 			{param labels: $labels /}
 			{param spritemap: $spritemap /}
@@ -101,7 +101,7 @@
 /**
  * This renders the information area of the card.
  */
-{deltemplate ClayCardBase.DescriptiveArea}
+{deltemplate ClayCard.DescriptiveArea}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -160,7 +160,7 @@
 /**
  * This renders the visual area of the card
  */
-{deltemplate ClayCardBase.VisualArea}
+{deltemplate ClayCard.VisualArea}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}

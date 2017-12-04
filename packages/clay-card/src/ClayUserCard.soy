@@ -23,7 +23,7 @@
 		{@param? userColor: string}
 
 
-    {call ClayCardBase.render}
+    {call ClayCard.render}
         {param actionItems: $actionItems /}
         {param disabled: $disabled /}
         {param elementClasses: $elementClasses /}
@@ -48,7 +48,7 @@
 /**
  * This renders the information area of the card.
  */
-{deltemplate ClayCardBase.DescriptiveArea variant="'user'"}
+{deltemplate ClayCard.DescriptiveArea variant="'user'"}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -94,7 +94,7 @@
 /**
  * Render the visual area of the card.
  */
-{deltemplate ClayCardBase.VisualArea variant="'user'"}
+{deltemplate ClayCard.VisualArea variant="'user'"}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
