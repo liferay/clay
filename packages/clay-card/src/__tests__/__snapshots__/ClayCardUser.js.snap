@@ -53,11 +53,6 @@ exports[`ClayCardUser should render a ClayCardUser with icon 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents">
-        <use xlink:href="icons.svg#documents"></use>
-      </svg>
-    </div>
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
@@ -104,7 +99,7 @@ exports[`ClayCardUser should render a ClayCardUser with imageSrc 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
       <span class="sticker sticker-primary rounded-circle sticker-xl">
-        <img class="img-fluid" src="thumbnail_coffee.jpg">
+        <img alt="" class="img-fluid" src="thumbnail_coffee.jpg">
       </span>
     </div>
   </div>

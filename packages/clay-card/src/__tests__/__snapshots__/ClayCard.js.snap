@@ -71,9 +71,7 @@ exports[`ClayCard should render a ClayCard with id 1`] = `
 
 exports[`ClayCard should render a ClayCard with imageAlt 1`] = `
 <div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first bg-checkered">
-    <img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-  </div>
+  <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand"></div>
@@ -85,7 +83,7 @@ exports[`ClayCard should render a ClayCard with imageAlt 1`] = `
 exports[`ClayCard should render a ClayCard with imageSrc 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first bg-checkered">
-    <img class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="thumbnail_coffee.jpg">
+    <img alt="" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="thumbnail_coffee.jpg">
   </div>
   <div class="card-body">
     <div class="card-row">
