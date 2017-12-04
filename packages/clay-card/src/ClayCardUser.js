@@ -78,6 +78,15 @@ ClayCardUser.STATE = {
 	imageSrc: Config.string(),
 
 	/**
+	 * Initials of the user.
+	 * @instance
+	 * @memberof ClayCardUser
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	initials: Config.string(),
+
+	/**
 	 * Name to be applied to the input element.
 	 * @instance
 	 * @memberof ClayCardUser
@@ -94,6 +103,15 @@ ClayCardUser.STATE = {
 	 * @default undefined
 	 */
 	inputValue: Config.string(),
+
+	/**
+	 * Name of the user.
+	 * @instance
+	 * @memberof ClayCardUser
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	name: Config.string(),
 
 	/**
 	 * Flag to indicate if the card is selectable or not.
@@ -132,31 +150,22 @@ ClayCardUser.STATE = {
 	subtitle: Config.string(),
 
 	/**
-	 * Title of the card.
+	 * Transform title in the url.
 	 * @instance
 	 * @memberof ClayCardUser
-	 * @type {?string|undefined}
+	 * @type {?string}
 	 * @default undefined
 	 */
-	title: Config.string(),
+	url: Config.string(),
 
 	/**
-	 * Render label in the ClaySticker element.
-	 * @instance
-	 * @memberof ClayCardUser
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	type: Config.string(),
-
-	/**
-	 * Style of the ClaySticker element.
+	 * Color of the user sticker.
 	 * @instance
 	 * @memberof ClayCardUser
 	 * @type {?string}
 	 * @default primary
 	 */
-	typeStyle: Config.oneOf([
+	userColor: Config.oneOf([
 		'danger',
 		'dark',
 		'info',
@@ -166,15 +175,6 @@ ClayCardUser.STATE = {
 		'success',
 		'warning',
 	]).value('primary'),
-
-	/**
-	 * Transform title in the url.
-	 * @instance
-	 * @memberof ClayCardUser
-	 * @type {?string}
-	 * @default undefined
-	 */
-	url: Config.string(),
 };
 
 defineWebComponent('clay-card-user', ClayCardUser);

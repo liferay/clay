@@ -136,7 +136,7 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with title', () => {
 		component = new ClayCardUser({
-			title: 'empty-background.png',
+			name: 'empty-background.png',
 			spritemap: spritemap,
 		});
 
@@ -145,7 +145,7 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
+			initials: 'DOC',
 			spritemap: spritemap,
 		});
 
@@ -154,8 +154,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `danger color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'danger',
+			initials: 'DOC',
+			userColor: 'danger',
 			spritemap: spritemap,
 		});
 
@@ -164,8 +164,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `dark color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'dark',
+			initials: 'DOC',
+			userColor: 'dark',
 			spritemap: spritemap,
 		});
 
@@ -174,8 +174,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `info color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'info',
+			initials: 'DOC',
+			userColor: 'info',
 			spritemap: spritemap,
 		});
 
@@ -184,8 +184,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `light color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'light',
+			initials: 'DOC',
+			userColor: 'light',
 			spritemap: spritemap,
 		});
 
@@ -194,8 +194,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `primary color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'primary',
+			initials: 'DOC',
+			userColor: 'primary',
 			spritemap: spritemap,
 		});
 
@@ -204,8 +204,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `secondary color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'secondary',
+			initials: 'DOC',
+			userColor: 'secondary',
 			spritemap: spritemap,
 		});
 
@@ -214,8 +214,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `success color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'success',
+			initials: 'DOC',
+			userColor: 'success',
 			spritemap: spritemap,
 		});
 
@@ -224,8 +224,8 @@ describe('ClayCardUser', function() {
 
 	it('should render a ClayCardUser with type `warning color`', () => {
 		component = new ClayCardUser({
-			type: 'DOC',
-			typeStyle: 'warning',
+			initials: 'DOC',
+			userColor: 'warning',
 			spritemap: spritemap,
 		});
 

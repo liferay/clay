@@ -11,16 +11,16 @@
     {@param? id: string}
     {@param? imageAlt: string}
 		{@param? imageSrc: string}
+    {@param? initials: string}
     {@param? inputName: string}
     {@param? inputValue: string}
+    {@param? name: string}
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? spritemap: string}
     {@param? subtitle: string}
-    {@param? title: string}
-    {@param? type: string}
-		{@param? typeStyle: string}
     {@param? url: string}
+		{@param? userColor: string}
 
 
     {call ClayCardBase.render}
@@ -37,9 +37,9 @@
         {param selected: $selected /}
         {param spritemap: $spritemap /}
         {param subtitle: $subtitle /}
-        {param title: $title /}
-        {param type: $type /}
-        {param typeStyle: $typeStyle /}
+        {param title: $name /}
+        {param type: $initials /}
+        {param typeStyle: $userColor /}
         {param url: $url /}
         {param variant: 'user' /}
     {/call}
