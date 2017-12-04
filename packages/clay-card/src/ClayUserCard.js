@@ -108,10 +108,10 @@ ClayUserCard.STATE = {
 	 * Name of the user.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {!string}
 	 * @default undefined
 	 */
-	name: Config.string(),
+	name: Config.string().required(),
 
 	/**
 	 * Flag to indicate if the card is selectable or not.

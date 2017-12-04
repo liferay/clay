@@ -9,7 +9,9 @@ exports[`ClayUserCard should render a ClayUserCard with actionItems 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
       <div class="flex-col">
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
@@ -43,7 +45,9 @@ exports[`ClayUserCard should render a ClayUserCard with classes 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -58,7 +62,9 @@ exports[`ClayUserCard should render a ClayUserCard with icon 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -73,7 +79,9 @@ exports[`ClayUserCard should render a ClayUserCard with id 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -88,7 +96,9 @@ exports[`ClayUserCard should render a ClayUserCard with imageAlt 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -105,7 +115,9 @@ exports[`ClayUserCard should render a ClayUserCard with imageSrc 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -125,7 +137,9 @@ exports[`ClayUserCard should render a ClayUserCard with input \`name\` 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="User Name">User Name</div>
+            </div>
           </div>
         </div>
       </div>
@@ -148,7 +162,9 @@ exports[`ClayUserCard should render a ClayUserCard with input \`value\` 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="User Name">User Name</div>
+            </div>
           </div>
         </div>
       </div>
@@ -167,6 +183,7 @@ exports[`ClayUserCard should render a ClayUserCard with subtitle 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
         <div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
       </div>
     </div>
@@ -200,7 +217,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`danger color\` 1`
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -215,7 +234,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`dark color\` 1`] 
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -230,7 +251,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`info color\` 1`] 
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -245,7 +268,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`light color\` 1`]
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -260,7 +285,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`primary color\` 1
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -275,7 +302,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`secondary color\`
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -290,7 +319,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`success color\` 1
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -305,7 +336,9 @@ exports[`ClayUserCard should render a ClayUserCard with type \`warning color\` 1
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -320,7 +353,9 @@ exports[`ClayUserCard should render a ClayUserCard with type 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
@@ -336,7 +371,7 @@ exports[`ClayUserCard should render a ClayUserCard with url 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
-        <a class=" card-title text-truncate" href="#1"></a>
+        <a class=" card-title text-truncate" href="#1">User Name</a>
       </div>
     </div>
   </div>
@@ -357,7 +392,9 @@ exports[`ClayUserCard should render a disabled ClayUserCard 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="User Name">User Name</div>
+            </div>
           </div>
         </div>
       </div>
@@ -380,7 +417,9 @@ exports[`ClayUserCard should render a selected ClayUserCard 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="User Name">User Name</div>
+            </div>
           </div>
         </div>
       </div>
@@ -398,7 +437,9 @@ exports[`ClayUserCard should render the default markup 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="User Name">User Name</div>
+      </div>
     </div>
   </div>
 </div>
