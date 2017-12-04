@@ -87,28 +87,24 @@ ClayCardFile.STATE = {
 	inputValue: Config.string(),
 
 	/**
-	 * Render label in the ClayLabel element.
+	 * Labels of the card.
 	 * @instance
 	 * @memberof ClayCardFile
-	 * @type {?string|undefined}
+	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	label: Config.string(),
-
-	/**
-	 * Style of the ClayLabel.
-	 * @instance
-	 * @memberof ClayCardFile
-	 * @type {?string}
-	 * @default secondary
-	 */
-	labelStyle: Config.oneOf([
-		'danger',
-		'info',
-		'secondary',
-		'success',
-		'warning',
-	]).value('secondary'),
+	labels: Config.arrayOf(
+		Config.shapeOf({
+			label: Config.string(),
+			style: Config.oneOf([
+				'danger',
+				'info',
+				'secondary',
+				'success',
+				'warning',
+			]).value('secondary'),
+		})
+	),
 
 	/**
 	 * Flag to indicate if the card is selectable or not.

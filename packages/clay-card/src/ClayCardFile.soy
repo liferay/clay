@@ -13,8 +13,10 @@
     {@param? id: string}
     {@param? inputName: string}
     {@param? inputValue: string}
-    {@param? label: string}
-	{@param? labelStyle: string}
+	{@param? labels: list<[
+		label: string,
+		style: string
+	]>}
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? subtitle: string}
@@ -31,8 +33,7 @@
         {param id: $id /}
         {param inputName: $inputName /}
         {param inputValue: $inputValue /}
-        {param label: $label /}
-        {param labelStyle: $labelStyle /}
+        {param labels: $labels /}
         {param ref: 'cardFile' /}
         {param selectable: $selectable /}
         {param selected: $selected /}

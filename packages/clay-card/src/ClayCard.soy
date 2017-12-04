@@ -14,8 +14,10 @@
 	{@param? imageSrc: string}
     {@param? inputName: string}
     {@param? inputValue: string}
-    {@param? label: string}
-	{@param? labelStyle: string}
+	{@param? labels: list<[
+		label: string,
+		style: string
+	]>}
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? spritemap: string}
@@ -24,7 +26,6 @@
     {@param? type: string}
 	{@param? typeStyle: string}
     {@param? url: string}
-
 
     {call ClayCardBase.render}
         {param actionItems: $actionItems /}
@@ -36,8 +37,7 @@
         {param imageSrc: $imageSrc /}
         {param inputName: $inputName /}
         {param inputValue: $inputValue /}
-        {param label: $label /}
-        {param labelStyle: $labelStyle /}
+        {param labels: $labels /}
         {param ref: 'card' /}
         {param selectable: $selectable /}
         {param selected: $selected /}
