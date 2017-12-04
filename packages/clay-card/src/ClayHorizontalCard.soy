@@ -1,0 +1,125 @@
+{namespace ClayHorizontalCard}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param spritemap: string}
+	{@param? actionItems: list<[
+		label: string,
+		separator: bool,
+		url: string
+	]>}
+	{@param? checkbox: [
+		checked: bool,
+		disabled: bool,
+		indeterminate: bool,
+		name: string,
+		value: string
+	]}
+	{@param? elementClasses: string}
+	{@param? id: string}
+	{@param? title: string}
+	{@param? url: string}
+
+	{let $attributes kind="attributes"}
+		class="card-type-directory
+			{if $checkbox}
+				{sp}form-check form-check-card form-check-middle-left
+			{else}
+				{sp}card card-horizontal
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	{let $body kind="html"}
+		{call .body}
+			{param actionItems: $actionItems /}
+			{param spritemap: $spritemap /}
+			{param title: $title /}
+			{param url: $url /}
+		{/call}
+	{/let}
+
+	<div {$attributes}>
+		{if $checkbox}
+			{call ClayCheckbox.render}
+				{param checked: $checkbox.checked /}
+				{param disabled: $checkbox.disabled /}
+				{param indeterminate: $checkbox.indeterminate /}
+				{param labelContent kind="html"}
+					{let $classesCard kind="text"}
+						card card-horizontal
+					{/let}
+
+					<div class="{$classesCard}">
+						{$body}
+					</div>
+				{/param}
+
+				{param name: $checkbox.name /}
+				{param value: $checkbox.value /}
+			{/call}
+		{else}
+			{$body}
+		{/if}
+	</div>
+{/template}
+
+
+/**
+ * The content the element.
+ */
+{template .body}
+	{@param spritemap: string}
+	{@param? actionItems: list<[
+		label: string,
+		separator: bool,
+		url: string
+	]>}
+	{@param? title: string}
+	{@param? url: string}
+
+	<div class="card-body">
+		<div class="card-row">
+			{let $classesDescription kind="text"}
+				flex-col flex-col-expand flex-col-gutters
+			{/let}
+
+      {call ClaySticker.render}
+        {param icon: 'folder' /}
+        {param spritemap: $spritemap /}
+        {param style: 'unstyled' /}
+      {/call}
+
+			<div class="{$classesDescription}">
+				{if $url}
+					{call ClayLink.render}
+						{param elementClasses: 'card-title text-truncate' /}
+						{param href: $url /}
+						{param label: $title /}
+					{/call}
+				{elseif $title}
+					<div class="card-title text-truncate" title="{$title}">{$title}</div>
+				{/if}
+			</div>
+
+			{if $actionItems}
+				<div class="flex-col">
+					{call ClayActionsDropdown.render}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</div>
+			{/if}
+		</div>
+	</div>
+{/template}

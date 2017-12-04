@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayCardFolder should render a ClayCardFolder with actionItems 1`] = `
-<div class="card card-type-directory card-horizontal">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 1`] = `
+<div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
       <span class="sticker sticker-unstyled">
@@ -34,8 +34,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with actionItems 1`] = `
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with checkbox \`name\` 1`] = `
-<div class="form-check form-check-card form-check-middle-left card-type-directory">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with checkbox \`name\` 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
     <label>
       <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
@@ -57,8 +57,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with checkbox \`name\` 1`
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with checkbox \`value\` 1`] = `
-<div class="form-check form-check-card form-check-middle-left card-type-directory">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with checkbox \`value\` 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
     <label>
       <input checked="" class="custom-control-input" value="checkbox" ref="input" type="checkbox">
@@ -80,8 +80,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with checkbox \`value\` 1
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with checkbox checked 1`] = `
-<div class="form-check form-check-card form-check-middle-left card-type-directory">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with checkbox checked 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
     <label>
       <input checked="" class="custom-control-input" ref="input" type="checkbox">
@@ -103,8 +103,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with checkbox checked 1`]
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with checkbox disabled 1`] = `
-<div class="form-check form-check-card form-check-middle-left card-type-directory">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with checkbox disabled 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
     <label>
       <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
@@ -126,8 +126,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with checkbox disabled 1`
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with checkbox indeterminate 1`] = `
-<div class="form-check form-check-card form-check-middle-left card-type-directory">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with checkbox indeterminate 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
     <label>
       <input checked="" class="custom-control-input" ref="input" type="checkbox">
@@ -149,8 +149,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with checkbox indetermina
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with classes 1`] = `
-<div class="card card-type-directory card-horizontal my-custom-class">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with classes 1`] = `
+<div class="card-type-directory card card-horizontal my-custom-class">
   <div class="card-body">
     <div class="card-row">
       <span class="sticker sticker-unstyled">
@@ -164,8 +164,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with classes 1`] = `
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with id 1`] = `
-<div class="card card-type-directory card-horizontal" id="myId">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
+<div class="card-type-directory card card-horizontal" id="myId">
   <div class="card-body">
     <div class="card-row">
       <span class="sticker sticker-unstyled">
@@ -179,8 +179,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with id 1`] = `
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with title 1`] = `
-<div class="card card-type-directory card-horizontal">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with title 1`] = `
+<div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
       <span class="sticker sticker-unstyled">
@@ -196,8 +196,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with title 1`] = `
 </div>
 `;
 
-exports[`ClayCardFolder should render a ClayCardFolder with url 1`] = `
-<div class="card card-type-directory card-horizontal">
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with url 1`] = `
+<div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
       <span class="sticker sticker-unstyled">
@@ -213,8 +213,8 @@ exports[`ClayCardFolder should render a ClayCardFolder with url 1`] = `
 </div>
 `;
 
-exports[`ClayCardFolder should render the default markup 1`] = `
-<div class="card card-type-directory card-horizontal">
+exports[`ClayHorizontalCard should render the default markup 1`] = `
+<div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
       <span class="sticker sticker-unstyled">

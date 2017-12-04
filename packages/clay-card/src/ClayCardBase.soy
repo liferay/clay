@@ -32,27 +32,11 @@
 	{@param? variant: string}
 
 	{let $attributes kind="attributes"}
-		class="
+		class="card-type-asset
 			{if $checkbox}
-				form-check form-check-card
-
-				{if $variant == 'folder'}
-					{sp}form-check-middle-left
-				{else}
-					{sp}form-check-top-left
-				{/if}
+				{sp}form-check form-check-card form-check-top-left
 			{else}
-				card
-			{/if}
-
-			{if $variant == 'folder'}
-				{sp}card-type-directory
-
-				{if not $checkbox}
-					{sp}card-horizontal
-				{/if}
-			{else}
-				{sp}card-type-asset
+				{sp}card
 			{/if}
 
 			{if $elementClasses}
@@ -66,17 +50,15 @@
 	{/let}
 
 	{let $header kind="html"}
-		{if $variant != 'folder'}
-			{call .header}
-				{param icon: $icon /}
-				{param imageAlt: $imageAlt /}
-				{param imageSrc: $imageSrc /}
-				{param spritemap: $spritemap /}
-				{param type: $type /}
-				{param typeStyle: $typeStyle /}
-				{param variant: $variant /}
-			{/call}
-		{/if}
+		{call .header}
+			{param icon: $icon /}
+			{param imageAlt: $imageAlt /}
+			{param imageSrc: $imageSrc /}
+			{param spritemap: $spritemap /}
+			{param type: $type /}
+			{param typeStyle: $typeStyle /}
+			{param variant: $variant /}
+		{/call}
 	{/let}
 
 	{let $body kind="html"}
@@ -88,7 +70,6 @@
 			{param subtitle: $subtitle /}
 			{param title: $title /}
 			{param url: $url /}
-			{param variant: $variant /}
 		{/call}
 	{/let}
 
@@ -100,12 +81,7 @@
 				{param indeterminate: $checkbox.indeterminate /}
 				{param labelContent kind="html"}
 					{let $classesCard kind="text"}
-						card
-						{if $variant == 'folder'}
-							{sp}card-horizontal
-						{else}
-							{sp}card-type-asset
-						{/if}
+						card card-type-asset
 					{/let}
 
 					<div class="{$classesCard}">
@@ -140,26 +116,10 @@
 	{@param? subtitle: string}
 	{@param? title: string}
 	{@param? url: string}
-	{@param? variant: string}
 
 	<div class="card-body">
 		<div class="card-row">
-			{let $classesDescription kind="text"}
-				flex-col flex-col-expand
-				{if $variant == 'folder'}
-					{sp}flex-col-gutters
-				{/if}
-			{/let}
-
-			{if $variant == 'folder'}
-				{call ClaySticker.render}
-					{param icon: 'folder' /}
-					{param spritemap: $spritemap /}
-					{param style: 'unstyled' /}
-				{/call}
-			{/if}
-
-			<div class="{$classesDescription}">
+			<div class="flex-col flex-col-expand">
 				{if $url}
 					{call ClayLink.render}
 						{param elementClasses: 'card-title text-truncate' /}
@@ -170,11 +130,11 @@
 					<div class="card-title text-truncate" title="{$title}">{$title}</div>
 				{/if}
 
-				{if $subtitle and $variant != 'folder'}
+				{if $subtitle}
 					<div class="card-subtitle text-truncate" title="{$subtitle}">{$subtitle}</div>
 				{/if}
 
-				{if $label and $labelStyle and $variant != 'folder'}
+				{if $label and $labelStyle}
 					<div class="card-detail">
 						{call ClayLabel.render}
 							{param label: $label /}

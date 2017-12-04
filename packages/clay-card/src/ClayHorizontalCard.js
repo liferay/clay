@@ -1,26 +1,29 @@
-import './ClayCardBase';
+import 'clay-checkbox';
+import 'clay-dropdown';
+import 'clay-link';
+import 'clay-sticker';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import templates from './ClayCardFolder.soy.js';
+import templates from './ClayHorizontalCard.soy.js';
 
 /**
- * Metal ClayCardFolder component.
+ * Metal ClayHorizontalCard component.
  */
-class ClayCardFolder extends Component {}
+class ClayHorizontalCard extends Component {}
 
 /**
  * State definition.
  * @static
  * @type {!Object}
  */
-ClayCardFolder.STATE = {
+ClayHorizontalCard.STATE = {
 	/**
 	 * Actions in the dropdown on card.
 	 * @instance
-	 * @memberof ClayCardFolder
+	 * @memberof ClayHorizontalCard
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
@@ -35,7 +38,7 @@ ClayCardFolder.STATE = {
 	/**
 	 * Transform card with checkbox.
 	 * @instance
-	 * @memberof ClayCardFolder
+	 * @memberof ClayHorizontalCard
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
@@ -50,7 +53,7 @@ ClayCardFolder.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayCardFolder
+	 * @memberof ClayHorizontalCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -59,7 +62,7 @@ ClayCardFolder.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayCardFolder
+	 * @memberof ClayHorizontalCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -68,7 +71,7 @@ ClayCardFolder.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayCardFolder
+	 * @memberof ClayHorizontalCard
 	 * @type {!string}
 	 * @default undefined
 	 */
@@ -77,7 +80,7 @@ ClayCardFolder.STATE = {
 	/**
 	 * Title of the card.
 	 * @instance
-	 * @memberof ClayCardFolder
+	 * @memberof ClayHorizontalCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -86,16 +89,16 @@ ClayCardFolder.STATE = {
 	/**
 	 * Transform title in the url.
 	 * @instance
-	 * @memberof ClayCardFolder
+	 * @memberof ClayHorizontalCard
 	 * @type {?string}
 	 * @default undefined
 	 */
 	url: Config.string(),
 };
 
-defineWebComponent('clay-card-folder', ClayCardFolder);
+defineWebComponent('clay-horizontal-card', ClayHorizontalCard);
 
-Soy.register(ClayCardFolder, templates);
+Soy.register(ClayHorizontalCard, templates);
 
-export {ClayCardFolder};
-export default ClayCardFolder;
+export {ClayHorizontalCard};
+export default ClayHorizontalCard;

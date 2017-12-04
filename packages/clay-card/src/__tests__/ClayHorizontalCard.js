@@ -1,4 +1,4 @@
-import ClayCardFolder from '../ClayCardFolder';
+import ClayHorizontalCard from '../ClayHorizontalCard';
 
 let component;
 let spritemap = 'icons.svg';
@@ -13,7 +13,7 @@ let actionItems = [
 	},
 ];
 
-describe('ClayCardFolder', function() {
+describe('ClayHorizontalCard', function() {
 	afterEach(() => {
 		if (component) {
 			component.dispose();
@@ -21,15 +21,15 @@ describe('ClayCardFolder', function() {
 	});
 
 	it('should render the default markup', () => {
-		component = new ClayCardFolder({
+		component = new ClayHorizontalCard({
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with classes', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with classes', () => {
+		component = new ClayHorizontalCard({
 			spritemap: spritemap,
 			elementClasses: 'my-custom-class',
 		});
@@ -37,8 +37,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with id', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with id', () => {
+		component = new ClayHorizontalCard({
 			spritemap: spritemap,
 			id: 'myId',
 		});
@@ -46,8 +46,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with actionItems', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with actionItems', () => {
+		component = new ClayHorizontalCard({
 			actionItems: actionItems,
 			spritemap: spritemap,
 		});
@@ -55,8 +55,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with checkbox checked', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with checkbox checked', () => {
+		component = new ClayHorizontalCard({
 			checkbox: {
 				checked: true,
 			},
@@ -66,8 +66,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with checkbox disabled', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with checkbox disabled', () => {
+		component = new ClayHorizontalCard({
 			checkbox: {
 				checked: true,
 				disabled: true,
@@ -78,8 +78,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with checkbox indeterminate', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with checkbox indeterminate', () => {
+		component = new ClayHorizontalCard({
 			checkbox: {
 				indeterminate: true,
 			},
@@ -89,8 +89,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with checkbox `name`', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with checkbox `name`', () => {
+		component = new ClayHorizontalCard({
 			checkbox: {
 				checked: true,
 				name: 'checkbox01',
@@ -101,8 +101,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with checkbox `value`', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with checkbox `value`', () => {
+		component = new ClayHorizontalCard({
 			checkbox: {
 				checked: true,
 				value: 'checkbox',
@@ -113,8 +113,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with title', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with title', () => {
+		component = new ClayHorizontalCard({
 			title: 'empty-background.png',
 			spritemap: spritemap,
 		});
@@ -122,8 +122,8 @@ describe('ClayCardFolder', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFolder with url', () => {
-		component = new ClayCardFolder({
+	it('should render a ClayHorizontalCard with url', () => {
+		component = new ClayHorizontalCard({
 			url: '#1',
 			spritemap: spritemap,
 		});

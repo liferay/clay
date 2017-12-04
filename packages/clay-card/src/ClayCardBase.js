@@ -189,7 +189,7 @@ ClayCardBase.STATE = {
 	 * @type {?array|undefined}
 	 * @default image
 	 */
-	variant: Config.oneOf(['image', 'file', 'user', 'folder']).value('image'),
+	variant: Config.oneOf(['image', 'file', 'user']).value('image'),
 };
 
 Soy.register(ClayCardBase, templates);
