@@ -33,19 +33,13 @@ ClayCardFile.STATE = {
 	),
 
 	/**
-	 * Transform card with checkbox.
+	 * Flag to indicate if the card is disabled or not.
 	 * @instance
 	 * @memberof ClayCardFile
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?bool|undefined}
+	 * @default false
 	 */
-	checkbox: Config.shapeOf({
-		checked: Config.bool().value(false),
-		disabled: Config.bool().value(false),
-		indeterminate: Config.bool().value(false),
-		name: Config.string(),
-		value: Config.string(),
-	}),
+	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -57,6 +51,15 @@ ClayCardFile.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Render ClayIcon in the background element.
+	 * @instance
+	 * @memberof ClayCardFile
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	icon: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCardFile
@@ -66,13 +69,22 @@ ClayCardFile.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Render ClayIcon in the background element.
+	 * Name to be applied to the input element.
 	 * @instance
 	 * @memberof ClayCardFile
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	icon: Config.string(),
+	inputName: Config.string(),
+
+	/**
+	 * Value to be applied to the input element.
+	 * @instance
+	 * @memberof ClayCardFile
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	inputValue: Config.string(),
 
 	/**
 	 * Render label in the ClayLabel element.
@@ -97,6 +109,24 @@ ClayCardFile.STATE = {
 		'success',
 		'warning',
 	]).value('secondary'),
+
+	/**
+	 * Flag to indicate if the card is selectable or not.
+	 * @instance
+	 * @memberof ClayCardFile
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selectable: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate if the card is selected or not.
+	 * @instance
+	 * @memberof ClayCardFile
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selected: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

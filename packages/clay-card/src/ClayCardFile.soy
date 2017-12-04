@@ -7,18 +7,16 @@
         separator: bool,
         url: string
     ]>}
-    {@param? checkbox: [
-		checked: bool,
-		disabled: bool,
-		indeterminate: bool,
-		name: string,
-		value: string
-	]}
+    {@param? disabled: bool}
     {@param? elementClasses: string}
     {@param? icon: string}
     {@param? id: string}
+    {@param? inputName: string}
+    {@param? inputValue: string}
     {@param? label: string}
 	{@param? labelStyle: string}
+    {@param? selectable: bool}
+    {@param? selected: bool}
     {@param? subtitle: string}
     {@param? title: string}
     {@param? type: string}
@@ -27,13 +25,18 @@
 
     {call ClayCardBase.render}
         {param actionItems: $actionItems /}
-        {param checkbox: $checkbox /}
+
+        {param disabled: $disabled /}
         {param elementClasses: $elementClasses /}
         {param icon: $icon /}
         {param id: $id /}
+        {param inputName: $inputName /}
+        {param inputValue: $inputValue /}
         {param label: $label /}
         {param labelStyle: $labelStyle /}
         {param ref: 'cardFile' /}
+        {param selectable: $selectable /}
+        {param selected: $selected /}
         {param spritemap: $spritemap /}
         {param subtitle: $subtitle /}
         {param title: $title /}

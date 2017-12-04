@@ -33,19 +33,13 @@ ClayCardUser.STATE = {
 	),
 
 	/**
-	 * Transform card with checkbox.
+	 * Flag to indicate if the card is disabled or not.
 	 * @instance
 	 * @memberof ClayCardUser
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?bool|undefined}
+	 * @default false
 	 */
-	checkbox: Config.shapeOf({
-		checked: Config.bool().value(false),
-		disabled: Config.bool().value(false),
-		indeterminate: Config.bool().value(false),
-		name: Config.string(),
-		value: Config.string(),
-	}),
+	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -57,6 +51,15 @@ ClayCardUser.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Render ClayIcon in the background element.
+	 * @instance
+	 * @memberof ClayCardUser
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	icon: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCardUser
@@ -64,15 +67,6 @@ ClayCardUser.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
-
-	/**
-	 *
-	 * @instance
-	 * @memberof ClayCardUser
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	icon: Config.string(),
 
 	/**
 	 * Alt the image.
@@ -91,6 +85,24 @@ ClayCardUser.STATE = {
 	 * @default undefined
 	 */
 	imageSrc: Config.string(),
+
+	/**
+	 * Name to be applied to the input element.
+	 * @instance
+	 * @memberof ClayCardUser
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	inputName: Config.string(),
+
+	/**
+	 * Value to be applied to the input element.
+	 * @instance
+	 * @memberof ClayCardUser
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	inputValue: Config.string(),
 
 	/**
 	 * Render label in the ClayLabel element.
@@ -115,6 +127,24 @@ ClayCardUser.STATE = {
 		'success',
 		'warning',
 	]).value('secondary'),
+
+	/**
+	 * Flag to indicate if the card is selectable or not.
+	 * @instance
+	 * @memberof ClayCardUser
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selectable: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate if the card is selected or not.
+	 * @instance
+	 * @memberof ClayCardUser
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selected: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

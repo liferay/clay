@@ -1,4 +1,4 @@
-import './ClayCardBase';
+import './ClayCard';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -33,19 +33,13 @@ ClayCard.STATE = {
 	),
 
 	/**
-	 * Transform card with checkbox.
+	 * Flag to indicate if the card is disabled or not.
 	 * @instance
 	 * @memberof ClayCard
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?bool|undefined}
+	 * @default false
 	 */
-	checkbox: Config.shapeOf({
-		checked: Config.bool().value(false),
-		disabled: Config.bool().value(false),
-		indeterminate: Config.bool().value(false),
-		name: Config.string(),
-		value: Config.string(),
-	}),
+	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -57,15 +51,6 @@ ClayCard.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Id to be applied to the element.
-	 * @instance
-	 * @memberof ClayCard
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	id: Config.string(),
-
-	/**
 	 * Render ClayIcon in the background element.
 	 * @instance
 	 * @memberof ClayCard
@@ -73,6 +58,15 @@ ClayCard.STATE = {
 	 * @default undefined
 	 */
 	icon: Config.string(),
+
+	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	id: Config.string(),
 
 	/**
 	 * Alt the image.
@@ -91,6 +85,24 @@ ClayCard.STATE = {
 	 * @default undefined
 	 */
 	imageSrc: Config.string(),
+
+	/**
+	 * Name to be applied to the input element.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	inputName: Config.string(),
+
+	/**
+	 * Value to be applied to the input element.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	inputValue: Config.string(),
 
 	/**
 	 * Render label in the ClayLabel element.
@@ -115,6 +127,24 @@ ClayCard.STATE = {
 		'success',
 		'warning',
 	]).value('secondary'),
+
+	/**
+	 * Flag to indicate if the card is selectable or not.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selectable: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate if the card is selected or not.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?bool|undefined}
+	 * @default false
+	 */
+	selected: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

@@ -10,20 +10,18 @@
 		separator: bool,
 		url: string
 	]>}
-	{@param? checkbox: [
-		checked: bool,
-		disabled: bool,
-		indeterminate: bool,
-		name: string,
-		value: string
-	]}
+  {@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? icon: string}
 	{@param? id: string}
+  {@param? inputName: string}
+  {@param? inputValue: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? label: string}
 	{@param? labelStyle: string}
+  {@param? selectable: bool}
+  {@param? selected: bool}
 	{@param? subtitle: string}
 	{@param? title: string}
 	{@param? type: string}
@@ -31,9 +29,10 @@
 	{@param? url: string}
 	{@param? variant: string}
 
+
 	{let $attributes kind="attributes"}
 		class="card-type-asset
-			{if $checkbox}
+			{if $selectable}
 				{sp}form-check form-check-card form-check-top-left
 			{else}
 				{sp}card
@@ -74,11 +73,10 @@
 	{/let}
 
 	<div {$attributes}>
-		{if $checkbox}
+		{if $selectable}
 			{call ClayCheckbox.render}
-				{param checked: $checkbox.checked /}
-				{param disabled: $checkbox.disabled /}
-				{param indeterminate: $checkbox.indeterminate /}
+				{param checked: $selected /}
+				{param disabled: $disabled /}
 				{param labelContent kind="html"}
 					{let $classesCard kind="text"}
 						card card-type-asset
@@ -90,8 +88,8 @@
 					</div>
 				{/param}
 
-				{param name: $checkbox.name /}
-				{param value: $checkbox.value /}
+				{param name: $inputName /}
+				{param value: $inputValue /}
 			{/call}
 		{else}
 			{$header}

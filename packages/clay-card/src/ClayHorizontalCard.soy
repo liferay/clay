@@ -10,21 +10,19 @@
 		separator: bool,
 		url: string
 	]>}
-	{@param? checkbox: [
-		checked: bool,
-		disabled: bool,
-		indeterminate: bool,
-		name: string,
-		value: string
-	]}
 	{@param? elementClasses: string}
+  {@param? disabled: bool}
 	{@param? id: string}
+  {@param? inputName: string}
+  {@param? inputValue: string}
+  {@param? selectable: bool}
+  {@param? selected: bool}
 	{@param? title: string}
 	{@param? url: string}
 
 	{let $attributes kind="attributes"}
 		class="card-type-directory
-			{if $checkbox}
+			{if $selectable}
 				{sp}form-check form-check-card form-check-middle-left
 			{else}
 				{sp}card card-horizontal
@@ -50,23 +48,18 @@
 	{/let}
 
 	<div {$attributes}>
-		{if $checkbox}
+		{if $selectable}
 			{call ClayCheckbox.render}
-				{param checked: $checkbox.checked /}
-				{param disabled: $checkbox.disabled /}
-				{param indeterminate: $checkbox.indeterminate /}
+				{param checked: $selected /}
+				{param disabled: $disabled /}
 				{param labelContent kind="html"}
-					{let $classesCard kind="text"}
-						card card-horizontal
-					{/let}
-
-					<div class="{$classesCard}">
+					<div class="card card-horizontal">
 						{$body}
 					</div>
 				{/param}
 
-				{param name: $checkbox.name /}
-				{param value: $checkbox.value /}
+				{param name: $inputName /}
+				{param value: $inputValue /}
 			{/call}
 		{else}
 			{$body}
