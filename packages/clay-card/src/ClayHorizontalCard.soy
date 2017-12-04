@@ -39,7 +39,7 @@
 	{/let}
 
 	{let $body kind="html"}
-		{call .body}
+		{call .descriptiveArea}
 			{param actionItems: $actionItems /}
 			{param spritemap: $spritemap /}
 			{param title: $title /}
@@ -71,7 +71,7 @@
 /**
  * The content the element.
  */
-{template .body}
+{template .descriptiveArea}
 	{@param spritemap: string}
 	{@param? actionItems: list<[
 		label: string,
