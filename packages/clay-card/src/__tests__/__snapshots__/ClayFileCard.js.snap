@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayCardFile should render a ClayCardFile with actionItems 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with actionItems 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -36,7 +36,7 @@ exports[`ClayCardFile should render a ClayCardFile with actionItems 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with classes 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with classes 1`] = `
 <div class="card-type-asset card my-custom-class">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -53,7 +53,7 @@ exports[`ClayCardFile should render a ClayCardFile with classes 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with icon 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with icon 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -70,7 +70,7 @@ exports[`ClayCardFile should render a ClayCardFile with icon 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with id 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with id 1`] = `
 <div class="card-type-asset card" id="myId">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -87,7 +87,7 @@ exports[`ClayCardFile should render a ClayCardFile with id 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with input \`name\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with input \`name\` 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -112,7 +112,7 @@ exports[`ClayCardFile should render a ClayCardFile with input \`name\` 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with input \`value\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with input \`value\` 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -137,7 +137,7 @@ exports[`ClayCardFile should render a ClayCardFile with input \`value\` 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with label 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with label 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -158,7 +158,7 @@ exports[`ClayCardFile should render a ClayCardFile with label 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with labelStyle \`danger color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with labelStyle \`danger color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -179,7 +179,7 @@ exports[`ClayCardFile should render a ClayCardFile with labelStyle \`danger colo
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with labelStyle \`info color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with labelStyle \`info color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -200,7 +200,7 @@ exports[`ClayCardFile should render a ClayCardFile with labelStyle \`info color\
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with labelStyle \`secondary color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with labelStyle \`secondary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -221,7 +221,7 @@ exports[`ClayCardFile should render a ClayCardFile with labelStyle \`secondary c
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with labelStyle \`success color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with labelStyle \`success color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -242,7 +242,7 @@ exports[`ClayCardFile should render a ClayCardFile with labelStyle \`success col
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with labelStyle \`warning color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with labelStyle \`warning color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -263,7 +263,7 @@ exports[`ClayCardFile should render a ClayCardFile with labelStyle \`warning col
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with subtitle 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with subtitle 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -282,7 +282,7 @@ exports[`ClayCardFile should render a ClayCardFile with subtitle 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with title 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with title 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -301,7 +301,7 @@ exports[`ClayCardFile should render a ClayCardFile with title 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`danger color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`danger color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -319,7 +319,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`danger color\` 1`
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`dark color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`dark color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -337,7 +337,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`dark color\` 1`] 
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`info color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`info color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -355,7 +355,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`info color\` 1`] 
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`light color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`light color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -373,7 +373,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`light color\` 1`]
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`primary color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`primary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -391,7 +391,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`primary color\` 1
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`secondary color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`secondary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -409,7 +409,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`secondary color\`
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`success color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`success color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -427,7 +427,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`success color\` 1
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type \`warning color\` 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type \`warning color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -445,7 +445,7 @@ exports[`ClayCardFile should render a ClayCardFile with type \`warning color\` 1
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with type 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with type 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -463,7 +463,7 @@ exports[`ClayCardFile should render a ClayCardFile with type 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a ClayCardFile with url 1`] = `
+exports[`ClayFileCard should render a ClayFileCard with url 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
@@ -482,7 +482,7 @@ exports[`ClayCardFile should render a ClayCardFile with url 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a disabled ClayCardFile 1`] = `
+exports[`ClayFileCard should render a disabled ClayFileCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -507,7 +507,7 @@ exports[`ClayCardFile should render a disabled ClayCardFile 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render a selected ClayCardFile 1`] = `
+exports[`ClayFileCard should render a selected ClayFileCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
   <div class="custom-control custom-checkbox">
     <label>
@@ -532,7 +532,7 @@ exports[`ClayCardFile should render a selected ClayCardFile 1`] = `
 </div>
 `;
 
-exports[`ClayCardFile should render the default markup 1`] = `
+exports[`ClayFileCard should render the default markup 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">

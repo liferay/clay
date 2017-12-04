@@ -1,4 +1,4 @@
-import ClayCardFile from '../ClayCardFile';
+import ClayFileCard from '../ClayFileCard';
 
 let component;
 let spritemap = 'icons.svg';
@@ -13,7 +13,7 @@ let actionItems = [
 	},
 ];
 
-describe('ClayCardFile', function() {
+describe('ClayFileCard', function() {
 	afterEach(() => {
 		if (component) {
 			component.dispose();
@@ -21,15 +21,15 @@ describe('ClayCardFile', function() {
 	});
 
 	it('should render the default markup', () => {
-		component = new ClayCardFile({
+		component = new ClayFileCard({
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with classes', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with classes', () => {
+		component = new ClayFileCard({
 			spritemap: spritemap,
 			elementClasses: 'my-custom-class',
 		});
@@ -37,8 +37,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with id', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with id', () => {
+		component = new ClayFileCard({
 			spritemap: spritemap,
 			id: 'myId',
 		});
@@ -46,8 +46,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with actionItems', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with actionItems', () => {
+		component = new ClayFileCard({
 			actionItems: actionItems,
 			spritemap: spritemap,
 		});
@@ -55,8 +55,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a selected ClayCardFile', () => {
-		component = new ClayCardFile({
+	it('should render a selected ClayFileCard', () => {
+		component = new ClayFileCard({
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
@@ -65,8 +65,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a disabled ClayCardFile', () => {
-		component = new ClayCardFile({
+	it('should render a disabled ClayFileCard', () => {
+		component = new ClayFileCard({
 			disabled: true,
 			selectable: true,
 			selected: true,
@@ -76,8 +76,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with input `name`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with input `name`', () => {
+		component = new ClayFileCard({
 			inputName: 'checkbox01',
 			selectable: true,
 			selected: true,
@@ -87,8 +87,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with input `value`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with input `value`', () => {
+		component = new ClayFileCard({
 			inputValue: 'checkbox',
 			selectable: true,
 			selected: true,
@@ -98,8 +98,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with icon', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with icon', () => {
+		component = new ClayFileCard({
 			icon: 'documents',
 			spritemap: spritemap,
 		});
@@ -107,8 +107,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with label', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with label', () => {
+		component = new ClayFileCard({
 			labels: [
 				{
 					label: 'Approved',
@@ -120,8 +120,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with labelStyle `danger color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with labelStyle `danger color`', () => {
+		component = new ClayFileCard({
 			labels: [
 				{
 					label: 'Approved',
@@ -134,8 +134,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with labelStyle `info color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with labelStyle `info color`', () => {
+		component = new ClayFileCard({
 			labels: [
 				{
 					label: 'Approved',
@@ -148,8 +148,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with labelStyle `secondary color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with labelStyle `secondary color`', () => {
+		component = new ClayFileCard({
 			labels: [
 				{
 					label: 'Approved',
@@ -162,8 +162,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with labelStyle `success color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with labelStyle `success color`', () => {
+		component = new ClayFileCard({
 			labels: [
 				{
 					label: 'Approved',
@@ -176,8 +176,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with labelStyle `warning color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with labelStyle `warning color`', () => {
+		component = new ClayFileCard({
 			labels: [
 				{
 					label: 'Approved',
@@ -190,8 +190,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with subtitle', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with subtitle', () => {
+		component = new ClayFileCard({
 			subtitle: 'Author Action',
 			spritemap: spritemap,
 		});
@@ -199,8 +199,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with title', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with title', () => {
+		component = new ClayFileCard({
 			title: 'empty-background.png',
 			spritemap: spritemap,
 		});
@@ -208,8 +208,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			spritemap: spritemap,
 		});
@@ -217,8 +217,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `danger color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `danger color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'danger',
 			spritemap: spritemap,
@@ -227,8 +227,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `dark color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `dark color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'dark',
 			spritemap: spritemap,
@@ -237,8 +237,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `info color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `info color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'info',
 			spritemap: spritemap,
@@ -247,8 +247,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `light color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `light color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'light',
 			spritemap: spritemap,
@@ -257,8 +257,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `primary color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `primary color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'primary',
 			spritemap: spritemap,
@@ -267,8 +267,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `secondary color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `secondary color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'secondary',
 			spritemap: spritemap,
@@ -277,8 +277,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `success color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `success color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'success',
 			spritemap: spritemap,
@@ -287,8 +287,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with type `warning color`', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with type `warning color`', () => {
+		component = new ClayFileCard({
 			type: 'DOC',
 			typeStyle: 'warning',
 			spritemap: spritemap,
@@ -297,8 +297,8 @@ describe('ClayCardFile', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayCardFile with url', () => {
-		component = new ClayCardFile({
+	it('should render a ClayFileCard with url', () => {
+		component = new ClayFileCard({
 			url: '#1',
 			spritemap: spritemap,
 		});

@@ -4,23 +4,23 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import templates from './ClayCardFile.soy.js';
+import templates from './ClayFileCard.soy.js';
 
 /**
- * Metal ClayCardFile component.
+ * Metal ClayFileCard component.
  */
-class ClayCardFile extends Component {}
+class ClayFileCard extends Component {}
 
 /**
  * State definition.
  * @static
  * @type {!Object}
  */
-ClayCardFile.STATE = {
+ClayFileCard.STATE = {
 	/**
 	 * Actions in the dropdown on card.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
@@ -35,7 +35,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Flag to indicate if the card is disabled or not.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -44,7 +44,7 @@ ClayCardFile.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -53,7 +53,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Render ClayIcon in the background element.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default documents-and-media
 	 */
@@ -62,7 +62,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -71,7 +71,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Name to be applied to the input element.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -80,7 +80,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Value to be applied to the input element.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -89,7 +89,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Labels of the card.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
@@ -109,7 +109,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -118,7 +118,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Flag to indicate if the card is selected or not.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -127,7 +127,7 @@ ClayCardFile.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {!string}
 	 * @default undefined
 	 */
@@ -136,7 +136,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Subtitle of the card.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -145,7 +145,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Title of the card.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -154,7 +154,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Render label in the ClaySticker element.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -163,7 +163,7 @@ ClayCardFile.STATE = {
 	/**
 	 * Style of the ClaySticker element.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string}
 	 * @default primary
 	 */
@@ -181,16 +181,16 @@ ClayCardFile.STATE = {
 	/**
 	 * Transform title in the url.
 	 * @instance
-	 * @memberof ClayCardFile
+	 * @memberof ClayFileCard
 	 * @type {?string}
 	 * @default undefined
 	 */
 	url: Config.string(),
 };
 
-defineWebComponent('clay-card-file', ClayCardFile);
+defineWebComponent('clay-file-card', ClayFileCard);
 
-Soy.register(ClayCardFile, templates);
+Soy.register(ClayFileCard, templates);
 
-export {ClayCardFile};
-export default ClayCardFile;
+export {ClayFileCard};
+export default ClayFileCard;
