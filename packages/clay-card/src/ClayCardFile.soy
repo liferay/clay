@@ -46,3 +46,35 @@
         {param variant: 'file' /}
     {/call}
 {/template}
+
+/**
+ * Render the visual area of the card.
+ */
+{deltemplate ClayCardBase.VisualArea variant="'file'"}
+	{@param spritemap: string}
+	{@param? icon: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? type: string}
+	{@param? typeStyle: string}
+	{@param? variant: string}
+
+	<div class="aspect-ratio card-item-first">
+		{if $icon and $spritemap}
+			<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+				{call ClayIcon.render}
+					{param spritemap: $spritemap /}
+					{param symbol: $icon /}
+				{/call}
+			</div>
+		{/if}
+
+		{if $type}
+			{call ClaySticker.render}
+				{param label: $type /}
+				{param position: 'bottom-left' /}
+				{param style: $typeStyle ?: 'primary' /}
+			{/call}
+		{/if}
+	</div>
+{/deltemplate}

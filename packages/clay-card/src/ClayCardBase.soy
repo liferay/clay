@@ -49,15 +49,14 @@
 	{/let}
 
 	{let $header kind="html"}
-		{call .header}
+		{delcall ClayCardBase.VisualArea variant="$variant"}
 			{param icon: $icon /}
 			{param imageAlt: $imageAlt /}
 			{param imageSrc: $imageSrc /}
 			{param spritemap: $spritemap /}
 			{param type: $type /}
 			{param typeStyle: $typeStyle /}
-			{param variant: $variant /}
-		{/call}
+		{/delcall}
 	{/let}
 
 	{let $body kind="html"}
@@ -154,65 +153,11 @@
 	</div>
 {/template}
 
-/**
- * Render the header of card.
- */
-{template .header}
+{deltemplate ClayCardBase.VisualArea}
 	{@param spritemap: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? type: string}
 	{@param? typeStyle: string}
-	{@param? variant: string}
-
-	{let $stickerStyle: $typeStyle ?: 'primary' /}
-
-	{let $classes kind="text"}
-		aspect-ratio card-item-first
-		{if $variant == 'image'}
-			{sp}bg-checkered
-		{/if}
-	{/let}
-
-	{let $classesAspectRatio kind="text"}
-		aspect-ratio-item-center-middle aspect-ratio-item-fluid
-	{/let}
-
-	<div class="{$classes}">
-		{if $imageSrc and $variant == 'image' or $imageAlt and $variant == 'image'}
-			<img alt="{$imageAlt}" class="{$classesAspectRatio}" src="{$imageSrc}"/>
-		{elseif $icon and $spritemap}
-			<div class="{$classesAspectRatio}">
-				{call ClayIcon.render}
-					{param spritemap: $spritemap /}
-					{param symbol: $icon /}
-				{/call}
-			</div>
-		{/if}
-
-		{if $variant == 'user'}
-			<div class="{$classesAspectRatio}">
-				{call ClaySticker.render}
-					{param label kind="html"}
-						{if $imageSrc}
-							<img alt="{$imageAlt}" class="img-fluid" src="{$imageSrc}">
-						{elseif $type}
-							{$type}
-						{/if}
-					{/param}
-
-					{param shape: 'circle' /}
-					{param size: 'xl' /}
-					{param style: $stickerStyle /}
-				{/call}
-			</div>
-		{elseif $type}
-			{call ClaySticker.render}
-				{param label: $type /}
-				{param position: 'bottom-left' /}
-				{param style: $stickerStyle /}
-			{/call}
-		{/if}
-	</div>
-{/template}
+{/deltemplate}

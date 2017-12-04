@@ -50,3 +50,51 @@
         {param variant: 'user' /}
     {/call}
 {/template}
+
+/**
+ * Render the visual area of the card.
+ */
+{deltemplate ClayCardBase.VisualArea variant="'user'"}
+	{@param spritemap: string}
+	{@param? icon: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? type: string}
+	{@param? typeStyle: string}
+	{@param? variant: string}
+
+	{let $stickerStyle: $typeStyle ?: 'primary' /}
+
+	{let $classesAspectRatio kind="text"}
+		aspect-ratio-item-center-middle aspect-ratio-item-fluid
+	{/let}
+
+	<div class="aspect-ratio card-item-first">
+		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+			{call ClaySticker.render}
+				{param label kind="html"}
+					{if $imageSrc}
+						{let $imageAttributes kind="attributes"}
+							alt="
+								{if $imageAlt}
+									{$imageAlt}
+								{/if}
+							"
+
+							class="img-fluid"
+							src="{$imageSrc}"
+						{/let}
+
+						<img {$imageAttributes} />
+					{elseif $type}
+						{$type}
+					{/if}
+				{/param}
+
+				{param shape: 'circle' /}
+				{param size: 'xl' /}
+				{param style: $stickerStyle /}
+			{/call}
+		</div>
+	</div>
+{/deltemplate}
