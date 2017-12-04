@@ -4,23 +4,23 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import templates from './ClayCardUser.soy.js';
+import templates from './ClayUserCard.soy.js';
 
 /**
- * Metal ClayCardUser component.
+ * Metal ClayUserCard component.
  */
-class ClayCardUser extends Component {}
+class ClayUserCard extends Component {}
 
 /**
  * State definition.
  * @static
  * @type {!Object}
  */
-ClayCardUser.STATE = {
+ClayUserCard.STATE = {
 	/**
 	 * Actions in the dropdown on card.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
@@ -35,7 +35,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Flag to indicate if the card is disabled or not.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -44,7 +44,7 @@ ClayCardUser.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -53,7 +53,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -62,7 +62,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Alt the image.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -71,7 +71,7 @@ ClayCardUser.STATE = {
 	/**
 	 * The src to be applied to the background or user card image.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -80,7 +80,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Initials of the user.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -89,7 +89,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Name to be applied to the input element.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -98,7 +98,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Value to be applied to the input element.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -107,7 +107,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Name of the user.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -116,7 +116,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -125,7 +125,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Flag to indicate if the card is selected or not.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -134,7 +134,7 @@ ClayCardUser.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {!string}
 	 * @default undefined
 	 */
@@ -143,7 +143,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Subtitle of the card.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -152,7 +152,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Transform title in the url.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string}
 	 * @default undefined
 	 */
@@ -161,7 +161,7 @@ ClayCardUser.STATE = {
 	/**
 	 * Color of the user sticker.
 	 * @instance
-	 * @memberof ClayCardUser
+	 * @memberof ClayUserCard
 	 * @type {?string}
 	 * @default primary
 	 */
@@ -177,9 +177,9 @@ ClayCardUser.STATE = {
 	]).value('primary'),
 };
 
-defineWebComponent('clay-card-user', ClayCardUser);
+defineWebComponent('clay-user-card', ClayUserCard);
 
-Soy.register(ClayCardUser, templates);
+Soy.register(ClayUserCard, templates);
 
-export {ClayCardUser};
-export default ClayCardUser;
+export {ClayUserCard};
+export default ClayUserCard;

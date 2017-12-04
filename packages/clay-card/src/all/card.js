@@ -1,13 +1,13 @@
 import ClayCard from '../ClayCard';
 import ClayCardBase from '../ClayCardBase';
-import ClayCardUser from '../ClayCardUser';
 import ClayFileCard from '../ClayFileCard';
 import ClayHorizontalCard from '../ClayHorizontalCard';
+import ClayUserCard from '../ClayUserCard';
 
 export {
 	ClayCard,
 	ClayCardBase,
-	ClayCardUser,
 	ClayFileCard,
 	ClayHorizontalCard,
+	ClayUserCard,
 };
