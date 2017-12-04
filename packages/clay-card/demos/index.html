@@ -49,6 +49,7 @@
 			<h4>File card</h4>
 			<div class="row">
 				<div class="col-md-4" id="file-block"></div>
+				<div class="col-md-4" id="file-checked-block"></div>
 			</div>
 		</div>
 	</div>
@@ -105,10 +106,9 @@
 
 		new metal.ClayCard({
 			actionItems: items,
-			checkbox: {
-				checked: true
-			},
 			icon: 'camera',
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
@@ -117,10 +117,9 @@
 		}, '#card-icon-block');
 
 		new metal.ClayCard({
-			checkbox: {
-				checked: true,
-				disabled: true
-			},
+			disabled: true,
+			selectable: true,
+			selected: true,
 			imageAlt: 'thumbnail',
 			label: 'Approved',
 			labelStyle: 'success',
@@ -145,6 +144,19 @@
 			typeStyle: 'danger'
 		}, '#file-block');
 
+		new metal.ClayCardFile({
+			icon: 'documents-and-media',
+			label: 'Approved',
+			labelStyle: 'success',
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Stevie Ray Vaughn',
+			title: 'deliverable.doc',
+			type: 'DOC',
+			typeStyle: 'danger'
+		}, '#file-checked-block');
+
 		/*
 		 * User card
 		 */
@@ -157,12 +169,11 @@
 		}, '#user-block');
 
 		new metal.ClayCardUser({
-			checkbox: {
-				checked: true,
-				disabled: true
-			},
+			disabled: true,
 			imageAlt: 'thumbnail',
 			imageSrc: image,
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 			subtitle: 'Latest Action',
 			title: 'User name',
@@ -179,10 +190,8 @@
 
 		new metal.ClayHorizontalCard({
 			actionItems: items,
-			checkbox: {
-				checked: true,
-				indeterminate: true
-			},
+			selectable: true,
+			selected: true,
 			spritemap: spritemap,
 			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 		}, '#directory-checkbox-block');
