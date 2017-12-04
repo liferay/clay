@@ -1,3 +1,111 @@
+### v2.0.0-beta.4 December 4, 2017
+
+* Breaking: List Group removed `$list-group-header-title-color`, `$list-group-header-title-font-size`, `$list-group-header-title-font-weight`, `$list-group-header-title-margin-bottom`, `$list-group-header-title-text-transform` use `$list-group-header-title` Sass map instead
+* Breaking: List Group removed `$list-group-title-color`, `$list-group-title-font-size`, `$list-group-title-font-weight`, `$list-group-title-margin-bottom`, `$list-group-title-text-decoration`, `$list-group-title-hover-color`, `$list-group-title-hover-text-decoration` use `$list-group-title` Sass map instead
+* Breaking: Removed `.list-group-subtitle` and related variables use `.list-group-subtext` instead
+* Breaking: `clay-navbar-size` mixin renamed `btn-min-height`, `btn-min-width` to `btn-monospaced-size` and `btn-min-height-mobile`, `btn-min-width-mobile` to `btn-monospaced-size-mobile`
+* Breaking: List Group Notification remove `$list-group-notification-border-bottom-left-radius`, `$list-group-notification-border-bottom-right-radius`, `$list-group-notification-border-top-left-radius`, `$list-group-notification-border-top-right-radius`
+* Breaking: List Group Notification rename `$list-group-notification-item-border-variant` to ``-group-notification-item`
+* Breaking: (Fixes [#380](https://github.com/liferay/clay/issues/380)) Button Monospaced use button size line-height
+* Breaking: ([#381](https://github.com/liferay/clay/issues/381)) Nav removed option to configure `$nav-link-color`, `$nav-link-hover-color`, `$nav-link-active-color`, `.nav` should be a base component with minimal styling we will create a mixin for those that need color variants
+* Breaking: Sheet split up `$sheet-padding-x` into `$sheet-padding-left` and `$sheet-padding-right`, `$sheet-padding-y` into `$sheet-padding-bottom` and `$sheet-padding-top`
+* Breaking: Atlas move and rename `$section-*` variables to `$sheet-*`
+* Breaking: Rename `.section-subheader` to `.sheet-tertiary-title` and variables `$section-subheader-color`, `$section-subheader-font-size`, `$section-subheader-font-weight`, `$section-subheader-line-height`, `$section-subheader-margin-bottom`, `$section-subheader-padding-x`, `$section-subheader-padding-y`, `$section-subheader-text-transform`, to `$sheet-tertiary-title-color`, `$sheet-tertiary-title-font-size`, `$sheet-tertiary-title-font-weight`, `$sheet-tertiary-title-line-height`, `$sheet-tertiary-title-margin-bottom`, `$sheet-tertiary-title-padding-x`, `$sheet-tertiary-title-padding-y`, `$sheet-tertiary-title-text-transform`
+* Breaking: Rename `.section-header` to `.sheet-subtitle` and variables `$section-header-border-color`, `$section-header-border-style`, `$section-header-border-width`, `$section-header-color`, `$section-header-font-size`, `$section-header-font-weight`, `$section-header-line-height`, `$section-header-margin-bottom`, `$section-header-padding-x`, `$section-header-padding-y`, `$section-header-text-transform`, `$section-header-link-color`, `$section-header-link-text-decoration`, `$section-header-link-hover-color`, `$section-header-link-hover-text-decoration`, `$section-header-collapse-icon-bottom`, `$section-header-collapse-icon-left`, `$section-header-collapse-icon-right`, `$section-header-collapse-icon-top`, `$section-header-collapse-icon-padding-left`, `$section-header-collapse-icon-padding-right`, to `$sheet-subtitle-border-color`, `$sheet-subtitle-border-style`, `$sheet-subtitle-border-width`, `$sheet-subtitle-color`, `$sheet-subtitle-font-size`, `$sheet-subtitle-font-weight`, `$sheet-subtitle-line-height`, `$sheet-subtitle-margin-bottom`, `$sheet-subtitle-padding-x`, `$sheet-subtitle-padding-y`, `$sheet-subtitle-text-transform`, `$sheet-subtitle-link-color`, `$sheet-subtitle-link-text-decoration`, `$sheet-subtitle-link-hover-color`, `$sheet-subtitle-link-hover-text-decoration`, `$sheet-subtitle-collapse-icon-bottom`, `$sheet-subtitle-collapse-icon-left`, `$sheet-subtitle-collapse-icon-right`, `$sheet-subtitle-collapse-icon-top`, `$sheet-subtitle-collapse-icon-padding-left`, `$sheet-subtitle-collapse-icon-padding-right`
+* Breaking: Rename `.section-title` to `.sheet-title` and variables `$section-title-color`, `$section-title-font-size`, `$section-title-font-weight`, `$section-title-margin-bottom`, `$section-title-font-size-mobile`, `$section-title-margin-bottom-mobile` to `$sheet-title-color`, `$sheet-title-font-size`, `$sheet-title-font-weight`, `$sheet-title-margin-bottom`, `$sheet-title-font-size-mobile`, `$sheet-title-margin-bottom-mobile`
+* New: List Group added option to configure `$list-group-item-flex-checkbox-offset-top`, `$list-group-item-flex-offset-top`
+* New: Utilities added `.autofit-row` to be used as the container for `.flex-col` and added `.flex-col-section` for content inside `.flex-col`
+* New: List Group added `$list-group-header-title` Sass map to use with `clay-text-typography` mixin
+* New: Added option to configure `text-tranform` to `clay-text-typography` mixin
+* New: List Group added option to configure `$list-group-text-active-color`, `$list-group-subtext-active-color`
+* New: List Group added `.list-group-text`, `.list-group-subtext` and option to configure `$list-group-text`, `$list-group-text-link`, `$list-group-subtext`, `$list-group-subtext-link` Sass maps
+* New: Added mixins `clay-text-typography($map)` and `clay-link($map)` to help with styling text, headings, and links
+* New: Widget added `$widget-spacer` to quickly set spacing between elements inside `.widget` and update Atlas Widget colors and spacing
+* New: Widget added option to configure `$widget-admin-toolbar-bg`
+* New: Widget add option to configure `$widget-article-title-font-weight`
+* New: Widget add option to configure `$widget-bg`
+* New: Widget added `.widget-admin` variant and option to configure `$widget-admin-border-color`, `$widget-admin-border-width`, `$widget-admin-toolbar-border-width`
+* New: Widget added `.widget-article-section` and option to configure `$widget-article-section-margin-bottom`
+* New: Widget added options to configure `$widget-border-color`, `$widget-border-width`, `$widget-border-radius`, `$widget-toolbar-bg`, `$widget-toolbar-border-width`, `$widget-toolbar-padding-x`, `$widget-toolbar-padding-y`, `$widget-header-padding-x`, `$widget-header-padding-y`, `$widget-header-title-color`, `$widget-header-title-font-size`, `$widget-header-title-margin-bottom`, `$widget-header-title-margin-top`, `$widget-header-title-text-transform`, `$widget-body-padding-bottom`, `$widget-body-padding-left`, `$widget-body-padding-right`, `$widget-body-padding-top`, `$widget-article-margin-bottom`, `$widget-article-header-margin-bottom`, `$widget-article-body-margin-bottom`, `$widget-article-title-color`, `$widget-article-title-font-size`, `$widget-article-title-margin-bottom`, `$widget-article-title-margin-top`, `$widget-article-subtitle-color`, `$widget-article-subtitle-font-size`, `$widget-article-subtitle-margin-top`
+* New: Widget component added `.widget`, `.widget-toolbar`, `.widget-header`, `.widget-controls`, `.widget-body`, `.widget-title`, `.widget-subtitle`, `.widget-article`, `.widget-article-header`, `.widget-article-body`, `.widget-article-footer`
+* New: Table added option to configure `$table-head-border-bottom-width`, `$table-head-border-top-width` for `.table`
+* New: Lexicon Icon caret-top-l.svg
+* New: Grid added `.container-view` and option to configure `$container-view-padding-bottom`, `$container-view-padding-left`, `$container-view-padding-right`, `$container-view-padding-top`, `$container-view-padding-bottom-mobile`, `$container-view-padding-left-mobile`, `$container-view-padding-right-mobile`, `$container-view-padding-top-mobile`
+* New: List Group added option to configure `$list-group-margin-bottom`, `$list-group-margin-top`
+* New: Table List added option to configure `$table-list-margin-bottom`, `$table-list-margin-top`
+* New: Grid added `.container-form` and option to configure `$container-form-padding-bottom`, `$container-form-padding-left`, `$container-form-padding-right`, `$container-form-padding-top`, `$container-form-padding-bottom-mobile`, `$container-form-padding-left-mobile`, `$container-form-padding-right-mobile`, `$container-form-padding-top-mobile`
+* New: Sheet added `.sheet-lg` and option to configure `$sheet-lg-max-width`
+* New: (Fixes [#386](https://github.com/liferay/clay/issues/386)) List Group Notification added `$list-group-notification-item-primary` Sass map to configure `.list-group-item-primary` styles, add option to configure bg colors in `clay-list-group-notification-item-border-variant` mixin
+* New: Alert add option to configure `$alert-fluid-margin-bottom` and set it to 0
+* New: Quick Action added option to configure `$quick-action-item-min-height`, `$quick-action-item-min-width`
+* New: Added `clay-nav-variant($map)` mixin for customizing nav colors
+* New: Form added option to configure `$form-group-margin-bottom-mobile`
+* New: Button added utility class `.btn-borderless` to make `border-color: transparent` on `.btn-outline-*`
+* New: Buttons added `$btn-outline-primary`, `$btn-outline-secondary`, `$btn-outline-success`, `$btn-outline-info`, `$btn-outline-warning`, `$btn-outline-danger`, `$btn-outline-light`, `$btn-outline-dark`, `$btn-outline-palette` Sass maps to configure `.btn-outline-*` styles they are based on clay-button-variant mixin, and adjust Atlas `.btn-outline-*` styles
+* New: Sheet added option to configure `$sheet-title-line-height` and long text without white space in `.sheet-title` should wrap
+* New: Sheet added option to configure `$sheet-tertiary-title-font-size-mobile`, `$sheet-tertiary-title-margin-bottom-mobile`
+* New: Sheet added option to configure `$sheet-subtitle-font-size-mobile`, `$sheet-subtitle-margin-bottom-mobile`
+* New: Sheet added `.sheet-footer` and option to configure `$sheet-footer-margin-bottom`, `$sheet-footer-margin-left`, `$sheet-footer-margin-right`, `$sheet-footer-margin-top`, `$sheet-footer-margin-bottom-mobile`, `$sheet-footer-margin-left-mobile`, `$sheet-footer-margin-right-mobile`, `$sheet-footer-margin-top-mobile`
+* New: Sheet added `.sheet-header` and option to configure `$sheet-header-margin-bottom`, `$sheet-header-margin-bottom-mobile`
+* New: Sheet added `.sheet-section` and option to configure `$sheet-section-margin-bottom`, `$sheet-section-margin-bottom-mobile`
+* New: Sheet added `.sheet-text` and option to configure `$sheet-text-color`, `$sheet-text-font-size`, `$sheet-text-font-weight`, `$sheet-text-margin-bottom`, `$sheet-text-font-size-mobile`, `$sheet-text-margin-bottom-mobile`
+* New: Type added `.section-title` and option to configure `$section-title-color`, `$section-title-font-size`, `$section-title-font-weight`, `$section-title-margin-bottom`, `$section-title-font-size-mobile`, `$section-title-margin-bottom-mobile`
+* Update: List Group center `.list-group-title:only-child`
+* Update: `.list-group-text` and `.list-group-subtext` allow more variations of links inside them
+* Update: Atlas List Group `.list-group-title`, `.list-group-text`, and `.list-group-subtext` styles
+* Update: Mixin `clay-link` hover-color should be able to accept a null value
+* Update: Atas List Group make spacing between items smaller
+* Update: Widget rename `.widget-article .widget-title`, `.widget-article .widget-subtitle`, `.widget-header .widget-title`, to `.widget-article-title`, `.widget-article-subtitle`, `.widget-header-title` respectively
+* Update: `.navbar-nav .nav-item` `word-wrap: normal` so text will truncate when used with `.navbar-text-truncate` in IE10
+* Update: Buttons with transparent backgrounds don't overlay inputs in IE10
+* Update: Input Group `.input-group-sm` and `.input-group-lg` should set `.form-control` padding to respective sizes in `.input-group-inset`
+* Update: Set `display: block` on `.panel-header`, `.sheet-title`, `sheet-subtitle`, and `.sheet-tertiary-title`
+* Update: Dropdown Wide / Full should expand in IE10
+* Update: `.nav-btn` and `.nav-link-monospaced` to set `height` instead of `min-height` flexbox and min-height don't work too well in IE10 - 11
+* Update: Nav Unstyled don't need to set `min-height` on `.nav-unstyled .nav-btn` already covered by `.nav-btn`
+* Update: (Fixes [#385](https://github.com/liferay/clay/issues/385)) Labels add option to set `text-transform` in `clay-label-size` mixin and set `.label-lg` `text-transform: none`
+* Update: `$sheet-lg-max-width` should be a function of `map-get($container-max-width, lg)`
+* Update: Atlas Sheet Subtitle colors
+* Update: List Group Notification don't need to map-merge `$list-group-notification-item`
+* Update: `clay-list-group-notification-item-border-variant` mixin to configure border-radius
+* Update: List Group Item `.active:focus` should win over other `.active`
+* Update: List Group Notification set borders to match regular `.list-group`
+* Update: Added `pointer-events: none` to `.navbar-text-truncate`, `.breadcrumb-text-truncate`, and `.lexicon-icon` to prevent focus highlight in IE11 when clicking links that contain those elements
+* Update: Modal `.modal-full-screen` position adjustment
+* Update: Atlas `.btn-outline-secondary` should have same hover, focus, active states as `.btn-secondary`
+* Update: Atlas Sheet set colors and set spacing in mobile
+* Update: Form Group margin-bottom to 24px
+* Update: Set values for `.sheet-header`, `.sheet-section` margin-bottom and `.panel-group-flush .panel-body` in `.sheet` should share `.sheet-section` margin-bottom
+* Update: Move `.section-title`, `.section-header`, `.section-subheader` components to sheets
+* Update: Type set `$section-header-font-weight` to semi-bold so that `.section-header` and `.section-subheader` will still be semi-bold if h1-6 element isnt used
+* Update: Form Inline Autofit should size correctly when there is long content inside
+* Update: `.form-text` and `.form-feedback-item` should `word-wrap: break-word;`
+* Site: Move `.table-responsive-*` from `table` element to a `div` that wraps the `table` element.
+* Site: List Group add example of `.list-group-title:only-child`
+* Site: List Group use `.list-group-text` and `.list-group-subtext` and `.flex-col-section`
+* Site: Added Widget page and Widget Test page
+* Site: Sheet update `.sheet-lg` docs to reflect max-width is a function of `$container-max-width`
+* Site: Grid add `.container-view` docs and use `.container-view` in test pages
+* Site: Grid added docs for `.container-form` and use `.container-form` on test pages
+* Site: Added docs for `.sheet-lg` and use `.sheet-lg` instead of inline styles for test pages
+* Site: List Group Notification added `.list-group-item-primary`
+* Site: Forms wrap form elements in `.form-group`
+* Site: Test pages remove BS4 utilities around main content and move container to outermost element
+* Site: (Fixes [#384](https://github.com/liferay/clay/issues/384)) Added plus button example with dropdown
+* Site: (Fixes [#377](https://github.com/liferay/clay/issues/377) and [#381](https://github.com/liferay/clay/issues/381)) Add note about BS4 utilities and change site name to Clay
+* Site: ([#381](https://github.com/liferay/clay/issues/381)) Add blurb explaining Navbar
+* Site: Fix typo in navs
+* Site: ([#381](https://github.com/liferay/clay/issues/381)) Add explanation about Base `.nav` class and its purpose
+* Site: Added Sheet page
+* Site: Button add examples of `.btn-outline-*.btn-borderless`
+* Site: Added test page for Form Hierarchy
+* Site: `.sheet-header`, `.sheet-subheader` were renamed to `.sheet-subtitle` and `.sheet-tertiary-title`
+* Site: Renamed `.section-title`, `.section-header`, `.section-subheader` to `.sheet-title`, `.sheet-header`, `.sheet-subheader`
+* Site: Typography add example of `.section-title`, `.section-header`, and `.section-subheader`
+* Site: Form explain `.form-inline-autofit` better
+* Site: Management Bar move `.clay-site-open-overlay` to the outer most element because claycss.com
+* Site: Multi Step Nav add disabled state to Multi Step Nav Collapse example
+
 ### v2.0.0-beta.3 November 20, 2017
 
 * Breaking: Rename `$form-container-bg`, `$form-container-border-color`, `$form-container-border-style`, `$form-container-border-width`, `$form-container-border-radius`, `$form-container-padding-x`, `$form-container-padding-y` to `$sheet-bg`, `$sheet-border-color`, `$sheet-border-style`, `$sheet-border-width`, `$sheet-border-radius`, `$sheet-padding-x`, `$sheet-padding-y`
