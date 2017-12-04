@@ -1,0 +1,100 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.lexicon-icon {
+	display: inline-block;
+	fill: currentColor;
+	height: $lexicon-icon-size;
+	margin-top: -3px;
+	pointer-events: none;
+	vertical-align: middle;
+	width: $lexicon-icon-size;
+}
+
+.lexicon-icon-sm {
+	font-size: $lexicon-icon-sm-font-size;
+}
+
+.lexicon-icon-lg {
+	font-size: $lexicon-icon-lg-font-size;
+}
+
+.lexicon-icon-xl {
+	font-size: $lexicon-icon-xl-font-size;
+}
+
+.order-arrow-down-active {
+	.order-arrow-arrow-down {
+		fill: $order-arrow-down-active-color;
+	}
+}
+
+.order-arrow-up-active {
+	.order-arrow-arrow-up {
+		fill: $order-arrow-up-active-color;
+	}
+}
+
+// Collapse Icon
+
+a.collapse-icon {
+	padding-left: $collapse-icon-padding-left;
+	padding-right: $collapse-icon-padding-right;
+}
+
+.collapse-icon-closed,
+.collapse-icon-open {
+	.lexicon-icon {
+		display: block;
+	}
+}
+
+.collapse-icon {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		bottom: $collapse-icon-position-bottom;
+		height: 1em;
+		left: $collapse-icon-position-left;
+		position: absolute;
+		right: $collapse-icon-position-right;
+		top: $collapse-icon-position-top;
+		width: 1em;
+
+		.lexicon-icon {
+			margin-top: 0;
+		}
+	}
+
+	.collapse-icon-closed {
+		display: none;
+	}
+
+	.collapse-icon-open {
+		display: inline-block;
+	}
+}
+
+.collapsed {
+	.collapse-icon-closed {
+		display: inline-block;
+	}
+
+	.collapse-icon-open {
+		display: none;
+	}
+}
+
+.collapse-icon-middle {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		margin-top: 0;
+		top: 50%;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}

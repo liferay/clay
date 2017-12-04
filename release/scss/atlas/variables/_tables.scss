@@ -1,0 +1,41 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$table-bg: #FFF !default;
+$table-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
+$table-hover-bg: lighten(saturate($component-active-bg, 3.40), 43.14) !default;
+$table-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+
+$table-head-border-bottom-width: 1px !default;
+$table-head-border-top-width: 0 !default;
+$table-head-color: $secondary !default;
+$table-head-font-size: 0.875rem !default; // 14px
+$table-head-font-weight: $font-weight-semi-bold !default;
+
+$table-divider-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
+$table-divider-color: $secondary !default;
+$table-divider-font-size: 0.75rem !default; // 12px
+$table-divider-font-weight: $font-weight-semi-bold !default;
+$table-divider-padding: 0.5rem 0.75rem !default;
+$table-divider-text-transform: uppercase !default;
+
+$table-quick-action-menu-accent-bg: $table-accent-bg !default;
+$table-quick-action-menu-accent-active-bg: $table-hover-bg !default;
+$table-quick-action-menu-active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61) !default;
+$table-quick-action-menu-hover-bg: $table-hover-bg !default;
+
+// Table List
+
+$table-list-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
+$table-list-hover-bg: $table-hover-bg !default;
+$table-list-active-bg: $table-list-hover-bg !default;
+$table-list-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$table-list-color: $body-color !default;
+
+$table-list-link-color: $secondary !default;
+
+$table-list-head-font-weight: $font-weight-normal !default;

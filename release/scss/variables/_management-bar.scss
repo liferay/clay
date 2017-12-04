@@ -1,0 +1,43 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$management-bar-size: () !default;
+$management-bar-size: map-merge((
+	scaling-navbar: true,
+	height: 4rem,
+	height-mobile: 3rem,
+	border-bottom-width: 0.0625rem,
+	padding-x: 0,
+	padding-y: 0,
+	link-height: 2rem,
+	link-height-mobile: 2rem,
+	link-margin-x: 0.5rem,
+	form-control-height-mobile: 2rem,
+	toggler-margin-x: 0.875rem,
+	active-border-bottom-width: 0.25rem,
+	nav-item-dropdown-margin-top: 0
+), $management-bar-size);
+
+$management-bar-light: () !default;
+$management-bar-light: map-merge((
+	bg: $light,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $management-bar-light);
+
+$management-bar-primary: () !default;
+$management-bar-primary: map-merge((
+	bg: lighten(saturate($primary, 3.40), 43.14),
+	border-color: $primary,
+	color: $navbar-light-color,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $management-bar-primary);

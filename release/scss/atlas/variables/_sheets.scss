@@ -1,0 +1,29 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sheet-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+
+$sheet-header-margin-bottom-mobile: 2rem !default; // 32px
+
+$sheet-section-margin-bottom-mobile: 2rem !default; // 32px
+
+$sheet-footer-margin-bottom-mobile: 1rem !default; // 16px
+$sheet-footer-margin-top-mobile: 1rem !default; // 16px
+
+$sheet-title-margin-bottom-mobile: 1rem !default; // 16px
+
+$sheet-subtitle-color: $body-color !default;
+$sheet-subtitle-border-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
+$sheet-subtitle-padding-y: 0.46875rem !default; // 7.5px
+
+$sheet-subtitle-margin-bottom-mobile: 1rem !default; // 16px
+
+$sheet-tertiary-title-margin-bottom-mobile: 0.5rem !default; // 8px
+
+$sheet-text-color: $secondary !default;
+
+$sheet-text-margin-bottom-mobile: 1rem !default; // 16px

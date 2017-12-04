@@ -1,0 +1,25 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$collapse-icon-padding-left: null !default;
+$collapse-icon-padding-right: 2.28125rem !default; // 45px
+
+$collapse-icon-position-bottom: null !default;
+$collapse-icon-position-left: null !default;
+$collapse-icon-position-right: 0.9375rem !default; // 15px
+$collapse-icon-position-top: clay-collapse-icon-align($nav-link-padding-y, 1px) !default;
+
+$icon-monospaced-size: 2rem !default; // 32px
+
+$lexicon-icon-size: 1em !default; // 16px
+
+$lexicon-icon-sm-font-size: 0.5rem !default; // 8px
+$lexicon-icon-lg-font-size: 2rem !default; // 32px
+$lexicon-icon-xl-font-size: 8rem !default; // 128px
+
+$order-arrow-down-active-color: rgba($black, 0.9) !default;
+$order-arrow-up-active-color: $order-arrow-down-active-color !default;

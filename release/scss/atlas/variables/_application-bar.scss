@@ -1,0 +1,13 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$application-bar-dark: (
+	bg: lighten(desaturate(adjust-hue($dark, 1), 0.77), 3.92),
+	link-border-radius: $border-radius,
+	link-hover-bg: rgba(255, 255, 255, 0.04),
+	link-active-bg: rgba(255, 255, 255, 0.08)
+) !default;

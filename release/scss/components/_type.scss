@@ -1,0 +1,88 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+	-webkit-font-smoothing: antialiased;
+
+	@include clay-scale-component {
+		font-size: $font-size-base-mobile;
+	}
+}
+
+a {
+	@if ($link-cursor != pointer) {
+		cursor: $link-cursor;
+	}
+}
+
+// Headings
+
+h1,
+.h1 {
+	@include clay-scale-component {
+		font-size: $h1-font-size-mobile;
+	}
+}
+
+h2,
+.h2 {
+	@include clay-scale-component {
+		font-size: $h2-font-size-mobile;
+	}
+}
+
+h3,
+.h3 {
+	@include clay-scale-component {
+		font-size: $h3-font-size-mobile;
+	}
+}
+
+h4,
+.h4 {
+	@include clay-scale-component {
+		font-size: $h4-font-size-mobile;
+	}
+}
+
+h5,
+.h5 {
+	@include clay-scale-component {
+		font-size: $h5-font-size-mobile;
+	}
+}
+
+h6,
+.h6 {
+	@include clay-scale-component {
+		font-size: $h6-font-size-mobile;
+	}
+}
+
+// Reference Mark
+
+.reference-mark {
+	display: inline-block;
+	font-size: $reference-mark-font-size;
+	position: relative;
+	vertical-align: $reference-mark-vertical-align;
+}
+
+// Marked Text
+
+mark,
+.mark {
+	@include clay-highlight-text;
+}
+
+// Text Truncate
+
+.text-truncate {
+	display: block;
+}

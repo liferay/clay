@@ -1,0 +1,100 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$list-group-box-shadow: null !default;
+$list-group-color: null !default;
+
+$list-group-margin-bottom: 1.5rem !default;
+$list-group-margin-top: null !default;
+
+// Use values flex-start, flex-end, or center
+$list-group-item-flex-align-items: flex-start !default;
+
+$list-group-item-flex-checkbox-offset-top: 0.1875rem !default; // 3px
+$list-group-item-flex-offset-top: 0.375rem !default; // 6px
+
+// List Group Header
+
+$list-group-header-bg: $list-group-bg !default;
+$list-group-header-padding-x: $list-group-item-padding-x !default;
+$list-group-header-padding-y: $list-group-item-padding-y !default;
+
+$list-group-header-title: (
+	font-size: 1rem
+) !default;
+
+// List Group Title
+
+$list-group-title: (
+	font-size: 1.25rem,
+	font-weight: $font-weight-semi-bold
+) !default;
+
+$list-group-title-link: () !default;
+
+$list-group-title-active-color: $list-group-active-color !default;
+
+// List Group Text
+
+$list-group-text: (
+	color: $body-color
+) !default;
+
+$list-group-text-link: (
+	color: $body-color
+) !default;
+
+$list-group-text-active-color: $list-group-active-color !default;
+
+// List Group Subtext
+
+$list-group-subtext: (
+	color: $secondary
+) !default;
+
+$list-group-subtext-link: (
+	color: $secondary
+) !default;
+
+$list-group-subtext-active-color: $list-group-active-color !default;
+
+// List Group Detail
+
+$list-group-detail-margin-bottom: null !default;
+$list-group-detail-margin-top: 0.25rem !default; // 4px
+
+$list-group-link-color: null !default;
+$list-group-link-hover-color: null !default;
+$list-group-link-active-color: $white !default;
+
+// List Group Notification
+
+$list-group-notification-item-border-bottom-color: $list-group-border-color !default;
+$list-group-notification-item-border-left-color: $list-group-border-color !default;
+$list-group-notification-item-border-right-color: $list-group-border-color !default;
+$list-group-notification-item-border-top-color: $list-group-border-color !default;
+
+$list-group-notification-item-active-border-bottom-color: $list-group-active-border-color !default;
+$list-group-notification-item-active-border-left-color: $list-group-active-border-color !default;
+$list-group-notification-item-active-border-right-color: $list-group-active-border-color !default;
+$list-group-notification-item-active-border-top-color: $list-group-active-border-color !default;
+
+$list-group-notification-item-border-bottom-width: 0.0625rem !default;
+$list-group-notification-item-border-left-width: 0.0625rem !default;
+$list-group-notification-item-border-right-width: 0.0625rem !default;
+$list-group-notification-item-border-top-width: 0.0625rem !default;
+
+$list-group-notification-item: () !default;
+
+$list-group-notification-item-primary: () !default;
+$list-group-notification-item-primary: map-merge((
+	border-left-color: $component-active-bg,
+	border-left-width: 0.5rem,
+	border-bottom-left-radius: 0,
+	border-top-left-radius: 0,
+	active-border-left-color: $component-active-bg
+), $list-group-notification-item-primary);

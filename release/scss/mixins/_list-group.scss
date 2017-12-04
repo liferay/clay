@@ -1,0 +1,56 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin clay-list-group-notification-item-border-variant($map) {
+	$bg: setter(map-get($map, bg), $list-group-bg);
+	$border-bottom-color: setter(map-get($map, border-bottom-color), $list-group-notification-item-border-bottom-color);
+	$border-left-color: setter(map-get($map, border-left-color), $list-group-notification-item-border-left-color);
+	$border-right-color: setter(map-get($map, border-right-color), $list-group-notification-item-border-right-color);
+	$border-top-color: setter(map-get($map, border-top-color), $list-group-notification-item-border-top-color);
+
+	$border-bottom-width: setter(map-get($map, border-bottom-width), $list-group-notification-item-border-bottom-width);
+	$border-left-width: setter(map-get($map, border-left-width), $list-group-notification-item-border-left-width);
+	$border-right-width: setter(map-get($map, border-right-width), $list-group-notification-item-border-right-width);
+	$border-top-width: setter(map-get($map, border-top-width), $list-group-notification-item-border-top-width);
+
+	$border-bottom-left-radius: map-get($map, border-bottom-left-radius);
+	$border-bottom-right-radius: map-get($map, border-bottom-right-radius);
+	$border-top-left-radius: map-get($map, border-top-left-radius);
+	$border-top-right-radius: map-get($map, border-top-right-radius);
+
+	$box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$border-bottom-color};
+	$box-shadow-left: inset #{$border-left-width} 0 #{$border-left-color};
+	$box-shadow-right: inset -#{$border-right-width} 0 #{$border-right-color};
+	$box-shadow-top: inset 0 #{$border-top-width} #{$border-top-color};
+
+	$active-bg: setter(map-get($map, active-bg), $list-group-active-bg);
+	$active-border-bottom-color: setter(map-get($map, active-border-bottom-color), $list-group-notification-item-active-border-bottom-color);
+	$active-border-left-color: setter(map-get($map, active-border-left-color), $list-group-notification-item-active-border-left-color);
+	$active-border-right-color: setter(map-get($map, active-border-right-color), $list-group-notification-item-active-border-right-color);
+	$active-border-top-color: setter(map-get($map, active-border-top-color), $list-group-notification-item-active-border-top-color);
+
+	$active-box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$active-border-bottom-color};
+	$active-box-shadow-left: inset #{$border-left-width} 0 #{$active-border-left-color};
+	$active-box-shadow-right: inset -#{$border-right-width} 0 #{$active-border-right-color};
+	$active-box-shadow-top: inset 0 #{$border-top-width} #{$active-border-top-color};
+
+	background-color: $bg;
+
+	@if ($enable-rounded) {
+		border-bottom-left-radius: $border-bottom-left-radius;
+		border-bottom-right-radius: $border-bottom-right-radius;
+		border-top-left-radius: $border-top-left-radius;
+		border-top-right-radius: $border-top-right-radius;
+	}
+
+	box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top, $box-shadow-bottom;
+
+	&.active {
+		background-color: $active-bg;
+		box-shadow: $active-box-shadow-left, $active-box-shadow-right, $active-box-shadow-top, $active-box-shadow-bottom;
+	}
+}

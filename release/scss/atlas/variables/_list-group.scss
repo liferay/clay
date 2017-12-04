@@ -1,0 +1,80 @@
+/**
+* Clay 2.0.0-beta.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$list-group-border-color: rgba(220, 220, 220, 0.5) !default;
+$list-group-color: $secondary !default;
+$list-group-hover-bg: lighten(saturate($component-active-bg, 3.40), 43.14) !default;
+$list-group-active-bg: $list-group-hover-bg !default;
+$list-group-active-border-color: $list-group-border-color !default;
+$list-group-active-color: !default;
+
+$list-group-item-padding-x: 1rem !default; // 16px
+$list-group-item-padding-y: 1rem !default; // 16px
+
+// List Group Header
+
+$list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
+$list-group-header-padding-y: 0.75rem !default; // 12px
+
+$list-group-header-title: (
+	color: $secondary,
+	font-size: 0.75rem,
+	font-weight: $font-weight-semi-bold,
+	text-transform: uppercase
+) !default;
+
+// List Group Title
+
+$list-group-title: (
+	color: $body-color,
+	font-size: 1rem,
+	line-height: 1.25
+) !default;
+
+$list-group-title-link: (
+	color: $body-color,
+	hover-color: $body-color
+) !default;
+
+// List Group Text
+
+$list-group-text: (
+	color: $body-color,
+	font-size: 0.875rem,
+	line-height: 1.45
+) !default;
+
+$list-group-text-link: (
+	color: $body-color,
+	hover-color: $body-color
+) !default;
+
+// List Group Subtext
+
+$list-group-subtext: (
+	color: $secondary,
+	font-size: 0.875rem,
+	line-height: 1.45
+) !default;
+
+$list-group-subtext-link: (
+	color: $secondary,
+	hover-color: $secondary
+) !default;
+
+// List Group Link
+
+$list-group-link-color: $body-color !default;
+$list-group-link-hover-color: $list-group-link-color !default;
+$list-group-link-active-color: $list-group-link-color !default;
+
+// List Group Notification
+
+$list-group-notification-item-primary: (
+	border-left-color: lighten(saturate($component-active-bg, 3.40), 21.18),
+	active-border-left-color: lighten(saturate($component-active-bg, 3.40), 21.18)
+) !default;
