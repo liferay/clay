@@ -12,6 +12,7 @@
 	]>}
 	{@param? elementClasses: string}
   {@param? disabled: bool}
+	{@param? icon: string}
 	{@param? id: string}
   {@param? inputName: string}
   {@param? inputValue: string}
@@ -41,6 +42,7 @@
 	{let $body kind="html"}
 		{call .descriptiveArea}
 			{param actionItems: $actionItems /}
+			{param icon: $icon /}
 			{param spritemap: $spritemap /}
 			{param title: $title /}
 			{param url: $url /}
@@ -78,6 +80,7 @@
 		separator: bool,
 		url: string
 	]>}
+	{@param? icon: string}
 	{@param? title: string}
 	{@param? url: string}
 
@@ -88,7 +91,7 @@
 			{/let}
 
       {call ClaySticker.render}
-        {param icon: 'folder' /}
+        {param icon: $icon ?: 'folder' /}
         {param spritemap: $spritemap /}
         {param style: 'unstyled' /}
       {/call}

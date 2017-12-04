@@ -54,6 +54,15 @@ ClayHorizontalCard.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Icon of the card.
+	 * @instance
+	 * @memberof ClayHorizontalCard
+	 * @type {?string|undefined}
+	 * @default folder
+	 */
+	icon: Config.string().value('folder'),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayHorizontalCard
