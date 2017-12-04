@@ -55,9 +55,9 @@ ClayCardFile.STATE = {
 	 * @instance
 	 * @memberof ClayCardFile
 	 * @type {?string|undefined}
-	 * @default undefined
+	 * @default documents-and-media
 	 */
-	icon: Config.string(),
+	icon: Config.string().value('documents-and-media'),
 
 	/**
 	 * Id to be applied to the element.
