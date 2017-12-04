@@ -30,101 +30,6 @@ exports[`ClayCard should render a ClayCard with actionItems 1`] = `
 </div>
 `;
 
-exports[`ClayCard should render a ClayCard with checkbox \`name\` 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first bg-checkered"></div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCard should render a ClayCard with checkbox \`value\` 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first bg-checkered"></div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCard should render a ClayCard with checkbox checked 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first bg-checkered"></div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCard should render a ClayCard with checkbox disabled 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first bg-checkered"></div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCard should render a ClayCard with checkbox indeterminate 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first bg-checkered"></div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
 exports[`ClayCard should render a ClayCard with classes 1`] = `
 <div class="card-type-asset card my-custom-class">
   <div class="aspect-ratio card-item-first bg-checkered"></div>
@@ -186,6 +91,44 @@ exports[`ClayCard should render a ClayCard with imageSrc 1`] = `
     <div class="card-row">
       <div class="flex-col flex-col-expand"></div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard should render a ClayCard with input \`name\` 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first bg-checkered"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCard should render a ClayCard with input \`value\` 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" name="checkbox" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first bg-checkered"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
   </div>
 </div>
 `;
@@ -432,6 +375,44 @@ exports[`ClayCard should render a ClayCard with url 1`] = `
         <a class=" card-title text-truncate" href="#1"></a>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard should render a disabled ClayCard 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first bg-checkered"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCard should render a selected ClayCard 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first bg-checkered"></div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
   </div>
 </div>
 `;

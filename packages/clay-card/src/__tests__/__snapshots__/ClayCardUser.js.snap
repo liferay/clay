@@ -34,121 +34,6 @@ exports[`ClayCardUser should render a ClayCardUser with actionItems 1`] = `
 </div>
 `;
 
-exports[`ClayCardUser should render a ClayCardUser with checkbox \`name\` 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCardUser should render a ClayCardUser with checkbox \`value\` 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCardUser should render a ClayCardUser with checkbox checked 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCardUser should render a ClayCardUser with checkbox disabled 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayCardUser should render a ClayCardUser with checkbox indeterminate 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
 exports[`ClayCardUser should render a ClayCardUser with classes 1`] = `
 <div class="card-type-asset card my-custom-class">
   <div class="aspect-ratio card-item-first">
@@ -227,6 +112,52 @@ exports[`ClayCardUser should render a ClayCardUser with imageSrc 1`] = `
     <div class="card-row">
       <div class="flex-col flex-col-expand"></div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardUser should render a ClayCardUser with input \`name\` 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first">
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardUser should render a ClayCardUser with input \`value\` 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" value="checkbox" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first">
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
   </div>
 </div>
 `;
@@ -527,6 +458,52 @@ exports[`ClayCardUser should render a ClayCardUser with url 1`] = `
         <a class=" card-title text-truncate" href="#1"></a>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardUser should render a disabled ClayCardUser 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first">
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayCardUser should render a selected ClayCardUser 1`] = `
+<div class="card-type-asset form-check form-check-card form-check-top-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input checked="" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-type-asset">
+        <div class="aspect-ratio card-item-first">
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand"></div>
+          </div>
+        </div>
+      </div>
+    </label>
   </div>
 </div>
 `;
