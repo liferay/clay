@@ -3,6 +3,7 @@ import 'clay-icon';
 import 'clay-label';
 import 'clay-link';
 import 'clay-sticker';
+import './ClayListGroupItem';
 
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
@@ -20,7 +21,7 @@ class ClayListGroup extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleItemCheckboxClick_(event) {
+	handleItemToggled_(event) {
 		this.emit('itemToggled', event);
 	}
 }

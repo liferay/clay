@@ -1,0 +1,151 @@
+{namespace ClayListGroupItem}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param title: string}
+	{@param? actionItems: list<[
+			disabled: bool,
+			indicatorSymbol: string,
+			label: string,
+			quickAction: bool,
+			separator: bool,
+			url: string
+	]>}
+	{@param? description: string}
+	{@param? elementClasses: string}
+	{@param? handleItemCheckboxClick_: any}
+	{@param? icon: string}
+	{@param? iconShape: string}
+	{@param? id: string}
+	{@param? label: string}
+	{@param? labelStyle: string}
+	{@param? selectable: bool}
+	{@param? selected: bool}
+	{@param? spritemap: string}
+	{@param? url: string}
+
+	{let $listItemAttributes kind="attributes"}
+    class="list-group-item list-group-item-flex
+  		{if $elementClasses}
+	  		{sp}{$elementClasses}
+		  {/if}
+
+  		{if $selected}
+	  		{sp}active
+		  {/if}
+    "
+
+    {if $id}
+      id="{$id}"
+    {/if}
+	{/let}
+
+	<li {$listItemAttributes}>
+		{let $isSimple: not $description and not $selectable and not $icon and not $actionItems and not $label/}
+
+		{if $isSimple}
+			{if $url}
+				{call ClayLink.render}
+					{param href: $url /}
+					{param label: $title /}
+				{/call}
+			{else}
+				{$title}
+			{/if}
+		{else}
+			{if $selectable}
+				<div class="flex-col">
+					{call ClayCheckbox.render}
+						{param checked: $selected /}
+						{param events: ['change': $handleItemCheckboxClick_] /}
+						{param hideLabel: true /}
+						{param label: 'select' /}
+					{/call}
+				</div>
+			{/if}
+
+			{if $icon and $spritemap}
+				<div class="flex-col">
+					{call ClaySticker.render}
+						{param icon: $icon /}
+						{param shape: $iconShape /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</div>
+			{/if}
+
+			<div class="flex-col flex-col-expand">
+				<h4 class="list-group-title text-truncate">
+					{if $url}
+						{call ClayLink.render}
+							{param href: $url /}
+							{param label: $title /}
+						{/call}
+					{else}
+						{$title}
+					{/if}
+				</h4>
+
+				{if $description}
+					<p class="list-group-subtitle text-truncate">{$description}</p>
+				{/if}
+
+				{if $label}
+					<div class="list-group-detail">
+						{call ClayLabel.render}
+							{param label: $label /}
+							{param style: $labelStyle /}
+						{/call}
+					</div>
+				{/if}
+			</div>
+
+			{if $actionItems and $spritemap}
+        <div class="flex-col">
+					{call .quickMenu}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+
+					{call ClayActionsDropdown.render}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</div>
+			{/if}
+		{/if}
+	</li>
+{/template}
+
+/**
+ * This renders the quick actions menu
+ */
+{template .quickMenu}
+	{@param items: list<[
+		disabled: bool,
+		indicatorSymbol: string,
+		label: string,
+		quickAction: bool,
+		separator: bool,
+		url: string
+	]>}
+	{@param spritemap: string}
+
+	<div class="quick-action-menu">
+		{foreach $item in $items}
+			{if $item.quickAction and $item.indicatorSymbol}
+				{call ClayLink.render}
+					{param elementClasses: 'quick-action-item' /}
+					{param label kind="html"}
+						{call ClayIcon.render}
+							{param spritemap: $spritemap /}
+							{param symbol: $item.indicatorSymbol /}
+						{/call}
+					{/param}
+				{/call}
+			{/if}
+		{/foreach}
+	</div>
+{/template}

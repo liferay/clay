@@ -24,7 +24,7 @@
 		url: string
 	]>}
 	{@param? elementClasses: string}
-	{@param? handleItemCheckboxClick_: any}
+	{@param? handleItemToggled_: any}
 	{@param? id: string}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
@@ -49,197 +49,21 @@
 			</li>
 		{/if}
 
-		{call .items}
-			{param handleItemCheckboxClick_: $handleItemCheckboxClick_ /}
-			{param items: $items /}
-			{param selectable: $selectable /}
-			{param spritemap: $spritemap /}
-		{/call}
-	</ul>
-{/template}
-
-/**
- * This renders a single item
- */
-{template .item}
-	{@param index: number}
-	{@param title: string}
-	{@param? actionItems: list<[
-			disabled: bool,
-			events: ?,
-			indicatorSymbol: string,
-			label: string,
-			quickAction: bool,
-			separator: bool,
-			url: string
-	]>}
-	{@param? description: string}
-	{@param? handleItemCheckboxClick_: any}
-	{@param? icon: string}
-	{@param? iconShape: string}
-	{@param? label: string}
-	{@param? labelStyle: string}
-	{@param? selectable: bool}
-	{@param? selected: bool}
-	{@param? spritemap: string}
-	{@param? url: string}
-
-	{let $listItemClasses kind="text"}
-		list-group-item list-group-item-flex
-		{if $selected}
-			{sp}active
-		{/if}
-	{/let}
-
-	<li class="{$listItemClasses}">
-		{let $isSimple: not $description and not $selectable and not $icon /}
-
-		{if $isSimple}
-			{if $url}
-				{call ClayLink.render}
-					{param href: $url /}
-					{param label: $title /}
-				{/call}
-			{else}
-				{$title}
-			{/if}
-		{else}
-			{if $selectable}
-				<div class="flex-col">
-					{call ClayCheckbox.render}
-						{param checked: $selected /}
-						{param events: ['change': $handleItemCheckboxClick_] /}
-						{param hideLabel: true /}
-						{param label: 'select' /}
-						{param ref: 'selectItem' + $index + 'Checkbox' /}
-					{/call}
-				</div>
-			{/if}
-
-			{if $icon and $spritemap}
-				<div class="flex-col">
-					{call ClaySticker.render}
-						{param icon: $icon /}
-						{param shape: $iconShape /}
-						{param spritemap: $spritemap /}
-					{/call}
-				</div>
-			{/if}
-
-			<div class="flex-col flex-col-expand">
-				<h4 class="list-group-title text-truncate">
-					{if $url}
-						{call ClayLink.render}
-							{param href: $url /}
-							{param label: $title /}
-						{/call}
-					{else}
-						{$title}
-					{/if}
-				</h4>
-
-				{if $description}
-					<p class="list-group-subtitle text-truncate">{$description}</p>
-				{/if}
-
-				{if $label}
-					<div class="list-group-detail">
-						{call ClayLabel.render}
-							{param label: $label /}
-							{param style: $labelStyle /}
-						{/call}
-					</div>
-				{/if}
-			</div>
-
-			{if $actionItems and $spritemap}
-				<div class="flex-col">
-					{call .quickMenu}
-						{param items: $actionItems /}
-						{param spritemap: $spritemap /}
-					{/call}
-
-					{call ClayActionsDropdown.render}
-						{param items: $actionItems /}
-						{param spritemap: $spritemap /}
-					{/call}
-				</div>
-			{/if}
-		{/if}
-	</li>
-{/template}
-
-/**
- * This renders the whole list of items.
- */
-{template .items}
-	{@param items: list<[
-		actionItems: list<[
-			disabled: bool,
-			events: ?,
-			indicatorSymbol: string,
-			label: string,
-			quickAction: bool,
-			separator: bool,
-			url: string
-		]>,
-		description: string,
-		icon: string,
-		iconShape: string,
-		label: string,
-		labelStyle: string,
-		selected: bool,
-		title: string,
-		url: string
-	]>}
-	{@param? handleItemCheckboxClick_: any}
-	{@param? selectable: bool}
-	{@param? spritemap: string}
-
-	{foreach $item in $items}
-		{call .item}
-			{param actionItems: $item.actionItems /}
-			{param description: $item.description /}
-			{param handleItemCheckboxClick_: $handleItemCheckboxClick_ /}
-			{param icon: $item.icon /}
-			{param iconShape: $item.iconShape /}
-			{param index: index($item) /}
-			{param label: $item.label /}
-			{param labelStyle: $item.labelStyle /}
-			{param selectable: $selectable /}
-			{param selected: $item.selected /}
-			{param spritemap: $spritemap /}
-			{param title: $item.title /}
-			{param url: $item.url /}
-		{/call}
-	{/foreach}
-{/template}
-
-{template .quickMenu}
-	{@param items: list<[
-		disabled: bool,
-		events: ?,
-		indicatorSymbol: string,
-		label: string,
-		quickAction: bool,
-		separator: bool,
-		url: string
-	]>}
-	{@param spritemap: string}
-
-	<div class="quick-action-menu">
 		{foreach $item in $items}
-			{if $item.quickAction and $item.indicatorSymbol}
-				{call ClayLink.render}
-					{param elementClasses: 'quick-action-item' /}
-					{param label kind="html"}
-						{call ClayIcon.render}
-							{param spritemap: $spritemap /}
-							{param symbol: $item.indicatorSymbol /}
-						{/call}
-					{/param}
-				{/call}
-			{/if}
+			{call ClayListGroupItem.render}
+				{param actionItems: $item.actionItems /}
+				{param description: $item.description /}
+				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param icon: $item.icon /}
+				{param iconShape: $item.iconShape /}
+				{param label: $item.label /}
+				{param labelStyle: $item.labelStyle /}
+				{param selectable: $selectable /}
+				{param selected: $item.selected /}
+				{param spritemap: $spritemap /}
+				{param title: $item.title /}
+				{param url: $item.url /}
+			{/call}
 		{/foreach}
-	</div>
+	</ul>
 {/template}
