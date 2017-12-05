@@ -75,28 +75,6 @@
 	+ .card-link {
 		margin-left: 0;
 	}
-
-	&.btn-link {
-		color: $card-link-color;
-
-		@include clay-component-btn-link;
-
-		line-height: normal;
-		text-decoration: $card-link-text-decoration;
-
-		@include hover-focus {
-			color: $card-link-hover-color;
-			text-decoration: $card-link-hover-text-decoration;
-		}
-	}
-}
-
-button.card-link {
-	background-color: transparent;
-
-	@include clay-component-btn-link;
-
-	line-height: normal;
 }
 
 .card-row {
