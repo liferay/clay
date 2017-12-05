@@ -33,7 +33,7 @@ ClayFileCard.STATE = {
 	 * Flag to indicate if the card is disabled or not.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	disabled: Config.bool().value(false),
@@ -78,7 +78,7 @@ ClayFileCard.STATE = {
 	 * Icon to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?string}
 	 * @default documents-and-media
 	 */
 	icon: Config.string().value('documents-and-media'),
@@ -134,7 +134,7 @@ ClayFileCard.STATE = {
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selectable: Config.bool().value(false),
@@ -143,7 +143,7 @@ ClayFileCard.STATE = {
 	 * Flag to indicate if the card is selected or not.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selected: Config.bool().value(false),
@@ -179,7 +179,7 @@ ClayFileCard.STATE = {
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	url: Config.string(),

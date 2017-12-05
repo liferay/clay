@@ -33,7 +33,7 @@ ClayImageCard.STATE = {
 	 * Flag to indicate if the card is disabled or not.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	disabled: Config.bool().value(false),
@@ -152,7 +152,7 @@ ClayImageCard.STATE = {
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selectable: Config.bool().value(false),
@@ -161,7 +161,7 @@ ClayImageCard.STATE = {
 	 * Flag to indicate if the card is selected or not.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selected: Config.bool().value(false),
@@ -170,7 +170,7 @@ ClayImageCard.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {!string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -197,7 +197,7 @@ ClayImageCard.STATE = {
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	url: Config.string(),

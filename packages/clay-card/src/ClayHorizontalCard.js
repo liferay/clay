@@ -34,7 +34,7 @@ ClayHorizontalCard.STATE = {
 	 * Flag to indicate if the card is disabled or not.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	disabled: Config.bool().value(false),
@@ -52,7 +52,7 @@ ClayHorizontalCard.STATE = {
 	 * Icon of the card.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {?string}
 	 * @default folder
 	 */
 	icon: Config.string().value('folder'),
@@ -88,7 +88,7 @@ ClayHorizontalCard.STATE = {
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selectable: Config.bool().value(false),
@@ -97,7 +97,7 @@ ClayHorizontalCard.STATE = {
 	 * Flag to indicate if the card is selected or not.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selected: Config.bool().value(false),
@@ -115,7 +115,7 @@ ClayHorizontalCard.STATE = {
 	 * Title of the card.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {!string}
 	 * @default undefined
 	 */
 	title: Config.string().required(),
@@ -124,7 +124,7 @@ ClayHorizontalCard.STATE = {
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	url: Config.string(),
