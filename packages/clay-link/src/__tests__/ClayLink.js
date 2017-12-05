@@ -1,5 +1,4 @@
 import ClayLink from '../ClayLink';
-import {domData} from 'metal-dom';
 
 let link;
 

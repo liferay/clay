@@ -1,5 +1,4 @@
 import ClayButton from '../ClayButton';
-import {domData} from 'metal-dom';
 
 let button;
 
