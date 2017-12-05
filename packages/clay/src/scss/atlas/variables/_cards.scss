@@ -9,6 +9,8 @@ $card-body-padding-top: 0.75rem !default;
 
 $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius} - #{$card-border-width}), $card-border-radius) !default;
 
+// Card Title
+
 $card-title: () !default;
 $card-title: map-merge((
 	color: $body-color
@@ -19,6 +21,16 @@ $card-title-link: map-merge((
 	hover-color: map-get($card-title, color),
 	hover-text-decoration: none
 ), $card-title-link);
+
+// Card Subtitle
+
+$card-subtitle-link: () !default;
+$card-subtitle-link: map-merge((
+	hover-color: $secondary,
+	hover-text-decoration: none
+), $card-subtitle-link);
+
+// Card Link
 
 $card-link: () !default;
 $card-link: map-merge((

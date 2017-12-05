@@ -38,6 +38,8 @@
 	text-transform: $card-section-header-text-transform;
 }
 
+// Card Title
+
 .card-title {
 	@include clay-text-typography($card-title);
 }
@@ -47,13 +49,18 @@ a.card-title,
 	@include clay-link($card-title-link);
 }
 
+// Card Subtitle
+
 .card-subtitle {
-	color: $card-subtitle-color;
-	font-size: $card-subtitle-font-size;
-	font-weight: $card-subtitle-font-weight;
-	margin-bottom: $card-subtitle-margin-bottom;
-	margin-top: $card-subtitle-margin-top;
+	@include clay-text-typography($card-subtitle);
 }
+
+a.card-subtitle,
+.card-subtitle a {
+	@include clay-link($card-subtitle-link);
+}
+
+// Card Link
 
 .card-link {
 	@include clay-link($card-link);
