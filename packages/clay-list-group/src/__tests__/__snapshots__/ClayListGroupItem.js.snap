@@ -86,12 +86,13 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with icon 1`] = `
 
 exports[`ClayListGroupItem should render a ClayListGroupItem with id 1`] = `<li class="list-group-item list-group-item-flex" id="myId">My Item</li>`;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with label 1`] = `
+exports[`ClayListGroupItem should render a ClayListGroupItem with labels with style 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
     <div class="list-group-detail">
-      <span class="label label-secondary">Status</span>
+      <span class="label label-info">Aproved</span>
+      <span class="label label-warning">Pending</span>
     </div>
   </div>
 </li>
@@ -100,6 +101,17 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with label 1`] = `
 exports[`ClayListGroupItem should render a ClayListGroupItem with link 1`] = `
 <li class="list-group-item list-group-item-flex">
   <a href="#1">Item 1</a>
+</li>
+`;
+
+exports[`ClayListGroupItem should render a ClayListGroupItem with one label 1`] = `
+<li class="list-group-item list-group-item-flex">
+  <div class="flex-col flex-col-expand">
+    <h4 class="list-group-title text-truncate">Item 1</h4>
+    <div class="list-group-detail">
+      <span class="label label-secondary">Status</span>
+    </div>
+  </div>
 </li>
 `;
 
@@ -146,6 +158,18 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with quick action m
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`ClayListGroupItem should render a ClayListGroupItem with two labels 1`] = `
+<li class="list-group-item list-group-item-flex">
+  <div class="flex-col flex-col-expand">
+    <h4 class="list-group-title text-truncate">Item 1</h4>
+    <div class="list-group-detail">
+      <span class="label label-secondary">Aproved</span>
+      <span class="label label-secondary">Pending</span>
     </div>
   </div>
 </li>
