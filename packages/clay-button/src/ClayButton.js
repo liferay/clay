@@ -16,7 +16,9 @@ class ClayButton extends Component {
 	 */
 	attached() {
 		for (let dataKey in this.data) {
-			domData.get(this.element, dataKey, this.data[dataKey]);
+			if (this.data.hasOwnProperty(dataKey)) {
+				domData.get(this.element, dataKey, this.data[dataKey]);
+			}
 		}
 	}
 }
