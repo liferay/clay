@@ -49,7 +49,7 @@ ClayLink.STATE = {
 	 * The css class to act as a button. If this is defined `style` param is
 	 * ignored.
 	 * @instance
-	 * @memberof ClayButton
+	 * @memberof ClayLink
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -58,7 +58,7 @@ ClayLink.STATE = {
 	/**
 	 * Data to add to the element.
 	 * @instance
-	 * @memberof ClayButton
+	 * @memberof ClayLink
 	 * @type {?object}
 	 * @default undefined
 	 */
@@ -125,7 +125,7 @@ ClayLink.STATE = {
 	/**
 	 * The css class that colors the button.
 	 * @instance
-	 * @memberof ClayButton
+	 * @memberof ClayLink
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
