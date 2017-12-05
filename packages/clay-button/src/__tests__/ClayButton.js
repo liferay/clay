@@ -1,4 +1,5 @@
 import ClayButton from '../ClayButton';
+import {domData} from 'metal-dom';
 
 let button;
 
@@ -142,5 +143,15 @@ describe('ClayButton', function() {
 		});
 
 		expect(button).toMatchSnapshot();
+	});
+
+	it('should render a button with customData attributes', function() {
+		button = new ClayButton({
+			data: {
+				myAttribute: 'myValue',
+			},
+		});
+
+		expect(domData.get(button.element, 'myAttribute')).toEqual('myValue');
 	});
 });

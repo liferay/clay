@@ -1,4 +1,5 @@
 import ClayLink from '../ClayLink';
+import {domData} from 'metal-dom';
 
 let link;
 
@@ -159,5 +160,15 @@ describe('ClayLink', function() {
 		});
 
 		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with customData attributes', function() {
+		link = new ClayLink({
+			data: {
+				myAttribute: 'myValue',
+			},
+		});
+
+		expect(domData.get(link.element, 'myAttribute')).toEqual('myValue');
 	});
 });
