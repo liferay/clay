@@ -32,6 +32,15 @@ ClayCard.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Content Renderer name of card.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?array|undefined}
+	 * @default image
+	 */
+	contentRenderer: Config.oneOf(['image', 'file', 'user']).value('image'),
+
+	/**
 	 * Flag to indicate if the card is disabled or not.
 	 * @instance
 	 * @memberof ClayCard
@@ -203,15 +212,6 @@ ClayCard.STATE = {
 	 * @default undefined
 	 */
 	url: Config.string(),
-
-	/**
-	 * Variant of card.
-	 * @instance
-	 * @memberof ClayCard
-	 * @type {?array|undefined}
-	 * @default image
-	 */
-	variant: Config.oneOf(['image', 'file', 'user']).value('image'),
 };
 
 defineWebComponent('clay-card', ClayCard);

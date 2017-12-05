@@ -25,6 +25,7 @@
 
     {call ClayCard.render}
 			{param actionItems: $actionItems /}
+			{param contentRenderer: 'user' /}
 			{param disabled: $disabled /}
 			{param elementClasses: $elementClasses /}
 			{param fileType: $initials /}
@@ -41,7 +42,6 @@
 			{param subtitle: $subtitle /}
 			{param title: $name /}
 			{param url: $url /}
-			{param variant: 'user' /}
     {/call}
 {/template}
 
@@ -101,7 +101,6 @@
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? spritemap: string}
-	{@param? variant: string}
 
 	{let $classesAspectRatio kind="text"}
 		aspect-ratio-item-center-middle aspect-ratio-item-fluid

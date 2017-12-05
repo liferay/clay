@@ -10,6 +10,7 @@
 		separator: bool,
 		url: string
 	]>}
+	{@param? contentRenderer: string}
   {@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? fileType: string}
@@ -29,7 +30,6 @@
 	{@param? spritemap: string}
 	{@param? subtitle: string}
 	{@param? url: string}
-	{@param? variant: string}
 
 	{let $attributes kind="attributes"}
 		class="card-type-asset
@@ -51,7 +51,7 @@
 
 	<div {$attributes}>
 		{let $visualArea kind="html"}
-			{delcall ClayCard.VisualArea variant="$variant"}
+			{delcall ClayCard.VisualArea variant="$contentRenderer"}
 				{param fileType: $fileType /}
 				{param fileTypeStyle: $fileTypeStyle /}
 				{param icon: $icon /}
@@ -62,7 +62,7 @@
 		{/let}
 
 		{let $descriptiveArea kind="html"}
-			{delcall ClayCard.DescriptiveArea variant="$variant"}
+			{delcall ClayCard.DescriptiveArea variant="$contentRenderer"}
 				{param actionItems: $actionItems /}
 				{param labels: $labels /}
 				{param spritemap: $spritemap /}

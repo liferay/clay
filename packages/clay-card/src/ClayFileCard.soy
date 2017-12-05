@@ -27,6 +27,7 @@
 
     {call ClayCard.render}
         {param actionItems: $actionItems /}
+        {param contentRenderer: 'file' /}
         {param disabled: $disabled /}
         {param elementClasses: $elementClasses /}
         {param fileType: $fileType /}
@@ -43,7 +44,6 @@
         {param subtitle: $subtitle /}
         {param title: $title /}
         {param url: $url /}
-        {param variant: 'file' /}
     {/call}
 {/template}
 
@@ -57,7 +57,6 @@
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? spritemap: string}
-	{@param? variant: string}
 
 	<div class="aspect-ratio card-item-first">
 		{if $icon and $spritemap}
