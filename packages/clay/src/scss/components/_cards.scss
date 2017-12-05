@@ -39,11 +39,7 @@
 }
 
 .card-title {
-	color: $card-title-color;
-	font-size: $card-title-font-size;
-	font-weight: $card-title-font-weight;
-	margin-bottom: $card-title-margin-bottom;
-	margin-top: $card-title-margin-top;
+	@include clay-text-typography($card-title);
 }
 
 .card-subtitle {
