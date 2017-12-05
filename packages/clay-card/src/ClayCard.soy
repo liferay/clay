@@ -50,7 +50,7 @@
 	{/let}
 
 	<div {$attributes}>
-		{let $visualArea kind="html"}
+		{let $content kind="html"}
 			{delcall ClayCard.VisualArea variant="$contentRenderer"}
 				{param fileType: $fileType /}
 				{param fileTypeStyle: $fileTypeStyle /}
@@ -59,9 +59,6 @@
 				{param imageSrc: $imageSrc /}
 				{param spritemap: $spritemap /}
 			{/delcall}
-		{/let}
-
-		{let $descriptiveArea kind="html"}
 			{delcall ClayCard.DescriptiveArea variant="$contentRenderer"}
 				{param actionItems: $actionItems /}
 				{param labels: $labels /}
@@ -82,8 +79,7 @@
 					{/let}
 
 					<div class="{$classesCard}">
-						{$visualArea}
-						{$descriptiveArea}
+						{$content}
 					</div>
 				{/param}
 
@@ -91,8 +87,7 @@
 				{param value: $inputValue /}
 			{/call}
 		{else}
-			{$visualArea}
-			{$descriptiveArea}
+			{$content}
 		{/if}
 	</div>
 {/template}
