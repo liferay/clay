@@ -9,6 +9,13 @@ $card-body-padding-top: 0.75rem !default;
 
 $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius} - #{$card-border-width}), $card-border-radius) !default;
 
+$card-title: (
+	color: $body-color,
+	font-size: 1rem,
+	font-weight: $font-weight-semi-bold,
+	line-height: $line-height-base
+) !default;
+
 $card-link: (
 	color: $secondary,
 	hover-color: $secondary

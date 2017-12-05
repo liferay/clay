@@ -15,17 +15,17 @@ $card-section-header-margin-bottom: 1.5rem !default;
 $card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
 $card-section-header-text-transform: uppercase !default;
 
-$card-title-color: null !default;
-$card-title-font-size: 1rem !default; // 16px
-$card-title-font-weight: $font-weight-semi-bold !default;
-$card-title-margin-bottom: 0.5rem !default; // 8px
-$card-title-margin-top: null !default;
+$card-title: (
+	font-size: 1rem,
+	font-weight: $font-weight-semi-bold,
+	line-height: $line-height-base
+) !default;
 
 $card-subtitle-color: $card-section-header-color !default;
 $card-subtitle-font-size: 0.875rem !default; // 14px
 $card-subtitle-font-weight: null !default;
 $card-subtitle-margin-bottom: 0.5rem !default; // 8px
-$card-subtitle-margin-top: -$card-title-margin-bottom !default; // -8px
+$card-subtitle-margin-top: 0 !default;
 
 $card-link: (
 	color: $link-color,
