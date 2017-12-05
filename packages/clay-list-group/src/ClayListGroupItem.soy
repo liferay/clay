@@ -20,8 +20,10 @@
 	{@param? icon: string}
 	{@param? iconShape: string}
 	{@param? id: string}
-	{@param? label: string}
-	{@param? labelStyle: string}
+	{@param? labels: list<[
+		label: string,
+		style: string
+	]>}
 	{@param? selectable: bool}
 	{@param? selected: bool}
 	{@param? spritemap: string}
@@ -44,10 +46,10 @@
 	{/let}
 
 	<li {$listItemAttributes}>
-		{let $isSimple: not $description and not $selectable and not $icon and not $actionItems and not $label/}
+		{let $isSimple: not $description and not $selectable and not $icon and not $actionItems and not $labels/}
 
 		{if $isSimple}
-			{delcall ClayListGroupItem.Content variant="$contentRenderer"}
+			{delcall ClayListGroupItem.Simple variant="$contentRenderer"}
 				{param title: $title /}
 				{param url: $url /}
 			{/delcall}
@@ -73,8 +75,7 @@
 
 			{delcall ClayListGroupItem.Content variant="$contentRenderer"}
 				{param description: $description /}
-				{param label: $label /}
-				{param labelStyle: $labelStyle /}
+				{param labels: $labels /}
 				{param spritemap: $spritemap /}
 				{param title: $title /}
 				{param url: $url /}
@@ -134,8 +135,10 @@
 {deltemplate ClayListGroupItem.Content}
 	{@param title: string}
 	{@param? description: string}
-	{@param? label: string}
-	{@param? labelStyle: string}
+	{@param? labels: list<[
+		label: string,
+		style: string
+	]>}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -155,12 +158,14 @@
 			<p class="list-group-subtitle text-truncate">{$description}</p>
 		{/if}
 
-		{if $label}
+		{if $labels}
 			<div class="list-group-detail">
-				{call ClayLabel.render}
-					{param label: $label /}
-					{param style: $labelStyle /}
-				{/call}
+				{foreach $label in $labels}
+					{call ClayLabel.render}
+						{param label: $label.label /}
+						{param style: $label.style /}
+					{/call}
+				{/foreach}
 			</div>
 		{/if}
 	</div>

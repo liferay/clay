@@ -104,28 +104,24 @@ ClayListGroupItem.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Label of the list item.
+	 * Labels of the list item.
 	 * @instance
-	 * @memberof ClayListGroupItem
-	 * @type {?string|undefined}
+	 * @memberof ClayCard
+	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	label: Config.string(),
-
-	/**
-	 * Style of the label of the list item.
-	 * @instance
-	 * @memberof ClayListGroupItem
-	 * @type {?string|undefined}
-	 * @default secondary
-	 */
-	labelStyle: Config.oneOf([
-		'danger',
-		'info',
-		'secondary',
-		'success',
-		'warning',
-	]).value('secondary'),
+	labels: Config.arrayOf(
+		Config.shapeOf({
+			label: Config.string(),
+			style: Config.oneOf([
+				'danger',
+				'info',
+				'secondary',
+				'success',
+				'warning',
+			]).value('secondary'),
+		})
+	),
 
 	/**
 	 * Flag to indicate if the list item is selectable.

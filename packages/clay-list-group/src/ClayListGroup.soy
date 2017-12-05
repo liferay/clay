@@ -16,8 +16,10 @@
 		description: string,
 		icon: string,
 		iconShape: string,
-		label: string,
-		labelStyle: string,
+		labels: list<[
+			label: string,
+			style: string
+		]>,
 		selected: bool,
 		title: string,
 		url: string
@@ -55,8 +57,7 @@
 				{param events: ['itemToggled': $handleItemToggled_ ] /}
 				{param icon: $item.icon /}
 				{param iconShape: $item.iconShape /}
-				{param label: $item.label /}
-				{param labelStyle: $item.labelStyle /}
+				{param labels: $item.labels /}
 				{param selectable: $selectable /}
 				{param selected: $item.selected /}
 				{param spritemap: $spritemap /}
