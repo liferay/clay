@@ -7,6 +7,7 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
+import actionItemsValidator from './action_items_validator';
 import templates from './ClayHorizontalCard.soy.js';
 
 /**
@@ -27,13 +28,7 @@ ClayHorizontalCard.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	actionItems: Config.arrayOf(
-		Config.shapeOf({
-			label: Config.string().required(),
-			separator: Config.bool().value(false),
-			url: Config.string(),
-		})
-	),
+	actionItems: actionItemsValidator,
 
 	/**
 	 * Flag to indicate if the card is disabled or not.
