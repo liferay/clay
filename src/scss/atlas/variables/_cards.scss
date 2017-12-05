@@ -20,10 +20,11 @@ $card-title-link: map-merge((
 	hover-text-decoration: none
 ), $card-title-link);
 
-$card-link: (
+$card-link: () !default;
+$card-link: map-merge((
 	color: $secondary,
 	hover-color: $secondary
-) !default;
+), $card-link);
 
 $checkbox-left-card-padding: 50px !default;
 
