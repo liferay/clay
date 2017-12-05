@@ -122,20 +122,20 @@
 
 		let actionItemsWithQuickItems = [
 			{
-				indicatorSymbol: 'trash',
+				icon: 'trash',
 				label: 'Option 1',
 				quickAction: true,
 				url: '#1',
 			},
 			{
-				indicatorSymbol: 'download',
+				icon: 'download',
 				label: 'Option 2',
 				quickAction: true,
 				separator: true,
 				url: '#2',
 			},
 			{
-				indicatorSymbol: 'info-circle-open',
+				icon: 'info-circle-open',
 				label: 'Option 3',
 				quickAction: true,
 				url: '#3',
@@ -272,23 +272,35 @@
 				{
 					description: 'Description 1',
 					icon: 'folder',
-					label: 'Status',
+					labels: [
+						{
+							label: 'Status',
+						},
+					],
 					title: 'Item 1',
 					url: '#1',
 				},
 				{
 					description: 'Description 2',
 					icon: 'folder',
-					label: 'Peding',
-					labelStyle: 'warning',
+					labels: [
+						{
+							label: 'Pending',
+							style: 'warning',
+						},
+					],
 					title: 'Item 2',
 					url: '#2',
 				},
 				{
 					description: 'Description 3',
 					icon: 'folder',
-					label: 'Aproved',
-					labelStyle: 'success',
+					labels: [
+						{
+							label: 'Aproved',
+							style: 'success',
+						},
+					],
 					title: 'Item 3',
 					url: '#3',
 				},
@@ -303,7 +315,11 @@
 					actionItems: actionItems,
 					description: 'Description 1',
 					icon: 'folder',
-					label: 'Status',
+					labels: [
+						{
+							label: 'Status',
+						},
+					],
 					title: 'Item 1',
 					url: '#1',
 				},
@@ -311,8 +327,12 @@
 					actionItems: actionItems,
 					description: 'Description 2',
 					icon: 'folder',
-					label: 'Peding',
-					labelStyle: 'warning',
+					labels: [
+						{
+							label: 'Pending',
+							style: 'warning',
+						},
+					],
 					title: 'Item 2',
 					url: '#2',
 				},
@@ -320,8 +340,12 @@
 					actionItems: actionItems,
 					description: 'Description 3',
 					icon: 'folder',
-					label: 'Aproved',
-					labelStyle: 'success',
+					labels: [
+						{
+							label: 'Aproved',
+							style: 'success',
+						},
+					],
 					title: 'Item 3',
 					url: '#3',
 				},
@@ -336,7 +360,11 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 1',
 					icon: 'folder',
-					label: 'Status',
+					labels: [
+						{
+							label: 'Status',
+						},
+					],
 					title: 'Item 1',
 					url: '#1',
 				},
@@ -344,8 +372,12 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 2',
 					icon: 'folder',
-					label: 'Peding',
-					labelStyle: 'warning',
+					labels: [
+						{
+							label: 'Pending',
+							style: 'warning',
+						},
+					],
 					title: 'Item 2',
 					url: '#2',
 				},
@@ -353,8 +385,12 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 3',
 					icon: 'folder',
-					label: 'Aproved',
-					labelStyle: 'success',
+					labels: [
+						{
+							label: 'Aproved',
+							style: 'success',
+						},
+					],
 					title: 'Item 3',
 					url: '#3',
 				},
@@ -369,7 +405,11 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 1',
 					icon: 'folder',
-					label: 'Status',
+					labels: [
+						{
+							label: 'Status',
+						},
+					],
 					title: 'Item 1',
 					url: '#1',
 				},
@@ -377,8 +417,12 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 2',
 					icon: 'folder',
-					label: 'Peding',
-					labelStyle: 'warning',
+					labels: [
+						{
+							label: 'Pending',
+							style: 'warning',
+						},
+					],
 					title: 'Item 2',
 					url: '#2',
 				},
@@ -386,8 +430,12 @@
 					actionItems: actionItemsWithQuickItems,
 					description: 'Description 3',
 					icon: 'folder',
-					label: 'Aproved',
-					labelStyle: 'success',
+					labels: [
+						{
+							label: 'Aproved',
+							style: 'success',
+						},
+					],
 					title: 'Item 3',
 					url: '#3',
 				},
@@ -403,7 +451,11 @@
 					actionItems: actionItems,
 					description: 'Description 1',
 					icon: 'folder',
-					label: 'Status',
+					labels: [
+						{
+							label: 'Status',
+						},
+					],
 					selected: true,
 					title: 'Item 1',
 					url: '#1',
@@ -412,8 +464,12 @@
 					actionItems: actionItems,
 					description: 'Description 2',
 					icon: 'folder',
-					label: 'Peding',
-					labelStyle: 'warning',
+					labels: [
+						{
+							label: 'Pending',
+							style: 'warning',
+						},
+					],
 					selected: true,
 					title: 'Item 2',
 					url: '#2',
@@ -422,8 +478,12 @@
 					actionItems: actionItems,
 					description: 'Description 3',
 					icon: 'folder',
-					label: 'Aproved',
-					labelStyle: 'success',
+					labels: [
+						{
+							label: 'Aproved',
+							style: 'success',
+						},
+					],
 					selected: true,
 					title: 'Item 3',
 					url: '#3',
