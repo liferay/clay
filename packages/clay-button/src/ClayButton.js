@@ -3,13 +3,23 @@ import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
+import {domData} from 'metal-dom';
 
 import templates from './ClayButton.soy.js';
 
 /**
  * Metal Clay Button component.
  */
-class ClayButton extends Component {}
+class ClayButton extends Component {
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		for (let dataKey in this.data) {
+			domData.get(this.element, dataKey, this.data[dataKey]);
+		}
+	}
+}
 
 /**
  * State definition.
@@ -34,6 +44,15 @@ ClayButton.STATE = {
 	 * @default false
 	 */
 	block: Config.bool().value(false),
+
+	/**
+	 * Data to add to the element.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?object}
+	 * @default undefined
+	 */
+	data: Config.object(),
 
 	/**
 	 * The button disabled attribute.
