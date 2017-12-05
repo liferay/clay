@@ -22,7 +22,7 @@ class ClayCard extends Component {}
  */
 ClayCard.STATE = {
 	/**
-	 * Actions in the dropdown on card.
+	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayCard
 	 * @type {?array|undefined}
@@ -82,7 +82,7 @@ ClayCard.STATE = {
 	]).value('primary'),
 
 	/**
-	 * Render ClayIcon in the background element.
+	 * Icon to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayCard
 	 * @type {?string|undefined}
@@ -100,7 +100,7 @@ ClayCard.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Alt the image.
+	 * Alternate text of the image.
 	 * @instance
 	 * @memberof ClayCard
 	 * @type {?string|undefined}
@@ -109,7 +109,7 @@ ClayCard.STATE = {
 	imageAlt: Config.string(),
 
 	/**
-	 * The src to be applied to the background or user card image.
+	 * Source of the image to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayCard
 	 * @type {?string|undefined}
@@ -201,7 +201,7 @@ ClayCard.STATE = {
 	title: Config.string(),
 
 	/**
-	 * Transform title in the url.
+	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayCard
 	 * @type {?string}

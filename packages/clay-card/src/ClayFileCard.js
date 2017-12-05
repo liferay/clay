@@ -18,7 +18,7 @@ class ClayFileCard extends Component {}
  */
 ClayFileCard.STATE = {
 	/**
-	 * Actions in the dropdown on card.
+	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?array|undefined}
@@ -78,7 +78,7 @@ ClayFileCard.STATE = {
 	]).value('primary'),
 
 	/**
-	 * Render ClayIcon in the background element.
+	 * Icon to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?string|undefined}
@@ -179,7 +179,7 @@ ClayFileCard.STATE = {
 	title: Config.string(),
 
 	/**
-	 * Transform title in the url.
+	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?string}

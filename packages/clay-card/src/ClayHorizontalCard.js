@@ -21,7 +21,7 @@ class ClayHorizontalCard extends Component {}
  */
 ClayHorizontalCard.STATE = {
 	/**
-	 * Actions in the dropdown on card.
+	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?array|undefined}
@@ -126,7 +126,7 @@ ClayHorizontalCard.STATE = {
 	title: Config.string(),
 
 	/**
-	 * Transform title in the url.
+	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?string}
