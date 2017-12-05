@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayHorizontalCard should render a ClayHorizontalCard with a different icon 1`] = `
+<div class="card-type-directory card card-horizontal">
+  <div class="card-body">
+    <div class="card-row">
+      <span class="sticker sticker-unstyled">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+          <use xlink:href="icons.svg#list"></use>
+        </svg>
+      </span>
+      <div class="flex-col flex-col-expand flex-col-gutters">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 1`] = `
 <div class="card-type-directory card card-horizontal">
   <div class="card-body">
@@ -70,56 +87,6 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
 </div>
 `;
 
-exports[`ClayHorizontalCard should render a ClayHorizontalCard with input \`name\` 1`] = `
-<div class="card-type-directory form-check form-check-card form-check-middle-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <use xlink:href="icons.svg#folder"></use>
-              </svg>
-            </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`ClayHorizontalCard should render a ClayHorizontalCard with input \`value\` 1`] = `
-<div class="card-type-directory form-check form-check-card form-check-middle-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <use xlink:href="icons.svg#folder"></use>
-              </svg>
-            </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
 exports[`ClayHorizontalCard should render a ClayHorizontalCard with url 1`] = `
 <div class="card-type-directory card card-horizontal">
   <div class="card-body">
@@ -141,7 +108,82 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
 <div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
     <label>
-      <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+      <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input class="custom-control-input" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with input \`name\` 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+      <span class="custom-control-indicator"></span>
+      <div class="card card-horizontal">
+        <div class="card-body">
+          <div class="card-row">
+            <span class="sticker sticker-unstyled">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <use xlink:href="icons.svg#folder"></use>
+              </svg>
+            </span>
+            <div class="flex-col flex-col-expand flex-col-gutters">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with input \`value\` 1`] = `
+<div class="card-type-directory form-check form-check-card form-check-middle-left">
+  <div class="custom-control custom-checkbox">
+    <label>
+      <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
       <span class="custom-control-indicator"></span>
       <div class="card card-horizontal">
         <div class="card-body">

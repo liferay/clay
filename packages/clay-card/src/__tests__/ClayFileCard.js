@@ -59,7 +59,17 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a selected ClayFileCard', () => {
+	it('should render a selectable ClayFileCard', () => {
+		component = new ClayFileCard({
+			selectable: true,
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a selectable selected ClayFileCard', () => {
 		component = new ClayFileCard({
 			selectable: true,
 			selected: true,
@@ -70,11 +80,10 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a disabled ClayFileCard', () => {
+	it('should render a selectable disabled ClayFileCard', () => {
 		component = new ClayFileCard({
 			disabled: true,
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 			title: 'My Title',
 		});
@@ -82,11 +91,10 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with input `name`', () => {
+	it('should render a selectable ClayFileCard with input `name`', () => {
 		component = new ClayFileCard({
 			inputName: 'checkbox01',
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 			title: 'My Title',
 		});
@@ -94,11 +102,10 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with input `value`', () => {
+	it('should render a selectable ClayFileCard with input `value`', () => {
 		component = new ClayFileCard({
 			inputValue: 'checkbox',
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 			title: 'My Title',
 		});
@@ -116,11 +123,28 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with label', () => {
+	it('should render a ClayFileCard with one label', () => {
 		component = new ClayFileCard({
 			labels: [
 				{
 					label: 'Approved',
+				},
+			],
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayFileCard with two labels', () => {
+		component = new ClayFileCard({
+			labels: [
+				{
+					label: 'Approved',
+				},
+				{
+					label: 'Pending',
 				},
 			],
 			spritemap: spritemap,
@@ -196,6 +220,25 @@ describe('ClayFileCard', function() {
 				{
 					label: 'Approved',
 					style: 'warning',
+				},
+			],
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayFileCard with two labels with styles', () => {
+		component = new ClayFileCard({
+			labels: [
+				{
+					label: 'Approved',
+					style: 'warning',
+				},
+				{
+					label: 'Pending',
+					style: 'danger',
 				},
 			],
 			spritemap: spritemap,

@@ -59,6 +59,16 @@ describe('ClayHorizontalCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a selectable ClayHorizontalCard', () => {
+		component = new ClayHorizontalCard({
+			selectable: true,
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a selected ClayHorizontalCard', () => {
 		component = new ClayHorizontalCard({
 			selectable: true,
@@ -74,7 +84,6 @@ describe('ClayHorizontalCard', function() {
 		component = new ClayHorizontalCard({
 			disabled: true,
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 			title: 'My Title',
 		});
@@ -82,11 +91,10 @@ describe('ClayHorizontalCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayHorizontalCard with input `name`', () => {
+	it('should render a selectable ClayHorizontalCard with input `name`', () => {
 		component = new ClayHorizontalCard({
 			inputName: 'checkbox01',
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 			title: 'My Title',
 		});
@@ -94,11 +102,10 @@ describe('ClayHorizontalCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayHorizontalCard with input `value`', () => {
+	it('should render a selectable ClayHorizontalCard with input `value`', () => {
 		component = new ClayHorizontalCard({
 			inputValue: 'checkbox',
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 			title: 'My Title',
 		});
@@ -111,6 +118,16 @@ describe('ClayHorizontalCard', function() {
 			spritemap: spritemap,
 			title: 'My Title',
 			url: '#1',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayHorizontalCard with a different icon', () => {
+		component = new ClayHorizontalCard({
+			icon: 'list',
+			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();

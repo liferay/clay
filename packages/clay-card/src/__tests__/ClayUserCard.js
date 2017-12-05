@@ -59,6 +59,16 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a selectable ClayUserCard', () => {
+		component = new ClayUserCard({
+			name: 'User Name',
+			selectable: true,
+			spritemap: spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a selected ClayUserCard', () => {
 		component = new ClayUserCard({
 			name: 'User Name',
@@ -75,41 +85,28 @@ describe('ClayUserCard', function() {
 			disabled: true,
 			name: 'User Name',
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with input `name`', () => {
+	it('should render a selectable ClayUserCard with input `name`', () => {
 		component = new ClayUserCard({
 			inputName: 'checkbox01',
 			name: 'User Name',
 			selectable: true,
-			selected: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with input `value`', () => {
+	it('should render a selectable ClayUserCard with input `value`', () => {
 		component = new ClayUserCard({
 			inputValue: 'checkbox',
 			name: 'User Name',
 			selectable: true,
-			selected: true,
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with icon', () => {
-		component = new ClayUserCard({
-			icon: 'documents',
-			name: 'User Name',
 			spritemap: spritemap,
 		});
 
@@ -146,16 +143,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with title', () => {
-		component = new ClayUserCard({
-			name: 'empty-background.png',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with type', () => {
+	it('should render a ClayUserCard with user initials', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -165,7 +153,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `danger color`', () => {
+	it('should render a ClayUserCard with user initials and style `danger color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -176,7 +164,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `dark color`', () => {
+	it('should render a ClayUserCard with user initials and style `dark color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -187,7 +175,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `info color`', () => {
+	it('should render a ClayUserCard with user initials and style `info color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -198,7 +186,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `light color`', () => {
+	it('should render a ClayUserCard with user initials and style `light color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -209,7 +197,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `primary color`', () => {
+	it('should render a ClayUserCard with user initials and style `primary color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -220,7 +208,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `secondary color`', () => {
+	it('should render a ClayUserCard with user initials and style `secondary color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -231,7 +219,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `success color`', () => {
+	it('should render a ClayUserCard with user initials and style `success color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
@@ -242,7 +230,7 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with type `warning color`', () => {
+	it('should render a ClayUserCard with user initials and style `warning color`', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
