@@ -26,7 +26,11 @@ class ClayComponent extends Component {
 
 		for (let dataKey in this.data) {
 			if (this.data.hasOwnProperty(dataKey)) {
-				domData.get(this.element, dataKey, this.data[dataKey]);
+				domData.get(
+					this.element,
+					'data-' + dataKey,
+					this.data[dataKey]
+				);
 			}
 		}
 	}
