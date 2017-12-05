@@ -7,7 +7,7 @@
 	{@param title: string}
 	{@param? actionItems: list<[
 			disabled: bool,
-			indicatorSymbol: string,
+			icon: string,
 			label: string,
 			quickAction: bool,
 			separator: bool,
@@ -125,7 +125,7 @@
 {template .quickMenu}
 	{@param items: list<[
 		disabled: bool,
-		indicatorSymbol: string,
+		icon: string,
 		label: string,
 		quickAction: bool,
 		separator: bool,
@@ -135,13 +135,13 @@
 
 	<div class="quick-action-menu">
 		{foreach $item in $items}
-			{if $item.quickAction and $item.indicatorSymbol}
+			{if $item.quickAction and $item.icon}
 				{call ClayLink.render}
 					{param elementClasses: 'quick-action-item' /}
 					{param label kind="html"}
 						{call ClayIcon.render}
 							{param spritemap: $spritemap /}
-							{param symbol: $item.indicatorSymbol /}
+							{param symbol: $item.icon /}
 						{/call}
 					{/param}
 				{/call}

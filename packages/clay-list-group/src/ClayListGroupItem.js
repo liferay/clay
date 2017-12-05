@@ -41,8 +41,7 @@ ClayListGroupItem.STATE = {
 	actionItems: Config.arrayOf(
 		Config.shapeOf({
 			disabled: Config.bool().value(false),
-			events: Config.object(),
-			indicatorSymbol: Config.string(),
+			icon: Config.string(),
 			label: Config.string().required(),
 			quickAction: Config.bool(),
 			separator: Config.bool().value(false),
