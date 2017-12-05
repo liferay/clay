@@ -65,6 +65,10 @@ a.card-subtitle,
 .card-link {
 	@include clay-link($card-link);
 
+	&.btn-unstyled {
+		white-space: normal;
+	}
+
 	+ .card-link {
 		margin-left: 0;
 	}
