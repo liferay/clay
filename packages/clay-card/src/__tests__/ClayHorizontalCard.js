@@ -23,6 +23,7 @@ describe('ClayHorizontalCard', function() {
 	it('should render the default markup', () => {
 		component = new ClayHorizontalCard({
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -30,8 +31,9 @@ describe('ClayHorizontalCard', function() {
 
 	it('should render a ClayHorizontalCard with classes', () => {
 		component = new ClayHorizontalCard({
-			spritemap: spritemap,
 			elementClasses: 'my-custom-class',
+			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -39,8 +41,9 @@ describe('ClayHorizontalCard', function() {
 
 	it('should render a ClayHorizontalCard with id', () => {
 		component = new ClayHorizontalCard({
-			spritemap: spritemap,
 			id: 'myId',
+			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -50,6 +53,7 @@ describe('ClayHorizontalCard', function() {
 		component = new ClayHorizontalCard({
 			actionItems: actionItems,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -60,6 +64,7 @@ describe('ClayHorizontalCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -71,6 +76,7 @@ describe('ClayHorizontalCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -82,6 +88,7 @@ describe('ClayHorizontalCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -93,15 +100,7 @@ describe('ClayHorizontalCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayHorizontalCard with title', () => {
-		component = new ClayHorizontalCard({
-			title: 'empty-background.png',
-			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -109,8 +108,9 @@ describe('ClayHorizontalCard', function() {
 
 	it('should render a ClayHorizontalCard with url', () => {
 		component = new ClayHorizontalCard({
-			url: '#1',
 			spritemap: spritemap,
+			title: 'My Title',
+			url: '#1',
 		});
 
 		expect(component).toMatchSnapshot();

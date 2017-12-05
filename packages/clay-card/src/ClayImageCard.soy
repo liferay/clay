@@ -1,6 +1,7 @@
 {namespace ClayImageCard}
 
 {template .render}
+    {@param title: string}
     {@param? actionItems: list<[
         label: string,
         separator: bool,
@@ -24,7 +25,6 @@
     {@param? selected: bool}
     {@param? spritemap: string}
     {@param? subtitle: string}
-    {@param? title: string}
     {@param? url: string}
 
     {call ClayCard.render}

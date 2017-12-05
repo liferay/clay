@@ -4,6 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param title: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -27,7 +28,6 @@
   {@param? selected: bool}
 	{@param? spritemap: string}
 	{@param? subtitle: string}
-	{@param? title: string}
 	{@param? url: string}
 	{@param? variant: string}
 
@@ -101,6 +101,7 @@
  * This renders the information area of the card.
  */
 {deltemplate ClayCard.DescriptiveArea}
+	{@param title: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -112,7 +113,6 @@
 	]>}
 	{@param? spritemap: string}
 	{@param? subtitle: string}
-	{@param? title: string}
 	{@param? url: string}
 
 	<div class="card-body">
@@ -124,7 +124,7 @@
 						{param href: $url /}
 						{param label: $title /}
 					{/call}
-				{elseif $title}
+				{else}
 					<div class="card-title text-truncate" title="{$title}">{$title}</div>
 				{/if}
 

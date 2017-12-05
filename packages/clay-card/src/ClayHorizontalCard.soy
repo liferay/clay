@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param spritemap: string}
+	{@param title: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -18,7 +19,6 @@
   {@param? inputValue: string}
   {@param? selectable: bool}
   {@param? selected: bool}
-	{@param? title: string}
 	{@param? url: string}
 
 	{let $attributes kind="attributes"}
@@ -74,13 +74,13 @@
  */
 {template .descriptiveArea}
 	{@param spritemap: string}
+	{@param title: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
 		url: string
 	]>}
 	{@param? icon: string}
-	{@param? title: string}
 	{@param? url: string}
 
 	<div class="card-body">
@@ -102,7 +102,7 @@
 						{param href: $url /}
 						{param label: $title /}
 					{/call}
-				{elseif $title}
+				{else}
 					<div class="card-title text-truncate" title="{$title}">{$title}</div>
 				{/if}
 			</div>

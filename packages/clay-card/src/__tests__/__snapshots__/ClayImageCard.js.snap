@@ -5,7 +5,9 @@ exports[`ClayImageCard should render a ClayImageCard with actionItems 1`] = `
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
       <div class="flex-col">
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
@@ -35,7 +37,9 @@ exports[`ClayImageCard should render a ClayImageCard with classes 1`] = `
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -52,7 +56,9 @@ exports[`ClayImageCard should render a ClayImageCard with icon 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -63,7 +69,9 @@ exports[`ClayImageCard should render a ClayImageCard with id 1`] = `
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -74,7 +82,9 @@ exports[`ClayImageCard should render a ClayImageCard with imageAlt 1`] = `
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -87,7 +97,9 @@ exports[`ClayImageCard should render a ClayImageCard with imageSrc 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -103,7 +115,9 @@ exports[`ClayImageCard should render a ClayImageCard with input \`name\` 1`] = `
         <div class="aspect-ratio card-item-first bg-checkered"></div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
@@ -122,7 +136,9 @@ exports[`ClayImageCard should render a ClayImageCard with input \`value\` 1`] = 
         <div class="aspect-ratio card-item-first bg-checkered"></div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
@@ -137,6 +153,7 @@ exports[`ClayImageCard should render a ClayImageCard with label 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">Approved</span>
         </div>
@@ -152,6 +169,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`danger co
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
         <div class="card-detail">
           <span class="label label-danger">Approved</span>
         </div>
@@ -167,6 +185,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`info colo
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
         <div class="card-detail">
           <span class="label label-info">Approved</span>
         </div>
@@ -182,6 +201,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`secondary
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">Approved</span>
         </div>
@@ -197,6 +217,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`success c
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
         <div class="card-detail">
           <span class="label label-success">Approved</span>
         </div>
@@ -212,6 +233,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`warning c
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
         <div class="card-detail">
           <span class="label label-warning">Approved</span>
         </div>
@@ -227,20 +249,8 @@ exports[`ClayImageCard should render a ClayImageCard with subtitle 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
         <div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with title 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first bg-checkered"></div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="empty-background.png">empty-background.png</div>
       </div>
     </div>
   </div>
@@ -254,7 +264,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`danger color\` 
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -267,7 +279,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`dark color\` 1`
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -280,7 +294,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`info color\` 1`
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -293,7 +309,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`light color\` 1
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -306,7 +324,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`primary color\`
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -319,7 +339,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`secondary color
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -332,7 +354,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`success color\`
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -345,7 +369,9 @@ exports[`ClayImageCard should render a ClayImageCard with type \`warning color\`
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -358,7 +384,9 @@ exports[`ClayImageCard should render a ClayImageCard with type 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -370,7 +398,7 @@ exports[`ClayImageCard should render a ClayImageCard with url 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="flex-col flex-col-expand">
-        <a class=" card-title text-truncate" href="#1"></a>
+        <a class=" card-title text-truncate" href="#1">My Title</a>
       </div>
     </div>
   </div>
@@ -387,7 +415,9 @@ exports[`ClayImageCard should render a disabled ClayImageCard 1`] = `
         <div class="aspect-ratio card-item-first bg-checkered"></div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
@@ -406,7 +436,9 @@ exports[`ClayImageCard should render a selected ClayImageCard 1`] = `
         <div class="aspect-ratio card-item-first bg-checkered"></div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand"></div>
+            <div class="flex-col flex-col-expand">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
@@ -420,7 +452,9 @@ exports[`ClayImageCard should render the default markup 1`] = `
   <div class="aspect-ratio card-item-first bg-checkered"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand"></div>
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>

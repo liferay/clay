@@ -23,6 +23,7 @@ describe('ClayImageCard', function() {
 	it('should render the default markup', () => {
 		component = new ClayImageCard({
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -30,8 +31,9 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with classes', () => {
 		component = new ClayImageCard({
-			spritemap: spritemap,
 			elementClasses: 'my-custom-class',
+			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -39,8 +41,9 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with id', () => {
 		component = new ClayImageCard({
-			spritemap: spritemap,
 			id: 'myId',
+			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -50,6 +53,7 @@ describe('ClayImageCard', function() {
 		component = new ClayImageCard({
 			actionItems: actionItems,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -60,6 +64,7 @@ describe('ClayImageCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -71,6 +76,7 @@ describe('ClayImageCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -82,6 +88,7 @@ describe('ClayImageCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -93,6 +100,7 @@ describe('ClayImageCard', function() {
 			selectable: true,
 			selected: true,
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -102,6 +110,7 @@ describe('ClayImageCard', function() {
 		component = new ClayImageCard({
 			icon: 'documents',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -111,6 +120,7 @@ describe('ClayImageCard', function() {
 		component = new ClayImageCard({
 			imageAlt: 'thumbnail',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -120,6 +130,7 @@ describe('ClayImageCard', function() {
 		component = new ClayImageCard({
 			imageSrc: 'thumbnail_coffee.jpg',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -133,6 +144,7 @@ describe('ClayImageCard', function() {
 				},
 			],
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -147,6 +159,7 @@ describe('ClayImageCard', function() {
 				},
 			],
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -161,6 +174,7 @@ describe('ClayImageCard', function() {
 				},
 			],
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -175,6 +189,7 @@ describe('ClayImageCard', function() {
 				},
 			],
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -189,6 +204,7 @@ describe('ClayImageCard', function() {
 				},
 			],
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -203,6 +219,7 @@ describe('ClayImageCard', function() {
 				},
 			],
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -210,17 +227,9 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with subtitle', () => {
 		component = new ClayImageCard({
+			spritemap: spritemap,
 			subtitle: 'Author Action',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayImageCard with title', () => {
-		component = new ClayImageCard({
-			title: 'empty-background.png',
-			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -230,6 +239,7 @@ describe('ClayImageCard', function() {
 		component = new ClayImageCard({
 			fileType: 'DOC',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -240,6 +250,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'danger',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -250,6 +261,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'dark',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -260,6 +272,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'info',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -270,6 +283,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'light',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -280,6 +294,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'primary',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -290,6 +305,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'secondary',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -300,6 +316,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'success',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -310,6 +327,7 @@ describe('ClayImageCard', function() {
 			fileType: 'DOC',
 			fileTypeStyle: 'warning',
 			spritemap: spritemap,
+			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -317,8 +335,9 @@ describe('ClayImageCard', function() {
 
 	it('should render a ClayImageCard with url', () => {
 		component = new ClayImageCard({
-			url: '#1',
 			spritemap: spritemap,
+			title: 'My Title',
+			url: '#1',
 		});
 
 		expect(component).toMatchSnapshot();

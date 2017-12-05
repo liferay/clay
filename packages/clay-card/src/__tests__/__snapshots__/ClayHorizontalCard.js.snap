@@ -9,7 +9,9 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
           <use xlink:href="icons.svg#folder"></use>
         </svg>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+      <div class="flex-col flex-col-expand flex-col-gutters">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
       <div class="flex-col">
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
@@ -43,7 +45,9 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with classes 1`] 
           <use xlink:href="icons.svg#folder"></use>
         </svg>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+      <div class="flex-col flex-col-expand flex-col-gutters">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -58,7 +62,9 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
           <use xlink:href="icons.svg#folder"></use>
         </svg>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+      <div class="flex-col flex-col-expand flex-col-gutters">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>
@@ -78,7 +84,9 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with input \`name
                 <use xlink:href="icons.svg#folder"></use>
               </svg>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+            <div class="flex-col flex-col-expand flex-col-gutters">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,28 +109,13 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with input \`valu
                 <use xlink:href="icons.svg#folder"></use>
               </svg>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+            <div class="flex-col flex-col-expand flex-col-gutters">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
     </label>
-  </div>
-</div>
-`;
-
-exports[`ClayHorizontalCard should render a ClayHorizontalCard with title 1`] = `
-<div class="card-type-directory card card-horizontal">
-  <div class="card-body">
-    <div class="card-row">
-      <span class="sticker sticker-unstyled">
-        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-          <use xlink:href="icons.svg#folder"></use>
-        </svg>
-      </span>
-      <div class="flex-col flex-col-expand flex-col-gutters">
-        <div class="card-title text-truncate" title="empty-background.png">empty-background.png</div>
-      </div>
-    </div>
   </div>
 </div>
 `;
@@ -137,7 +130,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with url 1`] = `
         </svg>
       </span>
       <div class="flex-col flex-col-expand flex-col-gutters">
-        <a class=" card-title text-truncate" href="#1"></a>
+        <a class=" card-title text-truncate" href="#1">My Title</a>
       </div>
     </div>
   </div>
@@ -158,7 +151,9 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
                 <use xlink:href="icons.svg#folder"></use>
               </svg>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+            <div class="flex-col flex-col-expand flex-col-gutters">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
@@ -181,7 +176,9 @@ exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
                 <use xlink:href="icons.svg#folder"></use>
               </svg>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters"></div>
+            <div class="flex-col flex-col-expand flex-col-gutters">
+              <div class="card-title text-truncate" title="My Title">My Title</div>
+            </div>
           </div>
         </div>
       </div>
@@ -199,7 +196,9 @@ exports[`ClayHorizontalCard should render the default markup 1`] = `
           <use xlink:href="icons.svg#folder"></use>
         </svg>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters"></div>
+      <div class="flex-col flex-col-expand flex-col-gutters">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+      </div>
     </div>
   </div>
 </div>

@@ -49,6 +49,7 @@
  * This renders the information area of the card.
  */
 {deltemplate ClayCard.DescriptiveArea variant="'user'"}
+	{@param title: string}
 	{@param? actionItems: list<[
 		label: string,
 		separator: bool,
@@ -58,7 +59,6 @@
 	{@param? labelStyle: string}
 	{@param? spritemap: string}
 	{@param? subtitle: string}
-	{@param? title: string}
 	{@param? url: string}
 
 	<div class="card-body">

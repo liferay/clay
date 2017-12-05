@@ -190,10 +190,10 @@ ClayCard.STATE = {
 	 * Title of the card.
 	 * @instance
 	 * @memberof ClayCard
-	 * @type {?string|undefined}
+	 * @type {!string}
 	 * @default undefined
 	 */
-	title: Config.string(),
+	title: Config.string().required(),
 
 	/**
 	 * Url to be applied to the title of the card.
