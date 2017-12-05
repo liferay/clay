@@ -27,10 +27,10 @@ $card-subtitle-font-weight: null !default;
 $card-subtitle-margin-bottom: 0.5rem !default; // 8px
 $card-subtitle-margin-top: -$card-title-margin-bottom !default; // -8px
 
-$card-link-color: $link-color !default;
-$card-link-text-decoration: null !default;
-$card-link-hover-color: $link-hover-color !default;
-$card-link-hover-text-decoration: none !default;
+$card-link: (
+	color: $link-color,
+	hover-color: $link-hover-color
+) !default;
 
 $card-divider-bg: $card-border-color !default;
 $card-divider-height: 1px !default;

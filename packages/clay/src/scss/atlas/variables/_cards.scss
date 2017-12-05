@@ -9,8 +9,10 @@ $card-body-padding-top: 0.75rem !default;
 
 $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius} - #{$card-border-width}), $card-border-radius) !default;
 
-$card-link-color: $secondary !default;
-$card-link-hover-color: $card-link-color !default;
+$card-link: (
+	color: $secondary,
+	hover-color: $secondary
+) !default;
 
 $checkbox-left-card-padding: 50px !default;
 

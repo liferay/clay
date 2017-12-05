@@ -54,6 +54,14 @@
 	margin-top: $card-subtitle-margin-top;
 }
 
+.card-link {
+	@include clay-link($card-link);
+
+	+ .card-link {
+		margin-left: 0;
+	}
+}
+
 .card-divider {
 	background-color: $card-divider-bg;
 	height: $card-divider-height;
@@ -61,20 +69,6 @@
 	margin-left: $card-divider-spacer-x;
 	margin-right: $card-divider-spacer-x;
 	margin-top: $card-divider-spacer-y;
-}
-
-.card-link {
-	color: $card-link-color;
-	text-decoration: $card-link-text-decoration;
-
-	@include hover-focus {
-		color: $card-link-hover-color;
-		text-decoration: $card-link-hover-text-decoration;
-	}
-
-	+ .card-link {
-		margin-left: 0;
-	}
 }
 
 .card-row {
