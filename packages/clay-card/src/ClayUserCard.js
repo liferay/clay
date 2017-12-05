@@ -1,3 +1,6 @@
+import 'clay-link';
+import 'clay-dropdown';
+import 'clay-sticker';
 import './ClayCard';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
