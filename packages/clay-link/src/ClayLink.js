@@ -1,27 +1,15 @@
 import 'clay-icon';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
-import {domData} from 'metal-dom';
 
 import templates from './ClayLink.soy.js';
 
 /**
  * Implementation of the Metal Clay Link.
  */
-class ClayLink extends Component {
-	/**
-	 * @inheritDoc
-	 */
-	attached() {
-		for (let dataKey in this.data) {
-			if (this.data.hasOwnProperty(dataKey)) {
-				domData.get(this.element, dataKey, this.data[dataKey]);
-			}
-		}
-	}
-}
+class ClayLink extends ClayComponent {}
 
 /**
  * State definition.
