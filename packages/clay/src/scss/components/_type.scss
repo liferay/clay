@@ -79,3 +79,17 @@ mark,
 .text-truncate {
 	display: block;
 }
+
+.text-truncate-inline {
+	display: inline;
+
+	.text-truncate {
+		display: inline-block;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		vertical-align: bottom;
+		white-space: nowrap;
+		word-wrap: normal;
+	}
+}
