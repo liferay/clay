@@ -22,20 +22,20 @@ let actionItems = [
 
 let actionItemsWithQuickItems = [
 	{
-		indicatorSymbol: 'trash',
+		icon: 'trash',
 		label: 'Option 1',
 		quickAction: true,
 		url: '#1',
 	},
 	{
-		indicatorSymbol: 'download',
+		icon: 'download',
 		label: 'Option 2',
 		quickAction: true,
 		separator: true,
 		url: '#2',
 	},
 	{
-		indicatorSymbol: 'info-circle-open',
+		icon: 'info-circle-open',
 		label: 'Option 3',
 		quickAction: true,
 		url: '#3',
@@ -147,9 +147,47 @@ describe('ClayListGroupItem', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayListGroupItem with label', () => {
+	it('should render a ClayListGroupItem with one label', () => {
 		component = new ClayListGroupItem({
-			label: 'Status',
+			labels: [
+				{
+					label: 'Status',
+				},
+			],
+			title: 'Item 1',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayListGroupItem with two labels', () => {
+		component = new ClayListGroupItem({
+			labels: [
+				{
+					label: 'Aproved',
+				},
+				{
+					label: 'Pending',
+				},
+			],
+			title: 'Item 1',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayListGroupItem with labels with style', () => {
+		component = new ClayListGroupItem({
+			labels: [
+				{
+					label: 'Aproved',
+					style: 'info',
+				},
+				{
+					label: 'Pending',
+					style: 'warning',
+				},
+			],
 			title: 'Item 1',
 		});
 
