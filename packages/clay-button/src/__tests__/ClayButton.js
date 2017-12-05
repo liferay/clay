@@ -148,10 +148,12 @@ describe('ClayButton', function() {
 	it('should render a button with customData attributes', function() {
 		button = new ClayButton({
 			data: {
-				myAttribute: 'myValue',
+				'my-attribute': 'myValue',
 			},
 		});
 
-		expect(domData.get(button.element, 'myAttribute')).toEqual('myValue');
+		expect(button.element.getAttribute('data-my-attribute')).toEqual(
+			'myValue'
+		);
 	});
 });

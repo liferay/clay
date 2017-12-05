@@ -165,10 +165,12 @@ describe('ClayLink', function() {
 	it('should render a link with customData attributes', function() {
 		link = new ClayLink({
 			data: {
-				myAttribute: 'myValue',
+				'my-attribute': 'myValue',
 			},
 		});
 
-		expect(domData.get(link.element, 'myAttribute')).toEqual('myValue');
+		expect(link.element.getAttribute('data-my-attribute')).toEqual(
+			'myValue'
+		);
 	});
 });

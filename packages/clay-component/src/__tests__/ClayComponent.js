@@ -1,8 +1,11 @@
 import ClayComponent from '../ClayComponent';
 import Soy from 'metal-soy';
 
-import templates from './MyComponent.soy.js';
+import templates from '../MyComponent.soy.js';
 
+/**
+ * My Component.
+ */
 class MyComponent extends ClayComponent {}
 Soy.register(MyComponent, templates);
 
