@@ -1,46 +1,6 @@
 import ClayListGroup from '../ClayListGroup';
 
-const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
-
 let component;
-
-let actionItems = [
-	{
-		label: 'Option 1',
-		url: '#1',
-	},
-	{
-		label: 'Option 2',
-		separator: true,
-		url: '#2',
-	},
-	{
-		label: 'Option 3',
-		url: '#3',
-	},
-];
-
-let actionItemsWithQuickItems = [
-	{
-		indicatorSymbol: 'trash',
-		label: 'Option 1',
-		quickAction: true,
-		url: '#1',
-	},
-	{
-		indicatorSymbol: 'download',
-		label: 'Option 2',
-		quickAction: true,
-		separator: true,
-		url: '#2',
-	},
-	{
-		indicatorSymbol: 'info-circle-open',
-		label: 'Option 3',
-		quickAction: true,
-		url: '#3',
-	},
-];
 
 describe('ClayListGroup', function() {
 	afterEach(() => {
