@@ -11,15 +11,15 @@
     {@param? disabled: bool}
     {@param? elementClasses: string}
     {@param? fileType: string}
-	{@param? fileTypeStyle: string}
+    {@param? fileTypeStyle: string}
     {@param? icon: string}
     {@param? id: string}
     {@param? inputName: string}
     {@param? inputValue: string}
-	{@param? labels: list<[
-		label: string,
-		style: string
-	]>}
+    {@param? labels: list<[
+    	label: string,
+    	style: string
+    ]>}
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? subtitle: string}
@@ -51,29 +51,29 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCard.VisualArea variant="'file'"}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
-	{@param? icon: string}
-	{@param? imageAlt: string}
-	{@param? imageSrc: string}
-	{@param? spritemap: string}
+    {@param? fileType: string}
+    {@param? fileTypeStyle: string}
+    {@param? icon: string}
+    {@param? imageAlt: string}
+    {@param? imageSrc: string}
+    {@param? spritemap: string}
 
-	<div class="aspect-ratio card-item-first">
-		{if $icon and $spritemap}
-			<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-				{call ClayIcon.render}
-					{param spritemap: $spritemap /}
-					{param symbol: $icon /}
-				{/call}
-			</div>
-		{/if}
+    <div class="aspect-ratio card-item-first">
+    	{if $icon and $spritemap}
+    		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    			{call ClayIcon.render}
+    				{param spritemap: $spritemap /}
+    				{param symbol: $icon /}
+    			{/call}
+    		</div>
+    	{/if}
 
-		{if $fileType}
-			{call ClaySticker.render}
-				{param label: $fileType /}
-				{param position: 'bottom-left' /}
-				{param style: $fileTypeStyle ?: 'primary' /}
-			{/call}
-		{/if}
-	</div>
+    	{if $fileType}
+    		{call ClaySticker.render}
+    			{param label: $fileType /}
+    			{param position: 'bottom-left' /}
+    			{param style: $fileTypeStyle ?: 'primary' /}
+    		{/call}
+    	{/if}
+    </div>
 {/deltemplate}

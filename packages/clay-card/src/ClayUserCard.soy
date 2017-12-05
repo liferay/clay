@@ -11,7 +11,7 @@
     {@param? elementClasses: string}
     {@param? id: string}
     {@param? imageAlt: string}
-		{@param? imageSrc: string}
+    {@param? imageSrc: string}
     {@param? initials: string}
     {@param? inputName: string}
     {@param? inputValue: string}
@@ -20,28 +20,27 @@
     {@param? spritemap: string}
     {@param? subtitle: string}
     {@param? url: string}
-		{@param? userColor: string}
-
+    {@param? userColor: string}
 
     {call ClayCard.render}
-			{param actionItems: $actionItems /}
-			{param contentRenderer: 'user' /}
-			{param disabled: $disabled /}
-			{param elementClasses: $elementClasses /}
-			{param fileType: $initials /}
-			{param fileTypeStyle: $userColor /}
-			{param id: $id /}
-			{param imageAlt: $imageAlt /}
-			{param imageSrc: $imageSrc /}
-			{param inputName: $inputName /}
-			{param inputValue: $inputValue /}
-			{param ref: 'card' /}
-			{param selectable: $selectable /}
-			{param selected: $selected /}
-			{param spritemap: $spritemap /}
-			{param subtitle: $subtitle /}
-			{param title: $name /}
-			{param url: $url /}
+        {param actionItems: $actionItems /}
+        {param contentRenderer: 'user' /}
+        {param disabled: $disabled /}
+        {param elementClasses: $elementClasses /}
+        {param fileType: $initials /}
+        {param fileTypeStyle: $userColor /}
+        {param id: $id /}
+        {param imageAlt: $imageAlt /}
+        {param imageSrc: $imageSrc /}
+        {param inputName: $inputName /}
+        {param inputValue: $inputValue /}
+        {param ref: 'card' /}
+        {param selectable: $selectable /}
+        {param selected: $selected /}
+        {param spritemap: $spritemap /}
+        {param subtitle: $subtitle /}
+        {param title: $name /}
+        {param url: $url /}
     {/call}
 {/template}
 
@@ -49,89 +48,89 @@
  * This renders the information area of the card.
  */
 {deltemplate ClayCard.DescriptiveArea variant="'user'"}
-	{@param title: string}
-	{@param? actionItems: list<[
-		label: string,
-		separator: bool,
-		url: string
-	]>}
-	{@param? label: string}
-	{@param? labelStyle: string}
-	{@param? spritemap: string}
-	{@param? subtitle: string}
-	{@param? url: string}
+    {@param title: string}
+    {@param? actionItems: list<[
+    	label: string,
+    	separator: bool,
+    	url: string
+    ]>}
+    {@param? label: string}
+    {@param? labelStyle: string}
+    {@param? spritemap: string}
+    {@param? subtitle: string}
+    {@param? url: string}
 
-	<div class="card-body">
-		<div class="card-row">
-			<div class="flex-col flex-col-expand">
-				{if $url}
-					{call ClayLink.render}
-						{param elementClasses: 'card-title text-truncate' /}
-						{param href: $url /}
-						{param label: $title /}
-					{/call}
-				{elseif $title}
-					<div class="card-title text-truncate" title="{$title}">{$title}</div>
-				{/if}
+    <div class="card-body">
+    	<div class="card-row">
+    		<div class="flex-col flex-col-expand">
+    			{if $url}
+    				{call ClayLink.render}
+    					{param elementClasses: 'card-title text-truncate' /}
+    					{param href: $url /}
+    					{param label: $title /}
+    				{/call}
+    			{elseif $title}
+    				<div class="card-title text-truncate" title="{$title}">{$title}</div>
+    			{/if}
 
-				{if $subtitle}
-					<div class="card-subtitle text-truncate" title="{$subtitle}">{$subtitle}</div>
-				{/if}
-			</div>
+    			{if $subtitle}
+    				<div class="card-subtitle text-truncate" title="{$subtitle}">{$subtitle}</div>
+    			{/if}
+    		</div>
 
-			{if $actionItems and $spritemap}
-				<div class="flex-col">
-					{call ClayActionsDropdown.render}
-						{param items: $actionItems /}
-						{param spritemap: $spritemap /}
-					{/call}
-				</div>
-			{/if}
-		</div>
-	</div>
+    		{if $actionItems and $spritemap}
+    			<div class="flex-col">
+    				{call ClayActionsDropdown.render}
+    					{param items: $actionItems /}
+    					{param spritemap: $spritemap /}
+    				{/call}
+    			</div>
+    		{/if}
+    	</div>
+    </div>
 {/deltemplate}
 
 /**
  * Render the visual area of the card.
  */
 {deltemplate ClayCard.VisualArea variant="'user'"}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
-	{@param? icon: string}
-	{@param? imageAlt: string}
-	{@param? imageSrc: string}
-	{@param? spritemap: string}
+    {@param? fileType: string}
+    {@param? fileTypeStyle: string}
+    {@param? icon: string}
+    {@param? imageAlt: string}
+    {@param? imageSrc: string}
+    {@param? spritemap: string}
 
-	{let $classesAspectRatio kind="text"}
-		aspect-ratio-item-center-middle aspect-ratio-item-fluid
-	{/let}
+    {let $classesAspectRatio kind="text"}
+    	aspect-ratio-item-center-middle aspect-ratio-item-fluid
+    {/let}
 
-	<div class="aspect-ratio card-item-first">
-		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-			{call ClaySticker.render}
-				{param label kind="html"}
-					{if $imageSrc}
-						{let $imageAttributes kind="attributes"}
-							alt="
-								{if $imageAlt}
-									{$imageAlt}
-								{/if}
-							"
+    <div class="aspect-ratio card-item-first">
+        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    		{call ClaySticker.render}
+    			{param label kind="html"}
+    				{if $imageSrc}
+    					{let $imageAttributes kind="attributes"}
+    						alt="
+    							{if $imageAlt}
+    								{$imageAlt}
+    							{/if}
+    						"
 
-							class="img-fluid"
-							src="{$imageSrc}"
-						{/let}
+    						class="img-fluid"
+    						src="{$imageSrc}"
+    					{/let}
 
-						<img {$imageAttributes} />
-					{elseif $fileType}
-						{$fileType}
-					{/if}
-				{/param}
+    					<img {$imageAttributes} />
+    				{elseif $fileType}
+    					{$fileType}
+    				{/if}
+    			{/param}
 
-				{param shape: 'circle' /}
-				{param size: 'xl' /}
-				{param style: $fileTypeStyle ?: 'primary' /}
-			{/call}
-		</div>
-	</div>
+    			{param shape: 'circle' /}
+    			{param size: 'xl' /}
+    			{param style: $fileTypeStyle ?: 'primary' /}
+    		{/call}
+    	</div>
+    </div>
 {/deltemplate}

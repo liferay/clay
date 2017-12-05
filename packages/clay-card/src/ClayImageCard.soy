@@ -10,17 +10,17 @@
     {@param? disabled: bool}
     {@param? elementClasses: string}
     {@param? fileType: string}
-	{@param? fileTypeStyle: string}
+    {@param? fileTypeStyle: string}
     {@param? icon: string}
     {@param? id: string}
     {@param? imageAlt: string}
-	{@param? imageSrc: string}
+    {@param? imageSrc: string}
     {@param? inputName: string}
     {@param? inputValue: string}
-	{@param? labels: list<[
-		label: string,
-		style: string
-	]>}
+    {@param? labels: list<[
+    	label: string,
+    	style: string
+    ]>}
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? spritemap: string}
@@ -55,46 +55,46 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCard.VisualArea variant="'image'"}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
-	{@param? icon: string}
-	{@param? imageAlt: string}
-	{@param? imageSrc: string}
+    {@param? fileType: string}
+    {@param? fileTypeStyle: string}
+    {@param? icon: string}
+    {@param? imageAlt: string}
+    {@param? imageSrc: string}
     {@param? spritemap: string}
 
-	<div class="aspect-ratio card-item-first bg-checkered">
-		{let $aspectRatioClasses kind="text"}
-			aspect-ratio-item-center-middle aspect-ratio-item-fluid
-		{/let}
+    <div class="aspect-ratio card-item-first bg-checkered">
+    	{let $aspectRatioClasses kind="text"}
+    		aspect-ratio-item-center-middle aspect-ratio-item-fluid
+    	{/let}
 
-		{if $imageSrc}
-			{let $imageAttributes kind="attributes"}
-				alt="
-					{if $imageAlt}
-						{$imageAlt}
-					{/if}
-				"
+    	{if $imageSrc}
+    		{let $imageAttributes kind="attributes"}
+    			alt="
+    				{if $imageAlt}
+    					{$imageAlt}
+    				{/if}
+    			"
 
-				class="{$aspectRatioClasses}"
-				src="{$imageSrc}"
-			{/let}
+    			class="{$aspectRatioClasses}"
+    			src="{$imageSrc}"
+    		{/let}
 
-			<img {$imageAttributes} />
-		{elseif $icon and $spritemap}
-			<div class="{$aspectRatioClasses}">
-				{call ClayIcon.render}
-					{param spritemap: $spritemap /}
-					{param symbol: $icon /}
-				{/call}
-			</div>
-		{/if}
+    		<img {$imageAttributes} />
+    	{elseif $icon and $spritemap}
+    		<div class="{$aspectRatioClasses}">
+    			{call ClayIcon.render}
+    				{param spritemap: $spritemap /}
+    				{param symbol: $icon /}
+    			{/call}
+    		</div>
+    	{/if}
 
-		{if $fileType}
-			{call ClaySticker.render}
-				{param label: $fileType /}
-				{param position: 'bottom-left' /}
-				{param style: $fileTypeStyle ?: 'primary' /}
-			{/call}
-		{/if}
-	</div>
+    	{if $fileType}
+    		{call ClaySticker.render}
+    			{param label: $fileType /}
+    			{param position: 'bottom-left' /}
+    			{param style: $fileTypeStyle ?: 'primary' /}
+    		{/call}
+    	{/if}
+    </div>
 {/deltemplate}
