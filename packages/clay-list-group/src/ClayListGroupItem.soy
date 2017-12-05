@@ -13,6 +13,7 @@
 			separator: bool,
 			url: string
 	]>}
+	{@param? contentRenderer: string}
 	{@param? description: string}
 	{@param? elementClasses: string}
 	{@param? handleItemCheckboxClick_: any}
@@ -46,14 +47,10 @@
 		{let $isSimple: not $description and not $selectable and not $icon and not $actionItems and not $label/}
 
 		{if $isSimple}
-			{if $url}
-				{call ClayLink.render}
-					{param href: $url /}
-					{param label: $title /}
-				{/call}
-			{else}
-				{$title}
-			{/if}
+			{delcall ClayListGroupItem.Content variant="$contentRenderer"}
+				{param title: $title /}
+				{param url: $url /}
+			{/delcall}
 		{else}
 			{if $selectable}
 				<div class="flex-col">
@@ -67,40 +64,21 @@
 			{/if}
 
 			{if $icon and $spritemap}
-				<div class="flex-col">
-					{call ClaySticker.render}
-						{param icon: $icon /}
-						{param shape: $iconShape /}
-						{param spritemap: $spritemap /}
-					{/call}
-				</div>
+				{delcall ClayListGroupItem.Icon variant="$contentRenderer"}
+					{param icon: $icon /}
+					{param iconShape: $iconShape /}
+					{param spritemap: $spritemap /}
+				{/delcall}
 			{/if}
 
-			<div class="flex-col flex-col-expand">
-				<h4 class="list-group-title text-truncate">
-					{if $url}
-						{call ClayLink.render}
-							{param href: $url /}
-							{param label: $title /}
-						{/call}
-					{else}
-						{$title}
-					{/if}
-				</h4>
-
-				{if $description}
-					<p class="list-group-subtitle text-truncate">{$description}</p>
-				{/if}
-
-				{if $label}
-					<div class="list-group-detail">
-						{call ClayLabel.render}
-							{param label: $label /}
-							{param style: $labelStyle /}
-						{/call}
-					</div>
-				{/if}
-			</div>
+			{delcall ClayListGroupItem.Content variant="$contentRenderer"}
+				{param description: $description /}
+				{param label: $label /}
+				{param labelStyle: $labelStyle /}
+				{param spritemap: $spritemap /}
+				{param title: $title /}
+				{param url: $url /}
+			{/delcall}
 
 			{if $actionItems and $spritemap}
         <div class="flex-col">
@@ -149,3 +127,75 @@
 		{/foreach}
 	</div>
 {/template}
+
+/**
+ * This renders the content of the item.
+ */
+{deltemplate ClayListGroupItem.Content}
+	{@param title: string}
+	{@param? description: string}
+	{@param? label: string}
+	{@param? labelStyle: string}
+	{@param? spritemap: string}
+	{@param? url: string}
+
+	<div class="flex-col flex-col-expand">
+		<h4 class="list-group-title text-truncate">
+			{if $url}
+				{call ClayLink.render}
+					{param href: $url /}
+					{param label: $title /}
+				{/call}
+			{else}
+				{$title}
+			{/if}
+		</h4>
+
+		{if $description}
+			<p class="list-group-subtitle text-truncate">{$description}</p>
+		{/if}
+
+		{if $label}
+			<div class="list-group-detail">
+				{call ClayLabel.render}
+					{param label: $label /}
+					{param style: $labelStyle /}
+				{/call}
+			</div>
+		{/if}
+	</div>
+{/deltemplate}
+
+/**
+ * This renders the icon of the item.
+ */
+{deltemplate ClayListGroupItem.Icon}
+	{@param icon: string}
+	{@param spritemap: string}
+	{@param? iconShape: string}
+
+	<div class="flex-col">
+		{call ClaySticker.render}
+			{param icon: $icon /}
+			{param shape: $iconShape /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</div>
+{/deltemplate}
+
+/**
+ * This renders a simple item.
+ */
+{deltemplate ClayListGroupItem.Simple}
+	{@param title: string}
+	{@param? url: string}
+
+	{if $url}
+		{call ClayLink.render}
+			{param href: $url /}
+			{param label: $title /}
+		{/call}
+	{else}
+		{$title}
+	{/if}
+{/deltemplate}

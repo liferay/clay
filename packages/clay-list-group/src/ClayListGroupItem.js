@@ -50,6 +50,15 @@ ClayListGroupItem.STATE = {
 	),
 
 	/**
+	 * Name of the content renderer to use template variants.
+	 * @instance
+	 * @memberof ClayListGroupItem
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	contentRenderer: Config.string(),
+
+	/**
 	 * Description of the item
 	 * @instance
 	 * @memberof ClayListGroupItem
