@@ -42,6 +42,11 @@
 	@include clay-text-typography($card-title);
 }
 
+a.card-title,
+.card-title a {
+	@include clay-link($card-title-link);
+}
+
 .card-subtitle {
 	color: $card-subtitle-color;
 	font-size: $card-subtitle-font-size;

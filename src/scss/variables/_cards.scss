@@ -15,11 +15,17 @@ $card-section-header-margin-bottom: 1.5rem !default;
 $card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
 $card-section-header-text-transform: uppercase !default;
 
-$card-title: (
+$card-title: () !default;
+$card-title: map-merge((
 	font-size: 1rem,
 	font-weight: $font-weight-semi-bold,
 	line-height: $line-height-base
-) !default;
+), $card-title);
+
+$card-title-link: () !default;
+$card-title-link: map-merge((
+	color: map-get($card-title, color)
+), $card-title-link);
 
 $card-subtitle-color: $card-section-header-color !default;
 $card-subtitle-font-size: 0.875rem !default; // 14px
