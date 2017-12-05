@@ -75,90 +75,6 @@ describe('ClayListGroup', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayListGroup with simple list elements', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					title: 'Item 1',
-				},
-				{
-					title: 'Item 2',
-				},
-				{
-					title: 'Item 3',
-				},
-			],
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayListGroup with simple list elements with links', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayListGroup with list elements with description', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					description: 'Description 1',
-					title: 'Item 1',
-				},
-				{
-					description: 'Description 2',
-					title: 'Item 2',
-				},
-				{
-					description: 'Description 3',
-					title: 'Item 3',
-				},
-			],
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayListGroup with list elements with description and url', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					description: 'Description 1',
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					description: 'Description 2',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					description: 'Description 3',
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render a selectable ClayListGroup', () => {
 		component = new ClayListGroup({
 			items: [
@@ -184,271 +100,35 @@ describe('ClayListGroup', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a selectable ClayListGroup with list elements with icons', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					description: 'Description 1',
-					icon: 'folder',
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					description: 'Description 2',
-					icon: 'folder',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					description: 'Description 3',
-					icon: 'folder',
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-			selectable: true,
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a selectable ClayListGroup with list elements with circle icons', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					description: 'Description 1',
-					icon: 'folder',
-					iconShape: 'circle',
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					description: 'Description 2',
-					icon: 'folder',
-					iconShape: 'circle',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					description: 'Description 3',
-					icon: 'folder',
-					iconShape: 'circle',
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-			selectable: true,
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a selectable ClayListGroup with list elements with label', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					description: 'Description 1',
-					icon: 'folder',
-					label: 'Status',
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					description: 'Description 2',
-					icon: 'folder',
-					label: 'Pending',
-					labelStyle: 'warning',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					description: 'Description 3',
-					icon: 'folder',
-					label: 'Aproved',
-					labelStyle: 'success',
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-			selectable: true,
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a selectable ClayListGroup with list elements with action menu', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					actionItems: actionItems,
-					description: 'Description 1',
-					icon: 'folder',
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 2',
-					icon: 'folder',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 3',
-					icon: 'folder',
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-			selectable: true,
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a selectable ClayListGroup with list elements with quick action menu', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 1',
-					icon: 'folder',
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 2',
-					icon: 'folder',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 3',
-					icon: 'folder',
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-			selectable: true,
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render a selectable ClayListGroup with header title', () => {
 		component = new ClayListGroup({
 			items: [
 				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 1',
-					icon: 'folder',
 					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 2',
-					icon: 'folder',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 3',
-					icon: 'folder',
-					title: 'Item 3',
-					url: '#3',
 				},
 			],
-			selectable: true,
-			spritemap: spritemap,
 			title: 'Group Header 1',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a selectable ClayListGroup with select list items', () => {
-		component = new ClayListGroup({
-			items: [
-				{
-					actionItems: actionItems,
-					description: 'Description 1',
-					icon: 'folder',
-					selected: true,
-					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 2',
-					icon: 'folder',
-					selected: true,
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 3',
-					icon: 'folder',
-					selected: true,
-					title: 'Item 3',
-					url: '#3',
-				},
-			],
-			selectable: true,
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render a ClayListGroup and emit an event on item toggled', () => {
+		const spy = jest.fn();
+
 		component = new ClayListGroup({
+			events: {itemToggled: spy},
 			items: [
 				{
-					actionItems: actionItems,
-					description: 'Description 1',
-					icon: 'folder',
-					selected: true,
 					title: 'Item 1',
-					url: '#1',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 2',
-					icon: 'folder',
-					title: 'Item 2',
-					url: '#2',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 3',
-					icon: 'folder',
-					title: 'Item 3',
-					url: '#3',
 				},
 			],
 			selectable: true,
-			spritemap: spritemap,
 		});
 
-		const spy = jest.spyOn(component, 'emit');
-
-		component.refs.selectItem1Checkbox.element
-			.querySelector('input')
-			.click();
+		component.element.querySelector('input[type="checkbox"]').click();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('itemToggled', expect.any(Object));
 	});
 
 	it('should fail when no items are passed', function() {
