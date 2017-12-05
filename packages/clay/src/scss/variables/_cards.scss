@@ -33,10 +33,11 @@ $card-subtitle-font-weight: null !default;
 $card-subtitle-margin-bottom: 0.5rem !default; // 8px
 $card-subtitle-margin-top: 0 !default;
 
-$card-link: (
+$card-link: () !default;
+$card-link: map-merge((
 	color: $link-color,
 	hover-color: $link-hover-color
-) !default;
+), $card-link);
 
 $card-divider-bg: $card-border-color !default;
 $card-divider-height: 1px !default;
