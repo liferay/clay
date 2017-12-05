@@ -1,4 +1,10 @@
 import ClayComponent from '../ClayComponent';
+import Soy from 'metal-soy';
+
+import templates from './MyComponent.soy.js';
+
+class MyComponent extends ClayComponent {}
+Soy.register(MyComponent, templates);
 
 let component;
 
@@ -9,20 +15,35 @@ describe('ClayComponent', function() {
 		}
 	});
 
-	it('should create a ClayComponent with accesible data attributes', () => {
+	it('should create a ClayComponent with `virtual` data attributes', () => {
 		component = new ClayComponent({
 			data: {
-				myAttribute1: 'myValue1',
-				myAttribute2: 'myValue2',
+				'my-attribute': 'Luke Skywalker',
 			},
-			id: 'prueba',
 		});
 
-		expect(component.element.getAttribute('myAttribute1')).toEqual(
-			'myValue1'
+		expect(component.element.getAttribute('data-my-attribute')).toEqual(
+			'Luke Skywalker'
 		);
-		expect(component.element.getAttribute('myAttribute2')).toEqual(
-			'myValue2'
+	});
+
+	it('should create a ClayComponent with accesible data attributes from dom', () => {
+		component = new MyComponent();
+
+		expect(component.element.getAttribute('data-my-dom-attribute')).toEqual(
+			'Han Solo'
+		);
+	});
+
+	it('should create a ClayComponent and element.getAttribute must return dom attribute in case both real dom and `virtual` data exists', () => {
+		component = new MyComponent({
+			data: {
+				'data-my-dom-attribute': 'Luke Skywalker',
+			},
+		});
+
+		expect(component.element.getAttribute('data-my-dom-attribute')).toEqual(
+			'Han Solo'
 		);
 	});
 });
