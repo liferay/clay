@@ -250,4 +250,10 @@ describe('ClayUserCard', function() {
 
 		expect(component).toMatchSnapshot();
 	});
+
+	it('should fail when no name is passed', function() {
+		expect(() => {
+			component = new ClayUserCard();
+		}).toThrow();
+	});
 });

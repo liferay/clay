@@ -365,4 +365,20 @@ describe('ClayFileCard', function() {
 
 		expect(component).toMatchSnapshot();
 	});
+
+	it('should fail when no spritemap is passed', function() {
+		expect(() => {
+			component = new ClayFileCard({
+				title: 'My Title',
+			});
+		}).toThrow();
+	});
+
+	it('should fail when no title is passed', function() {
+		expect(() => {
+			component = new ClayFileCard({
+				spritemap: spritemap,
+			});
+		}).toThrow();
+	});
 });

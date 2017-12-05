@@ -385,4 +385,10 @@ describe('ClayImageCard', function() {
 
 		expect(component).toMatchSnapshot();
 	});
+
+	it('should fail when no title is passed', function() {
+		expect(() => {
+			component = new ClayImageCard();
+		}).toThrow();
+	});
 });
