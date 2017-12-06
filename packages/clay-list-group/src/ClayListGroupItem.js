@@ -157,7 +157,7 @@ ClayListGroupItem.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	title: Config.string(),
+	title: Config.string().required(),
 
 	/**
 	 * Url of the item.
