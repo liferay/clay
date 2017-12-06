@@ -45,11 +45,11 @@
 	.list-group-item {
 		border-width: 0;
 
-		@include clay-list-group-notification-item-border-variant($list-group-notification-item);
+		@include clay-list-group-notification-item-variant($list-group-notification-item);
 	}
 
 	.list-group-item-primary {
-		@include clay-list-group-notification-item-border-variant($list-group-notification-item-primary);
+		@include clay-list-group-notification-item-variant($list-group-notification-item-primary);
 	}
 }
 
