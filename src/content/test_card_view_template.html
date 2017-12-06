@@ -223,7 +223,13 @@ section: Visual Tests
 											</span>
 										</div>
 										<div class="flex-col flex-col-expand flex-col-gutters">
-											<div class="card-title text-truncate" title="UX Team">UX Team</div>
+											<section class="flex-col-section">
+												<h3 class="card-title" title="UX Team">
+													<span class="text-truncate-inline">
+														<span class="text-truncate">UX Team</span>
+													</span>
+												</h3>
+											</section>
 										</div>
 										<div class="flex-col">
 											<div class="dropdown dropdown-action">
@@ -266,7 +272,13 @@ section: Visual Tests
 											</span>
 										</div>
 										<div class="flex-col flex-col-expand flex-col-gutters">
-											<div class="card-title text-truncate" title="Talks">Talks</div>
+											<section class="flex-col-section">
+												<h3 class="card-title" title="Talks">
+													<span class="text-truncate-inline">
+														<span class="text-truncate">Talks</span>
+													</span>
+												</h3>
+											</section>
 										</div>
 										<div class="flex-col">
 											<div class="dropdown dropdown-action">
@@ -309,7 +321,13 @@ section: Visual Tests
 											</span>
 										</div>
 										<div class="flex-col flex-col-expand flex-col-gutters">
-											<div class="card-title text-truncate" title="Branding">Branding</div>
+											<section class="flex-col-section">
+												<h3 class="card-title" title="Branding">
+													<span class="text-truncate-inline">
+														<span class="text-truncate">Branding</span>
+													</span>
+												</h3>
+											</section>
 										</div>
 										<div class="flex-col">
 											<div class="dropdown dropdown-action">
@@ -352,7 +370,13 @@ section: Visual Tests
 											</span>
 										</div>
 										<div class="flex-col flex-col-expand flex-col-gutters">
-											<div class="card-title text-truncate" title="Side Projects">Side Projects</div>
+											<section class="flex-col-section">
+												<h3 class="card-title" title="Side Projects">
+													<span class="text-truncate-inline">
+														<span class="text-truncate">Side Projects</span>
+													</span>
+												</h3>
+											</section>
 										</div>
 										<div class="flex-col">
 											<div class="dropdown dropdown-action">
@@ -383,177 +407,237 @@ section: Visual Tests
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-sm-6">
 				<div class="card-type-asset form-check form-check-card form-check-top-left">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-							<div class="card">
-								<div class="aspect-ratio bg-checkered card-item-first">
+					<div class="card">
+						<div class="aspect-ratio bg-checkered card-item-first">
+							<div class="custom-control custom-checkbox">
+								<label>
+									<input class="custom-control-input" type="checkbox">
+									<span class="custom-control-indicator"></span>
 									<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
-								</div>
-								<div class="card-body">
-									<div class="card-row">
-										<div class="flex-col flex-col-expand">
-											<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
-											<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
-											<div class="card-detail">
-												<span class="label label-success">Approved</span>
-											</div>
+								</label>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-row">
+								<div class="flex-col flex-col-expand">
+									<section class="flex-col-section">
+										<h3 class="card-title" title="thumbnail_coffee.jpg">
+											<span class="text-truncate-inline">
+												<span class="text-truncate">thumbnail_coffee.jpg</span>
+											</span>
+										</h3>
+										<h3 class="card-title">
+											<span class="text-truncate-inline">
+												<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+											</span>
+										</h3>
+										<div class="card-title">
+											<span class="text-truncate-inline">
+												<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+											</span>
 										</div>
-										<div class="flex-col">
-											<div class="dropdown dropdown-action">
-												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-														<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-													</svg>
-												</a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#1">Download</a>
-													<a class="dropdown-item" href="#1">Edit</a>
-													<a class="dropdown-item" href="#1">Move</a>
-													<a class="dropdown-item" href="#1">Checkout</a>
-													<a class="dropdown-item" href="#1">Permissions</a>
-													<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-												</div>
-											</div>
+										<p class="card-subtitle" title="Author Action">
+											<span class="text-truncate-inline">
+												<span class="text-truncate">Author Action</span>
+											</span>
+										</p>
+										<div class="card-subtitle">
+											<span class="text-truncate-inline">
+												<a class="text-truncate" href="#1">Author Action</a>
+											</span>
+										</div>
+										<div class="card-subtitle">
+											<span class="text-truncate-inline">
+												<a class="text-truncate" href="#1">Author Action</a>
+											</span>
+										</div>
+										<div class="card-detail">
+											<a class="card-link" href="#1">card-link</a>
+											>
+											<button class="btn btn-unstyled card-link" type="button">button.btn-unstyled.card-link</button>
+										</div>
+									</section>
+								</div>
+								<div class="flex-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#1">Download</a>
+											<a class="dropdown-item" href="#1">Edit</a>
+											<a class="dropdown-item" href="#1">Move</a>
+											<a class="dropdown-item" href="#1">Checkout</a>
+											<a class="dropdown-item" href="#1">Permissions</a>
+											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
 										</div>
 									</div>
 								</div>
 							</div>
-						</label>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-4 col-sm-6">
 				<div class="card-type-asset form-check form-check-card form-check-top-left">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-							<div class="card">
-								<div class="aspect-ratio bg-checkered card-item-first">
+					<div class="card">
+						<div class="aspect-ratio bg-checkered card-item-first">
+							<div class="custom-control custom-checkbox">
+								<label>
+									<input class="custom-control-input" type="checkbox">
+									<span class="custom-control-indicator"></span>
 									<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
-								</div>
-								<div class="card-body">
-									<div class="card-row">
-										<div class="flex-col flex-col-expand">
-											<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
-											<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
-											<div class="card-detail">
-												<span class="label label-success">Approved</span>
-											</div>
+								</label>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-row">
+								<div class="flex-col flex-col-expand">
+									<section class="flex-col-section">
+										<h3 class="card-title" title="thumbnail_coffee.jpg">
+											<span class="text-truncate-inline">
+												<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+											</span>
+										</h3>
+										<p class="card-subtitle" title="Author Action">
+											<span class="text-truncate-inline">
+												<span class="text-truncate">Author Action</span>
+											</span>
+										</p>
+										<div class="card-detail">
+											<span class="label label-success">Approved</span>
 										</div>
-										<div class="flex-col">
-											<div class="dropdown dropdown-action">
-												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-														<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-													</svg>
-												</a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#1">Download</a>
-													<a class="dropdown-item" href="#1">Edit</a>
-													<a class="dropdown-item" href="#1">Move</a>
-													<a class="dropdown-item" href="#1">Checkout</a>
-													<a class="dropdown-item" href="#1">Permissions</a>
-													<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-												</div>
-											</div>
+									</section>
+								</div>
+								<div class="flex-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#1">Download</a>
+											<a class="dropdown-item" href="#1">Edit</a>
+											<a class="dropdown-item" href="#1">Move</a>
+											<a class="dropdown-item" href="#1">Checkout</a>
+											<a class="dropdown-item" href="#1">Permissions</a>
+											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
 										</div>
 									</div>
 								</div>
 							</div>
-						</label>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-4 col-sm-6">
 				<div class="card-type-asset form-check form-check-card form-check-top-left">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-							<div class="card">
-								<div class="aspect-ratio bg-checkered card-item-first">
+					<div class="card">
+						<div class="aspect-ratio bg-checkered card-item-first">
+							<div class="custom-control custom-checkbox">
+								<label>
+									<input class="custom-control-input" type="checkbox">
+									<span class="custom-control-indicator"></span>
 									<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
-								</div>
-								<div class="card-body">
-									<div class="card-row">
-										<div class="flex-col flex-col-expand">
-											<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
-											<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
-											<div class="card-detail">
-												<span class="label label-success">Approved</span>
-											</div>
+								</label>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-row">
+								<div class="flex-col flex-col-expand">
+									<section class="flex-col-section">
+										<h3 class="card-title" title="thumbnail_coffee.jpg">
+											<span class="text-truncate-inline">
+												<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+											</span>
+										</h3>
+										<p class="card-subtitle" title="Author Action">
+											<span class="text-truncate-inline">
+												<span class="text-truncate">Author Action</span>
+											</span>
+										</p>
+										<div class="card-detail">
+											<span class="label label-success">Approved</span>
 										</div>
-										<div class="flex-col">
-											<div class="dropdown dropdown-action">
-												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-														<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-													</svg>
-												</a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#1">Download</a>
-													<a class="dropdown-item" href="#1">Edit</a>
-													<a class="dropdown-item" href="#1">Move</a>
-													<a class="dropdown-item" href="#1">Checkout</a>
-													<a class="dropdown-item" href="#1">Permissions</a>
-													<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-												</div>
-											</div>
+									</section>
+								</div>
+								<div class="flex-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#1">Download</a>
+											<a class="dropdown-item" href="#1">Edit</a>
+											<a class="dropdown-item" href="#1">Move</a>
+											<a class="dropdown-item" href="#1">Checkout</a>
+											<a class="dropdown-item" href="#1">Permissions</a>
+											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
 										</div>
 									</div>
 								</div>
 							</div>
-						</label>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-4 col-sm-6">
 				<div class="card-type-asset form-check form-check-card form-check-top-left">
-					<div class="custom-control custom-checkbox">
-						<label>
-							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-							<div class="card">
-								<div class="aspect-ratio bg-checkered card-item-first">
+					<div class="card">
+						<div class="aspect-ratio bg-checkered card-item-first">
+							<div class="custom-control custom-checkbox">
+								<label>
+									<input class="custom-control-input" type="checkbox">
+									<span class="custom-control-indicator"></span>
 									<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+								</label>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-row">
+								<div class="flex-col flex-col-expand">
+									<h3 class="card-title" title="thumbnail_coffee.jpg">
+										<span class="text-truncate-inline">
+											<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+										</span>
+									</h3>
+									<p class="card-subtitle" title="Author Action">
+										<span class="text-truncate-inline">
+											<span class="text-truncate">Author Action</span>
+										</span>
+									</p>
+									<div class="card-detail">
+										<span class="label label-success">Approved</span>
+									</div>
 								</div>
-								<div class="card-body">
-									<div class="card-row">
-										<div class="flex-col flex-col-expand">
-											<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
-											<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
-											<div class="card-detail">
-												<span class="label label-success">Approved</span>
-											</div>
-										</div>
-										<div class="flex-col">
-											<div class="dropdown dropdown-action">
-												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-														<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-													</svg>
-												</a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#1">Download</a>
-													<a class="dropdown-item" href="#1">Edit</a>
-													<a class="dropdown-item" href="#1">Move</a>
-													<a class="dropdown-item" href="#1">Checkout</a>
-													<a class="dropdown-item" href="#1">Permissions</a>
-													<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-												</div>
-											</div>
+								<div class="flex-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#1">Download</a>
+											<a class="dropdown-item" href="#1">Edit</a>
+											<a class="dropdown-item" href="#1">Move</a>
+											<a class="dropdown-item" href="#1">Checkout</a>
+											<a class="dropdown-item" href="#1">Permissions</a>
+											<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
 										</div>
 									</div>
 								</div>
 							</div>
-						</label>
+						</div>
 					</div>
 				</div>
 			</div>
