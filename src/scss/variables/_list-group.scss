@@ -7,8 +7,9 @@ $list-group-margin-top: null !default;
 // Use values flex-start, flex-end, or center
 $list-group-item-flex-align-items: flex-start !default;
 
-$list-group-item-flex-checkbox-offset-top: 0.1875rem !default; // 3px
-$list-group-item-flex-offset-top: 0.375rem !default; // 6px
+$list-group-item-flex-checkbox-offset-top: 3px !default;
+$list-group-item-flex-offset-top: 1px !default;
+$list-group-item-flex-list-group-title-offset-top: -4px !default;
 
 // List Group Header
 
@@ -16,16 +17,21 @@ $list-group-header-bg: $list-group-bg !default;
 $list-group-header-padding-x: $list-group-item-padding-x !default;
 $list-group-header-padding-y: $list-group-item-padding-y !default;
 
-$list-group-header-title: (
-	font-size: 1rem
-) !default;
+$list-group-header-title: () !default;
+$list-group-header-title: map-merge((
+	font-size: 1rem,
+	font-weight: $font-weight-semi-bold,
+	line-height: $headings-line-height
+), $list-group-header-title);
 
 // List Group Title
 
-$list-group-title: (
-	font-size: 1.25rem,
-	font-weight: $font-weight-semi-bold
-) !default;
+$list-group-title: () !default;
+$list-group-title: map-merge((
+	font-size: 1.125rem, // 18px
+	font-weight: $font-weight-semi-bold,
+	margin-top: $list-group-item-flex-list-group-title-offset-top
+), $list-group-title);
 
 $list-group-title-link: () !default;
 
@@ -33,32 +39,36 @@ $list-group-title-active-color: $list-group-active-color !default;
 
 // List Group Text
 
-$list-group-text: (
+$list-group-text: () !default;
+$list-group-text: map-merge((
 	color: $body-color
-) !default;
+), $list-group-text);
 
-$list-group-text-link: (
+$list-group-text-link: () !default;
+$list-group-text-link: map-merge((
 	color: $body-color
-) !default;
+), $list-group-text-link);
 
 $list-group-text-active-color: $list-group-active-color !default;
 
 // List Group Subtext
 
-$list-group-subtext: (
+$list-group-subtext: () !default;
+$list-group-subtext: map-merge((
 	color: $secondary
-) !default;
+), $list-group-subtext);
 
-$list-group-subtext-link: (
+$list-group-subtext-link: () !default;
+$list-group-subtext-link: map-merge((
 	color: $secondary
-) !default;
+), $list-group-subtext-link);
 
 $list-group-subtext-active-color: $list-group-active-color !default;
 
 // List Group Detail
 
 $list-group-detail-margin-bottom: null !default;
-$list-group-detail-margin-top: 0.25rem !default; // 4px
+$list-group-detail-margin-top: null !default;
 
 $list-group-link-color: null !default;
 $list-group-link-hover-color: null !default;
@@ -85,9 +95,9 @@ $list-group-notification-item: () !default;
 
 $list-group-notification-item-primary: () !default;
 $list-group-notification-item-primary: map-merge((
-	border-left-color: $component-active-bg,
+	border-left-color: theme-color-level(primary, -9),
 	border-left-width: 0.5rem,
 	border-bottom-left-radius: 0,
 	border-top-left-radius: 0,
-	active-border-left-color: $component-active-bg
+	active-border-left-color: theme-color-level(primary, -9)
 ), $list-group-notification-item-primary);
