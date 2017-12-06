@@ -424,22 +424,7 @@
 		}
 	}
 
-	.aspect-ratio-item-fluid {
-		color: lighten(map-get($theme-colors, secondary), 37%);
-		font-size: 64px;
-
-		.sticker {
-			display: block;
-
-			@include border-radius(100px);
-
-			.lexicon-icon {
-				font-size: 64px;
-			}
-		}
-	}
-
-	.bg-checkered .aspect-ratio-item-fluid {
+	.bg-checkered .card-type-asset-icon {
 		color: $body-color;
 	}
 
@@ -447,8 +432,23 @@
 		align-items: flex-start;
 	}
 
-	.card-subtitle {
-		margin-bottom: 0;
+	.card-type-asset-icon {
+		color: lighten(map-get($theme-colors, secondary), 37%);
+		width: 22.225%;
+
+		.lexicon-icon {
+			height: 100%;
+			width: 100%;
+		}
+
+		.sticker {
+			@include border-radius(100px);
+
+			display: block;
+			font-size: 2vw;
+			padding-bottom: 100%;
+			width: 100%;
+		}
 	}
 
 	.dropdown-action {
