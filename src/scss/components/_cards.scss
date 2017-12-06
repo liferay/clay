@@ -414,6 +414,16 @@ a.card-subtitle,
 		border-bottom: 1px solid lighten(map-get($theme-colors, secondary), 46%);
 
 		@include clay-aspect-ratio(16, 9);
+
+		.custom-control label,
+		.form-check-label {
+			bottom: 0;
+			cursor: $link-cursor;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 	}
 
 	.aspect-ratio-item-fluid {
