@@ -356,18 +356,22 @@ section: Components
 						</h4>
 						<p class="list-group-text">This is an example of .list-group-text and a <a href="#1">link</a>.</p>
 						<p class="list-group-text">
+							<a class="list-group-text-link" href="#1">Regular .list-group-text-link</a>
+						</p>
+						<p class="list-group-text">
 							<span class="text-truncate-inline">
-								<a class="text-truncate" href="#1">list-group-text.text-truncate a</a>
+								<a class="list-group-text-link text-truncate" href="#1">Truncated .list-group-text-link</a> and another <a href="#1">link</a>
 							</span>
 						</p>
-						<a class="list-group-text" href="#1">a.list-group-text</a>
 						<p class="list-group-subtext">This is .list-group-subtext and a <a href="#1">link</a>.</p>
 						<p class="list-group-subtext">
+							<a class="list-group-subtext-link" href="#1">Regular .list-group-subtext-link</a>
+						</p>
+						<p class="list-group-subtext">
 							<span class="text-truncate-inline">
-								<a class="text-truncate" href="#1">list-group-subtext.text-truncate a</a>
+								<a class="list-group-subtext-link text-truncate" href="#1">Truncated .list-group-subtext-link</a> and another <a href="#1">link</a>
 							</span>
 						</p>
-						<a class="list-group-subtext" href="#1">a.list-group-subtext</a>
 						<div class="list-group-detail">
 							<span class="label label-warning">Pending</span>
 						</div>
@@ -478,10 +482,50 @@ section: Components
 	<li class="list-group-header">
 		<h3 class="list-group-header-title">List Group Header 1</h3>
 	</li>
-	<li class="list-group-item">List Item 1</li>
-	<li class="list-group-item">List Item 2</li>
-	<li class="list-group-item">List Item 3</li>
-	<li class="list-group-item">List Item 4</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col flex-col-expand">
+			<section class="flex-col-section">
+				<h4 class="list-group-title">
+					<span class="text-truncate-inline">
+						<a class="text-truncate" href="#1">List Item 1</a>
+					</span>
+				</h4>
+			</section>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col flex-col-expand">
+			<section class="flex-col-section">
+				<h4 class="list-group-title">
+					<span class="text-truncate-inline">
+						<a class="text-truncate" href="#1">List Item 2</a>
+					</span>
+				</h4>
+			</section>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col flex-col-expand">
+			<section class="flex-col-section">
+				<h4 class="list-group-title">
+					<span class="text-truncate-inline">
+						<a class="text-truncate" href="#1">List Item 3</a>
+					</span>
+				</h4>
+			</section>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="flex-col flex-col-expand">
+			<section class="flex-col-section">
+				<h4 class="list-group-title">
+					<span class="text-truncate-inline">
+						<a class="text-truncate" href="#1">List Item 4</a>
+					</span>
+				</h4>
+			</section>
+		</div>
+	</li>
 	<li class="list-group-header">
 		<h3 class="list-group-header-title">List Group Header 2</h3>
 	</li>
