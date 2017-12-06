@@ -69,12 +69,8 @@
 	@include clay-text-typography($list-group-title);
 }
 
-a.list-group-title,
 .list-group-title a {
 	@include clay-link($list-group-title-link);
-
-	display: inline-block;
-	max-width: 100%;
 }
 
 // List Group Text
@@ -83,12 +79,8 @@ a.list-group-title,
 	@include clay-text-typography($list-group-text);
 }
 
-a.list-group-text,
-.list-group-text.text-truncate a {
+.list-group-text-link {
 	@include clay-link($list-group-text-link);
-
-	display: inline-block;
-	max-width: 100%;
 }
 
 // List Group Subtext
@@ -97,12 +89,8 @@ a.list-group-text,
 	@include clay-text-typography($list-group-subtext);
 }
 
-a.list-group-subtext,
-.list-group-subtext.text-truncate a {
+.list-group-subtext-link {
 	@include clay-link($list-group-subtext-link);
-
-	display: inline-block;
-	max-width: 100%;
 }
 
 // List Group Details
