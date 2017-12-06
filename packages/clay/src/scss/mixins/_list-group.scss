@@ -1,4 +1,4 @@
-@mixin clay-list-group-notification-item-border-variant($map) {
+@mixin clay-list-group-notification-item-variant($map) {
 	$bg: setter(map-get($map, bg), $list-group-bg);
 	$border-bottom-color: setter(map-get($map, border-bottom-color), $list-group-notification-item-border-bottom-color);
 	$border-left-color: setter(map-get($map, border-left-color), $list-group-notification-item-border-left-color);
