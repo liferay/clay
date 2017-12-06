@@ -44,7 +44,6 @@
 	@include clay-text-typography($card-title);
 }
 
-a.card-title,
 .card-title a {
 	@include clay-link($card-title-link);
 }
@@ -55,7 +54,6 @@ a.card-title,
 	@include clay-text-typography($card-subtitle);
 }
 
-a.card-subtitle,
 .card-subtitle a {
 	@include clay-link($card-subtitle-link);
 }
