@@ -13,51 +13,53 @@ $list-group-item-padding-y: 1rem !default; // 16px
 $list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $list-group-header-padding-y: 0.75rem !default; // 12px
 
-$list-group-header-title: (
+$list-group-header-title: () !default;
+$list-group-header-title: map-merge((
 	color: $secondary,
 	font-size: 0.75rem,
-	font-weight: $font-weight-semi-bold,
 	text-transform: uppercase
-) !default;
+), $list-group-header-title);
 
 // List Group Title
 
-$list-group-title: (
+$list-group-title: () !default;
+$list-group-title: map-merge((
 	color: $body-color,
 	font-size: 1rem,
 	line-height: 1.25
-) !default;
+), $list-group-title);
 
-$list-group-title-link: (
+$list-group-title-link: () !default;
+$list-group-title-link: map-merge((
 	color: $body-color,
 	hover-color: $body-color
-) !default;
+), $list-group-title-link);
 
 // List Group Text
 
-$list-group-text: (
-	color: $body-color,
+$list-group-text: () !default;
+$list-group-text: map-merge((
 	font-size: 0.875rem,
 	line-height: 1.45
-) !default;
+), $list-group-text);
 
-$list-group-text-link: (
-	color: $body-color,
+$list-group-text-link: () !default;
+$list-group-text-link: map-merge((
 	hover-color: $body-color
-) !default;
+), $list-group-text-link);
 
 // List Group Subtext
 
-$list-group-subtext: (
-	color: $secondary,
+$list-group-subtext: () !default;
+$list-group-subtext: map-merge((
 	font-size: 0.875rem,
 	line-height: 1.45
-) !default;
+), $list-group-subtext);
 
-$list-group-subtext-link: (
-	color: $secondary,
+$list-group-subtext-link: () !default;
+$list-group-subtext-link: map-merge((
 	hover-color: $secondary
-) !default;
+), $list-group-subtext-link);
 
 // List Group Link
 
@@ -67,7 +69,8 @@ $list-group-link-active-color: $list-group-link-color !default;
 
 // List Group Notification
 
-$list-group-notification-item-primary: (
+$list-group-notification-item-primary: () !default;
+$list-group-notification-item-primary: map-merge((
 	border-left-color: lighten(saturate($component-active-bg, 3.40), 21.18),
 	active-border-left-color: lighten(saturate($component-active-bg, 3.40), 21.18)
-) !default;
+), $list-group-notification-item-primary);

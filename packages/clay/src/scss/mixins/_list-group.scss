@@ -15,16 +15,20 @@
 	$border-top-left-radius: map-get($map, border-top-left-radius);
 	$border-top-right-radius: map-get($map, border-top-right-radius);
 
-	$box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$border-bottom-color};
-	$box-shadow-left: inset #{$border-left-width} 0 #{$border-left-color};
-	$box-shadow-right: inset -#{$border-right-width} 0 #{$border-right-color};
-	$box-shadow-top: inset 0 #{$border-top-width} #{$border-top-color};
+	$color: map-get($map, color);
 
 	$active-bg: setter(map-get($map, active-bg), $list-group-active-bg);
 	$active-border-bottom-color: setter(map-get($map, active-border-bottom-color), $list-group-notification-item-active-border-bottom-color);
 	$active-border-left-color: setter(map-get($map, active-border-left-color), $list-group-notification-item-active-border-left-color);
 	$active-border-right-color: setter(map-get($map, active-border-right-color), $list-group-notification-item-active-border-right-color);
 	$active-border-top-color: setter(map-get($map, active-border-top-color), $list-group-notification-item-active-border-top-color);
+
+	// Box shadows are used for borders, determined by border variables above
+
+	$box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$border-bottom-color};
+	$box-shadow-left: inset #{$border-left-width} 0 #{$border-left-color};
+	$box-shadow-right: inset -#{$border-right-width} 0 #{$border-right-color};
+	$box-shadow-top: inset 0 #{$border-top-width} #{$border-top-color};
 
 	$active-box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$active-border-bottom-color};
 	$active-box-shadow-left: inset #{$border-left-width} 0 #{$active-border-left-color};
@@ -41,6 +45,7 @@
 	}
 
 	box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top, $box-shadow-bottom;
+	color: $color;
 
 	&.active {
 		background-color: $active-bg;
