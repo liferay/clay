@@ -42,7 +42,8 @@
       "metal-jest-serializer"
     ],
     "testPathIgnorePatterns": [
-      "browserslist-config-clay-components"
+      "browserslist-config-clay-components",
+      "fixtures"
     ],
     "transformIgnorePatterns": [
       "<rootDir>.*(node_modules)(?!.*clay.*).*$"

@@ -1,7 +1,7 @@
 import ClayComponent from '../ClayComponent';
 import Soy from 'metal-soy';
 
-import templates from '../MyComponent.soy.js';
+import templates from './fixtures/MyComponent.soy.js';
 
 /**
  * My Component.

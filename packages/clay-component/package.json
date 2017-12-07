@@ -20,18 +20,17 @@
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy --soyDeps ../../node_modules/clay-icon/src/**/*.soy"
+    "soy": "metalsoy"
   },
   "keywords": [
     "clay",
     "metal"
   ],
   "dependencies": {
-    "metal": "^2.14.0",
     "metal-component": "^2.14.0",
+    "metal-dom": "^2.14.0",
     "metal-soy": "^2.14.0",
-    "metal-state": "^2.14.0",
-    "metal-web-component": "^2.14.0"
+    "metal-state": "^2.14.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -41,7 +40,6 @@
     "babel-preset-env": "^1.6.0",
     "browserslist-config-clay-components": "^1.0.0-alpha.2",
     "clay": "^2.0.0-beta.4",
-    "metal-dom": "^2.14.0",
     "metal-tools-soy": "^4.2.1",
     "webpack": "^3.0.0"
   },
