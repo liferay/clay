@@ -17,7 +17,7 @@
 
 	$asset-icon-color: map-get($map, asset-icon-color);
 	$asset-icon-width: setter(map-get($map, asset-icon-width), 22.225%);
-	$asset-icon-sticker-border-radius: setter(map-get($map, asset-icon-sticker-border-radius), 100px);
+	$asset-icon-sticker-border-radius: setter(map-get($map, asset-icon-sticker-border-radius), 50%);
 	$asset-icon-sticker-font-size: setter(map-get($map, asset-icon-sticker-font-size), 2vw);
 
 	$dropdown-action-offset-bottom: map-get($map, dropdown-action-offset-bottom);
@@ -71,6 +71,10 @@
 				font-size: $asset-icon-sticker-font-size;
 				padding-bottom: 100%;
 				width: 100%;
+
+				.img-fluid {
+					@include border-radius($asset-icon-sticker-border-radius);
+				}
 			}
 		}
 
