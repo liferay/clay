@@ -95,3 +95,32 @@
 		}
 	}
 }
+
+@mixin clay-card-type-directory($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$sticker-font-size: map-get($map, sticker-font-size);
+	$sticker-line-height: map-get($map, sticker-line-height);
+	$sticker-size: map-get($map, sticker-size);
+
+	$dropdown-action-offset-bottom: map-get($map, dropdown-action-offset-bottom);
+	$dropdown-action-offset-left: map-get($map, dropdown-action-offset-left);
+	$dropdown-action-offset-right: setter(map-get($map, dropdown-action-offset-right), -0.5rem); // -8px
+	$dropdown-action-offset-top: map-get($map, dropdown-action-offset-top);
+
+	@if ($enabled) {
+		.dropdown-action {
+			margin-bottom: $dropdown-action-offset-bottom;
+			margin-left: $dropdown-action-offset-left;
+			margin-right: $dropdown-action-offset-right;
+			margin-top: $dropdown-action-offset-top;
+		}
+
+		.sticker {
+			font-size: $sticker-font-size;
+			height: $sticker-size;
+			line-height: if($sticker-line-height, $sticker-line-height, $sticker-size);
+			width: $sticker-size;
+		}
+	}
+}
