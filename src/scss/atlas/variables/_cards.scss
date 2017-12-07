@@ -24,6 +24,11 @@ $card-title-link: map-merge((
 
 // Card Subtitle
 
+$card-subtitle: () !default;
+$card-subtitle: map-merge((
+	font-weight: $font-weight-normal
+), $card-subtitle);
+
 $card-subtitle-link: () !default;
 $card-subtitle-link: map-merge((
 	hover-color: $secondary,
