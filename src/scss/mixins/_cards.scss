@@ -1,0 +1,73 @@
+@mixin clay-card-type-asset($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$aspect-ratio-border-color: setter(map-get($map, aspect-ratio-border-color), $card-border-color);
+	$aspect-ratio-border-style: setter(map-get($map, aspect-ratio-border-style), solid);
+	$aspect-ratio-border-width: setter(map-get($map, aspect-ratio-border-bottom-width), 0 0 0.0625rem 0); // 0 0 1px 0
+	$aspect-ratio-horizontal: setter(map-get($map, aspect-ratio-horizontal), 16);
+	$aspect-ratio-vertical: setter(map-get($map, aspect-ratio-vertical), 9);
+
+	$card-row-align-items: setter(map-get($map, card-row-align-items), flex-start);
+
+	$checkbox-cursor: setter(map-get($map, checkbox-cursor), $link-cursor);
+
+	$asset-icon-color: map-get($map, asset-icon-color);
+	$asset-icon-width: setter(map-get($map, asset-icon-width), 22.225%);
+	$asset-icon-sticker-border-radius: setter(map-get($map, asset-icon-sticker-border-radius), 100px);
+	$asset-icon-sticker-font-size: setter(map-get($map, asset-icon-sticker-font-size), 2vw);
+
+	$dropdown-action-offset-bottom: map-get($map, dropdown-action-offset-bottom);
+	$dropdown-action-offset-left: map-get($map, dropdown-action-offset-left);
+	$dropdown-action-offset-right: setter(map-get($map, dropdown-action-offset-right), -0.5rem); // -8px
+	$dropdown-action-offset-top: setter(map-get($map, dropdown-action-offset-top), -0.1875rem); // -3px
+
+	@if ($enabled) {
+		.aspect-ratio {
+			border-color: $aspect-ratio-border-color;
+			border-style: $aspect-ratio-border-style;
+			border-width: $aspect-ratio-border-width;
+
+			@include clay-aspect-ratio($aspect-ratio-horizontal, $aspect-ratio-vertical);
+
+			.custom-control label,
+			.form-check-label {
+				bottom: 0;
+				cursor: $checkbox-cursor;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+
+		.card-row {
+			align-items: $card-row-align-items;
+		}
+
+		.card-type-asset-icon {
+			color: $asset-icon-color;
+			width: $asset-icon-width;
+
+			.lexicon-icon {
+				height: 100%;
+				width: 100%;
+			}
+
+			.sticker {
+				@include border-radius($asset-icon-sticker-border-radius);
+
+				display: block;
+				font-size: $asset-icon-sticker-font-size;
+				padding-bottom: 100%;
+				width: 100%;
+			}
+		}
+
+		.dropdown-action {
+			margin-bottom: $dropdown-action-offset-bottom;
+			margin-left: $dropdown-action-offset-left;
+			margin-right: $dropdown-action-offset-right;
+			margin-top: $dropdown-action-offset-top;
+		}
+	}
+}
