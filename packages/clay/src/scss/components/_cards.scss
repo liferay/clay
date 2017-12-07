@@ -405,57 +405,13 @@
 	}
 }
 
-// Card Variants
+// Card Type Asset
 
 .card-type-asset {
-	.aspect-ratio {
-		border-bottom: 1px solid lighten(map-get($theme-colors, secondary), 46%);
-
-		@include clay-aspect-ratio(16, 9);
-
-		.custom-control label,
-		.form-check-label {
-			bottom: 0;
-			cursor: $link-cursor;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-	}
-
-	.bg-checkered .card-type-asset-icon {
-		color: $body-color;
-	}
-
-	.card-row {
-		align-items: flex-start;
-	}
-
-	.card-type-asset-icon {
-		color: lighten(map-get($theme-colors, secondary), 37%);
-		width: 22.225%;
-
-		.lexicon-icon {
-			height: 100%;
-			width: 100%;
-		}
-
-		.sticker {
-			@include border-radius(100px);
-
-			display: block;
-			font-size: 2vw;
-			padding-bottom: 100%;
-			width: 100%;
-		}
-	}
-
-	.dropdown-action {
-		margin-right: -8px;
-		margin-top: -3px;
-	}
+	@include clay-card-type-asset($card-type-asset);
 }
+
+// Card Type Directory
 
 .card-type-directory {
 	.card-title {
