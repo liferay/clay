@@ -422,15 +422,5 @@
 // Card Type Directory
 
 .card-type-directory {
-	.card-title {
-		margin-bottom: 0;
-	}
-
-	.dropdown-action {
-		margin-right: -8px;
-	}
-
-	.sticker {
-		font-size: 18px;
-	}
+	@include clay-card-type-directory($card-type-directory);
 }
