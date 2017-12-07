@@ -411,6 +411,14 @@
 	@include clay-card-type-asset($card-type-asset);
 }
 
+.image-card {
+	@include clay-card-type-asset-variant($image-card);
+}
+
+.file-card {
+	@include clay-card-type-asset-variant($file-card);
+}
+
 // Card Type Directory
 
 .card-type-directory {

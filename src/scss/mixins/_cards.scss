@@ -71,3 +71,27 @@
 		}
 	}
 }
+
+@mixin clay-card-type-asset-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$aspect-ratio-bg: map-get($map, aspect-ratio-bg);
+	$aspect-ratio-checkered-fg: map-get($map, aspect-ratio-checkered-fg);
+	$aspect-ratio-checkered-bg: map-get($map, aspect-ratio-checkered-bg);
+
+	$asset-icon-color: map-get($map, asset-icon-color);
+
+	@if ($enabled) {
+		.aspect-ratio {
+			background-color: $aspect-ratio-bg;
+
+			@if ($aspect-ratio-checkered-fg) {
+				@include clay-bg-checkered($aspect-ratio-checkered-fg);
+			}
+		}
+
+		.card-type-asset-icon {
+			color: $asset-icon-color;
+		}
+	}
+}

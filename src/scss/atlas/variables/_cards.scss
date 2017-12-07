@@ -48,3 +48,13 @@ $card-type-asset: () !default;
 $card-type-asset: map-merge((
 	aspect-ratio-border-color: lighten(map-get($theme-colors, secondary), 46%)
 ), $card-type-asset);
+
+$image-card: () !default;
+$image-card: map-merge((
+	aspect-ratio-checkered-fg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
+), $image-card);
+
+$file-card: () !default;
+$file-card: map-merge((
+	asset-icon-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06)
+), $file-card);

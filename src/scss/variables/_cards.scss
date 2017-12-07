@@ -72,3 +72,10 @@ $form-check-card-checked-box-shadow: $input-btn-focus-box-shadow !default;
 // Card Variant
 
 $card-type-asset: () !default;
+
+$image-card: () !default;
+
+$file-card: () !default;
+$file-card: map-merge((
+	asset-icon-color: $gray-600
+), $file-card);
