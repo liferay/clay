@@ -1,3 +1,20 @@
-$loading-icon-color: lighten(map-get($theme-colors, primary), 15%) !default;
-$loading-icon-linear-color: lighten(map-get($theme-colors, primary), 10%) !default;
-$loading-icon-size: 64px !default;
+$loading-icon-color: map-get($theme-colors, secondary) !default;
+$loading-icon-linear-color: $loading-icon-color !default;
+$loading-icon-size: 40px !default;
+
+$loading-icon-ball-size: 12px;
+$loading-icon-ball-spacer: 14px;
+
+$loading-icon-ball-scale-0: 0em;
+$loading-icon-ball-scale-1: -0.10em;
+$loading-icon-ball-scale-2: -0.15em;
+$loading-icon-ball-scale-3: -0.20em;
+$loading-icon-ball-scale-4: -0.25em;
+$loading-icon-ball-scale-5: -0.35em;
+
+$loading-icon-ball-alpha-0: rgba($loading-icon-color, 1);
+$loading-icon-ball-alpha-1: rgba($loading-icon-color, 0.80);
+$loading-icon-ball-alpha-2: rgba($loading-icon-color, 0.60);
+$loading-icon-ball-alpha-3: rgba($loading-icon-color, 0.40);
+$loading-icon-ball-alpha-4: rgba($loading-icon-color, 0.20);
+$loading-icon-ball-alpha-5: rgba($loading-icon-color, 0.10);
