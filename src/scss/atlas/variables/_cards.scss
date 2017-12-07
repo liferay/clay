@@ -5,7 +5,7 @@ $card-box-shadow: 0 1px 10px -4px rgba(0, 0, 0, 0.6) !default;
 $card-body-padding-bottom: 1rem !default;
 $card-body-padding-left: 1rem !default;
 $card-body-padding-right: 1rem !default;
-$card-body-padding-top: 0.75rem !default;
+$card-body-padding-top: 1rem !default;
 
 $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius} - #{$card-border-width}), $card-border-radius) !default;
 
@@ -46,7 +46,8 @@ $form-check-card-checked-box-shadow: 0 0 0 2px lighten(saturate($component-activ
 
 $card-type-asset: () !default;
 $card-type-asset: map-merge((
-	aspect-ratio-border-color: lighten(map-get($theme-colors, secondary), 46%)
+	aspect-ratio-border-color: lighten(map-get($theme-colors, secondary), 46%),
+	card-body-padding-top: 0.75rem
 ), $card-type-asset);
 
 $image-card: () !default;
@@ -58,10 +59,3 @@ $file-card: () !default;
 $file-card: map-merge((
 	asset-icon-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06)
 ), $file-card);
-
-// Card Type Directory
-
-$card-type-directory: () !default;
-$card-type-directory: map-merge((
-	sticker-font-size: 1.21875rem
-), $card-type-directory);

@@ -7,6 +7,10 @@
 	$aspect-ratio-horizontal: setter(map-get($map, aspect-ratio-horizontal), 16);
 	$aspect-ratio-vertical: setter(map-get($map, aspect-ratio-vertical), 9);
 
+	$card-body-padding-bottom: map-get($map, card-body-padding-bottom);
+	$card-body-padding-left: map-get($map, card-body-padding-left);
+	$card-body-padding-right: map-get($map, card-body-padding-right);
+	$card-body-padding-top: map-get($map, card-body-padding-top);
 	$card-row-align-items: setter(map-get($map, card-row-align-items), flex-start);
 
 	$checkbox-cursor: setter(map-get($map, checkbox-cursor), $link-cursor);
@@ -38,6 +42,13 @@
 				right: 0;
 				top: 0;
 			}
+		}
+
+		.card-body {
+			padding-bottom: $card-body-padding-bottom;
+			padding-left: $card-body-padding-left;
+			padding-right: $card-body-padding-right;
+			padding-top: $card-body-padding-top;
 		}
 
 		.card-row {
@@ -99,6 +110,11 @@
 @mixin clay-card-type-directory($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
+	$card-body-padding-bottom: map-get($map, card-body-padding-bottom);
+	$card-body-padding-left: map-get($map, card-body-padding-left);
+	$card-body-padding-right: map-get($map, card-body-padding-right);
+	$card-body-padding-top: map-get($map, card-body-padding-top);
+
 	$sticker-font-size: map-get($map, sticker-font-size);
 	$sticker-line-height: map-get($map, sticker-line-height);
 	$sticker-size: map-get($map, sticker-size);
@@ -109,6 +125,13 @@
 	$dropdown-action-offset-top: map-get($map, dropdown-action-offset-top);
 
 	@if ($enabled) {
+		.card-body {
+			padding-bottom: $card-body-padding-bottom;
+			padding-left: $card-body-padding-left;
+			padding-right: $card-body-padding-right;
+			padding-top: $card-body-padding-top;
+		}
+
 		.dropdown-action {
 			margin-bottom: $dropdown-action-offset-bottom;
 			margin-left: $dropdown-action-offset-left;
