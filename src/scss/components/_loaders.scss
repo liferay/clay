@@ -2,74 +2,71 @@
 
 .loading-icon,
 .loadingmask-message .loadingmask-message-content {
-	animation: loading-icon 1.7s infinite ease;
+	animation: loading-icon 1.2s infinite ease-out;
 	border-radius: 50%;
 	display: block;
-	font-size: 16px;
-	height: 1em;
-	margin: 1em auto;
+	height: $loading-icon-ball-size;
+	margin: ($loading-icon-size - $loading-icon-ball-size * 2) auto;
 	position: relative;
-	width: 1em;
-
-	&:after,
-	&:before {
-		border-radius: 50%;
-		content: '';
-		display: block;
-		font-size: inherit;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
+	width: $loading-icon-ball-size;
 }
 
 @keyframes loading-icon {
-	0% {
-		@include trailing-shadow(0, -0.83em, $loading-icon-color);
-
-		transform: rotate(0);
-	}
-
-	2%, 96% {
-		@include trailing-shadow(0, -0.83em);
-	}
-
-	10% {
-		@include trailing-shadow(
-			(0, -0.087em, -0.173em, -0.256em, -0.338em),
-			(-0.83em, -0.825em, -0.812em, -0.789em, -0.758em)
-		);
-	}
-
-	25% {
-		@include trailing-shadow(
-			(0, -0.338em, -0.555em, -0.671em, -0.719em),
-			(-0.83em, -0.758em, -0.617em, -0.488em, -0.415em)
-		);
-	}
-
-	40% {
-		@include trailing-shadow(
-			(0, -0.377em, -0.645em, -0.775em, -0.82em),
-			(-0.83em, -0.74em, -0.522em, -0.297em, -0.13em),
-			adjust-hue($loading-icon-color, 330)
-		);
-	}
-
-	60% {
-		@include trailing-shadow(
-			(0, -0.087em, -0.173em, -0.256em, -0.297em),
-			(-0.83em, -0.825em, -0.812em, -0.789em, -0.775em)
-		);
-	}
-
+	0%,
 	100% {
-		@include trailing-shadow(0, -0.83em);
-
-		transform: rotate(360deg);
+		box-shadow:
+		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
+		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
+		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
+		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
+		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
+		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1;
 	}
+	16.6% {
+		box-shadow:
+		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
+		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
+		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
+		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
+		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
+		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2;
+	}
+	33.3% {
+		box-shadow:
+		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
+		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
+		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
+		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
+		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
+		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3;
+	}
+	50% {
+		box-shadow:
+		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
+		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
+		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
+		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
+		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
+		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4;
+	}
+	66.6% {
+		box-shadow:
+		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
+		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
+		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
+		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
+		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
+		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5;
+  	}
+  	83% {
+		box-shadow:
+		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
+		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
+		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
+		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
+		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
+		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0;
+  	}
 }
 
 // Linear Spinner
@@ -184,9 +181,9 @@ button {
 		// to allow the size to be set via the
 		// `loading-icon-{size}` classes
 		& {
-			font-size: 1em;
 			margin-right: 0.8em;
 			margin-top: 0;
+			transform: scale(0.5);
 		}
 
 		&.linear {
@@ -212,19 +209,19 @@ button {
 
 .loading-icon {
 	&.loading-icon-xs {
-		font-size: 8px;
+		transform: scale(0.5);
 	}
 
 	&.loading-icon-sm {
-		font-size: 10px;
+		transform: scale(1);
 	}
 
 	&.loading-icon-md {
-		font-size: 32px;
+		transform: scale(1.5);
 	}
 
 	&.loading-icon-lg {
-		font-size: 64px;
+		transform: scale(2);
 	}
 }
 
