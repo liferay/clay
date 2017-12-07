@@ -35,6 +35,7 @@ $card-subtitle: () !default;
 $card-subtitle: map-merge((
 	color: $secondary,
 	font-size: 0.875rem, // 14px
+	font-weight: $font-weight-semi-bold,
 	margin-top: 0
 ), $card-subtitle);
 
