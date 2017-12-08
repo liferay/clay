@@ -10,6 +10,18 @@
 	@return $val;
 }
 
+// Helper for displaying warning messages for required variables
+// @param $var - The variable to check
+// @param $msg - The error message
+
+@function required($var, $msg: 'This value is required!') {
+	@if not ($var) {
+		@warn($msg);
+	}
+
+	@return $var;
+}
+
 // Builds the calc string used in the CSS top property for
 // `.collapse-icon-closed` and `.collapse-icon-open`
 // @param $container-padding-top - Padding-top of containing element (e.g.,

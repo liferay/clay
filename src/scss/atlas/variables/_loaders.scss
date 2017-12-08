@@ -1,0 +1,9 @@
+$loading-icon-linear: () !default;
+$loading-icon-linear: map-merge((
+	color: $secondary
+), $loading-icon-linear);
+
+$loading-icon-dotted: () !default;
+$loading-icon-dotted: map-merge((
+	color: $secondary
+), $loading-icon-dotted);

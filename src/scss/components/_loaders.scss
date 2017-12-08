@@ -1,6 +1,6 @@
 .loading-icon {
 	display: inline-block;
-	font-size: 40px;
+	font-size: $loading-icon-font-size;
 	height: 1em;
 	position: relative;
 	text-align: left;
@@ -8,57 +8,40 @@
 	width: 1em;
 }
 
-.loading-icon-dotted .loading-icon-indicator {
-	animation: loading-icon-dotted 1.2s infinite ease-out;
-	border-radius: 50%;
-	box-shadow:
-	0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
-	$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
-	$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
-	0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
-	-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
-	-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1;
-	display: block;
-	height: $loading-icon-ball-size;
-	left: -$loading-icon-ball-size;
-	margin-left: auto;
-	margin-right: auto;
-	margin: $loading-icon-ball-size;
-	position: absolute;
-	top: -$loading-icon-ball-size;
-	transform: scale(0.33334);
-	width: $loading-icon-ball-size;
+// Loading Icon Dotted
+
+%loading-icon-dotted {
+	@include clay-loading-icon-dotted-variant($loading-icon-dotted);
 }
 
-.loading-icon-linear .loading-icon-indicator {
-	display: inline-block;
-	height: 1em;
-	left: 0;
-	margin-left: auto;
-	margin-right: auto;
-	position: absolute;
-	top: 0;
-	width: 1em;
+%loading-icon-dotted-light {
+	@include clay-loading-icon-dotted-variant($loading-icon-dotted-light);
+}
 
-	&:after,
-	&:before {
-		animation: 1.9s ease-out infinite both;
-		border: 0.15em solid transparent;
-		border-left-color: $loading-icon-linear-color;
-		border-radius: 50%;
-		content: '';
-		height: 100%;
-		position: absolute;
-		width: 100%;
-	}
+.loading-icon-dotted {
+	@extend %loading-icon-dotted;
+}
 
-	&:after {
-		animation-name: loading-icon-spin;
-	}
+.loading-icon-dotted-light {
+	@extend %loading-icon-dotted-light;
+}
 
-	&:before {
-		animation-name: loading-icon-linear;
-	}
+// Loading Icon Linear
+
+%loading-icon-linear {
+	@include clay-loading-icon-linear-variant($loading-icon-linear);
+}
+
+%loading-icon-linear-light {
+	@include clay-loading-icon-linear-variant($loading-icon-linear-light);
+}
+
+.loading-icon-linear {
+	@extend %loading-icon-linear;
+}
+
+.loading-icon-linear-light {
+	@extend %loading-icon-linear-light;
 }
 
 // Variations
@@ -78,107 +61,17 @@
 }
 
 .loading-icon-xs {
-	font-size: 1.25rem;
+	font-size: $loading-icon-font-size-xs;
+}
+
+.loading-icon-sm {
+	font-size: $loading-icon-font-size-sm;
 }
 
 .loading-icon-md {
-	font-size: 3.75rem;
+	font-size: $loading-icon-font-size-md;
 }
 
 .loading-icon-lg {
-	font-size: 5rem;
-}
-
-@keyframes loading-icon-dotted {
-	0%,
-	100% {
-		box-shadow:
-		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
-		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
-		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
-		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
-		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
-		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1;
-	}
-	16.6% {
-		box-shadow:
-		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
-		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
-		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
-		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
-		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
-		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2;
-	}
-	33.3% {
-		box-shadow:
-		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
-		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
-		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
-		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
-		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
-		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3;
-	}
-	50% {
-		box-shadow:
-		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
-		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
-		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
-		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
-		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
-		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4;
-	}
-	66.6% {
-		box-shadow:
-		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
-		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
-		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
-		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
-		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
-		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5;
-	}
-	83% {
-		box-shadow:
-		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
-		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
-		$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
-		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
-		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
-		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0;
-	}
-}
-
-@keyframes loading-icon-linear {
-	0% {
-		transform: rotate(0deg);
-	}
-
-	10.99% {
-		border-bottom-color: transparent;
-	}
-
-	11% {
-		border-bottom-color: $loading-icon-linear-color;
-	}
-
-	66% {
-		border-bottom-color: $loading-icon-linear-color;
-	}
-
-	66.6% {
-		border-bottom-color: transparent;
-	}
-
-	66.6%, 100% {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes loading-icon-spin {
-	0%, 22% {
-		transform: rotate(0deg);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
+	font-size: $loading-icon-font-size-lg;
 }
