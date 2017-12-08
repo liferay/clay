@@ -1,17 +1,95 @@
-// Loading Animation
+.loading-icon {
+	display: inline-block;
+	font-size: 40px;
+	height: 1em;
+	position: relative;
+	text-align: left;
+	vertical-align: middle;
+	width: 1em;
+}
 
-.loading-icon,
-.loadingmask-message .loadingmask-message-content {
-	animation: loading-icon 1.2s infinite ease-out;
+.loading-icon-dotted .loading-icon-indicator {
+	animation: loading-icon-dotted 1.2s infinite ease-out;
 	border-radius: 50%;
+	box-shadow:
+	0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
+	$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
+	$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
+	0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-3 $loading-icon-ball-alpha-3,
+	-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
+	-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1;
 	display: block;
 	height: $loading-icon-ball-size;
-	margin: ($loading-icon-size - $loading-icon-ball-size * 2) auto;
-	position: relative;
+	left: -$loading-icon-ball-size;
+	margin-left: auto;
+	margin-right: auto;
+	margin: $loading-icon-ball-size;
+	position: absolute;
+	top: -$loading-icon-ball-size;
+	transform: scale(0.33334);
 	width: $loading-icon-ball-size;
 }
 
-@keyframes loading-icon {
+.loading-icon-linear .loading-icon-indicator {
+	display: inline-block;
+	height: 1em;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 0;
+	width: 1em;
+
+	&:after,
+	&:before {
+		animation: 1.9s ease-out infinite both;
+		border: 0.15em solid transparent;
+		border-left-color: $loading-icon-linear-color;
+		border-radius: 50%;
+		content: '';
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
+
+	&:after {
+		animation-name: loading-icon-spin;
+	}
+
+	&:before {
+		animation-name: loading-icon-linear;
+	}
+}
+
+// Variations
+
+.btn {
+	&.loading .loading-icon {
+		display: inline-block;
+	}
+
+	.loading-icon {
+		display: none;
+		font-size: 1em;
+		margin-left: -0.25em;
+		margin-right: 0.25em;
+		margin-top: -3px;
+	}
+}
+
+.loading-icon-xs {
+	font-size: 1.25rem;
+}
+
+.loading-icon-md {
+	font-size: 3.75rem;
+}
+
+.loading-icon-lg {
+	font-size: 5rem;
+}
+
+@keyframes loading-icon-dotted {
 	0%,
 	100% {
 		box-shadow:
@@ -57,8 +135,8 @@
 		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
 		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0,
 		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5;
-  	}
-  	83% {
+	}
+	83% {
 		box-shadow:
 		0 (-$loading-icon-ball-spacer) 0 $loading-icon-ball-scale-5 $loading-icon-ball-alpha-5,
 		$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-4 $loading-icon-ball-alpha-4,
@@ -66,73 +144,6 @@
 		0 $loading-icon-ball-spacer 0 $loading-icon-ball-scale-2 $loading-icon-ball-alpha-2,
 		-$loading-icon-ball-spacer $loading-icon-ball-spacer/2 0 $loading-icon-ball-scale-1 $loading-icon-ball-alpha-1,
 		-$loading-icon-ball-spacer (-$loading-icon-ball-spacer/2) 0 $loading-icon-ball-scale-0 $loading-icon-ball-alpha-0;
-  	}
-}
-
-// Linear Spinner
-
-.loading-icon.linear {
-	&, &:before, &:after {
-		border-radius: 50%;
-		box-shadow: none;
-	}
-
-	& {
-		animation: none;
-		height: 1em;
-		margin: 0 auto;
-		position: relative;
-		transform: translateZ(0);
-		width: 1em;
-	}
-
-	&:before, &:after {
-		animation: 2s ease-out infinite both;
-		border: 0.15em solid transparent;
-		border-left-color: $loading-icon-linear-color;
-		border-radius: 50%;
-		content: '';
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		transform: rotate(270deg);
-		transform-origin: 50%;
-		width: 100%;
-	}
-
-	&:before {
-		animation-name: loading-icon-linear;
-	}
-
-	&:after {
-		animation-name: loading-icon-spin;
-	}
-}
-
-@keyframes loading-icon-linear {
-	0% {
-		transform: rotate(0deg);
-	}
-
-	10.99% {
-		border-bottom-color: transparent;
-	}
-
-	11% {
-		border-bottom-color: $loading-icon-linear-color;
-	}
-
-	66% {
-		border-bottom-color: $loading-icon-linear-color;
-	}
-
-	66.6% {
-		border-bottom-color: transparent;
-	}
-
-	66.6%, 100% {
-		transform: rotate(360deg);
 	}
 }
 
@@ -169,80 +180,5 @@
 
 	100% {
 		transform: rotate(360deg);
-	}
-}
-
-// Variations
-
-a.btn,
-button {
-	> .loading-icon {
-		// This is specifically in a less specific selector
-		// to allow the size to be set via the
-		// `loading-icon-{size}` classes
-		& {
-			margin-right: 0.8em;
-			margin-top: 0;
-			transform: scale(0.5);
-		}
-
-		&.linear {
-			margin-right: 0.2em;
-			margin-top: -0.2em;
-		}
-
-		&, &.linear {
-			display: none;
-			margin-bottom: 0;
-			vertical-align: middle;
-		}
-	}
-
-	&.loading {
-		> .loading-icon {
-			&, &.linear {
-				display: inline-block;
-			}
-		}
-	}
-}
-
-.loading-icon {
-	&.loading-icon-xs {
-		transform: scale(0.5);
-	}
-
-	&.loading-icon-sm {
-		transform: scale(1);
-	}
-
-	&.loading-icon-md {
-		transform: scale(1.5);
-	}
-
-	&.loading-icon-lg {
-		transform: scale(2);
-	}
-}
-
-// Backwards compatability
-
-.loading-animation {
-	@extend .loading-icon;
-
-	&.loading-animation-xs {
-		@extend .loading-icon-xs;
-	}
-
-	&.loading-animation-sm {
-		@extend .loading-icon-sm;
-	}
-
-	&.loading-animation-md {
-		@extend .loading-icon-md;
-	}
-
-	&.loading-animation-lg {
-		@extend .loading-icon-lg;
 	}
 }

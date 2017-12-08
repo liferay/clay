@@ -2,8 +2,8 @@ $loading-icon-color: map-get($theme-colors, secondary) !default;
 $loading-icon-linear-color: $loading-icon-color !default;
 $loading-icon-size: 40px !default;
 
-$loading-icon-ball-size: 12px;
-$loading-icon-ball-spacer: 14px;
+$loading-icon-ball-size: 1em;
+$loading-icon-ball-spacer: 1em;
 
 $loading-icon-ball-scale-0: 0em;
 $loading-icon-ball-scale-1: -0.10em;
