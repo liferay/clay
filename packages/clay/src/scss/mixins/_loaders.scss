@@ -1,0 +1,201 @@
+@mixin clay-loading-icon-dotted-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+	$mixin-name: 'clay-loading-icon-dotted-variant';
+
+	$border-radius: setter(map-get($map, border-radius), 50%);
+	$color: setter(map-get($map, color), $secondary);
+	$transform: setter(map-get($map, transform), scale(0.33334));
+
+	$animation: setter(map-get($map, animation), 1.2s ease-out infinite);
+	$animation-name: required(
+		map-get($map, animation-name),
+		'The property `animation-name` in `#{$mixin-name}` is required! #{$map}'
+	);
+
+	$ball-0-scale: setter(map-get($map, ball-0-scale), 0em);
+	$ball-1-scale: setter(map-get($map, ball-1-scale), -0.10em);
+	$ball-2-scale: setter(map-get($map, ball-2-scale), -0.15em);
+	$ball-3-scale: setter(map-get($map, ball-3-scale), -0.20em);
+	$ball-4-scale: setter(map-get($map, ball-4-scale), -0.25em);
+	$ball-5-scale: setter(map-get($map, ball-5-scale), -0.35em);
+
+	$ball-0-alpha: setter(map-get($map, ball-0-alpha), 1);
+	$ball-1-alpha: setter(map-get($map, ball-1-alpha), 0.80);
+	$ball-2-alpha: setter(map-get($map, ball-2-alpha), 0.60);
+	$ball-3-alpha: setter(map-get($map, ball-3-alpha), 0.40);
+	$ball-4-alpha: setter(map-get($map, ball-4-alpha), 0.20);
+	$ball-5-alpha: setter(map-get($map, ball-5-alpha), 0.10);
+
+	$ball-0-color: setter(map-get($map, ball-0-color), rgba($color, $ball-0-alpha));
+	$ball-1-color: setter(map-get($map, ball-1-color), rgba($color, $ball-1-alpha));
+	$ball-2-color: setter(map-get($map, ball-2-color), rgba($color, $ball-2-alpha));
+	$ball-3-color: setter(map-get($map, ball-3-color), rgba($color, $ball-3-alpha));
+	$ball-4-color: setter(map-get($map, ball-4-color), rgba($color, $ball-4-alpha));
+	$ball-5-color: setter(map-get($map, ball-5-color), rgba($color, $ball-5-alpha));
+
+	@if ($enabled) {
+		.loading-icon-indicator {
+			animation: $animation;
+			animation-name: $animation-name;
+			border-radius: $border-radius;
+
+			// Box shadow needs this specific order for proper animation
+
+			box-shadow: 0 -1em 0 $ball-0-scale $ball-0-color,
+				1em -0.5em 0 $ball-5-scale $ball-5-color,
+				1em 0.5em 0 $ball-4-scale $ball-4-color,
+				0 1em 0 $ball-3-scale $ball-3-color,
+				-1em 0.5em 0 $ball-2-scale $ball-2-color,
+				-1em -0.5em 0 $ball-1-scale $ball-1-color;
+			display: block;
+			height: 1em;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transform: $transform;
+			width: 1em;
+		}
+
+		@keyframes #{$animation-name} {
+
+			// Box shadows need this specific order for proper animation
+
+			0%,
+			100% {
+				box-shadow: 0 -1em 0 $ball-0-scale $ball-0-color,
+				1em -0.5em 0 $ball-5-scale $ball-5-color,
+				1em 0.5em 0 $ball-4-scale $ball-4-color,
+				0 1em 0 $ball-3-scale $ball-3-color,
+				-1em 0.5em 0 $ball-2-scale $ball-2-color,
+				-1em -0.5em 0 $ball-1-scale $ball-1-color;
+			}
+			16.6% {
+				box-shadow: 0 -1em 0 $ball-1-scale $ball-1-color,
+				1em -0.5em 0 $ball-0-scale $ball-0-color,
+				1em 0.5em 0 $ball-5-scale $ball-5-color,
+				0 1em 0 $ball-4-scale $ball-4-color,
+				-1em 0.5em 0 $ball-3-scale $ball-3-color,
+				-1em -0.5em 0 $ball-2-scale $ball-2-color;
+			}
+			33.3% {
+				box-shadow: 0 -1em 0 $ball-2-scale $ball-2-color,
+				1em -0.5em 0 $ball-1-scale $ball-1-color,
+				1em 0.5em 0 $ball-0-scale $ball-0-color,
+				0 1em 0 $ball-5-scale $ball-5-color,
+				-1em 0.5em 0 $ball-4-scale $ball-4-color,
+				-1em -0.5em 0 $ball-3-scale $ball-3-color;
+			}
+			50% {
+				box-shadow: 0 -1em 0 $ball-3-scale $ball-3-color,
+				1em -0.5em 0 $ball-2-scale $ball-2-color,
+				1em 0.5em 0 $ball-1-scale $ball-1-color,
+				0 1em 0 $ball-0-scale $ball-0-color,
+				-1em 0.5em 0 $ball-5-scale $ball-5-color,
+				-1em -0.5em 0 $ball-4-scale $ball-4-color;
+			}
+			66.6% {
+				box-shadow: 0 -1em 0 $ball-4-scale $ball-4-color,
+				1em -0.5em 0 $ball-3-scale $ball-3-color,
+				1em 0.5em 0 $ball-2-scale $ball-2-color,
+				0 1em 0 $ball-1-scale $ball-1-color,
+				-1em 0.5em 0 $ball-0-scale $ball-0-color,
+				-1em -0.5em 0 $ball-5-scale $ball-5-color;
+			}
+			83% {
+				box-shadow: 0 -1em 0 $ball-5-scale $ball-5-color,
+				1em -0.5em 0 $ball-4-scale $ball-4-color,
+				1em 0.5em 0 $ball-3-scale $ball-3-color,
+				0 1em 0 $ball-2-scale $ball-2-color,
+				-1em 0.5em 0 $ball-1-scale $ball-1-color,
+				-1em -0.5em 0 $ball-0-scale $ball-0-color;
+			}
+		}
+	}
+}
+
+@mixin clay-loading-icon-linear-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+	$mixin-name: 'clay-loading-icon-linear-variant';
+
+	$border-width: setter(map-get($map, border-width), 0.15em);
+	$color: setter(map-get($map, color), $secondary);
+
+	$after-animation: setter(map-get($map, after-animation), 1.9s ease-out infinite both);
+	$after-animation-name: required(
+		map-get($map, after-animation-name),
+		'The property `after-animation-name` in #{$mixin-name} is required!'
+	);
+	$before-animation: setter(map-get($map, before-animation), 1.9s ease-out infinite both);
+	$before-animation-name: required(
+		map-get($map, before-animation-name),
+		'The property `before-animation-name` in #{$mixin-name} is required!'
+	);
+
+	@if ($enabled) {
+		.loading-icon-indicator {
+			display: inline-block;
+			height: 1em;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 1em;
+
+			&:after,
+			&:before {
+				border: $border-width solid transparent;
+				border-left-color: $color;
+				border-radius: 50%;
+				content: '';
+				height: 100%;
+				position: absolute;
+				width: 100%;
+			}
+
+			&:after {
+				animation: $after-animation;
+				animation-name: $after-animation-name;
+			}
+
+			&:before {
+				animation: $before-animation;
+				animation-name: $before-animation-name;
+			}
+		}
+
+		@keyframes #{$after-animation-name} {
+			0%, 22% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes #{$before-animation-name} {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			10.99% {
+				border-bottom-color: transparent;
+			}
+
+			11% {
+				border-bottom-color: $color;
+			}
+
+			66% {
+				border-bottom-color: $color;
+			}
+
+			66.6% {
+				border-bottom-color: transparent;
+			}
+
+			66.6%, 100% {
+				transform: rotate(360deg);
+			}
+		}
+	}
+}
