@@ -144,3 +144,19 @@
 		border-color: transparent;
 	}
 }
+
+// Loading Icons with Buttons
+
+.btn {
+	&.loading .loading-icon {
+		display: inline-block;
+	}
+
+	.loading-icon {
+		display: none;
+		font-size: 1em;
+		margin-left: -0.25em;
+		margin-right: 0.25em;
+		margin-top: -3px;
+	}
+}
