@@ -19,11 +19,11 @@
 }
 
 .loading-icon-dotted {
-	@extend %loading-icon-dotted;
+	@extend %loading-icon-dotted !optional;
 }
 
 .loading-icon-dotted-light {
-	@extend %loading-icon-dotted-light;
+	@extend %loading-icon-dotted-light !optional;
 }
 
 // Loading Icon Linear
@@ -37,28 +37,14 @@
 }
 
 .loading-icon-linear {
-	@extend %loading-icon-linear;
+	@extend %loading-icon-linear !optional;
 }
 
 .loading-icon-linear-light {
-	@extend %loading-icon-linear-light;
+	@extend %loading-icon-linear-light !optional;
 }
 
 // Variations
-
-.btn {
-	&.loading .loading-icon {
-		display: inline-block;
-	}
-
-	.loading-icon {
-		display: none;
-		font-size: 1em;
-		margin-left: -0.25em;
-		margin-right: 0.25em;
-		margin-top: -3px;
-	}
-}
 
 .loading-icon-xs {
 	font-size: $loading-icon-font-size-xs;
