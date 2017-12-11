@@ -25,6 +25,13 @@
     {@param? url: string}
     {@param? userColor: string}
 
+    {let $classes kind="text"}
+        user-card
+        {if $elementClasses}
+            {sp}{$elementClasses}
+        {/if}
+    {/let}
+
     {call ClayCard.render}
         {param actionItems: $actionItems /}
         {param contentRenderer: 'user' /}
@@ -110,32 +117,30 @@
     	aspect-ratio-item-center-middle aspect-ratio-item-fluid
     {/let}
 
-    <div class="aspect-ratio card-item-first">
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-    		{call ClaySticker.render}
-    			{param label kind="html"}
-    				{if $imageSrc}
-    					{let $imageAttributes kind="attributes"}
-    						alt="
-    							{if $imageAlt}
-    								{$imageAlt}
-    							{/if}
-    						"
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+        {call ClaySticker.render}
+            {param label kind="html"}
+                {if $imageSrc}
+                    {let $imageAttributes kind="attributes"}
+                        alt="
+                            {if $imageAlt}
+                                {$imageAlt}
+                            {/if}
+                        "
 
-    						class="img-fluid"
-    						src="{$imageSrc}"
-    					{/let}
+                        class="img-fluid"
+                        src="{$imageSrc}"
+                    {/let}
 
-    					<img {$imageAttributes} />
-    				{elseif $fileType}
-    					{$fileType}
-    				{/if}
-    			{/param}
+                    <img {$imageAttributes} />
+                {elseif $fileType}
+                    <span class="sticker-overlay">{$fileType}</span>
+                {/if}
+            {/param}
 
-    			{param shape: 'circle' /}
-    			{param size: 'xl' /}
-    			{param style: $fileTypeStyle ?: 'primary' /}
-    		{/call}
-    	</div>
+            {param shape: 'circle' /}
+            {param size: 'xl' /}
+            {param style: $fileTypeStyle ?: 'primary' /}
+        {/call}
     </div>
 {/deltemplate}

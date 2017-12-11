@@ -30,11 +30,18 @@
     {@param? subtitle: string}
     {@param? url: string}
 
+    {let $classes kind="text"}
+        image-card
+        {if $elementClasses}
+            {sp}{$elementClasses}
+        {/if}
+    {/let}
+
     {call ClayCard.render}
         {param actionItems: $actionItems /}
         {param contentRenderer: 'image' /}
         {param disabled: $disabled /}
-        {param elementClasses: $elementClasses /}
+        {param elementClasses: $classes /}
         {param fileType: $fileType /}
         {param fileTypeStyle: $fileTypeStyle /}
         {param icon: $icon /}
@@ -65,9 +72,11 @@
     {@param? imageSrc: string}
     {@param? spritemap: string}
 
-    <div class="aspect-ratio card-item-first bg-checkered">
     	{let $aspectRatioClasses kind="text"}
     		aspect-ratio-item-center-middle aspect-ratio-item-fluid
+            {if $icon and $spritemap}
+                {sp}card-type-asset-icon
+            {/if}
     	{/let}
 
     	{if $imageSrc}
@@ -99,5 +108,4 @@
     			{param style: $fileTypeStyle ?: 'primary' /}
     		{/call}
     	{/if}
-    </div>
 {/deltemplate}

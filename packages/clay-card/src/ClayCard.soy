@@ -49,45 +49,52 @@
 		{/if}
 	{/let}
 
+	{let $descriptiveArea kind="html"}
+		{delcall ClayCard.DescriptiveArea variant="$contentRenderer"}
+			{param actionItems: $actionItems /}
+			{param labels: $labels /}
+			{param spritemap: $spritemap /}
+			{param subtitle: $subtitle /}
+			{param title: $title /}
+			{param url: $url /}
+		{/delcall}
+	{/let}
+
+	{let $visualArea kind="html"}
+		{delcall ClayCard.VisualArea variant="$contentRenderer"}
+			{param fileType: $fileType /}
+			{param fileTypeStyle: $fileTypeStyle /}
+			{param icon: $icon /}
+			{param imageAlt: $imageAlt /}
+			{param imageSrc: $imageSrc /}
+			{param spritemap: $spritemap /}
+		{/delcall}
+	{/let}
+
 	<div {$attributes}>
-		{let $content kind="html"}
-			{delcall ClayCard.VisualArea variant="$contentRenderer"}
-				{param fileType: $fileType /}
-				{param fileTypeStyle: $fileTypeStyle /}
-				{param icon: $icon /}
-				{param imageAlt: $imageAlt /}
-				{param imageSrc: $imageSrc /}
-				{param spritemap: $spritemap /}
-			{/delcall}
-			{delcall ClayCard.DescriptiveArea variant="$contentRenderer"}
-				{param actionItems: $actionItems /}
-				{param labels: $labels /}
-				{param spritemap: $spritemap /}
-				{param subtitle: $subtitle /}
-				{param title: $title /}
-				{param url: $url /}
-			{/delcall}
-		{/let}
-
 		{if $selectable}
-			{call ClayCheckbox.render}
-				{param checked: $selected /}
-				{param disabled: $disabled /}
-				{param labelContent kind="html"}
-					{let $classesCard kind="text"}
-						card card-type-asset
-					{/let}
+			<div class="card">
+				<div class="aspect-ratio card-item-first">
+					{call ClayCheckbox.render}
+						{param checked: $selected /}
+						{param disabled: $disabled /}
+						{param labelContent kind="html"}
+							{$visualArea}
+						{/param}
 
-					<div class="{$classesCard}">
-						{$content}
-					</div>
-				{/param}
+						{param name: $inputName /}
+						{param value: $inputValue /}
+					{/call}
+				</div>
 
-				{param name: $inputName /}
-				{param value: $inputValue /}
-			{/call}
+				{$descriptiveArea}
+			</div>
 		{else}
-			{$content}
+			<div class="aspect-ratio card-item-first">
+				{$visualArea}
+			</div>
+
+			{$descriptiveArea}
 		{/if}
 	</div>
 {/template}
