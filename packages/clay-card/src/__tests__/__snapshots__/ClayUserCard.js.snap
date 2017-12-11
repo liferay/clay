@@ -3,7 +3,7 @@
 exports[`ClayUserCard should render a ClayUserCard with actionItems 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
@@ -39,7 +39,7 @@ exports[`ClayUserCard should render a ClayUserCard with actionItems 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with classes 1`] = `
 <div class="card-type-asset card my-custom-class">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
@@ -56,7 +56,7 @@ exports[`ClayUserCard should render a ClayUserCard with classes 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with id 1`] = `
 <div class="card-type-asset card" id="myId">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
@@ -73,7 +73,7 @@ exports[`ClayUserCard should render a ClayUserCard with id 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with imageAlt 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
@@ -90,7 +90,7 @@ exports[`ClayUserCard should render a ClayUserCard with imageAlt 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with imageSrc 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl">
         <img alt="" class="img-fluid" src="thumbnail_coffee.jpg">
       </span>
@@ -109,7 +109,7 @@ exports[`ClayUserCard should render a ClayUserCard with imageSrc 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with subtitle 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
@@ -127,7 +127,7 @@ exports[`ClayUserCard should render a ClayUserCard with subtitle 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with url 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
@@ -144,8 +144,10 @@ exports[`ClayUserCard should render a ClayUserCard with url 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with user initials 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-primary rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -161,8 +163,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials 1`] = `
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`danger color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-danger rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-danger rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -178,8 +182,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`dark color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-dark rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-dark rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -195,8 +201,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`info color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-info rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-info rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -212,8 +220,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`light color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-light rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-light rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -229,8 +239,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`primary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-primary rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -246,8 +258,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`secondary color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-secondary rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-secondary rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -263,8 +277,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`success color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-success rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-success rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -280,8 +296,10 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 exports[`ClayUserCard should render a ClayUserCard with user initials and style \`warning color\` 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-      <span class="sticker sticker-warning rounded-circle sticker-xl">DOC</span>
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-warning rounded-circle sticker-xl">
+        <span class="sticker-overlay">DOC</span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -296,125 +314,125 @@ exports[`ClayUserCard should render a ClayUserCard with user initials and style 
 
 exports[`ClayUserCard should render a disabled ClayUserCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+  <div class="card">
+    <div class="aspect-ratio card-item-first">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="User Name">User Name</div>
-            </div>
-          </div>
+        </label>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-row">
+        <div class="flex-col flex-col-expand">
+          <div class="card-title text-truncate" title="User Name">User Name</div>
         </div>
       </div>
-    </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ClayUserCard should render a selectable ClayUserCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+  <div class="card">
+    <div class="aspect-ratio card-item-first">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="User Name">User Name</div>
-            </div>
-          </div>
+        </label>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-row">
+        <div class="flex-col flex-col-expand">
+          <div class="card-title text-truncate" title="User Name">User Name</div>
         </div>
       </div>
-    </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ClayUserCard should render a selectable ClayUserCard with input \`name\` 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+  <div class="card">
+    <div class="aspect-ratio card-item-first">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="User Name">User Name</div>
-            </div>
-          </div>
+        </label>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-row">
+        <div class="flex-col flex-col-expand">
+          <div class="card-title text-truncate" title="User Name">User Name</div>
         </div>
       </div>
-    </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ClayUserCard should render a selectable ClayUserCard with input \`value\` 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+  <div class="card">
+    <div class="aspect-ratio card-item-first">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="User Name">User Name</div>
-            </div>
-          </div>
+        </label>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-row">
+        <div class="flex-col flex-col-expand">
+          <div class="card-title text-truncate" title="User Name">User Name</div>
         </div>
       </div>
-    </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ClayUserCard should render a selected ClayUserCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left">
-  <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-indicator"></span>
-      <div class="card card-type-asset">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+  <div class="card">
+    <div class="aspect-ratio card-item-first">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input checked="" class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="User Name">User Name</div>
-            </div>
-          </div>
+        </label>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-row">
+        <div class="flex-col flex-col-expand">
+          <div class="card-title text-truncate" title="User Name">User Name</div>
         </div>
       </div>
-    </label>
+    </div>
   </div>
 </div>
 `;
@@ -422,7 +440,7 @@ exports[`ClayUserCard should render a selected ClayUserCard 1`] = `
 exports[`ClayUserCard should render the default markup 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
     </div>
   </div>
