@@ -69,12 +69,9 @@
 
 				display: block;
 				font-size: $asset-icon-sticker-font-size;
+				overflow: hidden;
 				padding-bottom: 100%;
 				width: 100%;
-
-				.img-fluid {
-					@include border-radius($asset-icon-sticker-border-radius);
-				}
 			}
 		}
 
