@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './src/ClayListGroup.js',
+	entry: './src/ClayList.js',
 	module: {
 		rules: [
 			{
@@ -22,7 +22,7 @@ module.exports = {
 	output: {
 		library: 'metal',
 		libraryTarget: 'this',
-		filename: './build/globals/clay-list-group.js',
+		filename: './build/globals/clay-list.js',
 	},
 	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
 	resolve: {

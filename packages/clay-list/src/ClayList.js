@@ -3,19 +3,19 @@ import 'clay-icon';
 import 'clay-label';
 import 'clay-link';
 import 'clay-sticker';
-import './ClayListGroupItem';
+import './ClayListItem';
 
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import templates from './ClayListGroup.soy.js';
+import templates from './ClayList.soy.js';
 
 /**
- * Metal ClayListGroup component.
+ * Metal ClayList component.
  */
-class ClayListGroup extends Component {
+class ClayList extends Component {
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -31,11 +31,11 @@ class ClayListGroup extends Component {
  * @static
  * @type {!Object}
  */
-ClayListGroup.STATE = {
+ClayList.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayListGroup
+	 * @memberof ClayList
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -44,7 +44,7 @@ ClayListGroup.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayListGroup
+	 * @memberof ClayList
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -53,7 +53,7 @@ ClayListGroup.STATE = {
 	/**
 	 * List of items.
 	 * @instance
-	 * @memberof ClayListGroup
+	 * @memberof ClayList
 	 * @type {!array}
 	 * @default undefined
 	 */
@@ -93,7 +93,7 @@ ClayListGroup.STATE = {
 	/**
 	 * Flag to indicate if the list group items are selectable.
 	 * @instance
-	 * @memberof ClayListGroup
+	 * @memberof ClayList
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -102,7 +102,7 @@ ClayListGroup.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayListGroup
+	 * @memberof ClayList
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -111,16 +111,16 @@ ClayListGroup.STATE = {
 	/**
 	 * Header of the list group.
 	 * @instance
-	 * @memberof ClayListGroup
+	 * @memberof ClayList
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	title: Config.string(),
 };
 
-defineWebComponent('clay-list-group', ClayListGroup);
+defineWebComponent('clay-list', ClayList);
 
-Soy.register(ClayListGroup, templates);
+Soy.register(ClayList, templates);
 
-export {ClayListGroup};
-export default ClayListGroup;
+export {ClayList};
+export default ClayList;

@@ -1,3 +1,4 @@
+import 'clay-checkbox';
 import 'clay-dropdown';
 import 'clay-icon';
 import 'clay-label';
@@ -9,12 +10,12 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import templates from './ClayListGroupItem.soy.js';
+import templates from './ClayListItem.soy.js';
 
 /**
- * Metal ClayListGroupItem component.
+ * Metal ClayListItem component.
  */
-class ClayListGroupItem extends Component {
+class ClayListItem extends Component {
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -30,11 +31,11 @@ class ClayListGroupItem extends Component {
  * @static
  * @type {!Object}
  */
-ClayListGroupItem.STATE = {
+ClayListItem.STATE = {
 	/**
 	 * List of items to display in the actions menu.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {!array}
 	 * @default undefined
 	 */
@@ -52,7 +53,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Name of the content renderer to use template variants.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -61,7 +62,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Description of the item
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -70,7 +71,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -79,7 +80,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Icon of the list item.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -88,7 +89,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Shape of the icon of the list item.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default rounded
 	 */
@@ -97,7 +98,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -126,7 +127,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Flag to indicate if the list item is selectable.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -135,7 +136,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Flag to indicate if the list item is selected.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?bool|undefined}
 	 * @default false
 	 */
@@ -144,7 +145,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -153,7 +154,7 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Title of the list item.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -162,16 +163,16 @@ ClayListGroupItem.STATE = {
 	/**
 	 * Url of the item.
 	 * @instance
-	 * @memberof ClayListGroupItem
+	 * @memberof ClayListItem
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	url: Config.string(),
 };
 
-defineWebComponent('clay-list-item', ClayListGroupItem);
+defineWebComponent('clay-list-item', ClayListItem);
 
-Soy.register(ClayListGroupItem, templates);
+Soy.register(ClayListItem, templates);
 
-export {ClayListGroupItem};
-export default ClayListGroupItem;
+export {ClayListItem};
+export default ClayListItem;

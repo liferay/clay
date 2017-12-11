@@ -1,4 +1,4 @@
-{namespace ClayListGroup}
+{namespace ClayList}
 
 /**
  * This renders the component's whole content.
@@ -51,7 +51,7 @@
 		{/if}
 
 		{foreach $item in $items}
-			{call ClayListGroupItem.render}
+			{call ClayListItem.render}
 				{param actionItems: $item.actionItems /}
 				{param description: $item.description /}
 				{param events: ['itemToggled': $handleItemToggled_ ] /}

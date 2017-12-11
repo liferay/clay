@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with action menu 1`] = `
+exports[`ClayListItem should render a ClayListItem with action menu 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
@@ -32,7 +32,7 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with action menu 1`
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with circle icons 1`] = `
+exports[`ClayListItem should render a ClayListItem with circle icons 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col">
     <span class="sticker sticker-primary rounded-circle">
@@ -47,9 +47,9 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with circle icons 1
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with classes 1`] = `<li class="list-group-item list-group-item-flex my-custom-class">My Item</li>`;
+exports[`ClayListItem should render a ClayListItem with classes 1`] = `<li class="list-group-item list-group-item-flex my-custom-class">My Item</li>`;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with description 1`] = `
+exports[`ClayListItem should render a ClayListItem with description 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
@@ -58,7 +58,7 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with description 1`
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with description and url 1`] = `
+exports[`ClayListItem should render a ClayListItem with description and url 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">
@@ -69,7 +69,7 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with description an
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with icon 1`] = `
+exports[`ClayListItem should render a ClayListItem with icon 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col">
     <span class="sticker sticker-primary">
@@ -84,9 +84,9 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with icon 1`] = `
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with id 1`] = `<li class="list-group-item list-group-item-flex" id="myId">My Item</li>`;
+exports[`ClayListItem should render a ClayListItem with id 1`] = `<li class="list-group-item list-group-item-flex" id="myId">My Item</li>`;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with labels with style 1`] = `
+exports[`ClayListItem should render a ClayListItem with labels with style 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
@@ -98,13 +98,13 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with labels with st
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with link 1`] = `
+exports[`ClayListItem should render a ClayListItem with link 1`] = `
 <li class="list-group-item list-group-item-flex">
   <a href="#1">Item 1</a>
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with one label 1`] = `
+exports[`ClayListItem should render a ClayListItem with one label 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
@@ -115,7 +115,7 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with one label 1`] 
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with quick action menu 1`] = `
+exports[`ClayListItem should render a ClayListItem with quick action menu 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
@@ -163,7 +163,7 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with quick action m
 </li>
 `;
 
-exports[`ClayListGroupItem should render a ClayListGroupItem with two labels 1`] = `
+exports[`ClayListItem should render a ClayListItem with two labels 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
@@ -175,7 +175,7 @@ exports[`ClayListGroupItem should render a ClayListGroupItem with two labels 1`]
 </li>
 `;
 
-exports[`ClayListGroupItem should render a selectable ClayListGroupItem 1`] = `
+exports[`ClayListItem should render a selectable ClayListItem 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col">
     <div class="custom-control custom-checkbox">
@@ -195,7 +195,7 @@ exports[`ClayListGroupItem should render a selectable ClayListGroupItem 1`] = `
 </li>
 `;
 
-exports[`ClayListGroupItem should render a selected ClayListGroupItem 1`] = `
+exports[`ClayListItem should render a selected ClayListItem 1`] = `
 <li class="list-group-item list-group-item-flex active">
   <div class="flex-col">
     <div class="custom-control custom-checkbox">
@@ -215,4 +215,4 @@ exports[`ClayListGroupItem should render a selected ClayListGroupItem 1`] = `
 </li>
 `;
 
-exports[`ClayListGroupItem should render the default markup 1`] = `<li class="list-group-item list-group-item-flex">My Item</li>`;
+exports[`ClayListItem should render the default markup 1`] = `<li class="list-group-item list-group-item-flex">My Item</li>`;

@@ -1,16 +1,16 @@
 {
-  "name": "clay-list-group",
+  "name": "clay-list",
   "version": "1.0.0-alpha.8",
-  "description": "Metal ClayListGroup component",
+  "description": "Metal ClayList component",
   "license": "BSD",
   "repository": "https://github.com/metal/metal-clay-components/tree/master/packages/clay-list-group",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/ClayListGroup.js",
-  "esnext:main": "src/ClayListGroup.js",
-  "jsnext:main": "src/ClayListGroup.js",
+  "main": "lib/ClayList.js",
+  "esnext:main": "src/ClayList.js",
+  "jsnext:main": "src/ClayList.js",
   "files": [
     "lib",
     "src",

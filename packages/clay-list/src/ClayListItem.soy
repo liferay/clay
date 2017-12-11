@@ -1,4 +1,4 @@
-{namespace ClayListGroupItem}
+{namespace ClayListItem}
 
 /**
  * This renders the component's whole content.
@@ -49,7 +49,7 @@
 		{let $isSimple: not $description and not $selectable and not $icon and not $actionItems and not $labels/}
 
 		{if $isSimple}
-			{delcall ClayListGroupItem.Simple variant="$contentRenderer"}
+			{delcall ClayListItem.Simple variant="$contentRenderer"}
 				{param title: $title /}
 				{param url: $url /}
 			{/delcall}
@@ -66,14 +66,14 @@
 			{/if}
 
 			{if $icon and $spritemap}
-				{delcall ClayListGroupItem.Icon variant="$contentRenderer"}
+				{delcall ClayListItem.Icon variant="$contentRenderer"}
 					{param icon: $icon /}
 					{param iconShape: $iconShape /}
 					{param spritemap: $spritemap /}
 				{/delcall}
 			{/if}
 
-			{delcall ClayListGroupItem.Content variant="$contentRenderer"}
+			{delcall ClayListItem.Content variant="$contentRenderer"}
 				{param description: $description /}
 				{param labels: $labels /}
 				{param spritemap: $spritemap /}
@@ -132,7 +132,7 @@
 /**
  * This renders the content of the item.
  */
-{deltemplate ClayListGroupItem.Content}
+{deltemplate ClayListItem.Content}
 	{@param title: string}
 	{@param? description: string}
 	{@param? labels: list<[
@@ -174,7 +174,7 @@
 /**
  * This renders the icon of the item.
  */
-{deltemplate ClayListGroupItem.Icon}
+{deltemplate ClayListItem.Icon}
 	{@param icon: string}
 	{@param spritemap: string}
 	{@param? iconShape: string}
@@ -191,7 +191,7 @@
 /**
  * This renders a simple item.
  */
-{deltemplate ClayListGroupItem.Simple}
+{deltemplate ClayListItem.Simple}
 	{@param title: string}
 	{@param? url: string}
 

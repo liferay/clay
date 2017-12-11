@@ -1,6 +1,6 @@
-# clay-list-group
+# clay-list
 
-Clay ListGroup component
+Clay List component
 
 ## Setup
 

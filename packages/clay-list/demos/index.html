@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Demo: ClayListGroup</title>
+	<title>Demo: ClayList</title>
 
 	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
 
@@ -17,86 +17,86 @@
 		}
 	</style>
 
-	<script src="../build/globals/clay-list-group.js"></script>
+	<script src="../build/globals/clay-list.js"></script>
 </head>
 <body class="container">
 	<div class="row row-spacing">
-		<h1>ListGroup</h1>
+		<h1>List</h1>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Simple ListGroup</h4>
+			<h4>Simple List</h4>
 			<div id="container1"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Simple ListGroup with links</h4>
+			<h4>Simple List with links</h4>
 			<div id="container2"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>ListGroup with description</h4>
+			<h4>List with description</h4>
 			<div id="container3"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup</h4>
+			<h4>Selectable List</h4>
 			<div id="container4"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Icon</h4>
+			<h4>Selectable List with Icon</h4>
 			<div id="container5"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Circle Icon</h4>
+			<h4>Selectable List with Circle Icon</h4>
 			<div id="container6"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Label</h4>
+			<h4>Selectable List with Label</h4>
 			<div id="container7"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Action Menu</h4>
+			<h4>Selectable List with Action Menu</h4>
 			<div id="container8"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Quick Action Menu</h4>
+			<h4>Selectable List with Quick Action Menu</h4>
 			<div id="container9"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Header Title</h4>
+			<h4>Selectable List with Header Title</h4>
 			<div id="container10"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable ListGroup with Selected Items</h4>
+			<h4>Selectable List with Selected Items</h4>
 			<div id="container11"></div>
 		</div>
 	</div>
@@ -142,7 +142,7 @@
 			},
 		];
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					title: 'Item 1',
@@ -156,7 +156,7 @@
 			]
 		}, '#container1');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					title: 'Item 1',
@@ -173,7 +173,7 @@
 			]
 		}, '#container2');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					description: 'Description 1',
@@ -193,7 +193,7 @@
 			]
 		}, '#container3');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					description: 'Description 1',
@@ -214,7 +214,7 @@
 			selectable: true,
 		}, '#container4');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					description: 'Description 1',
@@ -239,7 +239,7 @@
 			spritemap: spritemap,
 		}, '#container5');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					description: 'Description 1',
@@ -267,7 +267,7 @@
 			spritemap: spritemap,
 		}, '#container6');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					description: 'Description 1',
@@ -309,7 +309,7 @@
 			spritemap: spritemap,
 		}, '#container7');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					actionItems: actionItems,
@@ -354,7 +354,7 @@
 			spritemap: spritemap,
 		}, '#container8');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					actionItems: actionItemsWithQuickItems,
@@ -399,7 +399,7 @@
 			spritemap: spritemap,
 		}, '#container9');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					actionItems: actionItemsWithQuickItems,
@@ -445,7 +445,7 @@
 			title: 'Group Header 1',
 		}, '#container10');
 
-		new metal.ClayListGroup({
+		new metal.ClayList({
 			items: [
 				{
 					actionItems: actionItems,
