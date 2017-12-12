@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayButton should render a block button 1`] = `<button class="btn btn-block btn-primary"></button>`;
+exports[`ClayButton should render a block button 1`] = `<button class="btn btn-block btn-primary" type="button"></button>`;
 
-exports[`ClayButton should render a button with classes 1`] = `<button class="btn my-custom-class btn-primary"></button>`;
+exports[`ClayButton should render a button with classes 1`] = `<button class="btn my-custom-class btn-primary" type="button"></button>`;
 
 exports[`ClayButton should render a button with icon 1`] = `
-<button class="btn btn-primary" aria-label="plus">
+<button class="btn btn-primary" aria-label="plus" type="button">
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
@@ -14,7 +14,7 @@ exports[`ClayButton should render a button with icon 1`] = `
 `;
 
 exports[`ClayButton should render a button with icon and label 1`] = `
-<button class="btn btn-primary">
+<button class="btn btn-primary" type="button">
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
@@ -22,7 +22,7 @@ exports[`ClayButton should render a button with icon and label 1`] = `
 `;
 
 exports[`ClayButton should render a button with icon and monospaced true 1`] = `
-<button class="btn btn-monospaced btn-primary" aria-label="plus">
+<button class="btn btn-monospaced btn-primary" aria-label="plus" type="button">
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
@@ -30,14 +30,14 @@ exports[`ClayButton should render a button with icon and monospaced true 1`] = `
 </button>
 `;
 
-exports[`ClayButton should render a button with id 1`] = `<button class="btn btn-primary" id="myId"></button>`;
+exports[`ClayButton should render a button with id 1`] = `<button class="btn btn-primary" id="myId" type="button"></button>`;
 
-exports[`ClayButton should render a button with label 1`] = `<button class="btn btn-primary">Label</button>`;
+exports[`ClayButton should render a button with label 1`] = `<button class="btn btn-primary" type="button">Label</button>`;
 
-exports[`ClayButton should render a button with label and ariaLabel 1`] = `<button class="btn btn-primary" aria-label="My Description">Visit Liferay.com</button>`;
+exports[`ClayButton should render a button with label and ariaLabel 1`] = `<button class="btn btn-primary" aria-label="My Description" type="button">Visit Liferay.com</button>`;
 
 exports[`ClayButton should render a button with label and icon 1`] = `
-<button class="btn btn-primary">Label
+<button class="btn btn-primary" type="button">Label
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
@@ -45,14 +45,16 @@ exports[`ClayButton should render a button with label and icon 1`] = `
 </button>
 `;
 
-exports[`ClayButton should render a button with name 1`] = `<button class="btn btn-primary" name="myButton"></button>`;
+exports[`ClayButton should render a button with name 1`] = `<button class="btn btn-primary" name="myButton" type="button"></button>`;
 
-exports[`ClayButton should render a disabled button 1`] = `<button class="btn btn-primary" disabled=""></button>`;
+exports[`ClayButton should render a disabled button 1`] = `<button class="btn btn-primary" disabled="" type="button"></button>`;
 
-exports[`ClayButton should render a secondary button 1`] = `<button class="btn btn-secondary"></button>`;
+exports[`ClayButton should render a reset button 1`] = `<button class="btn btn-primary" type="reset"></button>`;
 
-exports[`ClayButton should render a small button 1`] = `<button class="btn btn-sm btn-primary"></button>`;
+exports[`ClayButton should render a secondary button 1`] = `<button class="btn btn-secondary" type="button"></button>`;
+
+exports[`ClayButton should render a small button 1`] = `<button class="btn btn-sm btn-primary" type="button"></button>`;
 
 exports[`ClayButton should render a submit button 1`] = `<button class="btn btn-primary" type="submit"></button>`;
 
-exports[`ClayButton should render the default markup 1`] = `<button class="btn btn-primary"></button>`;
+exports[`ClayButton should render the default markup 1`] = `<button class="btn btn-primary" type="button"></button>`;

@@ -600,7 +600,7 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
           <input aria-label="Search for..." class="form-control" placeholder="Search for..." type="text" ref="searchInput">
         </div>
         <span class="input-group-inset-item">
-          <button class="btn btn-link" aria-label="search">
+          <button class="btn btn-link" aria-label="search" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
               <title>search</title>
               <use xlink:href="icons.svg#search"></use>
