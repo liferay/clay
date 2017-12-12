@@ -27,6 +27,7 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+              <title>ellipsis-v</title>
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
             </svg>
           </button>
@@ -54,6 +55,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -63,6 +65,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
@@ -79,6 +82,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -88,6 +92,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
@@ -130,6 +135,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-down-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -139,6 +145,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
@@ -156,6 +163,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <div class="dropdown">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled">Filter and Order
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+              <title>caret-bottom</title>
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
@@ -189,6 +197,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -198,6 +207,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
@@ -214,6 +224,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -223,6 +234,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
@@ -274,6 +286,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -283,6 +296,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
@@ -325,6 +339,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -335,6 +350,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
         <div class="dropdown">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+              <title>list</title>
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
             </svg>
           </button>
@@ -344,6 +360,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
                 <a class=" dropdown-item active">
                   <div class="dropdown-item-indicator">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+                      <title>list</title>
                       <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
                     </svg>
                   </div>List</a>
@@ -352,6 +369,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
                 <a class=" dropdown-item disabled" href="javascript:;">
                   <div class="dropdown-item-indicator">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+                      <title>table</title>
                       <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#table"></use>
                     </svg>
                   </div>Table</a>
@@ -360,6 +378,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
                 <a class=" dropdown-item">
                   <div class="dropdown-item-indicator">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+                      <title>cards2</title>
                       <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#cards2"></use>
                     </svg>
                   </div>Card</a>
@@ -371,6 +390,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
@@ -387,6 +407,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
@@ -396,6 +417,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
           </svg>
         </button>

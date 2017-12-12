@@ -12,6 +12,7 @@ exports[`ClayImageCard should render a ClayImageCard with actionItems 1`] = `
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+              <title>ellipsis-v</title>
               <use xlink:href="icons.svg#ellipsis-v"></use>
             </svg>
           </button>
@@ -185,6 +186,7 @@ exports[`ClayImageCard should render a ClayImageCard with icon 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents">
+        <title>documents</title>
         <use xlink:href="icons.svg#documents"></use>
       </svg>
     </div>

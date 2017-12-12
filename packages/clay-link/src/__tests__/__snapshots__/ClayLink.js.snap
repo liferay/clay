@@ -23,6 +23,7 @@ exports[`ClayLink should render a link with href 1`] = `<a href="http://www.life
 exports[`ClayLink should render a link with icon 1`] = `
 <a>
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+    <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
   </svg>
 </a>
@@ -31,6 +32,7 @@ exports[`ClayLink should render a link with icon 1`] = `
 exports[`ClayLink should render a link with icon and label 1`] = `
 <a>
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+    <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
   </svg>My Link</a>
 `;
@@ -40,6 +42,7 @@ exports[`ClayLink should render a link with id 1`] = `<a id="myId"></a>`;
 exports[`ClayLink should render a link with label and icon 1`] = `
 <a>My Link
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+    <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
   </svg>
 </a>

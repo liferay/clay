@@ -154,6 +154,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
         <a class=" dropdown-item" href="item1url">
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+              <title>check</title>
               <use xlink:href="icons.svg#check"></use>
             </svg>
           </div>Item 1</a>
@@ -162,6 +163,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
         <a class=" dropdown-item" href="item2url">
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+              <title>check</title>
               <use xlink:href="icons.svg#check"></use>
             </svg>
           </div>Item 2</a>
@@ -180,6 +182,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
         <a class=" dropdown-item" href="item1url">Item 1
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+              <title>check</title>
               <use xlink:href="icons.svg#check"></use>
             </svg>
           </div>
@@ -189,6 +192,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
         <a class=" dropdown-item" href="item2url">Item 2
           <div class="dropdown-item-indicator">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+              <title>check</title>
               <use xlink:href="icons.svg#check"></use>
             </svg>
           </div>
@@ -598,6 +602,7 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
         <span class="input-group-inset-item">
           <button class="btn btn-link" aria-label="search">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+              <title>search</title>
               <use xlink:href="icons.svg#search"></use>
             </svg>
           </button>

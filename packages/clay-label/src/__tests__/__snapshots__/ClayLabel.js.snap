@@ -26,6 +26,7 @@ exports[`ClayLabel should render a label with removable 1`] = `
 <span class="label label-secondary label-dismissible">Foo
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+      <title>times</title>
       <use xlink:href="icons.svg#times"></use>
     </svg>
   </button>

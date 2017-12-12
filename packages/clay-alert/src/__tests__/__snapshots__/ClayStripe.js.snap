@@ -5,11 +5,13 @@ exports[`ClayStripe should render a "danger" style stripe 1`] = `
   <div class="container">
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+        <title>times</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+        <title>exclamation-full</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-full"></use>
       </svg>
     </span>
@@ -22,11 +24,13 @@ exports[`ClayStripe should render a "success" style stripe 1`] = `
   <div class="container">
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+        <title>times</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+        <title>check-circle-full</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle-full"></use>
       </svg>
     </span>
@@ -39,11 +43,13 @@ exports[`ClayStripe should render a "warning" style stripe 1`] = `
   <div class="container">
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+        <title>times</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+        <title>warning-full</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#warning-full"></use>
       </svg>
     </span>
@@ -56,11 +62,13 @@ exports[`ClayStripe should render an "info" style stripe 1`] = `
   <div class="container">
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+        <title>times</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+        <title>info-circle</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>
@@ -73,11 +81,13 @@ exports[`ClayStripe should render an stripe with classes 1`] = `
   <div class="container">
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+        <title>times</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+        <title>info-circle</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>
@@ -90,11 +100,13 @@ exports[`ClayStripe should render an stripe with id 1`] = `
   <div class="container">
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+        <title>times</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+        <title>info-circle</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>
@@ -107,11 +119,13 @@ exports[`ClayStripe should render default markup 1`] = `
   <div class="container">
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+        <title>times</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+        <title>info-circle</title>
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>

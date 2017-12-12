@@ -35,6 +35,7 @@ exports[`ClaySticker should render a sticker with classes 1`] = `<span class="st
 exports[`ClaySticker should render a sticker with icon 1`] = `
 <span class="sticker sticker-primary">
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+    <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
   </svg>
 </span>

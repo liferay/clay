@@ -16,6 +16,7 @@ exports[`ClayUserCard should render a ClayUserCard with actionItems 1`] = `
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+              <title>ellipsis-v</title>
               <use xlink:href="icons.svg#ellipsis-v"></use>
             </svg>
           </button>
