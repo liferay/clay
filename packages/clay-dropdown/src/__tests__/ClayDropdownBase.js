@@ -670,7 +670,17 @@ describe('ClayDropdownBase', function() {
 			url: 'item2url',
 		};
 
-		let items = [item1, item2];
+		let item3 = {
+			items: [
+				{
+					label: 'Item 3',
+				},
+			],
+			label: 'Group 1',
+			type: 'group',
+		};
+
+		let items = [item1, item2, item3];
 
 		clayDropdownBase = new ClayDropdownBase({
 			items: items,
@@ -696,7 +706,13 @@ describe('ClayDropdownBase', function() {
 			delegateTarget: input,
 		});
 
-		expect(clayDropdownBase.items).toEqual([item2]);
+		input.value = 'Item 3';
+
+		clayDropdownBase.handleSearch_({
+			delegateTarget: input,
+		});
+
+		expect(clayDropdownBase.items).toEqual([item3]);
 
 		input.value = '';
 
@@ -704,7 +720,7 @@ describe('ClayDropdownBase', function() {
 			delegateTarget: input,
 		});
 
-		expect(clayDropdownBase.items).toEqual([item1, item2]);
+		expect(clayDropdownBase.items).toEqual([item1, item2, item3]);
 	});
 
 	it('should render a dropdown and emit an event on button click', () => {
