@@ -52,9 +52,7 @@ ClayBadge.STATE = {
 	 */
 	style: Config.oneOf([
 		'danger',
-		'dark',
 		'info',
-		'light',
 		'primary',
 		'secondary',
 		'success',

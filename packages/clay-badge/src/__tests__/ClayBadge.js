@@ -104,22 +104,4 @@ describe('ClayBadge', function() {
 
 		expect(badge).toMatchSnapshot();
 	});
-
-	it('should render a `light color` badge', () => {
-		badge = new ClayBadge({
-			label: 'Foo',
-			style: 'light',
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
-	it('should render a `dark color` badge', () => {
-		badge = new ClayBadge({
-			label: 'Foo',
-			style: 'dark',
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
 });

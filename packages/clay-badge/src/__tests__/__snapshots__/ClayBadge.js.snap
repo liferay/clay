@@ -2,13 +2,9 @@
 
 exports[`ClayBadge should render a \`danger color\` badge 1`] = `<span class="badge badge-danger">Foo</span>`;
 
-exports[`ClayBadge should render a \`dark color\` badge 1`] = `<span class="badge badge-dark">Foo</span>`;
-
 exports[`ClayBadge should render a \`default color\` badge 1`] = `<span class="badge badge-primary">Foo</span>`;
 
 exports[`ClayBadge should render a \`info color\` badge 1`] = `<span class="badge badge-info">Foo</span>`;
-
-exports[`ClayBadge should render a \`light color\` badge 1`] = `<span class="badge badge-light">Foo</span>`;
 
 exports[`ClayBadge should render a \`primary color\` badge 1`] = `<span class="badge badge-primary">Foo</span>`;
 
