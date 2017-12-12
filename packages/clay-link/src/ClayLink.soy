@@ -10,91 +10,130 @@
 	{@param? download: string}
 	{@param? elementClasses: string}
 	{@param? href: string}
-	{@param? icon: [
-		alignment: string,
-		spritemap: string,
-		symbol: string
-	]}
+	{@param? icon: string}
+	{@param? iconAlignment: string}
 	{@param? id: string}
 	{@param? label: html|string}
+	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? target: string}
 
 	{let $attributes kind="attributes"}
-		{if $ariaLabel}
-			aria-label="{$ariaLabel}"
-		{/if}
-
-		{if $ariaExpanded}
-			aria-expanded="true"
-		{elseif $ariaExpanded == false}
-			aria-expanded="false"
-		{/if}
-
-		{let $classes kind="text"}
-			{if $buttonStyle}
-				btn btn-{$buttonStyle}
-			{elseif $style}
-				link-{$style}
-			{/if}
-
-			{if $elementClasses}
-				{sp}{$elementClasses}
-			{/if}
-		{/let}
-
-		{if $classes}
-			class="{$classes}"
-		{/if}
-
-		{if $download}
-			download="{$download}"
-		{/if}
-
-		{if $href}
-			href="{$href}"
-		{/if}
-
-		{if $id}
-			id="{$id}"
-		{/if}
-
-		{if $target}
-			target="{$target}"
-		{/if}
+		{call .attributes}
+			{param ariaExpanded: $ariaExpanded /}
+			{param ariaLabel: $ariaLabel /}
+			{param buttonStyle: $buttonStyle /}
+			{param download: $download /}
+			{param elementClasses: $elementClasses /}
+			{param href: $href /}
+			{param id: $id /}
+			{param style: $style /}
+			{param target: $target /}
+		{/call}
 	{/let}
 
 	<a {$attributes}>
-		{let $iconAlignment: $icon and $icon.alignment ? $icon.alignment : 'left' /}
-
-		{if $icon and $iconAlignment == 'left'}
-			{call .icon }
-				{param icon: $icon /}
-			{/call}
-		{/if}
-
-		{$label}
-
-		{if $icon and $iconAlignment == 'right'}
-			{call .icon }
-				{param icon: $icon /}
-			{/call}
-		{/if}
+		{call .content}
+			{param icon: $icon /}
+			{param iconAlignment: $iconAlignment ?: 'left' /}
+			{param label: $label /}
+			{param spritemap: $spritemap /}
+		{/call}
 	</a>
 {/template}
 
 /**
- * This renders a Clay Icon.
+ * Renders element content
+ */
+{template .content}
+	{@param? icon: string}
+	{@param? iconAlignment: string}
+	{@param? label: html|string}
+	{@param? spritemap: string}
+
+	{if $icon and $iconAlignment == 'left' and $spritemap}
+		{call .icon}
+			{param icon: $icon /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{/if}
+
+	{$label ?: ''}
+
+	{if $icon and $iconAlignment == 'right' and $spritemap}
+		{call .icon}
+			{param icon: $icon /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{/if}
+{/template}
+
+/**
+ * Renders icon element
  */
 {template .icon}
-	{@param? icon: [
-		alignment: string,
-		spritemap: string,
-		symbol: string
-	]}
+	{@param icon: string}
+	{@param spritemap: string}
 
 	{call ClayIcon.render}
-		{param spritemap: $icon.spritemap /}
-		{param symbol: $icon.symbol /}
+		{param spritemap: $spritemap /}
+		{param symbol: $icon /}
 	{/call}
+{/template}
+
+/**
+ * Renders html attributes for anchor element
+ */
+{template .attributes kind="attributes"}
+	{@param? ariaExpanded: bool}
+	{@param? ariaLabel: string}
+	{@param? buttonStyle: string}
+	{@param? download: string}
+	{@param? elementClasses: string}
+	{@param? href: string}
+	{@param? id: string}
+	{@param? style: string}
+	{@param? target: string}
+
+	{if $ariaExpanded}
+		aria-expanded="true"
+	{elseif $ariaExpanded == false}
+		aria-expanded="false"
+	{/if}
+
+	{if $ariaLabel}
+		aria-label="{$ariaLabel}"
+	{/if}
+
+	{let $classes kind="text"}
+		{if $buttonStyle}
+			btn btn-{$buttonStyle}
+		{elseif $style}
+			link-{$style}
+		{/if}
+
+		{if $elementClasses}
+			{sp}{$elementClasses}
+		{/if}
+	{/let}
+
+	{if $classes}
+		class="{$classes}"
+	{/if}
+
+	{if $download}
+		download="{$download}"
+	{/if}
+
+	{if $href}
+		href="{$href}"
+	{/if}
+
+	{if $id}
+		id="{$id}"
+	{/if}
+
+	{if $target}
+		target="{$target}"
+	{/if}
 {/template}

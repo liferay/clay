@@ -82,17 +82,22 @@ ClayLink.STATE = {
 	href: Config.string(),
 
 	/**
-	 * Render ClayIcon in the ClayLink element.
+	 * Icon to be rendered in the link.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?Object|undefined}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	icon: Config.shapeOf({
-		alignment: Config.oneOf(['left', 'right']),
-		spritemap: Config.string().required(),
-		symbol: Config.string().required(),
-	}),
+	icon: Config.string(),
+
+	/**
+	 * Render position of the ClayIcon in the ClayLink element.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?string}
+	 * @default left
+	 */
+	iconAlignment: Config.oneOf(['left', 'right']).value('left'),
 
 	/**
 	 * Id to be applied to the element.
@@ -111,6 +116,15 @@ ClayLink.STATE = {
 	 * @default undefined
 	 */
 	label: Config.any(),
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	spritemap: Config.string(),
 
 	/**
 	 * The css class that colors the button.

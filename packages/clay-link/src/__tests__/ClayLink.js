@@ -87,10 +87,8 @@ describe('ClayLink', function() {
 
 	it('should render a link with icon', () => {
 		link = new ClayLink({
-			icon: {
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
+			icon: 'plus',
+			spritemap: 'icons.svg',
 		});
 
 		expect(link).toMatchSnapshot();
@@ -98,11 +96,9 @@ describe('ClayLink', function() {
 
 	it('should render a link with icon and label', () => {
 		link = new ClayLink({
-			icon: {
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
+			icon: 'plus',
 			label: 'My Link',
+			spritemap: 'icons.svg',
 		});
 
 		expect(link).toMatchSnapshot();
@@ -110,12 +106,10 @@ describe('ClayLink', function() {
 
 	it('should render a link with label and icon', () => {
 		link = new ClayLink({
-			icon: {
-				alignment: 'right',
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
+			icon: 'plus',
+			iconAlignment: 'right',
 			label: 'My Link',
+			spritemap: 'icons.svg',
 		});
 
 		expect(link).toMatchSnapshot();
