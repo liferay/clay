@@ -32,3 +32,17 @@ $table-list-color: $body-color !default;
 $table-list-link-color: $secondary !default;
 
 $table-list-head-font-weight: $font-weight-normal !default;
+
+$table-list-title: () !default;
+$table-list-title: map-merge((
+	color: $body-color,
+	font-size: 1rem,
+	line-height: 1.25
+), $table-list-title);
+
+$table-list-title-link: () !default;
+$table-list-title-link: map-merge((
+	color: $body-color,
+	hover-color: $body-color,
+	hover-text-decoration: none
+), $table-list-title-link);

@@ -50,3 +50,12 @@ $table-list-quick-action-menu-accent-bg: $table-list-accent-bg !default;
 $table-list-quick-action-menu-accent-active-bg: $table-list-active-bg !default;
 $table-list-quick-action-menu-active-bg: $table-list-active-bg !default;
 $table-list-quick-action-menu-hover-bg: $table-list-hover-bg !default;
+
+$table-list-title: () !default;
+$table-list-title: map-merge((
+	font-size: 1.25rem,
+	font-weight: $font-weight-semi-bold,
+	line-height: $headings-line-height
+), $table-list-title);
+
+$table-list-title-link: () !default;

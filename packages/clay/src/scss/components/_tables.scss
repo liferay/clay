@@ -248,6 +248,16 @@ th {
 	}
 }
 
+// Table List Title
+
+.table-list-title {
+	@include clay-text-typography($table-list-title);
+}
+
+.table-list-title a {
+	@include clay-link($table-list-title-link);
+}
+
 // Table Helpers
 
 .table-autofit {
