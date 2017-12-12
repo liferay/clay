@@ -6,8 +6,8 @@
 {template .render}
 	{@param items: list<[
 		active: bool,
-		title: string,
-		url: string
+		href: string,
+		label: string
 	]>}
 	{@param spritemap: string}
 	{@param? elementClasses: string}
@@ -61,8 +61,8 @@
 {template .content}
 	{@param items: list<[
 		active: bool,
-		title: string,
-		url: string
+		href: string,
+		label: string
 	]>}
 	{@param spritemap: string}
 	{@param? isTransitioning_: bool}
@@ -98,8 +98,8 @@
  * This renders a navbar item.
  */
 {template .navitem}
-	{@param title: string}
-	{@param url: string}
+	{@param href: string}
+	{@param label: string}
 	{@param? active: bool}
 
 	<li class="nav-item">
@@ -117,9 +117,9 @@
 				{/if}
 			{/param}
 
-			{param href: $url /}
+			{param href: $href /}
 			{param label kind="html"}
-				<span class="navbar-text-truncate">{$title}</span>
+				<span class="navbar-text-truncate">{$label}</span>
 			{/param}
 
 		{/call}
@@ -132,16 +132,16 @@
 {template .navmenu}
 	{@param items: list<[
 		active: bool,
-		title: string,
-		url: string
+		href: string,
+		label: string
 	]>}
 
 	<ul class="navbar-nav">
 		{foreach $page in $items}
 			{call .navitem}
 				{param active: $page.active /}
-				{param title: $page.title /}
-				{param url: $page.url /}
+				{param href: $page.href /}
+				{param label: $page.label /}
 			{/call}
 		{/foreach}
 	</ul>
@@ -153,8 +153,8 @@
 {template .toggler}
 	{@param items: list<[
 		active: bool,
-		title: string,
-		url: string
+		href: string,
+		label: string
 	]>}
 	{@param spritemap: string}
 	{@param? handleClickToggler_: any}
@@ -178,7 +178,7 @@
 		{param label kind="text"}
 			{foreach $item in $items}
 				{if $item.active == true}
-					{$item.title}
+					{$item.label}
 				{/if}
 			{/foreach}
 		{/param}

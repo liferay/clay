@@ -123,8 +123,8 @@ ClayNavigationBar.STATE = {
 	items: Config.arrayOf(
 		Config.shapeOf({
 			active: Config.bool().value(false),
-			title: Config.string().required(),
-			url: Config.string().required(),
+			href: Config.string().required(),
+			label: Config.string().required(),
 		})
 	).required(),
 
