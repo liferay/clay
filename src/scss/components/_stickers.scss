@@ -20,25 +20,22 @@
 		margin: auto;
 	}
 
-	img {
-		vertical-align: top;
-	}
-
-	.img-fluid {
-		@include border-radius($sticker-border-radius);
-	}
-
-	&.rounded .img-fluid {
+	&.rounded .sticker-overlay {
 		border-radius: $rounded-border-radius;
 	}
 
-	&.rounded-circle .img-fluid {
+	&.rounded-circle .sticker-overlay {
 		border-radius: $rounded-circle-border-radius;
 	}
 
-	&.rounded-0 .img-fluid {
+	&.rounded-0 .sticker-overlay {
 		border-radius: 0;
 	}
+}
+
+.sticker-img {
+	@extend %aspect-ratio-item-center-middle;
+	@extend %aspect-ratio-item-fluid;
 }
 
 .sticker-overlay {
@@ -50,6 +47,7 @@
 	display: flex;
 	justify-content: center;
 	left: 0;
+	overflow: hidden;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -130,4 +128,11 @@
 		border-color: map-get($value, border-color);
 		color: map-get($value, color);
 	}
+}
+
+// User Icon
+
+.user-icon,
+.user-icon .sticker-overlay {
+	@include border-radius($user-icon-border-radius);
 }
