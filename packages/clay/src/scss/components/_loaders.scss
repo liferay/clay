@@ -44,20 +44,8 @@
 	@extend %loading-icon-linear-light !optional;
 }
 
-// Variations
-
-.loading-icon-xs {
-	font-size: $loading-icon-font-size-xs;
-}
+// Loading Icon Sizes
 
 .loading-icon-sm {
 	font-size: $loading-icon-font-size-sm;
-}
-
-.loading-icon-md {
-	font-size: $loading-icon-font-size-md;
-}
-
-.loading-icon-lg {
-	font-size: $loading-icon-font-size-lg;
 }
