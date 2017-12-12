@@ -59,19 +59,22 @@
 			color: $asset-icon-color;
 			width: $asset-icon-width;
 
-			.lexicon-icon {
+			> .lexicon-icon {
 				height: 100%;
 				width: 100%;
 			}
 
-			.sticker {
+			> .sticker {
 				@include border-radius($asset-icon-sticker-border-radius);
 
 				display: block;
 				font-size: $asset-icon-sticker-font-size;
-				overflow: hidden;
 				padding-bottom: 100%;
 				width: 100%;
+			}
+
+			.sticker-overlay {
+				@include border-radius($asset-icon-sticker-border-radius);
 			}
 		}
 
