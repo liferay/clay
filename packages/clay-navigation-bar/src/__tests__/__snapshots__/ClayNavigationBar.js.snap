@@ -3,7 +3,7 @@
 exports[`ClayNavigationBar should render a navigatiom bar with classes 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light my-custom-class">
   <div class="container">
-    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
+    <a aria-expanded="false" aria-label="Toggle Navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
@@ -27,7 +27,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with classes 1`] = `
 exports[`ClayNavigationBar should render a navigatiom bar with id 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light" id="myId">
   <div class="container">
-    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
+    <a aria-expanded="false" aria-label="Toggle Navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
@@ -51,7 +51,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with id 1`] = `
 exports[`ClayNavigationBar should render a navigatiom bar with more than one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container">
-    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
+    <a aria-expanded="false" aria-label="Toggle Navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
@@ -80,7 +80,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with more than one ele
 exports[`ClayNavigationBar should render a navigatiom bar with one active element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container">
-    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">Page 1
+    <a aria-expanded="false" aria-label="Toggle Navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">Page 1
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
@@ -104,7 +104,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with one active elemen
 exports[`ClayNavigationBar should render a navigatiom bar with one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container">
-    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
+    <a aria-expanded="false" aria-label="Toggle Navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
@@ -128,7 +128,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with one element 1`] =
 exports[`ClayNavigationBar should render an inverted colored navigatiom bar with one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
   <div class="container">
-    <a aria-label="Toggle Navigation" aria-expanded="false" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
+    <a aria-expanded="false" aria-label="Toggle Navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>

@@ -173,12 +173,8 @@
 		{param elementClasses: $classes /}
 		{param events: ['click': $handleClickToggler_] /}
 		{param href: '#' /}
-		{param icon: [
-			'alignment': 'right',
-			'spritemap': $spritemap,
-			'symbol': 'caret-bottom'
-		] /}
-
+		{param icon: 'caret-bottom' /}
+		{param iconAlignment: 'right' /}
 		{param label kind="text"}
 			{foreach $item in $items}
 				{if $item.active == true}
@@ -186,5 +182,7 @@
 				{/if}
 			{/foreach}
 		{/param}
+
+		{param spritemap: $spritemap /}
 	{/call}
 {/template}
