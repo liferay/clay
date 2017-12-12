@@ -63,17 +63,22 @@ ClayButton.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Icon to be rendered in the button.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	icon: Config.string(),
+
+	/**
 	 * Render ClayIcon in the ClayButton element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?string}
+	 * @default left
 	 */
-	icon: Config.shapeOf({
-		alignment: Config.oneOf(['left', 'right']),
-		spritemap: Config.string().required(),
-		symbol: Config.string().required(),
-	}),
+	iconAlignment: Config.oneOf(['left', 'right']).value('left'),
 
 	/**
 	 * Id to be applied to the element.
@@ -120,6 +125,15 @@ ClayButton.STATE = {
 	 * @default undefined
 	 */
 	size: Config.oneOf(['sm']),
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	spritemap: Config.string(),
 
 	/**
 	 * The css class that colors the button.

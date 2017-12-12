@@ -179,10 +179,9 @@
 		new metal.ClayButton(
 			{
 				label: 'Default Icon Position',
-				icon: {
-					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'plus'
-				}
+				icon: 'plus',
+				iconAlignment: 'left',
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 			},
 			'#icons-block'
 		);
@@ -190,22 +189,18 @@
 		new metal.ClayButton(
 			{
 				label: 'Icon positioned at right',
-				icon: {
-					alignment: 'right',
-					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'plus'
-				}
+				icon: 'plus',
+				iconAlignment: 'right',
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 			},
 			'#icons-block'
 		);
 
 		new metal.ClayButton(
 			{
-				icon: {
-					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'plus'
-				},
-				monospaced: true
+				icon: 'plus',
+				monospaced: true,
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 			},
 			'#icons-block'
 		);

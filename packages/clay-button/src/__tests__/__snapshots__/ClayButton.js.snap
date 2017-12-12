@@ -37,6 +37,14 @@ exports[`ClayButton should render a button with label 1`] = `<button class="btn 
 exports[`ClayButton should render a button with label and ariaLabel 1`] = `<button class="btn btn-primary" aria-label="My Description" type="button">Visit Liferay.com</button>`;
 
 exports[`ClayButton should render a button with label and icon 1`] = `
+<button class="btn btn-primary" type="button">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+    <title>plus</title>
+    <use xlink:href="icons.svg#plus"></use>
+  </svg>Label</button>
+`;
+
+exports[`ClayButton should render a button with label and icon on right side 1`] = `
 <button class="btn btn-primary" type="button">Label
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
     <title>plus</title>

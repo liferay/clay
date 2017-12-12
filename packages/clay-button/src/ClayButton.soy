@@ -8,16 +8,14 @@
 	{@param? block: bool}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
-	{@param? icon: [
-		alignment: string,
-		spritemap: string,
-		symbol: string
-	]}
+	{@param? icon: string}
+	{@param? iconAlignment: string}
 	{@param? id: string}
 	{@param? label: html|string}
 	{@param? monospaced: bool}
 	{@param? name: string}
 	{@param? size: string}
+	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? type: string}
 	{@param? value: string}
@@ -43,7 +41,9 @@
 	<button {$attributes}>
 		{call .content}
 			{param icon: $icon /}
+			{param iconAlignment: $iconAlignment ?: 'left' /}
 			{param label: $label /}
+			{param spritemap: $spritemap /}
 		{/call}
 	</button>
 {/template}
@@ -52,26 +52,24 @@
  * Renders element content
  */
 {template .content}
-	{@param? icon: [
-		alignment: string,
-		spritemap: string,
-		symbol: string
-	]}
+	{@param? icon: string}
+	{@param? iconAlignment: string}
 	{@param? label: html|string}
+	{@param? spritemap: string}
 
-	{let $iconAlignment: $icon and $icon.alignment ? $icon.alignment : 'left' /}
-
-	{if $icon and $iconAlignment == 'left'}
+	{if $icon and $iconAlignment == 'left' and $spritemap}
 		{call .icon}
 			{param icon: $icon /}
+			{param spritemap: $spritemap /}
 		{/call}
 	{/if}
 
 	{$label ?: ''}
 
-	{if $icon and $iconAlignment == 'right'}
+	{if $icon and $iconAlignment == 'right' and $spritemap}
 		{call .icon}
 			{param icon: $icon /}
+			{param spritemap: $spritemap /}
 		{/call}
 	{/if}
 {/template}
@@ -80,15 +78,12 @@
  * Renders icon element
  */
 {template .icon}
-	{@param? icon: [
-		alignment: string,
-		spritemap: string,
-		symbol: string
-	]}
+	{@param icon: string}
+	{@param spritemap: string}
 
 	{call ClayIcon.render}
-		{param spritemap: $icon.spritemap /}
-		{param symbol: $icon.symbol /}
+		{param spritemap: $spritemap /}
+		{param symbol: $icon /}
 	{/call}
 {/template}
 
@@ -100,11 +95,7 @@
 	{@param? block: bool}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
-	{@param? icon: [
-		alignment: string,
-		spritemap: string,
-		symbol: string
-	]}
+	{@param? icon: string}
 	{@param? id: string}
 	{@param? label: html|string}
 	{@param? monospaced: bool}
@@ -142,7 +133,7 @@
 	{elseif $label}
 		aria-label="{$label}"
 	{elseif $icon}
-		aria-label="{$icon.symbol}"
+		aria-label="{$icon}"
 	{/if}
 
 	{if $disabled}
