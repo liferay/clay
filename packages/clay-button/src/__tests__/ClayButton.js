@@ -39,6 +39,14 @@ describe('ClayButton', function() {
 		expect(button).toMatchSnapshot();
 	});
 
+	it('should render a reset button', function() {
+		button = new ClayButton({
+			type: 'reset',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
 	it('should render a disabled button', function() {
 		button = new ClayButton({
 			disabled: true,
