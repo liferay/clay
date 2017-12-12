@@ -136,7 +136,8 @@ ClayButton.STATE = {
 	spritemap: Config.string(),
 
 	/**
-	 * The css class that colors the button.
+	 * The css class that colors the button. Style `unstyled` is only for internal
+	 * purposes.
 	 * @instance
 	 * @memberof ClayButton
 	 * @type {?string|undefined}
