@@ -2,18 +2,35 @@
 
 exports[`ClayIcon should render an icon with classes 1`] = `
 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell my-custom-class">
+  <title>add-cell</title>
   <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
 </svg>
 `;
 
 exports[`ClayIcon should render an icon with id 1`] = `
 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" id="myId">
+  <title>myId</title>
+  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
+</svg>
+`;
+
+exports[`ClayIcon should render an icon with specified title 1`] = `
+<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+  <title>myTitle</title>
+  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
+</svg>
+`;
+
+exports[`ClayIcon should render an icon with specified title when id is passed too 1`] = `
+<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" id="myId">
+  <title>myTitle</title>
   <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
 </svg>
 `;
 
 exports[`ClayIcon should render markup for icon \`add-cell\` 1`] = `
 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+  <title>add-cell</title>
   <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
 </svg>
 `;

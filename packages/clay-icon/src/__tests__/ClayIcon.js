@@ -39,4 +39,25 @@ describe('ClayIcon', function() {
 
 		expect(clayIcon).toMatchSnapshot();
 	});
+
+	it('should render an icon with specified title', () => {
+		clayIcon = new ClayIcon({
+			title: 'myTitle',
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
+
+	it('should render an icon with specified title when id is passed too', () => {
+		clayIcon = new ClayIcon({
+			id: 'myId',
+			title: 'myTitle',
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
 });

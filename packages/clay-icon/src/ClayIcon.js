@@ -51,6 +51,15 @@ ClayIcon.STATE = {
 	 * @default undefined
 	 */
 	symbol: Config.string().required(),
+
+	/**
+	 * The title of the Clay SVG Icon.
+	 * @instance
+	 * @memberof ClayIcon
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	title: Config.string(),
 };
 
 defineWebComponent('clay-icon', ClayIcon);
