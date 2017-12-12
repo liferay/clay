@@ -88,13 +88,13 @@ class ClayDropdownBase extends Component {
 					item.originalItems_ = item.items;
 				}
 
-				item.items = item.originalItems_.filter(nested_item => {
+				item.items = item.originalItems_.filter(nestedItem => {
 					return (
-						nested_item.label &&
-						nested_item.type !== 'group' &&
-						nested_item.type !== 'header' &&
-						nested_item.type !== 'separator' &&
-						nested_item.label.toLowerCase().indexOf(searchValue) !==
+						nestedItem.label &&
+						nestedItem.type !== 'group' &&
+						nestedItem.type !== 'header' &&
+						nestedItem.type !== 'separator' &&
+						nestedItem.label.toLowerCase().indexOf(searchValue) !==
 							-1
 					);
 				});
