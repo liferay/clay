@@ -142,7 +142,7 @@ ClayLink.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	target: Config.string(),
+	target: Config.oneOf(['_blank', '_self']),
 };
 
 defineWebComponent('clay-link', ClayLink);
