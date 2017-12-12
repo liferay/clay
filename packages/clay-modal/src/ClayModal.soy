@@ -115,11 +115,8 @@
 				{call ClayButton.render}
 					{param elementClasses: 'close' /}
 					{param events: ['click': $handleCloseModal_] /}
-					{param icon: [
-						'alignment': 'left',
-						'spritemap': $spritemap,
-						'symbol': 'times'
-					] /}
+					{param icon: 'times' /}
+					{param spritemap: $spritemap /}
 					{param style: 'unstyled' /}
 				{/call}
 			{/if}
