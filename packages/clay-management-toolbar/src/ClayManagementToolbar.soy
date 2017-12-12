@@ -190,12 +190,9 @@
 					{call ClayButton.render}
 						{param elementClasses: $orderClasses /}
 						{param events: ['click': $handleSortingButtonClicked_] /}
-						{param icon: [
-							'alignment': 'left',
-							'spritemap': $spritemap,
-							'symbol': 'order-arrow'
-						] /}
+						{param icon: 'order-arrow' /}
 						{param ref: 'sortingButton' /}
+						{param spritemap: $spritemap /}
 						{param style: 'unstyled' /}
 					{/call}
 				</li>
@@ -224,11 +221,8 @@
 					{call ClayButton.render}
 						{param elementClasses: 'nav-btn nav-btn-monospaced' /}
 						{param events: ['click': $handlePlusButtonClicked_ ] /}
-						{param icon: [
-							'alignment': 'left',
-							'spritemap': $spritemap,
-							'symbol': 'plus'
-						] /}
+						{param icon: 'plus' /}
+						{param spritemap: $spritemap /}
 						{param ref: 'plusButton' /}
 					{/call}
 				</li>
