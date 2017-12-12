@@ -46,7 +46,7 @@ th {
 	}
 }
 
-.table-cell-content {
+%table-cell-expand {
 	display: table-cell;
 	max-width: 100px;
 	min-width: 100px;
@@ -54,7 +54,7 @@ th {
 	word-wrap: break-word;
 }
 
-.table-cell-field {
+%table-cell-contract {
 	display: table-cell;
 	width: 1%;
 }
@@ -266,8 +266,8 @@ th {
 		width: 1%;
 	}
 
-	.table-cell-content {
-		width: auto;
+	.table-cell-expand {
+		@extend %table-cell-expand;
 	}
 }
 
