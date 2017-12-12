@@ -7,6 +7,8 @@
 	{@param? elementClasses: string}
 	{@param? icon: string}
 	{@param? id: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
 	{@param? label: html|string}
 	{@param? outside: bool}
 	{@param? position: string}
@@ -50,6 +52,8 @@
 				{param spritemap: $spritemap /}
 				{param symbol: $icon /}
 			{/call}
+		{elseif $imageSrc}
+			<img alt="{$imageAlt}" class="img-fluid" src="{$imageSrc}" />
 		{elseif $label}
 			{$label}
 		{/if}

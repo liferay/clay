@@ -42,6 +42,18 @@ exports[`ClaySticker should render a sticker with icon 1`] = `
 
 exports[`ClaySticker should render a sticker with id 1`] = `<span class="sticker sticker-primary" id="myId"></span>`;
 
+exports[`ClaySticker should render a sticker with image 1`] = `
+<span class="sticker sticker-primary">
+  <img class="img-fluid" src="imageurl">
+</span>
+`;
+
+exports[`ClaySticker should render a sticker with image and imagen alternate text 1`] = `
+<span class="sticker sticker-primary">
+  <img alt="imageAlt" class="img-fluid" src="imageurl">
+</span>
+`;
+
 exports[`ClaySticker should render a sticker with label 1`] = `
 <span class="sticker sticker-primary">
   <span>Doc E. Brown</span>

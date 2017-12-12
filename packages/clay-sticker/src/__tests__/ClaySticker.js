@@ -40,6 +40,23 @@ describe('ClaySticker', function() {
 		expect(sticker).toMatchSnapshot();
 	});
 
+	it('should render a sticker with image', () => {
+		sticker = new ClaySticker({
+			imageSrc: 'imageurl',
+		});
+
+		expect(sticker).toMatchSnapshot();
+	});
+
+	it('should render a sticker with image and imagen alternate text', () => {
+		sticker = new ClaySticker({
+			imageAlt: 'imageAlt',
+			imageSrc: 'imageurl',
+		});
+
+		expect(sticker).toMatchSnapshot();
+	});
+
 	it('should render a sticker with label', () => {
 		sticker = new ClaySticker({
 			label: '<span>Doc E. Brown</span>',

@@ -61,6 +61,13 @@
 	</div>
 
 	<div class="row row-spacing">
+		<div class="col">
+			<h4>Sticker with images</h4>
+			<div id="images-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
 		<div class="col-md-12">
 			<h4>Sticker Positions</h4>
 		</div>
@@ -223,11 +230,9 @@
 
 		new metal.ClaySticker(
 			{
-				icon: {
-					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'add-cell'
-				},
+				icon: 'add-cell',
 				size: 'sm',
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 				static: true
 			},
 			'#icons-block'
@@ -235,22 +240,18 @@
 
 		new metal.ClaySticker(
 			{
-				icon: {
-					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'add-cell'
-				},
-				static: true
+				icon: 'add-cell',
+				static: true,
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 			},
 			'#icons-block'
 		);
 
 		new metal.ClaySticker(
 			{
-				icon: {
-					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'add-cell'
-				},
+				icon: 'add-cell',
 				size: 'lg',
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 				static: true
 			},
 			'#icons-block'
@@ -258,14 +259,47 @@
 
 		new metal.ClaySticker(
 			{
-				icon: {
-					spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'add-cell'
-				},
+				icon: 'add-cell',
 				size: 'xl',
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 				static: true
 			},
 			'#icons-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				imageSrc: './avatar.jpg',
+				shape: 'circle',
+				size: 'sm',
+			},
+			'#images-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				imageSrc: './avatar.jpg',
+				shape: 'circle',
+			},
+			'#images-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				imageSrc: './avatar.jpg',
+				shape: 'circle',
+				size: 'lg',
+			},
+			'#images-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				imageSrc: './avatar.jpg',
+				shape: 'circle',
+				size: 'xl',
+			},
+			'#images-block'
 		);
 
 		new metal.ClaySticker(

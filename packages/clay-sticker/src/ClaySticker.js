@@ -45,6 +45,24 @@ ClaySticker.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Alternate text of the image.
+	 * @instance
+	 * @memberof ClaySticker
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	imageAlt: Config.string(),
+
+	/**
+	 * Source of the image to be rendered inside the sticker.
+	 * @instance
+	 * @memberof ClaySticker
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	imageSrc: Config.string(),
+
+	/**
 	 * Sets the text or HTML to be rendered inside sticker.
 	 * @instance
 	 * @memberof ClaySticker
