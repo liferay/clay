@@ -35,7 +35,7 @@
 			{param name: $name /}
 			{param size: $size /}
 			{param style: $style /}
-			{param type: $type /}
+			{param type: $type ?: 'button' /}
 			{param value: $value /}
 		{/call}
 	{/let}
@@ -161,7 +161,5 @@
 		value="{$value}"
 	{/if}
 
-	{if $type}
-		type="{$type}"
-	{/if}
+	type="{$type}"
 {/template}

@@ -140,10 +140,10 @@ ClayButton.STATE = {
 	 * The type attribute value of the element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?string}
+	 * @default button
 	 */
-	type: Config.oneOf(['button', 'reset', 'submit']),
+	type: Config.oneOf(['button', 'reset', 'submit']).value('button'),
 
 	/**
 	 * The value attribute value of the element.
