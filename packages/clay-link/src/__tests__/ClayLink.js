@@ -115,6 +115,23 @@ describe('ClayLink', function() {
 		expect(link).toMatchSnapshot();
 	});
 
+	it('should render a link with image', () => {
+		link = new ClayLink({
+			imageSrc: 'image.jpg',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with image and image alt', () => {
+		link = new ClayLink({
+			imageAlt: 'my image',
+			imageSrc: 'image.jpg',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
 	it('should render a link with secondary style', () => {
 		link = new ClayLink({
 			style: 'secondary',

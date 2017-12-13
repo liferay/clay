@@ -39,6 +39,18 @@ exports[`ClayLink should render a link with icon and label 1`] = `
 
 exports[`ClayLink should render a link with id 1`] = `<a id="myId"></a>`;
 
+exports[`ClayLink should render a link with image 1`] = `
+<a>
+  <img class="img-fluid" src="image.jpg">
+</a>
+`;
+
+exports[`ClayLink should render a link with image and image alt 1`] = `
+<a>
+  <img alt="my image" class="img-fluid" src="image.jpg">
+</a>
+`;
+
 exports[`ClayLink should render a link with label and icon 1`] = `
 <a>My Link
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
