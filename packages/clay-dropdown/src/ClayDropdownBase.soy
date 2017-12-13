@@ -82,7 +82,7 @@
 			{param label: $item.label ?: '' /}
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
-			{param url: $item.url /}
+			{param href: $item.href /}
 		{/delcall}
 	{/foreach}
 {/template}
@@ -244,6 +244,7 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
+	{@param? href: string}
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
@@ -252,7 +253,6 @@
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
-	{@param? url: string}
 
 	{let $itemContent kind="html"}
 		{call ClayLink.render}
@@ -270,8 +270,8 @@
 			{param href kind="text"}
 				{if $disabled}
 					javascript:;
-				{elseif $url}
-					{$url}
+				{elseif $href}
+					{$href}
 				{/if}
 			{/param}
 
@@ -317,6 +317,7 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
+	{@param? href: string}
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
@@ -325,7 +326,6 @@
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
-	{@param? url: string}
 
 	{let $checkbox kind="html"}
 		{call ClayCheckbox.render}
@@ -380,7 +380,7 @@
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
-	{@param? url: string}
+	{@param? href: string}
 
 	{if $label != ''}
 		{if $isInList}
@@ -420,6 +420,7 @@
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
+	{@param? href: string}
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
@@ -428,7 +429,6 @@
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
-	{@param? url: string}
 
 	{if $label != ''}
 		<div class="dropdown-subheader">

@@ -6,12 +6,12 @@ let items = [
 	{
 		items: [
 			{
+				href: '#1',
 				label: 'Edit',
-				url: '#1',
 			},
 			{
+				href: '#1',
 				label: 'Preview',
-				url: '#1',
 			},
 		],
 		separator: true,
@@ -20,12 +20,12 @@ let items = [
 	{
 		items: [
 			{
+				href: '#1',
 				label: 'Expire',
-				url: '#1',
 			},
 			{
+				href: '#1',
 				label: 'View History',
-				url: '#1',
 			},
 		],
 		separator: true,
@@ -34,8 +34,8 @@ let items = [
 	{
 		items: [
 			{
+				href: '#1',
 				label: 'Permissions',
-				url: '#1',
 			},
 		],
 		separator: true,
@@ -44,12 +44,12 @@ let items = [
 	{
 		items: [
 			{
+				href: '#1',
 				label: 'Copy',
-				url: '#1',
 			},
 			{
+				href: '#1',
 				label: 'Move',
-				url: '#1',
 			},
 		],
 		separator: true,
@@ -58,8 +58,8 @@ let items = [
 	{
 		items: [
 			{
+				href: '#1',
 				label: 'Move to the Recycle Bin',
-				url: '#1',
 			},
 		],
 		type: 'group',
@@ -125,7 +125,7 @@ describe('ClayActionsDropdown', function() {
 			items: [
 				{
 					label: 'Item 1',
-					url: 'item1url',
+					href: 'item1url',
 				},
 			],
 			label: 'Trigger',

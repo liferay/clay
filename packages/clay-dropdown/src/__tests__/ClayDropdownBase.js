@@ -14,12 +14,12 @@ describe('ClayDropdownBase', function() {
 			elementClasses: 'my-cutsom-class',
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 				{
+					href: 'item2url',
 					label: 'Item 2',
-					url: 'item2url',
 				},
 			],
 			label: 'Trigger',
@@ -33,12 +33,12 @@ describe('ClayDropdownBase', function() {
 			id: 'myId',
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 				{
+					href: 'item2url',
 					label: 'Item 2',
-					url: 'item2url',
 				},
 			],
 			label: 'Trigger',
@@ -51,12 +51,12 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 				{
+					href: 'item2url',
 					label: 'Item 2',
-					url: 'item2url',
 				},
 			],
 			label: 'Trigger',
@@ -70,12 +70,12 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 				{
+					href: 'item2url',
 					label: 'Item 2',
-					url: 'item2url',
 				},
 			],
 			label: 'Trigger',
@@ -89,8 +89,8 @@ describe('ClayDropdownBase', function() {
 			items: [
 				{
 					active: true,
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -104,8 +104,8 @@ describe('ClayDropdownBase', function() {
 			items: [
 				{
 					disabled: true,
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -119,8 +119,8 @@ describe('ClayDropdownBase', function() {
 			items: [
 				{
 					disabled: true,
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -355,12 +355,12 @@ describe('ClayDropdownBase', function() {
 					items: [
 						{
 							active: true,
+							href: '#1',
 							label: 'Item 1',
-							url: '#1',
 						},
 						{
+							href: '#2',
 							label: 'Item 2',
-							url: '#2',
 						},
 					],
 					type: 'group',
@@ -369,13 +369,13 @@ describe('ClayDropdownBase', function() {
 					label: 'Group 2',
 					items: [
 						{
+							href: '#3',
 							label: 'Item 3',
-							url: '#3',
 						},
 						{
 							disabled: true,
+							href: '#4',
 							label: 'Item 3',
-							url: '#4',
 						},
 					],
 					type: 'group',
@@ -396,12 +396,12 @@ describe('ClayDropdownBase', function() {
 					items: [
 						{
 							active: true,
+							href: '#1',
 							label: 'Item 1',
-							url: '#1',
 						},
 						{
+							href: '#2',
 							label: 'Item 2',
-							url: '#2',
 						},
 					],
 					separator: true,
@@ -411,13 +411,13 @@ describe('ClayDropdownBase', function() {
 					label: 'Group 2',
 					items: [
 						{
+							href: '#3',
 							label: 'Item 3',
-							url: '#3',
 						},
 						{
 							disabled: true,
+							href: '#4',
 							label: 'Item 3',
-							url: '#4',
 						},
 					],
 					type: 'group',
@@ -436,27 +436,27 @@ describe('ClayDropdownBase', function() {
 			items: [
 				{
 					label: 'Element 1',
+					href: '#1',
 					separator: true,
-					url: '#1',
 				},
 				{
 					label: 'Group 1',
 					items: [
 						{
+							href: '#2',
 							label: 'Item 2',
-							url: '#2',
 						},
 						{
+							href: '#3',
 							label: 'Item 3',
-							url: '#3',
 						},
 					],
 					separator: true,
 					type: 'group',
 				},
 				{
+					href: '#4',
 					label: 'Element 4',
-					url: '#4',
 				},
 			],
 			label: 'Trigger Label',
@@ -470,14 +470,14 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
+					href: 'item1url',
 					icon: 'check',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 				{
+					href: 'item2url',
 					icon: 'check',
 					label: 'Item 2',
-					url: 'item2url',
 				},
 			],
 			itemsIconAlignment: 'left',
@@ -492,14 +492,14 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
+					href: 'item1url',
 					icon: 'check',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 				{
+					href: 'item2url',
 					icon: 'check',
 					label: 'Item 2',
-					url: 'item2url',
 				},
 			],
 			itemsIconAlignment: 'right',
@@ -515,8 +515,8 @@ describe('ClayDropdownBase', function() {
 			helpText: 'Help!',
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -533,8 +533,8 @@ describe('ClayDropdownBase', function() {
 			},
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -551,8 +551,8 @@ describe('ClayDropdownBase', function() {
 			},
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -566,8 +566,8 @@ describe('ClayDropdownBase', function() {
 			caption: 'My caption!',
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -580,12 +580,12 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 				{
+					href: 'item2url',
 					label: 'Item 2',
-					url: 'item2url',
 				},
 			],
 			label: 'Trigger',
@@ -601,8 +601,8 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -624,8 +624,8 @@ describe('ClayDropdownBase', function() {
 			expanded: true,
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -644,8 +644,8 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
@@ -661,13 +661,13 @@ describe('ClayDropdownBase', function() {
 
 	it('should filter items', () => {
 		let item1 = {
+			href: 'item1url',
 			label: 'Item 1',
-			url: 'item1url',
 		};
 
 		let item2 = {
+			href: 'item2url',
 			label: 'Item 2',
-			url: 'item2url',
 		};
 
 		let item3 = {
@@ -731,8 +731,8 @@ describe('ClayDropdownBase', function() {
 			},
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',

@@ -4,6 +4,7 @@ let itemShape = {
 	active: Config.bool().value(false),
 	checked: Config.bool().value(false),
 	disabled: Config.bool().value(false),
+	href: Config.string().required(),
 	icon: Config.string(),
 	inputName: Config.string(),
 	inputValue: Config.string(),
@@ -12,7 +13,6 @@ let itemShape = {
 	type: Config.oneOf(['checkbox', 'group', 'item', 'radiogroup']).value(
 		'item'
 	),
-	url: Config.string().required(),
 };
 
 const itemsValidator = Config.arrayOf(Config.shapeOf(itemShape));

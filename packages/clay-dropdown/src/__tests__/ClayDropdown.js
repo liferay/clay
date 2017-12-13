@@ -4,22 +4,22 @@ let clayDropdown;
 
 let items = [
 	{
+		href: 'item1url',
 		label: 'Item 1',
-		url: 'item1url',
 	},
 	{
+		href: 'item2url',
 		label: 'Item 2',
-		url: 'item2url',
 	},
 	{
 		active: true,
+		href: 'item1ur3',
 		label: 'Item 3',
-		url: 'item1ur3',
 	},
 	{
 		disabled: true,
+		href: 'item1url',
 		label: 'Item 4',
-		url: 'item1url',
 	},
 	{
 		inputName: 'checkbox5name',
@@ -155,8 +155,8 @@ describe('ClayDropdown', function() {
 			},
 			items: [
 				{
+					href: 'item1url',
 					label: 'Item 1',
-					url: 'item1url',
 				},
 			],
 			label: 'Trigger',
