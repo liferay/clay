@@ -36,8 +36,8 @@
 			<h4>Button States with WebComponents</h4>
 			<clay-button label="Default Button"></clay-button>
 			<clay-button label="Secondary Button" style="secondary"></clay-button>
-			<clay-button label="Borderless Button" style="borderless"></clay-button>
 			<clay-button label="Link Button" style="link"></clay-button>
+			<clay-button label="Unstyled Button" style="unstyled"></clay-button>
 		</div>
 	</div>
 
@@ -105,17 +105,17 @@
 
 		new metal.ClayButton(
 			{
-				style: 'borderless',
-				label: 'Borderless Button'
+				ariaLabel: 'My Description',
+				style: 'link',
+				label: 'Link Button'
 			},
 			'#states-block'
 		);
 
 		new metal.ClayButton(
 			{
-				ariaLabel: 'My Description',
-				style: 'link',
-				label: 'Link Button'
+				style: 'unstyled',
+				label: 'Unstyled Button'
 			},
 			'#states-block'
 		);
@@ -227,22 +227,23 @@
 
  		new metal.ClayButton(
  			{
- 				style: 'borderless',
+ 				ariaLabel: 'My Description',
+ 				style: 'link',
  				label: 'C',
 				monospaced: true
  			},
  			'#monospaced-block'
- 		);
+		 );
 
  		new metal.ClayButton(
  			{
- 				ariaLabel: 'My Description',
- 				style: 'link',
+ 				style: 'unstyled',
  				label: 'D',
 				monospaced: true
  			},
  			'#monospaced-block'
  		);
+
 	</script>
 </body>
 </html>
