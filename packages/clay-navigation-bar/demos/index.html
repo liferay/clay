@@ -34,7 +34,7 @@
 	<div class="row row-spacing">
 		<div class="col">
 			<h4>Navigation Bar with WebComponents</h4>
-			<clay-navigation-bar items='[{"active": true, "title": "Page 1", "url": "#1"}]' spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-navigation-bar>
+			<clay-navigation-bar items='[{"active": true, "label": "Page 1", "href": "#1"}]' spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-navigation-bar>
 		</div>
 	</div>
 
@@ -52,10 +52,23 @@
 		 * Normal Navigation Bar
 		 */
 		var items = [
-			{ active: true, title: 'Page 1', url: '#1'},
-			{ title: 'Page 2', url: '#2'},
-			{ title: 'Page 3', url: '#3'},
-			{ title: 'Page 4', url: '#4'}
+			{
+				active: true,
+				href: '#1',
+				label: 'Page 1',
+			},
+			{
+				href: '#2',
+				label: 'Page 2',
+			},
+			{
+				href: '#3',
+				label: 'Page 3',
+			},
+			{
+				href: '#4',
+				label: 'Page 4',
+			}
 		];
 
 		new metal.ClayNavigationBar(
