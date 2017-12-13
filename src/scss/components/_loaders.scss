@@ -26,24 +26,6 @@
 	@extend %loading-icon-dotted-light !optional;
 }
 
-// Loading Icon Linear
-
-%loading-icon-linear {
-	@include clay-loading-icon-linear-variant($loading-icon-linear);
-}
-
-%loading-icon-linear-light {
-	@include clay-loading-icon-linear-variant($loading-icon-linear-light);
-}
-
-.loading-icon-linear {
-	@extend %loading-icon-linear !optional;
-}
-
-.loading-icon-linear-light {
-	@extend %loading-icon-linear-light !optional;
-}
-
 // Loading Icon Sizes
 
 .loading-icon-sm {

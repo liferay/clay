@@ -2,22 +2,6 @@ $loading-icon-font-size: 2.5rem !default; // 40px
 
 $loading-icon-font-size-sm: 1.25rem !default; // 20px
 
-// Loading Icon Linear
-
-$loading-icon-linear: () !default;
-$loading-icon-linear: map-merge((
-	after-animation-name: loading-icon-spin,
-	before-animation-name: loading-icon-linear,
-	color: $body-color
-), $loading-icon-linear);
-
-$loading-icon-linear-light: () !default;
-$loading-icon-linear-light: map-merge((
-	after-animation-name: loading-icon-spin-light,
-	before-animation-name: loading-icon-linear-light,
-	color: #FFF
-), $loading-icon-linear-light);
-
 // Loading Icon Dotted
 
 $loading-icon-dotted: () !default;
