@@ -18,8 +18,7 @@ $card-title: map-merge((
 
 $card-title-link: () !default;
 $card-title-link: map-merge((
-	hover-color: map-get($card-title, color),
-	hover-text-decoration: none
+	hover-color: map-get($card-title, color)
 ), $card-title-link);
 
 // Card Subtitle
@@ -31,8 +30,7 @@ $card-subtitle: map-merge((
 
 $card-subtitle-link: () !default;
 $card-subtitle-link: map-merge((
-	hover-color: $secondary,
-	hover-text-decoration: none
+	hover-color: $secondary
 ), $card-subtitle-link);
 
 // Card Link
@@ -40,7 +38,8 @@ $card-subtitle-link: map-merge((
 $card-link: () !default;
 $card-link: map-merge((
 	color: $secondary,
-	hover-color: $secondary
+	hover-color: $secondary,
+	hover-text-decoration: underline
 ), $card-link);
 
 $checkbox-left-card-padding: 50px !default;
