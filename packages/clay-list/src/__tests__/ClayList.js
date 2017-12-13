@@ -40,18 +40,18 @@ describe('ClayList', function() {
 			items: [
 				{
 					description: 'Description 1',
+					href: '#1',
 					title: 'Item 1',
-					url: '#1',
 				},
 				{
 					description: 'Description 2',
+					href: '#2',
 					title: 'Item 2',
-					url: '#2',
 				},
 				{
 					description: 'Description 3',
+					href: '#3',
 					title: 'Item 3',
-					url: '#3',
 				},
 			],
 			selectable: true,

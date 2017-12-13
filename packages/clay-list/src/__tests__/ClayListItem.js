@@ -6,39 +6,39 @@ let component;
 
 let actionItems = [
 	{
+		href: '#1',
 		label: 'Option 1',
-		url: '#1',
 	},
 	{
+		href: '#2',
 		label: 'Option 2',
 		separator: true,
-		url: '#2',
 	},
 	{
+		href: '#3',
 		label: 'Option 3',
-		url: '#3',
 	},
 ];
 
 let actionItemsWithQuickItems = [
 	{
+		href: '#1',
 		icon: 'trash',
 		label: 'Option 1',
 		quickAction: true,
-		url: '#1',
 	},
 	{
+		href: '#2',
 		icon: 'download',
 		label: 'Option 2',
 		quickAction: true,
 		separator: true,
-		url: '#2',
 	},
 	{
+		href: '#3',
 		icon: 'info-circle-open',
 		label: 'Option 3',
 		quickAction: true,
-		url: '#3',
 	},
 ];
 
@@ -77,8 +77,8 @@ describe('ClayListItem', function() {
 
 	it('should render a ClayListItem with link', () => {
 		component = new ClayListItem({
+			href: '#1',
 			title: 'Item 1',
-			url: '#1',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -96,8 +96,8 @@ describe('ClayListItem', function() {
 	it('should render a ClayListItem with description and url', () => {
 		component = new ClayListItem({
 			description: 'Description 1',
+			href: '#1',
 			title: 'Item 1',
-			url: '#1',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -106,9 +106,9 @@ describe('ClayListItem', function() {
 	it('should render a selectable ClayListItem', () => {
 		component = new ClayListItem({
 			description: 'Description 1',
+			href: '#1',
 			selectable: true,
 			title: 'Item 1',
-			url: '#1',
 		});
 
 		expect(component).toMatchSnapshot();
@@ -117,10 +117,10 @@ describe('ClayListItem', function() {
 	it('should render a selected ClayListItem', () => {
 		component = new ClayListItem({
 			description: 'Description 1',
+			href: '#1',
 			selectable: true,
 			selected: true,
 			title: 'Item 1',
-			url: '#1',
 		});
 
 		expect(component).toMatchSnapshot();

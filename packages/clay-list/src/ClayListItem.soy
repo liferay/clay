@@ -7,16 +7,17 @@
 	{@param title: string}
 	{@param? actionItems: list<[
 			disabled: bool,
+			href: string,
 			icon: string,
 			label: string,
 			quickAction: bool,
-			separator: bool,
-			url: string
+			separator: bool
 	]>}
 	{@param? contentRenderer: string}
 	{@param? description: string}
 	{@param? elementClasses: string}
 	{@param? handleItemCheckboxClick_: any}
+	{@param? href: string}
 	{@param? icon: string}
 	{@param? iconShape: string}
 	{@param? id: string}
@@ -27,7 +28,6 @@
 	{@param? selectable: bool}
 	{@param? selected: bool}
 	{@param? spritemap: string}
-	{@param? url: string}
 
 	{let $listItemAttributes kind="attributes"}
     class="list-group-item list-group-item-flex
@@ -50,8 +50,8 @@
 
 		{if $isSimple}
 			{delcall ClayListItem.Simple variant="$contentRenderer"}
+				{param href: $href /}
 				{param title: $title /}
-				{param url: $url /}
 			{/delcall}
 		{else}
 			{if $selectable}
@@ -75,10 +75,10 @@
 
 			{delcall ClayListItem.Content variant="$contentRenderer"}
 				{param description: $description /}
+				{param href: $href /}
 				{param labels: $labels /}
 				{param spritemap: $spritemap /}
 				{param title: $title /}
-				{param url: $url /}
 			{/delcall}
 
 			{if $actionItems and $spritemap}
@@ -104,11 +104,11 @@
 {template .quickMenu}
 	{@param items: list<[
 		disabled: bool,
+		href: string,
 		icon: string,
 		label: string,
 		quickAction: bool,
-		separator: bool,
-		url: string
+		separator: bool
 	]>}
 	{@param spritemap: string}
 
@@ -135,18 +135,18 @@
 {deltemplate ClayListItem.Content}
 	{@param title: string}
 	{@param? description: string}
+	{@param? href: string}
 	{@param? labels: list<[
 		label: string,
 		style: string
 	]>}
 	{@param? spritemap: string}
-	{@param? url: string}
 
 	<div class="flex-col flex-col-expand">
 		<h4 class="list-group-title text-truncate">
-			{if $url}
+			{if $href}
 				{call ClayLink.render}
-					{param href: $url /}
+					{param href: $href /}
 					{param label: $title /}
 				{/call}
 			{else}
@@ -193,11 +193,11 @@
  */
 {deltemplate ClayListItem.Simple}
 	{@param title: string}
-	{@param? url: string}
+	{@param? href: string}
 
-	{if $url}
+	{if $href}
 		{call ClayLink.render}
-			{param href: $url /}
+			{param href: $href /}
 			{param label: $title /}
 		{/call}
 	{else}

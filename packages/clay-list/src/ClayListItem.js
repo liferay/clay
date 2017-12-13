@@ -42,11 +42,11 @@ ClayListItem.STATE = {
 	actionItems: Config.arrayOf(
 		Config.shapeOf({
 			disabled: Config.bool().value(false),
+			href: Config.string().required(),
 			icon: Config.string(),
 			label: Config.string().required(),
 			quickAction: Config.bool(),
 			separator: Config.bool().value(false),
-			url: Config.string().required(),
 		})
 	),
 
@@ -76,6 +76,15 @@ ClayListItem.STATE = {
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
+
+	/**
+	 * Url of the item.
+	 * @instance
+	 * @memberof ClayListItem
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	href: Config.string(),
 
 	/**
 	 * Icon of the list item.
@@ -159,15 +168,6 @@ ClayListItem.STATE = {
 	 * @default undefined
 	 */
 	title: Config.string().required(),
-
-	/**
-	 * Url of the item.
-	 * @instance
-	 * @memberof ClayListItem
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	url: Config.string(),
 };
 
 defineWebComponent('clay-list-item', ClayListItem);

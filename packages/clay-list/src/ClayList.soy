@@ -7,13 +7,14 @@
 	{@param items: list<[
 		actionItems: list<[
 			disabled: bool,
+			href: string,
 			icon: string,
 			label: string,
 			quickAction: bool,
-			separator: bool,
-			url: string
+			separator: bool
 		]>,
 		description: string,
+		href: string,
 		icon: string,
 		iconShape: string,
 		labels: list<[
@@ -21,8 +22,7 @@
 			style: string
 		]>,
 		selected: bool,
-		title: string,
-		url: string
+		title: string
 	]>}
 	{@param? elementClasses: string}
 	{@param? handleItemToggled_: any}
@@ -55,6 +55,7 @@
 				{param actionItems: $item.actionItems /}
 				{param description: $item.description /}
 				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param href: $item.href /}
 				{param icon: $item.icon /}
 				{param iconShape: $item.iconShape /}
 				{param labels: $item.labels /}
@@ -62,7 +63,6 @@
 				{param selected: $item.selected /}
 				{param spritemap: $spritemap /}
 				{param title: $item.title /}
-				{param url: $item.url /}
 			{/call}
 		{/foreach}
 	</ul>

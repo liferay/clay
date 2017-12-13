@@ -62,14 +62,15 @@ ClayList.STATE = {
 			actionItems: Config.arrayOf(
 				Config.shapeOf({
 					disabled: Config.bool().value(false),
+					href: Config.string().required(),
 					icon: Config.string(),
 					label: Config.string().required(),
 					quickAction: Config.bool(),
 					separator: Config.bool().value(false),
-					url: Config.string().required(),
 				})
 			),
 			description: Config.string(),
+			href: Config.string(),
 			icon: Config.string(),
 			iconShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
 			labels: Config.arrayOf(
@@ -86,7 +87,6 @@ ClayList.STATE = {
 			),
 			selected: Config.bool().value(false),
 			title: Config.string().required(),
-			url: Config.string(),
 		})
 	).required(),
 
