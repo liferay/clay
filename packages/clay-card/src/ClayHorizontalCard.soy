@@ -7,19 +7,19 @@
 	{@param spritemap: string}
 	{@param title: string}
 	{@param? actionItems: list<[
+		href: string,
 		label: string,
-		separator: bool,
-		url: string
+		separator: bool
 	]>}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
+	{@param? href: string}
 	{@param? icon: string}
 	{@param? id: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? selectable: bool}
 	{@param? selected: bool}
-	{@param? url: string}
 
 	{let $attributes kind="attributes"}
 		class="card-type-directory
@@ -42,10 +42,10 @@
 	{let $descriptiveArea kind="html"}
 		{call .descriptiveArea}
 			{param actionItems: $actionItems /}
+			{param href: $href /}
 			{param icon: $icon /}
 			{param spritemap: $spritemap /}
 			{param title: $title /}
-			{param url: $url /}
 		{/call}
 	{/let}
 
@@ -76,12 +76,12 @@
 	{@param spritemap: string}
 	{@param title: string}
 	{@param? actionItems: list<[
+		href: string,
 		label: string,
-		separator: bool,
-		url: string
+		separator: bool
 	]>}
+	{@param? href: string}
 	{@param? icon: string}
-	{@param? url: string}
 
 	<div class="card-body">
 		<div class="card-row">
@@ -96,10 +96,10 @@
       {/call}
 
 			<div class="{$classesDescription}">
-				{if $url}
+				{if $href}
 					{call ClayLink.render}
 						{param elementClasses: 'card-title text-truncate' /}
-						{param href: $url /}
+						{param href: $href /}
 						{param label: $title /}
 					{/call}
 				{else}

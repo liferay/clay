@@ -181,6 +181,19 @@ exports[`ClayImageCard should render a ClayImageCard with file type 1`] = `
 </div>
 `;
 
+exports[`ClayImageCard should render a ClayImageCard with href 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <a class=" card-title text-truncate" href="#1">My Title</a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayImageCard should render a ClayImageCard with icon 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
@@ -380,19 +393,6 @@ exports[`ClayImageCard should render a ClayImageCard with two labels with styles
           <span class="label label-warning">Approved</span>
           <span class="label label-danger">Peding</span>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with url 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first"></div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <a class=" card-title text-truncate" href="#1">My Title</a>
       </div>
     </div>
   </div>

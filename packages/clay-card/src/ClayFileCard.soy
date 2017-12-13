@@ -7,14 +7,15 @@
     {@param spritemap: string}
     {@param title: string}
     {@param? actionItems: list<[
+        href: string,
         label: string,
-        separator: bool,
-        url: string
+        separator: bool
     ]>}
     {@param? disabled: bool}
     {@param? elementClasses: string}
     {@param? fileType: string}
     {@param? fileTypeStyle: string}
+    {@param? href: string}
     {@param? icon: string}
     {@param? id: string}
     {@param? inputName: string}
@@ -26,7 +27,6 @@
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? subtitle: string}
-    {@param? url: string}
 
     {let $classes kind="text"}
         file-card
@@ -53,7 +53,7 @@
         {param spritemap: $spritemap /}
         {param subtitle: $subtitle /}
         {param title: $title /}
-        {param url: $url /}
+        {param href: $href /}
     {/call}
 {/template}
 

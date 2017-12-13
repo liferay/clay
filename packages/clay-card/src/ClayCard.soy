@@ -6,15 +6,16 @@
 {template .render}
 	{@param title: string}
 	{@param? actionItems: list<[
+		href: string,
 		label: string,
-		separator: bool,
-		url: string
+		separator: bool
 	]>}
 	{@param? contentRenderer: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? fileType: string}
 	{@param? fileTypeStyle: string}
+	{@param? href: string}
 	{@param? icon: string}
 	{@param? id: string}
 	{@param? imageAlt: string}
@@ -29,7 +30,6 @@
 	{@param? selected: bool}
 	{@param? spritemap: string}
 	{@param? subtitle: string}
-	{@param? url: string}
 
 	{let $attributes kind="attributes"}
 		class="card-type-asset
@@ -52,11 +52,11 @@
 	{let $descriptiveArea kind="html"}
 		{delcall ClayCard.DescriptiveArea variant="$contentRenderer"}
 			{param actionItems: $actionItems /}
+			{param href: $href /}
 			{param labels: $labels /}
 			{param spritemap: $spritemap /}
 			{param subtitle: $subtitle /}
 			{param title: $title /}
-			{param url: $url /}
 		{/delcall}
 	{/let}
 
@@ -105,25 +105,25 @@
 {deltemplate ClayCard.DescriptiveArea}
 	{@param title: string}
 	{@param? actionItems: list<[
+		href: string,
 		label: string,
-		separator: bool,
-		url: string
+		separator: bool
 	]>}
+	{@param? href: string}
 	{@param? labels: list<[
 		label: string,
 		style: string
 	]>}
 	{@param? spritemap: string}
 	{@param? subtitle: string}
-	{@param? url: string}
 
 	<div class="card-body">
 		<div class="card-row">
 			<div class="flex-col flex-col-expand">
-				{if $url}
+				{if $href}
 					{call ClayLink.render}
 						{param elementClasses: 'card-title text-truncate' /}
-						{param href: $url /}
+						{param href: $href /}
 						{param label: $title /}
 					{/call}
 				{else}

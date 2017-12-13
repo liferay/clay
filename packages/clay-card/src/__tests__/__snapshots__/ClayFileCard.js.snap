@@ -249,6 +249,26 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`warnin
 </div>
 `;
 
+exports[`ClayFileCard should render a ClayFileCard with href 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <a class=" card-title text-truncate" href="#1">My Title</a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayFileCard should render a ClayFileCard with icon 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
@@ -490,26 +510,6 @@ exports[`ClayFileCard should render a ClayFileCard with two labels with styles 1
           <span class="label label-warning">Approved</span>
           <span class="label label-danger">Pending</span>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with url 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <a class=" card-title text-truncate" href="#1">My Title</a>
       </div>
     </div>
   </div>

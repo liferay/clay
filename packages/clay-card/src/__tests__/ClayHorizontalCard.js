@@ -4,12 +4,12 @@ let component;
 let spritemap = 'icons.svg';
 let actionItems = [
 	{
+		href: '#1',
 		label: 'Edit',
-		url: '#1',
 	},
 	{
+		href: '#1',
 		label: 'Save',
-		url: '#1',
 	},
 ];
 
@@ -113,11 +113,11 @@ describe('ClayHorizontalCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayHorizontalCard with url', () => {
+	it('should render a ClayHorizontalCard with href', () => {
 		component = new ClayHorizontalCard({
+			href: '#1',
 			spritemap: spritemap,
 			title: 'My Title',
-			url: '#1',
 		});
 
 		expect(component).toMatchSnapshot();

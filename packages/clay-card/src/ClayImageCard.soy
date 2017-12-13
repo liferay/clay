@@ -6,14 +6,15 @@
 {template .render}
     {@param title: string}
     {@param? actionItems: list<[
+        href: string,
         label: string,
-        separator: bool,
-        url: string
+        separator: bool
     ]>}
     {@param? disabled: bool}
     {@param? elementClasses: string}
     {@param? fileType: string}
     {@param? fileTypeStyle: string}
+    {@param? href: string}
     {@param? icon: string}
     {@param? id: string}
     {@param? imageAlt: string}
@@ -28,7 +29,6 @@
     {@param? selected: bool}
     {@param? spritemap: string}
     {@param? subtitle: string}
-    {@param? url: string}
 
     {let $classes kind="text"}
         image-card
@@ -44,6 +44,7 @@
         {param elementClasses: $classes /}
         {param fileType: $fileType /}
         {param fileTypeStyle: $fileTypeStyle /}
+        {param href: $href /}
         {param icon: $icon /}
         {param id: $id /}
         {param imageAlt: $imageAlt /}
@@ -57,7 +58,6 @@
         {param spritemap: $spritemap /}
         {param subtitle: $subtitle /}
         {param title: $title /}
-        {param url: $url /}
     {/call}
 {/template}
 

@@ -86,6 +86,15 @@ ClayCard.STATE = {
 	]).value('primary'),
 
 	/**
+	 * Url to be applied to the title of the card.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	href: Config.string(),
+
+	/**
 	 * Icon to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayCard
@@ -203,15 +212,6 @@ ClayCard.STATE = {
 	 * @default undefined
 	 */
 	title: Config.string().required(),
-
-	/**
-	 * Url to be applied to the title of the card.
-	 * @instance
-	 * @memberof ClayCard
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	url: Config.string(),
 };
 
 defineWebComponent('clay-card', ClayCard);

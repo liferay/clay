@@ -49,6 +49,15 @@ ClayHorizontalCard.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Url to be applied to the title of the card.
+	 * @instance
+	 * @memberof ClayHorizontalCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	href: Config.string(),
+
+	/**
 	 * Icon of the card.
 	 * @instance
 	 * @memberof ClayHorizontalCard
@@ -119,15 +128,6 @@ ClayHorizontalCard.STATE = {
 	 * @default undefined
 	 */
 	title: Config.string().required(),
-
-	/**
-	 * Url to be applied to the title of the card.
-	 * @instance
-	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	url: Config.string(),
 };
 
 defineWebComponent('clay-horizontal-card', ClayHorizontalCard);

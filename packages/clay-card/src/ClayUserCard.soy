@@ -6,12 +6,13 @@
 {template .render}
     {@param name: string}
     {@param? actionItems: list<[
+        href: string,
         label: string,
-        separator: bool,
-        url: string
+        separator: bool
     ]>}
     {@param? disabled: bool}
     {@param? elementClasses: string}
+    {@param? href: string}
     {@param? id: string}
     {@param? imageAlt: string}
     {@param? imageSrc: string}
@@ -22,7 +23,6 @@
     {@param? selected: bool}
     {@param? spritemap: string}
     {@param? subtitle: string}
-    {@param? url: string}
     {@param? userColor: string}
 
     {let $classes kind="text"}
@@ -39,6 +39,7 @@
         {param elementClasses: $elementClasses /}
         {param fileType: $initials /}
         {param fileTypeStyle: $userColor /}
+        {param href: $href /}
         {param id: $id /}
         {param imageAlt: $imageAlt /}
         {param imageSrc: $imageSrc /}
@@ -50,7 +51,6 @@
         {param spritemap: $spritemap /}
         {param subtitle: $subtitle /}
         {param title: $name /}
-        {param url: $url /}
     {/call}
 {/template}
 
@@ -60,25 +60,25 @@
 {deltemplate ClayCard.DescriptiveArea variant="'user'"}
     {@param title: string}
     {@param? actionItems: list<[
+    	href: string,
     	label: string,
-    	separator: bool,
-    	url: string
+    	separator: bool
     ]>}
+    {@param? href: string}
     {@param? labels: list<[
 		label: string,
 		style: string
 	]>}
     {@param? spritemap: string}
     {@param? subtitle: string}
-    {@param? url: string}
 
     <div class="card-body">
     	<div class="card-row">
     		<div class="flex-col flex-col-expand">
-    			{if $url}
+    			{if $href}
     				{call ClayLink.render}
     					{param elementClasses: 'card-title text-truncate' /}
-    					{param href: $url /}
+    					{param href: $href /}
     					{param label: $title /}
     				{/call}
     			{elseif $title}

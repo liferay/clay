@@ -54,6 +54,23 @@ exports[`ClayUserCard should render a ClayUserCard with classes 1`] = `
 </div>
 `;
 
+exports[`ClayUserCard should render a ClayUserCard with href 1`] = `
+<div class="card-type-asset card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <a class=" card-title text-truncate" href="#1">User Name</a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayUserCard should render a ClayUserCard with id 1`] = `
 <div class="card-type-asset card" id="myId">
   <div class="aspect-ratio card-item-first">
@@ -119,23 +136,6 @@ exports[`ClayUserCard should render a ClayUserCard with subtitle 1`] = `
       <div class="flex-col flex-col-expand">
         <div class="card-title text-truncate" title="User Name">User Name</div>
         <div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with url 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <a class=" card-title text-truncate" href="#1">User Name</a>
       </div>
     </div>
   </div>

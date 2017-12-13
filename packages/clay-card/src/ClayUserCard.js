@@ -49,6 +49,15 @@ ClayUserCard.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Url to be applied to the title of the card.
+	 * @instance
+	 * @memberof ClayUserCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	href: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayUserCard
@@ -146,15 +155,6 @@ ClayUserCard.STATE = {
 	 * @default undefined
 	 */
 	subtitle: Config.string(),
-
-	/**
-	 * Url to be applied to the title of the card.
-	 * @instance
-	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	url: Config.string(),
 
 	/**
 	 * Color of the user sticker.

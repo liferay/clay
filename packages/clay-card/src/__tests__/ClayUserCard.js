@@ -4,12 +4,12 @@ let component;
 let spritemap = 'icons.svg';
 let actionItems = [
 	{
+		href: '#1',
 		label: 'Edit',
-		url: '#1',
 	},
 	{
+		href: '#1',
 		label: 'Save',
-		url: '#1',
 	},
 ];
 
@@ -241,10 +241,10 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with url', () => {
+	it('should render a ClayUserCard with href', () => {
 		component = new ClayUserCard({
+			href: '#1',
 			name: 'User Name',
-			url: '#1',
 			spritemap: spritemap,
 		});
 
