@@ -287,13 +287,9 @@ ClayDropdownBase.STATE = {
 	 * @type {?string}
 	 * @default unstyled
 	 */
-	style: Config.oneOf([
-		'borderless',
-		'link',
-		'primary',
-		'secondary',
-		'unstyled',
-	]).value('unstyled'),
+	style: Config.oneOf(['link', 'primary', 'secondary', 'unstyled']).value(
+		'unstyled'
+	),
 
 	/**
 	 * CSS classes to be applied to the trigger element.
