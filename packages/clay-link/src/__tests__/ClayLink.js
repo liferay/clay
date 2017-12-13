@@ -156,14 +156,6 @@ describe('ClayLink', function() {
 		expect(link).toMatchSnapshot();
 	});
 
-	it('should render a link with button borderless style', () => {
-		link = new ClayLink({
-			buttonStyle: 'borderless',
-		});
-
-		expect(link).toMatchSnapshot();
-	});
-
 	it('should render a link with button link style', () => {
 		link = new ClayLink({
 			buttonStyle: 'link',

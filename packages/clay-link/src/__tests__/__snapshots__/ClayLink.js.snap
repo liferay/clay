@@ -8,8 +8,6 @@ exports[`ClayLink should render a link with aria expanded 1`] = `<a aria-expande
 
 exports[`ClayLink should render a link with aria label 1`] = `<a aria-label="My Link"></a>`;
 
-exports[`ClayLink should render a link with button borderless style 1`] = `<a class="btn btn-borderless"></a>`;
-
 exports[`ClayLink should render a link with button link style 1`] = `<a class="btn btn-link"></a>`;
 
 exports[`ClayLink should render a link with button primary style 1`] = `<a class="btn btn-primary"></a>`;

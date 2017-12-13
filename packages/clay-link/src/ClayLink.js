@@ -43,7 +43,7 @@ ClayLink.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	buttonStyle: Config.oneOf(['borderless', 'link', 'primary', 'secondary']),
+	buttonStyle: Config.oneOf(['link', 'primary', 'secondary']),
 
 	/**
 	 * Data to add to the element.
