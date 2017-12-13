@@ -5,9 +5,25 @@
  */
 {template .render}
 	{@param spritemap: string}
-	{@param? actionItems: list<?>}
+	{@param? actionItems: list<[
+		disabled: bool,
+		href: string,
+		icon: string,
+		label: string,
+		quickAction: bool,
+		separator: bool,
+		type: string
+	]>}
 	{@param? elementClasses: string}
-	{@param? filterItems: list<?>}
+	{@param? filterItems: list<[
+		checked: bool,
+		disabled: bool,
+		inputName: string,
+		inputValue: string,
+		label: string,
+		separator: bool,
+		type: string
+	]>}
 	{@param? handleFilterDoneButtonClick_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSelectAllClicked_: any}
@@ -18,7 +34,12 @@
 	{@param? selectedItems: number}
 	{@param? sortingOrder: string}
 	{@param? totalItems: number}
-	{@param? viewTypes: list<?>}
+	{@param? viewTypes: list<[
+		active: bool,
+		disabled: bool,
+		icon: string,
+		label: string
+	]>}
 
 	{let $isActive: $selectedItems and $selectedItems > 0 /}
 
@@ -54,7 +75,15 @@
  */
 {template .active}
 	{@param spritemap: string}
-	{@param? actionItems: list<?>}
+	{@param? actionItems: list<[
+		disabled: bool,
+		href: string,
+		icon: string,
+		label: string,
+		quickAction: bool,
+		separator: bool,
+		type: string
+	]>}
 	{@param? elementClasses: string}
 	{@param? handleSelectAllClicked_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
@@ -124,7 +153,15 @@
 {template .default}
 	{@param spritemap: string}
 	{@param? elementClasses: string}
-	{@param? filterItems: list<?>}
+	{@param? filterItems: list<[
+		checked: bool,
+		disabled: bool,
+		inputName: string,
+		inputValue: string,
+		label: string,
+		separator: bool,
+		type: string
+	]>}
 	{@param? handleFilterDoneButtonClick_: any}
 	{@param? handlePlusButtonClicked_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
@@ -132,7 +169,12 @@
 	{@param? id: string}
 	{@param? selectable: bool}
 	{@param? sortingOrder: string}
-	{@param? viewTypes: list<?>}
+	{@param? viewTypes: list<[
+		active: bool,
+		disabled: bool,
+		icon: string,
+		label: string
+	]>}
 
 	{let $navAttributes kind="attributes"}
 		class="management-bar management-bar-light navbar navbar-expand-md

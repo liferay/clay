@@ -150,11 +150,11 @@ describe('ClayManagementToolbar', function() {
 			actionItems: [
 				{
 					label: 'Edit',
-					url: '#editurl',
+					href: '#editurl',
 				},
 				{
 					label: 'Delete',
-					url: '#deleteurl',
+					href: '#deleteurl',
 				},
 			],
 			selectable: true,
