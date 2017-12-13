@@ -216,13 +216,7 @@ ClayModal.STATE = {
 		Config.shapeOf({
 			alignment: Config.oneOf(['left', 'right']).value('right'),
 			label: Config.string().required(),
-			style: Config.oneOf([
-				'borderless',
-				'link',
-				'primary',
-				'secondary',
-				'unstyled',
-			]),
+			style: Config.oneOf(['link', 'primary', 'secondary', 'unstyled']),
 			type: Config.oneOf(['button', 'close', 'reset', 'submit']).value(
 				'button'
 			),
