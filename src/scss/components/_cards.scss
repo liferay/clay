@@ -405,6 +405,20 @@
 	}
 }
 
+// Card Page
+
+.card-page {
+	@extend %clay-custom-grid-wrapper;
+}
+
+.card-page-item-directory {
+	@include clay-custom-grid-columns($card-page-item-directory);
+}
+
+.card-page-item-asset {
+	@include clay-custom-grid-columns($card-page-item-asset);
+}
+
 // Card Type Asset
 
 .card-type-asset {

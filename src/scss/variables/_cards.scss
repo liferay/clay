@@ -81,9 +81,35 @@ $file-card: map-merge((
 	asset-icon-color: $gray-600
 ), $file-card);
 
+$card-page-item-asset: () !default;
+$card-page-item-asset: map-merge((
+	base: (
+		min-width: 200px,
+		padding-left: $grid-gutter-width / 2,
+		padding-right: $grid-gutter-width / 2
+	),
+	sm: (
+		breakpoint: map-get($grid-breakpoints, sm), // 576px
+		max-width: 50%
+	),
+	md: (
+		breakpoint: map-get($grid-breakpoints, md), // 768px
+		max-width: 33.3333%
+	),
+	lg: (
+		breakpoint: map-get($grid-breakpoints, lg), // 992px
+		max-width: 25%
+	)
+), $card-page-item-asset);
+
 // Card Type Directory
 
 $card-type-directory: () !default;
 $card-type-directory: map-merge((
 	sticker-font-size: 1.125rem // 18px
 ), $card-type-directory);
+
+$card-page-item-directory: () !default;
+$card-page-item-directory: map-merge((
+	$card-page-item-asset
+), $card-page-item-directory);

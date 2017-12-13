@@ -2,6 +2,8 @@
 	@import url($font-import-url);
 }
 
+@import "components/_grid";
+
 @import "components/_alerts";
 @import "components/_aspect-ratio";
 @import "components/_badges";
@@ -11,7 +13,6 @@
 @import "components/_cards";
 @import "components/_dropdowns";
 @import "components/_forms";
-@import "components/_grid";
 
 @import "components/_custom-forms";
 @import "components/_form-validation";
