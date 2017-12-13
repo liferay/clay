@@ -18,44 +18,99 @@
 	{@param? style: string}
 
 	{let $attributes kind="attributes"}
-		class="sticker
-			{sp}sticker-{$style ?: 'primary'}
-
-			{if $position}
-				{if $outside}
-					{sp}sticker-outside
-				{/if}
-				{sp}sticker-{$position}
-			{/if}
-
-			{if $shape == 'circle'}
-				{sp}rounded-circle
-			{/if}
-
-			{if $size}
-				{sp}sticker-{$size}
-			{/if}
-
-			{if $elementClasses}
-				{sp}{$elementClasses}
-			{/if}
-		"
-
-		{if $id}
-			id="{$id}"
-		{/if}
+		{call .attributes}
+			{param elementClasses: $elementClasses /}
+			{param id: $id /}
+			{param outside: $outside /}
+			{param position: $position /}
+			{param shape: $shape /}
+			{param size: $size /}
+			{param style: $style /}
+		{/call}
 	{/let}
 
 	<span {$attributes}>
-		{if $icon and $spritemap}
-			{call ClayIcon.render}
-				{param spritemap: $spritemap /}
-				{param symbol: $icon /}
-			{/call}
-		{elseif $imageSrc}
-			<img alt="{$imageAlt}" class="img-fluid" src="{$imageSrc}" />
-		{elseif $label}
-			{$label}
-		{/if}
+		{call .content}
+			{param icon: $icon /}
+			{param imageAlt: $imageAlt /}
+			{param imageSrc: $imageSrc /}
+			{param label: $label /}
+			{param spritemap: $spritemap /}
+		{/call}
 	</span>
+{/template}
+
+/**
+ * Renders element content
+ */
+{template .content}
+	{@param? icon: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? label: html|string}
+	{@param? spritemap: string}
+
+	{if $icon and $spritemap}
+		{call ClayIcon.render}
+			{param spritemap: $spritemap /}
+			{param symbol: $icon /}
+		{/call}
+	{elseif $imageSrc}
+		{call .image}
+			{param imageAlt: $imageAlt ?: '' /}
+			{param imageSrc: $imageSrc /}
+		{/call}
+	{elseif $label}
+		{$label}
+	{/if}
+{/template}
+
+/**
+ * Renders element content image
+ */
+{template .image}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+
+	<img alt="{$imageAlt}" class="img-fluid" src="{$imageSrc}" />
+{/template}
+
+/**
+ * Renders html attributes for sticker element
+ */
+{template .attributes kind="attributes"}
+	{@param? elementClasses: string}
+	{@param? id: string}
+	{@param? outside: bool}
+	{@param? position: string}
+	{@param? shape: string}
+	{@param? size: string}
+	{@param? style: string}
+
+	class="sticker
+		{sp}sticker-{$style ?: 'primary'}
+
+		{if $position}
+			{if $outside}
+				{sp}sticker-outside
+			{/if}
+			{sp}sticker-{$position}
+		{/if}
+
+		{if $shape == 'circle'}
+			{sp}rounded-circle
+		{/if}
+
+		{if $size}
+			{sp}sticker-{$size}
+		{/if}
+
+		{if $elementClasses}
+			{sp}{$elementClasses}
+		{/if}
+	"
+
+	{if $id}
+		id="{$id}"
+	{/if}
 {/template}

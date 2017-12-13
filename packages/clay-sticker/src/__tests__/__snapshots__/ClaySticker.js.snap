@@ -45,7 +45,7 @@ exports[`ClaySticker should render a sticker with id 1`] = `<span class="sticker
 
 exports[`ClaySticker should render a sticker with image 1`] = `
 <span class="sticker sticker-primary">
-  <img class="img-fluid" src="imageurl">
+  <img alt="" class="img-fluid" src="imageurl">
 </span>
 `;
 
