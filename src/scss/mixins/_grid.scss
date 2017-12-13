@@ -13,3 +13,36 @@
 		}
 	}
 }
+
+@mixin clay-custom-grid-columns($map) {
+	$custom-grid-props: map-merge((
+		enabled: $enable-grid-classes,
+		base: (
+			breakpoint: 0
+		)
+	), $map);
+
+	$enabled: map-get($custom-grid-props, enabled);
+
+	@if ($custom-grid-props && $enabled) {
+		display: block;
+		min-width: map-get(map-get($custom-grid-props, base), min-width);
+		padding-left: map-get(map-get($custom-grid-props, base), padding-left);
+		padding-right: map-get(map-get($custom-grid-props, base), padding-right);
+		position: relative;
+		width: 100%;
+
+		@each $breakpoint in map-keys($custom-grid-props) {
+			$next: breakpoint-next($breakpoint, $custom-grid-props);
+
+			@if ($next) {
+				@media (min-width: map-get(map-get($custom-grid-props, $next), breakpoint)) {
+					max-width: map-get(map-get($custom-grid-props, $next), max-width);
+					min-width: map-get(map-get($custom-grid-props, $next), min-width);
+					padding-left: map-get(map-get($custom-grid-props, $next), padding-left);
+					padding-right: map-get(map-get($custom-grid-props, $next), padding-right);
+				}
+			}
+		}
+	}
+}
