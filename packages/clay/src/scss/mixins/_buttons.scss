@@ -26,7 +26,6 @@
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
 	$loading-icon-dotted: map-get($map, loading-icon-dotted);
-	$loading-icon-linear: map-get($map, loading-icon-linear);
 
 	background-color: $bg;
 	border-color: $border-color;
@@ -74,9 +73,5 @@
 
 	.loading-icon-dotted {
 		@extend %#{$loading-icon-dotted} !optional;
-	}
-
-	.loading-icon-linear {
-		@extend %#{$loading-icon-linear} !optional;
 	}
 }
