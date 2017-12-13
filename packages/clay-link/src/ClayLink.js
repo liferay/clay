@@ -109,6 +109,24 @@ ClayLink.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Alternative text of the image to be rendered inside the link.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	imageAlt: Config.string(),
+
+	/**
+	 * Source of the image to be rendered inside the link.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	imageSrc: Config.string(),
+
+	/**
 	 * Sets the text or HTML to be rendered inside the anchor tag.
 	 * @instance
 	 * @memberof ClayLink

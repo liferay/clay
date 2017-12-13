@@ -13,6 +13,8 @@
 	{@param? icon: string}
 	{@param? iconAlignment: string}
 	{@param? id: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
 	{@param? label: html|string}
 	{@param? spritemap: string}
 	{@param? style: string}
@@ -36,6 +38,8 @@
 		{call .content}
 			{param icon: $icon /}
 			{param iconAlignment: $iconAlignment ?: 'left' /}
+			{param imageAlt: $imageAlt /}
+			{param imageSrc: $imageSrc /}
 			{param label: $label /}
 			{param spritemap: $spritemap /}
 		{/call}
@@ -48,23 +52,29 @@
 {template .content}
 	{@param? icon: string}
 	{@param? iconAlignment: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
 	{@param? label: html|string}
 	{@param? spritemap: string}
 
-	{if $icon and $iconAlignment == 'left' and $spritemap}
-		{call .icon}
-			{param icon: $icon /}
-			{param spritemap: $spritemap /}
-		{/call}
-	{/if}
+	{if $imageSrc}
+		<img alt="{$imageAlt}" class="img-fluid" src="{$imageSrc}" />
+	{else}
+		{if $icon and $iconAlignment == 'left' and $spritemap}
+			{call .icon}
+				{param icon: $icon /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{/if}
 
-	{$label ?: ''}
+		{$label ?: ''}
 
-	{if $icon and $iconAlignment == 'right' and $spritemap}
-		{call .icon}
-			{param icon: $icon /}
-			{param spritemap: $spritemap /}
-		{/call}
+		{if $icon and $iconAlignment == 'right' and $spritemap}
+			{call .icon}
+				{param icon: $icon /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{/if}
 	{/if}
 {/template}
 
