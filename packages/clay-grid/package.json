@@ -1,0 +1,51 @@
+{
+  "name": "clay-grid",
+  "version": "1.0.0-alpha.8",
+  "description": "Metal ClayGrid component",
+  "license": "BSD",
+  "repository": "https://github.com/metal/metal-clay-components/tree/master/packages/clay-grid",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/ClayGrid.js",
+  "esnext:main": "src/ClayGrid.js",
+  "jsnext:main": "src/ClayGrid.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
+    "prepublish": "npm run soy && npm run compile",
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|card|checkbox|dropdown|icon|label|link|radio|sticker)/src/**/*.soy'"
+  },
+  "keywords": [
+    "clay",
+    "metal"
+  ],
+  "dependencies": {
+    "metal": "^2.14.0",
+    "metal-component": "^2.14.0",
+    "metal-soy": "^2.14.0",
+    "metal-state": "^2.14.0",
+    "metal-web-component": "^2.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-node-env-inline": "^0.1.1",
+    "babel-preset-env": "^1.6.0",
+    "browserslist-config-clay-components": "^1.0.0-alpha.2",
+    "clay": "liferay/clay#develop",
+    "metal-dom": "^2.13.2",
+    "metal-tools-soy": "^4.2.1",
+    "webpack": "^3.0.0"
+  },
+  "browserslist": [
+    "extends browserslist-config-clay-components"
+  ]
+}
