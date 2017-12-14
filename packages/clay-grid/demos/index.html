@@ -24,12 +24,91 @@
 		ClayGrid
 	</h1>
 
-	<div id="container"></div>
+	<div id="container1"></div>
+	<div id="container2"></div>
 
 	<script type="text/javascript">
+		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 
-		new metal.ClayGrid({}, '#container');
+		let actionItems = [
+			{
+				href: '#1',
+				label: 'Option 1',
+			},
+			{
+				href: '#2',
+				label: 'Option 2',
+				separator: true,
+			},
+			{
+				href: '#3',
+				label: 'Option 3',
+			},
+		];
 
+		new metal.ClayGrid({
+			items: [
+				{
+					title: 'Folder 1',
+					type: 'folder',
+				},
+				{
+					title: 'Folder 2',
+					type: 'folder',
+				},
+				{
+					title: 'Folder 3',
+					type: 'folder',
+				},
+				{
+					title: 'Folder 4',
+					type: 'folder',
+				},
+				{
+					title: 'Folder 5',
+					type: 'folder',
+				},
+				{
+					title: 'Folder 6',
+					type: 'folder',
+				},
+			],
+			selectable: true,
+			spritemap: spritemap,
+			title: 'Folders',
+		}, '#container1');
+		
+		new metal.ClayGrid({
+			items: [
+				{
+					title: 'File Item 1',
+					type: 'file',
+				},
+				{
+					title: 'File Item 2',
+					type: 'file',
+				},
+				{
+					title: 'File Item 3',
+					type: 'file',
+				},
+				{
+					title: 'File Item 4',
+					type: 'file',
+				},
+				{
+					title: 'File Item 5',
+					type: 'file',
+				},
+				{
+					title: 'File Item 6',
+					type: 'file',
+				},
+			],
+			selectable: true,
+			spritemap: spritemap,
+			title: 'File Items',
+		}, '#container2');
 	</script>
 </body>
 </html>
