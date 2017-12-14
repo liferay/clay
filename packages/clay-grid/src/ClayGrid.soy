@@ -72,6 +72,20 @@
 									{param title: $item.title /}
 								{/call}
 							{/if}
+						{case 'folder'}
+							{if $spritemap}
+								{call ClayHorizontalCard.render}
+									{param actionItems: $item.actionItems /}
+									{param disabled: $item.disabled /}
+									{param events: ['itemToggled': $handleItemToggled_ ] /}
+									{param href: $item.href /}
+									{param icon: $item.icon /}
+									{param selectable: $selectable /}
+									{param selected: $item.selected /}
+									{param spritemap: $spritemap /}
+									{param title: $item.title /}
+								{/call}
+							{/if}
 					{/switch}
 				</li>
 			{/foreach}
