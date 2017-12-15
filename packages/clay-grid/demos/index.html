@@ -27,6 +27,7 @@
 	<div id="container1"></div>
 	<div id="container2"></div>
 	<div id="container3"></div>
+	<div id="container4"></div>
 
 	<script type="text/javascript">
 		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
@@ -148,6 +149,45 @@
 			spritemap: spritemap,
 			title: 'User Items',
 		}, '#container3');
+
+			
+		new metal.ClayGrid({
+			items: [
+				{
+					fileType: 'JPG',
+					imageSrc: './image1.jpg',
+					title: 'Image Item 1',
+				},
+				{
+					fileType: 'JPG',
+					imageSrc: './image1.jpg',
+					title: 'Image Item 2',
+				},
+				{
+					fileType: 'JPG',
+					imageSrc: './image1.jpg',
+					title: 'Image Item 3',
+				},
+				{
+					fileType: 'JPG',
+					imageSrc: './image1.jpg',
+					title: 'Image Item 4',
+				},
+				{
+					fileType: 'JPG',
+					imageSrc: './image1.jpg',
+					title: 'Image Item 5',
+				},
+				{
+					fileType: 'JPG',
+					imageSrc: './image1.jpg',
+					title: 'Image Item 6',
+				},
+			],
+			selectable: true,
+			spritemap: spritemap,
+			title: 'Image Items',
+		}, '#container4');
 	</script>
 </body>
 </html>
