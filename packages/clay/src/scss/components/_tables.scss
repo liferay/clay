@@ -278,6 +278,12 @@ th {
 	@include clay-link($table-list-link);
 }
 
+// Table List Action Link
+
+.table-list-action-link {
+	@include clay-link($table-list-action-link);
+}
+
 // Table Helpers
 
 .table-autofit {

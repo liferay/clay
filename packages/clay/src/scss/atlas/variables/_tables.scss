@@ -28,6 +28,15 @@ $table-title: map-merge((
 	color: $body-color
 ), $table-title);
 
+// Table Action Link
+
+$table-action-link: () !default;
+$table-action-link: map-merge((
+	color: $dropdown-action-toggle-color,
+	hover-bg: $dropdown-action-toggle-hover-bg,
+	hover-color: $dropdown-action-toggle-hover-color
+), $table-action-link);
+
 // Table Link
 
 $table-link: () !default;
@@ -60,3 +69,19 @@ $table-list-title-link: map-merge((
 	color: $body-color,
 	hover-color: $body-color
 ), $table-list-title-link);
+
+// Table List Link
+
+$table-list-link: () !default;
+$table-list-link: map-merge((
+	color: $body-color
+), $table-list-link);
+
+// Table List Action Link
+
+$table-list-action-link: () !default;
+$table-list-action-link: map-merge((
+	color: $dropdown-action-toggle-color,
+	hover-bg: $dropdown-action-toggle-hover-bg,
+	hover-color: $dropdown-action-toggle-hover-color
+), $table-list-action-link);
