@@ -72,6 +72,28 @@ th {
 	}
 }
 
+// Table Title
+
+.table-title {
+	@include clay-text-typography($table-title);
+}
+
+.table-title a {
+	@include clay-link($table-title-link);
+}
+
+// Table Link
+
+.table-link {
+	@include clay-link($table-link);
+}
+
+// Table Action Link
+
+.table-action-link {
+	@include clay-link($table-action-link);
+}
+
 // Table List Skin
 
 .table-list {
@@ -123,14 +145,6 @@ th {
 					}
 				}
 			}
-		}
-	}
-
-	a {
-		color: $table-list-link-color;
-
-		@include hover-focus {
-			color: $table-list-link-color-hover;
 		}
 	}
 
@@ -256,6 +270,12 @@ th {
 
 .table-list-title a {
 	@include clay-link($table-list-title-link);
+}
+
+// Table List Link
+
+.table-list-link {
+	@include clay-link($table-list-link);
 }
 
 // Table Helpers
