@@ -21,6 +21,20 @@ $table-quick-action-menu-accent-active-bg: $table-hover-bg !default;
 $table-quick-action-menu-active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61) !default;
 $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
+// Table Title
+
+$table-title: () !default;
+$table-title: map-merge((
+	color: $body-color
+), $table-title);
+
+// Table Link
+
+$table-link: () !default;
+$table-link: map-merge((
+	color: $body-color
+), $table-link);
+
 // Table List
 
 $table-list-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
@@ -33,16 +47,16 @@ $table-list-link-color: $secondary !default;
 
 $table-list-head-font-weight: $font-weight-normal !default;
 
+// Table List Title
+
 $table-list-title: () !default;
 $table-list-title: map-merge((
 	color: $body-color,
-	font-size: 1rem,
 	line-height: 1.25
 ), $table-list-title);
 
 $table-list-title-link: () !default;
 $table-list-title-link: map-merge((
 	color: $body-color,
-	hover-color: $body-color,
-	hover-text-decoration: none
+	hover-color: $body-color
 ), $table-list-title-link);
