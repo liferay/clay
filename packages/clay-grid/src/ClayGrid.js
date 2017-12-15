@@ -63,13 +63,24 @@ ClayGrid.STATE = {
 					separator: Config.bool().value(false),
 				})
 			),
+			color: Config.oneOf([
+				'danger',
+				'dark',
+				'info',
+				'light',
+				'primary',
+				'secondary',
+				'success',
+				'warning',
+			]).value('primary'),
 			description: Config.string(),
 			disabled: Config.bool(),
 			fileType: Config.string(),
-			fileTypeStyle: Config.string(),
 			href: Config.string(),
 			icon: Config.string(),
 			iconShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
+			imageSrc: Config.string(),
+			initials: Config.string(),
 			labels: Config.arrayOf(
 				Config.shapeOf({
 					label: Config.string(),
