@@ -12,7 +12,16 @@ import templates from './ClayImageCard.soy.js';
 /**
  * Metal ClayImageCard component.
  */
-class ClayImageCard extends Component {}
+class ClayImageCard extends Component {
+	/**
+	 * Continues the propagation of the checkbox changed event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleItemToggled_(event) {
+		this.emit('itemToggled', event);
+	}
+}
 
 /**
  * State definition.

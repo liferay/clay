@@ -15,6 +15,7 @@
     {@param? elementClasses: string}
     {@param? fileType: string}
     {@param? fileTypeStyle: string}
+    {@param? handleItemToggled_: any}
     {@param? href: string}
     {@param? icon: string}
     {@param? id: string}
@@ -40,6 +41,7 @@
         {param contentRenderer: 'file' /}
         {param disabled: $disabled /}
         {param elementClasses: $classes /}
+        {param events: ['itemToggled': $handleItemToggled_ ] /}
         {param fileType: $fileType /}
         {param fileTypeStyle: $fileTypeStyle /}
         {param icon: $icon ?: 'documents-and-media' /}

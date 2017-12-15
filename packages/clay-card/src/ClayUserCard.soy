@@ -12,6 +12,7 @@
     ]>}
     {@param? disabled: bool}
     {@param? elementClasses: string}
+    {@param? handleItemToggled_: any}
     {@param? href: string}
     {@param? id: string}
     {@param? imageAlt: string}
@@ -37,6 +38,7 @@
         {param contentRenderer: 'user' /}
         {param disabled: $disabled /}
         {param elementClasses: $elementClasses /}
+        {param events: ['itemToggled': $handleItemToggled_ ] /}
         {param fileType: $initials /}
         {param fileTypeStyle: $userColor /}
         {param href: $href /}

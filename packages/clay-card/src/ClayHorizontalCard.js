@@ -13,7 +13,16 @@ import templates from './ClayHorizontalCard.soy.js';
 /**
  * Metal ClayHorizontalCard component.
  */
-class ClayHorizontalCard extends Component {}
+class ClayHorizontalCard extends Component {
+	/**
+	 * Continues the propagation of the checkbox changed event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleItemCheckboxClick_(event) {
+		this.emit('itemToggled', event);
+	}
+}
 
 /**
  * State definition.

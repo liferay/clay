@@ -15,6 +15,7 @@
 	{@param? elementClasses: string}
 	{@param? fileType: string}
 	{@param? fileTypeStyle: string}
+	{@param? handleItemCheckboxClick_: any}
 	{@param? href: string}
 	{@param? icon: string}
 	{@param? id: string}
@@ -78,6 +79,7 @@
 					{call ClayCheckbox.render}
 						{param checked: $selected /}
 						{param disabled: $disabled /}
+						{param events: ['change': $handleItemCheckboxClick_] /}
 						{param labelContent kind="html"}
 							{$visualArea}
 						{/param}

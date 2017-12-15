@@ -366,6 +366,21 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a selectable ClayFileCard and emit an event on item toggle', () => {
+		component = new ClayFileCard({
+			selectable: true,
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		const spy = jest.spyOn(component, 'emit');
+
+		component.element.querySelector('input[type="checkbox"]').click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('itemToggled', expect.any(Object));
+	});
+
 	it('should fail when no spritemap is passed', function() {
 		expect(() => {
 			component = new ClayFileCard({

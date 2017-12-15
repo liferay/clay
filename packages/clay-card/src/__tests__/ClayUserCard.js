@@ -251,6 +251,21 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a selectable ClayUserCard and emit an event on item toggle', () => {
+		component = new ClayUserCard({
+			name: 'User Name',
+			selectable: true,
+			spritemap: spritemap,
+		});
+
+		const spy = jest.spyOn(component, 'emit');
+
+		component.element.querySelector('input[type="checkbox"]').click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('itemToggled', expect.any(Object));
+	});
+
 	it('should fail when no name is passed', function() {
 		expect(() => {
 			component = new ClayUserCard();
