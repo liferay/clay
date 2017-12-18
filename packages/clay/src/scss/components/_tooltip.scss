@@ -7,6 +7,8 @@
 }
 
 .tooltip-inner {
+	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
+
 	@if not ($tooltip-border-radius == $border-radius) {
 		@include border-radius($tooltip-border-radius);
 	}
