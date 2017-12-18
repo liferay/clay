@@ -155,14 +155,6 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Components (For Sites)</span>
-<div class="">
-<ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/widget">Widget</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
@@ -203,8 +195,6 @@
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/widget-asset-publisher">Widget Asset Publisher</a>
 </li>
 </ul>
 </div>
@@ -449,8 +439,12 @@
 						<td>
 							<span class="sticker sticker-danger">PNG</span>
 						</td>
-						<td class="table-cell-content">
-							<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						<td class="table-cell-expand">
+							<h4 class="table-list-title">
+								<span class="text-truncate-inline">
+									<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+								</span>
+							</h4>
 						</td>
 						<td>700KB</td>
 						<td>
@@ -495,6 +489,104 @@
 			</table>
 		</div>
 	</form>
+
+	<div class="alert alert-warning">
+		Because of the dynamic nature of content in tables, we left it to the developer to size and align columns inside tables. Add a unique class to each column and use min-width / max-width to space the tables to your specific requirements.
+	</div>
+
+	<div class="table-responsive-lg">
+		<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
+			<thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th class="table-cell-expand">
+						Title
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+							<use xlink:href="../../images/icons/icons.svg#order-arrow-down">
+						</svg>
+					</th>
+					<th>Status</th>
+					<th>Items</th>
+					<th>Start Date</th>
+					<th>Duration</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="table-divider">
+					<td colspan="9">In Progress</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-indicator"></span>
+							</label>
+						</div>
+					</td>
+					<td>
+						<span class="sticker sticker-danger user-icon">MT</span>
+					</td>
+					<td class="table-cell-expand">
+						<h4 class="table-list-title">
+							<span class="text-truncate-inline">
+								<a class="text-truncate" href="#1" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Publication Title</a>
+							</span>
+						</h4>
+					</td>
+					<td>
+						<span class="label label-warning">In Progress</span>
+					</td>
+					<td>100,000</td>
+					<td>2017.11.24 - 17:15</td>
+					<td>4 minutes</td>
+					<td>
+						<div class="progress-group">
+							<div class="progress">
+								<div aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 30%;"></div>
+							</div>
+							<div class="progress-group-addon">30%</div>
+						</div>
+					</td>
+					<td>
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="../../images/icons/icons.svg#trash">
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="../../images/icons/icons.svg#download">
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+								</svg>
+							</a>
+						</div>
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Remove</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 <script>
