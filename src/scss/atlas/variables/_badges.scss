@@ -1,9 +1,11 @@
 $badge-border-radius: 10em !default;
-$badge-font-size: 0.75rem !default; // 12px
+$badge-font-size: 0.6875rem !default; // 11px
 $badge-font-weight: $font-weight-semi-bold !default;
-$badge-lexicon-icon-height: 0.8em !default;
+$badge-line-height: 0.875rem !default // 14px
 $badge-padding-x: 0.25rem !default; // 4px
-$badge-padding-y: 0.0625rem !default; // 1px
+$badge-padding-y: 0 !default;
+
+$badge-lexicon-icon-height: 0.8em !default;
 
 $badge-pill-border-radius: $border-radius !default;
 $badge-pill-padding-x: 0.25rem !default; // 4px

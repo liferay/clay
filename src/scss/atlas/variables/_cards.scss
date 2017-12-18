@@ -13,7 +13,8 @@ $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius
 
 $card-title: () !default;
 $card-title: map-merge((
-	color: $body-color
+	color: $body-color,
+	font-size: $font-size-base // 14px
 ), $card-title);
 
 $card-title-link: () !default;
@@ -25,6 +26,7 @@ $card-title-link: map-merge((
 
 $card-subtitle: () !default;
 $card-subtitle: map-merge((
+	font-size: $font-size-sm, // 13px
 	font-weight: $font-weight-normal
 ), $card-subtitle);
 

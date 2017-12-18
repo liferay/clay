@@ -1,6 +1,24 @@
+$sticker-font-size: 0.6875rem !default; // 11px
 $sticker-font-weight: $font-weight-bold !default;
 
 $sticker-inside-offset: 1rem !default; // 16px
+
+// Sticker Sizes
+
+$sticker-sm: () !default;
+$sticker-sm: map-merge((
+	font-size: 0.5625rem // 9px
+), $sticker-sm);
+
+$sticker-lg: () !default;
+$sticker-lg: map-merge((
+	font-size: 0.9375rem // 15px
+), $sticker-lg);
+
+$sticker-xl: () !default;
+$sticker-xl: map-merge((
+	font-size: 1.0625rem // 17px
+), $sticker-xl);
 
 // Sticker Variants
 

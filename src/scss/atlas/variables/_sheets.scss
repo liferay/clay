@@ -7,13 +7,21 @@ $sheet-section-margin-bottom-mobile: 2rem !default; // 32px
 $sheet-footer-margin-bottom-mobile: 1rem !default; // 16px
 $sheet-footer-margin-top-mobile: 1rem !default; // 16px
 
+// Sheet Title
+
+$sheet-title-font-size: 1.25rem !default; // 20px
+$sheet-title-font-weight: $font-weight-bold !default;
 $sheet-title-margin-bottom-mobile: 1rem !default; // 16px
+
+// Sheet Subtitle
 
 $sheet-subtitle-color: $body-color !default;
 $sheet-subtitle-border-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
-$sheet-subtitle-padding-y: 0.46875rem !default; // 7.5px
-
+$sheet-subtitle-font-size: 0.8125rem !default // 13px
+$sheet-subtitle-padding-y: 0.5rem !default; // 8px
 $sheet-subtitle-margin-bottom-mobile: 1rem !default; // 16px
+
+// Sheet Tertiary Title
 
 $sheet-tertiary-title-margin-bottom-mobile: 0.5rem !default; // 8px
 
