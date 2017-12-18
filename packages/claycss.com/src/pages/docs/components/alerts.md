@@ -157,31 +157,31 @@ weight: 100
 
 ```soy
 {call ClayAlert.render}
-	{param message: This is an error message /}
+	{param message: 'This is an error message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'danger' /}
 	{param title: 'Error' /}
-{/param}
+{/call}
 
 {call ClayAlert.render}
-	{param message: This is a success message /}
+	{param message: 'This is a success message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
-{/param}
+{/call}
 
 {call ClayAlert.render}
-	{param message: This is an info message /}
+	{param message: 'This is an info message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param title: 'Info' /}
-{/param}
+{/call}
 
 {call ClayAlert.render}
-	{param message: This is a warning message /}
+	{param message: 'This is a warning message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
-{/param}
+{/call}
 ```
 ```text/html
 <clay-alert
@@ -322,76 +322,60 @@ weight: 100
 </div>
 
 ```soy
-{call ClayAlert.render}
-	{param closeable: true /}
+{call ClayStripe.render}
 	{param message: 'This is an error message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'danger' /}
 	{param title: 'Error' /}
-	{param type: 'fluid' /}
-{/param}
+{/call}
 
-{call ClayAlert.render}
-	{param closeable: true /}
+{call ClayStripe.render}
 	{param message: 'This is a success message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
-	{param type: 'fluid' /}
-{/param}
+{/call}
 
-{call ClayAlert.render}
-	{param closeable: true /}
+{call ClayStripe.render}
 	{param message: 'This is an info message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param title: 'Info' /}
-	{param type: 'fluid' /}
-{/param}
+{/call}
 
-{call ClayAlert.render}
-	{param closeable: true /}
+{call ClayStripe.render}
 	{param message: 'This is a warning message' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
-	{param type: 'fluid' /}
-{/param}
+{/call}
 ```
 ```text/html
-<clay-alert
-	closeable="true"
+<clay-stripe
 	style="danger"
 	message='This is an error message'
 	spritemap="/vendor/lexicon/icons.svg"
 	title="Error"
-	type="fluid">
-</clay-alert>
+</clay-stripe>
 
-<clay-alert
-	closeable="true"
+<clay-stripe
 	style="success"
 	message='This is a success message'
 	spritemap="/vendor/lexicon/icons.svg"
 	title="Success"
-	type="fluid"
-></clay-alert>
+></clay-stripe>
 
-<clay-alert
-	closeable="true"
+<clay-stripe
 	message='This is an info message'
 	spritemap="/vendor/lexicon/icons.svg"
 	title="Info"
-	type="fluid">
-</clay-alert>
+</clay-stripe>
 
-<clay-alert
-	closeable="true"
+<clay-stripe
 	style="warning"
 	message='This is a warning message'
 	spritemap="/vendor/lexicon/icons.svg"
 	title="Warning"
-	type="fluid">
-</clay-alert>
+</clay-stripe>
 ```
 ```text/html
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
@@ -489,7 +473,7 @@ weight: 100
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
-{/param}
+{/call}
 ```
 ```text/html
 <clay-alert
@@ -536,7 +520,7 @@ weight: 100
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
-{/param}
+{/call}
 ```
 ```text/html
 <clay-alert
