@@ -1,3 +1,5 @@
 $tooltip-border-radius: $border-radius !default;
 $tooltip-box-shadow: null !default;
+
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
 $tooltip-font-size: $font-size-sm !default;
