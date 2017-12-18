@@ -155,6 +155,7 @@
 
 .dropdown-action {
 	display: inline-block;
+	font-size: $dropdown-action-toggle-font-size;
 	vertical-align: middle;
 
 	> .dropdown-toggle {
