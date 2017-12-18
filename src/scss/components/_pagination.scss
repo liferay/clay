@@ -1,5 +1,6 @@
 .pagination {
 	flex-wrap: wrap;
+	font-size: $pagination-font-size;
 	margin-bottom: $pagination-margin-bottom;
 }
 
@@ -61,6 +62,7 @@
 }
 
 .pagination-items-per-page {
+	font-size: $pagination-items-per-page-font-size;
 	margin-bottom: $pagination-margin-bottom;
 
 	> a,
