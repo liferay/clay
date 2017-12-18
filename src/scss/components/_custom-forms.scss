@@ -70,6 +70,12 @@
 
 // Custom Checkbox and Radio
 
+.custom-control {
+	label {
+		font-size: 1rem;
+	}
+}
+
 .custom-control-indicator {
 	border-color: $custom-control-indicator-border-color;
 	border-style: $custom-control-indicator-border-style;
@@ -78,7 +84,8 @@
 }
 
 .custom-control-description {
-	cursor: $form-check-label-cursor;
+	cursor: $custom-control-description-cursor;
+	font-size: $custom-control-description-font-size;
 	line-height: $custom-control-description-line-height;
 	padding-left: $custom-control-description-padding-left;
 }
