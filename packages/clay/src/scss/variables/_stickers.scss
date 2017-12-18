@@ -3,7 +3,7 @@ $sticker-border-style: null !default;
 $sticker-border-width: null !default;
 $sticker-color: $label-color !default;
 $sticker-font-size: 0.875rem !default; // 14px
-$sticker-font-weight: null !default;
+$sticker-font-weight: $font-weight-semi-bold !default;
 $sticker-size: 2rem !default; // 32px
 
 // Sticker Sizes

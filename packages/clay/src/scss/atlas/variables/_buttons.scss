@@ -1,7 +1,7 @@
 $btn-box-shadow: none !default;
 $btn-font-weight: $font-weight-semi-bold !default;
 $btn-padding-x: 0.9375rem !default; // 15px
-$btn-padding-y: 0.4375rem !default; // 7px
+$btn-padding-y: 0.53125rem !default; // 8.5px
 
 $btn-disabled-opacity: 0.26 !default;
 
@@ -11,14 +11,14 @@ $btn-link-disabled-color: $link-color !default;
 $btn-active-box-shadow: inset 0 0 rgba(#000, 0) !default;
 
 $btn-border-radius-lg: $border-radius !default;
-$btn-font-size-lg: 1.25rem !default; // 20px
+$btn-font-size-lg: $font-size-lg !default; // 15px
 $btn-padding-x-lg: 1.25rem !default; // 20px
-$btn-padding-y-lg: 0.5rem !default; // 8px
+$btn-padding-y-lg: 0.75rem !default; // 12px
 
-$btn-font-size-sm: 0.875rem !default; // 14px
+$btn-font-size-sm: $font-size-sm !default; // 13px
 $btn-line-height-sm: 1 !default;
 $btn-padding-x-sm: 0.6875rem !default; // 11px
-$btn-padding-y-sm: 0.5rem !default; // 8px
+$btn-padding-y-sm: 0.53125rem !default; // 8.5px
 
 // Button Monospaced
 

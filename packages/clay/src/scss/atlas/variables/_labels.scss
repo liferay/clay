@@ -1,5 +1,5 @@
 $label-border-radius: 0.125rem !default; // 2px
-$label-font-size: 0.75rem !default; // 12px
+$label-font-size: 0.6875rem !default; // 11px
 $label-font-weight: $font-weight-semi-bold !default;
 $label-height: 1rem !default; // 16px
 $label-padding-x: 0.5rem !default; // 8px
@@ -8,9 +8,9 @@ $label-text-transform: uppercase !default;
 $label-anchor-hover-text-decoration: underline !default;
 
 $label-lg: (
-	font-size: 0.873rem,
-	height: 1.5rem,
-	padding-x: 0.625rem
+	font-size: 0.8125rem, // 13px
+	height: 1.5rem, // 24px
+	padding-x: 0.625rem // 10px
 ) !default;
 
 // Label Variants
