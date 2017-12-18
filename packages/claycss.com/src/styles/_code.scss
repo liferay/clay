@@ -104,6 +104,7 @@
 
 .nav.nav-tabs.nav-code-tabs {
 	border-width: 0;
+	margin-bottom: -20px;
 	margin-top: 32px;
 	padding: 0 24px;
 }
@@ -137,11 +138,7 @@
 	color: $brand-dark;
 }
 
-.nav.nav-tabs.nav-code-tabs ~ .code-container {
-	margin: 0 0 calc(1rem * 1.5);
-}
-
-#clay-alert-embedded, #clay-alert-stripe, #clay-alert-mixed-html-content, #clay-alert-dismissible, #clay-navbar-navigation-bar,
+#clay-alert-embedded, #clay-alert-toast, #clay-alert-stripe, #clay-alert-mixed-html-content, #clay-alert-dismissible, #clay-navbar-navigation-bar, #clay-button, #clay-button-sizes,
 #clay-badges {
 	.nav.nav-tabs.nav-code-tabs  {
 		li:nth-of-type(2) > button {
