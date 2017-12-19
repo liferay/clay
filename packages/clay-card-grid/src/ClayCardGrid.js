@@ -4,12 +4,12 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import templates from './ClayGrid.soy.js';
+import templates from './ClayCardGrid.soy.js';
 
 /**
- * Metal ClayGrid component.
+ * Metal ClayCardGrid component.
  */
-class ClayGrid extends Component {
+class ClayCardGrid extends Component {
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -25,11 +25,11 @@ class ClayGrid extends Component {
  * @static
  * @type {!Object}
  */
-ClayGrid.STATE = {
+ClayCardGrid.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayGrid
+	 * @memberof ClayCardGrid
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -38,7 +38,7 @@ ClayGrid.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayGrid
+	 * @memberof ClayCardGrid
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -47,7 +47,7 @@ ClayGrid.STATE = {
 	/**
 	 * List of items.
 	 * @instance
-	 * @memberof ClayGrid
+	 * @memberof ClayCardGrid
 	 * @type {!array}
 	 * @default undefined
 	 */
@@ -104,7 +104,7 @@ ClayGrid.STATE = {
 	/**
 	 * Flag to indicate if the list group items are selectable.
 	 * @instance
-	 * @memberof ClayGrid
+	 * @memberof ClayCardGrid
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -113,7 +113,7 @@ ClayGrid.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayGrid
+	 * @memberof ClayCardGrid
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -122,16 +122,16 @@ ClayGrid.STATE = {
 	/**
 	 * Header of the list group.
 	 * @instance
-	 * @memberof ClayGrid
+	 * @memberof ClayCardGrid
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	title: Config.string(),
 };
 
-defineWebComponent('clay-grid', ClayGrid);
+defineWebComponent('clay-card-grid', ClayCardGrid);
 
-Soy.register(ClayGrid, templates);
+Soy.register(ClayCardGrid, templates);
 
-export {ClayGrid};
-export default ClayGrid;
+export {ClayCardGrid};
+export default ClayCardGrid;

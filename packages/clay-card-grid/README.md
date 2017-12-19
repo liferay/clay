@@ -1,6 +1,6 @@
-# clay-grid
+# clay-card-grid
 
-Metal ClayGrid Component
+Metal ClayCardGrid Component
 
 ## Setup
 

@@ -1,16 +1,16 @@
 {
-  "name": "clay-grid",
+  "name": "clay-card-grid",
   "version": "1.0.0-alpha.8",
-  "description": "Metal ClayGrid component",
+  "description": "Metal ClayCardGrid component",
   "license": "BSD",
-  "repository": "https://github.com/metal/metal-clay-components/tree/master/packages/clay-grid",
+  "repository": "https://github.com/metal/metal-clay-components/tree/master/packages/clay-card-grid",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/ClayGrid.js",
-  "esnext:main": "src/ClayGrid.js",
-  "jsnext:main": "src/ClayGrid.js",
+  "main": "lib/ClayCardGrid.js",
+  "esnext:main": "src/ClayCardGrid.js",
+  "jsnext:main": "src/ClayCardGrid.js",
   "files": [
     "lib",
     "src",

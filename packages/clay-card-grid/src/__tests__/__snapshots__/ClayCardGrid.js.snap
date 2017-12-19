@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayGrid should render a ClayGrid with all kind items 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with all kind items 1`] = `
 <div>
   <ul class="card-page">
     <li class="card-page-item-directory">
@@ -61,7 +61,7 @@ exports[`ClayGrid should render a ClayGrid with all kind items 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with all kind items and title 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with all kind items and title 1`] = `
 <div>
   <h4 class="card-section-header">All Items</h4>
   <ul class="card-page">
@@ -276,13 +276,13 @@ exports[`ClayGrid should render a ClayGrid with all kind items and title 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with classes 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with classes 1`] = `
 <div class="my-custom-class">
   <ul class="card-page"></ul>
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with file items 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with file items 1`] = `
 <div>
   <ul class="card-page">
     <li class="card-page-item-directory">
@@ -346,7 +346,7 @@ exports[`ClayGrid should render a ClayGrid with file items 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with file items and title 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with file items and title 1`] = `
 <div>
   <h4 class="card-section-header">File Items</h4>
   <ul class="card-page">
@@ -411,7 +411,7 @@ exports[`ClayGrid should render a ClayGrid with file items and title 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with folder items 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with folder items 1`] = `
 <div>
   <ul class="card-page">
     <li class="card-page-item-directory">
@@ -469,7 +469,7 @@ exports[`ClayGrid should render a ClayGrid with folder items 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with folder items and title 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with folder items and title 1`] = `
 <div>
   <h4 class="card-section-header">Folder Items</h4>
   <ul class="card-page">
@@ -528,13 +528,13 @@ exports[`ClayGrid should render a ClayGrid with folder items and title 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with id 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with id 1`] = `
 <div id="myId">
   <ul class="card-page"></ul>
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with image items 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with image items 1`] = `
 <div>
   <ul class="card-page">
     <li class="card-page-item-directory">
@@ -586,7 +586,7 @@ exports[`ClayGrid should render a ClayGrid with image items 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with image items and title 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with image items and title 1`] = `
 <div>
   <h4 class="card-section-header">Image Items</h4>
   <ul class="card-page">
@@ -639,7 +639,7 @@ exports[`ClayGrid should render a ClayGrid with image items and title 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with user items 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with user items 1`] = `
 <div>
   <ul class="card-page">
     <li class="card-page-item-directory">
@@ -700,7 +700,7 @@ exports[`ClayGrid should render a ClayGrid with user items 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render a ClayGrid with user items and title 1`] = `
+exports[`ClayCardGrid should render a ClayCardGrid with user items and title 1`] = `
 <div>
   <h4 class="card-section-header">User Items</h4>
   <ul class="card-page">
@@ -762,7 +762,7 @@ exports[`ClayGrid should render a ClayGrid with user items and title 1`] = `
 </div>
 `;
 
-exports[`ClayGrid should render the default markup 1`] = `
+exports[`ClayCardGrid should render the default markup 1`] = `
 <div>
   <ul class="card-page"></ul>
 </div>
