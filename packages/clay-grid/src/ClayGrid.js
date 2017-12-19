@@ -105,7 +105,7 @@ ClayGrid.STATE = {
 	 * Flag to indicate if the list group items are selectable.
 	 * @instance
 	 * @memberof ClayGrid
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selectable: Config.bool().value(false),
