@@ -1,0 +1,58 @@
+body {
+	background-color: #393A4A;
+	min-height: 100vh;
+	color: #FFF;
+	background-image: url(../images/bg.svg);
+	background-position: center 50px;
+	background-repeat: no-repeat;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+	min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1080px;
+	}
+}
+
+h1 {
+	font-size: 110px;
+	font-weight: 700;
+}
+
+.h2 {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.card {
+	border-radius: 8px;
+}
+
+.card a {
+	color: #000;
+	display: block;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 14px 0;
+	text-decoration: underline;
+}
+
+p.hometext {
+	font-size: 28px;
+	color: #CDCED9;
+	font-weight: 300;
+}
+
+.hspace {
+	margin-bottom: 0;
+	margin-top: 170px;
+}
+
+.footer {
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
