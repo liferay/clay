@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Clay Charts</title>
 
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
 	<link rel="stylesheet" href="../build/clay-charts.css">
 
 	<script src="../build/globals/clay-charts.js"></script>
@@ -25,8 +26,60 @@
 			padding: 10px;
 		}
 	</style>
+
+
 </head>
 <body>
+
+	<svg>
+		<defs>
+		<pattern id="circles" patternUnits="userSpaceOnUse" width="16" height="16" style="fill:rgba(0,0,0,0.3)">
+		<circle cx="4" cy="4" r="2"/>
+		<circle cx="12" cy="12" r="2"/>
+		</pattern>
+
+		<pattern id="diagonal-left-large" patternUnits="userSpaceOnUse" width="10" height="10" style="fill:rgba(0,0,0,0.3)">
+		<polygon points="9.3,0 10,0.7 10,0 "/>
+		<polygon points="0,0 0,0.7 9.3,10 10,10 10,9.3 0.7,0 "/>
+		<polygon points="0,9.3 0,10 0.7,10 "/>
+		</pattern>
+
+		<pattern id="diagonal-left-small" patternUnits="userSpaceOnUse" width="5" height="5" style="fill:rgba(0,0,0,0.3)">
+		<polygon points="5,0 4.3,0 5,0.7 "/>
+		<polygon points="0.7,0 0,0 0,0.7 4.3,5 5,5 5,4.3 "/>
+		<polygon points="0,4.3 0,5 0.7,5 "/>
+		</pattern>
+
+		<pattern id="diagonal-right-large" patternUnits="userSpaceOnUse" width="10" height="10" style="fill:rgba(0,0,0,0.3)">
+		<polygon points="10,9.3 9.3,10 10,10 "/>
+		<polygon points="10,0 9.3,0 0,9.3 0,10 0.7,10 10,0.7 "/>
+		<polygon points="0.7,0 0,0 0,0.7 "/>
+		</pattern>
+
+		<pattern id="diagonal-right-small" patternUnits="userSpaceOnUse" width="5" height="5" style="fill:rgba(0,0,0,0.3)">
+		<polygon points="5,4.3 4.3,5 5,5 "/>
+		<polygon points="5,0 4.3,0 0,4.3 0,5 0.7,5 5,0.7 "/>
+		<polygon points="0.7,0 0,0 0,0.7 "/>
+		</pattern>
+
+		<pattern id="horizontal-large" patternUnits="userSpaceOnUse" width="8" height="8" style="fill:rgba(0,0,0,0.3)">
+		<rect y="7" width="8" height="1"/>
+		</pattern>
+
+		<pattern id="horizontal-small" patternUnits="userSpaceOnUse" width="4" height="4" style="fill:rgba(0,0,0,0.3)">
+		<rect y="3" width="4" height="1"/>
+		</pattern>
+
+		<pattern id="vertical-large" patternUnits="userSpaceOnUse" width="8" height="8" style="fill:rgba(0,0,0,0.3)">
+		<rect x="7" y="0" width="1" height="8"/>
+		</pattern>
+
+		<pattern id="vertical-small" patternUnits="userSpaceOnUse" width="4" height="4" style="fill:rgba(0,0,0,0.3)">
+		<rect x="3" width="1" height="4"/>
+		</pattern>
+		</defs>
+	</svg>
+
 	<h1>Clay Charts</h1>
 
 	<p>See <a href="https://naver.github.io/billboard.js/demo/">billboard.js</a> for more examples.</p>
@@ -85,8 +138,6 @@
 		<h2>Gauge</h2>
 		<div id="gauge"></div>
 	</div>
-
-
 
 	<div id="controls" style="display: none;">
 		<label>
@@ -214,12 +265,24 @@
 			],
 			columns_4: [
 				{
-					data: [50],
+					data: [10],
 					id: 'data1'
 				},
 				{
 					data: [50],
 					id: 'data2'
+				},
+				{
+					data: [20],
+					id: 'data3'
+				},
+        {
+          data: [15],
+          id: 'data4'
+        },
+				{
+					data: [5],
+					id: 'data5'
 				}
 			]
 		};
@@ -295,12 +358,21 @@
 		createChartControls(scatterChart, 'scatter');
 
 		var pieChart = new metal.PieChart({
-			columns: dummyPercentData.columns_1
+			columns: dummyPercentData.columns_1,
+			color: {
+				tiles() {
+					return [
+						document.querySelector('#circles'),
+						document.querySelector('#horizontal-large'),
+						document.querySelector('#vertical-small'),
+					];
+				}
+			}
 		}, '#pie');
 		createChartControls(pieChart, 'pie', dummyPercentData);
 
 		var donutChart = new metal.DonutChart({
-			columns: dummyPercentData.columns_1
+			columns: dummyPercentData.columns_1,
 		}, '#donut');
 		createChartControls(donutChart, 'donut', dummyPercentData);
 

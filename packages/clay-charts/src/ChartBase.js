@@ -24,6 +24,30 @@ const DEFAULT_COLORS = [
 	'#5FC8FF',
 ];
 
+const DEFAULT_LINE_CASSES = [
+	'bb-line-dashed-2-2',
+	'bb-line-dashed-2-3',
+	'bb-line-dashed-2-4',
+	'bb-line-dashed-3-2',
+	'bb-line-dashed-3-3',
+	'bb-line-dashed-3-4',
+	'bb-line-dashed-4-2',
+	'bb-line-dashed-4-3',
+	'bb-line-dashed-4-4',
+];
+
+const DEFAULT_PATTERNS = [
+	'circles',
+	'diagonal-left-large',
+	'diagonal-left-small',
+	'diagonal-right-large',
+	'diagonal-right-small',
+	'horizontal-large',
+	'horizontal-small',
+	'vertical-large',
+	'vertical-small',
+];
+
 /**
  * Chart Base prototype.
  *
@@ -35,6 +59,14 @@ const ChartBase = {
 	 */
 	attached: function() {
 		const config = this.constructChartConfig_();
+
+		const existingPatterns = DEFAULT_PATTERNS.filter(val => {
+			return document.querySelector(`#${val}`);
+		}).map(val => document.querySelector(`#${val}`));
+
+		if (existingPatterns.length > 0) {
+			config.color.tiles = () => existingPatterns;
+		}
 
 		this.bbChart = bb.generate(config);
 
@@ -598,9 +630,9 @@ ChartBase.STATE = {
 			value: Config.array(),
 			max: Config.number(),
 		}),
+		tiles: Config.func(),
 	}).value({
 		pattern: DEFAULT_COLORS,
-		threshhold: null,
 	}),
 
 	/**
@@ -861,10 +893,13 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	line: Config.shapeOf({
+		classes: Config.array(),
 		connectNull: Config.bool(),
 		step: Config.shapeOf({
 			type: Config.oneOf(['step', 'step-after', 'step-before']),
 		}),
+	}).value({
+		classes: DEFAULT_LINE_CASSES,
 	}),
 
 	/**
