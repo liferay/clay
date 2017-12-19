@@ -64,6 +64,35 @@
 	padding: 0;
 }
 
+// Inline Item
+
+.inline-item {
+	align-items: center;
+	display: inline-flex;
+	vertical-align: middle;
+
+	.lexicon-icon {
+		margin-top: $inline-item-lexicon-icon-margin-top;
+	}
+}
+
+.inline-item-before {
+	margin-right: $inline-item-spacer-x;
+}
+
+.inline-item-middle {
+	margin-left: $inline-item-spacer-x;
+	margin-right: $inline-item-spacer-x;
+
+	+ .inline-item-middle {
+		margin-left: 0;
+	}
+}
+
+.inline-item-after {
+	margin-left: $inline-item-spacer-x;
+}
+
 // Page Header
 
 .page-header {
