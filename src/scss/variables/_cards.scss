@@ -15,22 +15,44 @@ $card-section-header-margin-bottom: 1.5rem !default;
 $card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
 $card-section-header-text-transform: uppercase !default;
 
-$card-title-color: null !default;
-$card-title-font-size: 1rem !default; // 16px
-$card-title-font-weight: $font-weight-semi-bold !default;
-$card-title-margin-bottom: 0.5rem !default; // 8px
-$card-title-margin-top: null !default;
+// Card Title
 
-$card-subtitle-color: $card-section-header-color !default;
-$card-subtitle-font-size: 0.875rem !default; // 14px
-$card-subtitle-font-weight: null !default;
-$card-subtitle-margin-bottom: 0.5rem !default; // 8px
-$card-subtitle-margin-top: -$card-title-margin-bottom !default; // -8px
+$card-title: () !default;
+$card-title: map-merge((
+	font-size: 1rem,
+	font-weight: $font-weight-semi-bold,
+	line-height: $line-height-base
+), $card-title);
 
-$card-link-color: $link-color !default;
-$card-link-text-decoration: null !default;
-$card-link-hover-color: $link-hover-color !default;
-$card-link-hover-text-decoration: none !default;
+$card-title-link: () !default;
+$card-title-link: map-merge((
+	color: map-get($card-title, color)
+), $card-title-link);
+
+// Card Subtitle
+
+$card-subtitle: () !default;
+$card-subtitle: map-merge((
+	color: $secondary,
+	font-size: 0.875rem, // 14px
+	font-weight: $font-weight-semi-bold,
+	margin-top: 0
+), $card-subtitle);
+
+$card-subtitle-link: () !default;
+$card-subtitle-link: map-merge((
+	color: map-get($card-subtitle, color)
+), $card-subtitle-link);
+
+// Card Link
+
+$card-link: () !default;
+$card-link: map-merge((
+	color: $link-color,
+	hover-color: $link-hover-color
+), $card-link);
+
+// Card Divider
 
 $card-divider-bg: $card-border-color !default;
 $card-divider-height: 1px !default;
@@ -47,3 +69,47 @@ $checkbox-right-card-padding: $checkbox-left-card-padding !default;
 $checkbox-position: 1rem !default;
 
 $form-check-card-checked-box-shadow: $input-btn-focus-box-shadow !default;
+
+// Card Type Asset
+
+$card-type-asset: () !default;
+
+$image-card: () !default;
+
+$file-card: () !default;
+$file-card: map-merge((
+	asset-icon-color: $gray-600
+), $file-card);
+
+$card-page-item-asset: () !default;
+$card-page-item-asset: map-merge((
+	base: (
+		min-width: 200px,
+		padding-left: $grid-gutter-width / 2,
+		padding-right: $grid-gutter-width / 2
+	),
+	sm: (
+		breakpoint: map-get($grid-breakpoints, sm), // 576px
+		max-width: 50%
+	),
+	md: (
+		breakpoint: map-get($grid-breakpoints, md), // 768px
+		max-width: 33.3333%
+	),
+	lg: (
+		breakpoint: map-get($grid-breakpoints, lg), // 992px
+		max-width: 25%
+	)
+), $card-page-item-asset);
+
+// Card Type Directory
+
+$card-type-directory: () !default;
+$card-type-directory: map-merge((
+	sticker-font-size: 1.125rem // 18px
+), $card-type-directory);
+
+$card-page-item-directory: () !default;
+$card-page-item-directory: map-merge((
+	$card-page-item-asset
+), $card-page-item-directory);

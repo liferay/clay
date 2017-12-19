@@ -52,7 +52,8 @@ $btn-secondary: (
 	active-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
 	active-color: $body-color,
 	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61),
-	active-box-shadow: none
+	active-box-shadow: none,
+	loading-icon-dotted: ''
 ) !default;
 
 $btn-success: (
@@ -82,7 +83,8 @@ $btn-warning: (
 	disabled-bg: $warning,
 	active-bg: darken($warning, 8%),
 	active-border-color: transparent,
-	active-box-shadow: none
+	active-box-shadow: none,
+	loading-icon-dotted: 'loading-icon-dotted-light'
 ) !default;
 
 $btn-danger: (

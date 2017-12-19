@@ -1,0 +1,4 @@
+$loading-icon-dotted: () !default;
+$loading-icon-dotted: map-merge((
+	color: $secondary
+), $loading-icon-dotted);

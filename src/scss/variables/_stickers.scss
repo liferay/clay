@@ -31,6 +31,10 @@ $sticker-xl: map-merge((
 $sticker-inside-offset: $grid-gutter-width / 2 !default;
 $sticker-outside-offset: -($sticker-size / 2) !default;
 
+// User Icon
+
+$user-icon-border-radius: $rounded-circle-border-radius !default;
+
 // Sticker Variants
 
 $sticker-primary-bg: $primary !default;

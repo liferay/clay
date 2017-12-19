@@ -25,6 +25,7 @@
 	$active-border-color: map-get($map, active-border-color);
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
+	$loading-icon-dotted: map-get($map, loading-icon-dotted);
 
 	background-color: $bg;
 	border-color: $border-color;
@@ -68,5 +69,9 @@
 		border-color: $active-border-color;
 		box-shadow: $active-box-shadow;
 		color: $active-color;
+	}
+
+	.loading-icon-dotted {
+		@extend %#{$loading-icon-dotted} !optional;
 	}
 }

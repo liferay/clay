@@ -38,20 +38,38 @@
 	text-transform: $card-section-header-text-transform;
 }
 
+// Card Title
+
 .card-title {
-	color: $card-title-color;
-	font-size: $card-title-font-size;
-	font-weight: $card-title-font-weight;
-	margin-bottom: $card-title-margin-bottom;
-	margin-top: $card-title-margin-top;
+	@include clay-text-typography($card-title);
 }
 
+.card-title a {
+	@include clay-link($card-title-link);
+}
+
+// Card Subtitle
+
 .card-subtitle {
-	color: $card-subtitle-color;
-	font-size: $card-subtitle-font-size;
-	font-weight: $card-subtitle-font-weight;
-	margin-bottom: $card-subtitle-margin-bottom;
-	margin-top: $card-subtitle-margin-top;
+	@include clay-text-typography($card-subtitle);
+}
+
+.card-subtitle a {
+	@include clay-link($card-subtitle-link);
+}
+
+// Card Link
+
+.card-link {
+	@include clay-link($card-link);
+
+	&.btn-unstyled {
+		white-space: normal;
+	}
+
+	+ .card-link {
+		margin-left: 0;
+	}
 }
 
 .card-divider {
@@ -61,42 +79,6 @@
 	margin-left: $card-divider-spacer-x;
 	margin-right: $card-divider-spacer-x;
 	margin-top: $card-divider-spacer-y;
-}
-
-.card-link {
-	color: $card-link-color;
-	text-decoration: $card-link-text-decoration;
-
-	@include hover-focus {
-		color: $card-link-hover-color;
-		text-decoration: $card-link-hover-text-decoration;
-	}
-
-	+ .card-link {
-		margin-left: 0;
-	}
-
-	&.btn-link {
-		color: $card-link-color;
-
-		@include clay-component-btn-link;
-
-		line-height: normal;
-		text-decoration: $card-link-text-decoration;
-
-		@include hover-focus {
-			color: $card-link-hover-color;
-			text-decoration: $card-link-hover-text-decoration;
-		}
-	}
-}
-
-button.card-link {
-	background-color: transparent;
-
-	@include clay-component-btn-link;
-
-	line-height: normal;
 }
 
 .card-row {
@@ -423,58 +405,36 @@ button.card-link {
 	}
 }
 
-// Card Variants
+// Card Page
 
-.card-type-asset {
-	.aspect-ratio {
-		border-bottom: 1px solid lighten(map-get($theme-colors, secondary), 46%);
-
-		@include clay-aspect-ratio(16, 9);
-	}
-
-	.aspect-ratio-item-fluid {
-		color: lighten(map-get($theme-colors, secondary), 37%);
-		font-size: 64px;
-
-		.sticker {
-			display: block;
-
-			@include border-radius(100px);
-
-			.lexicon-icon {
-				font-size: 64px;
-			}
-		}
-	}
-
-	.bg-checkered .aspect-ratio-item-fluid {
-		color: $body-color;
-	}
-
-	.card-row {
-		align-items: flex-start;
-	}
-
-	.card-subtitle {
-		margin-bottom: 0;
-	}
-
-	.dropdown-action {
-		margin-right: -8px;
-		margin-top: -3px;
-	}
+.card-page {
+	@extend %clay-custom-grid-wrapper;
 }
 
+.card-page-item-directory {
+	@include clay-custom-grid-columns($card-page-item-directory);
+}
+
+.card-page-item-asset {
+	@include clay-custom-grid-columns($card-page-item-asset);
+}
+
+// Card Type Asset
+
+.card-type-asset {
+	@include clay-card-type-asset($card-type-asset);
+}
+
+.image-card {
+	@include clay-card-type-asset-variant($image-card);
+}
+
+.file-card {
+	@include clay-card-type-asset-variant($file-card);
+}
+
+// Card Type Directory
+
 .card-type-directory {
-	.card-title {
-		margin-bottom: 0;
-	}
-
-	.dropdown-action {
-		margin-right: -8px;
-	}
-
-	.sticker {
-		font-size: 18px;
-	}
+	@include clay-card-type-directory($card-type-directory);
 }
