@@ -36,7 +36,7 @@ const DEFAULT_LINE_CASSES = [
 	'bb-line-dashed-4-4',
 ];
 
-const DEFAULT_PATTERNS = [
+const DEFAULT_TILES = [
 	'circles',
 	'diagonal-left-large',
 	'diagonal-left-small',
@@ -60,12 +60,12 @@ const ChartBase = {
 	attached: function() {
 		const config = this.constructChartConfig_();
 
-		const existingPatterns = DEFAULT_PATTERNS.filter(val => {
+		const existingTiles = DEFAULT_TILES.filter(val => {
 			return document.querySelector(`#${val}`);
 		}).map(val => document.querySelector(`#${val}`));
 
-		if (existingPatterns.length > 0) {
-			config.color.tiles = () => existingPatterns;
+		if (existingTiles.length > 0) {
+			config.color.tiles = () => existingTiles;
 		}
 
 		this.bbChart = bb.generate(config);
