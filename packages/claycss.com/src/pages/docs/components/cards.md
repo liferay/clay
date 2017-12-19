@@ -13,7 +13,7 @@ weight: 100
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="card-type-asset-image-card">
+<article id="clay-image-card">
 
 ### Image card
 
@@ -68,6 +68,49 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayImageCard.render}
+	{param actionItems: [
+		[
+			"href": "#1",
+			"label": "Edit",
+			"separator": true
+		],
+		[
+			"href": "#1",
+			"label": "Save"
+		]
+	] /}
+	{param fileType: 'JPG' /}
+	{param fileTypeStyle: 'danger' /}
+	{param imageAlt: 'thumbnail' /}
+	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
+	{param labels: [
+		[
+			"label": "Approved",
+			"style": "success"
+		]
+	] /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Author Action' /}
+	{param title: 'thumbnail_coffee.jpg' /}
+{/call}
+```
+```text/html
+<clay-image-card
+	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
+	fileType="JPG"
+	fileTypeStyle="danger"
+	imageAlt="thumbnail"
+	imageSrc="/images/thumbnail_coffee.jpg"
+	labels='[{"label": "Approved", "style": "success"}]'
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Author Action"
+	title="thumbnail_coffee.jpg">
+</clay-image-card>
+```
 ```text/html
 <div class="card-type-asset form-check form-check-card form-check-top-left">
 	<div class="custom-control custom-checkbox">
@@ -162,6 +205,51 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayImageCard.render}
+	{param actionItems: [
+		[
+			"href": "#1",
+			"label": "Edit",
+			"separator": true
+		],
+		[
+			"href": "#1",
+			"label": "Save"
+		]
+	] /}
+	{param fileType: 'JPG' /}
+	{param fileTypeStyle: 'danger' /}
+	{param imageAlt: 'thumbnail' /}
+	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
+	{param labels: [
+		[
+			"label": "Approved",
+			"style": "success"
+		]
+	] /}
+	{param selectable: true /}
+	{param selected: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Author Action' /}
+	{param title: 'thumbnail_coffee.jpg' /}
+{/call}
+```
+```text/html
+<clay-image-card
+	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
+	fileType="JPG"
+	fileTypeStyle="danger"
+	imageAlt="thumbnail"
+	imageSrc="/images/thumbnail_coffee.jpg"
+	labels='[{"label": "Approved", "style": "success"}]'
+	selectable="true"
+	selected="true"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Author Action"
+	title="thumbnail_coffee.jpg">
+</clay-image-card>
+```
 ```text/html
 <div class="card-type-asset form-check form-check-card form-check-top-left">
 	<div class="custom-control custom-checkbox">
@@ -247,6 +335,45 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayImageCard.render}
+	{param actionItems: [
+		[
+			"href": "#1",
+			"label": "Edit",
+			"separator": true
+		],
+		[
+			"href": "#1",
+			"label": "Save"
+		]
+	] /}
+	{param fileType: 'PNG' /}
+	{param fileTypeStyle: 'info' /}
+	{param labels: [
+		[
+			"label": "Rejected",
+			"style": "danger"
+		]
+	] /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Author Action' /}
+	{param title: 'empty-background.png' /}
+{/call}
+```
+```text/html
+<clay-image-card
+	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
+	fileType="PNG"
+	fileTypeStyle="info"
+	labels='[{"label": "Rejected", "style": "danger"}]'
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Author Action"
+	title="thumbnail_coffee.jpg">
+</clay-image-card>
+```
 ```text/html
 <div class="card card-type-asset">
 	<div class="aspect-ratio bg-checkered card-item-first">
@@ -354,6 +481,67 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayImageCard.render}
+	{param actionItems: [
+		[
+			"href": "#1",
+			"label": "Edit",
+			"separator": true
+		],
+		[
+			"href": "#1",
+			"label": "Save"
+		]
+	] /}
+	{param icon: 'camera' /}
+	{param fileType: 'SVG' /}
+	{param fileTypeStyle: 'warning' /}
+	{param labels: [
+		[
+			"label": "Approved",
+			"style": "success"
+		]
+	] /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Author Action' /}
+	{param title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg' /}
+{/call}
+
+{call ClayImageCard.render}
+	{param imageAlt: 'thumbnail' /}
+	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
+	{param fileType: 'JPG' /}
+	{param fileTypeStyle: 'danger' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Author Action' /}
+	{param title: 'thumbnail_coffee.jpg' /}
+{/call}
+```
+```text/html
+<clay-image-card
+	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
+	fileType="SVG"
+	fileTypeStyle="warning"
+	icon="camera"
+	labels='[{"label": "Approved", "style": "success"}]'
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Author Action"
+	title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.jpg">
+</clay-image-card>
+
+<clay-image-card
+	fileType="JPG"
+	fileTypeStyle="danger"
+	imageAlt="thumbnail"
+	imageSrc="/images/thumbnail_coffee.jpg"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Author Action"
+	title="thumbnail_coffee.jpg">
+</clay-image-card>
+```
 ```text/html
 <div class="card-type-asset form-check form-check-card form-check-top-left">
 	<div class="custom-control custom-checkbox">
@@ -421,7 +609,7 @@ weight: 100
 </article>
 
 
-<article id="card-type-asset-file-card">
+<article id="clay-user-card">
 
 ### User card
 
@@ -489,6 +677,54 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayUserCard.render}
+	{param initials: 'HS' /}
+	{param name: 'User Name' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Latest Action' /}
+	{param userColor: 'danger' /}
+{/call}
+
+{call ClayUserCard.render}
+	{param actionItems: [
+		[
+			"href": "#1",
+			"label": "Edit",
+			"separator": true
+		],
+		[
+			"href": "#1",
+			"label": "Save"
+		]
+	] /}
+	{param initials: 'HS' /}
+	{param name: 'User Name' /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Latest Action' /}
+	{param userColor: 'danger' /}
+{/call}
+```
+```text/html
+<clay-user-card
+	initials="HS"
+	name="User Name"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Latest Action"
+	userColor="danger">
+</clay-user-card>
+
+<clay-user-card
+	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
+	initials="HS"
+	name="User Name"
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Latest Action"
+	userColor="danger">
+</clay-user-card>
+```
 ```text/html
 <div class="card card-type-asset">
 	<div class="aspect-ratio card-item-first">
@@ -550,7 +786,7 @@ weight: 100
 
 </article>
 
-<article id="card-type-asset-file-card">
+<article id="clay-file-card">
 
 ### File card
 
@@ -630,6 +866,72 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayFileCard.render}
+	{param fileType: 'DOC' /}
+	{param fileTypeStyle: 'danger' /}
+	{param icon: 'documents-and-media' /}
+	{param labels: [
+		[
+			"label": "Approved",
+			"style": "success"
+		]
+	] /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Stevie Ray Vaughn' /}
+	{param title: 'deliverable.doc' /}
+{/call}
+
+{call ClayFileCard.render}
+	{param actionItems: [
+		[
+			"href": "#1",
+			"label": "Edit",
+			"separator": true
+		],
+		[
+			"href": "#1",
+			"label": "Save"
+		]
+	] /}
+	{param fileType: 'DOC' /}
+	{param fileTypeStyle: 'danger' /}
+	{param icon: 'documents-and-media' /}
+	{param labels: [
+		[
+			"label": "Approved",
+			"style": "success"
+		]
+	] /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param subtitle: 'Stevie Ray Vaughn' /}
+	{param title: 'deliverable.doc' /}
+{/call}
+```
+```text/html
+<clay-file-card
+	fileType="DOC"
+	fileTypeStyle="danger"
+	icon="documents-and-media"
+	labels='[{"label": "Approved", "style": "success"}]'
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Stevie Ray Vaughn"
+	title="deliverable.doc">
+</clay-file-card>
+
+<clay-file-card
+	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
+	fileType="DOC"
+	fileTypeStyle="danger"
+	icon="documents-and-media"
+	labels='[{"label": "Approved", "style": "success"}]'
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg"
+	subtitle="Stevie Ray Vaughn"
+	title="deliverable.doc">
+</clay-file-card>
+```
 ```text/html
 <div class="card card-type-asset">
 	<div class="aspect-ratio card-item-first">
@@ -703,7 +1005,7 @@ weight: 100
 
 </article>
 
-<article id="card-type-directory">
+<article id="clay-folder-card">
 
 ### Folder card
 
@@ -773,6 +1075,42 @@ weight: 100
 	</div>
 </div>
 
+```soy
+{call ClayHorizontalCard.render}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual' /}
+{/call}
+
+{call ClayHorizontalCard.render}
+	{param actionItems: [
+		[
+			"href": "#1",
+			"label": "Edit",
+			"separator": true
+		],
+		[
+			"href": "#1",
+			"label": "Save"
+		]
+	] /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual' /}
+{/call}
+```
+```text/html
+<clay-horizontal-card
+	spritemap="/vendor/lexicon/icons.svg"
+	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
+</clay-horizontal-card>
+
+<clay-horizontal-card
+	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg"
+	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
+</clay-horizontal-card>
+```
 ```text/html
 <div class="card card-horizontal card-type-directory">
 	<div class="card-body">
