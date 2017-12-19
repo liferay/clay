@@ -1,7 +1,9 @@
 .loading-icon {
-	display: inline-block;
+	display: block;
 	font-size: $loading-icon-font-size;
 	height: 1em;
+	margin-left: auto;
+	margin-right: auto;
 	position: relative;
 	text-align: left;
 	vertical-align: middle;
