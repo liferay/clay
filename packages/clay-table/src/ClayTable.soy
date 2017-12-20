@@ -141,9 +141,11 @@
 	{@param? spritemap: string}
 
 	<td>
-		<a href="{$item.href}">
-			<span class="text-truncate">{$value}</span>
-		</a>
+		{call ClayLink.render}
+			{param elementClasses: 'text-truncate' /}
+			{param href: $item.href /}
+			{param label: $value /}
+		{/call}
 	</td>
 {/deltemplate}
 
@@ -159,13 +161,17 @@
 
 	<td class="table-cell-expand">
 		<h4 class="table-list-title">
-			{if $item.href}
-				<a class="text-truncate" href="{$item.href}">
-					<span>{$value}</span>
-				</a>
-			{else}
-				<span class="text-truncate">{$value}</span>	
-			{/if}
+			<span class="text-truncate-inline">
+				{if $item.href}
+					{call ClayLink.render}
+						{param elementClasses: 'text-truncate' /}
+						{param href: $item.href /}
+						{param label: $value /}
+					{/call}
+				{else}
+					<span class="text-truncate">{$value}</span>	
+				{/if}
+			</span>
 		</h4>
 	</td>
 {/deltemplate}
