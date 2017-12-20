@@ -27,8 +27,182 @@
 	<div id="container"></div>
 
 	<script type="text/javascript">
+		let actionItems = [
+			{
+				href: '#1',
+				label: 'Option 1',
+			},
+			{
+				href: '#2',
+				label: 'Option 2',
+				separator: true,
+			},
+			{
+				href: '#3',
+				label: 'Option 3',
+			},
+		];
 
-		new metal.ClayTable({}, '#container');
+		let actionItemsWithQuickItems = [
+			{
+				href: '#1',
+				icon: 'trash',
+				label: 'Remove',
+				quickAction: true,
+			},
+			{
+				href: '#2',
+				icon: 'download',
+				label: 'Download',
+				quickAction: true,
+				separator: true,
+			},
+			{
+				href: '#3',
+				icon: 'info-circle-open',
+				label: 'Mark as watched',
+				quickAction: true,
+			},
+		];
+
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		new metal.ClayTable({
+			items: [
+				{
+					items: [
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'George Lucas',
+							rating: 10,
+							ratingStatus: 'warning',
+							releaseDate: 'May 19th 1999',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Episode I: The Phantom Menace',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'George Lucas',
+							rating: 50,
+							releaseDate: 'May 12th 2002',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Episode II: Attack of the Clones',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'George Lucas',
+							rating: 60,
+							releaseDate: 'May 12th 2005',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Episode III: Revenge of the Sith',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'George Lucas',
+							rating: 90,
+							releaseDate: 'May 25th 1977',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Episode IV: A New Hope',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'Irvin Kershner',
+							rating: 100,
+							releaseDate: 'May 21th 1980',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Episode V: The Empire Strikes Back',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'Richard Marquand',
+							rating: 90,
+							releaseDate: 'May 21th 1980',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Episode VI: Return of the Jedi',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'J. J. Abrams',
+							rating: 70,
+							releaseDate: 'December 14th 2015',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Episode VII: The Force Awakens',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'J. J. Abrams',
+							rating: 0,
+							releaseDate: 'December 9th 2017',
+							status: 'Pending',
+							statusStyle: 'warning',
+							title: 'Episode VIII: The Last Jedi',
+						},
+					],
+					label: 'Saga',
+				},
+				{
+					items: [
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'Gareth Edwards',
+							rating: 70,
+							releaseDate: 'December 10th 2016',
+							status: 'Watched',
+							statusStyle: 'success',
+							title: 'Rogue One: A Star Wars Story',
+						},
+						{
+							actionItems: actionItemsWithQuickItems,
+							director: 'Ron Howard',
+							rating: 0,
+							releaseDate: 'May 25th 2018',
+							status: 'Pending',
+							statusStyle: 'warning',
+							title: 'Solo: A Star Wars Story',
+						},
+					],
+					label: 'Expanded Universe'
+				}
+			],
+			schema: [
+				{
+					fieldName: 'title',
+					label: 'Title',
+					sortingOrder: 'asc',
+				},
+				{
+					fieldName: 'director',
+					label: 'Director',
+				},
+				{
+					contentRenderer: 'number',
+					fieldName: 'releaseDate',
+					status: 'Watched',
+					statusStyle: 'success',
+					label: 'Release Date',
+				},
+				{
+					contentRenderer: 'label',
+					fieldName: 'status',
+					label: 'Status',
+				},
+				{
+					contentRenderer: 'progressbar',
+					fieldName: 'rating',
+					label: 'Rating'
+				},
+			],
+			selectable: true,
+			showActionsMenu: true,
+			spritemap: spritemap,
+		}, '#container');
 
 	</script>
 </body>
