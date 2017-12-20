@@ -13,6 +13,15 @@ import templates from './ClayTable.soy.js';
  */
 class ClayTable extends Component {
 	/**
+	 * Continues the propagation of the cell content click event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleCellContentClick_(event) {
+		this.emit('cellContentClicked', event);
+	}
+	
+	/**
 	 * Continues the propagation of the column sorting button click event
 	 * @param {!Event} event
 	 * @private

@@ -11,6 +11,7 @@
 		sortingOrder: string
 	]>}
 	{@param? elementClasses: string}
+	{@param? handleCellContentClick_: any}
 	{@param? handleSortingClick_: any}
 	{@param? id: string}
 	{@param? items: list<?>}
@@ -43,6 +44,7 @@
 			{/call}
 
 			{call .body}
+				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param spritemap: $spritemap /}
@@ -61,6 +63,7 @@
 		label: string,
 		sortingOrder: string
 	]>}
+	{@param? handleCellContentClick_: any}
 	{@param? items: list<?>}
 	{@param? spritemap: string}
 
@@ -73,6 +76,7 @@
 
 						{delcall ClayTable.Cell variant="$variant"}
 							{param fieldName: $element.fieldName /}
+							{param handleCellContentClick_: $handleCellContentClick_ /}
 							{param item: $item /}
 							{param spritemap: $spritemap /}
 							{param value: $item[$element.fieldName] /}
@@ -133,10 +137,31 @@
 	{@param fieldName: string}
 	{@param item: ?}
 	{@param value: ?}
+	{@param? handleCellContentClick_: any}
 	{@param? spritemap: string}
 
 	<td>
 		<span class="text-truncate">{$value}</span>
+	</td>
+{/deltemplate}
+
+/**
+ * This renders the default variant of a cell
+ */
+{deltemplate ClayTable.Cell variant="'button'"}
+	{@param fieldName: string}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? handleCellContentClick_: any}
+	{@param? spritemap: string}
+
+	<td>
+		{call ClayButton.render}
+			{param events: ['click': $handleCellContentClick_ ]/}
+			{param label: $value /}
+			{param style: $item[$fieldName + 'Style'] /}
+			{param type: $item[$fieldName + 'Type'] /}
+		{/call}
 	</td>
 {/deltemplate}
 
@@ -147,6 +172,7 @@
 	{@param fieldName: string}
 	{@param item: ?}
 	{@param value: ?}
+	{@param? handleCellContentClick_: any}
 	{@param? spritemap: string}
 
 	<td class="table-cell-expand">
@@ -164,6 +190,7 @@
 	{@param fieldName: string}
 	{@param item: ?}
 	{@param value: ?}
+	{@param? handleCellContentClick_: any}
 	{@param? spritemap: string}
 
 	<td>
@@ -184,6 +211,7 @@
 	{@param fieldName: string}
 	{@param item: ?}
 	{@param value: ?}
+	{@param? handleCellContentClick_: any}
 	{@param? spritemap: string}
 
 	<td class="table-cell-expand">
