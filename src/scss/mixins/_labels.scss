@@ -6,10 +6,8 @@
 	$padding-y: map-get($map, padding-y);
 	$text-transform: map-get($map, text-transform);
 
-	$close-margin-left: map-get($map, close-margin-left);
-	$close-vertical-align: map-get($map, close-vertical-align);
-
 	$lexicon-icon-height: setter(map-get($map, lexicon-icon-height), map-get($map, lexicon-icon-width));
+	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
 	$lexicon-icon-width: map-get($map, lexicon-icon-width);
 
 	border-width: $border-width;
@@ -25,12 +23,20 @@
 	padding-top: $padding-y;
 	text-transform: $text-transform;
 
-	.close {
-		margin-left: $close-margin-left;
-		vertical-align: $close-vertical-align;
+	.inline-item {
+		a,
+		.btn-unstyled,
+		.close {
+			margin-top: $lexicon-icon-margin-top;
+
+			.lexicon-icon {
+				margin-top: 0;
+			}
+		}
 
 		.lexicon-icon {
 			height: $lexicon-icon-height;
+			margin-top: $lexicon-icon-margin-top;
 			width: $lexicon-icon-width;
 		}
 	}
