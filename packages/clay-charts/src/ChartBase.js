@@ -48,6 +48,18 @@ const DEFAULT_TILES = [
 	'vertical-small',
 ];
 
+const DEFAULT_POINT_PATTERNS = [
+	'circle',
+	'rectangle',
+	'<polygon points="2.5 0 0 5 5 5"></polygon>',
+	'<polygon points="2.5 0 0 2.5 2.5 5 5 2.5"></polygon>',
+	'<polygon points="0 0 2.5 5 5 0"></polygon>',
+	'<path d="M5,5 a1,1 0 1,1 5,0">',
+	'<path d="M0,0 a1,1 0 0,0 5,0">',
+	'<rect width="5" height="2.5"></rect>',
+	'<rect width="2.5" height="5"></rect>',
+];
+
 /**
  * Chart Base prototype.
  *
@@ -976,6 +988,9 @@ ChartBase.STATE = {
 				r: Config.number(),
 			}),
 		}),
+		pattern: Config.array(),
+	}).value({
+		pattern: DEFAULT_POINT_PATTERNS,
 	}),
 
 	/**

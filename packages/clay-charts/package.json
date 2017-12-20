@@ -18,9 +18,10 @@
   "scripts": {
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
-    "prepublish": "npm run soy && npm run sass && npm run compile",
+    "prepublish": "npm run soy && npm run sass && npm run compile && npm run copy",
     "sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
-    "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy"
+    "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy",
+    "copy": "ncp src/svg lib/svg"
   },
   "keywords": [
     "metal"
@@ -52,6 +53,7 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.1",
     "metal-tools-soy": "^4.2.1",
+    "ncp": "^2.0.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
