@@ -8,17 +8,23 @@ $btn-disabled-cursor: $disabled-cursor !default;
 
 $btn-inline-item-font-size: null !default;
 
+$btn-section-font-size: 0.6875rem !default; // 11px
+$btn-section-font-weight: $font-weight-normal !default;
+$btn-section-line-height: 1 !default;
+
 // Button Sizes
 
 $btn-font-size-lg: null !default;
 $btn-font-size-lg-mobile: null !default;
 $btn-padding-x-lg-mobile: null !default;
 $btn-padding-y-lg-mobile: null !default;
+$btn-section-font-size-lg: 0.8125rem !default; // 13px
 
 $btn-font-size-sm: null !default;
 $btn-font-size-sm-mobile: null !default;
 $btn-padding-x-sm-mobile: null !default;
 $btn-padding-y-sm-mobile: null !default;
+$btn-section-font-size-sm: 0.5625rem !default; // 9px
 
 // Button Monospaced
 

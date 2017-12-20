@@ -22,6 +22,13 @@
 	font-size: $btn-inline-item-font-size;
 }
 
+.btn-section {
+	display: block;
+	font-size: $btn-section-font-size;
+	font-weight: $btn-section-font-weight;
+	line-height: $btn-section-line-height;
+}
+
 // Button Sizes
 
 .btn-lg {
@@ -34,6 +41,10 @@
 		padding-right: $btn-padding-x-lg-mobile;
 		padding-top: $btn-padding-y-lg-mobile;
 	}
+
+	.btn-section {
+		font-size: $btn-section-font-size-lg;
+	}
 }
 
 .btn-sm {
@@ -45,6 +56,10 @@
 		padding-left: $btn-padding-x-sm-mobile;
 		padding-right: $btn-padding-x-sm-mobile;
 		padding-top: $btn-padding-y-sm-mobile;
+	}
+
+	.btn-section {
+		font-size: $btn-section-font-size-sm;
 	}
 }
 
@@ -82,7 +97,11 @@
 // Button Monospaced
 
 .btn-monospaced {
+	align-items: center;
+	display: inline-flex;
+	flex-direction: column;
 	height: $btn-monospaced-size;
+	justify-content: center;
 	overflow: hidden;
 	padding: 0;
 	text-align: center;
@@ -115,10 +134,8 @@
 		}
 	}
 
-	.lexicon-icon {
-		display: block;
-		height: 100%;
-		margin: auto;
+	&.btn .lexicon-icon {
+		margin-top: 0;
 	}
 }
 
