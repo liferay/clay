@@ -21,8 +21,14 @@ body {
 }
 
 h1 {
-	font-size: 110px;
+	font-size: 80px;
 	font-weight: 700;
+}
+
+@media (min-width: 960px) {
+	h1 {
+		font-size: 110px;
+	}
 }
 
 .h2 {
@@ -44,14 +50,26 @@ h1 {
 }
 
 p.hometext {
-	font-size: 26px;
+	font-size: 24px;
 	color: #CDCED9;
 	font-weight: 400;
 }
 
+@media (min-width: 960px) {
+	p.hometext {
+		font-size: 26px;
+	}
+}
+
 .hspace {
 	margin-bottom: 0;
-	margin-top: 140px;
+	margin-top: 20px;
+}
+
+@media (min-width: 960px) {
+	.hspace {
+		margin-top: 140px;
+	}
 }
 
 .footer {
