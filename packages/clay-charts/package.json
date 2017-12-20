@@ -18,10 +18,10 @@
   "scripts": {
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
-    "prepublish": "npm run soy && npm run sass && npm run compile && npm run copy",
+    "prepublish": "npm run soy && npm run sass && npm run compile && npm run copyAssets",
     "sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
     "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy",
-    "copy": "ncp src/svg lib/svg"
+    "copyAssets": "ncp src/svg lib/svg"
   },
   "keywords": [
     "metal"
