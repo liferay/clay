@@ -72,6 +72,7 @@
 						{let $variant: index($element) == 0 ? 'main' : $element.contentRenderer /}
 
 						{delcall ClayTable.Cell variant="$variant"}
+							{param fieldName: $element.fieldName /}
 							{param item: $item /}
 							{param spritemap: $spritemap /}
 							{param value: $item[$element.fieldName] /}
@@ -123,6 +124,7 @@
  * This renders the default variant of a cell
  */
 {deltemplate ClayTable.Cell}
+	{@param fieldName: string}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? spritemap: string}
@@ -136,6 +138,7 @@
  * This renders a variant of a cell of type link
  */
 {deltemplate ClayTable.Cell variant="'link'"}
+	{@param fieldName: string}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? spritemap: string}
@@ -155,6 +158,7 @@
  * row.
  */
 {deltemplate ClayTable.Cell variant="'main'"}
+	{@param fieldName: string}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? spritemap: string}
