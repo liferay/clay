@@ -129,3 +129,18 @@
 		<span class="text-truncate">{$value}</span>
 	</td>
 {/deltemplate}
+
+/**
+ * This renders a variant of a cell of type link
+ */
+{deltemplate ClayTable.Cell variant="'link'"}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? spritemap: string}
+
+	<td>
+		<a href="{$item.href}">
+			<span class="text-truncate">{$value}</span>
+		</a>
+	</td>
+{/deltemplate}
