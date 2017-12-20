@@ -33,6 +33,15 @@ ClayTable.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
+
+	/**
+	 * Table responsive sizes. Available `lg`, `md`, `sm` and `xl`.
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	size: Config.oneOf(['lg', 'md', 'sm', 'xl']),
 };
 
 defineWebComponent('clay-table', ClayTable);

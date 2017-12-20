@@ -6,9 +6,15 @@
 {template .render}
 	{@param? elementClasses: string}
 	{@param? id: string}
+	{@param? size: string}
+
 
 	{let $attributes kind="attributes"}
-		class="clay-table
+		class="table-responsive
+			{if $size}
+				-{$size}
+			{/if}
+
 			{if $elementClasses}
 				{sp}{$elementClasses}
 			{/if}
