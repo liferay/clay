@@ -4,9 +4,16 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param schema: list<[
+		fieldName: string,
+		label: string,
+		sortingOrder: string
+	]>}
 	{@param? elementClasses: string}
+	{@param? handleSortingClick_: any}
 	{@param? id: string}
 	{@param? size: string}
+	{@param? spritemap: string}
 
 
 	{let $attributes kind="attributes"}
@@ -25,5 +32,47 @@
 		{/if}
 	{/let}
 
-	<div {$attributes}>Hello World</div>
+	<div {$attributes}>
+		<table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+			{call .header}
+				{param handleSortingClick_: $handleSortingClick_ /}
+				{param schema: $schema /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</table>
+	</div>
+{/template}
+
+/**
+ * This renders the header of the table
+ */
+{template .header}
+	{@param schema: list<[
+		fieldName: string,
+		label: string,
+		sortingOrder: string
+	]>}
+	{@param? handleSortingClick_: any}
+	{@param? spritemap: string}
+
+	<thead>
+		<tr>
+			{foreach $element in $schema}
+				<th>
+					{if not $element.sortingOrder}
+						{$element.label ?: $element.fieldName}
+					{else}
+						{call ClayLink.render}
+							{param events: ['click': $handleSortingClick_] /}
+							{param href: '#sort' /}
+							{param icon: 'order-arrow-' + ($element.sortingOrder == 'asc' ? 'up' : 'down') /}
+							{param iconAlignment: 'right' /}
+							{param label: $element.label ?: $element.fieldName /}
+							{param spritemap: $spritemap /}
+						{/call}
+					{/if}
+				</th>
+			{/foreach}
+		</tr>
+	</thead>
 {/template}
