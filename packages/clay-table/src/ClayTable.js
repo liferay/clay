@@ -47,6 +47,15 @@ ClayTable.STATE = {
 	id: Config.string(),
 
 	/**
+	 * List of items to display in the table.
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?array|undefined}
+	 * @default undefined
+	 */
+	items: Config.array(),
+
+	/**
 	 * Schema of the table containing an element per column with label and the
 	 * name of the field with the value.
 	 * @instance
@@ -56,6 +65,7 @@ ClayTable.STATE = {
 	 */
 	schema: Config.arrayOf(
 		Config.shapeOf({
+			contentRenderer: Config.string(),
 			fieldName: Config.string().required(),
 			label: Config.string(),
 			sortingOrder: Config.oneOf(['asc', 'desc']),
