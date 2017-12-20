@@ -135,6 +135,23 @@
 {/deltemplate}
 
 /**
+ * This renders a variant of a cell of type label
+ */
+{deltemplate ClayTable.Cell variant="'label'"}
+	{@param fieldName: string}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? spritemap: string}
+
+	<td class="table-cell-expand">
+		{call ClayLabel.render}
+			{param label: $value /}
+			{param style: $item[$fieldName + 'Style'] /}
+		{/call}
+	</td>
+{/deltemplate}
+
+/**
  * This renders a variant of a cell of type link
  */
 {deltemplate ClayTable.Cell variant="'link'"}

@@ -1,3 +1,4 @@
+import 'clay-label';
 import 'clay-link';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
