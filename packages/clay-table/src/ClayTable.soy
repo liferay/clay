@@ -69,7 +69,9 @@
 			{foreach $item in $items}
 				<tr>
 					{foreach $element in $schema}
-						{delcall ClayTable.Cell variant="$element.contentRenderer"}
+						{let $variant: index($element) == 0 ? 'main' : $element.contentRenderer /}
+
+						{delcall ClayTable.Cell variant="$variant"}
 							{param item: $item /}
 							{param spritemap: $spritemap /}
 							{param value: $item[$element.fieldName] /}
@@ -142,5 +144,28 @@
 		<a href="{$item.href}">
 			<span class="text-truncate">{$value}</span>
 		</a>
+	</td>
+{/deltemplate}
+
+/**
+ * This renders a variant of a cell of type main. This type renders an sticker
+ * if passed and a text or link in semibold. Is used for the first cell of each
+ * row.
+ */
+{deltemplate ClayTable.Cell variant="'main'"}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? spritemap: string}
+
+	<td class="table-cell-expand">
+		<h4 class="table-list-title">
+			{if $item.href}
+				<a class="text-truncate" href="{$item.href}">
+					<span>{$value}</span>
+				</a>
+			{else}
+				<span class="text-truncate">{$value}</span>	
+			{/if}
+		</h4>
 	</td>
 {/deltemplate}
