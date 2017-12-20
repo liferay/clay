@@ -1,11 +1,13 @@
 body {
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	background-color: #393A4A;
-	min-height: 100vh;
-	color: #FFF;
 	background-image: url(../images/bg.svg);
 	background-position: center 50px;
 	background-repeat: no-repeat;
+	color: #FFF;
 	font-family: 'Source Sans Pro', sans-serif;
+	min-height: 100vh;
 }
 
 .container {
@@ -14,7 +16,7 @@ body {
 
 @media (min-width: 1200px) {
 	.container {
-		max-width: 1080px;
+		max-width: 960px;
 	}
 }
 
@@ -24,7 +26,7 @@ h1 {
 }
 
 .h2 {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 700;
 }
 
@@ -42,17 +44,17 @@ h1 {
 }
 
 p.hometext {
-	font-size: 28px;
+	font-size: 26px;
 	color: #CDCED9;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .hspace {
 	margin-bottom: 0;
-	margin-top: 170px;
+	margin-top: 140px;
 }
 
 .footer {
-	margin-top: 80px;
-	margin-bottom: 40px;
+	margin-top: 60px;
+	margin-bottom: 20px;
 }
