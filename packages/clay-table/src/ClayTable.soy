@@ -101,17 +101,23 @@
 	<thead>
 		<tr>
 			{foreach $element in $schema}
-				<th>
+				{let $tableHeaderAttributes kind="attributes"}
+					{if index($element) == 0}
+						class="table-cell-expand"
+					{/if}
+				{/let}
+
+				<th {$tableHeaderAttributes}>
 					{if not $element.sortingOrder}
 						{$element.label ?: $element.fieldName}
 					{else}
-						{call ClayLink.render}
+						{call ClayButton.render}
 							{param events: ['click': $handleSortingClick_] /}
-							{param href: '#sort' /}
 							{param icon: 'order-arrow-' + ($element.sortingOrder == 'asc' ? 'up' : 'down') /}
 							{param iconAlignment: 'right' /}
 							{param label: $element.label ?: $element.fieldName /}
 							{param spritemap: $spritemap /}
+							{param style: 'unstyled' /}
 						{/call}
 					{/if}
 				</th>

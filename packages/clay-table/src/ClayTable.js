@@ -1,3 +1,4 @@
+import 'clay-button';
 import 'clay-label';
 import 'clay-link';
 import Component from 'metal-component';
@@ -17,8 +18,6 @@ class ClayTable extends Component {
 	 * @private
 	 */
 	handleSortingClick_(event) {
-		event.preventDefault();
-
 		this.emit('sortingButtonClicked', event);
 	}
 }
