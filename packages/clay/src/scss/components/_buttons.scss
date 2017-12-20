@@ -42,6 +42,10 @@
 		padding-top: $btn-padding-y-lg-mobile;
 	}
 
+	.inline-item {
+		font-size: $btn-inline-item-font-size-lg;
+	}
+
 	.btn-section {
 		font-size: $btn-section-font-size-lg;
 	}
@@ -56,6 +60,10 @@
 		padding-left: $btn-padding-x-sm-mobile;
 		padding-right: $btn-padding-x-sm-mobile;
 		padding-top: $btn-padding-y-sm-mobile;
+	}
+
+	.inline-item {
+		font-size: $btn-inline-item-font-size-sm;
 	}
 
 	.btn-section {
