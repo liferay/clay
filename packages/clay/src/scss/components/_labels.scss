@@ -32,17 +32,42 @@
 		}
 	}
 
-	.close {
-		color: inherit;
-		display: inline-flex;
-		float: none;
-		font-size: inherit;
-		opacity: 1;
-	}
+	.inline-item {
+		a {
+			align-items: center;
+			display: inline-flex;
+			margin-top: $label-lexicon-icon-margin-top;
+		}
 
-	.inline-item .lexicon-icon {
-		height: $label-lexicon-icon-height;
-		width: $label-lexicon-icon-width;
+		.btn-unstyled {
+			color: inherit;
+			display: inline-flex;
+			margin-top: $label-lexicon-icon-margin-top;
+			max-width: none;
+		}
+
+		.close {
+			color: inherit;
+			display: inline-flex;
+			float: none;
+			font-size: inherit;
+			margin-top: $label-lexicon-icon-margin-top;
+			opacity: 1;
+		}
+
+		a,
+		.btn-unstyled,
+		.close {
+			.lexicon-icon {
+				margin-top: 0;
+			}
+		}
+
+		.lexicon-icon {
+			height: $label-lexicon-icon-height;
+			margin-top: $label-lexicon-icon-margin-top;
+			width: $label-lexicon-icon-width;
+		}
 	}
 }
 

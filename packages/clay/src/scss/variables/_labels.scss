@@ -4,11 +4,13 @@ $label-link-hover-color: #FFF !default;
 $label-font-size: 75% !default;
 $label-font-weight: $font-weight-bold !default;
 $label-height: 1.25rem !default; // 20px
-$label-lexicon-icon-height: 0.76em !default;
-$label-lexicon-icon-width: $label-lexicon-icon-height !default;
 $label-padding-x: 0.4375rem !default; // 7px
 $label-padding-y: null !default; // 3px
 $label-text-transform: null !default;
+
+$label-lexicon-icon-height: 0.7em !default;
+$label-lexicon-icon-margin-top: -0.1em !default;
+$label-lexicon-icon-width: auto !default;
 
 $label-dismissible-text-transform: null !default;
 
