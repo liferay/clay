@@ -86,7 +86,19 @@ section: Components
 		<h3>Badge with Links Inside</h3>
 
 		<span class="badge badge-success">
-			<a href="#1">Badge</a><span class="inline-item inline-item-after">
+			<span class="inline-item inline-item-before"><a href="#1">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle"></use>
+				</svg>
+			</a></span><span class="inline-item inline-item-before"><button class="btn btn-unstyled" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#picture"></use>
+				</svg>
+			</button></span><a href="#1">Badge</a><span class="inline-item inline-item-after">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#camera"></use>
+				</svg>
+			</span><span class="inline-item inline-item-after">
 			<button aria-label="Close" class="close" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
@@ -129,7 +141,15 @@ section: Components
 		<h3>Label Dismissible</h3>
 
 <span class="label label-dismissible label-secondary">
-	Normal Label<span class="inline-item inline-item-after">
+	<span class="inline-item inline-item-before">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle"></use>
+		</svg>
+	</span><span class="inline-item inline-item-before">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+			<use xlink:href="{{rootPath}}/images/icons/icons.svg#add-cell"></use>
+		</svg>
+	</span>Normal Label<span class="inline-item inline-item-after">
 	<button aria-label="Close" class="close" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
@@ -137,7 +157,15 @@ section: Components
 	</button></span>
 </span>
 <span class="label label-dismissible label-lg label-success">
-	Large Label<span class="inline-item inline-item-after">
+	<span class="inline-item inline-item-before">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle"></use>
+		</svg>
+	</span><span class="inline-item inline-item-before">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+			<use xlink:href="{{rootPath}}/images/icons/icons.svg#add-cell"></use>
+		</svg>
+	</span>Large Label<span class="inline-item inline-item-after">
 	<button aria-label="Close" class="close" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
