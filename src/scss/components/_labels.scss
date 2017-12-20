@@ -34,17 +34,15 @@
 
 	.close {
 		color: inherit;
+		display: inline-flex;
 		float: none;
 		font-size: inherit;
-		margin-left: 2px;
 		opacity: 1;
-		vertical-align: middle;
+	}
 
-		.lexicon-icon {
-			height: $label-lexicon-icon-height;
-			vertical-align: baseline;
-			width: $label-lexicon-icon-width;
-		}
+	.inline-item .lexicon-icon {
+		height: $label-lexicon-icon-height;
+		width: $label-lexicon-icon-width;
 	}
 }
 
