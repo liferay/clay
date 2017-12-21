@@ -297,12 +297,13 @@ fieldset[disabled] label {
 	}
 }
 
-// Form Inline Autofit
+// Form Group Autofit
 
-.form-inline-autofit {
+.form-group-autofit {
 	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: $form-group-autofit-margin-bottom;
 
 	> .btn,
 	> .form-control,
@@ -335,7 +336,7 @@ fieldset[disabled] label {
 }
 
 @include media-breakpoint-up(sm) {
-	.form-inline-autofit {
+	.form-group-autofit {
 		flex: 1;
 		flex-direction: row;
 		width: 100%;
