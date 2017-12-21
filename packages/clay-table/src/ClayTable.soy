@@ -329,6 +329,21 @@
 /**
  * This renders a variant of a cell of type link
  */
+{deltemplate ClayTable.Cell variant="'number'"}
+	{@param fieldName: string}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? handleCellContentClick_: any}
+	{@param? spritemap: string}
+
+	<td class="text-right">
+		{$value}
+	</td>
+{/deltemplate}
+
+/**
+ * This renders a variant of a cell of type link
+ */
 {deltemplate ClayTable.Cell variant="'progressbar'"}
 	{@param fieldName: string}
 	{@param item: ?}
