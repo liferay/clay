@@ -1,20 +1,26 @@
 ---
 title: Labels
-description: Components
+description: "Labels are a mechanism to categorize information providing quick recognition."
 layout: "guide"
+pattern: "labels"
 weight: 100
 ---
 
-<article id="labels">
+### Description
+
+{$page.description}
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
+<article id="clay-labels">
 
 ### Labels
 
-<span class="label label-primary">Primary</span>{sp}
-<span class="label label-secondary">Secondary</span>{sp}
-<span class="label label-success">Success</span>{sp}
-<span class="label label-info">Info</span>{sp}
-<span class="label label-warning">Warning</span>{sp}
-<span class="label label-danger">Danger</span>
+<span class="label label-secondary">Label Text</span>{sp}
+<span class="label label-info">Status</span>{sp}
+<span class="label label-warning">Pending</span>{sp}
+<span class="label label-danger">Rejected</span>{sp}
+<span class="label label-success">Approved</span>
 
 ```soy
 {call ClayLabel.render}
@@ -41,7 +47,7 @@ weight: 100
 	{param style: 'success' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-label label="Label text"></clay-label>
 
 <clay-label label="Status" style="info"></clay-label>
@@ -53,192 +59,118 @@ weight: 100
 <clay-label label="Approved" style="success"></clay-label>
 ```
 ```text/html
-<span class="label label-primary">Primary</span>
-<span class="label label-secondary">Secondary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
+<span class="label label-secondary">Label Text</span>
+<span class="label label-info">Status</span>
+<span class="label label-warning">Pending</span>
+<span class="label label-danger">Rejected</span>
+<span class="label label-success">Approved</span>
 ```
 
 </article>
 
+<article id="clay-labels-size">
 
-<article id="label-as-a-link">
+### Sizes
 
-### Label as a Link
+> Use `label-lg` to make the label larger or use the mixin `label-size($sassMap)` to create a custom sized label.
 
-<a class="label label-primary" href="#1">Primary</a>{sp}
-<a class="label label-secondary" href="#1">Secondary</a>{sp}
-<a class="label label-success" href="#1">Success</a>{sp}
-<a class="label label-info" href="#1">Info</a>{sp}
-<a class="label label-warning" href="#1">Warning</a>{sp}
-<a class="label label-danger" href="#1">Danger</a>
+<span class="label label-secondary">Normal Label</span>{sp}
+<span class="label label-lg label-secondary">Large Label</span>{sp}
+
+```soy
+{call ClayLabel.render}
+	{param label: 'Normal Label' /}
+{/call}
+
+{call ClayLabel.render}
+	{param label: 'Large Label' /}
+	{param size: 'lg' /}
+{/call}
+```
+```text/html
+<clay-label label="Normal Label"></clay-label>
+
+<clay-label label="Large Label" size="lg"></clay-label>
+```
+```text/html
+<span class="label label-secondary">Normal Label</span>
+<span class="label label-lg label-secondary">Large Label</span>
+```
+
+</article>
+
+<article id="clay-labels-variations">
+
+### Variations
+
+#### Label simple
+
+> Used to identify, tag content, show status, to filter content or even to provide navigation to elements of same identification. It can be used with status colors.
+
+<span class="label label-secondary">Label Text</span>
+
+```soy
+{call ClayLabel.render}
+	{param label: 'Label Text' /}
+{/call}
+```
+```text/html
+<clay-label label="Normal Label"></clay-label>
+```
+```text/html
+<span class="label label-secondary">Label Text</span>
+```
+
+#### Label removable
+
+> Used in filter bars, categories, etc. Always in default size and without status color. Use it only in default size.
+
+<span class="label label-dismissible label-secondary">
+	Label Text{sp}
+	<button aria-label="Close" class="close" type="button">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
+		</svg>
+	</button>
+</span>
+
+```soy
+{call ClayLabel.render}
+	{param closeable: true /}
+	{param label: 'Label Text' /}
+{/call}
+```
+```text/html
+<clay-label closeable="true" label="Label Text"></clay-label>
+```
+```text/html
+<span class="label label-dismissible label-secondary">
+	Label Text{sp}
+	<button aria-label="Close" class="close" type="button">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
+		</svg>
+	</button>
+</span>
+```
+
+#### Label with link
+
+> Used in sites to link to related content.
+
+<a class="label label-secondary" href="#1">Label Text</a>
 
 ```soy
 {call ClayLabel.render}
 	{param href: '#1' /}
 	{param label: 'Label Text' /}
 {/call}
-
-{call ClayLabel.render}
-	{param href: '#1' /}
-	{param label: 'Status' /}
-	{param style: 'info' /}
-{/call}
-
-{call ClayLabel.render}
-	{param href: '#1' /}
-	{param label: 'Pending' /}
-	{param style: 'warning' /}
-{/call}
-
-{call ClayLabel.render}
-	{param href: '#1' /}
-	{param label: 'Rejected' /}
-	{param style: 'danger' /}
-{/call}
-
-{call ClayLabel.render}
-	{param href: '#1' /}
-	{param label: 'Approved' /}
-	{param style: 'success' /}
-{/call}
-```
-```webcomponents
-<clay-label href="#1" label="Label text"></clay-label>
-
-<clay-label href="#1" label="Status" style="info"></clay-label>
-
-<clay-label href="#1" label="Pending" style="warning"></clay-label>
-
-<clay-label href="#1" label="Rejected" style="danger"></clay-label>
-
-<clay-label href="#1" label="Approved" style="success"></clay-label>
 ```
 ```text/html
-<a class="label label-primary" href="#1">Primary</a>
-<a class="label label-secondary" href="#1">Secondary</a>
-<a class="label label-success" href="#1">Success</a>
-<a class="label label-info" href="#1">Info</a>
-<a class="label label-warning" href="#1">Warning</a>
-<a class="label label-danger" href="#1">Danger</a>
-```
-
-</article>
-
-
-<article id="label-dismissible">
-
-### Label Dismissible
-
-<span class="label label-dismissible label-secondary">
-	Normal Label{sp}
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>{sp}
-<span class="label label-dismissible label-lg label-success">
-	Large Label{sp}
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>
-
-```soy
-{call ClayLabel.render}
-	{param closeable: true /}
-	{param label: 'Normal Label' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-{/call}
-
-{call ClayLabel.render}
-	{param closeable: true /}
-	{param label: 'Large Label' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
-	{param size: 'lg' /}
-	{param style: 'info' /}
-{/call}
-```
-```webcomponents
-<clay-label
-	closeable="true"
-	label="Normal Label"
-	spritemap="/vendor/lexicon/icons.svg">
-</clay-label>
-
-<clay-label
-	closeable="true"
-	label="Large Label"
-	spritemap="/vendor/lexicon/icons.svg"
-	size="lg"
-	style="info">
-</clay-label>
+<clay-label href="#1" label="Label Text"></clay-label>
 ```
 ```text/html
-<span class="label label-dismissible label-secondary">
-	Normal Label
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>
-
-<span class="label label-dismissible label-lg label-success">
-	Large Label
-	<button aria-label="Close" class="close" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
-</span>
-```
-
-</article>
-
-
-<article id="label-sizes">
-
-### Label Sizes
-
-> Use `label-lg` to make the label larger or use the mixin `label-size($sassMap)` to create a custom sized label.
-
-<span class="label label-secondary">Normal Label</span>{sp}
-<span class="label label-lg label-success">Large Label</span>{sp}
-
-```soy
-{call ClayLabel.render}
-	{param closeable: true /}
-	{param label: 'Normal Label' /}
-{/call}
-
-{call ClayLabel.render}
-	{param label: 'Large Label' /}
-	{param size: 'lg' /}
-	{param style: 'info' /}
-{/call}
-```
-```webcomponents
-<clay-label
-	label="Normal Label"
-	spritemap="/vendor/lexicon/icons.svg">
-</clay-label>
-
-<clay-label
-	label="Large Label"
-	spritemap="/vendor/lexicon/icons.svg"
-	size="lg"
-	style="info">
-</clay-label>
-```
-```text/html
-<span class="label label-secondary">Normal Label</span>
-<span class="label label-lg label-success">Large Label</span>
+<a class="label label-primary" href="#1">Label Text</a>
 ```
 
 </article>
