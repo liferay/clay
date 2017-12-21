@@ -1,6 +1,7 @@
 import 'clay-button';
 import 'clay-label';
 import 'clay-link';
+import 'clay-progress-bar';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -20,7 +21,7 @@ class ClayTable extends Component {
 	handleCellContentClick_(event) {
 		this.emit('cellContentClicked', event);
 	}
-	
+
 	/**
 	 * Continues the propagation of the column sorting button click event
 	 * @param {!Event} event

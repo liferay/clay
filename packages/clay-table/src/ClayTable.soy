@@ -230,3 +230,23 @@
 		</h4>
 	</td>
 {/deltemplate}
+
+/**
+ * This renders a variant of a cell of type link
+ */
+{deltemplate ClayTable.Cell variant="'progressbar'"}
+	{@param fieldName: string}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? handleCellContentClick_: any}
+	{@param? spritemap: string}
+
+	<td>
+		{call ClayProgressBar.render}
+			{param maxValue: $item[$fieldName + 'MaxValue'] /}
+			{param minValue: $item[$fieldName + 'MinValue'] /}
+			{param status: $item[$fieldName + 'Status'] /}
+			{param value: $value /}
+		{/call}
+	</td>
+{/deltemplate}
