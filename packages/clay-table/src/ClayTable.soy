@@ -17,6 +17,7 @@
 	{@param? id: string}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
+	{@param? showActionsMenu: bool}
 	{@param? size: string}
 	{@param? spritemap: string}
 
@@ -43,6 +44,7 @@
 				{param handleSortingClick_: $handleSortingClick_ /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
+				{param showActionsMenu: $showActionsMenu /}
 				{param spritemap: $spritemap /}
 			{/call}
 
@@ -52,6 +54,7 @@
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
+				{param showActionsMenu: $showActionsMenu /}
 				{param spritemap: $spritemap /}
 			{/call}
 		</table>
@@ -72,6 +75,7 @@
 	{@param? handleItemToggled_: any}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
+	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
 
 	<tbody>
@@ -82,6 +86,7 @@
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
+				{param showActionsMenu: $showActionsMenu /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}
@@ -100,6 +105,7 @@
 	]>}
 	{@param? handleSortingClick_: any}
 	{@param? selectable: bool}
+	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
 
 	<thead>
@@ -130,6 +136,10 @@
 					{/if}
 				</th>
 			{/foreach}
+
+			{if $showActionsMenu}
+				<th></th>
+			{/if}
 		</tr>
 	</thead>
 {/template}
@@ -148,6 +158,7 @@
 	{@param? handleCellContentClick_: any}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
+	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
 
 	<tr>
@@ -174,6 +185,28 @@
 				{param value: $item[$element.fieldName] /}
 			{/delcall}
 		{/foreach}
+
+		{if $showActionsMenu and $item.actionItems and $spritemap}
+			<td>
+				<div class="quick-action-menu">
+					{foreach $actionItem in $item.actionItems}
+						{if $actionItem.quickAction and $actionItem.icon}
+							{call ClayLink.render}
+								{param elementClasses: 'quick-action-item' /}
+								{param href: $actionItem.href /}
+								{param icon: $actionItem.icon /}
+								{param spritemap: $spritemap /}
+							{/call}
+						{/if}
+					{/foreach}
+				</div>
+
+				{call ClayActionsDropdown.render}
+					{param items: $item.actionItems /}
+					{param spritemap: $spritemap /}
+				{/call}
+			</td>
+		{/if}
 	</tr>
 {/template}
 
@@ -192,6 +225,7 @@
 	{@param? handleCellContentClick_: any}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
+	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
@@ -210,6 +244,7 @@
 				{param items: $item.items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
+				{param showActionsMenu: $showActionsMenu /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{else}
@@ -219,6 +254,7 @@
 				{param item: $item /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
+				{param showActionsMenu: $showActionsMenu /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}
@@ -238,39 +274,6 @@
 	<td>
 		<span class="text-truncate">{$value}</span>
 	</td>
-{/deltemplate}
-
-/**
- * This renders the default variant of a cell
- */
-{deltemplate ClayTable.Cell variant="'actionsmenu'"}
-	{@param fieldName: string}
-	{@param item: ?}
-	{@param value: ?}
-	{@param? handleCellContentClick_: any}
-	{@param? spritemap: string}
-
-	{if $spritemap}
-		<td>
-			<div class="quick-action-menu">
-				{foreach $actionItem in $value}
-					{if $actionItem.quickAction and $actionItem.icon}
-						{call ClayLink.render}
-							{param elementClasses: 'quick-action-item' /}
-							{param href: $actionItem.href /}
-							{param icon: $actionItem.icon /}
-							{param spritemap: $spritemap /}
-						{/call}
-					{/if}
-				{/foreach}
-			</div>
-
-			{call ClayActionsDropdown.render}
-				{param items: $value /}
-				{param spritemap: $spritemap /}
-			{/call}
-		</td>
-	{/if}
 {/deltemplate}
 
 /**

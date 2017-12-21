@@ -158,6 +158,15 @@ ClayTable.STATE = {
 	selectable: Config.bool().value(false),
 
 	/**
+	 * Flag to indicate if the rows will show an actions menu or not.
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?bool}
+	 * @default false
+	 */
+	showActionsMenu: Config.bool().value(false),
+
+	/**
 	 * Table responsive sizes. Available `lg`, `md`, `sm` and `xl`.
 	 * @instance
 	 * @memberof ClayTable
