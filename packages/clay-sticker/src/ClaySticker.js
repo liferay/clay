@@ -82,8 +82,9 @@ ClaySticker.STATE = {
 	outside: Config.bool().value(false),
 
 	/**
-	 * Sticker position if not static. Available positions are `bottom-left`,
-	 * `bottom-right`, `top-right`.
+	 * Position of the sticker in relation to the contents.
+	 * Available positions are `bottom-left`, `bottom-right`, `top-left`
+	 * and `top-right`.
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?string|undefined}
