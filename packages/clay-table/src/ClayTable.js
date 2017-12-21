@@ -1,4 +1,5 @@
 import 'clay-button';
+import 'clay-checkbox';
 import 'clay-label';
 import 'clay-link';
 import 'clay-progress-bar';
@@ -20,6 +21,15 @@ class ClayTable extends Component {
 	 */
 	handleCellContentClick_(event) {
 		this.emit('cellContentClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the checkbox changed event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleItemToggled_(event) {
+		this.emit('itemToggled', event);
 	}
 
 	/**
@@ -81,6 +91,15 @@ ClayTable.STATE = {
 			sortingOrder: Config.oneOf(['asc', 'desc']),
 		})
 	).required(),
+
+	/**
+	 * Flag to indicate if the table items are selectable or not.
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?bool}
+	 * @default false
+	 */
+	selectable: Config.bool().value(false),
 
 	/**
 	 * Table responsive sizes. Available `lg`, `md`, `sm` and `xl`.

@@ -20,7 +20,7 @@
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|icon|label|link|progress-bar)/src/**/*.soy'"
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|checkbox|icon|label|link|progress-bar)/src/**/*.soy'"
   },
   "keywords": [
     "clay",
@@ -28,6 +28,7 @@
   ],
   "dependencies": {
     "clay-button": "1.0.0-alpha.8",
+    "clay-checkbox": "1.0.0-alpha.5",
     "clay-label": "1.0.0-alpha.8",
     "clay-link": "1.0.0-alpha.8",
     "clay-progress-bar": "1.0.0-alpha.5",

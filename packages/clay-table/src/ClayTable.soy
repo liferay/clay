@@ -12,9 +12,11 @@
 	]>}
 	{@param? elementClasses: string}
 	{@param? handleCellContentClick_: any}
+	{@param? handleItemToggled_: any}
 	{@param? handleSortingClick_: any}
 	{@param? id: string}
 	{@param? items: list<?>}
+	{@param? selectable: bool}
 	{@param? size: string}
 	{@param? spritemap: string}
 
@@ -40,13 +42,16 @@
 			{call .header}
 				{param handleSortingClick_: $handleSortingClick_ /}
 				{param schema: $schema /}
+				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 			{/call}
 
 			{call .body}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
 				{param schema: $schema /}
+				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 			{/call}
 		</table>
@@ -64,15 +69,19 @@
 		sortingOrder: string
 	]>}
 	{@param? handleCellContentClick_: any}
+	{@param? handleItemToggled_: any}
 	{@param? items: list<?>}
+	{@param? selectable: bool}
 	{@param? spritemap: string}
 
 	<tbody>
 		{if $items}
 			{call .rows}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
 				{param schema: $schema /}
+				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}
@@ -90,10 +99,15 @@
 		sortingOrder: string
 	]>}
 	{@param? handleSortingClick_: any}
+	{@param? selectable: bool}
 	{@param? spritemap: string}
 
 	<thead>
 		<tr>
+			{if $selectable}
+				<th></th>
+			{/if}
+
 			{foreach $element in $schema}
 				{let $tableHeaderAttributes kind="attributes"}
 					{if index($element) == 0}
@@ -132,9 +146,23 @@
 		sortingOrder: string
 	]>}
 	{@param? handleCellContentClick_: any}
+	{@param? handleItemToggled_: any}
+	{@param? selectable: bool}
 	{@param? spritemap: string}
 
 	<tr>
+		{if $selectable}
+			<td>
+				{call ClayCheckbox.render}
+					{param checked: $item.selected /}
+					{param disabled: $item.disabled /}
+					{param events: ['change': $handleItemToggled_] /}
+					{param name: $item.inputName /}
+					{param value: $item.inputValue /}
+				{/call}
+			</td>
+		{/if}
+
 		{foreach $element in $schema}
 			{let $variant: index($element) == 0 ? 'main' : $element.contentRenderer /}
 
@@ -162,25 +190,35 @@
 		sortingOrder: string
 	]>}
 	{@param? handleCellContentClick_: any}
+	{@param? handleItemToggled_: any}
+	{@param? selectable: bool}
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
 		{if $item.items}
 			<tr class="table-divider">
-				<td colspan="{length($schema)}">{$item.label}</td>
+				{let $cellAttributes kind="attributes"}
+					colspan="{length($schema) + $selectable}"
+				{/let}			
+
+				<td {$cellAttributes}>{$item.label}</td>
 			</tr>
 
 			{call .rows}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
 				{param schema: $schema /}
+				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{else}
 			{call .row}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}
 				{param schema: $schema /}
+				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}
