@@ -196,7 +196,7 @@
 	<td>
 		{call ClayLink.render}
 			{param elementClasses: 'text-truncate' /}
-			{param href: $item.href /}
+			{param href: $item[$fieldName + 'href'] /}
 			{param label: $value /}
 		{/call}
 	</td>
