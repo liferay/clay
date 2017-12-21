@@ -198,7 +198,7 @@
 		{if $item.items}
 			<tr class="table-divider">
 				{let $cellAttributes kind="attributes"}
-					colspan="{length($schema) + $selectable}"
+					colspan="{length($schema) + 2}"
 				{/let}			
 
 				<td {$cellAttributes}>{$item.label}</td>
@@ -238,6 +238,39 @@
 	<td>
 		<span class="text-truncate">{$value}</span>
 	</td>
+{/deltemplate}
+
+/**
+ * This renders the default variant of a cell
+ */
+{deltemplate ClayTable.Cell variant="'actionsmenu'"}
+	{@param fieldName: string}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? handleCellContentClick_: any}
+	{@param? spritemap: string}
+
+	{if $spritemap}
+		<td>
+			<div class="quick-action-menu">
+				{foreach $actionItem in $value}
+					{if $actionItem.quickAction and $actionItem.icon}
+						{call ClayLink.render}
+							{param elementClasses: 'quick-action-item' /}
+							{param href: $actionItem.href /}
+							{param icon: $actionItem.icon /}
+							{param spritemap: $spritemap /}
+						{/call}
+					{/if}
+				{/foreach}
+			</div>
+
+			{call ClayActionsDropdown.render}
+				{param items: $value /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</td>
+	{/if}
 {/deltemplate}
 
 /**

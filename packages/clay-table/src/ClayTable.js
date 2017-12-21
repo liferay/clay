@@ -1,5 +1,6 @@
 import 'clay-button';
 import 'clay-checkbox';
+import 'clay-dropdown';
 import 'clay-label';
 import 'clay-link';
 import 'clay-progress-bar';
