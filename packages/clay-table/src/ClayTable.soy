@@ -69,24 +69,14 @@
 
 	<tbody>
 		{if $items}
-			{foreach $item in $items}
-				<tr>
-					{foreach $element in $schema}
-						{let $variant: index($element) == 0 ? 'main' : $element.contentRenderer /}
-
-						{delcall ClayTable.Cell variant="$variant"}
-							{param fieldName: $element.fieldName /}
-							{param handleCellContentClick_: $handleCellContentClick_ /}
-							{param item: $item /}
-							{param spritemap: $spritemap /}
-							{param value: $item[$element.fieldName] /}
-						{/delcall}
-					{/foreach}
-				</tr>
-			{/foreach}
+			{call .rows}
+				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param items: $items /}
+				{param schema: $schema /}
+				{param spritemap: $spritemap /}
+			{/call}
 		{/if}
 	</tbody>
-
 {/template}
 
 /**
@@ -128,6 +118,73 @@
 			{/foreach}
 		</tr>
 	</thead>
+{/template}
+
+/**
+ * This renders a row.
+ */
+{template .row}
+	{@param item: ?}
+	{@param schema: list<[
+		contentRenderer: string,
+		fieldName: string,
+		label: string,
+		sortingOrder: string
+	]>}
+	{@param? handleCellContentClick_: any}
+	{@param? spritemap: string}
+
+	<tr>
+		{foreach $element in $schema}
+			{let $variant: index($element) == 0 ? 'main' : $element.contentRenderer /}
+
+			{delcall ClayTable.Cell variant="$variant"}
+				{param fieldName: $element.fieldName /}
+				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param item: $item /}
+				{param spritemap: $spritemap /}
+				{param value: $item[$element.fieldName] /}
+			{/delcall}
+		{/foreach}
+	</tr>
+{/template}
+
+/**
+ * This renders all the rows in the table, iteraing over the items and its
+ * possible nested items.
+ */
+{template .rows}
+	{@param items: list<?>}
+	{@param schema: list<[
+		contentRenderer: string,
+		fieldName: string,
+		label: string,
+		sortingOrder: string
+	]>}
+	{@param? handleCellContentClick_: any}
+	{@param? spritemap: string}
+
+	{foreach $item in $items}
+		{if $item.items}
+			<tr class="table-divider">
+				<td colspan="{length($schema)}">{$item.label}</td>
+			</tr>
+
+			{call .rows}
+				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param items: $item.items /}
+				{param schema: $schema /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{else}
+			{call .row}
+				{param handleCellContentClick_: $handleCellContentClick_ /}
+				{param item: $item /}
+				{param schema: $schema /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{/if}
+	{/foreach}
 {/template}
 
 /**
