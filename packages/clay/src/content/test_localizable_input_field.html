@@ -1,0 +1,202 @@
+---
+title: Localizable Input Field
+section: Visual Tests
+---
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<div class="sheet">
+			<header class="sheet-header">
+				<h2 class="sheet-title">Localizable Input Fields</h2>
+			</header>
+			<div class="sheet-section">
+				<div class="form-group form-inline-autofit">
+					<div class="form-inline-group">
+						<label for="productName">
+							Product Name
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
+							</svg>
+						</label>
+						<div class="input-group input-group-transparent">
+							<input aria-label="Amount" class="form-control" id="productName" placeholder="Some placeholder text..." type="text" value="Ratón inalámbrico Liferay">
+							<div class="input-group-btn">
+								<div class="dropdown">
+									<button class="btn btn-monospaced btn-secondary" data-toggle="dropdown" type="button">
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#es-es"></use>
+											</svg>
+										</span>
+										<span class="btn-section">es-ES</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#en-us"></use>
+												</svg>
+											</span>
+											en-US
+											<span class="label label-info">Default</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#en-gb"></use>
+												</svg>
+											</span>
+											en-GB
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="active dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#es-es"></use>
+												</svg>
+											</span>
+											es-ES
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#fr-fr"></use>
+												</svg>
+											</span>
+											fr-FR
+											<span class="label label-warning">Not Translated</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-text">Some helper text.</div>
+					</div>
+				</div>
+
+				<div class="form-group form-inline-autofit">
+					<div class="form-inline-group">
+						<label for="productDescription">Description</label>
+						<div class="input-group input-group-transparent">
+							<textarea aria-label="Amount" class="form-control" id="productDescription" placeholder="Some placeholder text...">El ratón inalámbrico Liferay es el ratón estelar de Liferay, diseñado para ofrecer a los usuarios avanzados comodidad, control y precisión superiores
+							</textarea>
+							<div class="input-group-btn">
+								<div class="dropdown">
+									<button class="btn btn-monospaced btn-secondary" data-toggle="dropdown" type="button">
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#es-es"></use>
+											</svg>
+										</span>
+										<span class="btn-section">es-ES</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#en-us"></use>
+												</svg>
+											</span>
+											en-US
+											<span class="label label-info">Default</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#en-gb"></use>
+												</svg>
+											</span>
+											en-GB
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="active dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#es-es"></use>
+												</svg>
+											</span>
+											es-ES
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#fr-fr"></use>
+												</svg>
+											</span>
+											fr-FR
+											<span class="label label-warning">Not Translated</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-text">Liferay offers advanced features and a stunning design, optimized for Windows and Mac. Enjoy ultimate comfort, control, precision and customization...<a href="#1">Read More</a></div>
+					</div>
+				</div>
+
+				<div class="form-group form-inline-autofit">
+					<div class="form-inline-group">
+						<label>Liferay</label>
+						<span class="form-text">http://www.liferay.com</span>
+						<div class="input-group">
+							<span class="input-group-addon">/</span>
+							<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text" value="soluciones">
+							<div class="input-group-btn">
+								<div class="dropdown">
+									<button class="btn btn-monospaced btn-secondary" data-toggle="dropdown" type="button">
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#es-es"></use>
+											</svg>
+										</span>
+										<span class="btn-section">es-ES</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#en-us"></use>
+												</svg>
+											</span>
+											en-US
+											<span class="label label-info">Default</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#en-gb"></use>
+												</svg>
+											</span>
+											en-GB
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="active dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#es-es"></use>
+												</svg>
+											</span>
+											es-ES
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#fr-fr"></use>
+												</svg>
+											</span>
+											fr-FR
+											<span class="label label-warning">Not Translated</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
