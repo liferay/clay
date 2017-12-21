@@ -4,10 +4,12 @@ import 'clay-dropdown';
 import 'clay-label';
 import 'clay-link';
 import 'clay-progress-bar';
+import {Config} from 'metal-state';
+import {EventHandler} from 'metal-events';
 import Component from 'metal-component';
+import dom from 'metal-dom';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import templates from './ClayTable.soy.js';
 
@@ -15,6 +17,36 @@ import templates from './ClayTable.soy.js';
  * Metal ClayTable component.
  */
 class ClayTable extends Component {
+	/**
+	 * @inheritDoc
+	 * Handles document click in order to hide menu.	 * Handles document click in order to hide menu.	 */
+	attached() {
+		this.eventHandler_.add(
+			dom.on(document, 'click', this.handleDocClick_.bind(this)),
+			dom.delegate(
+				this.element,
+				'focus',
+				'tr',
+				this.handleRowFocus_.bind(this)
+			)
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	created() {
+		this.eventHandler_ = new EventHandler();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	detached() {
+		super.detached();
+		this.eventHandler_.removeAllListeners();
+	}
+
 	/**
 	 * Continues the propagation of the cell content click event
 	 * @param {!Event} event
@@ -25,12 +57,35 @@ class ClayTable extends Component {
 	}
 
 	/**
+	 * Handles document click in order to remove the class `table-focus` from
+	 * the focused table row. This is to handle quickMenu accesibility.
+	 * @private
+	 */
+	handleDocClick_() {
+		dom.removeClasses(this.element.querySelectorAll('tr'), 'table-focus');
+	}
+
+	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
 	 */
 	handleItemToggled_(event) {
 		this.emit('itemToggled', event);
+	}
+
+	/**
+	 * Handles each row focus in order to add the class `table-focus` to the row.
+	 * This is to handle quickMenu accesibility.
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleRowFocus_(event) {
+		dom.removeClasses(
+			this.element.querySelector('.table-focus'),
+			'table-focus'
+		);
+		dom.addClasses(dom.closest(event.target, 'tr'), 'table-focus');
 	}
 
 	/**
