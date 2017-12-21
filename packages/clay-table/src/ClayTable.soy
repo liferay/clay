@@ -232,7 +232,7 @@
 		{if $item.items}
 			<tr class="table-divider">
 				{let $cellAttributes kind="attributes"}
-					colspan="{length($schema) + 2}"
+					colspan="{length($schema) + $selectable + $showActionsMenu}"
 				{/let}			
 
 				<td {$cellAttributes}>{$item.label}</td>
