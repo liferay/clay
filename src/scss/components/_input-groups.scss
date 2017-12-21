@@ -1,6 +1,6 @@
-.input-group {
-	align-items: flex-start;
+// Will need to revisit this whole thing once https://github.com/twbs/bootstrap/pull/25020 is merged
 
+.input-group {
 	.form-control:focus {
 		z-index: $zindex-input-group-focus;
 	}
@@ -17,6 +17,9 @@
 }
 
 .input-group-btn {
+	// Will need to be revisted once https://github.com/twbs/bootstrap/pull/25020 is merged
+	font-size: inherit;
+
 	> .btn {
 		height: $input-height;
 		padding-bottom: 0;
@@ -183,7 +186,9 @@
 	.btn-unstyled {
 		border-width: 0;
 		color: $input-group-transparent-addon-color;
-		font-size: setter($btn-font-size, 1rem);
+
+		// Will need to be revisted once https://github.com/twbs/bootstrap/pull/25020 is merged
+		font-size: $btn-font-size;
 		padding-left: $btn-padding-x;
 		padding-right: $btn-padding-x;
 	}
