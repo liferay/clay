@@ -19,7 +19,7 @@ import templates from './ClayTable.soy.js';
 class ClayTable extends Component {
 	/**
 	 * @inheritDoc
-	 * Handles document click in order to hide menu.	 * Handles document click in order to hide menu.	 */
+	 */
 	attached() {
 		this.eventHandler_.add(
 			dom.on(document, 'click', this.handleDocClick_.bind(this)),
