@@ -1,13 +1,430 @@
 ---
 title: List Groups
-description: Components
+description: "List is a visual representation of a dataset that provides more flexibility for arranging the data to display than a table and that is less visual explicit than a card view."
 layout: "guide"
+pattern: "list"
 weight: 100
 ---
 
-<article id="list-group-item-flex">
+### Description
 
-### List Group Item Flex
+{$page.description}
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
+<article id="clay-list">
+
+### Row states
+
+#### Default states
+
+<li class="list-group-item list-group-item-flex">
+	<div class="flex-col">
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input class="custom-control-input" type="checkbox">
+				<span class="custom-control-indicator"></span>
+			</label>
+		</div>
+	</div>
+	<div class="flex-col">
+		<div class="sticker sticker-secondary">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+			</svg>
+		</div>
+	</div>
+	<div class="flex-col flex-col-expand">
+		<h4 class="list-group-title text-truncate">
+			<a href="#1">Account Example One</a>
+		</h4>
+		<p class="list-group-subtitle text-truncate">Second Level Text</p>
+	</div>
+	<div class="flex-col">
+		<div class="quick-action-menu">
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+					<use xlink:href="/vendor/lexicon/icons.svg#download" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+					<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+				</svg>
+			</a>
+		</div>
+		<div class="dropdown dropdown-action">
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+				</svg>
+			</a>
+			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item" href="#1" role="button">Remove</a>
+				<a class="dropdown-item" href="#1" role="button">Edit</a>
+				<a class="dropdown-item" href="#1" role="button">Move</a>
+				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+			</div>
+		</div>
+	</div>
+</li>
+
+```soy
+{call ClayList.render}
+	{param items: [
+		[
+			"actionItems": [
+				[
+					"href": "#1",
+					"icon": "trash",
+					"label": "Option 1",
+					"quickAction": true
+				],
+				[
+					"href": "#2",
+					"icon": "download",
+					"label": "Option 2",
+					"quickAction": true,
+					"separator": true
+				],
+				[
+					"href": "#3",
+					"icon": "info-circle-open",
+					"label": "Option 3",
+					"quickAction": true
+				]
+			],
+			"description": "Second Level Text",
+			"href": "#1",
+			"icon": "folder",
+			"title": "Account Example One"
+		]
+	] /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
+```
+```text/html
+<clay-list
+	items='[
+		{
+			"actionItems": [
+				{
+					"href": "#1",
+					"icon": "trash",
+					"label": "Option 1",
+					"quickAction": true
+				},
+				{
+					"href": "#2",
+					"icon": "download",
+					"label": "Option 2",
+					"quickAction": true,
+					"separator": true
+				},
+				{
+					"href": "#3",
+					"icon": "info-circle-open",
+					"label": "Option 3",
+					"quickAction": true
+				}
+			],
+			"description": "Second Level Text",
+			"href": "#1",
+			"icon": "folder",
+			"title": "Account Example One"
+		}
+	]'
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-list>
+```
+```text/html
+<li class="list-group-item list-group-item-flex">
+	<div class="flex-col">
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input class="custom-control-input" type="checkbox">
+				<span class="custom-control-indicator"></span>
+			</label>
+		</div>
+	</div>
+	<div class="flex-col">
+		<div class="sticker sticker-secondary">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+			</svg>
+		</div>
+	</div>
+	<div class="flex-col flex-col-expand">
+		<h4 class="list-group-title text-truncate">
+			<a href="#1">Account Example One</a>
+		</h4>
+		<p class="list-group-subtitle text-truncate">Second Level Text</p>
+	</div>
+	<div class="flex-col">
+		<div class="quick-action-menu">
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+					<use xlink:href="/vendor/lexicon/icons.svg#download" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+					<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+				</svg>
+			</a>
+		</div>
+		<div class="dropdown dropdown-action">
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+				</svg>
+			</a>
+			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item" href="#1" role="button">Remove</a>
+				<a class="dropdown-item" href="#1" role="button">Edit</a>
+				<a class="dropdown-item" href="#1" role="button">Move</a>
+				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+			</div>
+		</div>
+	</div>
+</li>
+```
+
+#### Selected state
+
+<li class="list-group-item list-group-item-flex active">
+	<div class="flex-col">
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input checked class="custom-control-input" type="checkbox">
+				<span class="custom-control-indicator"></span>
+			</label>
+		</div>
+	</div>
+	<div class="flex-col">
+		<div class="sticker sticker-secondary">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+			</svg>
+		</div>
+	</div>
+	<div class="flex-col flex-col-expand">
+		<h4 class="list-group-title text-truncate">
+			<a href="#1">Account Example One</a>
+		</h4>
+		<p class="list-group-subtitle text-truncate">Second Level Text</p>
+	</div>
+	<div class="flex-col">
+		<div class="quick-action-menu">
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+					<use xlink:href="/vendor/lexicon/icons.svg#download" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+					<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+				</svg>
+			</a>
+		</div>
+		<div class="dropdown dropdown-action">
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+				</svg>
+			</a>
+			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item" href="#1" role="button">Remove</a>
+				<a class="dropdown-item" href="#1" role="button">Edit</a>
+				<a class="dropdown-item" href="#1" role="button">Move</a>
+				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+			</div>
+		</div>
+	</div>
+</li>
+
+```soy
+{call ClayList.render}
+	{param items: [
+		[
+			"actionItems": [
+				[
+					"href": "#1",
+					"icon": "trash",
+					"label": "Option 1",
+					"quickAction": true
+				],
+				[
+					"href": "#2",
+					"icon": "download",
+					"label": "Option 2",
+					"quickAction": true,
+					"separator": true
+				],
+				[
+					"href": "#3",
+					"icon": "info-circle-open",
+					"label": "Option 3",
+					"quickAction": true
+				]
+			],
+			"description": "Second Level Text",
+			"href": "#1",
+			"icon": "folder",
+			"selected": true,
+			"title": "Account Example One"
+		]
+	] /}
+	{param selectable: true /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
+```
+```text/html
+<clay-list
+	items='[
+		{
+			"actionItems": [
+				{
+					"href": "#1",
+					"icon": "trash",
+					"label": "Option 1",
+					"quickAction": true
+				},
+				{
+					"href": "#2",
+					"icon": "download",
+					"label": "Option 2",
+					"quickAction": true,
+					"separator": true
+				},
+				{
+					"href": "#3",
+					"icon": "info-circle-open",
+					"label": "Option 3",
+					"quickAction": true
+				}
+			],
+			"description": "Second Level Text",
+			"href": "#1",
+			"icon": "folder",
+			"selected": true,
+			"title": "Account Example One"
+		}
+	]'
+	selectable="true"
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-list>
+```
+```text/html
+<li class="list-group-item list-group-item-flex active">
+	<div class="flex-col">
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input checked class="custom-control-input" type="checkbox">
+				<span class="custom-control-indicator"></span>
+			</label>
+		</div>
+	</div>
+	<div class="flex-col">
+		<div class="sticker sticker-secondary">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+			</svg>
+		</div>
+	</div>
+	<div class="flex-col flex-col-expand">
+		<h4 class="list-group-title text-truncate">
+			<a href="#1">Account Example One</a>
+		</h4>
+		<p class="list-group-subtitle text-truncate">Second Level Text</p>
+	</div>
+	<div class="flex-col">
+		<div class="quick-action-menu">
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+					<use xlink:href="/vendor/lexicon/icons.svg#download" />
+				</svg>
+			</a>
+			<a class="quick-action-item" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+					<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+				</svg>
+			</a>
+		</div>
+		<div class="dropdown dropdown-action">
+			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+				</svg>
+			</a>
+			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item" href="#1" role="button">Remove</a>
+				<a class="dropdown-item" href="#1" role="button">Edit</a>
+				<a class="dropdown-item" href="#1" role="button">Move</a>
+				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+			</div>
+		</div>
+	</div>
+</li>
+```
+
+</article>
+
+<article id="clay-list-sections">
+
+### Sections
+
+> List sections help to separate different contents by a certain categorization or typology.
+
+<ul class="list-group show-quick-actions-on-hover">
+	<li class="list-group-header">
+		<h3 class="list-group-header-title">List Section</h3>
+	</li>
+</ul>
+
+```soy
+{call ClayList.render}
+	{param title: 'List Section' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
+```
+```text/html
+<clay-list
+	titl="List Section"
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-list>
+```
+```text/html
+<ul class="list-group show-quick-actions-on-hover">
+	<li class="list-group-header">
+		<h3 class="list-group-header-title">List Section</h3>
+	</li>
+</ul>
+```
+
+#### Example of use
 
 > Align content inside `.list-group-item` with flexbox with `.list-group-item-flex`.
 
@@ -20,6 +437,9 @@ weight: 100
 </div>
 
 <ul class="list-group show-quick-actions-on-hover">
+	<li class="list-group-header">
+		<h3 class="list-group-header-title">List Section</h3>
+	</li>
 	<li class="list-group-item list-group-item-flex">
 		<div class="flex-col">
 			<div class="custom-control custom-checkbox">
@@ -78,11 +498,11 @@ weight: 100
 			</div>
 		</div>
 	</li>
-	<li class="list-group-item list-group-item-flex">
+	<li class="list-group-item list-group-item-flex active">
 		<div class="flex-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input checked class="custom-control-input" type="checkbox">
 					<span class="custom-control-indicator"></span>
 				</label>
 			</div>
@@ -96,7 +516,7 @@ weight: 100
 		</div>
 		<div class="flex-col flex-col-expand">
 			<h4 class="list-group-title">
-				<a href="#1">Account Example Two</a>
+				<a href="#1">Account Example One</a>
 			</h4>
 			<p class="list-group-subtitle">Second Level Text</p>
 			<div class="list-group-detail">
@@ -138,509 +558,79 @@ weight: 100
 	</li>
 </ul>
 
-```text/html
-<ul class="list-group show-quick-actions-on-hover">
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title text-truncate">
-				<a href="#1">Account Example One</a>
-			</h4>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
-			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title">
-				<a href="#1">Account Example Two</a>
-			</h4>
-			<p class="list-group-subtitle">Second Level Text</p>
-			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-</ul>
+```soy
+{call ClayList.render}
+	{param items: [
+		[
+			"actionItems": [
+				[
+					"href": "#1",
+					"icon": "trash",
+					"label": "Option 1",
+					"quickAction": true
+				],
+				[
+					"href": "#2",
+					"icon": "download",
+					"label": "Option 2",
+					"quickAction": true,
+					"separator": true
+				],
+				[
+					"href": "#3",
+					"icon": "info-circle-open",
+					"label": "Option 3",
+					"quickAction": true
+				]
+			],
+			"description": "Second Level Text",
+			"href": "#1",
+			"icon": "folder",
+			"title": "Account Example One"
+		],
+		[
+			"actionItems": [
+				[
+					"href": "#1",
+					"icon": "trash",
+					"label": "Option 1",
+					"quickAction": true
+				],
+				[
+					"href": "#2",
+					"icon": "download",
+					"label": "Option 2",
+					"quickAction": true,
+					"separator": true
+				],
+				[
+					"href": "#3",
+					"icon": "info-circle-open",
+					"label": "Option 3",
+					"quickAction": true
+				]
+			],
+			"description": "Second Level Text",
+			"href": "#1",
+			"icon": "folder",
+			"title": "Account Example One"
+		]
+	] /}
+	{param title: 'List Section' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+{/call}
 ```
-
-</article>
-
-
-<article id="list-group-notification">
-
-### List Group Notification
-
-<ul class="list-group list-group-notification show-quick-actions-on-hover">
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title text-truncate">
-				<a href="#1">Account Example One</a>
-			</h4>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title">
-				<a href="#1">Account Example Two</a>
-			</h4>
-			<p class="list-group-subtitle">Second Level Text</p>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-</ul>
-
 ```text/html
-<ul class="list-group list-group-notification show-quick-actions-on-hover">
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title text-truncate">
-				<a href="#1">Account Example One</a>
-			</h4>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title">
-				<a href="#1">Account Example Two</a>
-			</h4>
-			<p class="list-group-subtitle">Second Level Text</p>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-</ul>
+<clay-list
+	items=""
+	title="List Section"
+	spritemap="/vendor/lexicon/icons.svg">
+</clay-list>
 ```
-
-</article>
-
-
-<article id="list-group-header">
-
-### List Group Header
-
-<ul class="list-group show-quick-actions-on-hover">
-	<li class="list-group-header">
-		<h3 class="list-group-header-title">List Group Header 1</h3>
-	</li>
-	<li class="list-group-item">List Item 1</li>
-	<li class="list-group-item">List Item 2</li>
-	<li class="list-group-item">List Item 3</li>
-	<li class="list-group-item">List Item 4</li>
-	<li class="list-group-header">
-		<h3 class="list-group-header-title">List Group Header 2</h3>
-	</li>
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title text-truncate">
-				<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
-			</h4>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
-			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
-			</div>
-		</div>
-		<div class="flex-col flex-col-expand">
-			<h4 class="list-group-title">
-				<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a>
-			</h4>
-			<p class="list-group-subtitle">Second Level Text</p>
-			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
-			</div>
-		</div>
-		<div class="flex-col">
-			<div class="quick-action-menu">
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/vendor/lexicon/icons.svg#download" />
-					</svg>
-				</a>
-				<a class="quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
-					</svg>
-				</a>
-			</div>
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
-				</div>
-			</div>
-		</div>
-	</li>
-</ul>
-
 ```text/html
 <ul class="list-group show-quick-actions-on-hover">
 	<li class="list-group-header">
-		<h3 class="list-group-header-title">List Group Header 1</h3>
-	</li>
-	<li class="list-group-item">List Item 1</li>
-	<li class="list-group-item">List Item 2</li>
-	<li class="list-group-item">List Item 3</li>
-	<li class="list-group-item">List Item 4</li>
-	<li class="list-group-header">
-		<h3 class="list-group-header-title">List Group Header 2</h3>
+		<h3 class="list-group-header-title">List Section</h3>
 	</li>
 	<li class="list-group-item list-group-item-flex">
 		<div class="flex-col">
@@ -660,7 +650,7 @@ weight: 100
 		</div>
 		<div class="flex-col flex-col-expand">
 			<h4 class="list-group-title text-truncate">
-				<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+				<a href="#1">Account Example One</a>
 			</h4>
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 			<div class="list-group-detail">
@@ -700,11 +690,11 @@ weight: 100
 			</div>
 		</div>
 	</li>
-	<li class="list-group-item list-group-item-flex">
+	<li class="list-group-item list-group-item-flex active">
 		<div class="flex-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input checked class="custom-control-input" type="checkbox">
 					<span class="custom-control-indicator"></span>
 				</label>
 			</div>
@@ -718,7 +708,7 @@ weight: 100
 		</div>
 		<div class="flex-col flex-col-expand">
 			<h4 class="list-group-title">
-				<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a>
+				<a href="#1">Account Example One</a>
 			</h4>
 			<p class="list-group-subtitle">Second Level Text</p>
 			<div class="list-group-detail">
