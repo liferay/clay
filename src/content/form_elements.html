@@ -382,20 +382,20 @@ section: Components
 		<h3>Form Group Autofit</h3>
 
 		<blockquote class="blockquote">
-			Equally spaced form inputs based on the number of items inside <code>.form-group-autofit</code>. Each <code>input</code> and <code>label</code> group should, generally, be wrapped inside <code>.form-inline-group</code>. <code>form-group-autofit</code> stacks all inputs at max-width: 575px (breakpoint sm).
+			Equally spaced form inputs based on the number of items inside <code>.form-group-autofit</code>. Each <code>input</code> and <code>label</code> group should be wrapped inside <code>.form-group-item</code>. <code>form-group-autofit</code> stacks all inputs at max-width: 575px (breakpoint sm).
 		</blockquote>
 
 		<blockquote class="blockquote">
-			To set a fixed width on <code>.form-inline-group</code> or any direct descendant of <code>.form-group-autofit</code> use <code>max-width: 200px;</code> or <code>flex-grow: 0; flex-basis: 200px;</code>. For <code>labels</code> or anything that doesn't have <code>width: 100%;</code> by default, you will need to set <code>width</code> instead of <code>max-width</code>.
+			To set a fixed width on <code>.form-group-item</code> use <code>max-width: 200px;</code> or <code>flex-grow: 0; flex-basis: 200px;</code>. For <code>labels</code> or anything that doesn't have <code>width: 100%;</code> by default, you will need to set <code>width</code> instead of <code>max-width</code>.
 		</blockquote>
 
 <div class="sheet">
 	<div class="form-group-autofit">
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
 			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
 		</div>
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitSelectElement1">Select Element</label>
 			<select class="form-control" id="formInlineAutofitSelectElement1">
 				<option>Option 1</option>
@@ -405,15 +405,15 @@ section: Components
 		</div>
 	</div>
 	<div class="form-group-autofit">
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitFirstName">First Name</label>
 			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
 		</div>
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitLastName">Last Name</label>
 			<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
 		</div>
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitInputGroup">Input Group</label>
 			<div class="input-group">
 				<div class="input-group-addon">$</div>
@@ -423,11 +423,11 @@ section: Components
 		</div>
 	</div>
 	<div class="form-group-autofit">
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitCity">City</label>
 			<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
 		</div>
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitState">State</label>
 			<select class="form-control" id="formInlineAutofitState">
 				<option>AL</option>
@@ -438,11 +438,11 @@ section: Components
 				<option>WA</option>
 			</select>
 		</div>
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitZip">Zip Code</label>
 			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
 		</div>
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitDonation">Donation</label>
 			<div class="input-group">
 				<div class="input-group-addon">$</div>
@@ -478,34 +478,34 @@ section: Components
 <div class="sheet">
 	<form class="my-custom-form">
 		<div class="form-group-autofit">
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<label>Name</label>
 			</div>
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
 				<div class="form-text">Your first name.</div>
 			</div>
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
 			</div>
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
 				<div class="form-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
 			</div>
 		</div>
 		<div class="form-group-autofit">
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<label for="formInlineAutofitCustomAddress1">Address 1</label>
 			</div>
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
 			</div>
 		</div>
 		<div class="form-group-autofit">
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<label for="formInlineAutofitCustomAddress2">Address 2</label>
 			</div>
-			<div class="form-inline-group">
+			<div class="form-group-item">
 				<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
 			</div>
 		</div>
