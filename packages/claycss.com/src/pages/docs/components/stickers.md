@@ -1,15 +1,85 @@
 ---
 title: Stickers
-description: Components
+description: "Stickers are a visual way to quickly identify content in a different way than badges and labels."
 layout: "guide"
+pattern: "stickers"
 weight: 100
 ---
 
-<article id="sticker">
+### Description
 
-### Sticker
+{$page.description}
 
-> Stickers are monospaced badges/labels.
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
+<article id="clay-sticker-sizes">
+
+### Sizes
+
+> Stickers come in 4 sizes sm, normal, lg, and xl . Create your own custom size with the `sticker-size` mixin.
+
+<span class="sticker sticker-primary sticker-sm">133</span>{sp}
+<span class="sticker sticker-secondary">133</span>{sp}
+<span class="sticker sticker-lg sticker-success">133</span>{sp}
+<span class="sticker sticker-danger sticker-xl">133</span>
+
+```soy
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'sm' /}
+	{param style: 'primary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param style: 'secondary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'lg' /}
+	{param style: 'success' /}
+{/call}
+
+{call ClaySticker.render}
+	{param label: '133' /}
+	{param size: 'xl' /}
+	{param style: 'danger' /}
+{/call}
+```
+```text/html
+<clay-sticker
+	label="133"
+	size="sm"
+	style="primary">
+</clay-sticker>
+
+<clay-sticker label="133" style="secondary"></clay-sticker>
+
+<clay-sticker
+	label="133"
+	size="lg"
+	style="success">
+</clay-sticker>
+
+<clay-sticker
+	label="133"
+	size="xl"
+	style="danger">
+</clay-sticker>
+```
+```text/html
+<span class="sticker sticker-primary sticker-sm">133</span>
+<span class="sticker sticker-secondary">133</span>
+<span class="sticker sticker-lg sticker-success">133</span>
+<span class="sticker sticker-danger sticker-xl">133</span>
+```
+
+</article>
+
+<article id="clay-sticker-colors">
+
+### Colors
 
 <span class="sticker sticker-primary">133</span>{sp}
 <span class="sticker sticker-secondary">133</span>{sp}
@@ -49,7 +119,7 @@ weight: 100
 	{param style: 'danger' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-sticker label="133"></clay-sticker>
 
 <clay-sticker label="133" style="secondary"></clay-sticker>
@@ -73,10 +143,103 @@ weight: 100
 
 </article>
 
+<article id="clay-stickers-variantions">
 
-<article id="positional-stickers">
+### Variations
 
-### Positional Stickers
+### Square
+
+> Use it only with files and folders. You can place up to 3 characters inside it or an icon. Always capital letters.
+
+<span class="sticker sticker-primary">JPG</span>{sp}
+<span class="sticker sticker-primary">
+	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+		<use xlink:href="/vendor/lexicon/icons.svg#picture" />
+	</svg>
+</span>
+
+```soy
+{call ClaySticker.render}
+	{param label: 'JPG' /}
+	{param style: 'primary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param icon: 'picture' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param style: 'primary' /}
+{/call}
+```
+```text/html
+<clay-sticker
+	label="JPG"
+	style="primary">
+</clay-sticker>
+
+<clay-sticker
+	icon="picture"
+	spritemap="/vendor/lexicon/icons.svg"
+	style="primary">
+</clay-sticker>
+```
+```text/html
+<span class="sticker sticker-primary">JPG</span>
+<span class="sticker sticker-primary">
+	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+		<use xlink:href="/vendor/lexicon/icons.svg#picture" />
+	</svg>
+</span>
+```
+
+### Round
+
+> Use it only with people. You can places up to 2 characters inside it or an image. Always capital letters.
+
+<span class="sticker sticker-primary rounded-circle">JP</span>{sp}
+<span class="sticker sticker-primary rounded-circle">
+	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+</span>
+
+```soy
+{call ClaySticker.render}
+	{param label: 'JP' /}
+	{param shape: 'circle' /}
+	{param style: 'primary' /}
+{/call}
+
+{call ClaySticker.render}
+	{param imageAlt: 'thumbnail' /}
+	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
+	{param shape: 'circle' /}
+{/call}
+```
+```text/html
+<clay-sticker
+	label="JP"
+	style="primary"
+	shape="circle">
+</clay-sticker>
+
+<clay-sticker
+	imageAlt="thumbnail"
+	imageSrc="/images/thumbnail_coffee.jpg"
+	shape="circle">
+</clay-sticker>
+```
+```text/html
+<span class="sticker sticker-primary rounded-circle">JP</span>
+<span class="sticker sticker-primary rounded-circle">
+	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+</span>
+```
+
+</article>
+
+<article id="clay-sticker-position">
+
+### Position
+
+> A sticker can be placed in a Image Card. Its position is always bottom left as you can see in the following example.
 
 > Place them anywhere relative to your container using positional sticker classes `sticker-top-left`, `sticker-bottom-left`, `sticker-top-right`, and `sticker-bottom-right`.
 
@@ -140,7 +303,7 @@ weight: 100
 	{param style: 'danger' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-sticker
 	label="133"
 	position="top-left"
@@ -182,279 +345,6 @@ weight: 100
 	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
 	<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
 </div>
-```
-
-</article>
-
-
-<article id="sticker-sizes">
-
-### Sticker Sizes
-
-> Stickers come in 4 sizes sm, normal, lg, and xl . Create your own custom size with the `sticker-size` mixin.
-
-<span class="sticker sticker-primary sticker-sm">133</span>{sp}
-<span class="sticker sticker-secondary">133</span>{sp}
-<span class="sticker sticker-lg sticker-success">133</span>{sp}
-<span class="sticker sticker-danger sticker-xl">133</span>
-
-```soy
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param size: 'sm' /}
-	{param style: 'primary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param style: 'secondary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param size: 'lg' /}
-	{param style: 'success' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: '133' /}
-	{param size: 'xl' /}
-	{param style: 'danger' /}
-{/call}
-```
-```webcomponents
-<clay-sticker
-	label="133"
-	size="sm"
-	style="primary">
-</clay-sticker>
-
-<clay-sticker label="133" style="secondary"></clay-sticker>
-
-<clay-sticker
-	label="133"
-	size="lg"
-	style="success">
-</clay-sticker>
-
-<clay-sticker
-	label="133"
-	size="xl"
-	style="danger">
-</clay-sticker>
-```
-```text/html
-<span class="sticker sticker-primary sticker-sm">133</span>
-<span class="sticker sticker-secondary">133</span>
-<span class="sticker sticker-lg sticker-success">133</span>
-<span class="sticker sticker-danger sticker-xl">133</span>
-```
-
-<span class="sticker sticker-primary sticker-sm">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>{sp}
-<span class="sticker sticker-secondary">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>{sp}
-<span class="sticker sticker-lg sticker-success">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>{sp}
-<span class="sticker sticker-danger sticker-xl">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>
-
-```soy
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param size: 'sm' /}
-	{param style: 'primary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param style: 'secondary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param size: 'lg' /}
-	{param style: 'success' /}
-{/call}
-
-{call ClaySticker.render}
-	{param icon: [
-			'spritemap': '/vendor/lexicon/icons.svg',
-			'symbol': 'format'
-	] /}
-	{param size: 'xl' /}
-	{param style: 'danger' /}
-{/call}
-```
-```webcomponents
-<clay-sticker
-	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
-	size="sm"
-	style="primary">
-</clay-sticker>
-
-<clay-sticker
-	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
-	style="secondary">
-</clay-sticker>
-
-<clay-sticker
-	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
-	size="lg"
-	style="success">
-</clay-sticker>
-
-<clay-sticker
-	icon="['spritemap': '/vendor/lexicon/icons.svg', 'symbol': 'format']"
-	size="xl"
-	style="danger">
-</clay-sticker>
-```
-```text/html
-<span class="sticker sticker-primary sticker-sm">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>
-<span class="sticker sticker-secondary">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>
-<span class="sticker sticker-lg sticker-success">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>
-<span class="sticker sticker-danger sticker-xl">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
-		<use xlink:href="/vendor/lexicon/icons.svg#format" />
-	</svg>
-</span>
-```
-
-</article>
-
-
-<article id="stickers-as-avatars-user-icon-replacement">
-
-### Stickers as Avatars (User Icon Replacement)
-
-<span class="rounded-circle sticker sticker-primary sticker-sm">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
-</span>{sp}
-<span class="rounded-circle sticker sticker-primary">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
-</span>{sp}
-<span class="rounded-circle sticker sticker-primary sticker-lg">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-</span>{sp}
-<span class="rounded-circle sticker sticker-primary sticker-xl">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
-</span>{sp}
-
-```text/html
-<span class="rounded-circle sticker sticker-primary sticker-sm">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
-</span>
-<span class="rounded-circle sticker sticker-primary">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
-</span>
-<span class="rounded-circle sticker sticker-primary sticker-lg">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-</span>
-<span class="rounded-circle sticker sticker-primary sticker-xl">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
-</span>
-```
-
-<span class="rounded-circle sticker sticker-primary sticker-sm">JB</span>{sp}
-<span class="rounded-circle sticker sticker-secondary">TT</span>{sp}
-<span class="rounded-circle sticker sticker-lg sticker-success">SP</span>{sp}
-<span class="rounded-circle sticker sticker-danger sticker-xl">WW</span>{sp}
-
-```soy
-{call ClaySticker.render}
-	{param label: 'JB' /}
-	{param shape: 'circle' /}
-	{param size: 'sm' /}
-	{param style: 'primary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: 'TT' /}
-	{param shape: 'circle' /}
-	{param style: 'secondary' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: 'SP' /}
-	{param shape: 'circle' /}
-	{param size: 'lg' /}
-	{param style: 'success' /}
-{/call}
-
-{call ClaySticker.render}
-	{param label: 'WW' /}
-	{param shape: 'circle' /}
-	{param size: 'xl' /}
-	{param style: 'danger' /}
-{/call}
-```
-```webcomponents
-<clay-sticker
-	label="JB"
-	shape="circle"
-	size="sm"
-	style="primary">
-</clay-sticker>
-
-<clay-sticker
-	label="TT"
-	shape="circle"
-	style="secondary">
-</clay-sticker>
-
-<clay-sticker
-	label="SP"
-	shape="circle"
-	size="lg"
-	style="success">
-</clay-sticker>
-
-<clay-sticker
-	label="WW"
-	shape="circle"
-	size="xl"
-	style="danger">
-</clay-sticker>
-```
-```text/html
-<span class="rounded-circle sticker sticker-primary sticker-sm">JB</span>
-<span class="rounded-circle sticker sticker-secondary">TT</span>
-<span class="rounded-circle sticker sticker-lg sticker-success">SP</span>
-<span class="rounded-circle sticker sticker-danger sticker-xl">WW</span>
 ```
 
 </article>
