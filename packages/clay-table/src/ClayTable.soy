@@ -174,15 +174,15 @@
 			</td>
 		{/if}
 
-		{foreach $element in $schema}
-			{let $variant: index($element) == 0 ? 'main' : $element.contentRenderer /}
+		{foreach $fieldSchema in $schema}
+			{let $variant: index($fieldSchema) == 0 ? 'main' : $fieldSchema.contentRenderer /}
 
 			{delcall ClayTable.Cell variant="$variant"}
-				{param fieldName: $element.fieldName /}
+				{param fieldSchema: $fieldSchema /}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param item: $item /}
 				{param spritemap: $spritemap /}
-				{param value: $item[$element.fieldName] /}
+				{param value: $item[$fieldSchema.fieldName] /}
 			{/delcall}
 		{/foreach}
 
@@ -265,7 +265,7 @@
  * This renders the default variant of a cell
  */
 {deltemplate ClayTable.Cell}
-	{@param fieldName: string}
+	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? handleCellContentClick_: any}
@@ -280,7 +280,7 @@
  * This renders the default variant of a cell
  */
 {deltemplate ClayTable.Cell variant="'button'"}
-	{@param fieldName: string}
+	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? handleCellContentClick_: any}
@@ -289,9 +289,9 @@
 	<td>
 		{call ClayButton.render}
 			{param events: ['click': $handleCellContentClick_ ]/}
-			{param label: $value /}
-			{param style: $item[$fieldName + 'Style'] /}
-			{param type: $item[$fieldName + 'Type'] /}
+			{param label: $fieldSchema.label /}
+			{param style: $fieldSchema.buttonStyle /}
+			{param type: $fieldSchema.buttonStyle /}
 		{/call}
 	</td>
 {/deltemplate}
@@ -300,16 +300,22 @@
  * This renders a variant of a cell of type label
  */
 {deltemplate ClayTable.Cell variant="'label'"}
-	{@param fieldName: string}
+	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? handleCellContentClick_: any}
 	{@param? spritemap: string}
 
 	<td class="table-cell-expand">
+		{let $style kind="text"}
+			{if $fieldSchema.labelStylesMap}
+				{$fieldSchema.labelStylesMap[$value] ?: $fieldSchema.labelStylesMap['*']}
+			{/if}
+		{/let}
+
 		{call ClayLabel.render}
 			{param label: $value /}
-			{param style: $item[$fieldName + 'Style'] /}
+			{param style: $style != '' ? $style : null /}
 		{/call}
 	</td>
 {/deltemplate}
@@ -318,7 +324,7 @@
  * This renders a variant of a cell of type link
  */
 {deltemplate ClayTable.Cell variant="'link'"}
-	{@param fieldName: string}
+	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? handleCellContentClick_: any}
@@ -327,7 +333,7 @@
 	<td>
 		{call ClayLink.render}
 			{param elementClasses: 'text-truncate' /}
-			{param href: $item[$fieldName + 'href'] /}
+			{param href: $item[$fieldSchema.hrefField] /}
 			{param label: $value /}
 		{/call}
 	</td>
@@ -339,7 +345,7 @@
  * row.
  */
 {deltemplate ClayTable.Cell variant="'main'"}
-	{@param fieldName: string}
+	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? handleCellContentClick_: any}
@@ -366,7 +372,7 @@
  * This renders a variant of a cell of type link
  */
 {deltemplate ClayTable.Cell variant="'number'"}
-	{@param fieldName: string}
+	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? handleCellContentClick_: any}
@@ -381,7 +387,7 @@
  * This renders a variant of a cell of type link
  */
 {deltemplate ClayTable.Cell variant="'progressbar'"}
-	{@param fieldName: string}
+	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
 	{@param? handleCellContentClick_: any}
@@ -389,9 +395,8 @@
 
 	<td>
 		{call ClayProgressBar.render}
-			{param maxValue: $item[$fieldName + 'MaxValue'] /}
-			{param minValue: $item[$fieldName + 'MinValue'] /}
-			{param status: $item[$fieldName + 'Status'] /}
+			{param maxValue: $fieldSchema.maxValue /}
+			{param minValue: $fieldSchema.minValue /}
 			{param value: $value /}
 		{/call}
 	</td>
