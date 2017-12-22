@@ -125,19 +125,19 @@ exports[`ClayListItem should render a ClayListItem with quick action menu 1`] = 
   </div>
   <div class="flex-col">
     <div class="quick-action-menu">
-      <a class=" quick-action-item">
+      <a class=" quick-action-item" href="#1">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
           <title>trash</title>
           <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
         </svg>
       </a>
-      <a class=" quick-action-item">
+      <a class=" quick-action-item" href="#2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
           <title>download</title>
           <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
         </svg>
       </a>
-      <a class=" quick-action-item">
+      <a class=" quick-action-item" href="#3">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
           <title>info-circle-open</title>
           <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
