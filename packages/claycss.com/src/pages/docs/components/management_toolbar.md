@@ -1,13 +1,18 @@
 ---
 title: Management Toolbar
-description: Components
+description: "Management toolbar is an extension of Toolbar. A combination of different components as filters, orders, search, visualization select and other actions, that allow to manage dataset."
 layout: "guide"
+pattern: "Toolbars/management_bar"
 weight: 100
 ---
 
-<article class="clay-site-open-overlay" id="navbar-management-bar">
+### Description
 
-### Management Toolbar
+{$page.description}
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
+<article id="clay-management-bar">
 
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container">
@@ -311,7 +316,6 @@ weight: 100
 ```
 
 </article>
-
 
 <script>
 {literal}
