@@ -114,15 +114,12 @@
 
 	<div class="quick-action-menu">
 		{foreach $item in $items}
-			{if $item.quickAction and $item.icon}
+			{if $item.quickAction and $item.icon and $spritemap}
 				{call ClayLink.render}
 					{param elementClasses: 'quick-action-item' /}
-					{param label kind="html"}
-						{call ClayIcon.render}
-							{param spritemap: $spritemap /}
-							{param symbol: $item.icon /}
-						{/call}
-					{/param}
+					{param href: $item.href /}
+					{param icon: $item.icon /}
+					{param spritemap: $spritemap /}
 				{/call}
 			{/if}
 		{/foreach}
