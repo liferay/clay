@@ -307,13 +307,13 @@ fieldset[disabled] label {
 
 	> .btn,
 	> .form-control,
-	> .form-inline-group {
+	> .form-group-item {
 		&:not(:last-child) {
 			margin-bottom: 1rem;
 		}
 	}
 
-	.form-inline-group {
+	.form-group-item {
 		flex: 1;
 		min-width: 25px;
 		position: relative;
@@ -327,7 +327,7 @@ fieldset[disabled] label {
 	> label,
 	> .btn,
 	> .form-control,
-	> .form-inline-group,
+	> .form-group-item,
 	> .input-group {
 		@include media-breakpoint-down(xs) {
 			flex-basis: auto !important;
@@ -350,7 +350,7 @@ fieldset[disabled] label {
 		> .btn,
 		> .form-control,
 		> .form-file,
-		> .form-inline-group {
+		> .form-group-item {
 			&:not(:last-child) {
 				margin-bottom: 0;
 				margin-right: $grid-gutter-width / 2;
@@ -369,7 +369,7 @@ fieldset[disabled] label {
 		}
 	}
 
-	.form-inline-group {
+	.form-group-item {
 		label {
 			display: inline-block;
 		}
