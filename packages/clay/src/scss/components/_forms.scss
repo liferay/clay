@@ -305,73 +305,37 @@ fieldset[disabled] label {
 	flex-direction: column;
 	margin-bottom: $form-group-autofit-margin-bottom;
 
-	> .btn,
-	> .form-control,
-	> .form-group-item {
+	.form-group-item {
+		display: flex;
+		flex-basis: auto;
+		flex-direction: column;
+		flex-grow: 0;
+		flex-shrink: 1;
+		min-width: 25px;
+		position: relative;
+		width: 100%;
+
 		&:not(:last-child) {
 			margin-bottom: 1rem;
 		}
 	}
 
-	.form-group-item {
-		flex: 1;
-		min-width: 25px;
-		position: relative;
-		width: 100%;
-	}
-
-	.input-group {
-		flex: 1;
-	}
-
-	> label,
-	> .btn,
-	> .form-control,
-	> .form-group-item,
-	> .input-group {
-		@include media-breakpoint-down(xs) {
-			flex-basis: auto !important;
-		}
+	.form-group-item-shrink {
+		flex-shrink: 0;
+		width: auto;
 	}
 }
 
 @include media-breakpoint-up(sm) {
 	.form-group-autofit {
-		flex: 1;
 		flex-direction: row;
 		width: 100%;
 
-		> label {
-			&:not(:last-child) {
-				margin-right: $grid-gutter-width / 2;
-			}
-		}
-
-		> .btn,
-		> .form-control,
-		> .form-file,
 		> .form-group-item {
 			&:not(:last-child) {
 				margin-bottom: 0;
 				margin-right: $grid-gutter-width / 2;
 			}
-		}
-
-		.form-control {
-			flex: 1;
-			min-width: 10px;
-			width: 100%;
-		}
-
-		> label {
-			display: inline-block;
-			margin-bottom: ($input-height - ($font-size-base * $line-height-base)) / 2;
-		}
-	}
-
-	.form-group-item {
-		label {
-			display: inline-block;
 		}
 	}
 }
