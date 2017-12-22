@@ -1,13 +1,20 @@
 ---
 title: Progress Bars
-description: Components
+description: "Progress bar is a progress indicator used to show the completion percentage of a task."
 layout: "guide"
+pattern: "progress_bars"
 weight: 100
 ---
 
-<article id="progress-groups">
+### Description
 
-### Progress Groups
+{$page.description}
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
+<article id="clay-progress-bar">
+
+### States
 
 > Place an addon on either side of a progress component with `progress-group` and `progress-group-addon`.
 
@@ -63,7 +70,7 @@ weight: 100
 	{param status: 'complete' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-progress-bar
 	minValue="0"
 	maxValue="100"
