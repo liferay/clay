@@ -126,7 +126,7 @@
 
 				<th {$tableHeaderAttributes}>
 					{if not $fieldSchema.sortable}
-						{$fieldSchema.label ?: $fieldSchema.fieldName}
+						{$fieldSchema.label}
 					{else}
 						{call ClayButton.render}
 							{param events: ['click': $handleSortingClick_] /}
