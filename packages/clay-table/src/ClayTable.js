@@ -144,6 +144,7 @@ ClayTable.STATE = {
 			contentRenderer: Config.string(),
 			fieldName: Config.string().required(),
 			label: Config.string(),
+			sortable: Config.bool(),
 			sortingOrder: Config.oneOf(['asc', 'desc']),
 		})
 	).required(),

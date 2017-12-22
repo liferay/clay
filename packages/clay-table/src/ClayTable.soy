@@ -8,6 +8,7 @@
 		contentRenderer: string,
 		fieldName: string,
 		label: string,
+		sortable: bool,
 		sortingOrder: string
 	]>}
 	{@param? elementClasses: string}
@@ -69,6 +70,7 @@
 		contentRenderer: string,
 		fieldName: string,
 		label: string,
+		sortable: bool,
 		sortingOrder: string
 	]>}
 	{@param? handleCellContentClick_: any}
@@ -101,6 +103,7 @@
 		contentRenderer: string,
 		fieldName: string,
 		label: string,
+		sortable: bool,
 		sortingOrder: string
 	]>}
 	{@param? handleSortingClick_: any}
@@ -114,22 +117,22 @@
 				<th></th>
 			{/if}
 
-			{foreach $element in $schema}
+			{foreach $fieldSchema in $schema}
 				{let $tableHeaderAttributes kind="attributes"}
-					{if index($element) == 0}
+					{if index($fieldSchema) == 0}
 						class="table-cell-expand"
 					{/if}
 				{/let}
 
 				<th {$tableHeaderAttributes}>
-					{if not $element.sortingOrder}
-						{$element.label ?: $element.fieldName}
+					{if not $fieldSchema.sortable}
+						{$fieldSchema.label ?: $fieldSchema.fieldName}
 					{else}
 						{call ClayButton.render}
 							{param events: ['click': $handleSortingClick_] /}
-							{param icon: 'order-arrow-' + ($element.sortingOrder == 'asc' ? 'up' : 'down') /}
+							{param icon: $fieldSchema.sortingOrder ? 'order-arrow-' + ($fieldSchema.sortingOrder == 'asc' ? 'up' : 'down') : null /}
 							{param iconAlignment: 'right' /}
-							{param label: $element.label ?: $element.fieldName /}
+							{param label: $fieldSchema.label ?: $fieldSchema.fieldName /}
 							{param spritemap: $spritemap /}
 							{param style: 'unstyled' /}
 						{/call}
@@ -153,6 +156,7 @@
 		contentRenderer: string,
 		fieldName: string,
 		label: string,
+		sortable: bool,
 		sortingOrder: string
 	]>}
 	{@param? handleCellContentClick_: any}
@@ -220,6 +224,7 @@
 		contentRenderer: string,
 		fieldName: string,
 		label: string,
+		sortable: bool,
 		sortingOrder: string
 	]>}
 	{@param? handleCellContentClick_: any}
