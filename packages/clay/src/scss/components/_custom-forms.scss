@@ -76,6 +76,11 @@
 	border-style: $custom-control-indicator-border-style;
 	border-width: $custom-control-indicator-border-width;
 	font-size: $custom-control-indicator-size;
+
+	&:before {
+		margin-left: -$custom-control-indicator-border-width;
+		margin-top: -$custom-control-indicator-border-width;
+	}
 }
 
 .custom-control-description {
@@ -130,13 +135,18 @@
 .custom-checkbox {
 	.custom-control-input {
 		&:checked ~ .custom-control-indicator {
-			background-size: $custom-checkbox-indicator-icon-checked-bg-size;
+			&:before {
+				background-size: $custom-checkbox-indicator-icon-checked-bg-size;
+			}
 		}
 
 		&:indeterminate ~ .custom-control-indicator {
 			background-color: $custom-checkbox-indicator-indeterminate-bg;
-			background-size: $custom-checkbox-indicator-icon-indeterminate-bg-size;
 			border-color: $custom-control-indicator-indeterminate-border-color;
+
+			&:before {
+				background-size: $custom-checkbox-indicator-icon-indeterminate-bg-size;
+			}
 		}
 
 		&:disabled:indeterminate ~ .custom-control-indicator {
@@ -151,7 +161,9 @@
 .custom-radio {
 	.custom-control-input {
 		&:checked ~ .custom-control-indicator {
-			background-size: $custom-radio-indicator-icon-checked-bg-size;
+			&:before {
+				background-size: $custom-radio-indicator-icon-checked-bg-size;
+			}
 		}
 
 		&:disabled ~ .custom-control-indicator {
