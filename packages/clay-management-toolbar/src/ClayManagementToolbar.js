@@ -1,10 +1,10 @@
 import 'clay-button';
 import 'clay-checkbox';
-import 'clay-dropdown';
+import {ClayActionsDropdown} from 'clay-dropdown';
+import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import templates from './ClayManagementToolbar.soy.js';
 

@@ -1,14 +1,14 @@
 import 'clay-button';
 import 'clay-checkbox';
-import 'clay-dropdown';
 import 'clay-label';
 import 'clay-link';
 import 'clay-progress-bar';
+import {ClayActionsDropdown} from 'clay-dropdown';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 import Component from 'metal-component';
-import dom from 'metal-dom';
 import defineWebComponent from 'metal-web-component';
+import dom from 'metal-dom';
 import Soy from 'metal-soy';
 
 import templates from './ClayTable.soy.js';

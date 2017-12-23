@@ -1,11 +1,11 @@
-import 'clay-link';
-import 'clay-dropdown';
-import 'clay-sticker';
 import './ClayCard';
+import 'clay-link';
+import 'clay-sticker';
+import {ClayActionsDropdown} from 'clay-dropdown';
+import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import actionItemsValidator from './action_items_validator';
 import templates from './ClayUserCard.soy.js';

@@ -1,4 +1,10 @@
-import 'clay-card';
+import {
+	ClayCard,
+	ClayFileCard,
+	ClayHorizontalCard,
+	ClayImageCard,
+	ClayUserCard,
+} from 'clay-card';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
