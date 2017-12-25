@@ -1,0 +1,77 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$panel-bg: #FFF !default;
+$panel-border-color: transparent !default;
+$panel-border-style: solid !default;
+
+$panel-border-bottom-width: 1px !default;
+$panel-border-left-width: 1px !default;
+$panel-border-right-width: 1px !default;
+$panel-border-top-width: 1px !default;
+$panel-border-width: $panel-border-top-width $panel-border-right-width $panel-border-bottom-width $panel-border-left-width !default;
+
+$panel-border-radius: $border-radius !default;
+$panel-box-shadow: null !default;
+$panel-margin-bottom: $spacer !default;
+
+// Panel Header
+
+$panel-header-border-bottom-width: 1px !default;
+$panel-header-offset-border-radius: if($panel-border-top-width > 0, calc(#{$panel-border-radius} - #{$panel-border-top-width}), $panel-border-radius) !default;
+$panel-header-padding-x: 1.25rem !default;
+$panel-header-padding-y: 0.75rem !default;
+
+$panel-header-link-text-decoration: null !default;
+$panel-header-link-hover-text-decoration: null !default;
+
+// Panel Body
+
+$panel-body-padding-x: 1.25rem !default;
+$panel-body-padding-y: 0.75rem !default;
+
+// Panel Footer
+
+$panel-footer-border-top-width: 1px !default;
+$panel-footer-offset-border-radius: if($panel-border-bottom-width > 0, calc(#{$panel-border-radius} - #{$panel-border-bottom-width}), $panel-border-radius) !default;
+$panel-footer-padding-x: $panel-header-padding-x !default;
+$panel-footer-padding-y: $panel-header-padding-y !default;
+
+// Panel Title
+
+$panel-title-font-size: null !default;
+$panel-title-font-weight: $font-weight-semi-bold !default;
+$panel-title-text-transform: null !default;
+
+// Panel Collapse Icon
+
+$panel-collapse-icon-font-size: 0.875rem !default; // 14px
+
+// Panel Group
+
+$panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
+
+// Panel Group Flush
+
+$panel-group-flush-body-margin-bottom: 1.5rem !default;
+$panel-group-flush-body-padding: 0 !default;
+
+$panel-group-flush-collapse-icon-left: null !default;
+$panel-group-flush-collapse-icon-right: 0 !default;
+$panel-group-flush-collapse-icon-padding-left: null !default;
+$panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
+
+// Panel Variants
+
+$panel-secondary: () !default;
+$panel-secondary: map-merge((
+	border-color: rgba($black, 0.125),
+	header-bg: $gray-100,
+	header-border-color: rgba($black, 0.125),
+	footer-bg: $gray-100,
+	footer-border-color: rgba($black, 0.125)
+), $panel-secondary);

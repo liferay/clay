@@ -1,0 +1,107 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Background
+
+.bg-checkered {
+	@include clay-bg-checkered($bg-checkered-fg);
+}
+
+// Rounded
+
+.rounded {
+	border-radius: $rounded-border-radius !important;
+}
+
+.rounded-circle {
+	border-radius: $rounded-circle-border-radius !important;
+}
+
+.rounded-0 {
+	border-radius: $rounded-0-border-radius !important;
+}
+
+// Close
+
+.close {
+	cursor: $btn-cursor;
+	text-align: center;
+}
+
+// Flex Col
+
+.autofit-row {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-height: 0;
+	position: relative;
+}
+
+.flex-col-expand {
+	flex-grow: 1;
+	min-width: 50px;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.flex-col-section {}
+
+// Inline Scroller
+
+.inline-scroller {
+	list-style: none;
+	margin: 0;
+	max-height: $inline-scroller-max-height;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding: 0;
+}
+
+// Inline Item
+
+.inline-item {
+	align-items: center;
+	display: inline-flex;
+	vertical-align: middle;
+
+	.lexicon-icon {
+		margin-top: $inline-item-lexicon-icon-margin-top;
+	}
+}
+
+.inline-item-before {
+	margin-right: $inline-item-spacer-x;
+}
+
+.inline-item-middle {
+	margin-left: $inline-item-spacer-x;
+	margin-right: $inline-item-spacer-x;
+
+	+ .inline-item-middle {
+		margin-left: 0;
+	}
+}
+
+.inline-item-after {
+	margin-left: $inline-item-spacer-x;
+}
+
+// Page Header
+
+.page-header {
+	background-color: $page-header-bg;
+}

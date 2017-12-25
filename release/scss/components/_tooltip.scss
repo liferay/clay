@@ -1,0 +1,24 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.tooltip {
+	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
+
+	@if not ($tooltip-font-size == $font-size-sm) {
+		font-size: $tooltip-font-size;
+	}
+}
+
+.tooltip-inner {
+	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
+
+	@if not ($tooltip-border-radius == $border-radius) {
+		@include border-radius($tooltip-border-radius);
+	}
+
+	@include box-shadow($tooltip-box-shadow);
+}

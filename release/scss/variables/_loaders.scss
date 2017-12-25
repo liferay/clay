@@ -1,0 +1,24 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$loading-icon-font-size: 2.5rem !default; // 40px
+
+$loading-icon-font-size-sm: 1.25rem !default; // 20px
+
+// Loading Icon Dotted
+
+$loading-icon-dotted: () !default;
+$loading-icon-dotted: map-merge((
+	animation-name: loading-icon-dotted,
+	color: $body-color
+), $loading-icon-dotted);
+
+$loading-icon-dotted-light: () !default;
+$loading-icon-dotted-light: map-merge((
+	animation-name: loading-icon-dotted-light,
+	color: #FFF
+), $loading-icon-dotted-light);

@@ -1,0 +1,69 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$multi-step-nav-margin-bottom: 15px !default;
+$multi-step-nav-padding-x: 15px !default;
+$multi-step-nav-padding-y: 0 !default;
+
+$multi-step-icon-bg: $gray-200 !default;
+$multi-step-icon-color: rgba($black, 0.5) !default;
+$multi-step-icon-border-radius: $border-radius !default;
+$multi-step-icon-font-size: $font-size-base !default;
+$multi-step-icon-font-weight: null !default;
+$multi-step-icon-size: 2rem !default;
+
+$multi-step-icon-hover-bg: $multi-step-icon-bg !default;
+$multi-step-icon-hover-color: rgba($black, 0.7) !default;
+$multi-step-icon-hover-text-decoration: none !default;
+
+$multi-step-divider-bg: $gray-200 !default;
+$multi-step-divider-height: 0.25rem !default;
+$multi-step-divider-spacer-x: 0 !default;
+$multi-step-divider-top: ($multi-step-divider-height / 2) + ($multi-step-icon-size / 2) !default;
+
+$multi-step-indicator-width: $multi-step-icon-size + ($multi-step-divider-spacer-x * 2) !default;
+
+$multi-step-indicator-label-color: null !default;
+$multi-step-indicator-label-font-size: $font-size-base !default;
+$multi-step-indicator-label-font-weight: null !default;
+$multi-step-indicator-label-max-width: 100px !default;
+
+$multi-step-title-color: null !default;
+$multi-step-title-font-size: $font-size-base !default;
+$multi-step-title-font-weight: null !default;
+$multi-step-title-margin-bottom: 0.625rem !default; // 10px
+$multi-step-title-max-width: 100px !default;
+
+$multi-step-item-margin-bottom: 10px !default;
+$multi-step-item-width: 75px !default;
+$multi-step-item-fixed-width: 150px !default;
+
+$multi-step-icon-complete-color: #FFF !default;
+$multi-step-icon-complete-bg: $secondary !default;
+$multi-step-icon-complete-bg-image: clay-icon(check, $multi-step-icon-complete-color) !default;
+$multi-step-icon-complete-bg-position: center !default;
+$multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
+$multi-step-divider-complete-bg: $multi-step-icon-complete-bg !default;
+$multi-step-dropdown-indicator-complete-icon: clay-icon(check, $dropdown-link-active-color) !default;
+$multi-step-dropdown-indicator-complete-width: 0.875rem !default;
+
+$multi-step-icon-active-color: $component-active-color !default;
+$multi-step-icon-active-bg: $component-active-bg !default;
+$multi-step-icon-active-bg-image: null !default;
+$multi-step-icon-active-bg-position: center !default;
+$multi-step-icon-active-bg-size: $multi-step-icon-font-size !default;
+$multi-step-divider-active-bg: $multi-step-divider-bg !default;
+
+$multi-step-icon-disabled-bg: $gray-100 !default;
+$multi-step-icon-disabled-bg-image: null !default;
+$multi-step-icon-disabled-bg-position: null !default;
+$multi-step-icon-disabled-bg-size: null !default;
+$multi-step-icon-disabled-color: $gray-400 !default;
+$multi-step-icon-disabled-cursor: $disabled-cursor !default;
+$multi-step-divider-disabled-bg: $multi-step-icon-disabled-bg !default;
+$multi-step-title-disabled-color: $multi-step-icon-disabled-color !default;
+$multi-step-indicator-label-disabled-color: $multi-step-title-disabled-color !default;

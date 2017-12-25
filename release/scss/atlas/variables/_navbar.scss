@@ -1,0 +1,29 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$navbar-underline-active-bg: lighten(saturate($component-active-bg, 3.40), 21.18) !default;
+
+// Navbar Transparent
+
+$navbar-transparent: (
+	border-color: darken(desaturate(adjust-hue($light, 10), 3.03), 12.55),
+	link-active-color: $body-color
+) !default;
+
+// Navbar Light
+
+$navbar-light-color: $secondary !default;
+$navbar-light-hover-color: $navbar-light-color !default;
+$navbar-light-active-color: $body-color !default;
+$navbar-light-disabled-color: $nav-link-disabled-color !default;
+
+// Navbar Dark
+
+$navbar-dark-color: #FFF !default;
+$navbar-dark-hover-color: $navbar-dark-color !default;
+$navbar-dark-active-color: $navbar-dark-color !default;
+$navbar-dark-disabled-color: $nav-link-disabled-color !default;

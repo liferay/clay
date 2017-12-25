@@ -1,0 +1,68 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$enable-scaling-components: false !default;
+$scaling-breakpoint-down: sm !default;
+
+$rounded-border-radius: $border-radius !default;
+$rounded-circle-border-radius: 5000px !default;
+$rounded-0-border-radius: 0 !default;
+
+// Cursors
+
+$link-cursor: pointer !default;
+$disabled-cursor: not-allowed !default;
+
+// Containers
+
+$container-form-padding-bottom: 3rem !default;
+$container-form-padding-left: null !default;
+$container-form-padding-right: null !default;
+$container-form-padding-top: 3rem !default;
+
+$container-form-padding-bottom-mobile: null !default;
+$container-form-padding-left-mobile: null !default;
+$container-form-padding-right-mobile: null !default;
+$container-form-padding-top-mobile: null !default;
+
+$container-view-padding-bottom: 1.5rem !default;
+$container-view-padding-left: null !default;
+$container-view-padding-right: null !default;
+$container-view-padding-top: 1.5rem !default;
+
+$container-view-padding-bottom-mobile: null !default;
+$container-view-padding-left-mobile: null !default;
+$container-view-padding-right-mobile: null !default;
+$container-view-padding-top-mobile: null !default;
+
+// Fonts
+
+$font-import-url: null !default;
+
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+
+$font-size-base-mobile: $font-size-base !default;
+$font-size-lg-mobile: $font-size-lg !default;
+
+$font-weight-semi-bold: 500 !default;
+$font-weight-bolder: 900 !default;
+
+$h1-font-size-mobile: null !default;
+$h2-font-size-mobile: null !default;
+$h3-font-size-mobile: null !default;
+$h4-font-size-mobile: null !default;
+$h5-font-size-mobile: null !default;
+$h6-font-size-mobile: null !default;
+
+// Z-Index Variables
+
+$zindex-alert-notifications: 5000 !default;
+$zindex-input-group-hover: 3 !default;
+$zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
+$zindex-navbar-collapse-absolute: 500 !default;
+$zindex-navbar-overlay: 450 !default;
+$zindex-sidenav: $zindex-fixed + 5 !default;

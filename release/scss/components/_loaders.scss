@@ -1,0 +1,42 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.loading-icon {
+	display: block;
+	font-size: $loading-icon-font-size;
+	height: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align: left;
+	vertical-align: middle;
+	width: 1em;
+}
+
+// Loading Icon Dotted
+
+%loading-icon-dotted {
+	@include clay-loading-icon-dotted-variant($loading-icon-dotted);
+}
+
+%loading-icon-dotted-light {
+	@include clay-loading-icon-dotted-variant($loading-icon-dotted-light);
+}
+
+.loading-icon-dotted {
+	@extend %loading-icon-dotted !optional;
+}
+
+.loading-icon-dotted-light {
+	@extend %loading-icon-dotted-light !optional;
+}
+
+// Loading Icon Sizes
+
+.loading-icon-sm {
+	font-size: $loading-icon-font-size-sm;
+}

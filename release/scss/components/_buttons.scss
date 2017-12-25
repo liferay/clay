@@ -1,0 +1,191 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.btn {
+	cursor: $btn-cursor;
+	font-size: $btn-font-size;
+
+	@include clay-scale-component {
+		font-size: $btn-font-size-mobile;
+		padding-bottom: $btn-padding-y-mobile;
+		padding-left: $btn-padding-x-mobile;
+		padding-right: $btn-padding-x-mobile;
+		padding-top: $btn-padding-y-mobile;
+	}
+
+	// Will need to be revisited if action is taken on https://github.com/twbs/bootstrap/issues/24156
+
+	&.disabled,
+	&:disabled {
+		cursor: $btn-disabled-cursor;
+	}
+}
+
+.btn .inline-item {
+	font-size: $btn-inline-item-font-size;
+}
+
+.btn-section {
+	display: block;
+	font-size: $btn-section-font-size;
+	font-weight: $btn-section-font-weight;
+	line-height: $btn-section-line-height;
+}
+
+// Button Sizes
+
+.btn-lg {
+	font-size: $btn-font-size-lg;
+
+	@include clay-scale-component {
+		font-size: $btn-font-size-lg-mobile;
+		padding-bottom: $btn-padding-y-lg-mobile;
+		padding-left: $btn-padding-x-lg-mobile;
+		padding-right: $btn-padding-x-lg-mobile;
+		padding-top: $btn-padding-y-lg-mobile;
+	}
+
+	.inline-item {
+		font-size: $btn-inline-item-font-size-lg;
+	}
+
+	.btn-section {
+		font-size: $btn-section-font-size-lg;
+	}
+}
+
+.btn-sm {
+	font-size: $btn-font-size-sm;
+
+	@include clay-scale-component {
+		font-size: $btn-font-size-sm-mobile;
+		padding-bottom: $btn-padding-y-sm-mobile;
+		padding-left: $btn-padding-x-sm-mobile;
+		padding-right: $btn-padding-x-sm-mobile;
+		padding-top: $btn-padding-y-sm-mobile;
+	}
+
+	.inline-item {
+		font-size: $btn-inline-item-font-size-sm;
+	}
+
+	.btn-section {
+		font-size: $btn-section-font-size-sm;
+	}
+}
+
+// Button Link
+
+.btn-link {
+	@include border-radius(1px);
+
+	&:focus {
+		box-shadow: $btn-focus-box-shadow;
+		text-decoration: $link-decoration;
+	}
+
+	@include hover {
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+// Button Unstyled
+
+%btn-unstyled {
+	background-color: rgba(0, 0, 0, 0.001);
+
+	@include border-radius(1px);
+	@include clay-component-btn-link;
+
+	line-height: inherit;
+	vertical-align: baseline;
+}
+
+.btn-unstyled {
+	@extend %btn-unstyled;
+}
+
+// Button Monospaced
+
+.btn-monospaced {
+	align-items: center;
+	display: inline-flex;
+	flex-direction: column;
+	height: $btn-monospaced-size;
+	justify-content: center;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+	white-space: normal;
+	width: $btn-monospaced-size;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		height: $btn-monospaced-size-mobile;
+		width: $btn-monospaced-size-mobile;
+	}
+
+	&.btn-lg {
+		height: $btn-monospaced-size-lg;
+		width: $btn-monospaced-size-lg;
+
+		@include clay-scale-component {
+			height: $btn-monospaced-size-lg-mobile;
+			width: $btn-monospaced-size-lg-mobile;
+		}
+	}
+
+	&.btn-sm {
+		height: $btn-monospaced-size-sm;
+		width: $btn-monospaced-size-sm;
+
+		@include clay-scale-component {
+			height: $btn-monospaced-size-sm-mobile;
+			width: $btn-monospaced-size-sm-mobile;
+		}
+	}
+
+	&.btn .lexicon-icon {
+		margin-top: 0;
+	}
+}
+
+// Button Variants
+
+@each $color, $value in $btn-palette {
+	.btn-#{$color} {
+		@include clay-button-variant($value);
+	}
+}
+
+// Button Outline Variants
+
+@each $color, $value in $btn-outline-palette {
+	.btn-outline-#{$color} {
+		@include clay-button-variant($value);
+	}
+}
+
+.btn-outline-borderless {
+	border-color: transparent;
+
+	@include hover-focus {
+		border-color: transparent;
+	}
+
+	&:disabled,
+	&.disabled {
+		border-color: transparent;
+	}
+}
+
+// Loading Icons with Buttons
+
+.btn .loading-icon {
+	font-size: 1em;
+	margin-top: $inline-item-lexicon-icon-margin-top;
+}

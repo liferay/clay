@@ -1,0 +1,536 @@
+/**
+* Clay 2.0.0-beta.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+table {
+	border-collapse: separate;
+}
+
+th {
+	height: 20px;
+}
+
+.table {
+	border-collapse: collapse;
+
+	thead {
+		td,
+		th {
+			border-bottom-width: $table-head-border-bottom-width;
+			border-top-width: $table-head-border-top-width;
+		}
+	}
+
+	th {
+		color: $table-head-color;
+		font-size: $table-head-font-size;
+		font-weight: $table-head-font-weight;
+		height: $table-head-height;
+		position: relative;
+	}
+
+	td {
+		position: relative;
+	}
+
+	td,
+	th {
+		&:first-child {
+			padding-left: $table-cell-gutters;
+		}
+
+		&:last-child {
+			padding-right: $table-cell-gutters;
+		}
+	}
+
+	.custom-control,
+	.form-check {
+		margin-bottom: 0;
+	}
+}
+
+%table-cell-expand {
+	display: table-cell;
+	max-width: 100px;
+	min-width: 100px;
+	width: auto;
+	word-wrap: break-word;
+}
+
+%table-cell-contract {
+	display: table-cell;
+	width: 1%;
+}
+
+// Table Bordered
+
+.table-bordered {
+	thead {
+		td,
+		th {
+			@if ($table-head-border-top-width == 0 && $table-head-border-top-width) {
+				border-top-width: $table-border-width;
+			}
+		}
+	}
+}
+
+// Table Title
+
+.table-title {
+	@include clay-text-typography($table-title);
+}
+
+.table-title a {
+	@include clay-link($table-title-link);
+}
+
+// Table Link
+
+.table-link {
+	@include clay-link($table-link);
+}
+
+// Table Action Link
+
+.table-action-link {
+	@include clay-link($table-action-link);
+}
+
+// Table List Skin
+
+.table-list {
+	background-color: $table-list-bg;
+
+	@include border-radius($table-list-border-radius);
+
+	color: $table-list-color;
+	font-size: $table-list-font-size;
+	margin-bottom: $table-list-margin-bottom;
+	margin-top: $table-list-margin-top;
+
+	thead,
+	tbody,
+	tfoot {
+		&:first-child {
+			tr:first-child {
+				th,
+				td {
+					&:first-child {
+						@if $enable-rounded {
+							border-top-left-radius: $table-list-border-radius;
+						}
+					}
+
+					&:last-child {
+						@if $enable-rounded {
+							border-top-right-radius: $table-list-border-radius;
+						}
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			tr:last-child {
+				th,
+				td {
+					&:first-child {
+						@if $enable-rounded {
+							border-bottom-left-radius: $table-list-border-radius;
+						}
+					}
+
+					&:last-child {
+						@if $enable-rounded {
+							border-bottom-right-radius: $table-list-border-radius;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	th,
+	td {
+		box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+					0 #{$table-list-border-width} $table-list-border-color; // bottom
+		padding-top: $table-list-border-width + $table-cell-padding;
+
+		&:first-child {
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+						0 #{$table-list-border-width} $table-list-border-color, // bottom
+						inset #{$table-list-border-width} 0 $table-list-border-color; // left
+			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
+		}
+
+		&:last-child {
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
+						0 #{$table-list-border-width} $table-list-border-color; // bottom
+			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
+		}
+
+		&:only-child {
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
+						0 #{$table-list-border-width} $table-list-border-color, // bottom
+						inset #{$table-list-border-width} 0 $table-list-border-color; // left
+			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
+		}
+	}
+
+	thead {
+		td,
+		th {
+			background-color: $table-list-head-bg;
+			border-width: 0;
+			font-size: $table-list-head-font-size;
+			font-weight: $table-list-head-font-weight;
+			height: $table-list-head-height;
+			vertical-align: $table-list-head-vertical-alignment;
+		}
+	}
+
+	tbody,
+	tfoot {
+		td,
+		th {
+			border-width: 0;
+			vertical-align: middle;
+		}
+	}
+}
+
+.table-list.table-bordered {
+	border-width: 0;
+
+	th,
+	td {
+		box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
+					inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
+					0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
+					#{-$table-list-border-width / 2} #{$table-list-border-width / 2} 0 #{$table-list-border-width / 2} #{$table-list-border-color}; // left
+		padding-right: $table-list-border-width + $table-cell-padding;
+		padding-top: $table-list-border-width + $table-cell-padding;
+
+		&:first-child {
+			box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
+						inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
+						0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
+						inset #{$table-list-border-width} 0 #{$table-list-border-color}; // left
+			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
+		}
+	}
+}
+
+.table-list.table-striped {
+	tbody tr:nth-of-type(odd) {
+		background-color: $table-list-accent-bg;
+	}
+}
+
+.table-list.table-hover {
+	tbody tr {
+		@include hover {
+			background-color: $table-list-hover-bg;
+		}
+	}
+}
+
+.table-list.table-hover {
+	.table-active {
+		@include hover {
+			background-color: $table-list-active-bg;
+
+			> th,
+			> td {
+				background-color: $table-list-active-bg;
+			}
+		}
+	}
+}
+
+.table-list .table-active {
+	&,
+	> th,
+	> td {
+		background-color: $table-list-active-bg;
+	}
+}
+
+// Table List Title
+
+.table-list-title {
+	@include clay-text-typography($table-list-title);
+}
+
+.table-list-title a {
+	@include clay-link($table-list-title-link);
+}
+
+// Table List Link
+
+.table-list-link {
+	@include clay-link($table-list-link);
+}
+
+// Table List Action Link
+
+.table-list-action-link {
+	@include clay-link($table-list-action-link);
+}
+
+// Table Helpers
+
+.table-autofit {
+	td,
+	th {
+		width: 1%;
+	}
+
+	.table-cell-expand {
+		@extend %table-cell-expand;
+	}
+}
+
+.table-heading-nowrap thead {
+	td,
+	th {
+		white-space: nowrap;
+	}
+}
+
+.table .table-divider {
+	td,
+	th {
+		background-color: $table-divider-bg;
+		color: $table-divider-color;
+		font-size: $table-divider-font-size;
+		font-weight: $table-divider-font-weight;
+		padding: $table-divider-padding;
+		text-transform: $table-divider-text-transform;
+	}
+}
+
+// Table Vertical Align
+
+.table-valign-bottom {
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: bottom;
+		}
+	}
+}
+
+.table-valign-middle {
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: middle;
+		}
+	}
+}
+
+.table-valign-top {
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: top;
+		}
+	}
+}
+
+// Tbody Vertical Align
+
+.tbody-valign-bottom {
+	tbody td {
+		vertical-align: bottom;
+	}
+}
+
+.tbody-valign-middle {
+	tbody td {
+		vertical-align: middle;
+	}
+}
+
+.tbody-valign-top {
+	tbody td {
+		vertical-align: top;
+	}
+}
+
+// Thead Vertical Align
+
+.thead-valign-bottom {
+	thead {
+		td,
+		th {
+			vertical-align: bottom;
+		}
+	}
+}
+
+.thead-valign-middle {
+	thead {
+		td,
+		th {
+			vertical-align: middle;
+		}
+	}
+}
+
+.thead-valign-top {
+	thead {
+		td,
+		th {
+			vertical-align: top;
+		}
+	}
+}
+
+// Show Quick Action
+
+.show-quick-actions-on-hover {
+	tr:not(.table-active) {
+		@include hover {
+			.quick-action-menu {
+				display: flex;
+			}
+		}
+	}
+
+	.table-focus:not(.table-active) {
+		.quick-action-menu {
+			display: flex;
+		}
+	}
+}
+
+.table {
+	.quick-action-menu {
+		align-items: $table-quick-action-menu-align-items;
+		background-color: $table-quick-action-menu-bg;
+		padding-bottom: $table-cell-padding;
+		padding-top: $table-cell-padding;
+	}
+}
+
+.table-striped {
+	tbody tr:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-quick-action-menu-accent-bg;
+		}
+	}
+
+	tbody .table-active:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-quick-action-menu-accent-active-bg;
+		}
+	}
+}
+
+.table-hover {
+	tbody tr {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-quick-action-menu-hover-bg;
+			}
+		}
+	}
+
+	tbody .table-active {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-quick-action-menu-active-bg;
+			}
+		}
+	}
+}
+
+.table-active {
+	.quick-action-menu {
+		background-color: $table-quick-action-menu-active-bg;
+	}
+}
+
+.table-list {
+	.quick-action-menu {
+		align-items: $table-list-quick-action-menu-align-items;
+		background-color: $table-list-quick-action-menu-bg;
+		bottom: 0;
+		top: $table-list-border-width;
+	}
+}
+
+.table-list.table-striped {
+	tbody tr:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-list-quick-action-menu-accent-bg;
+		}
+	}
+
+	tbody .table-active:nth-of-type(odd) {
+		.quick-action-menu {
+			background-color: $table-list-quick-action-menu-accent-active-bg;
+		}
+	}
+}
+
+.table-list.table-hover {
+	tbody tr {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-list-quick-action-menu-hover-bg;
+			}
+		}
+	}
+
+	tbody .table-active {
+		@include hover {
+			.quick-action-menu {
+				background-color: $table-list-quick-action-menu-active-bg;
+			}
+		}
+	}
+}
+
+.table-list .table-active {
+	.quick-action-menu {
+		background-color: $table-list-quick-action-menu-active-bg;
+	}
+}
+
+// Chrome 61.0.3163.100 bug, box-shadow on th td with .table-responsive causes
+// vertical scrollbar to appear.
+
+.table-responsive {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				overflow-y: hidden;
+			}
+		}
+	}
+}
