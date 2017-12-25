@@ -1,3 +1,130 @@
+### v2.0.0-beta.5 December 25, 2017
+
+* We will try and limit the number of breaking markup changes from this point on. Disclaimer: there is no guarantee as Bootstrap 4 is still in beta, couple breaking changes that are coming down the pipeline from Boostrap 4 <a href="https://github.com/twbs/bootstrap/pull/25020">https://github.com/twbs/bootstrap/pull/25020</a>, <a href="https://github.com/twbs/bootstrap/pull/25050">https://github.com/twbs/bootstrap/pull/25050</a>.
+* Breaking: BS4 moved custom checkbox and radio icons to `.custom-control-indicator::before`
+* Breaking: Update Bootstrap 4 to eaaad95
+* Breaking: Form Group Autofit remove support for individual form elements, must be wrapped in `.form-group-item` now and added `.form-group-item-shrink` for items that should only be wide as its content
+* Breaking: Form rename `.form-inline-group` to `.form-group-item`
+* Breaking: Form rename `.form-inline-autofit` to `.form-group-autofit`
+* Breaking: `clay-label-size` mixin to use new `.inline-item` pattern
+* Breaking: `clay-badge-size` mixin to use new `.inline-item` pattern (this mixin isn't used anywhere, just available for customizing badge size if needed)
+* Breaking: Lexicon Icons in Badges and Labels should be wrapped in `.inline-item` component
+* Breaking: Loading Icon in Buttons removed `.loading` modifier leaving it up to devs to implement how to insert/remove/show/hide the icon and removed `inline-block` styles from `.btn .loading-icon` should use new `.inline-item` component to inline loading icons
+* Breaking: Button rename `.btn-borderless` to `.btn-outline-borderless`
+* Breaking: Lexicon Icon rename `rss-svg` to `rss` and update design
+* Breaking: Widget removed component and associated variables
+* Breaking: Removed `$icon-monospaced-size` and added `$dropdown-action-toggle-size` for sizing `.dropdown-action`
+* Breaking: Table List replaced `.table-list a` with `.table-list-link` so we can use two types of link colors in `.table-list` also prevents colors from bleeding into other components like `.dropdown-item`
+* Breaking: Table List replaced $table-list-link-color` and `$table-list-link-color-hover` with `$table-list-link` Sass map
+* Breaking: (Fixes #394) Loading Indicators removed `.loading-icon-linear`, `.loading-icon-linear-light`, and associated variables and mixin
+* Breaking: Loading Indicators removed `.loading-icon-xs`, `.loading-icon-md`, `.loading-icon-lg`
+* Breaking: Removed variables `$loading-icon-font-size-xs`, `$loading-icon-font-size-md`, `$loading-icon-font-size-lg`
+* Breaking: Change `.loading-icon-sm` size to 1.25rem or 20px
+* Breaking: Sticker removed references to `.img-fluid` use `.sticker-img` instead
+* Breaking: Markup for creating user icons has changed:
+```
+<span class="sticker sticker-secondary user-icon">
+  <span class="sticker-overlay">
+    <img class="sticker-img">
+  </span>
+</span>
+```
+* Breaking: Table removed `.table-cell-content`, `.table-cell-field`, and moved the styles to Sass placeholders `%table-cell-expand`, `%table-cell-contract`, use `.table-autofit` with `.table-cell-expand` to space table content instead
+* Breaking: Loading Icon refactor
+* Breaking: Loading Icon removed `$loading-icon-color`
+* Breaking: Loading Indicators should scale based on font size
+* Breaking: rename `.loading-icon`, `.loading-icon.linear` to `.loading-icon-dotted .loading-icon-indicator`, `.loading-icon-linear .loading-icon-indicator` respectively
+* Breaking: rename keyframes `loading-icon` to `loading-icon-dotted`
+* Breaking: removed old classes `.loading-animation` and `.loading-animation-{xs|sm|md|lg}`
+* Breaking: Loaders mixin removed file `_loaders.scss`, removed function `to-list`, removed mixin `trailing-shadow`
+* Breaking: Loading Indicator redesign dotted spinner and linear spinner
+* Breaking: Card removed support for `a.card-title` and `a.card-subtitle`, these classes should always be on a block level element
+* Breaking: List Group renamed selectors `a.list-group-text, .list-group-text a.text-truncate`,  `a.list-group-subtext, .list-group-subtext a.text-truncate` to `.list-group-text-link`, `.list-group-subtext-link` respectively. Also removed support for a.list-group-title colors
+* Breaking: List Group rename `clay-list-group-notification-item-border-variant` to `clay-list-group-notification-item-variant`
+* Breaking: Card replace `$card-subtitle-color`, `$card-subtitle-font-size`, `$card-subtitle-font-weight`, `$card-subtitle-margin-bottom`, `$card-subtitle-margin-top` with `$card-subtitle` and `$card-subtitle-link` Sass maps
+* Breaking: (#388) Card replaced `$card-title-color`, `$card-title-font-size`, `$card-title-font-weight`, `$card-title-margin-bottom`, `$card-title-margin-top` with `$card-title` Sass map
+* Breaking: Card replaced `$card-link-color`,`$card-link-text-decoration`, `$card-link-hover-color`, `$card-link-hover-text-decoration` with `$card-link` Sass map
+* Breaking: Card removed styles for `button.card-link` and `.btn-link.card-link`, use `.btn.btn-unstyled.card-link` if you really need a button styled like a link
+* New: Button added option to configure `$btn-inline-item-font-size-lg`, `$btn-inline-item-font-size-sm`
+* New: Button added `.btn-section` for adding additional lines in `.btn` and option to configure `$btn-section-font-size`, `$btn-section-font-weight`, `$btn-section-line-height`, `$btn-section-font-size-lg`, `$btn-section-font-size-sm`
+* New: (#395) Button added option to configure `$btn-inline-item-font-size`
+* New: (Fixes #395) Utilities added `.inline-item`, `.inline-item-before`, `.inline-item-middle`, and `.inline-item-after` for spacing icons with inline text in components and option to configure `$inline-item-spacer-x`. This could technically be a breaking change.
+* New: Lexicon Icon Video
+* New: Popover add option to configure `$popover-font-size` and add note about Tooltip and Popover `border-radius`
+* New: Pagination added option to configure `$pagination-font-size`, `$pagination-items-per-page-font-size`
+* New: Dropdown and Quick Action added option to configure `$dropdown-action-toggle-font-size`, `$quick-action-font-size`
+* New: Custom Forms Checkbox and Radio added option to configure `$custom-control-description-cursor`, `$custom-control-description-font-size` and fixed vertical alignment with varying font sizes in `.custom-control-description`
+* New: Table added `.table-list-action-link` and update styles for other table links
+* New: Add more properties to `clay-link` mixin
+* New: Table added styles for `.table-title`, `.table-title a`, `.table-action-link`, and `.table-link`
+* New: Table added `$table-title`, `$table-action-link`, and `table-link` Sass maps
+* New: (Fixes #393) Card added `.card-page`, `.card-page-item-directory`, and `.card-page-item-asset` to help size and layout cards
+* New: Card added Sass maps `$card-page-item-asset`, `$card-page-item-directory` to configure widths, breakpoints, padding in `.card-page-item-*`
+* New: Grid added placeholder `%clay-custom-grid-wrapper`, mixin `clay-custom-grid-columns($map)` for creating custom grids that can't be done using BS4 grid out of the box. The Card Page component uses this.
+* New: (Fixes #390) Sticker added utility classes `.user-icon`, `.sticker-img` and option to configure `$user-icon-border-radius`. General use case for `.sticker-img` is inside `.sticker-overlay`.
+* New: Table List added `.table-list-title` and Sass Maps to configure `$table-list-title`, `$table-list-title-link`
+* New: Loading Icons in Buttons should display the right color
+* New: Loading Icon added mixin `clay-loading-icon-dotted-variant`, and Sass maps `$loading-icon-dotted`, `$loading-icon-dotted-light` to create `.loading-icon-dotted` variants
+* New: Card added option to configure `.card-body` in `clay-card-type-asset` and `clay-card-type-directory` mixins
+* New: Card added mixin `clay-card-type-directory` and `$card-type-directory` Sass map
+* New: Card added mixin `clay-card-type-asset-variant` used to create `.image-card` and `.file-card` variants, added `$image-card` and `$file-card` Sass maps
+* New: (Fixes #389) Card added `$card-type-asset` Sass map, mixin `clay-card-type-asset()`, and move `.card-type-asset` styles to the mixin
+* New: Card added `.card-type-asset-icon` for styling user icons and svg icons in `.card-type-asset`
+* New: Type added `.truncate-text-inline .truncate-text` pattern
+* New: (Fixes #388) Card added `$card-title-link` Sass map to configure `a.card-title` and `.card-title a` styles, also use map-merge for `$card-title` so preset styles don't get overwritten
+* Update: Custom Forms remove `.custom-select` styles from Clay, we don't use this component
+* Update: Input Group clean up some alignment styles fixed by Bootstrap and undo `font-size: 0` hack leftover from Bootstrap 3
+* Update: Button Monospaced to use `display: inline-flex` for centering icons
+* Update: Badges and Labels fix alignment of Lexicon Icons using `.inline-item`
+* Update: (Closes #399) Loading Icon change to `display: block` and center in container
+* Update: Atlas `.panel-title` font-size to 13px
+* Update: Tooltip add note about https://github.com/twbs/bootstrap/pull/25035
+* Update: Atlas update font-sizes for several components
+* Update: Atlas change font-family to default system fonts
+* Update: Atlas Card `$card-title-link`, `$card-subtitle-link`, and `$card-link` should have underline on hover
+* Update: Card Type Asset added support for new `.sticker.user-icon` markup
+* Update: Aspect Ratio move all properties to Sass placeholders for easier extend
+* Update: Progress Group change `flex-wrap: wrap` to `nowrap` to help render better in small spaces
+* Update: (#390) Card Type Asset with user icon inside aspect ratio should use `overflow: hidden` to style rounded borders
+* Update: Loading Icon remove `$loading-icon-ball-size`, `$loading-icon-ball-spacer` and hardcode values using `em`'s since sizes can be adjusted using `font-size`, any adjustments to the look of the icon should be made using ball-scale and transform
+* Update: Card mixin `clay-card-type-asset` sticker border-radius should be 50% since it scales with card width
+* Update: Card `.card-subtitle` font-weight
+* Update: List Group `.quick-action-menu` should be properly aligned
+* Update: List Group adjust spacing, sizes, and use map-merge for `$list-group-header-title`, `$list-group-title`, `$list-group-text`, `$list-group-text-link`, `$list-group-subtext`, `$list-group-subtext-link`, `$list-group-notification-item-primary` for inheritance
+* Update: Card `.card-type-asset` with clickable icon or blank item should still check checkbox
+* Update: Card `.card-link.btn-unstyled` should `break-word`
+* Update: Card use map-merge for `$card-link` so preset styles aren't overwritten
+* Site: All form elements inside a `.form-group-autofit` must be wrapped in `.form-group-item` and add `form-group-item-shrink` to examples
+* Site: Renamed `.form-inline-group` to `.form-group-item`
+* Site: Rename `.form-inline-autofit` to `.form-group-autofit`
+* Site: Form wrapped all `.form-inline-autofit` inputs with `.form-inline-group`
+* Site: Added test page Localizable Input
+* Site: Buttons add examples with `.btn-section` and wrap icons in `.inline-item` for proper sizing
+* Site: Badges and Label add more examples of `.inline-item`
+* Site: Badges and Labels should use `.inline-item`
+* Site: Loading Indicators use new `.inline-item` component for loading icons in `.btn` and remove references to `.loading`
+* Site: Utilities added `.inline-item` docs and examples, update pages with buttons and icons to use `.inline-item`
+* Site: Button renamed `.btn-borderless` to `.btn-outline-borderless`
+* Site: Widget remove pages and docs associated with component
+* Site: Form Hierarchy remove `.panel-title` class from collapsible `.sheet-subtitle`'s
+* Site: Tables update demos with different types of table links
+* Site: Tables update examples with `.table-list-link`, `.table-title`, `.table-link`, and `.table-action-link`
+* Site: Card View Template update markup to use `.card-page`, `.card-page-item-directory`, and `.card-page-item-asset`
+* Site: Loading Indicators removed examples of `.loading-icon-linear`, `.loading-icon-linear-light`, `.loading-icon-xs`, `.loading-icon-md`, and `.loading-icon-lg`
+* Site: Replace instances of user icons using `.rounded-circle.sticker` with `.sticker.user-icon`, and update markup for stickers with images inside
+* Site: Table View Template added Export table example, rename `.table-cell-content` to `.table-cell-expand`
+* Site: (#390) Card Type Asset add examples of different size images for User Card
+* Site: Loading Indicators updated markup to new pattern, added demos of light versions
+* Site: Loading Indicators `.loading-icon-xs` was not in examples
+* Site: (Fixes #390) Card added example of user icon card with image, added classes `.image-card`, `.file-card`, `.user-card` to cards that need it, update sticker markup inside `.card-type-asset`
+* Site: List Group use `.list-group-text-link` and `.list-group-subtext-link` also normalize markup for `.list-group-item-flex` with only title
+* Site: List Group View use `.list-group-notification`
+* Site: List Group View removed any reference to `.text-truncate` and use `.list-group-item-flex` pattern for list group item with only `.list-group-title` makes it easier for component teams to use one markup pattern
+* Site: List Group use `.text-truncate-inline` pattern for demo
+* Site: Test Card View change `.card-type-asset` with checkbox only clickable when clicking on image and use `.text-truncate-inline` pattern form truncating text
+* Site: (Fixes #387) Cards update `.card-type-asset` with checkboxes markup so clicking on `.aspect-ratio` container will check the checkbox instead of whole card and use `.text-truncate-inline` to truncate text in cards
+* Site: Typography added `.text-truncate-inline` demo
+
 ### v2.0.0-beta.4 December 4, 2017
 
 * Breaking: List Group removed `$list-group-header-title-color`, `$list-group-header-title-font-size`, `$list-group-header-title-font-weight`, `$list-group-header-title-margin-bottom`, `$list-group-header-title-text-transform` use `$list-group-header-title` Sass map instead
