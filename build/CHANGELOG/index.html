@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
+				<h4 class="title"><a href="..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -190,6 +190,8 @@
 </li>
 <li class=""><a class="nav-title" href="../content/test-list-view-template">List View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../content/test-localizable-input-field">Localizable Input Field</a>
+</li>
 <li class=""><a class="nav-title" href="../content/test-table-view-template">Table View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../content/test-users-and-organizations">Users and Organizations</a>
@@ -213,7 +215,132 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-beta-4-december-4-2017"><a class="heading-anchor" href="#v2-0-0-beta-4-december-4-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.4 December 4, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-beta-5-december-25-2017"><a class="heading-anchor" href="#v2-0-0-beta-5-december-25-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.5 December 25, 2017</h3>
+<ul>
+<li>We will try and limit the number of breaking markup changes from this point on. Disclaimer: there is no guarantee as Bootstrap 4 is still in beta, couple breaking changes that are coming down the pipeline from Boostrap 4 <a href="https://github.com/twbs/bootstrap/pull/25020">https://github.com/twbs/bootstrap/pull/25020</a>, <a href="https://github.com/twbs/bootstrap/pull/25050">https://github.com/twbs/bootstrap/pull/25050</a>.</li>
+<li>Breaking: BS4 moved custom checkbox and radio icons to <code>.custom-control-indicator::before</code></li>
+<li>Breaking: Update Bootstrap 4 to eaaad95</li>
+<li>Breaking: Form Group Autofit remove support for individual form elements, must be wrapped in <code>.form-group-item</code> now and added <code>.form-group-item-shrink</code> for items that should only be wide as its content</li>
+<li>Breaking: Form rename <code>.form-inline-group</code> to <code>.form-group-item</code></li>
+<li>Breaking: Form rename <code>.form-inline-autofit</code> to <code>.form-group-autofit</code></li>
+<li>Breaking: <code>clay-label-size</code> mixin to use new <code>.inline-item</code> pattern</li>
+<li>Breaking: <code>clay-badge-size</code> mixin to use new <code>.inline-item</code> pattern (this mixin isn&#x2019;t used anywhere, just available for customizing badge size if needed)</li>
+<li>Breaking: Lexicon Icons in Badges and Labels should be wrapped in <code>.inline-item</code> component</li>
+<li>Breaking: Loading Icon in Buttons removed <code>.loading</code> modifier leaving it up to devs to implement how to insert/remove/show/hide the icon and removed <code>inline-block</code> styles from <code>.btn .loading-icon</code> should use new <code>.inline-item</code> component to inline loading icons</li>
+<li>Breaking: Button rename <code>.btn-borderless</code> to <code>.btn-outline-borderless</code></li>
+<li>Breaking: Lexicon Icon rename <code>rss-svg</code> to <code>rss</code> and update design</li>
+<li>Breaking: Widget removed component and associated variables</li>
+<li>Breaking: Removed <code>$icon-monospaced-size</code> and added <code>$dropdown-action-toggle-size</code> for sizing <code>.dropdown-action</code></li>
+<li>Breaking: Table List replaced <code>.table-list a</code> with <code>.table-list-link</code> so we can use two types of link colors in <code>.table-list</code> also prevents colors from bleeding into other components like <code>.dropdown-item</code></li>
+<li>Breaking: Table List replaced $table-list-link-color<code>and</code>$table-list-link-color-hover<code>with</code>$table-list-link` Sass map</li>
+<li>Breaking: (Fixes #394) Loading Indicators removed <code>.loading-icon-linear</code>, <code>.loading-icon-linear-light</code>, and associated variables and mixin</li>
+<li>Breaking: Loading Indicators removed <code>.loading-icon-xs</code>, <code>.loading-icon-md</code>, <code>.loading-icon-lg</code></li>
+<li>Breaking: Removed variables <code>$loading-icon-font-size-xs</code>, <code>$loading-icon-font-size-md</code>, <code>$loading-icon-font-size-lg</code></li>
+<li>Breaking: Change <code>.loading-icon-sm</code> size to 1.25rem or 20px</li>
+<li>Breaking: Sticker removed references to <code>.img-fluid</code> use <code>.sticker-img</code> instead</li>
+<li>Breaking: Markup for creating user icons has changed:<pre><code>&lt;span class=&quot;sticker sticker-secondary user-icon&quot;&gt;
+&lt;span class=&quot;sticker-overlay&quot;&gt;
+  &lt;img class=&quot;sticker-img&quot;&gt;
+&lt;/span&gt;
+&lt;/span&gt;
+</code></pre></li>
+<li>Breaking: Table removed <code>.table-cell-content</code>, <code>.table-cell-field</code>, and moved the styles to Sass placeholders <code>%table-cell-expand</code>, <code>%table-cell-contract</code>, use <code>.table-autofit</code> with <code>.table-cell-expand</code> to space table content instead</li>
+<li>Breaking: Loading Icon refactor</li>
+<li>Breaking: Loading Icon removed <code>$loading-icon-color</code></li>
+<li>Breaking: Loading Indicators should scale based on font size</li>
+<li>Breaking: rename <code>.loading-icon</code>, <code>.loading-icon.linear</code> to <code>.loading-icon-dotted .loading-icon-indicator</code>, <code>.loading-icon-linear .loading-icon-indicator</code> respectively</li>
+<li>Breaking: rename keyframes <code>loading-icon</code> to <code>loading-icon-dotted</code></li>
+<li>Breaking: removed old classes <code>.loading-animation</code> and <code>.loading-animation-{xs|sm|md|lg}</code></li>
+<li>Breaking: Loaders mixin removed file <code>_loaders.scss</code>, removed function <code>to-list</code>, removed mixin <code>trailing-shadow</code></li>
+<li>Breaking: Loading Indicator redesign dotted spinner and linear spinner</li>
+<li>Breaking: Card removed support for <code>a.card-title</code> and <code>a.card-subtitle</code>, these classes should always be on a block level element</li>
+<li>Breaking: List Group renamed selectors <code>a.list-group-text, .list-group-text a.text-truncate</code>,  <code>a.list-group-subtext, .list-group-subtext a.text-truncate</code> to <code>.list-group-text-link</code>, <code>.list-group-subtext-link</code> respectively. Also removed support for a.list-group-title colors</li>
+<li>Breaking: List Group rename <code>clay-list-group-notification-item-border-variant</code> to <code>clay-list-group-notification-item-variant</code></li>
+<li>Breaking: Card replace <code>$card-subtitle-color</code>, <code>$card-subtitle-font-size</code>, <code>$card-subtitle-font-weight</code>, <code>$card-subtitle-margin-bottom</code>, <code>$card-subtitle-margin-top</code> with <code>$card-subtitle</code> and <code>$card-subtitle-link</code> Sass maps</li>
+<li>Breaking: (#388) Card replaced <code>$card-title-color</code>, <code>$card-title-font-size</code>, <code>$card-title-font-weight</code>, <code>$card-title-margin-bottom</code>, <code>$card-title-margin-top</code> with <code>$card-title</code> Sass map</li>
+<li>Breaking: Card replaced <code>$card-link-color</code>,<code>$card-link-text-decoration</code>, <code>$card-link-hover-color</code>, <code>$card-link-hover-text-decoration</code> with <code>$card-link</code> Sass map</li>
+<li>Breaking: Card removed styles for <code>button.card-link</code> and <code>.btn-link.card-link</code>, use <code>.btn.btn-unstyled.card-link</code> if you really need a button styled like a link</li>
+<li>New: Button added option to configure <code>$btn-inline-item-font-size-lg</code>, <code>$btn-inline-item-font-size-sm</code></li>
+<li>New: Button added <code>.btn-section</code> for adding additional lines in <code>.btn</code> and option to configure <code>$btn-section-font-size</code>, <code>$btn-section-font-weight</code>, <code>$btn-section-line-height</code>, <code>$btn-section-font-size-lg</code>, <code>$btn-section-font-size-sm</code></li>
+<li>New: (#395) Button added option to configure <code>$btn-inline-item-font-size</code></li>
+<li>New: (Fixes #395) Utilities added <code>.inline-item</code>, <code>.inline-item-before</code>, <code>.inline-item-middle</code>, and <code>.inline-item-after</code> for spacing icons with inline text in components and option to configure <code>$inline-item-spacer-x</code>. This could technically be a breaking change.</li>
+<li>New: Lexicon Icon Video</li>
+<li>New: Popover add option to configure <code>$popover-font-size</code> and add note about Tooltip and Popover <code>border-radius</code></li>
+<li>New: Pagination added option to configure <code>$pagination-font-size</code>, <code>$pagination-items-per-page-font-size</code></li>
+<li>New: Dropdown and Quick Action added option to configure <code>$dropdown-action-toggle-font-size</code>, <code>$quick-action-font-size</code></li>
+<li>New: Custom Forms Checkbox and Radio added option to configure <code>$custom-control-description-cursor</code>, <code>$custom-control-description-font-size</code> and fixed vertical alignment with varying font sizes in <code>.custom-control-description</code></li>
+<li>New: Table added <code>.table-list-action-link</code> and update styles for other table links</li>
+<li>New: Add more properties to <code>clay-link</code> mixin</li>
+<li>New: Table added styles for <code>.table-title</code>, <code>.table-title a</code>, <code>.table-action-link</code>, and <code>.table-link</code></li>
+<li>New: Table added <code>$table-title</code>, <code>$table-action-link</code>, and <code>table-link</code> Sass maps</li>
+<li>New: (Fixes #393) Card added <code>.card-page</code>, <code>.card-page-item-directory</code>, and <code>.card-page-item-asset</code> to help size and layout cards</li>
+<li>New: Card added Sass maps <code>$card-page-item-asset</code>, <code>$card-page-item-directory</code> to configure widths, breakpoints, padding in <code>.card-page-item-*</code></li>
+<li>New: Grid added placeholder <code>%clay-custom-grid-wrapper</code>, mixin <code>clay-custom-grid-columns($map)</code> for creating custom grids that can&#x2019;t be done using BS4 grid out of the box. The Card Page component uses this.</li>
+<li>New: (Fixes #390) Sticker added utility classes <code>.user-icon</code>, <code>.sticker-img</code> and option to configure <code>$user-icon-border-radius</code>. General use case for <code>.sticker-img</code> is inside <code>.sticker-overlay</code>.</li>
+<li>New: Table List added <code>.table-list-title</code> and Sass Maps to configure <code>$table-list-title</code>, <code>$table-list-title-link</code></li>
+<li>New: Loading Icons in Buttons should display the right color</li>
+<li>New: Loading Icon added mixin <code>clay-loading-icon-dotted-variant</code>, and Sass maps <code>$loading-icon-dotted</code>, <code>$loading-icon-dotted-light</code> to create <code>.loading-icon-dotted</code> variants</li>
+<li>New: Card added option to configure <code>.card-body</code> in <code>clay-card-type-asset</code> and <code>clay-card-type-directory</code> mixins</li>
+<li>New: Card added mixin <code>clay-card-type-directory</code> and <code>$card-type-directory</code> Sass map</li>
+<li>New: Card added mixin <code>clay-card-type-asset-variant</code> used to create <code>.image-card</code> and <code>.file-card</code> variants, added <code>$image-card</code> and <code>$file-card</code> Sass maps</li>
+<li>New: (Fixes #389) Card added <code>$card-type-asset</code> Sass map, mixin <code>clay-card-type-asset()</code>, and move <code>.card-type-asset</code> styles to the mixin</li>
+<li>New: Card added <code>.card-type-asset-icon</code> for styling user icons and svg icons in <code>.card-type-asset</code></li>
+<li>New: Type added <code>.truncate-text-inline .truncate-text</code> pattern</li>
+<li>New: (Fixes #388) Card added <code>$card-title-link</code> Sass map to configure <code>a.card-title</code> and <code>.card-title a</code> styles, also use map-merge for <code>$card-title</code> so preset styles don&#x2019;t get overwritten</li>
+<li>Update: Custom Forms remove <code>.custom-select</code> styles from Clay, we don&#x2019;t use this component</li>
+<li>Update: Input Group clean up some alignment styles fixed by Bootstrap and undo <code>font-size: 0</code> hack leftover from Bootstrap 3</li>
+<li>Update: Button Monospaced to use <code>display: inline-flex</code> for centering icons</li>
+<li>Update: Badges and Labels fix alignment of Lexicon Icons using <code>.inline-item</code></li>
+<li>Update: (Closes #399) Loading Icon change to <code>display: block</code> and center in container</li>
+<li>Update: Atlas <code>.panel-title</code> font-size to 13px</li>
+<li>Update: Tooltip add note about <a href="https://github.com/twbs/bootstrap/pull/25035">https://github.com/twbs/bootstrap/pull/25035</a></li>
+<li>Update: Atlas update font-sizes for several components</li>
+<li>Update: Atlas change font-family to default system fonts</li>
+<li>Update: Atlas Card <code>$card-title-link</code>, <code>$card-subtitle-link</code>, and <code>$card-link</code> should have underline on hover</li>
+<li>Update: Card Type Asset added support for new <code>.sticker.user-icon</code> markup</li>
+<li>Update: Aspect Ratio move all properties to Sass placeholders for easier extend</li>
+<li>Update: Progress Group change <code>flex-wrap: wrap</code> to <code>nowrap</code> to help render better in small spaces</li>
+<li>Update: (#390) Card Type Asset with user icon inside aspect ratio should use <code>overflow: hidden</code> to style rounded borders</li>
+<li>Update: Loading Icon remove <code>$loading-icon-ball-size</code>, <code>$loading-icon-ball-spacer</code> and hardcode values using <code>em</code>&#x2018;s since sizes can be adjusted using <code>font-size</code>, any adjustments to the look of the icon should be made using ball-scale and transform</li>
+<li>Update: Card mixin <code>clay-card-type-asset</code> sticker border-radius should be 50% since it scales with card width</li>
+<li>Update: Card <code>.card-subtitle</code> font-weight</li>
+<li>Update: List Group <code>.quick-action-menu</code> should be properly aligned</li>
+<li>Update: List Group adjust spacing, sizes, and use map-merge for <code>$list-group-header-title</code>, <code>$list-group-title</code>, <code>$list-group-text</code>, <code>$list-group-text-link</code>, <code>$list-group-subtext</code>, <code>$list-group-subtext-link</code>, <code>$list-group-notification-item-primary</code> for inheritance</li>
+<li>Update: Card <code>.card-type-asset</code> with clickable icon or blank item should still check checkbox</li>
+<li>Update: Card <code>.card-link.btn-unstyled</code> should <code>break-word</code></li>
+<li>Update: Card use map-merge for <code>$card-link</code> so preset styles aren&#x2019;t overwritten</li>
+<li>Site: All form elements inside a <code>.form-group-autofit</code> must be wrapped in <code>.form-group-item</code> and add <code>form-group-item-shrink</code> to examples</li>
+<li>Site: Renamed <code>.form-inline-group</code> to <code>.form-group-item</code></li>
+<li>Site: Rename <code>.form-inline-autofit</code> to <code>.form-group-autofit</code></li>
+<li>Site: Form wrapped all <code>.form-inline-autofit</code> inputs with <code>.form-inline-group</code></li>
+<li>Site: Added test page Localizable Input</li>
+<li>Site: Buttons add examples with <code>.btn-section</code> and wrap icons in <code>.inline-item</code> for proper sizing</li>
+<li>Site: Badges and Label add more examples of <code>.inline-item</code></li>
+<li>Site: Badges and Labels should use <code>.inline-item</code></li>
+<li>Site: Loading Indicators use new <code>.inline-item</code> component for loading icons in <code>.btn</code> and remove references to <code>.loading</code></li>
+<li>Site: Utilities added <code>.inline-item</code> docs and examples, update pages with buttons and icons to use <code>.inline-item</code></li>
+<li>Site: Button renamed <code>.btn-borderless</code> to <code>.btn-outline-borderless</code></li>
+<li>Site: Widget remove pages and docs associated with component</li>
+<li>Site: Form Hierarchy remove <code>.panel-title</code> class from collapsible <code>.sheet-subtitle</code>&#x2018;s</li>
+<li>Site: Tables update demos with different types of table links</li>
+<li>Site: Tables update examples with <code>.table-list-link</code>, <code>.table-title</code>, <code>.table-link</code>, and <code>.table-action-link</code></li>
+<li>Site: Card View Template update markup to use <code>.card-page</code>, <code>.card-page-item-directory</code>, and <code>.card-page-item-asset</code></li>
+<li>Site: Loading Indicators removed examples of <code>.loading-icon-linear</code>, <code>.loading-icon-linear-light</code>, <code>.loading-icon-xs</code>, <code>.loading-icon-md</code>, and <code>.loading-icon-lg</code></li>
+<li>Site: Replace instances of user icons using <code>.rounded-circle.sticker</code> with <code>.sticker.user-icon</code>, and update markup for stickers with images inside</li>
+<li>Site: Table View Template added Export table example, rename <code>.table-cell-content</code> to <code>.table-cell-expand</code></li>
+<li>Site: (#390) Card Type Asset add examples of different size images for User Card</li>
+<li>Site: Loading Indicators updated markup to new pattern, added demos of light versions</li>
+<li>Site: Loading Indicators <code>.loading-icon-xs</code> was not in examples</li>
+<li>Site: (Fixes #390) Card added example of user icon card with image, added classes <code>.image-card</code>, <code>.file-card</code>, <code>.user-card</code> to cards that need it, update sticker markup inside <code>.card-type-asset</code></li>
+<li>Site: List Group use <code>.list-group-text-link</code> and <code>.list-group-subtext-link</code> also normalize markup for <code>.list-group-item-flex</code> with only title</li>
+<li>Site: List Group View use <code>.list-group-notification</code></li>
+<li>Site: List Group View removed any reference to <code>.text-truncate</code> and use <code>.list-group-item-flex</code> pattern for list group item with only <code>.list-group-title</code> makes it easier for component teams to use one markup pattern</li>
+<li>Site: List Group use <code>.text-truncate-inline</code> pattern for demo</li>
+<li>Site: Test Card View change <code>.card-type-asset</code> with checkbox only clickable when clicking on image and use <code>.text-truncate-inline</code> pattern form truncating text</li>
+<li>Site: (Fixes #387) Cards update <code>.card-type-asset</code> with checkboxes markup so clicking on <code>.aspect-ratio</code> container will check the checkbox instead of whole card and use <code>.text-truncate-inline</code> to truncate text in cards</li>
+<li>Site: Typography added <code>.text-truncate-inline</code> demo</li>
+</ul>
+<h3 id="v2-0-0-beta-4-december-4-2017"><a class="heading-anchor" href="#v2-0-0-beta-4-december-4-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.4 December 4, 2017</h3>
 <ul>
 <li>Breaking: List Group removed <code>$list-group-header-title-color</code>, <code>$list-group-header-title-font-size</code>, <code>$list-group-header-title-font-weight</code>, <code>$list-group-header-title-margin-bottom</code>, <code>$list-group-header-title-text-transform</code> use <code>$list-group-header-title</code> Sass map instead</li>
 <li>Breaking: List Group removed <code>$list-group-title-color</code>, <code>$list-group-title-font-size</code>, <code>$list-group-title-font-weight</code>, <code>$list-group-title-margin-bottom</code>, <code>$list-group-title-text-decoration</code>, <code>$list-group-title-hover-color</code>, <code>$list-group-title-hover-text-decoration</code> use <code>$list-group-title</code> Sass map instead</li>
