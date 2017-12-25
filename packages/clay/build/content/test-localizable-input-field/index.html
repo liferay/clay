@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Clay - Loading Indicators</title>
+	<title>Clay - Localizable Input Field</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -106,7 +106,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/menu-bar-vertical">Menubar (Vertical)</a>
 </li>
@@ -190,7 +190,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/test-localizable-input-field">Localizable Input Field</a>
+<li class="active"><a class="nav-title" href="../../content/test-localizable-input-field">Localizable Input Field</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
 </li>
@@ -210,7 +210,7 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
-			Loading Indicators
+			Localizable Input Field
 
 			
 		</h1>
@@ -218,110 +218,199 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<blockquote class="blockquote">
-			<p>CSS only loading indicators</p>
-		</blockquote>
-	</div>
-</div>
+		<div class="sheet">
+			<header class="sheet-header">
+				<h2 class="sheet-title">Localizable Input Fields</h2>
+			</header>
+			<div class="sheet-section">
+				<div class="form-group-autofit">
+					<div class="form-group-item">
+						<label for="productName">
+							Product Name
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+								<use xlink:href="../../images/icons/icons.svg#asterisk">
+							</svg>
+						</label>
+						<div class="input-group input-group-transparent">
+							<input aria-label="Amount" class="form-control" id="productName" placeholder="Some placeholder text..." type="text" value="Rat&#xF3;n inal&#xE1;mbrico Liferay">
+							<div class="input-group-btn">
+								<div class="dropdown">
+									<button class="btn btn-monospaced btn-secondary" data-toggle="dropdown" type="button">
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+												<use xlink:href="../../images/icons/icons.svg#es-es">
+											</svg>
+										</span>
+										<span class="btn-section">es-ES</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+													<use xlink:href="../../images/icons/icons.svg#en-us">
+												</svg>
+											</span>
+											en-US
+											<span class="label label-info">Default</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+													<use xlink:href="../../images/icons/icons.svg#en-gb">
+												</svg>
+											</span>
+											en-GB
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="active dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+													<use xlink:href="../../images/icons/icons.svg#es-es">
+												</svg>
+											</span>
+											es-ES
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+													<use xlink:href="../../images/icons/icons.svg#fr-fr">
+												</svg>
+											</span>
+											fr-FR
+											<span class="label label-warning">Not Translated</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-text">Some helper text.</div>
+					</div>
+				</div>
 
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="loading-icon-dotted"><a class="heading-anchor" href="#loading-icon-dotted"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Loading Icon Dotted</h3>
-	</div>
+				<div class="form-group-autofit">
+					<div class="form-group-item">
+						<label for="productDescription">Description</label>
+						<div class="input-group input-group-transparent">
+							<textarea aria-label="Amount" class="form-control" id="productDescription" placeholder="Some placeholder text...">El rat&#xF3;n inal&#xE1;mbrico Liferay es el rat&#xF3;n estelar de Liferay, dise&#xF1;ado para ofrecer a los usuarios avanzados comodidad, control y precisi&#xF3;n superiores
+							</textarea>
+							<div class="input-group-btn">
+								<div class="dropdown">
+									<button class="btn btn-monospaced btn-secondary" data-toggle="dropdown" type="button">
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+												<use xlink:href="../../images/icons/icons.svg#es-es">
+											</svg>
+										</span>
+										<span class="btn-section">es-ES</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+													<use xlink:href="../../images/icons/icons.svg#en-us">
+												</svg>
+											</span>
+											en-US
+											<span class="label label-info">Default</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+													<use xlink:href="../../images/icons/icons.svg#en-gb">
+												</svg>
+											</span>
+											en-GB
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="active dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+													<use xlink:href="../../images/icons/icons.svg#es-es">
+												</svg>
+											</span>
+											es-ES
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+													<use xlink:href="../../images/icons/icons.svg#fr-fr">
+												</svg>
+											</span>
+											fr-FR
+											<span class="label label-warning">Not Translated</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-text">Liferay offers advanced features and a stunning design, optimized for Windows and Mac. Enjoy ultimate comfort, control, precision and customization...<a href="#1">Read More</a></div>
+					</div>
+				</div>
 
-	<div class="col-md-3">
-		<span aria-hidden="true" class="loading-icon loading-icon-dotted loading-icon-sm">
-			<span class="loading-icon-indicator"></span>
-		</span>
-	</div>
-	<div class="col-md-3">
-		<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-			<span class="loading-icon-indicator"></span>
-		</span>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="loading-icon-dotted-light"><a class="heading-anchor" href="#loading-icon-dotted-light"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Loading Icon Dotted Light</h3>
-	</div>
-
-	<div class="col-md-3">
-		<span class="bg-dark" style="display:inline-block;padding:5px;">
-			<span aria-hidden="true" class="loading-icon loading-icon-dotted-light">
-				<span class="loading-icon-indicator"></span>
-			</span>
-		</span></div>
-	</div>
-
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="button-with-loading-icon-dotted"><a class="heading-anchor" href="#button-with-loading-icon-dotted"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button with Loading Icon Dotted</h3>
-
-		<button class="btn btn-primary" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-secondary" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-success" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-info" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-warning" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-danger" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-light" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-dark" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
-		<button class="btn btn-link" type="button">
-			<span class="inline-item inline-item-before">
-				<span aria-hidden="true" class="loading-icon loading-icon-dotted">
-					<span class="loading-icon-indicator"></span>
-				</span>
-			</span>Loading
-		</button>
+				<div class="form-group-autofit">
+					<div class="form-group-item">
+						<label>Liferay</label>
+						<span class="form-text">http://www.liferay.com</span>
+						<div class="input-group">
+							<span class="input-group-addon">/</span>
+							<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text" value="soluciones">
+							<div class="input-group-btn">
+								<div class="dropdown">
+									<button class="btn btn-monospaced btn-secondary" data-toggle="dropdown" type="button">
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+												<use xlink:href="../../images/icons/icons.svg#es-es">
+											</svg>
+										</span>
+										<span class="btn-section">es-ES</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+													<use xlink:href="../../images/icons/icons.svg#en-us">
+												</svg>
+											</span>
+											en-US
+											<span class="label label-info">Default</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+													<use xlink:href="../../images/icons/icons.svg#en-gb">
+												</svg>
+											</span>
+											en-GB
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="active dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+													<use xlink:href="../../images/icons/icons.svg#es-es">
+												</svg>
+											</span>
+											es-ES
+											<span class="label label-success">Translated</span>
+										</a>
+										<a class="dropdown-item" href="#1">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+													<use xlink:href="../../images/icons/icons.svg#fr-fr">
+												</svg>
+											</span>
+											fr-FR
+											<span class="label label-warning">Not Translated</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 	</div>

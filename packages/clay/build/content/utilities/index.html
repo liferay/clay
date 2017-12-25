@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -190,6 +190,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-localizable-input-field">Localizable Input Field</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
@@ -318,6 +320,58 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="inline-item"><a class="heading-anchor" href="#inline-item"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inline Item</h3>
+
+		<blockquote class="blockquote">
+			<p>Use <code>inline-item inline-item-before</code>, <code>inline-item inline-item-middle</code>, and <code>inline-item inline-item-after</code> to provide consistent spacing between text and icons in elements such as links or buttons. This can also be used in other components that have inline content (e.g., <code>badge</code> and <code>label</code>).</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			For this component to function and space properly, white space between text and icons must be removed from the markup inside the component. It&apos;s generally easier to remove all white space inside the link, button, or component. In the examples below, whitespaces in button and link are slightly off and the link underline on hover is a bit wide.
+		</div>
+
+		<div>
+			<h5>Link without Whitespace</h5>
+			<a href="#1">
+				<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-share"><use xlink:href="../../images/icons/icons.svg#share"></svg></span>link<span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="../../images/icons/icons.svg#question-circle"></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="../../images/icons/icons.svg#question-circle"></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="../../images/icons/icons.svg#question-circle"></svg></span>why, but ok.<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use xlink:href="../../images/icons/icons.svg#add-cell"></svg></span>
+			</a>
+		</div>
+		<div>
+			<h5>Link with Whitespace</h5>
+			<a href="#1">
+				<span class="inline-item inline-item-before">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+						<use xlink:href="../../images/icons/icons.svg#share"></svg>
+				</span>
+				link
+				<span class="inline-item inline-item-after">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use xlink:href="../../images/icons/icons.svg#add-cell"></svg>
+				</span>
+			</a>
+		</div>
+		<div>
+			<h5>Button without Whitespace</h5>
+			<button class="btn btn-secondary" type="button"><span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus"><use xlink:href="../../images/icons/icons.svg#plus"></svg></span>Secondary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera"><use xlink:href="../../images/icons/icons.svg#camera"></svg></span></button>
+		</div>
+		<div>
+			<h5>Button with Whitespace</h5>
+			<button class="btn btn-secondary" type="button">
+				<span class="inline-item inline-item-before">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+						<use xlink:href="../../images/icons/icons.svg#plus"></svg>
+				</span>
+				Secondary
+				<span class="inline-item inline-item-after">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+						<use xlink:href="../../images/icons/icons.svg#camera"></svg>
+				</span>
+			</button>
 		</div>
 	</div>
 </div>

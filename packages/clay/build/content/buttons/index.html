@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -189,6 +189,8 @@
 <li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-localizable-input-field">Localizable Input Field</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
 </li>
@@ -366,70 +368,90 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="button-outline-button-borderless"><a class="heading-anchor" href="#button-outline-button-borderless"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button Outline Button Borderless</h3>
+		<h3 id="button-outline-borderless"><a class="heading-anchor" href="#button-outline-borderless"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button Outline Borderless</h3>
 
 		<h6>Normal</h6>
-		<button class="btn btn-borderless btn-outline-primary" type="button">Primary</button>
-		<button class="btn btn-borderless btn-outline-secondary" type="button">Secondary</button>
-		<button class="btn btn-borderless btn-outline-info" type="button">Info</button>
-		<button class="btn btn-borderless btn-outline-success" type="button">Success</button>
-		<button class="btn btn-borderless btn-outline-warning" type="button">Warning</button>
-		<button class="btn btn-borderless btn-outline-danger" type="button">Danger</button>
+		<button class="btn btn-outline-borderless btn-outline-primary" type="button">Primary</button>
+		<button class="btn btn-outline-borderless btn-outline-secondary" type="button">Secondary</button>
+		<button class="btn btn-outline-borderless btn-outline-info" type="button">Info</button>
+		<button class="btn btn-outline-borderless btn-outline-success" type="button">Success</button>
+		<button class="btn btn-outline-borderless btn-outline-warning" type="button">Warning</button>
+		<button class="btn btn-outline-borderless btn-outline-danger" type="button">Danger</button>
 		<div class="clay-site-light-container">
-			<button class="btn btn-borderless btn-outline-light" type="button">Light</button>
+			<button class="btn btn-outline-borderless btn-outline-light" type="button">Light</button>
 		</div>
-		<button class="btn btn-borderless btn-outline-dark" type="button">Dark</button>
+		<button class="btn btn-outline-borderless btn-outline-dark" type="button">Dark</button>
 
 		<h6>Focus</h6>
-		<button class="btn btn-borderless btn-outline-primary focus" type="button">Primary</button>
-		<button class="btn btn-borderless btn-outline-secondary focus" type="button">Secondary</button>
-		<button class="btn btn-borderless btn-outline-info focus" type="button">Info</button>
-		<button class="btn btn-borderless btn-outline-success focus" type="button">Success</button>
-		<button class="btn btn-borderless btn-outline-warning focus" type="button">Warning</button>
-		<button class="btn btn-borderless btn-outline-danger focus" type="button">Danger</button>
+		<button class="btn btn-outline-borderless btn-outline-primary focus" type="button">Primary</button>
+		<button class="btn btn-outline-borderless btn-outline-secondary focus" type="button">Secondary</button>
+		<button class="btn btn-outline-borderless btn-outline-info focus" type="button">Info</button>
+		<button class="btn btn-outline-borderless btn-outline-success focus" type="button">Success</button>
+		<button class="btn btn-outline-borderless btn-outline-warning focus" type="button">Warning</button>
+		<button class="btn btn-outline-borderless btn-outline-danger focus" type="button">Danger</button>
 		<div class="clay-site-light-container">
-			<button class="btn btn-borderless btn-outline-light focus" type="button">Light</button>
+			<button class="btn btn-outline-borderless btn-outline-light focus" type="button">Light</button>
 		</div>
-		<button class="btn btn-borderless btn-outline-dark focus" type="button">Dark</button>
+		<button class="btn btn-outline-borderless btn-outline-dark focus" type="button">Dark</button>
 
 		<h6>Active</h6>
-		<button class="active btn btn-borderless btn-outline-primary" type="button">Primary</button>
-		<button class="active btn btn-borderless btn-outline-secondary" type="button">Secondary</button>
-		<button class="active btn btn-borderless btn-outline-info" type="button">Info</button>
-		<button class="active btn btn-borderless btn-outline-success" type="button">Success</button>
-		<button class="active btn btn-borderless btn-outline-warning" type="button">Warning</button>
-		<button class="active btn btn-borderless btn-outline-danger" type="button">Danger</button>
+		<button class="active btn btn-outline-borderless btn-outline-primary" type="button">Primary</button>
+		<button class="active btn btn-outline-borderless btn-outline-secondary" type="button">Secondary</button>
+		<button class="active btn btn-outline-borderless btn-outline-info" type="button">Info</button>
+		<button class="active btn btn-outline-borderless btn-outline-success" type="button">Success</button>
+		<button class="active btn btn-outline-borderless btn-outline-warning" type="button">Warning</button>
+		<button class="active btn btn-outline-borderless btn-outline-danger" type="button">Danger</button>
 		<div class="clay-site-light-container">
-			<button class="active btn btn-borderless btn-outline-light" type="button">Light</button>
+			<button class="active btn btn-outline-borderless btn-outline-light" type="button">Light</button>
 		</div>
-		<button class="active btn btn-borderless btn-outline-dark" type="button">Dark</button>
+		<button class="active btn btn-outline-borderless btn-outline-dark" type="button">Dark</button>
 
 		<h6>Disabled</h6>
-		<button class="btn btn-borderless btn-outline-primary" disabled type="button">Primary</button>
-		<button class="btn btn-borderless btn-outline-secondary" disabled type="button">Secondary</button>
-		<button class="btn btn-borderless btn-outline-info" disabled type="button">Info</button>
-		<button class="btn btn-borderless btn-outline-success" disabled type="button">Success</button>
-		<button class="btn btn-borderless btn-outline-warning" disabled type="button">Warning</button>
-		<button class="btn btn-borderless btn-outline-danger" disabled type="button">Danger</button>
+		<button class="btn btn-outline-borderless btn-outline-primary" disabled type="button">Primary</button>
+		<button class="btn btn-outline-borderless btn-outline-secondary" disabled type="button">Secondary</button>
+		<button class="btn btn-outline-borderless btn-outline-info" disabled type="button">Info</button>
+		<button class="btn btn-outline-borderless btn-outline-success" disabled type="button">Success</button>
+		<button class="btn btn-outline-borderless btn-outline-warning" disabled type="button">Warning</button>
+		<button class="btn btn-outline-borderless btn-outline-danger" disabled type="button">Danger</button>
 		<div class="clay-site-light-container">
-			<button class="btn btn-borderless btn-outline-light" disabled type="button">Light</button>
+			<button class="btn btn-outline-borderless btn-outline-light" disabled type="button">Light</button>
 		</div>
-		<button class="btn btn-borderless btn-outline-dark" disabled type="button">Dark</button>
+		<button class="btn btn-outline-borderless btn-outline-dark" disabled type="button">Dark</button>
 
 		<h6>Anchor and Input Elements as Buttons</h6>
-		<input class="btn btn-borderless btn-outline-primary" type="button" value="Input">
-		<a class="btn btn-borderless btn-outline-secondary" href="#1" role="button">Anchor</a>
-		<input class="btn btn-borderless btn-outline-info" type="submit" value="Submit">
-		<a class="btn btn-borderless btn-outline-success" href="#1" role="button">Anchor</a>
-		<a class="btn btn-borderless btn-outline-warning" href="#1" role="button">Anchor</a>
-		<a class="btn btn-borderless btn-outline-danger" href="#1" role="button">Anchor</a>
+		<input class="btn btn-outline-borderless btn-outline-primary" type="button" value="Input">
+		<a class="btn btn-outline-borderless btn-outline-secondary" href="#1" role="button">Anchor</a>
+		<input class="btn btn-outline-borderless btn-outline-info" type="submit" value="Submit">
+		<a class="btn btn-outline-borderless btn-outline-success" href="#1" role="button">Anchor</a>
+		<a class="btn btn-outline-borderless btn-outline-warning" href="#1" role="button">Anchor</a>
+		<a class="btn btn-outline-borderless btn-outline-danger" href="#1" role="button">Anchor</a>
 		<div class="clay-site-light-container">
-			<a class="btn btn-borderless btn-outline-light" href="#1" role="button">Anchor</a>
+			<a class="btn btn-outline-borderless btn-outline-light" href="#1" role="button">Anchor</a>
 		</div>
-		<a class="btn btn-borderless btn-outline-dark" href="#1" role="button">Anchor</a>
+		<a class="btn btn-outline-borderless btn-outline-dark" href="#1" role="button">Anchor</a>
 	</div>
 </div>
 
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="buttons-with-icons"><a class="heading-anchor" href="#buttons-with-icons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Buttons with Icons</h3>
+
+		<blockquote class="blockquote">
+			<p>Use <code>inline-item inline-item-before</code>, <code>inline-item inline-item-middle</code>, and <code>inline-item inline-item-after</code> to space inline icons inside buttons.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			For this component to space properly, all white spaces must be removed from the markup inside the button. See <a href="../utilities/#inline-item">Utilities - Inline Item</a> for more details.
+		</div>
+
+		<button class="btn btn-primary" type="button">
+			<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-share"><use xlink:href="../../images/icons/icons.svg#share"></svg></span><span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus"><use xlink:href="../../images/icons/icons.svg#plus"></svg></span>Primary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera"><use xlink:href="../../images/icons/icons.svg#camera"></svg></span><span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture"><use xlink:href="../../images/icons/icons.svg#picture"></svg></span>
+		</button>
+		<button class="btn btn-secondary" type="button">
+			<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-share"><use xlink:href="../../images/icons/icons.svg#share"></svg></span>Secondary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture"><use xlink:href="../../images/icons/icons.svg#picture"></svg></span>
+		</button>
+	</div>
+</div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
@@ -459,10 +481,7 @@
 
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
-		Primary
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="../../images/icons/icons.svg#caret-bottom">
-		</svg>
+		Primary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="../../images/icons/icons.svg#caret-bottom"></svg></span>
 	</button>
 	<div class="dropdown-menu">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -472,10 +491,7 @@
 </div>
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-		Primary
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="../../images/icons/icons.svg#caret-bottom">
-		</svg>
+		Primary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="../../images/icons/icons.svg#caret-bottom"></svg></span>
 	</button>
 	<div class="dropdown-menu">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -498,21 +514,52 @@
 
 		<h6>Button Monospaced</h6>
 <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="../../images/icons/icons.svg#blogs">
-	</svg>
+	<span class="inline-item">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use xlink:href="../../images/icons/icons.svg#blogs">
+		</svg>
+	</span>
 </button>
 <button class="btn btn-monospaced btn-secondary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-		<use xlink:href="../../images/icons/icons.svg#plus">
-	</svg>
+	<span class="inline-item">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+			<use xlink:href="../../images/icons/icons.svg#plus">
+		</svg>
+	</span>
 </button>
 
 		<button class="btn btn-monospaced btn-secondary btn-lg" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-				<use xlink:href="../../images/icons/icons.svg#share">
-			</svg>
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+					<use xlink:href="../../images/icons/icons.svg#share">
+				</svg>
+			</span>
 		</button>
+
+		<a class="btn btn-monospaced btn-secondary btn-sm" href="#1">
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+					<use xlink:href="../../images/icons/icons.svg#es-es">
+				</svg>
+			</span>
+			<span class="btn-section">es-ES</span>
+		</a>
+		<a class="btn btn-monospaced btn-secondary" href="#1">
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+					<use xlink:href="../../images/icons/icons.svg#es-es">
+				</svg>
+			</span>
+			<span class="btn-section">es-ES</span>
+		</a>
+		<a class="btn btn-monospaced btn-secondary btn-lg" href="#1">
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+					<use xlink:href="../../images/icons/icons.svg#es-es">
+				</svg>
+			</span>
+			<span class="btn-section">es-ES</span>
+		</a>
 
 		<h6>Button Block</h6>
 <button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>

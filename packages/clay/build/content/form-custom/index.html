@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.4</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -190,6 +190,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-localizable-input-field">Localizable Input Field</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
@@ -264,13 +266,19 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<div class="align-items-end form-inline-autofit">
-			<label for="customFile4">Attach File</label>
-			<div class="form-file">
-				<input class="form-file-input" data-clay-site-content="#customFileText4" data-clay-site-toggle="file" id="customFile4" type="file">
-				<button class="btn btn-primary" tabindex="-1">Browse</button>
+		<div class="form-group-autofit">
+			<div class="form-group-item form-group-item-shrink">
+				<label for="customFile4">Attach File</label>
 			</div>
-			<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly tabindex="-1" type="text">
+			<div class="form-group-item form-group-item-shrink">
+				<div class="form-file">
+					<input class="form-file-input" data-clay-site-content="#customFileText4" data-clay-site-toggle="file" id="customFile4" type="file">
+					<button class="btn btn-primary" tabindex="-1">Browse</button>
+				</div>
+			</div>
+			<div class="form-group-item">
+				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly tabindex="-1" type="text">
+			</div>
 		</div>
 	</div>
 </div>
