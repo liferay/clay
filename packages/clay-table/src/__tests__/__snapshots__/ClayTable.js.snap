@@ -129,10 +129,12 @@ exports[`ClayTable should render a ClayTable with a basic schema with sortable f
       <tr>
         <th class="table-cell-expand">
           <button class="btn btn-unstyled" type="button">Title
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
-              <title>order-arrow-up</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow-up"></use>
-            </svg>
+            <span class="inline-item inline-item-after">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
+                <title>order-arrow-up</title>
+                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow-up"></use>
+              </svg>
+            </span>
           </button>
         </th>
         <th>
