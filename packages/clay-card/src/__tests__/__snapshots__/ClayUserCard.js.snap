@@ -110,7 +110,9 @@ exports[`ClayUserCard should render a ClayUserCard with imageSrc 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-primary rounded-circle sticker-xl">
-        <img alt="" class="img-fluid" src="thumbnail_coffee.jpg">
+        <span class="sticker-overlay">
+          <img alt="" class="sticker-img" src="thumbnail_coffee.jpg">
+        </span>
       </span>
     </div>
   </div>
