@@ -57,20 +57,42 @@
 	{@param? label: html|string}
 	{@param? spritemap: string}
 
+	{let $classes kind="text"}
+		inline-item
+		{if $iconAlignment == 'left' and $label}
+			{sp}inline-item-before
+		{elseif $iconAlignment == 'right' and $label}
+			{sp}inline-item-after
+		{/if}
+	{/let}
+
+	{let $iconContent kind="html"}
+		{if $icon and $spritemap}
+			{call .icon}
+				{param icon: $icon /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{/if}
+	{/let}
+
+	{let $iconWrapper kind="html"}
+		{if $label}
+			<span class="{$classes}">
+				{$iconContent}
+			</span>
+		{else}
+			{$iconContent}
+		{/if}
+	{/let}
+
 	{if $icon and $iconAlignment == 'left' and $spritemap}
-		{call .icon}
-			{param icon: $icon /}
-			{param spritemap: $spritemap /}
-		{/call}
+		{$iconWrapper}
 	{/if}
 
 	{$label ?: ''}
 
 	{if $icon and $iconAlignment == 'right' and $spritemap}
-		{call .icon}
-			{param icon: $icon /}
-			{param spritemap: $spritemap /}
-		{/call}
+		{$iconWrapper}
 	{/if}
 {/template}
 
