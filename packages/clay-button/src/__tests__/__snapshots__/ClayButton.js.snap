@@ -15,10 +15,12 @@ exports[`ClayButton should render a button with icon 1`] = `
 
 exports[`ClayButton should render a button with icon and label 1`] = `
 <button class="btn btn-primary" type="button">
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-    <title>plus</title>
-    <use xlink:href="icons.svg#plus"></use>
-  </svg>Label</button>
+  <span class="inline-item inline-item-before">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </span>Label</button>
 `;
 
 exports[`ClayButton should render a button with icon and monospaced true 1`] = `
@@ -38,18 +40,22 @@ exports[`ClayButton should render a button with label and ariaLabel 1`] = `<butt
 
 exports[`ClayButton should render a button with label and icon 1`] = `
 <button class="btn btn-primary" type="button">
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-    <title>plus</title>
-    <use xlink:href="icons.svg#plus"></use>
-  </svg>Label</button>
+  <span class="inline-item inline-item-before">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </span>Label</button>
 `;
 
 exports[`ClayButton should render a button with label and icon on right side 1`] = `
 <button class="btn btn-primary" type="button">Label
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-    <title>plus</title>
-    <use xlink:href="icons.svg#plus"></use>
-  </svg>
+  <span class="inline-item inline-item-after">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </span>
 </button>
 `;
 
