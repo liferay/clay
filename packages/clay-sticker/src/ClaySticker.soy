@@ -72,7 +72,21 @@
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 
-	<img alt="{$imageAlt}" class="img-fluid" src="{$imageSrc}" />
+	{let $attributes kind="attributes"}
+		class="sticker-img"
+
+		{if $imageAlt}
+			alt="{$imageAlt}"
+		{/if}
+
+		{if $imageSrc}
+			src="{$imageSrc}"
+		{/if}
+	{/let}
+
+	<span class="sticker-overlay">
+		<img {$attributes} />
+	</span>
 {/template}
 
 /**
