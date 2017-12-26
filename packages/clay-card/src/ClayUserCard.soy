@@ -130,11 +130,13 @@
                             {/if}
                         "
 
-                        class="img-fluid"
+                        class="sticker-img"
                         src="{$imageSrc}"
                     {/let}
 
-                    <img {$imageAttributes} />
+                    <span class="sticker-overlay">
+                        <img {$imageAttributes} />
+                    </span>
                 {elseif $fileType}
                     <span class="sticker-overlay">{$fileType}</span>
                 {/if}
