@@ -103,10 +103,12 @@
 					{/switch}
 				{/let}
 
-				{call ClayIcon.render}
-					{param spritemap: $spritemap /}
-					{param symbol: $icon /}
-				{/call}
+				<span class="modal-title-indicator">
+					{call ClayIcon.render}
+						{param spritemap: $spritemap /}
+						{param symbol: $icon /}
+					{/call}
+				</span>
 			{/if}
 
 			<div class="modal-title">{$title}</div>
