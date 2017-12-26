@@ -204,10 +204,12 @@ exports[`ClayModal should render a modal with status \`danger\` and title 1`] = 
   <div class="modal-dialog modal-danger">
     <div class="modal-content">
       <div class="modal-header">
-        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-          <title>exclamation-full</title>
-          <use xlink:href="icons.svg#exclamation-full"></use>
-        </svg>
+        <span class="modal-title-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+            <title>exclamation-full</title>
+            <use xlink:href="icons.svg#exclamation-full"></use>
+          </svg>
+        </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="times" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -226,10 +228,12 @@ exports[`ClayModal should render a modal with status \`info\` and title 1`] = `
   <div class="modal-dialog modal-info">
     <div class="modal-content">
       <div class="modal-header">
-        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-          <title>info-circle</title>
-          <use xlink:href="icons.svg#info-circle"></use>
-        </svg>
+        <span class="modal-title-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+            <title>info-circle</title>
+            <use xlink:href="icons.svg#info-circle"></use>
+          </svg>
+        </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="times" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -248,10 +252,12 @@ exports[`ClayModal should render a modal with status \`success\` and title 1`] =
   <div class="modal-dialog modal-success">
     <div class="modal-content">
       <div class="modal-header">
-        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-          <title>check-circle</title>
-          <use xlink:href="icons.svg#check-circle"></use>
-        </svg>
+        <span class="modal-title-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="icons.svg#check-circle"></use>
+          </svg>
+        </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="times" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -270,10 +276,12 @@ exports[`ClayModal should render a modal with status \`warning\` and title 1`] =
   <div class="modal-dialog modal-warning">
     <div class="modal-content">
       <div class="modal-header">
-        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
-          <title>question-circle-full</title>
-          <use xlink:href="icons.svg#question-circle-full"></use>
-        </svg>
+        <span class="modal-title-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
+            <title>question-circle-full</title>
+            <use xlink:href="icons.svg#question-circle-full"></use>
+          </svg>
+        </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="times" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
