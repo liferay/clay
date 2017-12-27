@@ -43,6 +43,14 @@ actionItemShape.items = actionItemsValidator;
  */
 class ClayManagementToolbar extends Component {
 	/**
+	 * Hides the search in mobile devices
+	 * @private
+	 */
+	handleCloseMobileSearchClick_() {
+		this.showMobileSearch_ = false;
+	}
+
+	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
@@ -52,12 +60,30 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Shows the search in mobile devices
+	 * @private
+	 */
+	handleOpenMobileSearchClick_() {
+		this.showMobileSearch_ = true;
+	}
+
+	/**
 	 * Continues the propagation of the plus button clicked event
 	 * @param {!Event} event
 	 * @private
 	 */
 	handlePlusButtonClicked_(event) {
 		this.emit('plusButtonClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the search button clicked event
+	 * @param {!Event} event
+	 * @return {Boolean} If the event has been prevented or not.
+	 * @private
+	 */
+	handleSearchSearchClick_(event) {
+		return !this.emit('search', event);
 	}
 
 	/**
@@ -132,6 +158,15 @@ ClayManagementToolbar.STATE = {
 	id: Config.string(),
 
 	/**
+	 * URL of the search form action
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	searchActionURL: Config.string(),
+
+	/**
 	 * Flag to indicate if the managment toolbar will control the selection of
 	 * elements.
 	 * @instance
@@ -149,6 +184,17 @@ ClayManagementToolbar.STATE = {
 	 * @default undefined
 	 */
 	selectedItems: Config.number(),
+
+	/**
+	 * Flag to indicate if search should be shown in mobile or not.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default false
+	 */
+	showMobileSearch_: Config.bool()
+		.internal()
+		.value(false),
 
 	/**
 	 * Sorting order.
