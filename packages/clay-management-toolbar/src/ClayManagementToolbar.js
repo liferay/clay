@@ -12,11 +12,12 @@ import templates from './ClayManagementToolbar.soy.js';
 let filterItemShape = {
 	checked: Config.bool().value(false),
 	disabled: Config.bool().value(false),
+	href: Config.string(),
 	inputName: Config.string(),
 	inputValue: Config.string(),
 	label: Config.string().required(),
 	separator: Config.bool().value(false),
-	type: Config.oneOf(['checkbox', 'group', 'radiogroup']),
+	type: Config.oneOf(['checkbox', 'group', 'item', 'radiogroup']),
 };
 
 const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
