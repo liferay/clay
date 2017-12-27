@@ -57,42 +57,25 @@
 	{@param? label: html|string}
 	{@param? spritemap: string}
 
-	{let $classes kind="text"}
-		inline-item
-		{if $iconAlignment == 'left'}
-			{sp}inline-item-before
-		{elseif $iconAlignment == 'right'}
-			{sp}inline-item-after
-		{/if}
-	{/let}
-
 	{let $iconContent kind="html"}
 		{if $icon and $spritemap}
 			{call .icon}
 				{param icon: $icon /}
+				{param iconAlignment: $iconAlignment /}
+				{param label: $label /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}
 	{/let}
 
-	{let $iconWrapper kind="html"}
-		{if $label}
-			<span class="{$classes}">
-				{$iconContent}
-			</span>
-		{else}
-			{$iconContent}
-		{/if}
-	{/let}
-
-	{if $icon and $iconAlignment == 'left' and $spritemap}
-		{$iconWrapper}
+	{if $iconContent != '' and $iconAlignment == 'left'}
+		{$iconContent}
 	{/if}
 
 	{$label ?: ''}
 
-	{if $icon and $iconAlignment == 'right' and $spritemap}
-		{$iconWrapper}
+	{if $iconContent != '' and $iconAlignment == 'right'}
+		{$iconContent}
 	{/if}
 {/template}
 
@@ -102,11 +85,33 @@
 {template .icon}
 	{@param icon: string}
 	{@param spritemap: string}
+	{@param? iconAlignment: string}
+	{@param? label: html|string}
 
-	{call ClayIcon.render}
-		{param spritemap: $spritemap /}
-		{param symbol: $icon /}
-	{/call}
+	{let $iconContent kind="html"}
+		{call ClayIcon.render}
+			{param spritemap: $spritemap /}
+			{param symbol: $icon /}
+		{/call}
+	{/let}
+
+	{if $label}
+		{let $iconWrapperClasses kind="text"}
+			inline-item
+			{if $iconAlignment == 'left'}
+				{sp}inline-item-before
+			{elseif $iconAlignment == 'right'}
+				{sp}inline-item-after
+			{/if}
+		{/let}
+
+		<span class="{$iconWrapperClasses}">
+			{$iconContent}
+		</span>
+	{else}
+		{$iconContent}
+	{/if}
+
 {/template}
 
 /**
