@@ -4,7 +4,7 @@ let itemShape = {
 	active: Config.bool().value(false),
 	checked: Config.bool().value(false),
 	disabled: Config.bool().value(false),
-	href: Config.string().required(),
+	href: Config.string(),
 	icon: Config.string(),
 	inputName: Config.string(),
 	inputValue: Config.string(),
