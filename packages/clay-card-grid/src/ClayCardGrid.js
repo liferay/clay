@@ -1,13 +1,15 @@
+import Component from 'metal-component';
+import defineWebComponent from 'metal-web-component';
+import Soy from 'metal-soy';
+/* eslint-disable */
 import {
 	ClayCard,
 	ClayFileCard,
 	ClayHorizontalCard,
 	ClayImageCard,
-	ClayUserCard,
+	ClayUserCard
 } from 'clay-card';
-import Component from 'metal-component';
-import defineWebComponent from 'metal-web-component';
-import Soy from 'metal-soy';
+/* eslint-enable */
 import {Config} from 'metal-state';
 
 import templates from './ClayCardGrid.soy.js';

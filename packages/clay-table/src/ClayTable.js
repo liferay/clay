@@ -3,7 +3,8 @@ import 'clay-checkbox';
 import 'clay-label';
 import 'clay-link';
 import 'clay-progress-bar';
-import {ClayActionsDropdown} from 'clay-dropdown';
+// eslint-disable-next-line
+import { ClayActionsDropdown } from 'clay-dropdown';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 import Component from 'metal-component';

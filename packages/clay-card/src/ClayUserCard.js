@@ -1,7 +1,8 @@
 import './ClayCard';
 import 'clay-link';
 import 'clay-sticker';
-import {ClayActionsDropdown} from 'clay-dropdown';
+// eslint-disable-next-line
+import { ClayActionsDropdown } from 'clay-dropdown';
 import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
