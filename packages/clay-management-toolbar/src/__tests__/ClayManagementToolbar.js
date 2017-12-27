@@ -37,6 +37,15 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with search action url', () => {
+		managementToolbar = new ClayManagementToolbar({
+			searchActionURL: 'mySearchURL',
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with selection enabled', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
@@ -337,5 +346,18 @@ describe('ClayManagementToolbar', function() {
 			'filterDoneClicked',
 			expect.any(Object)
 		);
+	});
+
+	it('should render a management toolbar and emit an on search', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.searchButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('search', expect.any(Object));
 	});
 });
