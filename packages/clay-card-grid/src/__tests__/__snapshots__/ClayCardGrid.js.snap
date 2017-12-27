@@ -127,10 +127,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with all kind items and title
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 1">Folder 1</div>
@@ -144,10 +146,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with all kind items and title
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 2">Folder 2</div>
@@ -161,10 +165,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with all kind items and title
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 3">Folder 3</div>
@@ -177,7 +183,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with all kind items and title
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 1" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -192,7 +200,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with all kind items and title
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 2" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -207,7 +217,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with all kind items and title
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 3" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -419,10 +431,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with folder items 1`] = `
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 1">Folder 1</div>
@@ -436,10 +450,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with folder items 1`] = `
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 2">Folder 2</div>
@@ -453,10 +469,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with folder items 1`] = `
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 3">Folder 3</div>
@@ -478,10 +496,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with folder items and title 1
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 1">Folder 1</div>
@@ -495,10 +515,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with folder items and title 1
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 2">Folder 2</div>
@@ -512,10 +534,12 @@ exports[`ClayCardGrid should render a ClayCardGrid with folder items and title 1
         <div class="card-body">
           <div class="card-row">
             <span class="sticker sticker-unstyled">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                <title>folder</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-              </svg>
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
               <div class="card-title text-truncate" title="Folder 3">Folder 3</div>
@@ -541,7 +565,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with image items 1`] = `
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 1" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -556,7 +582,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with image items 1`] = `
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 2" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -571,7 +599,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with image items 1`] = `
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 3" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -594,7 +624,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with image items and title 1`
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 1" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -609,7 +641,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with image items and title 1`
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 2" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">
@@ -624,7 +658,9 @@ exports[`ClayCardGrid should render a ClayCardGrid with image items and title 1`
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <img alt="Image Item 3" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./image1.jpg">
-          <span class="sticker sticker-primary sticker-bottom-left">JPG</span>
+          <span class="sticker sticker-primary sticker-bottom-left">
+            <span class="sticker-overlay">JPG</span>
+          </span>
         </div>
         <div class="card-body">
           <div class="card-row">

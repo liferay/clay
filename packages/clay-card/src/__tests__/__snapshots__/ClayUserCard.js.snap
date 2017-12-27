@@ -4,7 +4,9 @@ exports[`ClayUserCard should render a ClayUserCard with actionItems 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay"></span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -41,7 +43,9 @@ exports[`ClayUserCard should render a ClayUserCard with classes 1`] = `
 <div class="card-type-asset card my-custom-class">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay"></span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -58,7 +62,9 @@ exports[`ClayUserCard should render a ClayUserCard with href 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay"></span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -75,7 +81,9 @@ exports[`ClayUserCard should render a ClayUserCard with id 1`] = `
 <div class="card-type-asset card" id="myId">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay"></span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -92,7 +100,9 @@ exports[`ClayUserCard should render a ClayUserCard with imageAlt 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay"></span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -130,7 +140,9 @@ exports[`ClayUserCard should render a ClayUserCard with subtitle 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay"></span>
+      </span>
     </div>
   </div>
   <div class="card-body">
@@ -324,7 +336,9 @@ exports[`ClayUserCard should render a disabled ClayUserCard 1`] = `
           <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
           <span class="custom-control-indicator"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+            <span class="sticker sticker-primary rounded-circle sticker-xl">
+              <span class="sticker-overlay"></span>
+            </span>
           </div>
         </label>
       </div>
@@ -349,7 +363,9 @@ exports[`ClayUserCard should render a selectable ClayUserCard 1`] = `
           <input class="custom-control-input" ref="input" type="checkbox">
           <span class="custom-control-indicator"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+            <span class="sticker sticker-primary rounded-circle sticker-xl">
+              <span class="sticker-overlay"></span>
+            </span>
           </div>
         </label>
       </div>
@@ -374,7 +390,9 @@ exports[`ClayUserCard should render a selectable ClayUserCard with input \`name\
           <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
           <span class="custom-control-indicator"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+            <span class="sticker sticker-primary rounded-circle sticker-xl">
+              <span class="sticker-overlay"></span>
+            </span>
           </div>
         </label>
       </div>
@@ -399,7 +417,9 @@ exports[`ClayUserCard should render a selectable ClayUserCard with input \`value
           <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
           <span class="custom-control-indicator"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+            <span class="sticker sticker-primary rounded-circle sticker-xl">
+              <span class="sticker-overlay"></span>
+            </span>
           </div>
         </label>
       </div>
@@ -424,7 +444,9 @@ exports[`ClayUserCard should render a selected ClayUserCard 1`] = `
           <input checked="" class="custom-control-input" ref="input" type="checkbox">
           <span class="custom-control-indicator"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+            <span class="sticker sticker-primary rounded-circle sticker-xl">
+              <span class="sticker-overlay"></span>
+            </span>
           </div>
         </label>
       </div>
@@ -444,7 +466,9 @@ exports[`ClayUserCard should render the default markup 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-primary rounded-circle sticker-xl"></span>
+      <span class="sticker sticker-primary rounded-circle sticker-xl">
+        <span class="sticker-overlay"></span>
+      </span>
     </div>
   </div>
   <div class="card-body">

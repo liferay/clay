@@ -37,10 +37,12 @@ exports[`ClayListItem should render a ClayListItem with circle icons 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col">
     <span class="sticker sticker-primary rounded-circle">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-        <title>folder</title>
-        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-      </svg>
+      <span class="sticker-overlay">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <title>folder</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+        </svg>
+      </span>
     </span>
   </div>
   <div class="flex-col flex-col-expand">
@@ -75,10 +77,12 @@ exports[`ClayListItem should render a ClayListItem with icon 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col">
     <span class="sticker sticker-primary">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-        <title>folder</title>
-        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
-      </svg>
+      <span class="sticker-overlay">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+          <title>folder</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+        </svg>
+      </span>
     </span>
   </div>
   <div class="flex-col flex-col-expand">

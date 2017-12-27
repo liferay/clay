@@ -69,7 +69,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type 1`] = `
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -90,7 +92,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`danger
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-danger sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-danger sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -111,7 +115,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`dark c
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-dark sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-dark sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -132,7 +138,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`info c
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-info sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-info sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -153,7 +161,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`light 
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-light sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-light sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -174,7 +184,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`primar
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -195,7 +207,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`second
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-secondary sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-secondary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -216,7 +230,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`succes
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-success sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-success sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -237,7 +253,9 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`warnin
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-warning sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-warning sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">

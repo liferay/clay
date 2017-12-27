@@ -49,7 +49,9 @@ exports[`ClayImageCard should render a ClayImageCard with classes 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with file type \`danger color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-danger sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-danger sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -64,7 +66,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`danger col
 exports[`ClayImageCard should render a ClayImageCard with file type \`dark color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-dark sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-dark sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -79,7 +83,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`dark color
 exports[`ClayImageCard should render a ClayImageCard with file type \`info color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-info sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-info sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -94,7 +100,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`info color
 exports[`ClayImageCard should render a ClayImageCard with file type \`light color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-light sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-light sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -109,7 +117,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`light colo
 exports[`ClayImageCard should render a ClayImageCard with file type \`primary color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -124,7 +134,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`primary co
 exports[`ClayImageCard should render a ClayImageCard with file type \`secondary color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-secondary sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-secondary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -139,7 +151,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`secondary 
 exports[`ClayImageCard should render a ClayImageCard with file type \`success color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-success sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-success sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -154,7 +168,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`success co
 exports[`ClayImageCard should render a ClayImageCard with file type \`warning color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-warning sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-warning sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -169,7 +185,9 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`warning co
 exports[`ClayImageCard should render a ClayImageCard with file type 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">DOC</span>
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
   </div>
   <div class="card-body">
     <div class="card-row">
