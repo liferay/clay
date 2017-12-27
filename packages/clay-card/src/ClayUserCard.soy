@@ -121,27 +121,9 @@
 
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
         {call ClaySticker.render}
-            {param label kind="html"}
-                {if $imageSrc}
-                    {let $imageAttributes kind="attributes"}
-                        alt="
-                            {if $imageAlt}
-                                {$imageAlt}
-                            {/if}
-                        "
-
-                        class="sticker-img"
-                        src="{$imageSrc}"
-                    {/let}
-
-                    <span class="sticker-overlay">
-                        <img {$imageAttributes} />
-                    </span>
-                {elseif $fileType}
-                    <span class="sticker-overlay">{$fileType}</span>
-                {/if}
-            {/param}
-
+            {param imageAlt: $imageAlt /}
+            {param imageSrc: $imageSrc /}
+            {param label: $fileType /}
             {param shape: 'circle' /}
             {param size: 'xl' /}
             {param style: $fileTypeStyle ?: 'primary' /}
