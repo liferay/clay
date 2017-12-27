@@ -64,7 +64,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with filters dropdown', () => {
+	it('should render a management toolbar with filters dropdown with items of type checkbox', () => {
 		managementToolbar = new ClayManagementToolbar({
 			filterItems: [
 				{
@@ -78,6 +78,57 @@ describe('ClayManagementToolbar', function() {
 					inputName: 'item2checkbox',
 					inputValue: '2',
 					type: 'checkbox',
+				},
+			],
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with filters dropdown with items of type radio', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterItems: [
+				{
+					items: [
+						{
+							label: 'Item 1',
+							inputValue: '1',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputValue: '2',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputValue: '3',
+						},
+					],
+					inputName: 'item1radio',
+					label: 'Group 1',
+					type: 'radiogroup',
+				},
+			],
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with filters dropdown with items of type item', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterItems: [
+				{
+					href: '#myItem1',
+					label: 'Item 1',
+					type: 'item',
+				},
+				{
+					href: '#myItem2',
+					label: 'Item 2',
+					type: 'item',
 				},
 			],
 			spritemap: spritemap,

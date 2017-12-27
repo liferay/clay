@@ -155,7 +155,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
 </nav>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with filters dropdown 1`] = `
+exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type checkbox 1`] = `
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
   <div class="container">
     <ul class="navbar-nav">
@@ -185,6 +185,130 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Item 2</span>
                   </label>
+                </div>
+              </div>
+              <div class="dropdown-section">
+                <button class="btn btn-block btn-primary" type="button">Done</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type item 1`] = `
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="dropdown nav-item">
+        <div class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled">Filter and Order
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+              <title>caret-bottom</title>
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+            </svg>
+          </button>
+          <form>
+            <div class="dropdown-menu">
+              <li>
+                <a class=" dropdown-item" href="#myItem1">Item 1</a>
+              </li>
+              <li>
+                <a class=" dropdown-item" href="#myItem2">Item 2</a>
+              </li>
+              <div class="dropdown-section">
+                <button class="btn btn-block btn-primary" type="button">Done</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type radio 1`] = `
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="dropdown nav-item">
+        <div class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled">Filter and Order
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+              <title>caret-bottom</title>
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+            </svg>
+          </button>
+          <form>
+            <div class="dropdown-menu">
+              <div class="dropdown-subheader">Group 1</div>
+              <div aria-label="Group 1" role="radiogroup">
+                <div class="dropdown-item">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <label>
+                      <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Item 1</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="dropdown-item active">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <label>
+                      <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Item 2</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <label>
+                      <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Item 3</span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="dropdown-section">
