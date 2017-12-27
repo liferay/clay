@@ -146,6 +146,27 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with filters dropdown with items and no done button', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterItems: [
+				{
+					href: '#myItem1',
+					label: 'Item 1',
+					type: 'item',
+				},
+				{
+					href: '#myItem2',
+					label: 'Item 2',
+					type: 'item',
+				},
+			],
+			hideFiltersDoneButton: true,
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with view types', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
