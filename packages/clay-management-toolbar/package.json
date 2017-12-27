@@ -18,6 +18,8 @@
   ],
   "scripts": {
     "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
+    "prepublish": "npm run soy && npm run compile",
     "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|checkbox|dropdown|icon|link|radio)/src/**/*.soy'"
   },
   "keywords": [
