@@ -50,43 +50,37 @@
 	{@param? label: html|string}
 	{@param? spritemap: string}
 
-	{if $icon and $spritemap}
-		{call ClayIcon.render}
-			{param spritemap: $spritemap /}
-			{param symbol: $icon /}
-		{/call}
-	{elseif $imageSrc}
-		{call .image}
-			{param imageAlt: $imageAlt ?: '' /}
-			{param imageSrc: $imageSrc /}
-		{/call}
-	{elseif $label}
-		{$label}
-	{/if}
+	<span class="sticker-overlay">
+		{if $icon and $spritemap}
+			{call ClayIcon.render}
+				{param spritemap: $spritemap /}
+				{param symbol: $icon /}
+			{/call}
+		{elseif $imageSrc}
+			{call .image}
+				{param imageAlt: $imageAlt ?: '' /}
+				{param imageSrc: $imageSrc /}
+			{/call}
+		{elseif $label}
+			{$label}
+		{/if}
+	</span>
 {/template}
 
 /**
  * Renders element content image
  */
 {template .image}
-	{@param? imageAlt: string}
-	{@param? imageSrc: string}
+	{@param imageAlt: string}
+	{@param imageSrc: string}
 
-	{let $attributes kind="attributes"}
+	{let $imageAttributes kind="attributes"}
+		alt="{$imageAlt}"
 		class="sticker-img"
-
-		{if $imageAlt}
-			alt="{$imageAlt}"
-		{/if}
-
-		{if $imageSrc}
-			src="{$imageSrc}"
-		{/if}
+		src="{$imageSrc}"
 	{/let}
 
-	<span class="sticker-overlay">
-		<img {$attributes} />
-	</span>
+	<img {$imageAttributes} />
 {/template}
 
 /**
