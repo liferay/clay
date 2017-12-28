@@ -86,17 +86,17 @@
 		{else}
 			{call ClayListItem.render}
 				{param actionItems: $item[$schema.actionItems] ?: $item.actionItems /}
-				{param description: $item[$schema.description] ?: $item.description /}
+				{param description: $item[$schema.description] /}
 				{param events: ['itemToggled': $handleItemToggled_ ] /}
-				{param href: $item[$schema.href] ?: $item.href /}
+				{param href: $item[$schema.href] /}
 				{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.icon]] ?: $schema.iconsMap['*'] : $item[$schema.icon] /}
 				{param iconShape: $schema.iconShapesMap ? $schema.iconShapesMap[$item.icon] ?: $schema.iconShapesMap['*'] : null /}
-				{param label: $item[$schema.label] ?: $item.label /}
+				{param label: $item[$schema.label] /}
 				{param labelStylesMap: $schema.labelStylesMap /}
 				{param selectable: $selectable /}
-				{param selected: $item[$schema.selected] ?: $item.selected /}
+				{param selected: $item[$schema.selected] /}
 				{param spritemap: $spritemap /}
-				{param title: $item[$schema.title] ?: $item.title /}
+				{param title: $item[$schema.title] /}
 			{/call}
 		{/if}
 	{/foreach}
