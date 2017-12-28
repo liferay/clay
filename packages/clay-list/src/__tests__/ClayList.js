@@ -11,7 +11,7 @@ describe('ClayList', function() {
 
 	it('should render the default markup', () => {
 		component = new ClayList({
-			items: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -20,7 +20,7 @@ describe('ClayList', function() {
 	it('should render a ClayList with classes', () => {
 		component = new ClayList({
 			elementClasses: 'my-custom-class',
-			items: [],
+			schema: [],
 		});
 
 		expect(component).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('ClayList', function() {
 	it('should render a ClayList with id', () => {
 		component = new ClayList({
 			id: 'myId',
-			items: [],
+			schema: [],
 		});
 
 		expect(component).toMatchSnapshot();
@@ -39,35 +39,33 @@ describe('ClayList', function() {
 		component = new ClayList({
 			items: [
 				{
-					description: 'Description 1',
-					href: '#1',
-					title: 'Item 1',
-				},
-				{
-					description: 'Description 2',
-					href: '#2',
-					title: 'Item 2',
-				},
-				{
-					description: 'Description 3',
-					href: '#3',
-					title: 'Item 3',
+					title: 'Star Wars',
 				},
 			],
+			schema: {
+				title: 'title',
+			},
 			selectable: true,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a selectable ClayList with header title', () => {
+	it('should render a selectable ClayList with groups', () => {
 		component = new ClayList({
 			items: [
 				{
-					title: 'Item 1',
+					items: [
+						{
+							title: 'Star Wars',
+						},
+					],
+					label: 'Movies',
 				},
 			],
-			title: 'Group Header 1',
+			schema: {
+				title: 'title',
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -80,9 +78,12 @@ describe('ClayList', function() {
 			events: {itemToggled: spy},
 			items: [
 				{
-					title: 'Item 1',
+					title: 'Star Wars',
 				},
 			],
+			schema: {
+				title: 'title',
+			},
 			selectable: true,
 		});
 
@@ -91,9 +92,11 @@ describe('ClayList', function() {
 		expect(spy).toHaveBeenCalled();
 	});
 
-	it('should fail when no items are passed', function() {
+	it('should fail when no schema is passed', function() {
 		expect(() => {
-			component = new ClayList();
+			component = new ClayList({
+				items: [],
+			});
 		}).toThrow();
 	});
 });

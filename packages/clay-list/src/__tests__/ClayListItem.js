@@ -147,29 +147,9 @@ describe('ClayListItem', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayListItem with one label', () => {
+	it('should render a ClayListItem with label', () => {
 		component = new ClayListItem({
-			labels: [
-				{
-					label: 'Status',
-				},
-			],
-			title: 'Item 1',
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayListItem with two labels', () => {
-		component = new ClayListItem({
-			labels: [
-				{
-					label: 'Aproved',
-				},
-				{
-					label: 'Pending',
-				},
-			],
+			label: 'Status',
 			title: 'Item 1',
 		});
 
@@ -178,16 +158,10 @@ describe('ClayListItem', function() {
 
 	it('should render a ClayListItem with labels with style', () => {
 		component = new ClayListItem({
-			labels: [
-				{
-					label: 'Aproved',
-					style: 'info',
-				},
-				{
-					label: 'Pending',
-					style: 'warning',
-				},
-			],
+			label: 'Status',
+			labelStylesMap: {
+				'*': 'info',
+			},
 			title: 'Item 1',
 		});
 

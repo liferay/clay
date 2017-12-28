@@ -93,13 +93,23 @@ exports[`ClayListItem should render a ClayListItem with icon 1`] = `
 
 exports[`ClayListItem should render a ClayListItem with id 1`] = `<li class="list-group-item list-group-item-flex" id="myId">My Item</li>`;
 
+exports[`ClayListItem should render a ClayListItem with label 1`] = `
+<li class="list-group-item list-group-item-flex">
+  <div class="flex-col flex-col-expand">
+    <h4 class="list-group-title text-truncate">Item 1</h4>
+    <div class="list-group-detail">
+      <span class="label label-secondary">Status</span>
+    </div>
+  </div>
+</li>
+`;
+
 exports[`ClayListItem should render a ClayListItem with labels with style 1`] = `
 <li class="list-group-item list-group-item-flex">
   <div class="flex-col flex-col-expand">
     <h4 class="list-group-title text-truncate">Item 1</h4>
     <div class="list-group-detail">
-      <span class="label label-info">Aproved</span>
-      <span class="label label-warning">Pending</span>
+      <span class="label label-info">Status</span>
     </div>
   </div>
 </li>
@@ -108,17 +118,6 @@ exports[`ClayListItem should render a ClayListItem with labels with style 1`] = 
 exports[`ClayListItem should render a ClayListItem with link 1`] = `
 <li class="list-group-item list-group-item-flex">
   <a href="#1">Item 1</a>
-</li>
-`;
-
-exports[`ClayListItem should render a ClayListItem with one label 1`] = `
-<li class="list-group-item list-group-item-flex">
-  <div class="flex-col flex-col-expand">
-    <h4 class="list-group-title text-truncate">Item 1</h4>
-    <div class="list-group-detail">
-      <span class="label label-secondary">Status</span>
-    </div>
-  </div>
 </li>
 `;
 
@@ -169,18 +168,6 @@ exports[`ClayListItem should render a ClayListItem with quick action menu 1`] = 
           </li>
         </ul>
       </div>
-    </div>
-  </div>
-</li>
-`;
-
-exports[`ClayListItem should render a ClayListItem with two labels 1`] = `
-<li class="list-group-item list-group-item-flex">
-  <div class="flex-col flex-col-expand">
-    <h4 class="list-group-title text-truncate">Item 1</h4>
-    <div class="list-group-detail">
-      <span class="label label-secondary">Aproved</span>
-      <span class="label label-secondary">Pending</span>
     </div>
   </div>
 </li>
