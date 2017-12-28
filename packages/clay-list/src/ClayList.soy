@@ -22,7 +22,6 @@
 	{@param? items: list<?>}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
-	{@param? title: string}
 
 	{let $attributes kind="attributes"}
 		class="list-group show-quick-actions-on-hover
@@ -37,30 +36,68 @@
 	{/let}
 
 	<ul {$attributes}>
-		{if $title}
-			<li class="list-group-header">
-				<h3 class="list-group-header-title">{$title}</h3>
-			</li>
-		{/if}
-
-
 		{if $items}
-			{foreach $item in $items}
-				{call ClayListItem.render}
-					{param actionItems: $item[$schema.actionItems] ?: $item.actionItems /}
-					{param description: $item[$schema.description] ?: $item.description /}
-					{param events: ['itemToggled': $handleItemToggled_ ] /}
-					{param href: $item[$schema.href] ?: $item.href /}
-					{param icon: $schema.iconsMap and $schema.icon ? $schema.iconsMap[$item[$schema.icon]] ?: $schema.iconsMap['*'] : $item[$schema.icon] /}
-					{param iconShape: $schema.iconShapesMap ? $schema.iconShapesMap[$item.icon] ?: $schema.iconShapesMap['*'] : null /}
-					{param labels: $item[$schema.labels] ?: $item.labels /}
-					{param labelsStylesMap: $schema.labelsStylesMap /}
-					{param selectable: $selectable /}
-					{param selected: $item[$schema.selected] ?: $item.selected /}
-					{param spritemap: $spritemap /}
-					{param title: $item[$schema.title] ?: $item.title /}
-				{/call}
-			{/foreach}
+			{call .items}
+				{param handleItemToggled_: $handleItemToggled_ /}
+				{param items: $items /}
+				{param schema:	$schema /}
+				{param selectable: $selectable /}
+				{param spritemap: $spritemap /}
+			{/call}
 		{/if}
 	</ul>
+{/template}
+
+/**
+ * This renders all the items in the list, iteraing over the items and its
+ * possible nested items.
+ */
+{template .items}
+	{@param items: list<?>}
+	{@param schema:	[
+		actionItems: string,
+		description: string,
+		href: string,
+		icon: string,
+		iconsMap: ?,
+		iconShapesMap: ?,
+		labels: string,
+		labelsStylesMap: ?,
+		selected: string,
+		title: string
+	]}
+	{@param? handleItemToggled_: any}
+	{@param? selectable: bool}
+	{@param? spritemap: string}
+
+	{foreach $item in $items}
+		{if $item.items}
+			<li class="list-group-header">
+				<h3 class="list-group-header-title">{$item.label}</h3>
+			</li>
+
+			{call .items}
+				{param handleItemToggled_: $handleItemToggled_ /}
+				{param items: $item.items /}
+				{param schema:	$schema /}
+				{param selectable: $selectable /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{else}
+			{call ClayListItem.render}
+				{param actionItems: $item[$schema.actionItems] ?: $item.actionItems /}
+				{param description: $item[$schema.description] ?: $item.description /}
+				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param href: $item[$schema.href] ?: $item.href /}
+				{param icon: $schema.iconsMap and $schema.icon ? $schema.iconsMap[$item[$schema.icon]] ?: $schema.iconsMap['*'] : $item[$schema.icon] /}
+				{param iconShape: $schema.iconShapesMap ? $schema.iconShapesMap[$item.icon] ?: $schema.iconShapesMap['*'] : null /}
+				{param labels: $item[$schema.labels] ?: $item.labels /}
+				{param labelsStylesMap: $schema.labelsStylesMap /}
+				{param selectable: $selectable /}
+				{param selected: $item[$schema.selected] ?: $item.selected /}
+				{param spritemap: $spritemap /}
+				{param title: $item[$schema.title] ?: $item.title /}
+			{/call}
+		{/if}
+	{/foreach}
 {/template}
