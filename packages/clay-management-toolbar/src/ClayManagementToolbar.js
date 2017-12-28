@@ -131,6 +131,15 @@ ClayManagementToolbar.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Name of the content renderer to use template variants.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	contentRenderer: Config.string(),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayManagementToolbar

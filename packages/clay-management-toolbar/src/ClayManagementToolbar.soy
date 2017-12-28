@@ -14,6 +14,7 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? contentRenderer: string}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
 		checked: bool,
@@ -63,6 +64,7 @@
 		{/call}
 	{else}
 		{call .default}
+			{param contentRenderer: $contentRenderer /}
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
 			{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
@@ -168,6 +170,7 @@
  */
 {template .default}
 	{@param spritemap: string}
+	{@param? contentRenderer: string}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
 		checked: bool,
@@ -273,45 +276,14 @@
 
 			<div class="{$searchClasses}">
 				<div class="container">
-					{let $searchFormAttributes kind="attributes"}
-						{if $searchActionURL}
-							action="{$searchActionURL}"
-						{/if}
-
-						{if $searchFormName}
-							name="{$searchFormName}"
-						{/if}
-
-						role="search"
-					{/let}
-
-					<form {$searchFormAttributes}>
-						<div class="input-group input-group-inset">
-							<div class="input-group-input">
-								<input class="form-control" name="{$searchInputName}" placeholder="Search for..." ref="search" type="text" />
-							</div>
-
-							<span class="input-group-inset-item">
-								{call ClayButton.render}
-									{param elementClasses: 'navbar-breakpoint-d-none' /}
-									{param events: ['click': $handleCloseMobileSearchClick_] /}
-									{param icon: 'times' /}
-									{param spritemap: $spritemap /}
-									{param style: 'unstyled' /}
-								{/call}
-
-								{call ClayButton.render}
-									{param elementClasses: 'navbar-breakpoint-d-block' /}
-									{param events: ['click': $handleSearchSearchClick_] /}
-									{param icon: 'search' /}
-									{param ref: 'searchButton' /}
-									{param spritemap: $spritemap /}
-									{param style: 'unstyled' /}
-									{param type: 'submit' /}
-								{/call}
-							</span>
-						</div>
-					</form>
+					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
+						{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
+						{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
+						{param searchActionURL: $searchActionURL /}
+						{param searchFormName: $searchFormName /}
+						{param searchInputName: $searchInputName /}
+						{param spritemap: $spritemap /}
+					{/delcall}
 				</div>
 			</div>
 
@@ -357,3 +329,52 @@
 		</div>
 	</nav>
 {/template}
+
+{deltemplate ClayManagementToolbar.SearchForm}
+	{@param spritemap: string}
+	{@param? handleCloseMobileSearchClick_: any}
+	{@param? handleSearchSearchClick_: any}
+	{@param? searchActionURL: string}
+	{@param? searchFormName: string}
+	{@param? searchInputName: string}
+
+	{let $searchFormAttributes kind="attributes"}
+		{if $searchActionURL}
+			action="{$searchActionURL}"
+		{/if}
+
+		{if $searchFormName}
+			name="{$searchFormName}"
+		{/if}
+
+		role="search"
+	{/let}
+
+	<form {$searchFormAttributes}>
+		<div class="input-group input-group-inset">
+			<div class="input-group-input">
+				<input class="form-control" name="{$searchInputName}" placeholder="Search for..." ref="search" type="text" />
+			</div>
+
+			<span class="input-group-inset-item">
+				{call ClayButton.render}
+					{param elementClasses: 'navbar-breakpoint-d-none' /}
+					{param events: ['click': $handleCloseMobileSearchClick_] /}
+					{param icon: 'times' /}
+					{param spritemap: $spritemap /}
+					{param style: 'unstyled' /}
+				{/call}
+
+				{call ClayButton.render}
+					{param elementClasses: 'navbar-breakpoint-d-block' /}
+					{param events: ['click': $handleSearchSearchClick_] /}
+					{param icon: 'search' /}
+					{param ref: 'searchButton' /}
+					{param spritemap: $spritemap /}
+					{param style: 'unstyled' /}
+					{param type: 'submit' /}
+				{/call}
+			</span>
+		</div>
+	</form>
+{/deltemplate}
