@@ -4,13 +4,42 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param spritemap: string}
+	{@param? actionItems: list<[
+		disabled: bool,
+		href: string,
+		icon: string,
+		label: string,
+		quickAction: bool,
+		separator: bool,
+		type: string
+	]> | ?}
 	{@param? elementClasses: string}
+	{@param? filterItems: list<[
+		checked: bool,
+		disabled: bool,
+		inputName: string,
+		inputValue: string,
+		label: string,
+		separator: bool,
+		type: string
+	]>}
+	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? items: list<?>}
+	{@param? searchActionURL: string}
+	{@param? searchFormName: string}
+	{@param? searchInputName: string}
 	{@param? selectable: bool}
-	{@param? spritemap: string}
+	{@param? sortingOrder: string}
 	{@param? title: string}
 	{@param? viewType: string}
+	{@param? viewTypes: list<[
+		active: bool,
+		disabled: bool,
+		icon: string,
+		label: string
+	]>}
 
 	{let $attributes kind="attributes"}
 		class="clay-dataset-display
@@ -26,6 +55,19 @@
 
 	<div {$attributes}>
 		{if $items}
+			{call ClayManagementToolbar.render}
+				{param actionItems: $actionItems /}
+				{param filterItems: $filterItems /}
+				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
+				{param searchActionURL: $searchActionURL /}
+				{param searchFormName: $searchFormName /}
+				{param searchInputName: $searchInputName /}
+				{param selectable: $selectable /}
+				{param sortingOrder: $sortingOrder /}
+				{param spritemap: $spritemap /}
+				{param viewTypes: $viewTypes /}
+			{/call}
+
 			{delcall ClayDatasetDisplay.List variant="$viewType"}
 				{param items: $items /}
 				{param selectable: $selectable /}
