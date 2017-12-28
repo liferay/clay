@@ -121,28 +121,33 @@
 
 		let items = [
 			{
-				actionItemsField: actionItemsWithQuickItems,
-				descriptionField: 'Description 1',
-				hrefField: '#1',
-				iconField: 'folder',
-				labelsField: ['Pending'],
-				titleField: 'Item 1',
-			},
-			{
-				actionItemsField: actionItemsWithQuickItems,
-				descriptionField: 'Description 2',
-				hrefField: '#2',
-				iconField: 'folder',
-				labelsField: ['Watched'],
-				titleField: 'Item 2',
-			},
-			{
-				actionItemsField: actionItemsWithQuickItems,
-				descriptionField: 'Description 3',
-				hrefField: '#3',
-				iconField: 'folder',
-				labelsField: ['Pending'],
-				titleField: 'Item 3',
+				items: [
+					{
+						actionItemsField: actionItemsWithQuickItems,
+						descriptionField: 'Description 1',
+						hrefField: '#1',
+						iconField: 'folder',
+						labelsField: ['Pending'],
+						titleField: 'Item 1',
+					},
+					{
+						actionItemsField: actionItemsWithQuickItems,
+						descriptionField: 'Description 2',
+						hrefField: '#2',
+						iconField: 'folder',
+						labelsField: ['Watched'],
+						titleField: 'Item 2',
+					},
+					{
+						actionItemsField: actionItemsWithQuickItems,
+						descriptionField: 'Description 3',
+						hrefField: '#3',
+						iconField: 'folder',
+						labelsField: ['Pending'],
+						titleField: 'Item 3',
+					},
+				],
+				label: 'Group 1',
 			},
 		];
 
@@ -285,13 +290,12 @@
 			},
 			selectable: true,
 			spritemap: spritemap,
-			title: 'Group Header 1',
 		}, '#container9');
 
 
-		items[0].selected = true;
-		items[1].selected = true;
-		items[2].selected = true;
+		items[0].items[0].selected = true;
+		items[0].items[1].selected = true;
+		items[0].items[2].selected = true;
 
 		new metal.ClayList({
 			items: items,
@@ -316,7 +320,6 @@
 			},
 			selectable: true,
 			spritemap: spritemap,
-			title: 'Group Header 1',
 		}, '#container10');
 
 	</script>
