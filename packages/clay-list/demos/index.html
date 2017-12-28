@@ -75,50 +75,27 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable List with Action Menu</h4>
+			<h4>Selectable List with Quick Action Menu</h4>
 			<div id="container8"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable List with Quick Action Menu</h4>
+			<h4>Selectable List with Header Title</h4>
 			<div id="container9"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable List with Header Title</h4>
-			<div id="container10"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
 			<h4>Selectable List with Selected Items</h4>
-			<div id="container11"></div>
+			<div id="container10"></div>
 		</div>
 	</div>
 
 	<script type="text/javascript">
 		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
-
-		let actionItems = [
-			{
-				href: '#1',
-				label: 'Option 1',
-			},
-			{
-				href: '#2',
-				label: 'Option 2',
-				separator: true,
-			},
-			{
-				href: '#3',
-				label: 'Option 3',
-			},
-		];
 
 		let actionItemsWithQuickItems = [
 			{
@@ -142,356 +119,176 @@
 			},
 		];
 
+		let items = [
+			{
+				actionItemsField: actionItemsWithQuickItems,
+				descriptionField: 'Description 1',
+				hrefField: '#1',
+				iconField: 'folder',
+				iconShapeField: 'circle',
+				labelsField: [
+					{
+						label: 'Pending',
+						style: 'warning',
+					},
+				],
+				titleField: 'Item 1',
+			},
+			{
+				actionItemsField: actionItemsWithQuickItems,
+				descriptionField: 'Description 2',
+				hrefField: '#2',
+				iconField: 'folder',
+				iconShapeField: 'circle',
+				labelsField: [
+					{
+						label: 'Pending',
+						style: 'warning',
+					},
+				],
+				titleField: 'Item 2',
+			},
+			{
+				actionItemsField: actionItemsWithQuickItems,
+				descriptionField: 'Description 3',
+				hrefField: '#3',
+				iconField: 'folder',
+				iconShapeField: 'circle',
+				labelsField: [
+					{
+						label: 'Pending',
+						style: 'warning',
+					},
+				],
+				titleField: 'Item 3',
+			},
+		];
+
 		new metal.ClayList({
-			items: [
-				{
-					title: 'Item 1',
-				},
-				{
-					title: 'Item 2',
-				},
-				{
-					title: 'Item 3',
-				},
-			]
+			items: items,
+			schema: {
+				title: 'titleField',
+			},
 		}, '#container1');
 
 		new metal.ClayList({
-			items: [
-				{
-					href: '#1',
-					title: 'Item 1',
-				},
-				{
-					href: '#2',
-					title: 'Item 2',
-				},
-				{
-					href: '#3',
-					title: 'Item 3',
-				},
-			]
+			items: items,
+			schema: {
+				href: 'hrefField',
+				title: 'titleField',
+			},
 		}, '#container2');
 
 		new metal.ClayList({
-			items: [
-				{
-					description: 'Description 1',
-					href: '#1',
-					title: 'Item 1',
-				},
-				{
-					description: 'Description 2',
-					href: '#2',
-					title: 'Item 2',
-				},
-				{
-					description: 'Description 3',
-					href: '#3',
-					title: 'Item 3',
-				},
-			]
+			items: items,
+			schema: {
+				description: 'descriptionField',
+				href: 'hrefField',
+				title: 'titleField',
+			},
 		}, '#container3');
 
 		new metal.ClayList({
-			items: [
-				{
-					description: 'Description 1',
-					href: '#1',
-					title: 'Item 1',
-				},
-				{
-					description: 'Description 2',
-					href: '#2',
-					title: 'Item 2',
-				},
-				{
-					description: 'Description 3',
-					href: '#3',
-					title: 'Item 3',
-				},
-			],
+			items: items,
+			schema: {
+				description: 'descriptionField',
+				href: 'hrefField',
+				title: 'titleField',
+			},
 			selectable: true,
 		}, '#container4');
 
 		new metal.ClayList({
-			items: [
-				{
-					description: 'Description 1',
-					href: '#1',
-					icon: 'folder',
-					title: 'Item 1',
-				},
-				{
-					description: 'Description 2',
-					href: '#2',
-					icon: 'folder',
-					title: 'Item 2',
-				},
-				{
-					description: 'Description 3',
-					href: '#3',
-					icon: 'folder',
-					title: 'Item 3',
-				},
-			],
+			items: items,
+			schema: {
+				description: 'descriptionField',
+				href: 'hrefField',
+				icon: 'iconField',
+				title: 'titleField',
+			},
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container5');
 
 		new metal.ClayList({
-			items: [
-				{
-					description: 'Description 1',
-					href: '#1',
-					icon: 'folder',
-					iconShape: 'circle',
-					title: 'Item 1',
-				},
-				{
-					description: 'Description 2',
-					href: '#2',
-					icon: 'folder',
-					iconShape: 'circle',
-					title: 'Item 2',
-				},
-				{
-					description: 'Description 3',
-					href: '#3',
-					icon: 'folder',
-					iconShape: 'circle',
-					title: 'Item 3',
-				},
-			],
+			items: items,
+			schema: {
+				description: 'descriptionField',
+				href: 'hrefField',
+				icon: 'iconField',
+				iconShape: 'iconShapeField',
+				title: 'titleField',
+			},
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container6');
 
 		new metal.ClayList({
-			items: [
-				{
-					description: 'Description 1',
-					href: '#1',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Status',
-						},
-					],
-					title: 'Item 1',
-				},
-				{
-					description: 'Description 2',
-					href: '#2',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Pending',
-							style: 'warning',
-						},
-					],
-					title: 'Item 2',
-				},
-				{
-					description: 'Description 3',
-					href: '#3',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Aproved',
-							style: 'success',
-						},
-					],
-					title: 'Item 3',
-				},
-			],
+			items: items,
+			schema: {
+				description: 'descriptionField',
+				href: 'hrefField',
+				icon: 'iconField',
+				iconShape: 'iconShapeField',
+				labels: 'labelsField',
+				title: 'titleField',
+			},
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container7');
 
 		new metal.ClayList({
-			items: [
-				{
-					actionItems: actionItems,
-					description: 'Description 1',
-					href: '#1',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Status',
-						},
-					],
-					title: 'Item 1',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 2',
-					href: '#2',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Pending',
-							style: 'warning',
-						},
-					],
-					title: 'Item 2',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 3',
-					href: '#3',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Aproved',
-							style: 'success',
-						},
-					],
-					title: 'Item 3',
-				},
-			],
+			items: items,
+			schema: {
+				actionItems: 'actionItemsField',
+				description: 'descriptionField',
+				href: 'hrefField',
+				icon: 'iconField',
+				iconShape: 'iconShapeField',
+				labels: 'labelsField',
+				title: 'titleField',
+			},
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container8');
 
 		new metal.ClayList({
-			items: [
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 1',
-					href: '#1',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Status',
-						},
-					],
-					title: 'Item 1',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 2',
-					href: '#2',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Pending',
-							style: 'warning',
-						},
-					],
-					title: 'Item 2',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 3',
-					href: '#3',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Aproved',
-							style: 'success',
-						},
-					],
-					title: 'Item 3',
-				},
-			],
+			items: items,
+			schema: {
+				actionItems: 'actionItemsField',
+				description: 'descriptionField',
+				href: 'hrefField',
+				icon: 'iconField',
+				iconShape: 'iconShapeField',
+				labels: 'labelsField',
+				title: 'titleField',
+			},
 			selectable: true,
 			spritemap: spritemap,
+			title: 'Group Header 1',
 		}, '#container9');
 
+		
+		items[0].selected = true;
+		items[1].selected = true;
+		items[2].selected = true;
+
 		new metal.ClayList({
-			items: [
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 1',
-					href: '#1',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Status',
-						},
-					],
-					title: 'Item 1',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 2',
-					href: '#2',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Pending',
-							style: 'warning',
-						},
-					],
-					title: 'Item 2',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					description: 'Description 3',
-					href: '#3',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Aproved',
-							style: 'success',
-						},
-					],
-					title: 'Item 3',
-				},
-			],
+			items: items,
+			schema: {
+				actionItems: 'actionItemsField',
+				description: 'descriptionField',
+				href: 'hrefField',
+				icon: 'iconField',
+				iconShape: 'iconShapeField',
+				labels: 'labelsField',
+				title: 'titleField',
+			},
 			selectable: true,
 			spritemap: spritemap,
 			title: 'Group Header 1',
 		}, '#container10');
 
-		new metal.ClayList({
-			items: [
-				{
-					actionItems: actionItems,
-					description: 'Description 1',
-					href: '#1',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Status',
-						},
-					],
-					selected: true,
-					title: 'Item 1',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 2',
-					href: '#2',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Pending',
-							style: 'warning',
-						},
-					],
-					selected: true,
-					title: 'Item 2',
-				},
-				{
-					actionItems: actionItems,
-					description: 'Description 3',
-					href: '#3',
-					icon: 'folder',
-					labels: [
-						{
-							label: 'Aproved',
-							style: 'success',
-						},
-					],
-					selected: true,
-					title: 'Item 3',
-				},
-			],
-			selectable: true,
-			spritemap: spritemap,
-		}, '#container11');
 	</script>
 </body>
 </html>
