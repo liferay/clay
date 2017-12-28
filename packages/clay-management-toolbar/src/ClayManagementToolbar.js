@@ -177,6 +177,15 @@ ClayManagementToolbar.STATE = {
 	searchActionURL: Config.string(),
 
 	/**
+	 * Name of the search input.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	searchInputName: Config.string(),
+
+	/**
 	 * Flag to indicate if the managment toolbar will control the selection of
 	 * elements.
 	 * @instance
