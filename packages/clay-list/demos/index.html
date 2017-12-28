@@ -82,15 +82,8 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable List with Header Title</h4>
-			<div id="container9"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
 			<h4>Selectable List with Selected Items</h4>
-			<div id="container10"></div>
+			<div id="container9"></div>
 		</div>
 	</div>
 
@@ -123,34 +116,96 @@
 			{
 				items: [
 					{
-						actionItemsField: actionItemsWithQuickItems,
-						descriptionField: 'Description 1',
-						hrefField: '#1',
-						iconField: 'folder',
-						labelsField: ['Pending'],
-						titleField: 'Item 1',
+						director: 'George Lucas',
+						downloadHref: '#',
+						rating: 10,
+						releaseDate: 'May 19th 1999',
+						status: 'Error',
+						title: 'Episode I: The Phantom Menace',
 					},
 					{
-						actionItemsField: actionItemsWithQuickItems,
-						descriptionField: 'Description 2',
-						hrefField: '#2',
-						iconField: 'folder',
-						labelsField: ['Watched'],
-						titleField: 'Item 2',
+						director: 'George Lucas',
+						downloadHref: '#',
+						rating: 50,
+						releaseDate: 'May 12th 2002',
+						status: 'Watched',
+						title: 'Episode II: Attack of the Clones',
 					},
 					{
-						actionItemsField: actionItemsWithQuickItems,
-						descriptionField: 'Description 3',
-						hrefField: '#3',
-						iconField: 'folder',
-						labelsField: ['Pending'],
-						titleField: 'Item 3',
+						director: 'George Lucas',
+						downloadHref: '#',
+						rating: 60,
+						releaseDate: 'May 12th 2005',
+						status: 'Watched',
+						title: 'Episode III: Revenge of the Sith',
+					},
+					{
+						director: 'George Lucas',
+						downloadHref: '#',
+						rating: 90,
+						releaseDate: 'May 25th 1977',
+						status: 'Watched',
+						title: 'Episode IV: A New Hope',
+					},
+					{
+						director: 'Irvin Kershner',
+						downloadHref: '#',
+						rating: 100,
+						releaseDate: 'May 21th 1980',
+						status: 'Watched',
+						title: 'Episode V: The Empire Strikes Back',
+					},
+					{
+						director: 'Richard Marquand',
+						downloadHref: '#',
+						rating: 90,
+						releaseDate: 'May 21th 1980',
+						status: 'Watched',
+						title: 'Episode VI: Return of the Jedi',
+					},
+					{
+						director: 'J. J. Abrams',
+						downloadHref: '#',
+						rating: 70,
+						releaseDate: 'December 14th 2015',
+						status: 'Watched',
+						title: 'Episode VII: The Force Awakens',
+					},
+					{
+						director: 'Rian Johnson',
+						downloadHref: '#',
+						rating: 0,
+						releaseDate: 'December 9th 2017',
+						status: 'Pending',
+						title: 'Episode VIII: The Last Jedi',
 					},
 				],
-				label: 'Group 1',
+				label: 'Saga',
 			},
+			{
+				items: [
+					{
+						director: 'Gareth Edwards',
+						downloadHref: '#',
+						rating: 70,
+						releaseDate: 'December 10th 2016',
+						status: 'Watched',
+						title: 'Rogue One: A Star Wars Story',
+					},
+					{
+						director: 'Ron Howard',
+						downloadHref: '#',
+						rating: 0,
+						releaseDate: 'May 25th 2018',
+						status: 'Pending',
+						title: 'Solo: A Star Wars Story',
+					},
+				],
+				label: 'Expanded Universe'
+			}
 		];
 
+		/** Simple List **/
 		new metal.ClayList({
 			items: items,
 			schema: {
@@ -158,39 +213,42 @@
 			},
 		}, '#container1');
 
+		/** Simple List with Links**/
 		new metal.ClayList({
 			items: items,
 			schema: {
-				href: 'hrefField',
+				href: 'downloadHref',
 				title: 'titleField',
 			},
 		}, '#container2');
-
+		
+		/** List with Descriptions **/
 		new metal.ClayList({
 			items: items,
 			schema: {
-				description: 'descriptionField',
-				href: 'hrefField',
+				description: 'director',
+				href: 'downloadHref',
 				title: 'titleField',
 			},
 		}, '#container3');
 
+		/** Selectable List **/
 		new metal.ClayList({
 			items: items,
 			schema: {
-				description: 'descriptionField',
-				href: 'hrefField',
+				description: 'director',
+				href: 'downloadHref',
 				title: 'titleField',
 			},
 			selectable: true,
 		}, '#container4');
-
+		
+		/** Selectable List with Icons **/
 		new metal.ClayList({
 			items: items,
 			schema: {
-				description: 'descriptionField',
-				href: 'hrefField',
-				icon: 'iconField',
+				description: 'director',
+				href: 'downloadHref',
 				iconsMap: {
 					'*': 'folder',
 				},
@@ -200,12 +258,12 @@
 			spritemap: spritemap,
 		}, '#container5');
 
+		/** Selectable List with Circle Icons **/
 		new metal.ClayList({
 			items: items,
 			schema: {
-				description: 'descriptionField',
-				href: 'hrefField',
-				icon: 'iconField',
+				description: 'director',
+				href: 'downloadHref',
 				iconsMap: {
 					'*': 'folder',
 				},
@@ -218,20 +276,20 @@
 			spritemap: spritemap,
 		}, '#container6');
 
+		/** Selectable List with Label **/
 		new metal.ClayList({
 			items: items,
 			schema: {
-				description: 'descriptionField',
-				href: 'hrefField',
-				icon: 'iconField',
+				description: 'director',
+				href: 'downloadHref',
 				iconsMap: {
 					'*': 'folder',
 				},
 				iconShapesMap: {
 					'*': 'circle',
 				},
-				labels: 'labelsField',
-				labelsStylesMap: {
+				label: 'status',
+				labelStylesMap: {
 					'Watched': 'success',
 					'Pending': 'warning',
 					'*': 'danger',
@@ -242,21 +300,26 @@
 			spritemap: spritemap,
 		}, '#container7');
 
+		/** Selectable List with Action Menu **/
+		items.forEach(item => {
+			item.items.forEach(nestedItem => {
+				nestedItem.actionItems = actionItemsWithQuickItems;
+			});
+		});
+
 		new metal.ClayList({
 			items: items,
 			schema: {
-				actionItems: 'actionItemsField',
-				description: 'descriptionField',
-				href: 'hrefField',
-				icon: 'iconField',
+				description: 'director',
+				href: 'downloadHref',
 				iconsMap: {
 					'*': 'folder',
 				},
 				iconShapesMap: {
 					'*': 'circle',
 				},
-				labels: 'labelsField',
-				labelsStylesMap: {
+				label: 'status',
+				labelStylesMap: {
 					'Watched': 'success',
 					'Pending': 'warning',
 					'*': 'danger',
@@ -267,21 +330,26 @@
 			spritemap: spritemap,
 		}, '#container8');
 
+		/** Selectable List with Selected Items **/
+		items.forEach(item => {
+			item.items.forEach(nestedItem => {
+				nestedItem.selected = true;
+			});
+		});
+
 		new metal.ClayList({
 			items: items,
 			schema: {
-				actionItems: 'actionItemsField',
-				description: 'descriptionField',
-				href: 'hrefField',
-				icon: 'iconField',
+				description: 'director',
+				href: 'downloadHref',
 				iconsMap: {
 					'*': 'folder',
 				},
 				iconShapesMap: {
 					'*': 'circle',
 				},
-				labels: 'labelsField',
-				labelsStylesMap: {
+				label: 'status',
+				labelStylesMap: {
 					'Watched': 'success',
 					'Pending': 'warning',
 					'*': 'danger',
@@ -291,36 +359,6 @@
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container9');
-
-
-		items[0].items[0].selected = true;
-		items[0].items[1].selected = true;
-		items[0].items[2].selected = true;
-
-		new metal.ClayList({
-			items: items,
-			schema: {
-				actionItems: 'actionItemsField',
-				description: 'descriptionField',
-				href: 'hrefField',
-				icon: 'iconField',
-				iconsMap: {
-					'*': 'folder',
-				},
-				iconShapesMap: {
-					'*': 'circle',
-				},
-				labels: 'labelsField',
-				labelsStylesMap: {
-					'Watched': 'success',
-					'Pending': 'warning',
-					'*': 'danger',
-				},
-				title: 'titleField',
-			},
-			selectable: true,
-			spritemap: spritemap,
-		}, '#container10');
 
 	</script>
 </body>
