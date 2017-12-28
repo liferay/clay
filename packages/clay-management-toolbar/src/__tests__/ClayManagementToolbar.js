@@ -46,6 +46,15 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with search form name', () => {
+		managementToolbar = new ClayManagementToolbar({
+			searchFormName: 'mySearchName',
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with search input name', () => {
 		managementToolbar = new ClayManagementToolbar({
 			searchInputName: 'mySearchName',
