@@ -21,8 +21,8 @@
 	{@param? icon: string}
 	{@param? iconShape: string}
 	{@param? id: string}
-	{@param? labels: list<string>}
-	{@param? labelsStylesMap: ?}
+	{@param? label: string}
+	{@param? labelStylesMap: ?}
 	{@param? selectable: bool}
 	{@param? selected: bool}
 	{@param? spritemap: string}
@@ -44,7 +44,7 @@
 	{/let}
 
 	<li {$listItemAttributes}>
-		{let $isSimple: not $description and not $selectable and not $icon and not $actionItems and not $labels/}
+		{let $isSimple: not $description and not $selectable and not $icon and not $actionItems and not $label/}
 
 		{if $isSimple}
 			{delcall ClayListItem.Simple variant="$contentRenderer"}
@@ -74,8 +74,8 @@
 			{delcall ClayListItem.Content variant="$contentRenderer"}
 				{param description: $description /}
 				{param href: $href /}
-				{param labels: $labels /}
-				{param labelsStylesMap: $labelsStylesMap /}
+				{param label: $label /}
+				{param labelStylesMap: $labelStylesMap /}
 				{param spritemap: $spritemap /}
 				{param title: $title /}
 			{/delcall}
@@ -132,8 +132,8 @@
 	{@param title: string}
 	{@param? description: string}
 	{@param? href: string}
-	{@param? labels: list<string>}
-	{@param? labelsStylesMap: ?}
+	{@param? label: string}
+	{@param? labelStylesMap: ?}
 	{@param? spritemap: string}
 
 	<div class="flex-col flex-col-expand">
@@ -152,14 +152,12 @@
 			<p class="list-group-subtitle text-truncate">{$description}</p>
 		{/if}
 
-		{if $labels}
+		{if $label}
 			<div class="list-group-detail">
-				{foreach $label in $labels}
-					{call ClayLabel.render}
-						{param label: $label /}
-						{param style: $labelsStylesMap ? $labelsStylesMap[$label] ?: $labelsStylesMap['*'] : null /}
-					{/call}
-				{/foreach}
+				{call ClayLabel.render}
+					{param label: $label /}
+					{param style: $labelStylesMap ? $labelStylesMap[$label] ?: $labelStylesMap['*'] : null /}
+				{/call}
 			</div>
 		{/if}
 	</div>

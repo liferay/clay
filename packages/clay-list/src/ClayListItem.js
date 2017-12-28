@@ -114,22 +114,22 @@ ClayListItem.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Labels of the list item.
+	 * Label of the list item.
 	 * @instance
 	 * @memberof ClayListItem
-	 * @type {?array|undefined}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	labels: Config.arrayOf(Config.string()),
+	label: Config.string(),
 
 	/**
-	 * Labels styles map.
+	 * Label styles map.
 	 * @instance
 	 * @memberof ClayListItem
 	 * @type {?object|undefined}
 	 * @default undefined
 	 */
-	labelsStylesMap: Config.object(),
+	labelStylesMap: Config.object(),
 
 	/**
 	 * Flag to indicate if the list item is selectable.
