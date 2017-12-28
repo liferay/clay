@@ -35,6 +35,7 @@
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? searchActionURL: string}
+	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
@@ -74,6 +75,7 @@
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
 			{param searchActionURL: $searchActionURL /}
+			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
 			{param selectable: $selectable /}
 			{param showMobileSearch_: $showMobileSearch_ /}
@@ -186,6 +188,7 @@
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? searchActionURL: string}
+	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? showMobileSearch_: bool}
@@ -273,6 +276,10 @@
 					{let $searchFormAttributes kind="attributes"}
 						{if $searchActionURL}
 							action="{$searchActionURL}"
+						{/if}
+
+						{if $searchFormName}
+							name="{$searchFormName}"
 						{/if}
 
 						role="search"

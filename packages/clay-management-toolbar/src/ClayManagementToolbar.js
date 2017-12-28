@@ -177,6 +177,15 @@ ClayManagementToolbar.STATE = {
 	searchActionURL: Config.string(),
 
 	/**
+	 * Name of the search form.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	searchFormName: Config.string(),
+
+	/**
 	 * Name of the search input.
 	 * @instance
 	 * @memberof ClayManagementToolbar
