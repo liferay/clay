@@ -4,29 +4,20 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param items: list<[
-		actionItems: list<[
-			disabled: bool,
-			href: string,
-			icon: string,
-			label: string,
-			quickAction: bool,
-			separator: bool
-		]>,
+	{@param schema:	[
+		actionItems: string,
 		description: string,
 		href: string,
 		icon: string,
 		iconShape: string,
-		labels: list<[
-			label: string,
-			style: string
-		]>,
-		selected: bool,
+		labels: string,
+		selected: string,
 		title: string
-	]>}
+	]}
 	{@param? elementClasses: string}
 	{@param? handleItemToggled_: any}
 	{@param? id: string}
+	{@param? items: list<?>}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
 	{@param? title: string}
@@ -50,20 +41,22 @@
 			</li>
 		{/if}
 
-		{foreach $item in $items}
-			{call ClayListItem.render}
-				{param actionItems: $item.actionItems /}
-				{param description: $item.description /}
-				{param events: ['itemToggled': $handleItemToggled_ ] /}
-				{param href: $item.href /}
-				{param icon: $item.icon /}
-				{param iconShape: $item.iconShape /}
-				{param labels: $item.labels /}
-				{param selectable: $selectable /}
-				{param selected: $item.selected /}
-				{param spritemap: $spritemap /}
-				{param title: $item.title /}
-			{/call}
-		{/foreach}
+		{if $items}
+			{foreach $item in $items}
+				{call ClayListItem.render}
+					{param actionItems: $item[$schema.actionItems] ?: $item.actionItems /}
+					{param description: $item[$schema.description] ?: $item.description /}
+					{param events: ['itemToggled': $handleItemToggled_ ] /}
+					{param href: $item[$schema.href] ?: $item.href /}
+					{param icon: $item[$schema.icon] ?: $item.icon /}
+					{param iconShape: $item[$schema.iconShape] ?: $item.iconShape /}
+					{param labels: $item[$schema.labels] ?: $item.labels /}
+					{param selectable: $selectable /}
+					{param selected: $item[$schema.selected] ?: $item.selected /}
+					{param spritemap: $spritemap /}
+					{param title: $item[$schema.title] ?: $item.title /}
+				{/call}
+			{/foreach}
+		{/if}
 	</ul>
 {/template}

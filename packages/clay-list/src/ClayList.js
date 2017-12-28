@@ -54,41 +54,10 @@ ClayList.STATE = {
 	 * List of items.
 	 * @instance
 	 * @memberof ClayList
-	 * @type {!array}
+	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	items: Config.arrayOf(
-		Config.shapeOf({
-			actionItems: Config.arrayOf(
-				Config.shapeOf({
-					disabled: Config.bool().value(false),
-					href: Config.string().required(),
-					icon: Config.string(),
-					label: Config.string().required(),
-					quickAction: Config.bool(),
-					separator: Config.bool().value(false),
-				})
-			),
-			description: Config.string(),
-			href: Config.string(),
-			icon: Config.string(),
-			iconShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
-			labels: Config.arrayOf(
-				Config.shapeOf({
-					label: Config.string(),
-					style: Config.oneOf([
-						'danger',
-						'info',
-						'secondary',
-						'success',
-						'warning',
-					]).value('secondary'),
-				})
-			),
-			selected: Config.bool().value(false),
-			title: Config.string().required(),
-		})
-	).required(),
+	items: Config.array(),
 
 	/**
 	 * Flag to indicate if the list group items are selectable.
@@ -98,6 +67,24 @@ ClayList.STATE = {
 	 * @default false
 	 */
 	selectable: Config.bool().value(false),
+
+	/**
+	 * Schema mapping list item fields with item data properties.
+	 * @instance
+	 * @memberof ClayList
+	 * @type {!object}
+	 * @default undefined
+	 */
+	schema: Config.shapeOf({
+		actionItems: Config.string(),
+		description: Config.string(),
+		href: Config.string(),
+		icon: Config.string(),
+		iconShape: Config.string(),
+		labels: Config.string(),
+		selected: Config.string(),
+		title: Config.string(),
+	}).required(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
