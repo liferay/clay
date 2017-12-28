@@ -40,7 +40,7 @@
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
-	{@param? showMobileSearch_: bool}
+	{@param? showSearch_: bool}
 	{@param? sortingOrder: string}
 	{@param? totalItems: number}
 	{@param? viewTypes: list<[
@@ -80,7 +80,7 @@
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
 			{param selectable: $selectable /}
-			{param showMobileSearch_: $showMobileSearch_ /}
+			{param showSearch_: $showSearch_ /}
 			{param sortingOrder: $sortingOrder /}
 			{param spritemap: $spritemap /}
 			{param viewTypes: $viewTypes /}
@@ -194,7 +194,7 @@
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
-	{@param? showMobileSearch_: bool}
+	{@param? showSearch_: bool}
 	{@param? sortingOrder: string}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -269,7 +269,7 @@
 
 			{let $searchClasses kind="text"}
 				navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down
-				{if $showMobileSearch_}
+				{if $showSearch_}
 					{sp}show
 				{/if}
 			{/let}
