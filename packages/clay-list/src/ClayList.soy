@@ -9,6 +9,7 @@
 		description: string,
 		href: string,
 		icon: string,
+		iconsMap: ?,
 		iconShapesMap: ?,
 		labels: string,
 		selected: string,
@@ -49,7 +50,7 @@
 					{param description: $item[$schema.description] ?: $item.description /}
 					{param events: ['itemToggled': $handleItemToggled_ ] /}
 					{param href: $item[$schema.href] ?: $item.href /}
-					{param icon: $item[$schema.icon] ?: $item.icon /}
+					{param icon: $schema.iconsMap and $schema.icon ? $schema.iconsMap[$item[$schema.icon]] ?: $schema.iconsMap['*'] : $item[$schema.icon] /}
 					{param iconShape: $schema.iconShapesMap ? $schema.iconShapesMap[$item.icon] ?: $schema.iconShapesMap['*'] : null /}
 					{param labels: $item[$schema.labels] ?: $item.labels /}
 					{param selectable: $selectable /}

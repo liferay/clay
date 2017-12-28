@@ -81,6 +81,7 @@ ClayList.STATE = {
 		href: Config.string(),
 		icon: Config.string(),
 		iconShapesMap: Config.object(),
+		iconsMap: Config.object(),
 		labels: Config.string(),
 		selected: Config.string(),
 		title: Config.string(),
