@@ -9,7 +9,7 @@
 		description: string,
 		href: string,
 		icon: string,
-		iconShape: string,
+		iconShapesMap: ?,
 		labels: string,
 		selected: string,
 		title: string
@@ -41,6 +41,7 @@
 			</li>
 		{/if}
 
+
 		{if $items}
 			{foreach $item in $items}
 				{call ClayListItem.render}
@@ -49,7 +50,7 @@
 					{param events: ['itemToggled': $handleItemToggled_ ] /}
 					{param href: $item[$schema.href] ?: $item.href /}
 					{param icon: $item[$schema.icon] ?: $item.icon /}
-					{param iconShape: $item[$schema.iconShape] ?: $item.iconShape /}
+					{param iconShape: $schema.iconShapesMap ? $schema.iconShapesMap[$item.icon] ?: $schema.iconShapesMap['*'] : null /}
 					{param labels: $item[$schema.labels] ?: $item.labels /}
 					{param selectable: $selectable /}
 					{param selected: $item[$schema.selected] ?: $item.selected /}
