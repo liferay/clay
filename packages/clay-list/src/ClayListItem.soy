@@ -21,10 +21,8 @@
 	{@param? icon: string}
 	{@param? iconShape: string}
 	{@param? id: string}
-	{@param? labels: list<[
-		label: string,
-		style: string
-	]>}
+	{@param? labels: list<string>}
+	{@param? labelsStylesMap: ?}
 	{@param? selectable: bool}
 	{@param? selected: bool}
 	{@param? spritemap: string}
@@ -77,6 +75,7 @@
 				{param description: $description /}
 				{param href: $href /}
 				{param labels: $labels /}
+				{param labelsStylesMap: $labelsStylesMap /}
 				{param spritemap: $spritemap /}
 				{param title: $title /}
 			{/delcall}
@@ -133,10 +132,8 @@
 	{@param title: string}
 	{@param? description: string}
 	{@param? href: string}
-	{@param? labels: list<[
-		label: string,
-		style: string
-	]>}
+	{@param? labels: list<string>}
+	{@param? labelsStylesMap: ?}
 	{@param? spritemap: string}
 
 	<div class="flex-col flex-col-expand">
@@ -159,8 +156,8 @@
 			<div class="list-group-detail">
 				{foreach $label in $labels}
 					{call ClayLabel.render}
-						{param label: $label.label /}
-						{param style: $label.style /}
+						{param label: $label /}
+						{param style: $labelsStylesMap ? $labelsStylesMap[$label] ?: $labelsStylesMap['*'] : null /}
 					{/call}
 				{/foreach}
 			</div>

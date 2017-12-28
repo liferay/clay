@@ -12,6 +12,7 @@
 		iconsMap: ?,
 		iconShapesMap: ?,
 		labels: string,
+		labelsStylesMap: ?,
 		selected: string,
 		title: string
 	]}
@@ -53,6 +54,7 @@
 					{param icon: $schema.iconsMap and $schema.icon ? $schema.iconsMap[$item[$schema.icon]] ?: $schema.iconsMap['*'] : $item[$schema.icon] /}
 					{param iconShape: $schema.iconShapesMap ? $schema.iconShapesMap[$item.icon] ?: $schema.iconShapesMap['*'] : null /}
 					{param labels: $item[$schema.labels] ?: $item.labels /}
+					{param labelsStylesMap: $schema.labelsStylesMap /}
 					{param selectable: $selectable /}
 					{param selected: $item[$schema.selected] ?: $item.selected /}
 					{param spritemap: $spritemap /}

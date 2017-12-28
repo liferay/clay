@@ -116,22 +116,20 @@ ClayListItem.STATE = {
 	/**
 	 * Labels of the list item.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayListItem
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	labels: Config.arrayOf(
-		Config.shapeOf({
-			label: Config.string(),
-			style: Config.oneOf([
-				'danger',
-				'info',
-				'secondary',
-				'success',
-				'warning',
-			]).value('secondary'),
-		})
-	),
+	labels: Config.arrayOf(Config.string()),
+
+	/**
+	 * Labels styles map.
+	 * @instance
+	 * @memberof ClayListItem
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	labelsStylesMap: Config.object(),
 
 	/**
 	 * Flag to indicate if the list item is selectable.
