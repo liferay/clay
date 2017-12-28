@@ -125,12 +125,7 @@
 				descriptionField: 'Description 1',
 				hrefField: '#1',
 				iconField: 'folder',
-				labelsField: [
-					{
-						label: 'Pending',
-						style: 'warning',
-					},
-				],
+				labelsField: ['Pending'],
 				titleField: 'Item 1',
 			},
 			{
@@ -138,12 +133,7 @@
 				descriptionField: 'Description 2',
 				hrefField: '#2',
 				iconField: 'folder',
-				labelsField: [
-					{
-						label: 'Pending',
-						style: 'warning',
-					},
-				],
+				labelsField: ['Watched'],
 				titleField: 'Item 2',
 			},
 			{
@@ -151,12 +141,7 @@
 				descriptionField: 'Description 3',
 				hrefField: '#3',
 				iconField: 'folder',
-				labelsField: [
-					{
-						label: 'Pending',
-						style: 'warning',
-					},
-				],
+				labelsField: ['Pending'],
 				titleField: 'Item 3',
 			},
 		];
@@ -241,6 +226,11 @@
 					'*': 'circle',
 				},
 				labels: 'labelsField',
+				labelsStylesMap: {
+					'Watched': 'success',
+					'Pending': 'warning',
+					'*': 'danger',
+				},
 				title: 'titleField',
 			},
 			selectable: true,
@@ -261,6 +251,11 @@
 					'*': 'circle',
 				},
 				labels: 'labelsField',
+				labelsStylesMap: {
+					'Watched': 'success',
+					'Pending': 'warning',
+					'*': 'danger',
+				},
 				title: 'titleField',
 			},
 			selectable: true,
@@ -281,6 +276,11 @@
 					'*': 'circle',
 				},
 				labels: 'labelsField',
+				labelsStylesMap: {
+					'Watched': 'success',
+					'Pending': 'warning',
+					'*': 'danger',
+				},
 				title: 'titleField',
 			},
 			selectable: true,
@@ -307,6 +307,11 @@
 					'*': 'circle',
 				},
 				labels: 'labelsField',
+				labelsStylesMap: {
+					'Watched': 'success',
+					'Pending': 'warning',
+					'*': 'danger',
+				},
 				title: 'titleField',
 			},
 			selectable: true,
