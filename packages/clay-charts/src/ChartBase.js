@@ -291,11 +291,11 @@ const ChartBase = {
 			 */
 			config.onover = this.emitChartEvent_.bind(this, 'pointMouseover');
 			/**
-			 * Data select event.
-			 * @event dataSelect
+			 * Data selected event.
+			 * @event dataSelected
 			 * @memberof ChartBase
 			 */
-			config.onselect = this.emitChartEvent_.bind(this, 'dataSelect');
+			config.onselected = this.emitChartEvent_.bind(this, 'dataSelected');
 			/**
 			 * Data unselected event.
 			 * @event dataUnselected
