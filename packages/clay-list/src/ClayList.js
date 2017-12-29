@@ -1,14 +1,15 @@
+import 'clay-checkbox';
 import 'clay-dropdown';
 import 'clay-icon';
 import 'clay-label';
 import 'clay-link';
 import 'clay-sticker';
-import './ClayListItem';
-
+// eslint-disable-next-line
+import { ClayActionsDropdown } from 'clay-dropdown';
+import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import templates from './ClayList.soy.js';
 
@@ -75,18 +76,16 @@ ClayList.STATE = {
 	 * @type {!object}
 	 * @default undefined
 	 */
-	schema: Config.shapeOf({
-		actionItems: Config.string(),
-		description: Config.string(),
-		href: Config.string(),
-		icon: Config.string(),
-		iconShapesMap: Config.object(),
-		iconsMap: Config.object(),
-		label: Config.string(),
-		labelStylesMap: Config.object(),
-		selected: Config.string(),
-		title: Config.string(),
-	}).required(),
+	schema: Config.arrayOf(
+		Config.shapeOf({
+			contentRenderer: Config.string(),
+			fieldName: Config.string(),
+			fieldsMap: Config.object(),
+			iconsMap: Config.object(),
+			iconShapesMap: Config.object(),
+			labelStylesMap: Config.object(),
+		})
+	).required(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

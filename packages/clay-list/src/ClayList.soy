@@ -4,18 +4,14 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param schema:	[
-		actionItems: string,
-		description: string,
-		href: string,
-		icon: string,
+	{@param schema: list<[
+		contentRenderer: string,
+		fieldName: string,
+		fieldsMap: ?,
 		iconsMap: ?,
 		iconShapesMap: ?,
-		label: string,
-		labelStylesMap: ?,
-		selected: string,
-		title: string
-	]}
+		labelStylesMap: ?
+	]>}
 	{@param? elementClasses: string}
 	{@param? handleItemToggled_: any}
 	{@param? id: string}
@@ -48,24 +44,78 @@
 	</ul>
 {/template}
 
+{template .item}
+	{@param item: ?}
+	{@param schema: list<[
+		contentRenderer: string,
+		fieldName: string,
+		fieldsMap: ?,
+		iconsMap: ?,
+		iconShapesMap: ?,
+		labelStylesMap: ?
+	]>}
+	{@param? handleItemToggled_: any}
+	{@param? selectable: bool}
+	{@param? spritemap: string}
+
+	{let $listItemClasses kind="text"}
+    list-group-item list-group-item-flex
+  		{if $item.selected}
+	  		{sp}active
+		  {/if}
+	{/let}
+
+	<li class="{$listItemClasses}">
+		{if $selectable}
+			<div class="flex-col">
+				{call ClayCheckbox.render}
+					{param checked: $item.selected /}
+					{param events: ['change': $handleItemToggled_] /}
+					{param hideLabel: true /}
+					{param label: 'select' /}
+				{/call}
+			</div>
+		{/if}
+
+		{foreach $fieldSchema in $schema}
+			{delcall ClayList.Field variant="$fieldSchema.contentRenderer"}
+				{param fieldSchema: $fieldSchema /}
+				{param item: $item /}
+				{param spritemap: $spritemap /}
+				{param value: $item[$fieldSchema.fieldName] /}
+			{/delcall}
+		{/foreach}
+
+		{if $item.actionItems and $spritemap}
+			<div class="flex-col">
+				{call .quickMenu}
+					{param items: $item.actionItems /}
+					{param spritemap: $spritemap /}
+				{/call}
+
+				{call ClayActionsDropdown.render}
+					{param items: $item.actionItems /}
+					{param spritemap: $spritemap /}
+				{/call}
+			</div>
+		{/if}
+	</li>
+{/template}
+
 /**
  * This renders all the items in the list, iteraing over the items and its
  * possible nested items.
  */
 {template .items}
 	{@param items: list<?>}
-	{@param schema:	[
-		actionItems: string,
-		description: string,
-		href: string,
-		icon: string,
+	{@param schema: list<[
+		contentRenderer: string,
+		fieldName: string,
+		fieldsMap: ?,
 		iconsMap: ?,
 		iconShapesMap: ?,
-		label: string,
-		labelStylesMap: ?,
-		selected: string,
-		title: string
-	]}
+		labelStylesMap: ?
+	]>}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
@@ -84,20 +134,137 @@
 				{param spritemap: $spritemap /}
 			{/call}
 		{else}
-			{call ClayListItem.render}
-				{param actionItems: $item[$schema.actionItems] ?: $item.actionItems /}
-				{param description: $item[$schema.description] /}
-				{param events: ['itemToggled': $handleItemToggled_ ] /}
-				{param href: $item[$schema.href] /}
-				{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.icon]] ?: $schema.iconsMap['*'] : $item[$schema.icon] /}
-				{param iconShape: $schema.iconShapesMap ? $schema.iconShapesMap[$item.icon] ?: $schema.iconShapesMap['*'] : null /}
-				{param label: $item[$schema.label] /}
-				{param labelStylesMap: $schema.labelStylesMap /}
+			{call .item}
+				{param handleItemToggled_: $handleItemToggled_ /}
+				{param item: $item /}
+				{param schema: $schema /}
 				{param selectable: $selectable /}
-				{param selected: $item[$schema.selected] /}
 				{param spritemap: $spritemap /}
-				{param title: $item[$schema.title] /}
 			{/call}
 		{/if}
 	{/foreach}
 {/template}
+
+/**
+ * This renders the quick actions menu
+ */
+{template .quickMenu}
+	{@param items: list<[
+		disabled: bool,
+		href: string,
+		icon: string,
+		label: string,
+		quickAction: bool,
+		separator: bool
+	]>}
+	{@param spritemap: string}
+
+	<div class="quick-action-menu">
+		{foreach $item in $items}
+			{if $item.quickAction and $item.icon and $spritemap}
+				{call ClayLink.render}
+					{param elementClasses: 'quick-action-item' /}
+					{param href: $item.href /}
+					{param icon: $item.icon /}
+					{param spritemap: $spritemap /}
+				{/call}
+			{/if}
+		{/foreach}
+	</div>
+{/template}
+
+/**
+ * This renders the content of the item.
+ */
+{deltemplate ClayList.Field variant="'content'"}
+	{@param fieldSchema: [
+		contentRenderer: string,
+		fieldName: string,
+		fieldsMap: ?,
+		iconsMap: ?,
+		iconShapesMap: ?,
+		labelStylesMap: ?
+	]}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? spritemap: string}
+
+	<div class="flex-col flex-col-expand">
+		<h4 class="list-group-title text-truncate">
+			{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.href and $item[$fieldSchema.fieldsMap.href]}
+				{call ClayLink.render}
+					{param href: $item[$fieldSchema.fieldsMap.href] /}
+					{param label: $item[$fieldSchema.fieldsMap.title] /}
+				{/call}
+			{else}
+				{$item[$fieldSchema.fieldsMap.title]}
+			{/if}
+		</h4>
+
+		{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.description and $item[$fieldSchema.fieldsMap.description]}
+			<p class="list-group-subtitle text-truncate">{$item[$fieldSchema.fieldsMap.description]}</p>
+		{/if}
+
+		{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.label and $item[$fieldSchema.fieldsMap.label]}
+			<div class="list-group-detail">
+				{call ClayLabel.render}
+					{param label: $item[$fieldSchema.fieldsMap.label] /}
+					{param style: $fieldSchema.labelStylesMap ? $fieldSchema.labelStylesMap[$item[$fieldSchema.fieldsMap.label]] ?: $fieldSchema.labelStylesMap['*'] : null /}
+				{/call}
+			</div>
+		{/if}
+	</div>
+{/deltemplate}
+
+/**
+ * This renders the icon of the item.
+ */
+{deltemplate ClayList.Field variant="'icon'"}
+	{@param fieldSchema: [
+		contentRenderer: string,
+		fieldName: string,
+		fieldsMap: ?,
+		iconsMap: ?,
+		iconShapesMap: ?,
+		labelStylesMap: ?
+	]}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? spritemap: string}
+
+	<div class="flex-col">
+		{if $spritemap}
+			{call ClaySticker.render}
+				{param icon: $fieldSchema.iconsMap ? $fieldSchema.iconsMap[$value] ?: $fieldSchema.iconsMap['*'] : $value /}
+				{param shape: $fieldSchema.iconShapesMap ? $fieldSchema.iconShapesMap[$value] ?: $fieldSchema.iconShapesMap['*'] : null /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{/if}
+	</div>
+{/deltemplate}
+
+/**
+ * This renders a simple content of the item.
+ */
+{deltemplate ClayList.Field variant="'simple'"}
+	{@param fieldSchema: [
+		contentRenderer: string,
+		fieldName: string,
+		fieldsMap: ?,
+		iconsMap: ?,
+		iconShapesMap: ?,
+		labelStylesMap: ?
+	]}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? spritemap: string}
+
+	{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.href and $item[$fieldSchema.fieldsMap.href]}
+		{call ClayLink.render}
+			{param href: $item[$fieldSchema.fieldsMap.href] /}
+			{param label: $item[$fieldSchema.fieldsMap.title] /}
+		{/call}
+	{else}
+		{$item[$fieldSchema.fieldsMap.title]}
+	{/if}
+{/deltemplate}
