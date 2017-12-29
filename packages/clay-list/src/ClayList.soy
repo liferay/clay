@@ -205,12 +205,14 @@
 			<p class="list-group-subtitle text-truncate">{$item[$fieldSchema.fieldsMap.description]}</p>
 		{/if}
 
-		{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.label and $item[$fieldSchema.fieldsMap.label]}
+		{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.labels and $item[$fieldSchema.fieldsMap.labels]}
 			<div class="list-group-detail">
-				{call ClayLabel.render}
-					{param label: $item[$fieldSchema.fieldsMap.label] /}
-					{param style: $fieldSchema.labelStylesMap ? $fieldSchema.labelStylesMap[$item[$fieldSchema.fieldsMap.label]] ?: $fieldSchema.labelStylesMap['*'] : null /}
-				{/call}
+				{foreach $label in $item[$fieldSchema.fieldsMap.labels]}
+					{call ClayLabel.render}
+						{param label: $label /}
+						{param style: $fieldSchema.labelStylesMap ? $fieldSchema.labelStylesMap[$label] ?: $fieldSchema.labelStylesMap['*'] : null /}
+					{/call}
+				{/foreach}
 			</div>
 		{/if}
 	</div>
