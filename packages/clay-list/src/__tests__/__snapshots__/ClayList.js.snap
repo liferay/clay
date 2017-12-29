@@ -4,6 +4,223 @@ exports[`ClayList should render a ClayList with classes 1`] = `<ul class="list-g
 
 exports[`ClayList should render a ClayList with id 1`] = `<ul class="list-group show-quick-actions-on-hover" id="myId"></ul>`;
 
+exports[`ClayList should render a ClayList with items 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode I: The Phantom Menace</h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode II: Attack of the Clones</h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode III: Revenge of the Sith</h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode IV: A New Hope</h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode V: The Empire Strikes Back</h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode VI: Return of the Jedi</h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode VII: The Force Awakens</h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">Episode VIII: The Last Jedi</h4>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a ClayList with items with description 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a ClayList with items with links 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a ClayList with simple items 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-item list-group-item-flex">Episode I: The Phantom Menace</li>
+  <li class="list-group-item list-group-item-flex">Episode II: Attack of the Clones</li>
+  <li class="list-group-item list-group-item-flex">Episode III: Revenge of the Sith</li>
+  <li class="list-group-item list-group-item-flex">Episode IV: A New Hope</li>
+  <li class="list-group-item list-group-item-flex">Episode V: The Empire Strikes Back</li>
+  <li class="list-group-item list-group-item-flex">Episode VI: Return of the Jedi</li>
+  <li class="list-group-item list-group-item-flex">Episode VII: The Force Awakens</li>
+  <li class="list-group-item list-group-item-flex">Episode VIII: The Last Jedi</li>
+</ul>
+`;
+
+exports[`ClayList should render a ClayList with simple items with links 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode I: The Phantom Menace</a>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode II: Attack of the Clones</a>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode III: Revenge of the Sith</a>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode IV: A New Hope</a>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode V: The Empire Strikes Back</a>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode VI: Return of the Jedi</a>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode VII: The Force Awakens</a>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <a href="#">Episode VIII: The Last Jedi</a>
+  </li>
+</ul>
+`;
+
 exports[`ClayList should render a selectable ClayList 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
@@ -17,7 +234,693 @@ exports[`ClayList should render a selectable ClayList 1`] = `
       </div>
     </div>
     <div class="flex-col flex-col-expand">
-      <h4 class="list-group-title text-truncate">Star Wars</h4>
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description sr-only">select</span>
+        </label>
+      </div>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description sr-only">select</span>
+        </label>
+      </div>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description sr-only">select</span>
+        </label>
+      </div>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description sr-only">select</span>
+        </label>
+      </div>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description sr-only">select</span>
+        </label>
+      </div>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description sr-only">select</span>
+        </label>
+      </div>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <div class="custom-control custom-checkbox">
+        <label>
+          <input class="custom-control-input" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description sr-only">select</span>
+        </label>
+      </div>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a selectable ClayList with action menu 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-danger">Error</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+      <div class="list-group-detail">
+        <span class="label label-warning">Pending</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu"></div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-header">
+    <h3 class="list-group-header-title">Saga</h3>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+    </div>
+  </li>
+  <li class="list-group-header">
+    <h3 class="list-group-header-title">Expanded Universe</h3>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Rogue One: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Gareth Edwards</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Solo: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Ron Howard</p>
     </div>
   </li>
 </ul>
@@ -26,9 +929,1028 @@ exports[`ClayList should render a selectable ClayList 1`] = `
 exports[`ClayList should render a selectable ClayList with groups 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Movies</h3>
+    <h3 class="list-group-header-title">Saga</h3>
   </li>
-  <li class="list-group-item list-group-item-flex">Star Wars</li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+    </div>
+  </li>
+  <li class="list-group-header">
+    <h3 class="list-group-header-title">Expanded Universe</h3>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Rogue One: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Gareth Edwards</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Solo: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Ron Howard</p>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a selectable ClayList with icons 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-header">
+    <h3 class="list-group-header-title">Saga</h3>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+    </div>
+  </li>
+  <li class="list-group-header">
+    <h3 class="list-group-header-title">Expanded Universe</h3>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Rogue One: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Gareth Edwards</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Solo: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Ron Howard</p>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a selectable ClayList with label 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-header">
+    <h3 class="list-group-header-title">Saga</h3>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-danger">Error</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+      <div class="list-group-detail">
+        <span class="label label-warning">Pending</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-header">
+    <h3 class="list-group-header-title">Expanded Universe</h3>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Rogue One: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Gareth Edwards</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Solo: A Star Wars Story</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Ron Howard</p>
+      <div class="list-group-detail">
+        <span class="label label-warning">Pending</span>
+      </div>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`ClayList should render a selectable ClayList with quick action menu 1`] = `
+<ul class="list-group show-quick-actions-on-hover">
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode I: The Phantom Menace</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-danger">Error</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode II: Attack of the Clones</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode III: Revenge of the Sith</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode IV: A New Hope</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">George Lucas</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode V: The Empire Strikes Back</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Irvin Kershner</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VI: Return of the Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Richard Marquand</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary rounded-circle">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+            <title>check-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VII: The Force Awakens</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">J. J. Abrams</p>
+      <div class="list-group-detail">
+        <span class="label label-success">Watched</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="flex-col">
+      <span class="sticker sticker-primary">
+        <span class="sticker-overlay">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="flex-col flex-col-expand">
+      <h4 class="list-group-title text-truncate">
+        <a href="#">Episode VIII: The Last Jedi</a>
+      </h4>
+      <p class="list-group-subtitle text-truncate">Rian Johnson</p>
+      <div class="list-group-detail">
+        <span class="label label-warning">Pending</span>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="quick-action-menu">
+        <a class=" quick-action-item" href="#1">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+            <title>trash</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#2">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+            <title>download</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+          </svg>
+        </a>
+        <a class=" quick-action-item" href="#3">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-action">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <title>ellipsis-v</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="list-unstyled">
+            <li>
+              <a class=" dropdown-item" href="#1">Option 1</a>
+            </li>
+            <li>
+              <a class=" dropdown-item" href="#2">Option 2</a>
+            </li>
+            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+            <li>
+              <a class=" dropdown-item" href="#3">Option 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
 </ul>
 `;
 
