@@ -205,102 +205,144 @@
 			}
 		];
 
-		/** Simple List **/
+		// Simple List //
 		new metal.ClayList({
 			items: items,
-			schema: {
-				title: 'title',
-			},
+			schema: [{
+					contentRenderer: 'simple',
+					fieldsMap: {
+						title: 'title',
+					}
+				},
+			],
 		}, '#container1');
 
-		/** Simple List with Links**/
+		// Simple List with Links //
 		new metal.ClayList({
 			items: items,
-			schema: {
-				href: 'downloadHref',
-				title: 'title',
-			},
+			schema: [{
+					contentRenderer: 'simple',
+					fieldsMap: {
+						href: 'downloadHref',
+						title: 'title',
+					}
+				},
+			],
 		}, '#container2');
 		
-		/** List with Descriptions **/
+		// List with Descriptions //
 		new metal.ClayList({
 			items: items,
-			schema: {
-				description: 'director',
-				href: 'downloadHref',
-				title: 'title',
-			},
+			schema: [{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'director',
+						href: 'downloadHref',
+						title: 'title',
+					}
+				},
+			],
 		}, '#container3');
-
-		/** Selectable List **/
+		
+		// Selectable List //
 		new metal.ClayList({
 			items: items,
-			schema: {
-				description: 'director',
-				href: 'downloadHref',
-				title: 'title',
-			},
+			schema: [{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'director',
+						href: 'downloadHref',
+						title: 'title',
+					}
+				},
+			],
 			selectable: true,
 		}, '#container4');
 		
-		/** Selectable List with Icons **/
+		// Selectable List with Icons //
 		new metal.ClayList({
 			items: items,
-			schema: {
-				description: 'director',
-				href: 'downloadHref',
+			schema: [{
+				contentRenderer: 'icon',
+				fieldName: 'status',
 				iconsMap: {
-					'*': 'folder',
+					'Watched': 'check-circle',
+					'*': 'exclamation-circle',
 				},
-				title: 'title',
 			},
+			{
+				contentRenderer: 'content',
+				fieldsMap: {
+					description: 'director',
+					href: 'downloadHref',
+					title: 'title',
+				}
+			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container5');
 
-		/** Selectable List with Circle Icons **/
+		// Selectable List with Circle Icons //
 		new metal.ClayList({
 			items: items,
-			schema: {
-				description: 'director',
-				href: 'downloadHref',
+			schema: [{
+				contentRenderer: 'icon',
+				fieldName: 'status',
 				iconsMap: {
-					'*': 'folder',
+					'Watched': 'check-circle',
+					'*': 'exclamation-circle',
 				},
 				iconShapesMap: {
-					'*': 'circle',
+					'Watched': 'circle',
+					'*': 'rounded',
 				},
-				title: 'title',
 			},
+			{
+				contentRenderer: 'content',
+				fieldsMap: {
+					description: 'director',
+					href: 'downloadHref',
+					title: 'title',
+				}
+			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container6');
 
-		/** Selectable List with Label **/
+		// Selectable List with Label //
 		new metal.ClayList({
 			items: items,
-			schema: {
-				description: 'director',
-				href: 'downloadHref',
+			schema: [{
+				contentRenderer: 'icon',
+				fieldName: 'status',
 				iconsMap: {
-					'*': 'folder',
+					'Watched': 'check-circle',
+					'*': 'exclamation-circle',
 				},
 				iconShapesMap: {
-					'*': 'circle',
+					'Watched': 'circle',
+					'*': 'rounded',
 				},
-				label: 'status',
+			},
+			{
+				contentRenderer: 'content',
+				fieldsMap: {
+					description: 'director',
+					href: 'downloadHref',
+					label: 'status',
+					title: 'title',
+				},
 				labelStylesMap: {
 					'Watched': 'success',
 					'Pending': 'warning',
 					'*': 'danger',
 				},
-				title: 'title',
-			},
+			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container7');
 
-		/** Selectable List with Action Menu **/
+		// Selectable List with Action Menu //
 		items.forEach(item => {
 			item.items.forEach(nestedItem => {
 				nestedItem.actionItems = actionItemsWithQuickItems;
@@ -309,28 +351,37 @@
 
 		new metal.ClayList({
 			items: items,
-			schema: {
-				description: 'director',
-				href: 'downloadHref',
+			schema: [{
+				contentRenderer: 'icon',
+				fieldName: 'status',
 				iconsMap: {
-					'*': 'folder',
+					'Watched': 'check-circle',
+					'*': 'exclamation-circle',
 				},
 				iconShapesMap: {
-					'*': 'circle',
+					'Watched': 'circle',
+					'*': 'rounded',
 				},
-				label: 'status',
+			},
+			{
+				contentRenderer: 'content',
+				fieldsMap: {
+					description: 'director',
+					href: 'downloadHref',
+					label: 'status',
+					title: 'title',
+				},
 				labelStylesMap: {
 					'Watched': 'success',
 					'Pending': 'warning',
 					'*': 'danger',
 				},
-				title: 'title',
-			},
+			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container8');
 
-		/** Selectable List with Selected Items **/
+		// Selectable List with Selected Items //
 		items.forEach(item => {
 			item.items.forEach(nestedItem => {
 				nestedItem.selected = true;
@@ -339,24 +390,32 @@
 
 		new metal.ClayList({
 			items: items,
-			schema: {
-				description: 'director',
-				href: 'downloadHref',
+			schema: [{
+				contentRenderer: 'icon',
+				fieldName: 'status',
 				iconsMap: {
-					'*': 'folder',
+					'Watched': 'check-circle',
+					'*': 'exclamation-circle',
 				},
 				iconShapesMap: {
-					'*': 'circle',
+					'Watched': 'circle',
+					'*': 'rounded',
 				},
-				label: 'status',
+			},
+			{
+				contentRenderer: 'content',
+				fieldsMap: {
+					description: 'director',
+					href: 'downloadHref',
+					label: 'status',
+					title: 'title',
+				},
 				labelStylesMap: {
 					'Watched': 'success',
 					'Pending': 'warning',
 					'*': 'danger',
 				},
-				selected: 'selected',
-				title: 'title',
-			},
+			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container9');
