@@ -382,6 +382,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
       <p class="list-group-subtitle text-truncate">George Lucas</p>
       <div class="list-group-detail">
         <span class="label label-danger">Error</span>
+        <span class="label label-warning">Pending</span>
       </div>
     </div>
     <div class="flex-col">
@@ -1231,6 +1232,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       <p class="list-group-subtitle text-truncate">George Lucas</p>
       <div class="list-group-detail">
         <span class="label label-danger">Error</span>
+        <span class="label label-warning">Pending</span>
       </div>
     </div>
   </li>
@@ -1449,6 +1451,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       <p class="list-group-subtitle text-truncate">George Lucas</p>
       <div class="list-group-detail">
         <span class="label label-danger">Error</span>
+        <span class="label label-warning">Pending</span>
       </div>
     </div>
     <div class="flex-col">

@@ -49,7 +49,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 10,
 		releaseDate: 'May 19th 1999',
-		status: 'Error',
+		status: ['Error', 'Pending'],
 		title: 'Episode I: The Phantom Menace',
 	},
 	{
@@ -57,7 +57,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 50,
 		releaseDate: 'May 12th 2002',
-		status: 'Watched',
+		status: ['Watched'],
 		title: 'Episode II: Attack of the Clones',
 	},
 	{
@@ -65,7 +65,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 60,
 		releaseDate: 'May 12th 2005',
-		status: 'Watched',
+		status: ['Watched'],
 		title: 'Episode III: Revenge of the Sith',
 	},
 	{
@@ -73,7 +73,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 90,
 		releaseDate: 'May 25th 1977',
-		status: 'Watched',
+		status: ['Watched'],
 		title: 'Episode IV: A New Hope',
 	},
 	{
@@ -81,7 +81,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 100,
 		releaseDate: 'May 21th 1980',
-		status: 'Watched',
+		status: ['Watched'],
 		title: 'Episode V: The Empire Strikes Back',
 	},
 	{
@@ -89,7 +89,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 90,
 		releaseDate: 'May 25th 1983',
-		status: 'Watched',
+		status: ['Watched'],
 		title: 'Episode VI: Return of the Jedi',
 	},
 	{
@@ -97,7 +97,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 70,
 		releaseDate: 'December 14th 2015',
-		status: 'Watched',
+		status: ['Watched'],
 		title: 'Episode VII: The Force Awakens',
 	},
 	{
@@ -105,7 +105,7 @@ const sagaItems = [
 		downloadHref: '#',
 		rating: 0,
 		releaseDate: 'December 9th 2017',
-		status: 'Pending',
+		status: ['Pending'],
 		title: 'Episode VIII: The Last Jedi',
 	},
 ];
@@ -116,7 +116,7 @@ const expandedItems = [
 		downloadHref: '#',
 		rating: 70,
 		releaseDate: 'December 10th 2016',
-		status: 'Watched',
+		status: ['Watched'],
 		title: 'Rogue One: A Star Wars Story',
 	},
 	{
@@ -124,7 +124,7 @@ const expandedItems = [
 		downloadHref: '#',
 		rating: 0,
 		releaseDate: 'May 25th 2018',
-		status: 'Pending',
+		status: ['Pending'],
 		title: 'Solo: A Star Wars Story',
 	},
 ];
@@ -375,7 +375,7 @@ describe('ClayList', function() {
 					fieldsMap: {
 						description: 'director',
 						href: 'downloadHref',
-						label: 'status',
+						labels: 'status',
 						title: 'title',
 					},
 					labelStylesMap: {
@@ -428,7 +428,7 @@ describe('ClayList', function() {
 					fieldsMap: {
 						description: 'director',
 						href: 'downloadHref',
-						label: 'status',
+						labels: 'status',
 						title: 'title',
 					},
 					labelStylesMap: {
@@ -481,7 +481,7 @@ describe('ClayList', function() {
 					fieldsMap: {
 						description: 'director',
 						href: 'downloadHref',
-						label: 'status',
+						labels: 'status',
 						title: 'title',
 					},
 					labelStylesMap: {
