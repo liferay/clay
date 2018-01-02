@@ -5,38 +5,48 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Input Group Addon</h3>
+		<h3>Input Group Prepend, Input Group Append, Input Group Text</h3>
 
 		<blockquote class="blockquote">
-			<p>Append or prepend different things to your form elements with input-group.</p>
+			<p>Prepend or Append different things to your form elements with input-group.</p>
 		</blockquote>
 
 <div class="sheet">
 	<div class="form-group">
 		<div class="input-group">
-			<span class="input-group-addon" id="basicAddon1">@</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basicAddon1">@</span>
+			</div>
 			<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
 		</div>
 	</div>
 	<div class="form-group">
 		<div class="input-group">
 			<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
-			<span class="input-group-addon" id="basicAddon2">@example.com</span>
+			<div class="input-group-append">
+				<span class="input-group-text" id="basicAddon2">@example.com</span>
+			</div>
 		</div>
 	</div>
 	<div class="form-group">
 		<label>Liferay</label>
 		<span class="form-text">http://www.liferay.com</span>
 		<div class="input-group">
-			<span class="input-group-addon">/</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">/</span>
+			</div>
 			<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
 		</div>
 	</div>
 	<div class="form-group">
 		<div class="input-group">
-			<span class="input-group-addon">$</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
 			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-			<span class="input-group-addon">.00</span>
+			<div class="input-group-append">
+				<span class="input-group-text">.00</span>
+			</div>
 		</div>
 	</div>
 </div>
@@ -51,25 +61,31 @@ section: Components
 		<div class="sheet">
 			<div class="form-group">
 				<div class="input-group input-group-sm">
-					<span class="input-group-addon input-group-constrain" id="inputGroupConstrain01">
-						<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-					</span>
+					<div class="input-group-prepend">
+						<span class="input-group-text input-group-constrain" id="inputGroupConstrain01">
+							<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+						</span>
+					</div>
 					<input aria-describedby="inputGroupConstrain01" aria-label="Change Default URL" class="form-control" placeholder="Change Default URL" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="input-group">
-					<span class="input-group-addon input-group-constrain" id="inputGroupConstrain02">
-						<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-					</span>
+					<div class="input-group-prepend">
+						<span class="input-group-text input-group-constrain" id="inputGroupConstrain02">
+							<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+						</span>
+					</div>
 					<input aria-describedby="inputGroupConstrain02" aria-label="Change Default URL second one" class="form-control" placeholder="Change Default URL" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="input-group input-group-lg">
-					<span class="input-group-addon input-group-constrain" id="inputGroupConstrain03">
-						<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
-					</span>
+					<div class="input-group-prepend">
+						<span class="input-group-text input-group-constrain" id="inputGroupConstrain03">
+							<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+						</span>
+					</div>
 					<input aria-describedby="inputGroupConstrain03" aria-label="Change Default URL third one" class="form-control" placeholder="Change Default URL" type="text">
 				</div>
 			</div>
@@ -84,7 +100,7 @@ section: Components
 <div class="sheet">
 	<div class="form-group">
 		<div class="input-group">
-			<span class="input-group-btn">
+			<span class="input-group-prepend">
 				<button class="btn btn-secondary" type="button">Search</button>
 			</span>
 			<input aria-label="Search for" class="form-control" placeholder="Search for..." type="text">
@@ -93,14 +109,14 @@ section: Components
 	<div class="form-group">
 		<div class="input-group">
 			<input aria-label="Search for second one" class="form-control" placeholder="Search for..." type="text">
-			<span class="input-group-btn">
+			<span class="input-group-append">
 				<button class="btn btn-secondary" type="button">Search</button>
 			</span>
 		</div>
 	</div>
 	<div class="form-group">
 		<div class="input-group">
-			<div class="input-group-btn">
+			<div class="input-group-prepend">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" /></svg></span>
 				</button>
@@ -118,7 +134,7 @@ section: Components
 	<div class="form-group">
 		<div class="input-group">
 			<input aria-label="Text input with dropdown button" class="form-control" type="text">
-			<div class="input-group-btn">
+			<div class="input-group-append">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" /></svg></span>
 				</button>
@@ -134,7 +150,7 @@ section: Components
 	</div>
 	<div class="form-group">
 		<div class="input-group">
-			<div class="input-group-btn">
+			<div class="input-group-prepend">
 				<button class="btn btn-secondary" type="button">Action</button>
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
@@ -157,7 +173,7 @@ section: Components
 	<div class="form-group">
 		<div class="input-group">
 			<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
-			<div class="input-group-btn">
+			<div class="input-group-append">
 				<button class="btn btn-secondary" type="button">Action</button>
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
@@ -189,29 +205,33 @@ section: Components
 	<div class="form-group">
 		<label for="">Custom Checkbox</label>
 		<div class="input-group input-group-secondary">
-			<span class="input-group-addon">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-					</label>
-				</div>
-			</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+						</label>
+					</div>
+				</span>
+			</div>
 			<input aria-label="Text input with checkbox" class="form-control" type="text">
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="">Custom Checkbox and Custom Control Description</label>
 		<div class="input-group input-group-secondary">
-			<span class="input-group-addon">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Custom Check Label</span>
-					</label>
-				</div>
-			</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Custom Check Label</span>
+						</label>
+					</div>
+				</span>
+			</div>
 			<input aria-label="Text input with checkbox" class="form-control" type="text">
 		</div>
 	</div>
@@ -219,27 +239,31 @@ section: Components
 		<label for="">Form Check and Form Check Description</label>
 		<div class="input-group input-group-secondary">
 			<input aria-label="Text input with checkbox" class="form-control" type="text">
-			<span class="input-group-addon">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input aria-label="Checkbox for previous text input" class="form-check-input" type="checkbox" value="">
-						<span class="form-check-description">Form Check Label</span>
-					</label>
-				</div>
-			</span>
+			<div class="input-group-append">
+				<span class="input-group-text">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input aria-label="Checkbox for previous text input" class="form-check-input" type="checkbox" value="">
+							<span class="form-check-description">Form Check Label</span>
+						</label>
+					</div>
+				</span>
+			</div>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="">Custom Radio</label>
 		<div class="input-group input-group-secondary">
-			<span class="input-group-addon">
-				<div class="custom-control custom-radio">
-					<label>
-						<input aria-label="Radio button for following text input" class="custom-control-input" type="radio">
-						<span class="custom-control-indicator"></span>
-					</label>
-				</div>
-			</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">
+					<div class="custom-control custom-radio">
+						<label>
+							<input aria-label="Radio button for following text input" class="custom-control-input" type="radio">
+							<span class="custom-control-indicator"></span>
+						</label>
+					</div>
+				</span>
+			</div>
 			<input aria-label="Text input with radio button" class="form-control" type="text">
 		</div>
 	</div>
@@ -247,13 +271,15 @@ section: Components
 		<label for="">Form Check with Radio Button</label>
 		<div class="input-group input-group-secondary">
 			<input aria-label="Text input with radio button" class="form-control" type="text">
-			<span class="input-group-addon">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input aria-label="Radio button for previous text input" class="form-check-input" type="radio" value="">
-					</label>
-				</div>
-			</span>
+			<div class="input-group-append">
+				<span class="input-group-text">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input aria-label="Radio button for previous text input" class="form-check-input" type="radio" value="">
+						</label>
+					</div>
+				</span>
+			</div>
 		</div>
 	</div>
 </div>
@@ -278,15 +304,17 @@ section: Components
 			</svg>
 		</label>
 		<div class="input-group input-group-transparent">
-			<span class="input-group-addon">$</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
 			<input aria-label="Amount" class="form-control" id="inputGroupTransparent" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
+			<div class="input-group-append">
 				<button class="btn btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
 					</svg>
 				</button>
-			</span>
+			</div>
 		</div>
 	</div>
 </div>
@@ -301,23 +329,35 @@ section: Components
 <div class="sheet">
 	<div class="form-group">
 		<div class="input-group input-group-lg">
-			<span class="input-group-addon">$</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
 			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-			<span class="input-group-addon">.00</span>
+			<div class="input-group-append">
+				<span class="input-group-text">.00</span>
+			</div>
 		</div>
 	</div>
 	<div class="form-group">
 		<div class="input-group">
-			<span class="input-group-addon">$</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
 			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-			<span class="input-group-addon">.00</span>
+			<div class="input-group-append">
+				<span class="input-group-text">.00</span>
+			</div>
 		</div>
 	</div>
 	<div class="form-group">
 		<div class="input-group input-group-sm">
-			<span class="input-group-addon">$</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
 			<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
-			<span class="input-group-addon">.00</span>
+			<div class="input-group-append">
+				<span class="input-group-text">.00</span>
+			</div>
 		</div>
 	</div>
 	<div class="form-group">
@@ -328,9 +368,11 @@ section: Components
 			</svg>
 		</label>
 		<div class="input-group input-group-transparent input-group-lg">
-			<span class="input-group-addon">$</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
 			<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupTransparentLg" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
+			<span class="input-group-append">
 				<button class="btn btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
@@ -347,7 +389,7 @@ section: Components
 			</svg>
 		</label>
 		<div class="input-group input-group-transparent">
-			<span class="input-group-btn">
+			<span class="input-group-prepend">
 				<button class="btn btn-primary" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
@@ -365,7 +407,7 @@ section: Components
 				</button>
 			</span>
 			<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
+			<span class="input-group-append">
 				<button class="btn btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
@@ -382,9 +424,11 @@ section: Components
 			</svg>
 		</label>
 		<div class="input-group input-group-transparent input-group-sm">
-			<span class="input-group-addon">$</span>
+			<div class="input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
 			<input aria-label="Amount" class="form-control" id="inputGroupTransparentSm" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
+			<span class="input-group-append">
 				<button class="btn btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
