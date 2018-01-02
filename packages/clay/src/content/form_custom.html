@@ -20,7 +20,7 @@ section: Components
 		<label for="customFile1">Attach File</label>
 		<div class="input-group">
 			<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly tabindex="-1" type="text">
-			<div class="input-group-btn">
+			<div class="input-group-append">
 				<div class="form-file">
 					<input class="form-file-input" data-clay-site-content="#customFileText1" data-clay-site-toggle="file" id="customFile1" type="file">
 					<button class="btn btn-secondary" tabindex="-1">Browse</button>
@@ -47,7 +47,9 @@ section: Components
 		<div class="form-file">
 			<input class="form-file-input" data-clay-site-content="#customFileText3" data-clay-site-toggle="file" id="customFile3" type="file">
 			<div class="input-group">
-				<span class="input-group-addon" id="inputGroupAddon02">Browse</span>
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupAddon02">Browse</span>
+				</div>
 				<input aria-describedby="inputGroupAddon02" class="form-control" id="customFileText3" placeholder="Choose file..." tabindex="-1" type="text">
 			</div>
 		</div>
