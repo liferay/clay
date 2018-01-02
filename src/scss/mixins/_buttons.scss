@@ -25,6 +25,7 @@
 	$active-border-color: map-get($map, active-border-color);
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
+	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
 	$loading-icon-dotted: map-get($map, loading-icon-dotted);
 
 	background-color: $bg;
@@ -53,22 +54,16 @@
 	}
 
 	&:not([disabled]):not(.disabled):active,
+	&:not([disabled]):not(.disabled).active,
 	.show > &.dropdown-toggle {
-		background-color: $active-bg;
-		border-color: $active-border-color;
-		box-shadow: $focus-box-shadow;
-		color: $active-color;
-	}
-
-	&:not([disabled]):not(.disabled).active:focus {
-		box-shadow: $focus-box-shadow;
-	}
-
-	&:not([disabled]):not(.disabled).active {
 		background-color: $active-bg;
 		border-color: $active-border-color;
 		box-shadow: $active-box-shadow;
 		color: $active-color;
+
+		&:focus {
+			box-shadow: $active-focus-box-shadow;
+		}
 	}
 
 	.loading-icon-dotted {
