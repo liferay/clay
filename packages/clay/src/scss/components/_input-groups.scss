@@ -1,77 +1,75 @@
 // Will need to revisit this whole thing once https://github.com/twbs/bootstrap/pull/25020 is merged
 
 .input-group {
+	.btn:hover {
+		z-index: $zindex-input-group-hover;
+	}
+
+	.btn:focus,
 	.form-control:focus {
 		z-index: $zindex-input-group-focus;
 	}
 }
 
+.input-group-prepend,
+.input-group-append {
+	align-items: stretch;
+}
+
 // Input Group Btn
 
-.input-group-btn .btn:hover {
-	z-index: $zindex-input-group-hover;
-}
+// .input-group-btn .btn:hover {
+// 	z-index: $zindex-input-group-hover;
+// }
 
-.input-group-btn .btn:focus {
-	z-index: $zindex-input-group-focus;
-}
+// .input-group-btn .btn:focus {
+// 	z-index: $zindex-input-group-focus;
+// }
 
-.input-group-btn {
-	// Will need to be revisted once https://github.com/twbs/bootstrap/pull/25020 is merged
-	font-size: inherit;
+// .input-group-btn {
+// 	// Will need to be revisted once https://github.com/twbs/bootstrap/pull/25020 is merged
+// 	font-size: inherit;
 
-	> .btn {
-		height: $input-height;
-		padding-bottom: 0;
-		padding-top: 0;
+// 	> .btn {
+// 		height: $input-height;
+// 		padding-bottom: 0;
+// 		padding-top: 0;
 
-		@include clay-scale-component {
-			height: $input-height-mobile;
-		}
-	}
+// 		@include clay-scale-component {
+// 			height: $input-height-mobile;
+// 		}
+// 	}
 
-	> .btn + .btn {
-		margin-left: 0;
-	}
+// 	> .btn + .btn {
+// 		margin-left: 0;
+// 	}
 
-	&:first-child {
-		text-align: right;
+// 	&:first-child {
+// 		text-align: right;
 
-		> .btn {
-			@if ($btn-border-width > 1) {
-				margin-right: -($btn-border-width);
-			}
-		}
-	}
+// 		> .btn {
+// 			@if ($btn-border-width > 1) {
+// 				margin-right: -($btn-border-width);
+// 			}
+// 		}
+// 	}
 
-	&:last-child > .btn {
-		margin-left: -$btn-border-width;
-	}
+// 	&:last-child > .btn {
+// 		margin-left: -$btn-border-width;
+// 	}
 
-	&:not(:first-child) > .form-file .btn {
-		@include border-left-radius(0);
-	}
+// 	&:not(:first-child) > .form-file .btn {
+// 		@include border-left-radius(0);
+// 	}
 
-	&:not(:last-child) > .form-file .btn {
-		@include border-right-radius(0);
-	}
-}
+// 	&:not(:last-child) > .form-file .btn {
+// 		@include border-right-radius(0);
+// 	}
+// }
 
-// Input Group Addon
+// Input Group Text
 
-.input-group .input-group-addon {
-	&:first-child {
-		border-bottom-left-radius: $input-group-addon-border-radius;
-		border-top-left-radius: $input-group-addon-border-radius;
-	}
-
-	&:last-child {
-		border-bottom-right-radius: $input-group-addon-border-radius;
-		border-top-right-radius: $input-group-addon-border-radius;
-	}
-}
-
-.input-group-addon {
+.input-group-text {
 	align-items: center;
 	border-width: $input-border-width;
 	color: $input-group-addon-color;
@@ -95,6 +93,57 @@
 		margin-bottom: 0;
 	}
 }
+
+.input-group-text-secondary {
+	background-color: $input-group-secondary-addon-bg;
+	border-color: $input-group-secondary-addon-border-color;
+	border-width: $input-group-secondary-addon-border-width;
+	color: $input-group-secondary-addon-color;
+	z-index: 2;
+
+	label {
+		color: $input-group-secondary-addon-color;
+	}
+}
+
+// Input Group Addon
+
+// .input-group .input-group-addon {
+// 	&:first-child {
+// 		border-bottom-left-radius: $input-group-addon-border-radius;
+// 		border-top-left-radius: $input-group-addon-border-radius;
+// 	}
+
+// 	&:last-child {
+// 		border-bottom-right-radius: $input-group-addon-border-radius;
+// 		border-top-right-radius: $input-group-addon-border-radius;
+// 	}
+// }
+
+// .input-group-addon {
+// 	align-items: center;
+// 	border-width: $input-border-width;
+// 	color: $input-group-addon-color;
+// 	display: flex;
+// 	font-weight: $input-group-addon-font-weight;
+// 	height: $input-height;
+// 	padding-bottom: $input-group-addon-padding-y;
+// 	padding-top: $input-group-addon-padding-y;
+
+// 	@if not ($input-group-addon-padding-x == $btn-padding-x) {
+// 		padding-left: $input-group-addon-padding-x;
+// 		padding-right: $input-group-addon-padding-x;
+// 	}
+
+// 	@include clay-scale-component {
+// 		height: $input-height-mobile;
+// 	}
+
+// 	.custom-control,
+// 	.form-check {
+// 		margin-bottom: 0;
+// 	}
+// }
 
 // Input Group Input
 
@@ -135,27 +184,27 @@
 // Input Group Secondary
 
 .input-group-secondary {
-	.input-group-addon {
-		background-color: $input-group-secondary-addon-bg;
-		border-color: $input-group-secondary-addon-border-color;
-		border-style: solid;
-		border-width: $input-group-secondary-addon-border-width;
-		color: $input-group-secondary-addon-color;
-		margin-right: -$input-border-left-width;
+	// .input-group-addon {
+	// 	background-color: $input-group-secondary-addon-bg;
+	// 	border-color: $input-group-secondary-addon-border-color;
+	// 	border-style: solid;
+	// 	border-width: $input-group-secondary-addon-border-width;
+	// 	color: $input-group-secondary-addon-color;
+	// 	margin-right: -$input-border-left-width;
 
-		.custom-control-description,
-		.form-check-description {
-			color: $input-group-secondary-addon-color;
-		}
-	}
+	// 	.custom-control-description,
+	// 	.form-check-description {
+	// 		color: $input-group-secondary-addon-color;
+	// 	}
+	// }
 
-	.form-control + .input-group-addon:not(:first-child) {
-		border-left-color: $input-group-secondary-addon-border-color;
-		border-left-style: solid;
-		border-left-width: $input-group-secondary-addon-border-width;
-		margin-left: -$input-border-right-width;
-		margin-right: 0;
-	}
+	// .form-control + .input-group-addon:not(:first-child) {
+	// 	border-left-color: $input-group-secondary-addon-border-color;
+	// 	border-left-style: solid;
+	// 	border-left-width: $input-group-secondary-addon-border-width;
+	// 	margin-left: -$input-border-right-width;
+	// 	margin-right: 0;
+	// }
 }
 
 // Input Group Transparent
@@ -193,28 +242,28 @@
 		padding-right: $btn-padding-x;
 	}
 
-	.input-group-btn {
-		.btn,
-		&:not(:last-child) > .btn:not(:first-child),
-		&:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle) {
-			@include border-radius($btn-border-radius);
-		}
+	// .input-group-btn {
+	// 	.btn,
+	// 	&:not(:last-child) > .btn:not(:first-child),
+	// 	&:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle) {
+	// 		@include border-radius($btn-border-radius);
+	// 	}
 
-		&:last-child > .btn {
-			margin-left: $btn-border-width;
-		}
+	// 	&:last-child > .btn {
+	// 		margin-left: $btn-border-width;
+	// 	}
 
-		&:not(:last-child) > .btn {
-			margin-right: $btn-border-width;
-		}
-	}
+	// 	&:not(:last-child) > .btn {
+	// 		margin-right: $btn-border-width;
+	// 	}
+	// }
 
-	.input-group-addon {
-		background-color: $input-group-transparent-addon-bg;
-		border-color: $input-group-transparent-addon-border-color;
-		border-width: $input-group-transparent-addon-border-width;
-		color: $input-group-transparent-addon-color;
-	}
+	// .input-group-addon {
+	// 	background-color: $input-group-transparent-addon-bg;
+	// 	border-color: $input-group-transparent-addon-border-color;
+	// 	border-width: $input-group-transparent-addon-border-width;
+	// 	color: $input-group-transparent-addon-color;
+	// }
 }
 
 // Input Group Inset
@@ -278,25 +327,25 @@
 // Input Group Sizes
 
 .input-group-lg {
-	> .input-group-addon {
-		padding-bottom: $input-group-addon-padding-y-lg;
-		padding-top: $input-group-addon-padding-y-lg;
+	// > .input-group-addon {
+	// 	padding-bottom: $input-group-addon-padding-y-lg;
+	// 	padding-top: $input-group-addon-padding-y-lg;
 
-		@if not ($input-group-addon-padding-x-lg == $btn-padding-x-lg) {
-			padding-left: $input-group-addon-padding-x-lg;
-			padding-right: $input-group-addon-padding-x-lg;
-		}
+	// 	@if not ($input-group-addon-padding-x-lg == $btn-padding-x-lg) {
+	// 		padding-left: $input-group-addon-padding-x-lg;
+	// 		padding-right: $input-group-addon-padding-x-lg;
+	// 	}
 
-		&:first-child {
-			border-bottom-left-radius: $input-group-addon-border-radius-lg;
-			border-top-left-radius: $input-group-addon-border-radius-lg;
-		}
+	// 	&:first-child {
+	// 		border-bottom-left-radius: $input-group-addon-border-radius-lg;
+	// 		border-top-left-radius: $input-group-addon-border-radius-lg;
+	// 	}
 
-		&:last-child {
-			border-bottom-right-radius: $input-group-addon-border-radius-lg;
-			border-top-right-radius: $input-group-addon-border-radius-lg;
-		}
-	}
+	// 	&:last-child {
+	// 		border-bottom-right-radius: $input-group-addon-border-radius-lg;
+	// 		border-top-right-radius: $input-group-addon-border-radius-lg;
+	// 	}
+	// }
 
 	.input-group-constrain {
 		height: auto;
@@ -314,33 +363,33 @@
 		padding-right: $input-group-addon-padding-x-lg;
 	}
 
-	> .input-group-btn > .btn {
-		height: $input-height-lg;
-		padding-bottom: 0;
-		padding-left: $btn-padding-x-lg;
-		padding-right: $btn-padding-x-lg;
-		padding-top: 0;
+	// > .input-group-btn > .btn {
+	// 	height: $input-height-lg;
+	// 	padding-bottom: 0;
+	// 	padding-left: $btn-padding-x-lg;
+	// 	padding-right: $btn-padding-x-lg;
+	// 	padding-top: 0;
 
-		@include clay-scale-component {
-			height: $input-height-lg-mobile;
-			padding-bottom: 0;
-			padding-left: $btn-padding-x-lg-mobile;
-			padding-right: $btn-padding-x-lg-mobile;
-			padding-top: 0;
-		}
-	}
+	// 	@include clay-scale-component {
+	// 		height: $input-height-lg-mobile;
+	// 		padding-bottom: 0;
+	// 		padding-left: $btn-padding-x-lg-mobile;
+	// 		padding-right: $btn-padding-x-lg-mobile;
+	// 		padding-top: 0;
+	// 	}
+	// }
 
-	@if not ($btn-border-radius-lg == $input-border-radius-lg) {
-		> .input-group-btn {
-			&:first-child > .btn:first-child {
-				@include border-left-radius($btn-border-radius-lg);
-			}
+	// @if not ($btn-border-radius-lg == $input-border-radius-lg) {
+	// 	> .input-group-btn {
+	// 		&:first-child > .btn:first-child {
+	// 			@include border-left-radius($btn-border-radius-lg);
+	// 		}
 
-			&:last-child > .btn:last-child {
-				@include border-right-radius($btn-border-radius-lg);
-			}
-		}
-	}
+	// 		&:last-child > .btn:last-child {
+	// 			@include border-right-radius($btn-border-radius-lg);
+	// 		}
+	// 	}
+	// }
 
 	> .input-group-input .form-control {
 		font-size: $input-font-size-lg;
@@ -358,25 +407,25 @@
 }
 
 .input-group-sm {
-	> .input-group-addon {
-		padding-bottom: $input-group-addon-padding-y-sm;
-		padding-top: $input-group-addon-padding-y-sm;
+	// > .input-group-addon {
+	// 	padding-bottom: $input-group-addon-padding-y-sm;
+	// 	padding-top: $input-group-addon-padding-y-sm;
 
-		@if not ($input-group-addon-padding-x-sm == $btn-padding-x-sm) {
-			padding-left: $input-group-addon-padding-x-sm;
-			padding-right: $input-group-addon-padding-x-sm;
-		}
+	// 	@if not ($input-group-addon-padding-x-sm == $btn-padding-x-sm) {
+	// 		padding-left: $input-group-addon-padding-x-sm;
+	// 		padding-right: $input-group-addon-padding-x-sm;
+	// 	}
 
-		&:first-child {
-			border-bottom-left-radius: $input-group-addon-border-radius-sm;
-			border-top-left-radius: $input-group-addon-border-radius-sm;
-		}
+	// 	&:first-child {
+	// 		border-bottom-left-radius: $input-group-addon-border-radius-sm;
+	// 		border-top-left-radius: $input-group-addon-border-radius-sm;
+	// 	}
 
-		&:last-child {
-			border-bottom-right-radius: $input-group-addon-border-radius-sm;
-			border-top-right-radius: $input-group-addon-border-radius-sm;
-		}
-	}
+	// 	&:last-child {
+	// 		border-bottom-right-radius: $input-group-addon-border-radius-sm;
+	// 		border-top-right-radius: $input-group-addon-border-radius-sm;
+	// 	}
+	// }
 
 	.input-group-constrain {
 		height: auto;
@@ -394,33 +443,33 @@
 		padding-right: $input-group-addon-padding-x-sm;
 	}
 
-	> .input-group-btn > .btn {
-		height: $input-height-sm;
-		padding-bottom: 0;
-		padding-left: $btn-padding-x-sm;
-		padding-right: $btn-padding-x-sm;
-		padding-top: 0;
+	// > .input-group-btn > .btn {
+	// 	height: $input-height-sm;
+	// 	padding-bottom: 0;
+	// 	padding-left: $btn-padding-x-sm;
+	// 	padding-right: $btn-padding-x-sm;
+	// 	padding-top: 0;
 
-		@include clay-scale-component {
-			height: $input-height-sm-mobile;
-			padding-bottom: 0;
-			padding-left: $btn-padding-x-sm-mobile;
-			padding-right: $btn-padding-x-sm-mobile;
-			padding-top: 0;
-		}
-	}
+	// 	@include clay-scale-component {
+	// 		height: $input-height-sm-mobile;
+	// 		padding-bottom: 0;
+	// 		padding-left: $btn-padding-x-sm-mobile;
+	// 		padding-right: $btn-padding-x-sm-mobile;
+	// 		padding-top: 0;
+	// 	}
+	// }
 
-	@if not ($btn-border-radius-sm == $input-border-radius-sm) {
-		> .input-group-btn {
-			&:first-child > .btn:first-child {
-				@include border-left-radius($btn-border-radius-sm);
-			}
+	// @if not ($btn-border-radius-sm == $input-border-radius-sm) {
+	// 	> .input-group-btn {
+	// 		&:first-child > .btn:first-child {
+	// 			@include border-left-radius($btn-border-radius-sm);
+	// 		}
 
-			&:last-child > .btn:last-child {
-				@include border-right-radius($btn-border-radius-sm);
-			}
-		}
-	}
+	// 		&:last-child > .btn:last-child {
+	// 			@include border-right-radius($btn-border-radius-sm);
+	// 		}
+	// 	}
+	// }
 
 	> .input-group-input .form-control {
 		font-size: $input-font-size-sm;
