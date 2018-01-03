@@ -1,5 +1,3 @@
-// Will need to revisit this whole thing once https://github.com/twbs/bootstrap/pull/25020 is merged
-
 .input-group {
 	.btn:hover {
 		z-index: $zindex-input-group-hover;
@@ -11,9 +9,78 @@
 	}
 }
 
-.input-group-prepend,
+// Input Group Item
+
+.input-group-item {
+	display: flex;
+	flex-grow: 1;
+	margin-left: 0.5rem;
+	width: 1%;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.input-group-item-shrink {
+	flex-grow: 0;
+	width: auto;
+}
+
+// Input Group Prepend
+
+.input-group-prepend {
+	align-items: stretch;
+	margin-right: -$input-border-left-width;
+
+	+ .input-group-prepend,
+	+ .input-group-append,
+	+ .input-group-item:not(.input-group-append) {
+		margin-left: 0;
+	}
+
+	+ .input-group-item:not(.input-group-append) .form-control {
+		@include border-left-radius(0);
+	}
+}
+
+.input-group > .input-group-prepend {
+	&:not(:first-child) > .form-control {
+		@include border-left-radius(0);
+	}
+
+	> .form-control {
+		@include border-right-radius(0);
+	}
+}
+
+.input-group-item:not(.input-group-prepend) + .input-group-prepend {
+	.btn {
+		@include border-left-radius($btn-border-radius);
+	}
+
+	.form-control,
+	.input-group-text {
+		@include border-left-radius($input-border-radius);
+	}
+}
+
+// Input Group Append
+
 .input-group-append {
 	align-items: stretch;
+	margin-left: -$input-border-right-width;
+}
+
+.input-group > .input-group-append {
+	&:not(:last-child) > .form-control,
+	&:last-child > .form-control:not(:last-child) {
+		@include border-right-radius(0);
+	}
+
+	> .form-control {
+		@include border-left-radius(0);
+	}
 }
 
 // Input Group Btn
@@ -76,16 +143,19 @@
 	display: flex;
 	font-weight: $input-group-addon-font-weight;
 	height: $input-height;
+	justify-content: center;
+	min-width: 40px;
 	padding-bottom: $input-group-addon-padding-y;
+	padding-left: $input-group-addon-padding-x;
+	padding-right: $input-group-addon-padding-x;
 	padding-top: $input-group-addon-padding-y;
-
-	@if not ($input-group-addon-padding-x == $btn-padding-x) {
-		padding-left: $input-group-addon-padding-x;
-		padding-right: $input-group-addon-padding-x;
-	}
 
 	@include clay-scale-component {
 		height: $input-height-mobile;
+	}
+
+	label {
+		color: $input-group-addon-color;
 	}
 
 	.custom-control,
@@ -147,13 +217,14 @@
 
 // Input Group Input
 
-.input-group-input {
-	display: flex;
+// .input-group-input {
+// 	display: flex;
+// 	flex-grow: 1;
 
-	.form-control {
-		display: block;
-	}
-}
+// 	.form-control {
+// 		display: block;
+// 	}
+// }
 
 // Input Group Constrain
 
@@ -210,37 +281,37 @@
 // Input Group Transparent
 
 .input-group-transparent {
-	@if ($input-group-transparent-addon-border-width == 0) {
-		.form-control {
-			&:not(:first-child),
-			&:not(:last-child),
-			&:not(:first-child):not(:last-child) {
-				@include border-radius($input-border-radius);
-			}
-		}
+	// @if ($input-group-transparent-addon-border-width == 0) {
+	// 	.form-control {
+	// 		&:not(:first-child),
+	// 		&:not(:last-child),
+	// 		&:not(:first-child):not(:last-child) {
+	// 			@include border-radius($input-border-radius);
+	// 		}
+	// 	}
 
-		&.input-group-lg .form-control:not(:first-child):not(:last-child) {
-			@include border-radius($input-border-radius-lg);
-		}
+	// 	&.input-group-lg .form-control:not(:first-child):not(:last-child) {
+	// 		@include border-radius($input-border-radius-lg);
+	// 	}
 
-		&.input-group-sm .form-control:not(:first-child):not(:last-child) {
-			@include border-radius($input-border-radius-lg);
-		}
-	}
+	// 	&.input-group-sm .form-control:not(:first-child):not(:last-child) {
+	// 		@include border-radius($input-border-radius-lg);
+	// 	}
+	// }
 
-	.btn-link {
-		border-width: 0;
-	}
+	// .btn-link {
+	// 	border-width: 0;
+	// }
 
-	.btn-unstyled {
-		border-width: 0;
-		color: $input-group-transparent-addon-color;
+	// .btn-unstyled {
+	// 	border-width: 0;
+	// 	color: $input-group-transparent-addon-color;
 
-		// Will need to be revisted once https://github.com/twbs/bootstrap/pull/25020 is merged
-		font-size: $btn-font-size;
-		padding-left: $btn-padding-x;
-		padding-right: $btn-padding-x;
-	}
+	// 	// Will need to be revisted once https://github.com/twbs/bootstrap/pull/25020 is merged
+	// 	font-size: $btn-font-size;
+	// 	padding-left: $btn-padding-x;
+	// 	padding-right: $btn-padding-x;
+	// }
 
 	// .input-group-btn {
 	// 	.btn,
@@ -273,9 +344,9 @@
 		padding-right: 3.25rem;
 	}
 
-	.input-group-input {
-		width: 100%;
-	}
+	// .input-group-input {
+	// 	width: 100%;
+	// }
 }
 
 .input-group-inset-left {
@@ -391,19 +462,19 @@
 	// 	}
 	// }
 
-	> .input-group-input .form-control {
-		font-size: $input-font-size-lg;
-		height: $input-height-lg;
-		padding-bottom: $input-padding-y-lg;
-		padding-left: $input-padding-x-lg;
-		padding-right: $input-padding-x-lg;
-		padding-top: $input-padding-y-lg;
+	// > .input-group-input .form-control {
+	// 	font-size: $input-font-size-lg;
+	// 	height: $input-height-lg;
+	// 	padding-bottom: $input-padding-y-lg;
+	// 	padding-left: $input-padding-x-lg;
+	// 	padding-right: $input-padding-x-lg;
+	// 	padding-top: $input-padding-y-lg;
 
-		@include clay-scale-component {
-			font-size: $input-font-size-lg-mobile;
-			height: $input-height-lg-mobile;
-		}
-	}
+	// 	@include clay-scale-component {
+	// 		font-size: $input-font-size-lg-mobile;
+	// 		height: $input-height-lg-mobile;
+	// 	}
+	// }
 }
 
 .input-group-sm {
@@ -471,17 +542,17 @@
 	// 	}
 	// }
 
-	> .input-group-input .form-control {
-		font-size: $input-font-size-sm;
-		height: $input-height-sm;
-		padding-bottom: $input-padding-y-sm;
-		padding-left: $input-padding-x-sm;
-		padding-right: $input-padding-x-sm;
-		padding-top: $input-padding-y-sm;
+	// > .input-group-input .form-control {
+	// 	font-size: $input-font-size-sm;
+	// 	height: $input-height-sm;
+	// 	padding-bottom: $input-padding-y-sm;
+	// 	padding-left: $input-padding-x-sm;
+	// 	padding-right: $input-padding-x-sm;
+	// 	padding-top: $input-padding-y-sm;
 
-		@include clay-scale-component {
-			font-size: $input-font-size-sm-mobile;
-			height: $input-height-sm-mobile;
-		}
-	}
+	// 	@include clay-scale-component {
+	// 		font-size: $input-font-size-sm-mobile;
+	// 		height: $input-height-sm-mobile;
+	// 	}
+	// }
 }
