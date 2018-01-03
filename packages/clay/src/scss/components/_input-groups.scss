@@ -7,6 +7,10 @@
 	.form-control:focus {
 		z-index: $zindex-input-group-focus;
 	}
+
+	.btn-unstyled {
+		color: inherit;
+	}
 }
 
 // Input Group Item
@@ -278,65 +282,6 @@
 	// }
 }
 
-// Input Group Transparent
-
-.input-group-transparent {
-	// @if ($input-group-transparent-addon-border-width == 0) {
-	// 	.form-control {
-	// 		&:not(:first-child),
-	// 		&:not(:last-child),
-	// 		&:not(:first-child):not(:last-child) {
-	// 			@include border-radius($input-border-radius);
-	// 		}
-	// 	}
-
-	// 	&.input-group-lg .form-control:not(:first-child):not(:last-child) {
-	// 		@include border-radius($input-border-radius-lg);
-	// 	}
-
-	// 	&.input-group-sm .form-control:not(:first-child):not(:last-child) {
-	// 		@include border-radius($input-border-radius-lg);
-	// 	}
-	// }
-
-	// .btn-link {
-	// 	border-width: 0;
-	// }
-
-	// .btn-unstyled {
-	// 	border-width: 0;
-	// 	color: $input-group-transparent-addon-color;
-
-	// 	// Will need to be revisted once https://github.com/twbs/bootstrap/pull/25020 is merged
-	// 	font-size: $btn-font-size;
-	// 	padding-left: $btn-padding-x;
-	// 	padding-right: $btn-padding-x;
-	// }
-
-	// .input-group-btn {
-	// 	.btn,
-	// 	&:not(:last-child) > .btn:not(:first-child),
-	// 	&:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle) {
-	// 		@include border-radius($btn-border-radius);
-	// 	}
-
-	// 	&:last-child > .btn {
-	// 		margin-left: $btn-border-width;
-	// 	}
-
-	// 	&:not(:last-child) > .btn {
-	// 		margin-right: $btn-border-width;
-	// 	}
-	// }
-
-	// .input-group-addon {
-	// 	background-color: $input-group-transparent-addon-bg;
-	// 	border-color: $input-group-transparent-addon-border-color;
-	// 	border-width: $input-group-transparent-addon-border-width;
-	// 	color: $input-group-transparent-addon-color;
-	// }
-}
-
 // Input Group Inset
 
 .input-group-inset {
@@ -388,10 +333,6 @@
 		padding-top: 0;
 		padding-left: ($btn-padding-x - 0.1875rem);
 		padding-right: ($btn-padding-x - 0.1875rem);
-	}
-
-	.btn-unstyled {
-		color: inherit;
 	}
 }
 
