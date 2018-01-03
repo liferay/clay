@@ -219,32 +219,6 @@
 // 	}
 // }
 
-// Input Group Constrain
-
-.input-group-constrain {
-	border-bottom-width: 0;
-	height: auto;
-	line-height: $input-height-inner;
-	max-width: $input-group-constrain-max-width;
-	overflow-x: auto;
-	overflow-y: hidden;
-	padding-left: 0;
-	padding-right: 0;
-
-	@include clay-scale-component {
-		line-height: $input-height-inner-mobile;
-		max-width: $input-group-constrain-max-width-mobile;
-	}
-}
-
-.input-group-constrain-text {
-	border-bottom-color: $input-border-color;
-	border-bottom-style: solid;
-	border-bottom-width: $input-border-bottom-width;
-	padding-left: $input-group-addon-padding-x;
-	padding-right: $input-group-addon-padding-x;
-}
-
 // Input Group Inset
 
 .input-group-inset {
@@ -318,22 +292,6 @@
 	// 	}
 	// }
 
-	.input-group-constrain {
-		height: auto;
-		line-height: $input-height-inner-lg;
-		padding-left: 0;
-		padding-right: 0;
-
-		@include clay-scale-component {
-			line-height: $input-height-inner-lg-mobile;
-		}
-	}
-
-	.input-group-constrain-text {
-		padding-left: $input-group-addon-padding-x-lg;
-		padding-right: $input-group-addon-padding-x-lg;
-	}
-
 	// > .input-group-btn > .btn {
 	// 	height: $input-height-lg;
 	// 	padding-bottom: 0;
@@ -397,22 +355,6 @@
 	// 		border-top-right-radius: $input-group-addon-border-radius-sm;
 	// 	}
 	// }
-
-	.input-group-constrain {
-		height: auto;
-		line-height: $input-height-inner-sm;
-		padding-left: 0;
-		padding-right: 0;
-
-		@include clay-scale-component {
-			line-height: $input-height-inner-sm-mobile;
-		}
-	}
-
-	.input-group-constrain-text {
-		padding-left: $input-group-addon-padding-x-sm;
-		padding-right: $input-group-addon-padding-x-sm;
-	}
 
 	// > .input-group-btn > .btn {
 	// 	height: $input-height-sm;
