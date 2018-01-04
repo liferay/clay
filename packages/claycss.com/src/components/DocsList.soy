@@ -1,0 +1,33 @@
+{namespace DocsList}
+
+/**
+ * @param section
+ */
+{template .render}
+	{if $section.children}
+		<div class="docs-list row">
+			{foreach $childId in $section.childIds}
+				{let $childPage: $section.children[$childId] /}
+
+				{if not $childPage.hidden}
+					<div class="col-md-4">
+						{call .anchor data="all"}
+							{param page: $childPage /}
+						{/call}
+					</div>
+				{/if}
+			{/foreach}
+		</div>
+	{/if}
+{/template}
+
+/**
+ * @param page
+ */
+{template .anchor}
+	<div class="docs-item">
+		<a href="{$page.url}">
+			<span>{$page.title}</span>
+		</a>
+	</div>
+{/template}

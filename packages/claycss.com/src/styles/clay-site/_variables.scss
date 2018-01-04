@@ -1,0 +1,43 @@
+// Clay - Bootstrap vars
+
+$font-family-sans-serif: "Source Sans Pro", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Site vars
+
+$content-max-width: 960px;
+
+$sidebar-width: 376px;
+
+$base-size: 24px; // 1.5rem aprox
+
+// Color
+
+$bg-color: #F5F5F8;
+$footer-bg-color: #272833;
+
+$brand-dark: #B3472D;
+$brand-dark-lighter: #F1F2F5;
+
+$brand-light: #FFF;
+
+$brand-light-secondary-text: #A7A9BC;
+$brand-light-text: $brand-light;
+
+$brand-primary: #B16D50 !default;
+$brand-secondary: #30313F;
+
+$brand-lighten: #FBF8F5;
+
+$text-color: #000 !default;
+
+// Sizes
+
+$margin-top-body: $base-size * 4;
+
+// Breakpoints
+
+$screen-md: 900px;
+$screen-sm: 900px;
+$screen-xs: 768px;
+
+$grid-float-breakpoint: $screen-sm;
