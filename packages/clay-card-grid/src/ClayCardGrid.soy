@@ -65,7 +65,9 @@
 
 	<li class="card-page-item-directory">
 		{let $variant kind="text"}
-			{if $schema[0] and $schema[0].fieldsMap and $schema[0].fieldsMap.contentRenderer}
+			{if $schema[0].contentRenderer}
+				{$schema[0].contentRenderer}
+			{elseif $schema[0] and $schema[0].fieldsMap and $schema[0].fieldsMap.contentRenderer}
 				{if $schema[0].contentRendererMap and $schema[0].contentRendererMap[$item[$schema[0].fieldsMap.contentRenderer]]}
 					{$schema[0].contentRendererMap[$item[$schema[0].fieldsMap.contentRenderer]]}
 				{elseif $schema[0].contentRendererMap['*']}
@@ -74,7 +76,7 @@
 					image
 				{/if}
 			{else}
-				{$schema[0].contentRenderer ?: 'image'}
+				image
 			{/if}
 		{/let}
 

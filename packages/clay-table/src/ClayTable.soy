@@ -188,16 +188,18 @@
 
 		{foreach $fieldSchema in $schema}
 			{let $variant kind="text"}
-				{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.contentRenderer}
+				{if $fieldSchema.contentRenderer}
+					{$fieldSchema.contentRenderer}
+				{elseif $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.contentRenderer}
 					{if $fieldSchema.contentRendererMap and $fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
 						{$fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
 					{elseif $fieldSchema.contentRendererMap['*']}
 						{$fieldSchema.contentRendererMap['*']}
+					{elseif index($fieldSchema) == 0}
+						main
 					{/if}
 				{elseif index($fieldSchema) == 0}
 					main
-				{else}
-					{$fieldSchema.contentRenderer}
 				{/if}
 			{/let}
 
