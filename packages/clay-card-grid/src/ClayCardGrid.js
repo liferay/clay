@@ -56,56 +56,28 @@ ClayCardGrid.STATE = {
 	 * List of items.
 	 * @instance
 	 * @memberof ClayCardGrid
+	 * @type {?array|undefined}
+	 * @default undefined
+	 */
+	items: Config.array(),
+
+	/**
+	 * Schema mapping list item fields with item data properties.
+	 * @instance
+	 * @memberof ClayCardGrid
 	 * @type {!array}
 	 * @default undefined
 	 */
-	items: Config.arrayOf(
+	schema: Config.arrayOf(
 		Config.shapeOf({
-			actionItems: Config.arrayOf(
-				Config.shapeOf({
-					disabled: Config.bool().value(false),
-					href: Config.string().required(),
-					icon: Config.string(),
-					label: Config.string().required(),
-					quickAction: Config.bool(),
-					separator: Config.bool().value(false),
-				})
-			),
-			color: Config.oneOf([
-				'danger',
-				'dark',
-				'info',
-				'light',
-				'primary',
-				'secondary',
-				'success',
-				'warning',
-			]).value('primary'),
-			description: Config.string(),
-			disabled: Config.bool(),
-			fileType: Config.string(),
-			href: Config.string(),
-			icon: Config.string(),
-			iconShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
-			imageSrc: Config.string(),
-			initials: Config.string(),
-			labels: Config.arrayOf(
-				Config.shapeOf({
-					label: Config.string(),
-					style: Config.oneOf([
-						'danger',
-						'info',
-						'secondary',
-						'success',
-						'warning',
-					]).value('secondary'),
-				})
-			),
-			selected: Config.bool().value(false),
-			title: Config.string().required(),
-			type: Config.oneOf(['file', 'folder', 'image', 'user']).value(
-				'image'
-			),
+			contentRenderer: Config.string(),
+			contentRendererMap: Config.object(),
+			fieldName: Config.string(),
+			fieldsMap: Config.object(),
+			fileTypeStylesMap: Config.object(),
+			iconsMap: Config.object(),
+			labelStylesMap: Config.object(),
+			userColorsMap: Config.object(),
 		})
 	).required(),
 
