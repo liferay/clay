@@ -165,7 +165,8 @@ ClayCard.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	labels: Config.arrayOf(
+	labels: Config.oneOfType([
+		Config.string(),
 		Config.shapeOf({
 			label: Config.string(),
 			style: Config.oneOf([
@@ -175,8 +176,8 @@ ClayCard.STATE = {
 				'success',
 				'warning',
 			]).value('secondary'),
-		})
-	),
+		}),
+	]),
 
 	/**
 	 * Flag to indicate if the card is selectable or not.

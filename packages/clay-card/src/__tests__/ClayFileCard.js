@@ -143,9 +143,7 @@ describe('ClayFileCard', function() {
 				{
 					label: 'Approved',
 				},
-				{
-					label: 'Pending',
-				},
+				'Pending',
 			],
 			spritemap: spritemap,
 			title: 'My Title',

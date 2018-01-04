@@ -163,9 +163,7 @@ describe('ClayImageCard', function() {
 				{
 					label: 'Approved',
 				},
-				{
-					label: 'Pending',
-				},
+				'Pending',
 			],
 			spritemap: spritemap,
 			title: 'My Title',

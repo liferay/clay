@@ -23,10 +23,7 @@
 	{@param? imageSrc: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? labels: list<[
-		label: string,
-		style: string
-	]>}
+	{@param? labels: list<?>}
 	{@param? selectable: bool}
 	{@param? selected: bool}
 	{@param? spritemap: string}
@@ -112,10 +109,7 @@
 		separator: bool
 	]>}
 	{@param? href: string}
-	{@param? labels: list<[
-		label: string,
-		style: string
-	]>}
+	{@param? labels: list<?>}
 	{@param? spritemap: string}
 	{@param? subtitle: string}
 
@@ -139,10 +133,16 @@
 				{if $labels}
 					<div class="card-detail">
 						{foreach $label in $labels}
-							{call ClayLabel.render}
-								{param label: $label.label /}
-								{param style: $label.style /}
-							{/call}
+							{if $label.label}
+								{call ClayLabel.render}
+									{param label: $label.label /}
+									{param style: $label.style /}
+								{/call}
+							{else}
+								{call ClayLabel.render}
+									{param label: $label /}
+								{/call}
+							{/if}
 						{/foreach}
 					</div>
 				{/if}
