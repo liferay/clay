@@ -143,7 +143,9 @@ ClayTable.STATE = {
 	schema: Config.arrayOf(
 		Config.shapeOf({
 			contentRenderer: Config.string(),
+			contentRendererMap: Config.object(),
 			fieldName: Config.string().required(),
+			fieldsMap: Config.object(),
 			label: Config.string(),
 			sortable: Config.bool(),
 			sortingOrder: Config.oneOf(['asc', 'desc']),
