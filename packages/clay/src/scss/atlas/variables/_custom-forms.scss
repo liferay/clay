@@ -27,15 +27,15 @@ $custom-control-description-line-height: $custom-control-indicator-size + ($cust
 // Custom Checkbox
 
 $custom-checkbox-indicator-icon-checked: clay-icon(check, #FFF) !default;
-$custom-checkbox-indicator-icon-checked-bg-size: 0.6em !default; // 12px
-$custom-checkbox-indicator-icon-indeterminate-bg-size: 0.5em !default; // 10px
+$custom-checkbox-indicator-icon-checked-bg-size: 60% !default;
+$custom-checkbox-indicator-icon-indeterminate-bg-size: 50% !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
 $custom-checkbox-indicator-border-radius: 0.125rem !default; // 2px
 
 // Custom Radio
 
-$custom-radio-indicator-icon-checked-bg-size: 0.7em !default; // 11.2px
+$custom-radio-indicator-icon-checked-bg-size: 70% !default;
 
 $custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg !default;
 $custom-radio-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-border-color !default;

@@ -257,6 +257,7 @@
 .form-check-card {
 	margin-bottom: $card-margin-bottom;
 	margin-top: 0;
+	padding-left: 0;
 
 	.card {
 		font-size: $font-size-base;
@@ -274,9 +275,18 @@
 		}
 	}
 
-	.custom-control-input,
-	.custom-control-indicator {
+	.custom-control-input {
 		z-index: 1;
+	}
+
+	.custom-control-label {
+		position: absolute;
+		z-index: 1;
+
+		&::before,
+		&::after {
+			top: 0;
+		}
 	}
 
 	.form-check-input {
@@ -340,7 +350,7 @@
 
 .form-check-bottom-left {
 	.custom-control-input,
-	.custom-control-indicator,
+	.custom-control-label,
 	.form-check-input {
 		bottom: $checkbox-position;
 		left: $checkbox-position;
@@ -351,7 +361,7 @@
 
 .form-check-bottom-right {
 	.custom-control-input,
-	.custom-control-indicator,
+	.custom-control-label,
 	.form-check-input {
 		bottom: $checkbox-position;
 		left: auto;
@@ -363,7 +373,7 @@
 
 .form-check-middle-left {
 	.custom-control-input,
-	.custom-control-indicator,
+	.custom-control-label,
 	.form-check-input {
 		left: $checkbox-position;
 		margin-top: 0;
@@ -374,7 +384,7 @@
 
 .form-check-middle-right {
 	.custom-control-input,
-	.custom-control-indicator,
+	.custom-control-label,
 	.form-check-input {
 		left: auto;
 		margin-top: 0;
@@ -386,7 +396,7 @@
 
 .form-check-top-left {
 	.custom-control-input,
-	.custom-control-indicator,
+	.custom-control-label,
 	.form-check-input {
 		left: $checkbox-position;
 		top: $checkbox-position;
@@ -396,7 +406,7 @@
 
 .form-check-top-right {
 	.custom-control-input,
-	.custom-control-indicator,
+	.custom-control-label,
 	.form-check-input {
 		left: auto;
 		right: $checkbox-position;

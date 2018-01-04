@@ -67,66 +67,66 @@
 
 .custom-control {
 	label {
+		cursor: $custom-control-description-cursor;
 		font-size: 1rem;
 	}
 }
 
-.custom-control-indicator {
+.custom-control-label {
+	font-size: $custom-control-description-font-size;
+	line-height: $custom-control-description-line-height;
+}
+
+.custom-control-label-text {
+	padding-left: $custom-control-description-padding-left;
+}
+
+// Custom Control Indicator
+
+.custom-control-label::before {
 	border-color: $custom-control-indicator-border-color;
 	border-style: $custom-control-indicator-border-style;
 	border-width: $custom-control-indicator-border-width;
 	font-size: $custom-control-indicator-size;
-
-	&:before {
-		margin-left: -$custom-control-indicator-border-width;
-		margin-top: -$custom-control-indicator-border-width;
-	}
-}
-
-.custom-control-description {
-	cursor: $custom-control-description-cursor;
-	font-size: $custom-control-description-font-size;
-	line-height: $custom-control-description-line-height;
-	padding-left: $custom-control-description-padding-left;
 }
 
 .custom-control-input {
 	cursor: $form-check-input-cursor;
 
-	&:active ~ .custom-control-indicator {
+	&:active ~ .custom-control-label::before {
 		border-color: $custom-control-indicator-active-border-color;
 	}
 
-	&:active:checked ~ .custom-control-indicator {
+	&:active:checked ~ .custom-control-label::before {
 		background-color: $custom-control-indicator-active-checked-bg;
 		border-color: $custom-control-indicator-active-checked-border-color;
 	}
 
-	&:checked ~ .custom-control-indicator {
+	&:checked ~ .custom-control-label::before {
 		border-color: $custom-control-indicator-checked-border-color;
 	}
 
 	&:disabled {
 		cursor: $custom-control-indicator-disabled-cursor;
 
-		~ .custom-control-indicator {
+		~ .custom-control-label::before {
 			background-color: $custom-control-indicator-disabled-bg;
 			border-color: $custom-control-indicator-disabled-border-color;
 			box-shadow: none;
 		}
 
-		~ .custom-control-description {
+		~ .custom-control-label {
 			cursor: $custom-control-description-disabled-cursor;
 		}
 	}
 
-	&:disabled:checked ~ .custom-control-indicator {
+	&:disabled:checked ~ .custom-control-label::before {
 		background-color: $custom-control-indicator-disabled-checked-bg;
 		border-color: $custom-control-indicator-disabled-checked-border-color;
 	}
 }
 
-.custom-control .custom-control-input:focus ~ .custom-control-indicator {
+.custom-control .custom-control-input:focus ~ .custom-control-label::before {
 	box-shadow: $custom-control-indicator-focus-box-shadow;
 }
 
@@ -134,22 +134,20 @@
 
 .custom-checkbox {
 	.custom-control-input {
-		&:checked ~ .custom-control-indicator {
-			&:before {
-				background-size: $custom-checkbox-indicator-icon-checked-bg-size;
-			}
+		&:checked ~ .custom-control-label::after {
+			background-size: $custom-checkbox-indicator-icon-checked-bg-size;
 		}
 
-		&:indeterminate ~ .custom-control-indicator {
+		&:indeterminate ~ .custom-control-label::before {
 			background-color: $custom-checkbox-indicator-indeterminate-bg;
 			border-color: $custom-control-indicator-indeterminate-border-color;
-
-			&:before {
-				background-size: $custom-checkbox-indicator-icon-indeterminate-bg-size;
-			}
 		}
 
-		&:disabled:indeterminate ~ .custom-control-indicator {
+		&:indeterminate ~ .custom-control-label::after {
+			background-size: $custom-checkbox-indicator-icon-indeterminate-bg-size;
+		}
+
+		&:disabled:indeterminate ~ .custom-control-label::before {
 			background-color: $custom-control-indicator-disabled-checked-bg;
 			border-color: $custom-control-indicator-disabled-checked-border-color;
 		}
@@ -160,35 +158,28 @@
 
 .custom-radio {
 	.custom-control-input {
-		&:checked ~ .custom-control-indicator {
-			&:before {
-				background-size: $custom-radio-indicator-icon-checked-bg-size;
-			}
+		&:checked ~ .custom-control-label::after {
+			background-size: $custom-radio-indicator-icon-checked-bg-size;
 		}
 
-		&:disabled ~ .custom-control-indicator {
+		&:disabled ~ .custom-control-label::before {
 			border-color: $custom-radio-indicator-disabled-border-color;
 		}
 
-		&:disabled:checked ~ .custom-control-indicator {
+		&:disabled:checked ~ .custom-control-label::before {
 			border-color: $custom-radio-indicator-disabled-checked-border-color;
 		}
 	}
 }
 
-// Will be safe to remove once https://github.com/twbs/bootstrap/pull/23503 is merged
+// Will need to be revisited once https://github.com/twbs/bootstrap/pull/25184 is merged
 
 .custom-control {
-	display: block;
-	margin-bottom: $custom-control-spacer-y;
-	margin-right: 0;
-	min-height: 0;
 	padding-left: 0;
 
 	label {
 		display: inline;
 		margin-bottom: 0;
-		padding-left: $custom-control-indicator-size;
 	}
 }
 
@@ -200,8 +191,14 @@
 	z-index: 0;
 }
 
+.custom-control-label::before {
+	display: block;
+	float: left;
+	position: relative;
+}
+
 .custom-control-inline {
-	display: inline-block;
+	margin-right: 0;
 
 	+ .custom-control-inline {
 		margin-left: $custom-control-spacer-x;
