@@ -79,6 +79,7 @@ ClayList.STATE = {
 	schema: Config.arrayOf(
 		Config.shapeOf({
 			contentRenderer: Config.string(),
+			contentRendererMap: Config.object(),
 			fieldName: Config.string(),
 			fieldsMap: Config.object(),
 			iconsMap: Config.object(),

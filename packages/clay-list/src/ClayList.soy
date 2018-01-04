@@ -6,6 +6,7 @@
 {template .render}
 	{@param schema: list<[
 		contentRenderer: string,
+		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		iconsMap: ?,
@@ -48,6 +49,7 @@
 	{@param item: ?}
 	{@param schema: list<[
 		contentRenderer: string,
+		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		iconsMap: ?,
@@ -78,7 +80,19 @@
 		{/if}
 
 		{foreach $fieldSchema in $schema}
-			{delcall ClayList.Field variant="$fieldSchema.contentRenderer"}
+			{let $variant kind="text"}
+				{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.contentRenderer}
+					{if $fieldSchema.contentRendererMap and $fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
+						{$fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
+					{elseif $fieldSchema.contentRendererMap['*']}
+						{$fieldSchema.contentRendererMap['*']}
+					{/if}
+				{else}
+					{$fieldSchema.contentRenderer}
+				{/if}
+			{/let}
+
+			{delcall ClayList.Field variant="$variant"}
 				{param fieldSchema: $fieldSchema /}
 				{param item: $item /}
 				{param spritemap: $spritemap /}
@@ -110,6 +124,7 @@
 	{@param items: list<?>}
 	{@param schema: list<[
 		contentRenderer: string,
+		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		iconsMap: ?,
@@ -179,6 +194,7 @@
 {deltemplate ClayList.Field variant="'content'"}
 	{@param fieldSchema: [
 		contentRenderer: string,
+		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		iconsMap: ?,
@@ -224,6 +240,7 @@
 {deltemplate ClayList.Field variant="'icon'"}
 	{@param fieldSchema: [
 		contentRenderer: string,
+		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		iconsMap: ?,
@@ -251,6 +268,7 @@
 {deltemplate ClayList.Field variant="'simple'"}
 	{@param fieldSchema: [
 		contentRenderer: string,
+		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		iconsMap: ?,
