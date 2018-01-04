@@ -97,7 +97,7 @@
 	font-weight: $input-group-addon-font-weight;
 	height: $input-height;
 	justify-content: center;
-	min-width: 40px;
+	min-width: $input-group-addon-min-width;
 	padding-bottom: $input-group-addon-padding-y;
 	padding-left: $input-group-addon-padding-x;
 	padding-right: $input-group-addon-padding-x;
