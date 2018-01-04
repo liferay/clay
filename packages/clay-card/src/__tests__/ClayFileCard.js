@@ -246,6 +246,21 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayFileCard with labels with styles mapped with labelStylesMap', () => {
+		component = new ClayFileCard({
+			labels: ['Approved', 'Pending', 'Error'],
+			labelStylesMap: {
+				'Approved': 'success',
+				'Pending': 'warning',
+				'*': 'danger',
+			},
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayFileCard with subtitle', () => {
 		component = new ClayFileCard({
 			spritemap: spritemap,

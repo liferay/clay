@@ -168,6 +168,15 @@ ClayImageCard.STATE = {
 	]),
 
 	/**
+	 * Object that maps specific label values with desired styles.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	labelStylesMap: Config.object(),
+
+	/**
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
 	 * @memberof ClayImageCard

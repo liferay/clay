@@ -266,6 +266,21 @@ describe('ClayImageCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayImageCard with labels with styles mapped with labelStylesMap', () => {
+		component = new ClayImageCard({
+			labels: ['Approved', 'Pending', 'Error'],
+			labelStylesMap: {
+				'Approved': 'success',
+				'Pending': 'warning',
+				'*': 'danger',
+			},
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayImageCard with subtitle', () => {
 		component = new ClayImageCard({
 			spritemap: spritemap,
