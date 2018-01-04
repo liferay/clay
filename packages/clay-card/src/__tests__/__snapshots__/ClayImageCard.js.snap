@@ -353,6 +353,24 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`warning c
 </div>
 `;
 
+exports[`ClayImageCard should render a ClayImageCard with labels with styles mapped with labelStylesMap 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first"></div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="flex-col flex-col-expand">
+        <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="card-detail">
+          <span class="label label-success">Approved</span>
+          <span class="label label-warning">Pending</span>
+          <span class="label label-danger">Error</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first"></div>
