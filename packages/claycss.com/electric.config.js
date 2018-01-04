@@ -10,15 +10,21 @@ gulp.storage.create('claycss', 'claycss.json');
 
 const generateIconData = require('./lib/icons');
 
-var clayJSPath = path.join(clay.srcDir, 'js');
+let clayJSPath = path.join(clay.srcDir, 'js');
 
 const clayPath = gulp.storage.get('clayPath');
 let clayIncludePaths = clay.includePaths;
 
 if (clayPath) {
-	clayIncludePaths = path.join(path.join(process.cwd(), clayPath, 'src/scss'));
+	clayIncludePaths = path.join(
+		path.join(process.cwd(), clayPath, 'src/scss')
+	);
 
-	console.log('Warning! using ' + clayIncludePaths + ' to compile sass.\nDelete claycss.json to reset.');
+	console.log(
+		'Warning! using ' +
+			clayIncludePaths +
+			' to compile sass.\nDelete claycss.json to reset.'
+	);
 }
 
 module.exports = {
@@ -27,22 +33,23 @@ module.exports = {
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
 	metalComponents: ['electric-quartz-components'],
+	resolveModules: ['../../node_modules'],
 	sassOptions: {
-		includePaths: ['node_modules', clayIncludePaths]
+		includePaths: ['node_modules', clayIncludePaths],
 	},
 	vendorSrc: [
 		{
 			dest: 'dist/vendor/lexicon',
-			src: path.join(clay.buildDir, 'images', 'icons', '*')
+			src: path.join(clay.buildDir, 'images', 'icons', '*'),
 		},
 		{
 			src: [
 				path.join(clayJSPath, 'svg4everybody.js'),
-				path.join(clayJSPath, 'bootstrap.js')
-			]
+				path.join(clayJSPath, 'bootstrap.js'),
+			],
 		},
 		{
-			src: path.join(clayJSPath, 'svg4everybody.js')
-		}
-	]
+			src: path.join(clayJSPath, 'svg4everybody.js'),
+		},
+	],
 };
