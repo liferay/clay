@@ -19,8 +19,10 @@ section: Components
 	<div class="form-group">
 		<label for="customFile1">Attach File</label>
 		<div class="input-group">
-			<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly tabindex="-1" type="text">
-			<div class="input-group-append">
+			<div class="input-group-item input-group-prepend">
+				<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly tabindex="-1" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
 				<div class="form-file">
 					<input class="form-file-input" data-clay-site-content="#customFileText1" data-clay-site-toggle="file" id="customFile1" type="file">
 					<button class="btn btn-secondary" tabindex="-1">Browse</button>
@@ -31,7 +33,7 @@ section: Components
 	<div class="form-group">
 		<label for="customFile2">Attach File</label>
 		<div class="input-group input-group-inset">
-			<div class="input-group-input">
+			<div class="input-group-item">
 				<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly tabindex="-1" type="text" style="padding-right: 92px;">
 			</div>
 			<span class="input-group-inset-item">
@@ -47,10 +49,12 @@ section: Components
 		<div class="form-file">
 			<input class="form-file-input" data-clay-site-content="#customFileText3" data-clay-site-toggle="file" id="customFile3" type="file">
 			<div class="input-group">
-				<div class="input-group-prepend">
+				<div class="input-group-item input-group-item-shrink input-group-prepend">
 					<span class="input-group-text" id="inputGroupAddon02">Browse</span>
 				</div>
-				<input aria-describedby="inputGroupAddon02" class="form-control" id="customFileText3" placeholder="Choose file..." tabindex="-1" type="text">
+				<div class="input-group-append input-group-item">
+					<input aria-describedby="inputGroupAddon02" class="form-control" id="customFileText3" placeholder="Choose file..." tabindex="-1" type="text">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -215,10 +219,10 @@ section: Components
 
 		<div class="sheet">
 			<div class="form-group">
-				<label class="custom-file">
-					<input class="custom-file-input" type="file">
-					<span class="custom-file-control"></span>
-				</label>
+				<div class="custom-file">
+					<input class="custom-file-input" id="customFileInput" type="file">
+					<label class="custom-file-label" for="customFileInput">Choose File</label>
+				</div>
 			</div>
 		</div>
 	</div>
