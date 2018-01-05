@@ -1,8 +1,6 @@
 $tooltip-bg: $body-color !default;
 $tooltip-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.4) !default;
-
-// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
-$tooltip-font-size: 0.875rem !default;
+$tooltip-font-size: 0.875rem !default; // 14px
 $tooltip-max-width: 230px !default;
 $tooltip-opacity: 1 !default;
 $tooltip-padding-x: 0.75rem !default; // 12px

@@ -1,17 +1,3 @@
-.tooltip {
-	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
-
-	@if not ($tooltip-font-size == $font-size-sm) {
-		font-size: $tooltip-font-size;
-	}
-}
-
 .tooltip-inner {
-	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
-
-	@if not ($tooltip-border-radius == $border-radius) {
-		@include border-radius($tooltip-border-radius);
-	}
-
 	@include box-shadow($tooltip-box-shadow);
 }
