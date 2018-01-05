@@ -1,5 +1,5 @@
 $btn-cursor: $link-cursor !default;
-$btn-font-size: null !default;
+$btn-font-size: $font-size-base !default;
 $btn-font-size-mobile: null !default;
 $btn-padding-x-mobile: null !default;
 $btn-padding-y-mobile: null !default;
@@ -14,14 +14,14 @@ $btn-section-line-height: 1 !default;
 
 // Button Sizes
 
-$btn-font-size-lg: null !default;
+$btn-font-size-lg: $font-size-lg !default;
 $btn-font-size-lg-mobile: null !default;
 $btn-padding-x-lg-mobile: null !default;
 $btn-padding-y-lg-mobile: null !default;
 $btn-inline-item-font-size-lg: null !default;
 $btn-section-font-size-lg: 0.8125rem !default; // 13px
 
-$btn-font-size-sm: null !default;
+$btn-font-size-sm: $font-size-sm !default;
 $btn-font-size-sm-mobile: null !default;
 $btn-padding-x-sm-mobile: null !default;
 $btn-padding-y-sm-mobile: null !default;

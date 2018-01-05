@@ -181,6 +181,138 @@
 
 // Input Group Sizes
 
-.input-group-lg {}
+.input-group-lg {
+	.input-group-inset-item {
+		.btn {
+			font-size: $btn-font-size-lg;
 
-.input-group-sm {}
+			@include clay-scale-component {
+				font-size: $btn-font-size-lg-mobile;
+			}
+		}
+	}
+
+	.input-group-item {
+		.btn {
+			font-size: $btn-font-size-lg;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-lg-mobile;
+				padding-bottom: $btn-padding-y-lg-mobile;
+				padding-left: $btn-padding-x-lg-mobile;
+				padding-right: $btn-padding-x-lg-mobile;
+				padding-top: $btn-padding-y-lg-mobile;
+			}
+
+			.inline-item {
+				font-size: $btn-inline-item-font-size-lg;
+			}
+
+			.btn-section {
+				font-size: $btn-section-font-size-lg;
+			}
+		}
+
+		.btn-monospaced {
+			height: $btn-monospaced-size-lg;
+			width: $btn-monospaced-size-lg;
+
+			@include clay-scale-component {
+				height: $btn-monospaced-size-lg-mobile;
+				width: $btn-monospaced-size-lg-mobile;
+			}
+		}
+
+		.form-control {
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			line-height: $input-line-height-lg;
+			padding-bottom: $input-padding-y-lg;
+			padding-left: $input-padding-x-lg;
+			padding-right: $input-padding-x-lg;
+			padding-top: $input-padding-y-lg;
+
+			@include clay-scale-component {
+				height: $input-height-lg-mobile;
+			}
+		}
+
+		.input-group-text {
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			min-width: $input-group-addon-min-width-lg;
+			padding-bottom: $input-group-addon-padding-y-lg;
+			padding-left: $input-group-addon-padding-x-lg;
+			padding-right: $input-group-addon-padding-x-lg;
+			padding-top: $input-group-addon-padding-y-lg;
+		}
+	}
+}
+
+.input-group-sm {
+	.input-group-item {
+		.btn {
+			font-size: $btn-font-size-sm;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-sm-mobile;
+				padding-bottom: $btn-padding-y-sm-mobile;
+				padding-left: $btn-padding-x-sm-mobile;
+				padding-right: $btn-padding-x-sm-mobile;
+				padding-top: $btn-padding-y-sm-mobile;
+			}
+
+			.inline-item {
+				font-size: $btn-inline-item-font-size-sm;
+			}
+
+			.btn-section {
+				font-size: $btn-section-font-size-sm;
+			}
+		}
+
+		.btn-monospaced {
+			height: $btn-monospaced-size-sm;
+			width: $btn-monospaced-size-sm;
+
+			@include clay-scale-component {
+				height: $btn-monospaced-size-sm-mobile;
+				width: $btn-monospaced-size-sm-mobile;
+			}
+		}
+
+		.form-control {
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			line-height: $input-line-height-sm;
+			padding-bottom: $input-padding-y-sm;
+			padding-left: $input-padding-x-sm;
+			padding-right: $input-padding-x-sm;
+			padding-top: $input-padding-y-sm;
+
+			@include clay-scale-component {
+				height: $input-height-sm-mobile;
+			}
+		}
+
+		.input-group-text {
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			min-width: $input-group-addon-min-width-sm;
+			padding-bottom: $input-group-addon-padding-y-sm;
+			padding-left: $input-group-addon-padding-x-sm;
+			padding-right: $input-group-addon-padding-x-sm;
+			padding-top: $input-group-addon-padding-y-sm;
+		}
+	}
+
+	.input-group-inset-item {
+		.btn {
+			font-size: $btn-font-size-sm;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-sm-mobile;
+			}
+		}
+	}
+}

@@ -109,7 +109,12 @@ $input-group-addon-bg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
 $input-group-addon-border-color: $input-group-addon-bg !default;
 $input-group-addon-color: $secondary !default;
 $input-group-addon-font-weight: $font-weight-semi-bold !default;
-$input-group-addon-padding-x: 0.75rem !default;
+$input-group-addon-min-width: 2.5rem !default; // 40px
+$input-group-addon-padding-x: 0.75rem !default; // 12px
+
+// Input Group Sizes
+
+$input-group-addon-min-width-sm: 2rem !default; // 32px
 
 // Input Group Secondary
 
