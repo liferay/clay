@@ -174,16 +174,16 @@ textarea.form-control {
 	&:disabled {
 		cursor: $form-check-input-disabled-cursor;
 
-		+ .form-check-description {
+		+ .form-check-label-text {
 			color: $input-label-disabled-color;
-			cursor: $form-check-description-disabled-cursor;
+			cursor: $form-check-label-text-disabled-cursor;
 		}
 	}
 }
 
-.form-check-description {
-	margin-left: $form-check-description-margin-left;
-	padding-left: $form-check-description-padding-left;
+.form-check-label-text {
+	margin-left: $form-check-label-text-margin-left;
+	padding-left: $form-check-label-text-padding-left;
 }
 
 // Disabled State
