@@ -131,44 +131,59 @@
 
 // Input Group Inset
 
-.input-group-inset {
-	.form-control {
-		padding-right: 3.25rem;
+.input-group-item.focus {
+	@include border-radius($input-border-radius);
+
+	box-shadow: $input-focus-box-shadow;
+
+	.form-control,
+	.form-control[readonly] ~ .input-group-inset-item,
+	.input-group-inset-item {
+		background-color: $input-focus-bg;
+		border-color: $input-focus-border-color;
 	}
 }
 
-.input-group-inset-start {
-	.form-control {
-		padding-left: 3.25em;
-		padding-right: $input-padding-x;
+.input-group-inset {
+	order: 5;
+
+	&[readonly] {
+		&:focus {
+			~ .input-group-inset-item {
+				background-color: $input-readonly-focus-bg;
+				border-color: $input-readonly-focus-border-color;
+				color: $input-readonly-focus-color;
+			}
+		}
+
+		~ .input-group-inset-item {
+			background-color: $input-readonly-bg;
+			border-color: $input-readonly-border-color;
+			color: $input-readonly-color;
+			cursor: $input-readonly-cursor;
+		}
 	}
 
-	.input-group-inset-item {
-		left: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
-		right: auto;
+	&:focus {
+		box-shadow: none;
 
-		@if ($input-height-inner-mobile) {
-			@include clay-scale-component {
-				left: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
-			}
+		~ .input-group-inset-item {
+			background-color: $input-focus-bg;
+			border-color: $input-focus-border-color;
 		}
 	}
 }
 
 .input-group-inset-item {
 	align-items: center;
-	color: $input-group-inset-item-color;
+	background-color: $input-bg;
+	border-color: $input-border-color;
+	border-style: solid;
+	border-width: $input-border-width;
 	display: flex;
-	height: 100%;
-	right: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
-	position: absolute;
-	z-index: 5;
-
-	@if ($input-height-inner-mobile) {
-		@include clay-scale-component {
-			left: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
-		}
-	}
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: $input-transition;
 
 	.btn {
 		height: 75%;
@@ -177,6 +192,40 @@
 		padding-left: ($btn-padding-x - 0.1875rem);
 		padding-right: ($btn-padding-x - 0.1875rem);
 	}
+}
+
+.input-group-item .input-group-inset-before.form-control {
+	@include border-left-radius(0);
+	@include border-right-radius($input-border-radius);
+
+	border-left-width: 0;
+	padding-left: 0;
+}
+
+.input-group-inset-item-before {
+	@include border-left-radius($input-border-radius);
+
+	border-right-width: 0;
+}
+
+.input-group-inset-item-before {
+	color: $input-group-inset-item-color;
+	order: 3;
+}
+
+.input-group-item .input-group-inset-after.form-control {
+	@include border-right-radius(0);
+
+	border-right-width: 0;
+	padding-right: 0;
+}
+
+.input-group-inset-item-after {
+	@include border-right-radius($input-border-radius);
+
+	border-left-width: 0;
+	color: $input-group-inset-item-color;
+	order: 9;
 }
 
 // Input Group Sizes
