@@ -32,16 +32,16 @@ section: Components
 	</div>
 	<div class="form-group">
 		<label for="customFile2">Attach File</label>
-		<div class="input-group input-group-inset">
+		<div class="input-group">
 			<div class="input-group-item">
-				<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly tabindex="-1" type="text" style="padding-right: 92px;">
+				<input class="form-control input-group-inset input-group-inset-after" id="customFileText2" placeholder="Choose file..." readonly tabindex="-1" type="text">
+				<span class="input-group-inset-item input-group-inset-item-after">
+					<div class="form-file">
+						<input class="form-file-input" data-clay-site-content="#customFileText2" data-clay-site-toggle="file" id="customFile2" type="file">
+						<button class="btn btn-secondary" tabindex="-1">Browse</button>
+					</div>
+				</span>
 			</div>
-			<span class="input-group-inset-item">
-				<div class="form-file">
-					<input class="form-file-input" data-clay-site-content="#customFileText2" data-clay-site-toggle="file" id="customFile2" type="file">
-					<button class="btn btn-secondary" tabindex="-1">Browse</button>
-				</div>
-			</span>
 		</div>
 	</div>
 	<div class="form-group">
