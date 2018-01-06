@@ -215,6 +215,102 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Input Group Inset</h3>
+
+		<blockquote class="blockquote">
+			<p><code>.input-group-inset</code>, <code>.input-group-inset-before</code>, <code>.input-group-inset-after</code>, <code>.input-group-inset-item</code>, <code>.input-group-inset-item-before</code>, and <code>.input-group-inset-item-after</code>.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			To retain the focus styles around the <code>.input-group-inset</code> component when a button or link inside is focused, add the <code>focus</code> class on <code>.input-group-item</code>. Focus Box Shadows are only supported in <code>.input-group-inset</code> with <code>.input-group-item.focus</code>. <code>.input-prepend</code> and <code>.input-append</code> aren't supported with <code>.input-group-inset</code>.
+		</div>
+
+<div class="sheet">
+	<form>
+		<div class="form-group-autofit">
+			<div class="form-group-item">
+				<div class="input-group">
+					<div class="input-group-item">
+						<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+						<div class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled d-md-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group-item">
+				<div class="input-group">
+					<div class="input-group-item">
+						<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+						<div class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group-item">
+				<div class="input-group">
+					<div class="input-group-item">
+						<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-after" placeholder="Enter Email..." type="email">
+						<div class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-secondary" type="button">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group-autofit">
+			<div class="form-group-item">
+				<div class="input-group">
+					<div class="input-group-item">
+						<input aria-label="Search for" class="form-control input-group-inset input-group-inset-before" placeholder="Search..." type="text">
+						<div class="input-group-inset-item input-group-inset-item-before">
+							<button class="btn btn-unstyled" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group-item">
+				<div class="input-group">
+					<div class="input-group-item">
+						<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-before" placeholder="Enter Email..." type="email">
+						<div class="input-group-inset-item input-group-inset-item-before">
+							<button class="btn btn-secondary" type="button">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Input Group Text Secondary</h3>
 
 <div class="sheet">
@@ -491,7 +587,7 @@ section: Components
 				<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupLgSeparated" placeholder="Some placeholder text..." type="text">
 			</div>
 			<div class="input-group-item input-group-item-shrink">
-				<button class="btn btn-unstyled" type="button">
+				<button class="btn btn-monospaced btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
 					</svg>
@@ -508,7 +604,7 @@ section: Components
 		</label>
 		<div class="input-group">
 			<div class="input-group-item input-group-item-shrink">
-				<button class="btn btn-primary" type="button">
+				<button class="btn btn-monospaced btn-primary" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
 					</svg>
@@ -518,7 +614,7 @@ section: Components
 				<input aria-label="Amount" class="form-control" id="inputGroupNormalSeparated" placeholder="Some placeholder text..." type="text">
 			</div>
 			<div class="input-group-item input-group-item-shrink">
-				<button class="btn btn-unstyled" type="button">
+				<button class="btn btn-monospaced btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
 					</svg>
@@ -541,7 +637,7 @@ section: Components
 				<input aria-label="Amount" class="form-control" id="inputGroupSmSeparated" placeholder="Some placeholder text..." type="text">
 			</div>
 			<div class="input-group-item input-group-item-shrink">
-				<button class="btn btn-unstyled" type="button">
+				<button class="btn btn-monospaced btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
 					</svg>
@@ -549,84 +645,6 @@ section: Components
 			</div>
 		</div>
 	</div>
-</div>
-
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Input Group Inset</h3>
-
-		<blockquote class="blockquote">
-			<p>Add class <code>input-group-inset</code> to <code>input-group</code> to place a button or other stuff inside the input.</p>
-			<p><code>input-group-inset</code> gets aligned right by default, add <code>input-group-inset-start</code> to <code>input-group</code> to align inset content on the left. This helps keep the tab order logical so the input is always focused first and not the button.</p>
-		</blockquote>
-
-		<div class="alert alert-warning">
-			You will need to adjust <code>padding-left</code>, <code>padding-right</code>, or both on <code>.input-group-item .form-control</code> depending on what is inside <code>.input-group-inset</code>.
-		</div>
-
-<div class="sheet">
-	<form class="row">
-		<div class="col-md-6">
-			<div class="form-group">
-				<div class="input-group input-group-inset">
-					<div class="input-group-item">
-						<input aria-label="Search for" class="form-control" placeholder="Search..." type="text">
-					</div>
-					<div class="input-group-inset-item">
-						<button class="btn btn-link d-md-none" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-							</svg>
-						</button>
-						<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
-							</svg>
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group input-group-inset input-group-inset-start">
-					<div class="input-group-item">
-						<input aria-label="Search for" class="form-control" placeholder="Search..." type="text">
-					</div>
-					<div class="input-group-inset-item">
-						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
-							</svg>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="form-group">
-				<div class="input-group input-group-inset">
-					<div class="input-group-item">
-						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-right: 92px;">
-					</div>
-					<div class="input-group-inset-item">
-						<button class="btn btn-secondary" type="button">Submit</button>
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group input-group-inset input-group-inset-start">
-					<div class="input-group-item">
-						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-left: 92px;">
-					</div>
-					<div class="input-group-inset-item">
-						<button class="btn btn-secondary" type="button">Submit</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</form>
 </div>
 
 	</div>
