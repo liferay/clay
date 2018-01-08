@@ -1,15 +1,13 @@
+import './ClayDropdownItem';
 import 'clay-button';
-import 'clay-checkbox';
-import 'clay-icon';
-import 'clay-link';
-import 'clay-radio';
 import {Align} from 'metal-position';
-import Component from 'metal-component';
 import {Config} from 'metal-state';
-import dom from 'metal-dom';
 import {EventHandler} from 'metal-events';
+import Component from 'metal-component';
+import dom from 'metal-dom';
 import itemsValidator from './items_validator';
 import Soy from 'metal-soy';
+
 import templates from './ClayDropdownBase.soy.js';
 
 /**
@@ -68,6 +66,15 @@ class ClayDropdownBase extends Component {
 	 */
 	handleButtonClick_(event) {
 		this.emit('buttonClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the item clicked event
+	 * @param {!Event} event
+	 * @protected
+	 */
+	handleItemClick_(event) {
+		this.emit('itemClicked', event);
 	}
 
 	/**
@@ -238,7 +245,7 @@ ClayDropdownBase.STATE = {
 	 * List of menu items.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {!Array}
+	 * @type {!array}
 	 * @default undefined
 	 */
 	items: itemsValidator.required(),

@@ -1,0 +1,268 @@
+{namespace ClayDropdownItem}
+
+/**
+ * Empty .render placeholder. Necessary for metal-cli AOP.
+ */
+{template .render}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? href: string} 
+	{@param? icon: string}
+	{@param? inputName: string}
+	{@param? inputValue: string} 
+	{@param? isInList: bool}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? label: string}
+	{@param? separator: bool}
+	{@param? spritemap: string}
+	{@param? type: string}
+  
+  {delcall ClayDropdownItem.Item variant="$type ?: 'item'"}
+		{param active: $active /}
+		{param checked: $checked /}
+		{param disabled: $disabled /}
+		{param href: $href /}
+		{param icon: $icon /}
+		{param inputName: $inputName /}
+		{param inputValue: $inputValue /}
+		{param isInList: $isInList /}
+		{param items: $items /}
+		{param itemsIconAlignment: $itemsIconAlignment /}
+		{param label: $label ?: '' /}
+		{param separator: $separator /}
+		{param spritemap: $spritemap /}
+	{/delcall}
+{/template}
+
+/**
+ * Renders list item
+ **/
+{deltemplate ClayDropdownItem.Item}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? isInList: bool}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? separator: bool}
+	{@param? spritemap: string}
+
+	{let $itemContent kind="html"}
+		{call ClayLink.render}
+			{param elementClasses kind="text"}
+				dropdown-item
+				{if $active}
+					{sp}active
+				{/if}
+
+				{if $disabled}
+					{sp}disabled
+				{/if}
+			{/param}
+
+			{param href kind="text"}
+				{if $disabled}
+					javascript:;
+				{elseif $href}
+					{$href}
+				{/if}
+			{/param}
+
+			{param label kind="html"}
+				{let $iconContent kind="html"}
+					{if $icon and $spritemap}
+						<div class="dropdown-item-indicator">
+							{call ClayIcon.render}
+								{param spritemap: $spritemap /}
+								{param symbol: $icon /}
+							{/call}
+						</div>
+					{/if}
+				{/let}
+
+				{if $icon and $itemsIconAlignment == 'left'}
+					{$iconContent}
+				{/if}
+
+				{$label}
+
+				{if $icon and $itemsIconAlignment == 'right'}
+					{$iconContent}
+				{/if}
+			{/param}
+		{/call}
+	{/let}
+
+	<li>
+		{$itemContent}
+	</li>
+
+	{if $separator}
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+	{/if}
+{/deltemplate}
+
+/**
+ * Renders list item with checkbox
+ **/
+{deltemplate ClayDropdownItem.Item variant="'checkbox'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? isInList: bool}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? separator: bool}
+	{@param? spritemap: string}
+
+	{let $checkbox kind="html"}
+		{call ClayCheckbox.render}
+			{param checked: $checked /}
+			{param disabled: $disabled /}
+			{param inline: true /}
+			{param label: $label /}
+			{param name: $inputName /}
+			{param value: $inputValue /}
+		{/call}
+	{/let}
+
+	{let $listItemAttributes kind="attributes"}
+		class="dropdown-item
+			{if $active or $checked}
+				{sp}active
+			{/if}
+		"
+	{/let}
+
+	{if $isInList}
+		<li {$listItemAttributes}>
+			{$checkbox}
+		</li>
+
+		{if $separator}
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+		{/if}
+	{else}
+		<div {$listItemAttributes}>
+			{$checkbox}
+		</div>
+
+		{if $separator}
+			<div class="dropdown-divider"></div>
+		{/if}
+	{/if}
+{/deltemplate}
+
+/**
+ * Renders list group header item
+ **/
+{deltemplate ClayDropdownItem.Item variant="'group'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? isInList: bool}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? separator: bool}
+	{@param? spritemap: string}
+
+	{if $label != ''}
+		{if $isInList}
+			<li class="dropdown-subheader">
+				{$label}
+			</li>
+		{else}
+			<div class="dropdown-subheader">
+				{$label}
+			</div>
+		{/if}
+	{/if}
+
+	{if $items}
+		{call ClayDropdownBase.items}
+			{param isInList: $isInList /}
+			{param items: $items /}
+			{param itemsIconAlignment: $itemsIconAlignment /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{/if}
+
+	{if $separator}
+		{if $isInList}
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+		{else}
+			<div class="dropdown-divider"></div>
+		{/if}
+	{/if}
+{/deltemplate}
+
+/**
+ * Renders list item with radio group
+ **/
+{deltemplate ClayDropdownItem.Item variant="'radiogroup'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? isInList: bool}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? separator: bool}
+	{@param? spritemap: string}
+
+	{if $label != ''}
+		<div class="dropdown-subheader">
+			{$label}
+		</div>
+	{/if}
+
+	<div aria-label="{$label}" role="radiogroup">
+		{if $items}
+			{foreach $item in $items}
+				{let $listItemAttributes kind="attributes"}
+					class="dropdown-item
+						{if $item.active or $item.checked}
+							{sp}active
+						{/if}
+					"
+				{/let}
+
+				<div {$listItemAttributes}>
+					{call ClayRadio.render}
+						{param checked: $item.checked /}
+						{param disabled: $item.disabled /}
+						{param inline: true /}
+						{param label: $item.label /}
+						{param name: $inputName /}
+						{param value: $item.inputValue /}
+					{/call}
+				</div>
+			{/foreach}
+		{/if}
+	</div>
+
+	{if $separator}
+			<div class="dropdown-divider"></div>
+	{/if}
+{/deltemplate}

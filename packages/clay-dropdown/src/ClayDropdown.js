@@ -20,6 +20,15 @@ class ClayDropdown extends Component {
 	handleButtonClick_(event) {
 		this.emit('buttonClicked', event);
 	}
+
+	/**
+	 * Continues the propagation of the item clicked event
+	 * @param {!Event} event
+	 * @protected
+	 */
+	handleItemClick_(event) {
+		this.emit('itemClicked', event);
+	}
 }
 
 /**

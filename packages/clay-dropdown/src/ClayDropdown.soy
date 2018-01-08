@@ -10,6 +10,7 @@
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
+	{@param? handleItemClick_: any}
 	{@param? icon: string}
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
@@ -42,7 +43,10 @@
 	{call ClayDropdownBase.render}
     {param button: $button /}
     {param elementClasses: $elementClasses /}
-    {param events: ['buttonClicked': $handleButtonClick_] /}
+    {param events: [
+      'buttonClicked': $handleButtonClick_,
+      'itemClicked': $handleItemClick_
+    ]/}
     {param expanded: $expanded /}
     {param id: $id /}
     {param items: $items /}
