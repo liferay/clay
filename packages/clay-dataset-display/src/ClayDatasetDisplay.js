@@ -1,3 +1,4 @@
+import 'clay-list';
 import 'clay-management-toolbar';
 
 import Component from 'metal-component';
@@ -39,7 +40,9 @@ actionItemShape.items = actionItemsValidator;
 /**
  * Metal ClayDatasetDisplay component.
  */
-class ClayDatasetDisplay extends Component {}
+class ClayDatasetDisplay extends Component {
+	handleItemToggled_(event) {}
+}
 
 /**
  * State definition.
@@ -181,14 +184,7 @@ ClayDatasetDisplay.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	viewTypes: Config.arrayOf(
-		Config.shapeOf({
-			active: Config.bool().value(false),
-			disabled: Config.bool().value(false),
-			icon: Config.string().required(),
-			label: Config.string().required(),
-		})
-	),
+	viewTypes: Config.object(),
 };
 
 defineWebComponent('clay-dataset-display', ClayDatasetDisplay);

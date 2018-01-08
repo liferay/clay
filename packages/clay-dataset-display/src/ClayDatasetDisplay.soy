@@ -24,9 +24,10 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? handleItemToggled_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
-	{@param? items: list<?>}
+	{@param? items: ?}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -34,12 +35,7 @@
 	{@param? sortingOrder: string}
 	{@param? title: string}
 	{@param? viewType: string}
-	{@param? viewTypes: list<[
-		active: bool,
-		disabled: bool,
-		icon: string,
-		label: string
-	]>}
+	{@param? viewTypes: ?}
 
 	{let $attributes kind="attributes"}
 		class="clay-dataset-display
@@ -69,7 +65,9 @@
 			{/call}
 
 			{delcall ClayDatasetDisplay.List variant="$viewType"}
+				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
+				{param schema: $viewTypes[$viewType].schema /}
 				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 				{param title: $title /}
@@ -85,4 +83,32 @@
  * UIs and components.
  */
 {deltemplate ClayDatasetDisplay.List}
+	{@param handleItemToggled_: any}
+	{@param items: ?}
+	{@param schema: ?}
+	{@param spritemap: string}
+	{@param? selectable: bool}
+	{@param? title: string}
+{/deltemplate}
+
+/**
+ * This renders a ClayList
+ **/
+{deltemplate ClayDatasetDisplay.List variant="'list'"}
+	{@param handleItemToggled_: any}
+	{@param items: ?}
+	{@param schema: ?}
+	{@param spritemap: string}
+	{@param? selectable: bool}
+	{@param? title: string}
+
+	<div class="container container-view">
+		{call ClayList.render}
+			{param events: ['itemToggled': $handleItemToggled_ ] /}
+			{param items: $items /}
+			{param schema: $schema /}
+			{param selectable: $selectable /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</div>
 {/deltemplate}
