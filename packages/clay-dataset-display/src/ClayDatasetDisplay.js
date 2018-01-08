@@ -1,3 +1,4 @@
+import 'clay-card-grid';
 import 'clay-list';
 import 'clay-management-toolbar';
 import 'clay-table';

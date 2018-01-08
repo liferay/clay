@@ -20,13 +20,14 @@
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|checkbox|dropdown|icon|label|list|link|management-toolbar|progress-bar|radio|sticker|table)/src/**/*.soy'"
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|card|card-grid|checkbox|dropdown|icon|label|list|link|management-toolbar|progress-bar|radio|sticker|table)/src/**/*.soy'"
   },
   "keywords": [
     "clay",
     "metal"
   ],
   "dependencies": {
+    "clay-card-grid": "^1.0.0-alpha.13",
     "clay-list": "^1.0.0-alpha.14",
     "clay-management-toolbar": "^1.0.0-alpha.13",
     "clay-table": "^1.0.0-alpha.13",

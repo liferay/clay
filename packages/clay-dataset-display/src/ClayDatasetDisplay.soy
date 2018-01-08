@@ -92,6 +92,28 @@
 {/deltemplate}
 
 /**
+ * This renders a ClayCardGrid
+ **/
+{deltemplate ClayDatasetDisplay.List variant="'cards'"}
+	{@param handleItemToggled_: any}
+	{@param items: ?}
+	{@param schema: ?}
+	{@param spritemap: string}
+	{@param? selectable: bool}
+	{@param? title: string}
+
+	<div class="container container-view">
+		{call ClayCardGrid.render}
+			{param events: ['itemToggled': $handleItemToggled_ ] /}
+			{param items: $items /}
+			{param schema: $schema /}
+			{param selectable: $selectable /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</div>
+{/deltemplate}
+
+/**
  * This renders a ClayList
  **/
 {deltemplate ClayDatasetDisplay.List variant="'list'"}
