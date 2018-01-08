@@ -63,6 +63,7 @@ label {
 // Inputs
 
 .form-control {
+	background-clip: border-box;
 	border-width: $input-border-width;
 
 	@if not ($input-font-size == $font-size-base) {
