@@ -135,19 +135,21 @@ ClayFileCard.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	labels: Config.oneOfType([
-		Config.string(),
-		Config.shapeOf({
-			label: Config.string(),
-			style: Config.oneOf([
-				'danger',
-				'info',
-				'secondary',
-				'success',
-				'warning',
-			]).value('secondary'),
-		}),
-	]),
+	labels: Config.arrayOf(
+		Config.oneOfType([
+			Config.string(),
+			Config.shapeOf({
+				label: Config.string(),
+				style: Config.oneOf([
+					'danger',
+					'info',
+					'secondary',
+					'success',
+					'warning',
+				]).value('secondary'),
+			}),
+		])
+	),
 
 	/**
 	 * Object that maps specific label values with desired styles.
