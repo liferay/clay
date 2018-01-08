@@ -113,6 +113,24 @@ class ClayManagementToolbar extends Component {
 			sortingOrder: this.sortingOrder,
 		});
 	}
+
+	/**
+	 * Continues the propagation of the view type item clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleViewTypeClicked_(event) {
+		let element = event.currentTarget;
+		let elementIndex = Array.prototype.indexOf.call(
+			element.parentElement.children,
+			element
+		);
+		let item = this.viewTypes[elementIndex];
+
+		this.emit('viewTypeClicked', {
+			viewType: item,
+		});
+	}
 }
 
 /**

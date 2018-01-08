@@ -33,6 +33,7 @@
 	{@param? handleSelectAllClicked_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleSortingButtonClicked_: any}
+	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? searchActionURL: string}
@@ -74,6 +75,7 @@
 			{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
 			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
+			{param handleViewTypeClicked_: $handleViewTypeClicked_ /}
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
 			{param searchActionURL: $searchActionURL /}
@@ -188,6 +190,7 @@
 	{@param? handleSearchSearchClick_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleSortingButtonClicked_: any}
+	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? searchActionURL: string}
@@ -301,6 +304,7 @@
 				{if $viewTypes}
 					<li class="dropdown nav-item">
 						{call ClayDropdown.render}
+							{param events: ['itemClicked': $handleViewTypeClicked_] /}
 							{param icon kind="text"}
 								{foreach $viewType in $viewTypes}
 									{if $viewType.active}
