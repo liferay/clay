@@ -44,6 +44,23 @@ actionItemShape.items = actionItemsValidator;
  */
 class ClayDatasetDisplay extends Component {
 	handleItemToggled_(event) {}
+
+	/**
+	 * Changes the view on management toolbar view type click.
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleViewTypeClicked_(event) {
+		this.viewTypes[this.viewType].active = false;
+
+		for (let [index, viewType] of this.viewTypes.entries()) {
+			if (viewType === event.viewType) {
+				this.viewTypes[index].active = true;
+				this.viewType = index;
+				break;
+			}
+		}
+	}
 }
 
 /**
@@ -171,13 +188,13 @@ ClayDatasetDisplay.STATE = {
 	title: Config.string(),
 
 	/**
-	 * Type of the view of the list.
+	 * Position in the views list of the selected view.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?number|undefined}
 	 * @default undefined
 	 */
-	viewType: Config.string(),
+	viewType: Config.number(),
 
 	/**
 	 * List of view items.
@@ -186,7 +203,15 @@ ClayDatasetDisplay.STATE = {
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	viewTypes: Config.object(),
+	viewTypes: Config.arrayOf(
+		Config.shapeOf({
+			active: Config.bool().value(false),
+			disabled: Config.bool().value(false),
+			icon: Config.string().required(),
+			id: Config.string().required(),
+			label: Config.string().required(),
+		})
+	),
 };
 
 defineWebComponent('clay-dataset-display', ClayDatasetDisplay);

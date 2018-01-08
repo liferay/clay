@@ -25,6 +25,7 @@
 		type: string
 	]>}
 	{@param? handleItemToggled_: any}
+	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? items: ?}
@@ -34,8 +35,15 @@
 	{@param? selectable: bool}
 	{@param? sortingOrder: string}
 	{@param? title: string}
-	{@param? viewType: string}
-	{@param? viewTypes: ?}
+	{@param? viewType: int}
+	{@param? viewTypes: list<[
+		active: bool,
+		contentRenderer: string,
+		disabled: bool,
+		icon: string,
+		label: string,
+		schema: ?
+	]>}
 
 	{let $attributes kind="attributes"}
 		class="clay-dataset-display
@@ -53,6 +61,7 @@
 		{if $items}
 			{call ClayManagementToolbar.render}
 				{param actionItems: $actionItems /}
+				{param events: ['viewTypeClicked': $handleViewTypeClicked_] /}
 				{param filterItems: $filterItems /}
 				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 				{param searchActionURL: $searchActionURL /}
@@ -64,14 +73,18 @@
 				{param viewTypes: $viewTypes /}
 			{/call}
 
-			{delcall ClayDatasetDisplay.List variant="$viewType"}
-				{param handleItemToggled_: $handleItemToggled_ /}
-				{param items: $items /}
-				{param schema: $viewTypes[$viewType].schema /}
-				{param selectable: $selectable /}
-				{param spritemap: $spritemap /}
-				{param title: $title /}
-			{/delcall}
+			{if $viewTypes and isNonnull($viewType)}
+				{let $variant: $viewTypes[$viewType].contentRenderer /}
+
+				{delcall ClayDatasetDisplay.List variant="$variant"}
+					{param handleItemToggled_: $handleItemToggled_ /}
+					{param items: $items /}
+					{param schema: $viewTypes[$viewType].schema /}
+					{param selectable: $selectable /}
+					{param spritemap: $spritemap /}
+					{param title: $title /}
+				{/delcall}
+			{/if}
 		{/if}
 	</div>
 {/template}
