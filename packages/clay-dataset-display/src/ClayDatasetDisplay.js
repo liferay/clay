@@ -1,5 +1,6 @@
 import 'clay-list';
 import 'clay-management-toolbar';
+import 'clay-table';
 
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';

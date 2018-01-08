@@ -112,3 +112,25 @@
 		{/call}
 	</div>
 {/deltemplate}
+
+/**
+ * This renders a ClayTable
+ */
+{deltemplate ClayDatasetDisplay.List variant="'table'"}
+	{@param handleItemToggled_: any}
+	{@param items: ?}
+	{@param schema: ?}
+	{@param spritemap: string}
+	{@param? selectable: bool}
+	{@param? title: string}
+
+	<div class="container container-no-gutters-sm-down container-view">
+		{call ClayTable.render}
+			{param events: ['itemToggled': $handleItemToggled_ ] /}
+			{param items: $items /}
+			{param schema: $schema /}
+			{param selectable: $selectable /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</div>
+{/deltemplate}
