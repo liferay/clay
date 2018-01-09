@@ -3,11 +3,15 @@ $sidebar-dd-font-size: !default; // $font-size-base 14px
 
 // Sidebar Light
 
-$sidebar-light: (
+$sidebar-light: () !default;
+$sidebar-light: map-merge((
+	bg: #FFF,
+	border-left-width: 0,
 	link-color: $body-color,
 	header-title-color: $body-color,
 	subtitle-color: $secondary,
 	caption-color: $secondary,
 	actions-link-color: $secondary,
-	dt-color: $secondary
-) !default;
+	dt-color: $secondary,
+	panel-bg: $light
+), $sidebar-light);

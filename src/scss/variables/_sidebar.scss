@@ -48,10 +48,10 @@ $sidebar-list-item-flex-col-padding-y: 1rem !default;
 
 $sidebar-light: () !default;
 $sidebar-light: map-merge((
-	bg: $body-bg,
+	bg: $light,
 	border-color: darken(desaturate(adjust-hue($light, 10), 3.03), 12.55),
 	border-left-width: 1px,
 	color: $body-color,
 	list-item-border-color: darken(desaturate(adjust-hue($light, 10), 3.03), 12.55),
-	panel-bg: $light
+	panel-bg: $gray-200
 ), $sidebar-light);
