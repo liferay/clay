@@ -1,6 +1,12 @@
-$application-bar-dark: (
+$application-bar-size: () !default;
+$application-bar-size: map-merge((
+	title-font-size: 1.0625rem
+), $application-bar-size);
+
+$application-bar-dark: () !default;
+$application-bar-dark: map-merge((
 	bg: lighten(desaturate(adjust-hue($dark, 1), 0.77), 3.92),
 	link-border-radius: $border-radius,
 	link-hover-bg: rgba(255, 255, 255, 0.04),
 	link-active-bg: rgba(255, 255, 255, 0.08)
-) !default;
+), $application-bar-dark);
