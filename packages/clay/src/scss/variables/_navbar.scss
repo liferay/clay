@@ -16,7 +16,7 @@ $navbar-text-truncate-max-width: 140px !default;
 
 $navbar-transparent: () !default;
 $navbar-transparent: map-merge((
-	bg: $body-bg,
+	bg: inherit,
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
 	link-active-color: $navbar-light-active-color,
