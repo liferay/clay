@@ -73,6 +73,12 @@
 
 // Navbar Toggler
 
+.navbar-toggler {
+	&:focus {
+		z-index: $zindex-navbar-toggler-focus;
+	}
+}
+
 .navbar-toggler-link {
 	align-items: center;
 	display: flex;
@@ -82,10 +88,6 @@
 	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
 	padding: $navbar-brand-padding-y 0.5rem;
 	position: relative;
-
-	&:focus {
-		outline: none;
-	}
 
 	.lexicon-icon {
 		min-width: 1em;
