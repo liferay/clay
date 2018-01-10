@@ -71,6 +71,14 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Deselects all items on management toolbar deselect all button click.
+	 * @private
+	 */
+	handleDeselectAllClicked_() {
+		this.deselectAllItems();
+	}
+
+	/**
 	 * Toggles the selection of an item and adds or removes it from selected items
 	 * list.
 	 * @param {!Event} event
@@ -130,6 +138,14 @@ class ClayDatasetDisplay extends Component {
 
 		this.items = this.items;
 		this.selectedItems_ = this.selectedItems_;
+	}
+
+	/**
+	 * Selects all items on management toolbar select all button click.
+	 * @private
+	 */
+	handleSelectAllClicked_() {
+		this.selectAllItems();
 	}
 
 	/**

@@ -24,7 +24,9 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? handleDeselectAllClicked_: any}
 	{@param? handleItemToggled_: any}
+	{@param? handleSelectAllClicked_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
@@ -65,6 +67,8 @@
 			{call ClayManagementToolbar.render}
 				{param actionItems: $actionItems /}
 				{param events: [
+					'deselectAllClicked': $handleDeselectAllClicked_,
+					'selectAllClicked': $handleSelectAllClicked_,
 					'selectPageCheckboxChanged': $handleSelectPageCheckboxChanged_,
 					'viewTypeClicked': $handleViewTypeClicked_
 				] /}
