@@ -61,7 +61,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable List with Circle Icon</h4>
+			<h4>Selectable List with Circle Icons</h4>
 			<div id="container6"></div>
 		</div>
 	</div>
@@ -88,27 +88,31 @@
 	</div>
 
 	<script type="text/javascript">
-		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		let actionItems = [
+			{
+				href: '#1',
+				label: 'Remove',
+			},
+			{
+				href: '#2',
+				label: 'Download',
+				separator: true,
+			},
+		];
 
 		let actionItemsWithQuickItems = [
 			{
 				href: '#1',
 				icon: 'trash',
-				label: 'Option 1',
+				label: 'Remove',
 				quickAction: true,
 			},
 			{
 				href: '#2',
 				icon: 'download',
-				label: 'Option 2',
+				label: 'Download',
 				quickAction: true,
 				separator: true,
-			},
-			{
-				href: '#3',
-				icon: 'info-circle-open',
-				label: 'Option 3',
-				quickAction: true,
 			},
 		];
 
@@ -116,168 +120,210 @@
 			{
 				items: [
 					{
-						director: 'George Lucas',
-						downloadHref: '#',
-						rating: 10,
-						releaseDate: 'May 19th 1999',
-						status: ['Error', 'Pending'],
-						title: 'Episode I: The Phantom Menace',
+						id: '1',
+						name: 'Photos',
+						type: 'folder',
 					},
 					{
-						director: 'George Lucas',
-						downloadHref: '#',
-						rating: 50,
-						releaseDate: 'May 12th 2002',
-						status: ['Watched'],
-						title: 'Episode II: Attack of the Clones',
-					},
-					{
-						director: 'George Lucas',
-						downloadHref: '#',
-						rating: 60,
-						releaseDate: 'May 12th 2005',
-						status: ['Watched'],
-						title: 'Episode III: Revenge of the Sith',
-					},
-					{
-						director: 'George Lucas',
-						downloadHref: '#',
-						rating: 90,
-						releaseDate: 'May 25th 1977',
-						status: ['Watched'],
-						title: 'Episode IV: A New Hope',
-					},
-					{
-						director: 'Irvin Kershner',
-						downloadHref: '#',
-						rating: 100,
-						releaseDate: 'May 21th 1980',
-						status: ['Watched'],
-						title: 'Episode V: The Empire Strikes Back',
-					},
-					{
-						director: 'Richard Marquand',
-						downloadHref: '#',
-						rating: 90,
-						releaseDate: 'May 25th 1983',
-						status: ['Watched'],
-						title: 'Episode VI: Return of the Jedi',
-					},
-					{
-						director: 'J. J. Abrams',
-						downloadHref: '#',
-						rating: 70,
-						releaseDate: 'December 14th 2015',
-						status: ['Watched'],
-						title: 'Episode VII: The Force Awakens',
-					},
-					{
-						director: 'Rian Johnson',
-						downloadHref: '#',
-						rating: 0,
-						releaseDate: 'December 9th 2017',
-						status: ['Pending'],
-						title: 'Episode VIII: The Last Jedi',
-					},
+						id: '2',
+						name: 'Videos',
+						type: 'folder',
+					}
 				],
-				label: 'Saga',
+				label: 'Folders',
 			},
 			{
 				items: [
 					{
-						director: 'Gareth Edwards',
+						difficulty: 2,
 						downloadHref: '#',
-						rating: 70,
-						releaseDate: 'December 10th 2016',
-						status: ['Watched'],
-						title: 'Rogue One: A Star Wars Story',
+						format: 'PDF',
+						id: '3',
+						name: 'Hamburger',
+						origin: 'U.S.A',
+						spicyLevel: ['No Spicy'],
+						time: '10 min.',
 					},
 					{
-						director: 'Ron Howard',
+						difficulty: 8,
 						downloadHref: '#',
-						rating: 0,
-						releaseDate: 'May 25th 2018',
-						status: ['Pending'],
-						title: 'Solo: A Star Wars Story',
+						format: 'PDF',
+						id: '4',
+						image: './ramen.jpg',
+						name: 'Ramen',
+						origin: 'China',
+						spicyLevel: ['Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 9,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '5',
+						image: './paella.jpg',
+						name: 'Paella',
+						origin: 'Spain',
+						spicyLevel: ['No Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 6,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '6',
+						name: 'Pizza',
+						origin: 'Italy',
+						spicyLevel: ['No Spicy'],
+						time: '30 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '7',
+						image: './carcamusas.jpg',
+						name: 'Carcamusas',
+						origin: 'Toledo',
+						spicyLevel: ['Spicy'],
+						time: '50 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '8',
+						name: 'Tacos',
+						origin: 'Mexico',
+						spicyLevel: ['Very Spicy'],
+						time: '30 min.',
 					},
 				],
-				label: 'Expanded Universe'
+				label: "Recipes",
+			},
+			{
+				items: [
+					{
+						id: '9',
+						initials: 'FA',
+						name: 'Ferrán Adriá',
+						style: 'fusion',
+						type: 'chef',
+					},
+					{
+						id: '10',
+						image: './ramsay.jpg',
+						initials: 'GR',
+						name: 'Gordon Ramsay',
+						style: 'general',
+						type: 'chef',
+					},
+					{
+						id: '11',
+						initials: 'AC',
+						name: 'Alberto Chicote',
+						style: 'general',
+						type: 'chef',
+					},
+				],
+				label: 'Chefs',
 			}
 		];
+
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 
 		// Simple List //
 		new metal.ClayList({
 			items: items,
-			schema: [{
+			schema: {
+				fields: [{
 					contentRenderer: 'simple',
 					fieldsMap: {
-						title: 'title',
+						title: 'name',
 					}
-				},
-			],
+				}],
+			}
 		}, '#container1');
 
 		// Simple List with Links //
 		new metal.ClayList({
 			items: items,
-			schema: [{
+			schema: {
+				fields: [{
 					contentRenderer: 'simple',
 					fieldsMap: {
 						href: 'downloadHref',
-						title: 'title',
+						title: 'name',
 					}
-				},
-			],
+				}],
+			},
 		}, '#container2');
-		
+
 		// List with Descriptions //
 		new metal.ClayList({
 			items: items,
-			schema: [{
+			schema: {
+				fields: [{
 					contentRenderer: 'content',
 					fieldsMap: {
-						description: 'director',
+						description: 'origin',
 						href: 'downloadHref',
-						title: 'title',
+						title: 'name',
 					}
-				},
-			],
+				}],
+			},
 		}, '#container3');
-		
+
 		// Selectable List //
 		new metal.ClayList({
 			items: items,
-			schema: [{
+			schema: {
+				fields: [{
 					contentRenderer: 'content',
 					fieldsMap: {
-						description: 'director',
+						description: 'origin',
 						href: 'downloadHref',
-						title: 'title',
+						title: 'name',
 					}
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
 				},
-			],
+				inputValueField: 'id',
+			},
 			selectable: true,
 		}, '#container4');
-		
+
 		// Selectable List with Icons //
 		new metal.ClayList({
 			items: items,
-			schema: [{
-				contentRenderer: 'icon',
-				fieldName: 'status',
-				iconsMap: {
-					'Watched': 'check-circle',
-					'*': 'exclamation-circle',
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
 				},
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						title: 'name',
+					}
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
 			},
-			{
-				contentRenderer: 'content',
-				fieldsMap: {
-					description: 'director',
-					href: 'downloadHref',
-					title: 'title',
-				}
-			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container5');
@@ -285,26 +331,35 @@
 		// Selectable List with Circle Icons //
 		new metal.ClayList({
 			items: items,
-			schema: [{
-				contentRenderer: 'icon',
-				fieldName: 'status',
-				iconsMap: {
-					'Watched': 'check-circle',
-					'*': 'exclamation-circle',
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
 				},
-				iconShapesMap: {
-					'Watched': 'circle',
-					'*': 'rounded',
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						title: 'name',
+					}
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
 				},
+				inputValueField: 'id',
 			},
-			{
-				contentRenderer: 'content',
-				fieldsMap: {
-					description: 'director',
-					href: 'downloadHref',
-					title: 'title',
-				}
-			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container6');
@@ -312,37 +367,46 @@
 		// Selectable List with Labels //
 		new metal.ClayList({
 			items: items,
-			schema: [{
-				contentRenderer: 'icon',
-				fieldName: 'status',
-				iconsMap: {
-					'Watched': 'check-circle',
-					'*': 'exclamation-circle',
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
 				},
-				iconShapesMap: {
-					'Watched': 'circle',
-					'*': 'rounded',
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						labels: 'spicyLevel',
+						title: 'name',
+					},
+					labelStylesMap: {
+						'Spicy': 'warning',
+						'Very Spicy': 'danger',
+						'*': 'success',
+					},
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
 				},
+				inputValueField: 'id',
 			},
-			{
-				contentRenderer: 'content',
-				fieldsMap: {
-					description: 'director',
-					href: 'downloadHref',
-					labels: 'status',
-					title: 'title',
-				},
-				labelStylesMap: {
-					'Watched': 'success',
-					'Pending': 'warning',
-					'*': 'danger',
-				},
-			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container7');
 
-		// Selectable List with Action Menu //
+		// Selectable List with Action Items //
 		items.forEach(item => {
 			item.items.forEach(nestedItem => {
 				nestedItem.actionItems = actionItemsWithQuickItems;
@@ -351,32 +415,41 @@
 
 		new metal.ClayList({
 			items: items,
-			schema: [{
-				contentRenderer: 'icon',
-				fieldName: 'status',
-				iconsMap: {
-					'Watched': 'check-circle',
-					'*': 'exclamation-circle',
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
 				},
-				iconShapesMap: {
-					'Watched': 'circle',
-					'*': 'rounded',
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						labels: 'spicyLevel',
+						title: 'name',
+					},
+					labelStylesMap: {
+						'Spicy': 'warning',
+						'Very Spicy': 'danger',
+						'*': 'success',
+					},
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
 				},
+				inputValueField: 'id',
 			},
-			{
-				contentRenderer: 'content',
-				fieldsMap: {
-					description: 'director',
-					href: 'downloadHref',
-					labels: 'status',
-					title: 'title',
-				},
-				labelStylesMap: {
-					'Watched': 'success',
-					'Pending': 'warning',
-					'*': 'danger',
-				},
-			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container8');
@@ -390,36 +463,44 @@
 
 		new metal.ClayList({
 			items: items,
-			schema: [{
-				contentRenderer: 'icon',
-				fieldName: 'status',
-				iconsMap: {
-					'Watched': 'check-circle',
-					'*': 'exclamation-circle',
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
 				},
-				iconShapesMap: {
-					'Watched': 'circle',
-					'*': 'rounded',
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						labels: 'spicyLevel',
+						title: 'name',
+					},
+					labelStylesMap: {
+						'Spicy': 'warning',
+						'Very Spicy': 'danger',
+						'*': 'success',
+					},
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
 				},
+				inputValueField: 'id',
 			},
-			{
-				contentRenderer: 'content',
-				fieldsMap: {
-					description: 'director',
-					href: 'downloadHref',
-					labels: 'status',
-					title: 'title',
-				},
-				labelStylesMap: {
-					'Watched': 'success',
-					'Pending': 'warning',
-					'*': 'danger',
-				},
-			}],
 			selectable: true,
 			spritemap: spritemap,
 		}, '#container9');
-
 	</script>
 </body>
 </html>

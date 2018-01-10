@@ -27,22 +27,6 @@
 	<div id="container"></div>
 
 	<script type="text/javascript">
-		let actionItems = [
-			{
-				href: '#1',
-				label: 'Option 1',
-			},
-			{
-				href: '#2',
-				label: 'Option 2',
-				separator: true,
-			},
-			{
-				href: '#3',
-				label: 'Option 3',
-			},
-		];
-
 		let actionItemsWithQuickItems = [
 			{
 				href: '#1',
@@ -57,164 +41,183 @@
 				quickAction: true,
 				separator: true,
 			},
+		];
+
+		let items = [
 			{
-				href: '#3',
-				icon: 'info-circle-open',
-				label: 'Mark as watched',
-				quickAction: true,
+				items: [
+					{
+						id: '1',
+						name: 'Photos',
+						type: 'folder',
+					},
+					{
+						id: '2',
+						name: 'Videos',
+						type: 'folder',
+					}
+				],
+				label: 'Folders',
 			},
+			{
+				items: [
+					{
+						difficulty: 2,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '3',
+						name: 'Hamburger',
+						origin: 'U.S.A',
+						spicyLevel: ['No Spicy'],
+						time: '10 min.',
+					},
+					{
+						difficulty: 8,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '4',
+						image: './ramen.jpg',
+						name: 'Ramen',
+						origin: 'China',
+						spicyLevel: ['Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 9,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '5',
+						image: './paella.jpg',
+						name: 'Paella',
+						origin: 'Spain',
+						spicyLevel: ['No Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 6,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '6',
+						name: 'Pizza',
+						origin: 'Italy',
+						spicyLevel: ['No Spicy'],
+						time: '30 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '7',
+						image: './carcamusas.jpg',
+						name: 'Carcamusas',
+						origin: 'Toledo',
+						spicyLevel: ['Spicy'],
+						time: '50 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '8',
+						name: 'Tacos',
+						origin: 'Mexico',
+						spicyLevel: ['Very Spicy'],
+						time: '30 min.',
+					},
+				],
+				label: "Recipes",
+			},
+			{
+				items: [
+					{
+						id: '9',
+						initials: 'FA',
+						name: 'Ferrán Adriá',
+						style: 'fusion',
+						type: 'chef',
+					},
+					{
+						id: '10',
+						image: './ramsay.jpg',
+						initials: 'GR',
+						name: 'Gordon Ramsay',
+						style: 'general',
+						type: 'chef',
+					},
+					{
+						id: '11',
+						initials: 'AC',
+						name: 'Alberto Chicote',
+						style: 'general',
+						type: 'chef',
+					},
+				],
+				label: 'Chefs',
+			}
 		];
 
 		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 
+		items.forEach(item => {
+			item.items.forEach(nestedItem => {
+				nestedItem.actionItems = actionItemsWithQuickItems;
+			});
+		});
+
 		new metal.ClayTable({
-			items: [
-				{
-					items: [
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'George Lucas',
-							downloadHref: '#',
-							rating: 10,
-							releaseDate: 'May 19th 1999',
-							status: 'Error',
-							title: 'Episode I: The Phantom Menace',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'George Lucas',
-							downloadHref: '#',
-							rating: 50,
-							releaseDate: 'May 12th 2002',
-							status: 'Watched',
-							title: 'Episode II: Attack of the Clones',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'George Lucas',
-							downloadHref: '#',
-							rating: 60,
-							releaseDate: 'May 12th 2005',
-							status: 'Watched',
-							title: 'Episode III: Revenge of the Sith',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'George Lucas',
-							downloadHref: '#',
-							rating: 90,
-							releaseDate: 'May 25th 1977',
-							status: 'Watched',
-							title: 'Episode IV: A New Hope',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'Irvin Kershner',
-							downloadHref: '#',
-							rating: 100,
-							releaseDate: 'May 21th 1980',
-							status: 'Watched',
-							title: 'Episode V: The Empire Strikes Back',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'Richard Marquand',
-							downloadHref: '#',
-							rating: 90,
-							releaseDate: 'May 25th 1983',
-							status: 'Watched',
-							title: 'Episode VI: Return of the Jedi',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'J. J. Abrams',
-							downloadHref: '#',
-							rating: 70,
-							releaseDate: 'December 14th 2015',
-							status: 'Watched',
-							title: 'Episode VII: The Force Awakens',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'Rian Johnson',
-							downloadHref: '#',
-							rating: 0,
-							releaseDate: 'December 9th 2017',
-							status: 'Pending',
-							title: 'Episode VIII: The Last Jedi',
-						},
-					],
-					label: 'Saga',
+			items: items,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+						sortable: true,
+						sortingOrder: 'asc',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+					{
+						contentRenderer: 'number',
+						fieldName: 'time',
+						label: 'Time',
+					},
+					{
+						contentRenderer: 'label',
+						fieldName: 'spicyLevel',
+						label: 'SpicyLevel',
+						labelStylesMap: {
+							'Spicy': 'warning',
+							'Very Spicy': 'danger',
+							'*': 'success',
+						}
+					},
+					{
+						contentRenderer: 'button',
+						fieldName: 'downloadHref',
+						label: 'Download'
+					},
+					{
+						contentRenderer: 'progressbar',
+						fieldName: 'difficulty',
+						label: 'Difficulty',
+						maxValue: 10,
+						minValue: 0,
+					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
 				},
-				{
-					items: [
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'Gareth Edwards',
-							downloadHref: '#',
-							rating: 70,
-							releaseDate: 'December 10th 2016',
-							status: 'Watched',
-							title: 'Rogue One: A Star Wars Story',
-						},
-						{
-							actionItems: actionItemsWithQuickItems,
-							director: 'Ron Howard',
-							downloadHref: '#',
-							rating: 0,
-							releaseDate: 'May 25th 2018',
-							status: 'Pending',
-							title: 'Solo: A Star Wars Story',
-						},
-					],
-					label: 'Expanded Universe'
-				}
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-					sortable: true,
-					sortingOrder: 'asc',
-				},
-				{
-					fieldName: 'director',
-					label: 'Director',
-					sortable: true,
-				},
-				{
-					contentRenderer: 'number',
-					fieldName: 'releaseDate',
-					label: 'Release Date',
-				},
-				{
-					contentRenderer: 'label',
-					fieldName: 'status',
-					label: 'Status',
-					labelStylesMap: {
-						'Watched': 'success',
-						'Pending': 'warning',
-						'*': 'danger',
-					}
-				},
-				{
-					contentRenderer: 'button',
-					fieldName: 'downloadHref',
-					label: 'Download'
-				},
-				{
-					contentRenderer: 'progressbar',
-					fieldName: 'rating',
-					label: 'Rating',
-					maxValue: 100,
-					minValue: 0,
-				},
-			],
+				inputValueField: 'id'
+			},
 			selectable: true,
 			showActionsMenu: true,
 			spritemap: spritemap,
 		}, '#container');
-
 	</script>
 </body>
 </html>
