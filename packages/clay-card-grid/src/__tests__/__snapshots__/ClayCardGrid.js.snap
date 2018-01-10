@@ -21,7 +21,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
               </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
-              <a class=" card-title text-truncate" href="#sabers">Sabers</a>
+              <div class="card-title text-truncate" title="Photos">Photos</div>
             </div>
           </div>
         </div>
@@ -40,31 +40,77 @@ exports[`ClayCardGrid should render the default markup 1`] = `
               </span>
             </span>
             <div class="flex-col flex-col-expand flex-col-gutters">
-              <a class=" card-title text-truncate" href="#scripts">Scripts</a>
+              <div class="card-title text-truncate" title="Videos">Videos</div>
             </div>
           </div>
         </div>
       </div>
     </li>
   </ul>
-  <h4 class="card-section-header">Saga</h4>
+  <h4 class="card-section-header">Recipes</h4>
   <ul class="card-page">
     <li class="card-page-item-directory">
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
-          <img alt="Episode I: The Phantom Menace" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./swepisode1.jpg">
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+              <title>exclamation-circle</title>
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            </svg>
+          </div>
           <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
+            <span class="sticker-overlay">PDF</span>
           </span>
         </div>
         <div class="card-body">
           <div class="card-row">
             <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode I: The Phantom Menace</a>
-              <div class="card-subtitle text-truncate" title="George Lucas">George Lucas</div>
+              <a class=" card-title text-truncate" href="#">Hamburger</a>
+              <div class="card-subtitle text-truncate" title="U.S.A">U.S.A</div>
               <div class="card-detail">
-                <span class="label label-info">Error</span>
-                <span class="label label-warning">Pending</span>
+                <span class="label label-success">No Spicy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="card-page-item-directory">
+      <div class="card-type-asset card image-card">
+        <div class="aspect-ratio card-item-first">
+          <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
+          <span class="sticker sticker-danger sticker-bottom-left">
+            <span class="sticker-overlay">PDF</span>
+          </span>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand">
+              <a class=" card-title text-truncate" href="#">Ramen</a>
+              <div class="card-subtitle text-truncate" title="China">China</div>
+              <div class="card-detail">
+                <span class="label label-warning">Spicy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="card-page-item-directory">
+      <div class="card-type-asset card image-card">
+        <div class="aspect-ratio card-item-first">
+          <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
+          <span class="sticker sticker-danger sticker-bottom-left">
+            <span class="sticker-overlay">PDF</span>
+          </span>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <div class="flex-col flex-col-expand">
+              <a class=" card-title text-truncate" href="#">Paella</a>
+              <div class="card-subtitle text-truncate" title="Spain">Spain</div>
+              <div class="card-detail">
+                <span class="label label-success">No Spicy</span>
               </div>
             </div>
           </div>
@@ -75,22 +121,22 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-video">
-              <title>video</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#video"></use>
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+              <title>exclamation-circle</title>
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
             </svg>
           </div>
           <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
+            <span class="sticker-overlay">PDF</span>
           </span>
         </div>
         <div class="card-body">
           <div class="card-row">
             <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode II: Attack of the Clones</a>
-              <div class="card-subtitle text-truncate" title="George Lucas">George Lucas</div>
+              <a class=" card-title text-truncate" href="#">Pizza</a>
+              <div class="card-subtitle text-truncate" title="Italy">Italy</div>
               <div class="card-detail">
-                <span class="label label-success">Watched</span>
+                <span class="label label-success">No Spicy</span>
               </div>
             </div>
           </div>
@@ -100,18 +146,18 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <li class="card-page-item-directory">
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
-          <img alt="Episode III: Revenge of the Sith" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./swepisode3.jpg">
+          <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
           <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
+            <span class="sticker-overlay">PDF</span>
           </span>
         </div>
         <div class="card-body">
           <div class="card-row">
             <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode III: Revenge of the Sith</a>
-              <div class="card-subtitle text-truncate" title="George Lucas">George Lucas</div>
+              <a class=" card-title text-truncate" href="#">Carcamusas</a>
+              <div class="card-subtitle text-truncate" title="Toledo">Toledo</div>
               <div class="card-detail">
-                <span class="label label-success">Watched</span>
+                <span class="label label-warning">Spicy</span>
               </div>
             </div>
           </div>
@@ -121,102 +167,23 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <li class="card-page-item-directory">
       <div class="card-type-asset card image-card">
         <div class="aspect-ratio card-item-first">
-          <img alt="Episode IV: A New Hope" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./swepisode4.jpg">
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode IV: A New Hope</a>
-              <div class="card-subtitle text-truncate" title="George Lucas">George Lucas</div>
-              <div class="card-detail">
-                <span class="label label-success">Watched</span>
-              </div>
-            </div>
+          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+              <title>exclamation-circle</title>
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            </svg>
           </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <img alt="Episode V: The Empire Strikes Back" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./swepisode5.jpg">
           <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
+            <span class="sticker-overlay">PDF</span>
           </span>
         </div>
         <div class="card-body">
           <div class="card-row">
             <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode V: The Empire Strikes Back</a>
-              <div class="card-subtitle text-truncate" title="Irvin Kershner">Irvin Kershner</div>
+              <a class=" card-title text-truncate" href="#">Tacos</a>
+              <div class="card-subtitle text-truncate" title="Mexico">Mexico</div>
               <div class="card-detail">
-                <span class="label label-success">Watched</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <img alt="Episode VI: Return of the Jedi" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./swepisode6.jpg">
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode VI: Return of the Jedi</a>
-              <div class="card-subtitle text-truncate" title="Richard Marquand">Richard Marquand</div>
-              <div class="card-detail">
-                <span class="label label-success">Watched</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <img alt="Episode VII: The Force Awakens" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./swepisode7.jpg">
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode VII: The Force Awakens</a>
-              <div class="card-subtitle text-truncate" title="J. J. Abrams">J. J. Abrams</div>
-              <div class="card-detail">
-                <span class="label label-success">Watched</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <img alt="Episode VIII: The Last Jedi" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./swepisode8.jpg">
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">MOV</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Episode VIII: The Last Jedi</a>
-              <div class="card-subtitle text-truncate" title="Rian Johnson">Rian Johnson</div>
-              <div class="card-detail">
-                <span class="label label-warning">Pending</span>
+                <span class="label label-danger">Very Spicy</span>
               </div>
             </div>
           </div>
@@ -224,94 +191,21 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </li>
   </ul>
-  <h4 class="card-section-header">Expanded Universe</h4>
-  <ul class="card-page">
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card file-card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-video">
-              <title>video</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#video"></use>
-            </svg>
-          </div>
-          <span class="sticker sticker-primary sticker-bottom-left">
-            <span class="sticker-overlay">MKV</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Rogue One: A Star Wars Story</a>
-              <div class="card-subtitle text-truncate" title="Gareth Edwards">Gareth Edwards</div>
-              <div class="card-detail">
-                <span class="label label-success">Watched</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card file-card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-video">
-              <title>video</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#video"></use>
-            </svg>
-          </div>
-          <span class="sticker sticker-primary sticker-bottom-left">
-            <span class="sticker-overlay">MKV</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <a class=" card-title text-truncate" href="#">Solo: A Star Wars Story</a>
-              <div class="card-subtitle text-truncate" title="Ron Howard">Ron Howard</div>
-              <div class="card-detail">
-                <span class="label label-warning">Pending</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <h4 class="card-section-header">Characters</h4>
+  <h4 class="card-section-header">Chefs</h4>
   <ul class="card-page">
     <li class="card-page-item-directory">
       <div class="card-type-asset card">
         <div class="aspect-ratio card-item-first">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-danger rounded-circle sticker-xl">
-              <span class="sticker-overlay">DV</span>
+              <span class="sticker-overlay">FA</span>
             </span>
           </div>
         </div>
         <div class="card-body">
           <div class="card-row">
             <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="Darth Vader">Darth Vader</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-danger rounded-circle sticker-xl">
-              <span class="sticker-overlay">EP</span>
-            </span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="Emperor Palpatine">Emperor Palpatine</div>
+              <div class="card-title text-truncate" title="Ferrán Adriá">Ferrán Adriá</div>
             </div>
           </div>
         </div>
@@ -322,32 +216,16 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         <div class="aspect-ratio card-item-first">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-primary rounded-circle sticker-xl">
-              <span class="sticker-overlay">HS</span>
+              <span class="sticker-overlay">
+                <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+              </span>
             </span>
           </div>
         </div>
         <div class="card-body">
           <div class="card-row">
             <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="Han Solo">Han Solo</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-danger rounded-circle sticker-xl">
-              <span class="sticker-overlay">KR</span>
-            </span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="Kylo Ren">Kylo Ren</div>
+              <div class="card-title text-truncate" title="Gordon Ramsay">Gordon Ramsay</div>
             </div>
           </div>
         </div>
@@ -358,50 +236,14 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         <div class="aspect-ratio card-item-first">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-primary rounded-circle sticker-xl">
-              <span class="sticker-overlay">LO</span>
+              <span class="sticker-overlay">AC</span>
             </span>
           </div>
         </div>
         <div class="card-body">
           <div class="card-row">
             <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="Leia Organa">Leia Organa</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl">
-              <span class="sticker-overlay">LS</span>
-            </span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="Luke Skywalker">Luke Skywalker</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl">
-              <span class="sticker-overlay">Y</span>
-            </span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="flex-col flex-col-expand">
-              <div class="card-title text-truncate" title="Yoda">Yoda</div>
+              <div class="card-title text-truncate" title="Alberto Chicote">Alberto Chicote</div>
             </div>
           </div>
         </div>
