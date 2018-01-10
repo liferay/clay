@@ -6,18 +6,14 @@
 {template .render}
 	{@param? elementClasses: string}
 	{@param? id: string}
-	{@param? maxValue: int}
-	{@param? minValue: int}
 	{@param? spritemap: string}
 	{@param? status: string}
 	{@param? value: int}
 
-	{let $max: $maxValue ?: 100 /}
-	{let $min: $minValue ?: 0 /}
-	{let $succeed: $status == 'complete' or $value == $max /}
+	{let $maxValue: 100 /}
+	{let $minValue: 0 /}
+	{let $succeed: $status == 'complete' or $value == $maxValue /}
 	{let $warning: $status == 'warning' /}
-
-	{let $currentValue: $value ?: $succeed ? 100 : 0 /}
 
 	{let $progressGroupAttributes kind="attributes"}
 		class="progress-group
@@ -39,11 +35,25 @@
 		{/if}
 	{/let}
 
+	{let $currentValue kind="text"}
+		{if $value}
+			{if $value <= $maxValue and $value >= $minValue}
+				{$value}
+			{elseif $value < $minValue}
+				{$minValue}
+			{else}
+				{$maxValue}
+			{/if}
+		{else}
+			{$succeed ? $maxValue : $minValue}
+		{/if}
+	{/let}
+
 	<div {$progressGroupAttributes}>
 		<div class="progress">
 			{let $barAttributes kind="attributes"}
-				aria-valuemax="{$max}"
-				aria-valuemin="{$min}"
+				aria-valuemax="{$maxValue}"
+				aria-valuemin="{$minValue}"
 				aria-valuenow="{$currentValue}"
 				class="progress-bar"
 				role="progressbar"

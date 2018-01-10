@@ -36,24 +36,6 @@ ClayProgressBar.STATE = {
 	id: Config.string(),
 
 	/**
-	 * The maximum value of the progress bar.
-	 * @instance
-	 * @memberof ClayProgressBar
-	 * @type {?number}
-	 * @default undefined
-	 */
-	maxValue: Config.number(),
-
-	/**
-	 * The minimum value of the progress bar.
-	 * @instance
-	 * @memberof ClayProgressBar
-	 * @type {?number}
-	 * @default undefined
-	 */
-	minValue: Config.number(),
-
-	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayProgressBar
@@ -79,7 +61,10 @@ ClayProgressBar.STATE = {
 	 * @type {?number}
 	 * @default undefined
 	 */
-	value: Config.number(),
+	value: {
+		validator: value => value >= 0 && value <= 100,
+		value: 0,
+	},
 };
 
 defineWebComponent('clay-progress-bar', ClayProgressBar);
