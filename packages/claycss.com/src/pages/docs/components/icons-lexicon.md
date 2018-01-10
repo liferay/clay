@@ -1,9 +1,16 @@
 ---
 title: Icons
-description: Components
+description: "Icon is a visual metaphor representing a concept that lies behind the idea and/or action."
 layout: "guide"
+pattern: "icons"
 weight: 100
 ---
+
+### Description
+
+{$page.description}
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="clay-lexicon-icons">
 
