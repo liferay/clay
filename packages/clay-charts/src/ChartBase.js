@@ -69,13 +69,6 @@ const ChartBase = {
 	/**
 	 * @inheritDoc
 	 */
-	created() {
-		this.loading = true;
-	},
-
-	/**
-	 * @inheritDoc
-	 */
 	attached() {
 		const config = this.constructChartConfig_();
 
@@ -91,13 +84,13 @@ const ChartBase = {
 
 		this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
 		this.on('groupsChanged', this.handleGroupsChanged_.bind(this));
-		this.on('loadingChanged', this.handleLoadingChanged_.bind(this));
+		this.on('loading_Changed', this.handleLoadingChanged_.bind(this));
 		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
 		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
 		this.on('xChanged', this.handleXChanged_.bind(this));
 
-		this.loading = false;
+		this.loading_ = false;
 	},
 
 	/**
@@ -926,7 +919,9 @@ ChartBase.STATE = {
 	/**
 	 * Sets the `loading` state.
 	 */
-	loading: Config.bool().value(false),
+	loading_: Config.bool()
+		.internal()
+		.value(true),
 
 	/**
 	 * Sets billboard's data.mimeType config.
