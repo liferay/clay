@@ -1,20 +1,16 @@
 import ClayTable from '../ClayTable';
 
-const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
+let component;
 
 const actionItems = [
 	{
 		href: '#1',
-		label: 'Option 1',
+		label: 'Remove',
 	},
 	{
 		href: '#2',
-		label: 'Option 2',
+		label: 'Download',
 		separator: true,
-	},
-	{
-		href: '#3',
-		label: 'Option 3',
 	},
 ];
 
@@ -32,15 +28,128 @@ const actionItemsWithQuickItems = [
 		quickAction: true,
 		separator: true,
 	},
+];
+
+const folderItems = [
 	{
-		href: '#3',
-		icon: 'info-circle-open',
-		label: 'Mark as watched',
-		quickAction: true,
+		id: '1',
+		name: 'Photos',
+		type: 'folder',
+	},
+	{
+		id: '2',
+		name: 'Videos',
+		type: 'folder',
 	},
 ];
 
-let component;
+const recipeItems = [
+	{
+		difficulty: 2,
+		downloadHref: '#',
+		format: 'PDF',
+		id: '3',
+		name: 'Hamburger',
+		origin: 'U.S.A',
+		spicyLevel: ['No Spicy'],
+		time: '10 min.',
+	},
+	{
+		difficulty: 8,
+		downloadHref: '#',
+		format: 'PDF',
+		id: '4',
+		image: './ramen.jpg',
+		name: 'Ramen',
+		origin: 'China',
+		spicyLevel: ['Spicy'],
+		time: '90 min.',
+	},
+	{
+		difficulty: 9,
+		downloadHref: '#',
+		format: 'PDF',
+		id: '5',
+		image: './paella.jpg',
+		name: 'Paella',
+		origin: 'Spain',
+		spicyLevel: ['No Spicy'],
+		time: '90 min.',
+	},
+	{
+		difficulty: 6,
+		downloadHref: '#',
+		format: 'PDF',
+		id: '6',
+		name: 'Pizza',
+		origin: 'Italy',
+		spicyLevel: ['No Spicy'],
+		time: '30 min.',
+	},
+	{
+		difficulty: 5,
+		downloadHref: '#',
+		format: 'PDF',
+		id: '7',
+		image: './carcamusas.jpg',
+		name: 'Carcamusas',
+		origin: 'Toledo',
+		spicyLevel: ['Spicy'],
+		time: '50 min.',
+	},
+	{
+		difficulty: 5,
+		downloadHref: '#',
+		format: 'PDF',
+		id: '8',
+		name: 'Tacos',
+		origin: 'Mexico',
+		spicyLevel: ['Very Spicy'],
+		time: '30 min.',
+	},
+];
+
+const chefsItems = [
+	{
+		id: '9',
+		initials: 'FA',
+		name: 'Ferrán Adriá',
+		style: 'fusion',
+		type: 'chef',
+	},
+	{
+		id: '10',
+		image: './ramsay.jpg',
+		initials: 'GR',
+		name: 'Gordon Ramsay',
+		style: 'general',
+		type: 'chef',
+	},
+	{
+		id: '11',
+		initials: 'AC',
+		name: 'Alberto Chicote',
+		style: 'general',
+		type: 'chef',
+	},
+];
+
+const groupedItems = [
+	{
+		items: folderItems,
+		label: 'Folders',
+	},
+	{
+		items: recipeItems,
+		label: 'Recipes',
+	},
+	{
+		items: chefsItems,
+		label: 'Chefs',
+	},
+];
+
+const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 
 describe('ClayTable', function() {
 	afterEach(() => {
@@ -51,7 +160,7 @@ describe('ClayTable', function() {
 
 	it('should render the default markup', () => {
 		component = new ClayTable({
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -115,12 +224,12 @@ describe('ClayTable', function() {
 		component = new ClayTable({
 			schema: [
 				{
-					fieldName: 'title',
-					label: 'Title',
+					fieldName: 'name',
+					label: 'Name',
 				},
 				{
-					fieldName: 'director',
-					label: 'Director',
+					fieldName: 'origin',
+					label: 'Origin',
 				},
 			],
 		});
@@ -130,23 +239,20 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with a basic schema with sortable fields and no items', () => {
 		component = new ClayTable({
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-					sortable: true,
-					sortingOrder: 'asc',
-				},
-				{
-					fieldName: 'director',
-					label: 'Director',
-					sortable: true,
-				},
-				{
-					fieldName: 'year',
-					label: 'Year',
-				},
-			],
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+						sortable: true,
+						sortingOrder: 'asc',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+				],
+			},
 			spritemap: spritemap,
 		});
 
@@ -160,23 +266,20 @@ describe('ClayTable', function() {
 			events: {
 				sortingButtonClicked: spy,
 			},
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-					sortable: true,
-					sortingOrder: 'asc',
-				},
-				{
-					fieldName: 'director',
-					label: 'Director',
-					sortable: true,
-				},
-				{
-					fieldName: 'year',
-					label: 'Year',
-				},
-			],
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+						sortable: true,
+						sortingOrder: 'asc',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+				],
+			},
 		});
 
 		component.element.querySelector('table thead tr th button').click();
@@ -186,26 +289,19 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with a basic schema and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					director: 'George Lucas',
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					director: 'George Lucas',
-					title: 'Episode II: Attack of the Clones',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					fieldName: 'director',
-					label: 'Director',
-				},
-			],
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -213,44 +309,19 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with a basic schema and grouped items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					items: [
-						{
-							director: 'George Lucas',
-							title: 'Episode I: The Phantom Menace',
-						},
-						{
-							director: 'George Lucas',
-							title: 'Episode II: Attack of the Clones',
-						},
-					],
-					label: 'Saga',
-				},
-				{
-					items: [
-						{
-							director: 'Gareth Edwards',
-							title: 'Rogue One: A Star Wars Story',
-						},
-						{
-							director: 'Ron Howard',
-							title: 'Solo: A Star Wars Story',
-						},
-					],
-					label: 'Expanded Universe',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					fieldName: 'director',
-					label: 'Director',
-				},
-			],
+			items: groupedItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -258,25 +329,20 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with an schema with button field and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					title: 'Episode II: Attack of the Clones',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					contentRenderer: 'button',
-					fieldName: 'downloadHref',
-					label: 'Download',
-				},
-			],
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						contentRenderer: 'button',
+						fieldName: 'downloadHref',
+						label: 'Download',
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -289,25 +355,20 @@ describe('ClayTable', function() {
 			events: {
 				cellContentClicked: spy,
 			},
-			items: [
-				{
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					title: 'Episode II: Attack of the Clones',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					contentRenderer: 'button',
-					fieldName: 'downloadHref',
-					label: 'Download',
-				},
-			],
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						contentRenderer: 'button',
+						fieldName: 'downloadHref',
+						label: 'Download',
+					},
+				],
+			},
 		});
 
 		component.element.querySelector('table tr td button').click();
@@ -317,27 +378,20 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with an schema with label field and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					status: 'Watched',
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					status: 'Watched',
-					title: 'Episode II: Attack of the Clones',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					contentRenderer: 'label',
-					fieldName: 'status',
-					label: 'Status',
-				},
-			],
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						contentRenderer: 'label',
+						fieldName: 'spicyLevel',
+						label: 'SpicyLevel',
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -345,36 +399,25 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with an schema with label field with styles map and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					status: 'Error',
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					status: 'Watched',
-					title: 'Episode II: Attack of the Clones',
-				},
-				{
-					status: 'Pending',
-					title: 'Episode III: Revenge of the Sith',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					contentRenderer: 'label',
-					fieldName: 'status',
-					label: 'Status',
-					labelStylesMap: {
-						'Watched': 'success',
-						'Pending': 'warning',
-						'*': 'danger',
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
 					},
-				},
-			],
+					{
+						contentRenderer: 'label',
+						fieldName: 'spicyLevel',
+						label: 'SpicyLevel',
+						labelStylesMap: {
+							'Spicy': 'warning',
+							'Very Spicy': 'danger',
+							'*': 'success',
+						},
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -382,32 +425,21 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with an schema with link field and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					imdbHref: '#phantom',
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					imdbHref: '#attack',
-					title: 'Episode II: Attack of the Clones',
-				},
-				{
-					imdbHref: '#revenge',
-					title: 'Episode III: Revenge of the Sith',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					contentRenderer: 'link',
-					fieldName: 'title',
-					hrefFieldName: 'imdbHref',
-					label: 'IMDB',
-				},
-			],
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						contentRenderer: 'link',
+						fieldName: 'origin',
+						hrefFieldName: 'downloadHref',
+						label: 'Origin',
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -415,31 +447,20 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with an schema with number field and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					title: 'Episode I: The Phantom Menace',
-					year: '1999',
-				},
-				{
-					title: 'Episode II: Attack of the Clones',
-					year: '2002',
-				},
-				{
-					title: 'Episode III: Revenge of the Sith',
-					year: '2005',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					contentRenderer: 'number',
-					fieldName: 'year',
-					label: 'Year',
-				},
-			],
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						contentRenderer: 'number',
+						fieldName: 'time',
+						label: 'Time',
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -447,33 +468,20 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with an schema with progress bar field and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					rating: 1,
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					rating: 5,
-					title: 'Episode II: Attack of the Clones',
-				},
-				{
-					rating: 6,
-					title: 'Episode III: Revenge of the Sith',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-				{
-					contentRenderer: 'progressbar',
-					fieldName: 'rating',
-					label: 'Rating',
-					maxValue: 10,
-					minValue: 0,
-				},
-			],
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						contentRenderer: 'progressbar',
+						fieldName: 'difficulty',
+						label: 'Difficulty',
+					},
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -481,23 +489,22 @@ describe('ClayTable', function() {
 
 	it('should render a selectable ClayTable with an schema and items', () => {
 		component = new ClayTable({
-			items: [
-				{
-					title: 'Episode I: The Phantom Menace',
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-				{
-					title: 'Episode II: Attack of the Clones',
-				},
-				{
-					title: 'Episode III: Revenge of the Sith',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-			],
+				inputValueField: 'id',
+			},
 			selectable: true,
 		});
 
@@ -511,23 +518,22 @@ describe('ClayTable', function() {
 			events: {
 				itemToggled: spy,
 			},
-			items: [
-				{
-					title: 'Episode I: The Phantom Menace',
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-				{
-					title: 'Episode II: Attack of the Clones',
-				},
-				{
-					title: 'Episode III: Revenge of the Sith',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-			],
+				inputValueField: 'id',
+			},
 			selectable: true,
 		});
 
@@ -539,27 +545,32 @@ describe('ClayTable', function() {
 	});
 
 	it('should render a ClayTable with an schema, items and action menu', () => {
+		let itemsWithActionItems = [];
+
+		folderItems.forEach(item => {
+			let itemWithActionItems = {};
+
+			for (let key in item) {
+				if (Object.prototype.hasOwnProperty.call(item, key)) {
+					itemWithActionItems[key] = item[key];
+				}
+			}
+
+			itemWithActionItems.actionItems = actionItems;
+
+			itemsWithActionItems.push(itemWithActionItems);
+		});
+
 		component = new ClayTable({
-			items: [
-				{
-					actionItems: actionItems,
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					actionItems: actionItems,
-					title: 'Episode II: Attack of the Clones',
-				},
-				{
-					actionItems: actionItems,
-					title: 'Episode III: Revenge of the Sith',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-			],
+			items: itemsWithActionItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+				],
+			},
 			showActionsMenu: true,
 			spritemap: spritemap,
 		});
@@ -568,62 +579,62 @@ describe('ClayTable', function() {
 	});
 
 	it('should render a ClayTable with an schema, items and action menu with quick action items', () => {
+		let itemsWithActionItems = [];
+
+		recipeItems.forEach(item => {
+			let itemWithActionItems = {};
+
+			for (let key in item) {
+				if (Object.prototype.hasOwnProperty.call(item, key)) {
+					itemWithActionItems[key] = item[key];
+				}
+			}
+
+			itemWithActionItems.actionItems = actionItemsWithQuickItems;
+
+			itemsWithActionItems.push(itemWithActionItems);
+		});
+
 		component = new ClayTable({
-			items: [
-				{
-					actionItems: actionItemsWithQuickItems,
-					title: 'Episode I: The Phantom Menace',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					title: 'Episode II: Attack of the Clones',
-				},
-				{
-					actionItems: actionItemsWithQuickItems,
-					title: 'Episode III: Revenge of the Sith',
-				},
-			],
-			schema: [
-				{
-					fieldName: 'title',
-					label: 'Title',
-				},
-			],
+			items: itemsWithActionItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+				],
+			},
 			showActionsMenu: true,
 			spritemap: spritemap,
 		});
 
 		expect(component).toMatchSnapshot();
 	});
-});
 
-it('should render a ClayTable with a basic schema and items and add a class on row focus', () => {
-	component = new ClayTable({
-		items: [
-			{
-				director: 'George Lucas',
-				title: 'Episode I: The Phantom Menace',
+	it('should render a ClayTable with a basic schema and items and add a class on row focus', () => {
+		component = new ClayTable({
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+						sortable: true,
+						sortingOrder: 'asc',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+				],
 			},
-			{
-				director: 'George Lucas',
-				title: 'Episode II: Attack of the Clones',
-			},
-		],
-		schema: [
-			{
-				fieldName: 'title',
-				label: 'Title',
-			},
-			{
-				fieldName: 'director',
-				label: 'Director',
-			},
-		],
+		});
+
+		component.element
+			.querySelector('table tbody tr:not(.table-divider)')
+			.focus();
+
+		expect(component).toMatchSnapshot();
 	});
-
-	component.element
-		.querySelector('table tbody tr:not(.table-divider)')
-		.focus();
-
-	expect(component).toMatchSnapshot();
 });

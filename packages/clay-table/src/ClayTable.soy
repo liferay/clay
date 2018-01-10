@@ -140,28 +140,30 @@
 				<th></th>
 			{/if}
 
-			{foreach $fieldSchema in $schema.fields}
-				{let $tableHeaderAttributes kind="attributes"}
-					{if index($fieldSchema) == 0}
-						class="table-cell-expand"
-					{/if}
-				{/let}
+			{if $schema.fields}
+				{foreach $fieldSchema in $schema.fields}
+					{let $tableHeaderAttributes kind="attributes"}
+						{if index($fieldSchema) == 0}
+							class="table-cell-expand"
+						{/if}
+					{/let}
 
-				<th {$tableHeaderAttributes}>
-					{if not $fieldSchema.sortable}
-						{$fieldSchema.label}
-					{else}
-						{call ClayButton.render}
-							{param events: ['click': $handleSortingClick_] /}
-							{param icon: $fieldSchema.sortingOrder ? 'order-arrow-' + ($fieldSchema.sortingOrder == 'asc' ? 'up' : 'down') : null /}
-							{param iconAlignment: 'right' /}
-							{param label: $fieldSchema.label ?: $fieldSchema.fieldName /}
-							{param spritemap: $spritemap /}
-							{param style: 'unstyled' /}
-						{/call}
-					{/if}
-				</th>
-			{/foreach}
+					<th {$tableHeaderAttributes}>
+						{if not $fieldSchema.sortable}
+							{$fieldSchema.label}
+						{else}
+							{call ClayButton.render}
+								{param events: ['click': $handleSortingClick_] /}
+								{param icon: $fieldSchema.sortingOrder ? 'order-arrow-' + ($fieldSchema.sortingOrder == 'asc' ? 'up' : 'down') : null /}
+								{param iconAlignment: 'right' /}
+								{param label: $fieldSchema.label ?: $fieldSchema.fieldName /}
+								{param spritemap: $spritemap /}
+								{param style: 'unstyled' /}
+							{/call}
+						{/if}
+					</th>
+				{/foreach}
+			{/if}
 
 			{if $showActionsMenu}
 				<th></th>
@@ -220,31 +222,33 @@
 			</td>
 		{/if}
 
-		{foreach $fieldSchema in $schema.fields}
-			{let $variant kind="text"}
-				{if $fieldSchema.contentRenderer}
-					{$fieldSchema.contentRenderer}
-				{elseif $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.contentRenderer}
-					{if $fieldSchema.contentRendererMap and $fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
-						{$fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
-					{elseif $fieldSchema.contentRendererMap['*']}
-						{$fieldSchema.contentRendererMap['*']}
+		{if $schema.fields}
+			{foreach $fieldSchema in $schema.fields}
+				{let $variant kind="text"}
+					{if $fieldSchema.contentRenderer}
+						{$fieldSchema.contentRenderer}
+					{elseif $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.contentRenderer}
+						{if $fieldSchema.contentRendererMap and $fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
+							{$fieldSchema.contentRendererMap[$item[$fieldSchema.fieldsMap.contentRenderer]]}
+						{elseif $fieldSchema.contentRendererMap['*']}
+							{$fieldSchema.contentRendererMap['*']}
+						{elseif index($fieldSchema) == 0}
+							main
+						{/if}
 					{elseif index($fieldSchema) == 0}
 						main
 					{/if}
-				{elseif index($fieldSchema) == 0}
-					main
-				{/if}
-			{/let}
+				{/let}
 
-			{delcall ClayTable.Cell variant="$variant"}
-				{param fieldSchema: $fieldSchema /}
-				{param handleCellContentClick_: $handleCellContentClick_ /}
-				{param item: $item /}
-				{param spritemap: $spritemap /}
-				{param value: $item[$fieldSchema.fieldName] /}
-			{/delcall}
-		{/foreach}
+				{delcall ClayTable.Cell variant="$variant"}
+					{param fieldSchema: $fieldSchema /}
+					{param handleCellContentClick_: $handleCellContentClick_ /}
+					{param item: $item /}
+					{param spritemap: $spritemap /}
+					{param value: $item[$fieldSchema.fieldName] /}
+				{/delcall}
+			{/foreach}
+		{/if}
 
 		{if $showActionsMenu and $item.actionItems and $spritemap}
 			<td>
