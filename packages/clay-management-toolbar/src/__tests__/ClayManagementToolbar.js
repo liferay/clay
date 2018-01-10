@@ -209,6 +209,42 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with plus button with one option', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			plusButton: {
+				items: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+				],
+			},
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with plus button with more than one option', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			plusButton: {
+				items: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					},
+				],
+			},
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with state active', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
