@@ -74,13 +74,13 @@ weight: 100
 {call ClayImageCard.render}
 	{param actionItems: [
 		[
-			"href": "#1",
-			"label": "Edit",
-			"separator": true
+			'href': '#1',
+			'label': 'Edit',
+			'separator': true
 		],
 		[
-			"href": "#1",
-			"label": "Save"
+			'href': '#1',
+			'label': 'Save'
 		]
 	] /}
 	{param fileType: 'JPG' /}
@@ -89,8 +89,8 @@ weight: 100
 	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
 	{param labels: [
 		[
-			"label": "Approved",
-			"style": "success"
+			'label': 'Approved',
+			'style': 'success'
 		]
 	] /}
 	{param selectable: true /}
@@ -215,13 +215,13 @@ weight: 100
 {call ClayImageCard.render}
 	{param actionItems: [
 		[
-			"href": "#1",
-			"label": "Edit",
-			"separator": true
+			'href': '#1',
+			'label': 'Edit',
+			'separator': true
 		],
 		[
-			"href": "#1",
-			"label": "Save"
+			'href': '#1',
+			'label': 'Save'
 		]
 	] /}
 	{param fileType: 'JPG' /}
@@ -230,8 +230,8 @@ weight: 100
 	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
 	{param labels: [
 		[
-			"label": "Approved",
-			"style": "success"
+			'label': 'Approved',
+			'style': 'success'
 		]
 	] /}
 	{param selectable: true /}
@@ -347,21 +347,21 @@ weight: 100
 {call ClayImageCard.render}
 	{param actionItems: [
 		[
-			"href": "#1",
-			"label": "Edit",
-			"separator": true
+			'href': '#1',
+			'label': 'Edit',
+			'separator': true
 		],
 		[
-			"href": "#1",
-			"label": "Save"
+			'href': '#1',
+			'label': 'Save'
 		]
 	] /}
 	{param fileType: 'PNG' /}
 	{param fileTypeStyle: 'info' /}
 	{param labels: [
 		[
-			"label": "Rejected",
-			"style": "danger"
+			'label': 'Rejected',
+			'style': 'danger'
 		]
 	] /}
 	{param selectable: true /}
@@ -495,13 +495,13 @@ weight: 100
 {call ClayImageCard.render}
 	{param actionItems: [
 		[
-			"href": "#1",
-			"label": "Edit",
-			"separator": true
+			'href': '#1',
+			'label': 'Edit',
+			'separator': true
 		],
 		[
-			"href": "#1",
-			"label": "Save"
+			'href': '#1',
+			'label': 'Save'
 		]
 	] /}
 	{param icon: 'camera' /}
@@ -509,8 +509,8 @@ weight: 100
 	{param fileTypeStyle: 'warning' /}
 	{param labels: [
 		[
-			"label": "Approved",
-			"style": "success"
+			'label': 'Approved',
+			'style': 'success'
 		]
 	] /}
 	{param selectable: true /}
@@ -705,13 +705,13 @@ weight: 100
 {call ClayUserCard.render}
 	{param actionItems: [
 		[
-			"href": "#1",
-			"label": "Edit",
-			"separator": true
+			'href': '#1',
+			'label': 'Edit',
+			'separator': true
 		],
 		[
-			"href": "#1",
-			"label": "Save"
+			'href': '#1',
+			'label': 'Save'
 		]
 	] /}
 	{param initials: 'HS' /}
@@ -893,8 +893,8 @@ weight: 100
 	{param icon: 'documents-and-media' /}
 	{param labels: [
 		[
-			"label": "Approved",
-			"style": "success"
+			'label': 'Approved',
+			'style': 'success'
 		]
 	] /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
@@ -905,13 +905,13 @@ weight: 100
 {call ClayFileCard.render}
 	{param actionItems: [
 		[
-			"href": "#1",
-			"label": "Edit",
-			"separator": true
+			'href': '#1',
+			'label': 'Edit',
+			'separator': true
 		],
 		[
-			"href": "#1",
-			"label": "Save"
+			'href': '#1',
+			'label': 'Save'
 		]
 	] /}
 	{param fileType: 'DOC' /}
@@ -919,8 +919,8 @@ weight: 100
 	{param icon: 'documents-and-media' /}
 	{param labels: [
 		[
-			"label": "Approved",
-			"style": "success"
+			'label': 'Approved',
+			'style': 'success'
 		]
 	] /}
 	{param selectable: true /}
@@ -1104,13 +1104,13 @@ weight: 100
 {call ClayHorizontalCard.render}
 	{param actionItems: [
 		[
-			"href": "#1",
-			"label": "Edit",
-			"separator": true
+			'href': '#1',
+			'label': 'Edit',
+			'separator': true
 		],
 		[
-			"href": "#1",
-			"label": "Save"
+			'href': '#1',
+			'label': 'Save'
 		]
 	] /}
 	{param selectable: true /}
