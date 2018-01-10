@@ -78,31 +78,50 @@ weight: 100
 {call ClayList.render}
 	{param items: [
 		[
-			"actionItems": [
+			'actionItems': [
 				[
-					"href": "#1",
-					"icon": "trash",
-					"label": "Option 1",
-					"quickAction": true
+					'href': '#1',
+					'icon': 'trash',
+					'label': 'Option 1',
+					'quickAction': true
 				],
 				[
-					"href": "#2",
-					"icon": "download",
-					"label": "Option 2",
-					"quickAction": true,
-					"separator": true
+					'href': '#2',
+					'icon': 'download',
+					'label': 'Option 2',
+					'quickAction': true,
+					'separator': true
 				],
 				[
-					"href": "#3",
-					"icon": "info-circle-open",
-					"label": "Option 3",
-					"quickAction": true
+					'href': '#3',
+					'icon': 'info-circle-open',
+					'label': 'Option 3',
+					'quickAction': true
 				]
 			],
-			"description": "Second Level Text",
-			"href": "#1",
-			"icon": "folder",
-			"title": "Account Example One"
+			'description': 'Second Level Text',
+			'href': '#1',
+			'title': 'Account Example One'
+		]
+	] /}
+	{param schema: [
+		[
+			'contentRenderer': 'icon',
+			'fieldName': 'status',
+			'iconsMap': [
+				'*': 'folder'
+			],
+			'iconShapesMap': [
+				'*': 'rounded'
+			]
+		],
+		[
+			'contentRenderer': 'content',
+			'fieldsMap': [
+				'description': 'description',
+				'href': 'href',
+				'title': 'title'
+			]
 		]
 	] /}
 	{param selectable: true /}
@@ -136,8 +155,27 @@ weight: 100
 			],
 			"description": "Second Level Text",
 			"href": "#1",
-			"icon": "folder",
 			"title": "Account Example One"
+		}
+	]'
+	schema='[
+		{
+			"contentRenderer": "icon",
+			"fieldName": "status",
+			"iconsMap": {
+				"*": "folder"
+			},
+			"iconShapesMap": {
+				"*": "rounded"
+			}
+		},
+		{
+			"contentRenderer": "content",
+			"fieldsMap": {
+				"description": "description",
+				"href": "href",
+				"title": "title"
+			}
 		}
 	]'
 	selectable="true"
@@ -264,32 +302,51 @@ weight: 100
 {call ClayList.render}
 	{param items: [
 		[
-			"actionItems": [
+			'actionItems': [
 				[
-					"href": "#1",
-					"icon": "trash",
-					"label": "Option 1",
-					"quickAction": true
+					'href': '#1',
+					'icon': 'trash',
+					'label': 'Option 1',
+					'quickAction': true
 				],
 				[
-					"href": "#2",
-					"icon": "download",
-					"label": "Option 2",
-					"quickAction": true,
-					"separator": true
+					'href': '#2',
+					'icon': 'download',
+					'label': 'Option 2',
+					'quickAction': true,
+					'separator': true
 				],
 				[
-					"href": "#3",
-					"icon": "info-circle-open",
-					"label": "Option 3",
-					"quickAction": true
+					'href': '#3',
+					'icon': 'info-circle-open',
+					'label': 'Option 3',
+					'quickAction': true
 				]
 			],
-			"description": "Second Level Text",
-			"href": "#1",
-			"icon": "folder",
-			"selected": true,
-			"title": "Account Example One"
+			'description': 'Second Level Text',
+			'href': '#1',
+			'selected': true,
+			'title': 'Account Example One'
+		]
+	] /}
+	{param schema: [
+		[
+			'contentRenderer': 'icon',
+			'fieldName': 'status',
+			'iconsMap': [
+				'*': 'folder'
+			],
+			'iconShapesMap': [
+				'*': 'rounded'
+			]
+		],
+		[
+			'contentRenderer': 'content',
+			'fieldsMap': [
+				'description': 'description',
+				'href': 'href',
+				'title': 'title'
+			]
 		]
 	] /}
 	{param selectable: true /}
@@ -323,9 +380,28 @@ weight: 100
 			],
 			"description": "Second Level Text",
 			"href": "#1",
-			"icon": "folder",
 			"selected": true,
 			"title": "Account Example One"
+		}
+	]'
+	schema='[
+		{
+			"contentRenderer": "icon",
+			"fieldName": "status",
+			"iconsMap": {
+				"*": "folder"
+			},
+			"iconShapesMap": {
+				"*": "rounded"
+			}
+		},
+		{
+			"contentRenderer": "content",
+			"fieldsMap": {
+				"description": "description",
+				"href": "href",
+				"title": "title"
+			}
 		}
 	]'
 	selectable="true"
@@ -406,13 +482,120 @@ weight: 100
 
 ```soy
 {call ClayList.render}
-	{param title: 'List Section' /}
+	{param items: [
+		[
+			items: [
+				[
+					'actionItems': [
+						[
+							'href': '#1',
+							'icon': 'trash',
+							'label': 'Option 1',
+							'quickAction': true
+						],
+						[
+							'href': '#2',
+							'icon': 'download',
+							'label': 'Option 2',
+							'quickAction': true,
+							'separator': true
+						],
+						[
+							'href': '#3',
+							'icon': 'info-circle-open',
+							'label': 'Option 3',
+							'quickAction': true
+						]
+					],
+					'description': 'Second Level Text',
+					'href': '#1',
+					'selected': true,
+					'title': 'Account Example One'
+				]
+			],
+			'label': 'List Section'
+		]
+	] /}
+	{param schema: [
+		[
+			'contentRenderer': 'icon',
+			'fieldName': 'status',
+			'iconsMap': [
+				'*': 'folder'
+			],
+			'iconShapesMap': [
+				'*': 'rounded'
+			]
+		],
+		[
+			'contentRenderer': 'content',
+			'fieldsMap': [
+				'description': 'description',
+				'href': 'href',
+				'title': 'title'
+			]
+		]
+	] /}
+	{param selectable: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 {/call}
 ```
 ```text/html
 <clay-list
-	titl="List Section"
+	items='[
+		{
+			items: [
+				{
+					"actionItems": [
+						{
+							"href": "#1",
+							"icon": "trash",
+							"label": "Option 1",
+							"quickAction": true
+						},
+						{
+							"href": "#2",
+							"icon": "download",
+							"label": "Option 2",
+							"quickAction": true,
+							"separator": true
+						},
+						{
+							"href": "#3",
+							"icon": "info-circle-open",
+							"label": "Option 3",
+							"quickAction": true
+						}
+					],
+					"description": "Second Level Text",
+					"href": "#1",
+					"selected": true,
+					"title": "Account Example One"
+				}
+			]
+		}
+	]'
+	schema='[
+		{
+			"contentRenderer": "icon",
+			"fieldName": "status",
+			"iconsMap": {
+				"*": "folder"
+			},
+			"iconShapesMap": {
+				"*": "rounded"
+			}
+		},
+		{
+			"contentRenderer": "content",
+			"fieldsMap": {
+				"description": "description",
+				"href": "href",
+				"title": "title"
+			}
+		}
+	]'
+	selectable="true"
 	spritemap="/vendor/lexicon/icons.svg">
 </clay-list>
 ```
@@ -562,68 +745,182 @@ weight: 100
 {call ClayList.render}
 	{param items: [
 		[
-			"actionItems": [
+			items: [
 				[
-					"href": "#1",
-					"icon": "trash",
-					"label": "Option 1",
-					"quickAction": true
+					'actionItems': [
+						[
+							'href': '#1',
+							'icon': 'trash',
+							'label': 'Option 1',
+							'quickAction': true
+						],
+						[
+							'href': '#2',
+							'icon': 'download',
+							'label': 'Option 2',
+							'quickAction': true,
+							'separator': true
+						],
+						[
+							'href': '#3',
+							'icon': 'info-circle-open',
+							'label': 'Option 3',
+							'quickAction': true
+						]
+					],
+					'description': 'Second Level Text',
+					'href': '#1',
+					'status': ['Approved'],
+					'title': 'Account Example One'
 				],
 				[
-					"href": "#2",
-					"icon": "download",
-					"label": "Option 2",
-					"quickAction": true,
-					"separator": true
-				],
-				[
-					"href": "#3",
-					"icon": "info-circle-open",
-					"label": "Option 3",
-					"quickAction": true
+					'actionItems': [
+						[
+							'href': '#1',
+							'icon': 'trash',
+							'label': 'Option 1',
+							'quickAction': true
+						],
+						[
+							'href': '#2',
+							'icon': 'download',
+							'label': 'Option 2',
+							'quickAction': true,
+							'separator': true
+						],
+						[
+							'href': '#3',
+							'icon': 'info-circle-open',
+							'label': 'Option 3',
+							'quickAction': true
+						]
+					],
+					'description': 'Second Level Text',
+					'href': '#1',
+					'selected': true,
+					'status': ['Approved'],
+					'title': 'Account Example One'
 				]
 			],
-			"description": "Second Level Text",
-			"href": "#1",
-			"icon": "folder",
-			"title": "Account Example One"
-		],
-		[
-			"actionItems": [
-				[
-					"href": "#1",
-					"icon": "trash",
-					"label": "Option 1",
-					"quickAction": true
-				],
-				[
-					"href": "#2",
-					"icon": "download",
-					"label": "Option 2",
-					"quickAction": true,
-					"separator": true
-				],
-				[
-					"href": "#3",
-					"icon": "info-circle-open",
-					"label": "Option 3",
-					"quickAction": true
-				]
-			],
-			"description": "Second Level Text",
-			"href": "#1",
-			"icon": "folder",
-			"title": "Account Example One"
+			'label': 'List Section'
 		]
 	] /}
-	{param title: 'List Section' /}
+	{param schema: [
+		[
+			'contentRenderer': 'icon',
+			'fieldName': 'status',
+			'iconsMap': [
+				'*': 'folder'
+			],
+			'iconShapesMap': [
+				'*': 'rounded'
+			]
+		],
+		[
+			'contentRenderer': 'content',
+			'fieldsMap': [
+				'description': 'description',
+				'href': 'href',
+				'labels': 'status'
+				'title': 'title'
+			],
+			'labelStylesMap': [
+				'Approved': 'success'
+			]
+		]
+	] /}
+	{param selectable: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 {/call}
 ```
 ```text/html
 <clay-list
-	items=""
-	title="List Section"
+	items='[
+		{
+			items: [
+				{
+					"actionItems": [
+						{
+							"href": "#1",
+							"icon": "trash",
+							"label": "Option 1",
+							"quickAction": true
+						},
+						{
+							"href": "#2",
+							"icon": "download",
+							"label": "Option 2",
+							"quickAction": true,
+							"separator": true
+						},
+						{
+							"href": "#3",
+							"icon": "info-circle-open",
+							"label": "Option 3",
+							"quickAction": true
+						}
+					],
+					"description": "Second Level Text",
+					"href": "#1",
+					"status": ["Approved"],
+					"title": "Account Example One"
+				},
+				{
+					"actionItems": [
+						{
+							"href": "#1",
+							"icon": "trash",
+							"label": "Option 1",
+							"quickAction": true
+						},
+						{
+							"href": "#2",
+							"icon": "download",
+							"label": "Option 2",
+							"quickAction": true,
+							"separator": true
+						},
+						{
+							"href": "#3",
+							"icon": "info-circle-open",
+							"label": "Option 3",
+							"quickAction": true
+						}
+					],
+					"description": "Second Level Text",
+					"href": "#1",
+					"selected": true,
+					"status": ["Approved"],
+					"title": "Account Example One"
+				}
+			]
+		}
+	]'
+	schema='[
+		{
+			"contentRenderer": "icon",
+			"fieldName": "status",
+			"iconsMap": {
+				"*": "folder"
+			},
+			"iconShapesMap": {
+				"*": "rounded"
+			}
+		},
+		{
+			"contentRenderer": "content",
+			"fieldsMap": {
+				"description": "description",
+				"href": "href",
+				"labels": "status",
+				"title": "title"
+			},
+			"labelStylesMap": [
+				"Approved": "success"
+			]
+		}
+	]'
+	selectable="true"
 	spritemap="/vendor/lexicon/icons.svg">
 </clay-list>
 ```
