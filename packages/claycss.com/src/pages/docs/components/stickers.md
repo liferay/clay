@@ -197,7 +197,9 @@ weight: 100
 
 <span class="sticker sticker-primary rounded-circle">JP</span>{sp}
 <span class="sticker sticker-primary rounded-circle">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+	<span class="sticker-overlay">
+		<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+	</span>
 </span>
 
 ```soy
@@ -229,7 +231,9 @@ weight: 100
 ```text/html
 <span class="sticker sticker-primary rounded-circle">JP</span>
 <span class="sticker sticker-primary rounded-circle">
-	<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+	<span class="sticker-overlay">
+		<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+	</span>
 </span>
 ```
 
