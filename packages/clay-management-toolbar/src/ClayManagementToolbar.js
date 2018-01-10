@@ -43,11 +43,38 @@ actionItemShape.items = actionItemsValidator;
  */
 class ClayManagementToolbar extends Component {
 	/**
+	 * Continues the propagation of the action item clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleActionClicked_(event) {
+		let element = event.currentTarget;
+		let elementIndex = Array.prototype.indexOf.call(
+			element.parentElement.children,
+			element
+		);
+		let item = this.viewTypes[elementIndex];
+
+		this.emit('actionClicked', {
+			action: item,
+		});
+	}
+
+	/**
 	 * Hides the search in mobile devices
 	 * @private
 	 */
 	handleCloseMobileSearchClick_() {
 		this.showSearch_ = false;
+	}
+
+	/**
+	 * Continues the propagation of the deselect all button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleDeselectAllClicked_(event) {
+		this.emit('deselectAllClicked', event);
 	}
 
 	/**

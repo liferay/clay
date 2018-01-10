@@ -25,7 +25,9 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? handleActionClicked_: any}
 	{@param? handleCloseMobileSearchClick_: any}
+	{@param? handleDeselectAllClicked_: any}
 	{@param? handleFilterDoneButtonClick_: any}
 	{@param? handleOpenMobileSearchClick_: any}
 	{@param? handlePlusButtonClicked_: any}
@@ -57,6 +59,8 @@
 		{call .active}
 			{param actionItems: $actionItems /}
 			{param elementClasses: $elementClasses /}
+			{param handleActionClicked_: $handleActionClicked_ /}
+			{param handleDeselectAllClicked_: $handleDeselectAllClicked_ /}
 			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
 			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param selectedItems: $selectedItems /}
@@ -105,6 +109,8 @@
 		type: string
 	]>}
 	{@param? elementClasses: string}
+	{@param? handleActionClicked_: any}
+	{@param? handleDeselectAllClicked_: any}
 	{@param? handleSelectAllClicked_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? id: string}
@@ -143,13 +149,23 @@
 					</span>
 				</li>
 				<li class="nav-item">
-					{call ClayButton.render}
-						{param elementClasses: 'nav-btn' /}
-						{param events: ['click': $handleSelectAllClicked_] /}
-						{param label: 'Select all' /}
-						{param ref: 'selectAllButton' /}
-						{param style: 'link' /}
-					{/call}
+					{if $selectedItems < $totalItems}
+						{call ClayButton.render}
+							{param elementClasses: 'nav-btn' /}
+							{param events: ['click': $handleSelectAllClicked_] /}
+							{param label: 'Select all' /}
+							{param ref: 'selectAllButton' /}
+							{param style: 'link' /}
+						{/call}
+					{else}
+						{call ClayButton.render}
+							{param elementClasses: 'nav-btn' /}
+							{param events: ['click': $handleDeselectAllClicked_] /}
+							{param label: 'Deselect all' /}
+							{param ref: 'deselectAllButton' /}
+							{param style: 'link' /}
+						{/call}
+					{/if}
 				</li>
 			</ul>
 			
@@ -157,6 +173,7 @@
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						{call ClayActionsDropdown.render}
+							{param events: ['itemClicked': $handleActionClicked_] /}
 							{param items: $actionItems /}
 							{param spritemap: $spritemap /}
 						{/call}
