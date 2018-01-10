@@ -171,6 +171,19 @@
 			
 			{if $actionItems}
 				<ul class="navbar-nav">
+					{foreach $item in $actionItems}
+						{if $item.quickAction and $item.icon and $spritemap}
+							<li class="nav-item navbar-breakpoint-down-d-none">
+								{call ClayLink.render}
+									{param elementClasses: 'quick-action-item' /}
+									{param href: $item.href /}
+									{param icon: $item.icon /}
+									{param spritemap: $spritemap /}
+								{/call}
+							</li>
+						{/if}
+					{/foreach}
+
 					<li class="nav-item">
 						{call ClayActionsDropdown.render}
 							{param events: ['itemClicked': $handleActionClicked_] /}

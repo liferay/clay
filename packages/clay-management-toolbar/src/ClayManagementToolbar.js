@@ -1,5 +1,6 @@
 import 'clay-button';
 import 'clay-checkbox';
+import 'clay-link';
 // eslint-disable-next-line
 import { ClayActionsDropdown } from 'clay-dropdown';
 import {Config} from 'metal-state';
