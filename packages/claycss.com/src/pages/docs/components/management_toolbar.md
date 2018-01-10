@@ -201,6 +201,92 @@ weight: 100
 	</div>
 </nav>
 
+```soy
+{call ClayManagementToolbar.render}
+	{param searchFormName: 'mySearchName' /}
+	{param searchInputName: 'mySearchInputName' /}
+	{param selectable: true /}
+	{param sortingOrder: 'desc' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param viewTypes: [
+		[
+			'active': true,
+			'icon': 'list',
+			'label': 'List'
+		],
+		[
+			'disabled': true,
+			'icon': 'table',
+			'label': 'Table'
+		],
+		[
+			'icon': 'cards2',
+			'label': 'Card'
+		],
+	] /}
+{/call}
+
+{call ClayManagementToolbar.render}
+	{param actionItems: [
+		[
+			'href': '#1',
+			'label': 'Edit'
+		],
+		[
+			'href': '#2',
+			'label': 'Preview'
+		]
+	] /}
+	{param selectable: true /}
+	{param selectedItems: 3 /}
+	{param sortingOrder: 'desc' /}
+	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param totalItems: 7 /}
+{/call}
+```
+```text/html
+<clay-management-toolbar
+	searchFormName="mySearchName"
+	searchInputName="mySearchInputName"
+	selectable="true"
+	sortingOrder="desc"
+	spritemap="/vendor/lexicon/icons.svg"
+	viewTypes='[
+		{
+			"active": true,
+			"icon": "list",
+			"label": "List"
+		},
+		{
+			"disabled": true,
+			"icon": "table",
+			"label": "Table"
+		},
+		{
+			"icon": "cards2",
+			"label": "Card"
+		}
+	]'>
+</clay-management-toolbar>
+
+<clay-management-toolbar
+	actionItems='[
+		{
+			"href": "#1",
+			"label": "Edit"
+		},
+		{
+			"href": "#2",
+			"label": "Preview"
+		}
+	]'
+	selectable="true"
+	selectedItems="3"
+	sortingOrder="desc"
+	spritemap="/vendor/lexicon/icons.svg"
+	totalItems="7">
+</clay-management-toolbar>
+```
 ```text/html
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container">
