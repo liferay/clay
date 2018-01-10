@@ -4,9 +4,7 @@ import 'clay-icon';
 import 'clay-link';
 import 'clay-radio';
 import {Config} from 'metal-state';
-import {EventHandler} from 'metal-events';
 import Component from 'metal-component';
-import dom from 'metal-dom';
 import itemsValidator from './items_validator';
 import Soy from 'metal-soy';
 

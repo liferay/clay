@@ -40,19 +40,6 @@ const actionItemsValidator = Config.arrayOf(Config.shapeOf(actionItemShape));
 
 actionItemShape.items = actionItemsValidator;
 
-let plusButtonItemShape = {
-	disabled: Config.bool().value(false),
-	href: Config.string().required(),
-	icon: Config.string(),
-	label: Config.string().required(),
-	separator: Config.bool().value(false),
-	type: Config.oneOf(['group', 'item']).value('item'),
-};
-
-const plusButtonItemsValidator = Config.arrayOf(
-	Config.shapeOf(plusButtonItemShape)
-);
-
 /**
  * Metal ClayManagementToolbar component.
  */
