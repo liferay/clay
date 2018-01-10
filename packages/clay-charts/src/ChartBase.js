@@ -69,7 +69,14 @@ const ChartBase = {
 	/**
 	 * @inheritDoc
 	 */
-	attached: function() {
+	created() {
+		this.loading = true;
+	},
+
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
 		const config = this.constructChartConfig_();
 
 		const existingTiles = DEFAULT_TILES.filter(val => {
@@ -89,6 +96,8 @@ const ChartBase = {
 		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
 		this.on('xChanged', this.handleXChanged_.bind(this));
+
+		this.loading = false;
 	},
 
 	/**
