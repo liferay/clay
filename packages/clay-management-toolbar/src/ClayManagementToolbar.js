@@ -1,8 +1,9 @@
 import 'clay-button';
 import 'clay-checkbox';
+import 'clay-icon';
 import 'clay-link';
 // eslint-disable-next-line
-import { ClayActionsDropdown } from 'clay-dropdown';
+import { ClayActionsDropdown, ClayDropdownBase } from 'clay-dropdown';
 import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
@@ -38,6 +39,19 @@ let actionItemShape = {
 const actionItemsValidator = Config.arrayOf(Config.shapeOf(actionItemShape));
 
 actionItemShape.items = actionItemsValidator;
+
+let plusButtonItemShape = {
+	disabled: Config.bool().value(false),
+	href: Config.string().required(),
+	icon: Config.string(),
+	label: Config.string().required(),
+	separator: Config.bool().value(false),
+	type: Config.oneOf(['group', 'item']).value('item'),
+};
+
+const plusButtonItemsValidator = Config.arrayOf(
+	Config.shapeOf(plusButtonItemShape)
+);
 
 /**
  * Metal ClayManagementToolbar component.
@@ -221,6 +235,20 @@ ClayManagementToolbar.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
+
+	/**
+	 * Configuration of the plus button.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	plusButton: Config.shapeOf({
+		button: Config.object(),
+		caption: Config.string(),
+		helpText: Config.string(),
+		items: actionItemsValidator,
+	}),
 
 	/**
 	 * URL of the search form action

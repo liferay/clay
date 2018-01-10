@@ -38,6 +38,20 @@
 	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
+	{@param? plusButton: [
+		button: ?,
+		caption: string,
+		helpText: string,
+		items: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			quickAction: bool,
+			separator: bool,
+			type: string
+		]>
+	]}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -82,6 +96,7 @@
 			{param handleViewTypeClicked_: $handleViewTypeClicked_ /}
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
+			{param plusButton: $plusButton /}
 			{param searchActionURL: $searchActionURL /}
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
@@ -223,6 +238,20 @@
 	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
+	{@param? plusButton: [
+		button: ?,
+		caption: string,
+		helpText: string,
+		items: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			quickAction: bool,
+			separator: bool,
+			type: string
+		]>
+	]}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -351,17 +380,66 @@
 				{/if}
 
 				<li class="nav-item">
-					{call ClayButton.render}
-						{param elementClasses: 'nav-btn nav-btn-monospaced' /}
-						{param events: ['click': $handlePlusButtonClicked_ ] /}
-						{param icon: 'plus' /}
-						{param ref: 'plusButton' /}
+					{call .plusButton}
+						{param button: $plusButton ? $plusButton.button : null /}
+						{param caption: $plusButton ? $plusButton.caption : null /}
+						{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
+						{param helpText: $plusButton ? $plusButton.helpText : null /}
+						{param items: $plusButton ? $plusButton.items : null /}
 						{param spritemap: $spritemap /}
 					{/call}
 				</li>
 			</ul>
 		</div>
 	</nav>
+{/template}
+
+/**
+ * This renders the plus button.
+ */
+{template .plusButton}
+	{@param spritemap: string}
+	{@param? button: ?}
+	{@param? caption: string}
+	{@param? handlePlusButtonClicked_: any}
+	{@param? helpText: string}
+	{@param? items: list<?>}
+
+	{if $items and length($items) > 1}
+		{call ClayDropdownBase.render}
+			{param button: $button /}
+			{param caption: $caption /}
+			{param helpText: $helpText /}
+			{param items: $items /}
+			{param label kind="html"}
+				{call ClayIcon.render}
+					{param spritemap: $spritemap /}
+					{param symbol: 'plus' /}
+				{/call}
+			{/param}
+
+			{param ref: 'plusButtonDropdown' /}
+			{param spritemap: $spritemap /}
+			{param style: 'primary' /}
+			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+		{/call}
+	{elseif $items}
+		{call ClayLink.render}
+			{param buttonStyle: 'primary' /}
+			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param href: $items[0].href /}
+			{param icon: 'plus' /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{else}
+		{call ClayButton.render}
+			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
+			{param events: ['click': $handlePlusButtonClicked_ ] /}
+			{param icon: 'plus' /}
+			{param ref: 'plusButton' /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{/if}
 {/template}
 
 {deltemplate ClayManagementToolbar.SearchForm}
