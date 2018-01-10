@@ -70,7 +70,67 @@ class ClayDatasetDisplay extends Component {
 		this.totalItems_ = totalItems;
 	}
 
-	handleItemToggled_(event) {}
+	/**
+	 * Toggles the selection of an item and adds or removes it from selected items
+	 * list.
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleItemToggled_(event) {
+		let checkedStatus = event.target.checked;
+		let itemId = event.target.getAttribute('value');
+
+		if (!checkedStatus) {
+			for (let [index, item] of this.selectedItems_.entries()) {
+				if (
+					item[
+						this.viewTypes[this.viewType].schema.inputValueField
+					] === itemId
+				) {
+					item.selected = false;
+					this.selectedItems_.splice(index, 1);
+					break;
+				}
+			}
+		} else {
+			let found = false;
+
+			for (let item of this.items) {
+				if (item.items) {
+					for (let childrenItem of item.items) {
+						if (
+							childrenItem[
+								this.viewTypes[this.viewType].schema
+									.inputValueField
+							] === itemId
+						) {
+							childrenItem.selected = true;
+							this.selectedItems_.push(childrenItem);
+							found = true;
+							break;
+						}
+					}
+				} else {
+					if (
+						item[
+							this.viewTypes[this.viewType].schema.inputValueField
+						] === itemId
+					) {
+						item.selected = true;
+						this.selectedItems_.push(item);
+						found = true;
+					}
+				}
+
+				if (found) {
+					break;
+				}
+			}
+		}
+
+		this.items = this.items;
+		this.selectedItems_ = this.selectedItems_;
+	}
 
 	/**
 	 * Changes the selection status of the dataset items on management toolbar
