@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="lexicon-icons">
+<article id="clay-lexicon-icons">
 
 ### Lexicon Icons
 
@@ -26,7 +26,7 @@ weight: 100
 	{param symbol: 'add-cell' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-icon spritemap="path/to/icons.svg" symbol="add-column"></clay-icon>
 
 <clay-icon spritemap="path/to/icons.svg" symbol="add-cell"></clay-icon>
