@@ -5,19 +5,12 @@ let component;
 const actionItems = [
 	{
 		href: '#1',
-		icon: 'trash',
-		label: 'Option 1',
+		label: 'Remove',
 	},
 	{
 		href: '#2',
-		icon: 'download',
-		label: 'Option 2',
+		label: 'Download',
 		separator: true,
-	},
-	{
-		href: '#3',
-		icon: 'info-circle-open',
-		label: 'Option 3',
 	},
 ];
 
@@ -25,118 +18,134 @@ const actionItemsWithQuickItems = [
 	{
 		href: '#1',
 		icon: 'trash',
-		label: 'Option 1',
+		label: 'Remove',
 		quickAction: true,
 	},
 	{
 		href: '#2',
 		icon: 'download',
-		label: 'Option 2',
+		label: 'Download',
 		quickAction: true,
 		separator: true,
 	},
+];
+
+const folderItems = [
 	{
-		href: '#3',
-		icon: 'info-circle-open',
-		label: 'Option 3',
-		quickAction: true,
+		id: '1',
+		name: 'Photos',
+		type: 'folder',
+	},
+	{
+		id: '2',
+		name: 'Videos',
+		type: 'folder',
 	},
 ];
 
-const sagaItems = [
+const recipeItems = [
 	{
-		director: 'George Lucas',
+		difficulty: 2,
 		downloadHref: '#',
-		rating: 10,
-		releaseDate: 'May 19th 1999',
-		status: ['Error', 'Pending'],
-		title: 'Episode I: The Phantom Menace',
+		format: 'PDF',
+		id: '3',
+		name: 'Hamburger',
+		origin: 'U.S.A',
+		spicyLevel: ['No Spicy'],
+		time: '10 min.',
 	},
 	{
-		director: 'George Lucas',
+		difficulty: 8,
 		downloadHref: '#',
-		rating: 50,
-		releaseDate: 'May 12th 2002',
-		status: ['Watched'],
-		title: 'Episode II: Attack of the Clones',
+		format: 'PDF',
+		id: '4',
+		image: './ramen.jpg',
+		name: 'Ramen',
+		origin: 'China',
+		spicyLevel: ['Spicy'],
+		time: '90 min.',
 	},
 	{
-		director: 'George Lucas',
+		difficulty: 9,
 		downloadHref: '#',
-		rating: 60,
-		releaseDate: 'May 12th 2005',
-		status: ['Watched'],
-		title: 'Episode III: Revenge of the Sith',
+		format: 'PDF',
+		id: '5',
+		image: './paella.jpg',
+		name: 'Paella',
+		origin: 'Spain',
+		spicyLevel: ['No Spicy'],
+		time: '90 min.',
 	},
 	{
-		director: 'George Lucas',
+		difficulty: 6,
 		downloadHref: '#',
-		rating: 90,
-		releaseDate: 'May 25th 1977',
-		status: ['Watched'],
-		title: 'Episode IV: A New Hope',
+		format: 'PDF',
+		id: '6',
+		name: 'Pizza',
+		origin: 'Italy',
+		spicyLevel: ['No Spicy'],
+		time: '30 min.',
 	},
 	{
-		director: 'Irvin Kershner',
+		difficulty: 5,
 		downloadHref: '#',
-		rating: 100,
-		releaseDate: 'May 21th 1980',
-		status: ['Watched'],
-		title: 'Episode V: The Empire Strikes Back',
+		format: 'PDF',
+		id: '7',
+		image: './carcamusas.jpg',
+		name: 'Carcamusas',
+		origin: 'Toledo',
+		spicyLevel: ['Spicy'],
+		time: '50 min.',
 	},
 	{
-		director: 'Richard Marquand',
+		difficulty: 5,
 		downloadHref: '#',
-		rating: 90,
-		releaseDate: 'May 25th 1983',
-		status: ['Watched'],
-		title: 'Episode VI: Return of the Jedi',
-	},
-	{
-		director: 'J. J. Abrams',
-		downloadHref: '#',
-		rating: 70,
-		releaseDate: 'December 14th 2015',
-		status: ['Watched'],
-		title: 'Episode VII: The Force Awakens',
-	},
-	{
-		director: 'Rian Johnson',
-		downloadHref: '#',
-		rating: 0,
-		releaseDate: 'December 9th 2017',
-		status: ['Pending'],
-		title: 'Episode VIII: The Last Jedi',
+		format: 'PDF',
+		id: '8',
+		name: 'Tacos',
+		origin: 'Mexico',
+		spicyLevel: ['Very Spicy'],
+		time: '30 min.',
 	},
 ];
 
-const expandedItems = [
+const chefsItems = [
 	{
-		director: 'Gareth Edwards',
-		downloadHref: '#',
-		rating: 70,
-		releaseDate: 'December 10th 2016',
-		status: ['Watched'],
-		title: 'Rogue One: A Star Wars Story',
+		id: '9',
+		initials: 'FA',
+		name: 'Ferrán Adriá',
+		style: 'fusion',
+		type: 'chef',
 	},
 	{
-		director: 'Ron Howard',
-		downloadHref: '#',
-		rating: 0,
-		releaseDate: 'May 25th 2018',
-		status: ['Pending'],
-		title: 'Solo: A Star Wars Story',
+		id: '10',
+		image: './ramsay.jpg',
+		initials: 'GR',
+		name: 'Gordon Ramsay',
+		style: 'general',
+		type: 'chef',
+	},
+	{
+		id: '11',
+		initials: 'AC',
+		name: 'Alberto Chicote',
+		style: 'general',
+		type: 'chef',
 	},
 ];
 
 const groupedItems = [
 	{
-		items: sagaItems,
-		label: 'Saga',
+		items: folderItems,
+		label: 'Folders',
 	},
 	{
-		items: expandedItems,
-		label: 'Expanded Universe',
+		items: recipeItems,
+		label: 'Recipes',
+	},
+	{
+		items: chefsItems,
+		label: 'Chefs',
 	},
 ];
 
@@ -151,7 +160,7 @@ describe('ClayList', function() {
 
 	it('should render the default markup', () => {
 		component = new ClayList({
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -160,7 +169,7 @@ describe('ClayList', function() {
 	it('should render a ClayList with classes', () => {
 		component = new ClayList({
 			elementClasses: 'my-custom-class',
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -169,7 +178,7 @@ describe('ClayList', function() {
 	it('should render a ClayList with id', () => {
 		component = new ClayList({
 			id: 'myId',
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -177,15 +186,17 @@ describe('ClayList', function() {
 
 	it('should render a ClayList with simple items', () => {
 		component = new ClayList({
-			items: sagaItems,
-			schema: [
-				{
-					contentRenderer: 'simple',
-					fieldsMap: {
-						title: 'title',
+			items: folderItems,
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'simple',
+						fieldsMap: {
+							title: 'name',
+						},
 					},
-				},
-			],
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -193,16 +204,18 @@ describe('ClayList', function() {
 
 	it('should render a ClayList with simple items with links', () => {
 		component = new ClayList({
-			items: sagaItems,
-			schema: [
-				{
-					contentRenderer: 'simple',
-					fieldsMap: {
-						href: 'downloadHref',
-						title: 'title',
+			items: folderItems,
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'simple',
+						fieldsMap: {
+							href: 'downloadHref',
+							title: 'name',
+						},
 					},
-				},
-			],
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -210,15 +223,17 @@ describe('ClayList', function() {
 
 	it('should render a ClayList with items', () => {
 		component = new ClayList({
-			items: sagaItems,
-			schema: [
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						title: 'title',
+			items: folderItems,
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							title: 'name',
+						},
 					},
-				},
-			],
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -226,16 +241,18 @@ describe('ClayList', function() {
 
 	it('should render a ClayList with items with links', () => {
 		component = new ClayList({
-			items: sagaItems,
-			schema: [
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						href: 'downloadHref',
-						title: 'title',
+			items: folderItems,
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							href: 'downloadHref',
+							title: 'name',
+						},
 					},
-				},
-			],
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -243,17 +260,19 @@ describe('ClayList', function() {
 
 	it('should render a ClayList with items with description', () => {
 		component = new ClayList({
-			items: sagaItems,
-			schema: [
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						title: 'title',
+			items: folderItems,
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							title: 'name',
+						},
 					},
-				},
-			],
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -261,17 +280,26 @@ describe('ClayList', function() {
 
 	it('should render a selectable ClayList', () => {
 		component = new ClayList({
-			items: sagaItems,
-			schema: [
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						title: 'title',
+			items: folderItems,
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							title: 'name',
+						},
 					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-			],
+				inputValueField: 'id',
+			},
 			selectable: true,
 		});
 
@@ -281,16 +309,18 @@ describe('ClayList', function() {
 	it('should render a selectable ClayList with groups', () => {
 		component = new ClayList({
 			items: groupedItems,
-			schema: [
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						title: 'title',
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							title: 'name',
+						},
 					},
-				},
-			],
+				],
+			},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -299,24 +329,33 @@ describe('ClayList', function() {
 	it('should render a selectable ClayList with icons', () => {
 		component = new ClayList({
 			items: groupedItems,
-			schema: [
-				{
-					contentRenderer: 'icon',
-					fieldName: 'status',
-					iconsMap: {
-						'Watched': 'check-circle',
-						'*': 'exclamation-circle',
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'icon',
+						fieldName: 'type',
+						iconsMap: {
+							'folder': 'folder',
+							'*': 'exclamation-circle',
+						},
 					},
-				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						title: 'title',
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							title: 'name',
+						},
 					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-			],
+				inputValueField: 'id',
+			},
 			spritemap: spritemap,
 		});
 
@@ -326,28 +365,37 @@ describe('ClayList', function() {
 	it('should render a selectable ClayList with circle icons', () => {
 		component = new ClayList({
 			items: groupedItems,
-			schema: [
-				{
-					contentRenderer: 'icon',
-					fieldName: 'status',
-					iconsMap: {
-						'Watched': 'check-circle',
-						'*': 'exclamation-circle',
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'icon',
+						fieldName: 'type',
+						iconsMap: {
+							'folder': 'folder',
+							'*': 'exclamation-circle',
+						},
+						iconShapesMap: {
+							'folder': 'rounded',
+							'*': 'circle',
+						},
 					},
-					iconShapesMap: {
-						'Watched': 'circle',
-						'*': 'rounded',
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							title: 'name',
+						},
 					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						title: 'title',
-					},
-				},
-			],
+				inputValueField: 'id',
+			},
 			spritemap: spritemap,
 		});
 
@@ -357,34 +405,43 @@ describe('ClayList', function() {
 	it('should render a selectable ClayList with label', () => {
 		component = new ClayList({
 			items: groupedItems,
-			schema: [
-				{
-					contentRenderer: 'icon',
-					fieldName: 'status',
-					iconsMap: {
-						'Watched': 'check-circle',
-						'*': 'exclamation-circle',
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'icon',
+						fieldName: 'type',
+						iconsMap: {
+							'folder': 'folder',
+							'*': 'exclamation-circle',
+						},
+						iconShapesMap: {
+							'folder': 'rounded',
+							'*': 'circle',
+						},
 					},
-					iconShapesMap: {
-						'Watched': 'circle',
-						'*': 'rounded',
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							labels: 'spicyLevel',
+							title: 'name',
+						},
+						labelStylesMap: {
+							'Spicy': 'warning',
+							'Very Spicy': 'danger',
+							'*': 'success',
+						},
 					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						labels: 'status',
-						title: 'title',
-					},
-					labelStylesMap: {
-						'Watched': 'success',
-						'Pending': 'warning',
-						'*': 'danger',
-					},
-				},
-			],
+				inputValueField: 'id',
+			},
 			spritemap: spritemap,
 		});
 
@@ -394,7 +451,7 @@ describe('ClayList', function() {
 	it('should render a selectable ClayList with action menu', () => {
 		let itemsWithActionItems = [];
 
-		sagaItems.forEach(item => {
+		folderItems.forEach(item => {
 			let itemWithActionItems = {};
 
 			for (let key in item) {
@@ -410,34 +467,43 @@ describe('ClayList', function() {
 
 		component = new ClayList({
 			items: itemsWithActionItems,
-			schema: [
-				{
-					contentRenderer: 'icon',
-					fieldName: 'status',
-					iconsMap: {
-						'Watched': 'check-circle',
-						'*': 'exclamation-circle',
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'icon',
+						fieldName: 'type',
+						iconsMap: {
+							'folder': 'folder',
+							'*': 'exclamation-circle',
+						},
+						iconShapesMap: {
+							'folder': 'rounded',
+							'*': 'circle',
+						},
 					},
-					iconShapesMap: {
-						'Watched': 'circle',
-						'*': 'rounded',
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							labels: 'spicyLevel',
+							title: 'name',
+						},
+						labelStylesMap: {
+							'Spicy': 'warning',
+							'Very Spicy': 'danger',
+							'*': 'success',
+						},
 					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						labels: 'status',
-						title: 'title',
-					},
-					labelStylesMap: {
-						'Watched': 'success',
-						'Pending': 'warning',
-						'*': 'danger',
-					},
-				},
-			],
+				inputValueField: 'id',
+			},
 			spritemap: spritemap,
 		});
 
@@ -447,7 +513,7 @@ describe('ClayList', function() {
 	it('should render a selectable ClayList with quick action menu', () => {
 		let itemsWithActionItems = [];
 
-		sagaItems.forEach(item => {
+		recipeItems.forEach(item => {
 			let itemWithActionItems = {};
 
 			for (let key in item) {
@@ -463,34 +529,43 @@ describe('ClayList', function() {
 
 		component = new ClayList({
 			items: itemsWithActionItems,
-			schema: [
-				{
-					contentRenderer: 'icon',
-					fieldName: 'status',
-					iconsMap: {
-						'Watched': 'check-circle',
-						'*': 'exclamation-circle',
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'icon',
+						fieldName: 'type',
+						iconsMap: {
+							'folder': 'folder',
+							'*': 'exclamation-circle',
+						},
+						iconShapesMap: {
+							'folder': 'rounded',
+							'*': 'circle',
+						},
 					},
-					iconShapesMap: {
-						'Watched': 'circle',
-						'*': 'rounded',
+					{
+						contentRenderer: 'content',
+						fieldsMap: {
+							description: 'origin',
+							href: 'downloadHref',
+							labels: 'spicyLevel',
+							title: 'name',
+						},
+						labelStylesMap: {
+							'Spicy': 'warning',
+							'Very Spicy': 'danger',
+							'*': 'success',
+						},
 					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
 				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'director',
-						href: 'downloadHref',
-						labels: 'status',
-						title: 'title',
-					},
-					labelStylesMap: {
-						'Watched': 'success',
-						'Pending': 'warning',
-						'*': 'danger',
-					},
-				},
-			],
+				inputValueField: 'id',
+			},
 			spritemap: spritemap,
 		});
 
@@ -502,15 +577,17 @@ describe('ClayList', function() {
 
 		component = new ClayList({
 			events: {itemToggled: spy},
-			items: groupedItems,
-			schema: [
-				{
-					contentRenderer: 'simple',
-					fieldsMap: {
-						title: 'title',
+			items: folderItems,
+			schema: {
+				fields: [
+					{
+						contentRenderer: 'simple',
+						fieldsMap: {
+							title: 'name',
+						},
 					},
-				},
-			],
+				],
+			},
 			selectable: true,
 		});
 
