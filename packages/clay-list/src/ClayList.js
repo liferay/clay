@@ -76,17 +76,22 @@ ClayList.STATE = {
 	 * @type {!object}
 	 * @default undefined
 	 */
-	schema: Config.arrayOf(
-		Config.shapeOf({
-			contentRenderer: Config.string(),
-			contentRendererMap: Config.object(),
-			fieldName: Config.string(),
-			fieldsMap: Config.object(),
-			iconsMap: Config.object(),
-			iconShapesMap: Config.object(),
-			labelStylesMap: Config.object(),
-		})
-	).required(),
+	schema: Config.shapeOf({
+		fields: Config.arrayOf(
+			Config.shapeOf({
+				contentRenderer: Config.string(),
+				contentRendererMap: Config.object(),
+				fieldName: Config.string(),
+				fieldsMap: Config.object(),
+				iconsMap: Config.object(),
+				iconShapesMap: Config.object(),
+				labelStylesMap: Config.object(),
+			})
+		),
+		inputNameField: Config.string(),
+		inputNamesMap: Config.object(),
+		inputValueField: Config.string(),
+	}).required(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

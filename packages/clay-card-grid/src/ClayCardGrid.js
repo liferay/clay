@@ -65,21 +65,22 @@ ClayCardGrid.STATE = {
 	 * Schema mapping list item fields with item data properties.
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {!array}
+	 * @type {!object}
 	 * @default undefined
 	 */
-	schema: Config.arrayOf(
-		Config.shapeOf({
-			contentRenderer: Config.string(),
-			contentRendererMap: Config.object(),
-			fieldName: Config.string(),
-			fieldsMap: Config.object(),
-			fileTypeStylesMap: Config.object(),
-			iconsMap: Config.object(),
-			labelStylesMap: Config.object(),
-			userColorsMap: Config.object(),
-		})
-	).required(),
+	schema: Config.shapeOf({
+		contentRenderer: Config.string(),
+		contentRendererMap: Config.object(),
+		fieldName: Config.string(),
+		fieldsMap: Config.object(),
+		fileTypeStylesMap: Config.object(),
+		iconsMap: Config.object(),
+		inputNameField: Config.string(),
+		inputNamesMap: Config.object(),
+		inputValueField: Config.string(),
+		labelStylesMap: Config.object(),
+		userColorsMap: Config.object(),
+	}).required(),
 
 	/**
 	 * Flag to indicate if the list group items are selectable.

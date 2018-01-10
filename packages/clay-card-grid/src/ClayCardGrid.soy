@@ -4,16 +4,20 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param schema: list<[
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
-	]>}
+	]}
 	{@param? elementClasses: string}
 	{@param? handleItemToggled_: any}
 	{@param? id: string}
@@ -49,29 +53,33 @@
  */
 {template .item}
 	{@param item: ?}
-	{@param schema: list<[
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
-	]>}
+	]}
 	{@param spritemap: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 
 	<li class="card-page-item-directory">
 		{let $variant kind="text"}
-			{if $schema[0].contentRenderer}
-				{$schema[0].contentRenderer}
-			{elseif $schema[0] and $schema[0].fieldsMap and $schema[0].fieldsMap.contentRenderer}
-				{if $schema[0].contentRendererMap and $schema[0].contentRendererMap[$item[$schema[0].fieldsMap.contentRenderer]]}
-					{$schema[0].contentRendererMap[$item[$schema[0].fieldsMap.contentRenderer]]}
-				{elseif $schema[0].contentRendererMap['*']}
-					{$schema[0].contentRendererMap['*']}
+			{if $schema.contentRenderer}
+				{$schema.contentRenderer}
+			{elseif $schema and $schema.fieldsMap and $schema.fieldsMap.contentRenderer}
+				{if $schema.contentRendererMap and $schema.contentRendererMap[$item[$schema.fieldsMap.contentRenderer]]}
+					{$schema.contentRendererMap[$item[$schema.fieldsMap.contentRenderer]]}
+				{elseif $schema.contentRendererMap['*']}
+					{$schema.contentRendererMap['*']}
 				{else}
 					image
 				{/if}
@@ -81,9 +89,9 @@
 		{/let}
 
 		{delcall ClayCardGrid.Card variant="$variant"}
-			{param fieldSchema: $schema[0] /}
 			{param handleItemToggled_: $handleItemToggled_ /}
 			{param item: $item /}
+			{param schema: $schema /}
 			{param selectable: $selectable /}
 			{param spritemap: $spritemap /}
 		{/delcall}
@@ -96,16 +104,20 @@
  */
 {template .items}
 	{@param items: list<?>}
-	{@param schema: list<[
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
-	]>}
+	]}
 	{@param spritemap: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -145,17 +157,21 @@
  * This renders the default card item.
  */
 {deltemplate ClayCardGrid.Card}
-	{@param fieldSchema: [
+	{@param item: ?}
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
 	]}
-	{@param item: ?}
 	{@param spritemap: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -165,17 +181,21 @@
  * This renders a card item of type file.
  */
 {deltemplate ClayCardGrid.Card variant="'file'"}
-	{@param fieldSchema: [
+	{@param item: ?}
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
 	]}
-	{@param item: ?}
 	{@param spritemap: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -184,17 +204,30 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
-		{param fileType: $item[$fieldSchema.fieldsMap.fileType] /}
-		{param fileTypeStyle: $fieldSchema.fileTypeStylesMap ? $fieldSchema.fileTypeStylesMap[$item[$fieldSchema.fieldsMap.fileType]] ?: $fieldSchema.fileTypeStylesMap['*'] : null /}
-		{param href: $item[$fieldSchema.fieldsMap.href] /}
-		{param icon: $fieldSchema.iconsMap ? $fieldSchema.iconsMap[$item[$fieldSchema.fieldsMap.icon]] ?: $fieldSchema.iconsMap['*'] : $item[$fieldSchema.fieldsMap.icon] /}
-		{param labels: $item[$fieldSchema.fieldsMap.labels] /}
-		{param labelStylesMap: $fieldSchema.labelStylesMap /}
+		{param fileType: $item[$schema.fieldsMap.fileType] /}
+		{param fileTypeStyle: $schema.fileTypeStylesMap ? $schema.fileTypeStylesMap[$item[$schema.fieldsMap.fileType]] ?: $schema.fileTypeStylesMap['*'] : null /}
+		{param href: $item[$schema.fieldsMap.href] /}
+		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
+		{param inputName kind="text"}
+			{if $schema.inputName}
+				{$schema.inputName}
+			{elseif $schema.inputNameField and $schema.inputNamesMap}
+				{if $schema.inputNamesMap[$item[$schema.inputNameField]]}
+					{$schema.inputNamesMap[$item[$schema.inputNameField]]}
+				{elseif $schema.inputNamesMap['*']}
+					{$schema.inputNamesMap['*']}
+				{/if}
+			{/if}
+		{/param}
+
+		{param inputValue: $item[$schema.inputValueField] /}
+		{param labels: $item[$schema.fieldsMap.labels] /}
+		{param labelStylesMap: $schema.labelStylesMap /}
 		{param selectable: $selectable /}
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
-		{param subtitle: $item[$fieldSchema.fieldsMap.description] /}
-		{param title: $item[$fieldSchema.fieldsMap.title] /}
+		{param subtitle: $item[$schema.fieldsMap.description] /}
+		{param title: $item[$schema.fieldsMap.title] /}
 	{/call}
 {/deltemplate}
 
@@ -202,17 +235,21 @@
  * This renders a card item of type horizontal.
  */
 {deltemplate ClayCardGrid.Card variant="'horizontal'"}
-	{@param fieldSchema: [
+	{@param item: ?}
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
 	]}
-	{@param item: ?}
 	{@param spritemap: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -221,12 +258,25 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
-		{param href: $item[$fieldSchema.fieldsMap.href] /}
-		{param icon: $fieldSchema.iconsMap ? $fieldSchema.iconsMap[$item[$fieldSchema.fieldsMap.icon]] ?: $fieldSchema.iconsMap['*'] : $item[$fieldSchema.fieldsMap.icon] /}
+		{param href: $item[$schema.fieldsMap.href] /}
+		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
+		{param inputName kind="text"}
+			{if $schema.inputName}
+				{$schema.inputName}
+			{elseif $schema.inputNameField and $schema.inputNamesMap}
+				{if $schema.inputNamesMap[$item[$schema.inputNameField]]}
+					{$schema.inputNamesMap[$item[$schema.inputNameField]]}
+				{elseif $schema.inputNamesMap['*']}
+					{$schema.inputNamesMap['*']}
+				{/if}
+			{/if}
+		{/param}
+
+		{param inputValue: $item[$schema.inputValueField] /}
 		{param selectable: $selectable /}
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
-		{param title: $item[$fieldSchema.fieldsMap.title] /}
+		{param title: $item[$schema.fieldsMap.title] /}
 	{/call}
 {/deltemplate}
 
@@ -234,17 +284,21 @@
  * This renders a card item of type image.
  */
 {deltemplate ClayCardGrid.Card variant="'image'"}
-	{@param fieldSchema: [
+	{@param item: ?}
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
 	]}
-	{@param item: ?}
 	{@param spritemap: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -253,19 +307,32 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
-		{param fileType: $item[$fieldSchema.fieldsMap.fileType] /}
-		{param fileTypeStyle: $fieldSchema.fileTypeStylesMap ? $fieldSchema.fileTypeStylesMap[$item[$fieldSchema.fieldsMap.fileType]] ?: $fieldSchema.fileTypeStylesMap['*'] : null /}
-		{param href: $item[$fieldSchema.fieldsMap.href] /}
-		{param icon: $fieldSchema.iconsMap ? $fieldSchema.iconsMap[$item[$fieldSchema.fieldsMap.icon]] ?: $fieldSchema.iconsMap['*'] : $item[$fieldSchema.fieldsMap.icon] /}
-		{param imageAlt: $item[$fieldSchema.fieldsMap.imageAlt] /}
-		{param imageSrc: $item[$fieldSchema.fieldsMap.imageSrc] /}
-		{param labels: $item[$fieldSchema.fieldsMap.labels] /}
-		{param labelStylesMap: $fieldSchema.labelStylesMap /}
+		{param fileType: $item[$schema.fieldsMap.fileType] /}
+		{param fileTypeStyle: $schema.fileTypeStylesMap ? $schema.fileTypeStylesMap[$item[$schema.fieldsMap.fileType]] ?: $schema.fileTypeStylesMap['*'] : null /}
+		{param href: $item[$schema.fieldsMap.href] /}
+		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
+		{param imageAlt: $item[$schema.fieldsMap.imageAlt] /}
+		{param imageSrc: $item[$schema.fieldsMap.imageSrc] /}
+		{param inputName kind="text"}
+			{if $schema.inputName}
+				{$schema.inputName}
+			{elseif $schema.inputNameField and $schema.inputNamesMap}
+				{if $schema.inputNamesMap[$item[$schema.inputNameField]]}
+					{$schema.inputNamesMap[$item[$schema.inputNameField]]}
+				{elseif $schema.inputNamesMap['*']}
+					{$schema.inputNamesMap['*']}
+				{/if}
+			{/if}
+		{/param}
+
+		{param inputValue: $item[$schema.inputValueField] /}
+		{param labels: $item[$schema.fieldsMap.labels] /}
+		{param labelStylesMap: $schema.labelStylesMap /}
 		{param selectable: $selectable /}
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
-		{param subtitle: $item[$fieldSchema.fieldsMap.description] /}
-		{param title: $item[$fieldSchema.fieldsMap.title] /}
+		{param subtitle: $item[$schema.fieldsMap.description] /}
+		{param title: $item[$schema.fieldsMap.title] /}
 	{/call}
 {/deltemplate}
 
@@ -273,17 +340,21 @@
  * This renders a card item of type user.
  */
 {deltemplate ClayCardGrid.Card variant="'user'"}
-	{@param fieldSchema: [
+	{@param item: ?}
+	{@param schema: [
 		contentRenderer: string,
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
 		fileTypeStylesMap: ?,
 		iconsMap: ?,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string,
 		labelStylesMap: ?,
 		userColorsMap: ?
 	]}
-	{@param item: ?}
 	{@param spritemap: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -292,15 +363,28 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
-		{param href: $item[$fieldSchema.fieldsMap.href] /}
-		{param imageAlt: $item[$fieldSchema.fieldsMap.imageAlt] /}
-		{param imageSrc: $item[$fieldSchema.fieldsMap.imageSrc] /}
-		{param initials: $item[$fieldSchema.fieldsMap.initials] /}
-		{param name: $item[$fieldSchema.fieldsMap.username] /}
+		{param href: $item[$schema.fieldsMap.href] /}
+		{param imageAlt: $item[$schema.fieldsMap.imageAlt] /}
+		{param imageSrc: $item[$schema.fieldsMap.imageSrc] /}
+		{param initials: $item[$schema.fieldsMap.initials] /}
+		{param inputName kind="text"}
+			{if $schema.inputName}
+				{$schema.inputName}
+			{elseif $schema.inputNameField and $schema.inputNamesMap}
+				{if $schema.inputNamesMap[$item[$schema.inputNameField]]}
+					{$schema.inputNamesMap[$item[$schema.inputNameField]]}
+				{elseif $schema.inputNamesMap['*']}
+					{$schema.inputNamesMap['*']}
+				{/if}
+			{/if}
+		{/param}
+
+		{param inputValue: $item[$schema.inputValueField] /}
+		{param name: $item[$schema.fieldsMap.username] /}
 		{param selectable: $selectable /}
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
-		{param subtitle: $item[$fieldSchema.fieldsMap.description] /}
-		{param userColor: $fieldSchema.userColorsMap ? $fieldSchema.userColorsMap[$item[$fieldSchema.fieldsMap.userColor]] ?: $fieldSchema.userColorsMap['*'] : $item[$fieldSchema.fieldsMap.userColor] /}
+		{param subtitle: $item[$schema.fieldsMap.description] /}
+		{param userColor: $schema.userColorsMap ? $schema.userColorsMap[$item[$schema.fieldsMap.userColor]] ?: $schema.userColorsMap['*'] : $item[$schema.fieldsMap.userColor] /}
 	{/call}
 {/deltemplate}

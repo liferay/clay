@@ -33,7 +33,7 @@ ClayImageCard.STATE = {
 	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?array|undefined}
+	 * @type {?array|object|undefined}
 	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,

@@ -4,15 +4,21 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param schema: list<[
-		contentRenderer: string,
-		contentRendererMap: ?,
-		fieldName: string,
-		fieldsMap: ?,
-		iconsMap: ?,
-		iconShapesMap: ?,
-		labelStylesMap: ?
-	]>}
+	{@param schema: [
+		fields: list<[
+			contentRenderer: string,
+			contentRendererMap: ?,
+			fieldName: string,
+			fieldsMap: ?,
+			iconsMap: ?,
+			iconShapesMap: ?,
+			labelStylesMap: ?
+		]>,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string	
+	]}
 	{@param? elementClasses: string}
 	{@param? handleItemToggled_: any}
 	{@param? id: string}
@@ -50,15 +56,21 @@
  */
 {template .item}
 	{@param item: ?}
-	{@param schema: list<[
-		contentRenderer: string,
-		contentRendererMap: ?,
-		fieldName: string,
-		fieldsMap: ?,
-		iconsMap: ?,
-		iconShapesMap: ?,
-		labelStylesMap: ?
-	]>}
+	{@param schema: [
+		fields: list<[
+			contentRenderer: string,
+			contentRendererMap: ?,
+			fieldName: string,
+			fieldsMap: ?,
+			iconsMap: ?,
+			iconShapesMap: ?,
+			labelStylesMap: ?
+		]>,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string	
+	]}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
@@ -78,11 +90,24 @@
 					{param events: ['change': $handleItemToggled_] /}
 					{param hideLabel: true /}
 					{param label: 'select' /}
+					{param name kind="text"}
+						{if $schema.inputName}
+							{$schema.inputName}
+						{elseif $schema.inputNameField and $schema.inputNamesMap}
+							{if $schema.inputNamesMap[$item[$schema.inputNameField]]}
+								{$schema.inputNamesMap[$item[$schema.inputNameField]]}
+							{elseif $schema.inputNamesMap['*']}
+								{$schema.inputNamesMap['*']}
+							{/if}
+						{/if}
+					{/param}
+
+					{param value: $item[$schema.inputValueField] /}
 				{/call}
 			</div>
 		{/if}
 
-		{foreach $fieldSchema in $schema}
+		{foreach $fieldSchema in $schema.fields}
 			{let $variant kind="text"}
 				{if $fieldSchema.contentRenderer}
 					{$fieldSchema.contentRenderer}
@@ -125,15 +150,21 @@
  */
 {template .items}
 	{@param items: list<?>}
-	{@param schema: list<[
-		contentRenderer: string,
-		contentRendererMap: ?,
-		fieldName: string,
-		fieldsMap: ?,
-		iconsMap: ?,
-		iconShapesMap: ?,
-		labelStylesMap: ?
-	]>}
+	{@param schema: [
+		fields: list<[
+			contentRenderer: string,
+			contentRendererMap: ?,
+			fieldName: string,
+			fieldsMap: ?,
+			iconsMap: ?,
+			iconShapesMap: ?,
+			labelStylesMap: ?
+		]>,
+		inputName: string,
+		inputNameField: string,
+		inputNamesMap: ?,
+		inputValueField: string	
+	]}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}

@@ -137,20 +137,25 @@ ClayTable.STATE = {
 	 * name of the field with the value.
 	 * @instance
 	 * @memberof ClayTable
-	 * @type {!array}
+	 * @type {!object}
 	 * @default undefined
 	 */
-	schema: Config.arrayOf(
-		Config.shapeOf({
-			contentRenderer: Config.string(),
-			contentRendererMap: Config.object(),
-			fieldName: Config.string().required(),
-			fieldsMap: Config.object(),
-			label: Config.string(),
-			sortable: Config.bool(),
-			sortingOrder: Config.oneOf(['asc', 'desc']),
-		})
-	).required(),
+	schema: Config.shapeOf({
+		fields: Config.arrayOf(
+			Config.shapeOf({
+				contentRenderer: Config.string(),
+				contentRendererMap: Config.object(),
+				fieldName: Config.string().required(),
+				fieldsMap: Config.object(),
+				label: Config.string(),
+				sortable: Config.bool(),
+				sortingOrder: Config.oneOf(['asc', 'desc']),
+			})
+		),
+		inputNameField: Config.string(),
+		inputNamesMap: Config.object(),
+		inputValueField: Config.string(),
+	}).required(),
 
 	/**
 	 * Flag to indicate if the table items are selectable or not.
