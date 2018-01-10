@@ -25,6 +25,7 @@
 		type: string
 	]>}
 	{@param? handleItemToggled_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
@@ -33,8 +34,10 @@
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
+	{@param? selectedItems_: list<?>}
 	{@param? sortingOrder: string}
 	{@param? title: string}
+	{@param? totalItems_: number}
 	{@param? viewType: int}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -61,15 +64,20 @@
 		{if $items}
 			{call ClayManagementToolbar.render}
 				{param actionItems: $actionItems /}
-				{param events: ['viewTypeClicked': $handleViewTypeClicked_] /}
+				{param events: [
+					'selectPageCheckboxChanged': $handleSelectPageCheckboxChanged_,
+					'viewTypeClicked': $handleViewTypeClicked_
+				] /}
 				{param filterItems: $filterItems /}
 				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
 				{param selectable: $selectable /}
+				{param selectedItems: $selectedItems_ ? length($selectedItems_) : 0 /}
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}
+				{param totalItems: $totalItems_ /}
 				{param viewTypes: $viewTypes /}
 			{/call}
 

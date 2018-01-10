@@ -43,7 +43,50 @@ actionItemShape.items = actionItemsValidator;
  * Metal ClayDatasetDisplay component.
  */
 class ClayDatasetDisplay extends Component {
+	/**
+	 * @inheritDoc
+	 */
+	created() {
+		let selectedItems = [];
+		let totalItems = 0;
+
+		for (let item of this.items) {
+			if (item.items) {
+				totalItems += item.items.length;
+
+				for (let childrenItem of item.items) {
+					if (childrenItem.selected) {
+						selectedItems.push(childrenItem);
+					}
+				}
+			} else {
+				if (item.selected) {
+					selectedItems.push(item);
+				}
+			}
+		}
+
+		this.selectedItems_ = selectedItems;
+		this.totalItems_ = totalItems;
+	}
+
 	handleItemToggled_(event) {}
+
+	/**
+	 * Changes the selection status of the dataset items on management toolbar
+	 * select page checkbox change.
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleSelectPageCheckboxChanged_(event) {
+		let checkboxStatus = event.target.checked;
+
+		if (checkboxStatus) {
+			this.selectAllItems();
+		} else {
+			this.deselectAllItems();
+		}
+	}
 
 	/**
 	 * Changes the view on management toolbar view type click.
@@ -60,6 +103,44 @@ class ClayDatasetDisplay extends Component {
 				break;
 			}
 		}
+	}
+
+	/**
+	 * Iterates over the selected items array, mark all as not selected and
+	 * removes them from the selectedItems array.
+	 * @private
+	 */
+	deselectAllItems() {
+		for (let item of this.selectedItems_) {
+			item.selected = false;
+		}
+
+		this.selectedItems_ = [];
+	}
+
+	/**
+	 * Iterates over the items array, mark all as selected and adds them to the
+	 * selectedItems array.
+	 * @private
+	 */
+	selectAllItems() {
+		let selectedItems = [];
+
+		for (let item of this.items) {
+			if (item.items) {
+				for (let childrenItem of item.items) {
+					childrenItem.selected = true;
+
+					selectedItems.push(childrenItem);
+				}
+			} else {
+				item.selected = true;
+
+				selectedItems.push(childrenItem);
+			}
+		}
+
+		this.selectedItems_ = selectedItems;
 	}
 }
 
@@ -161,6 +242,15 @@ ClayDatasetDisplay.STATE = {
 	selectable: Config.bool().value(false),
 
 	/**
+	 * The selected items of the item list. For internatl purposes.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?array|undefined}
+	 * @default undefined
+	 */
+	selectedItems_: Config.array().internal(),
+
+	/**
 	 * Sorting order.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -186,6 +276,15 @@ ClayDatasetDisplay.STATE = {
 	 * @default undefined
 	 */
 	title: Config.string(),
+
+	/**
+	 * The total number of items in the item list. For internatl purposes.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?int|undefined}
+	 * @default undefined
+	 */
+	totalItems_: Config.number().internal(),
 
 	/**
 	 * Position in the views list of the selected view.
