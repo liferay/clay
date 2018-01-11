@@ -1,6 +1,6 @@
-@mixin clay-loading-icon-dotted-variant($map) {
+@mixin clay-loading-animation-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
-	$mixin-name: 'clay-loading-icon-dotted-variant';
+	$mixin-name: 'clay-loading-animation-variant';
 
 	$border-radius: setter(map-get($map, border-radius), 50%);
 	$color: setter(map-get($map, color), $secondary);
@@ -34,10 +34,11 @@
 	$ball-5-color: setter(map-get($map, ball-5-color), rgba($color, $ball-5-alpha));
 
 	@if ($enabled) {
-		.loading-icon-indicator {
+		&:after {
 			animation: $animation;
 			animation-name: $animation-name;
 			border-radius: $border-radius;
+			content: '';
 
 			// Box shadow needs this specific order for proper animation
 
