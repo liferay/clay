@@ -4,30 +4,31 @@ const webpack = require('webpack');
 console.log(path.resolve('./node_modules/clay-collapse'));
 
 module.exports = {
-  entry: './src/ClayBadge.js',
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            compact: false,
-            presets: ['babel-preset-env'],
-            plugins: ['babel-plugin-transform-node-env-inline'],
-          },
-        },
-      },
-    ],
-  },
-  output: {
-    library: 'metal',
-    libraryTarget: 'this',
-    filename: './build/globals/clay-badge.js',
-  },
-  plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
-  resolve: {
-    mainFields: ['esnext:main', 'main'],
-  },
+	entry: './src/ClayBadge.js',
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						compact: false,
+						presets: ['babel-preset-env'],
+						plugins: ['babel-plugin-transform-node-env-inline'],
+					},
+				},
+			},
+		],
+	},
+	devtool: 'cheap-module-source-map',
+	output: {
+		library: 'metal',
+		libraryTarget: 'this',
+		filename: './build/globals/clay-badge.js',
+	},
+	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
+	resolve: {
+		mainFields: ['esnext:main', 'main'],
+	},
 };
