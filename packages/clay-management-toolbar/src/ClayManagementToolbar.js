@@ -52,7 +52,11 @@ class ClayManagementToolbar extends Component {
 	handleActionClicked_(event) {
 		let element = event.delegateTarget;
 		let elementIndex = Array.prototype.indexOf.call(
-			element.parentElement.children,
+			Array.prototype.filter.call(
+				element.parentElement.children,
+				childrenElement =>
+					childrenElement.getAttribute('role') !== 'presentation'
+			),
 			element
 		);
 		let item = this.actionItems[elementIndex];
