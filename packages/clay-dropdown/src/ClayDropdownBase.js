@@ -1,5 +1,8 @@
-import './ClayDropdownItem';
 import 'clay-button';
+import 'clay-checkbox';
+import 'clay-icon';
+import 'clay-link';
+import 'clay-radio';
 import {Align} from 'metal-position';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';

@@ -50,12 +50,12 @@ class ClayManagementToolbar extends Component {
 	 * @private
 	 */
 	handleActionClicked_(event) {
-		let element = event.currentTarget;
+		let element = event.delegateTarget;
 		let elementIndex = Array.prototype.indexOf.call(
 			element.parentElement.children,
 			element
 		);
-		let item = this.viewTypes[elementIndex];
+		let item = this.actionItems[elementIndex];
 
 		this.emit('actionClicked', {
 			action: item,
@@ -149,7 +149,7 @@ class ClayManagementToolbar extends Component {
 	 * @private
 	 */
 	handleViewTypeClicked_(event) {
-		let element = event.currentTarget;
+		let element = event.delegateTarget;
 		let elementIndex = Array.prototype.indexOf.call(
 			element.parentElement.children,
 			element
