@@ -282,6 +282,20 @@ ClayDatasetDisplay.STATE = {
 	items: Config.array(),
 
 	/**
+	 * Configuration of the management bar plus button.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	plusButton: Config.shapeOf({
+		button: Config.object(),
+		caption: Config.string(),
+		helpText: Config.string(),
+		items: actionItemsValidator,
+	}),
+
+	/**
 	 * URL of the search form action
 	 * @instance
 	 * @memberof ClayDatasetDisplay

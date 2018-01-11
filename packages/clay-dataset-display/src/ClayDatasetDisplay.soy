@@ -32,6 +32,20 @@
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? items: ?}
+	{@param? plusButton: [
+		button: ?,
+		caption: string,
+		helpText: string,
+		items: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			quickAction: bool,
+			separator: bool,
+			type: string
+		]>
+	]}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -74,6 +88,7 @@
 				] /}
 				{param filterItems: $filterItems /}
 				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
+				{param plusButton: $plusButton /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
