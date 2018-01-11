@@ -177,6 +177,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the sorting button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleSortingButtonClicked_(event) {
+		this.emit('sortingButtonClicked', event);
+	}
+
+	/**
 	 * Selects all items on management toolbar select all button click.
 	 * @private
 	 */
