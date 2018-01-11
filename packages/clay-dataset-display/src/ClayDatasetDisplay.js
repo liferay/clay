@@ -71,6 +71,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the action item clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleActionClicked_(event) {
+		this.emit('actionClicked', event);
+	}
+
+	/**
 	 * Deselects all items on management toolbar deselect all button click.
 	 * @private
 	 */
@@ -92,7 +101,7 @@ class ClayDatasetDisplay extends Component {
 			for (let [index, item] of this.selectedItems_.entries()) {
 				if (
 					item[
-						this.viewTypes[this.viewType].schema.inputValueField
+						this.views[this.selectedView].schema.inputValueField
 					] === itemId
 				) {
 					item.selected = false;
@@ -108,7 +117,7 @@ class ClayDatasetDisplay extends Component {
 					for (let childrenItem of item.items) {
 						if (
 							childrenItem[
-								this.viewTypes[this.viewType].schema
+								this.views[this.selectedView].schema
 									.inputValueField
 							] === itemId
 						) {
@@ -121,7 +130,7 @@ class ClayDatasetDisplay extends Component {
 				} else {
 					if (
 						item[
-							this.viewTypes[this.viewType].schema.inputValueField
+							this.views[this.selectedView].schema.inputValueField
 						] === itemId
 					) {
 						item.selected = true;
@@ -170,12 +179,12 @@ class ClayDatasetDisplay extends Component {
 	 * @private
 	 */
 	handleViewTypeClicked_(event) {
-		this.viewTypes[this.viewType].active = false;
+		this.views[this.selectedView].active = false;
 
-		for (let [index, viewType] of this.viewTypes.entries()) {
-			if (viewType === event.viewType) {
-				this.viewTypes[index].active = true;
-				this.viewType = index;
+		for (let [index, view] of this.views.entries()) {
+			if (view === event.viewType) {
+				this.views[index].active = true;
+				this.selectedView = index;
 				break;
 			}
 		}
@@ -341,6 +350,15 @@ ClayDatasetDisplay.STATE = {
 	selectedItems_: Config.array().internal(),
 
 	/**
+	 * Position in the views list of the selected view.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?number|undefined}
+	 * @default undefined
+	 */
+	selectedView: Config.number(),
+
+	/**
 	 * Sorting order.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -377,22 +395,13 @@ ClayDatasetDisplay.STATE = {
 	totalItems_: Config.number().internal(),
 
 	/**
-	 * Position in the views list of the selected view.
-	 * @instance
-	 * @memberof ClayDatasetDisplay
-	 * @type {?number|undefined}
-	 * @default undefined
-	 */
-	viewType: Config.number(),
-
-	/**
 	 * List of view items.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
-	viewTypes: Config.arrayOf(
+	views: Config.arrayOf(
 		Config.shapeOf({
 			active: Config.bool().value(false),
 			disabled: Config.bool().value(false),

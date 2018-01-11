@@ -24,6 +24,7 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? handleActionClicked_: any}
 	{@param? handleDeselectAllClicked_: any}
 	{@param? handleItemToggled_: any}
 	{@param? handleSelectAllClicked_: any}
@@ -51,11 +52,11 @@
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedItems_: list<?>}
+	{@param? selectedView: int}
 	{@param? sortingOrder: string}
 	{@param? title: string}
 	{@param? totalItems_: number}
-	{@param? viewType: int}
-	{@param? viewTypes: list<[
+	{@param? views: list<[
 		active: bool,
 		contentRenderer: string,
 		disabled: bool,
@@ -81,6 +82,7 @@
 			{call ClayManagementToolbar.render}
 				{param actionItems: $actionItems /}
 				{param events: [
+					'actionClicked': $handleActionClicked_,
 					'deselectAllClicked': $handleDeselectAllClicked_,
 					'selectAllClicked': $handleSelectAllClicked_,
 					'selectPageCheckboxChanged': $handleSelectPageCheckboxChanged_,
@@ -97,16 +99,16 @@
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}
 				{param totalItems: $totalItems_ /}
-				{param viewTypes: $viewTypes /}
+				{param viewTypes: $views /}
 			{/call}
 
-			{if $viewTypes and isNonnull($viewType)}
-				{let $variant: $viewTypes[$viewType].contentRenderer /}
+			{if $views and isNonnull($selectedView)}
+				{let $variant: $views[$selectedView].contentRenderer /}
 
 				{delcall ClayDatasetDisplay.List variant="$variant"}
 					{param handleItemToggled_: $handleItemToggled_ /}
 					{param items: $items /}
-					{param schema: $viewTypes[$viewType].schema /}
+					{param schema: $views[$selectedView].schema /}
 					{param selectable: $selectable /}
 					{param spritemap: $spritemap /}
 					{param title: $title /}
