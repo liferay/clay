@@ -188,12 +188,12 @@
 				<ul class="navbar-nav">
 					{foreach $item in $actionItems}
 						{if $item.quickAction and $item.icon and $spritemap}
-							<li class="nav-item navbar-breakpoint-down-d-none">
-								{call ClayLink.render}
+							<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$handleActionClicked_}">
+								{call ClayButton.render}
 									{param elementClasses: 'quick-action-item' /}
-									{param href: $item.href /}
 									{param icon: $item.icon /}
 									{param spritemap: $spritemap /}
+									{param style: 'unstyled' /}
 								{/call}
 							</li>
 						{/if}
