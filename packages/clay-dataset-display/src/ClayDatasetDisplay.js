@@ -61,6 +61,8 @@ class ClayDatasetDisplay extends Component {
 						}
 					}
 				} else {
+					totalItems++;
+
 					if (item.selected) {
 						selectedItems.push(item);
 					}
