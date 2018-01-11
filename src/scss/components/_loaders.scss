@@ -1,4 +1,4 @@
-.loading-icon {
+.loading-animation {
 	display: block;
 	font-size: $loading-icon-font-size;
 	height: 1em;
@@ -12,24 +12,24 @@
 
 // Loading Icon Dotted
 
-%loading-icon-dotted {
-	@include clay-loading-icon-dotted-variant($loading-icon-dotted);
+%loading-animation {
+	@include clay-loading-animation-variant($loading-animation);
 }
 
-%loading-icon-dotted-light {
-	@include clay-loading-icon-dotted-variant($loading-icon-dotted-light);
+%loading-animation-light {
+	@include clay-loading-animation-variant($loading-animation-light);
 }
 
-.loading-icon-dotted {
-	@extend %loading-icon-dotted !optional;
+.loading-animation {
+	@extend %loading-animation !optional;
 }
 
-.loading-icon-dotted-light {
-	@extend %loading-icon-dotted-light !optional;
+.loading-animation-light {
+	@extend %loading-animation-light !optional;
 }
 
 // Loading Icon Sizes
 
-.loading-icon-sm {
+.loading-animation.loading-animation-sm {
 	font-size: $loading-icon-font-size-sm;
 }

@@ -47,22 +47,22 @@ $btn-toolbar-spacer-y: 0.125rem !default; // 2px
 
 $btn-primary: () !default;
 $btn-primary: map-merge((
-	loading-icon-dotted: 'loading-icon-dotted-light'
+	loading-animation: 'loading-animation-light'
 ), $btn-primary);
 
 $btn-secondary: () !default;
 $btn-secondary: map-merge((
-	loading-icon-dotted: 'loading-icon-dotted-light'
+	loading-animation: 'loading-animation-light'
 ), $btn-secondary);
 
 $btn-success: () !default;
 $btn-success: map-merge((
-	loading-icon-dotted: 'loading-icon-dotted-light'
+	loading-animation: 'loading-animation-light'
 ), $btn-success);
 
 $btn-info: () !default;
 $btn-info: map-merge((
-	loading-icon-dotted: 'loading-icon-dotted-light'
+	loading-animation: 'loading-animation-light'
 ), $btn-info);
 
 $btn-warning: () !default;
@@ -70,7 +70,7 @@ $btn-warning: map-merge((), $btn-warning);
 
 $btn-danger: () !default;
 $btn-danger: map-merge((
-	loading-icon-dotted: 'loading-icon-dotted-light'
+	loading-animation: 'loading-animation-light'
 ), $btn-danger);
 
 $btn-light: () !default;
@@ -78,7 +78,7 @@ $btn-light: map-merge((), $btn-light);
 
 $btn-dark: () !default;
 $btn-dark: map-merge((
-	loading-icon-dotted: 'loading-icon-dotted-light'
+	loading-animation: 'loading-animation-light'
 ), $btn-dark);
 
 $btn-palette: () !default;

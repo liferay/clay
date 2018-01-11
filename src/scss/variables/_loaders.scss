@@ -4,14 +4,14 @@ $loading-icon-font-size-sm: 1.25rem !default; // 20px
 
 // Loading Icon Dotted
 
-$loading-icon-dotted: () !default;
-$loading-icon-dotted: map-merge((
-	animation-name: loading-icon-dotted,
+$loading-animation: () !default;
+$loading-animation: map-merge((
+	animation-name: loading-animation,
 	color: $body-color
-), $loading-icon-dotted);
+), $loading-animation);
 
-$loading-icon-dotted-light: () !default;
-$loading-icon-dotted-light: map-merge((
-	animation-name: loading-icon-dotted-light,
+$loading-animation-light: () !default;
+$loading-animation-light: map-merge((
+	animation-name: loading-animation-light,
 	color: #FFF
-), $loading-icon-dotted-light);
+), $loading-animation-light);
