@@ -2,7 +2,7 @@
 
 exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
       <title>list</title>
       <use xlink:href="icons.svg#list"></use>
@@ -87,7 +87,7 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
 
 exports[`ClayDropdown should render a dropdown with classes 1`] = `
 <div class="dropdown my-custom-class">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
@@ -172,7 +172,7 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
 
 exports[`ClayDropdown should render a dropdown with id 1`] = `
 <div class="dropdown" id="myId">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
@@ -257,7 +257,7 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
 
 exports[`ClayDropdown should render a dropdown with items 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
@@ -342,7 +342,7 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
 
 exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn my-custom-class btn-unstyled">Trigger
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn my-custom-class btn-unstyled" type="button">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
@@ -427,7 +427,7 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
 
 exports[`ClayDropdown should render a searchable dropdown 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
@@ -527,7 +527,7 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
 
 exports[`ClayDropdown should render an expanded dropdown 1`] = `
 <div class="dropdown show">
-  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>

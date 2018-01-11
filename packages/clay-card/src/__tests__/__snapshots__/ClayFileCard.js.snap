@@ -17,7 +17,7 @@ exports[`ClayFileCard should render a ClayFileCard with actionItems 1`] = `
       </div>
       <div class="flex-col">
         <div class="dropdown dropdown-action">
-          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
               <title>ellipsis-v</title>
               <use xlink:href="icons.svg#ellipsis-v"></use>

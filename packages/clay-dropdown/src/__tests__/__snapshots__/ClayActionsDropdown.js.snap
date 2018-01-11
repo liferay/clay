@@ -2,7 +2,7 @@
 
 exports[`ClayActionsDropdown should render an actions dropdown with classes 1`] = `
 <div class="dropdown dropdown-action my-custom-class">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
       <title>ellipsis-v</title>
       <use xlink:href="icons.svg#ellipsis-v"></use>
@@ -45,7 +45,7 @@ exports[`ClayActionsDropdown should render an actions dropdown with classes 1`] 
 
 exports[`ClayActionsDropdown should render an actions dropdown with id 1`] = `
 <div class="dropdown dropdown-action" id="myId">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
       <title>ellipsis-v</title>
       <use xlink:href="icons.svg#ellipsis-v"></use>
@@ -88,7 +88,7 @@ exports[`ClayActionsDropdown should render an actions dropdown with id 1`] = `
 
 exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
 <div class="dropdown dropdown-action show">
-  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
       <title>ellipsis-v</title>
       <use xlink:href="icons.svg#ellipsis-v"></use>
@@ -131,7 +131,7 @@ exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
 
 exports[`ClayActionsDropdown should render default markdown 1`] = `
 <div class="dropdown dropdown-action">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
       <title>ellipsis-v</title>
       <use xlink:href="icons.svg#ellipsis-v"></use>
