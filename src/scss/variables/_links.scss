@@ -1,0 +1,74 @@
+$single-link-font-weight: $font-weight-semi-bold !default;
+
+$component-link: () !default;
+$component-link: map-merge((
+	color: $secondary
+), $component-link);
+
+$link-primary: () !default;
+$link-primary: map-merge((
+	color: $primary
+), $link-primary);
+
+$link-secondary: () !default;
+$link-secondary: map-merge((
+	color: $secondary
+), $link-secondary);
+
+// Component Title
+
+$component-title: () !default;
+$component-title: map-merge((
+	color: $body-color,
+	font-size: 1.125rem,
+	font-weight: $headings-font-weight,
+	line-height: $headings-line-height
+), $component-title);
+
+$component-title-link: () !default;
+$component-title-link: map-merge((
+	color: $body-color
+), $component-title-link);
+
+// Component Subtitle
+
+$component-subtitle: () !default;
+$component-subtitle: map-merge((
+	color: $secondary
+), $component-subtitle);
+
+$component-subtitle-link: () !default;
+$component-subtitle-link: map-merge((
+	color: $secondary
+), $component-subtitle-link);
+
+// Link Outline
+
+$link-outline-border-radius: $btn-border-radius !default;
+$link-outline-border-width: $btn-border-width !default;
+$link-outline-font-size: $btn-font-size-sm !default;
+$link-outline-font-weight: $font-weight-semi-bold !default;
+$link-outline-line-height: $btn-line-height-sm !default;
+$link-outline-padding-x: $btn-padding-x-sm !default;
+$link-outline-padding-y: $btn-padding-y-sm !default;
+$link-outline-transition: $btn-transition !default;
+
+$link-outline-primary: () !default;
+$link-outline-primary: map-merge((
+	border-color: $primary,
+	color: $primary,
+	hover-bg: $primary,
+	hover-color: #FFF
+), $link-outline-primary);
+
+$link-outline-secondary: () !default;
+$link-outline-secondary: map-merge((
+	border-color: $secondary,
+	color: $secondary,
+	hover-bg: $secondary,
+	hover-color: #FFF
+), $link-outline-secondary);
+
+// Link Monospaced
+
+$link-monospaced-size: $btn-monospaced-size-sm !default;
