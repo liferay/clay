@@ -8,9 +8,9 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/ClayManagementToolbar.js",
-  "esnext:main": "src/ClayManagementToolbar.js",
-  "jsnext:main": "src/ClayManagementToolbar.js",
+  "main": "lib/all/management-toolbar.js",
+  "esnext:main": "src/all/management-toolbar.js",
+  "jsnext:main": "src/all/management-toolbar.js",
   "files": [
     "lib",
     "src",

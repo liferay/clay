@@ -9,36 +9,8 @@ import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
+import {actionItemsValidator, filterItemsValidator} from './validators';
 import templates from './ClayManagementToolbar.soy.js';
-
-let filterItemShape = {
-	checked: Config.bool().value(false),
-	disabled: Config.bool().value(false),
-	href: Config.string(),
-	inputName: Config.string(),
-	inputValue: Config.string(),
-	label: Config.string().required(),
-	separator: Config.bool().value(false),
-	type: Config.oneOf(['checkbox', 'group', 'item', 'radiogroup']),
-};
-
-const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
-
-filterItemShape.items = filterItemsValidator;
-
-let actionItemShape = {
-	disabled: Config.bool().value(false),
-	href: Config.string().required(),
-	icon: Config.string(),
-	label: Config.string().required(),
-	quickAction: Config.bool(),
-	separator: Config.bool().value(false),
-	type: Config.oneOf(['group', 'item']).value('item'),
-};
-
-const actionItemsValidator = Config.arrayOf(Config.shapeOf(actionItemShape));
-
-actionItemShape.items = actionItemsValidator;
 
 /**
  * Metal ClayManagementToolbar component.
