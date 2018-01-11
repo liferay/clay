@@ -75,6 +75,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Returns the selected items.
+	 * @return {?array|undefined} the items.
+	 * @private
+	 */
+	getSelectedItems() {
+		return this.selectedItems_;
+	}
+
+	/**
 	 * Continues the propagation of the action item clicked event
 	 * @param {!Event} event
 	 * @private
