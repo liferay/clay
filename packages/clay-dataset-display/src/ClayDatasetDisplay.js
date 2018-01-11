@@ -50,18 +50,20 @@ class ClayDatasetDisplay extends Component {
 		let selectedItems = [];
 		let totalItems = 0;
 
-		for (let item of this.items) {
-			if (item.items) {
-				totalItems += item.items.length;
+		if (this.items) {
+			for (let item of this.items) {
+				if (item.items) {
+					totalItems += item.items.length;
 
-				for (let childrenItem of item.items) {
-					if (childrenItem.selected) {
-						selectedItems.push(childrenItem);
+					for (let childrenItem of item.items) {
+						if (childrenItem.selected) {
+							selectedItems.push(childrenItem);
+						}
 					}
-				}
-			} else {
-				if (item.selected) {
-					selectedItems.push(item);
+				} else {
+					if (item.selected) {
+						selectedItems.push(item);
+					}
 				}
 			}
 		}
@@ -121,35 +123,38 @@ class ClayDatasetDisplay extends Component {
 		} else {
 			let found = false;
 
-			for (let item of this.items) {
-				if (item.items) {
-					for (let childrenItem of item.items) {
+			if (this.items) {
+				for (let item of this.items) {
+					if (item.items) {
+						for (let childrenItem of item.items) {
+							if (
+								childrenItem[
+									this.views[this.selectedView].schema
+										.inputValueField
+								] === itemId
+							) {
+								childrenItem.selected = true;
+								this.selectedItems_.push(childrenItem);
+								found = true;
+								break;
+							}
+						}
+					} else {
 						if (
-							childrenItem[
+							item[
 								this.views[this.selectedView].schema
 									.inputValueField
 							] === itemId
 						) {
-							childrenItem.selected = true;
-							this.selectedItems_.push(childrenItem);
+							item.selected = true;
+							this.selectedItems_.push(item);
 							found = true;
-							break;
 						}
 					}
-				} else {
-					if (
-						item[
-							this.views[this.selectedView].schema.inputValueField
-						] === itemId
-					) {
-						item.selected = true;
-						this.selectedItems_.push(item);
-						found = true;
-					}
-				}
 
-				if (found) {
-					break;
+					if (found) {
+						break;
+					}
 				}
 			}
 		}
