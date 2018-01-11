@@ -9,7 +9,7 @@
 	position: relative;
 
 	@if ($card-border-radius > 0) {
-		.flex-col {
+		.autofit-col {
 			&:first-child {
 				@include border-left-radius($card-inner-border-radius);
 			}
@@ -85,18 +85,18 @@
 	display: flex;
 	width: 100%;
 
-	.flex-col {
+	.autofit-col {
 		justify-content: center;
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	.flex-col-expand {
+	.autofit-col-expand {
 		min-width: 25px;
 	}
 }
 
-.card-row .flex-col-gutters {
+.card-row .autofit-col-gutters {
 	padding-left: 10px;
 	padding-right: 10px;
 
@@ -108,7 +108,7 @@
 
 // Card Row Content Alignment
 
-.flex-col {
+.autofit-col {
 	.justify-content-center & {
 		justify-content: center;
 	}
@@ -142,7 +142,7 @@
 	width: 100%;
 }
 
-.flex-col:first-child .card-item-first {
+.autofit-col:first-child .card-item-first {
 	@include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
 }
 
@@ -152,7 +152,7 @@
 	width: 100%;
 }
 
-.flex-col:last-child .card-item-last {
+.autofit-col:last-child .card-item-last {
 	@include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
 }
 
@@ -169,7 +169,7 @@
 		border-bottom-right-radius: $card-rounded-inner-border-radius;
 	}
 
-	.flex-col:first-child {
+	.autofit-col:first-child {
 		border-bottom-left-radius: $card-rounded-inner-border-radius;
 		border-top-left-radius: $card-rounded-inner-border-radius;
 
@@ -178,7 +178,7 @@
 		}
 	}
 
-	.flex-col:last-child{
+	.autofit-col:last-child{
 		border-bottom-right-radius: $card-rounded-inner-border-radius;
 		border-top-right-radius: $card-rounded-inner-border-radius;
 
@@ -201,7 +201,7 @@
 		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
 	}
 
-	.flex-col:first-child {
+	.autofit-col:first-child {
 		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
 		border-top-left-radius: $card-rounded-0-inner-border-radius;
 
@@ -210,7 +210,7 @@
 		}
 	}
 
-	.flex-col:last-child {
+	.autofit-col:last-child {
 		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
 		border-top-right-radius: $card-rounded-0-inner-border-radius;
 
@@ -233,7 +233,7 @@
 		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
 	}
 
-	.flex-col:first-child {
+	.autofit-col:first-child {
 		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
 		border-top-left-radius: $card-rounded-circle-inner-border-radius;
 
@@ -242,7 +242,7 @@
 		}
 	}
 
-	.flex-col:last-child {
+	.autofit-col:last-child {
 		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
 		border-top-right-radius: $card-rounded-circle-inner-border-radius;
 

@@ -1,6 +1,12 @@
 $bg-checkered-fg: $gray-200 !default;
 $inline-scroller-max-height: 125px !default;
 
+// Autofit Row
+
+$autofit-col-expand-min-width: 3.125rem !default; // 50px
+
+// Inline Item
+
 $inline-item-lexicon-icon-margin-top: -0.21429em !default;
 $inline-item-spacer-x: 0.5em !default; // 8px
 
