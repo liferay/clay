@@ -45,13 +45,13 @@ actionItemShape.items = actionItemsValidator;
  */
 class ClayManagementToolbar extends Component {
 	/**
-	 * Continues the propagation of the action item clicked event
-	 * @param {!Event} event
+	 * Returns the dropdown index of the element.
+	 * @param {!Node} element
+	 * @return {?array|undefined} the index.
 	 * @private
 	 */
-	handleActionClicked_(event) {
-		let element = event.delegateTarget;
-		let elementIndex = Array.prototype.indexOf.call(
+	getDropdownItemIndex_(element) {
+		return Array.prototype.indexOf.call(
 			Array.prototype.filter.call(
 				element.parentElement.children,
 				childrenElement =>
@@ -59,6 +59,16 @@ class ClayManagementToolbar extends Component {
 			),
 			element
 		);
+	}
+
+	/**
+	 * Continues the propagation of the action item clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleActionClicked_(event) {
+		let element = event.delegateTarget;
+		let elementIndex = this.getDropdownItemIndex_(element);
 		let item = this.actionItems[elementIndex];
 
 		this.emit('actionClicked', {
@@ -154,14 +164,7 @@ class ClayManagementToolbar extends Component {
 	 */
 	handleViewTypeClicked_(event) {
 		let element = event.delegateTarget;
-		let elementIndex = Array.prototype.indexOf.call(
-			Array.prototype.filter.call(
-				element.parentElement.children,
-				childrenElement =>
-					childrenElement.getAttribute('role') !== 'presentation'
-			),
-			element
-		);
+		let elementIndex = this.getDropdownItemIndex_(element);
 		let item = this.viewTypes[elementIndex];
 
 		this.emit('viewTypeClicked', {
