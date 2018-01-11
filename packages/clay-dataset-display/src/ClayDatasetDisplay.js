@@ -264,7 +264,7 @@ class ClayDatasetDisplay extends Component {
 			} else {
 				item.selected = true;
 
-				selectedItems.push(childrenItem);
+				selectedItems.push(item);
 			}
 		}
 
