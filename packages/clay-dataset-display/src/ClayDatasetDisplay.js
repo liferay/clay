@@ -159,6 +159,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the plus button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handlePlusButtonClicked_(event) {
+		this.emit('plusButtonClicked', event);
+	}
+
+	/**
 	 * Selects all items on management toolbar select all button click.
 	 * @private
 	 */
