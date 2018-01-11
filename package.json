@@ -13,7 +13,7 @@
     "precommit": "lint-staged",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "start": "http-server . -p 4000",
-    "test": "npm run build && npm run jest"
+    "test": "npm run build && npm run jest && npm run a11y"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
