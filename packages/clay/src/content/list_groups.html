@@ -10,12 +10,8 @@ section: Components
 		<blockquote class="blockquote">
 			<p>Align content inside <code>.list-group-item</code> with flexbox with <code>.list-group-item-flex</code>.</p>
 
-			<p>Use a combination of <code>.flex-col</code> and <code>.flex-col.flex-col-expand</code> to control the size of each cell.</p>
+			<p>Use a combination of <code>.autofit-col</code> and <code>.autofit-col.autofit-col-expand</code> to control the size of each cell.</p>
 		</blockquote>
-
-		<div class="alert alert-warning">
-			Direct descendants of <code>flex-col</code> become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with a block level element such as a div.
-		</div>
 
 		<div class="alert alert-warning">
 			<code>show-quick-actions-on-hover</code> will need Javascript to add class <code>table-focus</code> on the table row when an item inside is focused to make it keyboard accessible.
@@ -23,7 +19,7 @@ section: Components
 
 <ul class="list-group show-quick-actions-on-hover">
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
@@ -31,15 +27,15 @@ section: Components
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<a href="#1">Account Example One</a>
 				</h4>
@@ -47,7 +43,7 @@ section: Components
 				<p class="list-group-subtext">Third Level (list-group-subtext)</p>
 			</section>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -81,7 +77,7 @@ section: Components
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
@@ -89,22 +85,22 @@ section: Components
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<a href="#1">Account Example Two</a>
 				</h4>
 				<p class="list-group-subtext">List Group Subtext</p>
 			</section>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -138,7 +134,7 @@ section: Components
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
@@ -146,21 +142,21 @@ section: Components
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<a href="#1">Account Example Three</a>
 				</h4>
 			</section>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -204,7 +200,7 @@ section: Components
 
 <ul class="list-group list-group-notification show-quick-actions-on-hover">
 	<li class="list-group-item list-group-item-flex list-group-item-primary">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
@@ -212,22 +208,22 @@ section: Components
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<a href="#1">Account Example One</a>
 				</h4>
 				<p class="list-group-subtext">List Group Subtext</p>
 			</section>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -261,7 +257,7 @@ section: Components
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
@@ -269,22 +265,22 @@ section: Components
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<a href="#1">Account Example Two</a>
 				</h4>
 				<p class="list-group-subtext">List Group Subtext</p>
 			</section>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -332,7 +328,7 @@ section: Components
 
 		<ul class="list-group list-group-bordered show-quick-actions-on-hover">
 			<li class="list-group-item list-group-item-flex">
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
@@ -340,15 +336,15 @@ section: Components
 						</label>
 					</div>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
-				<div class="flex-col flex-col-expand">
-					<section class="flex-col-section">
+				<div class="autofit-col autofit-col-expand">
+					<section class="autofit-section">
 						<h4 class="list-group-title">
 							<span class="text-truncate-inline">
 								<a class="text-truncate" href="#1">Text Truncate Example</a>
@@ -377,7 +373,7 @@ section: Components
 						</div>
 					</section>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="quick-action-menu">
 						<a class="quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -411,7 +407,7 @@ section: Components
 				</div>
 			</li>
 			<li class="list-group-item list-group-item-flex">
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
@@ -419,15 +415,15 @@ section: Components
 						</label>
 					</div>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
-				<div class="flex-col flex-col-expand">
-					<section class="flex-col-section">
+				<div class="autofit-col autofit-col-expand">
+					<section class="autofit-section">
 						<h4 class="list-group-title">
 							<a href="#1">Account Example Two</a>
 						</h4>
@@ -437,7 +433,7 @@ section: Components
 						</div>
 					</section>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="quick-action-menu">
 						<a class="quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -483,8 +479,8 @@ section: Components
 		<h3 class="list-group-header-title">List Group Header 1</h3>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<span class="text-truncate-inline">
 						<a class="text-truncate" href="#1">List Item 1</a>
@@ -494,8 +490,8 @@ section: Components
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<span class="text-truncate-inline">
 						<a class="text-truncate" href="#1">List Item 2</a>
@@ -505,8 +501,8 @@ section: Components
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<span class="text-truncate-inline">
 						<a class="text-truncate" href="#1">List Item 3</a>
@@ -516,8 +512,8 @@ section: Components
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<span class="text-truncate-inline">
 						<a class="text-truncate" href="#1">List Item 4</a>
@@ -530,7 +526,7 @@ section: Components
 		<h3 class="list-group-header-title">List Group Header 2</h3>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
@@ -538,15 +534,15 @@ section: Components
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<span class="text-truncate-inline">
 						<a class="text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
@@ -562,7 +558,7 @@ section: Components
 				</div>
 			</section>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -596,7 +592,7 @@ section: Components
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
@@ -604,15 +600,15 @@ section: Components
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
-			<section class="flex-col-section">
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
 				<h4 class="list-group-title">
 					<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a>
 				</h4>
@@ -622,7 +618,7 @@ section: Components
 				</div>
 			</section>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -728,7 +724,7 @@ section: Components
 
 		<ul class="list-group show-quick-actions-on-hover">
 			<li class="list-group-item list-group-item-flex">
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
@@ -736,15 +732,15 @@ section: Components
 						</label>
 					</div>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
-				<div class="flex-col flex-col-expand">
-					<section class="flex-col-section">
+				<div class="autofit-col autofit-col-expand">
+					<section class="autofit-section">
 						<h4 class="list-group-title">
 							<span class="text-truncate-inline">
 								<a class="text-truncate" href="#1">Account Example One</a>
@@ -757,7 +753,7 @@ section: Components
 						</p>
 					</section>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="quick-action-menu">
 						<button class="btn btn-unstyled quick-action-item" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -791,7 +787,7 @@ section: Components
 				</div>
 			</li>
 			<li class="list-group-item list-group-item-flex">
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
@@ -799,15 +795,15 @@ section: Components
 						</label>
 					</div>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
-				<div class="flex-col flex-col-expand">
-					<section class="flex-col-section">
+				<div class="autofit-col autofit-col-expand">
+					<section class="autofit-section">
 						<h4 class="list-group-title">
 							<a href="#1">Account Example Two</a>
 						</h4>
@@ -815,7 +811,7 @@ section: Components
 						<p class="list-group-subtext">List Group Subtext</p>
 					</section>
 				</div>
-				<div class="flex-col">
+				<div class="autofit-col">
 					<div class="quick-action-menu">
 						<button class="btn btn-unstyled quick-action-item" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">

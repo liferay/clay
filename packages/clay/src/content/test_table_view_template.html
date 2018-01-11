@@ -194,12 +194,12 @@ section: Visual Tests
 
 <div class="container container-no-gutters-sm-down container-view">
 	<form>
-		<div class="table-responsive-lg">
-			<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
+		<div class="table-responsive">
+			<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
 				<thead>
 					<tr>
 						<th></th>
-						<th colspan="2">
+						<th class="table-cell-expand">
 							Item Title
 							<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-up" />
@@ -225,15 +225,19 @@ section: Visual Tests
 								</label>
 							</div>
 						</td>
-						<td>
-							<span class="sticker sticker-danger">PNG</span>
-						</td>
 						<td class="table-cell-expand">
-							<h4 class="table-list-title">
-								<span class="text-truncate-inline">
-									<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-								</span>
-							</h4>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<span class="sticker sticker-danger">PNG</span>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<h4 class="table-list-title">
+										<span class="text-truncate-inline">
+											<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+										</span>
+									</h4>
+								</div>
+							</div>
 						</td>
 						<td>700KB</td>
 						<td>
@@ -283,11 +287,10 @@ section: Visual Tests
 		Because of the dynamic nature of content in tables, we left it to the developer to size and align columns inside tables. Add a unique class to each column and use min-width / max-width to space the tables to your specific requirements.
 	</div>
 
-	<div class="table-responsive-lg">
-		<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
+	<div class="table-responsive">
+		<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
 			<thead>
 				<tr>
-					<th></th>
 					<th></th>
 					<th class="table-cell-expand">
 						Title
@@ -305,7 +308,7 @@ section: Visual Tests
 			</thead>
 			<tbody>
 				<tr class="table-divider">
-					<td colspan="9">In Progress</td>
+					<td colspan="8">In Progress</td>
 				</tr>
 				<tr>
 					<td>
@@ -316,15 +319,19 @@ section: Visual Tests
 							</label>
 						</div>
 					</td>
-					<td>
-						<span class="sticker sticker-danger user-icon">MT</span>
-					</td>
 					<td class="table-cell-expand">
-						<h4 class="table-list-title">
-							<span class="text-truncate-inline">
-								<a class="text-truncate" href="#1" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Publication Title</a>
-							</span>
-						</h4>
+						<div class="autofit-row">
+							<div class="autofit-col">
+								<span class="sticker sticker-danger user-icon">MT</span>
+							</div>
+							<div class="autofit-col autofit-col-expand">
+								<h4 class="table-list-title">
+									<span class="text-truncate-inline">
+										<a class="text-truncate" href="#1" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Publication Title</a>
+									</span>
+								</h4>
+							</div>
+						</div>
 					</td>
 					<td>
 						<span class="label label-warning">In Progress</span>
