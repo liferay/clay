@@ -192,6 +192,7 @@
 								{call ClayButton.render}
 									{param elementClasses: 'quick-action-item' /}
 									{param icon: $item.icon /}
+									{param ref: 'quickAction' + index($item) /}
 									{param spritemap: $spritemap /}
 									{param style: 'unstyled' /}
 								{/call}
@@ -373,6 +374,7 @@
 							{/param}
 							{param items: $viewTypes /}
 							{param itemsIconAlignment: 'left' /}
+							{param ref: 'viewTypesDropdown' /}
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link nav-link-monospaced' /}
 						{/call}

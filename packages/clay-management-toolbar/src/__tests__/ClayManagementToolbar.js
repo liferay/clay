@@ -392,6 +392,24 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
+	it('should render a management toolbar and emit an event on deselect all button click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			selectedItems: 10,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.deselectAllButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'deselectAllClicked',
+			expect.any(Object)
+		);
+	});
+
 	it('should render a management toolbar and emit an event on filter done button click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			filterItems: [
@@ -434,5 +452,66 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('search', expect.any(Object));
+	});
+
+	it('should render a management toolbar with view types and emit an event on viewType click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			viewTypes: [
+				{
+					active: true,
+					icon: 'list',
+					label: 'List',
+				},
+				{
+					disabled: true,
+					icon: 'table',
+					label: 'Table',
+				},
+				{
+					icon: 'cards2',
+					label: 'Card',
+				},
+			],
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.viewTypesDropdown.element
+			.querySelector('ul li')
+			.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('viewTypeClicked', expect.any(Object));
+	});
+
+	it('should render a management toolbar with actions and emit an event on action click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			actionItems: [
+				{
+					label: 'Edit',
+					href: '#editurl',
+					icon: 'edit',
+					quickAction: true,
+				},
+				{
+					label: 'Delete',
+					href: '#deleteurl',
+					icon: 'trash',
+					quickAction: true,
+				},
+			],
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.quickAction0.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('actionClicked', expect.any(Object));
 	});
 });
