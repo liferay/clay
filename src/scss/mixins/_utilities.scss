@@ -1,0 +1,15 @@
+@mixin clay-autofit-float {
+	flex-wrap: wrap;
+
+	> .autofit-col {
+		max-width: 100%;
+	}
+
+	> .autofit-col-end {
+		margin-left: auto;
+
+		+ .autofit-col-end {
+			margin-left: 0;
+		}
+	}
+}
