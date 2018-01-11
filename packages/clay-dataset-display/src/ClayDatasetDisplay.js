@@ -1,43 +1,16 @@
 import 'clay-card-grid';
 import 'clay-list';
-import 'clay-management-toolbar';
 import 'clay-table';
-
+import {
+	actionItemsValidator,
+	filterItemsValidator,
+} from 'clay-management-toolbar';
+import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import templates from './ClayDatasetDisplay.soy.js';
-
-let filterItemShape = {
-	checked: Config.bool().value(false),
-	disabled: Config.bool().value(false),
-	href: Config.string(),
-	inputName: Config.string(),
-	inputValue: Config.string(),
-	label: Config.string().required(),
-	separator: Config.bool().value(false),
-	type: Config.oneOf(['checkbox', 'group', 'item', 'radiogroup']),
-};
-
-const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
-
-filterItemShape.items = filterItemsValidator;
-
-let actionItemShape = {
-	disabled: Config.bool().value(false),
-	href: Config.string().required(),
-	icon: Config.string(),
-	label: Config.string().required(),
-	quickAction: Config.bool(),
-	separator: Config.bool().value(false),
-	type: Config.oneOf(['group', 'item']).value('item'),
-};
-
-const actionItemsValidator = Config.arrayOf(Config.shapeOf(actionItemShape));
-
-actionItemShape.items = actionItemsValidator;
 
 /**
  * Metal ClayDatasetDisplay component.
@@ -75,6 +48,19 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Iterates over the selected items array, mark all as not selected and
+	 * removes them from the selectedItems array.
+	 * @private
+	 */
+	deselectAllItems_() {
+		for (let item of this.selectedItems_) {
+			item.selected = false;
+		}
+
+		this.selectedItems_ = [];
+	}
+
+	/**
 	 * Returns the selected items.
 	 * @return {?array|undefined} the items.
 	 * @private
@@ -97,7 +83,7 @@ class ClayDatasetDisplay extends Component {
 	 * @private
 	 */
 	handleDeselectAllClicked_() {
-		this.deselectAllItems();
+		this.deselectAllItems_();
 	}
 
 	/**
@@ -206,7 +192,7 @@ class ClayDatasetDisplay extends Component {
 	 * @private
 	 */
 	handleSelectAllClicked_() {
-		this.selectAllItems();
+		this.selectAllItems_();
 	}
 
 	/**
@@ -219,9 +205,9 @@ class ClayDatasetDisplay extends Component {
 		let checkboxStatus = event.target.checked;
 
 		if (checkboxStatus) {
-			this.selectAllItems();
+			this.selectAllItems_();
 		} else {
-			this.deselectAllItems();
+			this.deselectAllItems_();
 		}
 	}
 
@@ -243,24 +229,11 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
-	 * Iterates over the selected items array, mark all as not selected and
-	 * removes them from the selectedItems array.
-	 * @private
-	 */
-	deselectAllItems() {
-		for (let item of this.selectedItems_) {
-			item.selected = false;
-		}
-
-		this.selectedItems_ = [];
-	}
-
-	/**
 	 * Iterates over the items array, mark all as selected and adds them to the
 	 * selectedItems array.
 	 * @private
 	 */
-	selectAllItems() {
+	selectAllItems_() {
 		let selectedItems = [];
 
 		for (let item of this.items) {
@@ -387,7 +360,7 @@ ClayDatasetDisplay.STATE = {
 	 * Flag to indicate if the dataset is selectable.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?bool|undefined}
+	 * @type {?bool}
 	 * @default false
 	 */
 	selectable: Config.bool().value(false),
