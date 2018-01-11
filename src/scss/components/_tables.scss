@@ -297,6 +297,13 @@ th {
 	}
 }
 
+.table-nowrap {
+	td,
+	th {
+		white-space: nowrap;
+	}
+}
+
 .table-heading-nowrap thead {
 	td,
 	th {

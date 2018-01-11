@@ -1,16 +1,4 @@
 .popover {
-	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
-
-	@if not ($popover-border-radius == $border-radius-lg) {
-		@include border-radius($popover-border-radius);
-	}
-
-	// Will need to be revisited if https://github.com/twbs/bootstrap/pull/25035 is merged
-
-	@if not ($popover-font-size == $font-size-sm) {
-		font-size: $popover-font-size;
-	}
-
 	&.bs-popover-bottom {
 		.arrow::after {
 			border-bottom-color: $popover-bottom-arrow-color;

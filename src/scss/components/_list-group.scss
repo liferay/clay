@@ -167,7 +167,8 @@
 			margin-top: $list-group-item-flex-offset-top;
 
 			.custom-control-input,
-			.custom-control-indicator {
+			.custom-control-label::before,
+			.custom-control-label::after {
 				margin-top: $list-group-item-flex-checkbox-offset-top;
 			}
 		}

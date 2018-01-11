@@ -39,7 +39,7 @@ $form-group-margin-bottom-mobile: 1rem !default; // 16px
 $form-check-input-gutter: 0.875rem !default;
 $form-check-input-margin-y: 0.41667em !default;
 
-$form-check-description-margin-left: -0.1875rem !default; // 3px
+$form-check-label-text-margin-left: -0.1875rem !default; // 3px
 
 // Skin
 
@@ -109,13 +109,15 @@ $input-group-addon-bg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
 $input-group-addon-border-color: $input-group-addon-bg !default;
 $input-group-addon-color: $secondary !default;
 $input-group-addon-font-weight: $font-weight-semi-bold !default;
+$input-group-addon-min-width: 2.5rem !default; // 40px
+$input-group-addon-padding-x: 0.75rem !default; // 12px
+
+// Input Group Sizes
+
+$input-group-addon-min-width-sm: 2rem !default; // 32px
 
 // Input Group Secondary
 
 $input-group-secondary-addon-bg: #FFF !default;
 $input-group-secondary-addon-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
 $input-group-secondary-addon-color: $secondary !default;
-
-// Input Group Transparent
-
-$input-group-transparent-addon-color: $secondary !default;
