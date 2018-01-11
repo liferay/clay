@@ -168,6 +168,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the search event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleSearch_(event) {
+		this.emit('search', event);
+	}
+
+	/**
 	 * Selects all items on management toolbar select all button click.
 	 * @private
 	 */
