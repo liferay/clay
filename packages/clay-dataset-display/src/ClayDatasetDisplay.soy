@@ -143,13 +143,15 @@
 	{@param? title: string}
 
 	<div class="container container-view">
-		{call ClayCardGrid.render}
-			{param events: ['itemToggled': $handleItemToggled_ ] /}
-			{param items: $items /}
-			{param schema: $schema /}
-			{param selectable: $selectable /}
-			{param spritemap: $spritemap /}
-		{/call}
+		<form>
+			{call ClayCardGrid.render}
+				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param items: $items /}
+				{param schema: $schema /}
+				{param selectable: $selectable /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</form>
 	</div>
 {/deltemplate}
 
@@ -165,13 +167,15 @@
 	{@param? title: string}
 
 	<div class="container container-view">
-		{call ClayList.render}
-			{param events: ['itemToggled': $handleItemToggled_ ] /}
-			{param items: $items /}
-			{param schema: $schema /}
-			{param selectable: $selectable /}
-			{param spritemap: $spritemap /}
-		{/call}
+		<form>
+			{call ClayList.render}
+				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param items: $items /}
+				{param schema: $schema /}
+				{param selectable: $selectable /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</form>
 	</div>
 {/deltemplate}
 
@@ -187,12 +191,14 @@
 	{@param? title: string}
 
 	<div class="container container-no-gutters-sm-down container-view">
-		{call ClayTable.render}
-			{param events: ['itemToggled': $handleItemToggled_ ] /}
-			{param items: $items /}
-			{param schema: $schema /}
-			{param selectable: $selectable /}
-			{param spritemap: $spritemap /}
-		{/call}
+		<form>
+			{call ClayTable.render}
+				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param items: $items /}
+				{param schema: $schema /}
+				{param selectable: $selectable /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</form>
 	</div>
 {/deltemplate}
