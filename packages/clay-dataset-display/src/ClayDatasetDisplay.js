@@ -88,6 +88,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the filter done clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleFilterDoneClicked_(event) {
+		this.emit('filterDoneClicked', event);
+	}
+
+	/**
 	 * Toggles the selection of an item and adds or removes it from selected items
 	 * list.
 	 * @param {!Event} event
