@@ -25,31 +25,53 @@
 	text-align: center;
 }
 
-// Flex Col
+// Autofit Row
 
 .autofit-row {
 	display: flex;
 	flex-wrap: nowrap;
-	margin-left: 0;
-	margin-right: 0;
 }
 
-.flex-col {
+.autofit-row-center {
+	> .autofit-col {
+		justify-content: center;
+	}
+}
+
+.autofit-row-end {
+	> .autofit-col {
+		justify-content: flex-end;
+	}
+}
+
+.autofit-col {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	flex-shrink: 0;
 	min-height: 0;
 	position: relative;
 }
 
-.flex-col-expand {
+.autofit-col-expand {
 	flex-grow: 1;
-	min-width: 50px;
-	width: 100%;
+	flex-shrink: 1;
+	min-width: $autofit-col-expand-min-width;
 	word-wrap: break-word;
 }
 
-.flex-col-section {}
+.autofit-section {
+	max-width: 100%;
+}
+
+.autofit-float {
+	@include clay-autofit-float;
+}
+
+.autofit-float-sm-down {
+	@include media-breakpoint-down(sm) {
+		@include clay-autofit-float;
+	}
+}
 
 // Inline Scroller
 
