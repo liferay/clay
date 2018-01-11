@@ -1,0 +1,34 @@
+$link-secondary: () !default;
+$link-secondary: map-merge((
+	hover-color: $body-color
+), $link-secondary);
+
+// Component Title
+
+$component-title: () !default;
+$component-title: map-merge((
+	font-size: 1rem,
+	line-height: 1.25
+), $component-title);
+
+// Component Subtitle
+
+$component-subtitle: () !default;
+$component-subtitle: map-merge((
+	font-weight: $font-weight-semi-bold,
+	line-height: 1.45
+), $component-subtitle);
+
+$component-subtitle-link: () !default;
+$component-subtitle-link: map-merge((
+	hover-color: $body-color
+), $component-subtitle-link);
+
+// Link Outline
+
+$link-outline-secondary: () !default;
+$link-outline-secondary: map-merge((
+	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
+	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	hover-color: $body-color
+), $link-outline-secondary);

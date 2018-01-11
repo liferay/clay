@@ -1,0 +1,86 @@
+.component-link {
+	@include clay-link($component-link);
+}
+
+.single-link {
+	font-weight: $single-link-font-weight;
+}
+
+.link-primary {
+	@include clay-link($link-primary);
+}
+
+.link-secondary {
+	@include clay-link($link-secondary);
+}
+
+// Link Outline
+
+.link-outline {
+	align-items: center;
+	border-color: transparent;
+
+	@include border-radius($link-outline-border-radius);
+
+	border-style: solid;
+	border-width: $link-outline-border-width;
+	display: inline-flex;
+	font-size: $link-outline-font-size;
+	font-weight: $link-outline-font-weight;
+	justify-content: center;
+	line-height: $link-outline-line-height;
+	padding-bottom: $link-outline-padding-y;
+	padding-left: $link-outline-padding-x;
+	padding-right: $link-outline-padding-x;
+	padding-top: $link-outline-padding-y;
+	transition: $link-outline-transition;
+
+	@include hover {
+		text-decoration: none;
+	}
+}
+
+.link-outline-primary {
+	@include clay-link($link-outline-primary);
+}
+
+.link-outline-secondary {
+	@include clay-link($link-outline-secondary);
+}
+
+.link-outline-borderless {
+	border-color: transparent;
+}
+
+// Component Links
+
+.component-title {
+	@include clay-text-typography($component-title);
+
+	a {
+		@include clay-link($component-title-link);
+	}
+}
+
+.component-subtitle {
+	@include clay-text-typography($component-subtitle);
+
+	a {
+		@include clay-link($component-subtitle-link);
+	}
+}
+
+.link-monospaced {
+	align-items: center;
+	display: inline-flex;
+	height: $link-monospaced-size;
+	justify-content: center;
+	overflow: hidden;
+	padding: 0;
+	width: $link-monospaced-size;
+
+	.inline-item .lexicon-icon,
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
