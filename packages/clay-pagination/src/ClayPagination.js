@@ -1,3 +1,4 @@
+import 'clay-link';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -33,6 +34,24 @@ ClayPagination.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayPagination
+	 * @type {!string}
+	 * @default undefined
+	 */
+	spritemap: Config.string().required(),
+
+	/**
+	 * Total number of pages to show.
+	 * @instance
+	 * @memberof ClayPagination
+	 * @type {!number}
+	 * @default undefined
+	 */
+	totalPages: Config.number().required(),
 };
 
 defineWebComponent('clay-pagination', ClayPagination);
