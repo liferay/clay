@@ -10,7 +10,7 @@ exports[`ClayTable should render a ClayTable with a basic schema and grouped ite
       </tr>
     </thead>
     <tbody>
-      <tr class="table-divider">
+      <tr class="table-divider" id="group-0">
         <td colspan="2">Folders</td>
       </tr>
       <tr>
@@ -37,7 +37,7 @@ exports[`ClayTable should render a ClayTable with a basic schema and grouped ite
           <span class="text-truncate"></span>
         </td>
       </tr>
-      <tr class="table-divider">
+      <tr class="table-divider" id="group-1">
         <td colspan="2">Recipes</td>
       </tr>
       <tr>
@@ -112,7 +112,7 @@ exports[`ClayTable should render a ClayTable with a basic schema and grouped ite
           <span class="text-truncate">Mexico</span>
         </td>
       </tr>
-      <tr class="table-divider">
+      <tr class="table-divider" id="group-2">
         <td colspan="2">Chefs</td>
       </tr>
       <tr>
@@ -1003,13 +1003,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         </td>
         <td>
           <div class="quick-action-menu">
-            <a class=" quick-action-item" href="#1">
+            <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
-            <a class=" quick-action-item" href="#2">
+            <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1047,13 +1047,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         </td>
         <td>
           <div class="quick-action-menu">
-            <a class=" quick-action-item" href="#1">
+            <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
-            <a class=" quick-action-item" href="#2">
+            <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1091,13 +1091,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         </td>
         <td>
           <div class="quick-action-menu">
-            <a class=" quick-action-item" href="#1">
+            <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
-            <a class=" quick-action-item" href="#2">
+            <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1135,13 +1135,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         </td>
         <td>
           <div class="quick-action-menu">
-            <a class=" quick-action-item" href="#1">
+            <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
-            <a class=" quick-action-item" href="#2">
+            <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1179,13 +1179,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         </td>
         <td>
           <div class="quick-action-menu">
-            <a class=" quick-action-item" href="#1">
+            <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
-            <a class=" quick-action-item" href="#2">
+            <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1223,13 +1223,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         </td>
         <td>
           <div class="quick-action-menu">
-            <a class=" quick-action-item" href="#1">
+            <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
-            <a class=" quick-action-item" href="#2">
+            <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1344,7 +1344,7 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
             <label>
               <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"></span>
+              <span class="custom-control-description sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1362,7 +1362,7 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
             <label>
               <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"></span>
+              <span class="custom-control-description sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1380,7 +1380,7 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
             <label>
               <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"></span>
+              <span class="custom-control-description sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1398,7 +1398,7 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
             <label>
               <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"></span>
+              <span class="custom-control-description sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1416,7 +1416,7 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
             <label>
               <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"></span>
+              <span class="custom-control-description sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1434,7 +1434,7 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
             <label>
               <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"></span>
+              <span class="custom-control-description sr-only">Deselect</span>
             </label>
           </div>
         </td>

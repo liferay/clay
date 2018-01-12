@@ -45,20 +45,20 @@ exports[`ClayDropdownBase should render a dropdown of type form with groups 1`] 
   <form>
     <div class="dropdown-menu">
       <div class="dropdown-subheader">Group 1</div>
-      <li>
+      <div>
         <a class=" dropdown-item active" href="#1">Item 1</a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a class=" dropdown-item" href="#2">Item 2</a>
-      </li>
+      </div>
       <div class="dropdown-divider"></div>
       <div class="dropdown-subheader">Group 2</div>
-      <li>
+      <div>
         <a class=" dropdown-item" href="#3">Item 3</a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a class=" dropdown-item disabled" href="javascript:;">Item 3</a>
-      </li>
+      </div>
     </div>
   </form>
 </div>
@@ -69,9 +69,9 @@ exports[`ClayDropdownBase should render a dropdown of type form with items 1`] =
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger</button>
   <form>
     <div class="dropdown-menu">
-      <li>
+      <div>
         <a class=" dropdown-item disabled" href="javascript:;">Item 1</a>
-      </li>
+      </div>
     </div>
   </form>
 </div>

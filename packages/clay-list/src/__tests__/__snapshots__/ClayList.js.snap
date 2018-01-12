@@ -71,7 +71,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
         <label>
           <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
           <span class="custom-control-indicator"></span>
-          <span class="custom-control-description sr-only">select</span>
+          <span class="custom-control-description sr-only">Deselect</span>
         </label>
       </div>
     </div>
@@ -85,7 +85,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
         <label>
           <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
           <span class="custom-control-indicator"></span>
-          <span class="custom-control-description sr-only">select</span>
+          <span class="custom-control-description sr-only">Deselect</span>
         </label>
       </div>
     </div>
@@ -178,7 +178,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
 exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Folders</h3>
+    <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -211,7 +211,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Recipes</h3>
+    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -322,7 +322,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Chefs</h3>
+    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -375,7 +375,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
 exports[`ClayList should render a selectable ClayList with groups 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Folders</h3>
+    <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col flex-col-expand">
@@ -388,7 +388,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Recipes</h3>
+    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col flex-col-expand">
@@ -439,7 +439,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Chefs</h3>
+    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col flex-col-expand">
@@ -462,7 +462,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
 exports[`ClayList should render a selectable ClayList with icons 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Folders</h3>
+    <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -495,7 +495,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Recipes</h3>
+    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -606,7 +606,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Chefs</h3>
+    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -659,7 +659,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
 exports[`ClayList should render a selectable ClayList with label 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Folders</h3>
+    <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -692,7 +692,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Recipes</h3>
+    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -821,7 +821,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title">Chefs</h3>
+    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="flex-col">
@@ -895,13 +895,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
     <div class="flex-col">
       <div class="quick-action-menu">
-        <a class=" quick-action-item" href="#1">
+        <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
-        <a class=" quick-action-item" href="#2">
+        <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -951,13 +951,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
     <div class="flex-col">
       <div class="quick-action-menu">
-        <a class=" quick-action-item" href="#1">
+        <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
-        <a class=" quick-action-item" href="#2">
+        <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1007,13 +1007,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
     <div class="flex-col">
       <div class="quick-action-menu">
-        <a class=" quick-action-item" href="#1">
+        <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
-        <a class=" quick-action-item" href="#2">
+        <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1063,13 +1063,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
     <div class="flex-col">
       <div class="quick-action-menu">
-        <a class=" quick-action-item" href="#1">
+        <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
-        <a class=" quick-action-item" href="#2">
+        <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1119,13 +1119,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
     <div class="flex-col">
       <div class="quick-action-menu">
-        <a class=" quick-action-item" href="#1">
+        <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
-        <a class=" quick-action-item" href="#2">
+        <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
@@ -1175,13 +1175,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
     <div class="flex-col">
       <div class="quick-action-menu">
-        <a class=" quick-action-item" href="#1">
+        <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
-        <a class=" quick-action-item" href="#2">
+        <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
