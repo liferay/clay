@@ -1,0 +1,13 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// This file is used to overwrite default Bootstrap 4 variables for the Clay
+// Base Theme and should only be limited to the most destructive variables.
+
+$enable-caret: false !default;
+
+$form-check-inline-input-margin-x: !default;

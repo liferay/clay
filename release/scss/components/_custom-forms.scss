@@ -1,0 +1,213 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.form-file {
+	display: flex;
+	position: relative;
+}
+
+.form-file-input {
+	cursor: $input-file-cursor;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+
+	&::-webkit-file-upload-button {
+		cursor: $input-file-cursor;
+	}
+
+	&:focus {
+		+ .btn-primary {
+			@extend .btn-primary.focus !optional;
+		}
+
+		+ .btn-secondary {
+			@extend .btn-secondary.focus !optional;
+		}
+
+		+ .btn-success {
+			@extend .btn-success.focus !optional;
+		}
+
+		+ .btn-warning {
+			@extend .btn-warning.focus !optional;
+		}
+
+		+ .btn-danger {
+			@extend .btn-danger.focus !optional;
+		}
+
+		+ .btn-light {
+			@extend .btn-light.focus !optional;
+		}
+
+		+ .btn-dark {
+			@extend .btn-dark.focus !optional;
+		}
+
+		+ .input-group {
+			border-radius: 1px;
+			box-shadow: 0 0 0 0.075rem #FFF, $btn-focus-box-shadow;
+		}
+	}
+
+	&:disabled {
+		cursor: $input-disabled-cursor;
+
+		&::-webkit-file-upload-button {
+			cursor: $input-disabled-cursor;
+		}
+	}
+}
+
+.custom-file-input:focus + .custom-file-control {
+	border-radius: 1px;
+}
+
+// Custom Checkbox and Radio
+
+.custom-control {
+	label {
+		cursor: $custom-control-description-cursor;
+		font-size: 1rem;
+	}
+}
+
+.custom-control-label {
+	font-size: $custom-control-description-font-size;
+	line-height: $custom-control-description-line-height;
+}
+
+.custom-control-label-text {
+	padding-left: $custom-control-description-padding-left;
+}
+
+// Custom Control Indicator
+
+.custom-control-label::before {
+	border-color: $custom-control-indicator-border-color;
+	border-style: $custom-control-indicator-border-style;
+	border-width: $custom-control-indicator-border-width;
+	font-size: $custom-control-indicator-size;
+}
+
+.custom-control-input {
+	cursor: $form-check-input-cursor;
+
+	&:active ~ .custom-control-label::before {
+		border-color: $custom-control-indicator-active-border-color;
+	}
+
+	&:active:checked ~ .custom-control-label::before {
+		background-color: $custom-control-indicator-active-checked-bg;
+		border-color: $custom-control-indicator-active-checked-border-color;
+	}
+
+	&:checked ~ .custom-control-label::before {
+		border-color: $custom-control-indicator-checked-border-color;
+	}
+
+	&:disabled {
+		cursor: $custom-control-indicator-disabled-cursor;
+
+		~ .custom-control-label::before {
+			background-color: $custom-control-indicator-disabled-bg;
+			border-color: $custom-control-indicator-disabled-border-color;
+			box-shadow: none;
+		}
+
+		~ .custom-control-label {
+			cursor: $custom-control-description-disabled-cursor;
+		}
+	}
+
+	&:disabled:checked ~ .custom-control-label::before {
+		background-color: $custom-control-indicator-disabled-checked-bg;
+		border-color: $custom-control-indicator-disabled-checked-border-color;
+	}
+}
+
+.custom-control .custom-control-input:focus ~ .custom-control-label::before {
+	box-shadow: $custom-control-indicator-focus-box-shadow;
+}
+
+// Custom Checkbox
+
+.custom-checkbox {
+	.custom-control-input {
+		&:checked ~ .custom-control-label::after {
+			background-size: $custom-checkbox-indicator-icon-checked-bg-size;
+		}
+
+		&:indeterminate ~ .custom-control-label::before {
+			background-color: $custom-checkbox-indicator-indeterminate-bg;
+			border-color: $custom-control-indicator-indeterminate-border-color;
+		}
+
+		&:indeterminate ~ .custom-control-label::after {
+			background-size: $custom-checkbox-indicator-icon-indeterminate-bg-size;
+		}
+
+		&:disabled:indeterminate ~ .custom-control-label::before {
+			background-color: $custom-control-indicator-disabled-checked-bg;
+			border-color: $custom-control-indicator-disabled-checked-border-color;
+		}
+	}
+}
+
+// Custom Radio
+
+.custom-radio {
+	.custom-control-input {
+		&:checked ~ .custom-control-label::after {
+			background-size: $custom-radio-indicator-icon-checked-bg-size;
+		}
+
+		&:disabled ~ .custom-control-label::before {
+			border-color: $custom-radio-indicator-disabled-border-color;
+		}
+
+		&:disabled:checked ~ .custom-control-label::before {
+			border-color: $custom-radio-indicator-disabled-checked-border-color;
+		}
+	}
+}
+
+// Will need to be revisited once https://github.com/twbs/bootstrap/pull/25184 is merged
+
+.custom-control {
+	padding-left: 0;
+
+	label {
+		display: inline;
+		margin-bottom: 0;
+	}
+}
+
+.custom-control-input {
+	height: $custom-control-indicator-size;
+	left: 0;
+	top: (($line-height-base - $custom-control-indicator-size) / 2);
+	width: $custom-control-indicator-size;
+	z-index: 0;
+}
+
+.custom-control-label::before {
+	display: block;
+	float: left;
+	position: relative;
+}
+
+.custom-control-inline {
+	margin-right: 0;
+
+	+ .custom-control-inline {
+		margin-left: $custom-control-spacer-x;
+	}
+}

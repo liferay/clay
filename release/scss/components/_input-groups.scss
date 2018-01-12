@@ -1,0 +1,374 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.input-group {
+	.btn:hover {
+		z-index: $zindex-input-group-hover;
+	}
+
+	.btn:focus,
+	.form-control:focus {
+		z-index: $zindex-input-group-focus;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+	}
+}
+
+// Input Group Item
+
+.input-group-item {
+	display: flex;
+	flex-grow: 1;
+	margin-left: 0.5rem;
+	width: 1%;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.input-group-item-shrink {
+	flex-grow: 0;
+	width: auto;
+}
+
+// Input Group Prepend
+
+.input-group-prepend {
+	align-items: stretch;
+	margin-right: -$input-border-left-width;
+
+	+ .input-group-prepend,
+	+ .input-group-append,
+	+ .input-group-item:not(.input-group-append) {
+		margin-left: 0;
+	}
+
+	+ .input-group-item:not(.input-group-append) .form-control {
+		@include border-left-radius(0);
+	}
+}
+
+.input-group > .input-group-prepend {
+	&:not(:first-child) > .form-control {
+		@include border-left-radius(0);
+	}
+
+	> .form-control {
+		@include border-right-radius(0);
+	}
+}
+
+.input-group-item:not(.input-group-prepend) + .input-group-prepend {
+	.btn {
+		@include border-left-radius($btn-border-radius);
+	}
+
+	.form-control,
+	.input-group-text {
+		@include border-left-radius($input-border-radius);
+	}
+}
+
+// Input Group Append
+
+.input-group-append {
+	align-items: stretch;
+	margin-left: -$input-border-right-width;
+}
+
+.input-group > .input-group-append {
+	&:not(:last-child) > .form-control,
+	&:last-child > .form-control:not(:last-child) {
+		@include border-right-radius(0);
+	}
+
+	> .form-control {
+		@include border-left-radius(0);
+	}
+}
+
+// Input Group Text
+
+.input-group-text {
+	align-items: center;
+	border-width: $input-border-width;
+	color: $input-group-addon-color;
+	display: flex;
+	font-weight: $input-group-addon-font-weight;
+	height: $input-height;
+	justify-content: center;
+	min-width: $input-group-addon-min-width;
+	padding-bottom: $input-group-addon-padding-y;
+	padding-left: $input-group-addon-padding-x;
+	padding-right: $input-group-addon-padding-x;
+	padding-top: $input-group-addon-padding-y;
+
+	@include clay-scale-component {
+		height: $input-height-mobile;
+	}
+
+	label {
+		color: $input-group-addon-color;
+	}
+
+	.custom-control,
+	.form-check {
+		margin-bottom: 0;
+	}
+}
+
+.input-group-text-secondary {
+	background-color: $input-group-secondary-addon-bg;
+	border-color: $input-group-secondary-addon-border-color;
+	border-width: $input-group-secondary-addon-border-width;
+	color: $input-group-secondary-addon-color;
+	z-index: 2;
+
+	label {
+		color: $input-group-secondary-addon-color;
+	}
+}
+
+// Input Group Inset
+
+.input-group-item.focus {
+	@include border-radius($input-border-radius);
+
+	box-shadow: $input-focus-box-shadow;
+
+	.form-control,
+	.form-control[readonly] ~ .input-group-inset-item,
+	.input-group-inset-item {
+		background-color: $input-focus-bg;
+		border-color: $input-focus-border-color;
+	}
+}
+
+.input-group-inset {
+	order: 5;
+
+	&[readonly] {
+		&:focus {
+			~ .input-group-inset-item {
+				background-color: $input-readonly-focus-bg;
+				border-color: $input-readonly-focus-border-color;
+				color: $input-readonly-focus-color;
+			}
+		}
+
+		~ .input-group-inset-item {
+			background-color: $input-readonly-bg;
+			border-color: $input-readonly-border-color;
+			color: $input-readonly-color;
+			cursor: $input-readonly-cursor;
+		}
+	}
+
+	&:focus {
+		box-shadow: none;
+
+		~ .input-group-inset-item {
+			background-color: $input-focus-bg;
+			border-color: $input-focus-border-color;
+		}
+	}
+}
+
+.input-group-inset-item {
+	align-items: center;
+	background-color: $input-bg;
+	border-color: $input-border-color;
+	border-style: solid;
+	border-width: $input-border-width;
+	display: flex;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: $input-transition;
+
+	.btn {
+		height: 75%;
+		padding-bottom: 0;
+		padding-top: 0;
+		padding-left: ($btn-padding-x - 0.1875rem);
+		padding-right: ($btn-padding-x - 0.1875rem);
+	}
+}
+
+.input-group-item .input-group-inset-before.form-control {
+	@include border-left-radius(0);
+	@include border-right-radius($input-border-radius);
+
+	border-left-width: 0;
+	padding-left: 0;
+}
+
+.input-group-inset-item-before {
+	@include border-left-radius($input-border-radius);
+
+	border-right-width: 0;
+}
+
+.input-group-inset-item-before {
+	color: $input-group-inset-item-color;
+	order: 3;
+}
+
+.input-group-item .input-group-inset-after.form-control {
+	@include border-right-radius(0);
+
+	border-right-width: 0;
+	padding-right: 0;
+}
+
+.input-group-inset-item-after {
+	@include border-right-radius($input-border-radius);
+
+	border-left-width: 0;
+	color: $input-group-inset-item-color;
+	order: 9;
+}
+
+// Input Group Sizes
+
+.input-group-lg {
+	.input-group-inset-item {
+		.btn {
+			font-size: $btn-font-size-lg;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-lg-mobile;
+			}
+		}
+	}
+
+	.input-group-item {
+		.btn {
+			font-size: $btn-font-size-lg;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-lg-mobile;
+				padding-bottom: $btn-padding-y-lg-mobile;
+				padding-left: $btn-padding-x-lg-mobile;
+				padding-right: $btn-padding-x-lg-mobile;
+				padding-top: $btn-padding-y-lg-mobile;
+			}
+
+			.inline-item {
+				font-size: $btn-inline-item-font-size-lg;
+			}
+
+			.btn-section {
+				font-size: $btn-section-font-size-lg;
+			}
+		}
+
+		.btn-monospaced {
+			height: $btn-monospaced-size-lg;
+			width: $btn-monospaced-size-lg;
+
+			@include clay-scale-component {
+				height: $btn-monospaced-size-lg-mobile;
+				width: $btn-monospaced-size-lg-mobile;
+			}
+		}
+
+		.form-control {
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			line-height: $input-line-height-lg;
+			padding-bottom: $input-padding-y-lg;
+			padding-left: $input-padding-x-lg;
+			padding-right: $input-padding-x-lg;
+			padding-top: $input-padding-y-lg;
+
+			@include clay-scale-component {
+				height: $input-height-lg-mobile;
+			}
+		}
+
+		.input-group-text {
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			min-width: $input-group-addon-min-width-lg;
+			padding-bottom: $input-group-addon-padding-y-lg;
+			padding-left: $input-group-addon-padding-x-lg;
+			padding-right: $input-group-addon-padding-x-lg;
+			padding-top: $input-group-addon-padding-y-lg;
+		}
+	}
+}
+
+.input-group-sm {
+	.input-group-item {
+		.btn {
+			font-size: $btn-font-size-sm;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-sm-mobile;
+				padding-bottom: $btn-padding-y-sm-mobile;
+				padding-left: $btn-padding-x-sm-mobile;
+				padding-right: $btn-padding-x-sm-mobile;
+				padding-top: $btn-padding-y-sm-mobile;
+			}
+
+			.inline-item {
+				font-size: $btn-inline-item-font-size-sm;
+			}
+
+			.btn-section {
+				font-size: $btn-section-font-size-sm;
+			}
+		}
+
+		.btn-monospaced {
+			height: $btn-monospaced-size-sm;
+			width: $btn-monospaced-size-sm;
+
+			@include clay-scale-component {
+				height: $btn-monospaced-size-sm-mobile;
+				width: $btn-monospaced-size-sm-mobile;
+			}
+		}
+
+		.form-control {
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			line-height: $input-line-height-sm;
+			padding-bottom: $input-padding-y-sm;
+			padding-left: $input-padding-x-sm;
+			padding-right: $input-padding-x-sm;
+			padding-top: $input-padding-y-sm;
+
+			@include clay-scale-component {
+				height: $input-height-sm-mobile;
+			}
+		}
+
+		.input-group-text {
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			min-width: $input-group-addon-min-width-sm;
+			padding-bottom: $input-group-addon-padding-y-sm;
+			padding-left: $input-group-addon-padding-x-sm;
+			padding-right: $input-group-addon-padding-x-sm;
+			padding-top: $input-group-addon-padding-y-sm;
+		}
+	}
+
+	.input-group-inset-item {
+		.btn {
+			font-size: $btn-font-size-sm;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-sm-mobile;
+			}
+		}
+	}
+}

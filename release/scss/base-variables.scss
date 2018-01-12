@@ -1,0 +1,21 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// INSERT CUSTOM BASE VARS
+
+@import "functions/_global-functions";
+
+@import "variables/_bs4-variable-overwrites";
+
+@import "bootstrap/_functions";
+@import "bootstrap/_variables";
+@import "bootstrap/_mixins";
+
+@import "_variables";
+@import "_mixins";
+
+// INSERT CUSTOM VARS

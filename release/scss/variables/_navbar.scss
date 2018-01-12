@@ -1,0 +1,31 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$enable-scaling-navbar: $enable-scaling-components !default;
+
+$navbar-border-radius: null !default;
+
+$navbar-underline-active-bg: $component-active-bg !default;
+
+$navbar-title-font-size: 1.25rem !default;
+$navbar-title-font-weight: $font-weight-semi-bold !default;
+$navbar-title-margin-bottom: 0 !default;
+$navbar-title-text-transform: null !default;
+
+$navbar-text-truncate-spacer-right: 25px !default;
+$navbar-text-truncate-max-width: 140px !default;
+
+// Navbar Transparent
+
+$navbar-transparent: () !default;
+$navbar-transparent: map-merge((
+	bg: inherit,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $navbar-transparent);

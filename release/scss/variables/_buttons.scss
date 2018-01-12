@@ -1,0 +1,124 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$btn-cursor: $link-cursor !default;
+$btn-font-size: $font-size-base !default;
+$btn-font-size-mobile: null !default;
+$btn-padding-x-mobile: null !default;
+$btn-padding-y-mobile: null !default;
+
+$btn-disabled-cursor: $disabled-cursor !default;
+
+$btn-inline-item-font-size: null !default;
+
+$btn-section-font-size: 0.6875rem !default; // 11px
+$btn-section-font-weight: $font-weight-normal !default;
+$btn-section-line-height: 1 !default;
+
+// Button Sizes
+
+$btn-font-size-lg: $font-size-lg !default;
+$btn-font-size-lg-mobile: null !default;
+$btn-padding-x-lg-mobile: null !default;
+$btn-padding-y-lg-mobile: null !default;
+$btn-inline-item-font-size-lg: null !default;
+$btn-section-font-size-lg: 0.8125rem !default; // 13px
+
+$btn-font-size-sm: $font-size-sm !default;
+$btn-font-size-sm-mobile: null !default;
+$btn-padding-x-sm-mobile: null !default;
+$btn-padding-y-sm-mobile: null !default;
+$btn-inline-item-font-size-sm: null !default;
+$btn-section-font-size-sm: 0.5625rem !default; // 9px
+
+// Button Monospaced
+
+$btn-monospaced-size: 2.375rem !default; // 38px
+$btn-monospaced-size-lg: 3rem !default; // 48px
+$btn-monospaced-size-sm: 1.9375rem !default; // 31px
+
+$btn-monospaced-size-mobile: null !default;
+$btn-monospaced-size-lg-mobile: null !default;
+$btn-monospaced-size-sm-mobile: null !default;
+
+// Button Toolbar
+
+$btn-toolbar-spacer-x: 0.5rem !default; // 8px
+$btn-toolbar-spacer-y: 0.125rem !default; // 2px
+
+// Button Variants
+
+$btn-primary: () !default;
+$btn-primary: map-merge((
+	loading-animation: 'loading-animation-light'
+), $btn-primary);
+
+$btn-secondary: () !default;
+$btn-secondary: map-merge((
+	loading-animation: 'loading-animation-light'
+), $btn-secondary);
+
+$btn-success: () !default;
+$btn-success: map-merge((
+	loading-animation: 'loading-animation-light'
+), $btn-success);
+
+$btn-info: () !default;
+$btn-info: map-merge((
+	loading-animation: 'loading-animation-light'
+), $btn-info);
+
+$btn-warning: () !default;
+$btn-warning: map-merge((), $btn-warning);
+
+$btn-danger: () !default;
+$btn-danger: map-merge((
+	loading-animation: 'loading-animation-light'
+), $btn-danger);
+
+$btn-light: () !default;
+$btn-light: map-merge((), $btn-light);
+
+$btn-dark: () !default;
+$btn-dark: map-merge((
+	loading-animation: 'loading-animation-light'
+), $btn-dark);
+
+$btn-palette: () !default;
+$btn-palette: map-merge((
+	primary: $btn-primary,
+	secondary: $btn-secondary,
+	success: $btn-success,
+	info: $btn-info,
+	warning: $btn-warning,
+	danger: $btn-danger,
+	light: $btn-light,
+	dark: $btn-dark
+), $btn-palette);
+
+// Button Outline Variants
+
+$btn-outline-primary: () !default;
+$btn-outline-secondary: () !default;
+$btn-outline-success: () !default;
+$btn-outline-info: () !default;
+$btn-outline-warning: () !default;
+$btn-outline-danger: () !default;
+$btn-outline-light: () !default;
+$btn-outline-dark: () !default;
+
+$btn-outline-palette: () !default;
+$btn-outline-palette: map-merge((
+	primary: $btn-outline-primary,
+	secondary: $btn-outline-secondary,
+	success: $btn-outline-success,
+	info: $btn-outline-info,
+	warning: $btn-outline-warning,
+	danger: $btn-outline-danger,
+	light: $btn-outline-light,
+	dark: $btn-outline-dark
+), $btn-outline-palette);

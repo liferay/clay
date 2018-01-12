@@ -1,0 +1,12 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$bg-checkered-fg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+
+$inline-item-spacer-x: 0.85714em !default; // ~12px
+
+$page-header-bg: #FFF !default;

@@ -1,0 +1,28 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.menubar {
+	position: relative;
+}
+
+.menubar-toggler {
+	@extend %btn-unstyled;
+
+	display: none;
+}
+
+// Menubar Vertical
+
+.menubar-vertical-expand-md {
+	@include clay-menubar-vertical-expand($menubar-vertical-expand-md);
+}
+
+// Menubar Variants
+
+.menubar-transparent.menubar-vertical-expand-md {
+	@include clay-menubar-vertical-variant($menubar-vertical-transparent);
+}

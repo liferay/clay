@@ -1,0 +1,22 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin clay-autofit-float {
+	flex-wrap: wrap;
+
+	> .autofit-col {
+		max-width: 100%;
+	}
+
+	> .autofit-col-end {
+		margin-left: auto;
+
+		+ .autofit-col-end {
+			margin-left: 0;
+		}
+	}
+}

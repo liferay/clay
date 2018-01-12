@@ -1,0 +1,24 @@
+/**
+* Clay 2.0.0-beta.6
+*
+* Copyright 2018, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sidebar-dt-font-size: 0.6875rem !default; // 11px
+$sidebar-dd-font-size: 0.75rem !default; // 12px
+
+// Sidebar Light
+
+$sidebar-light: () !default;
+$sidebar-light: map-merge((
+	bg: #FFF,
+	border-left-width: 0,
+	link-color: $body-color,
+	header-title-color: $body-color,
+	subtitle-color: $secondary,
+	caption-color: $secondary,
+	actions-link-color: $secondary,
+	dt-color: $secondary,
+	panel-bg: $light
+), $sidebar-light);
