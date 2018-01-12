@@ -22,33 +22,47 @@
 	{/let}
 
 	<ul {$attributes}>
-		<li class="page-item">
-			{call ClayLink.render}
-				{param elementClasses: 'page-link' /}
-				{param href: '#1' /}
-				{param icon: 'angle-left' /}
-				{param spritemap: $spritemap /}
-			{/call}
-		</li>
+		{call .item}
+			{param ariaLabel: 'Previous Page' /}
+			{param href: '#1' /}
+			{param icon: 'angle-left' /}
+			{param spritemap: $spritemap /}
+		{/call}
 
 		{for $index in range($totalPages)}
-			<li class="page-item">
-				{call ClayLink.render}
-					{param elementClasses: 'page-link' /}
-					{param href: '#' + $index /}
-					{param label: '' + $index /}
-					{param spritemap: $spritemap /}
-				{/call}
-			</li>
+			{call .item}
+				{param href: '#' + $index /}
+				{param label: '' + $index /}
+			{/call}
 		{/for}
 
-		<li class="page-item">
-			{call ClayLink.render}
-				{param elementClasses: 'page-link' /}
-				{param href: '#' + $totalPages /}
-				{param icon: 'angle-right' /}
-				{param spritemap: $spritemap /}
-			{/call}
-		</li>
+		{call .item}
+			{param ariaLabel: 'Next Page' /}
+			{param href: '#' + $totalPages /}
+			{param icon: 'angle-right' /}
+			{param spritemap: $spritemap /}
+		{/call}
 	</ul>
+{/template}
+
+/**
+ * Renders a page item
+ */
+{template .item}
+	{@param href: string}
+	{@param? ariaLabel: string}
+	{@param? icon: string}
+	{@param? label: string}
+	{@param? spritemap: string}
+
+	<li class="page-item">
+		{call ClayLink.render}
+			{param ariaLabel: $ariaLabel /}
+			{param elementClasses: 'page-link' /}
+			{param href: $href /}
+			{param icon: $icon /}
+			{param label: $label /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</li>
 {/template}
