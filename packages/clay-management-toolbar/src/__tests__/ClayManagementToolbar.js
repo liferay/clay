@@ -212,7 +212,7 @@ describe('ClayManagementToolbar', function() {
 	it('should render a management toolbar with plus button with one option', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
-			plusButton: {
+			creationMenu: {
 				items: [
 					{
 						href: '#1',
@@ -228,7 +228,7 @@ describe('ClayManagementToolbar', function() {
 	it('should render a management toolbar with plus button with more than one option', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
-			plusButton: {
+			creationMenu: {
 				items: [
 					{
 						href: '#1',
@@ -364,11 +364,11 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
-		managementToolbar.refs.plusButton.element.click();
+		managementToolbar.refs.creationMenu.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'plusButtonClicked',
+			'creationButtonClicked',
 			expect.any(Object)
 		);
 	});

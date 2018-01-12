@@ -15,30 +15,7 @@
 		type: string
 	]>}
 	{@param? contentRenderer: string}
-	{@param? elementClasses: string}
-	{@param? filterItems: list<[
-		checked: bool,
-		disabled: bool,
-		inputName: string,
-		inputValue: string,
-		label: string,
-		separator: bool,
-		type: string
-	]>}
-	{@param? handleActionClicked_: any}
-	{@param? handleCloseMobileSearchClick_: any}
-	{@param? handleDeselectAllClicked_: any}
-	{@param? handleFilterDoneButtonClick_: any}
-	{@param? handleOpenMobileSearchClick_: any}
-	{@param? handlePlusButtonClicked_: any}
-	{@param? handleSearchSearchClick_: any}
-	{@param? handleSelectAllClicked_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
-	{@param? handleSortingButtonClicked_: any}
-	{@param? handleViewTypeClicked_: any}
-	{@param? hideFiltersDoneButton: bool}
-	{@param? id: string}
-	{@param? plusButton: [
+	{@param? creationMenu: [
 		button: ?,
 		caption: string,
 		helpText: string,
@@ -52,6 +29,29 @@
 			type: string
 		]>
 	]}
+	{@param? elementClasses: string}
+	{@param? filterItems: list<[
+		checked: bool,
+		disabled: bool,
+		inputName: string,
+		inputValue: string,
+		label: string,
+		separator: bool,
+		type: string
+	]>}
+	{@param? handleActionClicked_: any}
+	{@param? handleCloseMobileSearchClick_: any}
+	{@param? handleCreationButtonClicked_: any}
+	{@param? handleDeselectAllClicked_: any}
+	{@param? handleFilterDoneButtonClick_: any}
+	{@param? handleOpenMobileSearchClick_: any}
+	{@param? handleSearchSearchClick_: any}
+	{@param? handleSelectAllClicked_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
+	{@param? handleSortingButtonClicked_: any}
+	{@param? handleViewTypeClicked_: any}
+	{@param? hideFiltersDoneButton: bool}
+	{@param? id: string}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -84,19 +84,19 @@
 	{else}
 		{call .default}
 			{param contentRenderer: $contentRenderer /}
+			{param creationMenu: $creationMenu /}
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
 			{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
+			{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
 			{param handleFilterDoneButtonClick_: $handleFilterDoneButtonClick_ /}
 			{param handleOpenMobileSearchClick_: $handleOpenMobileSearchClick_ /}
-			{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
 			{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
 			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
 			{param handleViewTypeClicked_: $handleViewTypeClicked_ /}
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
-			{param plusButton: $plusButton /}
 			{param searchActionURL: $searchActionURL /}
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
@@ -219,27 +219,7 @@
 {template .default}
 	{@param spritemap: string}
 	{@param? contentRenderer: string}
-	{@param? elementClasses: string}
-	{@param? filterItems: list<[
-		checked: bool,
-		disabled: bool,
-		inputName: string,
-		inputValue: string,
-		label: string,
-		separator: bool,
-		type: string
-	]>}
-	{@param? handleCloseMobileSearchClick_: any}
-	{@param? handleFilterDoneButtonClick_: any}
-	{@param? handleOpenMobileSearchClick_: any}
-	{@param? handlePlusButtonClicked_: any}
-	{@param? handleSearchSearchClick_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
-	{@param? handleSortingButtonClicked_: any}
-	{@param? handleViewTypeClicked_: any}
-	{@param? hideFiltersDoneButton: bool}
-	{@param? id: string}
-	{@param? plusButton: [
+	{@param? creationMenu: [
 		button: ?,
 		caption: string,
 		helpText: string,
@@ -253,6 +233,26 @@
 			type: string
 		]>
 	]}
+	{@param? elementClasses: string}
+	{@param? filterItems: list<[
+		checked: bool,
+		disabled: bool,
+		inputName: string,
+		inputValue: string,
+		label: string,
+		separator: bool,
+		type: string
+	]>}
+	{@param? handleCloseMobileSearchClick_: any}
+	{@param? handleCreationButtonClicked_: any}
+	{@param? handleFilterDoneButtonClick_: any}
+	{@param? handleOpenMobileSearchClick_: any}
+	{@param? handleSearchSearchClick_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
+	{@param? handleSortingButtonClicked_: any}
+	{@param? handleViewTypeClicked_: any}
+	{@param? hideFiltersDoneButton: bool}
+	{@param? id: string}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -382,12 +382,12 @@
 				{/if}
 
 				<li class="nav-item">
-					{call .plusButton}
-						{param button: $plusButton ? $plusButton.button : null /}
-						{param caption: $plusButton ? $plusButton.caption : null /}
-						{param handlePlusButtonClicked_: $handlePlusButtonClicked_ /}
-						{param helpText: $plusButton ? $plusButton.helpText : null /}
-						{param items: $plusButton ? $plusButton.items : null /}
+					{call .creationMenu}
+						{param button: $creationMenu ? $creationMenu.button : null /}
+						{param caption: $creationMenu ? $creationMenu.caption : null /}
+						{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
+						{param helpText: $creationMenu ? $creationMenu.helpText : null /}
+						{param items: $creationMenu ? $creationMenu.items : null /}
 						{param spritemap: $spritemap /}
 					{/call}
 				</li>
@@ -399,11 +399,11 @@
 /**
  * This renders the plus button.
  */
-{template .plusButton}
+{template .creationMenu}
 	{@param spritemap: string}
 	{@param? button: ?}
 	{@param? caption: string}
-	{@param? handlePlusButtonClicked_: any}
+	{@param? handleCreationButtonClicked_: any}
 	{@param? helpText: string}
 	{@param? items: list<?>}
 
@@ -420,7 +420,7 @@
 				{/call}
 			{/param}
 
-			{param ref: 'plusButtonDropdown' /}
+			{param ref: 'creationMenuDropdown' /}
 			{param spritemap: $spritemap /}
 			{param style: 'primary' /}
 			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
@@ -436,9 +436,9 @@
 	{else}
 		{call ClayButton.render}
 			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
-			{param events: ['click': $handlePlusButtonClicked_ ] /}
+			{param events: ['click': $handleCreationButtonClicked_ ] /}
 			{param icon: 'plus' /}
-			{param ref: 'plusButton' /}
+			{param ref: 'creationMenu' /}
 			{param spritemap: $spritemap /}
 		{/call}
 	{/if}

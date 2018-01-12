@@ -57,6 +57,15 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the plus button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleCreationButtonClicked_(event) {
+		this.emit('creationButtonClicked', event);
+	}
+
+	/**
 	 * Continues the propagation of the deselect all button clicked event
 	 * @param {!Event} event
 	 * @private
@@ -80,15 +89,6 @@ class ClayManagementToolbar extends Component {
 	 */
 	handleOpenMobileSearchClick_() {
 		this.showSearch_ = true;
-	}
-
-	/**
-	 * Continues the propagation of the plus button clicked event
-	 * @param {!Event} event
-	 * @private
-	 */
-	handlePlusButtonClicked_(event) {
-		this.emit('plusButtonClicked', event);
 	}
 
 	/**
@@ -170,6 +170,20 @@ ClayManagementToolbar.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * Configuration of the plus button.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	creationMenu: Config.shapeOf({
+		button: Config.object(),
+		caption: Config.string(),
+		helpText: Config.string(),
+		items: actionItemsValidator,
+	}),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayManagementToolbar
@@ -205,20 +219,6 @@ ClayManagementToolbar.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
-
-	/**
-	 * Configuration of the plus button.
-	 * @instance
-	 * @memberof ClayManagementToolbar
-	 * @type {?object|undefined}
-	 * @default undefined
-	 */
-	plusButton: Config.shapeOf({
-		button: Config.object(),
-		caption: Config.string(),
-		helpText: Config.string(),
-		items: actionItemsValidator,
-	}),
 
 	/**
 	 * URL of the search form action

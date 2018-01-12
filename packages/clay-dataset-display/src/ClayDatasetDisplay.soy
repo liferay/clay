@@ -14,30 +14,7 @@
 		separator: bool,
 		type: string
 	]> | ?}
-	{@param? elementClasses: string}
-	{@param? filterItems: list<[
-		checked: bool,
-		disabled: bool,
-		inputName: string,
-		inputValue: string,
-		label: string,
-		separator: bool,
-		type: string
-	]>}
-	{@param? handleActionClicked_: any}
-	{@param? handleDeselectAllClicked_: any}
-	{@param? handleFilterDoneClicked_: any}
-	{@param? handleItemToggled_: any}
-	{@param? handlePlusButtonClicked_: any}
-	{@param? handleSearch_: any}
-	{@param? handleSelectAllClicked_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
-	{@param? handleSortingButtonClicked_: any}
-	{@param? handleViewTypeClicked_: any}
-	{@param? hideFiltersDoneButton: bool}
-	{@param? id: string}
-	{@param? items: ?}
-	{@param? plusButton: [
+	{@param? creationMenu: [
 		button: ?,
 		caption: string,
 		helpText: string,
@@ -51,6 +28,29 @@
 			type: string
 		]>
 	]}
+	{@param? elementClasses: string}
+	{@param? filterItems: list<[
+		checked: bool,
+		disabled: bool,
+		inputName: string,
+		inputValue: string,
+		label: string,
+		separator: bool,
+		type: string
+	]>}
+	{@param? handleActionClicked_: any}
+	{@param? handleCreationButtonClicked_: any}
+	{@param? handleDeselectAllClicked_: any}
+	{@param? handleFilterDoneClicked_: any}
+	{@param? handleItemToggled_: any}
+	{@param? handleSearch_: any}
+	{@param? handleSelectAllClicked_: any}
+	{@param? handleSelectPageCheckboxChanged_: any}
+	{@param? handleSortingButtonClicked_: any}
+	{@param? handleViewTypeClicked_: any}
+	{@param? hideFiltersDoneButton: bool}
+	{@param? id: string}
+	{@param? items: ?}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -85,11 +85,12 @@
 		{if $items}
 			{call ClayManagementToolbar.render}
 				{param actionItems: $actionItems /}
+				{param creationMenu: $creationMenu /}
 				{param events: [
 					'actionClicked': $handleActionClicked_,
+					'creationButtonClicked': $handleCreationButtonClicked_,
 					'deselectAllClicked': $handleDeselectAllClicked_,
 					'filterDoneClicked': $handleFilterDoneClicked_,
-					'plusButtonClicked': $handlePlusButtonClicked_,
 					'search': $handleSearch_,
 					'selectAllClicked': $handleSelectAllClicked_,
 					'selectPageCheckboxChanged': $handleSelectPageCheckboxChanged_,
@@ -98,7 +99,6 @@
 				] /}
 				{param filterItems: $filterItems /}
 				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
-				{param plusButton: $plusButton /}
 				{param ref: 'managementToolbar' /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}

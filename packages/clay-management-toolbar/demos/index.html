@@ -32,6 +32,18 @@
 		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 		
 		new metal.ClayManagementToolbar({
+			creationMenu: {
+				items: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					}
+				]
+			},
 			filterItems: [
 				{
 					items: [
@@ -118,18 +130,6 @@
 					type: 'radiogroup',
 				}
 			],
-			plusButton: {
-				items: [
-					{
-						href: '#1',
-						label: 'Add Content 1',
-					},
-					{
-						href: '#2',
-						label: 'Add Content 2',
-					}
-				]
-			},
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
 			selectable: true,

@@ -23,7 +23,7 @@ const actionItemsWithQuickItems = [
 	},
 ];
 
-let plusButtonConfig = {
+let creationMenuConfig = {
 	items: [
 		{
 			href: '#1',
@@ -408,7 +408,7 @@ describe('ClayDatasetDisplay', function() {
 
 	beforeEach(() => {
 		defaultConfig.items = groupedItems;
-		defaultConfig.plusButton = plusButtonConfig;
+		defaultConfig.creationMenu = creationMenuConfig;
 	});
 
 	it('should render the default markup', () => {
@@ -527,19 +527,19 @@ describe('ClayDatasetDisplay', function() {
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar plus button click', () => {
 		jest.useFakeTimers();
 
-		defaultConfig.plusButton = undefined;
+		defaultConfig.creationMenu = undefined;
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
 
-		component.refs.managementToolbar.refs.plusButton.element.click();
+		component.refs.managementToolbar.refs.creationMenu.element.click();
 
 		jest.runAllTimers();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'plusButtonClicked',
+			'creationButtonClicked',
 			expect.any(Object)
 		);
 	});

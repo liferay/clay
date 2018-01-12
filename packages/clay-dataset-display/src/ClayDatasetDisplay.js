@@ -79,6 +79,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the plus button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	handleCreationButtonClicked_(event) {
+		this.emit('creationButtonClicked', event);
+	}
+
+	/**
 	 * Deselects all items on management toolbar deselect all button click.
 	 * @private
 	 */
@@ -158,15 +167,6 @@ class ClayDatasetDisplay extends Component {
 
 		this.items = this.items;
 		this.selectedItems_ = this.selectedItems_;
-	}
-
-	/**
-	 * Continues the propagation of the plus button clicked event
-	 * @param {!Event} event
-	 * @private
-	 */
-	handlePlusButtonClicked_(event) {
-		this.emit('plusButtonClicked', event);
 	}
 
 	/**
@@ -270,6 +270,20 @@ ClayDatasetDisplay.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Configuration of the management bar plus button.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	creationMenu: Config.shapeOf({
+		button: Config.object(),
+		caption: Config.string(),
+		helpText: Config.string(),
+		items: actionItemsValidator,
+	}),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -314,20 +328,6 @@ ClayDatasetDisplay.STATE = {
 	 * @default undefined
 	 */
 	items: Config.array(),
-
-	/**
-	 * Configuration of the management bar plus button.
-	 * @instance
-	 * @memberof ClayDatasetDisplay
-	 * @type {?object|undefined}
-	 * @default undefined
-	 */
-	plusButton: Config.shapeOf({
-		button: Config.object(),
-		caption: Config.string(),
-		helpText: Config.string(),
-		items: actionItemsValidator,
-	}),
 
 	/**
 	 * URL of the search form action

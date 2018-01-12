@@ -171,6 +171,18 @@
 
 		new metal.ClayDatasetDisplay({
 			actionItems: actionItemsWithQuickItems,
+			creationMenu: {
+				items: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					}
+				]
+			},
 			filterItems: [
 				{
 					items: [
@@ -247,18 +259,6 @@
 				}
 			],
 			items: items,
-			plusButton: {
-				items: [
-					{
-						href: '#1',
-						label: 'Add Content 1',
-					},
-					{
-						href: '#2',
-						label: 'Add Content 2',
-					}
-				]
-			},
 			selectedView: 2,
 			searchActionURL: 'mySearchURL',
 			searchFormName: 'mySearchName',
