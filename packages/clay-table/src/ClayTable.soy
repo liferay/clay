@@ -206,7 +206,7 @@
 		{if $selectable}
 			<td>
 				{call ClayCheckbox.render}
-					{param ariaLabelledBy: 'group-' + $groupName /}
+					{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
 					{param events: ['change': $handleItemToggled_] /}

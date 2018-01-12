@@ -88,7 +88,7 @@
 		{if $selectable}
 			<div class="flex-col">
 				{call ClayCheckbox.render}
-					{param ariaLabelledBy: 'group-' + $groupName /}
+					{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
 					{param events: ['change': $handleItemToggled_] /}
@@ -176,7 +176,7 @@
 
 	{foreach $item in $items}
 		{if $item.items}
-			{let $currentgroupName kind="text"}
+			{let $currentGroupName kind="text"}
 				{if $groupName}
 					{$groupName}-
 				{/if}
@@ -186,7 +186,7 @@
 
 			{let $headerAttributes kind="attributes"}
 				class="list-group-header-title"
-				id="group-{$currentgroupName}"
+				id="group-{$currentGroupName}"
 			{/let}
 
 			<li class="list-group-header">
@@ -194,7 +194,7 @@
 			</li>
 
 			{call .items}
-				{param groupName: $currentgroupName /}
+				{param groupName: $currentGroupName /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
 				{param schema:	$schema /}
