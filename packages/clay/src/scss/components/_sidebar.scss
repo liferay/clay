@@ -46,7 +46,7 @@
 .sidebar-section-flex {
 	display: flex;
 
-	.flex-col {
+	.autofit-col {
 		justify-content: center;
 		min-height: 40px;
 	}
@@ -67,7 +67,7 @@
 	display: flex;
 	margin-bottom: -$sidebar-list-item-border-bottom-width;
 
-	.flex-col {
+	.autofit-col {
 		justify-content: center;
 		padding-bottom: $sidebar-list-item-flex-col-padding-y;
 		padding-left: $sidebar-list-item-flex-col-padding-x;
