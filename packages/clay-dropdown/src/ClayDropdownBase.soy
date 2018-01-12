@@ -308,12 +308,26 @@
 		{/call}
 	{/let}
 
-	<li data-onclick="{$handleItemClick_}">
-		{$itemContent}
-	</li>
+	{let $itemAttributes kind="attributes"}
+		data-onclick="{$handleItemClick_}"
+	{/let}
 
-	{if $separator}
-		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+	{if $isInList}
+		<li {$itemAttributes}>
+			{$itemContent}
+		</li>
+
+		{if $separator}
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+		{/if}
+	{else}
+		<div {$itemAttributes}>
+			{$itemContent}
+		</div>
+
+		{if $separator}
+			<div class="dropdown-divider"></div>
+		{/if}
 	{/if}
 {/deltemplate}
 

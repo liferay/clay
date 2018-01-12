@@ -47,6 +47,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Dropdown with links</h4>
+			<div id="links-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Dropdown with groups</h4>
 			<div id="groups-block"></div>
 		</div>
@@ -91,6 +98,13 @@
 		<div class="col">
 			<h4>Dropdown with form button</h4>
 			<div id="button-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown with complex structure</h4>
+			<div id="complex-block"></div>
 		</div>
 	</div>
 
@@ -188,6 +202,24 @@
 			'#icon-trigger-block'
 		);
 
+		/**
+		 * Dropdown with links
+		 **/
+		new metal.ClayDropdown(
+			{
+				items: [
+					{
+						label: 'Link 1',
+						href: '#mylink',
+						type: 'item',
+					},
+				],
+				spritemap: spritemap,
+				label: 'Trigger Label',
+			},
+			'#links-block'
+		);
+		
 		/**
 		 * Dropdown with groups
 		 **/
@@ -509,6 +541,108 @@
 				type: 'form',
 			},
 			'#button-block'
+		);
+
+		/**
+		 * Dropdown with complex structure
+		 **/
+		 new metal.ClayDropdown(
+			{
+				button: {
+					label: 'Done',
+					 style: 'primary',
+				},
+				items: [
+					{
+						items: [
+							{
+								label: 'Link 1',
+								href: '#mylink',
+								type: 'item',
+							},
+						],
+						label: 'Filter By (Links)',
+						type: 'group',
+					},
+					{
+						items: [
+							{
+								label: 'Item 1',
+								inputName: 'filteritem1checkbox',
+								inputValue: '1',
+								type: 'checkbox',
+							},
+							{
+								checked: true,
+								label: 'Item 2',
+								inputName: 'filteritem2checkbox',
+								inputValue: '2',
+								type: 'checkbox',
+							},
+							{
+								disabled: true,
+								label: 'Item 3',
+								inputName: 'filteritem3checkbox',
+								inputValue: '3',
+								type: 'checkbox',
+							},
+						],
+						label: 'Filter By',
+						type: 'group',
+					},
+					{
+						items: [
+							{
+								label: 'Item 1',
+								inputName: 'orderitem1checkbox',
+								inputValue: '1',
+								type: 'checkbox',
+							},
+							{
+								checked: true,
+								label: 'Item 2',
+								inputName: 'orderitem2checkbox',
+								inputValue: '2',
+								type: 'checkbox',
+							},
+							{
+								disabled: true,
+								label: 'Item 3',
+								inputName: 'orderitem3checkbox',
+								inputValue: '3',
+								type: 'checkbox',
+							},
+						],
+						label: 'Order By',
+						type: 'group',
+					},
+					{
+						items: [
+							{
+								label: 'Item 1',
+								inputValue: '1',
+							},
+							{
+								checked: true,
+								label: 'Item 2',
+								inputValue: '2',
+							},
+							{
+								disabled: true,
+								label: 'Item 3',
+								inputValue: '3',
+							},
+						],
+						inputName: 'item1radio',
+						label: 'Group 1',
+						type: 'radiogroup',
+					}
+				],
+				spritemap: spritemap,
+				label: 'Trigger Label',
+				type: 'form',
+			},
+			'#complex-block'
 		);
 
 		new metal.ClayActionsDropdown(
