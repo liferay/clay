@@ -467,7 +467,16 @@
 	<form {$searchFormAttributes}>
 		<div class="input-group input-group-inset">
 			<div class="input-group-input">
-				<input class="form-control" name="{$searchInputName}" placeholder="Search for..." ref="search" type="text" />
+				{let $inputAttributes kind="attributes"}
+					aria-label="Search"					
+					class="form-control"
+					name="{$searchInputName}"
+					placeholder="Search for..."
+					ref="search"
+					type="text"
+				{/let}
+
+				<input {$inputAttributes} />
 			</div>
 
 			<span class="input-group-inset-item">
