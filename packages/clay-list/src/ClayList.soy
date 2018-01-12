@@ -41,6 +41,7 @@
 	<ul {$attributes}>
 		{if $items}
 			{call .items}
+				{param groupIndex: $id /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
 				{param schema:	$schema /}
@@ -71,6 +72,7 @@
 		inputNamesMap: ?,
 		inputValueField: string	
 	]}
+	{@param? groupIndex: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
@@ -86,10 +88,12 @@
 		{if $selectable}
 			<div class="flex-col">
 				{call ClayCheckbox.render}
+					{param ariaLabelledBy: 'group-' + $groupIndex /}
 					{param checked: $item.selected /}
+					{param disabled: $item.disabled /}
 					{param events: ['change': $handleItemToggled_] /}
 					{param hideLabel: true /}
-					{param label: 'select' /}
+					{param label: $item.selected ? 'Select' : 'Deselect' /}
 					{param name kind="text"}
 						{if $schema.inputName}
 							{$schema.inputName}
@@ -165,17 +169,32 @@
 		inputNamesMap: ?,
 		inputValueField: string	
 	]}
+	{@param? groupIndex: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
 		{if $item.items}
+			{let $currentGroupIndex kind="text"}
+				{if $groupIndex}
+					{$groupIndex}-
+				{/if}
+
+				{index($item)}
+			{/let}
+
+			{let $headerAttributes kind="attributes"}
+				class="list-group-header-title"
+				id="group-{$currentGroupIndex}"
+			{/let}
+
 			<li class="list-group-header">
-				<h3 class="list-group-header-title">{$item.label}</h3>
+				<h3 {$headerAttributes}>{$item.label}</h3>
 			</li>
 
 			{call .items}
+				{param groupIndex: $currentGroupIndex /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
 				{param schema:	$schema /}
@@ -184,6 +203,7 @@
 			{/call}
 		{else}
 			{call .item}
+				{param groupIndex: $groupIndex /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}
 				{param schema: $schema /}
@@ -212,6 +232,7 @@
 		{foreach $item in $items}
 			{if $item.quickAction and $item.icon and $spritemap}
 				{call ClayLink.render}
+					{param ariaLabel: $item.label /}
 					{param elementClasses: 'quick-action-item' /}
 					{param href: $item.href /}
 					{param icon: $item.icon /}
