@@ -1,3 +1,73 @@
+### v2.0.0-beta.6 January 12, 2018
+
+* Breaking: Update Bootstrap 4 to 6d8d863
+* Breaking: (Fixes #407) Simplify `loading-icon loading-icon-dotted` to `loading-animation`.
+* Breaking: Sidebar removed `.sidebar-actions` use `.autofit-row` instead
+* Breaking: Sidebar removed `.sidebar-section-flex` styles, use `.sidebar-section.autofit-row` instead
+* Breaking: Sidebar renamed `.flex-col` to `.autofit-col` and adjust font sizes for `.sidebar-dt` and `.sidebar-dd`
+* Breaking: Moved mixins `clay-text-typography` and `clay-link` to `mixins/_links.scss` and `clay-link` added option to configure `border-color`
+* Breaking: Utilities renamed `.flex-col`, `.flex-col-expand`, `.flex-col-section` to `.autofit-col`, `.autofit-col-expand`, `.autofit-section` respectively
+* Breaking: Cards renamed `.flex-col-gutters` to `.autofit-col-gutters`
+* Breaking: Refactor `.input-group-inset` markup and styles after BS4 Input Group update
+* Breaking: Input Group removed `$input-group-addon-border-radius-lg`, `$input-group-addon-border-radius-sm`
+* Breaking: Input Group redo selectors for `.input-group-lg` and `.input-group-sm`
+* Breaking: Forms renamed `.form-check-description` to `.form-check-label-text`
+* Breaking: Form Check renamed `$form-check-description-margin-left`, `$form-check-description-padding-left`, `$form-check-description-disabled-cursor` to `$form-check-label-text-margin-left`,`$form-check-label-text-padding-left`, `$form-check-label-text-disabled-cursor`
+* Breaking: Custom Forms Checkbox and Radio to new BS4 beta.3 markup
+* Breaking: Custom Checkbox Radio renamed `.custom-control-indicator` to `.custom-control-label::before` and `.custom-control-label::after`
+* Breaking: Custom Checkbox Radio renamed `.custom-control-description` to `.custom-control-label .custom-control-label-text`
+* Breaking: Custom Checkbox Radio removed variable `$custom-control-spacer-y`
+* Breaking: Input Group removed `.input-group-constrain`, `.input-group-constrain-text` and associated variables
+* Breaking: Input Group rename `.input-group-inset-left` to `.input-group-inset-start`
+* Breaking: Input Group remove old `.input-group-secondary` styles
+* Breaking: Input Group removed `.input-group-transparent` and associated variables
+* Breaking: Input Group renamed `.input-group-addon` to `.input-group-text`, moved `.input-group-secondary .input-group-addon` to `.input-group-secondary-text`, comment out all old `.input-group` styles
+* Breaking: Input Group renamed `.input-group-input` to `input-group-item`
+* Breaking: Input Group renamed `.input-group-addon` to `.input-group-text`, moved `.input-group-secondary .input-group-addon` to `.input-group-secondary-text`, comment out all old `.input-group` styles
+* New: Added component `.tbar` (toolbar) for simple single line toolbars
+* New: Tbar added option to configure `$tbar-item-padding-x`, `$tbar-item-padding-y`, `$tbar-light` Sass map
+* New: (Fixes #396) Links component added `.component-link`, `.component-title`, `.component-subtitle`, `.single-link`, `.link-primary`, `.link-secondary`, `.link-outline-primary`, `.link-outline-secondary`, `link-outline-borderless`, and `.link-monospaced` for different link types
+* New: Links component added Sass maps to configure `$component-link`, `$link-primary`, `$link-secondary`, `$component-title`, `$component-title-link`, `$component-subtitle`, `$component-subtitle-link`, `$link-outline-primary`, `$link-outline-secondary`
+* New: Links added option to configure `$single-link-font-weight`, `$link-outline-border-radius`, `$link-outline-border-width`, `$link-outline-font-size`, `$link-outline-font-weight`, `$link-outline-line-height`, `$link-outline-padding-x`, `$link-outline-padding-y`, `$link-outline-transition`
+* New: Utilities added helpers `.autofit-row-center`, `.autofit-row-end`, `.autofit-col-end`, `.autofit-float`, `.autofit-float-sm-down` and option to configure `$autofit-col-expand-min-width`
+* New: Utilities added mixin `clay-autofit-float` for simulating floated elements when using `.autofit-row`
+* New: Added option to configure `$zindex-navbar-toggler-focus` and remove `outline` reset on `.navbar-toggler-link` it should use default focus border for keyboard accessibility
+* New: Lexicon SVG Icon Hashtag
+* New: Table add helper class `.table-nowrap` for no line breaks in table cells
+* New: Input Group added option to configure `$input-group-addon-min-width-lg` and `$input-group-addon-min-width-sm`
+* New: Input Group added option to configure `$input-group-addon-min-width`
+* New: Input Group added `.input-group-item-shrink` for making `input-group-item`'s shrink to to fit content
+* Update: Popper JS to 1.12.9
+* Update: Links `.component-title` should be minimum ~32px tall with margins
+* Update: Sidebar added padding for `.sidebar .container-fluid`
+* Update: Utilities move all `.autofit-*` component styles to placeholders for easier extend
+* Update: Links added `vertical-align: middle` to `.link-outline` and `.link-monospaced`
+* Update: Navbar Transparent should inherit `background-color`
+* Update: Sidebar Light colors to not be the same as `$body-bg`
+* Update: Atlas Application Bar `.navbar-title` font-size to 17px and use `map-merge` for `$application-bar-dark`
+* Update: Forms reset `background-clip` property on `.form-control` to `border-box` causes clipping issues when input background is any other color than white
+* Update: Badges and Labels should inherit `white-space`
+* Update: Popover remove `$popover-border-radius`, and `$popover-font-size` from Clay Base was added by BS4
+* Update: Tooltip remove `$tooltip-border-radius` and `$tooltip-font-size` from Clay Base was added by BS4
+* Update: Reset BS4 variable `$form-check-inline-input-margin-x` our native checkboxes are slightly different
+* Update: Re-position custom checkboxes in Cards, List Group, and Table
+* Update: Input Group removed commented `.input-group-addon` and `.input-group-btn` styles
+* Update: Input Group removed commented `.input-group-input` styles
+* Update: `clay-button-variant` mixin active focus selector to be as specific as BS4's beta.3 changes
+* Update: Custom Forms re-add variable `$custom-control-spacer-y` that was removed by BS4 beta.3
+* Site: Update loading-animation
+* Site: Sidebar added tbar to example and updating markup to use newer Clay components
+* Site: Add tbar example page
+* Site: Added docs for new Links component
+* Site: Renamed `.flex-col`, `.flex-col-expand`, `.flex-col-section`, `.flex-col-gutters` to `.autofit-col`, `.autofit-col-expand`, `.autofit-section`, `.autofit-gutters` respectively
+* Site: Navigation Bar manually add `z-index` to `.navbar-collapse` to show how to properly implement collapsible navbars close to each other and button examples should toggle the right nav
+* Site: Table document `.table-nowrap` helper class
+* Site: Update Input Group Inset examples to new markup
+* Site: Renamed `.form-check-description` to `.form-check-label-text`
+* Site: Custom Checkbox Radio updated markup to BS4 beta.3
+* Site: Input Groups to new BS4 beta.3 markup
+* Site: BS4 changed `input-group` markup. `.input-group-addon` is now `.input-group-prepend`, `.input-group-append`, and `.input-group-text`
+
 ### v2.0.0-beta.5 December 25, 2017
 
 * We will try and limit the number of breaking markup changes from this point on. Disclaimer: there is no guarantee as Bootstrap 4 is still in beta, couple breaking changes that are coming down the pipeline from Boostrap 4 <a href="https://github.com/twbs/bootstrap/pull/25020">https://github.com/twbs/bootstrap/pull/25020</a>, <a href="https://github.com/twbs/bootstrap/pull/25050">https://github.com/twbs/bootstrap/pull/25050</a>.
