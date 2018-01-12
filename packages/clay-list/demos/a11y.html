@@ -47,43 +47,8 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable List</h4>
-			<div id="container4"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
-			<h4>Selectable List with Icon</h4>
-			<div id="container5"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
-			<h4>Selectable List with Circle Icons</h4>
-			<div id="container6"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
-			<h4>Selectable List with Label</h4>
-			<div id="container7"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
-			<h4>Selectable List with Quick Action Menu</h4>
-			<div id="container8"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
 			<h4>Selectable List with Selected Items</h4>
-			<div id="container9"></div>
+			<div id="container4"></div>
 		</div>
 	</div>
 
@@ -276,197 +241,9 @@
 			},
 		}, '#container3');
 
-		// Selectable List //
-		new metal.ClayList({
-			id: 'selectableList',
-			items: items,
-			schema: {
-				fields: [{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'origin',
-						href: 'downloadHref',
-						title: 'name',
-					}
-				}],
-				inputNameField: 'type',
-				inputNamesMap: {
-					'folder': 'folder',
-					'type': 'chef',
-					'*': 'recipe'
-				},
-				inputValueField: 'id',
-			},
-			selectable: true,
-		}, '#container4');
-
-		// Selectable List with Icons //
-		new metal.ClayList({
-			id: 'selectableListIcons',
-			items: items,
-			schema: {
-				fields: [{
-					contentRenderer: 'icon',
-					fieldName: 'type',
-					iconsMap: {
-						'folder': 'folder',
-						'*': 'exclamation-circle',
-					},
-				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'origin',
-						href: 'downloadHref',
-						title: 'name',
-					}
-				}],
-				inputNameField: 'type',
-				inputNamesMap: {
-					'folder': 'folder',
-					'type': 'chef',
-					'*': 'recipe'
-				},
-				inputValueField: 'id',
-			},
-			selectable: true,
-			spritemap: spritemap,
-		}, '#container5');
-
-		// Selectable List with Circle Icons //
-		new metal.ClayList({
-			id: 'selectableListCircleIcons',
-			items: items,
-			schema: {
-				fields: [{
-					contentRenderer: 'icon',
-					fieldName: 'type',
-					iconsMap: {
-						'folder': 'folder',
-						'*': 'exclamation-circle',
-					},
-					iconShapesMap: {
-						'folder': 'rounded',
-						'*': 'circle',
-					},
-				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'origin',
-						href: 'downloadHref',
-						title: 'name',
-					}
-				}],
-				inputNameField: 'type',
-				inputNamesMap: {
-					'folder': 'folder',
-					'type': 'chef',
-					'*': 'recipe'
-				},
-				inputValueField: 'id',
-			},
-			selectable: true,
-			spritemap: spritemap,
-		}, '#container6');
-
-		// Selectable List with Labels //
-		new metal.ClayList({
-			id: 'selectableListLabels',
-			items: items,
-			schema: {
-				fields: [{
-					contentRenderer: 'icon',
-					fieldName: 'type',
-					iconsMap: {
-						'folder': 'folder',
-						'*': 'exclamation-circle',
-					},
-					iconShapesMap: {
-						'folder': 'rounded',
-						'*': 'circle',
-					},
-				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'origin',
-						href: 'downloadHref',
-						labels: 'spicyLevel',
-						title: 'name',
-					},
-					labelStylesMap: {
-						'Spicy': 'warning',
-						'Very Spicy': 'danger',
-						'*': 'success',
-					},
-				}],
-				inputNameField: 'type',
-				inputNamesMap: {
-					'folder': 'folder',
-					'type': 'chef',
-					'*': 'recipe'
-				},
-				inputValueField: 'id',
-			},
-			selectable: true,
-			spritemap: spritemap,
-		}, '#container7');
-
-		// Selectable List with Action Items //
-		items.forEach(item => {
-			item.items.forEach(nestedItem => {
-				nestedItem.actionItems = actionItemsWithQuickItems;
-			});
-		});
-
-		new metal.ClayList({
-			id: 'selectableListActionItems',
-			items: items,
-			schema: {
-				fields: [{
-					contentRenderer: 'icon',
-					fieldName: 'type',
-					iconsMap: {
-						'folder': 'folder',
-						'*': 'exclamation-circle',
-					},
-					iconShapesMap: {
-						'folder': 'rounded',
-						'*': 'circle',
-					},
-				},
-				{
-					contentRenderer: 'content',
-					fieldsMap: {
-						description: 'origin',
-						href: 'downloadHref',
-						labels: 'spicyLevel',
-						title: 'name',
-					},
-					labelStylesMap: {
-						'Spicy': 'warning',
-						'Very Spicy': 'danger',
-						'*': 'success',
-					},
-				}],
-				inputNameField: 'type',
-				inputNamesMap: {
-					'folder': 'folder',
-					'type': 'chef',
-					'*': 'recipe'
-				},
-				inputValueField: 'id',
-			},
-			selectable: true,
-			spritemap: spritemap,
-		}, '#container8');
-
 		// Selectable List with Selected Items //
-		items.forEach(item => {
-			item.items.forEach(nestedItem => {
-				nestedItem.selected = true;
-			});
+		items[0].items.forEach(item => {
+			item.selected = true;
 		});
 
 		new metal.ClayList({
@@ -502,14 +279,14 @@
 				inputNameField: 'type',
 				inputNamesMap: {
 					'folder': 'folder',
-					'type': 'chef',
+					'chef': 'chef',
 					'*': 'recipe'
 				},
 				inputValueField: 'id',
 			},
 			selectable: true,
 			spritemap: spritemap,
-		}, '#container9');
+		}, '#container4');
 	</script>
 </body>
 </html>
