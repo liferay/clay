@@ -3,6 +3,11 @@
 	overflow: auto;
 
 	-webkit-overflow-scrolling: touch;
+
+	.container-fluid {
+		padding-left: $sidebar-padding-left;
+		padding-right: $sidebar-padding-right;
+	}
 }
 
 // Sidebar Header / Footer
