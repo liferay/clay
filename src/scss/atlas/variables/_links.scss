@@ -8,7 +8,9 @@ $link-secondary: map-merge((
 $component-title: () !default;
 $component-title: map-merge((
 	font-size: 1rem,
-	line-height: 1.25
+	line-height: 1.25,
+	margin-bottom: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+	margin-top: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2)
 ), $component-title);
 
 // Component Subtitle
