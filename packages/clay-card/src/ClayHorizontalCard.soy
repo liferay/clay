@@ -13,6 +13,7 @@
 	]> | ?}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
+	{@param? groupIndex: string}
 	{@param? handleItemCheckboxClick_: any}
 	{@param? href: string}
 	{@param? icon: string}
@@ -53,6 +54,7 @@
 	<div {$attributes}>
 		{if $selectable}
 			{call ClayCheckbox.render}
+				{param ariaLabelledBy: $groupIndex ? 'group-' + $groupIndex : null /}
 				{param checked: $selected /}
 				{param disabled: $disabled /}
 				{param events: ['change': $handleItemCheckboxClick_] /}

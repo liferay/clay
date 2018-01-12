@@ -96,6 +96,15 @@ ClayCard.STATE = {
 	]).value('primary'),
 
 	/**
+	 * Group Index the card belongs to.
+	 * @instance
+	 * @memberof ClayCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	groupIndex: Config.string(),
+
+	/**
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayCard

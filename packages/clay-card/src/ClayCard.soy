@@ -15,6 +15,7 @@
 	{@param? elementClasses: string}
 	{@param? fileType: string}
 	{@param? fileTypeStyle: string}
+	{@param? groupIndex: string}
 	{@param? handleItemCheckboxClick_: any}
 	{@param? href: string}
 	{@param? icon: string}
@@ -76,6 +77,7 @@
 			<div class="card">
 				<div class="aspect-ratio card-item-first">
 					{call ClayCheckbox.render}
+						{param ariaLabelledBy: $groupIndex ? 'group-' + $groupIndex : null /}
 						{param checked: $selected /}
 						{param disabled: $disabled /}
 						{param events: ['change': $handleItemCheckboxClick_] /}
