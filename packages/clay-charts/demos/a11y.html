@@ -30,7 +30,7 @@
 
 </head>
 <body>
-
+<!--
 	<svg style="display:none">
 		<defs>
 			<pattern id="circles" patternUnits="userSpaceOnUse" width="16" height="16" style="fill:rgba(0,0,0,0.3)">
@@ -79,7 +79,7 @@
 			</pattern>
 		</defs>
 	</svg>
-
+-->
 	<h1>Clay Charts</h1>
 
 	<p>See <a href="https://naver.github.io/billboard.js/demo/">billboard.js</a> for more examples.</p>
@@ -359,6 +359,7 @@
 
 		var pieChart = new metal.PieChart({
 			columns: dummyPercentData.columns_1,
+/*
 			color: {
 				tiles() {
 					return [
@@ -368,6 +369,7 @@
 					];
 				}
 			}
+*/			
 		}, '#pie');
 		createChartControls(pieChart, 'pie', dummyPercentData);
 
