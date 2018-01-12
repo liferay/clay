@@ -4,6 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param currentPage: number}
 	{@param spritemap: string}
 	{@param totalPages: number}
 	{@param? elementClasses: string}
@@ -24,21 +25,24 @@
 	<ul {$attributes}>
 		{call .item}
 			{param ariaLabel: 'Previous Page' /}
-			{param href: '#1' /}
+			{param href: $currentPage > 1 ? '#' + ($currentPage - 1) : null /}
 			{param icon: 'angle-left' /}
 			{param spritemap: $spritemap /}
 		{/call}
 
 		{for $index in range($totalPages)}
+			{let $page: $index + 1 /}
+
 			{call .item}
-				{param href: '#' + $index /}
-				{param label: '' + $index /}
+				{param active: $page == $currentPage /}
+				{param href: '#' + $page /}
+				{param label: '' + $page /}
 			{/call}
 		{/for}
 
 		{call .item}
 			{param ariaLabel: 'Next Page' /}
-			{param href: '#' + $totalPages /}
+			{param href: $currentPage < $totalPages ? '#' + ($currentPage + 1) : null /}
 			{param icon: 'angle-right' /}
 			{param spritemap: $spritemap /}
 		{/call}
@@ -49,13 +53,25 @@
  * Renders a page item
  */
 {template .item}
-	{@param href: string}
+	{@param? active: bool}
 	{@param? ariaLabel: string}
+	{@param? href: string}
 	{@param? icon: string}
 	{@param? label: string}
 	{@param? spritemap: string}
 
-	<li class="page-item">
+	{let $classes kind="text"}
+		page-item
+		{if $active}
+			{sp}active
+		{/if}
+
+		{if not $href}
+			{sp}disabled
+		{/if}
+	{/let}
+
+	<li class="{$classes}">
 		{call ClayLink.render}
 			{param ariaLabel: $ariaLabel /}
 			{param elementClasses: 'page-link' /}

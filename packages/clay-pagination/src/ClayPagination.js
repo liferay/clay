@@ -18,6 +18,15 @@ class ClayPagination extends Component {}
  */
 ClayPagination.STATE = {
 	/**
+	 * Current page number.
+	 * @instance
+	 * @memberof ClayPagination
+	 * @type {!number}
+	 * @default undefined
+	 */
+	currentPage: Config.number().required(),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayPagination
