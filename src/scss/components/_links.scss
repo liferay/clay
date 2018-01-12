@@ -34,9 +34,15 @@
 	padding-right: $link-outline-padding-x;
 	padding-top: $link-outline-padding-y;
 	transition: $link-outline-transition;
+	vertical-align: middle;
 
 	@include hover {
 		text-decoration: none;
+	}
+
+	.inline-item .lexicon-icon,
+	.lexicon-icon {
+		margin-top: 0;
 	}
 }
 
@@ -77,6 +83,7 @@
 	justify-content: center;
 	overflow: hidden;
 	padding: 0;
+	vertical-align: middle;
 	width: $link-monospaced-size;
 
 	.inline-item .lexicon-icon,
