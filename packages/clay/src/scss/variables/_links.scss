@@ -22,7 +22,9 @@ $component-title: map-merge((
 	color: $body-color,
 	font-size: 1.125rem,
 	font-weight: $headings-font-weight,
-	line-height: $headings-line-height
+	line-height: $headings-line-height,
+	margin-bottom: calc((#{$dropdown-action-toggle-size} - (1em * #{$headings-line-height})) / 2),
+	margin-top: calc((#{$dropdown-action-toggle-size} - (1em * #{$headings-line-height})) / 2)
 ), $component-title);
 
 $component-title-link: () !default;
