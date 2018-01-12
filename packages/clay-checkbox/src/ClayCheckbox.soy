@@ -4,6 +4,7 @@
  * This renders an icon element based on the Clay Checkbox definition.
  */
 {template .render}
+	{@param? ariaLabelledBy: string}
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
@@ -34,6 +35,7 @@
 
 	<div {$attributes}>
 		{call .input}
+			{param ariaLabelledBy: $ariaLabelledBy /}
 			{param checked: $indeterminate or $checked /}
 			{param disabled: $disabled /}
 			{param hideLabel: $hideLabel /}
@@ -49,6 +51,7 @@
  * This renders the checkbox input
  **/
 {template .input}
+	{@param? ariaLabelledBy: string}
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? hideLabel: bool}
@@ -59,6 +62,10 @@
 
 	<label>
 		{let $inputAttributes kind="attributes"}
+			{if $ariaLabelledBy}
+				aria-labelledby="{$ariaLabelledBy}"
+			{/if}
+
 			{if $checked}
 				checked="checked"
 			{/if}

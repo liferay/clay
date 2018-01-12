@@ -24,6 +24,15 @@ class ClayCheckbox extends Component {
  */
 ClayCheckbox.STATE = {
 	/**
+	 * Aria labelled by attribute to apply to the input.
+	 * @instance
+	 * @memberof ClayCheckbox
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	ariaLabelledBy: Config.string(),
+
+	/**
 	 * Flag to indicate if checkbox is checked.
 	 * @instance
 	 * @memberof ClayCheckbox
