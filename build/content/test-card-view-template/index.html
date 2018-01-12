@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -104,6 +104,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/links">Links</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
@@ -145,6 +147,8 @@
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tbar">Tbar (Toolbar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
@@ -300,7 +304,7 @@
 				<div class="custom-control custom-checkbox">
 					<label>
 						<input class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
+						<span class="custom-control-label"></span>
 					</label>
 				</div>
 			</li>
@@ -333,22 +337,22 @@
 		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 			<div class="container">
 				<form role="search">
-					<div class="input-group input-group-inset">
-						<div class="input-group-input">
-							<input class="form-control" placeholder="Search for..." type="text">
+					<div class="input-group">
+						<div class="input-group-item">
+							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+							<span class="input-group-inset-item input-group-inset-item-after">
+								<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
+							</span>
 						</div>
-						<span class="input-group-inset-item">
-							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="../../images/icons/icons.svg#times">
-								</svg>
-							</button>
-							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use xlink:href="../../images/icons/icons.svg#search">
-								</svg>
-							</button>
-						</span>
 					</div>
 				</form>
 			</div>
@@ -424,19 +428,19 @@
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
+							<span class="custom-control-label"></span>
 							<div class="card card-horizontal">
 								<div class="card-body">
 									<div class="card-row">
-										<div class="flex-col">
+										<div class="autofit-col">
 											<span class="sticker">
 												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 													<use xlink:href="../../images/icons/icons.svg#folder">
 												</svg>
 											</span>
 										</div>
-										<div class="flex-col flex-col-expand flex-col-gutters">
-											<section class="flex-col-section">
+										<div class="autofit-col autofit-col-expand autofit-col-gutters">
+											<section class="autofit-section">
 												<h3 class="card-title" title="UX Team">
 													<span class="text-truncate-inline">
 														<a class="text-truncate" href="#1">UX Team</a>
@@ -444,7 +448,7 @@
 												</h3>
 											</section>
 										</div>
-										<div class="flex-col">
+										<div class="autofit-col">
 											<div class="dropdown dropdown-action">
 												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -473,19 +477,19 @@
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
+							<span class="custom-control-label"></span>
 							<div class="card card-horizontal">
 								<div class="card-body">
 									<div class="card-row">
-										<div class="flex-col">
+										<div class="autofit-col">
 											<span class="sticker">
 												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 													<use xlink:href="../../images/icons/icons.svg#folder">
 												</svg>
 											</span>
 										</div>
-										<div class="flex-col flex-col-expand flex-col-gutters">
-											<section class="flex-col-section">
+										<div class="autofit-col autofit-col-expand autofit-col-gutters">
+											<section class="autofit-section">
 												<h3 class="card-title" title="Talks">
 													<span class="text-truncate-inline">
 														<span class="text-truncate">Talks</span>
@@ -493,7 +497,7 @@
 												</h3>
 											</section>
 										</div>
-										<div class="flex-col">
+										<div class="autofit-col">
 											<div class="dropdown dropdown-action">
 												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -522,19 +526,19 @@
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
+							<span class="custom-control-label"></span>
 							<div class="card card-horizontal">
 								<div class="card-body">
 									<div class="card-row">
-										<div class="flex-col">
+										<div class="autofit-col">
 											<span class="sticker">
 												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 													<use xlink:href="../../images/icons/icons.svg#folder">
 												</svg>
 											</span>
 										</div>
-										<div class="flex-col flex-col-expand flex-col-gutters">
-											<section class="flex-col-section">
+										<div class="autofit-col autofit-col-expand autofit-col-gutters">
+											<section class="autofit-section">
 												<h3 class="card-title" title="Branding">
 													<span class="text-truncate-inline">
 														<span class="text-truncate">Branding</span>
@@ -542,7 +546,7 @@
 												</h3>
 											</section>
 										</div>
-										<div class="flex-col">
+										<div class="autofit-col">
 											<div class="dropdown dropdown-action">
 												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -571,19 +575,19 @@
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
+							<span class="custom-control-label"></span>
 							<div class="card card-horizontal">
 								<div class="card-body">
 									<div class="card-row">
-										<div class="flex-col">
+										<div class="autofit-col">
 											<span class="sticker">
 												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 													<use xlink:href="../../images/icons/icons.svg#folder">
 												</svg>
 											</span>
 										</div>
-										<div class="flex-col flex-col-expand flex-col-gutters">
-											<section class="flex-col-section">
+										<div class="autofit-col autofit-col-expand autofit-col-gutters">
+											<section class="autofit-section">
 												<h3 class="card-title" title="Side Projects">
 													<span class="text-truncate-inline">
 														<span class="text-truncate">Side Projects</span>
@@ -591,7 +595,7 @@
 												</h3>
 											</section>
 										</div>
-										<div class="flex-col">
+										<div class="autofit-col">
 											<div class="dropdown dropdown-action">
 												<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -625,7 +629,7 @@
 							<div class="custom-control custom-checkbox">
 								<label>
 									<input class="custom-control-input" type="checkbox">
-									<span class="custom-control-indicator"></span>
+									<span class="custom-control-label"></span>
 									<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 								</label>
@@ -633,8 +637,8 @@
 						</div>
 						<div class="card-body">
 							<div class="card-row">
-								<div class="flex-col flex-col-expand">
-									<section class="flex-col-section">
+								<div class="autofit-col autofit-col-expand">
+									<section class="autofit-section">
 										<h3 class="card-title" title="thumbnail_coffee.jpg">
 											<span class="text-truncate-inline">
 												<span class="text-truncate">thumbnail_coffee.jpg</span>
@@ -672,7 +676,7 @@
 										</div>
 									</section>
 								</div>
-								<div class="flex-col">
+								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -701,7 +705,7 @@
 							<div class="custom-control custom-checkbox">
 								<label>
 									<input class="custom-control-input" type="checkbox">
-									<span class="custom-control-indicator"></span>
+									<span class="custom-control-label"></span>
 									<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 								</label>
@@ -709,8 +713,8 @@
 						</div>
 						<div class="card-body">
 							<div class="card-row">
-								<div class="flex-col flex-col-expand">
-									<section class="flex-col-section">
+								<div class="autofit-col autofit-col-expand">
+									<section class="autofit-section">
 										<h3 class="card-title" title="thumbnail_coffee.jpg">
 											<span class="text-truncate-inline">
 												<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
@@ -726,7 +730,7 @@
 										</div>
 									</section>
 								</div>
-								<div class="flex-col">
+								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -755,7 +759,7 @@
 							<div class="custom-control custom-checkbox">
 								<label>
 									<input class="custom-control-input" type="checkbox">
-									<span class="custom-control-indicator"></span>
+									<span class="custom-control-label"></span>
 									<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 								</label>
@@ -763,8 +767,8 @@
 						</div>
 						<div class="card-body">
 							<div class="card-row">
-								<div class="flex-col flex-col-expand">
-									<section class="flex-col-section">
+								<div class="autofit-col autofit-col-expand">
+									<section class="autofit-section">
 										<h3 class="card-title" title="thumbnail_coffee.jpg">
 											<span class="text-truncate-inline">
 												<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
@@ -780,7 +784,7 @@
 										</div>
 									</section>
 								</div>
-								<div class="flex-col">
+								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -809,7 +813,7 @@
 							<div class="custom-control custom-checkbox">
 								<label>
 									<input class="custom-control-input" type="checkbox">
-									<span class="custom-control-indicator"></span>
+									<span class="custom-control-label"></span>
 									<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 									<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 								</label>
@@ -817,7 +821,7 @@
 						</div>
 						<div class="card-body">
 							<div class="card-row">
-								<div class="flex-col flex-col-expand">
+								<div class="autofit-col autofit-col-expand">
 									<h3 class="card-title" title="thumbnail_coffee.jpg">
 										<span class="text-truncate-inline">
 											<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
@@ -832,7 +836,7 @@
 										<span class="label label-success">Approved</span>
 									</div>
 								</div>
-								<div class="flex-col">
+								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">

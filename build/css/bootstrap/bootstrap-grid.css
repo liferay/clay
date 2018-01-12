@@ -1,12 +1,12 @@
 /**
-* Clay 2.0.0-beta.5
+* Clay 2.0.0-beta.6
 *
-* Copyright 2017, Liferay, Inc.
+* Copyright 2018, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
 /*!
- * Bootstrap Grid v4.0.0-beta.2 (https://getbootstrap.com)
+ * Bootstrap Grid v4.0.0-beta.3 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -173,6 +173,10 @@ html {
   order: -1;
 }
 
+.order-0 {
+  order: 0;
+}
+
 .order-1 {
   order: 1;
 }
@@ -327,6 +331,9 @@ html {
   .order-sm-first {
     order: -1;
   }
+  .order-sm-0 {
+    order: 0;
+  }
   .order-sm-1 {
     order: 1;
   }
@@ -462,6 +469,9 @@ html {
   }
   .order-md-first {
     order: -1;
+  }
+  .order-md-0 {
+    order: 0;
   }
   .order-md-1 {
     order: 1;
@@ -599,6 +609,9 @@ html {
   .order-lg-first {
     order: -1;
   }
+  .order-lg-0 {
+    order: 0;
+  }
   .order-lg-1 {
     order: 1;
   }
@@ -734,6 +747,9 @@ html {
   }
   .order-xl-first {
     order: -1;
+  }
+  .order-xl-0 {
+    order: 0;
   }
   .order-xl-1 {
     order: 1;

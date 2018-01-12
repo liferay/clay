@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -104,6 +104,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/links">Links</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
@@ -145,6 +147,8 @@
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tbar">Tbar (Toolbar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
@@ -316,9 +320,8 @@
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-							<span class="custom-control-description">
-								Custom Checkbox with Success
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Custom Checkbox with Success</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="../../images/icons/icons.svg#asterisk">
 								</svg>
@@ -330,9 +333,8 @@
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-							<span class="custom-control-description">
-								Custom Checkbox with Warning
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Custom Checkbox with Warning</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="../../images/icons/icons.svg#asterisk">
 								</svg>
@@ -344,9 +346,8 @@
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
-							<span class="custom-control-indicator"></span>
-							<span class="custom-control-description">
-								Custom Checkbox with Error
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Custom Checkbox with Error</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="../../images/icons/icons.svg#asterisk">
 								</svg>
@@ -362,8 +363,9 @@
 					<div class="custom-control custom-radio">
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
-							<span class="custom-control-indicator"></span>
-							<span class="custom-control-description">Custom Radio with Success</span>
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Custom Radio with Success</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -371,8 +373,9 @@
 					<div class="custom-control custom-radio">
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
-							<span class="custom-control-indicator"></span>
-							<span class="custom-control-description">Custom Radio with Warning</span>
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Custom Radio with Warning</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -380,8 +383,9 @@
 					<div class="custom-control custom-radio">
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
-							<span class="custom-control-indicator"></span>
-							<span class="custom-control-description">Custom Radio with Error</span>
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Custom Radio with Error</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -404,7 +408,7 @@
 					<div class="form-check">
 						<label class="form-check-label">
 							<input class="form-check-input" id="checkboxSuccess1" type="checkbox" value="option1">
-							<span class="form-check-description">Checkbox with Success</span>
+							<span class="form-check-label-text">Checkbox with Success</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 								<use xlink:href="../../images/icons/icons.svg#asterisk">
 							</svg>
@@ -415,7 +419,7 @@
 					<div class="form-check">
 						<label class="form-check-label">
 							<input class="form-check-input" id="checkboxWarning1" type="checkbox" value="option2">
-							<span class="form-check-description">Checkbox with Warning</span>
+							<span class="form-check-label-text">Checkbox with Warning</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 								<use xlink:href="../../images/icons/icons.svg#asterisk">
 							</svg>
@@ -426,7 +430,7 @@
 					<div class="form-check">
 						<label class="form-check-label">
 							<input class="form-check-input" id="checkboxError1" type="checkbox" value="option3">
-							<span class="form-check-description">Checkbox with Error</span>
+							<span class="form-check-label-text">Checkbox with Error</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 								<use xlink:href="../../images/icons/icons.svg#asterisk">
 							</svg>
@@ -441,7 +445,7 @@
 					<div class="form-check">
 						<label class="form-check-label">
 							<input class="form-check-input" id="radioSuccess1" type="radio" value="option1">
-							<span class="form-check-description">Radio with Success</span>
+							<span class="form-check-label-text">Radio with Success</span>
 						</label>
 					</div>
 				</div>
@@ -449,7 +453,7 @@
 					<div class="form-check">
 						<label class="form-check-label">
 							<input class="form-check-input" id="radioWarning1" type="radio" value="option2">
-							<span class="form-check-description">Radio with Warning</span>
+							<span class="form-check-label-text">Radio with Warning</span>
 						</label>
 					</div>
 				</div>
@@ -457,7 +461,7 @@
 					<div class="form-check">
 						<label class="form-check-label">
 							<input class="form-check-input" id="radioError1" type="radio" value="option3">
-							<span class="form-check-description">Radio with Error</span>
+							<span class="form-check-label-text">Radio with Error</span>
 						</label>
 					</div>
 				</div>
@@ -761,9 +765,8 @@
 						<div class="custom-control custom-checkbox">
 							<label>
 								<input class="custom-control-input" required type="checkbox">
-								<span class="custom-control-indicator"></span>
-								<span class="custom-control-description">
-									Custom Checkbox
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Custom Checkbox</span>
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 										<use xlink:href="../../images/icons/icons.svg#asterisk">
 									</svg>
@@ -786,9 +789,8 @@
 						<div class="custom-control custom-radio">
 							<label>
 								<input class="custom-control-input" name="regularRadio" required type="radio">
-								<span class="custom-control-indicator"></span>
-								<span class="custom-control-description">
-									Custom Radio
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Custom Radio</span>
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 										<use xlink:href="../../images/icons/icons.svg#asterisk">
 									</svg>
