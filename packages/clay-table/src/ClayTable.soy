@@ -59,6 +59,7 @@
 			{call .body}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param handleItemToggled_: $handleItemToggled_ /}
+				{param id: $id /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
@@ -90,6 +91,7 @@
 	]}
 	{@param? handleCellContentClick_: any}
 	{@param? handleItemToggled_: any}
+	{@param? id: string}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
@@ -98,6 +100,7 @@
 	<tbody>
 		{if $items}
 			{call .rows}
+				{param groupIndex: $id /}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
@@ -192,6 +195,7 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? groupIndex: string}
 	{@param? handleCellContentClick_: any}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -202,9 +206,12 @@
 		{if $selectable}
 			<td>
 				{call ClayCheckbox.render}
+					{param ariaLabelledBy: 'group-' + $groupIndex /}
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
 					{param events: ['change': $handleItemToggled_] /}
+					{param hideLabel: true /}
+					{param label: $item.selected ? 'Select' : 'Deselect' /}
 					{param name kind="text"}
 						{if $schema.inputName}
 							{$schema.inputName}
@@ -256,6 +263,7 @@
 					{foreach $actionItem in $item.actionItems}
 						{if $actionItem.quickAction and $actionItem.icon}
 							{call ClayLink.render}
+								{param ariaLabel: $actionItem.label /}
 								{param elementClasses: 'quick-action-item' /}
 								{param href: $actionItem.href /}
 								{param icon: $actionItem.icon /}
@@ -295,6 +303,7 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? groupIndex: string}
 	{@param? handleCellContentClick_: any}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -303,7 +312,20 @@
 
 	{foreach $item in $items}
 		{if $item.items}
-			<tr class="table-divider">
+			{let $currentGroupIndex kind="text"}
+				{if $groupIndex}
+					{$groupIndex}-
+				{/if}
+
+				{index($item)}
+			{/let}
+
+			{let $dividerAttributes kind="attributes"}
+				class="table-divider"
+				id="group-{$currentGroupIndex}"
+			{/let}
+
+			<tr {$dividerAttributes}>
 				{let $cellAttributes kind="attributes"}
 					colspan="{length($schema.fields) + $selectable + $showActionsMenu}"
 				{/let}			
@@ -312,6 +334,7 @@
 			</tr>
 
 			{call .rows}
+				{param groupIndex: $currentGroupIndex /}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
@@ -322,6 +345,7 @@
 			{/call}
 		{else}
 			{call .row}
+				{param groupIndex: $groupIndex /}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}
