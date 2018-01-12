@@ -65,7 +65,7 @@ ClayUserCard.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	groupIndex: Config.string(),
+	groupName: Config.string(),
 
 	/**
 	 * Url to be applied to the title of the card.

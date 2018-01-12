@@ -100,7 +100,7 @@
 	<tbody>
 		{if $items}
 			{call .rows}
-				{param groupIndex: $id /}
+				{param groupName: $id /}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
@@ -195,7 +195,7 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleCellContentClick_: any}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -206,7 +206,7 @@
 		{if $selectable}
 			<td>
 				{call ClayCheckbox.render}
-					{param ariaLabelledBy: 'group-' + $groupIndex /}
+					{param ariaLabelledBy: 'group-' + $groupName /}
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
 					{param events: ['change': $handleItemToggled_] /}
@@ -303,7 +303,7 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleCellContentClick_: any}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
@@ -312,9 +312,9 @@
 
 	{foreach $item in $items}
 		{if $item.items}
-			{let $currentGroupIndex kind="text"}
-				{if $groupIndex}
-					{$groupIndex}-
+			{let $currentgroupName kind="text"}
+				{if $groupName}
+					{$groupName}-
 				{/if}
 
 				{index($item)}
@@ -322,7 +322,7 @@
 
 			{let $dividerAttributes kind="attributes"}
 				class="table-divider"
-				id="group-{$currentGroupIndex}"
+				id="group-{$currentgroupName}"
 			{/let}
 
 			<tr {$dividerAttributes}>
@@ -334,7 +334,7 @@
 			</tr>
 
 			{call .rows}
-				{param groupIndex: $currentGroupIndex /}
+				{param groupName: $currentgroupName /}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
@@ -345,7 +345,7 @@
 			{/call}
 		{else}
 			{call .row}
-				{param groupIndex: $groupIndex /}
+				{param groupName: $groupName /}
 				{param handleCellContentClick_: $handleCellContentClick_ /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}

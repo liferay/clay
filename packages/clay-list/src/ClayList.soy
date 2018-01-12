@@ -41,7 +41,7 @@
 	<ul {$attributes}>
 		{if $items}
 			{call .items}
-				{param groupIndex: $id /}
+				{param groupName: $id /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
 				{param schema:	$schema /}
@@ -72,7 +72,7 @@
 		inputNamesMap: ?,
 		inputValueField: string	
 	]}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
@@ -88,7 +88,7 @@
 		{if $selectable}
 			<div class="flex-col">
 				{call ClayCheckbox.render}
-					{param ariaLabelledBy: 'group-' + $groupIndex /}
+					{param ariaLabelledBy: 'group-' + $groupName /}
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
 					{param events: ['change': $handleItemToggled_] /}
@@ -169,16 +169,16 @@
 		inputNamesMap: ?,
 		inputValueField: string	
 	]}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
 		{if $item.items}
-			{let $currentGroupIndex kind="text"}
-				{if $groupIndex}
-					{$groupIndex}-
+			{let $currentgroupName kind="text"}
+				{if $groupName}
+					{$groupName}-
 				{/if}
 
 				{index($item)}
@@ -186,7 +186,7 @@
 
 			{let $headerAttributes kind="attributes"}
 				class="list-group-header-title"
-				id="group-{$currentGroupIndex}"
+				id="group-{$currentgroupName}"
 			{/let}
 
 			<li class="list-group-header">
@@ -194,7 +194,7 @@
 			</li>
 
 			{call .items}
-				{param groupIndex: $currentGroupIndex /}
+				{param groupName: $currentgroupName /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
 				{param schema:	$schema /}
@@ -203,7 +203,7 @@
 			{/call}
 		{else}
 			{call .item}
-				{param groupIndex: $groupIndex /}
+				{param groupName: $groupName /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}
 				{param schema: $schema /}

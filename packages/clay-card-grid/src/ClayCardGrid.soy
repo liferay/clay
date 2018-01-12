@@ -68,7 +68,7 @@
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 
@@ -90,7 +90,7 @@
 		{/let}
 
 		{delcall ClayCardGrid.Card variant="$variant"}
-			{param groupIndex: $groupIndex /}
+			{param groupName: $groupName /}
 			{param handleItemToggled_: $handleItemToggled_ /}
 			{param item: $item /}
 			{param schema: $schema /}
@@ -121,15 +121,15 @@
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 
 	{foreach $item in $items}
 		{if $item.items}
-			{let $currentGroupIndex kind="text"}
-				{if $groupIndex}
-					{$groupIndex}-
+			{let $currentgroupName kind="text"}
+				{if $groupName}
+					{$groupName}-
 				{/if}
 
 				{index($item)}
@@ -137,13 +137,13 @@
 
 			{let $headerAttributes kind="attributes"}
 				class="card-section-header"
-				id="group-{$currentGroupIndex}"
+				id="group-{$currentgroupName}"
 			{/let}
 
 			<h4 {$headerAttributes}>{$item.label}</h4>
 
 			{call .items}
-				{param groupIndex: $currentGroupIndex /}
+				{param groupName: $currentgroupName /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
 				{param schema:	$schema /}
@@ -156,7 +156,7 @@
 			{/if}
 
 			{call .item}
-				{param groupIndex: $groupIndex /}
+				{param groupName: $groupName /}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}
 				{param schema: $schema /}
@@ -191,7 +191,7 @@
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 {/deltemplate}
@@ -216,7 +216,7 @@
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 
@@ -226,7 +226,7 @@
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
 		{param fileType: $item[$schema.fieldsMap.fileType] /}
 		{param fileTypeStyle: $schema.fileTypeStylesMap ? $schema.fileTypeStylesMap[$item[$schema.fieldsMap.fileType]] ?: $schema.fileTypeStylesMap['*'] : null /}
-		{param groupIndex: $groupIndex /}
+		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
 		{param inputName kind="text"}
@@ -272,7 +272,7 @@
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 
@@ -280,7 +280,7 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
-		{param groupIndex: $groupIndex /}
+		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
 		{param inputName kind="text"}
@@ -323,7 +323,7 @@
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 
@@ -333,7 +333,7 @@
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
 		{param fileType: $item[$schema.fieldsMap.fileType] /}
 		{param fileTypeStyle: $schema.fileTypeStylesMap ? $schema.fileTypeStylesMap[$item[$schema.fieldsMap.fileType]] ?: $schema.fileTypeStylesMap['*'] : null /}
-		{param groupIndex: $groupIndex /}
+		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
 		{param imageAlt: $item[$schema.fieldsMap.imageAlt] /}
@@ -381,7 +381,7 @@
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
-	{@param? groupIndex: string}
+	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 
@@ -389,7 +389,7 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $handleItemToggled_ ] /}
-		{param groupIndex: $groupIndex /}
+		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param imageAlt: $item[$schema.fieldsMap.imageAlt] /}
 		{param imageSrc: $item[$schema.fieldsMap.imageSrc] /}
