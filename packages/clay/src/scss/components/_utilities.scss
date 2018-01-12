@@ -27,24 +27,41 @@
 
 // Autofit Row
 
-.autofit-row {
+%autofit-row {
 	display: flex;
 	flex-wrap: nowrap;
+
+	@include list-unstyled;
+
+	margin-bottom: 0;
+	width: 100%;
 }
 
-.autofit-row-center {
+.autofit-row {
+	@extend %autofit-row;
+}
+
+%autofit-row-center {
 	> .autofit-col {
 		justify-content: center;
 	}
 }
 
-.autofit-row-end {
+.autofit-row-center {
+	@extend %autofit-row-center;
+}
+
+%autofit-row-end {
 	> .autofit-col {
 		justify-content: flex-end;
 	}
 }
 
-.autofit-col {
+.autofit-row-end {
+	@extend %autofit-row-end;
+}
+
+%autofit-col {
 	display: flex;
 	flex-direction: column;
 	flex-shrink: 0;
@@ -52,25 +69,45 @@
 	position: relative;
 }
 
-.autofit-col-expand {
+.autofit-col {
+	@extend %autofit-col;
+}
+
+%autofit-col-expand {
 	flex-grow: 1;
 	flex-shrink: 1;
 	min-width: $autofit-col-expand-min-width;
 	word-wrap: break-word;
 }
 
-.autofit-section {
+.autofit-col-expand {
+	@extend %autofit-col-expand;
+}
+
+%autofit-section {
 	max-width: 100%;
 }
 
-.autofit-float {
+.autofit-section {
+	@extend %autofit-section;
+}
+
+%autofit-float {
 	@include clay-autofit-float;
 }
 
-.autofit-float-sm-down {
+.autofit-float {
+	@extend %autofit-float;
+}
+
+%autofit-float-sm-down {
 	@include media-breakpoint-down(sm) {
 		@include clay-autofit-float;
 	}
+}
+
+.autofit-float-sm-down {
+	@extend %autofit-float-sm-down;
 }
 
 // Inline Scroller
