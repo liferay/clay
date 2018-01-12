@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -104,6 +104,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/links">Links</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
@@ -145,6 +147,8 @@
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tbar">Tbar (Toolbar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
@@ -285,17 +289,17 @@
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 		<form>
 			<div class="dropdown-section">
-				<div class="input-group input-group-inset input-group-sm">
-					<div class="input-group-input">
-						<input class="form-control" placeholder="Search for..." type="text">
+				<div class="input-group input-group-sm">
+					<div class="input-group-item">
+						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+						<span class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</span>
 					</div>
-					<span class="input-group-inset-item">
-						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
-					</span>
 				</div>
 			</div>
 			<div class="dropdown-subheader">Filter by</div>
@@ -303,8 +307,9 @@
 				<div class="custom-control custom-checkbox">
 					<label>
 						<input checked class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Selected Option</span>
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Selected Option</span>
+						</span>
 					</label>
 				</div>
 			</div>
@@ -312,8 +317,9 @@
 				<div class="custom-control custom-checkbox">
 					<label>
 						<input class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Normal Option</span>
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Normal Option</span>
+						</span>
 					</label>
 				</div>
 			</div>
@@ -321,8 +327,9 @@
 				<div class="custom-control custom-checkbox">
 					<label>
 						<input disabled class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Disabled Option</span>
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Disabled Option</span>
+						</span>
 					</label>
 				</div>
 			</div>
@@ -338,8 +345,9 @@
 				<div class="custom-control custom-radio">
 					<label>
 						<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Selected Option</span>
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Selected Option</span>
+						</span>
 					</label>
 				</div>
 			</div>
@@ -347,8 +355,9 @@
 				<div class="custom-control custom-radio">
 					<label>
 						<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Normal Option</span>
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Normal Option</span>
+						</span>
 					</label>
 				</div>
 			</div>
@@ -356,8 +365,9 @@
 				<div class="custom-control custom-radio">
 					<label>
 						<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Disabled Option</span>
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Disabled Option</span>
+						</span>
 					</label>
 				</div>
 			</div>

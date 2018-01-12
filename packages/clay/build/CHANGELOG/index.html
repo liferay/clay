@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
+				<h4 class="title"><a href="..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -104,6 +104,8 @@
 </li>
 <li class=""><a class="nav-title" href="../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
+<li class=""><a class="nav-title" href="../content/links">Links</a>
+</li>
 <li class=""><a class="nav-title" href="../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../content/loaders">Loading Indicators</a>
@@ -145,6 +147,8 @@
 <li class=""><a class="nav-title" href="../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../content/tbar">Tbar (Toolbar)</a>
 </li>
 <li class=""><a class="nav-title" href="../content/timelines">Timelines</a>
 </li>
@@ -215,7 +219,77 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-beta-5-december-25-2017"><a class="heading-anchor" href="#v2-0-0-beta-5-december-25-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.5 December 25, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-beta-6-january-12-2018"><a class="heading-anchor" href="#v2-0-0-beta-6-january-12-2018"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.6 January 12, 2018</h3>
+<ul>
+<li>Breaking: Update Bootstrap 4 to 6d8d863</li>
+<li>Breaking: (Fixes #407) Simplify <code>loading-icon loading-icon-dotted</code> to <code>loading-animation</code>.</li>
+<li>Breaking: Sidebar removed <code>.sidebar-actions</code> use <code>.autofit-row</code> instead</li>
+<li>Breaking: Sidebar removed <code>.sidebar-section-flex</code> styles, use <code>.sidebar-section.autofit-row</code> instead</li>
+<li>Breaking: Sidebar renamed <code>.flex-col</code> to <code>.autofit-col</code> and adjust font sizes for <code>.sidebar-dt</code> and <code>.sidebar-dd</code></li>
+<li>Breaking: Moved mixins <code>clay-text-typography</code> and <code>clay-link</code> to <code>mixins/_links.scss</code> and <code>clay-link</code> added option to configure <code>border-color</code></li>
+<li>Breaking: Utilities renamed <code>.flex-col</code>, <code>.flex-col-expand</code>, <code>.flex-col-section</code> to <code>.autofit-col</code>, <code>.autofit-col-expand</code>, <code>.autofit-section</code> respectively</li>
+<li>Breaking: Cards renamed <code>.flex-col-gutters</code> to <code>.autofit-col-gutters</code></li>
+<li>Breaking: Refactor <code>.input-group-inset</code> markup and styles after BS4 Input Group update</li>
+<li>Breaking: Input Group removed <code>$input-group-addon-border-radius-lg</code>, <code>$input-group-addon-border-radius-sm</code></li>
+<li>Breaking: Input Group redo selectors for <code>.input-group-lg</code> and <code>.input-group-sm</code></li>
+<li>Breaking: Forms renamed <code>.form-check-description</code> to <code>.form-check-label-text</code></li>
+<li>Breaking: Form Check renamed <code>$form-check-description-margin-left</code>, <code>$form-check-description-padding-left</code>, <code>$form-check-description-disabled-cursor</code> to <code>$form-check-label-text-margin-left</code>,<code>$form-check-label-text-padding-left</code>, <code>$form-check-label-text-disabled-cursor</code></li>
+<li>Breaking: Custom Forms Checkbox and Radio to new BS4 beta.3 markup</li>
+<li>Breaking: Custom Checkbox Radio renamed <code>.custom-control-indicator</code> to <code>.custom-control-label::before</code> and <code>.custom-control-label::after</code></li>
+<li>Breaking: Custom Checkbox Radio renamed <code>.custom-control-description</code> to <code>.custom-control-label .custom-control-label-text</code></li>
+<li>Breaking: Custom Checkbox Radio removed variable <code>$custom-control-spacer-y</code></li>
+<li>Breaking: Input Group removed <code>.input-group-constrain</code>, <code>.input-group-constrain-text</code> and associated variables</li>
+<li>Breaking: Input Group rename <code>.input-group-inset-left</code> to <code>.input-group-inset-start</code></li>
+<li>Breaking: Input Group remove old <code>.input-group-secondary</code> styles</li>
+<li>Breaking: Input Group removed <code>.input-group-transparent</code> and associated variables</li>
+<li>Breaking: Input Group renamed <code>.input-group-addon</code> to <code>.input-group-text</code>, moved <code>.input-group-secondary .input-group-addon</code> to <code>.input-group-secondary-text</code>, comment out all old <code>.input-group</code> styles</li>
+<li>Breaking: Input Group renamed <code>.input-group-input</code> to <code>input-group-item</code></li>
+<li>Breaking: Input Group renamed <code>.input-group-addon</code> to <code>.input-group-text</code>, moved <code>.input-group-secondary .input-group-addon</code> to <code>.input-group-secondary-text</code>, comment out all old <code>.input-group</code> styles</li>
+<li>New: Added component <code>.tbar</code> (toolbar) for simple single line toolbars</li>
+<li>New: Tbar added option to configure <code>$tbar-item-padding-x</code>, <code>$tbar-item-padding-y</code>, <code>$tbar-light</code> Sass map</li>
+<li>New: (Fixes #396) Links component added <code>.component-link</code>, <code>.component-title</code>, <code>.component-subtitle</code>, <code>.single-link</code>, <code>.link-primary</code>, <code>.link-secondary</code>, <code>.link-outline-primary</code>, <code>.link-outline-secondary</code>, <code>link-outline-borderless</code>, and <code>.link-monospaced</code> for different link types</li>
+<li>New: Links component added Sass maps to configure <code>$component-link</code>, <code>$link-primary</code>, <code>$link-secondary</code>, <code>$component-title</code>, <code>$component-title-link</code>, <code>$component-subtitle</code>, <code>$component-subtitle-link</code>, <code>$link-outline-primary</code>, <code>$link-outline-secondary</code></li>
+<li>New: Links added option to configure <code>$single-link-font-weight</code>, <code>$link-outline-border-radius</code>, <code>$link-outline-border-width</code>, <code>$link-outline-font-size</code>, <code>$link-outline-font-weight</code>, <code>$link-outline-line-height</code>, <code>$link-outline-padding-x</code>, <code>$link-outline-padding-y</code>, <code>$link-outline-transition</code></li>
+<li>New: Utilities added helpers <code>.autofit-row-center</code>, <code>.autofit-row-end</code>, <code>.autofit-col-end</code>, <code>.autofit-float</code>, <code>.autofit-float-sm-down</code> and option to configure <code>$autofit-col-expand-min-width</code></li>
+<li>New: Utilities added mixin <code>clay-autofit-float</code> for simulating floated elements when using <code>.autofit-row</code></li>
+<li>New: Added option to configure <code>$zindex-navbar-toggler-focus</code> and remove <code>outline</code> reset on <code>.navbar-toggler-link</code> it should use default focus border for keyboard accessibility</li>
+<li>New: Lexicon SVG Icon Hashtag</li>
+<li>New: Table add helper class <code>.table-nowrap</code> for no line breaks in table cells</li>
+<li>New: Input Group added option to configure <code>$input-group-addon-min-width-lg</code> and <code>$input-group-addon-min-width-sm</code></li>
+<li>New: Input Group added option to configure <code>$input-group-addon-min-width</code></li>
+<li>New: Input Group added <code>.input-group-item-shrink</code> for making <code>input-group-item</code>&#x2018;s shrink to to fit content</li>
+<li>Update: Popper JS to 1.12.9</li>
+<li>Update: Links <code>.component-title</code> should be minimum ~32px tall with margins</li>
+<li>Update: Sidebar added padding for <code>.sidebar .container-fluid</code></li>
+<li>Update: Utilities move all <code>.autofit-*</code> component styles to placeholders for easier extend</li>
+<li>Update: Links added <code>vertical-align: middle</code> to <code>.link-outline</code> and <code>.link-monospaced</code></li>
+<li>Update: Navbar Transparent should inherit <code>background-color</code></li>
+<li>Update: Sidebar Light colors to not be the same as <code>$body-bg</code></li>
+<li>Update: Atlas Application Bar <code>.navbar-title</code> font-size to 17px and use <code>map-merge</code> for <code>$application-bar-dark</code></li>
+<li>Update: Forms reset <code>background-clip</code> property on <code>.form-control</code> to <code>border-box</code> causes clipping issues when input background is any other color than white</li>
+<li>Update: Badges and Labels should inherit <code>white-space</code></li>
+<li>Update: Popover remove <code>$popover-border-radius</code>, and <code>$popover-font-size</code> from Clay Base was added by BS4</li>
+<li>Update: Tooltip remove <code>$tooltip-border-radius</code> and <code>$tooltip-font-size</code> from Clay Base was added by BS4</li>
+<li>Update: Reset BS4 variable <code>$form-check-inline-input-margin-x</code> our native checkboxes are slightly different</li>
+<li>Update: Re-position custom checkboxes in Cards, List Group, and Table</li>
+<li>Update: Input Group removed commented <code>.input-group-addon</code> and <code>.input-group-btn</code> styles</li>
+<li>Update: Input Group removed commented <code>.input-group-input</code> styles</li>
+<li>Update: <code>clay-button-variant</code> mixin active focus selector to be as specific as BS4&#x2019;s beta.3 changes</li>
+<li>Update: Custom Forms re-add variable <code>$custom-control-spacer-y</code> that was removed by BS4 beta.3</li>
+<li>Site: Update loading-animation</li>
+<li>Site: Sidebar added tbar to example and updating markup to use newer Clay components</li>
+<li>Site: Add tbar example page</li>
+<li>Site: Added docs for new Links component</li>
+<li>Site: Renamed <code>.flex-col</code>, <code>.flex-col-expand</code>, <code>.flex-col-section</code>, <code>.flex-col-gutters</code> to <code>.autofit-col</code>, <code>.autofit-col-expand</code>, <code>.autofit-section</code>, <code>.autofit-gutters</code> respectively</li>
+<li>Site: Navigation Bar manually add <code>z-index</code> to <code>.navbar-collapse</code> to show how to properly implement collapsible navbars close to each other and button examples should toggle the right nav</li>
+<li>Site: Table document <code>.table-nowrap</code> helper class</li>
+<li>Site: Update Input Group Inset examples to new markup</li>
+<li>Site: Renamed <code>.form-check-description</code> to <code>.form-check-label-text</code></li>
+<li>Site: Custom Checkbox Radio updated markup to BS4 beta.3</li>
+<li>Site: Input Groups to new BS4 beta.3 markup</li>
+<li>Site: BS4 changed <code>input-group</code> markup. <code>.input-group-addon</code> is now <code>.input-group-prepend</code>, <code>.input-group-append</code>, and <code>.input-group-text</code></li>
+</ul>
+<h3 id="v2-0-0-beta-5-december-25-2017"><a class="heading-anchor" href="#v2-0-0-beta-5-december-25-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-beta.5 December 25, 2017</h3>
 <ul>
 <li>We will try and limit the number of breaking markup changes from this point on. Disclaimer: there is no guarantee as Bootstrap 4 is still in beta, couple breaking changes that are coming down the pipeline from Boostrap 4 <a href="https://github.com/twbs/bootstrap/pull/25020">https://github.com/twbs/bootstrap/pull/25020</a>, <a href="https://github.com/twbs/bootstrap/pull/25050">https://github.com/twbs/bootstrap/pull/25050</a>.</li>
 <li>Breaking: BS4 moved custom checkbox and radio icons to <code>.custom-control-indicator::before</code></li>

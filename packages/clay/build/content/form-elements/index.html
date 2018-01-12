@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -104,6 +104,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/links">Links</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
@@ -145,6 +147,8 @@
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tbar">Tbar (Toolbar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
@@ -289,32 +293,32 @@
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="checkbox" value="">
-		<span class="form-check-description">Label</span>
+		<span class="form-check-label-text">Label</span>
 	</label>
 </div>
 <div class="form-check">
 	<label class="form-check-label">
 		<input checked class="form-check-input" disabled type="checkbox" value="">
-		<span class="form-check-description">Disabled Check Box</span>
+		<span class="form-check-label-text">Disabled Check Box</span>
 	</label>
 </div>
 <div class="form-group">
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
 			<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-			<span class="form-check-description">1</span>
+			<span class="form-check-label-text">1</span>
 		</label>
 	</div>
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
 			<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-			<span class="form-check-description">2</span>
+			<span class="form-check-label-text">2</span>
 		</label>
 	</div>
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
 			<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-			<span class="form-check-description">3</span>
+			<span class="form-check-label-text">3</span>
 		</label>
 	</div>
 </div>
@@ -332,32 +336,32 @@
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="radio" value="">
-		<span class="form-check-description">Label</span>
+		<span class="form-check-label-text">Label</span>
 	</label>
 </div>
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" disabled type="radio">
-		<span class="form-check-description">Disabled Radio Button</span>
+		<span class="form-check-label-text">Disabled Radio Button</span>
 	</label>
 </div>
 <div class="form-group">
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
 			<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
-			<span class="form-check-description">1</span>
+			<span class="form-check-label-text">1</span>
 		</label>
 	</div>
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
 			<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
-			<span class="form-check-description">2</span>
+			<span class="form-check-label-text">2</span>
 		</label>
 	</div>
 	<div class="form-check form-check-inline">
 		<label class="form-check-label">
 			<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
-			<span class="form-check-description">3</span>
+			<span class="form-check-label-text">3</span>
 		</label>
 	</div>
 </div>
@@ -489,13 +493,13 @@
 				<div class="form-check">
 					<label class="form-check-label">
 						<input checked class="form-check-input" type="checkbox" value="">
-						<span class="form-check-description">Disabled Checkbox</span>
+						<span class="form-check-label-text">Disabled Checkbox</span>
 					</label>
 				</div>
 				<div class="form-check">
 					<label class="form-check-label">
 						<input class="form-check-input" type="radio" value="">
-						<span class="form-check-description">Disabled Radio</span>
+						<span class="form-check-label-text">Disabled Radio</span>
 					</label>
 				</div>
 			</div>
@@ -629,9 +633,15 @@
 		<div class="form-group-item">
 			<label for="formInlineAutofitInputGroup">Input Group</label>
 			<div class="input-group">
-				<div class="input-group-addon">$</div>
-				<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
-				<div class="input-group-addon">.00</div>
+				<div class="input-group-item input-group-item-shrink input-group-prepend">
+					<span class="input-group-text">$</span>
+				</div>
+				<div class="input-group-append input-group-item">
+					<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
+				</div>
+				<div class="input-group-append input-group-item input-group-item-shrink">
+					<span class="input-group-text">.00</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -658,9 +668,15 @@
 		<div class="form-group-item">
 			<label for="formInlineAutofitDonation">Donation</label>
 			<div class="input-group">
-				<div class="input-group-addon">$</div>
-				<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
-				<div class="input-group-addon">.00</div>
+				<div class="input-group-item input-group-item-shrink input-group-prepend">
+					<span class="input-group-text">$</span>
+				</div>
+				<div class="input-group-append input-group-item">
+					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
+				</div>
+				<div class="input-group-append input-group-item input-group-item-shrink">
+					<span class="input-group-text">.00</span>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Clay - Extending Toggles</title>
+	<title>Clay - Links</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -104,7 +104,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/links">Links</a>
+<li class="active"><a class="nav-title" href="../../content/links">Links</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -180,7 +180,7 @@
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class="active"><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
 </div>
@@ -214,7 +214,7 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
-			Extending Toggles
+			Links
 
 			
 		</h1>
@@ -222,201 +222,102 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-
-		<p>For toggle overview, see <a href="../toggles/">toggles</a>.</p>
-
-		<img src="../../images/switch_components.png" style="width: 700px;">
-
-		<h3 class="usage-heading" id="custom-toggle-switch-using-images"><a class="heading-anchor" href="#custom-toggle-switch-using-images"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Toggle Switch using Images</h3>
+		<h3 id="links"><a class="heading-anchor" href="#links"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Links</h3>
 
 		<blockquote class="blockquote">
-			<p>Customize:</p>
-			<p>the <strong>toggle-switch button in the off</strong> position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar:after {}</code>.</p>
-
-			<p>the <strong>toggle-switch button icon in the off</strong> position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {}</code>.</p>
-
-			<p>the <strong>toggle-switch bar in the off</strong> position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar:before {}</code>.</p>
-
-			<p>the <strong>toggle-switch bar icon in the off</strong> position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {}</code>.</p>
-
-			<p>the <strong>toggle-switch button in the on</strong> position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar:after {}</code>.</p>
-
-			<p>the <strong>toggle-switch button icon in the on</strong> position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon</code>.</p>
-
-			<p>the <strong>toggle-switch bar in the on</strong> position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar:before {}</code>.</p>
-
-			<p>the <strong>toggle-switch bar icon in the on</strong> position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {}</code>.</p>
+			These elements should be used to style links based on the global link, primary, and secondary colors.
 		</blockquote>
 
-		<style>
-			#demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-				background-color: transparent;
-				background-image: url(../../images/switch_button.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-				border-width: 0;
-				bottom: 0;
-				height: auto;
-				left: 2px;
-				top: 1px;
-				width: 22px;
-			}
-
-			#demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-				background-color: transparent;
-				background-image: url(../../images/switch_base.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-				border-radius: 20px;
-				border-width: 0;
-				width: 51px;
-			}
-
-			#demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-				background-image: url(../../images/switch_off_icon.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-				height: 15px;
-				left: 28px;
-				top: 4px;
-				width: 15px;
-			}
-
-			#demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-				left: 26px;
-			}
-
-			#demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-				background-image: url(../../images/switch_on_icon.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-				height: 17px;
-				left: 5px;
-				top: 4px;
-				width: 17px;
-			}
-
-			@media (min-width: 768px) {
-				#demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-					width: 30px;
-				}
-
-				#demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-					width: 68px;
-				}
-
-				#demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-					height: 17px;
-					left: 40px;
-					top: 7px;
-					width: 17px;
-				}
-
-				#demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-					left: 35px;
-				}
-
-				#demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-					left: 12px;
-					top: 8px;
-				}
-			}
-		</style>
-
-		<div class="form-group" id="demoToggleSwitch" style="margin-bottom:0;">
-			<label class="toggle-switch">
-				<input class="toggle-switch-check" type="checkbox">
-
-				<span aria-hidden="true" class="toggle-switch-bar">
-					<span class="toggle-switch-handle">
-							<span class="toggle-switch-icon toggle-switch-icon-on"></span>
-							<span class="toggle-switch-icon toggle-switch-icon-off"></span>
-					</span>
-				</span>
-			</label>
-		</div>
+		<div><a href="#1">Regular Anchor Tag</a></div>
+		<div><a class="link-primary" href="#1">.link-primary</a></div>
+		<div><a class="link-secondary" href="#1">.link-secondary</a></div>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="ios-style-toggle-switches"><a class="heading-anchor" href="#ios-style-toggle-switches"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>iOS Style Toggle Switches</h3>
+		<h3 id="single-link"><a class="heading-anchor" href="#single-link"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Single Link</h3>
 
-		<style>
-			/* Toggle Switch Off Button */
-			.ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-				background-color: #FFF;
-				border-radius: 20px;
-				border-width: 0;
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-				height: 20px;
-				left: 2px;
-				top: 2px;
-				width: 20px;
-			}
+		<blockquote class="blockquote">
+			<p>Use <code>.single-link</code> on an anchor to add a semi-bold style to the link and should be used for stand alone links defined by <a href="https://lexicondesign.io/docs/patterns/link.html">https://lexicondesign.io/docs/patterns/link.html</a>.</p>
+		</blockquote>
 
-			/* Toggle Switch On Button */
-			.ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-				border-width: 0;
-				left: 23px;
-			}
+		<div><a class="link-primary single-link" href="#1">.link-primary.single-link</a></div>
+		<div><a class="link-secondary single-link" href="#1">.link-secondary.single-link</a></div>
+	</div>
+</div>
 
-			/* Toggle Switch Off Bar */
-			.ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-				background-color: #FEFEFE;
-				border: 1px solid #E6E6E6;
-				border-radius: 20px;
-			}
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="component-links"><a class="heading-anchor" href="#component-links"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Component Links</h3>
 
-			/* Toggle Switch On Bar */
-			.ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar:before {
-				background-color: #4BD863;
-				border-color: #4BD863;
-			}
+		<blockquote class="blockquote">
+			<p>Use these patterns for links, titles, subtitles in components.</p>
+		</blockquote>
 
-			/* Toggle Switch Off Bar Icon */
-			.ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-				color: #B5B5B5;
-				font-size: 15px;
-			}
+		<div class="alert alert-warning">
+			The colors, sizing, and other CSS Properties can change for these items depending on the component you put them in (requires custom CSS).
+		</div>
 
-			/* Toggle Switch On Bar Icon */
-			.ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-				color: #FFF;
-			}
+		<div><a class="component-link" href="#1">.component-link</a></div>
+		<h4 class="component-title">.component-title</h4>
+		<h4 class="component-title"><a href="#1">.component-title a</a></h4>
+		<p class="component-subtitle">.component-subtitle</p>
+		<p class="component-subtitle"><a href="#1">.component-subtitle a</a></p>
+	</div>
+</div>
 
-			@media (min-width: 768px) {
-				.ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-					height: 27px;
-					width: 27px;
-				}
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="link-outline"><a class="heading-anchor" href="#link-outline"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Link Outline</h3>
 
-				.ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-					left: 31px;
-				}
-			}
-		</style>
+		<a class="link-outline link-outline-primary" href="#1">Primary</a>
+		<a class="link-outline link-outline-secondary" href="#1">Secondary</a>
+	</div>
+</div>
 
-		<div class="form-group ios-toggle-switch" style="margin-bottom:0;">
-			<label class="toggle-switch">
-				<input class="toggle-switch-check" type="checkbox">
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="link-outline-borderless"><a class="heading-anchor" href="#link-outline-borderless"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Link Outline Borderless</h3>
 
-				<span aria-hidden="true" class="toggle-switch-bar">
-					<span class="toggle-switch-handle">
-					</span>
+		<a class="link-outline link-outline-borderless link-outline-primary" href="#1">Primary</a>
+		<a class="link-outline link-outline-borderless link-outline-secondary" href="#1">Secondary</a>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="link-monospaced"><a class="heading-anchor" href="#link-monospaced"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Link Monospaced</h3>
+
+		<div>
+			<a class="link-monospaced link-outline link-outline-primary" href="#1">
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+						<use xlink:href="../../images/icons/icons.svg#add-cell">
+					</svg>
 				</span>
-			</label>
-
-			<label class="toggle-switch">
-				<input class="toggle-switch-check" type="checkbox">
-
-				<span aria-hidden="true" class="toggle-switch-bar">
-					<span class="toggle-switch-handle">
-						<span class="toggle-switch-icon toggle-switch-icon-on">|</span>
-						<span class="icon-circle-blank toggle-switch-icon toggle-switch-icon-off"></span>
-					</span>
+			</a>
+			<a class="link-monospaced link-outline link-outline-borderless link-outline-primary" href="#1">
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+						<use xlink:href="../../images/icons/icons.svg#add-cell">
+					</svg>
 				</span>
-			</label>
+			</a>
+			<a class="link-monospaced link-outline link-outline-secondary" href="#1">
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+						<use xlink:href="../../images/icons/icons.svg#picture">
+					</svg>
+				</span>
+			</a>
+			<a class="link-monospaced link-outline link-outline-borderless link-outline-secondary" href="#1">
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+						<use xlink:href="../../images/icons/icons.svg#picture">
+					</svg>
+				</span>
+			</a>
 		</div>
 	</div>
 </div>

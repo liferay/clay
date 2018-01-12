@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -104,6 +104,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/links">Links</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
@@ -145,6 +147,8 @@
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tbar">Tbar (Toolbar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
@@ -300,7 +304,7 @@
 				<div class="custom-control custom-checkbox">
 					<label>
 						<input class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
+						<span class="custom-control-label"></span>
 					</label>
 				</div>
 			</li>
@@ -333,22 +337,22 @@
 		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 			<div class="container">
 				<form role="search">
-					<div class="input-group input-group-inset">
-						<div class="input-group-input">
-							<input class="form-control" placeholder="Search for..." type="text">
+					<div class="input-group">
+						<div class="input-group-item">
+							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+							<span class="input-group-inset-item input-group-inset-item-after">
+								<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
+							</span>
 						</div>
-						<span class="input-group-inset-item">
-							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="../../images/icons/icons.svg#times">
-								</svg>
-							</button>
-							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use xlink:href="../../images/icons/icons.svg#search">
-								</svg>
-							</button>
-						</span>
 					</div>
 				</form>
 			</div>
@@ -407,12 +411,12 @@
 
 <div class="container container-no-gutters-sm-down container-view">
 	<form>
-		<div class="table-responsive-lg">
-			<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
+		<div class="table-responsive">
+			<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
 				<thead>
 					<tr>
 						<th></th>
-						<th colspan="2">
+						<th class="table-cell-expand">
 							Item Title
 							<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
 								<use xlink:href="../../images/icons/icons.svg#order-arrow-up">
@@ -434,19 +438,23 @@
 							<div class="custom-control custom-checkbox">
 								<label>
 									<input class="custom-control-input" type="checkbox">
-									<span class="custom-control-indicator"></span>
+									<span class="custom-control-label"></span>
 								</label>
 							</div>
 						</td>
-						<td>
-							<span class="sticker sticker-danger">PNG</span>
-						</td>
 						<td class="table-cell-expand">
-							<h4 class="table-list-title">
-								<span class="text-truncate-inline">
-									<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-								</span>
-							</h4>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<span class="sticker sticker-danger">PNG</span>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<h4 class="table-list-title">
+										<span class="text-truncate-inline">
+											<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+										</span>
+									</h4>
+								</div>
+							</div>
 						</td>
 						<td>700KB</td>
 						<td>
@@ -496,11 +504,10 @@
 		Because of the dynamic nature of content in tables, we left it to the developer to size and align columns inside tables. Add a unique class to each column and use min-width / max-width to space the tables to your specific requirements.
 	</div>
 
-	<div class="table-responsive-lg">
-		<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
+	<div class="table-responsive">
+		<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
 			<thead>
 				<tr>
-					<th></th>
 					<th></th>
 					<th class="table-cell-expand">
 						Title
@@ -518,26 +525,30 @@
 			</thead>
 			<tbody>
 				<tr class="table-divider">
-					<td colspan="9">In Progress</td>
+					<td colspan="8">In Progress</td>
 				</tr>
 				<tr>
 					<td>
 						<div class="custom-control custom-checkbox">
 							<label>
 								<input class="custom-control-input" type="checkbox">
-								<span class="custom-control-indicator"></span>
+								<span class="custom-control-label"></span>
 							</label>
 						</div>
 					</td>
-					<td>
-						<span class="sticker sticker-danger user-icon">MT</span>
-					</td>
 					<td class="table-cell-expand">
-						<h4 class="table-list-title">
-							<span class="text-truncate-inline">
-								<a class="text-truncate" href="#1" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Publication Title</a>
-							</span>
-						</h4>
+						<div class="autofit-row">
+							<div class="autofit-col">
+								<span class="sticker sticker-danger user-icon">MT</span>
+							</div>
+							<div class="autofit-col autofit-col-expand">
+								<h4 class="table-list-title">
+									<span class="text-truncate-inline">
+										<a class="text-truncate" href="#1" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Publication Title</a>
+									</span>
+								</h4>
+							</div>
+						</div>
 					</td>
 					<td>
 						<span class="label label-warning">In Progress</span>

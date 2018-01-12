@@ -1,7 +1,7 @@
 /**
-* Clay 2.0.0-beta.5
+* Clay 2.0.0-beta.6
 *
-* Copyright 2017, Liferay, Inc.
+* Copyright 2018, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -794,19 +794,19 @@ body.sidenav-transition {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1279.99px) {
+@media (min-width: 992px) and (max-width: 1279.98px) {
   .uxgl-md-newline-demo {
     background-color: #FFFEDC;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.99px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .uxgl-sm-newline-demo {
     background-color: #FFFEDC;
   }
 }
 
-@media (max-width: 767.99px) {
+@media (max-width: 767.98px) {
   .uxgl-xs-newline-demo {
     background-color: #FFFEDC;
   }

@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.5</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -104,6 +104,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/links">Links</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
@@ -145,6 +147,8 @@
 <li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tbar">Tbar (Toolbar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
@@ -218,31 +222,45 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="flex-col-and-flex-col-expand"><a class="heading-anchor" href="#flex-col-and-flex-col-expand"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Flex Col and Flex Col Expand</h3>
+		<h3 id="autofit-row"><a class="heading-anchor" href="#autofit-row"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Autofit Row</h3>
 
 		<blockquote class="blockquote">
-			<p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.flex-col</code>, and <code>.flex-col-expand</code>.</p>
+			<p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.autofit-col</code>, and <code>.autofit-col-expand</code>.</p>
 		</blockquote>
 
 		<div class="alert alert-warning">
-			<code>.autofit-row</code>, <code>.flex-col</code>, <code>.flex-col-expand</code> shouldn&apos;t be used for laying out site pages, rather it&apos;s most useful for small chunks of content inside other components e.g. cards or list-groups.
+			<code>.autofit-row</code>, <code>.autofit-col</code>, <code>.autofit-col-expand</code> shouldn&apos;t be used for laying out site pages, rather it&apos;s most useful for small chunks of content inside other components e.g. cards or list-groups.
 		</div>
 
-		<div class="clay-site-row-spacer d-flex">
-			<div class="flex-col">
+		<div class="alert alert-warning">
+			Direct descendants of <code>.autofit-col</code> are <code>flex-direction: column;</code> (IE 10-11 workaround) therefore become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with <code>&lt;div class=&quot;autofit-section&quot;&gt;&lt;/div&gt;</code>.
+		</div>
+
+		<div class="autofit-row">
+			<div class="autofit-col">
 				<div class="form-check">
 					<label class="form-check-label">
 						<input class="form-check-input" type="checkbox" value="">
 					</label>
 				</div>
 			</div>
-			<div class="flex-col flex-col-expand">
-				<div class="flex-col-section">
-					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-					<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			<div class="autofit-col autofit-col-expand">
+				<div class="autofit-section">
+					<h6>
+						<span class="text-truncate-inline">
+							<span class="text-truncate">
+								Alberto Calvo, modified 2 hours ago.
+							</span>
+						</span>
+					</h6>
+					<p>
+						<span class="text-truncate-inline">
+							<a class="text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+						</span>
+					</p>
 				</div>
 			</div>
-			<div class="flex-col">
+			<div class="autofit-col">
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -268,39 +286,61 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<div class="alert alert-warning">
-			Direct descendants of <code>.flex-col</code> become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with a block level element such as a div or <code>&lt;div class=&quot;flex-col-section&quot;&gt;&lt;/div&gt;</code>.
-		</div>
-
 		<div class="autofit-row">
-			<div class="flex-col flex-col-expand" style="background-color: aliceblue;">
-				<div class="flex-col-section">
-					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-					<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			<div class="autofit-col autofit-col-expand" style="background-color: aliceblue;">
+				<div class="autofit-section">
+					<h6>
+						<span class="text-truncate-inline">
+							<span class="text-truncate">Alberto Calvo, modified 2 hours ago.</span>
+						</span>
+					</h6>
+					<p>
+						<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+					</p>
 					<span class="label label-success">Approved</span>
 					<span class="label label-info">Pending</span>
 					<span class="label label-danger">Rejected</span>
 				</div>
 			</div>
-			<div class="flex-col flex-col-expand" style="background-color: antiquewhite;">
-				<div class="flex-col-section">
-					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-					<h4><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			<div class="autofit-col autofit-col-expand" style="background-color: antiquewhite;">
+				<div class="autofit-section">
+					<h6>
+						<span class="text-truncate-inline">
+							<span class="text-truncate">
+							Alberto Calvo, modified 2 hours ago.
+							</span>
+						</span>
+					</h6>
+					<p>
+						<span class="text-truncate-inline">
+							<a class="text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+						</span>
+					</p>
 					<span class="label label-success">Approved</span>
 					<span class="label label-info">Pending</span>
 					<span class="label label-danger">Rejected</span>
 				</div>
 			</div>
-			<div class="flex-col flex-col-expand" style="background-color: aqua;">
-				<div class="flex-col-section">
-					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-					<h4 class="text-truncate"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			<div class="autofit-col autofit-col-expand" style="background-color: aqua;">
+				<div class="autofit-section">
+					<h6>
+						<span class="text-truncate-inline">
+							<span class="text-truncate">
+								Alberto Calvo, modified 2 hours ago.
+							</span>
+						</span>
+					</h6>
+					<p>
+						<span class="text-truncate-inline">
+							<a class="text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+						</span>
+					</p>
 					<span class="label label-success">Approved</span>
 					<span class="label label-info">Pending</span>
 					<span class="label label-danger">Rejected</span>
 				</div>
 			</div>
-			<div class="flex-col" style="background-color: aquamarine;">
+			<div class="autofit-col" style="background-color: aquamarine;">
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -321,6 +361,289 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<div class="autofit-row">
+					<div class="autofit-col autofit-col-expand">
+						<h2 style="margin-bottom:2px;margin-top:2px;">
+							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+						</h2>
+						<div>Sept 25 - 3 Views</div>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-monospaced btn-outline-primary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+									<use xlink:href="../../images/icons/icons.svg#pencil">
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="autofit-float"><a class="heading-anchor" href="#autofit-float"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Autofit Float</h3>
+
+		<blockquote class="blockquote">
+			<p>The component <code>.autofit-float-{sm|md|lg|xl}-down</code> simulates the behavior of floated elements on <code>.autofit-row</code>. The helper <code>.autofit-col-end</code> to any <code>.autofit-col</code> that should be &quot;floated right&quot;.</p>
+
+			<p>This pattern provides the benefit of aligning content via flexbox without losing the behavior of floated elements at the expense of extra markup.</p>
+		</blockquote>
+
+		<div class="card">
+			<div class="card-body">
+				<div class="autofit-row autofit-row-center autofit-float-sm-down">
+					<div class="autofit-col autofit-col-expand">
+						<h4 style="margin-bottom:0;">
+							<span class="text-truncate-inline">
+								<span class="text-truncate">
+									ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+								</span>
+							</span>
+						</h4>
+					</div>
+					<div class="autofit-col autofit-col-end">
+						<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+									<use xlink:href="../../images/icons/icons.svg#check-circle">
+								</svg>
+							</span>Subscribe
+						</button>
+					</div>
+				</div>
+
+				<div class="autofit-row autofit-float">
+					<div class="autofit-col autofit-col-expand">
+						<h4 style="margin-top:7px;">
+							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWord
+						</h4>
+					</div>
+					<div class="autofit-col autofit-col-end">
+						<div class="autofit-section">
+							<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+								<span class="inline-item inline-item-before">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+										<use xlink:href="../../images/icons/icons.svg#shortcut">
+									</svg>
+								</span>RSS
+							</button>
+							<button class="btn btn-primary btn-sm" type="button">
+								<span class="inline-item inline-item-before">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+										<use xlink:href="../../images/icons/icons.svg#plus">
+									</svg>
+								</span>Add Content
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="autofit-row autofit-row-center autofit-float">
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+									<use xlink:href="../../images/icons/icons.svg#shortcut">
+								</svg>
+							</span>View in context
+						</button>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+									<use xlink:href="../../images/icons/icons.svg#thumbs-up">
+								</svg>
+							</span>Like (25)
+						</button>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
+									<use xlink:href="../../images/icons/icons.svg#flag-empty">
+								</svg>
+							</span>Flag
+						</button>
+					</div>
+					<div class="autofit-col autofit-col-end">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+									<use xlink:href="../../images/icons/icons.svg#share">
+								</svg>
+							</span>Share
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="mix-the-two"><a class="heading-anchor" href="#mix-the-two"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Mix the Two</h3>
+
+		<div class="card">
+			<div class="card-body">
+				<div class="autofit-row autofit-float">
+					<div class="autofit-col autofit-col-expand">
+						<h4>COMMENTS</h4>
+					</div>
+					<div class="autofit-col autofit-col-end">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							Order by: newest<span class="inline-item inline-item-after">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+									<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<span class="sticker sticker-lg sticker-success user-icon">LC</span>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<div class="form-group">
+							<textarea class="form-control"></textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary btn-sm" type="button">Publish Comment</button>
+						</div>
+					</div>
+				</div>
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<span class="sticker sticker-lg sticker-warning user-icon">DA</span>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<div class="autofit-row">
+							<div class="autofit-col autofit-col-expand">
+								<h5>David Aragones Otero</h5>
+								<div>3 Hours Ago</div>
+							</div>
+							<div class="autofit-col">
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1" role="button">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1" role="button">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1" role="button">Move to Recycle Bin</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p>Percolator beans french press extraction seasonal grinder plunger pot caramelization. Single origin, dark grinder cultivar aftertaste iced skinny cappuccino irish barista aftertaste fair trade.Sweet, carajillo decaffeinated, french press crema froth and organic a fair trade. In est cream brewed bar roast filter americano turkish.</p>
+						<div class="autofit-row autofit-row-center autofit-float">
+							<div class="autofit-col">
+								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
+											<use xlink:href="../../images/icons/icons.svg#redo">
+										</svg>
+									</span>Reply to Comment
+								</button>
+							</div>
+							<div class="autofit-col">
+								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+											<use xlink:href="../../images/icons/icons.svg#thumbs-up">
+										</svg>
+									</span>10
+								</button>
+							</div>
+							<div class="autofit-col">
+								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
+											<use xlink:href="../../images/icons/icons.svg#thumbs-down">
+										</svg>
+									</span>03
+								</button>
+							</div>
+						</div>
+						<div class="autofit-row">
+							<div class="autofit-col">
+								<span class="sticker sticker-lg sticker-success user-icon">LC</span>
+							</div>
+							<div class="autofit-col autofit-col-expand">
+								<div class="autofit-row">
+									<div class="autofit-col autofit-col-expand">
+										<h5>Laura Garcia Castano</h5>
+										<div>2 Hours Ago</div>
+									</div>
+									<div class="autofit-col">
+										<div class="dropdown dropdown-action">
+											<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+													<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+												</svg>
+											</a>
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#1" role="button">Download</a>
+												<a class="dropdown-item" href="#1">Edit</a>
+												<a class="dropdown-item" href="#1">Move</a>
+												<a class="dropdown-item" href="#1" role="button">Checkout</a>
+												<a class="dropdown-item" href="#1">Permissions</a>
+												<a class="dropdown-item" href="#1" role="button">Move to Recycle Bin</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p>Percolator beans french press extraction seasonal grinder plunger pot caramelization. Single origin, dark grinder cultivar aftertaste iced skinny cappuccino irish barista aftertaste fair trade.Sweet, carajillo decaffeinated, french press crema froth and organic a fair trade. In est cream brewed bar roast filter americano turkish.</p>
+								<div class="autofit-row autofit-row-center autofit-float">
+									<div class="autofit-col">
+										<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
+													<use xlink:href="../../images/icons/icons.svg#redo">
+												</svg>
+											</span>Reply to Comment
+										</button>
+									</div>
+									<div class="autofit-col">
+										<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+													<use xlink:href="../../images/icons/icons.svg#thumbs-up">
+												</svg>
+											</span>10
+										</button>
+									</div>
+									<div class="autofit-col">
+										<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+											<span class="inline-item inline-item-before">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
+													<use xlink:href="../../images/icons/icons.svg#thumbs-down">
+												</svg>
+											</span>03
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 
