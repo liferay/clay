@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Alert</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<script src="../build/globals/clay-alert.js"></script>
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Alerts</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Alerts</h4>
+
+			<div id="regular-alert-success"></div>
+			<div id="regular-alert-info"></div>
+			<div id="regular-alert-warning"></div>
+			<div id="regular-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dismissible Alerts</h4>
+
+			<div id="closeable-alert-success"></div>
+			<div id="closeable-alert-info"></div>
+			<div id="closeable-alert-warning"></div>
+			<div id="closeable-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dismissible Alerts (Destroyed on dismiss)</h4>
+
+			<div id="closeable-destroyable-alert-success"></div>
+			<div id="closeable-destroyable-alert-info"></div>
+			<div id="closeable-destroyable-alert-warning"></div>
+			<div id="closeable-destroyable-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Alerts with WebComponents</h4>
+
+			<clay-alert message="This <a href='#'>alert</a> needs your attention." spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Info"></clay-alert>
+			<clay-alert style="success" message='You just read the <a href="#">alert message</a> successfully.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Success"></clay-alert>
+			<clay-alert style="warning" message='This alert is a <a href="#">warning message</a>.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Warning"></clay-alert>
+			<clay-alert style="danger" message='Something</a> is not right.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Danger"></clay-alert>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<h1>Stripe Alerts</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Stripe Alerts</h4>
+
+			<div id="stripe-alert-success"></div>
+			<div id="stripe-alert-info"></div>
+			<div id="stripe-alert-warning"></div>
+			<div id="stripe-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Stripe Alerts (Destroyed on dismiss)</h4>
+
+			<div id="destroyable-stripe-alert-success"></div>
+			<div id="destroyable-stripe-alert-info"></div>
+			<div id="destroyable-stripe-alert-warning"></div>
+			<div id="destroyable-stripe-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Auto Closeable Stripe Alerts</h4>
+
+			<div id="autocloseable-stripe-alert-success"></div>
+			<div id="autocloseable-stripe-alert-info"></div>
+			<div id="autocloseable-stripe-alert-warning"></div>
+			<div id="autocloseable-stripe-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Auto Closeable Stripe Alerts (Destroyed on dismiss)</h4>
+
+			<div id="autocloseable-destroyable-stripe-alert-success"></div>
+			<div id="autocloseable-destroyable-stripe-alert-info"></div>
+			<div id="autocloseable-destroyable-stripe-alert-warning"></div>
+			<div id="autocloseable-destroyable-stripe-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Stripe Alerts with WebComponents</h4>
+
+			<clay-stripe message="This <a href='#'>alert</a> needs your attention." spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Info"></clay-stripe>
+			<clay-stripe style="success" message='You just read the <a href="#">alert message</a> successfully.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Success"></clay-stripe>
+			<clay-stripe style="warning" message='This alert is a <a href="#">warning message</a>.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Warning"></clay-stripe>
+			<clay-stripe style="danger" message='Something</a> is not right.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Danger"></clay-stripe>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<h1>Toast Alerts</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Toast Alerts</h4>
+
+			<div class="alert-notifications" id="toast-alerts">
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Toast Alerts (Destroyed on dismiss)</h4>
+
+			<div class="alert-notifications" id="destroyable-toast-alerts">
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Auto Closeable Toast Alerts</h4>
+
+			<div class="alert-notifications" id="autocloseable-toast-alerts">
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Auto Closeable Toast Alerts (Destroyed on dismiss)</h4>
+
+			<div class="alert-notifications" id="autocloseable-destroyable-toast-alerts">
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Toast Alerts with WebComponents</h4>
+
+			<div class="alert-notifications">
+				<clay-toast message="This <a href='#'>alert</a> needs your attention." spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Info"></clay-toast>
+				<clay-toast style="success" message='You just read the <a href="#">alert message</a> successfully.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Success"></clay-toast>
+				<clay-toast style="warning" message='This alert is a <a href="#">warning message</a>.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Warning"></clay-toast>
+				<clay-toast style="danger" message='Something</a> is not right.' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" title="Danger"></clay-toast>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		/*
+		 * Regular Alerts
+		 */
+		 new metal.ClayAlert(
+			{
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+			},
+			'#regular-alert-success'
+		);
+
+		new metal.ClayAlert(
+			{
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info'
+			},
+			'#regular-alert-info'
+		);
+
+		new metal.ClayAlert(
+			{
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+			},
+			'#regular-alert-warning'
+		);
+
+		new metal.ClayAlert(
+			{
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+			},
+			'#regular-alert-danger'
+		);
+
+		/*
+ 		 * Closeable Alerts
+ 		 */
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+			},
+			'#closeable-alert-success'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info',
+			},
+			'#closeable-alert-info'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+			},
+			'#closeable-alert-warning'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+			},
+			'#closeable-alert-danger'
+		);
+
+		/*
+ 		 * Closeable and Destroyable Alerts
+ 		 */
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				destroyOnHide: true,
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+			},
+			'#closeable-destroyable-alert-success'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				destroyOnHide: true,
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info',
+			},
+			'#closeable-destroyable-alert-info'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				destroyOnHide: true,
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+			},
+			'#closeable-destroyable-alert-warning'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				destroyOnHide: true,
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+			},
+			'#closeable-destroyable-alert-danger'
+		);
+
+		/*
+		 * Stripe Alerts
+		 */
+		 new metal.ClayStripe(
+			{
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+				type: 'stripe',
+			},
+			'#stripe-alert-success'
+		);
+
+	 new metal.ClayStripe(
+			{
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info',
+				type: 'stripe',
+			},
+			'#stripe-alert-info'
+		);
+
+		new metal.ClayStripe(
+			{
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+				type: 'stripe',
+			},
+			'#stripe-alert-warning'
+		);
+
+		new metal.ClayStripe(
+			{
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+				type: 'stripe',
+			},
+			'#stripe-alert-danger'
+		);
+
+		/*
+		 * Destroyable Stripe Alerts
+		 */
+		 new metal.ClayStripe(
+			{
+				destroyOnHide: true,
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+				type: 'stripe',
+			},
+			'#destroyable-stripe-alert-success'
+		);
+
+	 new metal.ClayStripe(
+			{destroyOnHide: true,
+
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info',
+				type: 'stripe',
+			},
+			'#destroyable-stripe-alert-info'
+		);
+
+		new metal.ClayStripe(
+			{
+				destroyOnHide: true,
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+				type: 'stripe',
+			},
+			'#destroyable-stripe-alert-warning'
+		);
+
+		new metal.ClayStripe(
+			{
+				destroyOnHide: true,
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+				type: 'stripe',
+			},
+			'#destroyable-stripe-alert-danger'
+		);
+
+		/*
+		 * AutoCloseable Stripe Alerts
+		 */
+		new metal.ClayStripe(
+			{
+				autoClose: true,
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+				type: 'stripe',
+			},
+			'#autocloseable-stripe-alert-success'
+		);
+
+		new metal.ClayStripe(
+			{
+				autoClose: true,
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info',
+				type: 'stripe',
+			},
+			'#autocloseable-stripe-alert-info'
+		);
+
+		new metal.ClayStripe(
+			{
+				autoClose: true,
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+				type: 'stripe',
+			},
+			'#autocloseable-stripe-alert-warning'
+		);
+
+		new metal.ClayStripe(
+			{
+				autoClose: true,
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+				type: 'stripe',
+			},
+			'#autocloseable-stripe-alert-danger'
+		);
+
+		/*
+		 * AutoCloseable and Destroyable Stripe Alerts
+		 */
+		new metal.ClayStripe(
+			{
+				autoClose: true,
+				destroyOnHide: true,
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+				type: 'stripe',
+			},
+			'#autocloseable-destroyable-stripe-alert-success'
+		);
+
+		new metal.ClayStripe(
+			{
+				destroyOnHide: true,
+				autoClose: true,
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info',
+				type: 'stripe',
+			},
+			'#autocloseable-destroyable-stripe-alert-info'
+		);
+
+		new metal.ClayStripe(
+			{
+				autoClose: true,
+				destroyOnHide: true,
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+				type: 'stripe',
+			},
+			'#autocloseable-destroyable-stripe-alert-warning'
+		);
+
+		new metal.ClayStripe(
+			{
+				autoClose: true,
+				destroyOnHide: true,
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+				type: 'stripe',
+			},
+			'#autocloseable-destroyable-stripe-alert-danger'
+		);
+
+		/*
+ 		* Toast Alerts
+ 		*/
+		new metal.ClayToast(
+			{
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				message: '<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a href="#1">Extend</a>.</p>',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning:',
+				type: 'toast',
+			},
+			'#toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				message: '<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a href="#1">Log in</a></p>',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger:',
+				type: 'toast',
+			},
+			'#toast-alerts'
+		);
+
+		/*
+ 		* Destroyable Toast Alerts
+ 		*/
+		new metal.ClayToast(
+			{
+				destroyOnHide: true,
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#destroyable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				destroyOnHide: true,
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#destroyable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				destroyOnHide: true,
+				message: '<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a href="#1">Extend</a>.</p>',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning:',
+				type: 'toast',
+			},
+			'#destroyable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				destroyOnHide: true,
+				message: '<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a href="#1">Log in</a></p>',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger:',
+				type: 'toast',
+			},
+			'#destroyable-toast-alerts'
+		);
+
+		/*
+ 		* Autocloseable Toast Alerts
+ 		*/
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#autocloseable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#autocloseable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				message: '<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a href="#1">Extend</a>.</p>',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning:',
+				type: 'toast',
+			},
+			'#autocloseable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				message: '<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a href="#1">Log in</a></p>',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger:',
+				type: 'toast',
+			},
+			'#autocloseable-toast-alerts'
+		);
+
+		/*
+ 		* Autocloseable Destroyable Toast Alerts
+ 		*/
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				destroyOnHide: true,
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#autocloseable-destroyable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				destroyOnHide: true,
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+			},
+			'#autocloseable-destroyable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				destroyOnHide: true,
+				message: '<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a href="#1">Extend</a>.</p>',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning:',
+				type: 'toast',
+			},
+			'#autocloseable-destroyable-toast-alerts'
+		);
+
+		new metal.ClayToast(
+			{
+				autoClose: true,
+				destroyOnHide: true,
+				message: '<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a href="#1">Log in</a></p>',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger:',
+				type: 'toast',
+			},
+			'#autocloseable-destroyable-toast-alerts'
+		);
+
+	</script>
+</body>
+</html>

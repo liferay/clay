@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayBadge</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<script src="../build/globals/clay-badge.js"></script>
+
+	<style>
+			body {
+				background-color: #FFF;
+			}
+
+			.row {
+				margin-bottom: 20px;
+			}
+		</style>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+			<h1>Badges</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Badges default</h4>
+			<div id="styles-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Badges default with WebComponents</h4>
+
+			<clay-badge label='"10"'></clay-badge>
+			<clay-badge label='"500"' style="secondary"></clay-badge>
+			<clay-badge label='"32"' style="success"></clay-badge>
+			<clay-badge label='"56"' style="info"></clay-badge>
+			<clay-badge label='"87"' style="warning"></clay-badge>
+			<clay-badge label='"999"' style="danger"></clay-badge>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new metal.ClayBadge(
+			{
+				label: '10',
+				style: 'primary'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '500',
+				style: 'secondary'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '32',
+				style: 'success'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '56',
+				style: 'info'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '87',
+				style: 'warning'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '999',
+				style: 'danger'
+			},
+			'#styles-block'
+		);
+	</script>
+</body>
+</html>

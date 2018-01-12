@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo: Metal Clay Collapse</title>
+
+		<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+		<script src="../build/globals/clay-collapse.js"></script>
+		<style>
+				body {
+					background-color: #FFF;
+				}
+		
+				.row {
+					margin-bottom: 20px;
+				}
+			</style>
+	</head>
+	<body>
+		<h1>Clay Collapse</h1>
+
+		<div>
+			<button aria-controls="collapseExample1" class="btn btn-primary" data-toggle="collapse">Read more &raquo;</button>
+			<div class="collapse in" id="collapseExample1">
+				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea qui sint distinctio recusandae quo ut eaque provident eius eos commodi natus labore culpa modi soluta quia repudiandae nulla ex. Reiciendis cupiditate quis voluptatum atque veniam assumenda itaque perferendis eos voluptatem dolores aut eum. Ut voluptatum amet earum delectus totam unde!</div>
+			</div>
+		</div>
+
+		<div>
+			<a aria-controls="collapseExample2" href="#collapseExample" class="btn btn-primary collapsed" role="button">
+				Anchor Toggle
+			</a>
+
+			<button aria-controls="collapseExample2" class="btn btn-primary collapsed" type="button">
+				Button Toggle
+			</button>
+			<div aria-expanded="false" class="collapse" id="collapseExample2">
+				<div> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. </div>
+			</div>
+		</div>
+
+		<div>
+			<button aria-controls="collapseExample3" aria-expanded="false" class="btn btn-warning" id="toggle1">Toggle1</button>
+			<button aria-controls="collapseExample3" aria-expanded="false" class="btn btn-warning" id="toggle2">Toggle2</button>
+			<button aria-controls="collapseExample3" aria-expanded="false" class="btn btn-warning" id="toggle3" onclick="collapse3.toggle();">Toggle3</button>
+			<div aria-expanded="false" class="collapse" id="collapseExample3">
+				<div> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. </div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			var collapse1 = new metal.ClayCollapse({
+				headers: document.querySelector('[data-toggle="collapse"]'),
+				content: document.querySelector('#collapseExample1'),
+				collapsed: false
+			});
+
+			var collapse2 = new metal.ClayCollapse({
+				headers: '[aria-controls="collapseExample2"]',
+				content: document.querySelector('#collapseExample2')
+			});
+
+			var collapse3 = new metal.ClayCollapse({
+				headers: ['#toggle1', document.querySelector('#toggle2')],
+				content: '#collapseExample3'
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayModal</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-modal.js"></script>
+</head>
+<body class="container">
+	<h1 class="page-title">
+		ClayModal
+	</h1>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col">
+			<h4>Modal regular</h4>
+			<button type="button" class="btn btn-primary openModal">Open Modal</button>
+			<div id="modal-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col">
+			<h4>Modal with header and body</h4>
+			<button type="button" class="btn btn-primary openModal1">Open Modal</button>
+			<div id="modal-headerAndBody-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col">
+			<h4>Modal with body and footer</h4>
+			<button type="button" class="btn btn-primary openModal2">Open Modal</button>
+			<div id="modal-bodyAndFooter-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col">
+			<h4>Modal for status messages</h4>
+			<button type="button" class="btn btn-primary openModal3">Open Modal</button>
+			<div id="modal-status-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col">
+			<h4>Modal with iframe</h4>
+			<button type="button" class="btn btn-primary openModal4">Open Modal</button>
+			<div id="modal-iframe-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col">
+			<h4>Modal with size</h4>
+			<button type="button" class="btn btn-primary openModal5">Size sm</button>
+			<button type="button" class="btn btn-primary openModal6">Size lg</button>
+			<button type="button" class="btn btn-primary openModal7">Size full-screen</button>
+			<div id="modal-size-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col">
+			<h4>Modal with buttons in footer</h4>
+			<button type="button" class="btn btn-primary openModal8">Open Modal</button>
+			<div id="modal-button-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		var body = '<h4>Hello world!</h4>';
+		var bodyIframe = '<iframe title="Clay" src="https://claycss.com"></iframe>';
+
+		/**
+		 * Modal regular
+		 */
+		var modal = new metal.ClayModal({
+				body: body,
+				footerButtons: [
+					{
+						label: 'Save',
+					},
+					{
+						label: 'Cancel',
+						type: 'close'
+					}
+				],
+				spritemap: spritemap,
+				title: 'Title'
+			},
+			'#modal-block'
+		);
+
+		/**
+		 * Modal with header and body
+		 */
+		var modalHeaderAndBody = new metal.ClayModal({
+				body: body,
+				spritemap: spritemap,
+				title: 'Title'
+			},
+			'#modal-headerAndBody-block'
+		);
+
+		/**
+		 * Modal with body and footer
+		 */
+		var modalBodyAndFooter = new metal.ClayModal({
+				body: body,
+				footerButtons: [
+					{
+						label: 'Save',
+					},
+					{
+						label: 'Cancel',
+						type: 'close'
+					}
+				],
+			},
+			'#modal-bodyAndFooter-block'
+		);
+
+		/**
+		 * Modal for status messages
+		 */
+		var modalStatus = new metal.ClayModal({
+				body: body,
+				footerButtons: [
+					{
+						label: 'Save',
+					},
+					{
+						label: 'Cancel',
+						type: 'close'
+					}
+				],
+				spritemap: spritemap,
+				status: 'success',
+				title: 'Title'
+			},
+			'#modal-status-block'
+		);
+
+		/**
+		 * Modal with iframe
+		 */
+		var modalIframe = new metal.ClayModal({
+				footerButtons: [
+					{
+						label: 'Save',
+					},
+					{
+						label: 'Cancel',
+						type: 'close'
+					}
+				],
+				size: 'full-screen',
+				spritemap: spritemap,
+				title: 'Title',
+				url: 'https://claycss.com'
+			},
+			'#modal-iframe-block'
+		);
+
+		/**
+		 * Modal size
+		 */
+		var modalSize = new metal.ClayModal({
+				body: body,
+				footerButtons: [
+					{
+						label: 'Cancel',
+						type: 'close'
+					},
+					{
+						label: 'Save',
+					}
+				],
+				spritemap: spritemap,
+				size: 'sm',
+				title: 'Title'
+			},
+			'#modal-size-block'
+		);
+
+		var modalSizeLg = new metal.ClayModal({
+				body: body,
+				footerButtons: [
+					{
+						label: 'Cancel',
+						type: 'close'
+					},
+					{
+						label: 'Save',
+					}
+				],
+				spritemap: spritemap,
+				size: 'lg',
+				title: 'Title'
+			},
+			'#modal-size-block'
+		);
+
+		var modalSizeFs = new metal.ClayModal({
+				body: body,
+				footerButtons: [
+					{
+						label: 'Cancel',
+						type: 'close'
+					},
+					{
+						label: 'Save',
+					}
+				],
+				spritemap: spritemap,
+				size: 'full-screen',
+				title: 'Title'
+			},
+			'#modal-size-block'
+		);
+
+		/**
+		 * Modal with buttons in footer
+		 */
+		var modalButtons = new metal.ClayModal({
+				body: body,
+				events: {
+					'clickButton': handleClick,
+					'hide': handleClickHide
+				},
+				footerButtons: [
+					{
+						label: 'Save',
+					},
+					{
+						label: 'Cancel',
+						type: 'close'
+					},
+					{
+						label: 'All',
+						position: 'left',
+					},
+					{
+						label: 'All',
+						position: 'left',
+						style: 'secondary'
+					}
+				],
+				spritemap: spritemap,
+				title: 'Title'
+			},
+			'#modal-button-block'
+		);
+
+		open('.openModal', modal);
+
+		open('.openModal1', modalHeaderAndBody);
+
+		open('.openModal2', modalBodyAndFooter);
+
+		open('.openModal3', modalStatus);
+
+		open('.openModal4', modalIframe);
+
+		open('.openModal5', modalSize);
+
+		open('.openModal6', modalSizeLg);
+
+		open('.openModal7', modalSizeFs);
+
+		open('.openModal8', modalButtons);
+
+		function open(element, modalTarget) {
+			document.querySelector(element).addEventListener('click', function() {
+				modalTarget.show();
+			});
+		}
+
+		function handleClick(event) {
+			console.log(event);
+		}
+
+		function handleClickHide(event) {
+			console.log(event);
+		}
+	</script>
+</body>
+</html>

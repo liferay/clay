@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayCardGrid</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-card-grid.js"></script>
+</head>
+<body class="container">
+	<h1 class="page-title">
+		ClayCardGrid
+	</h1>
+
+	<div id="container"></div>
+
+	<script type="text/javascript">
+		let actionItems = [
+			{
+				href: '#1',
+				label: 'Remove',
+			},
+			{
+				href: '#2',
+				label: 'Download',
+				separator: true,
+			},
+		];
+
+		let items = [
+			{
+				items: [
+					{
+						id: '1',
+						name: 'Photos',
+						type: 'folder',
+					},
+					{
+						id: '2',
+						name: 'Videos',
+						type: 'folder',
+					}
+				],
+				label: 'Folders',
+			},
+			{
+				items: [
+					{
+						difficulty: 2,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '3',
+						name: 'Hamburger',
+						origin: 'U.S.A',
+						spicyLevel: ['No Spicy'],
+						time: '10 min.',
+					},
+					{
+						difficulty: 8,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '4',
+						image: './ramen.jpg',
+						name: 'Ramen',
+						origin: 'China',
+						spicyLevel: ['Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 9,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '5',
+						image: './paella.jpg',
+						name: 'Paella',
+						origin: 'Spain',
+						spicyLevel: ['No Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 6,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '6',
+						name: 'Pizza',
+						origin: 'Italy',
+						spicyLevel: ['No Spicy'],
+						time: '30 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '7',
+						image: './carcamusas.jpg',
+						name: 'Carcamusas',
+						origin: 'Toledo',
+						spicyLevel: ['Spicy'],
+						time: '50 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '8',
+						name: 'Tacos',
+						origin: 'Mexico',
+						spicyLevel: ['Very Spicy'],
+						time: '30 min.',
+					},
+				],
+				label: "Recipes",
+			},
+			{
+				items: [
+					{
+						id: '9',
+						initials: 'FA',
+						name: 'Ferrán Adriá',
+						style: 'fusion',
+						type: 'chef',
+					},
+					{
+						id: '10',
+						image: './ramsay.jpg',
+						initials: 'GR',
+						name: 'Gordon Ramsay',
+						style: 'general',
+						type: 'chef',
+					},
+					{
+						id: '11',
+						initials: 'AC',
+						name: 'Alberto Chicote',
+						style: 'general',
+						type: 'chef',
+					},
+				],
+				label: 'Chefs',
+			}
+		];
+
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		items.forEach(item => {
+			item.items.forEach(nestedItem => {
+				nestedItem.actionItems = actionItems;
+			});
+		});
+
+		new metal.ClayCardGrid({
+			items: items,
+			schema: {
+				contentRendererMap: {
+					'chef': 'user',
+					'folder': 'horizontal',
+					'MKV': 'file',
+				},
+				fieldsMap: {
+					contentRenderer: 'type',
+					description: 'origin',
+					fileType: 'format',
+					href: 'downloadHref',
+					icon: 'type',
+					imageAlt: 'name',
+					imageSrc: 'image',
+					initials: 'initials',
+					labels: 'spicyLevel',
+					title: 'name',
+					userColor: 'style',
+					username: 'name',
+				},
+				fileTypeStylesMap: {
+					'PDF': 'danger',
+				},
+				iconsMap: {
+					'folder': 'folder',
+					'*': 'exclamation-circle',
+				},
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'chef': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
+				labelStylesMap: {
+					'Spicy': 'warning',
+					'Very Spicy': 'danger',
+					'*': 'success',
+				},
+				userColorsMap: {
+					'fusion': 'danger',
+					'*': 'primary',
+				}
+			},
+			selectable: true,
+			spritemap: spritemap,
+		}, '#container');
+</script>
+</body>
+</html>

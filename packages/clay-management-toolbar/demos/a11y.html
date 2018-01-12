@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayManagementToolbar</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-management-toolbar.js"></script>
+</head>
+<body class="container">
+	<h1 class="page-title">
+		ClayManagementToolbar
+	</h1>
+
+	<div id="container0"></div>
+	<div id="container1"></div>
+	<div id="container2"></div>
+
+	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		
+		new metal.ClayManagementToolbar({
+			filterItems: [
+				{
+					items: [
+						{
+							label: 'Link 1',
+							href: '#mylink',
+							type: 'item',
+						},
+					],
+					label: 'Filter By (Links)',
+					type: 'group',
+				},
+				{
+					items: [
+						{
+							label: 'Item 1',
+							inputName: 'filteritem1checkbox',
+							inputValue: '1',
+							type: 'checkbox',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputName: 'filteritem2checkbox',
+							inputValue: '2',
+							type: 'checkbox',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputName: 'filteritem3checkbox',
+							inputValue: '3',
+							type: 'checkbox',
+						},
+					],
+					label: 'Filter By',
+					type: 'group',
+				},
+				{
+					items: [
+						{
+							label: 'Item 1',
+							inputName: 'orderitem1checkbox',
+							inputValue: '1',
+							type: 'checkbox',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputName: 'orderitem2checkbox',
+							inputValue: '2',
+							type: 'checkbox',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputName: 'orderitem3checkbox',
+							inputValue: '3',
+							type: 'checkbox',
+						},
+					],
+					label: 'Order By',
+					type: 'group',
+				},
+				{
+					items: [
+						{
+							label: 'Item 1',
+							inputValue: '1',
+						},
+						{
+							checked: true,
+							label: 'Item 2',
+							inputValue: '2',
+						},
+						{
+							disabled: true,
+							label: 'Item 3',
+							inputValue: '3',
+						},
+					],
+					inputName: 'item1radio',
+					label: 'Group 1',
+					type: 'radiogroup',
+				}
+			],
+			plusButton: {
+				items: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					}
+				]
+			},
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			selectable: true,
+			sortingOrder: 'desc',
+			spritemap: spritemap,
+			viewTypes: [
+				{
+					active: true,
+					icon: 'list',
+					label: 'List',
+				},
+				{
+					disabled: true,
+					icon: 'table',
+					label: 'Table',
+				},
+				{
+					icon: 'cards2',
+					label: 'Card',
+				},
+			]
+		}, '#container1');
+
+		new metal.ClayManagementToolbar({
+			actionItems: [
+				{
+					href: '#1',
+					icon: 'trash',
+					label: 'Remove',
+					quickAction: true,
+				},
+				{
+					href: '#2',
+					icon: 'download',
+					label: 'Download',
+					quickAction: true,
+					separator: true,
+				},
+				{
+					href: '#3',
+					icon: 'edit',
+					label: 'Edit',
+				},
+			],
+			selectable: true,
+			selectedItems: 14,
+			sortingOrder: 'desc',
+			spritemap: spritemap,
+			totalItems: 14,
+		}, '#container2');
+
+	</script>
+</body>
+</html>

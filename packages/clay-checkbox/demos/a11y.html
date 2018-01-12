@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Checkbox</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-checkbox.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Checkbox</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Default Checkbox</h4>
+			<div id="default-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Default Checkbox with WebComponents</h4>
+			<clay-checkbox label="Default Checkbox"></clay-checkbox>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Checked Checkbox</h4>
+			<div id="checked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Indeterminate Checkbox</h4>
+			<div id="indeterminate-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Disabled Checkbox</h4>
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Disabled Checked Checkbox</h4>
+			<div id="disabled-checked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Inline Checkbox</h4>
+			<div id="inline-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Hidden Label Checkbox</h4>
+			<div id="hidden-label-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new metal.ClayCheckbox(
+			{
+				label: 'Default Checkbox'
+			},
+			'#default-block'
+		);
+
+		new metal.ClayCheckbox(
+			{
+				checked: true,
+				label: 'Checked Checkbox'
+			},
+			'#checked-block'
+		);
+
+		new metal.ClayCheckbox(
+			{
+				indeterminate: true,
+				label: 'Indeterminate Checkbox'
+			},
+			'#indeterminate-block'
+		);
+
+		new metal.ClayCheckbox(
+			{
+				disabled: true,
+				label: 'Disabled Checkbox'
+			},
+			'#disabled-block'
+		);
+
+		new metal.ClayCheckbox(
+			{
+				checked: true,
+				disabled: true,
+				label: 'Disabled Checked Checkbox'
+			},
+			'#disabled-checked-block'
+		);
+
+		new metal.ClayCheckbox(
+			{
+				inline: true,
+				label: 'Inline Checkbox 1'
+			},
+			'#inline-block'
+		);
+		new metal.ClayCheckbox(
+			{
+				inline: true,
+				label: 'Inline Checkbox 2'
+			},
+			'#inline-block'
+		);
+
+		new metal.ClayCheckbox(
+			{
+				hideLabel: true,
+				label: 'Hidden Label Checkbox'
+			},
+			'#hidden-label-block'
+		);
+	</script>
+</body>
+</html>

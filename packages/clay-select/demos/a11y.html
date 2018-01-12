@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Select</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-select.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Select</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="default-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<clay-select label="Default Select with WebComponents" options='[{"label": "Option 1"}]'></clay-select>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="inline-autofit-block" class="form-inline form-inline-autofit"></div>
+			<h6>* In order to use inline-groups you may need to place it inside a .form-inline.form-inline-autofit container.</h6>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="preselected-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="multiple-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="inline-autofit-multiple-block" class="form-inline form-inline-autofit"></div>
+			<h6>* In order to use inline-groups you may need to place it inside a .form-inline.form-inline-autofit container.</h6>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new metal.ClaySelect(
+			{
+				label: 'Default Select',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				]
+			},
+			'#default-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				label: 'Inline Autofit Select',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				],
+				wrapperType: 'inline-group'
+			},
+			'#inline-autofit-block'
+		);
+		new metal.ClaySelect(
+			{
+				label: 'Inline Autofit Select 2',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				],
+				wrapperType: 'inline-group'
+			},
+			'#inline-autofit-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				label: 'Select with preselected option',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						selected: true,
+						value: '2'
+					}
+				]
+			},
+			'#preselected-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				disabled: true,
+				label: 'Disabled Select',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						selected: true,
+						value: '2'
+					}
+				]
+			},
+			'#disabled-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				label: 'Multiple Select',
+				multiple: true,
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				]
+			},
+			'#multiple-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				label: 'Inline Multiple Select',
+				multiple: true,
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				],
+				wrapperType: 'inline-group'
+			},
+			'#inline-autofit-multiple-block'
+		);
+		new metal.ClaySelect(
+			{
+				label: 'Inline Multiple Select 2',
+				multiple: true,
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				],
+				wrapperType: 'inline-group'
+			},
+			'#inline-autofit-multiple-block'
+		);
+	</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Radio</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-radio.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Radio</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Default Radio</h4>
+			<div id="default-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Default Radio with WebComponents</h4>
+
+			<clay-radio label="Default Radio"></clay-radio>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Checked Radio</h4>
+			<div id="checked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Disabled Radio</h4>
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Disabled Checked Radio</h4>
+			<div id="disabled-checked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Inline Radio</h4>
+			<div id="inline-block" role="radiogroup" aria-label="Inline Radio"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Hidden Label Radio</h4>
+			<div id="hidden-label-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new metal.ClayRadio(
+			{
+				label: 'Default Radio'
+			},
+			'#default-block'
+		);
+
+		new metal.ClayRadio(
+			{
+				checked: true,
+				label: 'Checked Radio'
+			},
+			'#checked-block'
+		);
+
+		new metal.ClayRadio(
+			{
+				disabled: true,
+				label: 'Disabled Radio'
+			},
+			'#disabled-block'
+		);
+
+		new metal.ClayRadio(
+			{
+				checked: true,
+				disabled: true,
+				label: 'Disabled Checked Radio'
+			},
+			'#disabled-checked-block'
+		);
+
+		new metal.ClayRadio(
+			{
+				inline: true,
+				label: 'Inline Radio 1',
+				name: 'inline-radio'
+			},
+			'#inline-block'
+		);
+		new metal.ClayRadio(
+			{
+				inline: true,
+				label: 'Inline Radio 2',
+				name: 'inline-radio'
+			},
+			'#inline-block'
+		);
+
+		new metal.ClayRadio(
+			{
+				hideLabel: true,
+				label: 'Hidden Label Radio'
+			},
+			'#hidden-label-block'
+		);
+	</script>
+</body>
+</html>

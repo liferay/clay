@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Button</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-button.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Button</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button States</h4>
+			<div id="states-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button States with WebComponents</h4>
+			<clay-button label="Default Button"></clay-button>
+			<clay-button label="Secondary Button" style="secondary"></clay-button>
+			<clay-button label="Link Button" style="link"></clay-button>
+			<clay-button label="Unstyled Button" style="unstyled"></clay-button>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Disabled Button</h4>
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button Sizes</h4>
+			<div id="sizes-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Block Button</h4>
+			<div id="block-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Listening Events</h4>
+			<div id="events-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button with icons</h4>
+			<div id="icons-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button monospaced</h4>
+			<div id="monospaced-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		/*
+		 * Button States.
+		 * Once state is a reserved key for STATE, we are using style instead.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Default Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				style: 'secondary',
+				label: 'Secondary Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				ariaLabel: 'My Description',
+				style: 'link',
+				label: 'Link Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				style: 'unstyled',
+				label: 'Unstyled Button'
+			},
+			'#states-block'
+		);
+
+		/*
+		 * Disabed button.
+		 */
+		new metal.ClayButton(
+			{
+				disabled: true,
+				label: 'Disabled Button'
+			},
+			'#disabled-block'
+		);
+
+		/*
+		 * Button sizes.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Regular Button',
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClayButton(
+			{
+				label: 'Small Button',
+				size: 'sm'
+			},
+			'#sizes-block'
+		);
+
+		/*
+		 * Listening to events.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Listening Click'
+			},
+			'#events-block'
+		)
+		.on('click', function(e) {
+			alert('click');
+		});
+
+		/*
+		 * Block button.
+		 */
+		new metal.ClayButton(
+			{
+				block: true,
+				label: 'Block Button'
+			},
+			'#block-block'
+		);
+
+		/*
+		 * Button with Icons.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Default Icon Position',
+				icon: 'plus',
+				iconAlignment: 'left',
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+			},
+			'#icons-block'
+		);
+
+		new metal.ClayButton(
+			{
+				label: 'Icon positioned at right',
+				icon: 'plus',
+				iconAlignment: 'right',
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+			},
+			'#icons-block'
+		);
+
+		new metal.ClayButton(
+			{
+				icon: 'plus',
+				monospaced: true,
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+			},
+			'#icons-block'
+		);
+
+		/*
+		 * Button monospaced.
+		 */
+		 new metal.ClayButton(
+ 			{
+ 				label: 'A',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+ 		);
+
+ 		new metal.ClayButton(
+ 			{
+ 				style: 'secondary',
+ 				label: 'B',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+ 		);
+
+ 		new metal.ClayButton(
+ 			{
+ 				ariaLabel: 'My Description',
+ 				style: 'link',
+ 				label: 'C',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+		 );
+
+ 		new metal.ClayButton(
+ 			{
+ 				style: 'unstyled',
+ 				label: 'D',
+				monospaced: true
+ 			},
+ 			'#monospaced-block'
+ 		);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Navigation Bar</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<script src="../build/globals/clay-navigation-bar.js"></script>
+
+	<style>
+			body {
+				background-color: #FFF;
+			}
+
+			.row {
+				margin-bottom: 20px;
+			}
+		</style>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Navigation Bar</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Navigation Bar</h4>
+			<div id="normal-navigation-bar-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Navigation Bar with WebComponents</h4>
+			<clay-navigation-bar items='[{"active": true, "label": "Page 1", "href": "#1"}]' spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-navigation-bar>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Inverted Navigation Bar</h4>
+			<div id="inverted-navigation-bar-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		/*
+		 * Normal Navigation Bar
+		 */
+		var items = [
+			{
+				active: true,
+				href: '#1',
+				label: 'Page 1',
+			},
+			{
+				href: '#2',
+				label: 'Page 2',
+			},
+			{
+				href: '#3',
+				label: 'Page 3',
+			},
+			{
+				href: '#4',
+				label: 'Page 4',
+			}
+		];
+
+		new metal.ClayNavigationBar(
+			{
+				items: items,
+				spritemap: spritemap
+			},
+			'#normal-navigation-bar-block'
+		);
+
+		/*
+		 * Inverted Navigation Bar
+		 */
+		 new metal.ClayNavigationBar(
+			{
+				inverted: true,
+				items: items,
+				spritemap: spritemap
+			},
+			'#inverted-navigation-bar-block'
+		);
+
+	</script>
+</body>
+</html>

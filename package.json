@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "a11y": "metal-a11y --packages ./packages -c demos/index.html",
+    "a11y": "metal-a11y --packages ./packages -c demos/a11y.html",
     "build": "lerna run build",
     "checkFormat": "npm run prettier -- --list-different",
     "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",

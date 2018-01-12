@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Metal Clay Icon</title>
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+	<script src="../build/globals/clay-icon.js"></script>
+	<style>
+			body {
+				background-color: #FFF;
+			}
+
+			.row {
+				margin-bottom: 20px;
+			}
+		</style>
+</head>
+<body>
+	<h1>Metal Clay Icon</h1>
+	<div id="clayIcons"></div>
+
+	<h1>Metal Clay Icon with Webcomponents</h1>
+	<clay-icon spritemap="../../../node_modules/clay/build/images/icons/icons.svg" symbol="add-cell"></clay-icon>
+
+	<script src="../../../node_modules/clay/build/js/svg4everybody.js"></script>
+	<script type="text/javascript">
+		var icons = ['add-cell', 'add-column', 'add-row', 'adjust', 'align-center', 'align-justify', 'align-left', 'align-right', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'archive', 'asterisk', 'audio', 'bars', 'blogs', 'bold', 'bookmarks', 'calendar', 'camera', 'cards', 'cards2', 'caret-bottom', 'caret-double-l', 'caret-double', 'caret-top', 'categories', 'chain-broken', 'change', 'check-circle', 'check', 'code', 'cog', 'columns', 'comments', 'compress', 'control-panel', 'cut', 'date', 'desktop', 'documents-and-media', 'download', 'dynamic-data-list', 'edit-layout', 'effects', 'ellipsis-h', 'ellipsis-v', 'embed', 'exclamation-circle', 'exclamation-full', 'expand', 'flag-empty', 'flag-full', 'folder', 'format', 'forms', 'full-size', 'geolocation', 'grid', 'h1', 'h2', 'heart', 'hidden', 'home', 'horizontal-scroll', 'hr', 'import-export', 'indent-less', 'indent-more', 'info-circle-open', 'info-circle', 'info-panel-closed', 'info-panel-open', 'information-live', 'italic', 'link', 'list-ol', 'list-ul', 'list', 'live', 'lock', 'logout', 'magic', 'mark-as-answer', 'mark-as-question', 'message-boards', 'mobile-device-rules', 'mobile-landscape', 'mobile-portrait', 'moon', 'move', 'myspace', 'organizations', 'page-template', 'page', 'paperclip', 'paragraph', 'password-policies', 'paste', 'pause', 'pencil', 'phone', 'picture', 'play', 'plus', 'polls', 'print', 'product-menu-closed', 'product-menu-open', 'product-menu', 'question-circle-full', 'question-circle', 'quote-left', 'quote-right', 'radio-button', 'redo', 'reload', 'remove-style', 'reply', 'repository', 'restore', 'rss-svg', 'search', 'select-from-list', 'share-alt', 'share', 'shortcut', 'simulation-menu-closed', 'simulation-menu-open', 'simulation-menu', 'site-template', 'sites', 'staging', 'star-half', 'star-o', 'star', 'strikethrough', 'subscript', 'suitcase', 'sun', 'superscript', 'table', 'table2', 'tablet-landscape', 'tablet-portrait', 'tag', 'text-editor', 'text', 'thumbs-down', 'thumbs-up', 'time', 'times-circle', 'times', 'transform', 'trash', 'twitter', 'underline', 'undo', 'unlock', 'user', 'users', 'vertical-scroll', 'view', 'vocabulary', 'web-content', 'wiki-page', 'wiki', 'workflow'];
+
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		for (var i = 0; i < icons.length; i++) {
+			new metal.ClayIcon({
+				spritemap: spritemap,
+				symbol: icons[i]
+			}, '#clayIcons');
+		}
+
+		icons = ['ar-sa', 'bg-bg', 'ca-ad', 'ca-es', 'cs-cz', 'da-dk', 'de-de', 'el-gr', 'en-au', 'en-gb', 'en-us', 'es-es', 'eu-es', 'fa-ir', 'fi-fi', 'fr-ca', 'fr-fr', 'gl-es', 'hi-in', 'hr-hr', 'hu-hu', 'in-id', 'it-it', 'iw-il', 'ja-jp', 'ko-kr', 'lo-la', 'lt-lt', 'nb-no', 'nl-be', 'nl-nl', 'pl-pl', 'pt-br', 'pt-pt', 'ro-ro', 'ru-ru', 'sk-sk', 'sl-si', 'sr-rs-latin', 'sr-rs', 'sv-se', 'tr-tr', 'uk-ua', 'vi-vn', 'zh-cn', 'zh-tw'];
+
+		for (var j = 0; j < icons.length; j++) {
+			new metal.ClayIcon({
+				spritemap: spritemap,
+				symbol: icons[j]
+			}, '#clayIcons');
+		}
+
+		svg4everybody();
+	</script>
+</body>
+</html>

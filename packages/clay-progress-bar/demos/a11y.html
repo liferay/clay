@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Progress Bar</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-progress-bar.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Progress Bar</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>In progress bar</h4>
+			<div id="in-progress-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>In progress bar with WebComponents</h4>
+			<clay-progress-bar value="40" spritemap="../../../node_modules/clay/build/images/icons/icons.svg"></clay-progress-bar>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Warning bar</h4>
+			<div id="warning-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Success bar</h4>
+			<div id="success-block-1"></div>
+			<div id="success-block-2"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		new metal.ClayProgressBar(
+			{
+				minValue: 0,
+				maxValue: 100,
+				spritemap: spritemap,
+				value: 40
+			},
+			'#in-progress-block'
+		);
+
+		new metal.ClayProgressBar(
+			{
+				minValue: 0,
+				maxValue: 100,
+				spritemap: spritemap,
+				status: 'warning',
+				value: 200
+			},
+			'#warning-block'
+		);
+
+		new metal.ClayProgressBar(
+			{
+				minValue: 0,
+				maxValue: 100,
+				spritemap: spritemap,
+				value: 100
+			},
+			'#success-block-1'
+		);
+
+		new metal.ClayProgressBar(
+			{
+				spritemap: spritemap,
+				status: 'complete'
+			},
+			'#success-block-2'
+		);
+	</script>
+</body>
+</html>

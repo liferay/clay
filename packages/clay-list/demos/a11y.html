@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayList</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-list.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>List</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Simple List</h4>
+			<div id="container1"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Simple List with links</h4>
+			<div id="container2"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>List with description</h4>
+			<div id="container3"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable List</h4>
+			<div id="container4"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable List with Icon</h4>
+			<div id="container5"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable List with Circle Icons</h4>
+			<div id="container6"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable List with Label</h4>
+			<div id="container7"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable List with Quick Action Menu</h4>
+			<div id="container8"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable List with Selected Items</h4>
+			<div id="container9"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let actionItems = [
+			{
+				href: '#1',
+				label: 'Remove',
+			},
+			{
+				href: '#2',
+				label: 'Download',
+				separator: true,
+			},
+		];
+
+		let actionItemsWithQuickItems = [
+			{
+				href: '#1',
+				icon: 'trash',
+				label: 'Remove',
+				quickAction: true,
+			},
+			{
+				href: '#2',
+				icon: 'download',
+				label: 'Download',
+				quickAction: true,
+				separator: true,
+			},
+		];
+
+		let items = [
+			{
+				items: [
+					{
+						id: '1',
+						name: 'Photos',
+						type: 'folder',
+					},
+					{
+						id: '2',
+						name: 'Videos',
+						type: 'folder',
+					}
+				],
+				label: 'Folders',
+			},
+			{
+				items: [
+					{
+						difficulty: 2,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '3',
+						name: 'Hamburger',
+						origin: 'U.S.A',
+						spicyLevel: ['No Spicy'],
+						time: '10 min.',
+					},
+					{
+						difficulty: 8,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '4',
+						image: './ramen.jpg',
+						name: 'Ramen',
+						origin: 'China',
+						spicyLevel: ['Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 9,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '5',
+						image: './paella.jpg',
+						name: 'Paella',
+						origin: 'Spain',
+						spicyLevel: ['No Spicy'],
+						time: '90 min.',
+					},
+					{
+						difficulty: 6,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '6',
+						name: 'Pizza',
+						origin: 'Italy',
+						spicyLevel: ['No Spicy'],
+						time: '30 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '7',
+						image: './carcamusas.jpg',
+						name: 'Carcamusas',
+						origin: 'Toledo',
+						spicyLevel: ['Spicy'],
+						time: '50 min.',
+					},
+					{
+						difficulty: 5,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '8',
+						name: 'Tacos',
+						origin: 'Mexico',
+						spicyLevel: ['Very Spicy'],
+						time: '30 min.',
+					},
+				],
+				label: "Recipes",
+			},
+			{
+				items: [
+					{
+						id: '9',
+						initials: 'FA',
+						name: 'Ferrán Adriá',
+						style: 'fusion',
+						type: 'chef',
+					},
+					{
+						id: '10',
+						image: './ramsay.jpg',
+						initials: 'GR',
+						name: 'Gordon Ramsay',
+						style: 'general',
+						type: 'chef',
+					},
+					{
+						id: '11',
+						initials: 'AC',
+						name: 'Alberto Chicote',
+						style: 'general',
+						type: 'chef',
+					},
+				],
+				label: 'Chefs',
+			}
+		];
+
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		// Simple List //
+		new metal.ClayList({
+			id: 'simpleList',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'simple',
+					fieldsMap: {
+						title: 'name',
+					}
+				}],
+			}
+		}, '#container1');
+
+		// Simple List with Links //
+		new metal.ClayList({
+			id: 'simpleListLinks',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'simple',
+					fieldsMap: {
+						href: 'downloadHref',
+						title: 'name',
+					}
+				}],
+			},
+		}, '#container2');
+
+		// List with Descriptions //
+		new metal.ClayList({
+			id: 'listDescriptions',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						title: 'name',
+					}
+				}],
+			},
+		}, '#container3');
+
+		// Selectable List //
+		new metal.ClayList({
+			id: 'selectableList',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						title: 'name',
+					}
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
+			},
+			selectable: true,
+		}, '#container4');
+
+		// Selectable List with Icons //
+		new metal.ClayList({
+			id: 'selectableListIcons',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+				},
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						title: 'name',
+					}
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
+			},
+			selectable: true,
+			spritemap: spritemap,
+		}, '#container5');
+
+		// Selectable List with Circle Icons //
+		new metal.ClayList({
+			id: 'selectableListCircleIcons',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
+				},
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						title: 'name',
+					}
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
+			},
+			selectable: true,
+			spritemap: spritemap,
+		}, '#container6');
+
+		// Selectable List with Labels //
+		new metal.ClayList({
+			id: 'selectableListLabels',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
+				},
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						labels: 'spicyLevel',
+						title: 'name',
+					},
+					labelStylesMap: {
+						'Spicy': 'warning',
+						'Very Spicy': 'danger',
+						'*': 'success',
+					},
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
+			},
+			selectable: true,
+			spritemap: spritemap,
+		}, '#container7');
+
+		// Selectable List with Action Items //
+		items.forEach(item => {
+			item.items.forEach(nestedItem => {
+				nestedItem.actionItems = actionItemsWithQuickItems;
+			});
+		});
+
+		new metal.ClayList({
+			id: 'selectableListActionItems',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
+				},
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						labels: 'spicyLevel',
+						title: 'name',
+					},
+					labelStylesMap: {
+						'Spicy': 'warning',
+						'Very Spicy': 'danger',
+						'*': 'success',
+					},
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
+			},
+			selectable: true,
+			spritemap: spritemap,
+		}, '#container8');
+
+		// Selectable List with Selected Items //
+		items.forEach(item => {
+			item.items.forEach(nestedItem => {
+				nestedItem.selected = true;
+			});
+		});
+
+		new metal.ClayList({
+			id: 'selectableListSelectedItems',
+			items: items,
+			schema: {
+				fields: [{
+					contentRenderer: 'icon',
+					fieldName: 'type',
+					iconsMap: {
+						'folder': 'folder',
+						'*': 'exclamation-circle',
+					},
+					iconShapesMap: {
+						'folder': 'rounded',
+						'*': 'circle',
+					},
+				},
+				{
+					contentRenderer: 'content',
+					fieldsMap: {
+						description: 'origin',
+						href: 'downloadHref',
+						labels: 'spicyLevel',
+						title: 'name',
+					},
+					labelStylesMap: {
+						'Spicy': 'warning',
+						'Very Spicy': 'danger',
+						'*': 'success',
+					},
+				}],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id',
+			},
+			selectable: true,
+			spritemap: spritemap,
+		}, '#container9');
+	</script>
+</body>
+</html>

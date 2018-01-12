@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Clay Charts</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+	<link rel="stylesheet" href="../build/clay-charts.css">
+
+	<script src="../build/globals/clay-charts.js"></script>
+
+	<style>
+		body {
+			background-color: #EEE;
+			margin: 20px 40px;
+		}
+
+		h2 {
+			margin: 12px;
+		}
+
+		.clay-chart-example {
+			background-color: #FFF;
+			margin: 20px;
+			padding: 10px;
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<svg style="display:none">
+		<defs>
+			<pattern id="circles" patternUnits="userSpaceOnUse" width="16" height="16" style="fill:rgba(0,0,0,0.3)">
+				<circle cx="4" cy="4" r="2"/>
+				<circle cx="12" cy="12" r="2"/>
+			</pattern>
+
+			<pattern id="diagonal-left-large" patternUnits="userSpaceOnUse" width="10" height="10" style="fill:rgba(0,0,0,0.3)">
+				<polygon points="9.3,0 10,0.7 10,0 "/>
+				<polygon points="0,0 0,0.7 9.3,10 10,10 10,9.3 0.7,0 "/>
+				<polygon points="0,9.3 0,10 0.7,10 "/>
+			</pattern>
+
+			<pattern id="diagonal-left-small" patternUnits="userSpaceOnUse" width="5" height="5" style="fill:rgba(0,0,0,0.3)">
+				<polygon points="5,0 4.3,0 5,0.7 "/>
+				<polygon points="0.7,0 0,0 0,0.7 4.3,5 5,5 5,4.3 "/>
+				<polygon points="0,4.3 0,5 0.7,5 "/>
+			</pattern>
+
+			<pattern id="diagonal-right-large" patternUnits="userSpaceOnUse" width="10" height="10" style="fill:rgba(0,0,0,0.3)">
+				<polygon points="10,9.3 9.3,10 10,10 "/>
+				<polygon points="10,0 9.3,0 0,9.3 0,10 0.7,10 10,0.7 "/>
+				<polygon points="0.7,0 0,0 0,0.7 "/>
+			</pattern>
+
+			<pattern id="diagonal-right-small" patternUnits="userSpaceOnUse" width="5" height="5" style="fill:rgba(0,0,0,0.3)">
+				<polygon points="5,4.3 4.3,5 5,5 "/>
+				<polygon points="5,0 4.3,0 0,4.3 0,5 0.7,5 5,0.7 "/>
+				<polygon points="0.7,0 0,0 0,0.7 "/>
+			</pattern>
+
+			<pattern id="horizontal-large" patternUnits="userSpaceOnUse" width="8" height="8" style="fill:rgba(0,0,0,0.3)">
+				<rect y="7" width="8" height="1"/>
+			</pattern>
+
+			<pattern id="horizontal-small" patternUnits="userSpaceOnUse" width="4" height="4" style="fill:rgba(0,0,0,0.3)">
+				<rect y="3" width="4" height="1"/>
+			</pattern>
+
+			<pattern id="vertical-large" patternUnits="userSpaceOnUse" width="8" height="8" style="fill:rgba(0,0,0,0.3)">
+				<rect x="7" y="0" width="1" height="8"/>
+			</pattern>
+
+			<pattern id="vertical-small" patternUnits="userSpaceOnUse" width="4" height="4" style="fill:rgba(0,0,0,0.3)">
+				<rect x="3" width="1" height="4"/>
+			</pattern>
+		</defs>
+	</svg>
+
+	<h1>Clay Charts</h1>
+
+	<p>See <a href="https://naver.github.io/billboard.js/demo/">billboard.js</a> for more examples.</p>
+
+	<div class="clay-chart-example">
+		<h2>Line</h2>
+		<div id="line"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Spline</h2>
+		<div id="spline"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Step</h2>
+		<div id="step"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Area</h2>
+		<div id="area"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Area-Spline</h2>
+		<div id="area-spline"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Area-Step</h2>
+		<div id="area-step"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Bar</h2>
+		<div id="bar"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Scatter</h2>
+		<div id="scatter"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Pie</h2>
+		<div id="pie"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Donut</h2>
+		<div id="donut"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Gauge</h2>
+		<div id="gauge"></div>
+	</div>
+
+	<div id="controls" style="display: none;">
+		<label>
+			Change type:
+			<select class="type">
+				<option>line</option>
+				<option>spline</option>
+				<option>step</option>
+				<option>area</option>
+				<option>area-spline</option>
+				<option>area-step</option>
+				<option>bar</option>
+				<option>scatter</option>
+				<option>pie</option>
+				<option>donut</option>
+				<option>gauge</option>
+			</select>
+		</label>
+		<label>
+			Change data:
+			<select class="data">
+				<option>columns_1</option>
+				<option>columns_2</option>
+				<option>columns_3</option>
+				<option>columns_4</option>
+			</select>
+		</label>
+	</div>
+
+	<script type="text/javascript">
+		var dummyData = {
+			columns_1: [
+				{
+					data: [30, 200, 100, 400, 150, 250],
+					id: 'sample_data_1',
+					name: 'Data 1',
+				},
+				{
+					data: [50, 20, 10, 40, 15, 25],
+					id: 'data2'
+				},
+				{
+					data: [150, 90, 30, 400, 15, 205],
+					id: 'data3'
+				},
+				{
+					data: [10, 30, 130, 200, 50, 20],
+					id: 'data4'
+				}
+			],
+			columns_2: [
+				{
+					color: 'green',
+					data: [230, 190, 300, 500, 300, 400],
+					id: 'data1',
+					name: 'Data 1 (green)'
+				},
+				{
+					data: [50, 20, 10, 40, 15, 25],
+					id: 'data2'
+				}
+			],
+			columns_3: [
+				{
+					data: [230, 190, 300, 500, 300, 400],
+					id: 'data1',
+					name: 'Data 1 (this data set has 3 columns)'
+				},
+				{
+					data: [50, 20, 10, 40, 15, 25],
+					id: 'data2'
+				},
+				{
+					data: [130, 150, 200, 300, 200, 100],
+					id: 'data3'
+				}
+			],
+			columns_4: [
+				{
+					data: [50, 20, 10, 40, 15, 25],
+					id: 'data1',
+					name: 'Data 1'
+				},
+				{
+					data: [130, 150, 200, 300, 200, 100],
+					id: 'data2'
+				}
+			]
+		};
+
+		var dummyPercentData = {
+			columns_1: [
+				{
+					data: [37.5],
+					id: 'data1'
+				},
+				{
+					data: [62.5],
+					id: 'data2'
+				}
+			],
+			columns_2: [
+				{
+					data: [22.9],
+					id: 'data1'
+				},
+				{
+					data: [77.1],
+					id: 'data2'
+				}
+			],
+			columns_3: [
+				{
+					data: [84],
+					id: 'data1'
+				},
+				{
+					data: [13],
+					id: 'data2'
+				},
+				{
+					data: [3],
+					id: 'data3'
+				}
+			],
+			columns_4: [
+				{
+					data: [10],
+					id: 'data1'
+				},
+				{
+					data: [50],
+					id: 'data2'
+				},
+				{
+					data: [20],
+					id: 'data3'
+				},
+        {
+          data: [15],
+          id: 'data4'
+        },
+				{
+					data: [5],
+					id: 'data5'
+				}
+			]
+		};
+
+		var dummyGaugeData = {
+			columns_1: [
+				{
+					data: [37.5],
+					id: 'data1'
+				}
+			],
+			columns_2: [
+				{
+					data: [22.9],
+					id: 'data1'
+				}
+			],
+			columns_3: [
+				{
+					data: [100],
+					id: 'data1'
+				}
+			],
+			columns_4: [
+				{
+					data: [37.5],
+					id: 'data2'
+				}
+			]
+		};
+
+		var lineChart = new metal.LineChart({
+			columns: dummyData.columns_1,
+			tooltip: {
+				show: true
+			},
+		}, '#line');
+		createChartControls(lineChart, 'line');
+
+		var splineChart = new metal.SplineChart({
+			columns: dummyData.columns_1
+		}, '#spline');
+		createChartControls(splineChart, 'spline');
+
+		var stepChart = new metal.StepChart({
+			columns: dummyData.columns_1
+		}, '#step');
+		createChartControls(stepChart, 'step');
+
+		var areaLineChart = new metal.AreaLineChart({
+			columns: dummyData.columns_1
+		}, '#area');
+		createChartControls(areaLineChart, 'area');
+
+		var areaSplineChart = new metal.AreaSplineChart({
+			columns: dummyData.columns_2
+		}, '#area-spline');
+		createChartControls(areaSplineChart, 'area-spline');
+
+		var areaStepChart = new metal.AreaStepChart({
+			columns: dummyData.columns_3
+		}, '#area-step');
+		createChartControls(areaStepChart, 'area-step');
+
+		var barChart = new metal.BarChart({
+			columns: dummyData.columns_1
+		}, '#bar');
+		createChartControls(barChart, 'bar');
+
+		var scatterChart = new metal.ScatterChart({
+			columns: dummyData.columns_1
+		}, '#scatter');
+		createChartControls(scatterChart, 'scatter');
+
+		var pieChart = new metal.PieChart({
+			columns: dummyPercentData.columns_1,
+			color: {
+				tiles() {
+					return [
+						document.querySelector('#circles'),
+						document.querySelector('#horizontal-large'),
+						document.querySelector('#vertical-small'),
+					];
+				}
+			}
+		}, '#pie');
+		createChartControls(pieChart, 'pie', dummyPercentData);
+
+		var donutChart = new metal.DonutChart({
+			columns: dummyPercentData.columns_1,
+		}, '#donut');
+		createChartControls(donutChart, 'donut', dummyPercentData);
+
+		var gaugeChart = new metal.GaugeChart({
+			columns: dummyGaugeData.columns_1
+		}, '#gauge');
+		createChartControls(gaugeChart, 'gauge', dummyGaugeData);
+
+		function createChartControls(chart, type, data) {
+			var element = document.getElementById(type);
+
+			var controlsTemplate = document.getElementById('controls');
+
+			var chartControls = document.createElement('div');
+			chartControls.innerHTML = controlsTemplate.innerHTML;
+
+			var typeSelect = chartControls.querySelector('.type');
+
+			typeSelect.value = type;
+
+			typeSelect.addEventListener('change', function(event) {
+				chart.loading = false;
+				chart.type = typeSelect.value;
+			});
+
+			var dataSelect = chartControls.querySelector('.data');
+
+			dataSelect.addEventListener('change', function(event) {
+				chart.loading = false;
+				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
+			});
+
+			element.parentNode.appendChild(chartControls);
+		}
+	</script>
+</body>
+</html>

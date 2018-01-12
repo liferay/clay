@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayCard</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-card.js"></script>
+</head>
+<body class="container">
+	<h1 class="page-title">
+		ClayCards
+	</h1>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Image Card</h4>
+			<div class="row">
+				<div class="col-md-4" id="image-card-block"></div>
+				<div class="col-md-4" id="image-card-icon-block"></div>
+				<div class="col-md-4" id="image-card-empty-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Image Card with file type</h4>
+			<div class="row">
+				<div class="col-md-4" id="filetype-image-card-block"></div>
+				<div class="col-md-4" id="filetype-image-card-icon-block"></div>
+				<div class="col-md-4" id="filetype-image-card-empty-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Image Card with labels</h4>
+			<div class="row">
+				<div class="col-md-4" id="image-card-one-label-block"></div>
+				<div class="col-md-4" id="image-card-two-labels-block"></div>
+				<div class="col-md-4" id="image-card-three-labels-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Selectable Image Card</h4>
+			<div class="row">
+					<div class="col-md-4" id="selectable-image-card-block"></div>
+					<div class="col-md-4" id="selectable-image-card-icon-block"></div>
+					<div class="col-md-4" id="selectable-image-card-empty-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Web Component Image Card</h4>
+			<div class="row">
+				<div class="col-md-4">
+					<clay-image-card 
+						actionItems='[{"label": "Edit"},{"label": "Save"}]'
+						fileType="JPG" 
+						fileTypeStyle="danger" 
+						href="#1"
+						imageAlt="thumbnail" 
+						imageSrc="./image1.jpg" 
+						labels='[{"label": "Approved", "style": "success"}]',
+						selectable="true"
+						selected="true"
+						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
+						subtitle="Author Action" 
+						title="thumbnail_kyoto.jpg" 
+					></clay-image-card>
+				</div>
+				<div class="col-md-4">
+					<clay-image-card 
+						actionItems='[{"label": "Edit"},{"label": "Save"}]'
+						fileType="SVG" 
+						fileTypeStyle="warning"
+						href="#1"
+						icon="camera"
+						imageAlt="thumbnail" 
+						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"}]',
+						selectable="true"
+						selected="true"
+						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
+						subtitle="Author Action" 
+						title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg" 
+					></clay-image-card>
+				</div>
+				<div class="col-md-4">
+					<clay-image-card 
+						actionItems='[{"label": "Edit"},{"label": "Save"}]'
+						fileType="PNG" 
+						fileTypeStyle="info" 
+						href="#1"
+						imageAlt="thumbnail" 
+						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"},{"label": "Canceled", "style": "danger"}]',
+						selectable="true"
+						selected="true"
+						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
+						subtitle="Author Action" 
+						title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg" 
+					></clay-image-card>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>File card</h4>
+			<div class="row">
+				<div class="col-md-4" id="file-card-block"></div>
+				<div class="col-md-4" id="file-card-checked-block"></div>
+				<div class="col-md-4" id="file-card-icon-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Web component File card</h4>
+			<div class="row">
+				<div class="col-md-4">
+					<clay-file-card 
+						actionItems='[{"label": "Edit"},{"label": "Save"}]'
+						fileType="PDF" 
+						fileTypeStyle="danger" 
+						labels='[{"label": "Approved", "style": "success"}]',
+						selectable="true"
+						selected="true"
+						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
+						subtitle="Author Action" 
+						title="deliverable.pdf" 
+					></clay-image-card>
+				</div>
+				<div class="col-md-4">
+					<clay-file-card 
+						actionItems='[{"label": "Edit"},{"label": "Save"}]'
+						fileType="TXT" 
+						fileTypeStyle="warning"
+						icon="camera"
+						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"}]',
+						selectable="true"
+						selected="true"
+						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
+						subtitle="Author Action" 
+						title="deliverable.txt" 
+					></clay-image-card>
+				</div>
+				<div class="col-md-4">
+					<clay-file-card 
+						actionItems='[{"label": "Edit"},{"label": "Save"}]'
+						fileType="DOC" 
+						fileTypeStyle="info" 
+						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"},{"label": "Canceled", "style": "danger"}]',
+						selectable="true"
+						selected="true"
+						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
+						subtitle="Author Action" 
+						title="deliverable.doc" 
+					></clay-image-card>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>User card</h4>
+			<div class="row">
+				<div class="col-md-4" id="user-card-block"></div>
+				<div class="col-md-4" id="user-card-image-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Horizontal card</h4>
+			<div class="row">
+				<div class="col-md-4" id="directory-block"></div>
+				<div class="col-md-4" id="directory-checkbox-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		var image = './image1.jpg';
+		var items = [
+			{
+				href: '#1',
+				label: 'Edit',
+				separator: true,
+			},
+			{
+				href: '#1',
+				label: 'Save',
+			}
+		];
+
+		/*
+		 * Image Card
+		 */
+		new metal.ClayImageCard({
+			actionItems: items,
+			href: '#1',
+			imageAlt: 'thumbnail',
+			imageSrc: image,
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'thumbnail_kyoto.jpg',
+		}, 
+		'#image-card-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			icon: 'camera',
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#image-card-icon-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#image-card-empty-block');
+
+		/*
+		 * Image Card with filetype
+		 */
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'JPG',
+			fileTypeStyle: 'danger',
+			href: '#1',
+			imageAlt: 'thumbnail',
+			imageSrc: image,
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'thumbnail_kyoto.jpg',
+		}, 
+		'#filetype-image-card-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'SVG',
+			fileTypeStyle: 'warning',
+			icon: 'camera',
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#filetype-image-card-icon-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'PNG',
+			fileTypeStyle: 'info',
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#filetype-image-card-empty-block');
+
+		/*
+		 * Image Card with labels
+		 */
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'JPG',
+			fileTypeStyle: 'danger',
+			href: '#1',
+			imageAlt: 'thumbnail',
+			imageSrc: image,
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+			],
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'thumbnail_kyoto.jpg',
+		}, 
+		'#image-card-one-label-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'SVG',
+			fileTypeStyle: 'warning',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+				'Pending',
+			],
+			labelStylesMap: {
+				'Pending': 'warning',
+			},
+			icon: 'camera',
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#image-card-two-labels-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'PNG',
+			fileTypeStyle: 'info',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+				{
+					label: 'Pending',
+					style: 'warning',
+				},
+				{
+					label: 'Canceled',
+					style: 'danger',
+				},
+			],
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#image-card-three-labels-block');
+
+		/*
+		 * Selectable Image Card
+		 */
+		 new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'JPG',
+			fileTypeStyle: 'danger',
+			href: '#1',
+			imageAlt: 'thumbnail',
+			imageSrc: image,
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+			],
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'thumbnail_kyoto.jpg',
+		}, 
+		'#selectable-image-card-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'SVG',
+			fileTypeStyle: 'warning',
+			icon: 'camera',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+				{
+					label: 'Pending',
+					style: 'warning',
+				},
+			],
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#selectable-image-card-icon-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			fileType: 'PNG',
+			fileTypeStyle: 'info',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+				{
+					label: 'Pending',
+					style: 'warning',
+				},
+				{
+					label: 'Canceled',
+					style: 'danger',
+				},
+			],
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		}, 
+		'#selectable-image-card-empty-block');
+
+		/*
+		 * File Card
+		 */
+		new metal.ClayFileCard({
+			actionItems: items,
+			fileType: 'PDF',
+			fileTypeStyle: 'danger',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+			],
+			spritemap: spritemap,
+			subtitle: 'Stevie Ray Vaughn',
+			title: 'deliverable.pdf',
+		}, 
+		'#file-card-block');
+
+		new metal.ClayFileCard({
+			actionItems: items,
+			fileType: 'TXT',
+			fileTypeStyle: 'warning',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+				'Pending',
+			],
+			labelStylesMap: {
+				'Pending': 'warning',
+			},
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Stevie Ray Vaughn',
+			title: 'deliverable.txt',
+		}, 
+		'#file-card-checked-block');
+
+		new metal.ClayFileCard({
+			actionItems: items,
+			fileType: 'DOC',
+			fileTypeStyle: 'info',
+			icon: 'list',
+			labels: [
+				{
+					label: 'Approved',
+					style: 'success',
+				},
+				{
+					label: 'Pending',
+					style: 'warning',
+				},
+				{
+					label: 'Canceled',
+					style: 'danger',
+				},
+			],
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Stevie Ray Vaughn',
+			title: 'deliverable.doc',
+		}, 
+		'#file-card-icon-block');
+
+		/*
+		 * User card
+		 */
+		new metal.ClayUserCard({
+			actionItems: items,
+			initials: 'HS',
+			name: 'User Name',
+			spritemap: spritemap,
+			subtitle: 'Latest Action',
+			userColor: 'danger'
+		}, 
+		'#user-card-block');
+
+		new metal.ClayUserCard({
+			actionItems: items,
+			disabled: true,
+			imageAlt: 'thumbnail',
+			imageSrc: './image2.jpg',
+			name: 'User name',
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Latest Action',
+		}, 
+		'#user-card-image-block');
+
+		/*
+		 * Horizontal card
+		 */
+		new metal.ClayHorizontalCard({
+			spritemap: spritemap,
+			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+		}, 
+		'#directory-block');
+
+		new metal.ClayHorizontalCard({
+			actionItems: items,
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+		}, 
+		'#directory-checkbox-block');
+
+	</script>
+</body>
+</html>
