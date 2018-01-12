@@ -1,0 +1,51 @@
+.tbar {
+	display: flex;
+
+	> .container,
+	> .container-fluid {
+		display: flex;
+	}
+}
+
+.tbar-nav {
+	@extend %autofit-row;
+
+	> .tbar-item {
+		justify-content: center;
+	}
+}
+
+.tbar-item {
+	@extend %autofit-col;
+
+	padding-bottom: $tbar-item-padding-y;
+	padding-left: $tbar-item-padding-x;
+	padding-right: $tbar-item-padding-x;
+	padding-top: $tbar-item-padding-y;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.tbar-item-expand {
+	@extend %autofit-col-expand;
+
+	text-align: center;
+}
+
+.tbar-section {
+	@extend %autofit-section;
+}
+
+.tbar-light {
+	background-color: map-get($tbar-light, bg);
+	border-color: map-get($tbar-light, border-color);
+	border-style: map-get($tbar-light, border-style);
+	border-width: map-get($tbar-light, border-width);
+	height: map-get($tbar-light, height);
+}

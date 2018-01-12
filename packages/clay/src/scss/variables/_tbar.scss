@@ -1,0 +1,11 @@
+$tbar-item-padding-x: 0.25rem !default;
+$tbar-item-padding-y: null !default;
+
+$tbar-light: () !default;
+$tbar-light: map-merge((
+	bg: $light,
+	border-color: $gray-400,
+	border-style: solid,
+	border-width: 0 0 0.0625rem 0,
+	height: 3.5rem
+), $tbar-light);
