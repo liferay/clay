@@ -80,6 +80,17 @@ module.exports = yeoman.generators.Base.extend({
 			}
 		);
 		this.fs.copyTpl(
+			this.templatePath('demos/_a11y.html'),
+			this.destinationPath('demos/a11y.html'),
+			{
+				camelCaseName: this.camelCaseName,
+				componentName: this.componentName,
+				capitalizeName: this.capitalizeName,
+				kebabCaseName: this.kebabCaseName,
+				repoName: this.repoName,
+			}
+		);
+		this.fs.copyTpl(
 			this.templatePath('src/_Boilerplate.soy'),
 			this.destinationPath('src/' + this.componentName + '.soy'),
 			{

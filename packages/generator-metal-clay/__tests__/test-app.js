@@ -18,6 +18,7 @@ describe.skip('metal-clay-generator:app', function() {
 
 	it('creates files', function() {
 		assert.file([
+			'demos/a11y.html',
 			'demos/index.html',
 			'src/ClayComponent.js',
 			'src/ClayComponent.soy',
