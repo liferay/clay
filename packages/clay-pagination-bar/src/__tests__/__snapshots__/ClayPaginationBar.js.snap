@@ -1,1 +1,385 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] = `
+<div class="clay-pagination-bar pagination-bar">
+  <div class="dropdown pagination-items-per-page">
+    <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <title>caret-bottom</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+      </svg>
+    </button>
+    <div class="dropdown-menu">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
+  <ul class="clay-pagination pagination">
+    <li class="page-item disabled">
+      <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+          <title>angle-left</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="page-item active">
+      <a class=" page-link" href="#mySite?curPage=1">1</a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#mySite?curPage=2">2</a>
+    </li>
+    <li class="page-item">
+      <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+          <title>angle-right</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = `
+<div class="clay-pagination-bar pagination-bar my-custom-class">
+  <div class="dropdown pagination-items-per-page">
+    <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <title>caret-bottom</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+      </svg>
+    </button>
+    <div class="dropdown-menu">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
+  <ul class="clay-pagination pagination">
+    <li class="page-item disabled">
+      <a aria-label="Previous Page" class=" page-link" href="#">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+          <title>angle-left</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="page-item active">
+      <a class=" page-link" href="#1">1</a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#2">2</a>
+    </li>
+    <li class="page-item">
+      <a aria-label="Next Page" class=" page-link" href="#2">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+          <title>angle-right</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
+<div class="clay-pagination-bar pagination-bar" id="myId">
+  <div class="dropdown pagination-items-per-page">
+    <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <title>caret-bottom</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+      </svg>
+    </button>
+    <div class="dropdown-menu">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
+  <ul class="clay-pagination pagination">
+    <li class="page-item disabled">
+      <a aria-label="Previous Page" class=" page-link" href="#">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+          <title>angle-left</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="page-item active">
+      <a class=" page-link" href="#1">1</a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#2">2</a>
+    </li>
+    <li class="page-item">
+      <a aria-label="Next Page" class=" page-link" href="#2">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+          <title>angle-right</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayPaginationBar should render a ClayPaginationBar with one item less than selected entry multiple 1`] = `
+<div class="clay-pagination-bar pagination-bar">
+  <div class="dropdown pagination-items-per-page">
+    <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <title>caret-bottom</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+      </svg>
+    </button>
+    <div class="dropdown-menu">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagination-results">Showing 11 to 19 of 19 entries.</div>
+  <ul class="clay-pagination pagination">
+    <li class="page-item">
+      <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+          <title>angle-left</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#mySite?curPage=1">1</a>
+    </li>
+    <li class="page-item active">
+      <a class=" page-link" href="#mySite?curPage=2">2</a>
+    </li>
+    <li class="page-item disabled">
+      <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+          <title>angle-right</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayPaginationBar should render a ClayPaginationBar with one item more than selected entry multiple 1`] = `
+<div class="clay-pagination-bar pagination-bar">
+  <div class="dropdown pagination-items-per-page">
+    <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <title>caret-bottom</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+      </svg>
+    </button>
+    <div class="dropdown-menu">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagination-results">Showing 11 to 20 of 21 entries.</div>
+  <ul class="clay-pagination pagination">
+    <li class="page-item">
+      <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+          <title>angle-left</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#mySite?curPage=1">1</a>
+    </li>
+    <li class="page-item active">
+      <a class=" page-link" href="#mySite?curPage=2">2</a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#mySite?curPage=3">3</a>
+    </li>
+    <li class="page-item">
+      <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+          <title>angle-right</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayPaginationBar should render a ClayPaginationBar with one item more than selected entry multiple 2`] = `
+<div class="clay-pagination-bar pagination-bar">
+  <div class="dropdown pagination-items-per-page">
+    <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <title>caret-bottom</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+      </svg>
+    </button>
+    <div class="dropdown-menu">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagination-results">Showing 21 to 21 of 21 entries.</div>
+  <ul class="clay-pagination pagination">
+    <li class="page-item">
+      <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+          <title>angle-left</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#mySite?curPage=1">1</a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#mySite?curPage=2">2</a>
+    </li>
+    <li class="page-item active">
+      <a class=" page-link" href="#mySite?curPage=3">3</a>
+    </li>
+    <li class="page-item disabled">
+      <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+          <title>angle-right</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayPaginationBar should render the default markup 1`] = `
+<div class="clay-pagination-bar pagination-bar">
+  <div class="dropdown pagination-items-per-page">
+    <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+        <title>caret-bottom</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+      </svg>
+    </button>
+    <div class="dropdown-menu">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
+  <ul class="clay-pagination pagination">
+    <li class="page-item disabled">
+      <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+          <title>angle-left</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="page-item active">
+      <a class=" page-link" href="#mySite?curPage=1">1</a>
+    </li>
+    <li class="page-item">
+      <a class=" page-link" href="#mySite?curPage=2">2</a>
+    </li>
+    <li class="page-item">
+      <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+          <title>angle-right</title>
+          <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
