@@ -95,15 +95,6 @@ ClayPaginationBar.STATE = {
 	 * @default undefined
 	 */
 	totalEntries: Config.number().required(),
-
-	/**
-	 * Total number of pages to show in the pagination.
-	 * @instance
-	 * @memberof ClayPaginationBar
-	 * @type {!number}
-	 * @default undefined
-	 */
-	totalPages: Config.number().required(),
 };
 
 defineWebComponent('clay-pagination-bar', ClayPaginationBar);

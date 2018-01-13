@@ -11,7 +11,6 @@
 	]>}
 	{@param spritemap: string}
 	{@param totalEntries: number}
-	{@param totalPages: number}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
@@ -30,20 +29,24 @@
 	{/let}
 
 	<div {$attributes}>
-		{if length($entries) > 0}
-			{let $selectedEntryItem: $selectedEntry ? $entries[$selectedEntry] : $entries[0] /}
+		{let $selectedEntryItem: $selectedEntry ? $entries[$selectedEntry] : $entries[0] /}
 
-			{call ClayDropdown.render}
-				{param elementClasses: 'pagination-items-per-page' /}
-				{param items: $entries /}
-				{param label: $selectedEntryItem.label + ' Items' /}
-				{param spritemap: $spritemap /}
-			{/call}
+		{call ClayDropdown.render}
+			{param elementClasses: 'pagination-items-per-page' /}
+			{param items: $entries /}
+			{param label: $selectedEntryItem.label + ' Items' /}
+			{param spritemap: $spritemap /}
+		{/call}
 
-			<div class="pagination-results">
-				Showing {($currentPage - 1) * ($selectedEntryItem.label * 1) + 1} to {$currentPage * $selectedEntryItem.label} of {$totalEntries} entries.
-			</div>
-		{/if}
+		<div class="pagination-results">
+			Showing
+			{sp}{($currentPage - 1) * ($selectedEntryItem.label * 1) + 1}
+			{sp}to
+			{sp}{$currentPage * $selectedEntryItem.label < $totalEntries ? $currentPage * $selectedEntryItem.label : $totalEntries}
+			{sp}of {$totalEntries} entries.
+		</div>
+		
+		{let $totalPages: $totalEntries / ($selectedEntryItem.label * 1) /}
 
 		{call ClayPagination.render}
 			{param baseHref: $baseHref /}
