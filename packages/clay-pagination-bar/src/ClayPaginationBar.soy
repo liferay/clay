@@ -10,6 +10,7 @@
 		label: string
 	]>}
 	{@param spritemap: string}
+	{@param totalEntries: number}
 	{@param totalPages: number}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
@@ -38,6 +39,10 @@
 				{param label: $selectedEntryItem.label + ' Items' /}
 				{param spritemap: $spritemap /}
 			{/call}
+
+			<div class="pagination-results">
+				Showing {($currentPage - 1) * ($selectedEntryItem.label * 1) + 1} to {$currentPage * $selectedEntryItem.label} of {$totalEntries} entries.
+			</div>
 		{/if}
 
 		{call ClayPagination.render}

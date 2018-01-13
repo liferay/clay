@@ -88,6 +88,15 @@ ClayPaginationBar.STATE = {
 	spritemap: Config.string().required(),
 
 	/**
+	 * Total number of entries.
+	 * @instance
+	 * @memberof ClayPaginationBar
+	 * @type {!number}
+	 * @default undefined
+	 */
+	totalEntries: Config.number().required(),
+
+	/**
 	 * Total number of pages to show in the pagination.
 	 * @instance
 	 * @memberof ClayPaginationBar
