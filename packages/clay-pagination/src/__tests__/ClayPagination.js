@@ -73,4 +73,34 @@ describe('ClayPagination', function() {
 			});
 		}
 	}
+
+	it('should fail when no currentPage is passed', function() {
+		expect(() => {
+			component = new ClayPagination({
+				baseHref: '#mySite?curPage=',
+				spritemap: spritemap,
+				totalPages: 10,
+			});
+		}).toThrow();
+	});
+
+	it('should fail when no spritemap is passed', function() {
+		expect(() => {
+			component = new ClayPagination({
+				baseHref: '#mySite?curPage=',
+				currentPage: 1,
+				totalPages: 10,
+			});
+		}).toThrow();
+	});
+
+	it('should fail when no totalPages is passed', function() {
+		expect(() => {
+			component = new ClayPagination({
+				baseHref: '#mySite?curPage=',
+				currentPage: 1,
+				spritemap: spritemap,
+			});
+		}).toThrow();
+	});
 });
