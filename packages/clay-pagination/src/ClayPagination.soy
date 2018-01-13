@@ -61,22 +61,11 @@
 					{/call}
 				{/for}
 			{else}
-				<li>
-					{call ClayDropdownBase.render}
-						{param contentRenderer: 'paginationdropdownitems' /}
-						{param elementClasses: 'page-item' /}
-						{param items: [[
-							'initPage': 2,
-							'endPage': $currentPage == $totalPages ? $currentPage : $currentPage - 1,
-							'baseHref': $baseHref
-						]] /}
-						
-						{param label kind="html" }
-							...
-						{/param}
-						{param triggerClasses: 'page-link' /}
-					{/call}
-				</li>
+				{call .range}
+					{param baseHref: $baseHref /}
+					{param endPage: $currentPage == $totalPages ? $currentPage : $currentPage - 1 /}
+					{param initPage: 2 /}
+				{/call}
 			{/if}
 
 			{if $currentPage != 1 and $currentPage != $totalPages}
@@ -102,22 +91,11 @@
 					{/call}
 				{/for}
 			{else}
-				<li>
-					{call ClayDropdownBase.render}
-						{param contentRenderer: 'paginationdropdownitems' /}
-						{param elementClasses: 'page-item' /}
-						{param items: [[
-							'initPage': ($currentPage + 2),
-							'endPage': $totalPages,
-							'baseHref': $baseHref
-						]] /}
-
-						{param label kind="html" }
-							...
-						{/param}
-						{param triggerClasses: 'page-link' /}
-					{/call}
-				</li>
+				{call .range}
+					{param baseHref: $baseHref /}
+					{param endPage: $totalPages /}
+					{param initPage: $currentPage + 2 /}
+				{/call}
 			{/if}
 
 			{for $page in range($currentPage == $totalPages ? $totalPages -3 : $totalPages, $totalPages + 1)}
@@ -188,6 +166,32 @@
 {/template}
 
 /**
+ * Renders a page range dropdown
+ */
+{template .range}
+	{@param endPage: number}
+	{@param initPage: number}
+	{@param? baseHref: string}
+
+	<li>
+		{call ClayDropdownBase.render}
+			{param contentRenderer: 'paginationdropdownitems' /}
+			{param elementClasses: 'page-item' /}
+			{param items: [[
+				'initPage': $initPage,
+				'endPage': $endPage,
+				'baseHref': $baseHref ?: '#'
+			]] /}
+
+			{param label kind="html" }
+				...
+			{/param}
+			{param triggerClasses: 'page-link' /}
+		{/call}
+	</li>
+{/template}
+
+/**
  * Renders a dropdown list of items
  */
 {deltemplate ClayDropdownBase.Items variant="'paginationdropdownitems'"}
@@ -197,7 +201,7 @@
 	{@param? itemsIconAlignment: string}
 	{@param? spritemap: string}
 
-	{let $baseHref: $items[0].baseHref ?: '#' /}
+	{let $baseHref: $items[0].baseHref /}
 	{let $endPage: $items[0].endPage /}
 	{let $initPage: $items[0].initPage /}
 
