@@ -1,5 +1,5 @@
+import 'clay-dropdown';
 import 'clay-pagination';
-import {ClayDropdown} from 'clay-dropdown';
 import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
