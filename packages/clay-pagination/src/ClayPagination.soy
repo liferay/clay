@@ -65,7 +65,12 @@
 					{call ClayDropdownBase.render}
 						{param contentRenderer: 'paginationdropdownitems' /}
 						{param elementClasses: 'page-item' /}
-						{param items: [['label':'2'], ['label': '' + ($currentPage == $totalPages ? $currentPage : $currentPage - 1)], ['label': $baseHref]] /}
+						{param items: [[
+							'initPage': 2,
+							'endPage': $currentPage == $totalPages ? $currentPage : $currentPage - 1,
+							'baseHref': $baseHref
+						]] /}
+						
 						{param label kind="html" }
 							...
 						{/param}
@@ -101,7 +106,12 @@
 					{call ClayDropdownBase.render}
 						{param contentRenderer: 'paginationdropdownitems' /}
 						{param elementClasses: 'page-item' /}
-						{param items: [['label':'' + ($currentPage + 2)], ['label': '' + $totalPages], ['label': $baseHref]] /}
+						{param items: [[
+							'initPage': ($currentPage + 2),
+							'endPage': $totalPages,
+							'baseHref': $baseHref
+						]] /}
+
 						{param label kind="html" }
 							...
 						{/param}
@@ -185,9 +195,9 @@
 	{@param? itemsIconAlignment: string}
 	{@param? spritemap: string}
 
-	{let $baseHref: $items[2].label ?: '#' /}
-	{let $endPage: $items[1].label /}
-	{let $initPage: $items[0].label /}
+	{let $baseHref: $items[0].baseHref ?: '#' /}
+	{let $endPage: $items[0].endPage /}
+	{let $initPage: $items[0].initPage /}
 
 	{for $page in range($initPage * 1, $endPage * 1)}
 		{delcall ClayDropdownBase.Item variant="'item'"}
