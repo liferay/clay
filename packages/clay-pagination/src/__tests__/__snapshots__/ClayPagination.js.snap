@@ -1,1 +1,5650 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayPagination should render a ClayPagination with 1 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 2 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 2 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 3 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 3 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 3 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 4 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 4 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 4 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 4 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 5 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 5 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 5 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 5 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 5 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 6 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 6 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 6 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 6 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 6 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 6 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 7 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 7 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 7 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 7 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 7 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 7 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 7 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 8 total pages and page 8 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 8 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#9">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 9 total pages and page 9 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 8 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#9">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 9 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#10">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with 10 total pages and page 10 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#9">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#9">9</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 1 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 2 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 2 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pages and page 8 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 8 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=9">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pages and page 9 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 1 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 2 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 3 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 4 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=3">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=3">3</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 5 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=4">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=4">4</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 6 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=5">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=5">5</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 7 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=6">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=6">6</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 8 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=7">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=9">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 9 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=8">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=10">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with baseHref, 10 total pages and page 10 as current page 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item">
+    <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=9">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=1">1</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=7">7</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=8">8</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#mySite?curPage=9">9</a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#mySite?curPage=10">10</a>
+  </li>
+  <li class="page-item disabled">
+    <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with classes 1`] = `
+<ul class="clay-pagination pagination my-custom-class">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render a ClayPagination with id 1`] = `
+<ul class="clay-pagination pagination" id="myId">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`ClayPagination should render the default markup 1`] = `
+<ul class="clay-pagination pagination">
+  <li class="page-item disabled">
+    <a aria-label="Previous Page" class=" page-link" href="#">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+        <title>angle-left</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-left"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class=" page-link" href="#1">1</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#2">2</a>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#3">3</a>
+  </li>
+  <li>
+    <div class="dropdown page-item">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn page-link btn-unstyled" type="button">...</button>
+      <div class="dropdown-menu">
+        <ul class="list-unstyled">
+          <li>
+            <a class=" dropdown-item" href="#3">3</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#4">4</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#5">5</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#6">6</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#7">7</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#8">8</a>
+          </li>
+          <li>
+            <a class=" dropdown-item" href="#9">9</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li class="page-item">
+    <a class=" page-link" href="#10">10</a>
+  </li>
+  <li class="page-item">
+    <a aria-label="Next Page" class=" page-link" href="#2">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+        <title>angle-right</title>
+        <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
