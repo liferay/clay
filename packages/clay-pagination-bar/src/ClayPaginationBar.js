@@ -1,8 +1,9 @@
 import 'clay-pagination';
+import {ClayDropdown} from 'clay-dropdown';
+import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import templates from './ClayPaginationBar.soy.js';
 
@@ -45,6 +46,21 @@ ClayPaginationBar.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * List of available number of entries.
+	 * @instance
+	 * @memberof ClayPaginationBar
+	 * @type {!array}
+	 * @default undefined
+	 */
+	entries: Config.arrayOf(
+		Config.shapeOf({
+			active: Config.bool(),
+			href: Config.string().required(),
+			label: Config.string().required(),
+		})
+	).required(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayPaginationBar
@@ -52,6 +68,15 @@ ClayPaginationBar.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
+
+	/**
+	 * Entries index that points to selected entry.
+	 * @instance
+	 * @memberof ClayPaginationBar
+	 * @type {?int}
+	 * @default 0
+	 */
+	selectedEntry: Config.number().value(0),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

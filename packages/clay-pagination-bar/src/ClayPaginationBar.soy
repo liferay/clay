@@ -5,11 +5,16 @@
  */
 {template .render}
 	{@param currentPage: number}
+	{@param entries: list<[
+		href: string,
+		label: string
+	]>}
 	{@param spritemap: string}
 	{@param totalPages: number}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
+	{@param? selectedEntry: int}
 
 	{let $attributes kind="attributes"}
 		class="clay-pagination-bar pagination-bar
@@ -24,6 +29,17 @@
 	{/let}
 
 	<div {$attributes}>
+		{if length($entries) > 0}
+			{let $selectedEntryItem: $selectedEntry ? $entries[$selectedEntry] : $entries[0] /}
+
+			{call ClayDropdown.render}
+				{param elementClasses: 'pagination-items-per-page' /}
+				{param items: $entries /}
+				{param label: $selectedEntryItem.label + ' Items' /}
+				{param spritemap: $spritemap /}
+			{/call}
+		{/if}
+
 		{call ClayPagination.render}
 			{param baseHref: $baseHref /}
 			{param currentPage: $currentPage /}
