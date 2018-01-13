@@ -9,12 +9,12 @@
 		href: string,
 		label: string
 	]>}
+	{@param selectedEntry: int}
 	{@param spritemap: string}
 	{@param totalEntries: number}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
-	{@param? selectedEntry: int}
 
 	{let $attributes kind="attributes"}
 		class="clay-pagination-bar pagination-bar
@@ -29,7 +29,7 @@
 	{/let}
 
 	<div {$attributes}>
-		{let $selectedEntryItem: $selectedEntry ? $entries[$selectedEntry] : $entries[0] /}
+		{let $selectedEntryItem: $entries[$selectedEntry] /}
 
 		{call ClayDropdown.render}
 			{param elementClasses: 'pagination-items-per-page' /}

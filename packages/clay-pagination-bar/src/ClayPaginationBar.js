@@ -73,10 +73,10 @@ ClayPaginationBar.STATE = {
 	 * Entries index that points to selected entry.
 	 * @instance
 	 * @memberof ClayPaginationBar
-	 * @type {?int}
-	 * @default 0
+	 * @type {?int|undefined}
+	 * @default undefined
 	 */
-	selectedEntry: Config.number().value(0),
+	selectedEntry: Config.number().required(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
