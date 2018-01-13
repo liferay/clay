@@ -20,16 +20,94 @@
 	<script src="../build/globals/clay-pagination.js"></script>
 </head>
 <body class="container">
-	<h1 class="page-title">
-		ClayPagination
-	</h1>
+	<div class="row row-spacing">
+			<h1>ClayPagination</h1>
+		</div>
 
-	<div id="container"></div>
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>1 page</h4>
+				<div id="container1"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>2 pages</h4>
+				<div id="container2"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>3 pages</h4>
+				<div id="container3"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>4 pages</h4>
+				<div id="container4"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>5 pages</h4>
+				<div id="container5"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>6 pages</h4>
+				<div id="container6"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>7 pages</h4>
+				<div id="container7"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>8 pages</h4>
+				<div id="container8"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>9 pages</h4>
+				<div id="container9"></div>
+			</div>
+		</div>
+
+		<div class="row row-spacing">
+			<div class="col">
+				<h4>10 pages</h4>
+				<div id="container10"></div>
+			</div>
+		</div>
+	</div>
 
 	<script type="text/javascript">
+		const spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 
-		new metal.ClayPagination({}, '#container');
-
+		for (let totalPages = 1; totalPages <= 10; totalPages++) {
+			for (let currentPage=1; currentPage <= totalPages; currentPage++ ) {
+				new metal.ClayPagination({
+					baseHref: '#mySite?curPage=',
+					currentPage: currentPage,
+					spritemap: spritemap,
+					totalPages: totalPages,
+				}, '#container' + totalPages);
+			}			
+		}
 	</script>
 </body>
 </html>
