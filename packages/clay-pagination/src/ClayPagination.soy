@@ -56,7 +56,17 @@
 					{/call}
 				{/for}
 			{else}
-				...
+				<li>
+					{call ClayDropdownBase.render}
+						{param contentRenderer: 'paginationdropdownitems' /}
+						{param elementClasses: 'page-item' /}
+						{param items: [['label':'2'], ['label': '' + ($currentPage == $totalPages ? $currentPage : $currentPage - 1)]] /}
+						{param label kind="html" }
+							...
+						{/param}
+						{param triggerClasses: 'page-link' /}
+					{/call}
+				</li>
 			{/if}
 
 			{if $currentPage != 1 and $currentPage != $totalPages}
@@ -80,7 +90,17 @@
 					{/call}
 				{/for}
 			{else}
-				...
+				<li>
+					{call ClayDropdownBase.render}
+						{param contentRenderer: 'paginationdropdownitems' /}
+						{param elementClasses: 'page-item' /}
+						{param items: [['label':'' + ($currentPage + 2)], ['label': '' + $totalPages]] /}
+						{param label kind="html" }
+							...
+						{/param}
+						{param triggerClasses: 'page-link' /}
+					{/call}
+				</li>
 			{/if}
 
 			{call .item}
@@ -132,3 +152,25 @@
 		{/call}
 	</li>
 {/template}
+
+/**
+ * Renders a dropdown list of items
+ */
+{deltemplate ClayDropdownBase.Items variant="'paginationdropdownitems'"}
+	{@param items: list<?>}
+	{@param? handleItemClick_: any}
+	{@param? isInList: bool}
+	{@param? itemsIconAlignment: string}
+	{@param? spritemap: string}
+
+	{let $endPage: $items[1].label /}
+	{let $initPage: $items[0].label /}
+
+	{for $page in range($initPage * 1, $endPage * 1)}
+		{delcall ClayDropdownBase.Item variant="'item'"}
+			{param href: '' + $page /}
+			{param isInList: $isInList /}
+			{param label: '' + $page /}
+		{/delcall}
+	{/for}
+{/deltemplate}
