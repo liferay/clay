@@ -1,0 +1,23 @@
+{namespace ClayPaginationBar}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? elementClasses: string}
+	{@param? id: string}
+
+	{let $attributes kind="attributes"}
+		class="clay-pagination-bar
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<div {$attributes}>Hello World</div>
+{/template}
