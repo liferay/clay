@@ -19,6 +19,15 @@ class ClayPagination extends Component {}
  */
 ClayPagination.STATE = {
 	/**
+	 * Href to create each page complete href.
+	 * @instance
+	 * @memberof ClayPagination
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	baseHref: Config.string(),
+
+	/**
 	 * Current page number.
 	 * @instance
 	 * @memberof ClayPagination
