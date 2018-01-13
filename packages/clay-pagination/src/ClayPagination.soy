@@ -30,15 +30,65 @@
 			{param spritemap: $spritemap /}
 		{/call}
 
-		{for $index in range($totalPages)}
-			{let $page: $index + 1 /}
+		{if $totalPages <= 5}
+			{for $page in range(1, $totalPages+1)}
+				{call .item}
+					{param active: $page == $currentPage /}
+					{param href: '#' + $page/}
+					{param label: '' + $page/}
+				{/call}
+			{/for}
+		{else}
+			{let $fromOneToCurrent: $currentPage - 1 /}
+			{let $fromCurrentToLast: $totalPages - $currentPage /}
 
 			{call .item}
-				{param active: $page == $currentPage /}
-				{param href: '#' + $page /}
-				{param label: '' + $page /}
+				{param active: $currentPage == 1 /}
+				{param href: '#1' /}
+				{param label: '1' /}
 			{/call}
-		{/for}
+
+			{if $fromOneToCurrent < 4}
+				{for $page in range(2, $currentPage)}
+					{call .item}
+						{param href: '#' + $page/}
+						{param label: '' + $page/}
+					{/call}
+				{/for}
+			{else}
+				...
+			{/if}
+
+			{if $currentPage != 1 and $currentPage != $totalPages}
+				{let $currentRangeInit: $fromOneToCurrent >= 4 ? $currentPage - 1 : $currentPage /}
+				{let $currentRangeEnd: $fromCurrentToLast > 3 ? $currentPage + 2 : $currentPage + 1 /}
+
+				{for $page in range($currentRangeInit, $currentRangeEnd)}
+					{call .item}
+						{param active: $page == $currentPage /}
+						{param href: '#' + $page /}
+						{param label: '' + $page /}
+					{/call}
+				{/for}
+			{/if}
+
+			{if $fromCurrentToLast <= 3}
+				{for $page in range($currentPage + 1, $totalPages)}
+					{call .item}
+						{param href: '#' + $page/}
+						{param label: '' + $page/}
+					{/call}
+				{/for}
+			{else}
+				...
+			{/if}
+
+			{call .item}
+				{param active: $currentPage == $totalPages /}
+				{param href: '#' + $totalPages /}
+				{param label: '' + $totalPages /}
+			{/call}
+		{/if}
 
 		{call .item}
 			{param ariaLabel: 'Next Page' /}
