@@ -53,7 +53,7 @@
 			{/call}
 
 			{if $fromOneToCurrent < 4}
-				{for $page in range(2, $currentPage)}
+				{for $page in range(2, $currentPage == 1 ? 4 : $currentPage)}
 					{call .item}
 						{param baseHref: $baseHref /}
 						{param label: '' + $page/}
@@ -120,12 +120,14 @@
 				</li>
 			{/if}
 
-			{call .item}
-				{param active: $currentPage == $totalPages /}
-				{param baseHref: $baseHref /}
-				{param label: '' + $totalPages /}
-				{param page: $totalPages /}
-			{/call}
+			{for $page in range($currentPage == $totalPages ? $totalPages -3 : $totalPages, $totalPages + 1)}
+				{call .item}
+					{param active: $page == $currentPage /}
+					{param baseHref: $baseHref /}
+					{param label: '' + $page/}
+					{param page: $page/}
+				{/call}
+			{/for}
 		{/if}
 
 		{call .item}
