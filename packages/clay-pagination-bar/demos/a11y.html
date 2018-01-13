@@ -20,15 +20,46 @@
 	<script src="../build/globals/clay-pagination-bar.js"></script>
 </head>
 <body class="container">
-	<h1 class="page-title">
-		ClayPaginationBar
-	</h1>
+	<div class="row row-spacing">
+			<h1>ClayPaginationBar</h1>
+		</div>
 
-	<div id="container"></div>
+		<div class="row row-spacing">
+			<div class="col">
+				<div id="container1"></div>
+			</div>
+		</div>
+	</div>
 
 	<script type="text/javascript">
+		const spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
 
-		new metal.ClayPaginationBar({}, '#container');
+		new metal.ClayPaginationBar({
+			baseHref: '#mySite?curPage=',
+			currentPage: 2,
+			entries: [
+				{
+					href: '#mySite?entries=5',
+					label: '5',
+				},
+				{
+					active: true,
+					href: '#mySite?entries=10',
+					label: '10',
+				},
+				{
+					href: '#mySite?entries=15',
+					label: '15',
+				},
+				{
+					href: '#mySite?entries=20',
+					label: '20',
+				},
+			],
+			selectedEntry: 1,
+			spritemap: spritemap,
+			totalEntries: 21,
+		}, '#container1');
 
 	</script>
 </body>
