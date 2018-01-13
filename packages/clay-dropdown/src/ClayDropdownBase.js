@@ -209,6 +209,15 @@ ClayDropdownBase.STATE = {
 	caption: Config.string(),
 
 	/**
+	 * Content Renderer name of items.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	contentRenderer: Config.string(),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdownBase

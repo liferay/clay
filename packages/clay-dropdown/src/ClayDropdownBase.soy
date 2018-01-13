@@ -8,6 +8,7 @@
 	{@param label: html|string}
 	{@param? button: ?}
 	{@param? caption: string}
+	{@param? contentRenderer: string}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
@@ -48,6 +49,7 @@
 		{call .sections}
 			{param button: $button /}
 			{param caption: $caption /}
+			{param contentRenderer: $contentRenderer /}
 			{param expanded: $expanded /}
 			{param handleButtonClick_: $handleButtonClick_ /}
 			{param handleItemClick_: $handleItemClick_ /}
@@ -59,36 +61,6 @@
 			{param type: $type ?: 'list' /}
 		{/call}
 	</div>
-{/template}
-
-/**
- * Renders a list of items
- */
-{template .items}
-	{@param items: list<?>}
-	{@param? handleItemClick_: any}
-	{@param? isInList: bool}
-	{@param? itemsIconAlignment: string}
-	{@param? spritemap: string}
-
-	{foreach $item in $items}
-		{delcall ClayDropdownBase.Item variant="$item.type ?: 'item'"}
-			{param active: $item.active /}
-			{param checked: $item.checked /}
-			{param disabled: $item.disabled /}
-			{param handleItemClick_: $handleItemClick_ /}
-			{param href: $item.href /}
-			{param icon: $item.icon /}
-			{param inputName: $item.inputName /}
-			{param inputValue: $item.inputValue /}
-			{param isInList: $isInList /}
-			{param items: $item.items /}
-			{param itemsIconAlignment: $itemsIconAlignment /}
-			{param label: $item.label ?: '' /}
-			{param separator: $item.separator /}
-			{param spritemap: $spritemap /}
-		{/delcall}
-	{/foreach}
 {/template}
 
 /**
@@ -121,6 +93,7 @@
 	{@param items: list<?>}
 	{@param? button: ?}
 	{@param? caption: string}
+	{@param? contentRenderer: string}
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
 	{@param? handleItemClick_: any}
@@ -159,13 +132,13 @@
 			{/if}
 
 			{let $itemList kind="html"}
-				{call .items}
+				{delcall ClayDropdownBase.Items variant="$contentRenderer"}
 					{param handleItemClick_: $handleItemClick_ /}
 					{param isInList: $type == 'list' /}
 					{param items: $items /}
 					{param itemsIconAlignment: $itemsIconAlignment /}
 					{param spritemap: $spritemap /}
-				{/call}
+				{/delcall}
 			{/let}
 
 			{if $type == 'list'}
@@ -422,13 +395,13 @@
 	{/if}
 
 	{if $items}
-		{call ClayDropdownBase.items}
+		{delcall ClayDropdownBase.Items}
 			{param handleItemClick_: $handleItemClick_ /}
 			{param isInList: $isInList /}
 			{param items: $items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param spritemap: $spritemap /}
-		{/call}
+		{/delcall}
 	{/if}
 
 	{if $separator}
@@ -494,4 +467,34 @@
 	{if $separator}
 			<div class="dropdown-divider"></div>
 	{/if}
+{/deltemplate}
+
+/**
+ * Renders a list of items
+ */
+{deltemplate ClayDropdownBase.Items}
+	{@param items: list<?>}
+	{@param? handleItemClick_: any}
+	{@param? isInList: bool}
+	{@param? itemsIconAlignment: string}
+	{@param? spritemap: string}
+
+	{foreach $item in $items}
+		{delcall ClayDropdownBase.Item variant="$item.type ?: 'item'"}
+			{param active: $item.active /}
+			{param checked: $item.checked /}
+			{param disabled: $item.disabled /}
+			{param handleItemClick_: $handleItemClick_ /}
+			{param href: $item.href /}
+			{param icon: $item.icon /}
+			{param inputName: $item.inputName /}
+			{param inputValue: $item.inputValue /}
+			{param isInList: $isInList /}
+			{param items: $item.items /}
+			{param itemsIconAlignment: $itemsIconAlignment /}
+			{param label: $item.label ?: '' /}
+			{param separator: $item.separator /}
+			{param spritemap: $spritemap /}
+		{/delcall}
+	{/foreach}
 {/deltemplate}
