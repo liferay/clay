@@ -4,11 +4,15 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param currentPage: number}
+	{@param spritemap: string}
+	{@param totalPages: number}
+	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
 
 	{let $attributes kind="attributes"}
-		class="clay-pagination-bar
+		class="clay-pagination-bar pagination-bar
 			{if $elementClasses}
 				{sp}{$elementClasses}
 			{/if}
@@ -19,5 +23,12 @@
 		{/if}
 	{/let}
 
-	<div {$attributes}>Hello World</div>
+	<div {$attributes}>
+		{call ClayPagination.render}
+			{param baseHref: $baseHref /}
+			{param currentPage: $currentPage /}
+			{param spritemap: $spritemap /}
+			{param totalPages: $totalPages /}
+		{/call}
+	</div>
 {/template}
