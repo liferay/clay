@@ -1,6 +1,6 @@
 {
   "name": "claycss.com",
-  "version": "1.0.0-alpha.13",
+  "version": "1.0.0-alpha.15",
   "private": true,
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
     "watch": "concurrent --kill-others \"gulp watch\" \"el run\""
   },
   "dependencies": {
-    "clay": "^2.0.0-beta.5",
+    "clay": "^1.0.0-alpha.15",
     "jquery": "^3.2.1",
     "metal-storage": "^1.1.0"
   },

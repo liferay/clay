@@ -1,6 +1,6 @@
 {
   "name": "clay-component",
-  "version": "1.0.0-alpha.12",
+  "version": "1.0.0-alpha.15",
   "description": "Clay Link Component",
   "license": "BSD",
   "repository": "https://github.com/metal/metal-clay-components/tree/master/packages/clay-component",
@@ -39,7 +39,7 @@
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
     "browserslist-config-clay-components": "^1.0.0-alpha.2",
-    "clay": "^2.0.0-beta.5",
+    "clay": "^1.0.0-alpha.15",
     "metal-tools-soy": "^4.2.1",
     "webpack": "^3.0.0"
   },
