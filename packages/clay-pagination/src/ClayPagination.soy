@@ -205,7 +205,7 @@
 	{let $endPage: $items[0].endPage /}
 	{let $initPage: $items[0].initPage /}
 
-	{for $page in range($initPage * 1, $endPage * 1)}
+	{for $page in range($initPage, $endPage)}
 		{delcall ClayDropdownBase.Item variant="'item'"}
 			{param href: $baseHref + $page /}
 			{param isInList: $isInList /}
