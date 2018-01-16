@@ -2,15 +2,16 @@ import 'clay-button';
 import 'clay-checkbox';
 import 'clay-icon';
 import 'clay-link';
+import 'clay-portal';
 import 'clay-radio';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
+import dom from 'metal-dom';
 import {Align} from 'metal-position';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
-import Component from 'metal-component';
-import dom from 'metal-dom';
-import itemsValidator from './items_validator';
-import Soy from 'metal-soy';
 
+import itemsValidator from './items_validator';
 import templates from './ClayDropdownBase.soy.js';
 
 /**
@@ -56,7 +57,11 @@ class ClayDropdownBase extends Component {
 	 * @protected
 	 */
 	handleDocClick_(event) {
-		if (this.element.contains(event.target)) {
+		if (
+			this.element.contains(event.target) ||
+			(this.refs.portal &&
+				this.refs.portal.element.contains(event.target))
+		) {
 			return;
 		}
 		this.close_();
@@ -138,7 +143,8 @@ class ClayDropdownBase extends Component {
 				this.alignElementSelector_
 			);
 			if (alignElement) {
-				let bodyElement = this.element.querySelector('.dropdown-menu');
+				let bodyElement = this.refs.portal.refs.menu;
+
 				this.alignedPosition_ = Align.align(
 					bodyElement,
 					alignElement,
@@ -279,6 +285,17 @@ ClayDropdownBase.STATE = {
 	 * @default undefined
 	 */
 	label: Config.any().required(),
+
+	/**
+	 * Id to be used for portal element.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {!string}
+	 * @default clay_dropdown_portal
+	 */
+	portalElementId: Config.string()
+		.value('clay_dropdown_portal')
+		.internal(),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements
