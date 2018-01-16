@@ -183,7 +183,7 @@
 					{/if}
 				</li>
 			</ul>
-			
+
 			{if $actionItems}
 				<ul class="navbar-nav">
 					{foreach $item in $actionItems}
@@ -465,10 +465,10 @@
 	{/let}
 
 	<form {$searchFormAttributes}>
-		<div class="input-group input-group-inset">
-			<div class="input-group-input">
+		<div class="input-group">
+			<div class="input-group-item">
 				{let $inputAttributes kind="attributes"}
-					aria-label="Search"					
+					aria-label="Search"
 					class="form-control"
 					name="{$searchInputName}"
 					placeholder="Search for..."
@@ -479,7 +479,7 @@
 				<input {$inputAttributes} />
 			</div>
 
-			<span class="input-group-inset-item">
+			<span class="input-group-inset-item input-group-inset-item-after">
 				{call ClayButton.render}
 					{param elementClasses: 'navbar-breakpoint-d-none' /}
 					{param events: ['click': $handleCloseMobileSearchClick_] /}
