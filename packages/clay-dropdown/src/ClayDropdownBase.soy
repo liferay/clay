@@ -13,9 +13,11 @@
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
 	{@param? handleItemClick_: any}
+	{@param? handleSearch_: any}
 	{@param? helpText: string}
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
+	{@param? portalElementId: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? style: string}
@@ -53,9 +55,11 @@
 			{param expanded: $expanded /}
 			{param handleButtonClick_: $handleButtonClick_ /}
 			{param handleItemClick_: $handleItemClick_ /}
+			{param handleSearch_: $handleSearch_ /}
 			{param helpText: $helpText /}
 			{param items: $items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
+			{param portalElementId: $portalElementId /}
 			{param searchable: $searchable /}
 			{param spritemap: $spritemap /}
 			{param type: $type ?: 'list' /}
@@ -68,11 +72,12 @@
  */
 {template .search}
 	{@param spritemap: string}
+	{@param? handleSearch_: any}
 
 	<div class="dropdown-section">
 		<div class="input-group input-group-inset">
 			<div class="input-group-input">
-				<input aria-label="Search for..." class="form-control" data-oninput="handleSearch_" placeholder="Search for..." type="text" ref="searchInput">
+				<input aria-label="Search for..." class="form-control" data-oninput="{$handleSearch_}" placeholder="Search for..." type="text" ref="searchInput">
 			</div>
 
 			<span class="input-group-inset-item">
@@ -97,8 +102,10 @@
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
 	{@param? handleItemClick_: any}
+	{@param? handleSearch_: any}
 	{@param? helpText: string}
 	{@param? itemsIconAlignment: string}
+	{@param? portalElementId: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? type: string}
@@ -115,6 +122,7 @@
 				{sp}show
 			{/if}
 		"
+		ref="menu"
 	{/let}
 
 	{let $dropdownMenu kind="html"}
@@ -127,6 +135,7 @@
 
 			{if $searchable and $spritemap}
 				{call .search}
+					{param handleSearch_: $handleSearch_ /}
 					{param spritemap: $spritemap /}
 				{/call}
 			{/if}
@@ -168,13 +177,19 @@
 		</div>
 	{/let}
 
-	{if $type == 'form'}
-		<form>
-			{$dropdownMenu}
-		</form>
-	{else}
-		{$dropdownMenu}
-	{/if}
+	{call ClayPortal.render}
+		{param content kind="html"}
+			{if $type == 'form'}
+				<form>
+					{$dropdownMenu}
+				</form>
+			{else}
+				{$dropdownMenu}
+			{/if}
+		{/param}
+		{param portalElement: '#' + $portalElementId /}
+		{param ref: 'portal' /}
+	{/call}
 {/template}
 
 /**
