@@ -14,10 +14,16 @@
 	$caption-color: map-get($map, caption-color);
 	$actions-link-color: map-get($map, actions-link-color);
 	$actions-link-hover-color: map-get($map, actions-link-hover-color);
-	$list-item-border-color: map-get($map, list-item-border-color);
 	$panel-bg: map-get($map, panel-bg);
 	$dt-color: map-get($map, dt-color);
 	$dd-color: map-get($map, dd-color);
+
+	$sidebar-list-group-item-bg: map-get($map, sidebar-list-group-item-bg);
+	$sidebar-list-group-item-border-color: map-get($map, sidebar-list-group-item-border-color);
+	$sidebar-list-group-title: setter(map-get($map, sidebar-list-group-title), ());
+	$sidebar-list-group-subtitle: setter(map-get($map, sidebar-list-group-subtitle), ());
+	$sidebar-list-group-text: setter(map-get($map, sidebar-list-group-text), ());
+	$sidebar-list-group-subtext: setter(map-get($map, sidebar-list-group-subtext), ());
 
 	background-color: $bg;
 	border-color: $border-color;
@@ -66,8 +72,27 @@
 		}
 	}
 
-	.sidebar-list-item {
-		border-color: $list-item-border-color;
+	.sidebar-list-group {
+		.list-group-item {
+			background-color: $sidebar-list-group-item-bg;
+			border-color: $sidebar-list-group-item-border-color;
+		}
+
+		.list-group-title {
+			@include clay-text-typography($sidebar-list-group-title);
+		}
+
+		.list-group-subtitle {
+			@include clay-text-typography($sidebar-list-group-subtitle);
+		}
+
+		.list-group-text {
+			@include clay-text-typography($sidebar-list-group-text);
+		}
+
+		.list-group-subtext {
+			@include clay-text-typography($sidebar-list-group-subtext);
+		}
 	}
 
 	.sidebar-panel {

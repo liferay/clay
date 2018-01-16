@@ -1,5 +1,16 @@
-$sidebar-dt-font-size: 0.6875rem !default; // 11px
-$sidebar-dd-font-size: 0.75rem !default; // 12px
+// Sidebar DT
+
+$sidebar-dt: () !default;
+$sidebar-dt: map-merge((
+	font-size: 0.6875rem // 11px
+), $sidebar-dt);
+
+// Sidebar DD
+
+$sidebar-dd: () !default;
+$sidebar-dd: map-merge((
+	font-size: 0.75rem // 12px
+), $sidebar-dd);
 
 // Sidebar Light
 
