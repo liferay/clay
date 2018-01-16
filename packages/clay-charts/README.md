@@ -151,7 +151,6 @@ These are the options available in clay-charts, some have slightly different nam
 + title
 + tooltip
 + transitionDuration
-+ type                       // The type of chart to render (defaults to 'line')
 + url
 + x                          // Set's billboard.js' data.x config
 + xFormat                    // Set's billboard.js' data.xFormat config
