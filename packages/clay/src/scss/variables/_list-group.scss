@@ -37,6 +37,15 @@ $list-group-title-link: () !default;
 
 $list-group-title-active-color: $list-group-active-color !default;
 
+// List Group Subtitle
+
+$list-group-subtitle: () !default;
+$list-group-subtitle: map-merge((
+	color: $secondary
+), $list-group-subtitle);
+
+$list-group-subtitle-link: () !default;
+
 // List Group Text
 
 $list-group-text: () !default;
