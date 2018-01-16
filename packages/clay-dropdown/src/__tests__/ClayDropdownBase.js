@@ -691,7 +691,7 @@ describe('ClayDropdownBase', function() {
 
 		expect(clayDropdownBase.items).toEqual(items);
 
-		let input = clayDropdownBase.refs['searchInput'];
+		let input = clayDropdownBase.refs.portal.refs['searchInput'];
 		input.value = 'Item 1';
 
 		clayDropdownBase.handleSearch_({
@@ -740,7 +740,7 @@ describe('ClayDropdownBase', function() {
 
 		const spy = jest.spyOn(clayDropdownBase, 'emit');
 
-		clayDropdownBase.refs.dropdownButton.element.click();
+		clayDropdownBase.refs.portal.refs.dropdownButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));
