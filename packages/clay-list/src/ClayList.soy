@@ -17,7 +17,7 @@
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
-		inputValueField: string	
+		inputValueField: string
 	]}
 	{@param? elementClasses: string}
 	{@param? handleItemToggled_: any}
@@ -70,7 +70,7 @@
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
-		inputValueField: string	
+		inputValueField: string
 	]}
 	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
@@ -86,7 +86,7 @@
 
 	<li class="{$listItemClasses}">
 		{if $selectable}
-			<div class="flex-col">
+			<div class="autofit-col">
 				{call ClayCheckbox.render}
 					{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
 					{param checked: $item.selected /}
@@ -133,7 +133,7 @@
 		{/foreach}
 
 		{if $item.actionItems and $spritemap}
-			<div class="flex-col">
+			<div class="autofit-col">
 				{call .quickMenu}
 					{param items: $item.actionItems /}
 					{param spritemap: $spritemap /}
@@ -167,7 +167,7 @@
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
-		inputValueField: string	
+		inputValueField: string
 	]}
 	{@param? groupName: string}
 	{@param? handleItemToggled_: any}
@@ -260,7 +260,7 @@
 	{@param value: ?}
 	{@param? spritemap: string}
 
-	<div class="flex-col flex-col-expand">
+	<div class="autofit-col autofit-col-expand">
 		<h4 class="list-group-title text-truncate">
 			{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.href and $item[$fieldSchema.fieldsMap.href]}
 				{call ClayLink.render}
@@ -306,7 +306,7 @@
 	{@param value: ?}
 	{@param? spritemap: string}
 
-	<div class="flex-col">
+	<div class="autofit-col">
 		{if $spritemap}
 			{call ClaySticker.render}
 				{param icon: $fieldSchema.iconsMap ? $fieldSchema.iconsMap[$value] ?: $fieldSchema.iconsMap['*'] : $value /}

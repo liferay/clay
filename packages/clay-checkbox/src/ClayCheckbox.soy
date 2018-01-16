@@ -90,13 +90,13 @@
 
 		<input {$inputAttributes}></input>
 
-		<span class="custom-control-indicator"></span>
+		<span class="custom-control-label"></span>
 
 		{if $labelContent}
 			{$labelContent}
 		{else}
 			{let $spanLabelClasses kind="text"}
-				custom-control-description
+				custom-control-label-text
 				{if $hideLabel}
 					{sp}sr-only
 				{/if}
