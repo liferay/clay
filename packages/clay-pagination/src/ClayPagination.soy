@@ -63,7 +63,7 @@
 			{else}
 				{call .range}
 					{param baseHref: $baseHref /}
-					{param endPage: $currentPage == $totalPages ? $currentPage : $currentPage - 1 /}
+					{param endPage: $currentPage == $totalPages ? $currentPage - 3 : $currentPage - 1 /}
 					{param initPage: 2 /}
 				{/call}
 			{/if}
