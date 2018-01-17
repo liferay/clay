@@ -125,24 +125,25 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
   <div class="custom-control custom-checkbox">
     <label>
       <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
-      <div class="card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+      <span class="custom-control-label">
+        <div class="card card-horizontal">
+          <div class="card-body">
+            <div class="card-row">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
-            <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                <div class="card-title text-truncate" title="My Title">My Title</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </span>
     </label>
   </div>
 </div>
@@ -153,24 +154,25 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = 
   <div class="custom-control custom-checkbox">
     <label>
       <input class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
-      <div class="card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+      <span class="custom-control-label">
+        <div class="card card-horizontal">
+          <div class="card-body">
+            <div class="card-row">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
-            <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                <div class="card-title text-truncate" title="My Title">My Title</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </span>
     </label>
   </div>
 </div>
@@ -181,24 +183,25 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
   <div class="custom-control custom-checkbox">
     <label>
       <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
-      <div class="card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+      <span class="custom-control-label">
+        <div class="card card-horizontal">
+          <div class="card-body">
+            <div class="card-row">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
-            <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                <div class="card-title text-truncate" title="My Title">My Title</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </span>
     </label>
   </div>
 </div>
@@ -209,24 +212,25 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
   <div class="custom-control custom-checkbox">
     <label>
       <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
-      <div class="card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+      <span class="custom-control-label">
+        <div class="card card-horizontal">
+          <div class="card-body">
+            <div class="card-row">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
-            <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                <div class="card-title text-truncate" title="My Title">My Title</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </span>
     </label>
   </div>
 </div>
@@ -237,24 +241,25 @@ exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
   <div class="custom-control custom-checkbox">
     <label>
       <input checked="" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
-      <div class="card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+      <span class="custom-control-label">
+        <div class="card card-horizontal">
+          <div class="card-body">
+            <div class="card-row">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
-            <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                <div class="card-title text-truncate" title="My Title">My Title</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </span>
     </label>
   </div>
 </div>
