@@ -23,20 +23,20 @@ exports[`ClayFileCard should render a ClayFileCard with actionItems 1`] = `
               <use xlink:href="icons.svg#ellipsis-v"></use>
             </svg>
           </button>
-          <div class="dropdown-menu">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item" href="#1">Edit</a>
-              </li>
-              <li>
-                <a class=" dropdown-item" href="#1">Save</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Save</a>
+    </li>
+  </ul>
 </div>
 `;
 
