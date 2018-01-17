@@ -96,7 +96,7 @@
 	$font-weight: map-get($map, font-weight);
 	$letter-spacing: map-get($map, letter-spacing);
 	$line-height: map-get($map, line-height);
-	$margin-bottom: setter(map-get($map, margin-bottom), 0);
+	$margin-bottom: map-get($map, margin-bottom);
 	$margin-left: map-get($map, margin-left);
 	$margin-right: map-get($map, margin-right);
 	$margin-top: map-get($map, margin-top);

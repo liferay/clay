@@ -36,7 +36,8 @@ $component-title-link: map-merge((
 
 $component-subtitle: () !default;
 $component-subtitle: map-merge((
-	color: $secondary
+	color: $secondary,
+	margin-bottom: 0
 ), $component-subtitle);
 
 $component-subtitle-link: () !default;

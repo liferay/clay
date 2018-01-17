@@ -11,7 +11,8 @@ $sidebar-title: map-merge((
 	font-weight: $font-weight-semi-bold,
 	clay-link: (
 		color: $body-color
-	)
+	),
+	margin-bottom: 0
 ), $sidebar-title);
 
 // Sidebar Subtitle
@@ -19,7 +20,8 @@ $sidebar-title: map-merge((
 $sidebar-subtitle: () !default;
 $sidebar-subtitle: map-merge((
 	font-size: 1.125rem, // 18px
-	font-weight: $font-weight-semi-bold
+	font-weight: $font-weight-semi-bold,
+	margin-bottom: 0
 ), $sidebar-subtitle);
 
 // Sidebar DT
