@@ -933,17 +933,6 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -964,22 +953,33 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
     </tbody>
   </table>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
 </div>
 `;
 
@@ -1023,17 +1023,6 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1067,17 +1056,6 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1111,17 +1089,6 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1155,17 +1122,6 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1199,17 +1155,6 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1243,22 +1188,77 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
                 <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
     </tbody>
   </table>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
 </div>
 `;
 
