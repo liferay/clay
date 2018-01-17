@@ -477,9 +477,10 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
-		managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element
-			.querySelector('ul li')
-			.click();
+		const element =
+			managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal
+				.element;
+		element.querySelector('ul li').click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('viewTypeClicked', expect.any(Object));

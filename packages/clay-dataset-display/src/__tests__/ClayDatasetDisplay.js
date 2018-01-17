@@ -861,17 +861,19 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(component).toMatchSnapshot();
 
-		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element
-			.querySelectorAll('ul li')[1]
-			.click();
+		let element =
+			component.refs.managementToolbar.refs.viewTypesDropdown.refs
+				.dropdown.refs.portal.element;
+		element.querySelectorAll('ul li')[1].click();
 
 		jest.runAllTimers();
 
 		expect(component).toMatchSnapshot();
 
-		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element
-			.querySelectorAll('ul li')[2]
-			.click();
+		element =
+			component.refs.managementToolbar.refs.viewTypesDropdown.refs
+				.dropdown.refs.portal.element;
+		element.querySelectorAll('ul li')[2].click();
 
 		jest.runAllTimers();
 
