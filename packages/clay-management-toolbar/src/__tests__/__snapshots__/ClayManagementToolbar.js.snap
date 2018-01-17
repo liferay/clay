@@ -66,7 +66,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -126,7 +126,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -212,7 +212,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -292,7 +292,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -387,7 +387,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -470,7 +470,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -580,7 +580,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -640,7 +640,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -726,7 +726,7 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -798,7 +798,7 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -858,7 +858,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
         <form action="mySearchURL" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -918,7 +918,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
         <form name="mySearchName" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -978,7 +978,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" name="mySearchName" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchName" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -1047,7 +1047,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -1133,7 +1133,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
@@ -1234,7 +1234,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
         <form role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
             </div>
             <span class="input-group-inset-item input-group-inset-item-after">
               <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
