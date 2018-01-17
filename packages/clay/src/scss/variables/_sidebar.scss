@@ -77,3 +77,13 @@ $sidebar-light: map-merge((
 		)
 	)
 ), $sidebar-light);
+
+$sidebar-light-navigation-bar: () !default;
+$sidebar-light-navigation-bar: map-merge((
+	bg: $light,
+	border-color: $gray-300,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $sidebar-light-navigation-bar);

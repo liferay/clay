@@ -26,3 +26,9 @@ $sidebar-light: map-merge((
 	dt-color: $secondary,
 	panel-bg: $light
 ), $sidebar-light);
+
+$sidebar-light-navigation-bar: () !default;
+$sidebar-light-navigation-bar: map-merge((
+	bg: #FFF,
+	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06)
+), $sidebar-light-navigation-bar);
