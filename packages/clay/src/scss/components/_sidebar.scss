@@ -20,6 +20,16 @@
 	padding-top: $sidebar-padding-top;
 }
 
+.sidebar-header {
+	.component-title {
+		@include clay-text-typography($sidebar-header-component-title);
+	}
+
+	.component-subtitle {
+		@include clay-text-typography($sidebar-header-component-subtitle);
+	}
+}
+
 // Sidebar Body
 
 .sidebar-body {
@@ -71,6 +81,8 @@
 	}
 
 	.list-group-item {
+		background-color: $sidebar-list-group-bg;
+		border-color: $sidebar-list-group-border-color;
 		padding: $sidebar-list-group-item-padding;
 	}
 
@@ -84,16 +96,6 @@
 .sidebar-panel {
 	margin-bottom: $sidebar-panel-margin-bottom;
 	position: relative;
-}
-
-// Sidebar Title, Subtitle, Caption
-
-.sidebar-title {
-	@include clay-text-typography($sidebar-title);
-}
-
-.sidebar-subtitle {
-	@include clay-text-typography($sidebar-subtitle);
 }
 
 // Sidebar Definition List (dl dt dd)

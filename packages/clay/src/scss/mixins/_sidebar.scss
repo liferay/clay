@@ -6,14 +6,14 @@
 	$border-right-width: setter(map-get($map, border-right-width), 0);
 	$border-top-width: setter(map-get($map, border-top-width), 0);
 	$color: map-get($map, color);
-	$link-color: map-get($map, link-color);
-	$link-hover-color: map-get($map, link-hover-color);
-	$header-title-color: map-get($map, header-title-color);
-	$header-title-hover-color: map-get($map, header-title-hover-color);
-	$subtitle-color: map-get($map, subtitle-color);
 	$panel-bg: map-get($map, panel-bg);
-	$dt-color: map-get($map, dt-color);
-	$dd-color: map-get($map, dd-color);
+
+	$component-header-title: setter(map-get($map, component-header-title), ());
+	$component-header-subtitle: setter(map-get($map, component-header-subtitle), ());
+	$component-link: setter(map-get($map, component-link), ());
+
+	$dt: setter(map-get($map, dt), ());
+	$dd: setter(map-get($map, dd), ());
 
 	$sidebar-list-group-item-bg: map-get($map, sidebar-list-group-item-bg);
 	$sidebar-list-group-item-border-color: map-get($map, sidebar-list-group-item-border-color);
@@ -28,32 +28,18 @@
 	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
 	color: $color;
 
-	.sidebar-link {
-		color: $link-color;
-
-		@include hover-focus {
-			color: $link-hover-color;
-		}
+	.component-link {
+		@include clay-text-typography($component-link);
 	}
 
 	.sidebar-header {
-		.sidebar-title {
-			color: $header-title-color;
+		.component-title {
+			@include clay-text-typography($component-header-title);
 		}
 
-		.sidebar-title.sidebar-link,
-		.sidebar-title .sidebar-link {
-			color: $header-title-color;
-			text-decoration: none;
-
-			@include hover-focus {
-				color: $header-title-hover-color;
-			}
+		.component-subtitle {
+			@include clay-text-typography($component-header-subtitle);
 		}
-	}
-
-	.sidebar-subtitle {
-		color: $subtitle-color;
 	}
 
 	.sidebar-list-group {
@@ -84,10 +70,10 @@
 	}
 
 	.sidebar-dt {
-		color: $dt-color;
+		@include clay-text-typography($dt);
 	}
 
 	.sidebar-dd {
-		color: $dd-color;
+		@include clay-text-typography($dd);
 	}
 }

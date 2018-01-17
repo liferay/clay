@@ -1,3 +1,18 @@
+// Sidebar Header Title
+
+$sidebar-header-component-title: () !default;
+$sidebar-header-component-title: map-merge((
+	font-size: 1.25rem // 20px,
+), $sidebar-header-component-title);
+
+// Sidebar Header Subtitle
+
+$sidebar-header-component-subtitle: () !default;
+$sidebar-header-component-subtitle: map-merge((
+	font-size: 0.75rem, // 12px
+	font-weight: $font-weight-normal
+), $sidebar-header-component-subtitle);
+
 // Sidebar DT
 
 $sidebar-dt: () !default;
@@ -12,16 +27,19 @@ $sidebar-dd: map-merge((
 	font-size: 0.75rem // 12px
 ), $sidebar-dd);
 
+// Sidebar List Group
+
+$sidebar-list-group-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+
 // Sidebar Light
 
 $sidebar-light: () !default;
 $sidebar-light: map-merge((
 	bg: #FFF,
 	border-left-width: 0,
-	link-color: $body-color,
-	header-title-color: $body-color,
-	subtitle-color: $secondary,
-	dt-color: $secondary,
+	dt: (
+		color: $secondary
+	),
 	panel-bg: $light
 ), $sidebar-light);
 
