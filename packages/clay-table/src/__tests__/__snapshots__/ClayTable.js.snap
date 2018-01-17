@@ -1343,8 +1343,8 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description sr-only">Deselect</span>
+              <span class="custom-control-label"></span>
+              <span class="custom-control-label-text sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1361,8 +1361,8 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description sr-only">Deselect</span>
+              <span class="custom-control-label"></span>
+              <span class="custom-control-label-text sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1379,8 +1379,8 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description sr-only">Deselect</span>
+              <span class="custom-control-label"></span>
+              <span class="custom-control-label-text sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1397,8 +1397,8 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description sr-only">Deselect</span>
+              <span class="custom-control-label"></span>
+              <span class="custom-control-label-text sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1415,8 +1415,8 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description sr-only">Deselect</span>
+              <span class="custom-control-label"></span>
+              <span class="custom-control-label-text sr-only">Deselect</span>
             </label>
           </div>
         </td>
@@ -1433,8 +1433,8 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description sr-only">Deselect</span>
+              <span class="custom-control-label"></span>
+              <span class="custom-control-label-text sr-only">Deselect</span>
             </label>
           </div>
         </td>

@@ -83,7 +83,7 @@
 		{/call}
 	{else}
 		{call .default}
-			{param contentRenderer: $contentRenderer /}
+			{param contentRenderer: $contentRenderer ?: '' /}
 			{param creationMenu: $creationMenu /}
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
@@ -183,7 +183,7 @@
 					{/if}
 				</li>
 			</ul>
-			
+
 			{if $actionItems}
 				<ul class="navbar-nav">
 					{foreach $item in $actionItems}
@@ -444,6 +444,9 @@
 	{/if}
 {/template}
 
+/**
+ * This renders the search form.
+ */
 {deltemplate ClayManagementToolbar.SearchForm}
 	{@param spritemap: string}
 	{@param? handleCloseMobileSearchClick_: any}
@@ -465,11 +468,11 @@
 	{/let}
 
 	<form {$searchFormAttributes}>
-		<div class="input-group input-group-inset">
-			<div class="input-group-input">
+		<div class="input-group">
+			<div class="input-group-item">
 				{let $inputAttributes kind="attributes"}
-					aria-label="Search"					
-					class="form-control"
+					aria-label="Search"
+					class="form-control input-group-inset input-group-inset-after"
 					name="{$searchInputName}"
 					placeholder="Search for..."
 					ref="search"
@@ -479,7 +482,7 @@
 				<input {$inputAttributes} />
 			</div>
 
-			<span class="input-group-inset-item">
+			<span class="input-group-inset-item input-group-inset-item-after">
 				{call ClayButton.render}
 					{param elementClasses: 'navbar-breakpoint-d-none' /}
 					{param events: ['click': $handleCloseMobileSearchClick_] /}

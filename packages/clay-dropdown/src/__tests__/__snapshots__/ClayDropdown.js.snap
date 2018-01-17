@@ -26,8 +26,8 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 5</span>
           </label>
         </div>
       </li>
@@ -35,8 +35,8 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -44,8 +44,8 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -55,8 +55,9 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 8</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 8</span>
+              </span>
             </label>
           </div>
         </div>
@@ -64,8 +65,9 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 9</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 9</span>
+              </span>
             </label>
           </div>
         </div>
@@ -73,8 +75,9 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 10</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 10</span>
+              </span>
             </label>
           </div>
         </div>
@@ -111,8 +114,8 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 5</span>
           </label>
         </div>
       </li>
@@ -120,8 +123,8 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -129,8 +132,8 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -140,8 +143,9 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 8</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 8</span>
+              </span>
             </label>
           </div>
         </div>
@@ -149,8 +153,9 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 9</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 9</span>
+              </span>
             </label>
           </div>
         </div>
@@ -158,8 +163,9 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 10</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 10</span>
+              </span>
             </label>
           </div>
         </div>
@@ -196,8 +202,8 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 5</span>
           </label>
         </div>
       </li>
@@ -205,8 +211,8 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -214,8 +220,8 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -225,8 +231,9 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 8</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 8</span>
+              </span>
             </label>
           </div>
         </div>
@@ -234,8 +241,9 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 9</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 9</span>
+              </span>
             </label>
           </div>
         </div>
@@ -243,8 +251,9 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 10</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 10</span>
+              </span>
             </label>
           </div>
         </div>
@@ -281,8 +290,8 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 5</span>
           </label>
         </div>
       </li>
@@ -290,8 +299,8 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -299,8 +308,8 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -310,8 +319,9 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 8</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 8</span>
+              </span>
             </label>
           </div>
         </div>
@@ -319,8 +329,9 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 9</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 9</span>
+              </span>
             </label>
           </div>
         </div>
@@ -328,8 +339,9 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 10</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 10</span>
+              </span>
             </label>
           </div>
         </div>
@@ -366,8 +378,8 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 5</span>
           </label>
         </div>
       </li>
@@ -375,8 +387,8 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -384,8 +396,8 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -395,8 +407,9 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 8</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 8</span>
+              </span>
             </label>
           </div>
         </div>
@@ -404,8 +417,9 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 9</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 9</span>
+              </span>
             </label>
           </div>
         </div>
@@ -413,8 +427,9 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 10</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 10</span>
+              </span>
             </label>
           </div>
         </div>
@@ -466,8 +481,8 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 5</span>
           </label>
         </div>
       </li>
@@ -475,8 +490,8 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -484,8 +499,8 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -495,8 +510,9 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 8</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 8</span>
+              </span>
             </label>
           </div>
         </div>
@@ -504,8 +520,9 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 9</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 9</span>
+              </span>
             </label>
           </div>
         </div>
@@ -513,8 +530,9 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 10</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 10</span>
+              </span>
             </label>
           </div>
         </div>
@@ -551,8 +569,8 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 5</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 5</span>
           </label>
         </div>
       </li>
@@ -560,8 +578,8 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -569,8 +587,8 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
         <div class="custom-control custom-checkbox custom-control-inline">
           <label>
             <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Item 7</span>
+            <span class="custom-control-label"></span>
+            <span class="custom-control-label-text">Item 7</span>
           </label>
         </div>
       </li>
@@ -580,8 +598,9 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 8</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 8</span>
+              </span>
             </label>
           </div>
         </div>
@@ -589,8 +608,9 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 9</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 9</span>
+              </span>
             </label>
           </div>
         </div>
@@ -598,8 +618,9 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Item 10</span>
+              <span class="custom-control-label">
+                <span class="custom-control-text">Item 10</span>
+              </span>
             </label>
           </div>
         </div>

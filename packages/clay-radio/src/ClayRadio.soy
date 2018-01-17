@@ -83,19 +83,19 @@
 
 		<input {$inputAttributes}></input>
 
-		<span class="custom-control-indicator"></span>
+		<span class="custom-control-label">
+			{if $labelContent}
+				{$labelContent}
+			{else}
+				{let $spanLabelClasses kind="text"}
+					custom-control-text
+					{if $hideLabel}
+						{sp}sr-only
+					{/if}
+				{/let}
 
-		{if $labelContent}
-			{$labelContent}
-		{else}
-			{let $spanLabelClasses kind="text"}
-				custom-control-description
-				{if $hideLabel}
-					{sp}sr-only
-				{/if}
-			{/let}
-
-			<span class="{$spanLabelClasses}">{$label}</span>
-		{/if}
+				<span class="{$spanLabelClasses}">{$label}</span>
+			{/if}
+		</span>
 	</label>
 {/template}

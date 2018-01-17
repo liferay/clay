@@ -9,7 +9,7 @@
 		href: string,
 		label: string,
 		separator: bool
-	]> | ?}
+	]>}
 	{@param? contentRenderer: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
@@ -49,8 +49,10 @@
 		{/if}
 	{/let}
 
+	{let $variant: $contentRenderer ?: '' /}
+
 	{let $descriptiveArea kind="html"}
-		{delcall ClayCard.DescriptiveArea variant="$contentRenderer"}
+		{delcall ClayCard.DescriptiveArea variant="$variant"}
 			{param actionItems: $actionItems /}
 			{param href: $href /}
 			{param labels: $labels /}
@@ -62,7 +64,7 @@
 	{/let}
 
 	{let $visualArea kind="html"}
-		{delcall ClayCard.VisualArea variant="$contentRenderer"}
+		{delcall ClayCard.VisualArea variant="$variant"}
 			{param fileType: $fileType /}
 			{param fileTypeStyle: $fileTypeStyle /}
 			{param icon: $icon /}
@@ -111,7 +113,7 @@
 		href: string,
 		label: string,
 		separator: bool
-	]> | ?}
+	]>}
 	{@param? href: string}
 	{@param? labels: list<?>}
 	{@param? labelStylesMap: ?}

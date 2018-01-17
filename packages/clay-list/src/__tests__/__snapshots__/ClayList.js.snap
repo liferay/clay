@@ -7,12 +7,12 @@ exports[`ClayList should render a ClayList with id 1`] = `<ul class="list-group 
 exports[`ClayList should render a ClayList with items 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -22,12 +22,12 @@ exports[`ClayList should render a ClayList with items 1`] = `
 exports[`ClayList should render a ClayList with items with description 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -37,12 +37,12 @@ exports[`ClayList should render a ClayList with items with description 1`] = `
 exports[`ClayList should render a ClayList with items with links 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -66,30 +66,30 @@ exports[`ClayList should render a ClayList with simple items with links 1`] = `
 exports[`ClayList should render a selectable ClayList 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description sr-only">Deselect</span>
+          <span class="custom-control-label"></span>
+          <span class="custom-control-label-text sr-only">Deselect</span>
         </label>
       </div>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description sr-only">Deselect</span>
+          <span class="custom-control-label"></span>
+          <span class="custom-control-label-text sr-only">Deselect</span>
         </label>
       </div>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -99,7 +99,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
 exports[`ClayList should render a selectable ClayList with action menu 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -109,10 +109,10 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu"></div>
       <div class="dropdown dropdown-action">
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
@@ -136,7 +136,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -146,10 +146,10 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu"></div>
       <div class="dropdown dropdown-action">
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
@@ -181,7 +181,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -191,12 +191,12 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -206,7 +206,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -214,7 +214,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -224,7 +224,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
       </h4>
@@ -232,7 +232,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -242,7 +242,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Ramen</a>
       </h4>
@@ -250,7 +250,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -260,7 +260,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Paella</a>
       </h4>
@@ -268,7 +268,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -278,7 +278,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Pizza</a>
       </h4>
@@ -286,7 +286,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -296,7 +296,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
       </h4>
@@ -304,7 +304,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -314,7 +314,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Tacos</a>
       </h4>
@@ -325,7 +325,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -335,12 +335,12 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -350,12 +350,12 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -365,7 +365,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
     </div>
   </li>
@@ -378,12 +378,12 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -391,7 +391,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
       </h4>
@@ -399,7 +399,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Ramen</a>
       </h4>
@@ -407,7 +407,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Paella</a>
       </h4>
@@ -415,7 +415,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Pizza</a>
       </h4>
@@ -423,7 +423,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
       </h4>
@@ -431,7 +431,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Tacos</a>
       </h4>
@@ -442,17 +442,17 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
     <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
     </div>
   </li>
@@ -465,7 +465,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -475,12 +475,12 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -490,7 +490,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -498,7 +498,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -508,7 +508,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
       </h4>
@@ -516,7 +516,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -526,7 +526,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Ramen</a>
       </h4>
@@ -534,7 +534,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -544,7 +544,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Paella</a>
       </h4>
@@ -552,7 +552,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -562,7 +562,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Pizza</a>
       </h4>
@@ -570,7 +570,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -580,7 +580,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
       </h4>
@@ -588,7 +588,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -598,7 +598,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Tacos</a>
       </h4>
@@ -609,7 +609,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -619,12 +619,12 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -634,12 +634,12 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -649,7 +649,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
     </div>
   </li>
@@ -662,7 +662,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -672,12 +672,12 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
@@ -687,7 +687,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
   </li>
@@ -695,7 +695,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -705,7 +705,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
       </h4>
@@ -716,7 +716,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -726,7 +726,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Ramen</a>
       </h4>
@@ -737,7 +737,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -747,7 +747,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Paella</a>
       </h4>
@@ -758,7 +758,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -768,7 +768,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Pizza</a>
       </h4>
@@ -779,7 +779,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -789,7 +789,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
       </h4>
@@ -800,7 +800,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -810,7 +810,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Tacos</a>
       </h4>
@@ -824,7 +824,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -834,12 +834,12 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -849,12 +849,12 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -864,7 +864,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
     </div>
   </li>
@@ -874,7 +874,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
 exports[`ClayList should render a selectable ClayList with quick action menu 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -884,7 +884,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
       </h4>
@@ -893,7 +893,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="label label-success">No Spicy</span>
       </div>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu">
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -930,7 +930,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -940,7 +940,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Ramen</a>
       </h4>
@@ -949,7 +949,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="label label-warning">Spicy</span>
       </div>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu">
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -986,7 +986,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -996,7 +996,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Paella</a>
       </h4>
@@ -1005,7 +1005,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="label label-success">No Spicy</span>
       </div>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu">
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -1042,7 +1042,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -1052,7 +1052,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Pizza</a>
       </h4>
@@ -1061,7 +1061,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="label label-success">No Spicy</span>
       </div>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu">
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -1098,7 +1098,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -1108,7 +1108,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
       </h4>
@@ -1117,7 +1117,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="label label-warning">Spicy</span>
       </div>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu">
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -1154,7 +1154,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="flex-col">
+    <div class="autofit-col">
       <span class="sticker sticker-primary rounded-circle">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
@@ -1164,7 +1164,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </span>
       </span>
     </div>
-    <div class="flex-col flex-col-expand">
+    <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">
         <a href="#">Tacos</a>
       </h4>
@@ -1173,7 +1173,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="label label-danger">Very Spicy</span>
       </div>
     </div>
-    <div class="flex-col">
+    <div class="autofit-col">
       <div class="quick-action-menu">
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">

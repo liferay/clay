@@ -13,7 +13,7 @@
 		quickAction: bool,
 		separator: bool,
 		type: string
-	]> | ?}
+	]>}
 	{@param? creationMenu: [
 		button: ?,
 		caption: string,
@@ -112,7 +112,7 @@
 			{/call}
 
 			{if $views and isNonnull($selectedView)}
-				{let $variant: $views[$selectedView].contentRenderer /}
+				{let $variant: $views[$selectedView].contentRenderer ?: '' /}
 
 				{delcall ClayDatasetDisplay.List variant="$variant"}
 					{param handleItemToggled_: $handleItemToggled_ /}
