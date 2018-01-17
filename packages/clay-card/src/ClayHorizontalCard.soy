@@ -90,7 +90,7 @@
 	<div class="card-body">
 		<div class="card-row">
 			{let $classesDescription kind="text"}
-				flex-col flex-col-expand flex-col-gutters
+				autofit-col autofit-col-expand autofit-col-gutters
 			{/let}
 
       {call ClaySticker.render}
@@ -112,7 +112,7 @@
 			</div>
 
 			{if $actionItems}
-				<div class="flex-col">
+				<div class="autofit-col">
 					{call ClayActionsDropdown.render}
 						{param items: $actionItems /}
 						{param spritemap: $spritemap /}
