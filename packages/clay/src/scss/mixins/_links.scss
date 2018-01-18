@@ -36,6 +36,17 @@
 	$focus-outline: map-get($map, focus-outline);
 	$focus-text-decoration: map-get($map, focus-text-decoration);
 
+	$active-bg: map-get($map, active-bg);
+	$active-border-color: map-get($map, active-border-color);
+	$active-color: map-get($map, active-color);
+
+	$disabled-cursor: map-get($map, disabled-cursor);
+	$disabled-opacity: map-get($map, disabled-opacity);
+	$disabled-pointer-events: map-get($map, disabled-pointer-events);
+	$disabled-hover-bg: map-get($map, disabled-hover-bg);
+	$disabled-hover-border-color: map-get($map, disabled-hover-border-color);
+	$disabled-hover-color: map-get($map, disabled-hover-color);
+
 	$lexicon-icon-margin-bottom: map-get($map, lexicon-icon-margin-bottom);
 	$lexicon-icon-margin-left: map-get($map, lexicon-icon-margin-left);
 	$lexicon-icon-margin-right: map-get($map, lexicon-icon-margin-right);
@@ -77,6 +88,26 @@
 		color: $focus-color;
 		outline: $focus-outline;
 		text-decoration: $focus-text-decoration;
+	}
+
+	&:active,
+	&.active {
+		background-color: $active-bg;
+		border-color: $active-border-color;
+		color: $active-color;
+	}
+
+	&:disabled,
+	&.disabled {
+		cursor: $disabled-cursor;
+		opacity: $disabled-opacity;
+		pointer-events: $disabled-pointer-events;
+
+		&:hover {
+			background-color: $disabled-hover-bg;
+			border-color: $disabled-hover-border-color;
+			color: $disabled-hover-color;
+		}
 	}
 
 	.lexicon-icon {
