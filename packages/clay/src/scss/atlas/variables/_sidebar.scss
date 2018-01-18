@@ -37,6 +37,7 @@ $sidebar-light: () !default;
 $sidebar-light: map-merge((
 	bg: #FFF,
 	border-left-width: 0,
+	box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
 	dt: (
 		color: $secondary
 	),
