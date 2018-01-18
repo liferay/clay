@@ -27,27 +27,35 @@ $list-group-header-title: map-merge((
 
 // List Group Title
 
+$list-group-title-link: () !default;
+$list-group-title-link: map-merge((
+	color: $body-color
+), $list-group-title-link);
+
 $list-group-title: () !default;
 $list-group-title: map-merge((
 	font-size: 1.125rem, // 18px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0,
-	margin-top: $list-group-item-flex-list-group-title-offset-top
+	margin-top: $list-group-item-flex-list-group-title-offset-top,
+	clay-link: $list-group-title-link
 ), $list-group-title);
-
-$list-group-title-link: () !default;
 
 $list-group-title-active-color: $list-group-active-color !default;
 
 // List Group Subtitle
 
+$list-group-subtitle-link: () !default;
+$list-group-subtitle-link: map-merge((
+	color: $secondary
+), $list-group-subtitle-link);
+
 $list-group-subtitle: () !default;
 $list-group-subtitle: map-merge((
 	color: $secondary,
-	margin-bottom: 0
+	margin-bottom: 0,
+	clay-link: $list-group-subtitle-link
 ), $list-group-subtitle);
-
-$list-group-subtitle-link: () !default;
 
 // List Group Text
 
