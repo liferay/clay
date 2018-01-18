@@ -1,4 +1,5 @@
 $component-tbar: () !default;
 $component-tbar: map-merge((
-	border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
+	border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
+	color: $secondary
 ), $component-tbar);

@@ -43,8 +43,5 @@
 }
 
 .component-tbar {
-	border-color: map-get($component-tbar, border-color);
-	border-style: map-get($component-tbar, border-style);
-	border-width: map-get($component-tbar, border-width);
-	height: map-get($component-tbar, height);
+	@include clay-tbar-variant($component-tbar);
 }
