@@ -41,7 +41,10 @@ $sidebar-light: map-merge((
 	dt: (
 		color: $secondary
 	),
-	panel-bg: $light
+	panel-bg: $light,
+	sidebar-list-group-title: (
+		font-size: $clay-unset
+	)
 ), $sidebar-light);
 
 $sidebar-light-navigation-bar: () !default;
