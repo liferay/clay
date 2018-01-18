@@ -49,6 +49,7 @@ $component-subtitle-link: map-merge((
 
 $component-action: () !default;
 $component-action: map-merge((
+	border-radius: $border-radius,
 	color: $secondary,
 	disabled-cursor: $disabled-cursor,
 	disabled-opacity: $btn-disabled-opacity,

@@ -105,5 +105,12 @@
 button.component-action {
 	@extend %btn-unstyled;
 
+	@include transition($btn-transition);
+
 	vertical-align: middle;
+
+	&:focus {
+		box-shadow: $btn-focus-box-shadow;
+		outline: 0;
+	}
 }
