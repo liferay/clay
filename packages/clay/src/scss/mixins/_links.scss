@@ -90,6 +90,7 @@
 		text-decoration: $focus-text-decoration;
 	}
 
+	.show > &,
 	&:active,
 	&.active {
 		background-color: $active-bg;
