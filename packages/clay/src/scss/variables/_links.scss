@@ -45,6 +45,16 @@ $component-subtitle-link: map-merge((
 	color: $secondary
 ), $component-subtitle-link);
 
+// Component Action
+
+$component-action: () !default;
+$component-action: map-merge((
+	color: $secondary,
+	disabled-cursor: $disabled-cursor,
+	disabled-opacity: $btn-disabled-opacity,
+	disabled-hover-color: $secondary
+), $component-action);
+
 // Link Outline
 
 $link-outline-border-radius: $btn-border-radius !default;
