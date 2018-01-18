@@ -30,12 +30,12 @@ $component-subtitle-link: map-merge((
 
 $component-action: () !default;
 $component-action: map-merge((
-	border-radius: $border-radius,
 	font-size: 1rem, // 16px
 	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61),
 	active-color: $body-color,
 	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
-	hover-color: $body-color
+	hover-color: $body-color,
+	disabled-bg: transparent
 ), $component-action);
 
 // Link Outline

@@ -51,9 +51,9 @@ $component-action: () !default;
 $component-action: map-merge((
 	border-radius: $border-radius,
 	color: $secondary,
+	disabled-color: $secondary,
 	disabled-cursor: $disabled-cursor,
-	disabled-opacity: $btn-disabled-opacity,
-	disabled-hover-color: $secondary
+	disabled-opacity: $btn-disabled-opacity
 ), $component-action);
 
 // Link Outline
