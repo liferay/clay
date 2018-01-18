@@ -94,6 +94,7 @@
 	@include border-radius(1px);
 	@include clay-component-btn-link;
 
+	cursor: $btn-cursor;
 	line-height: inherit;
 	vertical-align: baseline;
 }
