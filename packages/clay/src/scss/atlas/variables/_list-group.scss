@@ -22,6 +22,11 @@ $list-group-header-title: map-merge((
 
 // List Group Title
 
+$list-group-title-link: () !default;
+$list-group-title-link: map-merge((
+	hover-color: $clay-unset
+), $list-group-title-link);
+
 $list-group-title: () !default;
 $list-group-title: map-merge((
 	color: $body-color,
@@ -29,11 +34,12 @@ $list-group-title: map-merge((
 	line-height: 1.35
 ), $list-group-title);
 
-$list-group-title-link: () !default;
-$list-group-title-link: map-merge((
-	color: $body-color,
+// List Group Subtitle
+
+$list-group-subtitle-link: () !default;
+$list-group-subtitle-link: map-merge((
 	hover-color: $body-color
-), $list-group-title-link);
+), $list-group-subtitle-link);
 
 // List Group Text
 
@@ -58,7 +64,7 @@ $list-group-subtext: map-merge((
 
 $list-group-subtext-link: () !default;
 $list-group-subtext-link: map-merge((
-	hover-color: $secondary
+	hover-color: $body-color
 ), $list-group-subtext-link);
 
 // List Group Link

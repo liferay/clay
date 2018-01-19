@@ -69,9 +69,19 @@
 	@include clay-text-typography($list-group-title);
 }
 
-.list-group-title a {
-	@include clay-link($list-group-title-link);
+// .list-group-title a {
+// 	@include clay-link($list-group-title-link);
+// }
+
+// List Group Subtitle
+
+.list-group-subtitle {
+	@include clay-text-typography($list-group-subtitle);
 }
+
+// .list-group-subtitle a {
+// 	@include clay-link($list-group-subtitle-link);
+// }
 
 // List Group Text
 
@@ -211,6 +221,60 @@
 
 	@include hover-focus {
 		color: $list-group-link-hover-color;
+	}
+}
+
+// List Group Flush
+
+%list-group-flush {
+	.list-group-item {
+		border-left-width: 0;
+
+		@include border-radius(0);
+
+		border-right-width: 0;
+
+		> .autofit-col {
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+%list-group-flush-vertical {
+	.list-group-item {
+		border-left-width: 0;
+
+		@include border-radius(0);
+
+		border-right-width: 0;
+
+		> .autofit-col {
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
+	&:first-child {
+		.list-group-item:first-child {
+			border-top-width: 0;
+		}
+	}
+
+	&:last-child {
+		.list-group-item:last-child {
+			border-bottom-width: 0;
+		}
 	}
 }
 

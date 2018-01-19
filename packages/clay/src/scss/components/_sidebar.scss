@@ -20,6 +20,16 @@
 	padding-top: $sidebar-padding-top;
 }
 
+.sidebar-header {
+	.component-title {
+		@include clay-text-typography($sidebar-header-component-title);
+	}
+
+	.component-subtitle {
+		@include clay-text-typography($sidebar-header-component-subtitle);
+	}
+}
+
 // Sidebar Body
 
 .sidebar-body {
@@ -48,27 +58,36 @@
 	word-wrap: break-word;
 }
 
-// Sidebar List
+// Sidebar List Group
 
-.sidebar-list {
-	font-size: $sidebar-list-font-size;
-
-	@include list-unstyled;
-}
-
-.sidebar-list-item {
-	border-color: transparent;
-	border-style: solid;
-	border-width: $sidebar-list-item-border-top-width $sidebar-list-item-border-right-width $sidebar-list-item-border-bottom-width $sidebar-list-item-border-left-width;
+.sidebar-list-group {
 	display: flex;
-	margin-bottom: -$sidebar-list-item-border-bottom-width;
+	flex-direction: column;
+	font-size: $sidebar-list-group-font-size;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	@extend %#{$sidebar-list-group-type} !optional;
 
 	.autofit-col {
-		justify-content: center;
-		padding-bottom: $sidebar-list-item-flex-col-padding-y;
-		padding-left: $sidebar-list-item-flex-col-padding-x;
-		padding-right: $sidebar-list-item-flex-col-padding-x;
-		padding-top: $sidebar-list-item-flex-col-padding-y;
+		padding-bottom: $sidebar-list-group-autofit-col-padding-y;
+		padding-left: $sidebar-list-group-autofit-col-padding-x;
+		padding-right: $sidebar-list-group-autofit-col-padding-x;
+		padding-top: $sidebar-list-group-autofit-col-padding-y;
+
+		.list-group-title:only-child {
+			height: map-get($sidebar-list-group-sticker-size, size);
+		}
+	}
+
+	.list-group-item {
+		background-color: $sidebar-list-group-bg;
+		border-color: $sidebar-list-group-border-color;
+		padding: $sidebar-list-group-item-padding;
+	}
+
+	.sticker {
+		@include clay-sticker-size($sidebar-list-group-sticker-size);
 	}
 }
 
@@ -79,47 +98,22 @@
 	position: relative;
 }
 
-// Sidebar Title, Subtitle, Caption
-
-.sidebar-title {
-	display: block;
-	font-size: $sidebar-title-font-size;
-	font-weight: $sidebar-title-font-weight;
-	line-height: normal;
-	margin-bottom: 0;
-}
-
-.sidebar-subtitle {
-	font-size: $sidebar-subtitle-font-size;
-	font-weight: $sidebar-subtitle-font-weight;
-	line-height: normal;
-	text-transform: $sidebar-subtitle-text-transform;
-}
-
-.sidebar-caption {
-	font-size: $sidebar-caption-font-size;
-	font-weight: $sidebar-caption-font-weight;
-	text-transform: $sidebar-caption-text-transform;
-}
-
 // Sidebar Definition List (dl dt dd)
 
 .sidebar-dt {
-	font-size: $sidebar-dt-font-size;
-	font-weight: $sidebar-dt-font-weight;
-	margin-bottom: $sidebar-dt-margin-bottom;
-	text-transform: $sidebar-dt-text-transform;
+	@include clay-text-typography($sidebar-dt);
 }
 
 .sidebar-dd {
-	font-size: $sidebar-dd-font-size;
-	font-weight: $sidebar-dd-font-weight;
-	margin-bottom: $sidebar-dd-margin-bottom;
-	text-transform: $sidebar-dd-text-transform;
+	@include clay-text-typography($sidebar-dd);
 }
 
 // Sidebar Variants
 
 .sidebar-light {
 	@include clay-sidebar-variant($sidebar-light);
+}
+
+.sidebar-light .component-navigation-bar {
+	@include clay-navbar-variant($sidebar-light-navigation-bar);
 }

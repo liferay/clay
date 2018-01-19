@@ -26,7 +26,8 @@ $table-title: () !default;
 $table-title: map-merge((
 	font-size: 1rem, // 16px
 	font-weight: $font-weight-semi-bold,
-	line-height: $line-height-base
+	line-height: $line-height-base,
+	margin-bottom: 0
 ), $table-title);
 
 $table-title-link: () !default;
@@ -90,7 +91,8 @@ $table-list-title: () !default;
 $table-list-title: map-merge((
 	font-size: 1rem, // 16px
 	font-weight: $font-weight-semi-bold,
-	line-height: $headings-line-height
+	line-height: $headings-line-height,
+	margin-bottom: 0
 ), $table-list-title);
 
 $table-list-title-link: () !default;

@@ -21,7 +21,8 @@ $card-title: () !default;
 $card-title: map-merge((
 	font-size: 1rem,
 	font-weight: $font-weight-semi-bold,
-	line-height: $line-height-base
+	line-height: $line-height-base,
+	margin-bottom: 0
 ), $card-title);
 
 $card-title-link: () !default;
@@ -36,6 +37,7 @@ $card-subtitle: map-merge((
 	color: $secondary,
 	font-size: 0.875rem, // 14px
 	font-weight: $font-weight-semi-bold,
+	margin-bottom: 0,
 	margin-top: 0
 ), $card-subtitle);
 

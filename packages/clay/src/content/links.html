@@ -52,6 +52,43 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Component Action</h3>
+
+		<blockquote class="blockquote">
+			<p>Use these patterns for actions in components.</p>
+		</blockquote>
+
+		<div>
+			<h6>Anchor</h6>
+			<a class="component-action" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</a>
+			<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</a>
+		</div>
+		<div>
+			<h6>Button</h6>
+			<button class="component-action" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</button>
+			<button class="component-action" disabled type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Link Outline</h3>
 
 		<a class="link-outline link-outline-primary" href="#1">Primary</a>
