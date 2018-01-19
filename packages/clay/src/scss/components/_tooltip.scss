@@ -1,3 +1,125 @@
 .tooltip-inner {
 	@include box-shadow($tooltip-box-shadow);
 }
+
+// Tooltip Positions
+
+.clay-tooltip-bottom,
+.clay-tooltip-top {
+	.arrow {
+		left: 50%;
+		margin-left: -($tooltip-arrow-width / 2);
+	}
+}
+
+.clay-tooltip-bottom-left,
+.clay-tooltip-top-left {
+	.arrow {
+		left: $tooltip-arrow-offset;
+	}
+}
+
+.clay-tooltip-bottom-right,
+.clay-tooltip-top-right {
+	.arrow {
+		right: $tooltip-arrow-offset;
+	}
+}
+
+.clay-tooltip-left,
+.clay-tooltip-right {
+	.arrow {
+		margin-top: -($tooltip-arrow-width / 2);
+		top: 50%;
+	}
+}
+
+.clay-tooltip-left-bottom,
+.clay-tooltip-right-bottom {
+	.arrow {
+		bottom: $tooltip-arrow-offset;
+	}
+}
+
+.clay-tooltip-left-top,
+.clay-tooltip-right-top {
+	.arrow {
+		top: $tooltip-arrow-offset;
+	}
+}
+
+// Bottom
+
+.clay-tooltip-bottom,
+.clay-tooltip-bottom-left,
+.clay-tooltip-bottom-right {
+	padding-top: $tooltip-arrow-height;
+
+	.arrow {
+		top: 0;
+
+		&::before {
+			border-bottom-color: $tooltip-arrow-color;
+			border-width: 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+			bottom: 0;
+		}
+	}
+}
+
+// Left
+
+.clay-tooltip-left,
+.clay-tooltip-left-bottom,
+.clay-tooltip-left-top {
+	padding-right: $tooltip-arrow-height;
+
+	.arrow {
+		height: $tooltip-arrow-width;
+		right: 0;
+		width: $tooltip-arrow-height;
+
+		&::before {
+			border-left-color: $tooltip-arrow-color;
+			border-width: ($tooltip-arrow-width / 2) 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+			left: 0;
+		}
+	}
+}
+
+// Right
+
+.clay-tooltip-right,
+.clay-tooltip-right-bottom,
+.clay-tooltip-right-top {
+	padding-left: $tooltip-arrow-height;
+
+	.arrow {
+		height: $tooltip-arrow-width;
+		left: 0;
+		width: $tooltip-arrow-height;
+
+		&::before {
+			border-right-color: $tooltip-arrow-color;
+			border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+			right: 0;
+		}
+	}
+}
+
+// Top
+
+.clay-tooltip-top,
+.clay-tooltip-top-left,
+.clay-tooltip-top-right {
+	padding-bottom: $tooltip-arrow-height;
+
+	.arrow {
+		bottom: 0;
+
+		&::before {
+			border-top-color: $tooltip-arrow-color;
+			border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+			top: 0;
+		}
+	}
+}
