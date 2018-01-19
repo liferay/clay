@@ -38,10 +38,16 @@ $sidebar-light: map-merge((
 	bg: #FFF,
 	border-left-width: 0,
 	box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+	panel-bg: $light,
 	dt: (
 		color: $secondary
 	),
-	panel-bg: $light,
+	dd: (
+		clay-link: (
+			color: $body-color,
+			hover-color: $clay-unset
+		)
+	),
 	sidebar-list-group-title: (
 		font-size: $clay-unset
 	)
