@@ -20,7 +20,7 @@ ClayPortal.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayPortal
-	 * @type {?string|undefined}
+	 * @type {!html|string}
 	 * @default undefined
 	 */
 	content: Config.required(),
