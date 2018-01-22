@@ -480,27 +480,27 @@
 				{/let}
 
 				<input {$inputAttributes} />
+
+				<span class="input-group-inset-item input-group-inset-item-after">
+					{call ClayButton.render}
+						{param elementClasses: 'navbar-breakpoint-d-none' /}
+						{param events: ['click': $handleCloseMobileSearchClick_] /}
+						{param icon: 'times' /}
+						{param spritemap: $spritemap /}
+						{param style: 'unstyled' /}
+					{/call}
+
+					{call ClayButton.render}
+						{param elementClasses: 'navbar-breakpoint-d-block' /}
+						{param events: ['click': $handleSearchSearchClick_] /}
+						{param icon: 'search' /}
+						{param ref: 'searchButton' /}
+						{param spritemap: $spritemap /}
+						{param style: 'unstyled' /}
+						{param type: 'submit' /}
+					{/call}
+				</span>
 			</div>
-
-			<span class="input-group-inset-item input-group-inset-item-after">
-				{call ClayButton.render}
-					{param elementClasses: 'navbar-breakpoint-d-none' /}
-					{param events: ['click': $handleCloseMobileSearchClick_] /}
-					{param icon: 'times' /}
-					{param spritemap: $spritemap /}
-					{param style: 'unstyled' /}
-				{/call}
-
-				{call ClayButton.render}
-					{param elementClasses: 'navbar-breakpoint-d-block' /}
-					{param events: ['click': $handleSearchSearchClick_] /}
-					{param icon: 'search' /}
-					{param ref: 'searchButton' /}
-					{param spritemap: $spritemap /}
-					{param style: 'unstyled' /}
-					{param type: 'submit' /}
-				{/call}
-			</span>
 		</div>
 	</form>
 {/deltemplate}
