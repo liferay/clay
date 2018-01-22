@@ -40,6 +40,20 @@ th {
 		}
 	}
 
+	.autofit-col {
+		justify-content: center;
+		padding-left: $table-cell-padding;
+		padding-right: $table-cell-padding;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
 	.custom-control,
 	.form-check {
 		margin-bottom: 0;
