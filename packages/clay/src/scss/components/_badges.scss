@@ -3,8 +3,8 @@
 	border-style: $badge-border-style;
 	border-width: $badge-border-width;
 	line-height: $badge-line-height;
-	margin-bottom: 2px;
-	margin-top: 2px;
+	margin-bottom: $badge-spacer-y;
+	margin-top: $badge-spacer-y;
 	max-width: 100%;
 	white-space: inherit;
 	word-wrap: break-word;
@@ -17,6 +17,10 @@
 			color: $badge-link-hover-color;
 			text-decoration: $badge-link-hover-text-decoration;
 		}
+	}
+
+	~ .badge {
+		margin-left: $badge-spacer-x;
 	}
 
 	.inline-item {
