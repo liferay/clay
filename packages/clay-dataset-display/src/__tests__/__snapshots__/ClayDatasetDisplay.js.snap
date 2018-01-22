@@ -9,8 +9,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -29,8 +30,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -38,8 +40,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -47,8 +50,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -57,8 +61,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -66,8 +71,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -75,8 +81,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -87,7 +94,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -97,7 +104,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -107,7 +114,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -260,8 +267,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -294,8 +302,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -331,8 +340,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -367,8 +377,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -403,8 +414,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -439,8 +451,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -475,8 +488,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -511,8 +525,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -550,8 +565,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -584,8 +600,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -618,8 +635,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -664,8 +682,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -684,8 +703,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -693,8 +713,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -702,8 +723,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -712,8 +734,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -721,8 +744,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -730,8 +754,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -742,7 +767,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -752,7 +777,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -762,7 +787,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -893,8 +918,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -955,8 +981,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1020,8 +1047,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1088,8 +1116,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1156,8 +1185,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1224,8 +1254,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1292,8 +1323,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1360,8 +1392,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1431,8 +1464,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-2" class="custom-control-input" name="recipe" value="9" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1493,8 +1527,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-2" class="custom-control-input" name="recipe" value="10" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1555,8 +1590,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-2" class="custom-control-input" name="recipe" value="11" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -1627,8 +1663,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -1647,8 +1684,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -1656,8 +1694,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -1665,8 +1704,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -1675,8 +1715,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -1684,8 +1725,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -1693,8 +1735,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -1705,7 +1748,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -1715,7 +1758,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -1725,7 +1768,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -1878,8 +1921,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -1912,8 +1956,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -1949,8 +1994,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -1985,8 +2031,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2021,8 +2068,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2057,8 +2105,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2093,8 +2142,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2129,8 +2179,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2168,8 +2219,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2202,8 +2254,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2236,8 +2289,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2284,8 +2338,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -2304,8 +2359,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2313,8 +2369,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2322,8 +2379,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2332,8 +2390,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2341,8 +2400,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2350,8 +2410,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2362,7 +2423,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -2372,7 +2433,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -2382,7 +2443,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -2535,8 +2596,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2569,8 +2631,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2615,8 +2678,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox" checked="">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -2706,8 +2770,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox" checked="">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Select</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Select</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2740,8 +2805,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -2788,8 +2854,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -2808,8 +2875,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2817,8 +2885,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2826,8 +2895,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2836,8 +2906,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2845,8 +2916,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2854,8 +2926,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -2866,7 +2939,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -2876,7 +2949,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -2886,7 +2959,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -3036,8 +3109,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -3070,8 +3144,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -3116,8 +3191,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -3136,8 +3212,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3145,8 +3222,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3154,8 +3232,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3164,8 +3243,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3173,8 +3253,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3182,8 +3263,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3194,7 +3276,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -3204,7 +3286,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -3214,7 +3296,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -3344,48 +3426,49 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="custom-control custom-checkbox">
                 <label>
                   <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                  <span class="custom-control-label"></span>
-                  <div class="card card-horizontal">
-                    <div class="card-body">
-                      <div class="card-row">
-                        <span class="sticker sticker-unstyled">
-                          <span class="sticker-overlay">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                              <title>folder</title>
-                              <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
-                            </svg>
-                          </span>
-                        </span>
-                        <div class="flex-col flex-col-expand flex-col-gutters">
-                          <div class="card-title text-truncate" title="Photos">Photos</div>
-                        </div>
-                        <div class="flex-col">
-                          <div class="dropdown dropdown-action">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                                <title>ellipsis-v</title>
-                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
+                  <span class="custom-control-label">
+                    <div class="card card-horizontal">
+                      <div class="card-body">
+                        <div class="card-row">
+                          <span class="sticker sticker-unstyled">
+                            <span class="sticker-overlay">
+                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                                <title>folder</title>
+                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
                               </svg>
-                            </button>
-                            <div class="dropdown-menu">
-                              <ul class="list-unstyled">
-                                <li>
-                                  <a class=" dropdown-item" href="#1">Remove</a>
-                                </li>
-                                <li>
-                                  <a class=" dropdown-item" href="#2">Download</a>
-                                </li>
-                                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-                                <li>
-                                  <a class=" dropdown-item" href="#3">Edit</a>
-                                </li>
-                              </ul>
+                            </span>
+                          </span>
+                          <div class="flex-col flex-col-expand flex-col-gutters">
+                            <div class="card-title text-truncate" title="Photos">Photos</div>
+                          </div>
+                          <div class="flex-col">
+                            <div class="dropdown dropdown-action">
+                              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                                  <title>ellipsis-v</title>
+                                  <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
+                                </svg>
+                              </button>
+                              <div class="dropdown-menu">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a class=" dropdown-item" href="#1">Remove</a>
+                                  </li>
+                                  <li>
+                                    <a class=" dropdown-item" href="#2">Download</a>
+                                  </li>
+                                  <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+                                  <li>
+                                    <a class=" dropdown-item" href="#3">Edit</a>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </span>
                 </label>
               </div>
             </div>
@@ -3395,48 +3478,49 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="custom-control custom-checkbox">
                 <label>
                   <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                  <span class="custom-control-label"></span>
-                  <div class="card card-horizontal">
-                    <div class="card-body">
-                      <div class="card-row">
-                        <span class="sticker sticker-unstyled">
-                          <span class="sticker-overlay">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                              <title>folder</title>
-                              <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
-                            </svg>
-                          </span>
-                        </span>
-                        <div class="flex-col flex-col-expand flex-col-gutters">
-                          <div class="card-title text-truncate" title="Videos">Videos</div>
-                        </div>
-                        <div class="flex-col">
-                          <div class="dropdown dropdown-action">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                                <title>ellipsis-v</title>
-                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
+                  <span class="custom-control-label">
+                    <div class="card card-horizontal">
+                      <div class="card-body">
+                        <div class="card-row">
+                          <span class="sticker sticker-unstyled">
+                            <span class="sticker-overlay">
+                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                                <title>folder</title>
+                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
                               </svg>
-                            </button>
-                            <div class="dropdown-menu">
-                              <ul class="list-unstyled">
-                                <li>
-                                  <a class=" dropdown-item" href="#1">Remove</a>
-                                </li>
-                                <li>
-                                  <a class=" dropdown-item" href="#2">Download</a>
-                                </li>
-                                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-                                <li>
-                                  <a class=" dropdown-item" href="#3">Edit</a>
-                                </li>
-                              </ul>
+                            </span>
+                          </span>
+                          <div class="flex-col flex-col-expand flex-col-gutters">
+                            <div class="card-title text-truncate" title="Videos">Videos</div>
+                          </div>
+                          <div class="flex-col">
+                            <div class="dropdown dropdown-action">
+                              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                                  <title>ellipsis-v</title>
+                                  <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
+                                </svg>
+                              </button>
+                              <div class="dropdown-menu">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a class=" dropdown-item" href="#1">Remove</a>
+                                  </li>
+                                  <li>
+                                    <a class=" dropdown-item" href="#2">Download</a>
+                                  </li>
+                                  <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+                                  <li>
+                                    <a class=" dropdown-item" href="#3">Edit</a>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </span>
                 </label>
               </div>
             </div>
@@ -3451,15 +3535,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                          <title>exclamation-circle</title>
-                          <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
-                        </svg>
-                      </div>
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
+                      <span class="custom-control-label">
+                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                            <title>exclamation-circle</title>
+                            <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
+                          </svg>
+                        </div>
+                        <span class="sticker sticker-danger sticker-bottom-left">
+                          <span class="sticker-overlay">PDF</span>
+                        </span>
                       </span>
                     </label>
                   </div>
@@ -3509,10 +3594,11 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
+                      <span class="custom-control-label">
+                        <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
+                        <span class="sticker sticker-danger sticker-bottom-left">
+                          <span class="sticker-overlay">PDF</span>
+                        </span>
                       </span>
                     </label>
                   </div>
@@ -3562,10 +3648,11 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
+                      <span class="custom-control-label">
+                        <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
+                        <span class="sticker sticker-danger sticker-bottom-left">
+                          <span class="sticker-overlay">PDF</span>
+                        </span>
                       </span>
                     </label>
                   </div>
@@ -3615,15 +3702,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                          <title>exclamation-circle</title>
-                          <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
-                        </svg>
-                      </div>
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
+                      <span class="custom-control-label">
+                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                            <title>exclamation-circle</title>
+                            <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
+                          </svg>
+                        </div>
+                        <span class="sticker sticker-danger sticker-bottom-left">
+                          <span class="sticker-overlay">PDF</span>
+                        </span>
                       </span>
                     </label>
                   </div>
@@ -3673,10 +3761,11 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
+                      <span class="custom-control-label">
+                        <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
+                        <span class="sticker sticker-danger sticker-bottom-left">
+                          <span class="sticker-overlay">PDF</span>
+                        </span>
                       </span>
                     </label>
                   </div>
@@ -3726,15 +3815,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                          <title>exclamation-circle</title>
-                          <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
-                        </svg>
-                      </div>
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
+                      <span class="custom-control-label">
+                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                            <title>exclamation-circle</title>
+                            <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
+                          </svg>
+                        </div>
+                        <span class="sticker sticker-danger sticker-bottom-left">
+                          <span class="sticker-overlay">PDF</span>
+                        </span>
                       </span>
                     </label>
                   </div>
@@ -3787,12 +3877,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <span class="sticker sticker-danger rounded-circle sticker-xl">
-                          <span class="sticker-overlay">FA</span>
-                        </span>
-                      </div>
+                      <span class="custom-control-label">
+                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                          <span class="sticker sticker-danger rounded-circle sticker-xl">
+                            <span class="sticker-overlay">FA</span>
+                          </span>
+                        </div>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3837,14 +3928,15 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <span class="sticker sticker-primary rounded-circle sticker-xl">
-                          <span class="sticker-overlay">
-                            <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+                      <span class="custom-control-label">
+                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                          <span class="sticker sticker-primary rounded-circle sticker-xl">
+                            <span class="sticker-overlay">
+                              <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+                            </span>
                           </span>
-                        </span>
-                      </div>
+                        </div>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3889,12 +3981,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox">
                     <label>
                       <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <span class="sticker sticker-primary rounded-circle sticker-xl">
-                          <span class="sticker-overlay">AC</span>
-                        </span>
-                      </div>
+                      <span class="custom-control-label">
+                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                          <span class="sticker sticker-primary rounded-circle sticker-xl">
+                            <span class="sticker-overlay">AC</span>
+                          </span>
+                        </div>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3948,8 +4041,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -3968,8 +4062,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3977,8 +4072,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3986,8 +4082,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -3996,8 +4093,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4005,8 +4103,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4014,8 +4113,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4026,7 +4126,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -4036,7 +4136,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -4046,7 +4146,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -4177,8 +4277,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4239,8 +4340,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4304,8 +4406,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4372,8 +4475,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4440,8 +4544,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4508,8 +4613,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4576,8 +4682,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4644,8 +4751,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4715,8 +4823,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-2" class="custom-control-input" name="recipe" value="9" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4777,8 +4886,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-2" class="custom-control-input" name="recipe" value="10" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4839,8 +4949,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="custom-control custom-checkbox">
               <label>
                 <input aria-labelledby="group-2" class="custom-control-input" name="recipe" value="11" ref="input" type="checkbox">
-                <span class="custom-control-label"></span>
-                <span class="custom-control-label-text sr-only">Deselect</span>
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text sr-only">Deselect</span>
+                </span>
               </label>
             </div>
           </div>
@@ -4911,8 +5022,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -4931,8 +5043,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4940,8 +5053,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4949,8 +5063,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4959,8 +5074,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4968,8 +5084,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4977,8 +5094,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -4989,7 +5107,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -4999,7 +5117,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -5009,7 +5127,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -5162,8 +5280,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5196,8 +5315,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5233,8 +5353,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5269,8 +5390,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5305,8 +5427,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5341,8 +5464,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5377,8 +5501,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5413,8 +5538,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5452,8 +5578,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5486,8 +5613,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5520,8 +5648,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5566,8 +5695,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox" checked="">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -5654,8 +5784,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox" checked="">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Select</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Select</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5688,8 +5819,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5734,8 +5866,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           <div class="custom-control custom-checkbox">
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -5825,8 +5958,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5859,8 +5993,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5896,8 +6031,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" checked="" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Select</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Select</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5932,8 +6068,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -5968,8 +6105,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6004,8 +6142,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6040,8 +6179,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6076,8 +6216,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6115,8 +6256,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6149,8 +6291,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6183,8 +6326,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6229,8 +6373,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
           <div class="custom-control custom-checkbox">
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -6317,8 +6462,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input checked="" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Select</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Select</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6353,8 +6499,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6389,8 +6536,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6425,8 +6573,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6461,8 +6610,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6497,8 +6647,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6545,8 +6696,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Select Page</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Select Page</span>
+              </span>
             </label>
           </div>
         </li>
@@ -6565,8 +6717,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -6574,8 +6727,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -6583,8 +6737,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -6593,8 +6748,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 1</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 1</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -6602,8 +6758,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 2</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 2</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -6611,8 +6768,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                   <div class="custom-control custom-checkbox custom-control-inline">
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-label-text">Item 3</span>
+                      <span class="custom-control-label">
+                        <span class="custom-control-label-text">Item 3</span>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -6623,7 +6781,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                       <label>
                         <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 1</span>
+                          <span class="custom-control-label-text">Item 1</span>
                         </span>
                       </label>
                     </div>
@@ -6633,7 +6791,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                       <label>
                         <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 2</span>
+                          <span class="custom-control-label-text">Item 2</span>
                         </span>
                       </label>
                     </div>
@@ -6643,7 +6801,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                       <label>
                         <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                         <span class="custom-control-label">
-                          <span class="custom-control-text">Item 3</span>
+                          <span class="custom-control-label-text">Item 3</span>
                         </span>
                       </label>
                     </div>
@@ -6793,8 +6951,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6829,8 +6988,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6865,8 +7025,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6901,8 +7062,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6937,8 +7099,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>
@@ -6973,8 +7136,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="custom-control custom-checkbox">
                   <label>
                     <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text sr-only">Deselect</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text sr-only">Deselect</span>
+                    </span>
                   </label>
                 </div>
               </td>

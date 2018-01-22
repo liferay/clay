@@ -8,8 +8,9 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -176,8 +177,9 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -352,8 +354,9 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
                 <div class="custom-control custom-checkbox custom-control-inline">
                   <label>
                     <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text">Item 1</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text">Item 1</span>
+                    </span>
                   </label>
                 </div>
               </div>
@@ -361,8 +364,9 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
                 <div class="custom-control custom-checkbox custom-control-inline">
                   <label>
                     <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text">Item 2</span>
+                    <span class="custom-control-label">
+                      <span class="custom-control-label-text">Item 2</span>
+                    </span>
                   </label>
                 </div>
               </div>
@@ -533,7 +537,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
                     <label>
                       <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
                       <span class="custom-control-label">
-                        <span class="custom-control-text">Item 1</span>
+                        <span class="custom-control-label-text">Item 1</span>
                       </span>
                     </label>
                   </div>
@@ -543,7 +547,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
                     <label>
                       <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
                       <span class="custom-control-label">
-                        <span class="custom-control-text">Item 2</span>
+                        <span class="custom-control-label-text">Item 2</span>
                       </span>
                     </label>
                   </div>
@@ -553,7 +557,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
                     <label>
                       <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
                       <span class="custom-control-label">
-                        <span class="custom-control-text">Item 3</span>
+                        <span class="custom-control-label-text">Item 3</span>
                       </span>
                     </label>
                   </div>
@@ -690,8 +694,9 @@ exports[`ClayManagementToolbar should render a management toolbar with id in act
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -1028,8 +1033,9 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
         <div class="custom-control custom-checkbox">
           <label>
             <input class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -1097,8 +1103,9 @@ exports[`ClayManagementToolbar should render a management toolbar with state act
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
