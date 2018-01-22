@@ -15,10 +15,9 @@ describe('ClayPortal', function() {
 				IncrementalDOM.elementOpen('div');
 				IncrementalDOM.text('Portal');
 				IncrementalDOM.elementClose('div');
-			}
+			},
 		});
 
 		expect(component).toMatchSnapshot();
 	});
-
 });

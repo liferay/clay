@@ -7,8 +7,7 @@ import templates from './ClayPortal.soy.js';
 /**
  * Metal ClayPortal component.
  */
-class ClayPortal extends Component {
-}
+class ClayPortal extends Component {}
 
 /**
  * State definition.
