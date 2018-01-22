@@ -1,5 +1,4 @@
 .btn {
-	cursor: $btn-cursor;
 	font-size: $btn-font-size;
 
 	@include clay-scale-component {
@@ -10,7 +9,9 @@
 		padding-top: $btn-padding-y-mobile;
 	}
 
-	// Will need to be revisited if action is taken on https://github.com/twbs/bootstrap/issues/24156
+	&:not(:disabled):not(.disabled) {
+		cursor: $btn-cursor;
+	}
 
 	&.disabled,
 	&:disabled {
