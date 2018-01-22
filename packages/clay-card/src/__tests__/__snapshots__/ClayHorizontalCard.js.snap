@@ -12,7 +12,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with a different 
           </svg>
         </span>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters">
+      <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate" title="My Title">My Title</div>
       </div>
     </div>
@@ -32,10 +32,10 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
           </svg>
         </span>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters">
+      <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate" title="My Title">My Title</div>
       </div>
-      <div class="flex-col">
+      <div class="autofit-col">
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -72,7 +72,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with classes 1`] 
           </svg>
         </span>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters">
+      <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate" title="My Title">My Title</div>
       </div>
     </div>
@@ -92,7 +92,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with href 1`] = `
           </svg>
         </span>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters">
+      <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <a class=" card-title text-truncate" href="#1">My Title</a>
       </div>
     </div>
@@ -112,7 +112,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
           </svg>
         </span>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters">
+      <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate" title="My Title">My Title</div>
       </div>
     </div>
@@ -137,7 +137,7 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
                 </svg>
               </span>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
+            <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate" title="My Title">My Title</div>
             </div>
           </div>
@@ -165,7 +165,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = 
                 </svg>
               </span>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
+            <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate" title="My Title">My Title</div>
             </div>
           </div>
@@ -193,7 +193,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
                 </svg>
               </span>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
+            <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate" title="My Title">My Title</div>
             </div>
           </div>
@@ -221,7 +221,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
                 </svg>
               </span>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
+            <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate" title="My Title">My Title</div>
             </div>
           </div>
@@ -249,7 +249,7 @@ exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
                 </svg>
               </span>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
+            <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate" title="My Title">My Title</div>
             </div>
           </div>
@@ -272,7 +272,7 @@ exports[`ClayHorizontalCard should render the default markup 1`] = `
           </svg>
         </span>
       </span>
-      <div class="flex-col flex-col-expand flex-col-gutters">
+      <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate" title="My Title">My Title</div>
       </div>
     </div>

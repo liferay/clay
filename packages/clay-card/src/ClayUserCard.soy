@@ -76,7 +76,7 @@
 
     <div class="card-body">
     	<div class="card-row">
-    		<div class="flex-col flex-col-expand">
+    		<div class="autofit-col autofit-col-expand">
     			{if $href}
     				{call ClayLink.render}
     					{param elementClasses: 'card-title text-truncate' /}
@@ -93,7 +93,7 @@
     		</div>
 
     		{if $actionItems and $spritemap}
-    			<div class="flex-col">
+    			<div class="autofit-col">
     				{call ClayActionsDropdown.render}
     					{param items: $actionItems /}
     					{param spritemap: $spritemap /}

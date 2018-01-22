@@ -20,7 +20,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
                 </svg>
               </span>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
+            <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate" title="Photos">Photos</div>
             </div>
           </div>
@@ -39,7 +39,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
                 </svg>
               </span>
             </span>
-            <div class="flex-col flex-col-expand flex-col-gutters">
+            <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate" title="Videos">Videos</div>
             </div>
           </div>
@@ -64,7 +64,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <a class=" card-title text-truncate" href="#">Hamburger</a>
               <div class="card-subtitle text-truncate" title="U.S.A">U.S.A</div>
               <div class="card-detail">
@@ -85,7 +85,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <a class=" card-title text-truncate" href="#">Ramen</a>
               <div class="card-subtitle text-truncate" title="China">China</div>
               <div class="card-detail">
@@ -106,7 +106,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <a class=" card-title text-truncate" href="#">Paella</a>
               <div class="card-subtitle text-truncate" title="Spain">Spain</div>
               <div class="card-detail">
@@ -132,7 +132,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <a class=" card-title text-truncate" href="#">Pizza</a>
               <div class="card-subtitle text-truncate" title="Italy">Italy</div>
               <div class="card-detail">
@@ -153,7 +153,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <a class=" card-title text-truncate" href="#">Carcamusas</a>
               <div class="card-subtitle text-truncate" title="Toledo">Toledo</div>
               <div class="card-detail">
@@ -179,7 +179,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <a class=" card-title text-truncate" href="#">Tacos</a>
               <div class="card-subtitle text-truncate" title="Mexico">Mexico</div>
               <div class="card-detail">
@@ -204,7 +204,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <div class="card-title text-truncate" title="Ferrán Adriá">Ferrán Adriá</div>
             </div>
           </div>
@@ -224,7 +224,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <div class="card-title text-truncate" title="Gordon Ramsay">Gordon Ramsay</div>
             </div>
           </div>
@@ -242,7 +242,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         </div>
         <div class="card-body">
           <div class="card-row">
-            <div class="flex-col flex-col-expand">
+            <div class="autofit-col autofit-col-expand">
               <div class="card-title text-truncate" title="Alberto Chicote">Alberto Chicote</div>
             </div>
           </div>
