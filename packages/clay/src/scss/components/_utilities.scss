@@ -21,8 +21,11 @@
 // Close
 
 .close {
-	cursor: $btn-cursor;
 	text-align: center;
+
+	&:not([disabled]):not(.disabled) {
+		cursor: $btn-cursor;
+	}
 }
 
 // Autofit Row

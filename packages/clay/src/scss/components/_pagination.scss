@@ -28,6 +28,10 @@
 		z-index: 3;
 	}
 
+	&:not(:disabled):not(.disabled) {
+		cursor: $pagination-link-cursor;
+	}
+
 	&.btn-unstyled {
 		background-color: $pagination-bg;
 		border-width: $pagination-border-width;

@@ -77,6 +77,10 @@
 	&:focus {
 		z-index: $zindex-navbar-toggler-focus;
 	}
+
+	&:not(:disabled):not(.disabled) {
+		cursor: $navbar-toggler-cursor;
+	}
 }
 
 .navbar-toggler-link {
