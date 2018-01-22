@@ -1,12 +1,5 @@
 $navbar-underline-active-bg: lighten(saturate($component-active-bg, 3.40), 21.18) !default;
 
-// Navbar Transparent
-
-$navbar-transparent: (
-	border-color: darken(desaturate(adjust-hue($light, 10), 3.03), 12.55),
-	link-active-color: $body-color
-) !default;
-
 // Navbar Light
 
 $navbar-light-color: $secondary !default;

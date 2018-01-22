@@ -21,27 +21,48 @@ $list-group-header-title: () !default;
 $list-group-header-title: map-merge((
 	font-size: 1rem,
 	font-weight: $font-weight-semi-bold,
-	line-height: $headings-line-height
+	line-height: $headings-line-height,
+	margin-bottom: 0
 ), $list-group-header-title);
 
 // List Group Title
+
+$list-group-title-link: () !default;
+$list-group-title-link: map-merge((
+	color: $body-color
+), $list-group-title-link);
 
 $list-group-title: () !default;
 $list-group-title: map-merge((
 	font-size: 1.125rem, // 18px
 	font-weight: $font-weight-semi-bold,
-	margin-top: $list-group-item-flex-list-group-title-offset-top
+	margin-bottom: 0,
+	margin-top: $list-group-item-flex-list-group-title-offset-top,
+	clay-link: $list-group-title-link
 ), $list-group-title);
 
-$list-group-title-link: () !default;
-
 $list-group-title-active-color: $list-group-active-color !default;
+
+// List Group Subtitle
+
+$list-group-subtitle-link: () !default;
+$list-group-subtitle-link: map-merge((
+	color: $secondary
+), $list-group-subtitle-link);
+
+$list-group-subtitle: () !default;
+$list-group-subtitle: map-merge((
+	color: $secondary,
+	margin-bottom: 0,
+	clay-link: $list-group-subtitle-link
+), $list-group-subtitle);
 
 // List Group Text
 
 $list-group-text: () !default;
 $list-group-text: map-merge((
-	color: $body-color
+	color: $body-color,
+	margin-bottom: 0
 ), $list-group-text);
 
 $list-group-text-link: () !default;
@@ -55,7 +76,8 @@ $list-group-text-active-color: $list-group-active-color !default;
 
 $list-group-subtext: () !default;
 $list-group-subtext: map-merge((
-	color: $secondary
+	color: $secondary,
+	margin-bottom: 0
 ), $list-group-subtext);
 
 $list-group-subtext-link: () !default;

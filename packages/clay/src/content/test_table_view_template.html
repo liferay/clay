@@ -22,13 +22,13 @@ section: Visual Tests
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
-				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1">Action</a>
-					<a class="dropdown-item" href="#1">Another action</a>
-					<a class="dropdown-item" href="#1">Something else here</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#1">Separated link</a>
-				</div>
+				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+					<li><a class="dropdown-item" href="#1">Action</a></li>
+					<li><a class="dropdown-item" href="#1">Another action</a></li>
+					<li><a class="dropdown-item" href="#1">Something else here</a></li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#1">Separated link</a></li>
+				</ul>
 			</li>
 		</ul>
 	</div>
@@ -67,12 +67,12 @@ section: Visual Tests
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu">
-							<a class="dropdown-item" href="#1">App Section 4</a>
-							<a class="dropdown-item" href="#1">App Section 5</a>
-							<a class="dropdown-item" href="#1">App Section 6</a>
-							<a class="dropdown-item" href="#1">App Section 7</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu">
+							<li><a class="dropdown-item" href="#1">App Section 4</a></li>
+							<li><a class="dropdown-item" href="#1">App Section 5</a></li>
+							<li><a class="dropdown-item" href="#1">App Section 6</a></li>
+							<li><a class="dropdown-item" href="#1">App Section 7</a></li>
+						</ul>
 					</li>
 				</ul>
 			</div>
@@ -103,11 +103,11 @@ section: Visual Tests
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#filter" />
 					</svg>
 				</a>
-				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" href="#1">Filter Action 1</a>
-					<a class="dropdown-item" href="#1">Filter Action 2</a>
-					<a class="dropdown-item" href="#1">Filter Action 3</a>
-				</div>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#1">Filter Action 1</a></li>
+					<li><a class="dropdown-item" href="#1">Filter Action 2</a></li>
+					<li><a class="dropdown-item" href="#1">Filter Action 3</a></li>
+				</ul>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced order-arrow-up-active" href="#1">
@@ -154,32 +154,38 @@ section: Visual Tests
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
 					</svg>
 				</a>
-				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
-					<a class="dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-							</svg>
-						</span>
-						List View
-					</a>
-					<a class="active dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
-							</svg>
-						</span>
-						Table View
-					</a>
-					<a class="dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-							</svg>
-						</span>
-						Card View
-					</a>
-				</div>
+				<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+								</svg>
+							</span>
+							List View
+						</a>
+					</li>
+					<li>
+						<a class="active dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+								</svg>
+							</span>
+							Table View
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+								</svg>
+							</span>
+							Card View
+						</a>
+					</li>
+				</ul>
 			</li>
 			<li class="nav-item">
 				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
@@ -269,12 +275,12 @@ section: Visual Tests
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Remove</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1">Remove</a></li>
+									<li><a class="dropdown-item" href="#1">Edit</a></li>
+									<li><a class="dropdown-item" href="#1">Move</a></li>
+									<li><a class="dropdown-item" href="#1">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -371,12 +377,12 @@ section: Visual Tests
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Remove</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-							</div>
+							<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<li><a class="dropdown-item" href="#1">Remove</a></li>
+								<li><a class="dropdown-item" href="#1">Edit</a></li>
+								<li><a class="dropdown-item" href="#1">Move</a></li>
+								<li><a class="dropdown-item" href="#1">Checkout</a></li>
+							</ul>
 						</div>
 					</td>
 				</tr>

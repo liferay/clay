@@ -1,0 +1,13 @@
+@mixin clay-tbar-variant($map) {
+	$color: map-get($map, color);
+	$border-color: map-get($component-tbar, border-color);
+	$border-style: map-get($component-tbar, border-style);
+	$border-width: map-get($component-tbar, border-width);
+	$height: map-get($component-tbar, height);
+
+	color: $color;
+	border-color: $border-color;
+	border-style: $border-style;
+	border-width: $border-width;
+	height: $height;
+}
