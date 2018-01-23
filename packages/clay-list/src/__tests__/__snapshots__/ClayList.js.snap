@@ -123,17 +123,6 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -160,21 +149,32 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
 </ul>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
 `;
 
 exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
@@ -917,17 +917,6 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -973,17 +962,6 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -1029,17 +1007,6 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -1085,17 +1052,6 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -1141,17 +1097,6 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -1197,21 +1142,76 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
             <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
 </ul>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
 `;
 
 exports[`ClayList should render the default markup 1`] = `<ul class="list-group show-quick-actions-on-hover"></ul>`;

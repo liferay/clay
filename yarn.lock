@@ -7584,79 +7584,58 @@ metal-clipboard@^2.0.0:
     metal-dom "^2.0.0"
     metal-state "^2.0.0"
 
-metal-component@^2.0.0:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/metal-component/-/metal-component-2.15.0.tgz#73da2c28bba59e3553b14072403c78a4034dc7b5"
+metal-component@^2.0.0, metal-component@^2.13.2, metal-component@^2.16.0, metal-component@^2.16.3:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/metal-component/-/metal-component-2.16.3.tgz#3e59566862e8e90808594fc336c3c38049bceae1"
   dependencies:
-    metal "^2.15.0"
-    metal-dom "^2.15.0"
-    metal-events "^2.15.0"
-    metal-state "^2.15.0"
-
-metal-component@^2.13.2, metal-component@^2.14.0, metal-component@^2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/metal-component/-/metal-component-2.14.1.tgz#cb131d4a55c4b296552c2e676b17b1d137a7d5b9"
-  dependencies:
-    metal "^2.14.0"
-    metal-dom "^2.14.0"
-    metal-events "^2.14.0"
-    metal-state "^2.14.0"
+    metal "^2.16.2"
+    metal-dom "^2.16.2"
+    metal-events "^2.16.2"
+    metal-state "^2.16.2"
 
 metal-debounce@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/metal-debounce/-/metal-debounce-2.0.0.tgz#24cf659a8f7884a59ea4319e210734293d94f0ad"
 
-metal-dom@^2.0.0, metal-dom@^2.13.2, metal-dom@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/metal-dom/-/metal-dom-2.14.0.tgz#39a42c9293fd748038f83d2a57f898ee42357ee5"
+metal-dom@^2.0.0, metal-dom@^2.13.2, metal-dom@^2.16.0, metal-dom@^2.16.2:
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/metal-dom/-/metal-dom-2.16.2.tgz#fa61235822f9182f11f74a5151140f235d59d2c1"
   dependencies:
-    metal "^2.14.0"
-    metal-events "^2.14.0"
+    metal "^2.16.2"
+    metal-events "^2.16.2"
 
-metal-dom@^2.15.0:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/metal-dom/-/metal-dom-2.15.0.tgz#340911e5593e4a5b93777a300cc90669e7faaa9e"
+metal-events@^2.0.0, metal-events@^2.16.0, metal-events@^2.16.2, metal-events@^2.2.3, metal-events@^2.6.4:
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/metal-events/-/metal-events-2.16.2.tgz#28571e0b152a723f239f355d91566b71080c8491"
   dependencies:
-    metal "^2.15.0"
-    metal-events "^2.15.0"
+    metal "^2.16.2"
 
-metal-events@^2.0.0, metal-events@^2.14.0, metal-events@^2.6.4:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/metal-events/-/metal-events-2.14.0.tgz#05567cce88bc24e4d6ce9f04d5fc5c53e4636314"
-  dependencies:
-    metal "^2.14.0"
-
-metal-events@^2.15.0, metal-events@^2.2.3:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/metal-events/-/metal-events-2.15.0.tgz#169f5fd54a97502532385948effedfaf8a3880ae"
-  dependencies:
-    metal "^2.15.0"
-
-metal-incremental-dom@^2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/metal-incremental-dom/-/metal-incremental-dom-2.14.1.tgz#290f0ee115b305aa964548d11a4e996752a34259"
+metal-incremental-dom@^2.16.0, metal-incremental-dom@^2.16.3:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/metal-incremental-dom/-/metal-incremental-dom-2.16.3.tgz#da54e2d41678301a7c46e8e4d8a220a32a33cc48"
   dependencies:
     incremental-dom "^0.5.1"
     incremental-dom-string "0.0.2"
-    metal "^2.14.0"
-    metal-component "^2.14.1"
-    metal-dom "^2.14.0"
+    metal "^2.16.2"
+    metal-component "^2.16.3"
+    metal-dom "^2.16.2"
 
-metal-jest-serializer@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/metal-jest-serializer/-/metal-jest-serializer-1.0.1.tgz#ec111863670d1c028fb9374a5b1a224052e03af4"
+metal-jest-serializer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/metal-jest-serializer/-/metal-jest-serializer-2.0.0.tgz#b10a095af1ca1d7d157c080b101f0ab8595f4f07"
   dependencies:
     js-beautify "^1.6.11"
+    metal-incremental-dom "^2.16.0"
 
 metal-jsx@^2.13.2:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/metal-jsx/-/metal-jsx-2.14.1.tgz#1249f671435aaa5260a673b2e3a806c09a5c3fc1"
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/metal-jsx/-/metal-jsx-2.16.3.tgz#3175a9c15bd02ec1da3dcd58d28bc1616ab30d5d"
   dependencies:
-    metal "^2.14.0"
-    metal-component "^2.14.1"
-    metal-dom "^2.14.0"
-    metal-incremental-dom "^2.14.1"
-    metal-state "^2.14.0"
+    metal "^2.16.2"
+    metal-component "^2.16.3"
+    metal-dom "^2.16.2"
+    metal-incremental-dom "^2.16.3"
+    metal-state "^2.16.2"
 
 metal-keyboard-focus@^2.0.0:
   version "2.0.1"
@@ -7705,11 +7684,11 @@ metal-scrollspy@^2.0.0:
     metal-position "^2.0.0"
     metal-state "^2.0.0"
 
-metal-soy-bundle@^2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/metal-soy-bundle/-/metal-soy-bundle-2.14.1.tgz#cab137cd63443e47e746f50c725567e0904f7fcb"
+metal-soy-bundle@^2.16.3:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/metal-soy-bundle/-/metal-soy-bundle-2.16.3.tgz#7980b02118985bafae4785083554201aff4d6cd0"
   dependencies:
-    metal-incremental-dom "^2.14.1"
+    metal-incremental-dom "^2.16.3"
 
 metal-soy-critic@^2.4.0:
   version "2.4.0"
@@ -7725,16 +7704,16 @@ metal-soy-critic@^2.4.0:
     parsimmon "^1.2.0"
     soyparser "^1.0.0"
 
-metal-soy@^2.0.0, metal-soy@^2.13.2, metal-soy@^2.14.0:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/metal-soy/-/metal-soy-2.14.1.tgz#f5ac31709f6e7ec86cb5976c2aa9da546c05a869"
+metal-soy@^2.0.0, metal-soy@^2.13.2, metal-soy@^2.16.0:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/metal-soy/-/metal-soy-2.16.3.tgz#5cbcbbf3daee1a8f3a6644b57e78117b77c0950b"
   dependencies:
-    metal "^2.14.0"
-    metal-component "^2.14.1"
-    metal-dom "^2.14.0"
-    metal-incremental-dom "^2.14.1"
-    metal-soy-bundle "^2.14.1"
-    metal-state "^2.14.0"
+    metal "^2.16.2"
+    metal-component "^2.16.3"
+    metal-dom "^2.16.2"
+    metal-incremental-dom "^2.16.3"
+    metal-soy-bundle "^2.16.3"
+    metal-state "^2.16.2"
 
 metal-state@2.7.0:
   version "2.7.0"
@@ -7743,19 +7722,12 @@ metal-state@2.7.0:
     metal "^2.6.4"
     metal-events "^2.6.4"
 
-metal-state@^2.0.0, metal-state@^2.15.0:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/metal-state/-/metal-state-2.15.0.tgz#e50947264d6a482861441e4e354a32652c0807d4"
+metal-state@^2.0.0, metal-state@^2.16.0, metal-state@^2.16.2:
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/metal-state/-/metal-state-2.16.2.tgz#de986eea38c6daf1d51512b1981279b015a8889c"
   dependencies:
-    metal "^2.15.0"
-    metal-events "^2.15.0"
-
-metal-state@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/metal-state/-/metal-state-2.14.0.tgz#096f2572bd29d5fa1c06d2a5eec19790f0c0da1b"
-  dependencies:
-    metal "^2.14.0"
-    metal-events "^2.14.0"
+    metal "^2.16.2"
+    metal-events "^2.16.2"
 
 metal-storage@^1.1.0:
   version "1.1.0"
@@ -7788,8 +7760,8 @@ metal-toggler@^2.0.0:
     metal-state "^2.0.0"
 
 metal-tools-soy@^4.2.1:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/metal-tools-soy/-/metal-tools-soy-4.2.8.tgz#48e5c3d56787021287ea78c5b3fdf4d20e34d8a0"
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/metal-tools-soy/-/metal-tools-soy-4.2.9.tgz#6fdbd06cf3da1b6822b1e87122c6090d71f3b6a6"
   dependencies:
     globby "^6.1.0"
     gulp-if "^2.0.0"
@@ -7826,20 +7798,16 @@ metal-uri@^2.0.0:
     path-browserify "0.0.0"
     url "^0.11.0"
 
-metal-web-component@^2.14.0:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/metal-web-component/-/metal-web-component-2.14.1.tgz#809df35cbf58e871c28e06e42600f64fba6f8a1d"
+metal-web-component@^2.16.0:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/metal-web-component/-/metal-web-component-2.16.3.tgz#b1c5db1935e48ad89d56fa3fb2e0110df0553ad0"
   dependencies:
-    metal "^2.14.0"
+    metal "^2.16.2"
     metal-state "2.7.0"
 
-metal@^2.0.0, metal@^2.13.2, metal@^2.14.0, metal@^2.6.4:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/metal/-/metal-2.14.0.tgz#4d9dc1235697c9c190d09bb1acd408809bfe76c0"
-
-metal@^2.15.0:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/metal/-/metal-2.15.0.tgz#0618a17bcfc2ed0e19c55a99c5923d14d3b284b4"
+metal@^2.0.0, metal@^2.13.2, metal@^2.16.0, metal@^2.16.2, metal@^2.6.4:
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/metal/-/metal-2.16.2.tgz#11e1f1fee92575c574a4c0289853ed5327dda6cf"
 
 metalsmith-define@^1.0.0:
   version "1.0.0"

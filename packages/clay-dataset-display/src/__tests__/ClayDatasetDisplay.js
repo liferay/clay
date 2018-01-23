@@ -513,7 +513,7 @@ describe('ClayDatasetDisplay', function() {
 
 		let filtersDropdown =
 			component.refs.managementToolbar.refs.filters.refs.dropdown;
-		filtersDropdown.refs.dropdownButton.element.click();
+		filtersDropdown.refs.portal.refs.dropdownButton.element.click();
 
 		jest.runAllTimers();
 
@@ -861,17 +861,19 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(component).toMatchSnapshot();
 
-		component.refs.managementToolbar.refs.viewTypesDropdown.element
-			.querySelectorAll('ul li')[1]
-			.click();
+		let element =
+			component.refs.managementToolbar.refs.viewTypesDropdown.refs
+				.dropdown.refs.portal.element;
+		element.querySelectorAll('ul li')[1].click();
 
 		jest.runAllTimers();
 
 		expect(component).toMatchSnapshot();
 
-		component.refs.managementToolbar.refs.viewTypesDropdown.element
-			.querySelectorAll('ul li')[2]
-			.click();
+		element =
+			component.refs.managementToolbar.refs.viewTypesDropdown.refs
+				.dropdown.refs.portal.element;
+		element.querySelectorAll('ul li')[2].click();
 
 		jest.runAllTimers();
 

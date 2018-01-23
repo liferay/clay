@@ -134,7 +134,10 @@ describe('ClayActionsDropdown', function() {
 
 		const spy = jest.spyOn(clayActionsDropdown.refs.dropdown, 'emit');
 
-		clayActionsDropdown.refs.dropdown.refs.dropdownButton.element.click();
+		const element =
+			clayActionsDropdown.refs.dropdown.refs.portal.refs.dropdownButton
+				.element;
+		element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));
