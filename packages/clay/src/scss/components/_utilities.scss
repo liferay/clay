@@ -133,6 +133,10 @@
 	display: inline-flex;
 	vertical-align: middle;
 
+	.inline-item {
+		display: inline;
+	}
+
 	.lexicon-icon {
 		margin-top: $inline-item-lexicon-icon-margin-top;
 	}
