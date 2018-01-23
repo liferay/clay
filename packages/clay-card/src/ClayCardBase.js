@@ -10,12 +10,12 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
 import actionItemsValidator from './action_items_validator';
-import templates from './ClayCard.soy.js';
+import templates from './ClayCardBase.soy.js';
 
 /**
- * Metal ClayCard component.
+ * Metal ClayCardBase component.
  */
-class ClayCard extends Component {
+class ClayCardBase extends Component {
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -31,11 +31,11 @@ class ClayCard extends Component {
  * @static
  * @type {!Object}
  */
-ClayCard.STATE = {
+ClayCardBase.STATE = {
 	/**
 	 * List of items to display in the actions menu.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
@@ -44,7 +44,7 @@ ClayCard.STATE = {
 	/**
 	 * Content Renderer name of card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?array}
 	 * @default image
 	 */
@@ -53,7 +53,7 @@ ClayCard.STATE = {
 	/**
 	 * Flag to indicate if the card is disabled or not.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -62,7 +62,7 @@ ClayCard.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -71,7 +71,7 @@ ClayCard.STATE = {
 	/**
 	 * Type of the file represented in the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -80,7 +80,7 @@ ClayCard.STATE = {
 	/**
 	 * Style of type of the file represented in the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string}
 	 * @default primary
 	 */
@@ -98,7 +98,7 @@ ClayCard.STATE = {
 	/**
 	 * Group Index the card belongs to.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -107,7 +107,7 @@ ClayCard.STATE = {
 	/**
 	 * Url to be applied to the title of the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -116,7 +116,7 @@ ClayCard.STATE = {
 	/**
 	 * Icon to be rendered in the visual area of the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -125,7 +125,7 @@ ClayCard.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -134,7 +134,7 @@ ClayCard.STATE = {
 	/**
 	 * Alternate text of the image.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -143,7 +143,7 @@ ClayCard.STATE = {
 	/**
 	 * Source of the image to be rendered in the visual area of the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -152,7 +152,7 @@ ClayCard.STATE = {
 	/**
 	 * Name to be applied to the input element.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -161,7 +161,7 @@ ClayCard.STATE = {
 	/**
 	 * Value to be applied to the input element.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -170,7 +170,7 @@ ClayCard.STATE = {
 	/**
 	 * Labels of the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?array|undefined}
 	 * @default undefined
 	 */
@@ -193,7 +193,7 @@ ClayCard.STATE = {
 	/**
 	 * Object that maps specific label values with desired styles.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?object|undefined}
 	 * @default undefined
 	 */
@@ -202,7 +202,7 @@ ClayCard.STATE = {
 	/**
 	 * Flag to indicate if the card is selectable or not.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -211,7 +211,7 @@ ClayCard.STATE = {
 	/**
 	 * Flag to indicate if the card is selected or not.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -220,7 +220,7 @@ ClayCard.STATE = {
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -229,7 +229,7 @@ ClayCard.STATE = {
 	/**
 	 * Subtitle of the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -238,16 +238,16 @@ ClayCard.STATE = {
 	/**
 	 * Title of the card.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {!string}
 	 * @default undefined
 	 */
 	title: Config.string().required(),
 };
 
-defineWebComponent('clay-card', ClayCard);
+defineWebComponent('clay-card', ClayCardBase);
 
-Soy.register(ClayCard, templates);
+Soy.register(ClayCardBase, templates);
 
-export {ClayCard};
-export default ClayCard;
+export {ClayCardBase};
+export default ClayCardBase;

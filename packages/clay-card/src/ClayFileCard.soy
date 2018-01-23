@@ -35,7 +35,7 @@
         {/if}
     {/let}
 
-    {call ClayCard.render}
+    {call ClayCardBase.render}
         {param actionItems: $actionItems /}
         {param contentRenderer: 'file' /}
         {param disabled: $disabled /}
@@ -63,7 +63,7 @@
 /**
  * Render the visual area of the card.
  */
-{deltemplate ClayCard.VisualArea variant="'file'"}
+{deltemplate ClayCardBase.VisualArea variant="'file'"}
     {@param? fileType: string}
     {@param? fileTypeStyle: string}
     {@param? icon: string}
