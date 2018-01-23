@@ -1,6 +1,6 @@
 import 'clay-icon';
 import 'clay-sticker';
-import './ClayCard';
+import './ClayCardBase';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -181,7 +181,7 @@ ClayImageCard.STATE = {
 	/**
 	 * Object that maps specific label values with desired styles.
 	 * @instance
-	 * @memberof ClayCard
+	 * @memberof ClayCardBase
 	 * @type {?object|undefined}
 	 * @default undefined
 	 */
