@@ -6,6 +6,24 @@ th {
 	height: 20px;
 }
 
+.table-head-title {
+	.inline-item-before {
+		margin-right: $table-head-title-inline-item-spacer-x;
+
+		+ .text-truncate-inline {
+			max-width: $table-head-title-text-truncate-max-width;
+		}
+	}
+
+	.inline-item-after {
+		margin-left: $table-head-title-inline-item-spacer-x;
+	}
+
+	.text-truncate-inline {
+		max-width: 100%;
+	}
+}
+
 .table {
 	border-collapse: collapse;
 

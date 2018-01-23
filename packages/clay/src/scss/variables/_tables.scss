@@ -6,6 +6,9 @@ $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
 
+$table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
+$table-head-title-text-truncate-max-width: calc(100% - 1em - #{$table-head-title-inline-item-spacer-x}) !default;
+
 $table-divider-bg: #FFF !default;
 $table-divider-color: null !default;
 $table-divider-font-weight: null !default;
