@@ -151,6 +151,10 @@
 									{param style: $labelStylesMap ? $labelStylesMap[$label] ?: $labelStylesMap['*'] : null /}
 								{/call}
 							{/if}
+
+							{if not isLast($label)}
+								{sp}
+							{/if}
 						{/foreach}
 					</div>
 				{/if}
