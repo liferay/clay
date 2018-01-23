@@ -2,6 +2,7 @@ import AreaLineChart from './AreaLineChart';
 import AreaSplineChart from './AreaSplineChart';
 import AreaStepChart from './AreaStepChart';
 import BarChart from './BarChart';
+import BubbleChart from './BubbleChart';
 import Chart from './Chart';
 import DonutChart from './DonutChart';
 import GaugeChart from './GaugeChart';
@@ -17,6 +18,7 @@ export {
 	AreaSplineChart,
 	AreaStepChart,
 	BarChart,
+	BubbleChart,
 	bb,
 	Chart,
 	d3,

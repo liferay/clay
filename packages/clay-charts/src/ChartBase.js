@@ -132,6 +132,7 @@ const ChartBase = {
 			area: state.area,
 			axis,
 			bindto: this.refs.chart,
+			bubble: state.bubble,
 			color: state.color,
 			data,
 			grid: state.grid,
@@ -628,6 +629,16 @@ ChartBase.STATE = {
 	bar: Config.shapeOf({
 		width: Config.number(),
 		zerobased: Config.bool(),
+	}),
+
+	/** Styling and behavior of bubbles.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Object|undefined}
+	 * @default undefined
+	 */
+	bubble: Config.shapeOf({
+		maxR: Config.number(),
 	}),
 
 	/**

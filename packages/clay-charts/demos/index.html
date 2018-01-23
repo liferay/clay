@@ -30,7 +30,6 @@
 
 </head>
 <body>
-
 	<svg style="display:none">
 		<defs>
 			<pattern id="circles" patternUnits="userSpaceOnUse" width="16" height="16" style="fill:rgba(0,0,0,0.3)">
@@ -83,7 +82,6 @@
 	<h1>Clay Charts</h1>
 
 	<p>See <a href="https://naver.github.io/billboard.js/demo/">billboard.js</a> for more examples.</p>
-
 	<div class="clay-chart-example">
 		<h2>Line</h2>
 		<div id="line"></div>
@@ -137,6 +135,11 @@
 	<div class="clay-chart-example">
 		<h2>Gauge</h2>
 		<div id="gauge"></div>
+	</div>
+
+	<div class="clay-chart-example">
+		<h2>Bubble</h2>
+		<div id="bubble"></div>
 	</div>
 
 	<div id="controls" style="display: none;">
@@ -380,6 +383,18 @@
 			columns: dummyGaugeData.columns_1
 		}, '#gauge');
 		createChartControls(gaugeChart, 'gauge', dummyGaugeData);
+
+		var bubbleChart = new metal.BubbleChart({
+			bubble: {
+				maxR: 50
+			},
+			columns: dummyData.columns_1,
+			labels: false,
+			point: {
+				pattern: ['circle']
+			},
+			type: 'bubble',
+		}, '#bubble');
 
 		function createChartControls(chart, type, data) {
 			var element = document.getElementById(type);
