@@ -13,7 +13,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with a different 
         </span>
       </span>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
         </span>
       </span>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="card-title text-truncate">My Title</div>
       </div>
       <div class="autofit-col">
         <div class="dropdown dropdown-action">
@@ -73,7 +73,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with classes 1`] 
         </span>
       </span>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -113,7 +113,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
         </span>
       </span>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -140,7 +140,7 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
               </span>
             </span>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="card-title text-truncate">My Title</div>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = 
               </span>
             </span>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="card-title text-truncate">My Title</div>
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
               </span>
             </span>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="card-title text-truncate">My Title</div>
             </div>
           </div>
         </div>
@@ -230,7 +230,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
               </span>
             </span>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="card-title text-truncate">My Title</div>
             </div>
           </div>
         </div>
@@ -260,7 +260,7 @@ exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
               </span>
             </span>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate" title="My Title">My Title</div>
+              <div class="card-title text-truncate">My Title</div>
             </div>
           </div>
         </div>
@@ -283,7 +283,7 @@ exports[`ClayHorizontalCard should render the default markup 1`] = `
         </span>
       </span>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
