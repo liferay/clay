@@ -32,21 +32,21 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
             </svg>
           </button>
-          <div class="dropdown-menu">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item" href="#editurl">Edit</a>
-              </li>
-              <li>
-                <a class=" dropdown-item" href="#deleteurl">Delete</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#editurl">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#deleteurl">Delete</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with ascending sorting 1`] = `
@@ -268,16 +268,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div>
-                <a class=" dropdown-item" href="#myItem1">Item 1</a>
-              </div>
-              <div>
-                <a class=" dropdown-item" href="#myItem2">Item 2</a>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
@@ -334,6 +324,16 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
     </ul>
   </div>
 </nav>
+<form>
+  <div class="dropdown-menu" ref="menu">
+    <div>
+      <a class=" dropdown-item" href="#myItem1">Item 1</a>
+    </div>
+    <div>
+      <a class=" dropdown-item" href="#myItem2">Item 2</a>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type checkbox 1`] = `
@@ -348,33 +348,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div class="dropdown-item">
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <label>
-                    <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label">
-                      <span class="custom-control-label-text">Item 1</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <label>
-                    <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label">
-                      <span class="custom-control-label-text">Item 2</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <div class="dropdown-section">
-                <button class="btn btn-block btn-primary" type="button">Done</button>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
@@ -431,6 +404,33 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
     </ul>
   </div>
 </nav>
+<form>
+  <div class="dropdown-menu" ref="menu">
+    <div class="dropdown-item">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 1</span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <div class="dropdown-item">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 2</span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type item 1`] = `
@@ -445,19 +445,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div>
-                <a class=" dropdown-item" href="#myItem1">Item 1</a>
-              </div>
-              <div>
-                <a class=" dropdown-item" href="#myItem2">Item 2</a>
-              </div>
-              <div class="dropdown-section">
-                <button class="btn btn-block btn-primary" type="button">Done</button>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
@@ -514,6 +501,19 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
     </ul>
   </div>
 </nav>
+<form>
+  <div class="dropdown-menu" ref="menu">
+    <div>
+      <a class=" dropdown-item" href="#myItem1">Item 1</a>
+    </div>
+    <div>
+      <a class=" dropdown-item" href="#myItem2">Item 2</a>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type radio 1`] = `
@@ -528,46 +528,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div class="dropdown-subheader">Group 1</div>
-              <div aria-label="Group 1" role="radiogroup">
-                <div class="dropdown-item">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <label>
-                      <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
-                      <span class="custom-control-label">
-                        <span class="custom-control-label-text">Item 1</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="dropdown-item active">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <label>
-                      <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
-                      <span class="custom-control-label">
-                        <span class="custom-control-label-text">Item 2</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="dropdown-item">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <label>
-                      <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
-                      <span class="custom-control-label">
-                        <span class="custom-control-label-text">Item 3</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-section">
-                <button class="btn btn-block btn-primary" type="button">Done</button>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
@@ -624,6 +584,46 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
     </ul>
   </div>
 </nav>
+<form>
+  <div class="dropdown-menu" ref="menu">
+    <div class="dropdown-subheader">Group 1</div>
+    <div aria-label="Group 1" role="radiogroup">
+      <div class="dropdown-item">
+        <div class="custom-control custom-radio custom-control-inline">
+          <label>
+            <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
+            <span class="custom-control-label">
+              <span class="custom-control-label-text">Item 1</span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="dropdown-item active">
+        <div class="custom-control custom-radio custom-control-inline">
+          <label>
+            <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
+            <span class="custom-control-label">
+              <span class="custom-control-label-text">Item 2</span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="dropdown-item">
+        <div class="custom-control custom-radio custom-control-inline">
+          <label>
+            <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
+            <span class="custom-control-label">
+              <span class="custom-control-label-text">Item 3</span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with id 1`] = `
@@ -768,21 +768,21 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
-          <div class="dropdown-menu">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item" href="#1">Add Content 1</a>
-              </li>
-              <li>
-                <a class=" dropdown-item" href="#2">Add Content 2</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Add Content 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Add Content 2</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with plus button with one option 1`] = `
@@ -1177,37 +1177,6 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
               <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
             </svg>
           </button>
-          <div class="dropdown-menu dropdown-menu-indicator-start">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item active">
-                  <div class="dropdown-item-indicator">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-                      <title>list</title>
-                      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
-                    </svg>
-                  </div>List</a>
-              </li>
-              <li>
-                <a class=" dropdown-item disabled" href="javascript:;">
-                  <div class="dropdown-item-indicator">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-                      <title>table</title>
-                      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#table"></use>
-                    </svg>
-                  </div>Table</a>
-              </li>
-              <li>
-                <a class=" dropdown-item">
-                  <div class="dropdown-item-indicator">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-                      <title>cards2</title>
-                      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#cards2"></use>
-                    </svg>
-                  </div>Card</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </li>
       <li class="nav-item">
@@ -1221,6 +1190,37 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item active">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+            <title>list</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
+          </svg>
+        </div>List</a>
+    </li>
+    <li>
+      <a class=" dropdown-item disabled" href="javascript:;">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+            <title>table</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#table"></use>
+          </svg>
+        </div>Table</a>
+    </li>
+    <li>
+      <a class=" dropdown-item">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+            <title>cards2</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#cards2"></use>
+          </svg>
+        </div>Card</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render the default markup 1`] = `
