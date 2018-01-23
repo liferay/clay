@@ -9,22 +9,6 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
-    <div class="dropdown-menu">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
   <ul class="clay-pagination pagination">
@@ -52,6 +36,22 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
     </li>
   </ul>
 </div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = `
@@ -63,22 +63,6 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
-    <div class="dropdown-menu">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
   <ul class="clay-pagination pagination">
@@ -103,6 +87,22 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
           <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
+    </li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
 </div>
@@ -117,22 +117,6 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
-    <div class="dropdown-menu">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
   <ul class="clay-pagination pagination">
@@ -160,6 +144,22 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
     </li>
   </ul>
 </div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayPaginationBar should render a ClayPaginationBar with one item less than selected entry multiple 1`] = `
@@ -171,22 +171,6 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
-    <div class="dropdown-menu">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="pagination-results">Showing 11 to 19 of 19 entries.</div>
   <ul class="clay-pagination pagination">
@@ -214,6 +198,22 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
     </li>
   </ul>
 </div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayPaginationBar should render a ClayPaginationBar with one item more than selected entry multiple 1`] = `
@@ -225,22 +225,6 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
-    <div class="dropdown-menu">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="pagination-results">Showing 11 to 20 of 21 entries.</div>
   <ul class="clay-pagination pagination">
@@ -271,6 +255,22 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
     </li>
   </ul>
 </div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayPaginationBar should render a ClayPaginationBar with one item more than selected entry multiple 2`] = `
@@ -282,22 +282,6 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
-    <div class="dropdown-menu">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="pagination-results">Showing 21 to 21 of 21 entries.</div>
   <ul class="clay-pagination pagination">
@@ -328,6 +312,22 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
     </li>
   </ul>
 </div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=20">20</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayPaginationBar should render the default markup 1`] = `
@@ -339,22 +339,6 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
         <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
-    <div class="dropdown-menu">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=5">5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=15">15</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#mySite?entries=20">20</a>
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="pagination-results">Showing 1 to 10 of 20 entries.</div>
   <ul class="clay-pagination pagination">
@@ -379,6 +363,22 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
           <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
+    </li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=5">5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=15">15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
 </div>
