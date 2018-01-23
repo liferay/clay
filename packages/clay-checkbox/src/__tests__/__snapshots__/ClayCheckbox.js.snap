@@ -16,10 +16,11 @@ exports[`ClayCheckbox should render a checkbox with custom label content 1`] = `
   <label>
     <input class="custom-control-input" ref="input" type="checkbox">
     <span class="custom-control-label">
-      <div>
-        <h4>My Checkbox</h4>
-      </div>
+      <span class="custom-control-label-text"></span>
     </span>
+    <div>
+      <h4>My Checkbox</h4>
+    </div>
   </label>
 </div>
 `;

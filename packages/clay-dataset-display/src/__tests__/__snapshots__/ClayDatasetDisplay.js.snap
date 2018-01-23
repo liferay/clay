@@ -2810,34 +2810,35 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <label>
                   <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
                   <span class="custom-control-label">
-                    <div class="card card-horizontal">
-                      <div class="card-body">
-                        <div class="card-row">
-                          <span class="sticker sticker-unstyled">
-                            <span class="sticker-overlay">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                                <title>folder</title>
-                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
-                              </svg>
-                            </span>
+                    <span class="custom-control-label-text"></span>
+                  </span>
+                  <div class="card card-horizontal">
+                    <div class="card-body">
+                      <div class="card-row">
+                        <span class="sticker sticker-unstyled">
+                          <span class="sticker-overlay">
+                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                              <title>folder</title>
+                              <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
+                            </svg>
                           </span>
-                          <div class="autofit-col autofit-col-expand autofit-col-gutters">
-                            <div class="card-title text-truncate" title="Photos">Photos</div>
-                          </div>
-                          <div class="autofit-col">
-                            <div class="dropdown dropdown-action">
-                              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                                  <title>ellipsis-v</title>
-                                  <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
-                                </svg>
-                              </button>
-                            </div>
+                        </span>
+                        <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                          <div class="card-title text-truncate" title="Photos">Photos</div>
+                        </div>
+                        <div class="autofit-col">
+                          <div class="dropdown dropdown-action">
+                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                                <title>ellipsis-v</title>
+                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
+                              </svg>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </span>
+                  </div>
                 </label>
               </div>
             </div>
@@ -2848,34 +2849,35 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <label>
                   <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                   <span class="custom-control-label">
-                    <div class="card card-horizontal">
-                      <div class="card-body">
-                        <div class="card-row">
-                          <span class="sticker sticker-unstyled">
-                            <span class="sticker-overlay">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                                <title>folder</title>
-                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
-                              </svg>
-                            </span>
+                    <span class="custom-control-label-text"></span>
+                  </span>
+                  <div class="card card-horizontal">
+                    <div class="card-body">
+                      <div class="card-row">
+                        <span class="sticker sticker-unstyled">
+                          <span class="sticker-overlay">
+                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                              <title>folder</title>
+                              <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
+                            </svg>
                           </span>
-                          <div class="autofit-col autofit-col-expand autofit-col-gutters">
-                            <div class="card-title text-truncate" title="Videos">Videos</div>
-                          </div>
-                          <div class="autofit-col">
-                            <div class="dropdown dropdown-action">
-                              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                                  <title>ellipsis-v</title>
-                                  <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
-                                </svg>
-                              </button>
-                            </div>
+                        </span>
+                        <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                          <div class="card-title text-truncate" title="Videos">Videos</div>
+                        </div>
+                        <div class="autofit-col">
+                          <div class="dropdown dropdown-action">
+                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                                <title>ellipsis-v</title>
+                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#ellipsis-v"></use>
+                              </svg>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </span>
+                  </div>
                 </label>
               </div>
             </div>
@@ -2891,15 +2893,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                            <title>exclamation-circle</title>
-                            <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
-                          </svg>
-                        </div>
-                        <span class="sticker sticker-danger sticker-bottom-left">
-                          <span class="sticker-overlay">PDF</span>
-                        </span>
+                        <span class="custom-control-label-text"></span>
+                      </span>
+                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                          <title>exclamation-circle</title>
+                          <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
+                        </svg>
+                      </div>
+                      <span class="sticker sticker-danger sticker-bottom-left">
+                        <span class="sticker-overlay">PDF</span>
                       </span>
                     </label>
                   </div>
@@ -2936,10 +2939,11 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
-                        <span class="sticker sticker-danger sticker-bottom-left">
-                          <span class="sticker-overlay">PDF</span>
-                        </span>
+                        <span class="custom-control-label-text"></span>
+                      </span>
+                      <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
+                      <span class="sticker sticker-danger sticker-bottom-left">
+                        <span class="sticker-overlay">PDF</span>
                       </span>
                     </label>
                   </div>
@@ -2976,10 +2980,11 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
-                        <span class="sticker sticker-danger sticker-bottom-left">
-                          <span class="sticker-overlay">PDF</span>
-                        </span>
+                        <span class="custom-control-label-text"></span>
+                      </span>
+                      <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
+                      <span class="sticker sticker-danger sticker-bottom-left">
+                        <span class="sticker-overlay">PDF</span>
                       </span>
                     </label>
                   </div>
@@ -3016,15 +3021,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                            <title>exclamation-circle</title>
-                            <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
-                          </svg>
-                        </div>
-                        <span class="sticker sticker-danger sticker-bottom-left">
-                          <span class="sticker-overlay">PDF</span>
-                        </span>
+                        <span class="custom-control-label-text"></span>
+                      </span>
+                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                          <title>exclamation-circle</title>
+                          <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
+                        </svg>
+                      </div>
+                      <span class="sticker sticker-danger sticker-bottom-left">
+                        <span class="sticker-overlay">PDF</span>
                       </span>
                     </label>
                   </div>
@@ -3061,10 +3067,11 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
-                        <span class="sticker sticker-danger sticker-bottom-left">
-                          <span class="sticker-overlay">PDF</span>
-                        </span>
+                        <span class="custom-control-label-text"></span>
+                      </span>
+                      <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
+                      <span class="sticker sticker-danger sticker-bottom-left">
+                        <span class="sticker-overlay">PDF</span>
                       </span>
                     </label>
                   </div>
@@ -3101,15 +3108,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                            <title>exclamation-circle</title>
-                            <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
-                          </svg>
-                        </div>
-                        <span class="sticker sticker-danger sticker-bottom-left">
-                          <span class="sticker-overlay">PDF</span>
-                        </span>
+                        <span class="custom-control-label-text"></span>
+                      </span>
+                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                          <title>exclamation-circle</title>
+                          <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#exclamation-circle"></use>
+                        </svg>
+                      </div>
+                      <span class="sticker sticker-danger sticker-bottom-left">
+                        <span class="sticker-overlay">PDF</span>
                       </span>
                     </label>
                   </div>
@@ -3149,12 +3157,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                          <span class="sticker sticker-danger rounded-circle sticker-xl">
-                            <span class="sticker-overlay">FA</span>
-                          </span>
-                        </div>
+                        <span class="custom-control-label-text"></span>
                       </span>
+                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                        <span class="sticker sticker-danger rounded-circle sticker-xl">
+                          <span class="sticker-overlay">FA</span>
+                        </span>
+                      </div>
                     </label>
                   </div>
                 </div>
@@ -3186,14 +3195,15 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                          <span class="sticker sticker-primary rounded-circle sticker-xl">
-                            <span class="sticker-overlay">
-                              <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
-                            </span>
-                          </span>
-                        </div>
+                        <span class="custom-control-label-text"></span>
                       </span>
+                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                        <span class="sticker sticker-primary rounded-circle sticker-xl">
+                          <span class="sticker-overlay">
+                            <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+                          </span>
+                        </span>
+                      </div>
                     </label>
                   </div>
                 </div>
@@ -3225,12 +3235,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <label>
                       <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
                       <span class="custom-control-label">
-                        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                          <span class="sticker sticker-primary rounded-circle sticker-xl">
-                            <span class="sticker-overlay">AC</span>
-                          </span>
-                        </div>
+                        <span class="custom-control-label-text"></span>
                       </span>
+                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                        <span class="sticker sticker-primary rounded-circle sticker-xl">
+                          <span class="sticker-overlay">AC</span>
+                        </span>
+                      </div>
                     </label>
                   </div>
                 </div>
