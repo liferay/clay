@@ -80,8 +80,8 @@ th {
 
 %table-cell-expand {
 	display: table-cell;
-	max-width: 100px;
-	min-width: 100px;
+	max-width: $table-cell-expand-min-width;
+	min-width: $table-cell-expand-min-width;
 	width: auto;
 	word-wrap: break-word;
 }
