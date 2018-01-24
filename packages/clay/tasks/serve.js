@@ -6,7 +6,7 @@ module.exports = function(gulp) {
 			notify: true,
 			open: false,
 			server: {
-				baseDir: 'site'
+				baseDir: 'build'
 			}
 		});
 

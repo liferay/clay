@@ -75,14 +75,14 @@ gulp.task(
 			.pipe(assetFilter)
 			.pipe(plugins.header(license.tpl, license.metadata))
 			.pipe(assetFilter.restore)
-			.pipe(gulp.dest('./build'));
+			.pipe(gulp.dest('./lib'));
 	}
 );
 
 gulp.task(
 	'compile:clean',
 	function() {
-		return gulp.src('./build')
+		return gulp.src('./lib')
 			.pipe(plugins.clean({
 				read: false
 			}));
@@ -106,7 +106,7 @@ gulp.task(
 			.pipe(sourcemaps.init())
 			.pipe(sass())
 			.pipe(sourcemaps.write('.'))
-			.pipe(gulp.dest('./build/css'));
+			.pipe(gulp.dest('./lib/css'));
 	}
 );
 
@@ -128,7 +128,7 @@ gulp.task(
 gulp.task(
 	'compile:svg',
 	require('./tasks/lib/svgstore')(gulp, plugins, _, {
-		dest: './build/images/icons',
+		dest: './lib/images/icons',
 	})
 );
 

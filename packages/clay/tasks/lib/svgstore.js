@@ -5,10 +5,10 @@ var basename = require('basename');
 
 module.exports = function(gulp, plugins, _, config) {
 	var src = config.src || 'src/images/icons/*.svg';
-	var dest = config.dest || './site/images/icons/';
+	var dest = config.dest || './build/images/icons/';
 
 	var defaultConfig = {
-		dest: './site/images/icons/',
+		dest: './build/images/icons/',
 		src: 'src/images/icons/*.svg'
 	};
 

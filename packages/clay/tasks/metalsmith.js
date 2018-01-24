@@ -149,7 +149,7 @@ module.exports = function(gulp, plugins, _, config) {
 						.use(templates('ejs'))
 				)
 				.pipe(plugins.plumber.stop())
-				.pipe(gulp.dest('./site'));
+				.pipe(gulp.dest('./build'));
 
 	});
 
@@ -159,6 +159,6 @@ module.exports = function(gulp, plugins, _, config) {
 			.pipe(plugins.rename(function(file) {
 				file.basename += '_rtl';
 			}))
-			.pipe(gulp.dest('./site/css'));
+			.pipe(gulp.dest('./build/css'));
 	});
 };
