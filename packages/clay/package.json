@@ -50,6 +50,7 @@
   "license": "MIT",
   "devDependencies": {
     "basename": "^0.1.2",
+    "bootstrap": "4.0.0",
     "browser-sync": "^2.14.0",
     "cheerio": "^0.20.0",
     "ejs": "^2.3.1",
@@ -82,6 +83,7 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-sass": "^1.2.1",
     "metalsmith-templates": "^0.7.0",
+    "popper.js": "1.12.9",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
     "string-sub": "0.0.1",
