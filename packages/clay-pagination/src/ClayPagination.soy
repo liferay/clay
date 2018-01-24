@@ -196,8 +196,8 @@
  */
 {deltemplate ClayDropdownBase.Items variant="'paginationdropdownitems'"}
 	{@param items: list<?>}
+	{@param? contentRenderer: string}
 	{@param? handleItemClick_: any}
-	{@param? isInList: bool}
 	{@param? itemsIconAlignment: string}
 	{@param? spritemap: string}
 
@@ -205,11 +205,12 @@
 	{let $endPage: $items[0].endPage /}
 	{let $initPage: $items[0].initPage /}
 
-	{for $page in range($initPage, $endPage)}
-		{delcall ClayDropdownBase.Item variant="'item'"}
-			{param href: $baseHref + $page /}
-			{param isInList: $isInList /}
-			{param label: '' + $page /}
-		{/delcall}
-	{/for}
+	<ul class="list-unstyled">
+		{for $page in range($initPage, $endPage)}
+			{delcall ClayDropdownBase.Item variant="'item'"}
+				{param href: $baseHref + $page /}
+				{param label: '' + $page /}
+			{/delcall}
+		{/for}
+	</ul>	
 {/deltemplate}
