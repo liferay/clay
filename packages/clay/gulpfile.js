@@ -1,11 +1,12 @@
+var chalk = require('chalk');
+var filter = require('gulp-filter');
+var gulp = require('gulp-help')(require('gulp'));
 var inquirer = require('inquirer');
 var path = require('path');
-
-var gulp = require('gulp-help')(require('gulp'));
 var plugins = require('gulp-load-plugins')({pattern: ['autoprefixer', 'gulp-*', 'gulp.*', 'merge-stream', 'postcss-*']});
 var runSequence = require('run-sequence');
-
-var chalk = require('chalk');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 var _ = require('./lib/lodash_utils');
 
@@ -33,6 +34,7 @@ var config = {
 	POPPER_JS_FILE: POPPER_JS_FILE
 };
 
+var license = require('./tasks/copyright_banner');
 var tasks = require('require-dir')('./tasks');
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
@@ -54,16 +56,6 @@ gulp.task('build', function(cb) {
 		}
 	);
 });
-
-gulp.task('serve', ['serve:start', 'watch']);
-
-// New compile tasks
-
-var filter = require('gulp-filter');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-
-var license = require('./tasks/copyright_banner');
 
 gulp.task(
 	'compile',
@@ -158,3 +150,5 @@ gulp.task(
 		dest: './build/images/icons',
 	})
 );
+
+gulp.task('serve', ['serve:start', 'watch']);
