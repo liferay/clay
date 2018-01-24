@@ -87,7 +87,8 @@ gulp.task(
 		var src = [
 			'src/fonts/**/*',
 			'src/images/icons/*',
-			'src/js/{,bootstrap/}*.js'
+			'src/js/{,bootstrap/}*.js',
+			'src/js/{,bootstrap/}*.js.map'
 		];
 
 		return gulp.src(src, {
