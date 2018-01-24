@@ -91,14 +91,16 @@
 		<input {$inputAttributes}></input>
 
 		<span class="custom-control-label">
-			{let $spanLabelClasses kind="text"}
-				custom-control-label-text
-				{if $hideLabel}
-					{sp}sr-only
-				{/if}
-			{/let}
+			{if $label}
+				{let $spanLabelClasses kind="text"}
+					custom-control-label-text
+					{if $hideLabel}
+						{sp}sr-only
+					{/if}
+				{/let}
 
-			<span class="{$spanLabelClasses}">{$label}</span>
+				<span class="{$spanLabelClasses}">{$label}</span>
+			{/if}
 		</span>
 
 		{if $labelContent}
