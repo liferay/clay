@@ -93,6 +93,17 @@ label {
 		}
 	}
 
+	&[type="range"] {
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	&:not([type="range"]) {
+		@media screen and (-webkit-min-device-pixel-ratio: 0) {
+			-webkit-appearance: none;
+		}
+	}
+
 	&::-ms-clear,
 	&::-ms-reveal {
 		display: none;
