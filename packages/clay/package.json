@@ -3,6 +3,13 @@
   "version": "1.0.0-alpha.15",
   "description": "Liferay's web implementation of the Lexicon Design Language",
   "main": "index.js",
+  "files": [
+    "build",
+    "index.js",
+    "src/images",
+    "src/js",
+    "src/scss"
+  ],
   "csfConfig": {
     "js": {
       "lint": {
