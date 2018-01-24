@@ -127,7 +127,7 @@ weight: 100
 
 <span class="label label-dismissible label-secondary">
 	Label Text{sp}
-	<button aria-label="Close" class="close" type="button">
+	<button aria-label="Close" class="btn close btn-unstyled" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
@@ -146,7 +146,7 @@ weight: 100
 ```text/html
 <span class="label label-dismissible label-secondary">
 	Label Text{sp}
-	<button aria-label="Close" class="close" type="button">
+	<button aria-label="Close" class="btn close btn-unstyled" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
 		</svg>
