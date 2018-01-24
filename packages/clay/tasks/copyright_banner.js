@@ -1,6 +1,11 @@
+var fs = require('fs');
+var path = require('path');
+
 module.exports = {
 	metadata: {
-		version: require('../package.json').version,
+		version: JSON.parse(
+			fs.readFileSync(path.join(__dirname, '../package.json'))
+		).version,
 		year: (new Date()).getFullYear()
 	},
 	tpl: [
