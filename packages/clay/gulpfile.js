@@ -147,3 +147,104 @@ gulp.task(
 		);
 	}
 );
+
+// New compile tasks
+
+var filter = require('gulp-filter');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+
+var license = require('./tasks/copyright_banner');
+
+gulp.task(
+	'compile',
+	function(cb) {
+		runSequence(
+			'compile:clean',
+			'compile:files',
+			'compile:prep-scss',
+			'compile:css',
+			'compile:svg',
+			'compile:clean-temp',
+			function(err) {
+				cb(err);
+			}
+		);
+	}
+);
+
+gulp.task(
+	'compile:files',
+	function(cb) {
+		var assetFilter = filter(['*.js', '!bootstrap'], {
+			restore: true
+		});
+
+		var src = [
+			'src/fonts/**/*',
+			'src/images/icons/*',
+			'src/js/{,bootstrap/}*.js'
+		];
+
+		return gulp.src(src, {
+				base: './src'
+			})
+			.pipe(assetFilter)
+			.pipe(plugins.header(license.tpl, license.metadata))
+			.pipe(assetFilter.restore)
+			.pipe(gulp.dest('./build'));
+	}
+);
+
+gulp.task(
+	'compile:css',
+	function() {
+		return gulp.src('temp/+(atlas|bootstrap|base).scss')
+			.pipe(sourcemaps.init())
+			.pipe(sass())
+			.pipe(sourcemaps.write('.'))
+			.pipe(gulp.dest('./build/css'));
+	}
+);
+
+gulp.task(
+	'compile:clean',
+	function() {
+		return gulp.src('./build')
+			.pipe(plugins.clean({
+				read: false
+			}));
+	}
+);
+
+gulp.task(
+	'compile:clean-temp',
+	function() {
+		return gulp.src('./temp')
+			.pipe(plugins.clean({
+				read: false
+			}));
+	}
+);
+
+gulp.task(
+	'compile:prep-scss',
+	function() {
+		var entryFilter = filter(['bootstrap.scss'], {
+			restore: true
+		});
+
+		return gulp.src('src/scss/**/*')
+			.pipe(entryFilter)
+			.pipe(plugins.header(license.tpl, license.metadata))
+			.pipe(entryFilter.restore)
+			.pipe(gulp.dest('./temp'));
+	}
+);
+
+gulp.task(
+	'compile:svg',
+	require('./lib/svgstore')(gulp, plugins, _, {
+		dest: './build/images/icons',
+	})
+);
