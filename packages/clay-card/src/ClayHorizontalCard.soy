@@ -93,11 +93,13 @@
 				autofit-col autofit-col-expand autofit-col-gutters
 			{/let}
 
-      {call ClaySticker.render}
-        {param icon: $icon ?: 'folder' /}
-        {param spritemap: $spritemap /}
-        {param style: 'unstyled' /}
-      {/call}
+			<div class="autofit-col">
+				{call ClaySticker.render}
+					{param icon: $icon ?: 'folder' /}
+					{param spritemap: $spritemap /}
+					{param style: 'unstyled' /}
+				{/call}
+			</div>
 
 			<div class="{$classesDescription}">
 				{if $href}
