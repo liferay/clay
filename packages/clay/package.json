@@ -3,6 +3,13 @@
   "version": "1.0.0-alpha.15",
   "description": "Liferay's web implementation of the Lexicon Design Language",
   "main": "index.js",
+  "files": [
+    "build",
+    "index.js",
+    "src/images/icons",
+    "src/js",
+    "src/scss"
+  ],
   "csfConfig": {
     "js": {
       "lint": {
@@ -14,7 +21,8 @@
     }
   },
   "scripts": {
-    "test": "exit 0"
+    "compile": "gulp compile",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -41,44 +49,31 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.6.1",
     "basename": "^0.1.2",
-    "bluebird": "^3.0.6",
-    "bower": "^1.4.1",
     "browser-sync": "^2.14.0",
-    "center-align": "^0.1.1",
-    "chalk": "^1.0.0",
     "cheerio": "^0.20.0",
-    "cross-spawn": "^2.1.0",
     "ejs": "^2.3.1",
     "fs-extra": "^0.10.0",
     "gulp": "^3.9.1",
-    "gulp-change": "^1.0.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-clean": "^0.3.1",
-    "gulp-consolidate": "^0.1.2",
     "gulp-debug": "^2.0.1",
-    "gulp-doctoc": "^0.1.2",
-    "gulp-filter": "^2.0.2",
+    "gulp-filter": "^3.0.0",
     "gulp-front-matter": "^1.2.3",
     "gulp-header": "^1.7.1",
     "gulp-help": "^1.6.0",
-    "gulp-iconfont": "^5.0.0",
     "gulp-inject": "^3.0.0",
     "gulp-liferay-r2-css": "0.0.2",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-metalsmith": "0.0.3",
     "gulp-plumber": "^1.0.1",
-    "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.4",
-    "gulp-zip": "^3.0.2",
     "gulpsmith": "^0.5.3",
-    "inquirer": "^0.11.0",
-    "liferay-gulp-tasks": "^0.4.1",
     "lodash": "^3.9.3",
-    "merge-stream": "^1.0.1",
     "metalsmith": "^1.7.0",
     "metalsmith-define": "^1.0.0",
     "metalsmith-encode-html": "0.0.2",
@@ -87,14 +82,10 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-sass": "^1.2.1",
     "metalsmith-templates": "^0.7.0",
-    "minimist": "^1.2.0",
-    "postcss-scss": "^0.4.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
-    "semver": "^5.1.0",
     "string-sub": "0.0.1",
-    "underscore.string": "^3.2.2",
-    "window-size": "^0.1.2"
+    "underscore.string": "^3.2.2"
   },
   "private": true
 }
