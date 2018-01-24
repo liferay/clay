@@ -39,7 +39,7 @@ var tasks = require('require-dir')('./tasks');
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
 
-gulp.task('default', ['build']);
+gulp.task('default', ['compile']);
 
 gulp.task('build', function(cb) {
 	runSequence(
@@ -99,17 +99,6 @@ gulp.task(
 );
 
 gulp.task(
-	'compile:css',
-	function() {
-		return gulp.src('temp/+(atlas|bootstrap|base).scss')
-			.pipe(sourcemaps.init())
-			.pipe(sass())
-			.pipe(sourcemaps.write('.'))
-			.pipe(gulp.dest('./build/css'));
-	}
-);
-
-gulp.task(
 	'compile:clean',
 	function() {
 		return gulp.src('./build')
@@ -126,6 +115,17 @@ gulp.task(
 			.pipe(plugins.clean({
 				read: false
 			}));
+	}
+);
+
+gulp.task(
+	'compile:css',
+	function() {
+		return gulp.src('temp/+(atlas|bootstrap|base).scss')
+			.pipe(sourcemaps.init())
+			.pipe(sass())
+			.pipe(sourcemaps.write('.'))
+			.pipe(gulp.dest('./build/css'));
 	}
 );
 
