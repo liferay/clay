@@ -1,7 +1,7 @@
 var fs = require('fs-extra');
 var path = require('path');
 
-var _ = require('./lodash_utils');
+var _ = require('../lodash_utils');
 
 var format = _.cached(
 	function(str) {
@@ -19,15 +19,14 @@ var iterateFiles = function(files, metalsmith, done) {
 	for (var i in files) {
 		var file = files[i];
 
-		if (file.template) {
-			var newPath = format(i);
+		if (i.indexOf('CHANGELOG') === 0) {
+			var contents = file.contents.toString();
 
-			if (i != newPath) {
-				files[newPath] = file;
+			contents = '<div class="col-md-12">' + contents + '</div>';
 
-				delete files[i];
-			}
+			file.contents = new Buffer(contents);
 		}
+
 	}
 };
 

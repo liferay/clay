@@ -12,18 +12,18 @@ var sass = require('metalsmith-sass');
 var templates = require('metalsmith-templates');
 var headingsId = require('metalsmith-headings-identifier');
 
-var handleNav = require('../lib/handle_nav');
-var handlePath = require('../lib/handle_path');
-var handlePermalink = require('../lib/handle_permalink');
-var handleTemplate = require('../lib/handle_template');
+var handleNav = require('../lib/metalsmith/handle_nav');
+var handlePath = require('../lib/metalsmith/handle_path');
+var handlePermalink = require('../lib/metalsmith/handle_permalink');
+var handleTemplate = require('../lib/metalsmith/handle_template');
 var svgstore = require('../lib/svgstore');
-var wrapChangelog = require('../lib/wrap_changelog');
+var wrapChangelog = require('../lib/metalsmith/wrap_changelog');
 
 var _s = require('underscore.string');
 
 module.exports = function(gulp, plugins, _, config) {
 	var license = require('./copyright_banner');
-	var flagData = require('../lib/flag_data.json');
+	var flagData = require('../lib/metalsmith/flag_data.json');
 
 	var metadata = {
 		_: _,
@@ -38,10 +38,14 @@ module.exports = function(gulp, plugins, _, config) {
 	var TPL_FLAGS_SVG = '<li>' + TPL_SVG + ' <span>{1} ({0})</span></li>';
 
 	gulp.task('build:metalsmith', function(cb) {
-		var filter = plugins.filter(['**/*.md', '**/*.html']);
-		var assetFilter = plugins.filter(['**/*.*css', '**/*.js', '!**/js/bootstrap{*,/*}.js']);
-		var svgFilter = plugins.filter(['content/icons-lexicon.html']);
-		var changelogFilter = plugins.filter(['./CHANGELOG.md']);
+		var filterConfig = {
+			restore: true
+		};
+
+		var filter = plugins.filter(['**/*.md', '**/*.html'], filterConfig);
+		var assetFilter = plugins.filter(['**/*.*css', '**/*.js', '!**/js/bootstrap{*,/*}.js'], filterConfig);
+		var svgFilter = plugins.filter(['content/icons-lexicon.html'], filterConfig);
+		var changelogFilter = plugins.filter(['./CHANGELOG.md'], filterConfig);
 
 		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
 
@@ -74,10 +78,10 @@ module.exports = function(gulp, plugins, _, config) {
 						delete file.frontMatter;
 					}
 				)
-				.pipe(filter.restore())
+				.pipe(filter.restore)
 				.pipe(assetFilter)
 				.pipe(plugins.header(license.tpl, license.metadata))
-				.pipe(assetFilter.restore())
+				.pipe(assetFilter.restore)
 				.pipe(plugins.plumber())
 				.pipe(svgFilter)
 				.pipe(plugins.inject(svgFlags, {
@@ -97,7 +101,7 @@ module.exports = function(gulp, plugins, _, config) {
 						return _.sub(TPL_SVG_LI, basename);
 					}
 				}))
-				.pipe(svgFilter.restore())
+				.pipe(svgFilter.restore)
 				.pipe(
 					gulpsmith()
 						.use(define(metadata))

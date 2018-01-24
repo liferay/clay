@@ -1,7 +1,7 @@
 var fs = require('fs-extra');
 var path = require('path');
 
-var _ = require('./lodash_utils');
+var _ = require('../lodash_utils');
 
 var toTitleCase = _.cached(
 	function(str) {
