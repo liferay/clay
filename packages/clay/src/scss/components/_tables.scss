@@ -33,6 +33,10 @@ th {
 			border-bottom-width: $table-head-border-bottom-width;
 			border-top-width: $table-head-border-top-width;
 		}
+
+		th a {
+			@include clay-link($table-head-link);
+		}
 	}
 
 	th {
@@ -222,6 +226,10 @@ th {
 			font-weight: $table-list-head-font-weight;
 			height: $table-list-head-height;
 			vertical-align: $table-list-head-vertical-alignment;
+		}
+
+		th a {
+			@include clay-link($table-list-head-link);
 		}
 	}
 

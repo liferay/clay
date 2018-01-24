@@ -6,6 +6,8 @@ $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
 
+$table-head-link: () !default;
+
 $table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
 $table-head-title-text-truncate-max-width: calc(100% - 1em - #{$table-head-title-inline-item-spacer-x}) !default;
 
@@ -80,6 +82,8 @@ $table-list-head-font-size: null !default;
 $table-list-head-font-weight: null !default;
 $table-list-head-height: null !default;
 $table-list-head-vertical-alignment: null !default;
+
+$table-list-head-link: () !default;
 
 $table-list-quick-action-menu-align-items: center !default;
 $table-list-quick-action-menu-bg: $table-list-bg !default;
