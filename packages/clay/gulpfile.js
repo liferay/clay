@@ -8,7 +8,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
-var _ = require('./lib/lodash_utils');
+var _ = require('./tasks/lib/lodash_utils');
 
 var BOOTSTRAP_VAR_FILE = path.join('src','scss', 'bootstrap', '_variables.scss');
 
@@ -127,7 +127,7 @@ gulp.task(
 
 gulp.task(
 	'compile:svg',
-	require('./lib/svgstore')(gulp, plugins, _, {
+	require('./tasks/lib/svgstore')(gulp, plugins, _, {
 		dest: './build/images/icons',
 	})
 );

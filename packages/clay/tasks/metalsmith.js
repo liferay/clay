@@ -12,18 +12,18 @@ var sass = require('metalsmith-sass');
 var templates = require('metalsmith-templates');
 var headingsId = require('metalsmith-headings-identifier');
 
-var handleNav = require('../lib/metalsmith/handle_nav');
-var handlePath = require('../lib/metalsmith/handle_path');
-var handlePermalink = require('../lib/metalsmith/handle_permalink');
-var handleTemplate = require('../lib/metalsmith/handle_template');
-var svgstore = require('../lib/svgstore');
-var wrapChangelog = require('../lib/metalsmith/wrap_changelog');
+var handleNav = require('./lib/metalsmith/handle_nav');
+var handlePath = require('./lib/metalsmith/handle_path');
+var handlePermalink = require('./lib/metalsmith/handle_permalink');
+var handleTemplate = require('./lib/metalsmith/handle_template');
+var svgstore = require('./lib/svgstore');
+var wrapChangelog = require('./lib/metalsmith/wrap_changelog');
 
 var _s = require('underscore.string');
 
 module.exports = function(gulp, plugins, _, config) {
 	var license = require('./copyright_banner');
-	var flagData = require('../lib/metalsmith/flag_data.json');
+	var flagData = require('./lib/metalsmith/flag_data.json');
 
 	var metadata = {
 		_: _,
