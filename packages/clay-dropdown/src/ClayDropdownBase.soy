@@ -22,7 +22,6 @@
 	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? triggerClasses: string}
-	{@param? type: string}
 
 	{let $attributes kind="attributes"}
 		class="dropdown
@@ -62,7 +61,6 @@
 			{param portalElementId: $portalElementId /}
 			{param searchable: $searchable /}
 			{param spritemap: $spritemap /}
-			{param type: $type ?: 'list' /}
 		{/call}
 	</div>
 {/template}
@@ -74,21 +72,23 @@
 	{@param spritemap: string}
 	{@param? handleSearch_: any}
 
-	<div class="dropdown-section">
-		<div class="input-group input-group-inset">
-			<div class="input-group-input">
-				<input aria-label="Search for..." class="form-control" data-oninput="{$handleSearch_}" placeholder="Search for..." type="text" ref="searchInput">
-			</div>
+	<form>
+		<div class="dropdown-section">
+			<div class="input-group input-group-sm">
+				<div class="input-group-item">
+					<input aria-label="Search for..." class="form-control input-group-inset input-group-inset-after" data-oninput="{$handleSearch_}" placeholder="Search for..." type="text" ref="searchInput" />
 
-			<span class="input-group-inset-item">
-				{call ClayButton.render}
-					{param icon: 'search' /}
-					{param spritemap: $spritemap /}
-					{param style: 'link' /}
-				{/call}
-			</span>
+					<span class="input-group-inset-item input-group-inset-item-after">
+						{call ClayButton.render}
+							{param icon: 'search' /}
+							{param spritemap: $spritemap /}
+							{param style: 'link' /}
+						{/call}
+					</span>
+				</div>
+			</div>
 		</div>
-	</div>
+	</form>
 {/template}
 
 /**
@@ -108,7 +108,6 @@
 	{@param? portalElementId: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
-	{@param? type: string}
 
 	{let $listAttributes kind="attributes"}
 		class="dropdown-menu
@@ -140,52 +139,51 @@
 				{/call}
 			{/if}
 
-			{let $itemList kind="html"}
+			{let $listItemsContent kind="html"}
 				{delcall ClayDropdownBase.Items variant="$contentRenderer"}
 					{param handleItemClick_: $handleItemClick_ /}
-					{param isInList: $type == 'list' /}
 					{param items: $items /}
 					{param itemsIconAlignment: $itemsIconAlignment /}
 					{param spritemap: $spritemap /}
 				{/delcall}
 			{/let}
 
-			{if $type == 'list'}
-				<ul class="list-unstyled">
-					{$itemList}
-				</ul>
-			{else}
-					{$itemList}
-			{/if}
-
-			{if $caption}
-				<div class="dropdown-caption">{$caption}</div>
-			{/if}
+			{let $captionContent kind="html"}
+				{if $caption}
+					<div class="dropdown-caption">{$caption}</div>
+				{/if}
+			{/let}
 
 			{if $button}
-				<div class="dropdown-section">
-					{call ClayButton.render}
-						{param block: true /}
-						{param events: ['click': $handleButtonClick_ ]/}
-						{param label: $button.label /}
-						{param ref: 'dropdownButton' /}
-						{param style: $button.style /}
-						{param type: $button.type ?: 'button' /}
-					{/call}
-				</div>
+				<form>
+					<div class="inline-scroller">
+						{$listItemsContent}
+					</div>
+
+					{$captionContent}
+
+					<div class="dropdown-section">
+						{call ClayButton.render}
+							{param block: true /}
+							{param events: ['click': $handleButtonClick_ ]/}
+							{param label: $button.label /}
+							{param ref: 'dropdownButton' /}
+							{param style: $button.style /}
+							{param type: $button.type ?: 'button' /}
+						{/call}
+					</div>
+				</form>
+			{else}
+				{$listItemsContent}
+
+				{$captionContent}
 			{/if}
 		</div>
 	{/let}
 
 	{call ClayPortal.render}
 		{param content kind="html"}
-			{if $type == 'form'}
-				<form>
-					{$dropdownMenu}
-				</form>
-			{else}
-				{$dropdownMenu}
-			{/if}
+			{$dropdownMenu}
 		{/param}
 		{param portalElement: '#' + $portalElementId /}
 		{param ref: 'portal' /}
@@ -244,7 +242,6 @@
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isInList: bool}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
@@ -300,22 +297,12 @@
 		data-onclick="{$handleItemClick_}"
 	{/let}
 
-	{if $isInList}
-		<li {$itemAttributes}>
-			{$itemContent}
-		</li>
+	<li {$itemAttributes}>
+		{$itemContent}
+	</li>
 
-		{if $separator}
-			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-		{/if}
-	{else}
-		<div {$itemAttributes}>
-			{$itemContent}
-		</div>
-
-		{if $separator}
-			<div class="dropdown-divider"></div>
-		{/if}
+	{if $separator}
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 	{/if}
 {/deltemplate}
 
@@ -332,7 +319,6 @@
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isInList: bool}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
@@ -359,22 +345,12 @@
 		data-onclick="{$handleItemClick_}"
 	{/let}
 
-	{if $isInList}
-		<li {$itemAttributes}>
-			{$checkbox}
-		</li>
+	<li {$itemAttributes}>
+		{$checkbox}
+	</li>
 
-		{if $separator}
-			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-		{/if}
-	{else}
-		<div {$itemAttributes}>
-			{$checkbox}
-		</div>
-
-		{if $separator}
-			<div class="dropdown-divider"></div>
-		{/if}
+	{if $separator}
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 	{/if}
 {/deltemplate}
 
@@ -391,28 +367,18 @@
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isInList: bool}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
-	{if $label != ''}
-		{if $isInList}
-			<li class="dropdown-subheader">
-				{$label}
-			</li>
-		{else}
-			<div class="dropdown-subheader">
-				{$label}
-			</div>
-		{/if}
-	{/if}
+	<div class="dropdown-subheader" role="presentation">
+		{$label}
+	</div>
 
 	{if $items}
 		{delcall ClayDropdownBase.Items}
 			{param handleItemClick_: $handleItemClick_ /}
-			{param isInList: $isInList /}
 			{param items: $items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param spritemap: $spritemap /}
@@ -420,13 +386,58 @@
 	{/if}
 
 	{if $separator}
-		{if $isInList}
-			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-		{else}
-			<div class="dropdown-divider"></div>
-		{/if}
+		<div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 	{/if}
 {/deltemplate}
+
+/**
+ * Renders list item with radio
+ */
+{deltemplate ClayDropdownBase.Item variant="'radio'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? handleItemClick_: any}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? separator: bool}
+	{@param? spritemap: string}
+
+	{let $radio kind="html"}
+		{call ClayRadio.render}
+			{param checked: $checked /}
+			{param disabled: $disabled /}
+			{param inline: true /}
+			{param label: $label /}
+			{param name: $inputName /}
+			{param value: $inputValue /}
+		{/call}
+	{/let}
+
+	{let $itemAttributes kind="attributes"}
+		class="dropdown-item
+			{if $active or $checked}
+				{sp}active
+			{/if}
+		"
+
+		data-onclick="{$handleItemClick_}"
+	{/let}
+
+	<li {$itemAttributes}>
+		{$radio}
+	</li>
+
+	{if $separator}
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+	{/if}
+{/deltemplate}
+
 
 /**
  * Renders list item with radio group
@@ -447,40 +458,24 @@
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
-	{if $label != ''}
-		<div class="dropdown-subheader">
-			{$label}
-		</div>
-	{/if}
+	<div class="dropdown-subheader" role="presentation">
+		{$label}
+	</div>
 
 	<div aria-label="{$label}" role="radiogroup">
 		{if $items}
-			{foreach $item in $items}
-				{let $listItemAttributes kind="attributes"}
-					class="dropdown-item
-						{if $item.active or $item.checked}
-							{sp}active
-						{/if}
-					"
-				{/let}
-
-				<div {$listItemAttributes}>
-					{call ClayRadio.render}
-						{param checked: $item.checked /}
-						{param disabled: $item.disabled /}
-						{param events: ['change': $handleItemClick_] /}
-						{param inline: true /}
-						{param label: $item.label /}
-						{param name: $inputName /}
-						{param value: $item.inputValue /}
-					{/call}
-				</div>
-			{/foreach}
+			{delcall ClayDropdownBase.Items}
+				{param contentRenderer: 'radio' /}
+				{param handleItemClick_: $handleItemClick_ /}
+				{param items: $items /}
+				{param itemsIconAlignment: $itemsIconAlignment /}
+				{param spritemap: $spritemap /}
+			{/delcall}
 		{/if}
 	</div>
 
 	{if $separator}
-			<div class="dropdown-divider"></div>
+		<div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 	{/if}
 {/deltemplate}
 
@@ -489,13 +484,27 @@
  */
 {deltemplate ClayDropdownBase.Items}
 	{@param items: list<?>}
+	{@param? contentRenderer: string}
 	{@param? handleItemClick_: any}
-	{@param? isInList: bool}
 	{@param? itemsIconAlignment: string}
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
-		{delcall ClayDropdownBase.Item variant="$item.type ?: 'item'"}
+		{if $item.type != 'group' and $item.type != 'radiogroup' and (isFirst($item) or $items[index($item) - 1].type == 'group' or $items[index($item) - 1].type == 'radiogroup')}
+			<ul class="list-unstyled">
+		{/if}
+
+		{let $variant kind="text"}
+			{if isNonnull($contentRenderer) and $contentRenderer != ''}
+				{$contentRenderer}
+			{elseif $item.type}
+				{$item.type}
+			{else}
+				item
+			{/if}
+		{/let}
+
+		{delcall ClayDropdownBase.Item variant="$variant"}
 			{param active: $item.active /}
 			{param checked: $item.checked /}
 			{param disabled: $item.disabled /}
@@ -504,12 +513,15 @@
 			{param icon: $item.icon /}
 			{param inputName: $item.inputName /}
 			{param inputValue: $item.inputValue /}
-			{param isInList: $isInList /}
 			{param items: $item.items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param label: $item.label ?: '' /}
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
 		{/delcall}
+
+		{if $item.type != 'group' and $item.type != 'radiogroup' and (isLast($item) or $items[index($item) + 1].type == 'group' or $items[index($item) + 1].type == 'radiogroup')}
+			</ul>
+		{/if}
 	{/foreach}
 {/deltemplate}
