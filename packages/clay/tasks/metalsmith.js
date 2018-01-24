@@ -47,8 +47,6 @@ module.exports = function(gulp, plugins, _, config) {
 		var svgFilter = plugins.filter(['content/icons-lexicon.html'], filterConfig);
 		var changelogFilter = plugins.filter(['./CHANGELOG.md'], filterConfig);
 
-		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
-
 		var svgFiles = gulp.src(['src/images/icons/*.svg', '!src/images/icons/flags-*.svg'], {read: false})
 						.pipe(plugins.rename(function(file) {
 							file.basename = _s.slugify(file.basename);

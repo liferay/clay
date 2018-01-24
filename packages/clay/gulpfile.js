@@ -1,19 +1,13 @@
-var chalk = require('chalk');
 var filter = require('gulp-filter');
 var gulp = require('gulp-help')(require('gulp'));
-var inquirer = require('inquirer');
-var path = require('path');
-var plugins = require('gulp-load-plugins')({pattern: ['autoprefixer', 'gulp-*', 'gulp.*', 'merge-stream', 'postcss-*']});
+var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
 var _ = require('./tasks/lib/lodash_utils');
 
-var BOOTSTRAP_VAR_FILE = path.join('src','scss', 'bootstrap', '_variables.scss');
-
 var config = {
-	BOOTSTRAP_VAR_FILE: BOOTSTRAP_VAR_FILE,
 	SRC_GLOB: 'src/**/*'
 };
 
