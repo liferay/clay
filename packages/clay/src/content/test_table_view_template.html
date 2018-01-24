@@ -205,14 +205,18 @@ section: Visual Tests
 				<thead>
 					<tr>
 						<th></th>
-						<th class="table-cell-expand">
-							Item Title
-							<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-up" />
-							</svg>
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-down" />
-							</svg>
+						<th class="table-cell-expand table-head-title">
+							<span class="inline-item inline-item-before">
+								<a href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#drag" />
+									</svg>
+								</a></span><a class="inline-item text-truncate-inline" href="#1"><span class="text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span><span class="inline-item inline-item-after">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-down" />
+									</svg>
+								</span>
+							</a>
 						</th>
 						<th>Size</th>
 						<th>Status</th>
@@ -298,11 +302,19 @@ section: Visual Tests
 			<thead>
 				<tr>
 					<th></th>
-					<th class="table-cell-expand">
-						Title
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-down" />
-						</svg>
+					<th class="table-cell-expand table-head-title">
+						<span class="inline-item inline-item-before">
+							<a href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#drag" />
+								</svg>
+							</a>
+						</span><a class="inline-item text-truncate-inline" href="#1"><span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-up" />
+								</svg>
+							</span>
+						</a>
 					</th>
 					<th>Status</th>
 					<th>Items</th>
@@ -332,9 +344,9 @@ section: Visual Tests
 							</div>
 							<div class="autofit-col autofit-col-expand">
 								<h4 class="table-list-title">
-									<span class="text-truncate-inline">
-										<a class="text-truncate" href="#1" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Publication Title</a>
-									</span>
+									<a class="text-truncate-inline" href="#1">
+										<span class="text-truncate" title="Publication Title">Publication Title</span>
+									</a>
 								</h4>
 							</div>
 						</div>
