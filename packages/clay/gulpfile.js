@@ -10,28 +10,11 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var _ = require('./lib/lodash_utils');
 
-var BOOTSTRAP_JS_FILE = path.join('src', 'js', 'bootstrap.js');
-
-var BOOTSTRAP_JS_DIR = path.dirname(BOOTSTRAP_JS_FILE);
-
 var BOOTSTRAP_VAR_FILE = path.join('src','scss', 'bootstrap', '_variables.scss');
 
-var BOOTSTRAP_VAR_DIR = path.dirname(BOOTSTRAP_VAR_FILE);
-
-var POPPER_JS_FILE = path.join('src', 'js', 'popper.js');
-
 var config = {
-	AUTOPREFIXER: {
-		cascade: false,
-		browsers: ['last 2 versions'],
-		remove: false
-	},
-	BOOTSTRAP_JS_FILE: BOOTSTRAP_JS_FILE,
-	BOOTSTRAP_JS_DIR: BOOTSTRAP_JS_DIR,
 	BOOTSTRAP_VAR_FILE: BOOTSTRAP_VAR_FILE,
-	BOOTSTRAP_VAR_DIR: BOOTSTRAP_VAR_DIR,
-	SRC_GLOB: 'src/**/*',
-	POPPER_JS_FILE: POPPER_JS_FILE
+	SRC_GLOB: 'src/**/*'
 };
 
 var license = require('./tasks/copyright_banner');
@@ -43,12 +26,10 @@ gulp.task('default', ['compile']);
 
 gulp.task('build', function(cb) {
 	runSequence(
-		'build:patch-bootstrap',
 		'build:svg',
 		'build:svg:scss-icons',
 		'build:metalsmith',
 		'build:rtl',
-		'build:clean-bootstrap-patch',
 		function(err) {
 			gulp.emit('build:finished', err);
 
