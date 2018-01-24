@@ -71,6 +71,7 @@ gulp.task(
 		runSequence(
 			'compile:clean',
 			'compile:files',
+			'build:svg:scss-icons',
 			'compile:prep-scss',
 			'compile:css',
 			'compile:svg',
