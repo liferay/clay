@@ -53,7 +53,7 @@ gulp.task(
 gulp.task(
 	'compile:files',
 	function(cb) {
-		var assetFilter = filter(['*.js', '!bootstrap'], {
+		var assetFilter = filter(['**/*.js', '!**/bootstrap.js'], {
 			restore: true
 		});
 
