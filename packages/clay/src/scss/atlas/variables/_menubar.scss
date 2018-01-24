@@ -1,4 +1,15 @@
-$menubar-vertical-transparent: (
+// Menubar Vertical MD
+
+$menubar-vertical-transparent-md: (
+	bg-mobile: #FFF,
+	link-active-font-weight: $font-weight-semi-bold,
+	toggler-font-weight-mobile: $font-weight-semi-bold
+) !default;
+
+// Menubar Vertical LG
+
+$menubar-vertical-transparent-lg: (
+	bg-mobile: #FFF,
 	link-active-font-weight: $font-weight-semi-bold,
 	toggler-font-weight-mobile: $font-weight-semi-bold
 ) !default;

@@ -1,3 +1,21 @@
+// Menubar Vertical MD
+
 $menubar-vertical-expand-md: () !default;
 
-$menubar-vertical-transparent: () !default;
+$menubar-vertical-transparent-md: () !default;
+$menubar-vertical-transparent-md: map-merge((
+	bg-mobile: $light
+), $menubar-vertical-transparent-md);
+
+// Menubar Vertical LG
+
+$menubar-vertical-expand-lg: () !default;
+$menubar-vertical-expand-lg: map-merge((
+	breakpoint-up: lg
+), $menubar-vertical-expand-lg);
+
+$menubar-vertical-transparent-lg: () !default;
+$menubar-vertical-transparent-lg: map-merge((
+	breakpoint-up: lg,
+	bg-mobile: $light
+), $menubar-vertical-transparent-lg);
