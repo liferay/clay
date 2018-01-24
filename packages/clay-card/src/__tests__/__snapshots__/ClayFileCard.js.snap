@@ -566,9 +566,7 @@ exports[`ClayFileCard should render a selectable ClayFileCard 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
               <title>documents-and-media</title>
@@ -596,9 +594,7 @@ exports[`ClayFileCard should render a selectable ClayFileCard with input \`name\
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
               <title>documents-and-media</title>
@@ -626,9 +622,7 @@ exports[`ClayFileCard should render a selectable ClayFileCard with input \`value
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
               <title>documents-and-media</title>
@@ -656,9 +650,7 @@ exports[`ClayFileCard should render a selectable disabled ClayFileCard 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
               <title>documents-and-media</title>
@@ -686,9 +678,7 @@ exports[`ClayFileCard should render a selectable selected ClayFileCard 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input checked="" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
               <title>documents-and-media</title>
