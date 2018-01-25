@@ -16,8 +16,19 @@ $panel-margin-bottom: $spacer !default;
 
 $panel-header-border-bottom-width: 1px !default;
 $panel-header-offset-border-radius: if($panel-border-top-width > 0, calc(#{$panel-border-radius} - #{$panel-border-top-width}), $panel-border-radius) !default;
+$panel-header-font-size: $font-size-base !default;
+$panel-header-line-height: $headings-line-height !default;
 $panel-header-padding-x: 1.25rem !default;
 $panel-header-padding-y: 0.75rem !default;
+
+$panel-header-collapse-icon-font-size: 0.875rem !default; // 14px
+$panel-header-collapse-icon-bottom: null !default;
+$panel-header-collapse-icon-left: null !default;
+$panel-header-collapse-icon-right: null !default;
+$panel-header-collapse-icon-top: clay-collapse-icon-align($panel-header-padding-y, 0, $panel-header-font-size, $panel-header-line-height) !default;
+
+$panel-header-collapse-icon-padding-left: null !default;
+$panel-header-collapse-icon-padding-right: null !default;
 
 $panel-header-link-text-decoration: null !default;
 $panel-header-link-hover-text-decoration: null !default;
@@ -39,10 +50,6 @@ $panel-footer-padding-y: $panel-header-padding-y !default;
 $panel-title-font-size: null !default;
 $panel-title-font-weight: $font-weight-semi-bold !default;
 $panel-title-text-transform: null !default;
-
-// Panel Collapse Icon
-
-$panel-collapse-icon-font-size: 0.875rem !default; // 14px
 
 // Panel Group
 
