@@ -1,5 +1,17 @@
 # Change Log
 
+## [v2.0.0-beta.8](https://github.com/liferay/clay/tree/v2.0.0-beta.8) (2018-01-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-beta.7...v2.0.0-beta.8)
+
+**Closed issues:**
+
+- lib directory of clay is not published to npm [\#479](https://github.com/liferay/clay/issues/479)
+
+**Merged pull requests:**
+
+- Generates CHANGELOG [\#480](https://github.com/liferay/clay/pull/480) ([jbalsas](https://github.com/jbalsas))
+- Publish lib dir to npm [\#478](https://github.com/liferay/clay/pull/478) ([Robert-Frampton](https://github.com/Robert-Frampton))
+
 ## [v2.0.0-beta.7](https://github.com/liferay/clay/tree/v2.0.0-beta.7) (2018-01-25)
 [Full Changelog](https://github.com/liferay/clay/compare/v1.0.0-alpha.16...v2.0.0-beta.7)
 
