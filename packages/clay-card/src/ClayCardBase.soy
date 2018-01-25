@@ -1,0 +1,185 @@
+{namespace ClayCardBase}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param title: string}
+	{@param? actionItems: list<[
+		href: string,
+		label: string,
+		separator: bool
+	]>}
+	{@param? contentRenderer: string}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? fileType: string}
+	{@param? fileTypeStyle: string}
+	{@param? groupName: string}
+	{@param? handleItemCheckboxClick_: any}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? id: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? labels: list<?>}
+	{@param? labelStylesMap: ?}
+	{@param? selectable: bool}
+	{@param? selected: bool}
+	{@param? spritemap: string}
+	{@param? subtitle: string}
+
+	{let $attributes kind="attributes"}
+		class="card-type-asset
+			{if $selectable}
+				{sp}form-check form-check-card form-check-top-left
+			{else}
+				{sp}card
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	{let $variant: $contentRenderer ?: '' /}
+
+	{let $descriptiveArea kind="html"}
+		{delcall ClayCardBase.DescriptiveArea variant="$variant"}
+			{param actionItems: $actionItems /}
+			{param href: $href /}
+			{param labels: $labels /}
+			{param labelStylesMap: $labelStylesMap /}
+			{param spritemap: $spritemap /}
+			{param subtitle: $subtitle /}
+			{param title: $title /}
+		{/delcall}
+	{/let}
+
+	{let $visualArea kind="html"}
+		{delcall ClayCardBase.VisualArea variant="$variant"}
+			{param fileType: $fileType /}
+			{param fileTypeStyle: $fileTypeStyle /}
+			{param icon: $icon /}
+			{param imageAlt: $imageAlt /}
+			{param imageSrc: $imageSrc /}
+			{param spritemap: $spritemap /}
+		{/delcall}
+	{/let}
+
+	<div {$attributes}>
+		{if $selectable}
+			<div class="card">
+				<div class="aspect-ratio card-item-first">
+					{call ClayCheckbox.render}
+						{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
+						{param checked: $selected /}
+						{param disabled: $disabled /}
+						{param events: ['change': $handleItemCheckboxClick_] /}
+						{param labelContent kind="html"}
+							{$visualArea}
+						{/param}
+
+						{param name: $inputName /}
+						{param value: $inputValue /}
+					{/call}
+				</div>
+
+				{$descriptiveArea}
+			</div>
+		{else}
+			<div class="aspect-ratio card-item-first">
+				{$visualArea}
+			</div>
+
+			{$descriptiveArea}
+		{/if}
+	</div>
+{/template}
+
+/**
+ * This renders the information area of the card.
+ */
+{deltemplate ClayCardBase.DescriptiveArea}
+	{@param title: string}
+	{@param? actionItems: list<[
+		href: string,
+		label: string,
+		separator: bool
+	]>}
+	{@param? href: string}
+	{@param? labels: list<?>}
+	{@param? labelStylesMap: ?}
+	{@param? spritemap: string}
+	{@param? subtitle: string}
+
+	<div class="card-body">
+		<div class="card-row">
+			<div class="autofit-col autofit-col-expand">
+				{if $href}
+					{call ClayLink.render}
+						{param elementClasses: 'card-title text-truncate' /}
+						{param href: $href /}
+						{param label: $title /}
+					{/call}
+				{else}
+					<div class="card-title text-truncate">{$title}</div>
+				{/if}
+
+				{if $subtitle}
+					<div class="card-subtitle text-truncate">{$subtitle}</div>
+				{/if}
+
+				{if $labels}
+					<div class="card-detail">
+						{foreach $label in $labels}
+							{if $label.label}
+								{call ClayLabel.render}
+									{param label: $label.label /}
+									{param style: $label.style /}
+								{/call}
+							{else}
+								{call ClayLabel.render}
+									{param label: $label /}
+									{param style: $labelStylesMap ? $labelStylesMap[$label] ?: $labelStylesMap['*'] : null /}
+								{/call}
+							{/if}
+
+							{if not isLast($label)}
+								{sp}
+							{/if}
+						{/foreach}
+					</div>
+				{/if}
+			</div>
+
+			{if $actionItems and $spritemap}
+				<div class="autofit-col">
+					{call ClayActionsDropdown.render}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</div>
+			{/if}
+		</div>
+	</div>
+{/deltemplate}
+
+/**
+ * This renders the visual area of the card
+ */
+{deltemplate ClayCardBase.VisualArea}
+	{@param? fileType: string}
+	{@param? fileTypeStyle: string}
+	{@param? icon: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? spritemap: string}
+{/deltemplate}

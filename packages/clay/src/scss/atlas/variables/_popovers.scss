@@ -5,7 +5,9 @@ $popover-max-width: 14.5rem !default; // 232px
 $popover-inline-scroller-max-height: 14.875rem !default; // 238px
 
 $popover-arrow-outer-color: transparent !default;
-$popover-arrow-width: 5px !default;
+$popover-arrow-height: 0.3rem !default;
+$popover-arrow-offset: 0.625rem !default; // 10px
+$popover-arrow-width: $popover-arrow-height * 2 !default;
 
 $popover-inner-padding: 0 !default;
 

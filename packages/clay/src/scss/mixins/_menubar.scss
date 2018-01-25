@@ -14,6 +14,9 @@
 	$border-style-mobile: setter(map-get($map, border-style-mobile), solid);
 	$border-width-mobile: setter(map-get($map, border-width-mobile), 0.0625rem); // 1px
 	$margin-bottom-mobile: map-get($map, margin-bottom-mobile);
+	$margin-left-mobile: map-get($map, margin-left-mobile);
+	$margin-right-mobile: map-get($map, margin-right-mobile);
+	$margin-top-mobile: map-get($map, margin-top-mobile);
 	$max-width-mobile: setter(map-get($map, max-width-mobile), none);
 	$min-height-mobile: setter(map-get($map, min-height-mobile), 3rem); // 48px
 	$padding-x-mobile: setter(map-get($map, padding-x-mobile), 0.5rem);
@@ -54,6 +57,9 @@
 			flex-wrap: wrap;
 			justify-content: space-between;
 			margin-bottom: $margin-bottom-mobile;
+			margin-left: $margin-left-mobile;
+			margin-right: $margin-right-mobile;
+			margin-top: $margin-top-mobile;
 			max-width: $max-width-mobile;
 			min-height: $min-height-mobile;
 			padding-bottom: $padding-y-mobile;

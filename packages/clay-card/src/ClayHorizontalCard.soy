@@ -89,17 +89,15 @@
 
 	<div class="card-body">
 		<div class="card-row">
-			{let $classesDescription kind="text"}
-				flex-col flex-col-expand flex-col-gutters
-			{/let}
+			<div class="autofit-col">
+				{call ClaySticker.render}
+					{param icon: $icon ?: 'folder' /}
+					{param spritemap: $spritemap /}
+					{param style: 'unstyled' /}
+				{/call}
+			</div>
 
-      {call ClaySticker.render}
-        {param icon: $icon ?: 'folder' /}
-        {param spritemap: $spritemap /}
-        {param style: 'unstyled' /}
-      {/call}
-
-			<div class="{$classesDescription}">
+			<div class="autofit-col autofit-col-expand autofit-col-gutters">
 				{if $href}
 					{call ClayLink.render}
 						{param elementClasses: 'card-title text-truncate' /}
@@ -107,12 +105,12 @@
 						{param label: $title /}
 					{/call}
 				{else}
-					<div class="card-title text-truncate" title="{$title}">{$title}</div>
+					<div class="card-title text-truncate">{$title}</div>
 				{/if}
 			</div>
 
 			{if $actionItems}
-				<div class="flex-col">
+				<div class="autofit-col">
 					{call ClayActionsDropdown.render}
 						{param items: $actionItems /}
 						{param spritemap: $spritemap /}

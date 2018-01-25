@@ -1,4 +1,4 @@
-import './ClayCard';
+import './ClayCardBase';
 import 'clay-link';
 import 'clay-sticker';
 // eslint-disable-next-line

@@ -3,7 +3,7 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 /* eslint-disable */
 import {
-	ClayCard,
+	ClayCardBase,
 	ClayFileCard,
 	ClayHorizontalCard,
 	ClayImageCard,

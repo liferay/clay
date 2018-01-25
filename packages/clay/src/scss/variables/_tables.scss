@@ -6,6 +6,11 @@ $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
 
+$table-head-link: () !default;
+
+$table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
+$table-head-title-text-truncate-max-width: calc(100% - 1em - #{$table-head-title-inline-item-spacer-x}) !default;
+
 $table-divider-bg: #FFF !default;
 $table-divider-color: null !default;
 $table-divider-font-weight: null !default;
@@ -20,13 +25,16 @@ $table-quick-action-menu-accent-active-bg: #E0E0E0 !default;
 $table-quick-action-menu-active-bg: #DADADA !default;
 $table-quick-action-menu-hover-bg: #ECECEC !default;
 
+$table-cell-expand-min-width: 12.5rem !default; // 200px
+
 // Table Title
 
 $table-title: () !default;
 $table-title: map-merge((
 	font-size: 1rem, // 16px
 	font-weight: $font-weight-semi-bold,
-	line-height: $line-height-base
+	line-height: $line-height-base,
+	margin-bottom: 0
 ), $table-title);
 
 $table-title-link: () !default;
@@ -77,6 +85,8 @@ $table-list-head-font-weight: null !default;
 $table-list-head-height: null !default;
 $table-list-head-vertical-alignment: null !default;
 
+$table-list-head-link: () !default;
+
 $table-list-quick-action-menu-align-items: center !default;
 $table-list-quick-action-menu-bg: $table-list-bg !default;
 $table-list-quick-action-menu-accent-bg: $table-list-accent-bg !default;
@@ -90,7 +100,8 @@ $table-list-title: () !default;
 $table-list-title: map-merge((
 	font-size: 1rem, // 16px
 	font-weight: $font-weight-semi-bold,
-	line-height: $headings-line-height
+	line-height: $headings-line-height,
+	margin-bottom: 0
 ), $table-list-title);
 
 $table-list-title-link: () !default;

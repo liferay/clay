@@ -12,7 +12,7 @@ section: Components
 		</div>
 
 		<nav class="management-bar navbar navbar-expand-md">
-			<div class="container">
+			<div class="container-fluid container-fluid-max-xl">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<div class="custom-control custom-checkbox">
@@ -34,11 +34,11 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#filter" />
 							</svg>
 						</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#1" role="button">Filter Action 1</a>
-							<a class="dropdown-item" href="#1" role="button">Filter Action 2</a>
-							<a class="dropdown-item" href="#1" role="button">Filter Action 3</a>
-						</div>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#1" role="button">Filter Action 1</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Filter Action 2</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Filter Action 3</a></li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link nav-link-monospaced order-arrow-up-active" href="#1" role="button">
@@ -49,7 +49,7 @@ section: Components
 					</li>
 				</ul>
 				<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-					<div class="container">
+					<div class="container-fluid container-fluid-max-xl">
 						<form role="search">
 							<div class="input-group">
 								<div class="input-group-item">
@@ -85,32 +85,38 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
-							<a class="active dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-									</svg>
-								</span>
-								List View
-							</a>
-							<a class="dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
-									</svg>
-								</span>
-								Table View
-							</a>
-							<a class="dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-									</svg>
-								</span>
-								Card View
-							</a>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+							<li>
+								<a class="active dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+										</svg>
+									</span>
+									List View
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+										</svg>
+									</span>
+									Table View
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+										</svg>
+									</span>
+									Card View
+								</a>
+							</li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
@@ -124,7 +130,7 @@ section: Components
 		</nav>
 
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
-	<div class="container">
+	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<div class="custom-control custom-checkbox">
@@ -146,11 +152,11 @@ section: Components
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#filter" />
 					</svg>
 				</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#1" role="button">Filter Action 1</a>
-					<a class="dropdown-item" href="#1" role="button">Filter Action 2</a>
-					<a class="dropdown-item" href="#1" role="button">Filter Action 3</a>
-				</div>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#1" role="button">Filter Action 1</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Filter Action 2</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Filter Action 3</a></li>
+				</ul>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
@@ -161,7 +167,7 @@ section: Components
 			</li>
 		</ul>
 		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-			<div class="container">
+			<div class="container-fluid container-fluid-max-xl">
 				<form role="search">
 					<div class="input-group">
 						<div class="input-group-item">
@@ -197,32 +203,38 @@ section: Components
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
 					</svg>
 				</a>
-				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
-					<a class="active dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-							</svg>
-						</span>
-						List View
-					</a>
-					<a class="dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
-							</svg>
-						</span>
-						Table View
-					</a>
-					<a class="dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-							</svg>
-						</span>
-						Card View
-					</a>
-				</div>
+				<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+					<li>
+						<a class="active dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+								</svg>
+							</span>
+							List View
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+								</svg>
+							</span>
+							Table View
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+								</svg>
+							</span>
+							Card View
+						</a>
+					</li>
+				</ul>
 			</li>
 			<li class="nav-item">
 				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
@@ -237,24 +249,18 @@ section: Components
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
 					</svg>
 				</a>
-				<div class="dropdown-menu dropdown-menu-right">
-					<a class="active dropdown-item" href="#1">
-						Option 1
-					</a>
-					<a class="dropdown-item" href="#1">
-						Option 2
-					</a>
-					<a class="dropdown-item" href="#1">
-						Option 3
-					</a>
-				</div>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a class="active dropdown-item" href="#1">Option 1</a></li>
+					<li><a class="dropdown-item" href="#1">Option 2</a></li>
+					<li><a class="dropdown-item" href="#1">Option 3</a></li>
+				</ul>
 			</li>
 		</ul>
 	</div>
 </nav>
 
 <nav class="management-bar management-bar-primary navbar navbar-expand-md">
-	<div class="container">
+	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<div class="custom-control custom-checkbox">
@@ -297,32 +303,38 @@ section: Components
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
-				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
-					<a class="active dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-							</svg>
-						</span>
-						List View
-					</a>
-					<a class="dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
-							</svg>
-						</span>
-						Table View
-					</a>
-					<a class="dropdown-item" href="#1">
-						<span class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-							</svg>
-						</span>
-						Card View
-					</a>
-				</div>
+				<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+					<li>
+						<a class="active dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+								</svg>
+							</span>
+							List View
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+								</svg>
+							</span>
+							Table View
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+								</svg>
+							</span>
+							Card View
+						</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</div>
@@ -347,7 +359,7 @@ section: Components
 		</blockquote>
 
 		<nav class="management-bar management-bar-light navbar navbar-expand-md">
-			<div class="container">
+			<div class="container-fluid container-fluid-max-xl">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<div class="custom-control custom-checkbox">
@@ -369,15 +381,15 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#1">Action</a>
-							<a class="dropdown-item" href="#1">Another action</a>
-							<a class="dropdown-item" href="#1">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#1">Separated link</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#1">One more separated link</a>
-						</div>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#1">Action</a></li>
+							<li><a class="dropdown-item" href="#1">Another action</a></li>
+							<li><a class="dropdown-item" href="#1">Something else here</a></li>
+							<li class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#1">Separated link</a></li>
+							<li class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#1">One more separated link</a></li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
@@ -388,7 +400,7 @@ section: Components
 					</li>
 				</ul>
 				<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-					<div class="container">
+					<div class="container-fluid container-fluid-max-xl">
 						<form role="search">
 							<div class="input-group">
 								<div class="input-group-item">
@@ -439,7 +451,7 @@ section: Components
 					</li>
 				</ul>
 				<div class="navbar-overlay navbar-overlay-up">
-					<div class="container">
+					<div class="container-fluid container-fluid-max-xl">
 						<ul class="navbar-nav">
 							<li class="nav-item">
 								<div class="custom-control custom-checkbox">
@@ -465,17 +477,11 @@ section: Components
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#1" role="button">
-										Delete
-									</a>
-									<a class="dropdown-item" href="#1" role="button">
-										Copy
-									</a>
-									<a class="dropdown-item" href="#1" role="button">
-										Info
-									</a>
-								</div>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#1" role="button">Delete</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Copy</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Info</a></li>
+								</ul>
 							</li>
 							<li class="nav-item">
 								<button class="btn btn-secondary clay-site-close-overlay-up nav-btn" type="button">
@@ -495,7 +501,7 @@ section: Components
 		<h3>With Buttons</h3>
 
 		<nav class="management-bar management-bar-light navbar navbar-expand-md">
-			<div class="container">
+			<div class="container-fluid container-fluid-max-xl">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<div class="custom-control custom-checkbox">
@@ -517,11 +523,11 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#filter" />
 							</svg>
 						</button>
-						<div class="dropdown-menu">
-							<button class="dropdown-item" type="button">Filter Action 1</button>
-							<button class="dropdown-item" type="button">Filter Action 2</button>
-							<button class="dropdown-item" type="button">Filter Action 3</button>
-						</div>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button">Filter Action 1</button></li>
+							<li><button class="dropdown-item" type="button">Filter Action 2</button></li>
+							<li><button class="dropdown-item" type="button">Filter Action 3</button></li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<button class="btn btn-unstyled nav-btn nav-btn-monospaced order-arrow-down-active" type="button">
@@ -532,7 +538,7 @@ section: Components
 					</li>
 				</ul>
 				<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-					<div class="container">
+					<div class="container-fluid container-fluid-max-xl">
 						<form role="search">
 							<div class="input-group">
 								<div class="input-group-item">
@@ -568,32 +574,38 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
 							</svg>
 						</button>
-						<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
-							<a class="active dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-									</svg>
-								</span>
-								List View
-							</a>
-							<a class="dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
-									</svg>
-								</span>
-								Table View
-							</a>
-							<a class="dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-									</svg>
-								</span>
-								Card View
-							</a>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+							<li>
+								<a class="active dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+										</svg>
+									</span>
+									List View
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+										</svg>
+									</span>
+									Table View
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+										</svg>
+									</span>
+									Card View
+								</a>
+							</li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<button class="btn btn-secondary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" type="button">
@@ -614,7 +626,7 @@ section: Components
 		</nav>
 
 		<nav class="management-bar management-bar-primary navbar navbar-expand-md">
-			<div class="container">
+			<div class="container-fluid container-fluid-max-xl">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<div class="custom-control custom-checkbox">
@@ -636,11 +648,11 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#filter" />
 							</svg>
 						</button>
-						<div class="dropdown-menu">
-							<button class="dropdown-item" type="button">Filter Action 1</button>
-							<button class="dropdown-item" type="button">Filter Action 2</button>
-							<button class="dropdown-item" type="button">Filter Action 3</button>
-						</div>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button">Filter Action 1</button></li>
+							<li><button class="dropdown-item" type="button">Filter Action 2</button></li>
+							<li><button class="dropdown-item" type="button">Filter Action 3</button></li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<button class="btn btn-unstyled nav-btn nav-btn-monospaced order-arrow-down-active" type="button">
@@ -651,7 +663,7 @@ section: Components
 					</li>
 				</ul>
 				<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-					<div class="container">
+					<div class="container-fluid container-fluid-max-xl">
 						<form role="search">
 							<div class="input-group">
 								<div class="input-group-item">
@@ -687,32 +699,38 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
 							</svg>
 						</button>
-						<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
-							<a class="active dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-									</svg>
-								</span>
-								List View
-							</a>
-							<a class="dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
-									</svg>
-								</span>
-								Table View
-							</a>
-							<a class="dropdown-item" href="#1">
-								<span class="dropdown-item-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-									</svg>
-								</span>
-								Card View
-							</a>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+							<li>
+								<a class="active dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+										</svg>
+									</span>
+									List View
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+										</svg>
+									</span>
+									Table View
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#1">
+									<span class="dropdown-item-indicator">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+										</svg>
+									</span>
+									Card View
+								</a>
+							</li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<button class="btn btn-secondary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" type="button">

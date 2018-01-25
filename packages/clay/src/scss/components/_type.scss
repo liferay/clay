@@ -81,7 +81,8 @@ mark,
 }
 
 .text-truncate-inline {
-	display: inline;
+	display: inline-flex;
+	max-width: 100%;
 
 	.text-truncate {
 		display: inline-block;

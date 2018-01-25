@@ -34,7 +34,7 @@
         {/if}
     {/let}
 
-    {call ClayCard.render}
+    {call ClayCardBase.render}
         {param actionItems: $actionItems /}
         {param contentRenderer: 'user' /}
         {param disabled: $disabled /}
@@ -61,7 +61,7 @@
 /**
  * This renders the information area of the card.
  */
-{deltemplate ClayCard.DescriptiveArea variant="'user'"}
+{deltemplate ClayCardBase.DescriptiveArea variant="'user'"}
     {@param title: string}
     {@param? actionItems: list<[
     	href: string,
@@ -76,7 +76,7 @@
 
     <div class="card-body">
     	<div class="card-row">
-    		<div class="flex-col flex-col-expand">
+    		<div class="autofit-col autofit-col-expand">
     			{if $href}
     				{call ClayLink.render}
     					{param elementClasses: 'card-title text-truncate' /}
@@ -84,16 +84,16 @@
     					{param label: $title /}
     				{/call}
     			{elseif $title}
-    				<div class="card-title text-truncate" title="{$title}">{$title}</div>
+    				<div class="card-title text-truncate">{$title}</div>
     			{/if}
 
     			{if $subtitle}
-    				<div class="card-subtitle text-truncate" title="{$subtitle}">{$subtitle}</div>
+    				<div class="card-subtitle text-truncate">{$subtitle}</div>
     			{/if}
     		</div>
 
     		{if $actionItems and $spritemap}
-    			<div class="flex-col">
+    			<div class="autofit-col">
     				{call ClayActionsDropdown.render}
     					{param items: $actionItems /}
     					{param spritemap: $spritemap /}
@@ -107,7 +107,7 @@
 /**
  * Render the visual area of the card.
  */
-{deltemplate ClayCard.VisualArea variant="'user'"}
+{deltemplate ClayCardBase.VisualArea variant="'user'"}
     {@param? fileType: string}
     {@param? fileTypeStyle: string}
     {@param? icon: string}

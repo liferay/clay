@@ -51,6 +51,15 @@ ClayDropdown.STATE = {
 	}),
 
 	/**
+	 * Flag to indicate if menu is disabled
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?bool}
+	 * @default false
+	 */
+	disabled: Config.bool().value(false),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdown
@@ -149,15 +158,6 @@ ClayDropdown.STATE = {
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
-
-	/**
-	 * Type of the dropdown menu.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?string}
-	 * @default list
-	 */
-	type: Config.oneOf(['form', 'list']).value('list'),
 };
 
 defineWebComponent('clay-dropdown', ClayDropdown);

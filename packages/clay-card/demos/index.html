@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: ClayCard</title>
 
-	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+	<link rel="stylesheet" href="../../../node_modules/clay/lib/css/atlas.css">
 
 	<style>
 		body {
@@ -70,114 +70,11 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Web Component Image Card</h4>
-			<div class="row">
-				<div class="col-md-4">
-					<clay-image-card 
-						actionItems='[{"label": "Edit"},{"label": "Save"}]'
-						fileType="JPG" 
-						fileTypeStyle="danger" 
-						href="#1"
-						imageAlt="thumbnail" 
-						imageSrc="./image1.jpg" 
-						labels='[{"label": "Approved", "style": "success"}]',
-						selectable="true"
-						selected="true"
-						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
-						subtitle="Author Action" 
-						title="thumbnail_kyoto.jpg" 
-					></clay-image-card>
-				</div>
-				<div class="col-md-4">
-					<clay-image-card 
-						actionItems='[{"label": "Edit"},{"label": "Save"}]'
-						fileType="SVG" 
-						fileTypeStyle="warning"
-						href="#1"
-						icon="camera"
-						imageAlt="thumbnail" 
-						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"}]',
-						selectable="true"
-						selected="true"
-						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
-						subtitle="Author Action" 
-						title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg" 
-					></clay-image-card>
-				</div>
-				<div class="col-md-4">
-					<clay-image-card 
-						actionItems='[{"label": "Edit"},{"label": "Save"}]'
-						fileType="PNG" 
-						fileTypeStyle="info" 
-						href="#1"
-						imageAlt="thumbnail" 
-						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"},{"label": "Canceled", "style": "danger"}]',
-						selectable="true"
-						selected="true"
-						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
-						subtitle="Author Action" 
-						title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg" 
-					></clay-image-card>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
 			<h4>File card</h4>
 			<div class="row">
 				<div class="col-md-4" id="file-card-block"></div>
 				<div class="col-md-4" id="file-card-checked-block"></div>
 				<div class="col-md-4" id="file-card-icon-block"></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
-			<h4>Web component File card</h4>
-			<div class="row">
-				<div class="col-md-4">
-					<clay-file-card 
-						actionItems='[{"label": "Edit"},{"label": "Save"}]'
-						fileType="PDF" 
-						fileTypeStyle="danger" 
-						labels='[{"label": "Approved", "style": "success"}]',
-						selectable="true"
-						selected="true"
-						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
-						subtitle="Author Action" 
-						title="deliverable.pdf" 
-					></clay-image-card>
-				</div>
-				<div class="col-md-4">
-					<clay-file-card 
-						actionItems='[{"label": "Edit"},{"label": "Save"}]'
-						fileType="TXT" 
-						fileTypeStyle="warning"
-						icon="camera"
-						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"}]',
-						selectable="true"
-						selected="true"
-						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
-						subtitle="Author Action" 
-						title="deliverable.txt" 
-					></clay-image-card>
-				</div>
-				<div class="col-md-4">
-					<clay-file-card 
-						actionItems='[{"label": "Edit"},{"label": "Save"}]'
-						fileType="DOC" 
-						fileTypeStyle="info" 
-						labels='[{"label": "Approved", "style": "success"},{"label": "Pending", "style": "warning"},{"label": "Canceled", "style": "danger"}]',
-						selectable="true"
-						selected="true"
-						spritemap="../../../node_modules/clay/build/images/icons/icons.svg"
-						subtitle="Author Action" 
-						title="deliverable.doc" 
-					></clay-image-card>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -203,7 +100,7 @@
 	</div>
 
 	<script type="text/javascript">
-		var spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		var spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
 		var image = './image1.jpg';
 		var items = [
 			{
@@ -228,7 +125,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'thumbnail_kyoto.jpg',
-		}, 
+		},
 		'#image-card-block');
 
 		new metal.ClayImageCard({
@@ -237,7 +134,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#image-card-icon-block');
 
 		new metal.ClayImageCard({
@@ -245,7 +142,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#image-card-empty-block');
 
 		/*
@@ -261,7 +158,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'thumbnail_kyoto.jpg',
-		}, 
+		},
 		'#filetype-image-card-block');
 
 		new metal.ClayImageCard({
@@ -272,7 +169,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#filetype-image-card-icon-block');
 
 		new metal.ClayImageCard({
@@ -282,7 +179,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#filetype-image-card-empty-block');
 
 		/*
@@ -304,7 +201,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'thumbnail_kyoto.jpg',
-		}, 
+		},
 		'#image-card-one-label-block');
 
 		new metal.ClayImageCard({
@@ -325,7 +222,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#image-card-two-labels-block');
 
 		new metal.ClayImageCard({
@@ -349,7 +246,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#image-card-three-labels-block');
 
 		/*
@@ -373,7 +270,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'thumbnail_kyoto.jpg',
-		}, 
+		},
 		'#selectable-image-card-block');
 
 		new metal.ClayImageCard({
@@ -396,7 +293,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#selectable-image-card-icon-block');
 
 		new metal.ClayImageCard({
@@ -422,7 +319,7 @@
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
-		}, 
+		},
 		'#selectable-image-card-empty-block');
 
 		/*
@@ -441,7 +338,7 @@
 			spritemap: spritemap,
 			subtitle: 'Stevie Ray Vaughn',
 			title: 'deliverable.pdf',
-		}, 
+		},
 		'#file-card-block');
 
 		new metal.ClayFileCard({
@@ -463,7 +360,7 @@
 			spritemap: spritemap,
 			subtitle: 'Stevie Ray Vaughn',
 			title: 'deliverable.txt',
-		}, 
+		},
 		'#file-card-checked-block');
 
 		new metal.ClayFileCard({
@@ -490,7 +387,7 @@
 			spritemap: spritemap,
 			subtitle: 'Stevie Ray Vaughn',
 			title: 'deliverable.doc',
-		}, 
+		},
 		'#file-card-icon-block');
 
 		/*
@@ -503,7 +400,7 @@
 			spritemap: spritemap,
 			subtitle: 'Latest Action',
 			userColor: 'danger'
-		}, 
+		},
 		'#user-card-block');
 
 		new metal.ClayUserCard({
@@ -516,7 +413,7 @@
 			selected: true,
 			spritemap: spritemap,
 			subtitle: 'Latest Action',
-		}, 
+		},
 		'#user-card-image-block');
 
 		/*
@@ -525,7 +422,7 @@
 		new metal.ClayHorizontalCard({
 			spritemap: spritemap,
 			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
-		}, 
+		},
 		'#directory-block');
 
 		new metal.ClayHorizontalCard({
@@ -534,7 +431,7 @@
 			selected: true,
 			spritemap: spritemap,
 			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
-		}, 
+		},
 		'#directory-checkbox-block');
 
 	</script>

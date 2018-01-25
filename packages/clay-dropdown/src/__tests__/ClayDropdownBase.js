@@ -66,6 +66,25 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should render a disabled dropdown', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			disabled: true,
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+				{
+					href: 'item2url',
+					label: 'Item 2',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with items of type item', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
@@ -114,22 +133,6 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
-	it('should render a dropdown of type form with items', () => {
-		clayDropdownBase = new ClayDropdownBase({
-			items: [
-				{
-					disabled: true,
-					href: 'item1url',
-					label: 'Item 1',
-				},
-			],
-			label: 'Trigger',
-			type: 'form',
-		});
-
-		expect(clayDropdownBase).toMatchSnapshot();
-	});
-
 	it('should render a dropdown with items of type checkbox', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
@@ -148,7 +151,6 @@ describe('ClayDropdownBase', function() {
 				},
 			],
 			label: 'Trigger',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -190,7 +192,6 @@ describe('ClayDropdownBase', function() {
 				},
 			],
 			label: 'Trigger',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -209,7 +210,6 @@ describe('ClayDropdownBase', function() {
 				},
 			],
 			label: 'Trigger',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -252,7 +252,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -297,7 +296,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -342,7 +340,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			type: 'form',
 		});
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
@@ -383,49 +380,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-		});
-
-		expect(clayDropdownBase).toMatchSnapshot();
-	});
-
-	it('should render a dropdown of type form with groups', () => {
-		clayDropdownBase = new ClayDropdownBase({
-			items: [
-				{
-					label: 'Group 1',
-					items: [
-						{
-							active: true,
-							href: '#1',
-							label: 'Item 1',
-						},
-						{
-							href: '#2',
-							label: 'Item 2',
-						},
-					],
-					separator: true,
-					type: 'group',
-				},
-				{
-					label: 'Group 2',
-					items: [
-						{
-							href: '#3',
-							label: 'Item 3',
-						},
-						{
-							disabled: true,
-							href: '#4',
-							label: 'Item 3',
-						},
-					],
-					type: 'group',
-				},
-			],
-			label: 'Trigger Label',
-			spritemap: 'icons.svg',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -691,7 +645,7 @@ describe('ClayDropdownBase', function() {
 
 		expect(clayDropdownBase.items).toEqual(items);
 
-		let input = clayDropdownBase.refs['searchInput'];
+		let input = clayDropdownBase.refs.portal.refs['searchInput'];
 		input.value = 'Item 1';
 
 		clayDropdownBase.handleSearch_({
@@ -740,7 +694,7 @@ describe('ClayDropdownBase', function() {
 
 		const spy = jest.spyOn(clayDropdownBase, 'emit');
 
-		clayDropdownBase.refs.dropdownButton.element.click();
+		clayDropdownBase.refs.portal.refs.dropdownButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));

@@ -9,6 +9,12 @@ $table-head-color: $secondary !default;
 $table-head-font-size: 0.8125rem !default; // 13px
 $table-head-font-weight: $font-weight-semi-bold !default;
 
+$table-head-link: () !default;
+$table-head-link: map-merge((
+	color: $secondary,
+	hover-color: $body-color
+), $table-head-link);
+
 $table-divider-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $table-divider-color: $secondary !default;
 $table-divider-font-size: 0.6875rem !default; // 11px

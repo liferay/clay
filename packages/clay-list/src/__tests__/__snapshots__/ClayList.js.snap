@@ -70,8 +70,9 @@ exports[`ClayList should render a selectable ClayList 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-          <span class="custom-control-label-text sr-only">Deselect</span>
+          <span class="custom-control-label">
+            <span class="custom-control-label-text sr-only">Deselect</span>
+          </span>
         </label>
       </div>
     </div>
@@ -84,8 +85,9 @@ exports[`ClayList should render a selectable ClayList 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-          <span class="custom-control-label-text sr-only">Deselect</span>
+          <span class="custom-control-label">
+            <span class="custom-control-label-text sr-only">Deselect</span>
+          </span>
         </label>
       </div>
     </div>
@@ -104,7 +106,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -118,20 +120,9 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -141,7 +132,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -155,24 +146,35 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
 </ul>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
 `;
 
 exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
@@ -186,7 +188,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -201,7 +203,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -219,7 +221,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -237,7 +239,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -255,7 +257,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -273,7 +275,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -291,7 +293,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -309,7 +311,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -330,7 +332,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -345,7 +347,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -360,7 +362,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -470,7 +472,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -485,7 +487,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -503,7 +505,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -521,7 +523,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -539,7 +541,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -557,7 +559,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -575,7 +577,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -593,7 +595,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -614,7 +616,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -629,7 +631,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -644,7 +646,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -667,7 +669,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -682,7 +684,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
             <title>folder</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#folder"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
           </svg>
         </span>
       </span>
@@ -700,7 +702,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -721,7 +723,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -742,7 +744,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -763,7 +765,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -784,7 +786,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -805,7 +807,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -829,7 +831,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -844,7 +846,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -859,7 +861,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -879,7 +881,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -898,13 +900,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
         <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
           </svg>
         </a>
       </div>
@@ -912,20 +914,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -935,7 +926,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -954,13 +945,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
         <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
           </svg>
         </a>
       </div>
@@ -968,20 +959,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -991,7 +971,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -1010,13 +990,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
         <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
           </svg>
         </a>
       </div>
@@ -1024,20 +1004,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -1047,7 +1016,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -1066,13 +1035,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
         <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
           </svg>
         </a>
       </div>
@@ -1080,20 +1049,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -1103,7 +1061,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -1122,13 +1080,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
         <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
           </svg>
         </a>
       </div>
@@ -1136,20 +1094,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
@@ -1159,7 +1106,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </span>
       </span>
@@ -1178,13 +1125,13 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <a aria-label="Remove" class=" quick-action-item" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
             <title>trash</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
           </svg>
         </a>
         <a aria-label="Download" class=" quick-action-item" href="#2">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
             <title>download</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
           </svg>
         </a>
       </div>
@@ -1192,24 +1139,79 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
             <title>ellipsis-v</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
           </svg>
         </button>
-        <div class="dropdown-menu">
-          <ul class="list-unstyled">
-            <li>
-              <a class=" dropdown-item" href="#1">Remove</a>
-            </li>
-            <li>
-              <a class=" dropdown-item" href="#2">Download</a>
-            </li>
-            <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-          </ul>
-        </div>
       </div>
     </div>
   </li>
 </ul>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
 `;
 
 exports[`ClayList should render the default markup 1`] = `<ul class="list-group show-quick-actions-on-hover"></ul>`;

@@ -19,9 +19,8 @@
 	}
 
 	.nav-link {
-		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
+		padding-left: $navbar-nav-link-padding-x;
+		padding-right: $navbar-nav-link-padding-x;
 	}
 }
 
@@ -31,9 +30,8 @@
 	> .custom-control,
 	> .form-check {
 		margin-bottom: 0;
-		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-		margin-left: 0.5rem;
-		margin-right: 0.5rem;
+		margin-left: $navbar-nav-link-padding-x;
+		margin-right: $navbar-nav-link-padding-x;
 	}
 }
 
@@ -77,6 +75,10 @@
 	&:focus {
 		z-index: $zindex-navbar-toggler-focus;
 	}
+
+	&:not(:disabled):not(.disabled) {
+		cursor: $navbar-toggler-cursor;
+	}
 }
 
 .navbar-toggler-link {
@@ -85,8 +87,7 @@
 	border-width: 0;
 	line-height: $line-height-base;
 	max-width: 100%;
-	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-	padding: $navbar-brand-padding-y 0.5rem;
+	padding: $navbar-brand-padding-y $navbar-nav-link-padding-x;
 	position: relative;
 
 	.lexicon-icon {
@@ -101,9 +102,8 @@
 .navbar-brand {
 	margin-right: 0;
 	max-width: calc(100% - 72px);
-	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-left: $navbar-nav-link-padding-x;
+	padding-right: $navbar-nav-link-padding-x;
 }
 
 // Navbar Form
@@ -111,9 +111,8 @@
 .navbar-form {
 	align-items: center;
 	display: flex;
-	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-left: $navbar-nav-link-padding-x;
+	padding-right: $navbar-nav-link-padding-x;
 
 	> form {
 		width: 100%;
@@ -285,8 +284,7 @@
 					.show-dropdown-on-collapse {
 						.dropdown-header,
 						.dropdown-item {
-							// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-							padding: $nav-link-padding-y 0.5rem;
+							padding: $nav-link-padding-y $navbar-nav-link-padding-x;
 						}
 
 						.dropdown-menu {
@@ -438,10 +436,4 @@
 			}
 		}
 	}
-}
-
-// Navbar Transparent
-
-.navbar-transparent {
-	@include clay-navbar-variant($navbar-transparent);
 }

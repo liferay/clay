@@ -1,14 +1,16 @@
+$clay-unset: !default;
+
 $atlas-theme: true !default;
 
 $enable-scaling-components: true !default;
 $enable-shadows: true !default;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1280px
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1280px
 ) !default;
 
 $container-max-widths: (
@@ -19,9 +21,6 @@ $container-max-widths: (
 ) !default;
 
 $grid-gutter-width: 24px !default;
-
-$container-form-padding-bottom-mobile: 1rem !default;
-$container-form-padding-top-mobile: 1rem !default;
 
 $font-size-base: 0.875rem !default; // 14px
 $font-size-lg: 0.9375rem !default; // 15px

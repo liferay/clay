@@ -1,3 +1,29 @@
-$menubar-vertical-expand-md: () !default;
+// Menubar Vertical MD
 
-$menubar-vertical-transparent: () !default;
+$menubar-vertical-expand-md: () !default;
+$menubar-vertical-expand-md: map-merge((
+	margin-bottom-mobile: 1.5rem,
+	margin-left-mobile: -($grid-gutter-width / 2),
+	margin-right-mobile: -($grid-gutter-width / 2)
+), $menubar-vertical-expand-md);
+
+$menubar-vertical-transparent-md: () !default;
+$menubar-vertical-transparent-md: map-merge((
+	bg-mobile: $light
+), $menubar-vertical-transparent-md);
+
+// Menubar Vertical LG
+
+$menubar-vertical-expand-lg: () !default;
+$menubar-vertical-expand-lg: map-merge((
+	breakpoint-up: lg,
+	margin-bottom-mobile: 1.5rem,
+	margin-left-mobile: -($grid-gutter-width / 2),
+	margin-right-mobile: -($grid-gutter-width / 2)
+), $menubar-vertical-expand-lg);
+
+$menubar-vertical-transparent-lg: () !default;
+$menubar-vertical-transparent-lg: map-merge((
+	breakpoint-up: lg,
+	bg-mobile: $light
+), $menubar-vertical-transparent-lg);

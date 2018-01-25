@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Clay Charts</title>
 
-	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+	<link rel="stylesheet" href="../../../node_modules/clay/lib/css/atlas.css">
 	<link rel="stylesheet" href="../build/clay-charts.css">
 
 	<script src="../build/globals/clay-charts-jsx.js"></script>
@@ -137,6 +137,10 @@
 		<div id="gauge"></div>
 	</div>
 
+	<div class="clay-chart-example">
+		<h2>Bubble</h2>
+		<div id="bubble"></div>
+	</div>
 
 
 	<div id="controls" style="display: none;">
@@ -367,6 +371,17 @@
 			columns: dummyGaugeData.columns_1
 		}, '#gauge');
 		createChartControls(gaugeChart, 'gauge', dummyGaugeData);
+
+		var bubbleChart = new metal.BubbleChart({
+			bubble: {
+				maxR: 40
+			},
+			columns: dummyData.columns_1,
+			labels: false,
+			point: {
+				pattern: ['circle']
+			}
+		}, '#bubble');
 
 		function createChartControls(chart, type, data) {
 			var element = document.getElementById(type);

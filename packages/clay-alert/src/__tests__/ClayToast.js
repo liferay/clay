@@ -2,7 +2,7 @@ import ClayToast from '../ClayToast';
 
 let toast;
 
-const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
+const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
 describe('ClayToast', function() {
 	afterEach(() => {

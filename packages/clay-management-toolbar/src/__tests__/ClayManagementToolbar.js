@@ -2,7 +2,7 @@ import ClayManagementToolbar from '../ClayManagementToolbar';
 
 let managementToolbar;
 
-const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
+const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
 describe('ClayManagementToolbar', function() {
 	afterEach(() => {
@@ -256,6 +256,47 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a disabled management toolbar', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterItems: [
+				{
+					label: 'Item 1',
+					inputName: 'item1checkbox',
+					inputValue: '1',
+					type: 'checkbox',
+				},
+				{
+					label: 'Item 2',
+					inputName: 'item2checkbox',
+					inputValue: '2',
+					type: 'checkbox',
+				},
+			],
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 0,
+			viewTypes: [
+				{
+					active: true,
+					icon: 'list',
+					label: 'List',
+				},
+				{
+					disabled: true,
+					icon: 'table',
+					label: 'Table',
+				},
+				{
+					icon: 'cards2',
+					label: 'Card',
+				},
+			],
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with classes in active state', () => {
 		managementToolbar = new ClayManagementToolbar({
 			elementClasses: 'my-custom-class',
@@ -432,7 +473,7 @@ describe('ClayManagementToolbar', function() {
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
 		let filters = managementToolbar.refs.filters;
-		filters.refs.dropdown.refs.dropdownButton.element.click();
+		filters.refs.dropdown.refs.portal.refs.dropdownButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
@@ -477,9 +518,10 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
-		managementToolbar.refs.viewTypesDropdown.element
-			.querySelector('ul li')
-			.click();
+		const element =
+			managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal
+				.element;
+		element.querySelector('ul li').click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('viewTypeClicked', expect.any(Object));

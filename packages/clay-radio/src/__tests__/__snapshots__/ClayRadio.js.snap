@@ -5,7 +5,7 @@ exports[`ClayRadio should render a checked and disabled radio 1`] = `
   <label>
     <input checked="" disabled="disabled" class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -16,7 +16,7 @@ exports[`ClayRadio should render a checked radio 1`] = `
   <label>
     <input checked="" class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -27,7 +27,7 @@ exports[`ClayRadio should render a disabled radio 1`] = `
   <label>
     <input disabled="disabled" class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -38,7 +38,7 @@ exports[`ClayRadio should render a radio with classes 1`] = `
   <label>
     <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -62,7 +62,7 @@ exports[`ClayRadio should render a radio with hidden label 1`] = `
   <label>
     <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text sr-only">My Radio</span>
+      <span class="custom-control-label-text sr-only">My Radio</span>
     </span>
   </label>
 </div>
@@ -73,7 +73,7 @@ exports[`ClayRadio should render a radio with id 1`] = `
   <label>
     <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -84,7 +84,7 @@ exports[`ClayRadio should render a radio with name 1`] = `
   <label>
     <input class="custom-control-input" name="myradio" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -95,7 +95,7 @@ exports[`ClayRadio should render a radio with value 1`] = `
   <label>
     <input class="custom-control-input" value="myradio" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -106,7 +106,7 @@ exports[`ClayRadio should render an inline radio 1`] = `
   <label>
     <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>
@@ -117,7 +117,7 @@ exports[`ClayRadio should render default markup 1`] = `
   <label>
     <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-label">
-      <span class="custom-control-text">My Radio</span>
+      <span class="custom-control-label-text">My Radio</span>
     </span>
   </label>
 </div>

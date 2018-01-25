@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Metal Clay Dropdown</title>
 
-	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+	<link rel="stylesheet" href="../../../node_modules/clay/lib/css/atlas.css">
 
 	<style>
 		body {
@@ -33,15 +33,15 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Dropdown with icon trigger</h4>
-			<div id="icon-trigger-block"></div>
+			<h4>Disabled Dropdown</h4>
+			<div id="disabled-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Default Dropdown with WebComponents</h4>
-			<clay-dropdown items='[{"label": "Item 1"},{"label": "Item 2"}]' spritemap="../../../node_modules/clay/build/images/icons/icons.svg" label="Trigger label"></clay-dropdown>
+			<h4>Dropdown with icon trigger</h4>
+			<div id="icon-trigger-block"></div>
 		</div>
 	</div>
 
@@ -138,7 +138,7 @@
 
 
 	<script>
-		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		const spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
 
 		/**
 		 * Default Dropdown
@@ -169,6 +169,38 @@
 				label: 'Trigger Label',
 			},
 			'#default-block'
+		);
+
+		/**
+		 * Disabled Dropdown
+		 **/
+		new metal.ClayDropdown(
+			{
+				disabled: true,
+				items: [
+					{
+						href: '#1',
+						label: 'Item 1',
+					},
+					{
+						active: true,
+						href: '#2',
+						label: 'Item 2',
+					},
+					{
+						disabled: true,
+						href: '#3',
+						label: 'Item 3',
+					},
+					{
+						href: '#4',
+						label: 'Item 4',
+					},
+				],
+				spritemap: spritemap,
+				label: 'Trigger Label',
+			},
+			'#disabled-block'
 		);
 
 		/**
@@ -219,7 +251,7 @@
 			},
 			'#links-block'
 		);
-		
+
 		/**
 		 * Dropdown with groups
 		 **/
@@ -293,7 +325,6 @@
 				],
 				spritemap: spritemap,
 				label: 'Trigger Label',
-				type: 'form',
 			},
 			'#checkboxes-block'
 		);
@@ -350,7 +381,6 @@
 				],
 				spritemap: spritemap,
 				label: 'Trigger Label',
-				type: 'form',
 			},
 			'#radios-block'
 		);
@@ -538,7 +568,6 @@
 				],
 				spritemap: spritemap,
 				label: 'Trigger Label',
-				type: 'form',
 			},
 			'#button-block'
 		);
@@ -640,7 +669,6 @@
 				],
 				spritemap: spritemap,
 				label: 'Trigger Label',
-				type: 'form',
 			},
 			'#complex-block'
 		);
@@ -710,7 +738,7 @@
 						type: 'group'
 					},
 				],
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				spritemap: spritemap,
 				label: 'Trigger'
 			},
 			'#actions-block'

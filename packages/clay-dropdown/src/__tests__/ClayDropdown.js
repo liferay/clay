@@ -82,6 +82,17 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should render a disabled dropdown with items', () => {
+		clayDropdown = new ClayDropdown({
+			disabled: true,
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with classes', () => {
 		clayDropdown = new ClayDropdown({
 			elementClasses: 'my-custom-class',
@@ -165,7 +176,9 @@ describe('ClayDropdown', function() {
 
 		const spy = jest.spyOn(clayDropdown.refs.dropdown, 'emit');
 
-		clayDropdown.refs.dropdown.refs.dropdownButton.element.click();
+		const element =
+			clayDropdown.refs.dropdown.refs.portal.refs.dropdownButton.element;
+		element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));

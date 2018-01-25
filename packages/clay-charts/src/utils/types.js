@@ -6,6 +6,7 @@ const types = {
 		'area-spline',
 		'area-step',
 		'bar',
+		'bubble',
 		'donut',
 		'gauge',
 		'line',

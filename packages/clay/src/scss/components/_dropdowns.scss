@@ -149,6 +149,10 @@
 			max-height: $dropdown-inline-scroller-max-height-mobile;
 		}
 	}
+
+	> .list-unstyled {
+		margin-bottom: 0;
+	}
 }
 
 // Dropdown Action

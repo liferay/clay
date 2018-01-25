@@ -85,6 +85,7 @@
 		{call .default}
 			{param contentRenderer: $contentRenderer ?: '' /}
 			{param creationMenu: $creationMenu /}
+			{param disabled: $totalItems == 0 /}
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
 			{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
@@ -233,6 +234,7 @@
 			type: string
 		]>
 	]}
+	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
 		checked: bool,
@@ -284,6 +286,7 @@
 				{if $selectable}
 					<li class="nav-item">
 						{call ClayCheckbox.render}
+							{param disabled: $disabled /}
 							{param events: ['change': $handleSelectPageCheckboxChanged_] /}
 							{param hideLabel: true /}
 							{param label: 'Select Page' /}
@@ -298,13 +301,13 @@
 							{param button: $hideFiltersDoneButton ? null : [
 								'label': 'Done'
 							] /}
+							{param disabled: $disabled /}
 							{param events: ['buttonClicked': $handleFilterDoneButtonClick_] /}
 							{param items: $filterItems /}
 							{param label: 'Filter and Order' /}
 							{param ref: 'filters' /}
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link navbar-breakpoint-down-d-none' /}
-							{param type: 'form' /}
 						{/call}
 					</li>
 				{/if}
@@ -320,6 +323,7 @@
 					{/let}
 
 					{call ClayButton.render}
+						{param disabled: $disabled /}
 						{param elementClasses: $orderClasses /}
 						{param events: ['click': $handleSortingButtonClicked_] /}
 						{param icon: 'order-arrow' /}
@@ -340,6 +344,7 @@
 			<div class="{$searchClasses}">
 				<div class="container">
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
+						{param disabled: $disabled /}
 						{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
 						{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
 						{param searchActionURL: $searchActionURL /}
@@ -353,6 +358,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item navbar-breakpoint-d-none">
 					{call ClayButton.render}
+						{param disabled: $disabled /}
 						{param elementClasses: 'nav-link nav-link-monospaced' /}
 						{param events: ['click': $handleOpenMobileSearchClick_] /}
 						{param icon: 'search' /}
@@ -449,6 +455,7 @@
  */
 {deltemplate ClayManagementToolbar.SearchForm}
 	{@param spritemap: string}
+	{@param? disabled: bool}
 	{@param? handleCloseMobileSearchClick_: any}
 	{@param? handleSearchSearchClick_: any}
 	{@param? searchActionURL: string}
@@ -472,6 +479,10 @@
 			<div class="input-group-item">
 				{let $inputAttributes kind="attributes"}
 					aria-label="Search"
+					{if $disabled}
+						disabled
+					{/if}
+
 					class="form-control input-group-inset input-group-inset-after"
 					name="{$searchInputName}"
 					placeholder="Search for..."
@@ -480,27 +491,28 @@
 				{/let}
 
 				<input {$inputAttributes} />
+
+				<span class="input-group-inset-item input-group-inset-item-after">
+					{call ClayButton.render}
+						{param elementClasses: 'navbar-breakpoint-d-none' /}
+						{param events: ['click': $handleCloseMobileSearchClick_] /}
+						{param icon: 'times' /}
+						{param spritemap: $spritemap /}
+						{param style: 'unstyled' /}
+					{/call}
+
+					{call ClayButton.render}
+						{param disabled: $disabled /}
+						{param elementClasses: 'navbar-breakpoint-d-block' /}
+						{param events: ['click': $handleSearchSearchClick_] /}
+						{param icon: 'search' /}
+						{param ref: 'searchButton' /}
+						{param spritemap: $spritemap /}
+						{param style: 'unstyled' /}
+						{param type: 'submit' /}
+					{/call}
+				</span>
 			</div>
-
-			<span class="input-group-inset-item input-group-inset-item-after">
-				{call ClayButton.render}
-					{param elementClasses: 'navbar-breakpoint-d-none' /}
-					{param events: ['click': $handleCloseMobileSearchClick_] /}
-					{param icon: 'times' /}
-					{param spritemap: $spritemap /}
-					{param style: 'unstyled' /}
-				{/call}
-
-				{call ClayButton.render}
-					{param elementClasses: 'navbar-breakpoint-d-block' /}
-					{param events: ['click': $handleSearchSearchClick_] /}
-					{param icon: 'search' /}
-					{param ref: 'searchButton' /}
-					{param spritemap: $spritemap /}
-					{param style: 'unstyled' /}
-					{param type: 'submit' /}
-				{/call}
-			</span>
 		</div>
 	</form>
 {/deltemplate}

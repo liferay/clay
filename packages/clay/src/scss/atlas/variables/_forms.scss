@@ -1,3 +1,5 @@
+$input-font-size-mobile: 1rem !default; // 16px
+
 $input-label-font-size: 0.8125rem !default; // 13px
 $input-label-font-weight: $font-weight-semi-bold !default;
 $input-label-margin-bottom: 0.25rem !default; // 4px
@@ -90,9 +92,9 @@ $input-warning-select-icon: clay-icon(caret-double-l, $input-warning-select-icon
 
 // Select Element
 
-$input-select-bg-position: right 8px center !default;
-$input-select-bg-size: 24px auto !default;
-$input-select-padding-right: 32px !default;
+$input-select-bg-position: right 0.5em center !default;
+$input-select-bg-size: 1.5em auto !default;
+$input-select-padding-right: 2em !default;
 
 $input-select-icon-color: $secondary !default;
 $input-select-icon: clay-icon(caret-double-l, $input-select-icon-color) !default;

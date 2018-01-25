@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: ClayPagination</title>
 
-	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+	<link rel="stylesheet" href="../../../node_modules/clay/lib/css/atlas.css">
 
 	<style>
 		body {
@@ -96,7 +96,7 @@
 	</div>
 
 	<script type="text/javascript">
-		const spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+		const spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
 
 		for (let totalPages = 1; totalPages <= 10; totalPages++) {
 			for (let currentPage=1; currentPage <= totalPages; currentPage++ ) {
@@ -106,7 +106,7 @@
 					spritemap: spritemap,
 					totalPages: totalPages,
 				}, '#container' + totalPages);
-			}			
+			}
 		}
 	</script>
 </body>

@@ -353,7 +353,7 @@ exports[`ClayTable should render a ClayTable with a basic schema with sortable f
             <span class="inline-item inline-item-after">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
                 <title>order-arrow-up</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow-up"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
               </svg>
             </span>
           </button>
@@ -930,20 +930,9 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -961,25 +950,36 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
     </tbody>
   </table>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
 </div>
 `;
 
@@ -1006,13 +1006,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
             <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </div>
@@ -1020,20 +1020,9 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1050,13 +1039,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
             <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </div>
@@ -1064,20 +1053,9 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1094,13 +1072,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
             <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </div>
@@ -1108,20 +1086,9 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1138,13 +1105,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
             <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </div>
@@ -1152,20 +1119,9 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1182,13 +1138,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
             <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </div>
@@ -1196,20 +1152,9 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
@@ -1226,13 +1171,13 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <a aria-label="Remove" class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
                 <title>trash</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
             <a aria-label="Download" class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
                 <title>download</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#download"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </div>
@@ -1240,25 +1185,80 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
                 <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
               </svg>
             </button>
-            <div class="dropdown-menu">
-              <ul class="list-unstyled">
-                <li>
-                  <a class=" dropdown-item" href="#1">Remove</a>
-                </li>
-                <li>
-                  <a class=" dropdown-item" href="#2">Download</a>
-                </li>
-                <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-              </ul>
-            </div>
           </div>
         </td>
       </tr>
     </tbody>
   </table>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Remove</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Download</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
 </div>
 `;
 
@@ -1343,8 +1343,9 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Deselect</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Deselect</span>
+              </span>
             </label>
           </div>
         </td>
@@ -1361,8 +1362,9 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Deselect</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Deselect</span>
+              </span>
             </label>
           </div>
         </td>
@@ -1379,8 +1381,9 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Deselect</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Deselect</span>
+              </span>
             </label>
           </div>
         </td>
@@ -1397,8 +1400,9 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Deselect</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Deselect</span>
+              </span>
             </label>
           </div>
         </td>
@@ -1415,8 +1419,9 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Deselect</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Deselect</span>
+              </span>
             </label>
           </div>
         </td>
@@ -1433,8 +1438,9 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
           <div class="custom-control custom-checkbox">
             <label>
               <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-              <span class="custom-control-label"></span>
-              <span class="custom-control-label-text sr-only">Deselect</span>
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">Deselect</span>
+              </span>
             </label>
           </div>
         </td>

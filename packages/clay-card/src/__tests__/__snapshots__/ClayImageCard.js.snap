@@ -5,10 +5,10 @@ exports[`ClayImageCard should render a ClayImageCard with actionItems 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
-      <div class="flex-col">
+      <div class="autofit-col">
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -16,20 +16,20 @@ exports[`ClayImageCard should render a ClayImageCard with actionItems 1`] = `
               <use xlink:href="icons.svg#ellipsis-v"></use>
             </svg>
           </button>
-          <div class="dropdown-menu">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item" href="#1">Edit</a>
-              </li>
-              <li>
-                <a class=" dropdown-item" href="#1">Save</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Save</a>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -38,8 +38,8 @@ exports[`ClayImageCard should render a ClayImageCard with classes 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -55,8 +55,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`danger col
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -72,8 +72,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`dark color
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -89,8 +89,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`info color
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -106,8 +106,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`light colo
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -123,8 +123,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`primary co
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -140,8 +140,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`secondary 
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -157,8 +157,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`success co
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -174,8 +174,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type \`warning co
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -191,8 +191,8 @@ exports[`ClayImageCard should render a ClayImageCard with file type 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -204,7 +204,7 @@ exports[`ClayImageCard should render a ClayImageCard with href 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
+      <div class="autofit-col autofit-col-expand">
         <a class=" card-title text-truncate" href="#1">My Title</a>
       </div>
     </div>
@@ -224,8 +224,8 @@ exports[`ClayImageCard should render a ClayImageCard with icon 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -237,8 +237,8 @@ exports[`ClayImageCard should render a ClayImageCard with id 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -250,8 +250,8 @@ exports[`ClayImageCard should render a ClayImageCard with imageAlt 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -265,8 +265,8 @@ exports[`ClayImageCard should render a ClayImageCard with imageSrc 1`] = `
   </div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
@@ -278,8 +278,8 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`danger co
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-danger">Approved</span>
         </div>
@@ -294,8 +294,8 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`info colo
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-info">Approved</span>
         </div>
@@ -310,8 +310,8 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`secondary
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">Approved</span>
         </div>
@@ -326,8 +326,8 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`success c
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-success">Approved</span>
         </div>
@@ -342,8 +342,8 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`warning c
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-warning">Approved</span>
         </div>
@@ -358,8 +358,8 @@ exports[`ClayImageCard should render a ClayImageCard with labels with styles map
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-success">Approved</span>
           <span class="label label-warning">Pending</span>
@@ -376,8 +376,8 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">Approved</span>
         </div>
@@ -392,9 +392,9 @@ exports[`ClayImageCard should render a ClayImageCard with subtitle 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
-        <div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+        <div class="card-subtitle text-truncate">Author Action</div>
       </div>
     </div>
   </div>
@@ -406,8 +406,8 @@ exports[`ClayImageCard should render a ClayImageCard with two labels 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">Approved</span>
           <span class="label label-secondary">Pending</span>
@@ -423,8 +423,8 @@ exports[`ClayImageCard should render a ClayImageCard with two labels with styles
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-warning">Approved</span>
           <span class="label label-danger">Peding</span>
@@ -448,8 +448,8 @@ exports[`ClayImageCard should render a disabled ClayImageCard 1`] = `
     </div>
     <div class="card-body">
       <div class="card-row">
-        <div class="flex-col flex-col-expand">
-          <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="autofit-col autofit-col-expand">
+          <div class="card-title text-truncate">My Title</div>
         </div>
       </div>
     </div>
@@ -470,8 +470,8 @@ exports[`ClayImageCard should render a selectable ClayImageCard 1`] = `
     </div>
     <div class="card-body">
       <div class="card-row">
-        <div class="flex-col flex-col-expand">
-          <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="autofit-col autofit-col-expand">
+          <div class="card-title text-truncate">My Title</div>
         </div>
       </div>
     </div>
@@ -492,8 +492,8 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`nam
     </div>
     <div class="card-body">
       <div class="card-row">
-        <div class="flex-col flex-col-expand">
-          <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="autofit-col autofit-col-expand">
+          <div class="card-title text-truncate">My Title</div>
         </div>
       </div>
     </div>
@@ -514,8 +514,8 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`val
     </div>
     <div class="card-body">
       <div class="card-row">
-        <div class="flex-col flex-col-expand">
-          <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="autofit-col autofit-col-expand">
+          <div class="card-title text-truncate">My Title</div>
         </div>
       </div>
     </div>
@@ -536,8 +536,8 @@ exports[`ClayImageCard should render a selected ClayImageCard 1`] = `
     </div>
     <div class="card-body">
       <div class="card-row">
-        <div class="flex-col flex-col-expand">
-          <div class="card-title text-truncate" title="My Title">My Title</div>
+        <div class="autofit-col autofit-col-expand">
+          <div class="card-title text-truncate">My Title</div>
         </div>
       </div>
     </div>
@@ -550,8 +550,8 @@ exports[`ClayImageCard should render the default markup 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="flex-col flex-col-expand">
-        <div class="card-title text-truncate" title="My Title">My Title</div>
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>

@@ -19,8 +19,7 @@
 	$link-height: setter(map-get($map, link-height), $height - $border-bottom-width - $border-top-width - ($padding-y * 2));
 	$link-margin-x: map-get($map, link-margin-x);
 	$link-margin-y: setter(map-get($map, link-margin-y), (($height - $border-bottom-width - $border-top-width) - $link-height) / 2);
-	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-	$link-padding-x: setter(map-get($map, link-padding-x), 0.5rem);
+	$link-padding-x: setter(map-get($map, link-padding-x), $navbar-nav-link-padding-x);
 	$link-padding-y: setter(map-get($map, link-padding-y), ($link-height - ($font-size * $line-height-base)) / 2);
 	$btn-monospaced-size: map-get($map, btn-monospaced-size);
 	$btn-margin-x: setter(map-get($map, btn-margin-x), $link-padding-x);

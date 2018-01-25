@@ -42,10 +42,6 @@
 	@extend %autofit-section;
 }
 
-.tbar-light {
-	background-color: map-get($tbar-light, bg);
-	border-color: map-get($tbar-light, border-color);
-	border-style: map-get($tbar-light, border-style);
-	border-width: map-get($tbar-light, border-width);
-	height: map-get($tbar-light, height);
+.component-tbar {
+	@include clay-tbar-variant($component-tbar);
 }

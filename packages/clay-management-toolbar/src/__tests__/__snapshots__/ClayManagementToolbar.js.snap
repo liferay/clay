@@ -1,5 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayManagementToolbar should render a disabled management toolbar 1`] = `
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <div class="custom-control custom-checkbox">
+          <label>
+            <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
+          </label>
+        </div>
+      </li>
+      <li class="dropdown nav-item">
+        <div class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" disabled="" type="button">Filter and Order
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+              <title>caret-bottom</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" disabled="" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+      <div class="container">
+        <form role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" disabled="" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" disabled="" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item navbar-breakpoint-d-none">
+        <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" disabled="" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+            <title>search</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="dropdown nav-item">
+        <div class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+              <title>list</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li class="dropdown-item">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 1</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 2</span>
+              </span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </form>
+</div>
+<div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item active">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+            <title>list</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+          </svg>
+        </div>List</a>
+    </li>
+    <li>
+      <a class=" dropdown-item disabled" href="javascript:;">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+            <title>table</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+          </svg>
+        </div>Table</a>
+    </li>
+    <li>
+      <a class=" dropdown-item">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+            <title>cards2</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+          </svg>
+        </div>Card</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with actions in active state 1`] = `
 <nav class="management-bar management-bar-primary navbar navbar-expand-md">
   <div class="container">
@@ -8,8 +160,9 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -28,24 +181,24 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
               <title>ellipsis-v</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#ellipsis-v"></use>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
             </svg>
           </button>
-          <div class="dropdown-menu">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item" href="#editurl">Edit</a>
-              </li>
-              <li>
-                <a class=" dropdown-item" href="#deleteurl">Delete</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#editurl">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#deleteurl">Delete</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with ascending sorting 1`] = `
@@ -56,7 +209,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -67,21 +220,21 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -91,7 +244,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -99,7 +252,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -116,7 +269,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -127,21 +280,21 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -151,7 +304,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -159,7 +312,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -176,8 +329,9 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -202,7 +356,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
         <button class="btn nav-link nav-link-monospaced order-arrow-down-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -213,21 +367,21 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -237,7 +391,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -245,7 +399,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -263,26 +417,16 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
               <title>caret-bottom</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div>
-                <a class=" dropdown-item" href="#myItem1">Item 1</a>
-              </div>
-              <div>
-                <a class=" dropdown-item" href="#myItem2">Item 2</a>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -293,21 +437,21 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -317,7 +461,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -325,13 +469,23 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#myItem1">Item 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#myItem2">Item 2</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type checkbox 1`] = `
@@ -343,41 +497,16 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
               <title>caret-bottom</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div class="dropdown-item">
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <label>
-                    <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text">Item 1</span>
-                  </label>
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <label>
-                    <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-label-text">Item 2</span>
-                  </label>
-                </div>
-              </div>
-              <div class="dropdown-section">
-                <button class="btn btn-block btn-primary" type="button">Done</button>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -388,21 +517,21 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -412,7 +541,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -420,13 +549,44 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li class="dropdown-item">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 1</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 2</span>
+              </span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </form>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type item 1`] = `
@@ -438,29 +598,16 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
               <title>caret-bottom</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div>
-                <a class=" dropdown-item" href="#myItem1">Item 1</a>
-              </div>
-              <div>
-                <a class=" dropdown-item" href="#myItem2">Item 2</a>
-              </div>
-              <div class="dropdown-section">
-                <button class="btn btn-block btn-primary" type="button">Done</button>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -471,21 +618,21 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -495,7 +642,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -503,13 +650,30 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#myItem1">Item 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#myItem2">Item 2</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </form>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type radio 1`] = `
@@ -521,56 +685,16 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
               <title>caret-bottom</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
             </svg>
           </button>
-          <form>
-            <div class="dropdown-menu">
-              <div class="dropdown-subheader">Group 1</div>
-              <div aria-label="Group 1" role="radiogroup">
-                <div class="dropdown-item">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <label>
-                      <input class="custom-control-input" name="item1radio" value="1" ref="input" type="radio" role="radio">
-                      <span class="custom-control-label">
-                        <span class="custom-control-text">Item 1</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="dropdown-item active">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <label>
-                      <input checked="" class="custom-control-input" name="item1radio" value="2" ref="input" type="radio" role="radio">
-                      <span class="custom-control-label">
-                        <span class="custom-control-text">Item 2</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="dropdown-item">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <label>
-                      <input disabled="disabled" class="custom-control-input" name="item1radio" value="3" ref="input" type="radio" role="radio">
-                      <span class="custom-control-label">
-                        <span class="custom-control-text">Item 3</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-section">
-                <button class="btn btn-block btn-primary" type="button">Done</button>
-              </div>
-            </div>
-          </form>
         </div>
       </li>
       <li class="nav-item">
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -581,21 +705,21 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -605,7 +729,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -613,13 +737,57 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <div class="dropdown-subheader" role="presentation">Group 1</div>
+      <div aria-label="Group 1" role="radiogroup">
+        <ul class="list-unstyled">
+          <li class="dropdown-item">
+            <div class="custom-control custom-radio custom-control-inline">
+              <label>
+                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text">Item 1</span>
+                </span>
+              </label>
+            </div>
+          </li>
+          <li class="dropdown-item active">
+            <div class="custom-control custom-radio custom-control-inline">
+              <label>
+                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text">Item 2</span>
+                </span>
+              </label>
+            </div>
+          </li>
+          <li class="dropdown-item">
+            <div class="custom-control custom-radio custom-control-inline">
+              <label>
+                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                <span class="custom-control-label">
+                  <span class="custom-control-label-text">Item 3</span>
+                </span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </form>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with id 1`] = `
@@ -630,7 +798,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -641,21 +809,21 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -665,7 +833,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -673,7 +841,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -690,8 +858,9 @@ exports[`ClayManagementToolbar should render a management toolbar with id in act
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -716,7 +885,7 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -727,21 +896,21 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -751,7 +920,7 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -760,24 +929,24 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
               <title>plus</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
-          <div class="dropdown-menu">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item" href="#1">Add Content 1</a>
-              </li>
-              <li>
-                <a class=" dropdown-item" href="#2">Add Content 2</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Add Content 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Add Content 2</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with plus button with one option 1`] = `
@@ -788,7 +957,7 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -799,21 +968,21 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -823,7 +992,7 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -831,7 +1000,7 @@ exports[`ClayManagementToolbar should render a management toolbar with plus butt
         <a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </a>
       </li>
@@ -848,7 +1017,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -859,21 +1028,21 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -883,7 +1052,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -891,7 +1060,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -908,7 +1077,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -919,21 +1088,21 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -943,7 +1112,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -951,7 +1120,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -968,7 +1137,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -979,21 +1148,21 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchName" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -1003,7 +1172,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -1011,7 +1180,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -1028,8 +1197,9 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
         <div class="custom-control custom-checkbox">
           <label>
             <input class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -1037,7 +1207,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -1048,21 +1218,21 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -1072,7 +1242,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -1080,7 +1250,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
@@ -1097,8 +1267,9 @@ exports[`ClayManagementToolbar should render a management toolbar with state act
         <div class="custom-control custom-checkbox">
           <label>
             <input checked="" class="custom-control-input" ref="input" type="checkbox">
-            <span class="custom-control-label"></span>
-            <span class="custom-control-label-text sr-only">Select Page</span>
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
           </label>
         </div>
       </li>
@@ -1123,7 +1294,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -1134,21 +1305,21 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -1158,7 +1329,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -1167,53 +1338,53 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
               <title>list</title>
-              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#list"></use>
             </svg>
           </button>
-          <div class="dropdown-menu dropdown-menu-indicator-start">
-            <ul class="list-unstyled">
-              <li>
-                <a class=" dropdown-item active">
-                  <div class="dropdown-item-indicator">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-                      <title>list</title>
-                      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
-                    </svg>
-                  </div>List</a>
-              </li>
-              <li>
-                <a class=" dropdown-item disabled" href="javascript:;">
-                  <div class="dropdown-item-indicator">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-                      <title>table</title>
-                      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#table"></use>
-                    </svg>
-                  </div>Table</a>
-              </li>
-              <li>
-                <a class=" dropdown-item">
-                  <div class="dropdown-item-indicator">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-                      <title>cards2</title>
-                      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#cards2"></use>
-                    </svg>
-                  </div>Card</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </li>
       <li class="nav-item">
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>
     </ul>
   </div>
 </nav>
+<div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item active">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+            <title>list</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+          </svg>
+        </div>List</a>
+    </li>
+    <li>
+      <a class=" dropdown-item disabled" href="javascript:;">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+            <title>table</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+          </svg>
+        </div>Table</a>
+    </li>
+    <li>
+      <a class=" dropdown-item">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+            <title>cards2</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+          </svg>
+        </div>Card</a>
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`ClayManagementToolbar should render the default markup 1`] = `
@@ -1224,7 +1395,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
             <title>order-arrow</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
           </svg>
         </button>
       </li>
@@ -1235,21 +1406,21 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-            <span class="input-group-inset-item input-group-inset-item-after">
-              <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-              <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-                  <title>search</title>
-                  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
           </div>
         </form>
       </div>
@@ -1259,7 +1430,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
             <title>search</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
           </svg>
         </button>
       </li>
@@ -1267,7 +1438,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
         <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
             <title>plus</title>
-            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
           </svg>
         </button>
       </li>

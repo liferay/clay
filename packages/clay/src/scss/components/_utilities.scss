@@ -21,8 +21,11 @@
 // Close
 
 .close {
-	cursor: $btn-cursor;
 	text-align: center;
+
+	&:not([disabled]):not(.disabled) {
+		cursor: $btn-cursor;
+	}
 }
 
 // Autofit Row
@@ -129,6 +132,10 @@
 	align-items: center;
 	display: inline-flex;
 	vertical-align: middle;
+
+	.inline-item {
+		display: inline;
+	}
 
 	.lexicon-icon {
 		margin-top: $inline-item-lexicon-icon-margin-top;

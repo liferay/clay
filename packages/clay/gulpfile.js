@@ -1,58 +1,34 @@
-var inquirer = require('inquirer');
-var path = require('path');
-
+var async = require('async');
+var del = require('del');
+var filter = require('gulp-filter');
+var fs = require('fs-extra');
 var gulp = require('gulp-help')(require('gulp'));
-// var liferayGulpTasks = require('liferay-gulp-tasks');
-var plugins = require('gulp-load-plugins')({pattern: ['autoprefixer', 'gulp-*', 'gulp.*', 'merge-stream', 'postcss-*']});
+var path = require('path');
+var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
+var sass = require('node-sass');
 
-var chalk = require('chalk');
-
-var _ = require('./lib/lodash_utils');
-
-var BOOTSTRAP_JS_FILE = path.join('src', 'js', 'bootstrap.js');
-
-var BOOTSTRAP_JS_DIR = path.dirname(BOOTSTRAP_JS_FILE);
-
-var BOOTSTRAP_VAR_FILE = path.join('src','scss', 'bootstrap', '_variables.scss');
-
-var BOOTSTRAP_VAR_DIR = path.dirname(BOOTSTRAP_VAR_FILE);
-
-var POPPER_JS_FILE = path.join('src', 'js', 'popper.js');
+var _ = require('./tasks/lib/lodash_utils');
 
 var config = {
-	AUTOPREFIXER: {
-		cascade: false,
-		browsers: ['last 2 versions'],
-		remove: false
-	},
-	BOOTSTRAP_JS_FILE: BOOTSTRAP_JS_FILE,
-	BOOTSTRAP_JS_DIR: BOOTSTRAP_JS_DIR,
-	BOOTSTRAP_VAR_FILE: BOOTSTRAP_VAR_FILE,
-	BOOTSTRAP_VAR_DIR: BOOTSTRAP_VAR_DIR,
-	SRC_GLOB: 'src/**/*',
-	POPPER_JS_FILE: POPPER_JS_FILE
+	SRC_GLOB: 'src/**/*'
 };
 
-var tasks = require('require-dir')('./tasks');
+var bootstrapPath = path.dirname(require.resolve('bootstrap/package.json'));
 
-// liferayGulpTasks(gulp, {
-// 	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**'],
-// 	artifactName: 'clay'
-// });
+var license = require('./tasks/copyright_banner');
+var tasks = require('require-dir')('./tasks');
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
 
-gulp.task('default', ['build']);
+gulp.task('default', ['compile']);
 
 gulp.task('build', function(cb) {
 	runSequence(
-		'build:patch-bootstrap',
 		'build:svg',
 		'build:svg:scss-icons',
 		'build:metalsmith',
 		'build:rtl',
-		'build:clean-bootstrap-patch',
 		function(err) {
 			gulp.emit('build:finished', err);
 
@@ -61,89 +37,160 @@ gulp.task('build', function(cb) {
 	);
 });
 
-gulp.task('serve', ['serve:start', 'watch']);
-
 gulp.task(
-	'release:files',
+	'compile',
 	function(cb) {
 		runSequence(
-			'build:patch-bootstrap',
-			'release:clean',
-			'release:build',
-			'release:svg',
-			'release:zip',
-			'build:clean-bootstrap-patch',
-			cb
-		);
-	}
-);
-
-gulp.task(
-	'release:npm',
-	function(cb) {
-		runSequence(
-			'build:patch-bootstrap',
-			'release:npm-clean',
-			'release:npm-build-files',
-			'release:npm-src-files',
-			'release:npm-index',
-			'release:npm-package',
-			'release:npm-publish',
-			'build:clean-bootstrap-patch',
-			cb
-		);
-	}
-);
-
-gulp.task(
-	'release',
-	function(cb) {
-		var questions = [
-			{
-				default: false,
-				message: 'Do you want to create a git tag and push to gh-pages?',
-				name: 'publish',
-				type: 'confirm'
-			},
-			{
-				default: false,
-				// message: 'Do you want to push to the Maven repo and publish to npm?',
-				message: 'Do you want to publish to npm?',
-				name: 'packageManagers',
-				type: 'confirm',
-				when: function(answers) {
-					return answers.publish;
-				}
+			'compile:clean',
+			'compile:files',
+			'compile:bootstrap:js',
+			'compile:bootstrap:scss',
+			'compile:popper',
+			'build:svg:scss-icons',
+			'compile:prep-scss',
+			'compile:css',
+			'compile:clean-scss',
+			'compile:svg',
+			function(err) {
+				cb(err);
 			}
+		);
+	}
+);
+
+gulp.task(
+	'compile:bootstrap:js',
+	function() {
+		var src = [
+			path.join(bootstrapPath, 'dist/js/bootstrap.js'),
+			path.join(bootstrapPath, 'dist/js/bootstrap.js.map')
 		];
 
-		runSequence(
-			'release:files',
-			function() {
-				inquirer.prompt(
-					questions,
-					function(answers) {
-						if (answers.publish) {
-							var args = [
-								'release:git',
-								'release:publish',
-								cb
-							];
-
-							if (answers.packageManagers) {
-								// args.splice(2, 0, 'maven-publish');
-								// args.splice(3, 0, 'release:npm');
-								args.splice(2, 0, 'release:npm');
-							}
-
-							runSequence.apply(null, args);
-						}
-						else {
-							cb();
-						}
-					}
-				);
-			}
-		);
+		return gulp.src(src)
+			.pipe(gulp.dest('./src/js'));
 	}
 );
+
+gulp.task(
+	'compile:bootstrap:scss',
+	function() {
+		return gulp.src(path.join(bootstrapPath, 'scss/**/*'))
+			.pipe(gulp.dest('./src/scss/bootstrap'));
+	}
+);
+
+gulp.task(
+	'compile:files',
+	function(cb) {
+		var assetFilter = filter(['**/*.js', '!**/bootstrap.js'], {
+			restore: true
+		});
+
+		var src = [
+			'src/fonts/**/*',
+			'src/images/icons/*',
+			'src/js/{,bootstrap/}*.js',
+			'src/js/{,bootstrap/}*.js.map'
+		];
+
+		return gulp.src(src, {
+				base: './src'
+			})
+			.pipe(assetFilter)
+			.pipe(plugins.header(license.tpl, license.metadata))
+			.pipe(assetFilter.restore)
+			.pipe(gulp.dest('./lib'));
+	}
+);
+
+gulp.task(
+	'compile:clean',
+	function() {
+		del.sync(['./lib']);
+	}
+);
+
+gulp.task(
+	'compile:clean-scss',
+	function() {
+		del.sync([
+			'./lib/css/**/*.scss',
+			'./lib/css/atlas/',
+			'./lib/css/bootstrap/',
+			'./lib/css/components/',
+			'./lib/css/functions/',
+			'./lib/css/mixins/',
+			'./lib/css/site/',
+			'./lib/css/variables/'
+		]);
+	}
+);
+
+gulp.task(
+	'compile:css',
+	function(cb) {
+		fs.ensureDirSync(path.resolve('./lib/css'));
+
+		var filesNames = ['atlas.scss', 'bootstrap.scss', 'base.scss'];
+
+		async.each(filesNames, function(fileName, cb) {
+			var fileDestName = path.basename(fileName, '.scss') + '.css';
+
+			var destName = path.resolve('./lib/css/' + fileDestName);
+
+			sass.render({
+				file: path.resolve('./lib/css/' + fileName),
+				outFile: './' + fileDestName,
+				sourceMap: true,
+				sourceMapContents: true,
+				sourceMapRoot: '../../'
+			}, function(err, results) {
+				fs.writeFileSync(destName, results.css);
+				fs.writeFileSync(destName + '.map', results.map);
+
+				cb(err);
+			});
+		}, function(err) {
+			cb(err);
+		});
+	}
+);
+
+gulp.task(
+	'compile:popper',
+	function() {
+		var popperPath = path.dirname(require.resolve('popper.js/package.json'));
+
+		var src = [
+			path.join(popperPath, 'dist/umd/popper.js'),
+			path.join(popperPath, 'dist/umd/popper.js.map')
+		];
+
+		return gulp.src(src)
+			.pipe(gulp.dest('./src/js'));
+	}
+);
+
+gulp.task(
+	'compile:prep-scss',
+	function() {
+		var entryFilter = filter(['bootstrap.scss'], {
+			restore: true
+		});
+
+		return gulp.src('src/scss/**/*')
+			.pipe(entryFilter)
+			.pipe(plugins.header(license.tpl, license.metadata))
+			.pipe(entryFilter.restore)
+			.pipe(gulp.dest('./lib/css'));
+	}
+);
+
+gulp.task(
+	'compile:svg',
+	require('./tasks/lib/svgstore')(gulp, plugins, _, {
+		dest: './lib/images/icons',
+	})
+);
+
+gulp.task('serve', ['serve:start', 'watch']);

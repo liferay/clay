@@ -18,6 +18,10 @@
 	}
 
 	display: block;
+	font-size: $panel-header-font-size;
+	line-height: $panel-header-line-height;
+	padding: $panel-header-padding-y $panel-header-padding-x;
+	position: relative;
 	width: 100%;
 
 	&.collapsed {
@@ -30,9 +34,19 @@
 		border-bottom-width: 0;
 	}
 
-	line-height: normal;
-	padding: $panel-header-padding-y $panel-header-padding-x;
-	position: relative;
+	&.collapse-icon {
+		padding-left: $panel-header-collapse-icon-padding-left;
+		padding-right: $panel-header-collapse-icon-padding-right;
+	}
+
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		bottom: $panel-header-collapse-icon-bottom;
+		font-size: $panel-header-collapse-icon-font-size;
+		left: $panel-header-collapse-icon-left;
+		right: $panel-header-collapse-icon-right;
+		top: $panel-header-collapse-icon-top;
+	}
 }
 
 .panel-header-link {
@@ -73,13 +87,6 @@
 	font-size: $panel-title-font-size;
 	font-weight: $panel-title-font-weight;
 	text-transform: $panel-title-text-transform;
-}
-
-.panel {
-	.collapse-icon-closed,
-	.collapse-icon-open {
-		font-size: $panel-collapse-icon-font-size;
-	}
 }
 
 // Panel Group

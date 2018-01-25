@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayActionsDropdown should render a disabled dropdown 1`] = `
+<div class="dropdown dropdown-action">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" disabled="" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+      <title>ellipsis-v</title>
+      <use xlink:href="icons.svg#ellipsis-v"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Expire</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">View History</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Permissions</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Copy</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Move</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayActionsDropdown should render an actions dropdown with classes 1`] = `
 <div class="dropdown dropdown-action my-custom-class">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
@@ -8,38 +59,46 @@ exports[`ClayActionsDropdown should render an actions dropdown with classes 1`] 
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <div class="dropdown-menu">
-    <ul class="list-unstyled">
-      <li>
-        <a class=" dropdown-item" href="#1">Edit</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Preview</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Expire</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">View History</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Permissions</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Copy</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
-      </li>
-    </ul>
-  </div>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Expire</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">View History</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Permissions</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Copy</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Move</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -51,38 +110,46 @@ exports[`ClayActionsDropdown should render an actions dropdown with id 1`] = `
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <div class="dropdown-menu">
-    <ul class="list-unstyled">
-      <li>
-        <a class=" dropdown-item" href="#1">Edit</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Preview</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Expire</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">View History</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Permissions</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Copy</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
-      </li>
-    </ul>
-  </div>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Expire</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">View History</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Permissions</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Copy</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Move</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -94,38 +161,46 @@ exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <div class="dropdown-menu show" style="top: 0px; left: 0px;">
-    <ul class="list-unstyled">
-      <li>
-        <a class=" dropdown-item" href="#1">Edit</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Preview</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Expire</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">View History</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Permissions</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Copy</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
-      </li>
-    </ul>
-  </div>
+</div>
+<div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Expire</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">View History</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Permissions</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Copy</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Move</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -137,37 +212,45 @@ exports[`ClayActionsDropdown should render default markdown 1`] = `
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <div class="dropdown-menu">
-    <ul class="list-unstyled">
-      <li>
-        <a class=" dropdown-item" href="#1">Edit</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Preview</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Expire</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">View History</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Permissions</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Copy</a>
-      </li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move</a>
-      </li>
-      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-      <li>
-        <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
-      </li>
-    </ul>
-  </div>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Expire</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">View History</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Permissions</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Copy</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Move</a>
+    </li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
+    </li>
+  </ul>
 </div>
 `;

@@ -105,6 +105,17 @@ describe('ClayActionsDropdown', function() {
 		expect(clayActionsDropdown).toMatchSnapshot();
 	});
 
+	it('should render a disabled dropdown', () => {
+		clayActionsDropdown = new ClayActionsDropdown({
+			disabled: true,
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayActionsDropdown).toMatchSnapshot();
+	});
+
 	it('should render an expanded action dropdown', () => {
 		clayActionsDropdown = new ClayActionsDropdown({
 			expanded: true,
@@ -134,7 +145,10 @@ describe('ClayActionsDropdown', function() {
 
 		const spy = jest.spyOn(clayActionsDropdown.refs.dropdown, 'emit');
 
-		clayActionsDropdown.refs.dropdown.refs.dropdownButton.element.click();
+		const element =
+			clayActionsDropdown.refs.dropdown.refs.portal.refs.dropdownButton
+				.element;
+		element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));

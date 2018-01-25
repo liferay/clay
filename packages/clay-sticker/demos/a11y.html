@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Metal Clay Sticker</title>
 
-	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+	<link rel="stylesheet" href="../../../node_modules/clay/lib/css/atlas.css">
 
 	<style>
 		body {
@@ -28,14 +28,6 @@
 		<div class="col">
 			<h4>Sticker Shapes</h4>
 			<div id="shapes-block"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
-			<h4>Sticker Shapes with WebComponents</h4>
-			<clay-sticker label="DB"></clay-sticker>
-			<clay-sticker label="MM" shape="circle"></clay-sticker>
 		</div>
 	</div>
 
@@ -120,6 +112,8 @@
 	</div>
 
 	<script>
+		const spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
+
 		new metal.ClaySticker(
 			{
 				label: 'DB',
@@ -220,7 +214,7 @@
 			{
 				icon: 'add-cell',
 				size: 'sm',
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				spritemap: spritemap,
 			},
 			'#icons-block'
 		);
@@ -228,7 +222,7 @@
 		new metal.ClaySticker(
 			{
 				icon: 'add-cell',
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				spritemap: spritemap,
 			},
 			'#icons-block'
 		);
@@ -237,7 +231,7 @@
 			{
 				icon: 'add-cell',
 				size: 'lg',
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				spritemap: spritemap,
 			},
 			'#icons-block'
 		);
@@ -246,7 +240,7 @@
 			{
 				icon: 'add-cell',
 				size: 'xl',
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				spritemap: spritemap,
 			},
 			'#icons-block'
 		);
