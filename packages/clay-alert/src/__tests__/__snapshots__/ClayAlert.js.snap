@@ -5,7 +5,7 @@ exports[`ClayAlert should render a "danger" style alert 1`] = `
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
       <title>exclamation-full</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-full"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-full"></use>
     </svg>
   </span>
   <strong class="lead">Danger!</strong>message</div>
@@ -16,7 +16,7 @@ exports[`ClayAlert should render a "success" style alert 1`] = `
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
       <title>check-circle-full</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle-full"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#check-circle-full"></use>
     </svg>
   </span>
   <strong class="lead">Success!</strong>message</div>
@@ -27,7 +27,7 @@ exports[`ClayAlert should render a "warning" style alert 1`] = `
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
       <title>warning-full</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#warning-full"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#warning-full"></use>
     </svg>
   </span>
   <strong class="lead">Warning!</strong>message</div>
@@ -38,13 +38,13 @@ exports[`ClayAlert should render a closeable alert 1`] = `
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
       <title>times</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
       <title>warning-full</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#warning-full"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#warning-full"></use>
     </svg>
   </span>
   <strong class="lead">Warning!</strong>message</div>
@@ -55,7 +55,7 @@ exports[`ClayAlert should render an "info" style alert 1`] = `
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
       <title>info-circle</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
   <strong class="lead">Info</strong>message</div>
@@ -66,7 +66,7 @@ exports[`ClayAlert should render an alert with classes 1`] = `
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
       <title>info-circle</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
   <strong class="lead">info</strong>message</div>
@@ -77,7 +77,7 @@ exports[`ClayAlert should render an alert with id 1`] = `
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
       <title>info-circle</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
   <strong class="lead">info</strong>message</div>
@@ -88,7 +88,7 @@ exports[`ClayAlert should render default markup 1`] = `
   <span class="alert-indicator">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
       <title>info-circle</title>
-      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
   <strong class="lead">info</strong>message</div>
