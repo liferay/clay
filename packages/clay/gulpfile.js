@@ -1,10 +1,11 @@
+var async = require('async');
 var filter = require('gulp-filter');
+var fs = require('fs-extra');
 var gulp = require('gulp-help')(require('gulp'));
 var path = require('path');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var sass = require('node-sass');
 
 var _ = require('./tasks/lib/lodash_utils');
 
@@ -123,12 +124,30 @@ gulp.task(
 
 gulp.task(
 	'compile:css',
-	function() {
-		return gulp.src('temp/+(atlas|bootstrap|base).scss')
-			.pipe(sourcemaps.init())
-			.pipe(sass())
-			.pipe(sourcemaps.write('.'))
-			.pipe(gulp.dest('./lib/css'));
+	function(cb) {
+		fs.ensureDirSync(path.resolve('./lib/css'));
+
+		var filesNames = ['atlas.scss', 'bootstrap.scss', 'base.scss'];
+
+		async.each(filesNames, function(fileName, cb) {
+			var fileDestName = path.basename(fileName, '.scss') + '.css';
+
+			var destName = path.resolve('./lib/css/' + fileDestName);
+
+			sass.render({
+				file: path.resolve('./temp/' + fileName),
+				outFile: './' + fileDestName,
+				sourceMap: true,
+				sourceMapContents: true
+			}, function(err, results) {
+				fs.writeFileSync(destName, results.css);
+				fs.writeFileSync(destName + '.map', results.map);
+
+				cb(err);
+			});
+		}, function(err) {
+			cb(err);
+		});
 	}
 );
 

@@ -21,6 +21,7 @@
     }
   },
   "scripts": {
+    "build": "npm run compile",
     "compile": "gulp compile",
     "prepublish": "npm run compile"
   },
@@ -49,6 +50,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "async": "^2.6.0",
     "basename": "^0.1.2",
     "bootstrap": "4.0.0",
     "browser-sync": "^2.14.0",
@@ -69,8 +71,6 @@
     "gulp-metalsmith": "0.0.3",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^1.12.1",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.4",
     "gulpsmith": "^0.5.3",
@@ -83,6 +83,7 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-sass": "^1.2.1",
     "metalsmith-templates": "^0.7.0",
+    "node-sass": "^4.7.1",
     "popper.js": "1.12.9",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
