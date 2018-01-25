@@ -53,6 +53,8 @@
 	</div>
 
 	<script type="text/javascript">
+		const spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
+
 		new metal.ClayLabel(
 			{
 				label: 'Label text'
@@ -111,7 +113,7 @@
 			{
 				label: 'Label text',
 				closeable: true,
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				spritemap: spritemap,
 				events: {
  					'close': handleClick
  				}
@@ -124,7 +126,7 @@
 				label: 'Label text',
 				size: 'lg',
 				closeable: true,
-				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				spritemap: spritemap,
 				events: {
  					'close': handleClick
  				}
