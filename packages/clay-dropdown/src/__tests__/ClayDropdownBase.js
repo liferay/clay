@@ -114,22 +114,6 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
-	it('should render a dropdown of type form with items', () => {
-		clayDropdownBase = new ClayDropdownBase({
-			items: [
-				{
-					disabled: true,
-					href: 'item1url',
-					label: 'Item 1',
-				},
-			],
-			label: 'Trigger',
-			type: 'form',
-		});
-
-		expect(clayDropdownBase).toMatchSnapshot();
-	});
-
 	it('should render a dropdown with items of type checkbox', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
@@ -148,7 +132,6 @@ describe('ClayDropdownBase', function() {
 				},
 			],
 			label: 'Trigger',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -190,7 +173,6 @@ describe('ClayDropdownBase', function() {
 				},
 			],
 			label: 'Trigger',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -209,7 +191,6 @@ describe('ClayDropdownBase', function() {
 				},
 			],
 			label: 'Trigger',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -252,7 +233,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -297,7 +277,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
@@ -342,7 +321,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-			type: 'form',
 		});
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
@@ -383,49 +361,6 @@ describe('ClayDropdownBase', function() {
 			],
 			label: 'Trigger Label',
 			spritemap: 'icons.svg',
-		});
-
-		expect(clayDropdownBase).toMatchSnapshot();
-	});
-
-	it('should render a dropdown of type form with groups', () => {
-		clayDropdownBase = new ClayDropdownBase({
-			items: [
-				{
-					label: 'Group 1',
-					items: [
-						{
-							active: true,
-							href: '#1',
-							label: 'Item 1',
-						},
-						{
-							href: '#2',
-							label: 'Item 2',
-						},
-					],
-					separator: true,
-					type: 'group',
-				},
-				{
-					label: 'Group 2',
-					items: [
-						{
-							href: '#3',
-							label: 'Item 3',
-						},
-						{
-							disabled: true,
-							href: '#4',
-							label: 'Item 3',
-						},
-					],
-					type: 'group',
-				},
-			],
-			label: 'Trigger Label',
-			spritemap: 'icons.svg',
-			type: 'form',
 		});
 
 		expect(clayDropdownBase).toMatchSnapshot();
