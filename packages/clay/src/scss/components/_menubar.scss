@@ -8,14 +8,22 @@
 	display: none;
 }
 
-// Menubar Vertical
+// Menubar Vertical MD
 
 .menubar-vertical-expand-md {
 	@include clay-menubar-vertical-expand($menubar-vertical-expand-md);
+
+	&.menubar-transparent {
+		@include clay-menubar-vertical-variant($menubar-vertical-transparent-md);
+	}
 }
 
-// Menubar Variants
+// Menubar Vertical LG
 
-.menubar-transparent.menubar-vertical-expand-md {
-	@include clay-menubar-vertical-variant($menubar-vertical-transparent);
+.menubar-vertical-expand-lg {
+	@include clay-menubar-vertical-expand($menubar-vertical-expand-lg);
+
+	&.menubar-transparent {
+		@include clay-menubar-vertical-variant($menubar-vertical-transparent-lg);
+	}
 }
