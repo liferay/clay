@@ -53,41 +53,43 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
         </label>
       </div>
     </li>
-    <div class="dropdown-subheader">Radio Group</div>
-    <div aria-label="Radio Group" role="radiogroup">
-      <div class="dropdown-item">
+  </ul>
+  <div class="dropdown-subheader" role="presentation">Radio Group</div>
+  <div aria-label="Radio Group" role="radiogroup">
+    <ul class="list-unstyled">
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 8</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item active">
+      </li>
+      <li class="dropdown-item active">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 9</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item">
+      </li>
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 10</span>
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div class="dropdown-divider"></div>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 </div>
 `;
 
@@ -144,41 +146,43 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
         </label>
       </div>
     </li>
-    <div class="dropdown-subheader">Radio Group</div>
-    <div aria-label="Radio Group" role="radiogroup">
-      <div class="dropdown-item">
+  </ul>
+  <div class="dropdown-subheader" role="presentation">Radio Group</div>
+  <div aria-label="Radio Group" role="radiogroup">
+    <ul class="list-unstyled">
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 8</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item active">
+      </li>
+      <li class="dropdown-item active">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 9</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item">
+      </li>
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 10</span>
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div class="dropdown-divider"></div>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 </div>
 `;
 
@@ -235,41 +239,43 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
         </label>
       </div>
     </li>
-    <div class="dropdown-subheader">Radio Group</div>
-    <div aria-label="Radio Group" role="radiogroup">
-      <div class="dropdown-item">
+  </ul>
+  <div class="dropdown-subheader" role="presentation">Radio Group</div>
+  <div aria-label="Radio Group" role="radiogroup">
+    <ul class="list-unstyled">
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 8</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item active">
+      </li>
+      <li class="dropdown-item active">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 9</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item">
+      </li>
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 10</span>
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div class="dropdown-divider"></div>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 </div>
 `;
 
@@ -326,41 +332,43 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
         </label>
       </div>
     </li>
-    <div class="dropdown-subheader">Radio Group</div>
-    <div aria-label="Radio Group" role="radiogroup">
-      <div class="dropdown-item">
+  </ul>
+  <div class="dropdown-subheader" role="presentation">Radio Group</div>
+  <div aria-label="Radio Group" role="radiogroup">
+    <ul class="list-unstyled">
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 8</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item active">
+      </li>
+      <li class="dropdown-item active">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 9</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item">
+      </li>
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 10</span>
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div class="dropdown-divider"></div>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 </div>
 `;
 
@@ -417,41 +425,43 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
         </label>
       </div>
     </li>
-    <div class="dropdown-subheader">Radio Group</div>
-    <div aria-label="Radio Group" role="radiogroup">
-      <div class="dropdown-item">
+  </ul>
+  <div class="dropdown-subheader" role="presentation">Radio Group</div>
+  <div aria-label="Radio Group" role="radiogroup">
+    <ul class="list-unstyled">
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 8</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item active">
+      </li>
+      <li class="dropdown-item active">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 9</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item">
+      </li>
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 10</span>
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div class="dropdown-divider"></div>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 </div>
 `;
 
@@ -465,21 +475,23 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
   </button>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <div class="dropdown-section">
-    <div class="input-group input-group-inset">
-      <div class="input-group-input">
-        <input aria-label="Search for..." class="form-control" placeholder="Search for..." type="text" ref="searchInput">
+  <form>
+    <div class="dropdown-section">
+      <div class="input-group input-group-inset">
+        <div class="input-group-input">
+          <input aria-label="Search for..." class="form-control" placeholder="Search for..." type="text" ref="searchInput">
+        </div>
+        <span class="input-group-inset-item">
+          <button class="btn btn-link" aria-label="search" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+              <title>search</title>
+              <use xlink:href="icons.svg#search"></use>
+            </svg>
+          </button>
+        </span>
       </div>
-      <span class="input-group-inset-item">
-        <button class="btn btn-link" aria-label="search" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-            <title>search</title>
-            <use xlink:href="icons.svg#search"></use>
-          </svg>
-        </button>
-      </span>
     </div>
-  </div>
+  </form>
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="item1url">Item 1</a>
@@ -523,41 +535,43 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
         </label>
       </div>
     </li>
-    <div class="dropdown-subheader">Radio Group</div>
-    <div aria-label="Radio Group" role="radiogroup">
-      <div class="dropdown-item">
+  </ul>
+  <div class="dropdown-subheader" role="presentation">Radio Group</div>
+  <div aria-label="Radio Group" role="radiogroup">
+    <ul class="list-unstyled">
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 8</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item active">
+      </li>
+      <li class="dropdown-item active">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 9</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item">
+      </li>
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 10</span>
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div class="dropdown-divider"></div>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 </div>
 `;
 
@@ -614,40 +628,42 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
         </label>
       </div>
     </li>
-    <div class="dropdown-subheader">Radio Group</div>
-    <div aria-label="Radio Group" role="radiogroup">
-      <div class="dropdown-item">
+  </ul>
+  <div class="dropdown-subheader" role="presentation">Radio Group</div>
+  <div aria-label="Radio Group" role="radiogroup">
+    <ul class="list-unstyled">
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 8</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item active">
+      </li>
+      <li class="dropdown-item active">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 9</span>
             </span>
           </label>
         </div>
-      </div>
-      <div class="dropdown-item">
+      </li>
+      <li class="dropdown-item">
         <div class="custom-control custom-radio custom-control-inline">
           <label>
-            <input disabled="disabled" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
             <span class="custom-control-label">
               <span class="custom-control-label-text">Item 10</span>
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div class="dropdown-divider"></div>
-  </ul>
+      </li>
+    </ul>
+  </div>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
 </div>
 `;
