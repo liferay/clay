@@ -256,6 +256,47 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a disabled management toolbar', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterItems: [
+				{
+					label: 'Item 1',
+					inputName: 'item1checkbox',
+					inputValue: '1',
+					type: 'checkbox',
+				},
+				{
+					label: 'Item 2',
+					inputName: 'item2checkbox',
+					inputValue: '2',
+					type: 'checkbox',
+				},
+			],
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 0,
+			viewTypes: [
+				{
+					active: true,
+					icon: 'list',
+					label: 'List',
+				},
+				{
+					disabled: true,
+					icon: 'table',
+					label: 'Table',
+				},
+				{
+					icon: 'cards2',
+					label: 'Card',
+				},
+			],
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with classes in active state', () => {
 		managementToolbar = new ClayManagementToolbar({
 			elementClasses: 'my-custom-class',
