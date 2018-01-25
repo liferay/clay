@@ -172,6 +172,13 @@
 			border-color: $input-focus-border-color;
 		}
 	}
+
+	&:disabled {
+		~ .input-group-inset-item {
+			background-color: $input-disabled-bg;
+			border-color: $input-disabled-border-color;
+		}
+	}
 }
 
 .input-group-inset-item {
