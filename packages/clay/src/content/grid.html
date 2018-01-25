@@ -5,14 +5,18 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Container Form</h3>
+		<h3>Container Form Lg</h3>
 
 		<blockquote class="blockquote">
-			Use <code>.container-form</code> with <code>.container</code> to properly space between application controls and the form.
+			Use <code>.container-form-lg</code> with <code>.container</code> to properly space between application controls and the form.
 		</blockquote>
 
+		<div class="alert alert-warning">
+			If you need more breakpoints such as <code>.container-form-{sm|md|xl}</code> you will need to define them yourself.
+		</div>
+
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
-	<div class="container">
+	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
@@ -48,7 +52,7 @@ section: Components
 		</ul>
 	</div>
 </nav>
-<div class="container container-form">
+<div class="container-fluid container-fluid-max-xl container-form-lg">
 	<div class="sheet sheet-lg">
 		<h2 class="sheet-title">Form Title</h2>
 	</div>
@@ -66,7 +70,7 @@ section: Components
 		</blockquote>
 
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
-	<div class="container">
+	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
@@ -102,7 +106,7 @@ section: Components
 		</ul>
 	</div>
 </nav>
-<div class="container container-view">
+<div class="container-fluid container-fluid-max-xl container-view">
 	<form>
 		<div class="table-responsive-lg">
 			<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
