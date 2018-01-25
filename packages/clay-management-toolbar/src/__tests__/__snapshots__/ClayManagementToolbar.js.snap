@@ -1,5 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayManagementToolbar should render a disabled management toolbar 1`] = `
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <div class="custom-control custom-checkbox">
+          <label>
+            <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+            <span class="custom-control-label">
+              <span class="custom-control-label-text sr-only">Select Page</span>
+            </span>
+          </label>
+        </div>
+      </li>
+      <li class="dropdown nav-item">
+        <div class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" disabled="" type="button">Filter and Order
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+              <title>caret-bottom</title>
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#caret-bottom"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" disabled="" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+            <title>order-arrow</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#order-arrow"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+      <div class="container">
+        <form role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" disabled="" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+                <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" disabled="" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item navbar-breakpoint-d-none">
+        <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" disabled="" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+            <title>search</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#search"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="dropdown nav-item">
+        <div class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+              <title>list</title>
+              <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+            <title>plus</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li class="dropdown-item">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 1</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <label>
+              <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 2</span>
+              </span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-primary" type="button">Done</button>
+    </div>
+  </form>
+</div>
+<div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item active">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+            <title>list</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#list"></use>
+          </svg>
+        </div>List</a>
+    </li>
+    <li>
+      <a class=" dropdown-item disabled" href="javascript:;">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+            <title>table</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#table"></use>
+          </svg>
+        </div>Table</a>
+    </li>
+    <li>
+      <a class=" dropdown-item">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+            <title>cards2</title>
+            <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#cards2"></use>
+          </svg>
+        </div>Card</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with actions in active state 1`] = `
 <nav class="management-bar management-bar-primary navbar navbar-expand-md">
   <div class="container">

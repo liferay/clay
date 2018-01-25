@@ -33,6 +33,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Disabled Dropdown</h4>
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Dropdown with icon trigger</h4>
 			<div id="icon-trigger-block"></div>
 		</div>
@@ -162,6 +169,38 @@
 				label: 'Trigger Label',
 			},
 			'#default-block'
+		);
+
+		/**
+		 * Disabled Dropdown
+		 **/
+		new metal.ClayDropdown(
+			{
+				disabled: true,
+				items: [
+					{
+						href: '#1',
+						label: 'Item 1',
+					},
+					{
+						active: true,
+						href: '#2',
+						label: 'Item 2',
+					},
+					{
+						disabled: true,
+						href: '#3',
+						label: 'Item 3',
+					},
+					{
+						href: '#4',
+						label: 'Item 4',
+					},
+				],
+				spritemap: spritemap,
+				label: 'Trigger Label',
+			},
+			'#disabled-block'
 		);
 
 		/**

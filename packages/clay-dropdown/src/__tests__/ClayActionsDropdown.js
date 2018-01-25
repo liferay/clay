@@ -105,6 +105,17 @@ describe('ClayActionsDropdown', function() {
 		expect(clayActionsDropdown).toMatchSnapshot();
 	});
 
+	it('should render a disabled dropdown', () => {
+		clayActionsDropdown = new ClayActionsDropdown({
+			disabled: true,
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayActionsDropdown).toMatchSnapshot();
+	});
+
 	it('should render an expanded action dropdown', () => {
 		clayActionsDropdown = new ClayActionsDropdown({
 			expanded: true,

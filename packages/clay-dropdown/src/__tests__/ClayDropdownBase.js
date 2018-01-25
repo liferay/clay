@@ -66,6 +66,25 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should render a disabled dropdown', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			disabled: true,
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+				{
+					href: 'item2url',
+					label: 'Item 2',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with items of type item', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
