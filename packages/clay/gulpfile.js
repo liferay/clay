@@ -1,4 +1,5 @@
 var async = require('async');
+var del = require('del');
 var filter = require('gulp-filter');
 var fs = require('fs-extra');
 var gulp = require('gulp-help')(require('gulp'));
@@ -48,8 +49,8 @@ gulp.task(
 			'build:svg:scss-icons',
 			'compile:prep-scss',
 			'compile:css',
+			'compile:clean-scss',
 			'compile:svg',
-			'compile:clean-temp',
 			function(err) {
 				cb(err);
 			}
@@ -105,20 +106,23 @@ gulp.task(
 gulp.task(
 	'compile:clean',
 	function() {
-		return gulp.src('./lib')
-			.pipe(plugins.clean({
-				read: false
-			}));
+		del.sync(['./lib']);
 	}
 );
 
 gulp.task(
-	'compile:clean-temp',
+	'compile:clean-scss',
 	function() {
-		return gulp.src('./temp')
-			.pipe(plugins.clean({
-				read: false
-			}));
+		del.sync([
+			'./lib/css/**/*.scss',
+			'./lib/css/atlas/',
+			'./lib/css/bootstrap/',
+			'./lib/css/components/',
+			'./lib/css/functions/',
+			'./lib/css/mixins/',
+			'./lib/css/site/',
+			'./lib/css/variables/'
+		]);
 	}
 );
 
@@ -135,10 +139,11 @@ gulp.task(
 			var destName = path.resolve('./lib/css/' + fileDestName);
 
 			sass.render({
-				file: path.resolve('./temp/' + fileName),
+				file: path.resolve('./lib/css/' + fileName),
 				outFile: './' + fileDestName,
 				sourceMap: true,
-				sourceMapContents: true
+				sourceMapContents: true,
+				sourceMapRoot: '../../'
 			}, function(err, results) {
 				fs.writeFileSync(destName, results.css);
 				fs.writeFileSync(destName + '.map', results.map);
@@ -177,7 +182,7 @@ gulp.task(
 			.pipe(entryFilter)
 			.pipe(plugins.header(license.tpl, license.metadata))
 			.pipe(entryFilter.restore)
-			.pipe(gulp.dest('./temp'));
+			.pipe(gulp.dest('./lib/css'));
 	}
 );
 
