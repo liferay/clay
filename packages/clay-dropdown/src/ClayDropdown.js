@@ -149,15 +149,6 @@ ClayDropdown.STATE = {
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
-
-	/**
-	 * Type of the dropdown menu.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?string}
-	 * @default list
-	 */
-	type: Config.oneOf(['form', 'list']).value('list'),
 };
 
 defineWebComponent('clay-dropdown', ClayDropdown);
