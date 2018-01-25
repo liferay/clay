@@ -1,7 +1,6 @@
 {namespace Sidebar}
 
 /**
- * @param? atlas
  * @param section
  * @param site
  */
@@ -39,24 +38,6 @@
 							{param path: '/docs/' /}
 							{param placeholder: 'Search' /}
 						{/call}
-					</div>
-
-					<div class="style-toggler">
-						<div class="form-check">
-							<label class="form-check-label">
-								{let $attributes kind="attributes"}
-									{if $atlas}
-										checked
-									{/if}
-									class="form-check-input"
-									data-onchange="handleThemeChange_"
-									type="checkbox"
-								{/let}
-
-								<input {$attributes} />
-								<span class="form-check-description">Show Atlas Theme</span>
-							</label>
-						</div>
 					</div>
 
 					{call MainNavigation.render}

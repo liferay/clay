@@ -1,5 +1,6 @@
 body {
 	background-color: $bg-color;
+	font-size: 1rem;
 
 	@media (max-width: $grid-float-breakpoint - 1) {
 		margin-top: $margin-top-body;
