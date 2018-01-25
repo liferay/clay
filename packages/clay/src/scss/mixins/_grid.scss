@@ -14,6 +14,36 @@
 	}
 }
 
+@mixin clay-container($map) {
+	$enabled: setter(map-get($map, enabled), true);
+	$breakpoint-up: map-get($map, breakpoint-up);
+	$breakpoint-down: setter(clay-breakpoint-prev($breakpoint-up), null);
+
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+
+	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
+	$padding-left-mobile: map-get($map, padding-left-mobile);
+	$padding-right-mobile: map-get($map, padding-right-mobile);
+	$padding-top-mobile: map-get($map, padding-top-mobile);
+
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
+
+	@if($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			padding-bottom: $padding-bottom-mobile;
+			padding-left: $padding-left-mobile;
+			padding-right: $padding-right-mobile;
+			padding-top: $padding-top-mobile;
+		}
+	}
+}
+
 @mixin clay-custom-grid-columns($map) {
 	$custom-grid-props: map-merge((
 		enabled: $enable-grid-classes,
