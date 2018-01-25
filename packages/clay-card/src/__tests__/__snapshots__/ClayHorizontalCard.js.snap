@@ -4,14 +4,16 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with a different 
 <div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
-      <span class="sticker sticker-unstyled">
-        <span class="sticker-overlay">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-            <title>list</title>
-            <use xlink:href="icons.svg#list"></use>
-          </svg>
+      <div class="autofit-col">
+        <span class="sticker sticker-unstyled">
+          <span class="sticker-overlay">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+              <title>list</title>
+              <use xlink:href="icons.svg#list"></use>
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate">My Title</div>
       </div>
@@ -24,14 +26,16 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
 <div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
-      <span class="sticker sticker-unstyled">
-        <span class="sticker-overlay">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-            <title>folder</title>
-            <use xlink:href="icons.svg#folder"></use>
-          </svg>
+      <div class="autofit-col">
+        <span class="sticker sticker-unstyled">
+          <span class="sticker-overlay">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+              <title>folder</title>
+              <use xlink:href="icons.svg#folder"></use>
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate">My Title</div>
       </div>
@@ -64,14 +68,16 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with classes 1`] 
 <div class="card-type-directory card card-horizontal my-custom-class">
   <div class="card-body">
     <div class="card-row">
-      <span class="sticker sticker-unstyled">
-        <span class="sticker-overlay">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-            <title>folder</title>
-            <use xlink:href="icons.svg#folder"></use>
-          </svg>
+      <div class="autofit-col">
+        <span class="sticker sticker-unstyled">
+          <span class="sticker-overlay">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+              <title>folder</title>
+              <use xlink:href="icons.svg#folder"></use>
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate">My Title</div>
       </div>
@@ -84,14 +90,16 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with href 1`] = `
 <div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
-      <span class="sticker sticker-unstyled">
-        <span class="sticker-overlay">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-            <title>folder</title>
-            <use xlink:href="icons.svg#folder"></use>
-          </svg>
+      <div class="autofit-col">
+        <span class="sticker sticker-unstyled">
+          <span class="sticker-overlay">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+              <title>folder</title>
+              <use xlink:href="icons.svg#folder"></use>
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <a class=" card-title text-truncate" href="#1">My Title</a>
       </div>
@@ -104,14 +112,16 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
 <div class="card-type-directory card card-horizontal" id="myId">
   <div class="card-body">
     <div class="card-row">
-      <span class="sticker sticker-unstyled">
-        <span class="sticker-overlay">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-            <title>folder</title>
-            <use xlink:href="icons.svg#folder"></use>
-          </svg>
+      <div class="autofit-col">
+        <span class="sticker sticker-unstyled">
+          <span class="sticker-overlay">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+              <title>folder</title>
+              <use xlink:href="icons.svg#folder"></use>
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate">My Title</div>
       </div>
@@ -129,14 +139,16 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+            <div class="autofit-col">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
+            </div>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate">My Title</div>
             </div>
@@ -157,14 +169,16 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = 
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+            <div class="autofit-col">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
+            </div>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate">My Title</div>
             </div>
@@ -185,14 +199,16 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+            <div class="autofit-col">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
+            </div>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate">My Title</div>
             </div>
@@ -213,14 +229,16 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+            <div class="autofit-col">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
+            </div>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate">My Title</div>
             </div>
@@ -241,14 +259,16 @@ exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
-            <span class="sticker sticker-unstyled">
-              <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                  <title>folder</title>
-                  <use xlink:href="icons.svg#folder"></use>
-                </svg>
+            <div class="autofit-col">
+              <span class="sticker sticker-unstyled">
+                <span class="sticker-overlay">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                    <title>folder</title>
+                    <use xlink:href="icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
-            </span>
+            </div>
             <div class="autofit-col autofit-col-expand autofit-col-gutters">
               <div class="card-title text-truncate">My Title</div>
             </div>
@@ -264,14 +284,16 @@ exports[`ClayHorizontalCard should render the default markup 1`] = `
 <div class="card-type-directory card card-horizontal">
   <div class="card-body">
     <div class="card-row">
-      <span class="sticker sticker-unstyled">
-        <span class="sticker-overlay">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-            <title>folder</title>
-            <use xlink:href="icons.svg#folder"></use>
-          </svg>
+      <div class="autofit-col">
+        <span class="sticker sticker-unstyled">
+          <span class="sticker-overlay">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+              <title>folder</title>
+              <use xlink:href="icons.svg#folder"></use>
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
       <div class="autofit-col autofit-col-expand autofit-col-gutters">
         <div class="card-title text-truncate">My Title</div>
       </div>

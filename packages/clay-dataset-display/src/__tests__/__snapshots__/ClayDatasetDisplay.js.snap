@@ -2813,14 +2813,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="card card-horizontal">
                     <div class="card-body">
                       <div class="card-row">
-                        <span class="sticker sticker-unstyled">
-                          <span class="sticker-overlay">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                              <title>folder</title>
-                              <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
-                            </svg>
+                        <div class="autofit-col">
+                          <span class="sticker sticker-unstyled">
+                            <span class="sticker-overlay">
+                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                                <title>folder</title>
+                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
+                              </svg>
+                            </span>
                           </span>
-                        </span>
+                        </div>
                         <div class="autofit-col autofit-col-expand autofit-col-gutters">
                           <div class="card-title text-truncate">Photos</div>
                         </div>
@@ -2850,14 +2852,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <div class="card card-horizontal">
                     <div class="card-body">
                       <div class="card-row">
-                        <span class="sticker sticker-unstyled">
-                          <span class="sticker-overlay">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                              <title>folder</title>
-                              <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
-                            </svg>
+                        <div class="autofit-col">
+                          <span class="sticker sticker-unstyled">
+                            <span class="sticker-overlay">
+                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                                <title>folder</title>
+                                <use xlink:href="../../../node_modules/clay/build/images/icons/icons.svg#folder"></use>
+                              </svg>
+                            </span>
                           </span>
-                        </span>
+                        </div>
                         <div class="autofit-col autofit-col-expand autofit-col-gutters">
                           <div class="card-title text-truncate">Videos</div>
                         </div>
