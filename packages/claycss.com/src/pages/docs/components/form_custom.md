@@ -14,22 +14,25 @@ weight: 100
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Unchecked</span>
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Unchecked</span>
+				</span>
 			</label>
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input checked class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Checked</span>
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Checked</span>
+				</span>
 			</label>
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Indeterminate</span>
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Indeterminate</span>
+				</span>
 			</label>
 		</div>
 	</div>
@@ -37,22 +40,25 @@ weight: 100
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input class="custom-control-input" disabled type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Unchecked Disabled</span>
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Unchecked Disabled</span>
+				</span>
 			</label>
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input checked class="custom-control-input" disabled type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Checked Disabled</span>
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Checked Disabled</span>
+				</span>
 			</label>
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" disabled type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Indeterminate Disabled</span>
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Indeterminate Disabled</span>
+				</span>
 			</label>
 		</div>
 	</div>
@@ -124,48 +130,54 @@ weight: 100
 <div class="custom-control custom-checkbox">
 	<label>
 		<input class="custom-control-input" type="checkbox">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Unchecked</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Unchecked</span>
+		</span>
 	</label>
 </div>
 
 <div class="custom-control custom-checkbox">
 	<label>
 		<input checked class="custom-control-input" type="checkbox">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Checked</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Checked</span>
+		</span>
 	</label>
 </div>
 
 <div class="custom-control custom-checkbox">
 	<label>
 		<input class="custom-control-input" type="checkbox">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Indeterminate</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Indeterminate</span>
+		</span>
 	</label>
 </div>
 
 <div class="custom-control custom-checkbox">
 	<label>
 		<input class="custom-control-input" disabled type="checkbox">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Unchecked Disabled</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Unchecked Disabled</span>
+		</span>
 	</label>
 </div>
 
 <div class="custom-control custom-checkbox">
 	<label>
 		<input checked class="custom-control-input" disabled type="checkbox">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Checked Disabled</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Checked Disabled</span>
+		</span>
 	</label>
 </div>
 
 <div class="custom-control custom-checkbox">
 	<label>
 		<input class="custom-control-input" disabled type="checkbox">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Indeterminate Disabled</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Indeterminate Disabled</span>
+		</span>
 	</label>
 </div>
 ```
@@ -178,19 +190,23 @@ weight: 100
 ### Custom Radio
 
 <div class="sheet">
-	<div class="custom-control custom-radio">
-		<label>
-			<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
-			<span class="custom-control-indicator"></span>
-			<span class="custom-control-description">Toggle this custom radio</span>
-		</label>
-	</div>
-	<div class="custom-control custom-radio">
-		<label>
-			<input class="custom-control-input" id="radio2" name="radio" type="radio">
-			<span class="custom-control-indicator"></span>
-			<span class="custom-control-description">Or toggle this other custom radio</span>
-		</label>
+	<div class="form-group">
+		<div class="custom-control custom-radio">
+			<label>
+				<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Toggle this custom radio</span>
+				</span>
+			</label>
+		</div>
+		<div class="custom-control custom-radio">
+			<label>
+				<input class="custom-control-input" id="radio2" name="radio" type="radio">
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Or toggle this other custom radio</span>
+				</span>
+			</label>
+		</div>
 	</div>
 </div>
 
@@ -226,16 +242,18 @@ weight: 100
 <div class="custom-control custom-radio">
 	<label>
 		<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Toggle this custom radio</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Toggle this custom radio</span>
+		</span>
 	</label>
 </div>
 
 <div class="custom-control custom-radio">
 	<label>
 		<input class="custom-control-input" id="radio2" name="radio" type="radio">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Or toggle this other custom radio</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Or toggle this other custom radio</span>
+		</span>
 	</label>
 </div>
 ```
@@ -248,19 +266,23 @@ weight: 100
 ### Custom Controls Inline
 
 <div class="sheet">
-	<div class="custom-control custom-control-inline custom-radio">
-		<label>
-			<input class="custom-control-input" disabled id="radioStacked3" name="radio-stacked" type="radio">
-			<span class="custom-control-indicator"></span>
-			<span class="custom-control-description">Toggle this custom radio</span>
-		</label>
-	</div>
-	<div class="custom-control custom-control-inline custom-radio">
-		<label>
-			<input class="custom-control-input" id="radioStacked4" name="radio-stacked" type="radio">
-			<span class="custom-control-indicator"></span>
-			<span class="custom-control-description">Or toggle this other custom radio</span>
-		</label>
+	<div class="form-group">
+		<div class="custom-control custom-control-inline custom-radio">
+			<label>
+				<input class="custom-control-input" disabled id="radioStacked3" name="radio-stacked" type="radio">
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Toggle this custom radio</span>
+				</span>
+			</label>
+		</div>
+		<div class="custom-control custom-control-inline custom-radio">
+			<label>
+				<input class="custom-control-input" id="radioStacked4" name="radio-stacked" type="radio">
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Or toggle this other custom radio</span>
+				</span>
+			</label>
+		</div>
 	</div>
 </div>
 
@@ -296,15 +318,17 @@ weight: 100
 <div class="custom-control custom-control-inline custom-radio">
 	<label>
 		<input class="custom-control-input" disabled id="radioStacked3" name="radio-stacked" type="radio">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Toggle this custom radio</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Toggle this custom radio</span>
+		</span>
 	</label>
 </div>
 <div class="custom-control custom-control-inline custom-radio">
 	<label>
 		<input class="custom-control-input" id="radioStacked4" name="radio-stacked" type="radio">
-		<span class="custom-control-indicator"></span>
-		<span class="custom-control-description">Or toggle this other custom radio</span>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Or toggle this other custom radio</span>
+		</span>
 	</label>
 </div>
 ```
