@@ -82,6 +82,17 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should render a disabled dropdown with items', () => {
+		clayDropdown = new ClayDropdown({
+			disabled: true,
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with classes', () => {
 		clayDropdown = new ClayDropdown({
 			elementClasses: 'my-custom-class',
