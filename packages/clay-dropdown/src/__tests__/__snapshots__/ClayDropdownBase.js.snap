@@ -39,6 +39,22 @@ exports[`ClayDropdownBase should open dropdown 1`] = `
 </div>
 `;
 
+exports[`ClayDropdownBase should render a disabled dropdown 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" disabled="" type="button">Trigger</button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="item1url">Item 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="item2url">Item 2</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger</button>
