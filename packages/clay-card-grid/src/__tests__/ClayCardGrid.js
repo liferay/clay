@@ -160,7 +160,7 @@ const schema = {
 	},
 };
 
-const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
+const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
 describe('ClayCardGrid', function() {
 	afterEach(() => {
