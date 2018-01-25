@@ -372,9 +372,11 @@
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
-	<div class="dropdown-subheader" role="presentation">
-		{$label}
-	</div>
+	{if $label and $label != ''}
+		<div class="dropdown-subheader" role="presentation">
+			{$label}
+		</div>
+	{/if}
 
 	{if $items}
 		{delcall ClayDropdownBase.Items}
@@ -458,9 +460,11 @@
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
-	<div class="dropdown-subheader" role="presentation">
-		{$label}
-	</div>
+	{if $label and $label != ''}
+		<div class="dropdown-subheader" role="presentation">
+			{$label}
+		</div>
+	{/if}
 
 	<div aria-label="{$label}" role="radiogroup">
 		{if $items}
