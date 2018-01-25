@@ -335,15 +335,6 @@ ClayDropdownBase.STATE = {
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
-
-	/**
-	 * Type of the dropdown menu.
-	 * @instance
-	 * @memberof ClayDropdownBase
-	 * @type {?string}
-	 * @default list
-	 */
-	type: Config.oneOf(['form', 'list']).value('list'),
 };
 
 Soy.register(ClayDropdownBase, templates);

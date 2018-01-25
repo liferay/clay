@@ -17,25 +17,33 @@ exports[`ClayActionsDropdown should render an actions dropdown with classes 1`] 
     <li>
       <a class=" dropdown-item" href="#1">Preview</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Expire</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">View History</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Permissions</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Copy</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">Move</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
@@ -60,25 +68,33 @@ exports[`ClayActionsDropdown should render an actions dropdown with id 1`] = `
     <li>
       <a class=" dropdown-item" href="#1">Preview</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Expire</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">View History</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Permissions</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Copy</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">Move</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
@@ -103,25 +119,33 @@ exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
     <li>
       <a class=" dropdown-item" href="#1">Preview</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Expire</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">View History</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Permissions</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Copy</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">Move</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
@@ -146,25 +170,33 @@ exports[`ClayActionsDropdown should render default markdown 1`] = `
     <li>
       <a class=" dropdown-item" href="#1">Preview</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Expire</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">View History</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Permissions</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Copy</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#1">Move</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+  <div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+  <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
