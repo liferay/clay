@@ -442,9 +442,7 @@ exports[`ClayImageCard should render a disabled ClayImageCard 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
         </label>
       </div>
     </div>
@@ -466,9 +464,7 @@ exports[`ClayImageCard should render a selectable ClayImageCard 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
         </label>
       </div>
     </div>
@@ -490,9 +486,7 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`nam
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
         </label>
       </div>
     </div>
@@ -514,9 +508,7 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`val
       <div class="custom-control custom-checkbox">
         <label>
           <input class="custom-control-input" name="checkbox" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
         </label>
       </div>
     </div>
@@ -538,9 +530,7 @@ exports[`ClayImageCard should render a selected ClayImageCard 1`] = `
       <div class="custom-control custom-checkbox">
         <label>
           <input checked="" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text"></span>
-          </span>
+          <span class="custom-control-label"></span>
         </label>
       </div>
     </div>
