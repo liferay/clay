@@ -52,10 +52,10 @@ module.exports = {
 			src: path.join(clayJSPath, 'svg4everybody.js'),
 		},
 		{
-			src: '../../node_modules/billboard.js/dist/css/*',
+			src: 'node_modules/billboard.js/dist/css/*',
 		},
 		{
-			src: '../../node_modules/clay-charts/lib/css/*',
+			src: 'node_modules/clay-charts/lib/css/*',
 		},
 	],
 };
