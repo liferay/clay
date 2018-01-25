@@ -32,7 +32,7 @@ module.exports = {
 		return generateIconData(data);
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
-	metalComponents: ['electric-quartz-components'],
+	metalComponents: ['electric-quartz-components', 'clay-charts'],
 	resolveModules: ['../../node_modules'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths],
@@ -50,6 +50,12 @@ module.exports = {
 		},
 		{
 			src: path.join(clayJSPath, 'svg4everybody.js'),
+		},
+		{
+			src: '../../node_modules/billboard.js/dist/css/*',
+		},
+		{
+			src: '../../node_modules/clay-charts/lib/css/*',
 		},
 	],
 };

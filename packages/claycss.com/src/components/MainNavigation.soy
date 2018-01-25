@@ -13,7 +13,7 @@
 			{foreach $childId in $section.childIds}
 				{let $page: $section.children[$childId] /}
 
-				{if not $page.hidden}
+				{if $page and not $page.hidden}
 					<li class="{$page.active ? 'active ' : ''}{$page.children ? 'nav-heading' : ''}">
 						{call .anchor data="all"}
 							{param page: $page /}
