@@ -9,6 +9,7 @@
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? contentRenderer: string}
+	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
@@ -42,6 +43,7 @@
 	<div {$attributes}>
 		{call .trigger}
 			{param classes: $triggerClasses /}
+			{param disabled: $disabled /}
 			{param expanded: $expanded /}
 			{param label: $label /}
 			{param style: $style /}
@@ -196,6 +198,7 @@
 {template .trigger}
 	{@param label: html|string}
 	{@param? classes: string}
+	{@param? disabled: bool}
 	{@param? expanded: bool}
 	{@param? style: string}
 
@@ -220,7 +223,12 @@
 			{/if}
 		"
 
-		data-onclick="toggle"
+		{if $disabled}
+			disabled
+		{else}
+			data-onclick="toggle"
+		{/if}
+
 		type="button"
 	{/let}
 

@@ -7,6 +7,7 @@
 	{@param items: list<?>}
 	{@param spritemap: string}
 	{@param? button: ?}
+	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
 	{@param? handleButtonClick_: any}
@@ -41,6 +42,7 @@
 
 	{call ClayDropdownBase.render}
     {param button: $button /}
+    {param disabled: $disabled /}
     {param elementClasses: $elementClasses /}
     {param events: [
       'buttonClicked': $handleButtonClick_,

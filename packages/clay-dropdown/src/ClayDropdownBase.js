@@ -224,6 +224,15 @@ ClayDropdownBase.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * Flag to indicate if menu is disabled
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?bool}
+	 * @default false
+	 */
+	disabled: Config.bool().value(false),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdownBase

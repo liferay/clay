@@ -60,6 +60,15 @@ ClayActionsDropdown.STATE = {
 	caption: Config.string(),
 
 	/**
+	 * Flag to indicate if menu is disabled
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?bool}
+	 * @default false
+	 */
+	disabled: Config.bool().value(false),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayActionsDropdown
