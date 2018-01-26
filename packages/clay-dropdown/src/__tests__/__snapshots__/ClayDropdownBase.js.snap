@@ -4,7 +4,7 @@ exports[`ClayDropdownBase should close dropdown 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger</button>
 </div>
-<div class="dropdown-menu" ref="menu" style="top: 0px; left: 0px;">
+<div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="item1url">Item 1</a>
