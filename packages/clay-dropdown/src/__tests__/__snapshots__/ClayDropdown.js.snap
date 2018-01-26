@@ -677,7 +677,7 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
     </svg>
   </button>
 </div>
-<div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
+<div class="dropdown-menu show" ref="menu">
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="item1url">Item 1</a>
