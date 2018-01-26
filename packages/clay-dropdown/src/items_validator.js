@@ -8,7 +8,7 @@ let itemShape = {
 	icon: Config.string(),
 	inputName: Config.string(),
 	inputValue: Config.string(),
-	label: Config.string(),
+	label: Config.oneOfType([Config.number(), Config.string()]),
 	separator: Config.bool().value(false),
 	type: Config.oneOf(['checkbox', 'group', 'item', 'radiogroup']).value(
 		'item'
