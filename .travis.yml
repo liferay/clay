@@ -6,6 +6,10 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
   - npm install -g lerna@2.4.0
 
+branches:
+  except:
+  - wedeploy
+
 cache:
   yarn: true
 
@@ -17,7 +21,7 @@ jdk:
 
 language: java
 
-script: 
+script:
   - npm run build
   - npm run checkFormat
   - npm run lint
