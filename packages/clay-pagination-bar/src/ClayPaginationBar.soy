@@ -7,7 +7,7 @@
 	{@param currentPage: number}
 	{@param entries: list<[
 		href: string,
-		label: string
+		label: number
 	]>}
 	{@param selectedEntry: int}
 	{@param spritemap: string}
@@ -40,13 +40,13 @@
 
 		<div class="pagination-results">
 			Showing
-			{sp}{($currentPage - 1) * ($selectedEntryItem.label * 1) + 1}
+			{sp}{($currentPage - 1) * $selectedEntryItem.label + 1}
 			{sp}to
 			{sp}{$currentPage * $selectedEntryItem.label < $totalEntries ? $currentPage * $selectedEntryItem.label : $totalEntries}
 			{sp}of {$totalEntries} entries.
 		</div>
 		
-		{let $totalPages: $totalEntries / ($selectedEntryItem.label * 1) /}
+		{let $totalPages: $totalEntries / $selectedEntryItem.label /}
 
 		{call ClayPagination.render}
 			{param baseHref: $baseHref /}

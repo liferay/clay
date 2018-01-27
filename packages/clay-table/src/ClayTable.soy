@@ -289,7 +289,7 @@
 {template .rows}
 	{@param items: list<?>}
 	{@param schema: [
-			fields: list<[
+		fields: list<[
 			contentRenderer: string,
 			contentRendererMap: ?,
 			fieldName: string,
@@ -327,8 +327,8 @@
 
 			<tr {$dividerAttributes}>
 				{let $cellAttributes kind="attributes"}
-					colspan="{length($schema.fields) + $selectable + $showActionsMenu}"
-				{/let}			
+					colspan="{length($schema.fields) + ($selectable ? 1 : 0) + ($showActionsMenu ? 1 : 0)}"
+				{/let}
 
 				<td {$cellAttributes}>{$item.label}</td>
 			</tr>
@@ -463,7 +463,7 @@
 						{param label: $value /}
 					{/call}
 				{else}
-					<span class="text-truncate">{$value}</span>	
+					<span class="text-truncate">{$value}</span>
 				{/if}
 			</span>
 		</h4>
