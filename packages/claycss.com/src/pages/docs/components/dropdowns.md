@@ -22,9 +22,11 @@ weight: 100
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-		<a class="active dropdown-item" href="#1">Selected Option</a>
-		<a class="dropdown-item" href="#3">Normal Option</a>
-		<a class="disabled dropdown-item" href="#4">Disabled Option</a>
+		<ul class="list-unstyled">
+			<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
+			<li><a class="dropdown-item" href="#3">Normal Option</a></li>
+			<li><a class="disabled dropdown-item" href="#4">Disabled Option</a></li>
+		</ul>
 	</div>
 </div>
 
@@ -59,9 +61,11 @@ weight: 100
 ```
 ```text/html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-	<a class="active dropdown-item" href="#">Selected Option</a>
-	<a class="dropdown-item" href="#">Normal Option</a>
-	<a class="disabled dropdown-item" href="#">Disabled Option</a>
+	<ul class="list-unstyled">
+		<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
+		<li><a class="dropdown-item" href="#3">Normal Option</a></li>
+		<li><a class="disabled dropdown-item" href="#4">Disabled Option</a></li>
+	</ul>
 </div>
 ```
 
@@ -71,18 +75,28 @@ weight: 100
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-		<a class="dropdown-item" href="#1">Edit</a>
-		<a class="dropdown-item" href="#2">Preview</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Edit</a></li>
+			<li><a class="dropdown-item" href="#2">Preview</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#3">Expire</a>
-		<a class="dropdown-item" href="#4">View History</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#3">Expire</a></li>
+			<li><a class="dropdown-item" href="#4">View History</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#5">Permissions</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#5">Permissions</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#6">Copy</a>
-		<a class="dropdown-item" href="#7">Move</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#6">Copy</a></li>
+			<li><a class="dropdown-item" href="#7">Move</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#8">Move to Recycle Bin</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#8">Move to Recycle Bin</a></li>
+		</ul>
 	</div>
 </div>
 
@@ -139,18 +153,28 @@ weight: 100
 ```
 ```text/html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-	<a class="dropdown-item" href="#1">Edit</a>
-	<a class="dropdown-item" href="#2">Preview</a>
+	<ul class="list-unstyled">
+		<li><a class="dropdown-item" href="#1">Edit</a></li>
+		<li><a class="dropdown-item" href="#2">Preview</a></li>
+	</ul>
 	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#3">Expire</a>
-	<a class="dropdown-item" href="#4">View History</a>
+	<ul class="list-unstyled">
+		<li><a class="dropdown-item" href="#3">Expire</a></li>
+		<li><a class="dropdown-item" href="#4">View History</a></li>
+	</ul>
 	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#5">Permissions</a>
+	<ul class="list-unstyled">
+		<li><a class="dropdown-item" href="#5">Permissions</a></li>
+	</ul>
 	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#6">Copy</a>
-	<a class="dropdown-item" href="#7">Move</a>
+	<ul class="list-unstyled">
+		<li><a class="dropdown-item" href="#6">Copy</a></li>
+		<li><a class="dropdown-item" href="#7">Move</a></li>
+	</ul>
 	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#8">Move to Recycle Bin</a>
+	<ul class="list-unstyled">
+		<li><a class="dropdown-item" href="#8">Move to Recycle Bin</a></li>
+	</ul>
 </div>
 ```
 
@@ -160,33 +184,38 @@ weight: 100
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-		<div class="active dropdown-item">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input checked class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Selected Option</span>
-				</label>
-			</div>
-		</div>
-		<div class="dropdown-item">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Normal Option</span>
-				</label>
-			</div>
-		</div>
-		<div class="disabled dropdown-item">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input disabled class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Disabled Option</span>
-				</label>
-			</div>
-		</div>
+		<ul class="list-unstyled">
+			<li class="active dropdown-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Selected Option</span>
+						</span>
+					</label>
+				</div>
+			</li>
+			<li class="dropdown-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Normal Option</span>
+						</span>
+					</label>
+				</div>
+			</li>
+			<li class="disabled dropdown-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input disabled class="custom-control-input" type="checkbox">
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Disabled Option</span>
+						</span>
+					</label>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
 
@@ -228,33 +257,38 @@ weight: 100
 ```
 ```text/html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-	<div class="active dropdown-item">
-		<div class="custom-control custom-checkbox">
-			<label>
-				<input checked class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Selected Option</span>
-			</label>
-		</div>
-	</div>
-	<div class="dropdown-item">
-		<div class="custom-control custom-checkbox">
-			<label>
-				<input class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Normal Option</span>
-			</label>
-		</div>
-	</div>
-	<div class="disabled dropdown-item">
-		<div class="custom-control custom-checkbox">
-			<label>
-				<input disabled class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Disabled Option</span>
-			</label>
-		</div>
-	</div>
+	<ul class="list-unstyled">
+		<li class="active dropdown-item">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input checked class="custom-control-input" type="checkbox">
+					<span class="custom-control-label">
+						<span class="custom-control-label-text">Selected Option</span>
+					</span>
+				</label>
+			</div>
+		</li>
+		<li class="dropdown-item">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox">
+					<span class="custom-control-label">
+						<span class="custom-control-label-text">Normal Option</span>
+					</span>
+				</label>
+			</div>
+		</li>
+		<li class="disabled dropdown-item">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input disabled class="custom-control-input" type="checkbox">
+					<span class="custom-control-label">
+						<span class="custom-control-label-text">Disabled Option</span>
+					</span>
+				</label>
+			</div>
+		</li>
+	</ul>
 </div>
 ```
 
@@ -266,23 +300,25 @@ weight: 100
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 		<form>
 			<div class="dropdown-section">
-				<div class="input-group input-group-inset input-group-sm">
-					<div class="input-group-input">
-						<input class="form-control" placeholder="Search for..." type="text">
+				<div class="input-group input-group-sm">
+					<div class="input-group-item">
+						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+						<span class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-link" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
 					</div>
-					<span class="input-group-inset-item">
-						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
-							</svg>
-						</button>
-					</span>
 				</div>
 			</div>
-			<a class="active dropdown-item" href="#1">Selected Option</a>
-			<a class="dropdown-item" href="#2">Normal Option</a>
-			<a class="disabled dropdown-item" href="#3">Disabled Option</a>
 		</form>
+		<ul class="list-unstyled">
+			<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
+			<li><a class="dropdown-item" href="#2">Normal Option</a></li>
+			<li><a class="disabled dropdown-item" href="#3">Disabled Option</a></li>
+		</ul>
 	</div>
 </div>
 
@@ -320,17 +356,17 @@ weight: 100
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<form>
 		<div class="dropdown-section">
-			<div class="input-group input-group-inset input-group-sm">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+			<div class="input-group input-group-sm">
+				<div class="input-group-item">
+					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+					<span class="input-group-inset-item input-group-inset-item-after">
+						<button class="btn btn-link" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+							</svg>
+						</button>
+					</span>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-unstyled" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
 			</div>
 		</div>
 		<a class="active dropdown-item" href="#1">Selected Option</a>
@@ -346,23 +382,31 @@ weight: 100
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-start">
-		<a class="dropdown-item" href="#1">
-			<div class="dropdown-item-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-					<use xlink:href="/vendor/lexicon/icons.svg#check" />
-				</svg>
-			</div>
-			Normal Option
-		</a>
-		<a class="dropdown-item" href="#1">
-			<div class="dropdown-item-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-					<use xlink:href="/vendor/lexicon/icons.svg#check" />
-				</svg>
-			</div>
-			Second Option
-		</a>
-		<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+		<ul class="list-unstyled">
+			<li>
+				<a class="dropdown-item" href="#1">
+					<div class="dropdown-item-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						</svg>
+					</div>
+					Normal Option
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#1">
+					<div class="dropdown-item-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						</svg>
+					</div>
+					Second Option
+				</a>
+			</li>
+			<li>
+				<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+			</li>
+		</ul>
 	</div>
 </div>
 
@@ -400,23 +444,31 @@ weight: 100
 ```
 ```text/html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-start">
-	<a class="dropdown-item" href="#1">
-		<div class="dropdown-item-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-				<use xlink:href="/vendor/lexicon/icons.svg#check" />
-			</svg>
-		</div>
-		Normal Option
-	</a>
-	<a class="dropdown-item" href="#1">
-		<div class="dropdown-item-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-				<use xlink:href="/vendor/lexicon/icons.svg#check" />
-			</svg>
-		</div>
-		Second Option
-	</a>
-	<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+	<ul class="list-unstyled">
+		<li>
+			<a class="dropdown-item" href="#1">
+				<div class="dropdown-item-indicator">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+					</svg>
+				</div>
+				Normal Option
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-item" href="#1">
+				<div class="dropdown-item-indicator">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+					</svg>
+				</div>
+				Second Option
+			</a>
+		</li>
+		<li>
+			<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+		</li>
+	</ul>
 </div>
 ```
 
@@ -426,23 +478,31 @@ weight: 100
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end">
-		<a class="active dropdown-item" href="#1">
-			Selected Option
-			<div class="dropdown-item-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-					<use xlink:href="/vendor/lexicon/icons.svg#check" />
-				</svg>
-			</div>
-		</a>
-		<a class="dropdown-item" href="#1">
-			Regular Option
-			<div class="dropdown-item-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-					<use xlink:href="/vendor/lexicon/icons.svg#check" />
-				</svg>
-			</div>
-		</a>
-		<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+		<ul class="list-unstyled">
+			<li>
+				<a class="active dropdown-item" href="#1">
+					Selected Option
+					<div class="dropdown-item-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						</svg>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#1">
+					Regular Option
+					<div class="dropdown-item-indicator">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						</svg>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+			</li>
+		</ul>
 	</div>
 </div>
 
@@ -481,23 +541,31 @@ weight: 100
 ```
 ```text/html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end">
-	<a class="active dropdown-item" href="#1">
-		Selected Option
-		<div class="dropdown-item-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-				<use xlink:href="/vendor/lexicon/icons.svg#check" />
-			</svg>
-		</div>
-	</a>
-	<a class="dropdown-item" href="#1">
-		Regular Option
-		<div class="dropdown-item-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-				<use xlink:href="/vendor/lexicon/icons.svg#check" />
-			</svg>
-		</div>
-	</a>
-	<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+	<ul class="list-unstyled">
+		<li>
+			<a class="active dropdown-item" href="#1">
+				Selected Option
+				<div class="dropdown-item-indicator">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+					</svg>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-item" href="#1">
+				Regular Option
+				<div class="dropdown-item-indicator">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+					</svg>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+		</li>
+	</ul>
 </div>
 ```
 
@@ -511,74 +579,88 @@ weight: 100
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 		<form>
 			<div class="dropdown-section">
-				<div class="input-group input-group-inset input-group-sm">
-					<div class="input-group-input">
-						<input class="form-control" placeholder="Search for..." type="text">
+				<div class="input-group input-group-sm">
+					<div class="input-group-item">
+						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+						<span class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-link" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
 					</div>
-					<span class="input-group-inset-item">
-						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
-							</svg>
-						</button>
-					</span>
 				</div>
 			</div>
-			<div class="dropdown-subheader">Filter by</div>
-			<div class="active dropdown-item">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input checked class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Selected Option</span>
-					</label>
-				</div>
-			</div>
-			<div class="dropdown-item">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Normal Option</span>
-					</label>
-				</div>
-			</div>
-			<div class="disabled dropdown-item">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input disabled class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Disabled Option</span>
-					</label>
-				</div>
-			</div>
-			<div class="dropdown-subheader">Order by</div>
-			<div class="active dropdown-item">
-				<div class="custom-control custom-radio">
-					<label>
-						<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Selected Option</span>
-					</label>
-				</div>
-			</div>
-			<div class="dropdown-item">
-				<div class="custom-control custom-radio">
-					<label>
-						<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Normal Option</span>
-					</label>
-				</div>
-			</div>
-			<div class="disabled dropdown-item">
-				<div class="custom-control custom-radio">
-					<label>
-						<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Disabled Option</span>
-					</label>
-				</div>
+		</form>
+		<form>
+			<div class="inline-scroller">
+				<div class="dropdown-subheader">Filter by</div>
+				<ul class="list-unstyled">
+					<li class="active dropdown-item">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input checked class="custom-control-input" type="checkbox">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Selected Option</span>
+								</span>
+							</label>
+						</div>
+					</li>
+					<li class="dropdown-item">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Normal Option</span>
+								</span>
+							</label>
+						</div>
+					</li>
+					<li class="disabled dropdown-item">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input disabled class="custom-control-input" type="checkbox">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Disabled Option</span>
+								</span>
+							</label>
+						</div>
+					</li>
+				</ul>
+				<div class="dropdown-subheader">Order by</div>
+				<ul class="list-unstyled">
+					<li class="active dropdown-item">
+						<div class="custom-control custom-radio">
+							<label>
+								<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Selected Option</span>
+								</span>
+							</label>
+						</div>
+					</li>
+					<li class="dropdown-item">
+						<div class="custom-control custom-radio">
+							<label>
+								<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Normal Option</span>
+								</span>
+							</label>
+						</div>
+					</li>
+					<li class="disabled dropdown-item">
+						<div class="custom-control custom-radio">
+							<label>
+								<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Disabled Option</span>
+								</span>
+							</label>
+						</div>
+					</li>
+				</ul>
 			</div>
 			<div class="dropdown-section">
 				<button class="btn btn-block btn-primary" type="submit">Done</button>
@@ -701,74 +783,88 @@ weight: 100
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<form>
 		<div class="dropdown-section">
-			<div class="input-group input-group-inset input-group-sm">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+			<div class="input-group input-group-sm">
+				<div class="input-group-item">
+					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+					<span class="input-group-inset-item input-group-inset-item-after">
+						<button class="btn btn-link" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+							</svg>
+						</button>
+					</span>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-unstyled" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
 			</div>
 		</div>
-		<div class="dropdown-subheader">Filter by</div>
-		<div class="active dropdown-item">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input checked class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Selected Option</span>
-				</label>
-			</div>
-		</div>
-		<div class="dropdown-item">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Normal Option</span>
-				</label>
-			</div>
-		</div>
-		<div class="disabled dropdown-item">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input disabled class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Disabled Option</span>
-				</label>
-			</div>
-		</div>
-		<div class="dropdown-subheader">Order by</div>
-		<div class="active dropdown-item">
-			<div class="custom-control custom-radio">
-				<label>
-					<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Selected Option</span>
-				</label>
-			</div>
-		</div>
-		<div class="dropdown-item">
-			<div class="custom-control custom-radio">
-				<label>
-					<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Normal Option</span>
-				</label>
-			</div>
-		</div>
-		<div class="disabled dropdown-item">
-			<div class="custom-control custom-radio">
-				<label>
-					<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Disabled Option</span>
-				</label>
-			</div>
+	</form>
+	<form>
+		<div class="inline-scroller">
+			<div class="dropdown-subheader">Filter by</div>
+			<ul class="list-unstyled">
+				<li class="active dropdown-item">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input checked class="custom-control-input" type="checkbox">
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Selected Option</span>
+							</span>
+						</label>
+					</div>
+				</li>
+				<li class="dropdown-item">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Normal Option</span>
+							</span>
+						</label>
+					</div>
+				</li>
+				<li class="disabled dropdown-item">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input disabled class="custom-control-input" type="checkbox">
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Disabled Option</span>
+							</span>
+						</label>
+					</div>
+				</li>
+			</ul>
+			<div class="dropdown-subheader">Order by</div>
+			<ul class="list-unstyled">
+				<li class="active dropdown-item">
+					<div class="custom-control custom-radio">
+						<label>
+							<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Selected Option</span>
+							</span>
+						</label>
+					</div>
+				</li>
+				<li class="dropdown-item">
+					<div class="custom-control custom-radio">
+						<label>
+							<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Normal Option</span>
+							</span>
+						</label>
+					</div>
+				</li>
+				<li class="disabled dropdown-item">
+					<div class="custom-control custom-radio">
+						<label>
+							<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Disabled Option</span>
+							</span>
+						</label>
+					</div>
+				</li>
+			</ul>
 		</div>
 		<div class="dropdown-section">
 			<button class="btn btn-block btn-primary" type="submit">Done</button>
@@ -788,24 +884,34 @@ weight: 100
 > A monospaced `dropdown-toggle` for a dropdown containing several actions, add `dropdown-action` to `dropdown`.
 
 <div class="dropdown dropdown-action">
-	<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+	<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 			<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 		</svg>
-	</a>
+	</button>
 	<div aria-labelledby="dropdownAction1" class="dropdown-menu">
-		<a class="dropdown-item" href="#1">Edit</a>
-		<a class="dropdown-item" href="#1">Preview</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Edit</a></li>
+			<li><a class="dropdown-item" href="#1">Preview</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#1">Expire</a>
-		<a class="dropdown-item" href="#1">View History</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Expire</a></li>
+			<li><a class="dropdown-item" href="#1">View History</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#1">Permissions</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Permissions</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#1">Copy</a>
-		<a class="dropdown-item" href="#1">Move</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Copy</a></li>
+			<li><a class="dropdown-item" href="#1">Move</a></li>
+		</ul>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+		</ul>
 	</div>
 </div>
 
@@ -860,48 +966,73 @@ weight: 100
 ```
 ```text/html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-	<a class="dropdown-item" href="#1">Edit</a>
-	<a class="dropdown-item" href="#2">Preview</a>
-	<div class="dro pdown-divider"></div>
-	<a class="dropdown-item" href="#3">Expire</a>
-	<a class="dropdown-item" href="#4">View History</a>
-	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#5">Permissions</a>
-	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#6">Copy</a>
-	<a class="dropdown-item" href="#7">Move</a>
-	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#8">Move to Recycle Bin</a>
+	<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+			<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+		</svg>
+	</button>
+	<div aria-labelledby="dropdownAction1" class="dropdown-menu">
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Edit</a></li>
+			<li><a class="dropdown-item" href="#1">Preview</a></li>
+		</ul>
+		<div class="dropdown-divider"></div>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Expire</a></li>
+			<li><a class="dropdown-item" href="#1">View History</a></li>
+		</ul>
+		<div class="dropdown-divider"></div>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Permissions</a></li>
+		</ul>
+		<div class="dropdown-divider"></div>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Copy</a></li>
+			<li><a class="dropdown-item" href="#1">Move</a></li>
+		</ul>
+		<div class="dropdown-divider"></div>
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+		</ul>
+	</div>
 </div>
 ```
 
 #### Dropdown menu from plus button
 
 <div class="clay-site-dropdown-menu-container">
-	<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-		<div class="dropdown-header">Dropdown Header</div>
-		<div class="inline-scroller">
-			<a class="dropdown-item" href="#1">Actions</a>
-			<a class="dropdown-item" href="#1">Edit</a>
-			<a class="dropdown-item" href="#1">View</a>
-			<a class="dropdown-item" href="#1">Permissions</a>
-			<a class="dropdown-item" href="#1">Actions</a>
-			<a class="dropdown-item" href="#1">Edit</a>
-			<a class="dropdown-item" href="#1">View</a>
-			<a class="dropdown-item" href="#1">Permissions</a>
-			<a class="dropdown-item" href="#1">Actions</a>
-			<a class="dropdown-item" href="#1">Edit</a>
-			<a class="dropdown-item" href="#1">View</a>
-			<a class="dropdown-item" href="#1">Permissions</a>
-			<a class="dropdown-item" href="#1">Actions</a>
-			<a class="dropdown-item" href="#1">Edit</a>
-			<a class="dropdown-item" href="#1">View</a>
-			<a class="dropdown-item" href="#1">Permissions</a>
-		</div>
-		<a class="disabled dropdown-item" href="#1">Disabled</a>
-		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#1">Scope</a>
-	</ul>
+	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+		<ul class="list-unstyled">
+			<div class="dropdown-header">Dropdown Header</div>
+			<div class="inline-scroller">
+				<ul class="list-unstyled">
+					<li><a class="dropdown-item" href="#1">Actions</a></li>
+					<li><a class="dropdown-item" href="#1">Edit</a></li>
+					<li><a class="dropdown-item" href="#1">View</a></li>
+					<li><a class="dropdown-item" href="#1">Permissions</a></li>
+					<li><a class="dropdown-item" href="#1">Actions</a></li>
+					<li><a class="dropdown-item" href="#1">Edit</a></li>
+					<li><a class="dropdown-item" href="#1">View</a></li>
+					<li><a class="dropdown-item" href="#1">Permissions</a></li>
+					<li><a class="dropdown-item" href="#1">Actions</a></li>
+					<li><a class="dropdown-item" href="#1">Edit</a></li>
+					<li><a class="dropdown-item" href="#1">View</a></li>
+					<li><a class="dropdown-item" href="#1">Permissions</a></li>
+					<li><a class="dropdown-item" href="#1">Actions</a></li>
+					<li><a class="dropdown-item" href="#1">Edit</a></li>
+					<li><a class="dropdown-item" href="#1">View</a></li>
+					<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				</ul>
+			</div>
+			<li>
+				<a class="disabled dropdown-item" href="#1">Disabled</a>
+			</li>
+			<div class="dropdown-divider"></div>
+			<li>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <div class="clay-site-dropdown-menu-container">
@@ -913,18 +1044,20 @@ weight: 100
 		<div class="dropdown-divider"></div>
 		<div class="dropdown-subheader">Favorites</div>
 		<div class="inline-scroller">
-			<a class="dropdown-item" href="#1">D Structure</a>
-			<a class="dropdown-item" href="#1">F Structure</a>
-			<a class="disabled dropdown-item" href="#1">H Structure</a>
-			<a class="dropdown-item" href="#1">J Structure</a>
-			<a class="dropdown-item" href="#1">L Structure</a>
-			<a class="dropdown-item" href="#1">M Structure</a>
-			<a class="dropdown-item" href="#1">P Structure</a>
-			<a class="dropdown-item" href="#1">Q Structure</a>
-			<a class="dropdown-item" href="#1">R Structure</a>
-			<a class="dropdown-item" href="#1">S Structure</a>
-			<a class="dropdown-item" href="#1">T Structure</a>
-			<a class="dropdown-item" href="#1">U Structure</a>
+			<ul class="list-unstyled">
+				<li><a class="dropdown-item" href="#1">D Structure</a></li>
+				<li><a class="dropdown-item" href="#1">F Structure</a></li>
+				<li><a class="disabled dropdown-item" href="#1">H Structure</a></li>
+				<li><a class="dropdown-item" href="#1">J Structure</a></li>
+				<li><a class="dropdown-item" href="#1">L Structure</a></li>
+				<li><a class="dropdown-item" href="#1">M Structure</a></li>
+				<li><a class="dropdown-item" href="#1">P Structure</a></li>
+				<li><a class="dropdown-item" href="#1">Q Structure</a></li>
+				<li><a class="dropdown-item" href="#1">R Structure</a></li>
+				<li><a class="dropdown-item" href="#1">S Structure</a></li>
+				<li><a class="dropdown-item" href="#1">T Structure</a></li>
+				<li><a class="dropdown-item" href="#1">U Structure</a></li>
+			</ul>
 		</div>
 		<div class="dropdown-caption">Showing 7 of 203 Structures</div>
 		<div class="dropdown-section">
@@ -934,30 +1067,67 @@ weight: 100
 </div>
 
 ```text/html
-<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-	<div class="dropdown-header">Dropdown Header</div>
-	<div class="inline-scroller">
-		<a class="dropdown-item" href="#1">Actions</a>
-		<a class="dropdown-item" href="#1">Edit</a>
-		<a class="dropdown-item" href="#1">View</a>
-		<a class="dropdown-item" href="#1">Permissions</a>
-		<a class="dropdown-item" href="#1">Actions</a>
-		<a class="dropdown-item" href="#1">Edit</a>
-		<a class="dropdown-item" href="#1">View</a>
-		<a class="dropdown-item" href="#1">Permissions</a>
-		<a class="dropdown-item" href="#1">Actions</a>
-		<a class="dropdown-item" href="#1">Edit</a>
-		<a class="dropdown-item" href="#1">View</a>
-		<a class="dropdown-item" href="#1">Permissions</a>
-		<a class="dropdown-item" href="#1">Actions</a>
-		<a class="dropdown-item" href="#1">Edit</a>
-		<a class="dropdown-item" href="#1">View</a>
-		<a class="dropdown-item" href="#1">Permissions</a>
+<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+	<ul class="list-unstyled">
+		<div class="dropdown-header">Dropdown Header</div>
+		<div class="inline-scroller">
+			<ul class="list-unstyled">
+				<li><a class="dropdown-item" href="#1">Actions</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">View</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Actions</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">View</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Actions</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">View</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Actions</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">View</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+			</ul>
+		</div>
+		<li>
+			<a class="disabled dropdown-item" href="#1">Disabled</a>
+		</li>
+		<div class="dropdown-divider"></div>
+		<li>
+			<a class="dropdown-item" href="#1">Scope</a>
+		</li>
+	</ul>
+</div>
+
+<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+	<div class="alert alert-fluid alert-info" role="alert">
+		You can customize this menu or see all you have by pressing "more".
 	</div>
-	<a class="disabled dropdown-item" href="#1">Disabled</a>
+	<div class="dropdown-header">Folder</div>
 	<div class="dropdown-divider"></div>
-	<a class="dropdown-item" href="#1">Scope</a>
-</ul>
+	<div class="dropdown-subheader">Favorites</div>
+	<div class="inline-scroller">
+		<ul class="list-unstyled">
+			<li><a class="dropdown-item" href="#1">D Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">F Structure</a></ul>
+			<li><a class="disabled dropdown-item" href="#1">H Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">J Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">L Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">M Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">P Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">Q Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">R Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">S Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">T Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">U Structure</a></ul>
+		</ul>
+	</div>
+	<div class="dropdown-caption">Showing 7 of 203 Structures</div>
+	<div class="dropdown-section">
+		<button class="btn btn-block btn-secondary">More</button>
+	</div>
+</div>
 ```
 
 </article>
