@@ -681,48 +681,57 @@ weight: 100
 				[
 					'active': true,
 					'label': 'Selected Option',
-					'inputValue': '1'
+					'inputValue': '1',
+					'inputName': 'item1checkbox',
+					'type': 'checkbox'
 				],
 				[
 					'label': 'Normal Option',
-					'inputValue': '2'
+					'inputValue': '2',
+					'inputName': 'item2checkbox',
+					'type': 'checkbox'
 				],
 				[
 					'disabled': true,
 					'label': 'Disabled Option',
-					'inputValue': '3'
+					'inputName': 'item3checkbox',
+					'inputValue': '3',
+					'type': 'checkbox'
 				]
 			],
-			'inputName': 'item1checkbox',
 			'label': 'Filter by',
-			'type': 'checkbox'
+			'type': 'group'
 		],
 		[
 			'items': [
 				[
 					'checked': true,
 					'label': 'Selected Option',
-					'inputValue': '1'
+					'inputValue': '1',
+					'type': 'checkbox',
+					'inputName': 'item1radio',
 				],
 				[
 					'label': "Normal Option",
-					'inputValue': '2'
+					'inputValue': '2',
+					'type': 'checkbox',
+					'inputName': 'item2radio',
 				],
 				[
 					'disabled': true,
 					'label': 'Disabled Option',
-					'inputValue': '3'
+					'inputValue': '3',
+					'type': 'checkbox',
+					'inputName': 'item3radio',
 				]
 			],
-			'inputName': 'item1radio',
 			'label': 'Order by',
-			'type': 'radiogroup'
+			'type': 'group'
 		]
 	] /}
 	{param searchable: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param label: 'Trigger Label' /}
-	{param type: 'form' /}
 {/call}
 ```
 ```text/html
@@ -735,48 +744,53 @@ weight: 100
 					"active": true,
 					"checked": true,
 					"label": "Selected Option",
-					"inputValue": "1"
+					"inputValue": "1",
+					"type": "checkbox"
 				},
 				{
 					"label": "Normal Option",
-					"inputValue": "2"
+					"inputValue": "2",
+					"type": "checkbox"
 				},
 				{
 					"disabled": true,
 					"label": "Disabled Option",
-					"inputValue": "3"
+					"inputValue": "3",
+					"type": "checkbox"
 				}
 			],
 			"inputName": "item1checkbox",
 			"label": "Filter by",
-			"type": "checkbox"
+			"type": "group"
 		},
 		{
 			"items": [
 				{
 					"checked": true,
 					"label": "Selected Option",
-					"inputValue": "1"
+					"inputValue": "1",
+					"type": "checkbox"
 				},
 				{
 					"label": "Normal Option",
-					"inputValue": "2"
+					"inputValue": "2",
+					"type": "checkbox"
 				},
 				{
 					"disabled": true,
 					"label": "Disabled Option",
-					"inputValue": "3"
+					"inputValue": "3",
+					"type": "checkbox"
 				}
 			],
 			"inputName": "item1radio",
 			"label": "Order by",
-			"type": "radiogroup"
+			"type": "group"
 		}
 	]'
 	searchable="true"
 	spritemap="/vendor/lexicon/icons.svg"
-	label="Trigger Label"
-	type="form">
+	label="Trigger Label">
 </clay-dropdown>
 ```
 ```text/html
@@ -919,40 +933,65 @@ weight: 100
 {call ClayActionsDropdown.render}
 	{param items: [
 		[
-			'href': '#1',
-			'label': 'Edit'
+			'items': [
+				[
+					'href': '#1',
+					'label': 'Edit'
+				],
+				[
+					'href': '#1',
+					'label': 'Preview',
+				]
+			],
+			'separator': true,
+			'type': 'group'
 		],
 		[
-			'href': '#1',
-			'label': 'Preview',
-			'separator': true
+			'items': [
+				[
+					'href': '#1',
+					'label': 'Expire'
+				],
+				[
+					'href': '#1',
+					'label': 'View History',
+				]
+			],
+			'separator': true,
+			'type': 'group'
 		],
 		[
-			'href': '#1',
-			'label': 'Expire'
+			'items': [
+				[
+					'href': '#1',
+					'label': 'Permissions'
+				]
+			],
+			'separator': true,
+			'type': 'group'
 		],
 		[
-			'href': '#1',
-			'label': 'View History',
-			'separator': true
+			'items': [
+				[
+					'href': '#1',
+					'label': 'Copy'
+				],
+				[
+					'href': '#1',
+					'label': 'Move'
+				]
+			],
+			'separator': true,
+			'type': 'group'
 		],
 		[
-			'href': '#1',
-			'label': 'Permissions',
-			'separator': true
-		],
-		[
-			'href': '#1',
-			'label': 'Copy'
-		],
-		[
-			'href': '#1',
-			'label': 'Move',
-			'separator': true
-		],
-		[
-			'href': '#1',
-			'label': 'Move to Recycle Bin'
+			'items': [
+				[
+					'href': '#1',
+					'label': 'Move to Recycle Bin'
+				]
+			],
+			'type': 'group'
 		]
 	] /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
@@ -960,7 +999,69 @@ weight: 100
 ```
 ```text/html
 <clay-dropdown
-	items='[{"href": "#", "label": "Edit"}, {"href": "#", "label": "Preview", "separator": true}, {"href": "#", "label": "Expire"}, {"href": "#", "label": "View History", "separator": true}, {"href": "#", "label": "Permissions", "separator": true}, {"href": "#", "label": "Copy"}, {"href": "#", "label": "Move", "separator": true}, {"href": "#", "label": "Move to Recycle Bin"}]'
+	items='[
+		{
+			"items": [
+				{
+					"href": '#1',
+					"label": "Edit",
+				},
+				{
+					"href": '#1',
+					"label": "Preview",
+				}
+			],
+			"separator": true,
+			"type": 'group'
+		},
+		{
+			"items": [
+				{
+					"href": '#1',
+					"label": "Expire",
+				},
+				{
+					"href": '#1',
+					"label": "View History",
+				}
+			],
+			"separator": true,
+			"type": 'group'
+		},
+		{
+			"items": [
+				{
+					"href": '#1',
+					"label": "Permissions",
+				}
+			],
+			"separator": true,
+			"type": 'group'
+		},
+		{
+			"items": [
+				{
+					"href": '#1',
+					"label": "Copy",
+				},
+				{
+					"href": '#1',
+					"label": "Move",
+				}
+			],
+			"separator": true,
+			"type": 'group'
+		},
+		{
+			"items": [
+				{
+					"href": '#1',
+					"label": "Move to the Recycle Bin",
+				}
+			],
+			"type": 'group'
+		},
+	]'
 	spritemap="/vendor/lexicon/icons.svg"
 </clay-dropdown>
 ```
