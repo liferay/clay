@@ -889,7 +889,7 @@ ChartBase.STATE = {
 	/**
 	 * Legend display options.
 	 * @instance
-	 * @memberof ChartBas
+	 * @memberof ChartBase
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
