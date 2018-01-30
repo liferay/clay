@@ -889,11 +889,15 @@ ChartBase.STATE = {
 	/**
 	 * Legend display options.
 	 * @instance
-	 * @memberof ChartBase
+	 * @memberof ChartBas
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
 	legend: Config.shapeOf({
+		contents: Config.shapeOf({
+			bindto: Config.string(),
+			template: Config.oneOfType([Config.func(), Config.string()]),
+		}),
 		hide: Config.bool(),
 		position: Config.oneOf(['bottom', 'inset', 'right']),
 		inset: Config.shapeOf({
