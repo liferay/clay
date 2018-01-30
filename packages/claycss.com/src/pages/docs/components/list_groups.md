@@ -19,28 +19,28 @@ weight: 100
 #### Default states
 
 <li class="list-group-item list-group-item-flex">
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
+				<span class="custom-control-label"></span>
 			</label>
 		</div>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 			</svg>
 		</div>
 	</div>
-	<div class="flex-col flex-col-expand">
+	<div class="autofit-col autofit-col-expand">
 		<h4 class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
 		</h4>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -65,10 +65,12 @@ weight: 100
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<a class="dropdown-item" href="#1" role="button">Remove</a>
-				<a class="dropdown-item" href="#1" role="button">Edit</a>
-				<a class="dropdown-item" href="#1" role="button">Move</a>
-				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+				<ul class="list-unstyled">
+					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -184,7 +186,7 @@ weight: 100
 ```
 ```text/html
 <li class="list-group-item list-group-item-flex">
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input class="custom-control-input" type="checkbox">
@@ -192,20 +194,20 @@ weight: 100
 			</label>
 		</div>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 			</svg>
 		</div>
 	</div>
-	<div class="flex-col flex-col-expand">
+	<div class="autofit-col autofit-col-expand">
 		<h4 class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
 		</h4>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -230,10 +232,12 @@ weight: 100
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<a class="dropdown-item" href="#1" role="button">Remove</a>
-				<a class="dropdown-item" href="#1" role="button">Edit</a>
-				<a class="dropdown-item" href="#1" role="button">Move</a>
-				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+				<ul class="list-unstyled">
+					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -243,28 +247,28 @@ weight: 100
 #### Selected state
 
 <li class="list-group-item list-group-item-flex active">
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input checked class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
+				<span class="custom-control-label"></span>
 			</label>
 		</div>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 			</svg>
 		</div>
 	</div>
-	<div class="flex-col flex-col-expand">
+	<div class="autofit-col autofit-col-expand">
 		<h4 class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
 		</h4>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -289,10 +293,12 @@ weight: 100
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<a class="dropdown-item" href="#1" role="button">Remove</a>
-				<a class="dropdown-item" href="#1" role="button">Edit</a>
-				<a class="dropdown-item" href="#1" role="button">Move</a>
-				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+				<ul class="list-unstyled">
+					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -410,7 +416,7 @@ weight: 100
 ```
 ```text/html
 <li class="list-group-item list-group-item-flex active">
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
 				<input checked class="custom-control-input" type="checkbox">
@@ -418,20 +424,20 @@ weight: 100
 			</label>
 		</div>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 			</svg>
 		</div>
 	</div>
-	<div class="flex-col flex-col-expand">
+	<div class="autofit-col autofit-col-expand">
 		<h4 class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
 		</h4>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
-	<div class="flex-col">
+	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -456,10 +462,12 @@ weight: 100
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<a class="dropdown-item" href="#1" role="button">Remove</a>
-				<a class="dropdown-item" href="#1" role="button">Edit</a>
-				<a class="dropdown-item" href="#1" role="button">Move</a>
-				<a class="dropdown-item" href="#1" role="button">Checkout</a>
+				<ul class="list-unstyled">
+					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -624,22 +632,22 @@ weight: 100
 		<h3 class="list-group-header-title">List Section</h3>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
+					<span class="custom-control-label"></span>
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
+		<div class="autofit-col autofit-col-expand">
 			<h4 class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
 			</h4>
@@ -648,7 +656,7 @@ weight: 100
 				<span class="label label-success">Approved</span>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -673,31 +681,33 @@ weight: 100
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex active">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input checked class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
+					<span class="custom-control-label"></span>
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
+		<div class="autofit-col autofit-col-expand">
 			<h4 class="list-group-title">
 				<a href="#1">Account Example One</a>
 			</h4>
@@ -706,7 +716,7 @@ weight: 100
 				<span class="label label-success">Approved</span>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -731,10 +741,12 @@ weight: 100
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -930,22 +942,22 @@ weight: 100
 		<h3 class="list-group-header-title">List Section</h3>
 	</li>
 	<li class="list-group-item list-group-item-flex">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
+					<span class="custom-control-label"></span>
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
+		<div class="autofit-col autofit-col-expand">
 			<h4 class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
 			</h4>
@@ -954,7 +966,7 @@ weight: 100
 				<span class="label label-success">Approved</span>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -979,31 +991,33 @@ weight: 100
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex active">
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input checked class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
+					<span class="custom-control-label"></span>
 				</label>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
-		<div class="flex-col flex-col-expand">
+		<div class="autofit-col autofit-col-expand">
 			<h4 class="list-group-title">
 				<a href="#1">Account Example One</a>
 			</h4>
@@ -1012,7 +1026,7 @@ weight: 100
 				<span class="label label-success">Approved</span>
 			</div>
 		</div>
-		<div class="flex-col">
+		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
@@ -1037,10 +1051,12 @@ weight: 100
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#1" role="button">Remove</a>
-					<a class="dropdown-item" href="#1" role="button">Edit</a>
-					<a class="dropdown-item" href="#1" role="button">Move</a>
-					<a class="dropdown-item" href="#1" role="button">Checkout</a>
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
