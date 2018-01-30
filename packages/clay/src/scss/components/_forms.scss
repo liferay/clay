@@ -317,6 +317,11 @@ fieldset[disabled] label {
 	flex-direction: column;
 	margin-bottom: $form-group-autofit-margin-bottom;
 
+	@include media-breakpoint-up(sm) {
+		flex-direction: row;
+		width: 100%;
+	}
+
 	.form-group-item {
 		display: flex;
 		flex-basis: auto;
@@ -332,22 +337,42 @@ fieldset[disabled] label {
 		}
 	}
 
+	> .form-group-item:not(:last-child) {
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+			margin-right: $grid-gutter-width / 2;
+		}
+	}
+
 	.form-group-item-shrink {
 		flex-shrink: 0;
+		max-width: 100%;
 		width: auto;
 	}
 }
 
-@include media-breakpoint-up(sm) {
-	.form-group-autofit {
-		flex-direction: row;
-		width: 100%;
+// Form Group Item Label
 
-		> .form-group-item {
-			&:not(:last-child) {
-				margin-bottom: 0;
-				margin-right: $grid-gutter-width / 2;
-			}
+.form-group-autofit .form-group-item-label:not(:last-child) {
+	@include media-breakpoint-down(xs) {
+		margin-bottom: 0;
+	}
+}
+
+.form-group-item-label {
+	@include media-breakpoint-up(sm) {
+		justify-content: center;
+		min-height: $input-height;
+
+		> label {
+			margin-bottom: 0;
+			max-width: $form-group-item-label-max-width;
 		}
+	}
+}
+
+.form-group-item-label-spacer {
+	@include media-breakpoint-up(sm) {
+		margin-top: $form-group-item-label-spacer;
 	}
 }

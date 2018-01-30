@@ -153,6 +153,11 @@ $form-text-color: $text-muted !default;
 $form-text-font-size: $font-size-sm !default;
 $form-text-font-weight: null !default;
 
+// Form Group Autofit
+
+$form-group-item-label-max-width: 12.5rem !default; // 200px
+$form-group-item-label-spacer: 2rem !default; // 32px
+
 // Input Group
 
 $input-group-addon-color: null !default;
