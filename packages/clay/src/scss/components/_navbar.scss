@@ -11,6 +11,14 @@
 	}
 }
 
+.navbar-nav,
+.navbar-form {
+	.dropdown-menu-right {
+		left: auto;
+		right: 0;
+	}
+}
+
 .navbar-nav {
 	flex-direction: row;
 
