@@ -41,7 +41,8 @@ $table-action-link: map-merge((
 	color: $dropdown-action-toggle-color,
 	font-size: 1rem, // 16px
 	hover-bg: $dropdown-action-toggle-hover-bg,
-	hover-color: $dropdown-action-toggle-hover-color
+	hover-color: $dropdown-action-toggle-hover-color,
+	active-bg: $dropdown-action-toggle-active-bg
 ), $table-action-link);
 
 // Table Link

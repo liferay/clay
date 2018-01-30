@@ -21,6 +21,7 @@
 	$link-margin-y: setter(map-get($map, link-margin-y), (($height - $border-bottom-width - $border-top-width) - $link-height) / 2);
 	$link-padding-x: setter(map-get($map, link-padding-x), $navbar-nav-link-padding-x);
 	$link-padding-y: setter(map-get($map, link-padding-y), ($link-height - ($font-size * $line-height-base)) / 2);
+	$btn-monospaced-font-size: map-get($map, btn-monospaced-font-size);
 	$btn-monospaced-size: map-get($map, btn-monospaced-size);
 	$btn-margin-x: setter(map-get($map, btn-margin-x), $link-padding-x);
 	$btn-margin-y: setter(map-get($map, btn-margin-y), ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - if($btn-monospaced-size, $btn-monospaced-size, $nav-item-monospaced-size)) / 2);
@@ -45,6 +46,7 @@
 	$link-margin-y-mobile: setter(map-get($map, link-margin-y-mobile), (($height-mobile - $border-bottom-width - $border-top-width) - $link-height-mobile) / 2);
 	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), $link-padding-x);
 	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($link-height-mobile - ($font-size-mobile * $line-height-base)) / 2);
+	$btn-monospaced-font-size-mobile: setter(map-get($map, btn-monospaced-font-size-mobile), $btn-monospaced-font-size);
 	$btn-monospaced-size-mobile: setter(map-get($map, btn-monospaced-size-mobile), $btn-monospaced-size);
 	$btn-margin-x-mobile: setter(map-get($map, btn-margin-x-mobile), $link-padding-x-mobile);
 	$btn-margin-y-mobile: setter(map-get($map, btn-margin-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - if($btn-monospaced-size-mobile, $btn-monospaced-size-mobile, $nav-item-monospaced-size)) / 2);
@@ -141,6 +143,10 @@
 				min-width: $btn-monospaced-size-mobile;
 			}
 
+			.nav-btn-monospaced {
+				font-size: $btn-monospaced-font-size-mobile;
+			}
+
 			.nav-item {
 				> .custom-control,
 				> .form-check {
@@ -162,6 +168,7 @@
 			}
 
 			.nav-link-monospaced {
+				font-size: $btn-monospaced-font-size-mobile;
 				margin-bottom: $btn-margin-y-mobile;
 				margin-left: $btn-margin-x-mobile;
 				margin-right: $btn-margin-x-mobile;
@@ -275,6 +282,12 @@
 							}
 						}
 
+						.nav-btn-monospaced {
+							@if ($scaling-navbar) {
+								font-size: $btn-monospaced-font-size;
+							}
+						}
+
 						.nav-item {
 							> .custom-control,
 							> .form-check {
@@ -301,6 +314,7 @@
 
 						.nav-link-monospaced {
 							@if ($scaling-navbar) {
+								font-size: $btn-monospaced-font-size;
 								margin-bottom: $btn-margin-y;
 								margin-left: $btn-margin-x;
 								margin-right: $btn-margin-x;
