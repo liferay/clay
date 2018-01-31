@@ -51,15 +51,11 @@ weight: 100
 
 ```soy
 {call ClayProgressBar.render}
-	{param minValue: 0 /}
-	{param maxValue: 100 /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param value: 30 /}
 {/call}
 
 {call ClayProgressBar.render}
-	{param minValue: 0 /}
-	{param maxValue: 100 /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param status: 'warning' /}
 	{param value: 70 /}
@@ -72,15 +68,11 @@ weight: 100
 ```
 ```text/html
 <clay-progress-bar
-	minValue="0"
-	maxValue="100"
 	spritemap="/vendor/lexicon/icons.svg"
 	value="30">
 </clay-progress-bar>
 
 <clay-progress-bar
-	minValue="0"
-	maxValue="100"
 	spritemap="/vendor/lexicon/icons.svg"
 	status="warning"
 	value="70">
