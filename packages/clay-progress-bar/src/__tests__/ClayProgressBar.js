@@ -29,8 +29,6 @@ describe('ClayProgressBar', function() {
 
 	it('should render an in progress bar', function() {
 		progressBar = new ClayProgressBar({
-			minValue: 0,
-			maxValue: 100,
 			spritemap: spritemap,
 			value: 40,
 		});
@@ -40,8 +38,6 @@ describe('ClayProgressBar', function() {
 
 	it('should render a progress bar at 0% of progress', function() {
 		progressBar = new ClayProgressBar({
-			minValue: 0,
-			maxValue: 100,
 			spritemap: spritemap,
 			value: 0,
 		});
@@ -57,8 +53,6 @@ describe('ClayProgressBar', function() {
 
 	it('should render a progress bar with warning', function() {
 		progressBar = new ClayProgressBar({
-			minValue: 0,
-			maxValue: 100,
 			spritemap: spritemap,
 			status: 'warning',
 			value: 40,
@@ -69,8 +63,6 @@ describe('ClayProgressBar', function() {
 
 	it('should render a completed progress bar', function() {
 		progressBar = new ClayProgressBar({
-			minValue: 0,
-			maxValue: 100,
 			spritemap: spritemap,
 			value: 100,
 		});
