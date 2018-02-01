@@ -462,7 +462,6 @@
 	{@param? icon: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isInList: bool}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
 	{@param? separator: bool}
@@ -527,7 +526,7 @@
 			{param inputValue: $item.inputValue /}
 			{param items: $item.items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
-			{param label: $item.label ?: '' /}
+			{param label: $item.label ? '' + $item.label : '' /}
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
 		{/delcall}

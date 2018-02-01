@@ -11,6 +11,10 @@ section: Components
 			You will need to adjust the z-index of <code>.navbar-collapse</code> in the collapsed state if there are multiple <code>.navbar-collapse-absolute</code>'s near each other.
 		</div>
 
+		<div class="alert alert-warning">
+			Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="../dropdowns/#dropdown-alignment">Dropdown Alignment</a>.
+		</div>
+
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
 	<div class="container-fluid container-fluid-max-xl">
 		<a aria-controls="navigationBarCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse00" role="button">

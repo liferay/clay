@@ -25,6 +25,26 @@
 			margin: 20px;
 			padding: 10px;
 		}
+
+		.pie-legend {
+			float: right;
+			padding: 5px;
+			position: relative;
+			right: 50px;
+			text-transform: uppercase;
+			top: -150px;
+		}
+		.pie-legend a {
+			background: none;
+			color: #000;
+			font-weight: bold;
+			padding: 5px;
+			text-decoration: none;
+		}
+		.pie-legend a:hover {
+			background: #000;
+			color: #fff;
+		}
 	</style>
 
 
@@ -125,6 +145,7 @@
 	<div class="clay-chart-example">
 		<h2>Pie</h2>
 		<div id="pie"></div>
+		<div class="pie-legend"></div>
 	</div>
 
 	<div class="clay-chart-example">
@@ -320,7 +341,15 @@
 		var lineChart = new metal.LineChart({
 			columns: dummyData.columns_1,
 			tooltip: {
+				format: {
+					value(d) {
+						return `${d}%`;
+					}
+				},
 				show: true
+			},
+			legend: {
+					position: 'right'
 			},
 		}, '#line');
 		createChartControls(lineChart, 'line');
@@ -370,7 +399,18 @@
 						document.querySelector('#vertical-small'),
 					];
 				}
-			}
+			},
+			legend: {
+				contents: {
+					bindto: '.pie-legend',
+					template(title, color) {
+						return `<p><svg width="15" height="10">
+							<rect x="2.5" width="10" height="10" style="fill:${color}"></rect></svg>
+							<a href="#" class="legend-title">${title}</a>
+						</p>`;
+					},
+				},
+			},
 		}, '#pie');
 		createChartControls(pieChart, 'pie', dummyPercentData);
 

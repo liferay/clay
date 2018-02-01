@@ -21,6 +21,13 @@ class ClayDropdownBase extends Component {
 	/**
 	 * @inheritDoc
 	 */
+	attached() {
+		this.refs.portal.on('rendered', this.handleRenderedPortal_.bind(this));
+	}
+
+	/**
+	 * @inheritDoc
+	 */
 	created() {
 		this.eventHandler_ = new EventHandler();
 
@@ -86,6 +93,28 @@ class ClayDropdownBase extends Component {
 	}
 
 	/**
+	 * Handle when the lifecycle `rendered` is called in ClayPortal.
+	 * @protected
+	 */
+	handleRenderedPortal_() {
+		if (this.expanded && this.alignElementSelector_) {
+			// eslint-disable-next-line
+			let alignElement = this.element.querySelector(
+				this.alignElementSelector_
+			);
+			if (alignElement) {
+				let bodyElement = this.refs.portal.refs.menu;
+
+				this.alignedPosition_ = Align.align(
+					bodyElement,
+					alignElement,
+					Align.BottomLeft
+				);
+			}
+		}
+	}
+
+	/**
 	 * Handles Search in Dropdown.
 	 * @param {!Event} event
 	 * @protected
@@ -130,28 +159,6 @@ class ClayDropdownBase extends Component {
 			originalItems: this.originalItems_,
 			filteredItems: this.items,
 		});
-	}
-
-	/**
-	 * Synchronization logic for `expanded` state.
-	 * @param {boolean} expanded
-	 */
-	syncExpanded(expanded) {
-		if (expanded && this.alignElementSelector_) {
-			// eslint-disable-next-line
-			let alignElement = this.element.querySelector(
-				this.alignElementSelector_
-			);
-			if (alignElement) {
-				let bodyElement = this.refs.portal.refs.menu;
-
-				this.alignedPosition_ = Align.align(
-					bodyElement,
-					alignElement,
-					Align.BottomLeft
-				);
-			}
-		}
 	}
 
 	/**

@@ -56,7 +56,7 @@ ClayPaginationBar.STATE = {
 		Config.shapeOf({
 			active: Config.bool(),
 			href: Config.string().required(),
-			label: Config.string().required(),
+			label: Config.number().required(),
 		})
 	).required(),
 
