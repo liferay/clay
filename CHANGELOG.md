@@ -1,5 +1,36 @@
 # Change Log
 
+## [v2.0.0-rc.0](https://github.com/liferay/clay/tree/v2.0.0-rc.0) (2018-02-01)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-beta.8...v2.0.0-rc.0)
+
+**Implemented enhancements:**
+
+- Wedeploy branch is being tested in Travis [\#483](https://github.com/liferay/clay/issues/483)
+
+**Closed issues:**
+
+- .dropdown-menu-right should work in all Navbar variants [\#500](https://github.com/liferay/clay/issues/500)
+- Items in Navigation Bar mobile menu aren't vertically aligned on the left [\#498](https://github.com/liferay/clay/issues/498)
+- Form Group Autofit should better support Horizontal Forms [\#492](https://github.com/liferay/clay/issues/492)
+- Tweak font sizes to match Lexicon 2 in Tables, Navigation Bar, Application Bar, and Management Bar [\#490](https://github.com/liferay/clay/issues/490)
+- ClayDropdown is not being aligned in the best way [\#452](https://github.com/liferay/clay/issues/452)
+
+**Merged pull requests:**
+
+- Updates CHANGELOG for v2.0.0-beta.8 [\#503](https://github.com/liferay/clay/pull/503) ([jbalsas](https://github.com/jbalsas))
+- .dropdown-menu-right should work in all Navbar variants [\#501](https://github.com/liferay/clay/pull/501) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#498\) Navigation Bar mobile menu should be properly al… [\#499](https://github.com/liferay/clay/pull/499) ([pat270](https://github.com/pat270))
+- Remove unnecessary use of minValue and maxValue in the ProgressBar [\#497](https://github.com/liferay/clay/pull/497) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Some updates from the claycss.com [\#496](https://github.com/liferay/clay/pull/496) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Add missing contents property to legend option [\#494](https://github.com/liferay/clay/pull/494) ([julien](https://github.com/julien))
+- Form Group Autofit added `.form-group-item-label` and `.form-group-item-label-spacer` for horizontally aligned labels [\#493](https://github.com/liferay/clay/pull/493) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#490\) Tweak font-sizes to match Lexicon V2 [\#491](https://github.com/liferay/clay/pull/491) ([pat270](https://github.com/pat270))
+- Update Dropdown markup in claycss.com [\#489](https://github.com/liferay/clay/pull/489) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update ClayPaginationBar demos [\#487](https://github.com/liferay/clay/pull/487) ([carloslancha](https://github.com/carloslancha))
+- Remove isInList param from ClayDropdownBase's radaiogroup deltemplate variant | Fixes 485 [\#486](https://github.com/liferay/clay/pull/486) ([carloslancha](https://github.com/carloslancha))
+- Excludes wedeploy branch from travis [\#484](https://github.com/liferay/clay/pull/484) ([jbalsas](https://github.com/jbalsas))
+- Fix the align of the dropdown when expanded in ClayDropdown | Fixes \#452 [\#482](https://github.com/liferay/clay/pull/482) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.0.0-beta.8](https://github.com/liferay/clay/tree/v2.0.0-beta.8) (2018-01-25)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-beta.7...v2.0.0-beta.8)
 
