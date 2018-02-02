@@ -48,7 +48,7 @@
 		var screenMd = 992;
 		var screenLg = 1200;
 
-		var windowWidth = $(window).width();
+		var windowWidth = window.innerWidth;
 		var region = '';
 
 		if (windowWidth >= screenLg) {
@@ -236,6 +236,8 @@
 
 				var toggler = instance.toggler;
 
+				var target = toggler.attr('href') || toggler.attr('data-target');
+
 				sidenav.trigger({
 					toggler: $(instance.togglerSelector),
 					type: 'closedStart.lexicon.sidenav'
@@ -259,7 +261,9 @@
 				toggler.addClass('sidenav-transition');
 
 				sidenav.addClass(closedClass).removeClass(openClass);
-				toggler.removeClass(openClass).removeClass('active');
+
+				$('[data-target="' + target + '"]').removeClass(openClass).removeClass('active');
+				$('[href="' + target + '"]').removeClass(openClass).removeClass('active');
 			}
 		},
 
