@@ -403,6 +403,7 @@ const ChartBase = {
 	/**
 	 * Creates the tiles defaults and returns it according to what
 	 * is selected.
+	 * @param {?Array} tiles
 	 * @return {?Elements}
 	 * @protected
 	 */
@@ -695,10 +696,10 @@ ChartBase.STATE = {
 					'horizontal-large',
 					'horizontal-small',
 					'vertical-large',
-					'vertical-small'
+					'vertical-small',
 				])
 			),
-			Config.func()
+			Config.func(),
 		]),
 	}),
 

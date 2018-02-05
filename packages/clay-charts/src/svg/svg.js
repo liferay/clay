@@ -4,81 +4,77 @@ import {d3} from 'billboard.js';
  * Creates SVG elements from an object.
  */
 class SVG {
-    /**
+	/**
      * Create a pattern element of d3.
-     * @param {!Object}
+     * @param {!Object} object
      * @return {Object}
      */
-    pattern({id, patternUnits, width, height, style}) {
-        const pattern = d3.select(document.createElementNS(d3.namespaces.svg, "pattern"))
-            .attr("id", id)
-            .attr("patternUnits", patternUnits)
-            .attr("width", width)
-            .attr("height", height)
-            .attr("style", style);
+	pattern({id, patternUnits, width, height, style}) {
+		const pattern = d3.select(document.createElementNS(d3.namespaces.svg, 'pattern'))
+			.attr('id', id)
+			.attr('patternUnits', patternUnits)
+			.attr('width', width)
+			.attr('height', height)
+			.attr('style', style);
 
-        return pattern;
-    }
+		return pattern;
+	}
 
-    /**
+	/**
      * Create a circle element of d3.
      * @param {!Element} element
-     * @param {!Object}
+     * @param {!Object} object
      * @return {Object}
      */
-    circle(element, {cx, cy, r}) {
-        const circle = element
-            .append("circle")
-            .attr("cx", cx)
-            .attr("cy", cy)
-            .attr("r", r);
+	circle(element, {cx, cy, r}) {
+		const circle = element.append('circle')
+			.attr('cx', cx)
+			.attr('cy', cy)
+			.attr('r', r);
 
-        return circle;
-    }
+		return circle;
+	}
 
-    /**
+	/**
      * Create a polygon element of d3.
      * @param {!Element} element
-     * @param {!Object}
+     * @param {!Object} object
      * @return {Object}
      */
-    polygon(element, {points}) {
-        const polygon = element
-            .append("polygon")
-            .attr("points", points);
+	polygon(element, {points}) {
+		const polygon = element.append('polygon').attr('points', points);
 
-        return polygon;
-    }
+		return polygon;
+	}
 
-    /**
+	/**
      * Create a rect element of d3.
      * @param {!Element} element
-     * @param {!Object}
+     * @param {!Object} object
      * @return {Object}
      */
-    rect(element, {x, y, width, height}) {
-        const rect = element
-            .append("rect")
-            .attr("x", x)
-            .attr("y", y)
-            .attr("width", width)
-            .attr("height", height)
-            .attr("style", "");
+	rect(element, {x, y, width, height}) {
+		const rect = element.append('rect')
+			.attr('x', x).attr('y', y)
+			.attr('width', width)
+			.attr('height', height);
 
-        return rect;
-    }
+		return rect;
+	}
 
-    /**
+	/**
+     * @param {!Object} element
+     * @param {!Array} children
      * @return {Object}
      * @protected
      */
-    createChildren_(element, children) {
-        return children.map(({nodeName, attributes}) => {
-            return this[nodeName](element, attributes);
-        });
-    }
+	createChildren_(element, children) {
+		return children.map(({nodeName, attributes}) => {
+			return this[nodeName](element, attributes);
+		});
+	}
 
-    /**
+	/**
      * Creates an SVG element from an object and returns a list
      * of element.
      *
@@ -101,16 +97,16 @@ class SVG {
      * @param {!Array} props
      * @return {Array}
      */
-    create(props) {
-        return props.map(val => {
-            const {attributes, children, nodeName} = val;
-            const element = this[nodeName](attributes);
+	create(props) {
+		return props.map(val => {
+			const {attributes, children, nodeName} = val;
+			const element = this[nodeName](attributes);
 
-            this.createChildren_(element, children);
+			this.createChildren_(element, children);
 
-            return element.node();
-        });
-    }
+			return element.node();
+		});
+	}
 }
 
 export default SVG;
