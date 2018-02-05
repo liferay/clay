@@ -1,6 +1,8 @@
-import types from './utils/types';
-import {Config} from 'metal-state';
 import {bb, d3} from 'billboard.js';
+import {Config} from 'metal-state';
+import SVG from './svg/svg';
+import TILES_PATTERNS from './svg/types';
+import types from './utils/types';
 
 const PROP_NAME_MAP = {
 	axis: 'axes',
@@ -36,18 +38,6 @@ const DEFAULT_LINE_CASSES = [
 	'bb-line-dashed-4-4',
 ];
 
-const DEFAULT_TILES = [
-	'circles',
-	'diagonal-left-large',
-	'diagonal-left-small',
-	'diagonal-right-large',
-	'diagonal-right-small',
-	'horizontal-large',
-	'horizontal-small',
-	'vertical-large',
-	'vertical-small',
-];
-
 const DEFAULT_POINT_PATTERNS = [
 	'circle',
 	'rectangle',
@@ -71,14 +61,6 @@ const ChartBase = {
 	 */
 	attached() {
 		const config = this.constructChartConfig_();
-
-		const existingTiles = DEFAULT_TILES.filter(val => {
-			return document.querySelector(`#${val}`);
-		}).map(val => document.querySelector(`#${val}`));
-
-		if (existingTiles.length > 0) {
-			config.color.tiles = () => existingTiles;
-		}
 
 		this.bbChart = bb.generate(config);
 
@@ -240,6 +222,34 @@ const ChartBase = {
 	},
 
 	/**
+	 * This ensures that when they are passed in `tiles` they will only be used
+	 * on their respective charts and using` color.pattern` and not `colors`.
+	 * @return {Object}
+	 * @protected
+	 */
+	constructColorsAndTilesConfig_: function() {
+		let {colors, color, columns} = this.getStateObj_();
+
+		if (color && color.tiles) {
+			const tiles = typeof color.tiles === 'function' ? color.tiles : this.getTiles_(color.tiles);
+
+			color.pattern = color.pattern || DEFAULT_COLORS;
+			color.tiles = () => tiles;
+
+			colors = {};
+		} else {
+			for (let i = 0; i < columns.length; i++) {
+				const column = columns[i];
+				const {id} = column;
+
+				colors[id] = DEFAULT_COLORS[i];
+			}
+		}
+
+		return colors;
+	},
+
+	/**
 	 * Constructs `data` billboard config property.
 	 * @param {boolean} attachListeners
 	 * @return {Object}
@@ -248,9 +258,11 @@ const ChartBase = {
 	constructDataConfig_: function(attachListeners = true) {
 		const state = this.getStateObj_();
 
+		const colors = this.constructColorsAndTilesConfig_();
+
 		const config = {
 			color: state.colorFormatter,
-			colors: state.colors,
+			colors: colors,
 			empty: state.emptyLabelText,
 			groups: state.groups,
 			hide: state.hide,
@@ -386,6 +398,24 @@ const ChartBase = {
 	 */
 	getStateObj_: function() {
 		return this;
+	},
+
+	/**
+	 * Creates the tiles defaults and returns it according to what
+	 * is selected.
+	 * @param {?Array} tiles
+	 * @return {?Elements}
+	 * @protected
+	 */
+	getTiles_: function(tiles) {
+		const svg = new SVG();
+		const tilesPatterns = svg.create(TILES_PATTERNS);
+
+		return tiles.map(elem => {
+			return tilesPatterns.find(val => {
+				return val.id == elem;
+			});
+		});
 	},
 
 	/**
@@ -649,15 +679,28 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	color: Config.shapeOf({
-		pattern: Config.array(),
+		pattern: Config.array().value(DEFAULT_COLORS),
 		threshhold: Config.shapeOf({
 			unit: Config.string(),
 			value: Config.array(),
 			max: Config.number(),
 		}),
-		tiles: Config.func(),
-	}).value({
-		pattern: DEFAULT_COLORS,
+		tiles: Config.oneOfType([
+			Config.arrayOf(
+				Config.oneOf([
+					'circles',
+					'diagonal-left-large',
+					'diagonal-left-small',
+					'diagonal-right-large',
+					'diagonal-right-small',
+					'horizontal-large',
+					'horizontal-small',
+					'vertical-large',
+					'vertical-small',
+				])
+			),
+			Config.func(),
+		]),
 	}),
 
 	/**
