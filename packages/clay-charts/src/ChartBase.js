@@ -690,15 +690,28 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	color: Config.shapeOf({
-		pattern: Config.array(),
+		pattern: Config.array().value(DEFAULT_COLORS),
 		threshhold: Config.shapeOf({
 			unit: Config.string(),
 			value: Config.array(),
 			max: Config.number(),
 		}),
-		tiles: Config.func(),
-	}).value({
-		pattern: DEFAULT_COLORS,
+		tiles: Config.oneOfType([
+			Config.arrayOf(
+				Config.oneOf([
+					'circles',
+					'diagonal-left-large',
+					'diagonal-left-small',
+					'diagonal-right-large',
+					'diagonal-right-small',
+					'horizontal-large',
+					'horizontal-small',
+					'vertical-large',
+					'vertical-small'
+				])
+			),
+			Config.func()
+		]),
 	}),
 
 	/**
