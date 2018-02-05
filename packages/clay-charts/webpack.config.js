@@ -28,6 +28,12 @@ module.exports = {
 					use: ['css-loader', 'sass-loader'],
 				}),
 			},
+			{
+				test: /\.soy$/,
+				use: {
+					loader: 'metal-soy-loader',
+				},
+			},
 		],
 	},
 	devtool: 'cheap-module-source-map',
