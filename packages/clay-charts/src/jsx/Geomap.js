@@ -1,11 +1,11 @@
-import {Geomap} from '../Geomap';
+import {Geomap as GeomapComponent} from '../Geomap';
 import {JSXDataManager, JSXRenderer} from 'metal-jsx';
 
 /**
  * Geomap  component for use with JSX.
  * @extends Geomap
  */
-class GeomapJSX extends Geomap {
+class Geomap extends GeomapComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -17,9 +17,9 @@ class GeomapJSX extends Geomap {
 	}
 }
 
-GeomapJSX.DATA_MANAGER = JSXDataManager;
-GeomapJSX.PROPS = Geomap.STATE;
-GeomapJSX.RENDERER = JSXRenderer;
+Geomap.DATA_MANAGER = JSXDataManager;
+Geomap.PROPS = GeomapComponent.STATE;
+Geomap.RENDERER = JSXRenderer;
 
-export {GeomapJSX};
-export default GeomapJSX;
+export {Geomap};
+export default Geomap;
