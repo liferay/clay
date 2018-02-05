@@ -38,18 +38,6 @@ const DEFAULT_LINE_CASSES = [
 	'bb-line-dashed-4-4',
 ];
 
-const DEFAULT_TILES = [
-	'circles',
-	'diagonal-left-large',
-	'diagonal-left-small',
-	'diagonal-right-large',
-	'diagonal-right-small',
-	'horizontal-large',
-	'horizontal-small',
-	'vertical-large',
-	'vertical-small',
-];
-
 const DEFAULT_POINT_PATTERNS = [
 	'circle',
 	'rectangle',
