@@ -119,13 +119,14 @@ const ChartBase = {
 		const axis = this.constructAxisConfig_();
 		const data = this.constructDataConfig_();
 		const zoom = this.constructZoomConfig_();
+		const color = this.constructTilesConfig_();
 
 		const config = {
 			area: state.area,
 			axis,
 			bindto: this.refs.chart,
 			bubble: state.bubble,
-			color: state.color,
+			color: color,
 			data,
 			grid: state.grid,
 			legend: state.legend,
@@ -232,28 +233,16 @@ const ChartBase = {
 	},
 
 	/**
-	 * This ensures that when they are passed in `tiles` they will only be used
-	 * on their respective charts and using` color.pattern` and not `colors`.
+	 * When tiles for true always leave `colors` empty,
+	 * this ensures that` colors.tiles` is more important.
 	 * @return {Object}
 	 * @protected
 	 */
-	constructColorsAndTilesConfig_: function() {
-		let {colors, color, columns} = this.getStateObj_();
+	constructColorsConfig_: function() {
+		let {colors, color} = this.getStateObj_();
 
 		if (color && color.tiles) {
-			const tiles = typeof color.tiles === 'function' ? color.tiles : this.getTiles_();
-
-			color.pattern = color.pattern || DEFAULT_COLORS;
-			color.tiles = () => tiles;
-
 			colors = {};
-		} else {
-			for (let i = 0; i < columns.length; i++) {
-				const column = columns[i];
-				const {id} = column;
-
-				colors[id] = DEFAULT_COLORS[i];
-			}
 		}
 
 		return colors;
@@ -267,8 +256,7 @@ const ChartBase = {
 	 */
 	constructDataConfig_: function(attachListeners = true) {
 		const state = this.getStateObj_();
-
-		const colors = this.constructColorsAndTilesConfig_();
+		const colors = this.constructColorsConfig_();
 
 		const config = {
 			color: state.colorFormatter,
@@ -333,6 +321,24 @@ const ChartBase = {
 		}
 
 		return config;
+	},
+
+	/**
+	 * Constructs color tiles for passed to billboard.
+	 * @return {Object}
+	 * @protected
+	 */
+	constructTilesConfig_() {
+		const {color} = this.getStateObj_();
+
+		if (color.tiles) {
+			const tiles = this.getTiles_();
+
+			color.tiles = () => tiles;
+			color.pattern = DEFAULT_COLORS;
+		}
+
+		return color;
 	},
 
 	/**
@@ -692,6 +698,9 @@ ChartBase.STATE = {
 			Config.bool().value(false),
 			Config.func(),
 		]),
+	}).value({
+		pattern: DEFAULT_COLORS,
+		tiles: false,
 	}),
 
 	/**
