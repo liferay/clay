@@ -45,9 +45,7 @@ describe('ClayPagination', function() {
 
 	for (let totalPages = 1; totalPages <= 10; totalPages++) {
 		for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
-			it(`should render a ClayPagination with ${
-				totalPages
-			} total pages and page ${currentPage} as current page`, () => {
+			it(`should render a ClayPagination with ${totalPages} total pages and page ${currentPage} as current page`, () => {
 				component = new ClayPagination({
 					currentPage: currentPage,
 					spritemap: spritemap,
@@ -60,9 +58,7 @@ describe('ClayPagination', function() {
 
 	for (let totalPages = 1; totalPages <= 10; totalPages++) {
 		for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
-			it(`should render a ClayPagination with baseHref, ${
-				totalPages
-			} total pages and page ${currentPage} as current page`, () => {
+			it(`should render a ClayPagination with baseHref, ${totalPages} total pages and page ${currentPage} as current page`, () => {
 				component = new ClayPagination({
 					baseHref: '#mySite?curPage=',
 					currentPage: currentPage,

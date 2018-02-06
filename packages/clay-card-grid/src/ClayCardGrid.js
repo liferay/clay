@@ -7,7 +7,7 @@ import {
 	ClayFileCard,
 	ClayHorizontalCard,
 	ClayImageCard,
-	ClayUserCard
+	ClayUserCard,
 } from 'clay-card';
 /* eslint-enable */
 import {Config} from 'metal-state';
