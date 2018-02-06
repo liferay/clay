@@ -369,6 +369,46 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with info button', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			infoButton: true,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with info button in active state', () => {
+		managementToolbar = new ClayManagementToolbar({
+			actionItems: [
+				{
+					label: 'Edit',
+					href: '#editurl',
+					icon: 'edit',
+					quickAction: true,
+				},
+				{
+					label: 'Info Button',
+					href: '#infobutton',
+					icon: 'info-circle-open',
+					quickAction: true,
+				},
+				{
+					label: 'Delete',
+					href: '#deleteurl',
+					icon: 'trash',
+					quickAction: true,
+				},
+			],
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a selectable management toolbar and emit an event on checkbox click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
@@ -584,5 +624,19 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('actionClicked', expect.any(Object));
+	});
+
+	it('should render a management toolbar with info button and emit an event on infoButton click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			infoButton: true,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.infoButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('infoButtonClicked', expect.any(Object));
 	});
 });
