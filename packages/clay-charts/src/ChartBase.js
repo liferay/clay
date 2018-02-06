@@ -1,7 +1,5 @@
 import {bb, d3} from 'billboard.js';
 import {Config} from 'metal-state';
-import SVG from './svg/svg';
-import TILES_PATTERNS from './svg/types';
 import types from './utils/types';
 
 const PROP_NAME_MAP = {
@@ -243,7 +241,7 @@ const ChartBase = {
 		let {colors, color, columns} = this.getStateObj_();
 
 		if (color && color.tiles) {
-			const tiles = typeof color.tiles === 'function' ? color.tiles : this.getTiles_(color.tiles);
+			const tiles = typeof color.tiles === 'function' ? color.tiles : this.getTiles_();
 
 			color.pattern = color.pattern || DEFAULT_COLORS;
 			color.tiles = () => tiles;
@@ -413,20 +411,14 @@ const ChartBase = {
 	},
 
 	/**
-	 * Creates the tiles defaults and returns it according to what
-	 * is selected.
+	 * Get all tiles of the DOM.
 	 * @return {?Elements}
 	 * @protected
 	 */
-	getTiles_: function(tiles) {
-		const svg = new SVG();
-		const tilesPatterns = svg.create(TILES_PATTERNS);
-
-		return tiles.map(elem => {
-			return tilesPatterns.find(val => {
-				return val.id == elem;
-			});
-		});
+	getTiles_: function() {
+		return DEFAULT_TILES.filter(val => {
+			return document.querySelector(`#${val}`);
+		}).map(val => document.querySelector(`#${val}`));
 	},
 
 	/**
@@ -697,20 +689,8 @@ ChartBase.STATE = {
 			max: Config.number(),
 		}),
 		tiles: Config.oneOfType([
-			Config.arrayOf(
-				Config.oneOf([
-					'circles',
-					'diagonal-left-large',
-					'diagonal-left-small',
-					'diagonal-right-large',
-					'diagonal-right-small',
-					'horizontal-large',
-					'horizontal-small',
-					'vertical-large',
-					'vertical-small'
-				])
-			),
-			Config.func()
+			Config.bool().value(false),
+			Config.func(),
 		]),
 	}),
 
