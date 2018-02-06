@@ -608,6 +608,9 @@ describe('ClayManagementToolbar', function() {
 		managementToolbar.refs.infoButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('infoButtonClicked', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			'infoButtonClicked',
+			expect.any(Object)
+		);
 	});
 });
