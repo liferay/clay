@@ -98,7 +98,6 @@ class ClayDropdownBase extends Component {
 	 */
 	handleRenderedPortal_() {
 		if (this.expanded && this.alignElementSelector_) {
-			// eslint-disable-next-line
 			let alignElement = this.element.querySelector(
 				this.alignElementSelector_
 			);
