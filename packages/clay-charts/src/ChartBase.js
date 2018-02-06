@@ -694,10 +694,7 @@ ChartBase.STATE = {
 			value: Config.array(),
 			max: Config.number(),
 		}),
-		tiles: Config.oneOfType([
-			Config.bool().value(false),
-			Config.func(),
-		]),
+		tiles: Config.oneOfType([Config.bool().value(false), Config.func()]),
 	}).value({
 		pattern: DEFAULT_COLORS,
 		tiles: false,
