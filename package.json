@@ -12,7 +12,10 @@
     "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay-components,claycss.com,generator-metal-clay,node_modules}/**'",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "start": "http-server . -p 4000",
-    "test": "npm run build && npm run jest && npm run a11y"
+    "test": "npm run build && npm run jest && npm run a11y",
+    "electric": "cd packages/clay && npm run build && cd ../clay-charts && npm run compile && npm run sass",
+    "web": "npm run electric && cd packages/claycss.com && el run",
+    "deploy": "npm run electric && cd packages/claycss.com && el deploy"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
