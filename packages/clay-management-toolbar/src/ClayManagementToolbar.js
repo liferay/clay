@@ -84,6 +84,15 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the Info button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleInfoButtonClicked(event) {
+		this.emit('infoButtonClicked', event);
+	}
+
+	/**
 	 * Shows the search in mobile devices
 	 * @private
 	 */
@@ -238,6 +247,15 @@ ClayManagementToolbar.STATE = {
 	 * @default undefined
 	 */
 	id: Config.string(),
+
+	/**
+	 * Flag to indicate if the Info button is needed.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default false
+	 */
+	infoButton: Config.bool().value(false),
 
 	/**
 	 * URL of the search form action

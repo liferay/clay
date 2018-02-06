@@ -10,6 +10,7 @@
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
+	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleSearchSearchClick: any}
 	{@param? _handleSelectAllClicked: any}
@@ -53,6 +54,7 @@
 	]>}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
+	{@param? infoButton: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -87,6 +89,7 @@
 			{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 			{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
 			{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
+			{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 			{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
 			{param _handleSearchSearchClick: $_handleSearchSearchClick /}
 			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
@@ -100,6 +103,7 @@
 			{param filterItems: $filterItems /}
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
+			{param infoButton: $infoButton /}
 			{param searchActionURL: $searchActionURL /}
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
@@ -224,6 +228,7 @@
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
+	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleSearchSearchClick: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
@@ -258,6 +263,7 @@
 	]>}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
+	{@param? infoButton: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -382,6 +388,18 @@
 							{param elementClasses: 'nav-link nav-link-monospaced' /}
 							{param events: ['click': $_handleOpenMobileSearchClick] /}
 							{param icon: 'search' /}
+							{param spritemap: $spritemap /}
+							{param style: 'unstyled' /}
+						{/call}
+					</li>
+				{/if}
+
+				{if $infoButton}
+					<li class="nav-item">
+						{call ClayButton.render}
+							{param elementClasses: 'nav-link nav-link-monospaced' /}
+							{param events: ['click': $_handleInfoButtonClicked] /}
+							{param icon: 'info-circle-open' /}
 							{param spritemap: $spritemap /}
 							{param style: 'unstyled' /}
 						{/call}
