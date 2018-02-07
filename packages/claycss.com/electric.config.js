@@ -1,6 +1,7 @@
 'use strict';
 
 const clay = require('clay');
+const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
 
@@ -27,12 +28,17 @@ if (clayPath) {
 	);
 }
 
+const excludedComponents = /.*pagination/;
+const metalComponents = ['electric-quartz-components']
+	.concat(fs.readdirSync('../').filter(f => f.match(/^clay-.*/) && !f.match(excludedComponents)));
+
+
 module.exports = {
 	frontMatterHook: function(data) {
 		return generateIconData(data);
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
-	metalComponents: ['electric-quartz-components'],
+	metalComponents: metalComponents,
 	resolveModules: ['../../node_modules'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths],
@@ -50,6 +56,9 @@ module.exports = {
 		},
 		{
 			src: path.join(clayJSPath, 'svg4everybody.js'),
+		},
+		{
+			src: path.join('../clay-charts/build/clay-charts.css'),
 		},
 	],
 };
