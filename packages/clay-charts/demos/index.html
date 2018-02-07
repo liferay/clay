@@ -392,13 +392,7 @@
 		var pieChart = new metal.PieChart({
 			columns: dummyPercentData.columns_1,
 			color: {
-				tiles() {
-					return [
-						document.querySelector('#circles'),
-						document.querySelector('#horizontal-large'),
-						document.querySelector('#vertical-small'),
-					];
-				}
+				tiles: true
 			},
 			legend: {
 				contents: {

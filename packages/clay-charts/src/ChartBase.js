@@ -1,6 +1,6 @@
-import types from './utils/types';
-import {Config} from 'metal-state';
 import {bb, d3} from 'billboard.js';
+import {Config} from 'metal-state';
+import types from './utils/types';
 
 const PROP_NAME_MAP = {
 	axis: 'axes',
@@ -72,14 +72,6 @@ const ChartBase = {
 	attached() {
 		const config = this.constructChartConfig_();
 
-		const existingTiles = DEFAULT_TILES.filter(val => {
-			return document.querySelector(`#${val}`);
-		}).map(val => document.querySelector(`#${val}`));
-
-		if (existingTiles.length > 0) {
-			config.color.tiles = () => existingTiles;
-		}
-
 		this.bbChart = bb.generate(config);
 
 		this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
@@ -127,13 +119,14 @@ const ChartBase = {
 		const axis = this.constructAxisConfig_();
 		const data = this.constructDataConfig_();
 		const zoom = this.constructZoomConfig_();
+		const color = this.constructTilesConfig_();
 
 		const config = {
 			area: state.area,
 			axis,
 			bindto: this.refs.chart,
 			bubble: state.bubble,
-			color: state.color,
+			color: color,
 			data,
 			grid: state.grid,
 			legend: state.legend,
@@ -240,6 +233,22 @@ const ChartBase = {
 	},
 
 	/**
+	 * When tiles for true always leave `colors` empty,
+	 * this ensures that` colors.tiles` is more important.
+	 * @return {Object}
+	 * @protected
+	 */
+	constructColorsConfig_: function() {
+		let {colors, color} = this.getStateObj_();
+
+		if (color && color.tiles) {
+			colors = {};
+		}
+
+		return colors;
+	},
+
+	/**
 	 * Constructs `data` billboard config property.
 	 * @param {boolean} attachListeners
 	 * @return {Object}
@@ -247,10 +256,11 @@ const ChartBase = {
 	 */
 	constructDataConfig_: function(attachListeners = true) {
 		const state = this.getStateObj_();
+		const colors = this.constructColorsConfig_();
 
 		const config = {
 			color: state.colorFormatter,
-			colors: state.colors,
+			colors: colors,
 			empty: state.emptyLabelText,
 			groups: state.groups,
 			hide: state.hide,
@@ -311,6 +321,24 @@ const ChartBase = {
 		}
 
 		return config;
+	},
+
+	/**
+	 * Constructs color tiles for passed to billboard.
+	 * @return {Object}
+	 * @protected
+	 */
+	constructTilesConfig_() {
+		const {color} = this.getStateObj_();
+
+		if (color.tiles) {
+			const tiles = this.getTiles_();
+
+			color.tiles = () => tiles;
+			color.pattern = DEFAULT_COLORS;
+		}
+
+		return color;
 	},
 
 	/**
@@ -386,6 +414,17 @@ const ChartBase = {
 	 */
 	getStateObj_: function() {
 		return this;
+	},
+
+	/**
+	 * Get all tiles of the DOM.
+	 * @return {?Elements}
+	 * @protected
+	 */
+	getTiles_: function() {
+		return DEFAULT_TILES.filter(val => {
+			return document.querySelector(`#${val}`);
+		}).map(val => document.querySelector(`#${val}`));
 	},
 
 	/**
@@ -649,15 +688,16 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	color: Config.shapeOf({
-		pattern: Config.array(),
+		pattern: Config.array().value(DEFAULT_COLORS),
 		threshhold: Config.shapeOf({
 			unit: Config.string(),
 			value: Config.array(),
 			max: Config.number(),
 		}),
-		tiles: Config.func(),
+		tiles: Config.oneOfType([Config.bool().value(false), Config.func()]),
 	}).value({
 		pattern: DEFAULT_COLORS,
+		tiles: false,
 	}),
 
 	/**
