@@ -322,6 +322,10 @@ fieldset[disabled] label {
 		width: 100%;
 	}
 
+	label {
+		align-self: flex-start;
+	}
+
 	.form-group-item {
 		display: flex;
 		flex-basis: auto;
