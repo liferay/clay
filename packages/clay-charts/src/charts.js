@@ -6,6 +6,7 @@ import BubbleChart from './BubbleChart';
 import Chart from './Chart';
 import DonutChart from './DonutChart';
 import GaugeChart from './GaugeChart';
+import Geomap from './Geomap';
 import LineChart from './LineChart';
 import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
@@ -24,6 +25,7 @@ export {
 	d3,
 	DonutChart,
 	GaugeChart,
+	Geomap,
 	LineChart,
 	PieChart,
 	ScatterChart,
