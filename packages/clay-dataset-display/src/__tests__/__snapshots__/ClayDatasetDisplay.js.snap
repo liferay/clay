@@ -531,8 +531,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -563,9 +563,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -596,42 +594,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -1212,8 +1210,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -1244,9 +1242,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -1277,42 +1273,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -1893,8 +1889,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -1925,9 +1921,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -1958,42 +1952,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -2417,8 +2411,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -2449,9 +2443,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -2482,42 +2474,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -2833,462 +2825,462 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   </nav>
   <div class="container container-view">
     <form>
-      <div>
-        <h4 class="card-section-header" id="group-0">Folders</h4>
-        <ul class="card-page">
-          <li class="card-page-item-directory">
-            <div class="card-type-directory form-check form-check-card form-check-middle-left">
-              <div class="custom-control custom-checkbox">
-                <label>
-                  <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-                  <span class="custom-control-label"></span>
-                  <div class="card card-horizontal">
-                    <div class="card-body">
-                      <div class="card-row">
-                        <div class="autofit-col">
-                          <span class="sticker sticker-unstyled">
-                            <span class="sticker-overlay">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                                <title>folder</title>
-                                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
-                              </svg>
-                            </span>
-                          </span>
-                        </div>
-                        <div class="autofit-col autofit-col-expand autofit-col-gutters">
-                          <div class="card-title text-truncate">Photos</div>
-                        </div>
-                        <div class="autofit-col">
-                          <div class="dropdown dropdown-action">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                                <title>ellipsis-v</title>
-                                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-directory form-check form-check-card form-check-middle-left">
-              <div class="custom-control custom-checkbox">
-                <label>
-                  <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-                  <span class="custom-control-label"></span>
-                  <div class="card card-horizontal">
-                    <div class="card-body">
-                      <div class="card-row">
-                        <div class="autofit-col">
-                          <span class="sticker sticker-unstyled">
-                            <span class="sticker-overlay">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                                <title>folder</title>
-                                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
-                              </svg>
-                            </span>
-                          </span>
-                        </div>
-                        <div class="autofit-col autofit-col-expand autofit-col-gutters">
-                          <div class="card-title text-truncate">Videos</div>
-                        </div>
-                        <div class="autofit-col">
-                          <div class="dropdown dropdown-action">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                                <title>ellipsis-v</title>
-                                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <h4 class="card-section-header" id="group-1">Recipes</h4>
-        <ul class="card-page">
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                          <title>exclamation-circle</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
-                        </svg>
-                      </div>
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <a class=" card-title text-truncate" href="#">Hamburger</a>
-                      <div class="card-subtitle text-truncate">U.S.A</div>
-                      <div class="card-detail">
-                        <span class="label label-success">No Spicy</span>
-                      </div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <a class=" card-title text-truncate" href="#">Ramen</a>
-                      <div class="card-subtitle text-truncate">China</div>
-                      <div class="card-detail">
-                        <span class="label label-warning">Spicy</span>
-                      </div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <a class=" card-title text-truncate" href="#">Paella</a>
-                      <div class="card-subtitle text-truncate">Spain</div>
-                      <div class="card-detail">
-                        <span class="label label-success">No Spicy</span>
-                      </div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                          <title>exclamation-circle</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
-                        </svg>
-                      </div>
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <a class=" card-title text-truncate" href="#">Pizza</a>
-                      <div class="card-subtitle text-truncate">Italy</div>
-                      <div class="card-detail">
-                        <span class="label label-success">No Spicy</span>
-                      </div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <a class=" card-title text-truncate" href="#">Carcamusas</a>
-                      <div class="card-subtitle text-truncate">Toledo</div>
-                      <div class="card-detail">
-                        <span class="label label-warning">Spicy</span>
-                      </div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-                          <title>exclamation-circle</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
-                        </svg>
-                      </div>
-                      <span class="sticker sticker-danger sticker-bottom-left">
-                        <span class="sticker-overlay">PDF</span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <a class=" card-title text-truncate" href="#">Tacos</a>
-                      <div class="card-subtitle text-truncate">Mexico</div>
-                      <div class="card-detail">
-                        <span class="label label-danger">Very Spicy</span>
-                      </div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <h4 class="card-section-header" id="group-2">Chefs</h4>
-        <ul class="card-page">
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <span class="sticker sticker-danger rounded-circle sticker-xl">
-                          <span class="sticker-overlay">FA</span>
-                        </span>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <div class="card-title text-truncate">Ferrán Adriá</div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <span class="sticker sticker-primary rounded-circle sticker-xl">
+      <ul class="card-page">
+        <li>
+          <h4 class="card-section-header" id="group-0">Folders</h4>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-directory form-check form-check-card form-check-middle-left">
+            <div class="custom-control custom-checkbox">
+              <label>
+                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <span class="custom-control-label"></span>
+                <div class="card card-horizontal">
+                  <div class="card-body">
+                    <div class="card-row">
+                      <div class="autofit-col">
+                        <span class="sticker sticker-unstyled">
                           <span class="sticker-overlay">
-                            <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                              <title>folder</title>
+                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                            </svg>
                           </span>
                         </span>
                       </div>
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <div class="card-title text-truncate">Gordon Ramsay</div>
-                    </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
+                      <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                        <div class="card-title text-truncate">Photos</div>
+                      </div>
+                      <div class="autofit-col">
+                        <div class="dropdown dropdown-action">
+                          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                              <title>ellipsis-v</title>
+                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                            </svg>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </label>
             </div>
-          </li>
-          <li class="card-page-item-directory">
-            <div class="card-type-asset form-check form-check-card form-check-top-left">
-              <div class="card">
-                <div class="aspect-ratio card-item-first">
-                  <div class="custom-control custom-checkbox">
-                    <label>
-                      <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
-                      <span class="custom-control-label"></span>
-                      <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                        <span class="sticker sticker-primary rounded-circle sticker-xl">
-                          <span class="sticker-overlay">AC</span>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-directory form-check form-check-card form-check-middle-left">
+            <div class="custom-control custom-checkbox">
+              <label>
+                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <span class="custom-control-label"></span>
+                <div class="card card-horizontal">
+                  <div class="card-body">
+                    <div class="card-row">
+                      <div class="autofit-col">
+                        <span class="sticker sticker-unstyled">
+                          <span class="sticker-overlay">
+                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                              <title>folder</title>
+                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                            </svg>
+                          </span>
                         </span>
                       </div>
-                    </label>
+                      <div class="autofit-col autofit-col-expand autofit-col-gutters">
+                        <div class="card-title text-truncate">Videos</div>
+                      </div>
+                      <div class="autofit-col">
+                        <div class="dropdown dropdown-action">
+                          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                              <title>ellipsis-v</title>
+                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="card-body">
-                  <div class="card-row">
-                    <div class="autofit-col autofit-col-expand">
-                      <div class="card-title text-truncate">Alberto Chicote</div>
+              </label>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h4 class="card-section-header" id="group-1">Recipes</h4>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                        <title>exclamation-circle</title>
+                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                      </svg>
                     </div>
-                    <div class="autofit-col">
-                      <div class="dropdown dropdown-action">
-                        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-                          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-                            <title>ellipsis-v</title>
-                            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
-                          </svg>
-                        </button>
-                      </div>
+                    <span class="sticker sticker-danger sticker-bottom-left">
+                      <span class="sticker-overlay">PDF</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <a class=" card-title text-truncate" href="#">Hamburger</a>
+                    <div class="card-subtitle text-truncate">U.S.A</div>
+                    <div class="card-detail">
+                      <span class="label label-success">No Spicy</span>
+                    </div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
+                    <span class="sticker sticker-danger sticker-bottom-left">
+                      <span class="sticker-overlay">PDF</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <a class=" card-title text-truncate" href="#">Ramen</a>
+                    <div class="card-subtitle text-truncate">China</div>
+                    <div class="card-detail">
+                      <span class="label label-warning">Spicy</span>
+                    </div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
+                    <span class="sticker sticker-danger sticker-bottom-left">
+                      <span class="sticker-overlay">PDF</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <a class=" card-title text-truncate" href="#">Paella</a>
+                    <div class="card-subtitle text-truncate">Spain</div>
+                    <div class="card-detail">
+                      <span class="label label-success">No Spicy</span>
+                    </div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                        <title>exclamation-circle</title>
+                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                      </svg>
+                    </div>
+                    <span class="sticker sticker-danger sticker-bottom-left">
+                      <span class="sticker-overlay">PDF</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <a class=" card-title text-truncate" href="#">Pizza</a>
+                    <div class="card-subtitle text-truncate">Italy</div>
+                    <div class="card-detail">
+                      <span class="label label-success">No Spicy</span>
+                    </div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
+                    <span class="sticker sticker-danger sticker-bottom-left">
+                      <span class="sticker-overlay">PDF</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <a class=" card-title text-truncate" href="#">Carcamusas</a>
+                    <div class="card-subtitle text-truncate">Toledo</div>
+                    <div class="card-detail">
+                      <span class="label label-warning">Spicy</span>
+                    </div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+                        <title>exclamation-circle</title>
+                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                      </svg>
+                    </div>
+                    <span class="sticker sticker-danger sticker-bottom-left">
+                      <span class="sticker-overlay">PDF</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <a class=" card-title text-truncate" href="#">Tacos</a>
+                    <div class="card-subtitle text-truncate">Mexico</div>
+                    <div class="card-detail">
+                      <span class="label label-danger">Very Spicy</span>
+                    </div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h4 class="card-section-header" id="group-2">Chefs</h4>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                      <span class="sticker sticker-danger rounded-circle sticker-xl">
+                        <span class="sticker-overlay">FA</span>
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <div class="card-title text-truncate">Ferrán Adriá</div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                      <span class="sticker sticker-primary rounded-circle sticker-xl">
+                        <span class="sticker-overlay">
+                          <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+                        </span>
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <div class="card-title text-truncate">Gordon Ramsay</div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card-page-item-directory">
+          <div class="card-type-asset form-check form-check-card form-check-top-left">
+            <div class="card">
+              <div class="aspect-ratio card-item-first">
+                <div class="custom-control custom-checkbox">
+                  <label>
+                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
+                    <span class="custom-control-label"></span>
+                    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                      <span class="sticker sticker-primary rounded-circle sticker-xl">
+                        <span class="sticker-overlay">AC</span>
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <div class="autofit-col autofit-col-expand">
+                    <div class="card-title text-truncate">Alberto Chicote</div>
+                  </div>
+                  <div class="autofit-col">
+                    <div class="dropdown dropdown-action">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+                          <title>ellipsis-v</title>
+                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </form>
   </div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -3319,9 +3311,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -3352,42 +3342,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -4276,8 +4266,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -4308,9 +4298,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -4341,42 +4329,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -5111,8 +5099,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -5143,9 +5131,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -5176,42 +5162,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -5456,8 +5442,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -5488,9 +5474,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -5521,42 +5505,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
@@ -6783,8 +6767,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
 <div class="dropdown-menu" ref="menu">
   <form>
     <div class="inline-scroller">
-      <div class="dropdown-subheader" role="presentation">Filter By</div>
       <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Filter By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -6815,9 +6799,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             </label>
           </div>
         </li>
-      </ul>
-      <div class="dropdown-subheader" role="presentation">Order By</div>
-      <ul class="list-unstyled">
+        <li class="dropdown-subheader" role="presentation">Order By</li>
         <li class="dropdown-item">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
@@ -6848,42 +6830,42 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             </label>
           </div>
         </li>
+        <li class="dropdown-subheader" role="presentation">Group 1</li>
+        <li aria-label="Group 1" role="radiogroup">
+          <ul class="list-unstyled">
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 1</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item active">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 2</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <div class="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
+                  <span class="custom-control-label">
+                    <span class="custom-control-label-text">Item 3</span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <div class="dropdown-subheader" role="presentation">Group 1</div>
-      <div aria-label="Group 1" role="radiogroup">
-        <ul class="list-unstyled">
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 1</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item active">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 2</span>
-                </span>
-              </label>
-            </div>
-          </li>
-          <li class="dropdown-item">
-            <div class="custom-control custom-radio custom-control-inline">
-              <label>
-                <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
-                <span class="custom-control-label">
-                  <span class="custom-control-label-text">Item 3</span>
-                </span>
-              </label>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Done</button>
