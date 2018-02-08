@@ -12,9 +12,10 @@
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
     "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay-components,claycss.com,generator-metal-clay,node_modules}/**'",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
+    "soy": "lerna run soy",
     "start": "http-server . -p 4000",
     "test": "npm run build && npm run jest && npm run a11y",
-    "electric": "npm run compile && cd packages/claycss.com && el",
+    "electric": "npm run soy && npm run compile && cd packages/claycss.com && el",
     "web": "npm run electric -- run",
     "deploy": "npm run electric -- deploy"
   },
