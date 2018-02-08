@@ -71,6 +71,7 @@ label {
 	}
 
 	height: $input-height;
+	min-width: 0;
 
 	@if not ($input-padding-y == $btn-padding-y) {
 		padding-bottom: $input-padding-y;
