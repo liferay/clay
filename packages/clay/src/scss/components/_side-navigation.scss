@@ -17,14 +17,19 @@
 }
 
 .sidenav-container.open {
+	&.sidenav-transition {
+		> .sidenav-menu-slider {
+			overflow: hidden;
+		}
+	}
+
 	> .sidenav-menu-slider {
+		overflow: visible;
 		visibility: visible;
 	}
 }
 
 .sidenav-content {
-	padding-left: 0;
-	padding-right: 0;
 	position: relative;
 
 	@include media-breakpoint-up(md) {
