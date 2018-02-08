@@ -88,32 +88,34 @@ weight: 100
 	<div class="form-check">
 		<label class="form-check-label">
 			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-description">Label</span>
+			<span class="form-check-label-text">Label</span>
 		</label>
 	</div>
 	<div class="form-check">
 		<label class="form-check-label">
 			<input checked class="form-check-input" disabled type="checkbox" value="">
-			<span class="form-check-description">Disabled Check Box</span>
+			<span class="form-check-label-text">Disabled Check Box</span>
 		</label>
 	</div>
-	<div class="form-check form-check-inline">
-		<label class="form-check-label">
-			<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-			<span class="form-check-description">1</span>
-		</label>
-	</div>
-	<div class="form-check form-check-inline">
-		<label class="form-check-label">
-			<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-			<span class="form-check-description">2</span>
-		</label>
-	</div>
-	<div class="form-check form-check-inline">
-		<label class="form-check-label">
-			<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-			<span class="form-check-description">3</span>
-		</label>
+	<div class="form-group">
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
+				<span class="form-check-label-text">1</span>
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
+				<span class="form-check-label-text">2</span>
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
+				<span class="form-check-label-text">3</span>
+			</label>
+		</div>
 	</div>
 </div>
 
@@ -127,35 +129,35 @@ weight: 100
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="checkbox" value="">
-		<span class="form-check-description">Label</span>
+		<span class="form-check-label-text">Label</span>
 	</label>
 </div>
 
 <div class="form-check">
 	<label class="form-check-label">
 		<input checked class="form-check-input" disabled type="checkbox" value="">
-		<span class="form-check-description">Disabled Check Box</span>
+		<span class="form-check-label-text">Disabled Check Box</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-		<span class="form-check-description">1</span>
+		<span class="form-check-label-text">1</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-		<span class="form-check-description">2</span>
+		<span class="form-check-label-text">2</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-		<span class="form-check-description">3</span>
+		<span class="form-check-label-text">3</span>
 	</label>
 </div>
 ```
@@ -176,32 +178,34 @@ weight: 100
 	<div class="form-check">
 		<label class="form-check-label">
 			<input class="form-check-input" type="radio" value="">
-			<span class="form-check-description">Label</span>
+			<span class="form-check-label-text">Label</span>
 		</label>
 	</div>
 	<div class="form-check">
 		<label class="form-check-label">
 			<input class="form-check-input" disabled type="radio">
-			<span class="form-check-description">Disabled Radio Button</span>
+			<span class="form-check-label-text">Disabled Radio Button</span>
 		</label>
 	</div>
-	<div class="form-check form-check-inline">
-		<label class="form-check-label">
-			<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
-			<span class="form-check-description">1</span>
-		</label>
-	</div>
-	<div class="form-check form-check-inline">
-		<label class="form-check-label">
-			<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
-			<span class="form-check-description">2</span>
-		</label>
-	</div>
-	<div class="form-check form-check-inline">
-		<label class="form-check-label">
-			<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
-			<span class="form-check-description">3</span>
-		</label>
+	<div class="form-group">
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
+				<span class="form-check-label-text">1</span>
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
+				<span class="form-check-label-text">2</span>
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
+				<span class="form-check-label-text">3</span>
+			</label>
+		</div>
 	</div>
 </div>
 
@@ -215,35 +219,35 @@ weight: 100
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" type="radio" value="">
-		<span class="form-check-description">Label</span>
+		<span class="form-check-label-text">Label</span>
 	</label>
 </div>
 
 <div class="form-check">
 	<label class="form-check-label">
 		<input class="form-check-input" disabled type="radio">
-		<span class="form-check-description">Disabled Radio Button</span>
+		<span class="form-check-label-text">Disabled Radio Button</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
-		<span class="form-check-description">1</span>
+		<span class="form-check-label-text">1</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
-		<span class="form-check-description">2</span>
+		<span class="form-check-label-text">2</span>
 	</label>
 </div>
 
 <div class="form-check form-check-inline">
 	<label class="form-check-label">
 		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
-		<span class="form-check-description">3</span>
+		<span class="form-check-label-text">3</span>
 	</label>
 </div>
 ```
@@ -554,19 +558,23 @@ weight: 100
 					<option>Sample 4</option>
 				</select>
 			</div>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input checked class="form-check-input" type="checkbox" value="">
-					<span class="form-check-description">Disabled Checkbox</span>
-				</label>
+			<div class="form-group">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input checked class="form-check-input" type="checkbox" value="">
+						<span class="form-check-label-text">Disabled Checkbox</span>
+					</label>
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="radio" value="">
+						<span class="form-check-label-text">Disabled Radio</span>
+					</label>
+				</div>
 			</div>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="radio" value="">
-					<span class="form-check-description">Disabled Radio</span>
-				</label>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Submit</button>
 			</div>
-			<button class="btn btn-primary" type="submit">Submit</button>
 		</fieldset>
 	</form>
 </div>
@@ -650,19 +658,19 @@ weight: 100
 </article>
 
 
-<article id="form-inline-autofit">
+<article id="form-group-autofit">
 
 ### Form Inline Autofit
 
-> Equally spaced form inputs. To set a fixed width use `flex-grow: 0; flex-basis: 200px;` on `.form-inline-group` or any direct descendant of `.form-inline-autofit`.
+> Equally spaced form inputs. To set a fixed width use `flex-grow: 0; flex-basis: 200px;` on `.form-group-item` or any direct descendant of `.form-group-autofit`.
 
 <div class="sheet">
-	<div class="form-group form-inline-autofit">
-		<div class="form-inline-group">
+	<div class="form-group-autofit">
+		<div class="form-group-item">
 			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
 			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
 		</div>
-		<div class="form-inline-group">
+		<div class="form-group-item">
 			<label for="formInlineAutofitSelectElement1">Select Element</label>
 			<select class="form-control" id="formInlineAutofitSelectElement1">
 				<option>Option 1</option>
@@ -671,53 +679,108 @@ weight: 100
 			</select>
 		</div>
 	</div>
-	<div class="align-items-end form-group form-inline-autofit">
-		<div class="form-inline-group">
-			<label for="formInlineAutofitTextInput2">First Name</label>
+	<div class="form-group-autofit">
+		<div class="form-group-item">
+			<label for="formInlineAutofitFirstName">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="First Name">First Name</span>
+				</span>
+			</label>
 			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
 		</div>
-		<div class="form-inline-group">
-			<label for="formInlineAutofitLastName">Last Name</label>
+		<div class="form-group-item">
+			<label for="formInlineAutofitLastName">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Last Name">Last Name</span>
+				</span>
+			</label>
 			<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
 		</div>
-		<div class="input-group">
-			<div class="input-group-addon">$</div>
-			<input class="form-control" id="exampleInputAmount" placeholder="Amount">
-			<div class="input-group-addon">.00</div>
-		</div>
-	</div>
-	<div class="align-items-end form-group form-inline-autofit">
-		<label for="formInlineAutofitCity">City</label>
-		<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
-		<select class="form-control">
-			<option>AL</option>
-			<option>CA</option>
-			<option>FL</option>
-			<option>HI</option>
-			<option>NV</option>
-			<option>WA</option>
-		</select>
-		<input class="form-control" placeholder="Zip" type="text">
-		<div class="form-inline-group">
-			<label for="formInlineAutofitDonation">Donation</label>
+		<div class="form-group-item">
+			<label for="formInlineAutofitInputGroup">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Input Group">Input Group</span>
+				</span>
+			</label>
 			<div class="input-group">
-				<div class="input-group-addon">$</div>
-				<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
-				<div class="input-group-addon">.00</div>
+				<div class="input-group-item input-group-item-shrink input-group-prepend">
+					<span class="input-group-text">$</span>
+				</div>
+				<div class="input-group-append input-group-item">
+					<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
+				</div>
+				<div class="input-group-append input-group-item input-group-item-shrink">
+					<span class="input-group-text">.00</span>
+				</div>
 			</div>
 		</div>
 	</div>
-	<button class="btn btn-primary" type="submit">Submit</button>{sp}
-	<a class="btn btn-danger" href="#1" role="button">Clear</a>
+	<div class="form-group-autofit">
+		<div class="form-group-item form-group-item-label form-group-item-label-spacer form-group-item-shrink">
+			<label for="formInlineAutofitCity">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="City">City</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-group-item form-group-item-label-spacer">
+			<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
+		</div>
+		<div class="form-group-item">
+			<label for="formInlineAutofitState">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</span>
+			</label>
+			<select class="form-control" id="formInlineAutofitState">
+				<option>AL</option>
+				<option>CA</option>
+				<option>FL</option>
+				<option>HI</option>
+				<option>NV</option>
+				<option>WA</option>
+			</select>
+		</div>
+		<div class="form-group-item">
+			<label for="formInlineAutofitZip">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Zip Code">Zip Code</span>
+				</span>
+			</label>
+			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
+		</div>
+		<div class="form-group-item">
+			<label for="formInlineAutofitDonation">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Donation">Donation</span>
+				</span>
+			</label>
+			<div class="input-group">
+				<div class="input-group-item input-group-item-shrink input-group-prepend">
+					<span class="input-group-text">$</span>
+				</div>
+				<div class="input-group-append input-group-item">
+					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
+				</div>
+				<div class="input-group-append input-group-item input-group-item-shrink">
+					<span class="input-group-text">.00</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" type="submit">Submit</button>{sp}
+		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+	</div>
 </div>
 
 ```text/html
-<div class="form-inline-autofit">
-	<div class="form-inline-group">
+<div class="form-group-autofit">
+	<div class="form-group-item">
 		<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
 		<input class="form-control" id="formInlineAutofitTextInput1" type="text">
 	</div>
-	<div class="form-inline-group">
+	<div class="form-group-item">
 		<label for="formInlineAutofitSelectElement1">Select Element</label>
 		<select class="form-control" id="formInlineAutofitSelectElement1">
 			<option>Option 1</option>
@@ -731,7 +794,7 @@ weight: 100
 </article>
 
 
-<article id="form-inline-autofit-2-columns">
+<article id="form-group-autofit-2-columns">
 
 ### Form Inline Autofit 2 Columns
 
@@ -749,22 +812,41 @@ weight: 100
 
 <div class="sheet">
 	<form class="my-custom-form">
-		<div class="form-group form-inline-autofit">
-			<label>Name</label>
-			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
-			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
-			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+		<div class="form-group-autofit">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
+				<label>Name</label>
+			</div>
+			<div class="form-group-item">
+				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+				<div class="form-text">Your first name.</div>
+			</div>
+			<div class="form-group-item">
+				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+			</div>
+			<div class="form-group-item">
+				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+			</div>
 		</div>
-		<div class="form-group form-inline-autofit">
-			<label for="formInlineAutofitCustomAddress1">Address 1</label>
-			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+		<div class="form-group-autofit">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
+				<label for="formInlineAutofitCustomAddress1">Address 1</label>
+			</div>
+			<div class="form-group-item">
+				<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+			</div>
 		</div>
-		<div class="form-group form-inline-autofit">
-			<label for="formInlineAutofitCustomAddress2">Address 2</label>
-			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+		<div class="form-group-autofit">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
+				<label for="formInlineAutofitCustomAddress2">Address 2</label>
+			</div>
+			<div class="form-group-item">
+				<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+			</div>
 		</div>
-		<button class="btn btn-primary" type="submit">Submit</button>{sp}
-		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit">Submit</button>{sp}
+			<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+		</div>
 	</form>
 </div>
 
@@ -778,22 +860,41 @@ weight: 100
 </style>
 <div class="sheet">
 	<form class="my-custom-form">
-		<div class="form-group form-inline-autofit">
-			<label>Name</label>
-			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
-			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
-			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+		<div class="form-group-autofit">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
+				<label>Name</label>
+			</div>
+			<div class="form-group-item">
+				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+				<div class="form-text">Your first name.</div>
+			</div>
+			<div class="form-group-item">
+				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+			</div>
+			<div class="form-group-item">
+				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+			</div>
 		</div>
-		<div class="form-group form-inline-autofit">
-			<label for="formInlineAutofitCustomAddress1">Address 1</label>
-			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+		<div class="form-group-autofit">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
+				<label for="formInlineAutofitCustomAddress1">Address 1</label>
+			</div>
+			<div class="form-group-item">
+				<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+			</div>
 		</div>
-		<div class="form-group form-inline-autofit">
-			<label for="formInlineAutofitCustomAddress2">Address 2</label>
-			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+		<div class="form-group-autofit">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
+				<label for="formInlineAutofitCustomAddress2">Address 2</label>
+			</div>
+			<div class="form-group-item">
+				<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+			</div>
 		</div>
-		<button class="btn btn-primary" type="submit">Submit</button>
-		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit">Submit</button>
+			<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+		</div>
 	</form>
 </div>
 ```
