@@ -226,6 +226,7 @@
 							}
 
 							.navbar-form {
+								height: $height-mobile - $border-bottom-width - $border-top-width;
 								padding-bottom: $link-padding-y-mobile;
 								padding-left: $link-padding-x-mobile;
 								padding-right: $link-padding-x-mobile;
@@ -262,8 +263,15 @@
 
 						.navbar-form {
 							@if ($scaling-navbar) {
+								height: $height - $border-bottom-width - $border-top-width;
 								padding-left: $link-padding-x;
 								padding-right: $link-padding-x;
+
+								> .container,
+								> .container-fluid {
+									padding-left: 0;
+									padding-right: 0;
+								}
 
 								.form-control {
 									height: $form-control-height;
