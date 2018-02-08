@@ -518,15 +518,17 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -569,12 +571,14 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -695,12 +699,14 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -746,9 +752,11 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -791,18 +799,20 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -845,15 +855,17 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -899,12 +911,14 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -992,12 +1006,14 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1040,15 +1056,17 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1094,12 +1112,14 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1142,21 +1162,23 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1199,18 +1221,20 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1256,15 +1280,17 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1313,12 +1339,14 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1367,12 +1395,14 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1418,15 +1448,17 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1469,18 +1501,20 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1526,15 +1560,17 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1577,24 +1613,26 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1637,21 +1675,23 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1697,18 +1737,20 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1757,15 +1799,17 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1816,22 +1860,26 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1880,15 +1928,17 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1934,18 +1984,20 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -1988,21 +2040,23 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2048,18 +2102,20 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2102,27 +2158,29 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2165,24 +2223,26 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2228,21 +2288,23 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2291,18 +2353,20 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2353,25 +2417,29 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2422,25 +2490,29 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2489,18 +2561,20 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2546,21 +2620,23 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2603,24 +2679,26 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -2666,21 +2744,23 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3203,15 +3283,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3254,12 +3336,14 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3380,12 +3464,14 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3431,9 +3517,11 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3476,18 +3564,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3530,15 +3620,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3584,12 +3676,14 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3677,12 +3771,14 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3725,15 +3821,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3779,12 +3877,14 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3827,21 +3927,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3884,18 +3986,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3941,15 +4045,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -3998,12 +4104,14 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4052,12 +4160,14 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4103,15 +4213,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4154,18 +4266,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4211,15 +4325,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4262,24 +4378,26 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4322,21 +4440,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4382,18 +4502,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4442,15 +4564,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4501,22 +4625,26 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4565,15 +4693,17 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4619,18 +4749,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4673,21 +4805,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4733,18 +4867,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4787,27 +4923,29 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4850,24 +4988,26 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4913,21 +5053,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -4976,18 +5118,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5038,25 +5182,29 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+    </ul>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5107,25 +5255,29 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+    </ul>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5174,18 +5326,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5231,21 +5385,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5288,24 +5444,26 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5351,21 +5509,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5408,27 +5568,29 @@ exports[`ClayPagination should render a ClayPagination with classes 1`] = `
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5471,27 +5633,29 @@ exports[`ClayPagination should render a ClayPagination with id 1`] = `
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
@@ -5534,27 +5698,29 @@ exports[`ClayPagination should render the default markup 1`] = `
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#3">3</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#4">4</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#5">5</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#6">6</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#7">7</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#8">8</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#9">9</a>
-    </li>
+    <ul class="list-unstyled">
+      <li>
+        <a class=" dropdown-item" href="#3">3</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#4">4</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#5">5</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#6">6</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#7">7</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#8">8</a>
+      </li>
+      <li>
+        <a class=" dropdown-item" href="#9">9</a>
+      </li>
+    </ul>
   </ul>
 </div>
 `;
