@@ -25,18 +25,20 @@
 	{@param? selectable: bool}
 	{@param? spritemap: string}
 
-	{let $attributes kind="attributes"}
-		{if $elementClasses}
-			class="{$elementClasses}"
-		{/if}
+	{if $items and $spritemap}
+		{let $attributes kind="attributes"}
+			class="card-page
+				{if $elementClasses}
+					{sp}{$elementClasses}
+				{/if}
+			"
 
-		{if $id}
-			id="{$id}"
-		{/if}
-	{/let}
+			{if $id}
+				id="{$id}"
+			{/if}
+		{/let}
 
-	<div {$attributes}>
-		{if $items and $spritemap}
+		<ul {$attributes}>
 			{call .items}
 				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
@@ -44,8 +46,8 @@
 				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 			{/call}
-		{/if}
-	</div>
+		</ul>
+	{/if}
 {/template}
 
 /**
@@ -140,7 +142,9 @@
 				id="group-{$currentgroupName}"
 			{/let}
 
-			<h4 {$headerAttributes}>{$item.label}</h4>
+			<li>
+				<h4 {$headerAttributes}>{$item.label}</h4>
+			</li>
 
 			{call .items}
 				{param groupName: $currentgroupName /}
@@ -151,10 +155,6 @@
 				{param spritemap: $spritemap /}
 			{/call}
 		{else}
-			{if isFirst($item)}
-				<ul class="card-page">
-			{/if}
-
 			{call .item}
 				{param groupName: $groupName /}
 				{param handleItemToggled_: $handleItemToggled_ /}
@@ -163,10 +163,6 @@
 				{param selectable: $selectable /}
 				{param spritemap: $spritemap /}
 			{/call}
-
-			{if isLast($item)}
-				</ul>
-			{/if}
 		{/if}
 	{/foreach}
 {/template}
