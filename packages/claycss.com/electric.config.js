@@ -31,7 +31,18 @@ if (clayPath) {
 const excludedComponents = /.*pagination/;
 const metalComponents = ['electric-quartz-components']
 	.concat(fs.readdirSync('../').filter(f => f.match(/^clay-.*/) && !f.match(excludedComponents)));
-
+const pathSrc = 'src';
+const ignoreDirs = ['components', 'layouts', 'pages', 'partials', 'styles'];
+const ignoreGlob = path.join(
+	'!' + pathSrc,
+	'+(' + ignoreDirs.join('|') + ')/'
+);
+const staticSrc = [
+	path.join(pathSrc, '**/*'),
+	path.join('!' + pathSrc, 'site.json'),
+	ignoreGlob,
+	path.join(ignoreGlob, '**/*'),
+];
 
 module.exports = {
 	frontMatterHook: function(data) {
@@ -43,6 +54,7 @@ module.exports = {
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths],
 	},
+	staticStc: staticSrc,
 	vendorSrc: [
 		{
 			dest: 'dist/vendor/lexicon',
