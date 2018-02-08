@@ -1,258 +1,258 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayCardGrid should render a ClayCardGrid with classes 1`] = `<div class="my-custom-class"></div>`;
+exports[`ClayCardGrid should render a ClayCardGrid with classes 1`] = `<ul class="card-page my-custom-class"></ul>`;
 
-exports[`ClayCardGrid should render a ClayCardGrid with id 1`] = `<div id="myId"></div>`;
+exports[`ClayCardGrid should render a ClayCardGrid with id 1`] = `<ul class="card-page" id="myId"></ul>`;
 
 exports[`ClayCardGrid should render the default markup 1`] = `
-<div>
-  <h4 class="card-section-header" id="group-0">Folders</h4>
-  <ul class="card-page">
-    <li class="card-page-item-directory">
-      <div class="card-type-directory card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col">
-              <span class="sticker sticker-unstyled">
-                <span class="sticker-overlay">
-                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                    <title>folder</title>
-                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
-                  </svg>
-                </span>
-              </span>
-            </div>
-            <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate">Photos</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-directory card card-horizontal">
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col">
-              <span class="sticker sticker-unstyled">
-                <span class="sticker-overlay">
-                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-                    <title>folder</title>
-                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
-                  </svg>
-                </span>
-              </span>
-            </div>
-            <div class="autofit-col autofit-col-expand autofit-col-gutters">
-              <div class="card-title text-truncate">Videos</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <h4 class="card-section-header" id="group-1">Recipes</h4>
-  <ul class="card-page">
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-              <title>exclamation-circle</title>
-              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
-            </svg>
-          </div>
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">PDF</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <a class=" card-title text-truncate" href="#">Hamburger</a>
-              <div class="card-subtitle text-truncate">U.S.A</div>
-              <div class="card-detail">
-                <span class="label label-success">No Spicy</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">PDF</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <a class=" card-title text-truncate" href="#">Ramen</a>
-              <div class="card-subtitle text-truncate">China</div>
-              <div class="card-detail">
-                <span class="label label-warning">Spicy</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">PDF</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <a class=" card-title text-truncate" href="#">Paella</a>
-              <div class="card-subtitle text-truncate">Spain</div>
-              <div class="card-detail">
-                <span class="label label-success">No Spicy</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-              <title>exclamation-circle</title>
-              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
-            </svg>
-          </div>
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">PDF</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <a class=" card-title text-truncate" href="#">Pizza</a>
-              <div class="card-subtitle text-truncate">Italy</div>
-              <div class="card-detail">
-                <span class="label label-success">No Spicy</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">PDF</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <a class=" card-title text-truncate" href="#">Carcamusas</a>
-              <div class="card-subtitle text-truncate">Toledo</div>
-              <div class="card-detail">
-                <span class="label label-warning">Spicy</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card image-card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
-              <title>exclamation-circle</title>
-              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
-            </svg>
-          </div>
-          <span class="sticker sticker-danger sticker-bottom-left">
-            <span class="sticker-overlay">PDF</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <a class=" card-title text-truncate" href="#">Tacos</a>
-              <div class="card-subtitle text-truncate">Mexico</div>
-              <div class="card-detail">
-                <span class="label label-danger">Very Spicy</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <h4 class="card-section-header" id="group-2">Chefs</h4>
-  <ul class="card-page">
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-danger rounded-circle sticker-xl">
-              <span class="sticker-overlay">FA</span>
-            </span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <div class="card-title text-truncate">Ferrán Adriá</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl">
+<ul class="card-page">
+  <li>
+    <h4 class="card-section-header" id="group-0">Folders</h4>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-directory card card-horizontal">
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col">
+            <span class="sticker sticker-unstyled">
               <span class="sticker-overlay">
-                <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                </svg>
               </span>
             </span>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <div class="card-title text-truncate">Gordon Ramsay</div>
-            </div>
+          <div class="autofit-col autofit-col-expand autofit-col-gutters">
+            <div class="card-title text-truncate">Photos</div>
           </div>
         </div>
       </div>
-    </li>
-    <li class="card-page-item-directory">
-      <div class="card-type-asset card">
-        <div class="aspect-ratio card-item-first">
-          <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <span class="sticker sticker-primary rounded-circle sticker-xl">
-              <span class="sticker-overlay">AC</span>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-directory card card-horizontal">
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col">
+            <span class="sticker sticker-unstyled">
+              <span class="sticker-overlay">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                  <title>folder</title>
+                  <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                </svg>
+              </span>
             </span>
           </div>
+          <div class="autofit-col autofit-col-expand autofit-col-gutters">
+            <div class="card-title text-truncate">Videos</div>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="card-row">
-            <div class="autofit-col autofit-col-expand">
-              <div class="card-title text-truncate">Alberto Chicote</div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <h4 class="card-section-header" id="group-1">Recipes</h4>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card image-card">
+      <div class="aspect-ratio card-item-first">
+        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </div>
+        <span class="sticker sticker-danger sticker-bottom-left">
+          <span class="sticker-overlay">PDF</span>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <a class=" card-title text-truncate" href="#">Hamburger</a>
+            <div class="card-subtitle text-truncate">U.S.A</div>
+            <div class="card-detail">
+              <span class="label label-success">No Spicy</span>
             </div>
           </div>
         </div>
       </div>
-    </li>
-  </ul>
-</div>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card image-card">
+      <div class="aspect-ratio card-item-first">
+        <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
+        <span class="sticker sticker-danger sticker-bottom-left">
+          <span class="sticker-overlay">PDF</span>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <a class=" card-title text-truncate" href="#">Ramen</a>
+            <div class="card-subtitle text-truncate">China</div>
+            <div class="card-detail">
+              <span class="label label-warning">Spicy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card image-card">
+      <div class="aspect-ratio card-item-first">
+        <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
+        <span class="sticker sticker-danger sticker-bottom-left">
+          <span class="sticker-overlay">PDF</span>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <a class=" card-title text-truncate" href="#">Paella</a>
+            <div class="card-subtitle text-truncate">Spain</div>
+            <div class="card-detail">
+              <span class="label label-success">No Spicy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card image-card">
+      <div class="aspect-ratio card-item-first">
+        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </div>
+        <span class="sticker sticker-danger sticker-bottom-left">
+          <span class="sticker-overlay">PDF</span>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <a class=" card-title text-truncate" href="#">Pizza</a>
+            <div class="card-subtitle text-truncate">Italy</div>
+            <div class="card-detail">
+              <span class="label label-success">No Spicy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card image-card">
+      <div class="aspect-ratio card-item-first">
+        <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
+        <span class="sticker sticker-danger sticker-bottom-left">
+          <span class="sticker-overlay">PDF</span>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <a class=" card-title text-truncate" href="#">Carcamusas</a>
+            <div class="card-subtitle text-truncate">Toledo</div>
+            <div class="card-detail">
+              <span class="label label-warning">Spicy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card image-card">
+      <div class="aspect-ratio card-item-first">
+        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+            <title>exclamation-circle</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </div>
+        <span class="sticker sticker-danger sticker-bottom-left">
+          <span class="sticker-overlay">PDF</span>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <a class=" card-title text-truncate" href="#">Tacos</a>
+            <div class="card-subtitle text-truncate">Mexico</div>
+            <div class="card-detail">
+              <span class="label label-danger">Very Spicy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <h4 class="card-section-header" id="group-2">Chefs</h4>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card">
+      <div class="aspect-ratio card-item-first">
+        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+          <span class="sticker sticker-danger rounded-circle sticker-xl">
+            <span class="sticker-overlay">FA</span>
+          </span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <div class="card-title text-truncate">Ferrán Adriá</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card">
+      <div class="aspect-ratio card-item-first">
+        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+          <span class="sticker sticker-primary rounded-circle sticker-xl">
+            <span class="sticker-overlay">
+              <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <div class="card-title text-truncate">Gordon Ramsay</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="card-page-item-directory">
+    <div class="card-type-asset card">
+      <div class="aspect-ratio card-item-first">
+        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+          <span class="sticker sticker-primary rounded-circle sticker-xl">
+            <span class="sticker-overlay">AC</span>
+          </span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="autofit-col autofit-col-expand">
+            <div class="card-title text-truncate">Alberto Chicote</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
 `;
