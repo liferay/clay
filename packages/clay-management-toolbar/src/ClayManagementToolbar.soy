@@ -54,12 +54,12 @@
 	]>}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
-	{@param? infoButton: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
+	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
 	{@param? totalItems: number}
@@ -103,11 +103,11 @@
 			{param filterItems: $filterItems /}
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
-			{param infoButton: $infoButton /}
 			{param searchActionURL: $searchActionURL /}
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
 			{param selectable: $selectable /}
+			{param showInfoButton: $showInfoButton /}
 			{param showSearch: $showSearch != false /}
 			{param sortingOrder: $sortingOrder /}
 			{param spritemap: $spritemap /}
@@ -263,11 +263,11 @@
 	]>}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
-	{@param? infoButton: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
+	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
 	{@param? viewTypes: list<[
@@ -394,7 +394,7 @@
 					</li>
 				{/if}
 
-				{if $infoButton}
+				{if $showInfoButton}
 					<li class="nav-item">
 						{call ClayButton.render}
 							{param elementClasses: 'nav-link nav-link-monospaced' /}

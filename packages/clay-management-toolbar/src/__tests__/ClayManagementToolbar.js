@@ -372,7 +372,7 @@ describe('ClayManagementToolbar', function() {
 	it('should render a management toolbar with info button', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
-			infoButton: true,
+			showInfoButton: true,
 		});
 
 		expect(managementToolbar).toMatchSnapshot();
@@ -629,7 +629,7 @@ describe('ClayManagementToolbar', function() {
 	it('should render a management toolbar with info button and emit an event on infoButton click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
-			infoButton: true,
+			showInfoButton: true,
 		});
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
