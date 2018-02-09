@@ -53,12 +53,12 @@
 	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
-	{@param? infoButton: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
+	{@param? showInfoButton: bool}
 	{@param? showSearch_: bool}
 	{@param? sortingOrder: string}
 	{@param? totalItems: number}
@@ -101,11 +101,11 @@
 			{param handleViewTypeClicked_: $handleViewTypeClicked_ /}
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
-			{param infoButton: $infoButton /}
 			{param searchActionURL: $searchActionURL /}
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
 			{param selectable: $selectable /}
+			{param showInfoButton: $showInfoButton /}
 			{param showSearch_: $showSearch_ /}
 			{param sortingOrder: $sortingOrder /}
 			{param spritemap: $spritemap /}
@@ -260,11 +260,11 @@
 	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
-	{@param? infoButton: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
+	{@param? showInfoButton: bool}
 	{@param? showSearch_: bool}
 	{@param? sortingOrder: string}
 	{@param? viewTypes: list<[
@@ -373,7 +373,7 @@
 					{/call}
 				</li>
 
-				{if $infoButton}
+				{if $showInfoButton}
 					<li class="nav-item">
 						{call ClayButton.render}
 							{param elementClasses: 'nav-link nav-link-monospaced' /}

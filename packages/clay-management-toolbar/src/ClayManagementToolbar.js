@@ -230,15 +230,6 @@ ClayManagementToolbar.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Flag to indicate if the Info button is needed.
-	 * @instance
-	 * @memberof ClayManagementToolbar
-	 * @type {?bool}
-	 * @default false
-	 */
-	infoButton: Config.bool().value(false),
-
-	/**
 	 * URL of the search form action
 	 * @instance
 	 * @memberof ClayManagementToolbar
@@ -283,6 +274,15 @@ ClayManagementToolbar.STATE = {
 	 * @default undefined
 	 */
 	selectedItems: Config.number(),
+
+	/**
+	 * Flag to indicate if the Info button should be shown or not.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default false
+	 */
+	showInfoButton: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if search should be shown in or not. This is for the
