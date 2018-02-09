@@ -18,11 +18,17 @@
 .input-group-item {
 	display: flex;
 	flex-grow: 1;
+	flex-wrap: wrap;
 	margin-left: 0.5rem;
 	width: 1%;
+	word-wrap: break-word;
 
 	&:first-child {
 		margin-left: 0;
+	}
+
+	> .btn {
+		align-self: flex-start;
 	}
 }
 
@@ -77,11 +83,6 @@
 }
 
 .input-group > .input-group-append {
-	&:not(:last-child) > .form-control,
-	&:last-child > .form-control:not(:last-child) {
-		@include border-right-radius(0);
-	}
-
 	> .form-control {
 		@include border-left-radius(0);
 	}
@@ -145,7 +146,9 @@
 }
 
 .input-group-inset {
+	flex-grow: 1;
 	order: 5;
+	width: 1%;
 
 	&[readonly] {
 		&:focus {
@@ -178,6 +181,10 @@
 			background-color: $input-disabled-bg;
 			border-color: $input-disabled-border-color;
 		}
+	}
+
+	~ .form-feedback-group {
+		order: 13;
 	}
 }
 
