@@ -1,10 +1,50 @@
 # Change Log
 
+## [v2.0.0-rc.1](https://github.com/liferay/clay/tree/v2.0.0-rc.1) (2018-02-09)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.0...v2.0.0-rc.1)
+
+**Implemented enhancements:**
+
+- Create a Map Chart in Clay Charts [\#509](https://github.com/liferay/clay/issues/509)
+
+**Fixed bugs:**
+
+- Side Navigation plugin mobile breakpoint is ~15px too high [\#504](https://github.com/liferay/clay/issues/504)
+- Wrong delTemplate ClayDropdownBase [\#485](https://github.com/liferay/clay/issues/485)
+
+**Closed issues:**
+
+- Inputs with help or error messages must have the same parent element [\#537](https://github.com/liferay/clay/issues/537)
+- Website not accessible: ERR\_TOO\_MANY\_REDIRECTS [\#528](https://github.com/liferay/clay/issues/528)
+- We need to update Clay Dropdown markup [\#527](https://github.com/liferay/clay/issues/527)
+- Accessibility issue in ClayManagementToolbar [\#518](https://github.com/liferay/clay/issues/518)
+- Breaking input-group-item in Firefox [\#516](https://github.com/liferay/clay/issues/516)
+- management bar does not look correctly when contains only a search [\#512](https://github.com/liferay/clay/issues/512)
+- Enable chart background "patterns" on demand [\#495](https://github.com/liferay/clay/issues/495)
+- Move charts demos to claycss.com [\#456](https://github.com/liferay/clay/issues/456)
+
+**Merged pull requests:**
+
+- Updates CHANGELOG for v2.0.0-rc.0 [\#541](https://github.com/liferay/clay/pull/541) ([jbalsas](https://github.com/jbalsas))
+- \#537 Inputs with help or error messages must have the same parent element [\#540](https://github.com/liferay/clay/pull/540) ([pat270](https://github.com/pat270))
+- Update the Table markup at claycss.com [\#539](https://github.com/liferay/clay/pull/539) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update markups on form elements at claycss.com [\#538](https://github.com/liferay/clay/pull/538) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- \#512 management bar does not look correctly when contains only a search [\#535](https://github.com/liferay/clay/pull/535) ([pat270](https://github.com/pat270))
+- Update metal-tools-soy to 6.0.0 | Fixes \#530 [\#533](https://github.com/liferay/clay/pull/533) ([carloslancha](https://github.com/carloslancha))
+- Makes sure we run soy before generating the site \(Fixes \#509\) [\#529](https://github.com/liferay/clay/pull/529) ([jbalsas](https://github.com/jbalsas))
+- Update: \(Fixes \#516\) Forms `.form-control` in Firefox should shrink t… [\#524](https://github.com/liferay/clay/pull/524) ([pat270](https://github.com/pat270))
+- Add Chart examples to claycss.com [\#521](https://github.com/liferay/clay/pull/521) ([julien](https://github.com/julien))
+- Fix accessibility issue | Fixes \#518 [\#519](https://github.com/liferay/clay/pull/519) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update prettier-eslint-cli to 4.7.0 [\#514](https://github.com/liferay/clay/pull/514) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Use tiles when it's true | Fixes \#495 [\#513](https://github.com/liferay/clay/pull/513) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update: \(Fixes \#504\) Side Navigation JS breakpoint region should use window size + scrollbar [\#506](https://github.com/liferay/clay/pull/506) ([pat270](https://github.com/pat270))
+
 ## [v2.0.0-rc.0](https://github.com/liferay/clay/tree/v2.0.0-rc.0) (2018-02-01)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-beta.8...v2.0.0-rc.0)
 
 **Implemented enhancements:**
 
+- Update metal-tools-soy | Some markup fails compiling with metal-tools-soy 6.0.0 [\#530](https://github.com/liferay/clay/issues/530)
 - Wedeploy branch is being tested in Travis [\#483](https://github.com/liferay/clay/issues/483)
 
 **Closed issues:**
