@@ -6,6 +6,11 @@
 	font-weight: $form-feedback-font-weight;
 }
 
+.form-feedback-group {
+	width: 100%;
+	word-wrap: break-word;
+}
+
 .form-feedback-item {
 	font-size: $form-feedback-font-size;
 	font-weight: $form-feedback-font-weight;

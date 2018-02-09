@@ -71,6 +71,7 @@ label {
 	}
 
 	height: $input-height;
+	min-width: 0;
 
 	@if not ($input-padding-y == $btn-padding-y) {
 		padding-bottom: $input-padding-y;
@@ -320,6 +321,10 @@ fieldset[disabled] label {
 	@include media-breakpoint-up(sm) {
 		flex-direction: row;
 		width: 100%;
+	}
+
+	label {
+		align-self: flex-start;
 	}
 
 	.form-group-item {

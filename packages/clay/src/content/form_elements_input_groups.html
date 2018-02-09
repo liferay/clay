@@ -56,7 +56,7 @@ section: Components
 		<h3>Input Group (Connected)</h3>
 
 		<blockquote class="blockquote">
-			<p>Create connected <code>.input-group</code>'s by adding <code>.input-group-prepend</code> to the first <code>.input-group-item</code> and <code>.input-group-append</code> to each subsequent <code>.input-group-item</code>.</p>
+			<p>Create connected <code>.input-group</code>'s by adding <code>.input-group-prepend</code> to every <code>.input-group-item</code> and <code>.input-group-append</code> to the last <code>.input-group-item</code>.</p>
 		</blockquote>
 
 <div class="sheet">
@@ -65,7 +65,7 @@ section: Components
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text" id="basicAddon1">@</span>
 			</div>
-			<div class="input-group-item input-group-append">
+			<div class="input-group-append input-group-item">
 				<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
 			</div>
 		</div>
@@ -75,13 +75,13 @@ section: Components
 			<div class="input-group-item input-group-prepend">
 				<input class="form-control" placeholder="Email" type="text">
 			</div>
-			<div class="input-group-item input-group-item-shrink input-group-append">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">@</span>
 			</div>
-			<div class="input-group-item input-group-append">
+			<div class="input-group-item input-group-prepend">
 				<input class="form-control" placeholder="liferay" type="text">
 			</div>
-			<div class="input-group-item input-group-item-shrink input-group-append">
+			<div class="input-group-append input-group-item input-group-item-shrink">
 				<span class="input-group-text">.com</span>
 			</div>
 		</div>
@@ -91,19 +91,19 @@ section: Components
 			<div class="input-group-item input-group-prepend">
 				<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
 			</div>
-			<div class="input-group-item input-group-item-shrink input-group-append">
+			<div class="input-group-append input-group-item input-group-item-shrink">
 				<span class="input-group-text" id="basicAddon2">@example.com</span>
 			</div>
 		</div>
 	</div>
 	<div class="form-group">
 		<label>Liferay</label>
-		<span class="form-text">http://www.liferay.com</span>
+		<div class="form-text">http://www.liferay.com</div>
 		<div class="input-group">
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">/</span>
 			</div>
-			<div class="input-group-item">
+			<div class="input-group-append input-group-item">
 				<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
 			</div>
 		</div>
@@ -113,10 +113,10 @@ section: Components
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">$</span>
 			</div>
-			<div class="input-group-item input-group-append">
+			<div class="input-group-item input-group-prepend">
 				<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
 			</div>
-			<div class="input-group-item input-group-item-shrink input-group-append">
+			<div class="input-group-append input-group-item input-group-item-shrink">
 				<span class="input-group-text">.00</span>
 			</div>
 		</div>
@@ -143,19 +143,19 @@ section: Components
 			<div class="input-group-item input-group-prepend">
 				<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
 			</div>
-			<div class="input-group-item input-group-item-shrink input-group-append">
+			<div class="input-group-append input-group-item input-group-item-shrink">
 				<button class="btn btn-secondary" type="submit">Submit</button>
 			</div>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="localizableInput1">Liferay</label>
-		<span class="form-text">http://www.liferay.com</span>
+		<div class="form-text">http://www.liferay.com</div>
 		<div class="input-group">
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">/</span>
 			</div>
-			<div class="input-group-item">
+			<div class="input-group-append input-group-item">
 				<input class="form-control" id="localizableInput1" placeholder="design/lexicon" type="text" value="soluciones">
 			</div>
 			<div class="input-group-item input-group-item-shrink">
@@ -335,7 +335,7 @@ section: Components
 					</div>
 				</span>
 			</div>
-			<div class="input-group-item input-group-append">
+			<div class="input-group-append input-group-item">
 				<input aria-label="Text input with checkbox" class="form-control" type="text">
 			</div>
 		</div>
@@ -355,7 +355,7 @@ section: Components
 					</div>
 				</span>
 			</div>
-			<div class="input-group-item input-group-append">
+			<div class="input-group-append input-group-item">
 				<input aria-label="Text input with checkbox" class="form-control" type="text">
 			</div>
 		</div>
@@ -366,7 +366,7 @@ section: Components
 			<div class="input-group-item input-group-prepend">
 				<input aria-label="Text input with checkbox" class="form-control" type="text">
 			</div>
-			<div class="input-group-item input-group-item-shrink input-group-append">
+			<div class="input-group-append input-group-item input-group-item-shrink">
 				<span class="input-group-text input-group-text-secondary">
 					<div class="form-check">
 						<label class="form-check-label">
@@ -391,7 +391,7 @@ section: Components
 					</div>
 				</span>
 			</div>
-			<div class="input-group-item input-group-append">
+			<div class="input-group-append input-group-item">
 				<input aria-label="Text input with radio button" class="form-control" type="text">
 			</div>
 		</div>
@@ -402,7 +402,7 @@ section: Components
 			<div class="input-group-item input-group-prepend">
 				<input aria-label="Text input with radio button" class="form-control" type="text">
 			</div>
-			<div class="input-group-item input-group-item-shrink input-group-append">
+			<div class="input-group-append input-group-item input-group-item-shrink">
 				<span class="input-group-text input-group-text-secondary">
 					<div class="form-check">
 						<label class="form-check-label">
@@ -510,7 +510,7 @@ section: Components
 			<div class="input-group-item input-group-prepend">
 				<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
 			</div>
-			<div class="input-group-append input-group-item input-group-item-shrink">
+			<div class="input-group-prepend input-group-item input-group-item-shrink">
 				<button class="btn btn-secondary" type="button">Action</button>
 			</div>
 			<div class="input-group-append input-group-item input-group-item-shrink">
@@ -546,7 +546,7 @@ section: Components
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">$</span>
 			</div>
-			<div class="input-group-append input-group-item">
+			<div class="input-group-prepend input-group-item">
 				<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
 			</div>
 			<div class="input-group-append input-group-item input-group-item-shrink">
@@ -559,7 +559,7 @@ section: Components
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">$</span>
 			</div>
-			<div class="input-group-append input-group-item">
+			<div class="input-group-item input-group-prepend">
 				<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
 			</div>
 			<div class="input-group-append input-group-item-shrink">
@@ -572,7 +572,7 @@ section: Components
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">$</span>
 			</div>
-			<div class="input-group-append input-group-item">
+			<div class="input-group-item input-group-prepend">
 				<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
 			</div>
 			<div class="input-group-append input-group-item input-group-item-shrink">
@@ -591,7 +591,7 @@ section: Components
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">$</span>
 			</div>
-			<div class="input-group-item">
+			<div class="input-group-item input-group-append">
 				<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupLgSeparated" placeholder="Some placeholder text..." type="text">
 			</div>
 			<div class="input-group-item input-group-item-shrink">
@@ -641,7 +641,7 @@ section: Components
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<span class="input-group-text">$</span>
 			</div>
-			<div class="input-group-item">
+			<div class="input-group-append input-group-item">
 				<input aria-label="Amount" class="form-control" id="inputGroupSmSeparated" placeholder="Some placeholder text..." type="text">
 			</div>
 			<div class="input-group-item input-group-item-shrink">

@@ -1,6 +1,7 @@
 'use strict';
 
 const clay = require('clay');
+const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
 
@@ -27,16 +28,33 @@ if (clayPath) {
 	);
 }
 
+const excludedComponents = /.*pagination/;
+const metalComponents = ['electric-quartz-components']
+	.concat(fs.readdirSync('../').filter(f => f.match(/^clay-.*/) && !f.match(excludedComponents)));
+const pathSrc = 'src';
+const ignoreDirs = ['components', 'layouts', 'pages', 'partials', 'styles'];
+const ignoreGlob = path.join(
+	'!' + pathSrc,
+	'+(' + ignoreDirs.join('|') + ')/'
+);
+const staticSrc = [
+	path.join(pathSrc, '**/*'),
+	path.join('!' + pathSrc, 'site.json'),
+	ignoreGlob,
+	path.join(ignoreGlob, '**/*'),
+];
+
 module.exports = {
 	frontMatterHook: function(data) {
 		return generateIconData(data);
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
-	metalComponents: ['electric-quartz-components'],
+	metalComponents: metalComponents,
 	resolveModules: ['../../node_modules'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths],
 	},
+	staticStc: staticSrc,
 	vendorSrc: [
 		{
 			dest: 'dist/vendor/lexicon',
@@ -50,6 +68,9 @@ module.exports = {
 		},
 		{
 			src: path.join(clayJSPath, 'svg4everybody.js'),
+		},
+		{
+			src: path.join('../clay-charts/build/clay-charts.css'),
 		},
 	],
 };

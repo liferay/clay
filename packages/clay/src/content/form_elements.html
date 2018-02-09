@@ -379,7 +379,7 @@ section: Components
 		</blockquote>
 
 		<div class="alert alert-warning">
-			Form Group Autofit doesn't support <code>.form-feedback-item</code> or <code>.form-text</code> + <code>label</code>'s with long text that breaks to new lines.
+			Form Group Autofit doesn't support <code>label</code>'s with long text that breaks to new lines or multiple new lines above the input.
 		</div>
 
 <div class="sheet">
@@ -432,14 +432,16 @@ section: Components
 				<div class="input-group-item input-group-item-shrink input-group-prepend">
 					<span class="input-group-text">$</span>
 				</div>
-				<div class="input-group-append input-group-item">
+				<div class="input-group-item input-group-prepend">
 					<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
 				</div>
 				<div class="input-group-append input-group-item input-group-item-shrink">
 					<span class="input-group-text">.00</span>
 				</div>
 			</div>
-			<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+			<div class="form-feedback-group">
+				<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+			</div>
 		</div>
 	</div>
 	<div class="form-group-autofit">
@@ -475,7 +477,9 @@ section: Components
 				</span>
 			</label>
 			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
-			<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+			<div class="form-feedback-group">
+				<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+			</div>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitDonation">
@@ -487,7 +491,7 @@ section: Components
 				<div class="input-group-item input-group-item-shrink input-group-prepend">
 					<span class="input-group-text">$</span>
 				</div>
-				<div class="input-group-append input-group-item">
+				<div class="input-group-item input-group-prepend">
 					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
 				</div>
 				<div class="input-group-append input-group-item input-group-item-shrink">
@@ -528,14 +532,18 @@ section: Components
 			</div>
 			<div class="form-group-item">
 				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
-				<div class="form-text">Your first name.</div>
+				<div class="form-feedback-group">
+					<div class="form-text">Your first name.</div>
+				</div>
 			</div>
 			<div class="form-group-item">
 				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
 			</div>
 			<div class="form-group-item">
 				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
-				<div class="form-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
+				<div class="form-feedback-group">
+					<div class="form-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
+				</div>
 			</div>
 		</div>
 		<div class="form-group-autofit">

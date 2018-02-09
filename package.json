@@ -3,6 +3,7 @@
   "scripts": {
     "a11y": "metal-a11y --packages ./packages -c demos/a11y.html",
     "build": "lerna run build",
+    "compile": "lerna run compile",
     "checkFormat": "npm run prettier -- --list-different",
     "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
     "format": "npm run prettier -- --write",
@@ -11,8 +12,12 @@
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
     "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay-components,claycss.com,generator-metal-clay,node_modules}/**'",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
+    "soy": "lerna run soy",
     "start": "http-server . -p 4000",
-    "test": "npm run build && npm run jest && npm run a11y"
+    "test": "npm run build && npm run jest && npm run a11y",
+    "electric": "npm run soy && npm run compile && cd packages/claycss.com && el",
+    "web": "npm run electric -- run",
+    "deploy": "npm run electric -- deploy"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
@@ -28,7 +33,7 @@
     "metal-a11y-checker": "^1.0.5",
     "metal-jest-serializer": "^2.0.0",
     "metal-soy-critic": "^2.4.0",
-    "prettier-eslint-cli": "^4.3.2"
+    "prettier-eslint-cli": "^4.7.0"
   },
   "jest": {
     "collectCoverage": true,

@@ -142,12 +142,14 @@
 			{/if}
 
 			{let $listItemsContent kind="html"}
-				{delcall ClayDropdownBase.Items variant="$contentRenderer"}
-					{param handleItemClick_: $handleItemClick_ /}
-					{param items: $items /}
-					{param itemsIconAlignment: $itemsIconAlignment /}
-					{param spritemap: $spritemap /}
-				{/delcall}
+				<ul class="list-unstyled">
+					{delcall ClayDropdownBase.Items variant="$contentRenderer"}
+						{param handleItemClick_: $handleItemClick_ /}
+						{param items: $items /}
+						{param itemsIconAlignment: $itemsIconAlignment /}
+						{param spritemap: $spritemap /}
+					{/delcall}
+				</ul>
 			{/let}
 
 			{let $captionContent kind="html"}
@@ -381,9 +383,9 @@
 	{@param? spritemap: string}
 
 	{if $label and $label != ''}
-		<div class="dropdown-subheader" role="presentation">
+		<li class="dropdown-subheader" role="presentation">
 			{$label}
-		</div>
+		</li>
 	{/if}
 
 	{if $items}
@@ -396,7 +398,7 @@
 	{/if}
 
 	{if $separator}
-		<div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 	{/if}
 {/deltemplate}
 
@@ -468,25 +470,27 @@
 	{@param? spritemap: string}
 
 	{if $label and $label != ''}
-		<div class="dropdown-subheader" role="presentation">
+		<li class="dropdown-subheader" role="presentation">
 			{$label}
-		</div>
+		</li>
 	{/if}
 
-	<div aria-label="{$label}" role="radiogroup">
+	<li aria-label="{$label}" role="radiogroup">
 		{if $items}
-			{delcall ClayDropdownBase.Items}
-				{param contentRenderer: 'radio' /}
-				{param handleItemClick_: $handleItemClick_ /}
-				{param items: $items /}
-				{param itemsIconAlignment: $itemsIconAlignment /}
-				{param spritemap: $spritemap /}
-			{/delcall}
+			<ul class="list-unstyled">
+				{delcall ClayDropdownBase.Items}
+					{param contentRenderer: 'radio' /}
+					{param handleItemClick_: $handleItemClick_ /}
+					{param items: $items /}
+					{param itemsIconAlignment: $itemsIconAlignment /}
+					{param spritemap: $spritemap /}
+				{/delcall}
+			</ul>
 		{/if}
-	</div>
+	</li>
 
 	{if $separator}
-		<div aria-hidden="true" class="dropdown-divider" role="presentation"></div>
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 	{/if}
 {/deltemplate}
 
@@ -501,10 +505,6 @@
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
-		{if $item.type != 'group' and $item.type != 'radiogroup' and (isFirst($item) or $items[index($item) - 1].type == 'group' or $items[index($item) - 1].type == 'radiogroup')}
-			<ul class="list-unstyled">
-		{/if}
-
 		{let $variant kind="text"}
 			{if isNonnull($contentRenderer) and $contentRenderer != ''}
 				{$contentRenderer}
@@ -530,9 +530,5 @@
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
 		{/delcall}
-
-		{if $item.type != 'group' and $item.type != 'radiogroup' and (isLast($item) or $items[index($item) + 1].type == 'group' or $items[index($item) + 1].type == 'radiogroup')}
-			</ul>
-		{/if}
 	{/foreach}
 {/deltemplate}
