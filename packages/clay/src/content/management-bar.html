@@ -59,14 +59,14 @@ section: Components
 								<div class="input-group-item">
 									<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 									<span class="input-group-inset-item input-group-inset-item-after">
-										<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-											</svg>
-										</button>
-										<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+										<button class="btn btn-unstyled" type="submit">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 												<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+											</svg>
+										</button>
+										<button class="btn btn-unstyled d-none" type="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 											</svg>
 										</button>
 									</span>
@@ -177,14 +177,14 @@ section: Components
 						<div class="input-group-item">
 							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 							<span class="input-group-inset-item input-group-inset-item-after">
-								<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-									</svg>
-								</button>
-								<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+								<button class="btn btn-unstyled" type="submit">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+									</svg>
+								</button>
+								<button class="btn btn-unstyled d-none" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 									</svg>
 								</button>
 							</span>
@@ -410,14 +410,14 @@ section: Components
 								<div class="input-group-item">
 									<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 									<span class="input-group-inset-item input-group-inset-item-after">
-										<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-											</svg>
-										</button>
-										<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+										<button class="btn btn-unstyled" type="submit">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 												<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+											</svg>
+										</button>
+										<button class="btn btn-unstyled d-none" type="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 											</svg>
 										</button>
 									</span>
@@ -502,6 +502,81 @@ section: Components
 
 <div class="clay-site-open-overlay clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Management Bar with only Search (Collapses in Mobile)</h3>
+
+		<nav class="management-bar management-bar-light navbar navbar-expand-md">
+			<div class="container-fluid container-fluid-max-xl">
+				<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+					<div class="container-fluid container-fluid-max-xl">
+						<form role="search">
+							<div class="input-group">
+								<div class="input-group-item">
+									<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+									<span class="input-group-inset-item input-group-inset-item-after">
+										<button class="btn btn-unstyled" type="submit">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+											</svg>
+										</button>
+										<button class="btn btn-unstyled d-none" type="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+											</svg>
+										</button>
+									</span>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<ul class="navbar-nav navbar-nav-last">
+					<li class="nav-item navbar-breakpoint-d-none">
+						<a class="nav-link nav-link-monospaced" href="#1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="clay-site-open-overlay clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Management Bar with only Search (Always Open)</h3>
+
+		<nav class="management-bar management-bar-light navbar navbar-expand-md">
+			<div class="container-fluid container-fluid-max-xl">
+				<div class="navbar-form navbar-form-autofit">
+					<form role="search">
+						<div class="input-group">
+							<div class="input-group-item">
+								<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+								<span class="input-group-inset-item input-group-inset-item-after">
+									<button class="btn btn-unstyled" type="submit">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+										</svg>
+									</button>
+									<button class="btn btn-unstyled d-none" type="button">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+										</svg>
+									</button>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="clay-site-open-overlay clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>With Buttons</h3>
 
 		<nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -548,14 +623,14 @@ section: Components
 								<div class="input-group-item">
 									<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 									<span class="input-group-inset-item input-group-inset-item-after">
-										<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-											</svg>
-										</button>
-										<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+										<button class="btn btn-unstyled" type="submit">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 												<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+											</svg>
+										</button>
+										<button class="btn btn-unstyled d-none" type="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 											</svg>
 										</button>
 									</span>
@@ -673,14 +748,14 @@ section: Components
 								<div class="input-group-item">
 									<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 									<span class="input-group-inset-item input-group-inset-item-after">
-										<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-											</svg>
-										</button>
-										<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+										<button class="btn btn-unstyled" type="submit">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 												<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+											</svg>
+										</button>
+										<button class="btn btn-unstyled d-none" type="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 											</svg>
 										</button>
 									</span>
@@ -800,7 +875,7 @@ section: Components
 		$(this).closest('.navbar').find('.navbar-overlay-sm-down').addClass('show');
 	});
 
-	$('.clay-site-open-overlay .input-group-inset-item .btn-unstyled').on('click', function(event) {
+	$('.clay-site-open-overlay .input-group-inset-item .btn-unstyled[type="button"]').on('click', function(event) {
 		$(this).closest('.navbar-overlay-sm-down').removeClass('show');
 	});
 
@@ -810,5 +885,24 @@ section: Components
 
 	$('.clay-site-close-overlay-up').on('click', function(event) {
 		$(this).closest('.navbar-overlay-up').removeClass('show');
+	});
+
+	$('.form-control').on('input', function(event) {
+		var value = $(this).val() === '';
+		var closeButton = $(this).closest('.input-group').find('[type="button"]');
+
+		if (value) {
+			closeButton.addClass('d-none');
+		}
+		else {
+			closeButton.removeClass('d-none');
+		}
+	});
+
+	$('.input-group').delegate('[type="submit"] + [type="button"]', 'click', function(event) {
+		var formControl = $(this).closest('.input-group').find('.form-control');
+		formControl.val('');
+		$(this).addClass('d-none');
+		formControl.focus();
 	});
 </script>
