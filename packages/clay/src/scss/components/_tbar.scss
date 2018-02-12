@@ -10,6 +10,8 @@
 .tbar-nav {
 	@extend %autofit-row;
 
+	margin-bottom: 0;
+
 	> .tbar-item {
 		justify-content: center;
 	}
