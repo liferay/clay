@@ -16,20 +16,24 @@ LineChart.STATE = {
 	 * @type {?Array|undefined}
 	 * @default []
 	 */
-	columns: Config.arrayOf(
-		Config.shapeOf({
-			axis: Config.oneOf(['y', 'y2']),
-			class: Config.string(),
-			color: Config.string(),
-			data: Config.array().required(),
-			hide: Config.bool(),
-			id: Config.required().string(),
-			name: Config.string(),
-			regions: Config.array(),
-			type: Config.oneOf(types.point),
-			x: Config.string(),
-		})
-	),
+	columns: Config.oneOfType([
+		Config.arrayOf(
+			Config.shapeOf({
+				axis: Config.oneOf(['y', 'y2']),
+				class: Config.string(),
+				color: Config.string(),
+				data: Config.array().required(),
+				hide: Config.bool(),
+				id: Config.required().string(),
+				name: Config.string(),
+				regions: Config.array(),
+				type: Config.oneOf(types.all),
+				x: Config.string(),
+			}),
+		),
+		Config.func(),
+		Config.string(),
+	]),
 
 	/**
 	 * The variety of chart that will be rendered.

@@ -1,3 +1,4 @@
+import {isFunction, isObject, isString} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -47,7 +48,19 @@ class Geomap extends Component {
 		this.path = d3.geoPath().projection(this.projection);
 		this.selected_ = null;
 
-		d3.json(this.data, this.onDataLoad_.bind(this));
+		this.onDataLoadHandler_ = this.onDataLoad_.bind(this);
+
+		if (isString(this.data)) {
+			d3.json(this.data, this.onDataLoadHandler_);
+		} else if (isObject(this.data) && !isFunction(this.data)) {
+			this.onDataLoadHandler_.apply(this, [null, this.data]);
+		} else if (isFunction(this.data)) {
+			this.data().then(val => {
+				this.onDataLoadHandler_.apply(this, [null, val]);
+			}).catch(err => {
+				this.onDataLoadHandler_.apply(this, [err, null]);
+			});
+		}
 	}
 
 	/**
@@ -197,10 +210,14 @@ Geomap.STATE = {
 	 * Path to the geo-json data
 	 * @instance
 	 * @memberof Geomap
-	 * @type {?String|undefined}
+	 * @type {?Function|?Object|?String}
 	 * @default undefined
 	 */
-	data: Config.string().required(),
+	data: Config.oneOfType([
+		Config.func(),
+		Config.object(),
+		Config.string(),
+	]).required(),
 
 	/**
 	 * Height of the map
