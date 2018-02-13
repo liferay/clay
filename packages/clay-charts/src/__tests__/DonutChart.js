@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('DonutChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new DonutChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new DonutChart({
 			columns: [],
 		});
 

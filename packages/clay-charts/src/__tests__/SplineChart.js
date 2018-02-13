@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('SplineChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new SplineChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new SplineChart({
 			columns: [],
 		});
 

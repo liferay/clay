@@ -1,4 +1,5 @@
 import {bb, d3} from 'billboard.js';
+import {isFunction, isString} from 'metal';
 import {Config} from 'metal-state';
 import types from './utils/types';
 
@@ -70,19 +71,26 @@ const ChartBase = {
 	 * @inheritDoc
 	 */
 	attached() {
-		const config = this.constructChartConfig_();
+		const data = this.columns || this.data;
 
-		this.bbChart = bb.generate(config);
+		this.resolveData_(data).then(data => {
+			this.columns = data;
+			this.data = data;
 
-		this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
-		this.on('groupsChanged', this.handleGroupsChanged_.bind(this));
-		this.on('loading_Changed', this.handleLoadingChanged_.bind(this));
-		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
-		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
-		this.on('typeChanged', this.handleTypeChanged_.bind(this));
-		this.on('xChanged', this.handleXChanged_.bind(this));
+			const config = this.constructChartConfig_();
+			this.bbChart = bb.generate(config);
 
-		this.loading_ = false;
+			this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
+			this.on('dataChanged', this.handleDataChanged_.bind(this));
+			this.on('groupsChanged', this.handleGroupsChanged_.bind(this));
+			this.on('loading_Changed', this.handleLoadingChanged_.bind(this));
+			this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
+			this.on('sizeChanged', this.handleSizeChanged_.bind(this));
+			this.on('typeChanged', this.handleTypeChanged_.bind(this));
+			this.on('xChanged', this.handleXChanged_.bind(this));
+
+			this.loading_ = false;
+		});
 	},
 
 	/**
@@ -97,7 +105,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructAxisConfig_: function() {
+	constructAxisConfig_() {
 		const state = this.getStateObj_();
 
 		return {
@@ -113,7 +121,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructChartConfig_: function() {
+	constructChartConfig_() {
 		const state = this.getStateObj_();
 
 		const axis = this.constructAxisConfig_();
@@ -192,7 +200,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructColumnsConfig_: function() {
+	constructColumnsConfig_() {
 		const {columns} = this.getStateObj_();
 
 		const config = {
@@ -238,7 +246,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructColorsConfig_: function() {
+	constructColorsConfig_() {
 		let {colors, color} = this.getStateObj_();
 
 		if (color && color.tiles) {
@@ -254,7 +262,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructDataConfig_: function(attachListeners = true) {
+	constructDataConfig_(attachListeners = true) {
 		const state = this.getStateObj_();
 		const colors = this.constructColorsConfig_();
 
@@ -346,7 +354,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructZoomConfig_: function() {
+	constructZoomConfig_() {
 		const state = this.getStateObj_();
 
 		const zoom = state.zoom;
@@ -381,7 +389,7 @@ const ChartBase = {
 	 * @return {Array}
 	 * @protected
 	 */
-	createColumnsArray_: function(columns) {
+	createColumnsArray_(columns) {
 		return columns.map(({data, id}) => {
 			return [id].concat(data);
 		});
@@ -391,7 +399,7 @@ const ChartBase = {
 	 * Emits event based on arguments array.
 	 * @protected
 	 */
-	emitChartEvent_: function() {
+	emitChartEvent_() {
 		this.emit.apply(this, arguments); // eslint-disable-line
 	},
 
@@ -401,7 +409,7 @@ const ChartBase = {
 	 * @return {?Object}
 	 * @protected
 	 */
-	getColumn_: function(id) {
+	getColumn_(id) {
 		return this.columns.find(column => {
 			return column.id === id;
 		});
@@ -412,7 +420,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	getStateObj_: function() {
+	getStateObj_() {
 		return this;
 	},
 
@@ -421,7 +429,7 @@ const ChartBase = {
 	 * @return {?Elements}
 	 * @protected
 	 */
-	getTiles_: function() {
+	getTiles_() {
 		return DEFAULT_TILES.filter(val => {
 			return document.querySelector(`#${val}`);
 		}).map(val => document.querySelector(`#${val}`));
@@ -431,7 +439,7 @@ const ChartBase = {
 	 * Maps `columns` state to chart via `bb.load` method.
 	 * @protected
 	 */
-	handleColumnsChanged_: function({prevVal}) {
+	handleColumnsChanged_({prevVal}) {
 		const data = this.constructDataConfig_(false);
 
 		const newVal = data.columns;
@@ -451,10 +459,22 @@ const ChartBase = {
 	},
 
 	/**
+	 * Handles `data` changes.
+	 * @param {Object} event The change event.
+	 * @protected
+	 * @return {Promise}
+	 */
+	handleDataChanged_(event) {
+		return this.resolveData_(event.newVal).then(data => {
+			this.columns = data;
+		});
+	},
+
+	/**
 	 * Maps `groups` state to chart via `bb.groups` method.
 	 * @protected
 	 */
-	handleGroupsChanged_: function({newVal}) {
+	handleGroupsChanged_({newVal}) {
 		this.bbChart.groups(newVal);
 	},
 
@@ -462,7 +482,7 @@ const ChartBase = {
 	 * Handles `loading` state.
 	 * @protected
 	 */
-	handleLoadingChanged_: function({newVal}) {
+	handleLoadingChanged_({newVal}) {
 		if (!newVal) {
 			this.refs.chart.removeAttribute('hidden');
 			this.refs.placeholder.setAttribute('hidden', 'hidden');
@@ -476,7 +496,7 @@ const ChartBase = {
 	 * Maps `regions` state to chart via `bb.regions` method.
 	 * @protected
 	 */
-	handleRegionsChanged_: function({newVal}) {
+	handleRegionsChanged_({newVal}) {
 		this.bbChart.regions(newVal);
 	},
 
@@ -484,7 +504,7 @@ const ChartBase = {
 	 * Maps `size` state to chart via `bb.resize` method.
 	 * @protected
 	 */
-	handleSizeChanged_: function({newVal}) {
+	handleSizeChanged_({newVal}) {
 		this.bbChart.resize(newVal);
 	},
 
@@ -492,7 +512,7 @@ const ChartBase = {
 	 * Maps `type` state to chart via `bb.transform` method.
 	 * @protected
 	 */
-	handleTypeChanged_: function({newVal}) {
+	handleTypeChanged_({newVal}) {
 		this.bbChart.transform(newVal);
 	},
 
@@ -500,7 +520,7 @@ const ChartBase = {
 	 * Maps `x` state to chart via `bb.x` method.
 	 * @protected
 	 */
-	handleXChanged_: function({newVal}) {
+	handleXChanged_({newVal}) {
 		const column = this.getColumn_(newVal);
 
 		this.bbChart.x(column.data);
@@ -512,7 +532,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	mapXSValues_: function(xs) {
+	mapXSValues_(xs) {
 		return Object.keys(xs).reduce((xsValues, key) => {
 			const value = xs[key];
 
@@ -525,13 +545,31 @@ const ChartBase = {
 	},
 
 	/**
+	 * Check's the data or columns option and resolves this `data_` accordingly.
+	 * @return {Promise}
+	 * @param {?Array|Function|String} data the data to resolve.
+	 * @protected
+	 */
+	resolveData_(data) {
+		if (Array.isArray(data)) {
+			return Promise.resolve(data);
+		} else if (isFunction(data)) {
+			return data().then(val => val);
+		} else if (isString(data)) {
+			return fetch(data)
+				.then(res => res.json())
+				.then(res => res.data);
+		}
+	},
+
+	/**
 	 * Determines which ids should be passed to the unload property.
 	 * @static
 	 * @param {Array} newColumns
 	 * @param {Array} prevColumns
 	 * @return {Array}
 	 */
-	resolveRemovedColumns_: function(newColumns, prevColumns) {
+	resolveRemovedColumns_(newColumns, prevColumns) {
 		const ids = newColumns.map(column => column[0]);
 
 		return prevColumns.reduce((removedIds, column) => {
@@ -725,20 +763,50 @@ ChartBase.STATE = {
 	 * @type {?Array|undefined}
 	 * @default undefined
 	 */
-	columns: Config.arrayOf(
-		Config.shapeOf({
-			axis: Config.oneOf(['y', 'y2']),
-			class: Config.string(),
-			color: Config.string(),
-			data: Config.array().required(),
-			hide: Config.bool(),
-			id: Config.required().string(),
-			name: Config.string(),
-			regions: Config.array(),
-			type: Config.oneOf(types.all),
-			x: Config.string(),
-		})
-	),
+	columns: Config.oneOfType([
+		Config.arrayOf(
+			Config.shapeOf({
+				axis: Config.oneOf(['y', 'y2']),
+				class: Config.string(),
+				color: Config.string(),
+				data: Config.array().required(),
+				hide: Config.bool(),
+				id: Config.required().string(),
+				name: Config.string(),
+				regions: Config.array(),
+				type: Config.oneOf(types.all),
+				x: Config.string(),
+			})
+		),
+		Config.func(),
+		Config.string(),
+	]),
+
+	/**
+	 * Data that will be rendered to the chart.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Array|undefined}
+	 * @default undefined
+	 */
+	data: Config.oneOfType([
+		Config.arrayOf(
+			Config.shapeOf({
+				axis: Config.oneOf(['y', 'y2']),
+				class: Config.string(),
+				color: Config.string(),
+				data: Config.array().required(),
+				hide: Config.bool(),
+				id: Config.required().string(),
+				name: Config.string(),
+				regions: Config.array(),
+				type: Config.oneOf(types.all),
+				x: Config.string(),
+			})
+		),
+		Config.func(),
+		Config.string(),
+	]),
 
 	/**
 	 * Configuration options for donut chart.

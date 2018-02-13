@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('AreaStepChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new AreaStepChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new AreaStepChart({
 			columns: [],
 		});
 

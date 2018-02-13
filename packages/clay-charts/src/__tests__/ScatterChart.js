@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('ScatterChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new ScatterChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new ScatterChart({
 			columns: [],
 		});
 

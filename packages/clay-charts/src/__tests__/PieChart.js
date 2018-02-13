@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('PieChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new PieChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new PieChart({
 			columns: [],
 		});
 
