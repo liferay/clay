@@ -106,6 +106,14 @@
 		margin-bottom: $sheet-subtitle-margin-bottom-mobile;
 	}
 
+	&.autofit-row {
+		padding-bottom: 0;
+
+		.autofit-col {
+			margin-bottom: $sheet-subtitle-padding-y;
+		}
+	}
+
 	&.collapse-icon {
 		padding-left: $sheet-subtitle-collapse-icon-padding-left;
 		padding-right: $sheet-subtitle-collapse-icon-padding-right;
@@ -117,6 +125,11 @@
 		left: $sheet-subtitle-collapse-icon-left;
 		right: $sheet-subtitle-collapse-icon-right;
 		top: $sheet-subtitle-collapse-icon-top;
+	}
+
+	.heading-text {
+		margin-bottom: $sheet-subtitle-heading-text-margin-bottom;
+		margin-top: $sheet-subtitle-heading-text-margin-top;
 	}
 }
 
