@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import Geomap from '../Geomap';
 
 /**
@@ -10,15 +11,46 @@ function createMap(config = {}) {
 }
 
 describe('Geomap', () => {
-	it('should throw an error if required configuration is invalid', () => {
-		expect(createMap).toThrow();
-	});
+	it('should accept data as a string', () => {
+		d3.json = jest.fn();
 
-	it('should not throw an error', () => {
 		const geomap = createMap({
-			data: '../../demos/data/world-low-res.geo.json',
+			data: './data/world-low-res.geo.json',
 		});
 
+		expect(geomap).toMatchSnapshot();
+	});
+
+	it('should accept data as an object', () => {
+		const geomap = createMap({
+			data: {
+				features: [
+					{
+						properties: {},
+					},
+				],
+			},
+		});
+
+		expect(geomap).toMatchSnapshot();
+	});
+
+	it('should accept data as a function', () => {
+		const geomap = createMap({
+			data: () => {
+				return new Promise(resolve => {
+					setTimeout(() => {
+						resolve({
+							features: [
+								{
+									properties: {},
+								},
+							],
+						});
+					}, 500);
+				});
+			},
+		});
 		expect(geomap).toMatchSnapshot();
 	});
 });

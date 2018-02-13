@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('BubbleChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new BubbleChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new BubbleChart({
 			columns: [],
 		});
 
