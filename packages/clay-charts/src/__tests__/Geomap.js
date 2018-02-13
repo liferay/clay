@@ -24,9 +24,11 @@ describe('Geomap', () => {
 	it('should accept data as an object', () => {
 		const geomap = createMap({
 			data: {
-				features: [{
-					properties: {},
-				}],
+				features: [
+					{
+						properties: {},
+					},
+				],
 			},
 		});
 
@@ -36,12 +38,14 @@ describe('Geomap', () => {
 	it('should accept data as a function', () => {
 		const geomap = createMap({
 			data: () => {
-				return new Promise((resolve) => {
+				return new Promise(resolve => {
 					setTimeout(() => {
 						resolve({
-							features: [{
-								properties: {},
-							}],
+							features: [
+								{
+									properties: {},
+								},
+							],
 						});
 					}, 500);
 				});

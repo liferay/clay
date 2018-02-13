@@ -55,11 +55,13 @@ class Geomap extends Component {
 		} else if (isObject(this.data) && !isFunction(this.data)) {
 			this.onDataLoadHandler_.apply(this, [null, this.data]);
 		} else if (isFunction(this.data)) {
-			this.data().then(val => {
-				this.onDataLoadHandler_.apply(this, [null, val]);
-			}).catch(err => {
-				this.onDataLoadHandler_.apply(this, [err, null]);
-			});
+			this.data()
+				.then(val => {
+					this.onDataLoadHandler_.apply(this, [null, val]);
+				})
+				.catch(err => {
+					this.onDataLoadHandler_.apply(this, [err, null]);
+				});
 		}
 	}
 

@@ -100,7 +100,6 @@ const ChartBase = {
 		return false;
 	},
 
-
 	/**
 	 * Constructs `axis` billboard config property.
 	 * @return {Object}
@@ -557,7 +556,9 @@ const ChartBase = {
 		} else if (isFunction(data)) {
 			return data().then(val => val);
 		} else if (isString(data)) {
-			return fetch(data).then(res => res.json()).then(res => res.data);
+			return fetch(data)
+				.then(res => res.json())
+				.then(res => res.data);
 		}
 	},
 
@@ -775,7 +776,7 @@ ChartBase.STATE = {
 				regions: Config.array(),
 				type: Config.oneOf(types.all),
 				x: Config.string(),
-			}),
+			})
 		),
 		Config.func(),
 		Config.string(),
@@ -801,7 +802,7 @@ ChartBase.STATE = {
 				regions: Config.array(),
 				type: Config.oneOf(types.all),
 				x: Config.string(),
-			}),
+			})
 		),
 		Config.func(),
 		Config.string(),

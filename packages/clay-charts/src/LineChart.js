@@ -29,7 +29,7 @@ LineChart.STATE = {
 				regions: Config.array(),
 				type: Config.oneOf(types.all),
 				x: Config.string(),
-			}),
+			})
 		),
 		Config.func(),
 		Config.string(),
