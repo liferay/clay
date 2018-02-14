@@ -1,18 +1,22 @@
 ---
 title: Form Elements
-description: Components
+description: "Forms is one of the most used patterns in Lexicon. Forms capture information from the user and transmits it to the system either to store, to produce an action or both at same time. Forms in Lexicon are defined to be full width."
 layout: "guide"
+pattern: "Forms/forms"
 weight: 100
 ---
 
+### Description
+{$page.description}
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
 <article id="basic-form-elements">
-
-### Basic Form Elements
-
-> Add class `focus` on the label to change the color of the label.
+<h3 class="component-title">
+	<a href="#basic-form-elements">Basic Form Elements</a>
+</h3>
 
 <div class="sheet">
-	<h4 class="section-header">Section Header</h4>
 	<div class="form-group">
 		<label for="basicInputTypeText">
 			Text
@@ -60,7 +64,7 @@ weight: 100
 
 ```text/html
 <div class="form-group">
-	<label>
+	<label for="basicInputTypeText">
 		Text
 		<span class="reference-mark">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
@@ -68,187 +72,47 @@ weight: 100
 			</svg>
 		</span>
 	</label>
-	<input class="form-control" placeholder="Placeholder" type="text">
-</div>
-```
-
-</article>
-
-
-<article id="checkboxes">
-
-### Checkboxes
-
-<div class="sheet">
-	<div class="form-check">
-		<label class="form-check-label">
-			<input class="form-check-input" type="checkbox" value="">
-		</label>
-	</div>
-	<div class="form-check">
-		<label class="form-check-label">
-			<input class="form-check-input" type="checkbox" value="">
-			<span class="form-check-label-text">Label</span>
-		</label>
-	</div>
-	<div class="form-check">
-		<label class="form-check-label">
-			<input checked class="form-check-input" disabled type="checkbox" value="">
-			<span class="form-check-label-text">Disabled Check Box</span>
-		</label>
-	</div>
-	<div class="form-group">
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-				<span class="form-check-label-text">1</span>
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-				<span class="form-check-label-text">2</span>
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-				<span class="form-check-label-text">3</span>
-			</label>
-		</div>
-	</div>
+	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
 </div>
 
-```text/html
-<div class="form-check">
-	<label class="form-check-label">
-		<input class="form-check-input" type="checkbox" value="">
-	</label>
+<div class="form-group">
+	<label for="basicInputTypePassword">Password</label>
+	<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="password">
 </div>
 
-<div class="form-check">
-	<label class="form-check-label">
-		<input class="form-check-input" type="checkbox" value="">
-		<span class="form-check-label-text">Label</span>
-	</label>
+<div class="form-group">
+	<label for="basicInputTypeTextarea">Textarea</label>
+	<textarea class="form-control" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
 </div>
 
-<div class="form-check">
-	<label class="form-check-label">
-		<input checked class="form-check-input" disabled type="checkbox" value="">
-		<span class="form-check-label-text">Disabled Check Box</span>
-	</label>
+<div class="form-group">
+	<label for="basicInputTypeUrl">Url</label>
+	<input class="form-control" id="basicInputTypeUrl" type="url">
 </div>
 
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-		<span class="form-check-label-text">1</span>
-	</label>
+<div class="form-group">
+	<label for="basicInputTypeTel">Tel</label>
+	<input class="form-control" id="basicInputTypeTel" type="tel">
 </div>
 
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-		<span class="form-check-label-text">2</span>
-	</label>
+<div class="form-group">
+	<label for="basicInputTypeEmail">Email</label>
+	<input class="form-control" id="basicInputTypeEmail" type="email">
 </div>
 
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-		<span class="form-check-label-text">3</span>
-	</label>
-</div>
-```
-
-</article>
-
-
-<article id="radio">
-
-### Radio
-
-<div class="sheet">
-	<div class="form-check">
-		<label class="form-check-label">
-			<input class="form-check-input" type="radio" value="">
-		</label>
-	</div>
-	<div class="form-check">
-		<label class="form-check-label">
-			<input class="form-check-input" type="radio" value="">
-			<span class="form-check-label-text">Label</span>
-		</label>
-	</div>
-	<div class="form-check">
-		<label class="form-check-label">
-			<input class="form-check-input" disabled type="radio">
-			<span class="form-check-label-text">Disabled Radio Button</span>
-		</label>
-	</div>
-	<div class="form-group">
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
-				<span class="form-check-label-text">1</span>
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
-				<span class="form-check-label-text">2</span>
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
-				<span class="form-check-label-text">3</span>
-			</label>
-		</div>
-	</div>
+<div class="form-group">
+	<label for="basicInputTypeSearch">Search</label>
+	<input class="form-control" id="basicInputTypeSearch" type="search">
 </div>
 
-```text/html
-<div class="form-check">
-	<label class="form-check-label">
-		<input class="form-check-input" type="radio" value="">
-	</label>
+<div class="form-group">
+	<label for="basicInputTypeNumber">Number</label>
+	<input class="form-control" id="basicInputTypeNumber" type="number">
 </div>
 
-<div class="form-check">
-	<label class="form-check-label">
-		<input class="form-check-input" type="radio" value="">
-		<span class="form-check-label-text">Label</span>
-	</label>
-</div>
-
-<div class="form-check">
-	<label class="form-check-label">
-		<input class="form-check-input" disabled type="radio">
-		<span class="form-check-label-text">Disabled Radio Button</span>
-	</label>
-</div>
-
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1">
-		<span class="form-check-label-text">1</span>
-	</label>
-</div>
-
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2">
-		<span class="form-check-label-text">2</span>
-	</label>
-</div>
-
-<div class="form-check form-check-inline">
-	<label class="form-check-label">
-		<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3">
-		<span class="form-check-label-text">3</span>
-	</label>
+<div class="form-group">
+	<label for="basicInputTypeRange">Range</label>
+	<input class="form-control" id="basicInputTypeRange" type="range">
 </div>
 ```
 
@@ -256,8 +120,9 @@ weight: 100
 
 
 <article id="select-element">
-
-### Select Element
+<h3 class="component-title">
+	<a href="#select-element">Select Element</a>
+</h3>
 
 <div class="sheet">
 	<div class="form-group">
@@ -376,8 +241,9 @@ weight: 100
 
 
 <article id="file-upload">
-
-### File Upload
+<h3 class="component-title">
+	<a href="#file-upload">File Upload</a>
+</h3>
 
 <div class="sheet">
 	<div class="form-group">
@@ -397,8 +263,9 @@ weight: 100
 
 
 <article id="disabled-inputs">
-
-### Disabled Inputs
+<h3 class="component-title">
+	<a href="#disabled-inputs">Disabled Inputs</a>
+</h3>
 
 > Add class `disabled` on the label to match the opacity to disabled input.
 
@@ -534,53 +401,11 @@ weight: 100
 
 
 <article id="disabled-fieldset">
-
-### Disabled Fieldset
+<h3 class="component-title">
+	<a href="#disabled-fieldset">Disabled Fieldset</a>
+</h3>
 
 <div class="sheet">
-	<form>
-		<fieldset disabled>
-			<div class="form-group">
-				<label>Use fieldset to group related elements in a form and ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
-					<input class="form-control" type="text" value="Plunger pot, extra siphon latte">
-				</label>
-			</div>
-			<div class="form-group">
-				<label for="disabledFieldsetTextInput2">Disabled Input</label>
-				<input class="form-control" id="disabledFieldsetTextInput2" type="text" value="Plunger pot, extra siphon latte">
-			</div>
-			<div class="form-group">
-				<label for="disabledFieldsetSelectElement">Disabled Select Element</label>
-				<select class="form-control" id="disabledFieldsetSelectElement">
-					<option>Sample 1</option>
-					<option>Sample 2</option>
-					<option>Sample 3</option>
-					<option>Sample 4</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input checked class="form-check-input" type="checkbox" value="">
-						<span class="form-check-label-text">Disabled Checkbox</span>
-					</label>
-				</div>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="radio" value="">
-						<span class="form-check-label-text">Disabled Radio</span>
-					</label>
-				</div>
-			</div>
-			<div class="form-group">
-				<button class="btn btn-primary" type="submit">Submit</button>
-			</div>
-		</fieldset>
-	</form>
-</div>
-
-```text/html
-<form>
 	<fieldset disabled>
 		<div class="form-group">
 			<label>Use fieldset to group related elements in a form and ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
@@ -591,16 +416,54 @@ weight: 100
 			<label for="disabledFieldsetTextInput2">Disabled Input</label>
 			<input class="form-control" id="disabledFieldsetTextInput2" type="text" value="Plunger pot, extra siphon latte">
 		</div>
+		<div class="form-group">
+			<label for="disabledFieldsetSelectElement">Disabled Select Element</label>
+			<select class="form-control" id="disabledFieldsetSelectElement">
+				<option>Sample 1</option>
+				<option>Sample 2</option>
+				<option>Sample 3</option>
+				<option>Sample 4</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</div>
 	</fieldset>
-</form>
+</div>
+
+```text/html
+<fieldset disabled>
+	<div class="form-group">
+		<label>Use fieldset to group related elements in a form and ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+			<input class="form-control" type="text" value="Plunger pot, extra siphon latte">
+		</label>
+	</div>
+	<div class="form-group">
+		<label for="disabledFieldsetTextInput2">Disabled Input</label>
+		<input class="form-control" id="disabledFieldsetTextInput2" type="text" value="Plunger pot, extra siphon latte">
+	</div>
+	<div class="form-group">
+		<label for="disabledFieldsetSelectElement">Disabled Select Element</label>
+		<select class="form-control" id="disabledFieldsetSelectElement">
+			<option>Sample 1</option>
+			<option>Sample 2</option>
+			<option>Sample 3</option>
+			<option>Sample 4</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" type="submit">Submit</button>
+	</div>
+</fieldset>
 ```
 
 </article>
 
 
 <article id="read-only-states">
-
-### Read Only States
+<h3 class="component-title">
+	<a href="#read-only-states">Read Only States</a>
+</h3>
 
 <div class="sheet">
 	<div class="form-group">
@@ -629,8 +492,9 @@ weight: 100
 
 
 <article id="form-element-sizes">
-
-### Form Element Sizes
+<h3 class="component-title">
+	<a href="#form-element-sizes">Form Element Sizes</a>
+</h3>
 
 <div class="sheet">
 	<div class="form-group">
@@ -640,6 +504,10 @@ weight: 100
 	<div class="form-group">
 		<label for="normalTextInput">Normal text input</label>
 		<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text">
+	</div>
+	<div class="form-group">
+		<label for="largeTextInput">Large text input</label>
+		<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text">
 	</div>
 </div>
 
@@ -653,25 +521,45 @@ weight: 100
 	<label for="normalTextInput">Normal text input</label>
 	<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text">
 </div>
+
+<div class="form-group">
+	<label for="largeTextInput">Large text input</label>
+	<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text">
+</div>
 ```
 
 </article>
 
 
 <article id="form-group-autofit">
+<h3 class="component-title">
+	<a href="#form-group-autofit">Form Group Autofit</a>
+</h3>
 
-### Form Inline Autofit
+> Equally spaced form inputs based on the number of items inside `.form-group-autofit`. Each `input` and `label` group should be wrapped inside `.form-group-item`. `form-group-autofit` stacks all inputs at max-width: 575px (breakpoint sm).
 
-> Equally spaced form inputs. To set a fixed width use `flex-grow: 0; flex-basis: 200px;` on `.form-group-item` or any direct descendant of `.form-group-autofit`.
+> To set a maximum width on a `.form-group-item` use `max-width: 200px;`.
+
+> To make a `.form-group-item` shrink to the size of its content add `.form-group-item-shrink`. This component should only be used for static content, such as labels or buttons. This component doesn't work well with dynamically added content, such as form helper text, use the max-width method above instead.
+
+<div class="alert alert-warning">Form Group Autofit doesn't support <code>label</code>'s with long text that breaks to new lines or multiple new lines above the input.</div>
 
 <div class="sheet">
 	<div class="form-group-autofit">
 		<div class="form-group-item">
-			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
+			<label for="formInlineAutofitTextInput1">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Form Inline Autofit">Form Inline Autofit</span>
+				</span>
+			</label>
 			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
 		</div>
-		<div class="form-group-item">
-			<label for="formInlineAutofitSelectElement1">Select Element</label>
+		<div class="form-group-item" style="max-width: 200px;">
+			<label for="formInlineAutofitSelectElement1">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Select Element">Select Element</span>
+				</span>
+			</label>
 			<select class="form-control" id="formInlineAutofitSelectElement1">
 				<option>Option 1</option>
 				<option>Option 2</option>
@@ -706,12 +594,15 @@ weight: 100
 				<div class="input-group-item input-group-item-shrink input-group-prepend">
 					<span class="input-group-text">$</span>
 				</div>
-				<div class="input-group-append input-group-item">
+				<div class="input-group-item input-group-prepend">
 					<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
 				</div>
 				<div class="input-group-append input-group-item input-group-item-shrink">
 					<span class="input-group-text">.00</span>
 				</div>
+			</div>
+			<div class="form-feedback-group">
+				<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
 			</div>
 		</div>
 	</div>
@@ -748,6 +639,9 @@ weight: 100
 				</span>
 			</label>
 			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
+			<div class="form-feedback-group">
+				<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+			</div>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitDonation">
@@ -759,7 +653,7 @@ weight: 100
 				<div class="input-group-item input-group-item-shrink input-group-prepend">
 					<span class="input-group-text">$</span>
 				</div>
-				<div class="input-group-append input-group-item">
+				<div class="input-group-item input-group-prepend">
 					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
 				</div>
 				<div class="input-group-append input-group-item input-group-item-shrink">
@@ -770,18 +664,26 @@ weight: 100
 	</div>
 	<div class="form-group">
 		<button class="btn btn-primary" type="submit">Submit</button>{sp}
-		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		<a class="btn btn-secondary" href="#1" role="button">Clear</a>
 	</div>
 </div>
 
 ```text/html
 <div class="form-group-autofit">
 	<div class="form-group-item">
-		<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
+		<label for="formInlineAutofitTextInput1">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="Form Inline Autofit">Form Inline Autofit</span>
+			</span>
+		</label>
 		<input class="form-control" id="formInlineAutofitTextInput1" type="text">
 	</div>
-	<div class="form-group-item">
-		<label for="formInlineAutofitSelectElement1">Select Element</label>
+	<div class="form-group-item" style="max-width: 200px;">
+		<label for="formInlineAutofitSelectElement1">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="Select Element">Select Element</span>
+			</span>
+		</label>
 		<select class="form-control" id="formInlineAutofitSelectElement1">
 			<option>Option 1</option>
 			<option>Option 2</option>
@@ -789,42 +691,149 @@ weight: 100
 		</select>
 	</div>
 </div>
+
+<div class="form-group-autofit">
+	<div class="form-group-item">
+		<label for="formInlineAutofitFirstName">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="First Name">First Name</span>
+			</span>
+		</label>
+		<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
+	</div>
+	<div class="form-group-item">
+		<label for="formInlineAutofitLastName">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="Last Name">Last Name</span>
+			</span>
+		</label>
+		<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
+	</div>
+	<div class="form-group-item">
+		<label for="formInlineAutofitInputGroup">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="Input Group">Input Group</span>
+			</span>
+		</label>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-item input-group-prepend">
+				<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<span class="input-group-text">.00</span>
+			</div>
+		</div>
+		<div class="form-feedback-group">
+			<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+		</div>
+	</div>
+</div>
+
+<div class="form-group-autofit">
+	<div class="form-group-item form-group-item-label form-group-item-label-spacer form-group-item-shrink">
+		<label for="formInlineAutofitCity">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="City">City</span>
+			</span>
+		</label>
+	</div>
+	<div class="form-group-item form-group-item-label-spacer">
+		<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
+	</div>
+	<div class="form-group-item">
+		<label for="formInlineAutofitState">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+			</span>
+		</label>
+		<select class="form-control" id="formInlineAutofitState">
+			<option>AL</option>
+			<option>CA</option>
+			<option>FL</option>
+			<option>HI</option>
+			<option>NV</option>
+			<option>WA</option>
+		</select>
+	</div>
+	<div class="form-group-item">
+		<label for="formInlineAutofitZip">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="Zip Code">Zip Code</span>
+			</span>
+		</label>
+		<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
+		<div class="form-feedback-group">
+			<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+		</div>
+	</div>
+	<div class="form-group-item">
+		<label for="formInlineAutofitDonation">
+			<span class="text-truncate-inline">
+				<span class="text-truncate" title="Donation">Donation</span>
+			</span>
+		</label>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-item input-group-prepend">
+				<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<span class="input-group-text">.00</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<button class="btn btn-primary" type="submit">Submit</button>
+	<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+</div>
 ```
 
 </article>
 
 
-<article id="form-group-autofit-2-columns">
+<article id="form-group-autofit-horizontal-form">
+<h3 class="component-title">
+	<a href="#form-group-autofit-horizontal-form">Form Group Autofit (Horizontal Form)</a>
+</h3>
 
-### Form Inline Autofit 2 Columns
-
-> An example of an inline form without using Bootstrap's grid.
-
-<style>
+> Create horizontal forms by placing each `input` inside `form-group-item` and `label` inside `form-group-item form-group-item-label form-group-item-shrink` and set a min-width on `.form-group-item-label`.
 {literal}
+<style>
 	@media (min-width: 576px) {
-		.my-custom-form label {
-			width: 200px;
+		.my-custom-form .form-group-item-label {
+			min-width: 200px;
 		}
 	}
-{/literal}
 </style>
+{/literal}
 
 <div class="sheet">
 	<form class="my-custom-form">
 		<div class="form-group-autofit">
 			<div class="form-group-item form-group-item-label form-group-item-shrink">
-				<label>Name</label>
+				<label>Name ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</label>
 			</div>
 			<div class="form-group-item">
 				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
-				<div class="form-text">Your first name.</div>
+				<div class="form-feedback-group">
+					<div class="form-text">Your first name.</div>
+				</div>
 			</div>
 			<div class="form-group-item">
 				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
 			</div>
 			<div class="form-group-item">
 				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+				<div class="form-feedback-group">
+					<div class="form-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
+				</div>
 			</div>
 		</div>
 		<div class="form-group-autofit">
@@ -853,50 +862,54 @@ weight: 100
 ```text/html
 <style>
 	@media (min-width: 576px) {
-		.my-custom-form label {
-			width: 200px;
+		.my-custom-form .form-group-item-label {
+			min-width: 200px;
 		}
 	}
 </style>
-<div class="sheet">
-	<form class="my-custom-form">
-		<div class="form-group-autofit">
-			<div class="form-group-item form-group-item-label form-group-item-shrink">
-				<label>Name</label>
-			</div>
-			<div class="form-group-item">
-				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+
+<form class="my-custom-form">
+	<div class="form-group-autofit">
+		<div class="form-group-item form-group-item-label form-group-item-shrink">
+			<label>Name ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</label>
+		</div>
+		<div class="form-group-item">
+			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+			<div class="form-feedback-group">
 				<div class="form-text">Your first name.</div>
 			</div>
-			<div class="form-group-item">
-				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
-			</div>
-			<div class="form-group-item">
-				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+		</div>
+		<div class="form-group-item">
+			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+		</div>
+		<div class="form-group-item">
+			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+			<div class="form-feedback-group">
+				<div class="form-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
 			</div>
 		</div>
-		<div class="form-group-autofit">
-			<div class="form-group-item form-group-item-label form-group-item-shrink">
-				<label for="formInlineAutofitCustomAddress1">Address 1</label>
-			</div>
-			<div class="form-group-item">
-				<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
-			</div>
+	</div>
+	<div class="form-group-autofit">
+		<div class="form-group-item form-group-item-label form-group-item-shrink">
+			<label for="formInlineAutofitCustomAddress1">Address 1</label>
 		</div>
-		<div class="form-group-autofit">
-			<div class="form-group-item form-group-item-label form-group-item-shrink">
-				<label for="formInlineAutofitCustomAddress2">Address 2</label>
-			</div>
-			<div class="form-group-item">
-				<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
-			</div>
+		<div class="form-group-item">
+			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
 		</div>
-		<div class="form-group">
-			<button class="btn btn-primary" type="submit">Submit</button>
-			<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+	</div>
+	<div class="form-group-autofit">
+		<div class="form-group-item form-group-item-label form-group-item-shrink">
+			<label for="formInlineAutofitCustomAddress2">Address 2</label>
 		</div>
-	</form>
-</div>
+		<div class="form-group-item">
+			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+		</div>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" type="submit">Submit</button>
+		<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+	</div>
+</form>
 ```
 
 </article>
