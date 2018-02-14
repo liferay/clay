@@ -1,4 +1,5 @@
 .btn {
+	backface-visibility: hidden; // https://github.com/liferay/clay/issues/546
 	font-size: $btn-font-size;
 
 	@include clay-scale-component {
