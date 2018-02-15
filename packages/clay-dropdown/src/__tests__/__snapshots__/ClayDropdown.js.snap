@@ -3,7 +3,7 @@
 exports[`ClayDropdown should render a disabled dropdown with items 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" disabled="" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -96,7 +96,7 @@ exports[`ClayDropdown should render a disabled dropdown with items 1`] = `
 exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
       <title>list</title>
       <use xlink:href="icons.svg#list"></use>
     </svg>
@@ -189,7 +189,7 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
 exports[`ClayDropdown should render a dropdown with classes 1`] = `
 <div class="dropdown my-custom-class">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -282,7 +282,7 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
 exports[`ClayDropdown should render a dropdown with id 1`] = `
 <div class="dropdown" id="myId">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -375,7 +375,7 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
 exports[`ClayDropdown should render a dropdown with items 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -468,7 +468,7 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
 exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn my-custom-class btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -561,7 +561,7 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
 exports[`ClayDropdown should render a searchable dropdown 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -575,7 +575,7 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
           <input aria-label="Search for..." class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" ref="searchInput">
           <span class="input-group-inset-item input-group-inset-item-after">
             <button class="btn btn-link" aria-label="search" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
                 <use xlink:href="icons.svg#search"></use>
               </svg>
@@ -671,7 +671,7 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
 exports[`ClayDropdown should render an expanded dropdown 1`] = `
 <div class="dropdown show">
   <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>

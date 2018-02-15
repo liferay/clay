@@ -16,7 +16,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
           <div class="autofit-col">
             <span class="sticker sticker-unstyled">
               <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
                   <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
                 </svg>
@@ -37,7 +37,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
           <div class="autofit-col">
             <span class="sticker sticker-unstyled">
               <span class="sticker-overlay">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
                   <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
                 </svg>
@@ -58,7 +58,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
@@ -126,7 +126,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
@@ -173,7 +173,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
