@@ -76,8 +76,8 @@ describe('ClaySelect', function() {
 	it('should render an inline group select element', function() {
 		select = new ClaySelect({
 			label: 'My Select',
+			inline: true,
 			options: options,
-			wrapperType: 'inline-group',
 		});
 
 		expect(select).toMatchSnapshot();
@@ -122,8 +122,8 @@ describe('ClaySelect', function() {
 	it('should render an inline group multiple select element', function() {
 		select = new ClaySelect({
 			multiple: true,
+			inline: true,
 			options: options,
-			wrapperType: 'inline-group',
 		});
 
 		expect(select).toMatchSnapshot();
