@@ -8,15 +8,15 @@
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? id: string}
+	{@param? inline: bool}
 	{@param? label: string}
 	{@param? multiple: bool}
 	{@param? name: string}
-	{@param? wrapperType: string}
 
 	{let $attributes kind="attributes"}
 		class="
-			{if $wrapperType}
-				form-{$wrapperType}
+			{if $inline}
+				form-group-item
 			{else}
 				form-group
 			{/if}
