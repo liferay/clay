@@ -24,12 +24,20 @@
 		ClayManagementToolbar
 	</h1>
 
+	<div id="container0"></div>
 	<div id="container1"></div>
 	<div id="container2"></div>
 	<div id="container3"></div>
 
 	<script type="text/javascript">
 		var spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
+
+		new metal.ClayManagementToolbar({
+			onlySearch: true,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			spritemap: spritemap
+		}, '#container0');
 
 		new metal.ClayManagementToolbar({
 			creationMenu: {

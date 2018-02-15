@@ -221,6 +221,16 @@ ClayManagementToolbar.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Flag to indicate if the management toolbar should the render
+	 * only search.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default false
+	 */
+	onlySearch: Config.bool().value(false),
+
+	/**
 	 * URL of the search form action
 	 * @instance
 	 * @memberof ClayManagementToolbar
