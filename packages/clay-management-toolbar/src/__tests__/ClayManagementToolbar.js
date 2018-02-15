@@ -64,6 +64,15 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with only search', () => {
+		managementToolbar = new ClayManagementToolbar({
+			onlySearch: true,
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with selection enabled', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
