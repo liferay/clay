@@ -60,4 +60,23 @@ describe('ClayIcon', function() {
 
 		expect(clayIcon).toMatchSnapshot();
 	});
+
+	it('should render an icon with focusable to true', () => {
+		clayIcon = new ClayIcon({
+			focusable: true,
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
+
+	it('should render an icon with focusable to false by default', () => {
+		clayIcon = new ClayIcon({
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
 });
