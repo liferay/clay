@@ -61,7 +61,7 @@ exports[`ClayButton should render a button with label and icon on right side 1`]
 
 exports[`ClayButton should render a button with name 1`] = `<button class="btn btn-primary" name="myButton" type="button"></button>`;
 
-exports[`ClayButton should render a disabled button 1`] = `<button class="btn btn-primary" disabled="" type="button"></button>`;
+exports[`ClayButton should render a disabled button 1`] = `<button class="btn btn-primary" disabled="disabled" type="button"></button>`;
 
 exports[`ClayButton should render a reset button 1`] = `<button class="btn btn-primary" type="reset"></button>`;
 
