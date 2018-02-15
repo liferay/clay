@@ -52,6 +52,7 @@
 	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
+	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -67,46 +68,57 @@
 		label: string
 	]>}
 
-	{let $isActive: $selectedItems and $selectedItems > 0 /}
-
-	{if $isActive}
-		{call .active}
-			{param actionItems: $actionItems /}
+	{if $onlySearch}
+		{call .onlySearch}
 			{param elementClasses: $elementClasses /}
-			{param handleActionClicked_: $handleActionClicked_ /}
-			{param handleDeselectAllClicked_: $handleDeselectAllClicked_ /}
-			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
-			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
-			{param selectedItems: $selectedItems /}
-			{param spritemap: $spritemap /}
-			{param totalItems: $totalItems /}
-		{/call}
-	{else}
-		{call .default}
-			{param contentRenderer: $contentRenderer ?: '' /}
-			{param creationMenu: $creationMenu /}
-			{param disabled: $totalItems == 0 /}
-			{param elementClasses: $elementClasses /}
-			{param filterItems: $filterItems /}
-			{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
-			{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
-			{param handleFilterDoneButtonClick_: $handleFilterDoneButtonClick_ /}
-			{param handleOpenMobileSearchClick_: $handleOpenMobileSearchClick_ /}
-			{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
-			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
-			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
-			{param handleViewTypeClicked_: $handleViewTypeClicked_ /}
-			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
 			{param searchActionURL: $searchActionURL /}
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
-			{param selectable: $selectable /}
-			{param showSearch_: $showSearch_ /}
-			{param sortingOrder: $sortingOrder /}
 			{param spritemap: $spritemap /}
-			{param viewTypes: $viewTypes /}
 		{/call}
+	{else}
+		{let $isActive: $selectedItems and $selectedItems > 0 /}
+
+		{if $isActive}
+			{call .active}
+				{param actionItems: $actionItems /}
+				{param elementClasses: $elementClasses /}
+				{param handleActionClicked_: $handleActionClicked_ /}
+				{param handleDeselectAllClicked_: $handleDeselectAllClicked_ /}
+				{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
+				{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
+				{param selectedItems: $selectedItems /}
+				{param spritemap: $spritemap /}
+				{param totalItems: $totalItems /}
+			{/call}
+		{else}
+			{call .default}
+				{param contentRenderer: $contentRenderer ?: '' /}
+				{param creationMenu: $creationMenu /}
+				{param disabled: $totalItems == 0 /}
+				{param elementClasses: $elementClasses /}
+				{param filterItems: $filterItems /}
+				{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
+				{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
+				{param handleFilterDoneButtonClick_: $handleFilterDoneButtonClick_ /}
+				{param handleOpenMobileSearchClick_: $handleOpenMobileSearchClick_ /}
+				{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
+				{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
+				{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
+				{param handleViewTypeClicked_: $handleViewTypeClicked_ /}
+				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
+				{param id: $id /}
+				{param searchActionURL: $searchActionURL /}
+				{param searchFormName: $searchFormName /}
+				{param searchInputName: $searchInputName /}
+				{param selectable: $selectable /}
+				{param showSearch_: $showSearch_ /}
+				{param sortingOrder: $sortingOrder /}
+				{param spritemap: $spritemap /}
+				{param viewTypes: $viewTypes /}
+			{/call}
+		{/if}
 	{/if}
 {/template}
 
@@ -215,7 +227,7 @@
 {/template}
 
 /**
- * This renders the component's active content.
+ * This renders the component's default content.
  */
 {template .default}
 	{@param spritemap: string}
@@ -345,6 +357,7 @@
 				<div class="container">
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
 						{param disabled: $disabled /}
+						{param elementClassesSearchButton: 'navbar-breakpoint-d-block' /}
 						{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
 						{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
 						{param searchActionURL: $searchActionURL /}
@@ -451,11 +464,50 @@
 {/template}
 
 /**
+ * This renders the component's only search content.
+ */
+{template .onlySearch}
+	{@param spritemap: string}
+	{@param? elementClasses: string}
+	{@param? id: string}
+	{@param? searchActionURL: string}
+	{@param? searchFormName: string}
+	{@param? searchInputName: string}
+
+	{let $navAttributes kind="attributes"}
+		class="management-bar management-bar-light navbar navbar-expand-md
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<nav {$navAttributes}>
+		<div class="container-fluid container-fluid-max-xl">
+				<div class="navbar-form navbar-form-autofit">
+					{delcall ClayManagementToolbar.SearchForm}
+						{param disabled: false /}
+						{param searchActionURL: $searchActionURL /}
+						{param searchFormName: $searchFormName /}
+						{param searchInputName: $searchInputName /}
+						{param spritemap: $spritemap /}
+					{/delcall}
+				</div>
+		</div>
+	</nav>
+{/template}
+
+/**
  * This renders the search form.
  */
 {deltemplate ClayManagementToolbar.SearchForm}
 	{@param spritemap: string}
 	{@param? disabled: bool}
+	{@param? elementClassesSearchButton: string}
 	{@param? handleCloseMobileSearchClick_: any}
 	{@param? handleSearchSearchClick_: any}
 	{@param? searchActionURL: string}
@@ -493,17 +545,19 @@
 				<input {$inputAttributes} />
 
 				<span class="input-group-inset-item input-group-inset-item-after">
-					{call ClayButton.render}
-						{param elementClasses: 'navbar-breakpoint-d-none' /}
-						{param events: ['click': $handleCloseMobileSearchClick_] /}
-						{param icon: 'times' /}
-						{param spritemap: $spritemap /}
-						{param style: 'unstyled' /}
-					{/call}
+					{if $handleCloseMobileSearchClick_}
+						{call ClayButton.render}
+							{param elementClasses: 'navbar-breakpoint-d-none' /}
+							{param events: ['click': $handleCloseMobileSearchClick_] /}
+							{param icon: 'times' /}
+							{param spritemap: $spritemap /}
+							{param style: 'unstyled' /}
+						{/call}
+					{/if}
 
 					{call ClayButton.render}
 						{param disabled: $disabled /}
-						{param elementClasses: 'navbar-breakpoint-d-block' /}
+						{param elementClasses: $elementClassesSearchButton /}
 						{param events: ['click': $handleSearchSearchClick_] /}
 						{param icon: 'search' /}
 						{param ref: 'searchButton' /}
