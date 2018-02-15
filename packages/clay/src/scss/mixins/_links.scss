@@ -17,6 +17,10 @@
 	$margin-left: map-get($map, margin-left);
 	$margin-right: map-get($map, margin-right);
 	$margin-top: map-get($map, margin-top);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
 	$text-align: map-get($map, text-align);
 	$text-decoration: map-get($map, text-decoration);
 	$text-transform: map-get($map, text-transform);
@@ -70,6 +74,10 @@
 	margin-left: $margin-left;
 	margin-right: $margin-right;
 	margin-top: $margin-top;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
 	text-align: $text-align;
 	text-decoration: $text-decoration;
 	text-transform: $text-transform;
