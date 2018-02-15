@@ -44,6 +44,17 @@ ClaySelect.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Flag to indicate if select should be wrapped to be inline or not.
+	 * In order to make inline work properly you may place it inside
+	 * a .form-group-autofit container.
+	 * @instance
+	 * @memberof ClaySelect
+	 * @type {?bool}
+	 * @default false
+	 */
+	inline: Config.bool().value(false),
+
+	/**
 	 * Label of the select element.
 	 * @instance
 	 * @memberof ClaySelect
@@ -84,18 +95,6 @@ ClaySelect.STATE = {
 			value: Config.string().required(),
 		})
 	).required(),
-
-	/**
-	 * Type of the select wrapper element.
-	 * In order to make inline-group work properly you may place it inside
-	 * a .form-inline.form-inline-autofit container.
-	 * container.
-	 * @instance
-	 * @memberof ClaySelect
-	 * @type {?string|undefined}
-	 * @default group
-	 */
-	wrapperType: Config.oneOf(['inline-group', 'group']).value('group'),
 };
 
 defineWebComponent('clay-select', ClaySelect);
