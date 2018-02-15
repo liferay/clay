@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="custom-checkbox">
+<article id="clay-custom-checkbox">
 
 ### Custom Checkbox
 
@@ -96,7 +96,7 @@ weight: 100
 	{param label: 'Indeterminate disabled' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-checkbox label="Unchecked"></clay-checkbox>
 
 <clay-checkbox
@@ -185,7 +185,7 @@ weight: 100
 </article>
 
 
-<article id="custom-radio">
+<article id="clay-custom-radio">
 
 ### Custom Radio
 
@@ -224,7 +224,7 @@ weight: 100
 	{param name: 'radio' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-radio
 	checked="true"
 	id="radio1"
@@ -261,7 +261,7 @@ weight: 100
 </article>
 
 
-<article id="custom-controls-stacked">
+<article id="clay-custom-controls-stacked">
 
 ### Custom Controls Inline
 
@@ -300,7 +300,7 @@ weight: 100
 	{param name: 'radio-stacked' /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-radio
 	disabled="true"
 	id="radioStacked3"
