@@ -530,15 +530,9 @@
 						{/call}
 					{/if}
 
-					{let $classesSearchButton kind="text"}
-						{if not $onlySearch}
-							navbar-breakpoint-d-block
-						{/if}
-					{/let}
-
 					{call ClayButton.render}
 						{param disabled: $disabled /}
-						{param elementClasses: $classesSearchButton /}
+						{param elementClasses: $onlySearch ? '' : 'navbar-breakpoint-d-block' /}
 						{param events: ['click': $handleSearchSearchClick_] /}
 						{param icon: 'search' /}
 						{param ref: 'searchButton' /}
