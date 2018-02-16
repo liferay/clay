@@ -527,7 +527,7 @@ describe('ClayDatasetDisplay', function() {
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar plus button click', () => {
 		jest.useFakeTimers();
 
-		defaultConfig.creationMenu = undefined;
+		defaultConfig.creationMenu = true;
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
