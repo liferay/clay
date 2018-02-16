@@ -26,7 +26,7 @@ ClayIcon.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Flag to indicate when svg focusable or not.
+	 * Flag to indicate if the svg is focusable or not
 	 * @instance
 	 * @memberof ClayIcon
 	 * @type {?bool}
