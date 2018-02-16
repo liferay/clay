@@ -171,17 +171,24 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * Configuration of the plus button.
+	 * Set `true` to just show the button.
+	 * Set `string` to use the button URL.
+	 * Set `object` to use the dropdown menu with items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?object|undefined}
+	 * @type {?object|string|bool|undefined}
 	 * @default undefined
 	 */
-	creationMenu: Config.shapeOf({
-		button: Config.object(),
-		caption: Config.string(),
-		helpText: Config.string(),
-		items: actionItemsValidator,
-	}),
+	creationMenu: Config.oneOfType([
+		Config.bool().value(false),
+		Config.string(),
+		Config.shapeOf({
+			button: Config.object(),
+			caption: Config.string(),
+			helpText: Config.string(),
+			items: actionItemsValidator,
+		}),
+	]),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -283,9 +290,9 @@ ClayManagementToolbar.STATE = {
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?string|undefined}
-	 * @default asc
+	 * @default undefined
 	 */
-	sortingOrder: Config.oneOf(['asc', 'desc']).value('asc'),
+	sortingOrder: Config.oneOf(['asc', 'desc']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
