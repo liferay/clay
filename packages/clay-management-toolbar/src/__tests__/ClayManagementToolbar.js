@@ -37,6 +37,15 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with no search', () => {
+		managementToolbar = new ClayManagementToolbar({
+			showSearch: false,
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with search action url', () => {
 		managementToolbar = new ClayManagementToolbar({
 			searchActionURL: 'mySearchURL',
