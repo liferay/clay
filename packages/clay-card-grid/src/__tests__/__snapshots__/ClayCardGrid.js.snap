@@ -6,8 +6,8 @@ exports[`ClayCardGrid should render a ClayCardGrid with id 1`] = `<ul class="car
 
 exports[`ClayCardGrid should render the default markup 1`] = `
 <ul class="card-page">
-  <li>
-    <h4 class="card-section-header" id="group-0">Folders</h4>
+  <li class="card-page-item-header">
+    <h4 class="card-section-header">Folders</h4>
   </li>
   <li class="card-page-item-directory">
     <div class="card-type-directory card card-horizontal">
@@ -51,8 +51,8 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li>
-    <h4 class="card-section-header" id="group-1">Recipes</h4>
+  <li class="card-page-item-header">
+    <h4 class="card-section-header">Recipes</h4>
   </li>
   <li class="card-page-item-directory">
     <div class="card-type-asset card image-card">
@@ -195,8 +195,8 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li>
-    <h4 class="card-section-header" id="group-2">Chefs</h4>
+  <li class="card-page-item-header">
+    <h4 class="card-section-header">Chefs</h4>
   </li>
   <li class="card-page-item-directory">
     <div class="card-type-asset card">
