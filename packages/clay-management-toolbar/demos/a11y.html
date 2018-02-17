@@ -24,20 +24,198 @@
 		ClayManagementToolbar
 	</h1>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Default State</h4>
+			<div id="default-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Active State</h4>
+			<div id="active-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Disabled State</h4>
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With Only Search</h4>
+			<div id="only-search-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Without Search</h4>
+			<div id="without-search-block"></div>
+		</div>
+	</div>
+
 	<div id="container0"></div>
 	<div id="container1"></div>
 	<div id="container2"></div>
 	<div id="container3"></div>
 
 	<script type="text/javascript">
-		var spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
+		const actionItems = [
+			{
+				href: '#1',
+				icon: 'trash',
+				label: 'Remove',
+				quickAction: true,
+			},
+			{
+				href: '#2',
+				icon: 'download',
+				label: 'Download',
+				quickAction: true,
+				separator: true,
+			},
+			{
+				href: '#3',
+				icon: 'edit',
+				label: 'Edit',
+			},
+		];
 
+		const filterItems = [
+			{
+				items: [
+					{
+						label: 'Link 1',
+						href: '#mylink',
+						type: 'item',
+					},
+				],
+				label: 'Filter By (Links)',
+				type: 'group',
+			},
+			{
+				items: [
+					{
+						label: 'Item 1',
+						inputName: 'filteritem1checkbox',
+						inputValue: '1',
+						type: 'checkbox',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputName: 'filteritem2checkbox',
+						inputValue: '2',
+						type: 'checkbox',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputName: 'filteritem3checkbox',
+						inputValue: '3',
+						type: 'checkbox',
+					},
+				],
+				label: 'Filter By',
+				type: 'group',
+			},
+			{
+				items: [
+					{
+						label: 'Item 1',
+						inputName: 'orderitem1checkbox',
+						inputValue: '1',
+						type: 'checkbox',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputName: 'orderitem2checkbox',
+						inputValue: '2',
+						type: 'checkbox',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputName: 'orderitem3checkbox',
+						inputValue: '3',
+						type: 'checkbox',
+					},
+				],
+				label: 'Order By',
+				type: 'group',
+			},
+			{
+				items: [
+					{
+						label: 'Item 1',
+						inputValue: '1',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputValue: '2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputValue: '3',
+					},
+				],
+				inputName: 'item1radio',
+				label: 'Group 1',
+				type: 'radiogroup',
+			}
+		];
+
+		const viewTypes= [
+			{
+				active: true,
+				icon: 'list',
+				label: 'List',
+			},
+			{
+				disabled: true,
+				icon: 'table',
+				label: 'Table',
+			},
+			{
+				icon: 'cards2',
+				label: 'Card',
+			},
+		];
+
+		const spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
+
+		//Default State
 		new metal.ClayManagementToolbar({
+			creationMenu: true,
+			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
-			spritemap: spritemap
-		}, '#container0');
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			viewTypes: viewTypes,
+		},
+		'#default-block');
 
+		//Active State
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			selectable: true,
+			selectedItems: 5,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-block');
+
+		//Disabled State
 		new metal.ClayManagementToolbar({
 			creationMenu: {
 				items: [
@@ -51,268 +229,36 @@
 					}
 				]
 			},
-			filterItems: [
-				{
-					items: [
-						{
-							label: 'Link 1',
-							href: '#mylink',
-							type: 'item',
-						},
-					],
-					label: 'Filter By (Links)',
-					type: 'group',
-				},
-				{
-					items: [
-						{
-							label: 'Item 1',
-							inputName: 'filteritem1checkbox',
-							inputValue: '1',
-							type: 'checkbox',
-						},
-						{
-							checked: true,
-							label: 'Item 2',
-							inputName: 'filteritem2checkbox',
-							inputValue: '2',
-							type: 'checkbox',
-						},
-						{
-							disabled: true,
-							label: 'Item 3',
-							inputName: 'filteritem3checkbox',
-							inputValue: '3',
-							type: 'checkbox',
-						},
-					],
-					label: 'Filter By',
-					type: 'group',
-				},
-				{
-					items: [
-						{
-							label: 'Item 1',
-							inputName: 'orderitem1checkbox',
-							inputValue: '1',
-							type: 'checkbox',
-						},
-						{
-							checked: true,
-							label: 'Item 2',
-							inputName: 'orderitem2checkbox',
-							inputValue: '2',
-							type: 'checkbox',
-						},
-						{
-							disabled: true,
-							label: 'Item 3',
-							inputName: 'orderitem3checkbox',
-							inputValue: '3',
-							type: 'checkbox',
-						},
-					],
-					label: 'Order By',
-					type: 'group',
-				},
-				{
-					items: [
-						{
-							label: 'Item 1',
-							inputValue: '1',
-						},
-						{
-							checked: true,
-							label: 'Item 2',
-							inputValue: '2',
-						},
-						{
-							disabled: true,
-							label: 'Item 3',
-							inputValue: '3',
-						},
-					],
-					inputName: 'item1radio',
-					label: 'Group 1',
-					type: 'radiogroup',
-				}
-			],
+			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
 			selectable: true,
-			sortingOrder: 'desc',
-			spritemap: spritemap,
-			viewTypes: [
-				{
-					active: true,
-					icon: 'list',
-					label: 'List',
-				},
-				{
-					disabled: true,
-					icon: 'table',
-					label: 'Table',
-				},
-				{
-					icon: 'cards2',
-					label: 'Card',
-				},
-			]
-		}, '#container1');
-
-		new metal.ClayManagementToolbar({
-			actionItems: [
-				{
-					href: '#1',
-					icon: 'trash',
-					label: 'Remove',
-					quickAction: true,
-				},
-				{
-					href: '#2',
-					icon: 'download',
-					label: 'Download',
-					quickAction: true,
-					separator: true,
-				},
-				{
-					href: '#3',
-					icon: 'edit',
-					label: 'Edit',
-				},
-			],
-			selectable: true,
-			selectedItems: 14,
-			sortingOrder: 'desc',
-			spritemap: spritemap,
-			totalItems: 14,
-		}, '#container2');
-
-		// Disabled state
-
-		new metal.ClayManagementToolbar({
-			creationMenu: {
-				items: [
-					{
-						href: '#1',
-						label: 'Add Content 1',
-					},
-					{
-						href: '#2',
-						label: 'Add Content 2',
-					}
-				]
-			},
-			filterItems: [
-				{
-					items: [
-						{
-							label: 'Link 1',
-							href: '#mylink',
-							type: 'item',
-						},
-					],
-					label: 'Filter By (Links)',
-					type: 'group',
-				},
-				{
-					items: [
-						{
-							label: 'Item 1',
-							inputName: 'filteritem4checkbox',
-							inputValue: '1',
-							type: 'checkbox',
-						},
-						{
-							checked: true,
-							label: 'Item 2',
-							inputName: 'filteritem5checkbox',
-							inputValue: '2',
-							type: 'checkbox',
-						},
-						{
-							disabled: true,
-							label: 'Item 3',
-							inputName: 'filteritem6checkbox',
-							inputValue: '3',
-							type: 'checkbox',
-						},
-					],
-					label: 'Filter By',
-					type: 'group',
-				},
-				{
-					items: [
-						{
-							label: 'Item 1',
-							inputName: 'orderitem4checkbox',
-							inputValue: '1',
-							type: 'checkbox',
-						},
-						{
-							checked: true,
-							label: 'Item 2',
-							inputName: 'orderitem5checkbox',
-							inputValue: '2',
-							type: 'checkbox',
-						},
-						{
-							disabled: true,
-							label: 'Item 3',
-							inputName: 'orderitem6checkbox',
-							inputValue: '3',
-							type: 'checkbox',
-						},
-					],
-					label: 'Order By',
-					type: 'group',
-				},
-				{
-					items: [
-						{
-							label: 'Item 1',
-							inputValue: '1',
-						},
-						{
-							checked: true,
-							label: 'Item 2',
-							inputValue: '2',
-						},
-						{
-							disabled: true,
-							label: 'Item 3',
-							inputValue: '3',
-						},
-					],
-					inputName: 'item1radio',
-					label: 'Group 1',
-					type: 'radiogroup',
-				}
-			],
-			searchFormName: 'mySearchName',
-			searchInputName: 'mySearchInputName',
-			selectable: true,
-			sortingOrder: 'desc',
+			sortingOrder: 'asc',
 			spritemap: spritemap,
 			totalItems: 0,
-			viewTypes: [
-				{
-					active: true,
-					icon: 'list',
-					label: 'List',
-				},
-				{
-					disabled: true,
-					icon: 'table',
-					label: 'Table',
-				},
-				{
-					icon: 'cards2',
-					label: 'Card',
-				},
-			]
-		}, '#container3');
+			viewTypes: viewTypes,
+		},
+		'#disabled-block');
 
+		//With Only Search
+		new metal.ClayManagementToolbar({
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			spritemap: spritemap,
+		},
+		'#only-search-block');
+
+		//Without Search
+		new metal.ClayManagementToolbar({
+			creationMenu: '#creationPageURL',
+			filterItems: filterItems,
+			showSearch: false,
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			viewTypes: viewTypes,
+		},
+		'#without-search-block');
 	</script>
 </body>
 </html>
