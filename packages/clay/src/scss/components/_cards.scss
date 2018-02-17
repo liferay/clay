@@ -421,6 +421,12 @@
 	@extend %clay-custom-grid-wrapper;
 }
 
+.card-page-item-header {
+	padding-left: $grid-gutter-width / 2;
+	padding-right: $grid-gutter-width / 2;
+	width: 100%;
+}
+
 .card-page-item-directory {
 	@include clay-custom-grid-columns($card-page-item-directory);
 }
