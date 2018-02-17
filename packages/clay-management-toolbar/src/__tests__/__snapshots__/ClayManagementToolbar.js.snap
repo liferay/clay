@@ -723,6 +723,15 @@ exports[`ClayManagementToolbar should render a management toolbar with id in act
 </nav>
 `;
 
+exports[`ClayManagementToolbar should render a management toolbar with no search 1`] = `
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
+  <div class="container">
+    <ul class="navbar-nav"></ul>
+    <ul class="navbar-nav"></ul>
+  </div>
+</nav>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with plus button with more than one option 1`] = `
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
   <div class="container">
