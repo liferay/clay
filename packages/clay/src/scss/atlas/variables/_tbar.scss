@@ -3,3 +3,17 @@ $component-tbar: map-merge((
 	border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
 	color: $secondary
 ), $component-tbar);
+
+// Subnav Tbar
+
+$subnav-tbar: () !default;
+$subnav-tbar: map-merge((
+	btn-height: 1.4375rem,
+	btn-monospaced-font-size: 0.8125rem
+), $subnav-tbar);
+
+$subnav-tbar-light: () !default;
+$subnav-tbar-light: map-merge((
+	bg-color: #FFF,
+	color: $secondary
+), $subnav-tbar-light);
