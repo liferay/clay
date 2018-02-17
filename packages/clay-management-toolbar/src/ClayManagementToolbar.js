@@ -53,7 +53,7 @@ class ClayManagementToolbar extends Component {
 	 * @private
 	 */
 	handleCloseMobileSearchClick_() {
-		this.showSearch_ = false;
+		this.showSearchMobile_ = false;
 	}
 
 	/**
@@ -88,7 +88,7 @@ class ClayManagementToolbar extends Component {
 	 * @private
 	 */
 	handleOpenMobileSearchClick_() {
-		this.showSearch_ = true;
+		this.showSearchMobile_ = true;
 	}
 
 	/**
@@ -274,14 +274,23 @@ ClayManagementToolbar.STATE = {
 	selectedItems: Config.number(),
 
 	/**
-	 * Flag to indicate if search should be shown in or not. This is for the
+	 * Flag to indicate if search should be shown or not.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default true
+	 */
+	showSearch: Config.bool().value(true),
+
+	/**
+	 * Flag to indicate if search should be shown or not. This is for the
 	 * hide/show interaction in small devices.
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?bool}
 	 * @default false
 	 */
-	showSearch_: Config.bool()
+	showSearchMobile_: Config.bool()
 		.internal()
 		.value(false),
 
