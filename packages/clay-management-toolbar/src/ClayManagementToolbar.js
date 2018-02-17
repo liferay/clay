@@ -313,7 +313,8 @@ ClayManagementToolbar.STATE = {
 	spritemap: Config.string().required(),
 
 	/**
-	 * Total number of items.
+	 * Total number of items. If totalItems is 0 most of the elements in the bar
+	 * will appear disabled.
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?number|undefined}
