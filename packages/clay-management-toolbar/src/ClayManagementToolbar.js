@@ -170,10 +170,10 @@ ClayManagementToolbar.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
-	 * Configuration of the plus button.
-	 * Set `true` to just show the button.
-	 * Set `string` to use the button URL.
-	 * Set `object` to use the dropdown menu with items.
+	 * Configuration of the creation menu.
+	 * Set `true` to render a plain button that will emit an event onclick.
+	 * Set `string` to use it as link href to render a link styled button.
+	 * Set `object` to render a dropdown menu with items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?object|string|bool|undefined}

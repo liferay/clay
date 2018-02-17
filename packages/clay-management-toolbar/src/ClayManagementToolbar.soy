@@ -357,26 +357,16 @@
 			{/let}
 
 			<div class="{$searchClasses}">
-				{let $searchForm kind="html"}
-					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
-						{param disabled: $disabled /}
-						{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
-						{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
-						{param onlySearch: $onlySearch /}
-						{param searchActionURL: $searchActionURL /}
-						{param searchFormName: $searchFormName /}
-						{param searchInputName: $searchInputName /}
-						{param spritemap: $spritemap /}
-					{/delcall}
-				{/let}
-
-				{if $onlySearch}
-					{$searchForm}
-				{else}
-					<div class="container-fluid container-fluid-max-xl">
-						{$searchForm}
-					</div>
-				{/if}
+				{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
+					{param disabled: $disabled /}
+					{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
+					{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
+					{param onlySearch: $onlySearch /}
+					{param searchActionURL: $searchActionURL /}
+					{param searchFormName: $searchFormName /}
+					{param searchInputName: $searchInputName /}
+					{param spritemap: $spritemap /}
+				{/delcall}
 			</div>
 
 			<ul class="navbar-nav">
@@ -428,14 +418,12 @@
 {/template}
 
 /**
- * This renders the plus button.
+ * This renders the creation menu.
  */
 {template .creationMenu}
+	{@param creationMenu: ?}
 	{@param spritemap: string}
-	{@param? creationMenu: ?}
 	{@param? handleCreationButtonClicked_: any}
-
-	{let $commonClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
 
 	{if $creationMenu.items}
 		{call ClayDropdownBase.render}
@@ -453,7 +441,7 @@
 			{param ref: 'creationMenuDropdown' /}
 			{param spritemap: $spritemap /}
 			{param style: 'primary' /}
-			{param triggerClasses: $commonClasses /}
+			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
 		{/call}
 	{elseif $creationMenu == true}
 		{call ClayButton.render}
@@ -466,7 +454,7 @@
 	{else}
 		{call ClayLink.render}
 			{param buttonStyle: 'primary' /}
-			{param elementClasses: $commonClasses /}
+			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
 			{param href: $creationMenu /}
 			{param icon: 'plus' /}
 			{param spritemap: $spritemap /}
@@ -487,59 +475,69 @@
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 
-	{let $searchFormAttributes kind="attributes"}
-		{if $searchActionURL}
-			action="{$searchActionURL}"
-		{/if}
+	{let $searchFormContent kind="html"}
+		{let $searchFormAttributes kind="attributes"}
+			{if $searchActionURL}
+				action="{$searchActionURL}"
+			{/if}
 
-		{if $searchFormName}
-			name="{$searchFormName}"
-		{/if}
+			{if $searchFormName}
+				name="{$searchFormName}"
+			{/if}
 
-		role="search"
-	{/let}
+			role="search"
+		{/let}
 
-	<form {$searchFormAttributes}>
-		<div class="input-group">
-			<div class="input-group-item">
-				{let $inputAttributes kind="attributes"}
-					aria-label="Search"
-					{if $disabled}
-						disabled
-					{/if}
+		<form {$searchFormAttributes}>
+			<div class="input-group">
+				<div class="input-group-item">
+					{let $inputAttributes kind="attributes"}
+						aria-label="Search"
+						{if $disabled}
+							disabled
+						{/if}
 
-					class="form-control input-group-inset input-group-inset-after"
-					name="{$searchInputName}"
-					placeholder="Search for..."
-					ref="search"
-					type="text"
-				{/let}
+						class="form-control input-group-inset input-group-inset-after"
+						name="{$searchInputName}"
+						placeholder="Search for..."
+						ref="search"
+						type="text"
+					{/let}
 
-				<input {$inputAttributes} />
+					<input {$inputAttributes} />
 
-				<span class="input-group-inset-item input-group-inset-item-after">
-					{if not $onlySearch}
+					<span class="input-group-inset-item input-group-inset-item-after">
+						{if not $onlySearch}
+							{call ClayButton.render}
+								{param elementClasses: 'navbar-breakpoint-d-none' /}
+								{param events: ['click': $handleCloseMobileSearchClick_] /}
+								{param icon: 'times' /}
+								{param spritemap: $spritemap /}
+								{param style: 'unstyled' /}
+							{/call}
+						{/if}
+
 						{call ClayButton.render}
-							{param elementClasses: 'navbar-breakpoint-d-none' /}
-							{param events: ['click': $handleCloseMobileSearchClick_] /}
-							{param icon: 'times' /}
+							{param disabled: $disabled /}
+							{param elementClasses: $onlySearch ? '' : 'navbar-breakpoint-d-block' /}
+							{param events: ['click': $handleSearchSearchClick_] /}
+							{param icon: 'search' /}
+							{param ref: 'searchButton' /}
 							{param spritemap: $spritemap /}
 							{param style: 'unstyled' /}
+							{param type: 'submit' /}
 						{/call}
-					{/if}
-
-					{call ClayButton.render}
-						{param disabled: $disabled /}
-						{param elementClasses: $onlySearch ? '' : 'navbar-breakpoint-d-block' /}
-						{param events: ['click': $handleSearchSearchClick_] /}
-						{param icon: 'search' /}
-						{param ref: 'searchButton' /}
-						{param spritemap: $spritemap /}
-						{param style: 'unstyled' /}
-						{param type: 'submit' /}
-					{/call}
-				</span>
+					</span>
+				</div>
 			</div>
+		</form>
+	{/let}
+
+	{if $onlySearch}
+		{$searchFormContent}
+	{else}
+		<div class="container-fluid container-fluid-max-xl">
+			{$searchFormContent}
 		</div>
-	</form>
+	{/if}
 {/deltemplate}
