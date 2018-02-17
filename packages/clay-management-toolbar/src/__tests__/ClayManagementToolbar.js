@@ -209,6 +209,24 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a managment toolbar with plus button', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			creationMenu: true,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a managment toolbar with plus link', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			creationMenu: '#1',
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with plus button with one option', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
@@ -384,6 +402,7 @@ describe('ClayManagementToolbar', function() {
 
 	it('should render a management toolbar and emit an event on sorting button click', () => {
 		managementToolbar = new ClayManagementToolbar({
+			sortingOrder: 'asc',
 			spritemap: spritemap,
 		});
 
@@ -400,6 +419,7 @@ describe('ClayManagementToolbar', function() {
 
 	it('should render a management toolbar and emit an event on plus button click', () => {
 		managementToolbar = new ClayManagementToolbar({
+			creationMenu: true,
 			spritemap: spritemap,
 		});
 

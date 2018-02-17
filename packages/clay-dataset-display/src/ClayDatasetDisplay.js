@@ -273,15 +273,19 @@ ClayDatasetDisplay.STATE = {
 	 * Configuration of the management bar plus button.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?object|undefined}
+	 * @type {?object|string|bool|undefined}
 	 * @default undefined
 	 */
-	creationMenu: Config.shapeOf({
-		button: Config.object(),
-		caption: Config.string(),
-		helpText: Config.string(),
-		items: actionItemsValidator,
-	}),
+	creationMenu: Config.oneOfType([
+		Config.bool().value(false),
+		Config.string(),
+		Config.shapeOf({
+			button: Config.object(),
+			caption: Config.string(),
+			helpText: Config.string(),
+			items: actionItemsValidator,
+		}),
+	]),
 
 	/**
 	 * CSS classes to be applied to the element.

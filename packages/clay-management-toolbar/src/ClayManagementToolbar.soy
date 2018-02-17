@@ -15,7 +15,7 @@
 		type: string
 	]>}
 	{@param? contentRenderer: string}
-	{@param? creationMenu: [
+	{@param? creationMenu: bool|string|[
 		button: ?,
 		caption: string,
 		helpText: string,
@@ -220,7 +220,7 @@
 {template .default}
 	{@param spritemap: string}
 	{@param? contentRenderer: string}
-	{@param? creationMenu: [
+	{@param? creationMenu: bool|string|[
 		button: ?,
 		caption: string,
 		helpText: string,
@@ -280,8 +280,18 @@
 		{/if}
 	{/let}
 
+	{let $onlySearch: not $creationMenu and not $selectable and not $filterItems and not $sortingOrder and not $viewTypes /}
+
 	<nav {$navAttributes}>
-		<div class="container">
+		{let $classesContainer kind="text"}
+			{if $onlySearch}
+				container-fluid container-fluid-max-xl
+			{else}
+				container
+			{/if}
+		{/let}
+
+		<div class="{$classesContainer}">
 			<ul class="navbar-nav">
 				{if $selectable}
 					<li class="nav-item">
@@ -312,60 +322,78 @@
 					</li>
 				{/if}
 
-				<li class="nav-item">
-					{let $orderClasses kind="text"}
-						nav-link nav-link-monospaced
-						{if $sortingOrder == 'desc'}
-							{sp}order-arrow-down-active
-						{else}
-							{sp}order-arrow-up-active
-						{/if}
-					{/let}
+				{if $sortingOrder}
+					<li class="nav-item">
+						{let $orderClasses kind="text"}
+							nav-link nav-link-monospaced
+							{if $sortingOrder == 'desc'}
+								{sp}order-arrow-down-active
+							{else}
+								{sp}order-arrow-up-active
+							{/if}
+						{/let}
 
-					{call ClayButton.render}
-						{param disabled: $disabled /}
-						{param elementClasses: $orderClasses /}
-						{param events: ['click': $handleSortingButtonClicked_] /}
-						{param icon: 'order-arrow' /}
-						{param ref: 'sortingButton' /}
-						{param spritemap: $spritemap /}
-						{param style: 'unstyled' /}
-					{/call}
-				</li>
+						{call ClayButton.render}
+							{param disabled: $disabled /}
+							{param elementClasses: $orderClasses /}
+							{param events: ['click': $handleSortingButtonClicked_] /}
+							{param icon: 'order-arrow' /}
+							{param ref: 'sortingButton' /}
+							{param spritemap: $spritemap /}
+							{param style: 'unstyled' /}
+						{/call}
+					</li>
+				{/if}
 			</ul>
 
 			{let $searchClasses kind="text"}
-				navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down
-				{if $showSearch_}
-					{sp}show
+				navbar-form navbar-form-autofit
+				{if not $onlySearch}
+					{sp}navbar-overlay navbar-overlay-sm-down
+					{if $showSearch_}
+						{sp}show
+					{/if}
 				{/if}
 			{/let}
 
 			<div class="{$searchClasses}">
-				<div class="container">
+
+				{let $SearchForm kind="html"}
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
 						{param disabled: $disabled /}
 						{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
 						{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
+						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
 						{param searchFormName: $searchFormName /}
 						{param searchInputName: $searchInputName /}
 						{param spritemap: $spritemap /}
 					{/delcall}
-				</div>
+				{/let}
+
+				{if $onlySearch}
+					{$SearchForm}
+				{else}
+					<div class="container">
+						{$SearchForm}
+					</div>
+				{/if}
+
 			</div>
 
 			<ul class="navbar-nav">
-				<li class="nav-item navbar-breakpoint-d-none">
-					{call ClayButton.render}
-						{param disabled: $disabled /}
-						{param elementClasses: 'nav-link nav-link-monospaced' /}
-						{param events: ['click': $handleOpenMobileSearchClick_] /}
-						{param icon: 'search' /}
-						{param spritemap: $spritemap /}
-						{param style: 'unstyled' /}
-					{/call}
-				</li>
+				{if not $onlySearch}
+					<li class="nav-item navbar-breakpoint-d-none">
+						{call ClayButton.render}
+							{param disabled: $disabled /}
+							{param elementClasses: 'nav-link nav-link-monospaced' /}
+							{param events: ['click': $handleOpenMobileSearchClick_] /}
+							{param icon: 'search' /}
+							{param spritemap: $spritemap /}
+							{param style: 'unstyled' /}
+						{/call}
+					</li>
+				{/if}
 
 				{if $viewTypes}
 					<li class="dropdown nav-item">
@@ -387,16 +415,15 @@
 					</li>
 				{/if}
 
-				<li class="nav-item">
-					{call .creationMenu}
-						{param button: $creationMenu ? $creationMenu.button : null /}
-						{param caption: $creationMenu ? $creationMenu.caption : null /}
-						{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
-						{param helpText: $creationMenu ? $creationMenu.helpText : null /}
-						{param items: $creationMenu ? $creationMenu.items : null /}
-						{param spritemap: $spritemap /}
-					{/call}
-				</li>
+				{if $creationMenu}
+					<li class="nav-item">
+						{call .creationMenu}
+							{param creationMenu: $creationMenu /}
+							{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
+							{param spritemap: $spritemap /}
+						{/call}
+					</li>
+				{/if}
 			</ul>
 		</div>
 	</nav>
@@ -407,18 +434,17 @@
  */
 {template .creationMenu}
 	{@param spritemap: string}
-	{@param? button: ?}
-	{@param? caption: string}
+	{@param? creationMenu: ?}
 	{@param? handleCreationButtonClicked_: any}
-	{@param? helpText: string}
-	{@param? items: list<?>}
 
-	{if $items and length($items) > 1}
+	{let $commonClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+
+	{if $creationMenu.items}
 		{call ClayDropdownBase.render}
-			{param button: $button /}
-			{param caption: $caption /}
-			{param helpText: $helpText /}
-			{param items: $items /}
+			{param button: $creationMenu.button /}
+			{param caption: $creationMenu.caption /}
+			{param helpText: $creationMenu.helpText /}
+			{param items: $creationMenu.items /}
 			{param label kind="html"}
 				{call ClayIcon.render}
 					{param spritemap: $spritemap /}
@@ -429,22 +455,22 @@
 			{param ref: 'creationMenuDropdown' /}
 			{param spritemap: $spritemap /}
 			{param style: 'primary' /}
-			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param triggerClasses: $commonClasses /}
 		{/call}
-	{elseif $items}
-		{call ClayLink.render}
-			{param buttonStyle: 'primary' /}
-			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
-			{param href: $items[0].href /}
-			{param icon: 'plus' /}
-			{param spritemap: $spritemap /}
-		{/call}
-	{else}
+	{elseif $creationMenu == true}
 		{call ClayButton.render}
 			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
 			{param events: ['click': $handleCreationButtonClicked_ ] /}
 			{param icon: 'plus' /}
 			{param ref: 'creationMenu' /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{else}
+		{call ClayLink.render}
+			{param buttonStyle: 'primary' /}
+			{param elementClasses: $commonClasses /}
+			{param href: $creationMenu /}
+			{param icon: 'plus' /}
 			{param spritemap: $spritemap /}
 		{/call}
 	{/if}
@@ -458,6 +484,7 @@
 	{@param? disabled: bool}
 	{@param? handleCloseMobileSearchClick_: any}
 	{@param? handleSearchSearchClick_: any}
+	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -493,17 +520,19 @@
 				<input {$inputAttributes} />
 
 				<span class="input-group-inset-item input-group-inset-item-after">
-					{call ClayButton.render}
-						{param elementClasses: 'navbar-breakpoint-d-none' /}
-						{param events: ['click': $handleCloseMobileSearchClick_] /}
-						{param icon: 'times' /}
-						{param spritemap: $spritemap /}
-						{param style: 'unstyled' /}
-					{/call}
+					{if not $onlySearch}
+						{call ClayButton.render}
+							{param elementClasses: 'navbar-breakpoint-d-none' /}
+							{param events: ['click': $handleCloseMobileSearchClick_] /}
+							{param icon: 'times' /}
+							{param spritemap: $spritemap /}
+							{param style: 'unstyled' /}
+						{/call}
+					{/if}
 
 					{call ClayButton.render}
 						{param disabled: $disabled /}
-						{param elementClasses: 'navbar-breakpoint-d-block' /}
+						{param elementClasses: $onlySearch ? '' : 'navbar-breakpoint-d-block' /}
 						{param events: ['click': $handleSearchSearchClick_] /}
 						{param icon: 'search' /}
 						{param ref: 'searchButton' /}
