@@ -280,10 +280,10 @@
 		{/if}
 	{/let}
 
-	{let $onlySearch: not $creationMenu and not $selectable and not $filterItems and not $sortingOrder and not $viewTypes /}
-
 	<nav {$navAttributes}>
-		{let $classesContainer kind="text"}
+		{let $onlySearch: not $creationMenu and not $selectable and not $filterItems and not $sortingOrder and not $viewTypes /}
+
+		{let $containerClasses kind="text"}
 			{if $onlySearch}
 				container-fluid container-fluid-max-xl
 			{else}
@@ -291,7 +291,7 @@
 			{/if}
 		{/let}
 
-		<div class="{$classesContainer}">
+		<div class="{$containerClasses}">
 			<ul class="navbar-nav">
 				{if $selectable}
 					<li class="nav-item">
@@ -324,7 +324,7 @@
 
 				{if $sortingOrder}
 					<li class="nav-item">
-						{let $orderClasses kind="text"}
+						{let $sortingClasses kind="text"}
 							nav-link nav-link-monospaced
 							{if $sortingOrder == 'desc'}
 								{sp}order-arrow-down-active
@@ -335,7 +335,7 @@
 
 						{call ClayButton.render}
 							{param disabled: $disabled /}
-							{param elementClasses: $orderClasses /}
+							{param elementClasses: $sortingClasses /}
 							{param events: ['click': $handleSortingButtonClicked_] /}
 							{param icon: 'order-arrow' /}
 							{param ref: 'sortingButton' /}
@@ -357,8 +357,7 @@
 			{/let}
 
 			<div class="{$searchClasses}">
-
-				{let $SearchForm kind="html"}
+				{let $searchForm kind="html"}
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
 						{param disabled: $disabled /}
 						{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
@@ -372,13 +371,12 @@
 				{/let}
 
 				{if $onlySearch}
-					{$SearchForm}
+					{$searchForm}
 				{else}
 					<div class="container">
-						{$SearchForm}
+						{$searchForm}
 					</div>
 				{/if}
-
 			</div>
 
 			<ul class="navbar-nav">
