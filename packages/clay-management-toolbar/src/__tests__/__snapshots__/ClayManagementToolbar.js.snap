@@ -1188,7 +1188,7 @@ exports[`ClayManagementToolbar should render a managment toolbar with plus link 
         </button>
       </li>
       <li class="nav-item">
-        <a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+        <a aria-label="add" class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
             <title>plus</title>
             <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
