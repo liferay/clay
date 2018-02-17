@@ -349,17 +349,17 @@
 				{/if}
 			</ul>
 
-			{let $searchClasses kind="text"}
-				navbar-form navbar-form-autofit
-				{if not $onlySearch}
-					{sp}navbar-overlay navbar-overlay-sm-down
-					{if $showSearchMobile_}
-						{sp}show
-					{/if}
-				{/if}
-			{/let}
-
 			{if $showSearch}
+				{let $searchClasses kind="text"}
+					navbar-form navbar-form-autofit
+					{if not $onlySearch}
+						{sp}navbar-overlay navbar-overlay-sm-down
+						{if $showSearchMobile_}
+							{sp}show
+						{/if}
+					{/if}
+				{/let}
+
 				<div class="{$searchClasses}">
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
 						{param disabled: $disabled /}
