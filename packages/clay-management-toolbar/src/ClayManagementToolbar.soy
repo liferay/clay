@@ -44,6 +44,7 @@
 	{@param? handleCreationButtonClicked_: any}
 	{@param? handleDeselectAllClicked_: any}
 	{@param? handleFilterDoneButtonClick_: any}
+	{@param? handleInfoButtonClicked_: any}
 	{@param? handleOpenMobileSearchClick_: any}
 	{@param? handleSearchSearchClick_: any}
 	{@param? handleSelectAllClicked_: any}
@@ -57,6 +58,7 @@
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
+	{@param? showInfoButton: bool}
 	{@param? showSearch_: bool}
 	{@param? sortingOrder: string}
 	{@param? totalItems: number}
@@ -91,6 +93,7 @@
 			{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
 			{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
 			{param handleFilterDoneButtonClick_: $handleFilterDoneButtonClick_ /}
+			{param handleInfoButtonClicked_: $handleInfoButtonClicked_ /}
 			{param handleOpenMobileSearchClick_: $handleOpenMobileSearchClick_ /}
 			{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
 			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
@@ -102,6 +105,7 @@
 			{param searchFormName: $searchFormName /}
 			{param searchInputName: $searchInputName /}
 			{param selectable: $selectable /}
+			{param showInfoButton: $showInfoButton /}
 			{param showSearch_: $showSearch_ /}
 			{param sortingOrder: $sortingOrder /}
 			{param spritemap: $spritemap /}
@@ -248,6 +252,7 @@
 	{@param? handleCloseMobileSearchClick_: any}
 	{@param? handleCreationButtonClicked_: any}
 	{@param? handleFilterDoneButtonClick_: any}
+	{@param? handleInfoButtonClicked_: any}
 	{@param? handleOpenMobileSearchClick_: any}
 	{@param? handleSearchSearchClick_: any}
 	{@param? handleSelectPageCheckboxChanged_: any}
@@ -259,6 +264,7 @@
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
+	{@param? showInfoButton: bool}
 	{@param? showSearch_: bool}
 	{@param? sortingOrder: string}
 	{@param? viewTypes: list<[
@@ -366,6 +372,19 @@
 						{param style: 'unstyled' /}
 					{/call}
 				</li>
+
+				{if $showInfoButton}
+					<li class="nav-item">
+						{call ClayButton.render}
+							{param elementClasses: 'nav-link nav-link-monospaced' /}
+							{param events: ['click': $handleInfoButtonClicked_] /}
+							{param icon: 'info-circle-open' /}
+							{param ref: 'infoButton' /}
+							{param spritemap: $spritemap /}
+							{param style: 'unstyled' /}
+						{/call}
+					</li>
+				{/if}
 
 				{if $viewTypes}
 					<li class="dropdown nav-item">
