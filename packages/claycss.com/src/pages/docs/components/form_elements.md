@@ -119,7 +119,7 @@ weight: 100
 </article>
 
 
-<article id="select-element">
+<article id="clay-select-element">
 <h3 class="component-title">
 	<a href="#select-element">Select Element</a>
 </h3>
@@ -197,7 +197,7 @@ weight: 100
 	] /}
 {/call}
 ```
-```webcomponents
+```text/html
 <clay-select
 	id="regularSelectElement"
 	label="Regular Select Element"
