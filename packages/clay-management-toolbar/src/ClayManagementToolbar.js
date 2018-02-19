@@ -53,7 +53,7 @@ class ClayManagementToolbar extends Component {
 	 * @private
 	 */
 	handleCloseMobileSearchClick_() {
-		this.showSearch_ = false;
+		this.showSearchMobile_ = false;
 	}
 
 	/**
@@ -88,7 +88,7 @@ class ClayManagementToolbar extends Component {
 	 * @private
 	 */
 	handleOpenMobileSearchClick_() {
-		this.showSearch_ = true;
+		this.showSearchMobile_ = true;
 	}
 
 	/**
@@ -170,18 +170,25 @@ ClayManagementToolbar.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
-	 * Configuration of the plus button.
+	 * Configuration of the creation menu.
+	 * Set `true` to render a plain button that will emit an event onclick.
+	 * Set `string` to use it as link href to render a link styled button.
+	 * Set `object` to render a dropdown menu with items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?object|undefined}
+	 * @type {?object|string|bool|undefined}
 	 * @default undefined
 	 */
-	creationMenu: Config.shapeOf({
-		button: Config.object(),
-		caption: Config.string(),
-		helpText: Config.string(),
-		items: actionItemsValidator,
-	}),
+	creationMenu: Config.oneOfType([
+		Config.bool().value(false),
+		Config.string(),
+		Config.shapeOf({
+			button: Config.object(),
+			caption: Config.string(),
+			helpText: Config.string(),
+			items: actionItemsValidator,
+		}),
+	]),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -267,14 +274,23 @@ ClayManagementToolbar.STATE = {
 	selectedItems: Config.number(),
 
 	/**
-	 * Flag to indicate if search should be shown in or not. This is for the
+	 * Flag to indicate if search should be shown or not.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default true
+	 */
+	showSearch: Config.bool().value(true),
+
+	/**
+	 * Flag to indicate if search should be shown or not. This is for the
 	 * hide/show interaction in small devices.
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?bool}
 	 * @default false
 	 */
-	showSearch_: Config.bool()
+	showSearchMobile_: Config.bool()
 		.internal()
 		.value(false),
 
@@ -283,9 +299,9 @@ ClayManagementToolbar.STATE = {
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?string|undefined}
-	 * @default asc
+	 * @default undefined
 	 */
-	sortingOrder: Config.oneOf(['asc', 'desc']).value('asc'),
+	sortingOrder: Config.oneOf(['asc', 'desc']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
@@ -297,7 +313,8 @@ ClayManagementToolbar.STATE = {
 	spritemap: Config.string().required(),
 
 	/**
-	 * Total number of items.
+	 * Total number of items. If totalItems is 0 most of the elements in the bar
+	 * will appear disabled.
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?number|undefined}
