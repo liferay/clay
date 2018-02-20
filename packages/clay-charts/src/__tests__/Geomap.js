@@ -2,6 +2,9 @@ import Geomap from '../Geomap';
 
 let consoleErrorReference;
 
+/**
+ * Stubs console.error
+ */
 function mockConsoleError() {
 	console.error = () => {};
 }

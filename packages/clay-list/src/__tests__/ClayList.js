@@ -1,6 +1,6 @@
 import ClayList from '../ClayList';
 
-let consoleErrorReference
+let consoleErrorReference;
 let component;
 
 const actionItems = [
@@ -152,6 +152,9 @@ const groupedItems = [
 
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+/**
+ * Stubs console.error
+ */
 function mockConsoleError() {
 	console.error = () => {};
 }

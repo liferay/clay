@@ -5,6 +5,9 @@ let component;
 
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+/**
+ * Stubs console.error
+ */
 function mockConsoleError() {
 	console.error = () => {};
 }

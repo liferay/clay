@@ -26,6 +26,9 @@ const entries = [
 
 let component;
 
+/**
+ * Stubs console.error
+ */
 function mockConsoleError() {
 	console.error = () => {};
 }

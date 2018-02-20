@@ -14,6 +14,9 @@ let actionItems = [
 	},
 ];
 
+/**
+ * Stubs console.error
+ */
 function mockConsoleError() {
 	console.error = () => {};
 }

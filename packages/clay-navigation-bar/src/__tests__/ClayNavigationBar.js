@@ -6,6 +6,9 @@ let consoleErrorReference;
 let navigationbar;
 const spritemap = 'icons.svg';
 
+/**
+ * Stubs console.error
+ */
 function mockConsoleError() {
 	console.error = () => {};
 }

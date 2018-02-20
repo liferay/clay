@@ -233,7 +233,7 @@ describe('ClayTable', function() {
 						label: 'Origin',
 					},
 				],
-			}
+			},
 		});
 
 		expect(component).toMatchSnapshot();
