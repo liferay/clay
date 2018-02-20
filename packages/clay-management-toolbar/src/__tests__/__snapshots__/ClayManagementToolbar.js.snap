@@ -67,6 +67,14 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
           </svg>
         </button>
       </li>
+      <li class="nav-item">
+        <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="info-circle-open" disabled="disabled" type="button">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open" focusable="false">
+            <title>info-circle-open</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle-open"></use>
+          </svg>
+        </button>
+      </li>
       <li class="dropdown nav-item">
         <div class="dropdown">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
