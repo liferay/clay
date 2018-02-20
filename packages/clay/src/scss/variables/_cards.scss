@@ -92,10 +92,12 @@ $card-page-item-asset: map-merge((
 	),
 	sm: (
 		breakpoint: map-get($grid-breakpoints, sm), // 576px
+		flex-basis: 50%,
 		max-width: 50%
 	),
 	md: (
 		breakpoint: map-get($grid-breakpoints, md), // 768px
+		flex-basis: 200px,
 		max-width: 33.3333%
 	),
 	lg: (

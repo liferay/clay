@@ -56,6 +56,9 @@
 
 	@if ($custom-grid-props && $enabled) {
 		display: block;
+		flex-basis: map-get(map-get($custom-grid-props, base), min-width);
+		flex-grow: 1;
+		max-width: map-get(map-get($custom-grid-props, base), max-width);
 		min-width: map-get(map-get($custom-grid-props, base), min-width);
 		padding-left: map-get(map-get($custom-grid-props, base), padding-left);
 		padding-right: map-get(map-get($custom-grid-props, base), padding-right);
@@ -67,6 +70,7 @@
 
 			@if ($next) {
 				@media (min-width: map-get(map-get($custom-grid-props, $next), breakpoint)) {
+					flex-basis: map-get(map-get($custom-grid-props, $next), flex-basis);
 					max-width: map-get(map-get($custom-grid-props, $next), max-width);
 					min-width: map-get(map-get($custom-grid-props, $next), min-width);
 					padding-left: map-get(map-get($custom-grid-props, $next), padding-left);
