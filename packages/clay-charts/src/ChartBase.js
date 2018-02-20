@@ -71,9 +71,9 @@ const ChartBase = {
 	 * @inheritDoc
 	 */
 	attached() {
-		const data = this.columns || this.data;
+		const data = this.data || this.columns;
 
-		this.resolveData_(data).then(data => {
+		this._resolveData(data).then(data => {
 			this.columns = data;
 			this.data = data;
 
@@ -544,7 +544,7 @@ const ChartBase = {
 	 * @param {?Array|Function|String} data the data to resolve.
 	 * @protected
 	 */
-	resolveData_(data) {
+	_resolveData(data) {
 		if (Array.isArray(data)) {
 			return Promise.resolve(data);
 		} else if (isFunction(data)) {

@@ -28,12 +28,6 @@ describe('Geomap', () => {
 		console.error = consoleErrorReference;
 	});
 
-	it('should throw an error if required configuration is invalid', () => {
-		mockConsoleError();
-
-		expect(createMap).toThrow();
-	});
-
 	it('should accept data as a string', () => {
 		d3.json = jest.fn();
 

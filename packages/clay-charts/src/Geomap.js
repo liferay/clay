@@ -50,19 +50,13 @@ class Geomap extends Component {
 
 		this._onDataLoadHandler = this._onDataLoad.bind(this);
 
-		if (isString(this.data)) {
-			d3.json(this.data, this._onDataLoadHandler);
-		} else if (isObject(this.data) && !isFunction(this.data)) {
-			this._onDataLoadHandler.apply(this, [null, this.data]);
-		} else if (isFunction(this.data)) {
-			this.data()
-				.then(val => {
-					this._onDataLoadHandler.apply(this, [null, val]);
-				})
-				.catch(err => {
-					this._onDataLoadHandler.apply(this, [err, null]);
-				});
-		}
+		this._resolveData()
+			.then(val => {
+				this._onDataLoadHandler.apply(this, [null, val]);
+			})
+			.catch(err => {
+				this._onDataLoadHandler.apply(this, [err, null]);
+			});
 	}
 
 	/**
@@ -158,6 +152,28 @@ class Geomap extends Component {
 			.on('click', this._handleClickHandler)
 			.on('mouseout', this._handleMouseOut.bind(this))
 			.on('mouseover', this._handleMouseOver.bind(this));
+	}
+
+	/**
+	 * @return {Promise}
+	 * @protected
+	 */
+	_resolveData() {
+		return new Promise((resolve, reject) => {
+			if (isString(this.data)) {
+				d3.json(this.data, (err, data) => {
+					if (err) {
+						reject(err);
+					} else {
+						resolve(data);
+					}
+				});
+			} else if (isObject(this.data) && !isFunction(this.data)) {
+				resolve(this.data);
+			} else if (isFunction(this.data)) {
+				resolve(this.data());
+			}
+		});
 	}
 }
 
