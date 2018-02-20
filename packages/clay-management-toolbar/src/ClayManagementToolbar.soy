@@ -334,18 +334,35 @@
 				{/if}
 
 				{if $filterItems}
+					{let $filtersTrigger kind="html"}
+						<span class="navbar-breakpoint-down-d-none">
+							Filter and Order
+							{call ClayIcon.render}
+								{param spritemap: $spritemap /}
+								{param symbol: 'caret-bottom' /}
+							{/call}
+						</span>
+
+						<span class="navbar-breakpoint-d-none">
+							{call ClayIcon.render}
+								{param spritemap: $spritemap /}
+								{param symbol: 'filter' /}
+							{/call}
+						</span>
+					{/let}
+
 					<li class="dropdown nav-item">
-						{call ClayDropdown.render}
+						{call ClayDropdownBase.render}
 							{param button: $hideFiltersDoneButton ? null : [
 								'label': 'Done'
 							] /}
 							{param disabled: $disabled /}
 							{param events: ['buttonClicked': $_handleFilterDoneButtonClick] /}
 							{param items: $filterItems /}
-							{param label: 'Filter and Order' /}
+							{param label: $filtersTrigger /}
 							{param ref: 'filters' /}
 							{param spritemap: $spritemap /}
-							{param triggerClasses: 'nav-link navbar-breakpoint-down-d-none' /}
+							{param triggerClasses: 'nav-link' /}
 						{/call}
 					</li>
 				{/if}

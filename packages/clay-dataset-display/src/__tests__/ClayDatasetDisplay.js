@@ -511,8 +511,7 @@ describe('ClayDatasetDisplay', function() {
 
 		const spy = jest.spyOn(component, 'emit');
 
-		let filtersDropdown =
-			component.refs.managementToolbar.refs.filters.refs.dropdown;
+		let filtersDropdown = component.refs.managementToolbar.refs.filters;
 		filtersDropdown.refs.portal.refs.dropdownButton.element.click();
 
 		jest.runAllTimers();
