@@ -20,7 +20,7 @@ class ClayHorizontalCard extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleItemCheckboxClick_(event) {
+	_handleItemCheckboxClick(event) {
 		this.emit('itemToggled', event);
 	}
 }
