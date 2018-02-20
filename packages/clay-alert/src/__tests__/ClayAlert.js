@@ -109,7 +109,7 @@ describe('ClayAlert', function() {
 
 		alert.element.querySelector('button.close').click();
 
-		expect(alert.visible_).toBeFalsy();
+		expect(alert._visible).toBeFalsy();
 	});
 
 	it('should close and destroy an alert', function() {
@@ -123,7 +123,7 @@ describe('ClayAlert', function() {
 
 		alert.element.querySelector('button.close').click();
 
-		expect(alert.visible_).toBeFalsy();
+		expect(alert._visible).toBeFalsy();
 		expect(alert.disposed_).toBeTruthy();
 	});
 

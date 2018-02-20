@@ -19,23 +19,23 @@ class ClayModal extends Component {
 	 * @inheritDoc
 	 */
 	created() {
-		this.overlayElement_ = this.valueOverlayElementFn_();
-		this.eventHandler_ = new EventHandler();
+		this._overlayElement = this._valueOverlayElementFn();
+		this._eventHandler = new EventHandler();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	attached() {
-		this.addListener('click', this.handleDocumentClick_.bind(this), true);
-		this.addListener('hide', this.defaultHideModal_, true);
-		this.addListener('show', this.defaultShowModal_, true);
+		this.addListener('click', this._handleDocumentClick.bind(this), true);
+		this.addListener('hide', this._defaultHideModal, true);
+		this.addListener('show', this._defaultShowModal, true);
 		this.addListener(
 			'touchend',
-			this.handleDocumentClick_.bind(this),
+			this._handleDocumentClick.bind(this),
 			true
 		);
-		this.addListener('transitionend', this.handleTransitionEnd_, true);
+		this.addListener('transitionend', this._handleTransitionEnd, true);
 	}
 
 	/**
@@ -43,7 +43,20 @@ class ClayModal extends Component {
 	 */
 	detached() {
 		super.detached();
-		this.eventHandler_.removeAllListeners();
+		this._eventHandler.removeAllListeners();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	// eslint-disable-next-line
+	sync_isTransitioning() {
+		if (this._isTransitioning && !this.visible) {
+			this._isTransitioning = false;
+			this.visible = true;
+		} else if (this._isTransitioning && this.visible) {
+			this.visible = false;
+		}
 	}
 
 	/**
@@ -51,23 +64,11 @@ class ClayModal extends Component {
 	 */
 	syncVisible() {
 		if (this.visible) {
-			dom.enterDocument(this.overlayElement_);
-			this.overlayElement_.offsetHeight;
-			dom.addClasses(this.overlayElement_, 'show');
+			dom.enterDocument(this._overlayElement);
+			this._overlayElement.offsetHeight;
+			dom.addClasses(this._overlayElement, 'show');
 		} else {
-			dom.exitDocument(this.overlayElement_);
-		}
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncIsTransitioning_() {
-		if (this.isTransitioning_ && !this.visible) {
-			this.isTransitioning_ = false;
-			this.visible = true;
-		} else if (this.isTransitioning_ && this.visible) {
-			this.visible = false;
+			dom.exitDocument(this._overlayElement);
 		}
 	}
 
@@ -75,26 +76,26 @@ class ClayModal extends Component {
 	 * Close modal and remove transitions.
 	 * @private
 	 */
-	defaultHideModal_() {
-		dom.removeClasses(this.overlayElement_, 'show');
+	_defaultHideModal() {
+		dom.removeClasses(this._overlayElement, 'show');
 		dom.removeClasses(document.body, 'modal-open');
 
-		this.isTransitioning_ = true;
+		this._isTransitioning = true;
 
-		this.eventHandler_.removeAllListeners();
+		this._eventHandler.removeAllListeners();
 	}
 
 	/**
 	 * Open modal and add transition.
 	 * @private
 	 */
-	defaultShowModal_() {
+	_defaultShowModal() {
 		dom.addClasses(document.body, 'modal-open');
 
-		this.isTransitioning_ = true;
+		this._isTransitioning = true;
 
-		this.eventHandler_.add(
-			dom.on(document, 'keyup', this.handleKeyup_.bind(this))
+		this._eventHandler.add(
+			dom.on(document, 'keyup', this._handleKeyup.bind(this))
 		);
 	}
 
@@ -103,7 +104,7 @@ class ClayModal extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleClickFooterButton_(event) {
+	_handleClickFooterButton(event) {
 		this.emit('clickButton', event);
 	}
 
@@ -112,7 +113,7 @@ class ClayModal extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleClickCloseButtonFooter_(event) {
+	_handleClickCloseButtonFooter(event) {
 		this.emit('clickButton', event);
 		this.emit('hide');
 	}
@@ -121,7 +122,7 @@ class ClayModal extends Component {
 	 * Handle the click and emit close modal.
 	 * @private
 	 */
-	handleCloseModal_() {
+	_handleCloseModal() {
 		this.emit('hide');
 	}
 
@@ -130,7 +131,7 @@ class ClayModal extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleDocumentClick_(event) {
+	_handleDocumentClick(event) {
 		if (dom.contains(event.target, this.element)) {
 			this.emit('hide');
 		}
@@ -141,7 +142,7 @@ class ClayModal extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleKeyup_(event) {
+	_handleKeyup(event) {
 		if (event.keyCode === KEY_CODE_ESC) {
 			this.emit('hide');
 		}
@@ -152,13 +153,13 @@ class ClayModal extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleTransitionEnd_(event) {
+	_handleTransitionEnd(event) {
 		if (
 			event.target === this.element &&
-			this.isTransitioning_ &&
+			this._isTransitioning &&
 			!this.visible
 		) {
-			this.isTransitioning_ = false;
+			this._isTransitioning = false;
 		}
 	}
 
@@ -167,7 +168,7 @@ class ClayModal extends Component {
 	 * @return {Element} The resulting document fragment.
 	 * @private
 	 */
-	valueOverlayElementFn_() {
+	_valueOverlayElementFn() {
 		return dom.buildFragment('<div class="modal-backdrop fade"></div>')
 			.firstChild;
 	}
@@ -240,7 +241,7 @@ ClayModal.STATE = {
 	 * @default false
 	 * @private
 	 */
-	isTransitioning_: Config.bool()
+	_isTransitioning: Config.bool()
 		.value(false)
 		.internal(),
 

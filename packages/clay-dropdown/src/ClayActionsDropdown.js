@@ -17,7 +17,7 @@ class ClayActionsDropdown extends Component {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	handleButtonClick_(event) {
+	_handleButtonClick(event) {
 		this.emit('buttonClicked', event);
 	}
 
@@ -26,7 +26,7 @@ class ClayActionsDropdown extends Component {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	handleItemClick_(event) {
+	_handleItemClick(event) {
 		this.emit('itemClicked', event);
 	}
 }

@@ -23,7 +23,7 @@ class ClayCardGrid extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleItemToggled_(event) {
+	_handleItemToggled(event) {
 		this.emit('itemToggled', event);
 	}
 }

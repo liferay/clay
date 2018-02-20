@@ -4,11 +4,11 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param? loading_:  bool}
+	{@param? _loading:  bool}
 
 	<div class="metal-chart-container">
 		{let $chartAttrs kind="attributes"}
-			{if $loading_}
+			{if $_loading}
 				hidden
 			{/if}
 
@@ -18,7 +18,7 @@
 		<div class="metal-chart" {$chartAttrs}></div>
 
 		{let $placeholderAttrs kind="attributes"}
-			{if not $loading_}
+			{if not $_loading}
 				hidden
 			{/if}
 

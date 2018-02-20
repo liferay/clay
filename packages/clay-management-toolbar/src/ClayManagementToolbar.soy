@@ -5,6 +5,18 @@
  */
 {template .render}
 	{@param spritemap: string}
+	{@param? _handleActionClicked: any}
+	{@param? _handleCloseMobileSearchClick: any}
+	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleDeselectAllClicked: any}
+	{@param? _handleFilterDoneButtonClick: any}
+	{@param? _handleOpenMobileSearchClick: any}
+	{@param? _handleSearchSearchClick: any}
+	{@param? _handleSelectAllClicked: any}
+	{@param? _handleSelectPageCheckboxChanged: any}
+	{@param? _handleSortingButtonClicked: any}
+	{@param? _handleViewTypeClicked: any}
+	{@param? _showSearchMobile: bool}
 	{@param? actionItems: list<[
 		disabled: bool,
 		href: string,
@@ -39,17 +51,6 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? handleActionClicked_: any}
-	{@param? handleCloseMobileSearchClick_: any}
-	{@param? handleCreationButtonClicked_: any}
-	{@param? handleDeselectAllClicked_: any}
-	{@param? handleFilterDoneButtonClick_: any}
-	{@param? handleOpenMobileSearchClick_: any}
-	{@param? handleSearchSearchClick_: any}
-	{@param? handleSelectAllClicked_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
-	{@param? handleSortingButtonClicked_: any}
-	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? searchActionURL: string}
@@ -58,7 +59,6 @@
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
 	{@param? showSearch: bool}
-	{@param? showSearchMobile_: bool}
 	{@param? sortingOrder: string}
 	{@param? totalItems: number}
 	{@param? viewTypes: list<[
@@ -72,31 +72,32 @@
 
 	{if $isActive}
 		{call .active}
+			{param _handleActionClicked: $_handleActionClicked /}
+			{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
+			{param _handleSelectAllClicked: $_handleSelectAllClicked /}
+			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 			{param actionItems: $actionItems /}
 			{param elementClasses: $elementClasses /}
-			{param handleActionClicked_: $handleActionClicked_ /}
-			{param handleDeselectAllClicked_: $handleDeselectAllClicked_ /}
-			{param handleSelectAllClicked_: $handleSelectAllClicked_ /}
-			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
 			{param selectedItems: $selectedItems /}
 			{param spritemap: $spritemap /}
 			{param totalItems: $totalItems /}
 		{/call}
 	{else}
 		{call .default}
+			{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
+			{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+			{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
+			{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
+			{param _handleSearchSearchClick: $_handleSearchSearchClick /}
+			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
+			{param _handleSortingButtonClicked: $_handleSortingButtonClicked /}
+			{param _handleViewTypeClicked: $_handleViewTypeClicked /}
+			{param _showSearchMobile: $_showSearchMobile /}
 			{param contentRenderer: $contentRenderer ?: '' /}
 			{param creationMenu: $creationMenu /}
 			{param disabled: $totalItems == 0 /}
 			{param elementClasses: $elementClasses /}
 			{param filterItems: $filterItems /}
-			{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
-			{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
-			{param handleFilterDoneButtonClick_: $handleFilterDoneButtonClick_ /}
-			{param handleOpenMobileSearchClick_: $handleOpenMobileSearchClick_ /}
-			{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
-			{param handleSelectPageCheckboxChanged_: $handleSelectPageCheckboxChanged_ /}
-			{param handleSortingButtonClicked_: $handleSortingButtonClicked_ /}
-			{param handleViewTypeClicked_: $handleViewTypeClicked_ /}
 			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 			{param id: $id /}
 			{param searchActionURL: $searchActionURL /}
@@ -104,7 +105,6 @@
 			{param searchInputName: $searchInputName /}
 			{param selectable: $selectable /}
 			{param showSearch: $showSearch != false /}
-			{param showSearchMobile_: $showSearchMobile_ /}
 			{param sortingOrder: $sortingOrder /}
 			{param spritemap: $spritemap /}
 			{param viewTypes: $viewTypes /}
@@ -117,6 +117,10 @@
  */
 {template .active}
 	{@param spritemap: string}
+	{@param? _handleActionClicked: any}
+	{@param? _handleDeselectAllClicked: any}
+	{@param? _handleSelectAllClicked: any}
+	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? actionItems: list<[
 		disabled: bool,
 		href: string,
@@ -127,10 +131,6 @@
 		type: string
 	]>}
 	{@param? elementClasses: string}
-	{@param? handleActionClicked_: any}
-	{@param? handleDeselectAllClicked_: any}
-	{@param? handleSelectAllClicked_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
 	{@param? id: string}
 	{@param? selectedItems: number}
 	{@param? totalItems: number}
@@ -153,7 +153,7 @@
 				<li class="nav-item">
 					{call ClayCheckbox.render}
 						{param checked: true /}
-						{param events: ['change': $handleSelectPageCheckboxChanged_] /}
+						{param events: ['change': $_handleSelectPageCheckboxChanged] /}
 						{param hideLabel: true /}
 						{param indeterminate: $selectedItems < $totalItems /}
 						{param label: 'Select Page' /}
@@ -170,7 +170,7 @@
 					{if $selectedItems < $totalItems}
 						{call ClayButton.render}
 							{param elementClasses: 'nav-btn' /}
-							{param events: ['click': $handleSelectAllClicked_] /}
+							{param events: ['click': $_handleSelectAllClicked] /}
 							{param label: 'Select all' /}
 							{param ref: 'selectAllButton' /}
 							{param style: 'link' /}
@@ -178,7 +178,7 @@
 					{else}
 						{call ClayButton.render}
 							{param elementClasses: 'nav-btn' /}
-							{param events: ['click': $handleDeselectAllClicked_] /}
+							{param events: ['click': $_handleDeselectAllClicked] /}
 							{param label: 'Deselect all' /}
 							{param ref: 'deselectAllButton' /}
 							{param style: 'link' /}
@@ -191,7 +191,7 @@
 				<ul class="navbar-nav">
 					{foreach $item in $actionItems}
 						{if $item.quickAction and $item.icon and $spritemap}
-							<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$handleActionClicked_}">
+							<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleActionClicked}">
 								{call ClayButton.render}
 									{param elementClasses: 'quick-action-item' /}
 									{param icon: $item.icon /}
@@ -205,7 +205,7 @@
 
 					<li class="nav-item">
 						{call ClayActionsDropdown.render}
-							{param events: ['itemClicked': $handleActionClicked_] /}
+							{param events: ['itemClicked': $_handleActionClicked] /}
 							{param items: $actionItems /}
 							{param spritemap: $spritemap /}
 						{/call}
@@ -221,6 +221,15 @@
  */
 {template .default}
 	{@param spritemap: string}
+	{@param? _handleCloseMobileSearchClick: any}
+	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleFilterDoneButtonClick: any}
+	{@param? _handleOpenMobileSearchClick: any}
+	{@param? _handleSearchSearchClick: any}
+	{@param? _handleSelectPageCheckboxChanged: any}
+	{@param? _handleSortingButtonClicked: any}
+	{@param? _handleViewTypeClicked: any}
+	{@param? _showSearchMobile: bool}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
 		button: ?,
@@ -247,14 +256,6 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? handleCloseMobileSearchClick_: any}
-	{@param? handleCreationButtonClicked_: any}
-	{@param? handleFilterDoneButtonClick_: any}
-	{@param? handleOpenMobileSearchClick_: any}
-	{@param? handleSearchSearchClick_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
-	{@param? handleSortingButtonClicked_: any}
-	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? searchActionURL: string}
@@ -262,7 +263,6 @@
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? showSearch: bool}
-	{@param? showSearchMobile_: bool}
 	{@param? sortingOrder: string}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -300,7 +300,7 @@
 					<li class="nav-item">
 						{call ClayCheckbox.render}
 							{param disabled: $disabled /}
-							{param events: ['change': $handleSelectPageCheckboxChanged_] /}
+							{param events: ['change': $_handleSelectPageCheckboxChanged] /}
 							{param hideLabel: true /}
 							{param label: 'Select Page' /}
 							{param ref: 'selectPageCheckbox' /}
@@ -315,7 +315,7 @@
 								'label': 'Done'
 							] /}
 							{param disabled: $disabled /}
-							{param events: ['buttonClicked': $handleFilterDoneButtonClick_] /}
+							{param events: ['buttonClicked': $_handleFilterDoneButtonClick] /}
 							{param items: $filterItems /}
 							{param label: 'Filter and Order' /}
 							{param ref: 'filters' /}
@@ -339,7 +339,7 @@
 						{call ClayButton.render}
 							{param disabled: $disabled /}
 							{param elementClasses: $sortingClasses /}
-							{param events: ['click': $handleSortingButtonClicked_] /}
+							{param events: ['click': $_handleSortingButtonClicked] /}
 							{param icon: 'order-arrow' /}
 							{param ref: 'sortingButton' /}
 							{param spritemap: $spritemap /}
@@ -354,7 +354,7 @@
 					navbar-form navbar-form-autofit
 					{if not $onlySearch}
 						{sp}navbar-overlay navbar-overlay-sm-down
-						{if $showSearchMobile_}
+						{if $_showSearchMobile}
 							{sp}show
 						{/if}
 					{/if}
@@ -362,9 +362,9 @@
 
 				<div class="{$searchClasses}">
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
+						{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
+						{param _handleSearchSearchClick: $_handleSearchSearchClick /}
 						{param disabled: $disabled /}
-						{param handleCloseMobileSearchClick_: $handleCloseMobileSearchClick_ /}
-						{param handleSearchSearchClick_: $handleSearchSearchClick_ /}
 						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
 						{param searchFormName: $searchFormName /}
@@ -380,7 +380,7 @@
 						{call ClayButton.render}
 							{param disabled: $disabled /}
 							{param elementClasses: 'nav-link nav-link-monospaced' /}
-							{param events: ['click': $handleOpenMobileSearchClick_] /}
+							{param events: ['click': $_handleOpenMobileSearchClick] /}
 							{param icon: 'search' /}
 							{param spritemap: $spritemap /}
 							{param style: 'unstyled' /}
@@ -391,7 +391,7 @@
 				{if $viewTypes}
 					<li class="dropdown nav-item">
 						{call ClayDropdown.render}
-							{param events: ['itemClicked': $handleViewTypeClicked_] /}
+							{param events: ['itemClicked': $_handleViewTypeClicked] /}
 							{param icon kind="text"}
 								{foreach $viewType in $viewTypes}
 									{if $viewType.active}
@@ -411,8 +411,8 @@
 				{if $creationMenu}
 					<li class="nav-item">
 						{call .creationMenu}
+							{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
 							{param creationMenu: $creationMenu /}
-							{param handleCreationButtonClicked_: $handleCreationButtonClicked_ /}
 							{param spritemap: $spritemap /}
 						{/call}
 					</li>
@@ -428,7 +428,7 @@
 {template .creationMenu}
 	{@param creationMenu: ?}
 	{@param spritemap: string}
-	{@param? handleCreationButtonClicked_: any}
+	{@param? _handleCreationButtonClicked: any}
 
 	{if $creationMenu.items}
 		{call ClayDropdownBase.render}
@@ -451,7 +451,7 @@
 	{elseif $creationMenu == true}
 		{call ClayButton.render}
 			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
-			{param events: ['click': $handleCreationButtonClicked_ ] /}
+			{param events: ['click': $_handleCreationButtonClicked ] /}
 			{param icon: 'plus' /}
 			{param ref: 'creationMenu' /}
 			{param spritemap: $spritemap /}
@@ -473,9 +473,9 @@
  */
 {deltemplate ClayManagementToolbar.SearchForm}
 	{@param spritemap: string}
+	{@param? _handleCloseMobileSearchClick: any}
+	{@param? _handleSearchSearchClick: any}
 	{@param? disabled: bool}
-	{@param? handleCloseMobileSearchClick_: any}
-	{@param? handleSearchSearchClick_: any}
 	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
@@ -516,7 +516,7 @@
 						{if not $onlySearch}
 							{call ClayButton.render}
 								{param elementClasses: 'navbar-breakpoint-d-none' /}
-								{param events: ['click': $handleCloseMobileSearchClick_] /}
+								{param events: ['click': $_handleCloseMobileSearchClick] /}
 								{param icon: 'times' /}
 								{param spritemap: $spritemap /}
 								{param style: 'unstyled' /}
@@ -526,7 +526,7 @@
 						{call ClayButton.render}
 							{param disabled: $disabled /}
 							{param elementClasses: $onlySearch ? '' : 'navbar-breakpoint-d-block' /}
-							{param events: ['click': $handleSearchSearchClick_] /}
+							{param events: ['click': $_handleSearchSearchClick] /}
 							{param icon: 'search' /}
 							{param ref: 'searchButton' /}
 							{param spritemap: $spritemap /}

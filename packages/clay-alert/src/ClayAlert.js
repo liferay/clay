@@ -14,14 +14,14 @@ class ClayAlert extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
-		this.addListener('hide', this.defaultHideAlert_, true);
+		this.addListener('hide', this._defaultHideAlert, true);
 	}
 
 	/**
 	 * Hides the alert and destroy it if proceed.
 	 * @private
 	 */
-	defaultHideAlert_() {
+	_defaultHideAlert() {
 		if (this.destroyOnHide) {
 			this.dispose();
 		}
@@ -31,7 +31,7 @@ class ClayAlert extends Component {
 	 * Continues the propagation of the hide event
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	handleHide_() {
+	_handleHide() {
 		return !this.emit('hide');
 	}
 }

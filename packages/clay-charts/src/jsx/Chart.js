@@ -45,7 +45,7 @@ ChartJSX.PROPS = ChartBase.STATE;
 /**
  * @inheritDoc
  */
-ChartJSX.prototype.getStateObj_ = function() {
+ChartJSX.prototype._getStateObj = function() {
 	return this.props;
 };
 

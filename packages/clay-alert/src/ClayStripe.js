@@ -14,14 +14,14 @@ class ClayStripe extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
-		this.addListener('hide', this.defaultHideStripe_, true);
+		this.addListener('hide', this._defaultHideStripe, true);
 	}
 
 	/**
 	 * Hides the alert and destroy it if proceed.
 	 * @private
 	 */
-	defaultHideStripe_() {
+	_defaultHideStripe() {
 		if (this.destroyOnHide) {
 			this.dispose();
 		}
@@ -31,7 +31,7 @@ class ClayStripe extends Component {
 	 * Continues the propagation of the hide event
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	handleHide_() {
+	_handleHide() {
 		return !this.emit('hide');
 	}
 }

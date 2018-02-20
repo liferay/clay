@@ -22,7 +22,7 @@ class ClayManagementToolbar extends Component {
 	 * @return {?array|undefined} the index.
 	 * @private
 	 */
-	getDropdownItemIndex_(element) {
+	_getDropdownItemIndex(element) {
 		return Array.prototype.indexOf.call(
 			Array.prototype.filter.call(
 				element.parentElement.children,
@@ -38,9 +38,9 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleActionClicked_(event) {
+	_handleActionClicked(event) {
 		let element = event.delegateTarget;
-		let elementIndex = this.getDropdownItemIndex_(element);
+		let elementIndex = this._getDropdownItemIndex(element);
 		let item = this.actionItems[elementIndex];
 
 		this.emit('actionClicked', {
@@ -52,8 +52,8 @@ class ClayManagementToolbar extends Component {
 	 * Hides the search in mobile devices
 	 * @private
 	 */
-	handleCloseMobileSearchClick_() {
-		this.showSearchMobile_ = false;
+	_handleCloseMobileSearchClick() {
+		this._showSearchMobile = false;
 	}
 
 	/**
@@ -61,7 +61,7 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleCreationButtonClicked_(event) {
+	_handleCreationButtonClicked(event) {
 		this.emit('creationButtonClicked', event);
 	}
 
@@ -70,7 +70,7 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleDeselectAllClicked_(event) {
+	_handleDeselectAllClicked(event) {
 		this.emit('deselectAllClicked', event);
 	}
 
@@ -79,7 +79,7 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleFilterDoneButtonClick_(event) {
+	_handleFilterDoneButtonClick(event) {
 		this.emit('filterDoneClicked', event);
 	}
 
@@ -87,8 +87,8 @@ class ClayManagementToolbar extends Component {
 	 * Shows the search in mobile devices
 	 * @private
 	 */
-	handleOpenMobileSearchClick_() {
-		this.showSearchMobile_ = true;
+	_handleOpenMobileSearchClick() {
+		this._showSearchMobile = true;
 	}
 
 	/**
@@ -97,7 +97,7 @@ class ClayManagementToolbar extends Component {
 	 * @return {Boolean} If the event has been prevented or not.
 	 * @private
 	 */
-	handleSearchSearchClick_(event) {
+	_handleSearchSearchClick(event) {
 		return !this.emit('search', event);
 	}
 
@@ -106,7 +106,7 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleSelectAllClicked_(event) {
+	_handleSelectAllClicked(event) {
 		this.emit('selectAllClicked', event);
 	}
 
@@ -115,7 +115,7 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleSelectPageCheckboxChanged_(event) {
+	_handleSelectPageCheckboxChanged(event) {
 		this.emit('selectPageCheckboxChanged', event);
 	}
 
@@ -123,7 +123,7 @@ class ClayManagementToolbar extends Component {
 	 * Continues the propagation of the sorting button clicked event
 	 * @private
 	 */
-	handleSortingButtonClicked_() {
+	_handleSortingButtonClicked() {
 		this.emit('sortingButtonClicked', {
 			sortingOrder: this.sortingOrder,
 		});
@@ -134,9 +134,9 @@ class ClayManagementToolbar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleViewTypeClicked_(event) {
+	_handleViewTypeClicked(event) {
 		let element = event.delegateTarget;
-		let elementIndex = this.getDropdownItemIndex_(element);
+		let elementIndex = this._getDropdownItemIndex(element);
 		let item = this.viewTypes[elementIndex];
 
 		this.emit('viewTypeClicked', {
@@ -151,6 +151,18 @@ class ClayManagementToolbar extends Component {
  * @type {!Object}
  */
 ClayManagementToolbar.STATE = {
+	/**
+	 * Flag to indicate if search should be shown or not. This is for the
+	 * hide/show interaction in small devices.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default false
+	 */
+	_showSearchMobile: Config.bool()
+		.internal()
+		.value(false),
+
 	/**
 	 * List of items to display in the actions menu on active state.
 	 * @instance
@@ -281,18 +293,6 @@ ClayManagementToolbar.STATE = {
 	 * @default true
 	 */
 	showSearch: Config.bool().value(true),
-
-	/**
-	 * Flag to indicate if search should be shown or not. This is for the
-	 * hide/show interaction in small devices.
-	 * @instance
-	 * @memberof ClayManagementToolbar
-	 * @type {?bool}
-	 * @default false
-	 */
-	showSearchMobile_: Config.bool()
-		.internal()
-		.value(false),
 
 	/**
 	 * Sorting order.
