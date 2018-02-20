@@ -43,8 +43,8 @@ class ClayDatasetDisplay extends Component {
 			}
 		}
 
-		this.selectedItems_ = selectedItems;
-		this.totalItems_ = totalItems;
+		this._selectedItems = selectedItems;
+		this._totalItems = totalItems;
 	}
 
 	/**
@@ -52,12 +52,12 @@ class ClayDatasetDisplay extends Component {
 	 * removes them from the selectedItems array.
 	 * @private
 	 */
-	deselectAllItems_() {
-		for (let item of this.selectedItems_) {
+	_deselectAllItems() {
+		for (let item of this._selectedItems) {
 			item.selected = false;
 		}
 
-		this.selectedItems_ = [];
+		this._selectedItems = [];
 	}
 
 	/**
@@ -66,7 +66,7 @@ class ClayDatasetDisplay extends Component {
 	 * @private
 	 */
 	getSelectedItems() {
-		return this.selectedItems_;
+		return this._selectedItems;
 	}
 
 	/**
@@ -74,7 +74,7 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleActionClicked_(event) {
+	_handleActionClicked(event) {
 		this.emit('actionClicked', event);
 	}
 
@@ -83,7 +83,7 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleCreationButtonClicked_(event) {
+	_handleCreationButtonClicked(event) {
 		this.emit('creationButtonClicked', event);
 	}
 
@@ -91,8 +91,8 @@ class ClayDatasetDisplay extends Component {
 	 * Deselects all items on management toolbar deselect all button click.
 	 * @private
 	 */
-	handleDeselectAllClicked_() {
-		this.deselectAllItems_();
+	_handleDeselectAllClicked() {
+		this._deselectAllItems();
 	}
 
 	/**
@@ -100,7 +100,7 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleFilterDoneClicked_(event) {
+	_handleFilterDoneClicked(event) {
 		this.emit('filterDoneClicked', event);
 	}
 
@@ -110,19 +110,19 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleItemToggled_(event) {
+	_handleItemToggled(event) {
 		let checkedStatus = event.target.checked;
 		let itemId = event.target.getAttribute('value');
 
 		if (!checkedStatus) {
-			for (let [index, item] of this.selectedItems_.entries()) {
+			for (let [index, item] of this._selectedItems.entries()) {
 				if (
 					item[
 						this.views[this.selectedView].schema.inputValueField
 					] === itemId
 				) {
 					item.selected = false;
-					this.selectedItems_.splice(index, 1);
+					this._selectedItems.splice(index, 1);
 					break;
 				}
 			}
@@ -140,7 +140,7 @@ class ClayDatasetDisplay extends Component {
 								] === itemId
 							) {
 								childrenItem.selected = true;
-								this.selectedItems_.push(childrenItem);
+								this._selectedItems.push(childrenItem);
 								found = true;
 								break;
 							}
@@ -153,7 +153,7 @@ class ClayDatasetDisplay extends Component {
 							] === itemId
 						) {
 							item.selected = true;
-							this.selectedItems_.push(item);
+							this._selectedItems.push(item);
 							found = true;
 						}
 					}
@@ -166,7 +166,7 @@ class ClayDatasetDisplay extends Component {
 		}
 
 		this.items = this.items;
-		this.selectedItems_ = this.selectedItems_;
+		this._selectedItems = this._selectedItems;
 	}
 
 	/**
@@ -174,7 +174,7 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleSearch_(event) {
+	_handleSearch(event) {
 		this.emit('search', event);
 	}
 
@@ -183,7 +183,7 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleSortingButtonClicked_(event) {
+	_handleSortingButtonClicked(event) {
 		this.emit('sortingButtonClicked', event);
 	}
 
@@ -191,8 +191,8 @@ class ClayDatasetDisplay extends Component {
 	 * Selects all items on management toolbar select all button click.
 	 * @private
 	 */
-	handleSelectAllClicked_() {
-		this.selectAllItems_();
+	_handleSelectAllClicked() {
+		this._selectAllItems();
 	}
 
 	/**
@@ -201,13 +201,13 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleSelectPageCheckboxChanged_(event) {
+	_handleSelectPageCheckboxChanged(event) {
 		let checkboxStatus = event.target.checked;
 
 		if (checkboxStatus) {
-			this.selectAllItems_();
+			this._selectAllItems();
 		} else {
-			this.deselectAllItems_();
+			this._deselectAllItems();
 		}
 	}
 
@@ -216,7 +216,7 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleViewTypeClicked_(event) {
+	_handleViewTypeClicked(event) {
 		this.views[this.selectedView].active = false;
 
 		for (let [index, view] of this.views.entries()) {
@@ -233,7 +233,7 @@ class ClayDatasetDisplay extends Component {
 	 * selectedItems array.
 	 * @private
 	 */
-	selectAllItems_() {
+	_selectAllItems() {
 		let selectedItems = [];
 
 		for (let item of this.items) {
@@ -250,7 +250,7 @@ class ClayDatasetDisplay extends Component {
 			}
 		}
 
-		this.selectedItems_ = selectedItems;
+		this._selectedItems = selectedItems;
 	}
 }
 
@@ -260,6 +260,24 @@ class ClayDatasetDisplay extends Component {
  * @type {!Object}
  */
 ClayDatasetDisplay.STATE = {
+	/**
+	 * The selected items of the item list. For internatl purposes.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?array|undefined}
+	 * @default undefined
+	 */
+	_selectedItems: Config.array().internal(),
+
+	/**
+	 * The total number of items in the item list. For internatl purposes.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?int|undefined}
+	 * @default undefined
+	 */
+	_totalItems: Config.number().internal(),
+
 	/**
 	 * List of items to display in the management toolbar actions menu.
 	 * @instance
@@ -370,15 +388,6 @@ ClayDatasetDisplay.STATE = {
 	selectable: Config.bool().value(false),
 
 	/**
-	 * The selected items of the item list. For internatl purposes.
-	 * @instance
-	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
-	 * @default undefined
-	 */
-	selectedItems_: Config.array().internal(),
-
-	/**
 	 * Position in the views list of the selected view.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -413,15 +422,6 @@ ClayDatasetDisplay.STATE = {
 	 * @default undefined
 	 */
 	title: Config.string(),
-
-	/**
-	 * The total number of items in the item list. For internatl purposes.
-	 * @instance
-	 * @memberof ClayDatasetDisplay
-	 * @type {?int|undefined}
-	 * @default undefined
-	 */
-	totalItems_: Config.number().internal(),
 
 	/**
 	 * List of view items.
