@@ -129,12 +129,6 @@
 	> form {
 		width: 100%;
 	}
-
-	.form-inline {
-		.form-control {
-			margin-bottom: 0;
-		}
-	}
 }
 
 .navbar-form-autofit {
@@ -143,19 +137,6 @@
 
 	form {
 		display: flex;
-		width: 100%;
-	}
-
-	.form-inline {
-		align-items: flex-end;
-		flex: 1;
-		flex-direction: row;
-		width: 100%;
-	}
-
-	.form-control {
-		flex: 1;
-		min-width: 50px;
 		width: 100%;
 	}
 }
