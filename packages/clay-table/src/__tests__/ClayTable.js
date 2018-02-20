@@ -169,7 +169,7 @@ describe('ClayTable', function() {
 	it('should render a ClayTable with classes', () => {
 		component = new ClayTable({
 			elementClasses: 'my-custom-class',
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -178,7 +178,7 @@ describe('ClayTable', function() {
 	it('should render a ClayTable with id', () => {
 		component = new ClayTable({
 			id: 'myId',
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -186,7 +186,7 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with size `sm`', () => {
 		component = new ClayTable({
-			schema: [],
+			schema: {},
 			size: 'sm',
 		});
 
@@ -195,7 +195,7 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with size `md`', () => {
 		component = new ClayTable({
-			schema: [],
+			schema: {},
 			size: 'md',
 		});
 
@@ -204,7 +204,7 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with size `lg`', () => {
 		component = new ClayTable({
-			schema: [],
+			schema: {},
 			size: 'lg',
 		});
 
@@ -213,7 +213,7 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with size `xl`', () => {
 		component = new ClayTable({
-			schema: [],
+			schema: {},
 			size: 'xl',
 		});
 
@@ -222,16 +222,18 @@ describe('ClayTable', function() {
 
 	it('should render a ClayTable with a basic schema and no items', () => {
 		component = new ClayTable({
-			schema: [
-				{
-					fieldName: 'name',
-					label: 'Name',
-				},
-				{
-					fieldName: 'origin',
-					label: 'Origin',
-				},
-			],
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+				],
+			}
 		});
 
 		expect(component).toMatchSnapshot();
