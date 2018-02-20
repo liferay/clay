@@ -22,13 +22,13 @@ class ClayTable extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
-		this.eventHandler_.add(
-			dom.on(document, 'click', this.handleDocClick_.bind(this)),
+		this._eventHandler.add(
+			dom.on(document, 'click', this._handleDocClick.bind(this)),
 			dom.delegate(
 				this.element,
 				'focus',
 				'tr',
-				this.handleRowFocus_.bind(this)
+				this._handleRowFocus.bind(this)
 			)
 		);
 	}
@@ -37,7 +37,7 @@ class ClayTable extends Component {
 	 * @inheritDoc
 	 */
 	created() {
-		this.eventHandler_ = new EventHandler();
+		this._eventHandler = new EventHandler();
 	}
 
 	/**
@@ -45,7 +45,7 @@ class ClayTable extends Component {
 	 */
 	detached() {
 		super.detached();
-		this.eventHandler_.removeAllListeners();
+		this._eventHandler.removeAllListeners();
 	}
 
 	/**
@@ -53,7 +53,7 @@ class ClayTable extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleCellContentClick_(event) {
+	_handleCellContentClick(event) {
 		this.emit('cellContentClicked', event);
 	}
 
@@ -62,7 +62,7 @@ class ClayTable extends Component {
 	 * the focused table row. This is to handle quickMenu accesibility.
 	 * @private
 	 */
-	handleDocClick_() {
+	_handleDocClick() {
 		dom.removeClasses(this.element.querySelectorAll('tr'), 'table-focus');
 	}
 
@@ -71,7 +71,7 @@ class ClayTable extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleItemToggled_(event) {
+	_handleItemToggled(event) {
 		this.emit('itemToggled', event);
 	}
 
@@ -81,7 +81,7 @@ class ClayTable extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleRowFocus_(event) {
+	_handleRowFocus(event) {
 		dom.removeClasses(
 			this.element.querySelector('.table-focus'),
 			'table-focus'
@@ -94,7 +94,7 @@ class ClayTable extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleSortingClick_(event) {
+	_handleSortingClick(event) {
 		this.emit('sortingButtonClicked', event);
 	}
 }

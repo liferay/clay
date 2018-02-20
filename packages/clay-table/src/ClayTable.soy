@@ -19,10 +19,10 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? _handleCellContentClick: any}
+	{@param? _handleItemToggled: any}
+	{@param? _handleSortingClick: any}
 	{@param? elementClasses: string}
-	{@param? handleCellContentClick_: any}
-	{@param? handleItemToggled_: any}
-	{@param? handleSortingClick_: any}
 	{@param? id: string}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
@@ -49,7 +49,7 @@
 	<div {$attributes}>
 		<table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
 			{call .header}
-				{param handleSortingClick_: $handleSortingClick_ /}
+				{param _handleSortingClick: $_handleSortingClick /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
 				{param showActionsMenu: $showActionsMenu /}
@@ -57,8 +57,8 @@
 			{/call}
 
 			{call .body}
-				{param handleCellContentClick_: $handleCellContentClick_ /}
-				{param handleItemToggled_: $handleItemToggled_ /}
+				{param _handleCellContentClick: $_handleCellContentClick /}
+				{param _handleItemToggled: $_handleItemToggled /}
 				{param id: $id /}
 				{param items: $items /}
 				{param schema: $schema /}
@@ -89,8 +89,8 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
-	{@param? handleCellContentClick_: any}
-	{@param? handleItemToggled_: any}
+	{@param? _handleCellContentClick: any}
+	{@param? _handleItemToggled: any}
 	{@param? id: string}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
@@ -100,9 +100,9 @@
 	<tbody>
 		{if $items}
 			{call .rows}
+				{param _handleCellContentClick: $_handleCellContentClick /}
+				{param _handleItemToggled: $_handleItemToggled /}
 				{param groupName: $id /}
-				{param handleCellContentClick_: $handleCellContentClick_ /}
-				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
@@ -132,7 +132,7 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
-	{@param? handleSortingClick_: any}
+	{@param? _handleSortingClick: any}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
@@ -156,7 +156,7 @@
 							{$fieldSchema.label}
 						{else}
 							{call ClayButton.render}
-								{param events: ['click': $handleSortingClick_] /}
+								{param events: ['click': $_handleSortingClick] /}
 								{param icon: $fieldSchema.sortingOrder ? 'order-arrow-' + ($fieldSchema.sortingOrder == 'asc' ? 'up' : 'down') : null /}
 								{param iconAlignment: 'right' /}
 								{param label: $fieldSchema.label ?: $fieldSchema.fieldName /}
@@ -195,9 +195,9 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? _handleCellContentClick: any}
+	{@param? _handleItemToggled: any}
 	{@param? groupName: string}
-	{@param? handleCellContentClick_: any}
-	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
@@ -209,7 +209,7 @@
 					{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
-					{param events: ['change': $handleItemToggled_] /}
+					{param events: ['change': $_handleItemToggled] /}
 					{param hideLabel: true /}
 					{param label: $item.selected ? 'Select' : 'Deselect' /}
 					{param name kind="text"}
@@ -248,8 +248,8 @@
 				{/let}
 
 				{delcall ClayTable.Cell variant="$variant"}
+					{param _handleCellContentClick: $_handleCellContentClick /}
 					{param fieldSchema: $fieldSchema /}
-					{param handleCellContentClick_: $handleCellContentClick_ /}
 					{param item: $item /}
 					{param spritemap: $spritemap /}
 					{param value: $item[$fieldSchema.fieldName] /}
@@ -303,9 +303,9 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? _handleCellContentClick: any}
+	{@param? _handleItemToggled: any}
 	{@param? groupName: string}
-	{@param? handleCellContentClick_: any}
-	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
@@ -334,9 +334,9 @@
 			</tr>
 
 			{call .rows}
+				{param _handleCellContentClick: $_handleCellContentClick /}
+				{param _handleItemToggled: $_handleItemToggled /}
 				{param groupName: $currentgroupName /}
-				{param handleCellContentClick_: $handleCellContentClick_ /}
-				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
@@ -345,9 +345,9 @@
 			{/call}
 		{else}
 			{call .row}
+				{param _handleCellContentClick: $_handleCellContentClick /}
+				{param _handleItemToggled: $_handleItemToggled /}
 				{param groupName: $groupName /}
-				{param handleCellContentClick_: $handleCellContentClick_ /}
-				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
@@ -365,7 +365,7 @@
 	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
-	{@param? handleCellContentClick_: any}
+	{@param? _handleCellContentClick: any}
 	{@param? spritemap: string}
 
 	<td>
@@ -380,12 +380,12 @@
 	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
-	{@param? handleCellContentClick_: any}
+	{@param? _handleCellContentClick: any}
 	{@param? spritemap: string}
 
 	<td>
 		{call ClayButton.render}
-			{param events: ['click': $handleCellContentClick_ ]/}
+			{param events: ['click': $_handleCellContentClick ]/}
 			{param label: $fieldSchema.label /}
 			{param size: 'sm' /}
 			{param style: 'secondary' /}
@@ -401,7 +401,7 @@
 	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
-	{@param? handleCellContentClick_: any}
+	{@param? _handleCellContentClick: any}
 	{@param? spritemap: string}
 
 	<td>
@@ -429,7 +429,7 @@
 	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
-	{@param? handleCellContentClick_: any}
+	{@param? _handleCellContentClick: any}
 	{@param? spritemap: string}
 
 	<td>
@@ -450,7 +450,7 @@
 	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
-	{@param? handleCellContentClick_: any}
+	{@param? _handleCellContentClick: any}
 	{@param? spritemap: string}
 
 	<td class="table-cell-expand">
@@ -477,7 +477,7 @@
 	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
-	{@param? handleCellContentClick_: any}
+	{@param? _handleCellContentClick: any}
 	{@param? spritemap: string}
 
 	<td class="text-right">
@@ -492,7 +492,7 @@
 	{@param fieldSchema: ?}
 	{@param item: ?}
 	{@param value: ?}
-	{@param? handleCellContentClick_: any}
+	{@param? _handleCellContentClick: any}
 	{@param? spritemap: string}
 
 	<td>
