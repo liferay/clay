@@ -11,7 +11,7 @@ class Geomap extends GeomapComponent {
 	 */
 	render() {
 		const state = this.getState();
-		const style = `width:${state.width_};height:${state.height_}`;
+		const style = `width:${state._width};height:${state._height}`;
 
 		return <div style={style} />;
 	}

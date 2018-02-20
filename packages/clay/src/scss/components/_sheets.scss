@@ -11,11 +11,22 @@
 	padding-right:  $sheet-padding-right;
 	padding-top: $sheet-padding-top;
 
-	.panel-group-flush .panel-body {
-		margin-bottom: $sheet-section-margin-bottom;
+	.panel-group {
+		&,
+		.panel:last-child .panel-body {
+			margin-bottom: $sheet-panel-group-margin-bottom;
 
-		@include clay-scale-component {
-			margin-bottom: $sheet-section-margin-bottom-mobile;
+			@include clay-scale-component {
+				margin-bottom: $sheet-panel-group-margin-bottom-mobile;
+			}
+		}
+
+		.panel-body {
+			margin-bottom: $sheet-section-margin-bottom;
+
+			@include clay-scale-component {
+				margin-bottom: $sheet-section-margin-bottom-mobile;
+			}
 		}
 	}
 }
@@ -37,6 +48,20 @@
 
 	@include clay-scale-component {
 		margin-bottom: $sheet-section-margin-bottom-mobile;
+	}
+
+	> fieldset {
+		margin-bottom: -$sheet-section-margin-bottom;
+
+		@include clay-scale-component {
+			margin-bottom: -$sheet-section-margin-bottom-mobile;
+		}
+	}
+}
+
+fieldset {
+	+ .sheet-footer {
+		margin-top: 0;
 	}
 }
 
@@ -106,6 +131,14 @@
 		margin-bottom: $sheet-subtitle-margin-bottom-mobile;
 	}
 
+	&.autofit-row {
+		padding-bottom: 0;
+
+		.autofit-col {
+			margin-bottom: $sheet-subtitle-padding-y;
+		}
+	}
+
 	&.collapse-icon {
 		padding-left: $sheet-subtitle-collapse-icon-padding-left;
 		padding-right: $sheet-subtitle-collapse-icon-padding-right;
@@ -117,6 +150,11 @@
 		left: $sheet-subtitle-collapse-icon-left;
 		right: $sheet-subtitle-collapse-icon-right;
 		top: $sheet-subtitle-collapse-icon-top;
+	}
+
+	.heading-text {
+		margin-bottom: $sheet-subtitle-heading-text-margin-bottom;
+		margin-top: $sheet-subtitle-heading-text-margin-top;
 	}
 }
 

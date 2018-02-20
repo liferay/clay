@@ -32,7 +32,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<div id="inline-autofit-block" class="form-inline form-inline-autofit"></div>
+			<div id="inline-autofit-block" class="form-group-autofit"></div>
 			<h6>* In order to use inline-groups you may need to place it inside a .form-inline.form-inline-autofit container.</h6>
 		</div>
 	</div>
@@ -57,7 +57,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<div id="inline-autofit-multiple-block" class="form-inline form-inline-autofit"></div>
+			<div id="inline-autofit-multiple-block" class="form-group-autofit"></div>
 			<h6>* In order to use inline-groups you may need to place it inside a .form-inline.form-inline-autofit container.</h6>
 		</div>
 	</div>
@@ -83,6 +83,7 @@
 		new metal.ClaySelect(
 			{
 				label: 'Inline Autofit Select',
+				inline: true,
 				options: [
 					{
 						label: 'Option 1',
@@ -92,14 +93,14 @@
 						label: 'Option 2',
 						value: '2'
 					}
-				],
-				wrapperType: 'inline-group'
+				]
 			},
 			'#inline-autofit-block'
 		);
 		new metal.ClaySelect(
 			{
 				label: 'Inline Autofit Select 2',
+				inline: true,
 				options: [
 					{
 						label: 'Option 1',
@@ -109,8 +110,7 @@
 						label: 'Option 2',
 						value: '2'
 					}
-				],
-				wrapperType: 'inline-group'
+				]
 			},
 			'#inline-autofit-block'
 		);
@@ -173,6 +173,7 @@
 		new metal.ClaySelect(
 			{
 				label: 'Inline Multiple Select',
+				inline: true,
 				multiple: true,
 				options: [
 					{
@@ -183,14 +184,14 @@
 						label: 'Option 2',
 						value: '2'
 					}
-				],
-				wrapperType: 'inline-group'
+				]
 			},
 			'#inline-autofit-multiple-block'
 		);
 		new metal.ClaySelect(
 			{
 				label: 'Inline Multiple Select 2',
+				inline: true,
 				multiple: true,
 				options: [
 					{
@@ -201,8 +202,7 @@
 						label: 'Option 2',
 						value: '2'
 					}
-				],
-				wrapperType: 'inline-group'
+				]
 			},
 			'#inline-autofit-multiple-block'
 		);

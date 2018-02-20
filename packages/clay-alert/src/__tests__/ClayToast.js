@@ -1,14 +1,27 @@
 import ClayToast from '../ClayToast';
 
+let consoleErrorReference;
 let toast;
-
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+/**
+ * Stubs console.error
+ */
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayToast', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (toast) {
 			toast.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render default markup', function() {
@@ -96,7 +109,7 @@ describe('ClayToast', function() {
 
 		toast.element.querySelector('button.close').click();
 
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -114,7 +127,7 @@ describe('ClayToast', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(5000);
 
 		jest.runAllTimers();
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -132,7 +145,7 @@ describe('ClayToast', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(10000);
 
 		jest.runAllTimers();
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 	});
 
 	it('should close and destroy a toast', function() {
@@ -145,11 +158,13 @@ describe('ClayToast', function() {
 
 		toast.element.querySelector('button.close').click();
 
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 		expect(toast.disposed_).toBeTruthy();
 	});
 
 	it('should fail when no message is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			toast = new ClayToast({
 				spritemap: spritemap,
@@ -159,6 +174,8 @@ describe('ClayToast', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			toast = new ClayToast({
 				message: 'message',
@@ -168,6 +185,8 @@ describe('ClayToast', function() {
 	});
 
 	it('should fail when no title is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			toast = new ClayToast({
 				message: 'message',

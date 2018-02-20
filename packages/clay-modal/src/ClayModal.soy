@@ -4,14 +4,14 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param? _handleClickCloseButtonFooter: any}
+	{@param? _handleClickFooterButton: any}
+	{@param? _handleCloseModal: any}
+	{@param? _isTransitioning: bool}
 	{@param? body: string|html}
 	{@param? elementClasses: string}
 	{@param? footerButtons: list<?>}
-	{@param? handleClickCloseButtonFooter_: any}
-	{@param? handleClickFooterButton_: any}
-	{@param? handleCloseModal_: any}
 	{@param? id: string}
-	{@param? isTransitioning_: bool}
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? status: string}
@@ -21,7 +21,7 @@
 
 	{let $attributes kind="attributes"}
 		class="fade modal
-			{if $isTransitioning_ or $visible}
+			{if $_isTransitioning or $visible}
 				{sp}d-block
 			{/if}
 
@@ -57,7 +57,7 @@
 		<div class="{$classesSize}">
 			<div class="modal-content">
 				{call .header}
-					{param handleCloseModal_: $handleCloseModal_ /}
+					{param _handleCloseModal: $_handleCloseModal /}
 					{param spritemap: $spritemap /}
 					{param status: $status /}
 					{param title: $title /}
@@ -69,9 +69,9 @@
 				{/call}
 
 				{call .footer}
+					{param _handleClickCloseButtonFooter: $_handleClickCloseButtonFooter /}
+					{param _handleClickFooterButton: $_handleClickFooterButton /}
 					{param buttons: $footerButtons /}
-					{param handleClickCloseButtonFooter_: $handleClickCloseButtonFooter_ /}
-					{param handleClickFooterButton_: $handleClickFooterButton_ /}
 				{/call}
 			</div>
 		</div>
@@ -82,7 +82,7 @@
  * Render a header of the modal.
  */
 {template .header}
-	{@param? handleCloseModal_: any}
+	{@param? _handleCloseModal: any}
 	{@param? spritemap: string}
 	{@param? status: string}
 	{@param? title: string}
@@ -116,7 +116,7 @@
 			{if $spritemap}
 				{call ClayButton.render}
 					{param elementClasses: 'close' /}
-					{param events: ['click': $handleCloseModal_] /}
+					{param events: ['click': $_handleCloseModal] /}
 					{param icon: 'times' /}
 					{param spritemap: $spritemap /}
 					{param style: 'unstyled' /}
@@ -150,9 +150,9 @@
  * Render a footer of the modal.
  */
 {template .footer}
+	{@param? _handleClickCloseButtonFooter: any}
+	{@param? _handleClickFooterButton: any}
 	{@param? buttons: list<?>}
-	{@param? handleClickCloseButtonFooter_: any}
-	{@param? handleClickFooterButton_: any}
 
 	{if $buttons}
 		<div class="modal-footer">
@@ -160,7 +160,7 @@
 				{foreach $button in $buttons}
 					{if $button.alignment == 'left'}
 						{call ClayButton.render}
-							{param events: ['click': $handleClickFooterButton_] /}
+							{param events: ['click': $_handleClickFooterButton] /}
 							{param label: $button.label /}
 							{param style: $button.style ?: 'secondary' /}
 							{param type: not $button.type or $button.type == 'close' ? 'button' : $button.type /}
@@ -175,14 +175,14 @@
 						{if $button.type == 'close'}
 							{call ClayButton.render}
 								{param elementClasses: 'close-modal' /}
-								{param events: ['click': $handleClickCloseButtonFooter_] /}
+								{param events: ['click': $_handleClickCloseButtonFooter] /}
 								{param label: $button.label /}
 								{param style: 'secondary' /}
 								{param type: 'button' /}
 							{/call}
 						{else}
 							{call ClayButton.render}
-								{param events: ['click': $handleClickFooterButton_] /}
+								{param events: ['click': $_handleClickFooterButton] /}
 								{param label: $button.label /}
 								{param style: $button.style ?: 'primary' /}
 								{param type: $button.type /}

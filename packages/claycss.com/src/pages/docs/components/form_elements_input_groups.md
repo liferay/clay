@@ -1,498 +1,403 @@
 ---
 title: Form Elements (Input Groups)
-description: Components
+description: "An Input Group is a text field with extra elements that makes the pattern more complete for a common or frequent use case."
 layout: "guide"
+pattern: "Forms/text_input_group"
 weight: 100
 ---
 
-<article id="input-group-addon">
+### Description
+{$page.description}
 
-### Input Group Addon
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-> Append or prepend different things to your form elements with input-group.
+<article id="input-group-separated">
+<h3 class="component-title">
+	<a href="#input-group-separated">Input Group (Separated)</a>
+</h3>
+<div class="alert alert-warning">
+	Clay Input Group markup deviates from Bootstrap 4's Input Groups.
+</div>
+
+> Wrap each item in a <code>.input-group</code> with <code>.input-group-item</code>. The class <code>.input-group-item</code> splits the space evenly by default, add <code>.input-group-item-shrink</code> to make an item shrink to fit.
 
 <div class="sheet">
 	<div class="form-group">
 		<div class="input-group">
-			<span class="input-group-addon" id="basicAddon1">@</span>
-			<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+			<div class="input-group-item input-group-item-shrink">
+				<span class="input-group-text" id="basicAddon1">@</span>
+			</div>
+			<div class="input-group-item">
+				<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+			</div>
 		</div>
 	</div>
 	<div class="form-group">
 		<div class="input-group">
-			<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
-			<span class="input-group-addon" id="basicAddon2">@example.com</span>
+			<div class="input-group-item">
+				<input class="form-control" placeholder="Email" type="text">
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<span class="input-group-text">@</span>
+			</div>
+			<div class="input-group-item">
+				<input class="form-control" placeholder="liferay" type="text">
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<span class="input-group-text">.com</span>
+			</div>
 		</div>
-	</div>
-	<div class="form-group">
-		<label>Liferay</label>
-		<span class="form-text">http://www.liferay.com</span>
-		<div class="input-group">
-			<span class="input-group-addon">/</span>
-			<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
-		</div>
-	</div>
-	<div class="input-group">
-		<span class="input-group-addon">$</span>
-		<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-		<span class="input-group-addon">.00</span>
 	</div>
 </div>
 
 ```text/html
 <div class="form-group">
 	<div class="input-group">
-		<span class="input-group-addon" id="basicAddon1">@</span>
-		<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+		<div class="input-group-item input-group-item-shrink">
+			<span class="input-group-text" id="basicAddon1">@</span>
+		</div>
+		<div class="input-group-item">
+			<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+		</div>
 	</div>
 </div>
 
 <div class="form-group">
 	<div class="input-group">
-		<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
-		<span class="input-group-addon" id="basicAddon2">@example.com</span>
+		<div class="input-group-item">
+			<input class="form-control" placeholder="Email" type="text">
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<span class="input-group-text">@</span>
+		</div>
+		<div class="input-group-item">
+			<input class="form-control" placeholder="liferay" type="text">
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<span class="input-group-text">.com</span>
+		</div>
+	</div>
+</div>
+```
+
+</article>
+
+
+<article id="input-group-connected">
+<h3 class="component-title">
+	<a href="#input-group-connected">Input Group (Connected)</a>
+</h3>
+
+> Create connected <code>.input-group</code>'s by adding <code>.input-group-prepend</code> to every <code>.input-group-item</code> and <code>.input-group-append</code> to the last <code>.input-group-item</code>.
+
+<div class="sheet">
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text" id="basicAddon1">@</span>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-prepend">
+				<input class="form-control" placeholder="Email" type="text">
+			</div>
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">@</span>
+			</div>
+			<div class="input-group-item input-group-prepend">
+				<input class="form-control" placeholder="liferay" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<span class="input-group-text">.com</span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-prepend">
+				<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<span class="input-group-text" id="basicAddon2">@example.com</span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label>Liferay</label>
+		<div class="form-text">http://www.liferay.com</div>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">/</span>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-item input-group-prepend">
+				<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<span class="input-group-text">.00</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+```text/html
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text" id="basicAddon1">@</span>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-prepend">
+			<input class="form-control" placeholder="Email" type="text">
+		</div>
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">@</span>
+		</div>
+		<div class="input-group-item input-group-prepend">
+			<input class="form-control" placeholder="liferay" type="text">
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<span class="input-group-text">.com</span>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-prepend">
+			<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<span class="input-group-text" id="basicAddon2">@example.com</span>
+		</div>
 	</div>
 </div>
 
 <div class="form-group">
 	<label>Liferay</label>
-	<span class="form-text">http://www.liferay.com</span>
+	<div class="form-text">http://www.liferay.com</div>
 	<div class="input-group">
-		<span class="input-group-addon">/</span>
-		<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
-	</div>
-</div>
-
-<div class="input-group">
-	<span class="input-group-addon">$</span>
-	<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-	<span class="input-group-addon">.00</span>
-</div>
-```
-
-</article>
-
-
-<article id="input-group-buttons">
-
-### Input Group Buttons
-
-<div class="sheet">
-	<div class="form-group">
-		<div class="input-group">
-			<span class="input-group-btn">
-				<button class="btn btn-secondary" type="button">Search</button>
-			</span>
-			<input aria-label="Search for" class="form-control" placeholder="Search for..." type="text">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">/</span>
 		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<input aria-label="Search for second one" class="form-control" placeholder="Search for..." type="text">
-			<span class="input-group-btn">
-				<button class="btn btn-secondary" type="button">Search</button>
-			</span>
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<div class="input-group-btn">
-				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					Action
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-					</svg>
-				</button>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
-					<a class="dropdown-item" href="#">Something else here</a>
-					<div class="dropdown-divider" role="separator"></div>
-					<a class="dropdown-item" href="#">Separated link</a>
-				</div>
-			</div>
-			<input aria-label="Text input with dropdown button" class="form-control" type="text">
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<input aria-label="Text input with dropdown button" class="form-control" type="text">
-			<div class="input-group-btn">
-				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					Action
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-					</svg>
-				</button>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
-					<a class="dropdown-item" href="#">Something else here</a>
-					<div class="dropdown-divider" role="separator"></div>
-					<a class="dropdown-item" href="#">Separated link</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<div class="input-group-btn">
-				<button class="btn btn-secondary" type="button">Action</button>
-				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-					</svg>
-				</button>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
-					<a class="dropdown-item" href="#">Something else here</a>
-					<div class="dropdown-divider" role="separator"></div>
-					<a class="dropdown-item" href="#">Separated link</a>
-				</div>
-			</div>
-			<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
-			<div class="input-group-btn">
-				<button class="btn btn-secondary" type="button">Action</button>
-				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-					</svg>
-				</button>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
-					<a class="dropdown-item" href="#">Something else here</a>
-					<div class="dropdown-divider" role="separator"></div>
-					<a class="dropdown-item" href="#">Separated link</a>
-				</div>
-			</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
 		</div>
 	</div>
 </div>
 
-```text/html
-<div class="input-group">
-	<span class="input-group-btn">
-		<button class="btn btn-secondary" type="button">Search</button>
-	</span>
-	<input aria-label="Search for" class="form-control" placeholder="Search for..." type="text">
-</div>
-
-<div class="input-group">
-	<input aria-label="Search for second one" class="form-control" placeholder="Search for..." type="text">
-	<span class="input-group-btn">
-		<button class="btn btn-secondary" type="button">Search</button>
-	</span>
-</div>
-
-<div class="input-group">
-	<div class="input-group-btn">
-		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-			Action
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-			</svg>
-		</button>
-		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">Action</a>
-			<a class="dropdown-item" href="#">Another action</a>
-			<a class="dropdown-item" href="#">Something else here</a>
-			<div class="dropdown-divider" role="separator"></div>
-			<a class="dropdown-item" href="#">Separated link</a>
-		</div>
-	</div>
-	<input aria-label="Text input with dropdown button" class="form-control" type="text">
-</div>
-
-<div class="input-group">
-	<input aria-label="Text input with dropdown button" class="form-control" type="text">
-	<div class="input-group-btn">
-		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-			Action
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-			</svg>
-		</button>
-		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">Action</a>
-			<a class="dropdown-item" href="#">Another action</a>
-			<a class="dropdown-item" href="#">Something else here</a>
-			<div class="dropdown-divider" role="separator"></div>
-			<a class="dropdown-item" href="#">Separated link</a>
-		</div>
-	</div>
-</div>
-
-<div class="input-group">
-	<div class="input-group-btn">
-		<button class="btn btn-secondary" type="button">Action</button>
-		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-			</svg>
-		</button>
-		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">Action</a>
-			<a class="dropdown-item" href="#">Another action</a>
-			<a class="dropdown-item" href="#">Something else here</a>
-			<div class="dropdown-divider" role="separator"></div>
-			<a class="dropdown-item" href="#">Separated link</a>
-		</div>
-	</div>
-	<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
-</div>
-
-<div class="input-group">
-	<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
-	<div class="input-group-btn">
-		<button class="btn btn-secondary" type="button">Action</button>
-		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-			</svg>
-		</button>
-		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">Action</a>
-			<a class="dropdown-item" href="#">Another action</a>
-			<a class="dropdown-item" href="#">Something else here</a>
-			<div class="dropdown-divider" role="separator"></div>
-			<a class="dropdown-item" href="#">Separated link</a>
-		</div>
-	</div>
-</div>
-```
-
-</article>
-
-
-<article id="input-group-secondary">
-
-### Input Group Secondary
-
-> Different skin for Input Group
-
-<div class="sheet">
-	<div class="form-group">
-		<label for="">Custom Checkbox</label>
-		<div class="input-group input-group-secondary">
-			<span class="input-group-addon">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-					</label>
-				</div>
-			</span>
-			<input aria-label="Text input with checkbox" class="form-control" type="text">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="">Custom Checkbox and Custom Control Description</label>
-		<div class="input-group input-group-secondary">
-			<span class="input-group-addon">
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description">Custom Check Label</span>
-					</label>
-				</div>
-			</span>
-			<input aria-label="Text input with checkbox" class="form-control" type="text">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="">Form Check and Form Check Description</label>
-		<div class="input-group input-group-secondary">
-			<input aria-label="Text input with checkbox" class="form-control" type="text">
-			<span class="input-group-addon">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input aria-label="Checkbox for previous text input" class="form-check-input" type="checkbox" value="">
-						<span class="form-check-description">Form Check Label</span>
-					</label>
-				</div>
-			</span>
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="">Custom Radio</label>
-		<div class="input-group input-group-secondary">
-			<span class="input-group-addon">
-				<div class="custom-control custom-radio">
-					<label>
-						<input aria-label="Radio button for following text input" class="custom-control-input" type="radio">
-						<span class="custom-control-indicator"></span>
-					</label>
-				</div>
-			</span>
-			<input aria-label="Text input with radio button" class="form-control" type="text">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="">Form Check with Radio Button</label>
-		<div class="input-group input-group-secondary">
-			<input aria-label="Text input with radio button" class="form-control" type="text">
-			<span class="input-group-addon">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input aria-label="Radio button for previous text input" class="form-check-input" type="radio" value="">
-					</label>
-				</div>
-			</span>
-		</div>
-	</div>
-</div>
-
-```text/html
 <div class="form-group">
-	<label for="">Custom Checkbox</label>
-	<div class="input-group input-group-secondary">
-		<span class="input-group-addon">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-				</label>
-			</div>
-		</span>
-		<input aria-label="Text input with checkbox" class="form-control" type="text">
-	</div>
-</div>
-```
-
-</article>
-
-
-<article id="input-group-transparent">
-
-### Input Group Transparent
-
-> Another skin for Input Group
-
-<div class="sheet">
-	<div class="form-group">
-		<label for="inputGroupTransparent">
-			Label{sp}
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
-			</svg>
-		</label>
-		<div class="input-group input-group-transparent">
-			<span class="input-group-addon">$</span>
-			<input aria-label="Amount" class="form-control" id="inputGroupTransparent" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
-				<button class="btn btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</button>
-			</span>
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">$</span>
 		</div>
-	</div>
-</div>
-
-```text/html
-<div class="form-group">
-	<label for="inputGroupTransparent">
-		Label
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
-		</svg>
-	</label>
-	<div class="input-group input-group-transparent">
-		<span class="input-group-addon">$</span>
-		<input aria-label="Amount" class="form-control" id="inputGroupTransparent" placeholder="Some placeholder text..." type="text">
-		<span class="input-group-btn">
-			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-				</svg>
-			</button>
-		</span>
-	</div>
-</div>
-```
-
-</article>
-
-
-<article id="input-group-sizes">
-
-### Input Group Sizes
-
-<div class="sheet">
-	<div class="form-group">
-		<div class="input-group input-group-sm">
-			<span class="input-group-addon">$</span>
-			<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
-			<span class="input-group-addon">.00</span>
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<span class="input-group-addon">$</span>
+		<div class="input-group-item input-group-prepend">
 			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-			<span class="input-group-addon">.00</span>
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<span class="input-group-text">.00</span>
+		</div>
+	</div>
+</div>
+```
+
+</article>
+
+
+<article id="input-group-mixed">
+<h3 class="component-title">
+	<a href="#input-group-mixed">Input Group (Mixed)</a>
+</h3>
+
+> Mix the two.
+
+<div class="sheet">
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink">
+				<span class="input-group-text" id="basicAddon1">@</span>
+			</div>
+			<div class="input-group-item input-group-prepend">
+				<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<button class="btn btn-secondary" type="submit">Submit</button>
+			</div>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="inputGroupTransparentSm">
-			Label Input Group Sm{sp}
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
-			</svg>
-		</label>
-		<div class="input-group input-group-transparent input-group-sm">
-			<span class="input-group-addon">$</span>
-			<input aria-label="Amount" class="form-control" id="inputGroupTransparentSm" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
-				<button class="btn btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
+		<label for="localizableInput1">Liferay</label>
+		<div class="form-text">http://www.liferay.com</div>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">/</span>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input class="form-control" id="localizableInput1" placeholder="design/lexicon" type="text" value="soluciones">
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+					<span class="inline-item">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+							<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+						</svg>
+					</span>
+					<span class="btn-section">es-ES</span>
 				</button>
-			</span>
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputGroupTransparentNormal">
-			Label{sp}
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
-			</svg>
-		</label>
-		<div class="input-group input-group-transparent">
-			<span class="input-group-addon">$</span>
-			<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-btn">
-				<button class="btn btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-					</svg>
-				</button>
-			</span>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+									<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
+								</svg>
+							</span>
+							en-US
+							<span class="label label-info">Default</span>
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+									<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
+								</svg>
+							</span>
+							en-GB
+							<span class="label label-success">Translated</span>
+						</a>
+					</li>
+					<li>
+						<a class="active dropdown-item" href="#1">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+									<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+								</svg>
+							</span>
+							es-ES
+							<span class="label label-success">Translated</span>
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+									<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
+								</svg>
+							</span>
+							fr-FR
+							<span class="label label-warning">Not Translated</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
 ```text/html
-<div class="input-group input-group-sm">
-	<span class="input-group-addon">$</span>
-	<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
-	<span class="input-group-addon">.00</span>
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink">
+			<span class="input-group-text" id="basicAddon1">@</span>
+		</div>
+		<div class="input-group-item input-group-prepend">
+			<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<button class="btn btn-secondary" type="submit">Submit</button>
+		</div>
+	</div>
 </div>
 
-<div class="input-group">
-	<span class="input-group-addon">$</span>
-	<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-	<span class="input-group-addon">.00</span>
+<div class="form-group">
+	<label for="localizableInput1">Liferay</label>
+	<div class="form-text">http://www.liferay.com</div>
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">/</span>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input class="form-control" id="localizableInput1" placeholder="design/lexicon" type="text" value="soluciones">
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+						<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+					</svg>
+				</span>
+				<span class="btn-section">es-ES</span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li>
+					<a class="dropdown-item" href="#1">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+								<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
+							</svg>
+						</span>
+						en-US
+						<span class="label label-info">Default</span>
+					</a>
+				</li>
+				<li>
+					<a class="dropdown-item" href="#1">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+								<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
+							</svg>
+						</span>
+						en-GB
+						<span class="label label-success">Translated</span>
+					</a>
+				</li>
+				<li>
+					<a class="active dropdown-item" href="#1">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+								<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+							</svg>
+						</span>
+						es-ES
+						<span class="label label-success">Translated</span>
+					</a>
+				</li>
+				<li>
+					<a class="dropdown-item" href="#1">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+								<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
+							</svg>
+						</span>
+						fr-FR
+						<span class="label label-warning">Not Translated</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>
 ```
 
@@ -500,27 +405,24 @@ weight: 100
 
 
 <article id="input-group-inset">
+<h3 class="component-title">
+	<a href="#input-group-inset">Input Group Inset</a>
+</h3>
 
-### Input Group Inset
-
-> Add class `input-group-inset` to `input-group` to place a button or other stuff inside the input.
-
-> `input-group-inset` gets aligned right by default, add `input-group-inset-left` to `input-group` to align inset content on the left. This helps keep the tab order logical so the input is always focused first and not the button.
+> <code>.input-group-inset</code>, <code>.input-group-inset-before</code>, <code>.input-group-inset-after</code>, <code>.input-group-inset-item</code>, <code>.input-group-inset-item-before</code>, and <code>.input-group-inset-item-after</code>.
 
 <div class="alert alert-warning">
-	You will need to adjust <code>padding-left</code>, <code>padding-right</code>, or both on <code>.input-group-input .form-control</code> depending on what is inside <code>.input-group-inset</code>.
+	To retain the focus styles around the <code>.input-group-inset</code> component when a button or link inside is focused, add the <code>focus</code> class on <code>.input-group-item</code>. Focus Box Shadows are only supported in <code>.input-group-inset</code> with <code>.input-group-item.focus</code>. <code>.input-prepend</code> and <code>.input-append</code> aren't supported with <code>.input-group-inset</code>.
 </div>
 
 <div class="sheet">
-	<div class="row">
-		<div class="col-md-6">
-			<div class="form-group">
-				<div class="input-group input-group-inset">
-					<div class="input-group-input">
-						<input aria-label="Search for" class="form-control" placeholder="Search..." type="text">
-					</div>
-					<span class="input-group-inset-item">
-						<button class="btn btn-link d-md-none" type="button">
+	<div class="form-group-autofit">
+		<div class="form-group-item">
+			<div class="input-group">
+				<div class="input-group-item">
+					<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+					<div class="input-group-inset-item input-group-inset-item-after">
+						<button class="btn btn-unstyled d-md-none" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
@@ -530,43 +432,62 @@ weight: 100
 								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
 						</button>
-					</span>
+					</div>
 				</div>
 			</div>
-			<div class="form-group">
-				<div class="input-group input-group-inset input-group-inset-left">
-					<div class="input-group-input">
-						<input aria-label="Search for" class="form-control" placeholder="Search..." type="text">
-					</div>
-					<span class="input-group-inset-item">
+		</div>
+		<div class="form-group-item">
+			<div class="input-group">
+				<div class="input-group-item">
+					<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+					<div class="input-group-inset-item input-group-inset-item-after">
+						<button class="btn btn-unstyled" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+								<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+							</svg>
+						</button>
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
 						</button>
-					</span>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
-			<div class="form-group">
-				<div class="input-group input-group-inset">
-					<div class="input-group-input">
-						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-right: 92px;">
-					</div>
-					<span class="input-group-inset-item">
+		<div class="form-group-item">
+			<div class="input-group">
+				<div class="input-group-item">
+					<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-after" placeholder="Enter Email..." type="email">
+					<div class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-secondary" type="button">Submit</button>
-					</span>
+					</div>
 				</div>
 			</div>
-			<div class="form-group">
-				<div class="input-group input-group-inset input-group-inset-left">
-					<div class="input-group-input">
-						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-left: 92px;">
+		</div>
+	</div>
+	<div class="form-group-autofit">
+		<div class="form-group-item">
+			<div class="input-group">
+				<div class="input-group-item">
+					<input aria-label="Search for" class="form-control input-group-inset input-group-inset-before" placeholder="Search..." type="text">
+					<div class="input-group-inset-item input-group-inset-item-before">
+						<button class="btn btn-unstyled" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+							</svg>
+						</button>
 					</div>
-					<span class="input-group-inset-item">
+				</div>
+			</div>
+		</div>
+		<div class="form-group-item">
+			<div class="input-group">
+				<div class="input-group-item">
+					<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-before" placeholder="Enter Email..." type="email">
+					<div class="input-group-inset-item input-group-inset-item-before">
 						<button class="btn btn-secondary" type="button">Submit</button>
-					</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -574,13 +495,11 @@ weight: 100
 </div>
 
 ```text/html
-<div class="form-group">
-	<div class="input-group input-group-inset">
-		<div class="input-group-input">
-			<input aria-label="Search for" class="form-control" placeholder="Search..." type="text">
-		</div>
-		<span class="input-group-inset-item">
-			<button class="btn btn-link d-md-none" type="button">
+<div class="input-group">
+	<div class="input-group-item">
+		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+		<div class="input-group-inset-item input-group-inset-item-after">
+			<button class="btn btn-unstyled d-md-none" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 					<use xlink:href="/vendor/lexicon/icons.svg#times" />
 				</svg>
@@ -590,44 +509,56 @@ weight: 100
 					<use xlink:href="/vendor/lexicon/icons.svg#search" />
 				</svg>
 			</button>
-		</span>
+		</div>
 	</div>
 </div>
 
-<div class="form-group">
-	<div class="input-group input-group-inset input-group-inset-left">
-		<div class="input-group-input">
-			<input aria-label="Search for" class="form-control" placeholder="Search..." type="text">
-		</div>
-		<span class="input-group-inset-item">
+<div class="input-group">
+	<div class="input-group-item">
+		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+		<div class="input-group-inset-item input-group-inset-item-after">
+			<button class="btn btn-unstyled" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+					<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+				</svg>
+			</button>
 			<button class="btn btn-unstyled" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 					<use xlink:href="/vendor/lexicon/icons.svg#search" />
 				</svg>
 			</button>
-		</span>
+		</div>
 	</div>
 </div>
 
-<div class="form-group">
-	<div class="input-group input-group-inset">
-		<div class="input-group-input">
-			<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-right: 92px;">
-		</div>
-		<span class="input-group-inset-item">
+<div class="input-group">
+	<div class="input-group-item">
+		<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-after" placeholder="Enter Email..." type="email">
+		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-secondary" type="button">Submit</button>
-		</span>
+		</div>
 	</div>
 </div>
 
-<div class="form-group">
-	<div class="input-group input-group-inset input-group-inset-left">
-		<div class="input-group-input">
-			<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-left: 92px;">
+<div class="input-group">
+	<div class="input-group-item">
+		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-before" placeholder="Search..." type="text">
+		<div class="input-group-inset-item input-group-inset-item-before">
+			<button class="btn btn-unstyled" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+					<use xlink:href="/vendor/lexicon/icons.svg#search" />
+				</svg>
+			</button>
 		</div>
-		<span class="input-group-inset-item">
+	</div>
+</div>
+
+<div class="input-group">
+	<div class="input-group-item">
+		<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-before" placeholder="Enter Email..." type="email">
+		<div class="input-group-inset-item input-group-inset-item-before">
 			<button class="btn btn-secondary" type="button">Submit</button>
-		</span>
+		</div>
 	</div>
 </div>
 ```
@@ -635,17 +566,607 @@ weight: 100
 </article>
 
 
-<script>
-{literal}
-$(function() {
-	$('[data-toggle="popover"]').popover(
-		{
-			container: 'body',
-			content: 'Some help text for your input.',
-			placement: 'left',
-			trigger: 'hover'
-		}
-	);
-});
-{/literal}
-</script>
+<article id="input-group-text-secondary">
+<h3 class="component-title">
+	<a href="#input-group-text-secondary">Input Group Text Secondary</a>
+</h3>
+
+<div class="sheet">
+	<div class="form-group">
+		<label for="">Custom Checkbox</label>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text input-group-text-secondary">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</span>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Text input with checkbox" class="form-control" type="text">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="">Custom Checkbox and Custom Control Description</label>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text input-group-text-secondary">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+							<span class="custom-control-label">
+								<span class="custom-control-label-text">Custom Check Label</span>
+							</span>
+						</label>
+					</div>
+				</span>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Text input with checkbox" class="form-control" type="text">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="">Custom Radio</label>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text input-group-text-secondary">
+					<div class="custom-control custom-radio">
+						<label>
+							<input aria-label="Radio button for following text input" class="custom-control-input" type="radio">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</span>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Text input with radio button" class="form-control" type="text">
+			</div>
+		</div>
+	</div>
+</div>
+
+```text/html
+<div class="form-group">
+	<label for="">Custom Checkbox</label>
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text input-group-text-secondary">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+						<span class="custom-control-label"></span>
+					</label>
+				</div>
+			</span>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Text input with checkbox" class="form-control" type="text">
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="">Custom Checkbox and Custom Control Description</label>
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text input-group-text-secondary">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Custom Check Label</span>
+						</span>
+					</label>
+				</div>
+			</span>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Text input with checkbox" class="form-control" type="text">
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="">Custom Radio</label>
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text input-group-text-secondary">
+				<div class="custom-control custom-radio">
+					<label>
+						<input aria-label="Radio button for following text input" class="custom-control-input" type="radio">
+						<span class="custom-control-label"></span>
+					</label>
+				</div>
+			</span>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Text input with radio button" class="form-control" type="text">
+		</div>
+	</div>
+</div>
+```
+
+</article>
+
+
+<article id="input-group-buttons">
+<h3 class="component-title">
+	<a href="#input-group-buttons">Input Group Buttons</a>
+</h3>
+
+<div class="sheet">
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<button class="btn btn-secondary" type="button">Search</button>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Search for" class="form-control" placeholder="Search for..." type="text">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-prepend">
+				<input aria-label="Search for second one" class="form-control" placeholder="Search for..." type="text">
+			</div>
+			<span class="input-group-append input-group-item input-group-item-shrink">
+				<button class="btn btn-secondary" type="button">Search</button>
+			</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#1">Action</a></li>
+					<li><a class="dropdown-item" href="#1">Another action</a></li>
+					<li><a class="dropdown-item" href="#1">Something else here</a></li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#1">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Text input with dropdown button" class="form-control" type="text">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-prepend">
+				<input aria-label="Text input with dropdown button" class="form-control" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a class="dropdown-item" href="#1">Action</a></li>
+					<li><a class="dropdown-item" href="#1">Another action</a></li>
+					<li><a class="dropdown-item" href="#1">Something else here</a></li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#1">Separated link</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<button class="btn btn-secondary" type="button">Action</button>
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+					<span class="inline-item">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+						</svg>
+					</span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#1">Action</a></li>
+					<li><a class="dropdown-item" href="#1">Another action</a></li>
+					<li><a class="dropdown-item" href="#1">Something else here</a></li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#1">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-prepend">
+				<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
+			</div>
+			<div class="input-group-prepend input-group-item input-group-item-shrink">
+				<button class="btn btn-secondary" type="button">Action</button>
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+					<span class="inline-item">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+						</svg>
+					</span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a class="dropdown-item" href="#1">Action</a></li>
+					<li><a class="dropdown-item" href="#1">Another action</a></li>
+					<li><a class="dropdown-item" href="#1">Something else here</a></li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#1">Separated link</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+```text/html
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<button class="btn btn-secondary" type="button">Search</button>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Search for" class="form-control" placeholder="Search for..." type="text">
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-prepend">
+			<input aria-label="Search for second one" class="form-control" placeholder="Search for..." type="text">
+		</div>
+		<span class="input-group-append input-group-item input-group-item-shrink">
+			<button class="btn btn-secondary" type="button">Search</button>
+		</span>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Action</a></li>
+				<li><a class="dropdown-item" href="#1">Another action</a></li>
+				<li><a class="dropdown-item" href="#1">Something else here</a></li>
+				<li class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#1">Separated link</a></li>
+			</ul>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Text input with dropdown button" class="form-control" type="text">
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-prepend">
+			<input aria-label="Text input with dropdown button" class="form-control" type="text">
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li><a class="dropdown-item" href="#1">Action</a></li>
+				<li><a class="dropdown-item" href="#1">Another action</a></li>
+				<li><a class="dropdown-item" href="#1">Something else here</a></li>
+				<li class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#1">Separated link</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<button class="btn btn-secondary" type="button">Action</button>
+			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					</svg>
+				</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Action</a></li>
+				<li><a class="dropdown-item" href="#1">Another action</a></li>
+				<li><a class="dropdown-item" href="#1">Something else here</a></li>
+				<li class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#1">Separated link</a></li>
+			</ul>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-prepend">
+			<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
+		</div>
+		<div class="input-group-prepend input-group-item input-group-item-shrink">
+			<button class="btn btn-secondary" type="button">Action</button>
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					</svg>
+				</span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li><a class="dropdown-item" href="#1">Action</a></li>
+				<li><a class="dropdown-item" href="#1">Another action</a></li>
+				<li><a class="dropdown-item" href="#1">Something else here</a></li>
+				<li class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#1">Separated link</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+```
+
+</article>
+
+
+<article id="input-group-sizes">
+<h3 class="component-title">
+	<a href="#input-group-sizes">Input Group Sizes</a>
+</h3>
+
+<div class="sheet">
+	<div class="form-group">
+		<div class="input-group input-group-lg">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-prepend input-group-item">
+				<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<span class="input-group-text">.00</span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-item input-group-prepend">
+				<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+			</div>
+			<div class="input-group-append input-group-item-shrink">
+				<span class="input-group-text">.00</span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group input-group-sm">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-item input-group-prepend">
+				<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
+			</div>
+			<div class="input-group-append input-group-item input-group-item-shrink">
+				<span class="input-group-text">.00</span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputGroupLgSeparated">
+			Label Input Group Lg
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+			</svg>
+		</label>
+		<div class="input-group input-group-lg">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-item input-group-append">
+				<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupLgSeparated" placeholder="Some placeholder text..." type="text">
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<button class="btn btn-monospaced btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputGroupNormalSeparated">
+			Label
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+			</svg>
+		</label>
+		<div class="input-group">
+			<div class="input-group-item input-group-item-shrink">
+				<button class="btn btn-monospaced btn-primary" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+			</div>
+			<div class="input-group-item">
+				<input aria-label="Amount" class="form-control" id="inputGroupNormalSeparated" placeholder="Some placeholder text..." type="text">
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<button class="btn btn-monospaced btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputGroupSmSeparated">
+			Label Input Group Sm
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+			</svg>
+		</label>
+		<div class="input-group input-group-sm">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<span class="input-group-text">$</span>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Amount" class="form-control" id="inputGroupSmSeparated" placeholder="Some placeholder text..." type="text">
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<button class="btn btn-monospaced btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+```text/html
+<div class="form-group">
+	<div class="input-group input-group-lg">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">$</span>
+		</div>
+		<div class="input-group-prepend input-group-item">
+			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<span class="input-group-text">.00</span>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">$</span>
+		</div>
+		<div class="input-group-item input-group-prepend">
+			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+		</div>
+		<div class="input-group-append input-group-item-shrink">
+			<span class="input-group-text">.00</span>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="input-group input-group-sm">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">$</span>
+		</div>
+		<div class="input-group-item input-group-prepend">
+			<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text">
+		</div>
+		<div class="input-group-append input-group-item input-group-item-shrink">
+			<span class="input-group-text">.00</span>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="inputGroupLgSeparated">
+		Label Input Group Lg
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+			<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+		</svg>
+	</label>
+	<div class="input-group input-group-lg">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">$</span>
+		</div>
+		<div class="input-group-item input-group-append">
+			<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupLgSeparated" placeholder="Some placeholder text..." type="text">
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<button class="btn btn-monospaced btn-unstyled" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="inputGroupNormalSeparated">
+		Label
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+			<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+		</svg>
+	</label>
+	<div class="input-group">
+		<div class="input-group-item input-group-item-shrink">
+			<button class="btn btn-monospaced btn-primary" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</button>
+		</div>
+		<div class="input-group-item">
+			<input aria-label="Amount" class="form-control" id="inputGroupNormalSeparated" placeholder="Some placeholder text..." type="text">
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<button class="btn btn-monospaced btn-unstyled" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="inputGroupSmSeparated">
+		Label Input Group Sm
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+			<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+		</svg>
+	</label>
+	<div class="input-group input-group-sm">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">$</span>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input aria-label="Amount" class="form-control" id="inputGroupSmSeparated" placeholder="Some placeholder text..." type="text">
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<button class="btn btn-monospaced btn-unstyled" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+```
+
+</article>

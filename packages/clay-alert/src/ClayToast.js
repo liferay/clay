@@ -14,14 +14,14 @@ class ClayToast extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
-		this.addListener('hide', this.defaultHideToast_, true);
+		this.addListener('hide', this._defaultHideToast, true);
 	}
 
 	/**
 	 * Hides the toast and destroy it if proceed.
 	 * @private
 	 */
-	defaultHideToast_() {
+	_defaultHideToast() {
 		if (this.destroyOnHide) {
 			this.dispose();
 		}
@@ -31,7 +31,7 @@ class ClayToast extends Component {
 	 * Continues the propagation of the hide event
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	handleHide_() {
+	_handleHide() {
 		return !this.emit('hide');
 	}
 }

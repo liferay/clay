@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/metal/metal-clay-components.svg?branch=master)](https://travis-ci.org/metal/metal-clay-components)
 
-[![Coverage Status](https://coveralls.io/repos/github/metal/metal-clay-components/badge.svg)](https://coveralls.io/github/metal/metal-clay-components)
+[![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
 
 ## Setup
 

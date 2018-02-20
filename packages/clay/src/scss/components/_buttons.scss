@@ -1,4 +1,5 @@
 .btn {
+	backface-visibility: hidden; // https://github.com/liferay/clay/issues/546
 	font-size: $btn-font-size;
 
 	@include clay-scale-component {
@@ -91,11 +92,15 @@
 
 %btn-unstyled {
 	background-color: rgba(0, 0, 0, 0.001);
-
-	@include clay-component-btn-link;
-
+	border-width: 0;
 	cursor: $btn-cursor;
+	font-size: inherit;
+	font-weight: inherit;
 	line-height: inherit;
+	max-width: 100%;
+	padding: 0;
+	text-align: left;
+	text-transform: inherit;
 	vertical-align: baseline;
 }
 

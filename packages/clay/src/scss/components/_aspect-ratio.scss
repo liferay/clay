@@ -165,6 +165,18 @@
 	@extend %aspect-ratio-16-to-9;
 }
 
+// Bg Contain
+
+%aspect-ratio-bg-contain {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.aspect-ratio-bg-contain {
+	@extend %aspect-ratio-bg-contain;
+}
+
 // Bg Cover
 
 %aspect-ratio-bg-cover {

@@ -10,12 +10,12 @@
 		label: string
 	]>}
 	{@param spritemap: string}
+	{@param? _handleClickToggler: any}
+	{@param? _isTransitioning: bool}
+	{@param? _visible: bool}
 	{@param? elementClasses: string}
-	{@param? handleClickToggler_: any}
 	{@param? id: string}
 	{@param? inverted: bool}
-	{@param? isTransitioning_: bool}
-	{@param? visible_: bool}
 
 	{let $attributes kind="attributes"}
 		class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar
@@ -39,17 +39,17 @@
 		<div class="container">
 			{if $items}
 				{call .toggler}
-					{param handleClickToggler_: $handleClickToggler_ /}
+					{param _handleClickToggler: $_handleClickToggler /}
+					{param _visible: $_visible /}
 					{param items: $items /}
 					{param spritemap: $spritemap /}
-					{param visible_: $visible_ /}
 				{/call}
 			{/if}
 			{call .content}
-				{param isTransitioning_: $isTransitioning_ /}
+				{param _isTransitioning: $_isTransitioning /}
+				{param _visible: $_visible /}
 				{param items: $items /}
 				{param spritemap: $spritemap /}
-				{param visible_: $visible_ /}
 			{/call}
 		</div>
 	</nav>
@@ -65,19 +65,19 @@
 		label: string
 	]>}
 	{@param spritemap: string}
-	{@param? isTransitioning_: bool}
-	{@param? visible_: bool}
+	{@param? _isTransitioning: bool}
+	{@param? _visible: bool}
 
 	{let $classes kind="text"}
 		navbar-collapse
 
-		{if $isTransitioning_}
+		{if $_isTransitioning}
 			{sp}collapsing
 		{else}
 			{sp}collapse
 		{/if}
 
-		{if $visible_}
+		{if $_visible}
 			{sp}show
 		{/if}
 	{/let}
@@ -157,21 +157,21 @@
 		label: string
 	]>}
 	{@param spritemap: string}
-	{@param? handleClickToggler_: any}
-	{@param? visible_: bool}
+	{@param? _handleClickToggler: any}
+	{@param? _visible: bool}
 
 	{let $classes kind="text"}
 		navbar-toggler navbar-toggler-link
-		{if not $visible_}
+		{if not $_visible}
 			{sp}collapsed
 		{/if}
 	{/let}
 
 	{call ClayLink.render}
-		{param ariaExpanded: $visible_ /}
+		{param ariaExpanded: $_visible /}
 		{param ariaLabel: 'Toggle Navigation' /}
 		{param elementClasses: $classes /}
-		{param events: ['click': $handleClickToggler_] /}
+		{param events: ['click': $_handleClickToggler] /}
 		{param href: '#' /}
 		{param icon: 'caret-bottom' /}
 		{param iconAlignment: 'right' /}

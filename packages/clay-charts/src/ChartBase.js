@@ -70,19 +70,19 @@ const ChartBase = {
 	 * @inheritDoc
 	 */
 	attached() {
-		const config = this.constructChartConfig_();
+		const config = this._constructChartConfig();
 
 		this.bbChart = bb.generate(config);
 
-		this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
-		this.on('groupsChanged', this.handleGroupsChanged_.bind(this));
-		this.on('loading_Changed', this.handleLoadingChanged_.bind(this));
-		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
-		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
-		this.on('typeChanged', this.handleTypeChanged_.bind(this));
-		this.on('xChanged', this.handleXChanged_.bind(this));
+		this.on('columnsChanged', this._handleColumnsChanged.bind(this));
+		this.on('groupsChanged', this._handleGroupsChanged.bind(this));
+		this.on('_loadingChanged', this._handleLoadingChanged.bind(this));
+		this.on('regionsChanged', this._handleRegionsChanged.bind(this));
+		this.on('sizeChanged', this._handleSizeChanged.bind(this));
+		this.on('typeChanged', this._handleTypeChanged.bind(this));
+		this.on('xChanged', this._handleXChanged.bind(this));
 
-		this.loading_ = false;
+		this._loading = false;
 	},
 
 	/**
@@ -97,8 +97,8 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructAxisConfig_: function() {
-		const state = this.getStateObj_();
+	_constructAxisConfig: function() {
+		const state = this._getStateObj();
 
 		return {
 			rotated: state.axisRotated,
@@ -113,13 +113,13 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructChartConfig_: function() {
-		const state = this.getStateObj_();
+	_constructChartConfig: function() {
+		const state = this._getStateObj();
 
-		const axis = this.constructAxisConfig_();
-		const data = this.constructDataConfig_();
-		const zoom = this.constructZoomConfig_();
-		const color = this.constructTilesConfig_();
+		const axis = this._constructAxisConfig();
+		const data = this._constructDataConfig();
+		const zoom = this._constructZoomConfig();
+		const color = this._constructTilesConfig();
 
 		const config = {
 			area: state.area,
@@ -152,37 +152,37 @@ const ChartBase = {
 		 * @event chartInit
 		 * @memberof ChartBase
 		 */
-		config.oninit = this.emitChartEvent_.bind(this, 'chartInit');
+		config.oninit = this._emitChartEvent.bind(this, 'chartInit');
 		/**
 		 * Chart mouse out event.
 		 * @event chartMouseout
 		 * @memberof ChartBase
 		 */
-		config.onout = this.emitChartEvent_.bind(this, 'chartMouseout');
+		config.onout = this._emitChartEvent.bind(this, 'chartMouseout');
 		/**
 		 * Chart mouse over event.
 		 * @event chartMouseover
 		 * @memberof ChartBase
 		 */
-		config.onover = this.emitChartEvent_.bind(this, 'chartMouseover');
+		config.onover = this._emitChartEvent.bind(this, 'chartMouseover');
 		/**
 		 * Chart rendered event.
 		 * @event chartRendered
 		 * @memberof ChartBase
 		 */
-		config.onrendered = this.emitChartEvent_.bind(this, 'chartRendered');
+		config.onrendered = this._emitChartEvent.bind(this, 'chartRendered');
 		/**
 		 * Chart resize event.
 		 * @event chartResize
 		 * @memberof ChartBase
 		 */
-		config.onresize = this.emitChartEvent_.bind(this, 'chartResize');
+		config.onresize = this._emitChartEvent.bind(this, 'chartResize');
 		/**
 		 * Chart resized event.
 		 * @event chartResized
 		 * @memberof ChartBase
 		 */
-		config.onresized = this.emitChartEvent_.bind(this, 'chartResized');
+		config.onresized = this._emitChartEvent.bind(this, 'chartResized');
 
 		return config;
 	},
@@ -192,11 +192,11 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructColumnsConfig_: function() {
-		const {columns} = this.getStateObj_();
+	_constructColumnsConfig: function() {
+		const {columns} = this._getStateObj();
 
 		const config = {
-			columns: this.createColumnsArray_(columns),
+			columns: this._createColumnsArray(columns),
 		};
 
 		for (let i = 0; i < columns.length; i++) {
@@ -238,8 +238,8 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructColorsConfig_: function() {
-		let {colors, color} = this.getStateObj_();
+	_constructColorsConfig: function() {
+		let {colors, color} = this._getStateObj();
 
 		if (color && color.tiles) {
 			colors = {};
@@ -254,9 +254,9 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructDataConfig_: function(attachListeners = true) {
-		const state = this.getStateObj_();
-		const colors = this.constructColorsConfig_();
+	_constructDataConfig: function(attachListeners = true) {
+		const state = this._getStateObj();
+		const colors = this._constructColorsConfig();
 
 		const config = {
 			color: state.colorFormatter,
@@ -280,7 +280,7 @@ const ChartBase = {
 			xs: state.xs,
 		};
 
-		const columnsConfig = this.constructColumnsConfig_();
+		const columnsConfig = this._constructColumnsConfig();
 
 		Object.assign(config, columnsConfig);
 
@@ -290,31 +290,31 @@ const ChartBase = {
 			 * @event pointClick
 			 * @memberof ChartBase
 			 */
-			config.onclick = this.emitChartEvent_.bind(this, 'pointClick');
+			config.onclick = this._emitChartEvent.bind(this, 'pointClick');
 			/**
 			 * Point mouse out event.
 			 * @event pointMouseout
 			 * @memberof ChartBase
 			 */
-			config.onout = this.emitChartEvent_.bind(this, 'pointMouseout');
+			config.onout = this._emitChartEvent.bind(this, 'pointMouseout');
 			/**
 			 * Point mouse over event.
 			 * @event pointMouseoever
 			 * @memberof ChartBase
 			 */
-			config.onover = this.emitChartEvent_.bind(this, 'pointMouseover');
+			config.onover = this._emitChartEvent.bind(this, 'pointMouseover');
 			/**
 			 * Data selected event.
 			 * @event dataSelected
 			 * @memberof ChartBase
 			 */
-			config.onselected = this.emitChartEvent_.bind(this, 'dataSelected');
+			config.onselected = this._emitChartEvent.bind(this, 'dataSelected');
 			/**
 			 * Data unselected event.
 			 * @event dataUnselected
 			 * @memberof ChartBase
 			 */
-			config.onunselected = this.emitChartEvent_.bind(
+			config.onunselected = this._emitChartEvent.bind(
 				this,
 				'dataUnselected'
 			);
@@ -328,11 +328,11 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructTilesConfig_() {
-		const {color} = this.getStateObj_();
+	_constructTilesConfig() {
+		const {color} = this._getStateObj();
 
 		if (color.tiles) {
-			const tiles = this.getTiles_();
+			const tiles = this._getTiles();
 
 			color.tiles = () => tiles;
 			color.pattern = DEFAULT_COLORS;
@@ -346,8 +346,8 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructZoomConfig_: function() {
-		const state = this.getStateObj_();
+	_constructZoomConfig: function() {
+		const state = this._getStateObj();
 
 		const zoom = state.zoom;
 
@@ -358,19 +358,19 @@ const ChartBase = {
 		 * @event zoom
 		 * @memberof ChartBase
 		 */
-		config.onzoom = this.emitChartEvent_.bind(this, 'zoom');
+		config.onzoom = this._emitChartEvent.bind(this, 'zoom');
 		/**
 		 * Zoom end event.
 		 * @event zoomEnd
 		 * @memberof ChartBase
 		 */
-		config.onzoomend = this.emitChartEvent_.bind(this, 'zoomEnd');
+		config.onzoomend = this._emitChartEvent.bind(this, 'zoomEnd');
 		/**
 		 * Zoom start event.
 		 * @event zoomStart
 		 * @memberof ChartBase
 		 */
-		config.onzoomstart = this.emitChartEvent_.bind(this, 'zoomStart');
+		config.onzoomstart = this._emitChartEvent.bind(this, 'zoomStart');
 
 		return config;
 	},
@@ -381,7 +381,7 @@ const ChartBase = {
 	 * @return {Array}
 	 * @protected
 	 */
-	createColumnsArray_: function(columns) {
+	_createColumnsArray: function(columns) {
 		return columns.map(({data, id}) => {
 			return [id].concat(data);
 		});
@@ -391,7 +391,7 @@ const ChartBase = {
 	 * Emits event based on arguments array.
 	 * @protected
 	 */
-	emitChartEvent_: function() {
+	_emitChartEvent: function() {
 		this.emit.apply(this, arguments); // eslint-disable-line
 	},
 
@@ -401,7 +401,7 @@ const ChartBase = {
 	 * @return {?Object}
 	 * @protected
 	 */
-	getColumn_: function(id) {
+	_getColumn: function(id) {
 		return this.columns.find(column => {
 			return column.id === id;
 		});
@@ -412,7 +412,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	getStateObj_: function() {
+	_getStateObj: function() {
 		return this;
 	},
 
@@ -421,7 +421,7 @@ const ChartBase = {
 	 * @return {?Elements}
 	 * @protected
 	 */
-	getTiles_: function() {
+	_getTiles: function() {
 		return DEFAULT_TILES.filter(val => {
 			return document.querySelector(`#${val}`);
 		}).map(val => document.querySelector(`#${val}`));
@@ -431,13 +431,13 @@ const ChartBase = {
 	 * Maps `columns` state to chart via `bb.load` method.
 	 * @protected
 	 */
-	handleColumnsChanged_: function({prevVal}) {
-		const data = this.constructDataConfig_(false);
+	_handleColumnsChanged: function({prevVal}) {
+		const data = this._constructDataConfig(false);
 
 		const newVal = data.columns;
-		prevVal = this.createColumnsArray_(prevVal);
+		prevVal = this._createColumnsArray(prevVal);
 
-		const removedIds = this.resolveRemovedColumns_(newVal, prevVal);
+		const removedIds = this._resolveRemovedColumns(newVal, prevVal);
 
 		if (removedIds.length) {
 			data.unload = removedIds;
@@ -446,7 +446,7 @@ const ChartBase = {
 		this.bbChart.load(data);
 
 		if (data.xs) {
-			this.bbChart.xs(this.mapXSValues_(data.xs));
+			this.bbChart.xs(this._mapXSValues(data.xs));
 		}
 	},
 
@@ -454,7 +454,7 @@ const ChartBase = {
 	 * Maps `groups` state to chart via `bb.groups` method.
 	 * @protected
 	 */
-	handleGroupsChanged_: function({newVal}) {
+	_handleGroupsChanged: function({newVal}) {
 		this.bbChart.groups(newVal);
 	},
 
@@ -462,7 +462,7 @@ const ChartBase = {
 	 * Handles `loading` state.
 	 * @protected
 	 */
-	handleLoadingChanged_: function({newVal}) {
+	_handleLoadingChanged: function({newVal}) {
 		if (!newVal) {
 			this.refs.chart.removeAttribute('hidden');
 			this.refs.placeholder.setAttribute('hidden', 'hidden');
@@ -476,7 +476,7 @@ const ChartBase = {
 	 * Maps `regions` state to chart via `bb.regions` method.
 	 * @protected
 	 */
-	handleRegionsChanged_: function({newVal}) {
+	_handleRegionsChanged: function({newVal}) {
 		this.bbChart.regions(newVal);
 	},
 
@@ -484,7 +484,7 @@ const ChartBase = {
 	 * Maps `size` state to chart via `bb.resize` method.
 	 * @protected
 	 */
-	handleSizeChanged_: function({newVal}) {
+	_handleSizeChanged: function({newVal}) {
 		this.bbChart.resize(newVal);
 	},
 
@@ -492,7 +492,7 @@ const ChartBase = {
 	 * Maps `type` state to chart via `bb.transform` method.
 	 * @protected
 	 */
-	handleTypeChanged_: function({newVal}) {
+	_handleTypeChanged: function({newVal}) {
 		this.bbChart.transform(newVal);
 	},
 
@@ -500,8 +500,8 @@ const ChartBase = {
 	 * Maps `x` state to chart via `bb.x` method.
 	 * @protected
 	 */
-	handleXChanged_: function({newVal}) {
-		const column = this.getColumn_(newVal);
+	_handleXChanged: function({newVal}) {
+		const column = this._getColumn(newVal);
 
 		this.bbChart.x(column.data);
 	},
@@ -512,11 +512,11 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	mapXSValues_: function(xs) {
+	_mapXSValues: function(xs) {
 		return Object.keys(xs).reduce((xsValues, key) => {
 			const value = xs[key];
 
-			const xColumn = this.getColumn_(value);
+			const xColumn = this._getColumn(value);
 
 			xsValues[key] = xColumn.data;
 
@@ -531,7 +531,7 @@ const ChartBase = {
 	 * @param {Array} prevColumns
 	 * @return {Array}
 	 */
-	resolveRemovedColumns_: function(newColumns, prevColumns) {
+	_resolveRemovedColumns: function(newColumns, prevColumns) {
 		const ids = newColumns.map(column => column[0]);
 
 		return prevColumns.reduce((removedIds, column) => {
@@ -552,6 +552,13 @@ const ChartBase = {
  * @type {!Object}
  */
 ChartBase.STATE = {
+	/**
+	 * Sets the `loading` state.
+	 */
+	_loading: Config.bool()
+		.internal()
+		.value(true),
+
 	/**
 	 * Data that will be rendered to the chart.
 	 * @instance
@@ -970,13 +977,6 @@ ChartBase.STATE = {
 	}).value({
 		classes: DEFAULT_LINE_CASSES,
 	}),
-
-	/**
-	 * Sets the `loading` state.
-	 */
-	loading_: Config.bool()
-		.internal()
-		.value(true),
 
 	/**
 	 * Sets billboard's data.mimeType config.
