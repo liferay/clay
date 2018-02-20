@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('AreaSplineChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new AreaSplineChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new AreaSplineChart({
 			columns: [],
 		});
 

@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('StepChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new StepChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new StepChart({
 			columns: [],
 		});
 

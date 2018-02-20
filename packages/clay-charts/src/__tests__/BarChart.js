@@ -18,8 +18,8 @@ afterAll(() => {
 });
 
 describe('BarChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new BarChart({
+	it('should be pass correct type to billboard.js', async () => {
+		await new BarChart({
 			columns: [],
 		});
 

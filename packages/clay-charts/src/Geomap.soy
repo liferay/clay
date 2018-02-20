@@ -4,7 +4,13 @@
  * This renders the main element
  */
 {template .render}
+	{@param data: any}
 	{@param? height_: string}
 	{@param? width_: string}
-	<div style="width:{$width_};height:{$height_}"></div>
+
+	{let $attrs kind="attributes"}
+		data="{$data}"
+		style="width:{$width_};height:{$height_}"
+	{/let}
+	<div {$attrs}></div>
 {/template}
