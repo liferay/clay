@@ -301,6 +301,7 @@ describe('ClayManagementToolbar', function() {
 			],
 			selectable: true,
 			sortingOrder: 'asc',
+			showInfoButton: true,
 			spritemap: spritemap,
 			totalItems: 0,
 			viewTypes: [
@@ -362,6 +363,27 @@ describe('ClayManagementToolbar', function() {
 			],
 			selectable: true,
 			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with info button', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			showInfoButton: true,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with info button in active state', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			selectedItems: 1,
+			showInfoButton: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -584,5 +606,42 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('actionClicked', expect.any(Object));
+	});
+
+	it('should render a management toolbar with info button and emit an event on infoButton click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			showInfoButton: true,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.infoButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'infoButtonClicked',
+			expect.any(Object)
+		);
+	});
+
+	it('should render a management toolbar with info button in active state and emit an event on infoButton click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			selectedItems: 1,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.infoButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'infoButtonClicked',
+			expect.any(Object)
+		);
 	});
 });
