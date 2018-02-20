@@ -59,10 +59,12 @@
 		</div>
 	</div>
 
-	<div id="container0"></div>
-	<div id="container1"></div>
-	<div id="container2"></div>
-	<div id="container3"></div>
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With search results bar</h4>
+			<div id="search-results-bar"></div>
+		</div>
+	</div>
 
 	<script type="text/javascript">
 		const actionItems = [
@@ -262,6 +264,29 @@
 			viewTypes: viewTypes,
 		},
 		'#without-search-block');
+
+		//With search results bar
+		new metal.ClayManagementToolbar({
+			creationMenu: true,
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			searchValue: 'red',
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+			events: {
+				'clearButtonClicked': handleClearButton
+			},
+		},
+		'#search-results-bar');
+
+		function handleClearButton(event) {
+			this.searchValue = null;
+			this.totalItems = null;
+		}
 	</script>
 </body>
 </html>
