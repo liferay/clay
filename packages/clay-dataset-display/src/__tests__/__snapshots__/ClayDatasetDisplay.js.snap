@@ -17,11 +17,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -696,11 +704,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -1375,11 +1391,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -2230,11 +2254,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -2749,11 +2781,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -3598,11 +3638,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -4585,11 +4633,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -5264,11 +5320,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
@@ -6437,11 +6501,19 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link navbar-breakpoint-down-d-none btn-unstyled" type="button">Filter and Order
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
-                <title>caret-bottom</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
-              </svg>
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
+              <span class="navbar-breakpoint-down-d-none">Filter and Order
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+                  <title>caret-bottom</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </span>
+              <span class="navbar-breakpoint-d-none">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                  <title>filter</title>
+                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </li>
