@@ -1,11 +1,65 @@
 # Change Log
 
+## [v2.0.0-rc.2](https://github.com/liferay/clay/tree/v2.0.0-rc.2) (2018-02-20)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.1...v2.0.0-rc.2)
+
+**Implemented enhancements:**
+
+- Implement Search only content markup in ManagmentToolbar [\#543](https://github.com/liferay/clay/issues/543)
+
+**Fixed bugs:**
+
+- InfoButton in ClayManagementToolbar should never be disabled [\#583](https://github.com/liferay/clay/issues/583)
+- Fix connection with coveralls [\#575](https://github.com/liferay/clay/issues/575)
+- Filter button in ClayManagementToolbar does not appear on mobile [\#571](https://github.com/liferay/clay/issues/571)
+- Upadte styles for new Clay Card Grid List Markup [\#542](https://github.com/liferay/clay/issues/542)
+- IE: Tabbing through the document focuses SVG elements [\#536](https://github.com/liferay/clay/issues/536)
+- Disabled attribute markup is incorrect for button [\#522](https://github.com/liferay/clay/issues/522)
+
+**Closed issues:**
+
+- infoButton in ClayManagementoToolbar can not be disabled [\#581](https://github.com/liferay/clay/issues/581)
+- Test throwing exceptions [\#579](https://github.com/liferay/clay/issues/579)
+- Change all trailing underscores to leading [\#573](https://github.com/liferay/clay/issues/573)
+- Update ClaySelect Markup [\#558](https://github.com/liferay/clay/issues/558)
+- Subnav needs a refactor to support more use cases [\#557](https://github.com/liferay/clay/issues/557)
+- Fieldset element inside Sheet mess up spacing because it doesn't support margin collapse [\#551](https://github.com/liferay/clay/issues/551)
+- sheet-title can contain an "add button" right aligned [\#547](https://github.com/liferay/clay/issues/547)
+- Tabbing through items with box-shadow in a Blink browser \(Chrome\) leaves remnants of the shadow [\#546](https://github.com/liferay/clay/issues/546)
+- aspect-ratio-bg-contain [\#545](https://github.com/liferay/clay/issues/545)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.2 [\#588](https://github.com/liferay/clay/pull/588) ([jbalsas](https://github.com/jbalsas))
+- Regen snapshots | Fixes \#571 [\#587](https://github.com/liferay/clay/pull/587) ([carloslancha](https://github.com/carloslancha))
+- Update coveralls badge | Fixes \#575 [\#586](https://github.com/liferay/clay/pull/586) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Regen snapshots | Fixes \#583 [\#584](https://github.com/liferay/clay/pull/584) ([carloslancha](https://github.com/carloslancha))
+- Stub console.error | Fixes \#579 [\#580](https://github.com/liferay/clay/pull/580) ([carloslancha](https://github.com/carloslancha))
+- Add "info button" to ClayManagementToolbar | Fixes \#481 [\#577](https://github.com/liferay/clay/pull/577) ([carloslancha](https://github.com/carloslancha))
+- Change trailing to leading underscores in clay-charts | Fixes \#573 [\#574](https://github.com/liferay/clay/pull/574) ([carloslancha](https://github.com/carloslancha))
+- Removing variable no more used in ClayCardGrid [\#570](https://github.com/liferay/clay/pull/570) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Add missing features and search only layout to Management Toolbar | Fixes \#543 [\#568](https://github.com/liferay/clay/pull/568) ([carloslancha](https://github.com/carloslancha))
+- Update styles for new Clay Card Grid List Markup | Fixes \#542 [\#567](https://github.com/liferay/clay/pull/567) ([carloslancha](https://github.com/carloslancha))
+- \(\#542\) Put `card-section-header` inside `card-page li` [\#566](https://github.com/liferay/clay/pull/566) ([pat270](https://github.com/pat270))
+- \#557 Create `.subnav-tbar` component and remove `.subnav` component [\#565](https://github.com/liferay/clay/pull/565) ([pat270](https://github.com/pat270))
+- Add flag to indicate when focusable is true or not | Fixes \#536 [\#563](https://github.com/liferay/clay/pull/563) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Adds disabled="true" to force your render separate from other attributes | Fixes \#522 [\#561](https://github.com/liferay/clay/pull/561) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update some tabs for to get highlights from webcomponents in claycss [\#560](https://github.com/liferay/clay/pull/560) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update ClaySelect markup and remove wrapperType to use the inline API| Fixes \#558 [\#559](https://github.com/liferay/clay/pull/559) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- ClayCSS Docs Update Form Elements and Form Validation markup [\#556](https://github.com/liferay/clay/pull/556) ([pat270](https://github.com/pat270))
+- ClayCSS Docs update Input Group markup [\#555](https://github.com/liferay/clay/pull/555) ([pat270](https://github.com/pat270))
+- \#546 Button added `backface-visibility: hidden` to `.… [\#554](https://github.com/liferay/clay/pull/554) ([pat270](https://github.com/pat270))
+- \#545 Add `.aspect-ratio-bg-contain` [\#553](https://github.com/liferay/clay/pull/553) ([pat270](https://github.com/pat270))
+- \#551 Add support for Fieldset in Sheet [\#552](https://github.com/liferay/clay/pull/552) ([pat270](https://github.com/pat270))
+- \(\#547\) sheet-subtitle can contain an "add button" right aligned [\#549](https://github.com/liferay/clay/pull/549) ([pat270](https://github.com/pat270))
+
 ## [v2.0.0-rc.1](https://github.com/liferay/clay/tree/v2.0.0-rc.1) (2018-02-09)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.0...v2.0.0-rc.1)
 
 **Implemented enhancements:**
 
 - Create a Map Chart in Clay Charts [\#509](https://github.com/liferay/clay/issues/509)
+- Add "info button" to ClayManagementToolbar [\#481](https://github.com/liferay/clay/issues/481)
 
 **Fixed bugs:**
 
