@@ -17,23 +17,20 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('Chart', function() {
-	it('should be pass correctly formatted configuration options to billboard.js', () => {
-		const chart = new Chart({
+describe.only('Chart', () => {
+	it('should be pass correctly formatted configuration options to billboard.js', async () => {
+		const chart = await new Chart({
 			columns: [],
 		});
-
 		const config = bb.generate.mock.calls[0][0];
-
 		expect(config.bindto).toBe(chart.refs.chart);
 
 		config.bindto = undefined;
-
 		expect(JSON.stringify(config)).toMatchSnapshot();
 	});
 
-	it('should format columns array into billboard.js compatible data', () => {
-		new Chart({
+	it('should format columns array into billboard.js compatible data', async () => {
+		await new Chart({
 			columns: [
 				{
 					axis: 'y',
@@ -81,14 +78,14 @@ describe('Chart', function() {
 		expect(JSON.stringify(config)).toMatchSnapshot();
 	});
 
-	it('should transform chart new type is passed', () => {
+	it('should transform chart new type is passed', async () => {
 		const transformMock = jest.fn();
 
 		bb.generate.mockReturnValue({
 			transform: transformMock,
 		});
 
-		const chart = new Chart({
+		const chart = await new Chart({
 			columns: [],
 			type: 'line',
 		});
@@ -98,14 +95,14 @@ describe('Chart', function() {
 		expect(transformMock.mock.calls[0][0]).toBe('spline');
 	});
 
-	it('should rerender chart when new columns are passed', () => {
+	it('should rerender chart when new columns are passed', async () => {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
 			load: loadMock,
 		});
 
-		const chart = new Chart({
+		const chart = await new Chart({
 			columns: [
 				{
 					id: 'data1',
@@ -126,14 +123,14 @@ describe('Chart', function() {
 		expect(config).toMatchSnapshot();
 	});
 
-	it('should unload removed columns when new columns are passed', () => {
+	it('should unload removed columns when new columns are passed', async () => {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
 			load: loadMock,
 		});
 
-		const chart = new Chart({
+		const chart = await new Chart({
 			columns: [
 				{
 					id: 'data1',
