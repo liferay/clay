@@ -1,6 +1,7 @@
 import ClayUserCard from '../ClayUserCard';
 
 let component;
+let consoleErrorReference;
 let spritemap = 'icons.svg';
 let actionItems = [
 	{
@@ -13,11 +14,24 @@ let actionItems = [
 	},
 ];
 
+/**
+ * Stubs console.error
+ */
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayUserCard', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (component) {
 			component.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render the default markup', () => {
@@ -267,6 +281,8 @@ describe('ClayUserCard', function() {
 	});
 
 	it('should fail when no name is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayUserCard();
 		}).toThrow();

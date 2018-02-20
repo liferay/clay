@@ -336,7 +336,10 @@ exports[`ClayTable should render a ClayTable with a basic schema and no items 1`
 <div class="table-responsive">
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
     <thead>
-      <tr></tr>
+      <tr>
+        <th class="table-cell-expand">Name</th>
+        <th>Origin</th>
+      </tr>
     </thead>
     <tbody></tbody>
   </table>
