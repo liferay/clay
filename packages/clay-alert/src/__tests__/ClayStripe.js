@@ -96,7 +96,7 @@ describe('ClayStripe', function() {
 
 		stripe.element.querySelector('button.close').click();
 
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -114,7 +114,7 @@ describe('ClayStripe', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(5000);
 
 		jest.runAllTimers();
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -132,7 +132,7 @@ describe('ClayStripe', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(10000);
 
 		jest.runAllTimers();
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 	});
 
 	it('should close and destroy an stripe', function() {
@@ -145,7 +145,7 @@ describe('ClayStripe', function() {
 
 		stripe.element.querySelector('button.close').click();
 
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 		expect(stripe.disposed_).toBeTruthy();
 	});
 

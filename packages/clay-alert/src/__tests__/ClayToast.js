@@ -96,7 +96,7 @@ describe('ClayToast', function() {
 
 		toast.element.querySelector('button.close').click();
 
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -114,7 +114,7 @@ describe('ClayToast', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(5000);
 
 		jest.runAllTimers();
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -132,7 +132,7 @@ describe('ClayToast', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(10000);
 
 		jest.runAllTimers();
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 	});
 
 	it('should close and destroy a toast', function() {
@@ -145,7 +145,7 @@ describe('ClayToast', function() {
 
 		toast.element.querySelector('button.close').click();
 
-		expect(toast.visible_).toBeFalsy();
+		expect(toast._visible).toBeFalsy();
 		expect(toast.disposed_).toBeTruthy();
 	});
 
