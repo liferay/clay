@@ -380,28 +380,9 @@ describe('ClayManagementToolbar', function() {
 
 	it('should render a management toolbar with info button in active state', () => {
 		managementToolbar = new ClayManagementToolbar({
-			actionItems: [
-				{
-					label: 'Edit',
-					href: '#editurl',
-					icon: 'edit',
-					quickAction: true,
-				},
-				{
-					label: 'Info Button',
-					href: '#infobutton',
-					icon: 'info-circle-open',
-					quickAction: true,
-				},
-				{
-					label: 'Delete',
-					href: '#deleteurl',
-					icon: 'trash',
-					quickAction: true,
-				},
-			],
 			selectable: true,
 			selectedItems: 1,
+			showInfoButton: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -630,6 +611,26 @@ describe('ClayManagementToolbar', function() {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
 			showInfoButton: true,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.infoButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'infoButtonClicked',
+			expect.any(Object)
+		);
+	});
+
+	it('should render a management toolbar with info button in active state and emit an event on infoButton click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			selectedItems: 1,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
 		});
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
