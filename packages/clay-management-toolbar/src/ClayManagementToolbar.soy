@@ -76,11 +76,13 @@
 		{call .active}
 			{param _handleActionClicked: $_handleActionClicked /}
 			{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
+			{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 			{param _handleSelectAllClicked: $_handleSelectAllClicked /}
 			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 			{param actionItems: $actionItems /}
 			{param elementClasses: $elementClasses /}
 			{param selectedItems: $selectedItems /}
+			{param showInfoButton: $showInfoButton /}
 			{param spritemap: $spritemap /}
 			{param totalItems: $totalItems /}
 		{/call}
@@ -123,6 +125,7 @@
 	{@param spritemap: string}
 	{@param? _handleActionClicked: any}
 	{@param? _handleDeselectAllClicked: any}
+	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleSelectAllClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? actionItems: list<[
@@ -137,6 +140,7 @@
 	{@param? elementClasses: string}
 	{@param? id: string}
 	{@param? selectedItems: number}
+	{@param? showInfoButton: bool}
 	{@param? totalItems: number}
 
 	{let $navAttributes kind="attributes"}
@@ -191,29 +195,44 @@
 				</li>
 			</ul>
 
-			{if $actionItems}
+			{if $actionItems or $showInfoButton}
 				<ul class="navbar-nav">
-					{foreach $item in $actionItems}
-						{if $item.quickAction and $item.icon and $spritemap}
-							<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleActionClicked}">
-								{call ClayButton.render}
-									{param elementClasses: 'quick-action-item' /}
-									{param icon: $item.icon /}
-									{param ref: 'quickAction' + index($item) /}
-									{param spritemap: $spritemap /}
-									{param style: 'unstyled' /}
-								{/call}
-							</li>
-						{/if}
-					{/foreach}
+					{if $showInfoButton}
+						<li class="nav-item">
+							{call ClayButton.render}
+								{param elementClasses: 'nav-link nav-link-monospaced' /}
+								{param events: ['click': $_handleInfoButtonClicked] /}
+								{param icon: 'info-circle-open' /}
+								{param ref: 'infoButton' /}
+								{param spritemap: $spritemap /}
+								{param style: 'unstyled' /}
+							{/call}
+						</li>
+					{/if}
 
-					<li class="nav-item">
-						{call ClayActionsDropdown.render}
-							{param events: ['itemClicked': $_handleActionClicked] /}
-							{param items: $actionItems /}
-							{param spritemap: $spritemap /}
-						{/call}
-					</li>
+					{if $actionItems}
+						{foreach $item in $actionItems}
+							{if $item.quickAction and $item.icon and $spritemap}
+								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleActionClicked}">
+									{call ClayButton.render}
+										{param elementClasses: 'quick-action-item' /}
+										{param icon: $item.icon /}
+										{param ref: 'quickAction' + index($item) /}
+										{param spritemap: $spritemap /}
+										{param style: 'unstyled' /}
+									{/call}
+								</li>
+							{/if}
+						{/foreach}
+
+						<li class="nav-item">
+							{call ClayActionsDropdown.render}
+								{param events: ['itemClicked': $_handleActionClicked] /}
+								{param items: $actionItems /}
+								{param spritemap: $spritemap /}
+							{/call}
+						</li>
+					{/if}
 				</ul>
 			{/if}
 		</div>
