@@ -1,15 +1,6 @@
 import * as d3 from 'd3';
 import Geomap from '../Geomap';
 
-let consoleErrorReference;
-
-/**
- * Stubs console.error
- */
-function mockConsoleError() {
-	console.error = () => {};
-}
-
 /**
  * Creates a Geomap
  * @param {Object} config
@@ -20,14 +11,6 @@ function createMap(config = {}) {
 }
 
 describe('Geomap', () => {
-	beforeEach(() => {
-		consoleErrorReference = console.error;
-	});
-
-	afterEach(() => {
-		console.error = consoleErrorReference;
-	});
-
 	it('should accept data as a string', () => {
 		d3.json = jest.fn();
 
