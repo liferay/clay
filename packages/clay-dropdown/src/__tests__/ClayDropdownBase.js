@@ -648,7 +648,7 @@ describe('ClayDropdownBase', function() {
 		let input = clayDropdownBase.refs.portal.refs['searchInput'];
 		input.value = 'Item 1';
 
-		clayDropdownBase.handleSearch_({
+		clayDropdownBase._handleSearch({
 			delegateTarget: input,
 		});
 
@@ -656,13 +656,13 @@ describe('ClayDropdownBase', function() {
 
 		input.value = 'Item 2';
 
-		clayDropdownBase.handleSearch_({
+		clayDropdownBase._handleSearch({
 			delegateTarget: input,
 		});
 
 		input.value = 'Item 3';
 
-		clayDropdownBase.handleSearch_({
+		clayDropdownBase._handleSearch({
 			delegateTarget: input,
 		});
 
@@ -670,7 +670,7 @@ describe('ClayDropdownBase', function() {
 
 		input.value = '';
 
-		clayDropdownBase.handleSearch_({
+		clayDropdownBase._handleSearch({
 			delegateTarget: input,
 		});
 

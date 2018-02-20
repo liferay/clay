@@ -14,11 +14,11 @@ class Geomap extends Component {
 	 */
 	attached() {
 		const w =
-			typeof this.width_ === 'string' ? this.width_ : `${this.width_}px`;
+			typeof this._width === 'string' ? this._width : `${this._width}px`;
 		const h =
-			typeof this.height_ === 'string'
-				? this.height_
-				: `${this.height_}px`;
+			typeof this._height === 'string'
+				? this._height
+				: `${this._height}px`;
 
 		this.svg = d3
 			.select(this.element)
@@ -26,14 +26,14 @@ class Geomap extends Component {
 			.attr('width', w)
 			.attr('height', h);
 
-		this.handleClickHandler_ = this.handleClick_.bind(this);
+		this._handleClickHandler = this._handleClick.bind(this);
 
 		this.rect = this.svg
 			.append('rect')
 			.attr('fill', 'rgba(1, 1, 1, 0)')
 			.attr('width', w)
 			.attr('height', h)
-			.on('click', this.handleClickHandler_);
+			.on('click', this._handleClickHandler);
 
 		const bounds = this.svg.node().getBoundingClientRect();
 
@@ -45,9 +45,9 @@ class Geomap extends Component {
 			.translate([bounds.width / 2, bounds.height / 2]);
 
 		this.path = d3.geoPath().projection(this.projection);
-		this.selected_ = null;
+		this._selected = null;
 
-		d3.json(this.data, this.onDataLoad_.bind(this));
+		d3.json(this.data, this._onDataLoad.bind(this));
 	}
 
 	/**
@@ -56,7 +56,7 @@ class Geomap extends Component {
 	 * @return {Number}
 	 * @protected
 	 */
-	fillFn_(d) {
+	_fillFn(d) {
 		const value = d && d.properties ? d.properties[this.color.value] : 0;
 		return this.colorScale(value);
 	}
@@ -66,11 +66,11 @@ class Geomap extends Component {
 	 * @param {Object} d
 	 * @protected
 	 */
-	handleClick_(d) {
-		if (d && this.selected_ !== d) {
-			this.selected_ = d;
+	_handleClick(d) {
+		if (d && this._selected !== d) {
+			this._selected = d;
 		} else {
-			this.selected_ = null;
+			this._selected = null;
 		}
 
 		// Highlight the clicked province
@@ -79,9 +79,9 @@ class Geomap extends Component {
 			.style(
 				'fill',
 				d =>
-					this.selected_ && d === this.selected_
+					this._selected && d === this._selected
 						? this.color.selected
-						: this.fillFn_.bind(this)(d)
+						: this._fillFn.bind(this)(d)
 			);
 	}
 
@@ -92,7 +92,7 @@ class Geomap extends Component {
 	 * @param {Array} selection
 	 * @protected
 	 */
-	handleMouseOver_(feature, idx, selection) {
+	_handleMouseOver(feature, idx, selection) {
 		const node = selection[idx];
 		d3.select(node).style('fill', this.color.selected);
 	}
@@ -104,9 +104,9 @@ class Geomap extends Component {
 	 * @param {Array} selection
 	 * @protected
 	 */
-	handleMouseOut_(feature, idx, selection) {
+	_handleMouseOut(feature, idx, selection) {
 		const node = selection[idx];
-		d3.select(node).style('fill', this.fillFn_.bind(this));
+		d3.select(node).style('fill', this._fillFn.bind(this));
 	}
 
 	/**
@@ -115,7 +115,7 @@ class Geomap extends Component {
 	 * @param {Object} mapData
 	 * @protected
 	 */
-	onDataLoad_(err, mapData) {
+	_onDataLoad(err, mapData) {
 		if (err) {
 			throw err;
 		}
@@ -124,12 +124,12 @@ class Geomap extends Component {
 		// Calculate domain based on values received
 		const values = features.map(f => f.properties[this.color.value]);
 
-		this.domainMin_ = Math.min.apply(null, values);
-		this.domainMax_ = Math.max.apply(null, values);
+		this._domainMin = Math.min.apply(null, values);
+		this._domainMax = Math.max.apply(null, values);
 
 		this.colorScale = d3
 			.scaleLinear()
-			.domain([this.domainMin_, this.domainMax_])
+			.domain([this._domainMin, this._domainMax])
 			.range([this.color.range.min, this.color.range.max]);
 
 		this.mapLayer
@@ -139,10 +139,10 @@ class Geomap extends Component {
 			.append('path')
 			.attr('d', this.path)
 			.attr('vector-effect', 'non-scaling-stroke')
-			.attr('fill', this.fillFn_.bind(this))
-			.on('click', this.handleClickHandler_)
-			.on('mouseout', this.handleMouseOut_.bind(this))
-			.on('mouseover', this.handleMouseOver_.bind(this));
+			.attr('fill', this._fillFn.bind(this))
+			.on('click', this._handleClickHandler)
+			.on('mouseout', this._handleMouseOut.bind(this))
+			.on('mouseover', this._handleMouseOver.bind(this));
 	}
 }
 
@@ -154,6 +154,44 @@ Soy.register(Geomap, templates);
  * @static
  */
 Geomap.STATE = {
+	/**
+	 * Minimum value for domain
+	 * @instance
+	 * @memberof Geomap
+	 * @type {Number}
+	 */
+	_domainMin: Config.number().internal(),
+
+	/**
+	 * Maximum value for domain
+	 * @instance
+	 * @memberOf Geomap
+	 * @type {Number}
+	 */
+	_domainMax: Config.number().internal(),
+
+	/**
+	 * Height of the map
+	 * @instance
+	 * @memberof Geomap
+	 * @type {?Number}
+	 * @default 480
+	 */
+	_height: Config.oneOfType([Config.string(), Config.number()])
+		.value('100%')
+		.internal(),
+
+	/**
+	 * Width of the map
+	 * @instance
+	 * @memberof Geomap
+	 * @type {?Number}
+	 * @default 640
+	 */
+	_width: Config.oneOfType([Config.string(), Config.number()])
+		.value('100%')
+		.internal(),
+
 	/**
 	 * Color configuration.
 	 * @instance
@@ -178,22 +216,6 @@ Geomap.STATE = {
 	}),
 
 	/**
-	 * Minimum value for domain
-	 * @instance
-	 * @memberof Geomap
-	 * @type {Number}
-	 */
-	domainMin_: Config.number().internal(),
-
-	/**
-	 * Maximum value for domain
-	 * @instance
-	 * @memberOf Geomap
-	 * @type {Number}
-	 */
-	domainMax_: Config.number().internal(),
-
-	/**
 	 * Path to the geo-json data
 	 * @instance
 	 * @memberof Geomap
@@ -201,28 +223,6 @@ Geomap.STATE = {
 	 * @default undefined
 	 */
 	data: Config.string().required(),
-
-	/**
-	 * Height of the map
-	 * @instance
-	 * @memberof Geomap
-	 * @type {?Number}
-	 * @default 480
-	 */
-	height_: Config.oneOfType([Config.string(), Config.number()])
-		.value('100%')
-		.internal(),
-
-	/**
-	 * Width of the map
-	 * @instance
-	 * @memberof Geomap
-	 * @type {?Number}
-	 * @default 640
-	 */
-	width_: Config.oneOfType([Config.string(), Config.number()])
-		.value('100%')
-		.internal(),
 };
 
 export {Geomap};

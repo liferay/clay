@@ -2,14 +2,28 @@
 
 import ClayNavigationBar from '../ClayNavigationBar';
 
+let consoleErrorReference;
 let navigationbar;
 const spritemap = 'icons.svg';
 
+/**
+ * Stubs console.error
+ */
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayNavigationBar', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (navigationbar) {
 			navigationbar.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render a navigatiom bar with one element', function() {
@@ -73,6 +87,8 @@ describe('ClayNavigationBar', function() {
 	});
 
 	it('should fail when no items are passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			navigationbar = new ClayNavigationBar({
 				spritemap: spritemap,
@@ -81,6 +97,8 @@ describe('ClayNavigationBar', function() {
 	});
 
 	it('should fail when no label is passed on each page', function() {
+		mockConsoleError();
+
 		expect(() => {
 			navigationbar = new ClayNavigationBar({
 				items: [{href: '#1'}],
@@ -90,6 +108,8 @@ describe('ClayNavigationBar', function() {
 	});
 
 	it('should fail when no href is passed on each page', function() {
+		mockConsoleError();
+
 		expect(() => {
 			navigationbar = new ClayNavigationBar({
 				items: [{label: 'Page 1'}],

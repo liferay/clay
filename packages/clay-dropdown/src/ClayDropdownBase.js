@@ -22,40 +22,40 @@ class ClayDropdownBase extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
-		this.refs.portal.on('rendered', this.handleRenderedPortal_.bind(this));
+		this.refs.portal.on('rendered', this._handleRenderedPortal.bind(this));
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	created() {
-		this.eventHandler_ = new EventHandler();
+		this._eventHandler = new EventHandler();
 
-		this.eventHandler_.add(
-			dom.on(document, 'click', this.handleDocClick_.bind(this))
+		this._eventHandler.add(
+			dom.on(document, 'click', this._handleDocClick.bind(this))
 		);
 	}
 
 	/**
 	 * @inheritDoc
 	 */
+	detached() {
+		this._eventHandler.removeAllListeners();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
 	disposed() {
-		this.eventHandler_.removeAllListeners();
+		this._eventHandler.removeAllListeners();
 	}
 
 	/**
 	 * Closes the dropdown.
 	 * @protected
 	 */
-	close_() {
+	_close() {
 		this.expanded = false;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	detached() {
-		this.eventHandler_.removeAllListeners();
 	}
 
 	/**
@@ -63,7 +63,7 @@ class ClayDropdownBase extends Component {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	handleDocClick_(event) {
+	_handleDocClick(event) {
 		if (
 			this.element.contains(event.target) ||
 			(this.refs.portal &&
@@ -71,7 +71,7 @@ class ClayDropdownBase extends Component {
 		) {
 			return;
 		}
-		this.close_();
+		this._close();
 	}
 
 	/**
@@ -79,7 +79,7 @@ class ClayDropdownBase extends Component {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	handleButtonClick_(event) {
+	_handleButtonClick(event) {
 		this.emit('buttonClicked', event);
 	}
 
@@ -88,7 +88,7 @@ class ClayDropdownBase extends Component {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	handleItemClick_(event) {
+	_handleItemClick(event) {
 		this.emit('itemClicked', event);
 	}
 
@@ -96,15 +96,15 @@ class ClayDropdownBase extends Component {
 	 * Handle when the lifecycle `rendered` is called in ClayPortal.
 	 * @protected
 	 */
-	handleRenderedPortal_() {
-		if (this.expanded && this.alignElementSelector_) {
+	_handleRenderedPortal() {
+		if (this.expanded && this._alignElementSelector) {
 			let alignElement = this.element.querySelector(
-				this.alignElementSelector_
+				this._alignElementSelector
 			);
 			if (alignElement) {
 				let bodyElement = this.refs.portal.refs.menu;
 
-				this.alignedPosition_ = Align.align(
+				this._alignedPosition = Align.align(
 					bodyElement,
 					alignElement,
 					Align.BottomLeft
@@ -118,20 +118,20 @@ class ClayDropdownBase extends Component {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	handleSearch_(event) {
+	_handleSearch(event) {
 		let searchValue = event.delegateTarget.value.toLowerCase();
 
-		if (!this.originalItems_) {
-			this.originalItems_ = this.items;
+		if (!this._originalItems) {
+			this._originalItems = this.items;
 		}
 
-		this.items = this.originalItems_.filter(item => {
+		this.items = this._originalItems.filter(item => {
 			if (item.items) {
-				if (!item.originalItems_) {
-					item.originalItems_ = item.items;
+				if (!item._originalItems) {
+					item._originalItems = item.items;
 				}
 
-				item.items = item.originalItems_.filter(nestedItem => {
+				item.items = item._originalItems.filter(nestedItem => {
 					return (
 						nestedItem.label &&
 						nestedItem.type !== 'group' &&
@@ -155,7 +155,7 @@ class ClayDropdownBase extends Component {
 		});
 
 		this.emit('itemsFiltered', {
-			originalItems: this.originalItems_,
+			originalItems: this._originalItems,
 			filteredItems: this.items,
 		});
 	}
@@ -185,7 +185,7 @@ ClayDropdownBase.STATE = {
 	 * @type {number}
 	 * @default Align.isValidPosition
 	 */
-	alignedPosition_: Config.validator(Align.isValidPosition).internal(),
+	_alignedPosition: Config.validator(Align.isValidPosition).internal(),
 
 	/**
 	 * Element selector used to position dropdown according to trigger position.
@@ -194,7 +194,7 @@ ClayDropdownBase.STATE = {
 	 * @type {?string}
 	 * @default .dropdown-toggle
 	 */
-	alignElementSelector_: Config.string()
+	_alignElementSelector: Config.string()
 		.value('.dropdown-toggle')
 		.internal(),
 

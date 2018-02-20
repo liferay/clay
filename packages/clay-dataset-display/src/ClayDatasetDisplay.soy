@@ -5,6 +5,18 @@
  */
 {template .render}
 	{@param spritemap: string}
+	{@param? _handleActionClicked: any}
+	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleDeselectAllClicked: any}
+	{@param? _handleFilterDoneClicked: any}
+	{@param? _handleItemToggled: any}
+	{@param? _handleSearch: any}
+	{@param? _handleSelectAllClicked: any}
+	{@param? _handleSelectPageCheckboxChanged: any}
+	{@param? _handleSortingButtonClicked: any}
+	{@param? _handleViewTypeClicked: any}
+	{@param? _selectedItems: list<?>}
+	{@param? _totalItems: number}
 	{@param? actionItems: list<[
 		disabled: bool,
 		href: string,
@@ -14,7 +26,7 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? creationMenu: [
+	{@param? creationMenu: bool|string|[
 		button: ?,
 		caption: string,
 		helpText: string,
@@ -38,16 +50,6 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? handleActionClicked_: any}
-	{@param? handleCreationButtonClicked_: any}
-	{@param? handleDeselectAllClicked_: any}
-	{@param? handleFilterDoneClicked_: any}
-	{@param? handleItemToggled_: any}
-	{@param? handleSearch_: any}
-	{@param? handleSelectAllClicked_: any}
-	{@param? handleSelectPageCheckboxChanged_: any}
-	{@param? handleSortingButtonClicked_: any}
-	{@param? handleViewTypeClicked_: any}
 	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? items: ?}
@@ -55,11 +57,9 @@
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
-	{@param? selectedItems_: list<?>}
 	{@param? selectedView: int}
 	{@param? sortingOrder: string}
 	{@param? title: string}
-	{@param? totalItems_: number}
 	{@param? views: list<[
 		active: bool,
 		contentRenderer: string,
@@ -87,15 +87,15 @@
 				{param actionItems: $actionItems /}
 				{param creationMenu: $creationMenu /}
 				{param events: [
-					'actionClicked': $handleActionClicked_,
-					'creationButtonClicked': $handleCreationButtonClicked_,
-					'deselectAllClicked': $handleDeselectAllClicked_,
-					'filterDoneClicked': $handleFilterDoneClicked_,
-					'search': $handleSearch_,
-					'selectAllClicked': $handleSelectAllClicked_,
-					'selectPageCheckboxChanged': $handleSelectPageCheckboxChanged_,
-					'sortingButtonClicked': $handleSortingButtonClicked_,
-					'viewTypeClicked': $handleViewTypeClicked_
+					'actionClicked': $_handleActionClicked,
+					'creationButtonClicked': $_handleCreationButtonClicked,
+					'deselectAllClicked': $_handleDeselectAllClicked,
+					'filterDoneClicked': $_handleFilterDoneClicked,
+					'search': $_handleSearch,
+					'selectAllClicked': $_handleSelectAllClicked,
+					'selectPageCheckboxChanged': $_handleSelectPageCheckboxChanged,
+					'sortingButtonClicked': $_handleSortingButtonClicked,
+					'viewTypeClicked': $_handleViewTypeClicked
 				] /}
 				{param filterItems: $filterItems /}
 				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
@@ -104,10 +104,10 @@
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
 				{param selectable: $selectable /}
-				{param selectedItems: $selectedItems_ ? length($selectedItems_) : 0 /}
+				{param selectedItems: $_selectedItems ? length($_selectedItems) : 0 /}
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}
-				{param totalItems: $totalItems_ /}
+				{param totalItems: $_totalItems /}
 				{param viewTypes: $views /}
 			{/call}
 
@@ -115,7 +115,7 @@
 				{let $variant: $views[$selectedView].contentRenderer ?: '' /}
 
 				{delcall ClayDatasetDisplay.List variant="$variant"}
-					{param handleItemToggled_: $handleItemToggled_ /}
+					{param _handleItemToggled: $_handleItemToggled /}
 					{param items: $items /}
 					{param schema: $views[$selectedView].schema /}
 					{param selectable: $selectable /}
@@ -134,7 +134,7 @@
  * UIs and components.
  */
 {deltemplate ClayDatasetDisplay.List}
-	{@param handleItemToggled_: any}
+	{@param _handleItemToggled: any}
 	{@param items: ?}
 	{@param schema: ?}
 	{@param spritemap: string}
@@ -146,7 +146,7 @@
  * This renders a ClayCardGrid
  */
 {deltemplate ClayDatasetDisplay.List variant="'cards'"}
-	{@param handleItemToggled_: any}
+	{@param _handleItemToggled: any}
 	{@param items: ?}
 	{@param schema: ?}
 	{@param spritemap: string}
@@ -156,7 +156,7 @@
 	<div class="container container-view">
 		<form>
 			{call ClayCardGrid.render}
-				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param events: ['itemToggled': $_handleItemToggled ] /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
@@ -170,7 +170,7 @@
  * This renders a ClayList
  */
 {deltemplate ClayDatasetDisplay.List variant="'list'"}
-	{@param handleItemToggled_: any}
+	{@param _handleItemToggled: any}
 	{@param items: ?}
 	{@param schema: ?}
 	{@param spritemap: string}
@@ -180,7 +180,7 @@
 	<div class="container container-view">
 		<form>
 			{call ClayList.render}
-				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param events: ['itemToggled': $_handleItemToggled ] /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
@@ -194,7 +194,7 @@
  * This renders a ClayTable
  */
 {deltemplate ClayDatasetDisplay.List variant="'table'"}
-	{@param handleItemToggled_: any}
+	{@param _handleItemToggled: any}
 	{@param items: ?}
 	{@param schema: ?}
 	{@param spritemap: string}
@@ -204,7 +204,7 @@
 	<div class="container container-no-gutters-sm-down container-view">
 		<form>
 			{call ClayTable.render}
-				{param events: ['itemToggled': $handleItemToggled_ ] /}
+				{param events: ['itemToggled': $_handleItemToggled ] /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}

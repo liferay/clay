@@ -1,6 +1,7 @@
 import ClayFileCard from '../ClayFileCard';
 
 let component;
+let consoleErrorReference;
 let spritemap = 'icons.svg';
 let actionItems = [
 	{
@@ -13,11 +14,24 @@ let actionItems = [
 	},
 ];
 
+/**
+ * Stubs console.error
+ */
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayFileCard', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (component) {
 			component.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render the default markup', () => {
@@ -395,6 +409,8 @@ describe('ClayFileCard', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayFileCard({
 				title: 'My Title',
@@ -403,6 +419,8 @@ describe('ClayFileCard', function() {
 	});
 
 	it('should fail when no title is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayFileCard({
 				spritemap: spritemap,

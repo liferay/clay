@@ -1,14 +1,27 @@
 import ClayAlert from '../ClayAlert';
 
+let consoleErrorReference;
 let alert;
-
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+/**
+ * Stubs console.error
+ */
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayAlert', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (alert) {
 			alert.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render default markup', function() {
@@ -109,7 +122,7 @@ describe('ClayAlert', function() {
 
 		alert.element.querySelector('button.close').click();
 
-		expect(alert.visible_).toBeFalsy();
+		expect(alert._visible).toBeFalsy();
 	});
 
 	it('should close and destroy an alert', function() {
@@ -123,11 +136,13 @@ describe('ClayAlert', function() {
 
 		alert.element.querySelector('button.close').click();
 
-		expect(alert.visible_).toBeFalsy();
+		expect(alert._visible).toBeFalsy();
 		expect(alert.disposed_).toBeTruthy();
 	});
 
 	it('should fail when no message is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			alert = new ClayAlert({
 				spritemap: spritemap,
@@ -137,6 +152,8 @@ describe('ClayAlert', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			alert = new ClayAlert({
 				message: 'message',
@@ -146,6 +163,8 @@ describe('ClayAlert', function() {
 	});
 
 	it('should fail when no title is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			alert = new ClayAlert({
 				message: 'message',

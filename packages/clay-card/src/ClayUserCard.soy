@@ -5,6 +5,7 @@
  */
 {template .render}
     {@param name: string}
+    {@param? _handleItemToggled: any}
     {@param? actionItems: list<[
         href: string,
         label: string,
@@ -13,7 +14,6 @@
     {@param? disabled: bool}
     {@param? elementClasses: string}
     {@param? groupName: string}
-    {@param? handleItemToggled_: any}
     {@param? href: string}
     {@param? id: string}
     {@param? imageAlt: string}
@@ -39,7 +39,7 @@
         {param contentRenderer: 'user' /}
         {param disabled: $disabled /}
         {param elementClasses: $elementClasses /}
-        {param events: ['itemToggled': $handleItemToggled_ ] /}
+        {param events: ['itemToggled': $_handleItemToggled ] /}
         {param fileType: $initials /}
         {param fileTypeStyle: $userColor /}
         {param groupName: $groupName /}

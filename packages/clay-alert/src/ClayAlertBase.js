@@ -15,7 +15,7 @@ class ClayAlertBase extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
-		this.addListener('hide', this.defaultHideAlert_, true);
+		this.addListener('hide', this._defaultHideAlert, true);
 	}
 
 	/**
@@ -26,12 +26,12 @@ class ClayAlertBase extends Component {
 			this.autoClose &&
 			(this.type === 'stripe' || this.type === 'toast')
 		) {
-			if (this.delayTime_ === undefined || this.delayTime_ > 0) {
-				this.delayTime_ =
+			if (this._delayTime === undefined || this._delayTime > 0) {
+				this._delayTime =
 					(this.element.querySelector('a') ? 10 : 5) * 1000;
 			}
 
-			this.resumeTimeout_();
+			this._resumeTimeout();
 		}
 	}
 
@@ -39,28 +39,77 @@ class ClayAlertBase extends Component {
 	 * @inheritDoc
 	 */
 	disposed() {
-		if (this.timer_) {
-			clearTimeout(this.timer_);
-			this.timer_ = undefined;
+		if (this._timer) {
+			clearTimeout(this._timer);
+			this._timer = undefined;
 		}
-		this.delayTime_ = undefined;
-		this.startDelayTime_ = undefined;
+		this._delayTime = undefined;
+		this._startDelayTime = undefined;
 	}
 
 	/**
 	 * Hides the alert and destroy it if proceed.
 	 * @private
 	 */
-	defaultHideAlert_() {
-		this.delayTime_ = 0;
-		this.visible_ = false;
+	_defaultHideAlert() {
+		this._delayTime = 0;
+		this._visible = false;
 
-		if (this.timer_) {
-			clearTimeout(this.timer_);
+		if (this._timer) {
+			clearTimeout(this._timer);
 		}
 
 		if (this.destroyOnHide) {
 			this.dispose();
+		}
+	}
+
+	/**
+	 * Handles onclick event for the close button in case of closeable alert.
+	 * @private
+	 */
+	_handleCloseClick() {
+		this.close();
+	}
+
+	/**
+	 * Handles mouseot event for the alert.
+	 * @private
+	 */
+	_handleMouseOut() {
+		this._resumeTimeout();
+	}
+
+	/**
+	 * Handles mouseover event for the alert.
+	 * @private
+	 */
+	_handleMouseOver() {
+		this._pauseTimeout();
+	}
+
+	/**
+	 * Pauses the closing delay time.
+	 * @private
+	 */
+	_pauseTimeout() {
+		if (this._timer) {
+			clearTimeout(this._timer);
+			this._timer = undefined;
+			this._delayTime -= new Date() - this._startDelayTime;
+		}
+	}
+
+	/**
+	 * Resumes the closing delay time.
+	 * @private
+	 */
+	_resumeTimeout() {
+		if (this._delayTime > 0) {
+			this._startDelayTime = new Date();
+			this._timer = setTimeout(() => {
+				this.close();
+			}, this._delayTime);
 		}
 	}
 
@@ -71,55 +120,6 @@ class ClayAlertBase extends Component {
 	close() {
 		this.emit('hide');
 	}
-
-	/**
-	 * Handles onclick event for the close button in case of closeable alert.
-	 * @private
-	 */
-	handleCloseClick_() {
-		this.close();
-	}
-
-	/**
-	 * Handles mouseot event for the alert.
-	 * @private
-	 */
-	handleMouseOut_() {
-		this.resumeTimeout_();
-	}
-
-	/**
-	 * Handles mouseover event for the alert.
-	 * @private
-	 */
-	handleMouseOver_() {
-		this.pauseTimeout_();
-	}
-
-	/**
-	 * Pauses the closing delay time.
-	 * @private
-	 */
-	pauseTimeout_() {
-		if (this.timer_) {
-			clearTimeout(this.timer_);
-			this.timer_ = undefined;
-			this.delayTime_ -= new Date() - this.startDelayTime_;
-		}
-	}
-
-	/**
-	 * Resumes the closing delay time.
-	 * @private
-	 */
-	resumeTimeout_() {
-		if (this.delayTime_ > 0) {
-			this.startDelayTime_ = new Date();
-			this.timer_ = setTimeout(() => {
-				this.close();
-			}, this.delayTime_);
-		}
-	}
 }
 
 /**
@@ -128,6 +128,17 @@ class ClayAlertBase extends Component {
  * @type {!Object}
  */
 ClayAlertBase.STATE = {
+	/**
+	 * Flag to indicate the visibility of the alert
+	 * @instance
+	 * @memberof ClayAlertBase
+	 * @type {?bool}
+	 * @default true
+	 */
+	_visible: Config.bool()
+		.internal()
+		.value(true),
+
 	/**
 	 * Flag to indicate if alert should be automatically closed.
 	 * @instance
@@ -216,17 +227,6 @@ ClayAlertBase.STATE = {
 	 * @default embedded
 	 */
 	type: Config.oneOf(['embedded', 'stripe', 'toast']).value('embedded'),
-
-	/**
-	 * Flag to indicate the visibility of the alert
-	 * @instance
-	 * @memberof ClayAlertBase
-	 * @type {?bool}
-	 * @default true
-	 */
-	visible_: Config.bool()
-		.internal()
-		.value(true),
 };
 
 defineWebComponent('clay-alert-base', ClayAlertBase);

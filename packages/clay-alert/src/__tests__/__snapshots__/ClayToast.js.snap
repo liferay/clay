@@ -3,13 +3,13 @@
 exports[`ClayToast should render a "danger" style toast 1`] = `
 <div class="alert alert-danger fade alert-dismissible show" role="alert">
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
       <title>exclamation-full</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-full"></use>
     </svg>
@@ -20,13 +20,13 @@ exports[`ClayToast should render a "danger" style toast 1`] = `
 exports[`ClayToast should render a "success" style toast 1`] = `
 <div class="alert alert-success fade alert-dismissible show" role="alert">
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full" focusable="false">
       <title>check-circle-full</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#check-circle-full"></use>
     </svg>
@@ -37,13 +37,13 @@ exports[`ClayToast should render a "success" style toast 1`] = `
 exports[`ClayToast should render a "warning" style toast 1`] = `
 <div class="alert alert-warning fade alert-dismissible show" role="alert">
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
       <title>warning-full</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#warning-full"></use>
     </svg>
@@ -54,13 +54,13 @@ exports[`ClayToast should render a "warning" style toast 1`] = `
 exports[`ClayToast should render an "info" style toast 1`] = `
 <div class="alert alert-info fade alert-dismissible show" role="alert">
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
       <title>info-circle</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
@@ -71,13 +71,13 @@ exports[`ClayToast should render an "info" style toast 1`] = `
 exports[`ClayToast should render an toast with classes 1`] = `
 <div class="alert alert-info fade alert-dismissible my-custom-class show" role="alert">
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
       <title>info-circle</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
@@ -88,13 +88,13 @@ exports[`ClayToast should render an toast with classes 1`] = `
 exports[`ClayToast should render an toast with id 1`] = `
 <div class="alert alert-info fade alert-dismissible show" id="myId" role="alert">
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
       <title>info-circle</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
@@ -105,13 +105,13 @@ exports[`ClayToast should render an toast with id 1`] = `
 exports[`ClayToast should render default markup 1`] = `
 <div class="alert alert-info fade alert-dismissible show" role="alert">
   <button class="btn close btn-unstyled" aria-label="Close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
       <title>info-circle</title>
       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
     </svg>

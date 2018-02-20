@@ -36,7 +36,6 @@
 
 	@include list-unstyled;
 
-	margin-bottom: 0;
 	width: 100%;
 }
 
@@ -111,6 +110,21 @@
 
 .autofit-float-sm-down {
 	@extend %autofit-float-sm-down;
+}
+
+// Headings (h1-6)
+
+.heading-start {
+	margin-right: $heading-spacer-x;
+}
+
+.heading-end {
+	margin-left: $heading-spacer-x;
+}
+
+.heading-text {
+	margin-bottom: $heading-text-margin-bottom;
+	margin-top: $heading-text-margin-top;
 }
 
 // Inline Scroller

@@ -16,20 +16,20 @@ class ClayCollapse extends State {
 	constructor(config) {
 		super(config);
 
-		this.eventHandler_ = new EventHandler();
+		this._eventHandler = new EventHandler();
 
-		const transitionEnd = this.getTransitionEndEvent_();
+		const transitionEnd = this._getTransitionEndEvent();
 
 		this.supportsTransitionEnd = transitionEnd !== false;
 		this.transitionEnd = transitionEnd || 'transitionend';
 
-		this.on('headersChanged', this.handleHeadersChanged_);
-		this.syncHeaderListeners_();
+		this.on('headersChanged', this._handleHeadersChanged);
+		this._syncHeaderListeners();
 
-		this.on('collapsedChanged', this.handleCollapsedChanged_);
+		this.on('collapsedChanged', this._handleCollapsedChanged);
 
 		if (this.content) {
-			this.collapsed ? this.close_() : this.open_();
+			this.collapsed ? this._close() : this._open();
 		}
 	}
 
@@ -38,19 +38,19 @@ class ClayCollapse extends State {
 	 */
 	disposeInternal() {
 		super.disposeInternal();
-		this.eventHandler_.removeAllListeners();
+		this._eventHandler.removeAllListeners();
 	}
 
 	/**
 	 * Animates close when `collapsed` is true
 	 * @protected
 	 */
-	animateClose_() {
+	_animateClose() {
 		const {content, openClasses, transitionClasses} = this;
 
 		content.transitionType = 0;
 
-		this.updateContentHeight_();
+		this._updateContentHeight();
 
 		dom.addClasses(content, transitionClasses);
 		dom.removeClasses(content, openClasses);
@@ -58,14 +58,14 @@ class ClayCollapse extends State {
 		content.offsetHeight;
 		content.style.removeProperty('height');
 
-		this.shimUnsupportedTransition_(content);
+		this._shimUnsupportedTransition(content);
 	}
 
 	/**
 	 * Animates open when `collapsed` is false
 	 * @protected
 	 */
-	animateOpen_() {
+	_animateOpen() {
 		const {closedClasses, content, transitionClasses} = this;
 
 		content.transitionType = 1;
@@ -73,9 +73,9 @@ class ClayCollapse extends State {
 		dom.removeClasses(content, closedClasses);
 		dom.addClasses(content, transitionClasses);
 
-		this.updateContentHeight_();
+		this._updateContentHeight();
 
-		this.shimUnsupportedTransition_(content);
+		this._shimUnsupportedTransition(content);
 	}
 
 	/**
@@ -83,10 +83,10 @@ class ClayCollapse extends State {
 	 * @param {!Element|!string} header
 	 * @protected
 	 */
-	attachHeaderListeners_(header) {
-		this.eventHandler_.add(
-			dom.on(header, 'click', this.handleClick_.bind(this)),
-			dom.on(header, 'keydown', this.handleKeydown_.bind(this))
+	_attachHeaderListeners(header) {
+		this._eventHandler.add(
+			dom.on(header, 'click', this._handleClick.bind(this)),
+			dom.on(header, 'keydown', this._handleKeydown.bind(this))
 		);
 	}
 
@@ -95,7 +95,7 @@ class ClayCollapse extends State {
 	 * is true
 	 * @protected
 	 */
-	close_() {
+	_close() {
 		const {closedClasses, content, openClasses, transitionClasses} = this;
 
 		dom.removeClasses(content, `${openClasses} ${transitionClasses}`);
@@ -111,7 +111,7 @@ class ClayCollapse extends State {
 	 * @return {string|boolean} The name of the transitionend event or false
 	 * if not supported
 	 */
-	getTransitionEndEvent_() {
+	_getTransitionEndEvent() {
 		let el = document.createElement('metalClayTransitionEnd');
 
 		let transitionEndEvents = {
@@ -134,7 +134,7 @@ class ClayCollapse extends State {
 	 * Handles a `click` event on the headers.
 	 * @protected
 	 */
-	handleClick_() {
+	_handleClick() {
 		this.toggle();
 	}
 
@@ -143,15 +143,15 @@ class ClayCollapse extends State {
 	 * state, attaching and removing css properties and classes needed to open
 	 * and close the element.
 	 */
-	handleCollapsedChanged_() {
-		this.collapsed ? this.animateClose_() : this.animateOpen_();
+	_handleCollapsedChanged() {
+		this.collapsed ? this._animateClose() : this._animateOpen();
 	}
 
 	/**
 	 * Handles `changed` event of `headers` and attaches listeners.
 	 */
-	handleHeadersChanged_() {
-		this.syncHeaderListeners_();
+	_handleHeadersChanged() {
+		this._syncHeaderListeners();
 	}
 
 	/**
@@ -159,7 +159,7 @@ class ClayCollapse extends State {
 	 * @param {!Event} event
 	 * @protected
 	 */
-	handleKeydown_(event) {
+	_handleKeydown(event) {
 		// eslint-disable-next-line
 		if (
 			event.keyCode === KEY_CODE_ENTER ||
@@ -174,8 +174,8 @@ class ClayCollapse extends State {
 	 * Handles the `transitionend` event on the content.
 	 * @protected
 	 */
-	handleTransitionEnd_() {
-		this.content.transitionType ? this.open_() : this.close_();
+	_handleTransitionEnd() {
+		this.content.transitionType ? this._open() : this._close();
 	}
 
 	/**
@@ -183,7 +183,7 @@ class ClayCollapse extends State {
 	 * is false
 	 * @protected
 	 */
-	open_() {
+	_open() {
 		const {content, openClasses, transitionClasses} = this;
 
 		dom.addClasses(content, openClasses);
@@ -198,7 +198,7 @@ class ClayCollapse extends State {
 	 * @param {!Element} element
 	 * @protected
 	 */
-	shimUnsupportedTransition_(element) {
+	_shimUnsupportedTransition(element) {
 		if (!this.supportsTransitionEnd) {
 			anim.emulateTransitionEnd(element);
 		}
@@ -209,17 +209,17 @@ class ClayCollapse extends State {
 	 * attaching events to the new element and detaching from any previous one.
 	 * @protected
 	 */
-	syncHeaderListeners_() {
+	_syncHeaderListeners() {
 		const {headers} = this;
 
-		this.eventHandler_.removeAllListeners();
+		this._eventHandler.removeAllListeners();
 
 		if (Array.isArray(headers)) {
 			headers.forEach(header => {
-				this.attachHeaderListeners_(header);
+				this._attachHeaderListeners(header);
 			});
 		} else {
-			this.attachHeaderListeners_(headers);
+			this._attachHeaderListeners(headers);
 		}
 	}
 
@@ -230,7 +230,7 @@ class ClayCollapse extends State {
 	toggle() {
 		const {collapsed, content, transitionEnd} = this;
 
-		dom.once(content, transitionEnd, this.handleTransitionEnd_.bind(this));
+		dom.once(content, transitionEnd, this._handleTransitionEnd.bind(this));
 
 		this.collapsed = !collapsed;
 	}
@@ -239,7 +239,7 @@ class ClayCollapse extends State {
 	 * Calculates what the content height should be and sets it.
 	 * @protected
 	 */
-	updateContentHeight_() {
+	_updateContentHeight() {
 		const {content} = this;
 
 		content.setAttribute(

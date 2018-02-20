@@ -4,7 +4,7 @@ exports[`ClayFileCard should render a ClayFileCard with actionItems 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -18,7 +18,7 @@ exports[`ClayFileCard should render a ClayFileCard with actionItems 1`] = `
       <div class="autofit-col">
         <div class="dropdown dropdown-action">
           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
               <title>ellipsis-v</title>
               <use xlink:href="icons.svg#ellipsis-v"></use>
             </svg>
@@ -44,7 +44,7 @@ exports[`ClayFileCard should render a ClayFileCard with classes 1`] = `
 <div class="card-type-asset card file-card my-custom-class">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -64,7 +64,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -87,7 +87,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`danger
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -110,7 +110,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`dark c
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -133,7 +133,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`info c
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -156,7 +156,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`light 
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -179,7 +179,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`primar
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -202,7 +202,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`second
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -225,7 +225,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`succes
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -248,7 +248,7 @@ exports[`ClayFileCard should render a ClayFileCard with file type style \`warnin
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -271,7 +271,7 @@ exports[`ClayFileCard should render a ClayFileCard with href 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -291,7 +291,7 @@ exports[`ClayFileCard should render a ClayFileCard with icon 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents" focusable="false">
         <title>documents</title>
         <use xlink:href="icons.svg#documents"></use>
       </svg>
@@ -311,7 +311,7 @@ exports[`ClayFileCard should render a ClayFileCard with id 1`] = `
 <div class="card-type-asset card file-card" id="myId">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -331,7 +331,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`danger colo
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -354,7 +354,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`info color\
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -377,7 +377,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`secondary c
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -400,7 +400,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`success col
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -423,7 +423,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`warning col
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -446,7 +446,7 @@ exports[`ClayFileCard should render a ClayFileCard with labels with styles mappe
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -471,7 +471,7 @@ exports[`ClayFileCard should render a ClayFileCard with one label 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -494,7 +494,7 @@ exports[`ClayFileCard should render a ClayFileCard with subtitle 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -515,7 +515,7 @@ exports[`ClayFileCard should render a ClayFileCard with two labels 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -539,7 +539,7 @@ exports[`ClayFileCard should render a ClayFileCard with two labels with styles 1
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
@@ -568,7 +568,7 @@ exports[`ClayFileCard should render a selectable ClayFileCard 1`] = `
           <input class="custom-control-input" ref="input" type="checkbox">
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
               <title>documents-and-media</title>
               <use xlink:href="icons.svg#documents-and-media"></use>
             </svg>
@@ -596,7 +596,7 @@ exports[`ClayFileCard should render a selectable ClayFileCard with input \`name\
           <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
               <title>documents-and-media</title>
               <use xlink:href="icons.svg#documents-and-media"></use>
             </svg>
@@ -624,7 +624,7 @@ exports[`ClayFileCard should render a selectable ClayFileCard with input \`value
           <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
               <title>documents-and-media</title>
               <use xlink:href="icons.svg#documents-and-media"></use>
             </svg>
@@ -652,7 +652,7 @@ exports[`ClayFileCard should render a selectable disabled ClayFileCard 1`] = `
           <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
               <title>documents-and-media</title>
               <use xlink:href="icons.svg#documents-and-media"></use>
             </svg>
@@ -680,7 +680,7 @@ exports[`ClayFileCard should render a selectable selected ClayFileCard 1`] = `
           <input checked="" class="custom-control-input" ref="input" type="checkbox">
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
               <title>documents-and-media</title>
               <use xlink:href="icons.svg#documents-and-media"></use>
             </svg>
@@ -703,7 +703,7 @@ exports[`ClayFileCard should render the default markup 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
         <title>documents-and-media</title>
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>

@@ -7,6 +7,7 @@
 	{@param spritemap: string}
 	{@param symbol: string}
 	{@param? elementClasses: string}
+	{@param? focusable: bool}
 	{@param? id: string}
 	{@param? title: string}
 
@@ -19,6 +20,12 @@
 				{sp}{$elementClasses}
 			{/if}
 		"
+
+		{if $focusable}
+			focusable="true"
+		{else}
+			focusable="false"
+		{/if}
 
 		{if $id}
 			id="{$id}"

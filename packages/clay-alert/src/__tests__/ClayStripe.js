@@ -1,14 +1,27 @@
 import ClayStripe from '../ClayStripe';
 
+let consoleErrorReference;
 let stripe;
-
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+/**
+ * Stubs console.error
+ */
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayStripe', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (stripe) {
 			stripe.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render default markup', function() {
@@ -96,7 +109,7 @@ describe('ClayStripe', function() {
 
 		stripe.element.querySelector('button.close').click();
 
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -114,7 +127,7 @@ describe('ClayStripe', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(5000);
 
 		jest.runAllTimers();
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 	});
 
 	// eslint-disable-next-line
@@ -132,7 +145,7 @@ describe('ClayStripe', function() {
 		expect(setTimeout.mock.calls[0][1]).toBe(10000);
 
 		jest.runAllTimers();
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 	});
 
 	it('should close and destroy an stripe', function() {
@@ -145,11 +158,13 @@ describe('ClayStripe', function() {
 
 		stripe.element.querySelector('button.close').click();
 
-		expect(stripe.visible_).toBeFalsy();
+		expect(stripe._visible).toBeFalsy();
 		expect(stripe.disposed_).toBeTruthy();
 	});
 
 	it('should fail when no message is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			stripe = new ClayStripe({
 				spritemap: spritemap,
@@ -159,6 +174,8 @@ describe('ClayStripe', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			stripe = new ClayStripe({
 				message: 'message',
@@ -168,6 +185,8 @@ describe('ClayStripe', function() {
 	});
 
 	it('should fail when no title is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			stripe = new ClayStripe({
 				message: 'message',

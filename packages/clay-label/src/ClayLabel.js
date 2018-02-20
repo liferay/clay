@@ -15,7 +15,7 @@ class ClayLabel extends Component {
 	 * Handle `click` button and emit event `close`.
 	 * @protected
 	 */
-	handleCloseButtonClick_() {
+	_handleCloseButtonClick() {
 		this.emit('close');
 	}
 }

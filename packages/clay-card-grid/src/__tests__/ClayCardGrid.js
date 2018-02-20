@@ -182,7 +182,7 @@ describe('ClayCardGrid', function() {
 	it('should render a ClayCardGrid with classes', () => {
 		component = new ClayCardGrid({
 			elementClasses: 'my-custom-class',
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();
@@ -191,7 +191,7 @@ describe('ClayCardGrid', function() {
 	it('should render a ClayCardGrid with id', () => {
 		component = new ClayCardGrid({
 			id: 'myId',
-			schema: [],
+			schema: {},
 		});
 
 		expect(component).toMatchSnapshot();

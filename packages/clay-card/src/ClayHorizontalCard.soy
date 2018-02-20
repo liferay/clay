@@ -6,6 +6,7 @@
 {template .render}
 	{@param spritemap: string}
 	{@param title: string}
+	{@param? _handleItemCheckboxClick: any}
 	{@param? actionItems: list<[
 		href: string,
 		label: string,
@@ -14,7 +15,6 @@
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? groupName: string}
-	{@param? handleItemCheckboxClick_: any}
 	{@param? href: string}
 	{@param? icon: string}
 	{@param? id: string}
@@ -57,7 +57,7 @@
 				{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
 				{param checked: $selected /}
 				{param disabled: $disabled /}
-				{param events: ['change': $handleItemCheckboxClick_] /}
+				{param events: ['change': $_handleItemCheckboxClick] /}
 				{param labelContent kind="html"}
 					<div class="card card-horizontal">
 						{$descriptiveArea}

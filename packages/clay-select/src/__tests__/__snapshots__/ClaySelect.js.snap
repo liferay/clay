@@ -83,7 +83,7 @@ exports[`ClaySelect should render a select element with preselected option 1`] =
 `;
 
 exports[`ClaySelect should render an inline group multiple select element 1`] = `
-<div class="form-inline-group">
+<div class="form-group-item">
   <select class="form-control" multiple="multiple">
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
@@ -92,7 +92,7 @@ exports[`ClaySelect should render an inline group multiple select element 1`] = 
 `;
 
 exports[`ClaySelect should render an inline group select element 1`] = `
-<div class="form-inline-group">
+<div class="form-group-item">
   <label>My Select</label>
   <select class="form-control" aria-label="My Select">
     <option value="1">Option 1</option>

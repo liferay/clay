@@ -132,7 +132,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
     <li>
       <a class=" dropdown-item" href="item1url">
         <div class="dropdown-item-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
             <title>check</title>
             <use xlink:href="icons.svg#check"></use>
           </svg>
@@ -141,7 +141,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
     <li>
       <a class=" dropdown-item" href="item2url">
         <div class="dropdown-item-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
             <title>check</title>
             <use xlink:href="icons.svg#check"></use>
           </svg>
@@ -160,7 +160,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
     <li>
       <a class=" dropdown-item" href="item1url">Item 1
         <div class="dropdown-item-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
             <title>check</title>
             <use xlink:href="icons.svg#check"></use>
           </svg>
@@ -170,7 +170,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
     <li>
       <a class=" dropdown-item" href="item2url">Item 2
         <div class="dropdown-item-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
             <title>check</title>
             <use xlink:href="icons.svg#check"></use>
           </svg>
@@ -618,7 +618,7 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
           <input aria-label="Search for..." class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" ref="searchInput">
           <span class="input-group-inset-item input-group-inset-item-after">
             <button class="btn btn-link" aria-label="search" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
                 <use xlink:href="icons.svg#search"></use>
               </svg>

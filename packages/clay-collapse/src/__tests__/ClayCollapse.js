@@ -67,7 +67,7 @@ describe('ClayCollapse', () => {
 				headers: '[aria-controls="collapseExample1"]',
 			});
 
-			component.close_();
+			component._close();
 
 			checkClosedClasses(component);
 		});
@@ -78,7 +78,7 @@ describe('ClayCollapse', () => {
 				headers: '[aria-controls="collapseExample1"]',
 			});
 
-			component.open_();
+			component._open();
 
 			checkOpenClasses(component);
 		});

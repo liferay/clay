@@ -6,13 +6,13 @@
 {template .render}
 	{@param items: list<?>}
 	{@param spritemap: string}
+	{@param? _handleButtonClick: any}
+	{@param? _handleItemClick: any}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
-	{@param? handleButtonClick_: any}
-	{@param? handleItemClick_: any}
 	{@param? helpText: string}
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
@@ -37,8 +37,8 @@
     {param disabled: $disabled /}
     {param elementClasses: $dropdownElementClasses /}
     {param events: [
-      'buttonClicked': $handleButtonClick_,
-      'itemClicked': $handleItemClick_
+      'buttonClicked': $_handleButtonClick,
+      'itemClicked': $_handleItemClick
     ]/}
     {param expanded: $expanded /}
     {param helpText: $helpText /}

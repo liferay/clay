@@ -19,8 +19,8 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? _handleItemToggled: any}
 	{@param? elementClasses: string}
-	{@param? handleItemToggled_: any}
 	{@param? id: string}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
@@ -41,8 +41,8 @@
 	<ul {$attributes}>
 		{if $items}
 			{call .items}
+				{param _handleItemToggled: $_handleItemToggled /}
 				{param groupName: $id /}
-				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $items /}
 				{param schema:	$schema /}
 				{param selectable: $selectable /}
@@ -72,8 +72,8 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? _handleItemToggled: any}
 	{@param? groupName: string}
-	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
 
@@ -91,7 +91,7 @@
 					{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
-					{param events: ['change': $handleItemToggled_] /}
+					{param events: ['change': $_handleItemToggled] /}
 					{param hideLabel: true /}
 					{param label: $item.selected ? 'Select' : 'Deselect' /}
 					{param name kind="text"}
@@ -169,8 +169,8 @@
 		inputNamesMap: ?,
 		inputValueField: string
 	]}
+	{@param? _handleItemToggled: any}
 	{@param? groupName: string}
-	{@param? handleItemToggled_: any}
 	{@param? selectable: bool}
 	{@param? spritemap: string}
 
@@ -194,8 +194,8 @@
 			</li>
 
 			{call .items}
+				{param _handleItemToggled: $_handleItemToggled /}
 				{param groupName: $currentGroupName /}
-				{param handleItemToggled_: $handleItemToggled_ /}
 				{param items: $item.items /}
 				{param schema:	$schema /}
 				{param selectable: $selectable /}
@@ -203,8 +203,8 @@
 			{/call}
 		{else}
 			{call .item}
+				{param _handleItemToggled: $_handleItemToggled /}
 				{param groupName: $groupName /}
-				{param handleItemToggled_: $handleItemToggled_ /}
 				{param item: $item /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}

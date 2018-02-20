@@ -14,16 +14,37 @@ class ClayNavigationBar extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
-		this.addListener('transitionend', this.handleTransitionEnd_, true);
+		this.addListener('transitionend', this._handleTransitionEnd, true);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	// eslint-disable-next-line
+	sync_isTransitioning() {
+		const elementCollapse = this.element.querySelector('.navbar-collapse');
+
+		if (this._isTransitioning && !this._visible) {
+			const heightCollapse = elementCollapse.querySelector('.container')
+				.clientHeight;
+
+			elementCollapse.setAttribute(
+				'style',
+				`height: ${heightCollapse}px`
+			);
+		} else if (this._isTransitioning && this._visible) {
+			elementCollapse.setAttribute('style', 'height: 0');
+			elementCollapse.removeAttribute('style');
+		}
 	}
 
 	/**
 	 * Check the click and set transition true.
 	 * @private
 	 */
-	handleClickToggler_() {
-		if (!this.isTransitioning_) {
-			this.isTransitioning_ = true;
+	_handleClickToggler() {
+		if (!this._isTransitioning) {
+			this._isTransitioning = true;
 		}
 	}
 
@@ -32,38 +53,18 @@ class ClayNavigationBar extends Component {
 	 * @param {!Event} event
 	 * @private
 	 */
-	handleTransitionEnd_(event) {
+	_handleTransitionEnd(event) {
 		const element = this.element.querySelector('.navbar-collapse');
 		if (
 			element == event.target &&
-			this.isTransitioning_ &&
-			!this.visible_
+			this._isTransitioning &&
+			!this._visible
 		) {
-			this.visible_ = true;
-			this.isTransitioning_ = false;
+			this._visible = true;
+			this._isTransitioning = false;
 		} else if (element == event.target) {
-			this.visible_ = false;
-			this.isTransitioning_ = false;
-		}
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncIsTransitioning_() {
-		const elementCollapse = this.element.querySelector('.navbar-collapse');
-
-		if (this.isTransitioning_ && !this.visible_) {
-			const heightCollapse = elementCollapse.querySelector('.container')
-				.clientHeight;
-
-			elementCollapse.setAttribute(
-				'style',
-				`height: ${heightCollapse}px`
-			);
-		} else if (this.isTransitioning_ && this.visible_) {
-			elementCollapse.setAttribute('style', 'height: 0');
-			elementCollapse.removeAttribute('style');
+			this._visible = false;
+			this._isTransitioning = false;
 		}
 	}
 }
@@ -74,6 +75,30 @@ class ClayNavigationBar extends Component {
  * @type {!Object}
  */
 ClayNavigationBar.STATE = {
+	/**
+	 * The toggle animation.
+	 * @instance
+	 * @memberof ClayNavigationBar
+	 * @type {?boolean}
+	 * @default false
+	 * @private
+	 */
+	_isTransitioning: Config.bool()
+		.value(false)
+		.internal(),
+
+	/**
+	 * Navmenus visible in mobile when click in the button.
+	 * @instance
+	 * @memberof ClayNavigationBar
+	 * @type {?bool}
+	 * @default false
+	 * @private
+	 */
+	_visible: Config.bool()
+		.value(false)
+		.internal(),
+
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
@@ -102,18 +127,6 @@ ClayNavigationBar.STATE = {
 	inverted: Config.bool().value(false),
 
 	/**
-	 * The toggle animation.
-	 * @instance
-	 * @memberof ClayNavigationBar
-	 * @type {?boolean}
-	 * @default false
-	 * @private
-	 */
-	isTransitioning_: Config.bool()
-		.value(false)
-		.internal(),
-
-	/**
 	 * List of items to show in the Navbar.
 	 * @instance
 	 * @memberof ClayNavigationBar
@@ -136,18 +149,6 @@ ClayNavigationBar.STATE = {
 	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
-
-	/**
-	 * Navmenus visible in mobile when click in the button.
-	 * @instance
-	 * @memberof ClayNavigationBar
-	 * @type {?bool}
-	 * @default false
-	 * @private
-	 */
-	visible_: Config.bool()
-		.value(false)
-		.internal(),
 };
 
 defineWebComponent('clay-navigation-bar', ClayNavigationBar);
