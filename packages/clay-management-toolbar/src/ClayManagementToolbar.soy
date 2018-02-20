@@ -89,37 +89,39 @@
 			{param totalItems: $totalItems /}
 		{/call}
 	{else}
-		{call .default}
-			{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
-			{param _handleClearResultsClick: $_handleClearResultsClick /}
-			{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
-			{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
-			{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
-			{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
-			{param _handleSearchSearchClick: $_handleSearchSearchClick /}
-			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
-			{param _handleSortingButtonClicked: $_handleSortingButtonClicked /}
-			{param _handleViewTypeClicked: $_handleViewTypeClicked /}
-			{param _showSearchMobile: $_showSearchMobile /}
-			{param contentRenderer: $contentRenderer ?: '' /}
-			{param creationMenu: $creationMenu /}
-			{param disabled: $totalItems == 0 /}
-			{param elementClasses: $elementClasses /}
-			{param filterItems: $filterItems /}
-			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
-			{param id: $id /}
-			{param searchActionURL: $searchActionURL /}
-			{param searchFormName: $searchFormName /}
-			{param searchInputName: $searchInputName /}
-			{param searchValue: $searchValue /}
-			{param selectable: $selectable /}
-			{param showInfoButton: $showInfoButton /}
-			{param showSearch: $showSearch != false /}
-			{param sortingOrder: $sortingOrder /}
-			{param spritemap: $spritemap /}
-			{param totalItems: $totalItems /}
-			{param viewTypes: $viewTypes /}
-		{/call}
+		<div>
+			{call .default}
+				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
+				{param _handleClearResultsClick: $_handleClearResultsClick /}
+				{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+				{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
+				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
+				{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
+				{param _handleSearchSearchClick: $_handleSearchSearchClick /}
+				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
+				{param _handleSortingButtonClicked: $_handleSortingButtonClicked /}
+				{param _handleViewTypeClicked: $_handleViewTypeClicked /}
+				{param _showSearchMobile: $_showSearchMobile /}
+				{param contentRenderer: $contentRenderer ?: '' /}
+				{param creationMenu: $creationMenu /}
+				{param disabled: $totalItems == 0 /}
+				{param elementClasses: $elementClasses /}
+				{param filterItems: $filterItems /}
+				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
+				{param id: $id /}
+				{param searchActionURL: $searchActionURL /}
+				{param searchFormName: $searchFormName /}
+				{param searchInputName: $searchInputName /}
+				{param searchValue: $searchValue /}
+				{param selectable: $selectable /}
+				{param showInfoButton: $showInfoButton /}
+				{param showSearch: $showSearch != false /}
+				{param sortingOrder: $sortingOrder /}
+				{param spritemap: $spritemap /}
+				{param totalItems: $totalItems /}
+				{param viewTypes: $viewTypes /}
+			{/call}
+		</div>
 	{/if}
 {/template}
 
