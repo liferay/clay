@@ -301,6 +301,7 @@ describe('ClayManagementToolbar', function() {
 			],
 			selectable: true,
 			sortingOrder: 'asc',
+			showInfoButton: true,
 			spritemap: spritemap,
 			totalItems: 0,
 			viewTypes: [
