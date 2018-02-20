@@ -1,5 +1,11 @@
 import Geomap from '../Geomap';
 
+let consoleErrorReference;
+
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 /**
  * Creates a Geomap
  * @param {Object} config
@@ -10,7 +16,17 @@ function createMap(config = {}) {
 }
 
 describe('Geomap', () => {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
+	afterEach(() => {
+		console.error = consoleErrorReference;
+	});
+
 	it('should throw an error if required configuration is invalid', () => {
+		mockConsoleError();
+
 		expect(createMap).toThrow();
 	});
 

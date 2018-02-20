@@ -1,14 +1,24 @@
 import ClayStripe from '../ClayStripe';
 
+let consoleErrorReference;
 let stripe;
-
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayStripe', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (stripe) {
 			stripe.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render default markup', function() {
@@ -150,6 +160,8 @@ describe('ClayStripe', function() {
 	});
 
 	it('should fail when no message is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			stripe = new ClayStripe({
 				spritemap: spritemap,
@@ -159,6 +171,8 @@ describe('ClayStripe', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			stripe = new ClayStripe({
 				message: 'message',
@@ -168,6 +182,8 @@ describe('ClayStripe', function() {
 	});
 
 	it('should fail when no title is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			stripe = new ClayStripe({
 				message: 'message',

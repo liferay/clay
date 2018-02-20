@@ -1,34 +1,46 @@
 import ClayPaginationBar from '../ClayPaginationBar';
 
+let consoleErrorReference;
+
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
 const entries = [
 	{
 		href: '#mySite?entries=5',
-		label: '5',
+		label: 5,
 	},
 	{
 		active: true,
 		href: '#mySite?entries=10',
-		label: '10',
+		label: 10,
 	},
 	{
 		href: '#mySite?entries=15',
-		label: '15',
+		label: 15,
 	},
 	{
 		href: '#mySite?entries=20',
-		label: '20',
+		label: 20,
 	},
 ];
 
 let component;
 
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayPaginationBar', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (component) {
 			component.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render the default markup', () => {
@@ -121,6 +133,8 @@ describe('ClayPaginationBar', function() {
 	});
 
 	it('should fail when no currentPage is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayPaginationBar({
 				baseHref: '#mySite?curPage=',
@@ -133,6 +147,8 @@ describe('ClayPaginationBar', function() {
 	});
 
 	it('should fail when no entries are passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayPaginationBar({
 				currentPage: 1,
@@ -145,6 +161,8 @@ describe('ClayPaginationBar', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayPaginationBar({
 				currentPage: 1,
@@ -157,6 +175,8 @@ describe('ClayPaginationBar', function() {
 	});
 
 	it('should fail when no totalEntries is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayPaginationBar({
 				currentPage: 1,

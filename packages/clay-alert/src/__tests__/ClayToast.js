@@ -1,14 +1,24 @@
 import ClayToast from '../ClayToast';
 
+let consoleErrorReference;
 let toast;
-
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayToast', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (toast) {
 			toast.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render default markup', function() {
@@ -150,6 +160,8 @@ describe('ClayToast', function() {
 	});
 
 	it('should fail when no message is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			toast = new ClayToast({
 				spritemap: spritemap,
@@ -159,6 +171,8 @@ describe('ClayToast', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			toast = new ClayToast({
 				message: 'message',
@@ -168,6 +182,8 @@ describe('ClayToast', function() {
 	});
 
 	it('should fail when no title is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			toast = new ClayToast({
 				message: 'message',

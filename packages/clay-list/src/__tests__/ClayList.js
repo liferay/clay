@@ -1,5 +1,6 @@
 import ClayList from '../ClayList';
 
+let consoleErrorReference
 let component;
 
 const actionItems = [
@@ -151,11 +152,21 @@ const groupedItems = [
 
 const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
 
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayList', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (component) {
 			component.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render the default markup', () => {
@@ -597,6 +608,8 @@ describe('ClayList', function() {
 	});
 
 	it('should fail when no schema is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayList({
 				items: [],

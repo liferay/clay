@@ -1,14 +1,25 @@
 import ClayPagination from '../ClayPagination';
 
-const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
-
+let consoleErrorReference;
 let component;
 
+const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
+
+function mockConsoleError() {
+	console.error = () => {};
+}
+
 describe('ClayPagination', function() {
+	beforeEach(() => {
+		consoleErrorReference = console.error;
+	});
+
 	afterEach(() => {
 		if (component) {
 			component.dispose();
 		}
+
+		console.error = consoleErrorReference;
 	});
 
 	it('should render the default markup', () => {
@@ -71,6 +82,8 @@ describe('ClayPagination', function() {
 	}
 
 	it('should fail when no currentPage is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayPagination({
 				baseHref: '#mySite?curPage=',
@@ -81,6 +94,8 @@ describe('ClayPagination', function() {
 	});
 
 	it('should fail when no spritemap is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayPagination({
 				baseHref: '#mySite?curPage=',
@@ -91,6 +106,8 @@ describe('ClayPagination', function() {
 	});
 
 	it('should fail when no totalPages is passed', function() {
+		mockConsoleError();
+
 		expect(() => {
 			component = new ClayPagination({
 				baseHref: '#mySite?curPage=',
