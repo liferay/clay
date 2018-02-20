@@ -416,6 +416,7 @@
 				{if $showInfoButton}
 					<li class="nav-item">
 						{call ClayButton.render}
+							{param disabled: $disabled /}
 							{param elementClasses: 'nav-link nav-link-monospaced' /}
 							{param events: ['click': $_handleInfoButtonClicked] /}
 							{param icon: 'info-circle-open' /}
