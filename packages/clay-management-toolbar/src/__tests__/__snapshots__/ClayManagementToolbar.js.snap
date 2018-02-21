@@ -269,7 +269,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
 
 exports[`ClayManagementToolbar should render a management toolbar with classes 1`] = `
 <div class="my-custom-class">
-  <nav class="management-bar management-bar-light navbar navbar-expand-md my-custom-class">
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
@@ -297,7 +297,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
 
 exports[`ClayManagementToolbar should render a management toolbar with classes in active state 1`] = `
 <div class="my-custom-class">
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md my-custom-class">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md">
     <div class="container">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -739,8 +739,8 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with id 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md" id="myId">
+<div id="myId">
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
@@ -767,7 +767,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with id in active state 1`] = `
-<div>
+<div id="myId">
   <nav class="management-bar management-bar-primary navbar navbar-expand-md">
     <div class="container">
       <ul class="navbar-nav">
@@ -1094,8 +1094,8 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with search results bar 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md" id="myId">
+<div id="myId">
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -1168,8 +1168,8 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with search results bar only when totalItems is greater than zero 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md" id="myId">
+<div id="myId">
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -1224,7 +1224,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with search results bar when state is active 1`] = `
-<div>
+<div id="myId">
   <nav class="management-bar management-bar-primary navbar navbar-expand-md">
     <div class="container">
       <ul class="navbar-nav">
