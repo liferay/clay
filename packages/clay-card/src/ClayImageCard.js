@@ -215,6 +215,15 @@ ClayImageCard.STATE = {
 	]).value('primary'),
 
 	/**
+	 * Shape for the sticker represented in the card.
+	 * @instance
+	 * @memberof ClayImageCards
+	 * @type {?string}
+	 * @default rounded
+	 */
+	stickerShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
+
+	/**
 	 * Subtitle of the card.
 	 * @instance
 	 * @memberof ClayImageCard
