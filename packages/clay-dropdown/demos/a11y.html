@@ -47,6 +47,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Dropdown with icon and label trigger</h4>
+			<div id="icon-label-trigger-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Dropdown with links</h4>
 			<div id="links-block"></div>
 		</div>
@@ -232,6 +239,38 @@
 				spritemap: spritemap,
 			},
 			'#icon-trigger-block'
+		);
+		
+		/**
+		 * Icon and Label Trigger Dropdown
+		 **/
+		new metal.ClayDropdown(
+			{
+				icon: 'list',
+				items: [
+					{
+						href: '#1',
+						label: 'Item 1',
+					},
+					{
+						active: true,
+						href: '#2',
+						label: 'Item 2',
+					},
+					{
+						disabled: true,
+						href: '#3',
+						label: 'Item 3',
+					},
+					{
+						href: '#4',
+						label: 'Item 4',
+					},
+				],
+				label: 'Trigger Label',
+				spritemap: spritemap,
+			},
+			'#icon-label-trigger-block'
 		);
 
 		/**
