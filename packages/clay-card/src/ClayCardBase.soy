@@ -14,8 +14,6 @@
 	{@param? contentRenderer: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
 	{@param? groupName: string}
 	{@param? href: string}
 	{@param? icon: string}
@@ -29,6 +27,8 @@
 	{@param? selectable: bool}
 	{@param? selected: bool}
 	{@param? spritemap: string}
+	{@param? stickerLabel: string}
+	{@param? stickerStyle: string}
 	{@param? subtitle: string}
 
 	{let $attributes kind="attributes"}
@@ -65,12 +65,12 @@
 
 	{let $visualArea kind="html"}
 		{delcall ClayCardBase.VisualArea variant="$variant"}
-			{param fileType: $fileType /}
-			{param fileTypeStyle: $fileTypeStyle /}
 			{param icon: $icon /}
 			{param imageAlt: $imageAlt /}
 			{param imageSrc: $imageSrc /}
 			{param spritemap: $spritemap /}
+			{param stickerLabel: $stickerLabel /}
+			{param stickerStyle: $stickerStyle /}
 		{/delcall}
 	{/let}
 
@@ -176,10 +176,10 @@
  * This renders the visual area of the card
  */
 {deltemplate ClayCardBase.VisualArea}
-	{@param? fileType: string}
-	{@param? fileTypeStyle: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? spritemap: string}
+	{@param? stickerLabel: string}
+	{@param? stickerStyle: string}
 {/deltemplate}
