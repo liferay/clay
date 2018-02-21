@@ -27,6 +27,7 @@
     {@param? selected: bool}
     {@param? spritemap: string}
     {@param? stickerLabel: string}
+    {@param? stickerShape: string}
     {@param? stickerStyle: string}
     {@param? subtitle: string}
 
@@ -58,6 +59,7 @@
         {param selected: $selected /}
         {param spritemap: $spritemap /}
         {param stickerLabel: $stickerLabel /}
+        {param stickerShape: $stickerShape /}
         {param stickerStyle: $stickerStyle /}
         {param subtitle: $subtitle /}
         {param title: $title /}
@@ -73,6 +75,7 @@
     {@param? imageSrc: string}
     {@param? spritemap: string}
     {@param? stickerLabel: string}
+    {@param? stickerShape: string}
     {@param? stickerStyle: string}
 
     	{let $aspectRatioClasses kind="text"}
@@ -108,6 +111,7 @@
     		{call ClaySticker.render}
     			{param label: $stickerLabel /}
     			{param position: 'bottom-left' /}
+    			{param shape: $stickerShape ?: 'rounded' /}
     			{param style: $stickerStyle ?: 'primary' /}
     		{/call}
     	{/if}

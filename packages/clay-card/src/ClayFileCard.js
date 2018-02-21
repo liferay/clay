@@ -179,6 +179,15 @@ ClayFileCard.STATE = {
 	stickerLabel: Config.string(),
 
 	/**
+	 * Shape for the sticker represented in the card.
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?string}
+	 * @default rounded
+	 */
+	stickerShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
+
+	/**
 	 * Style of sticker represented in the card.
 	 * @instance
 	 * @memberof ClayFileCard
