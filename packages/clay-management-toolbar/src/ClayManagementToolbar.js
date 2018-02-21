@@ -49,6 +49,15 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the clear button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleClearResultsClick(event) {
+		this.emit('clearButtonClicked', event);
+	}
+
+	/**
 	 * Hides the search in mobile devices
 	 * @private
 	 */
@@ -274,6 +283,15 @@ ClayManagementToolbar.STATE = {
 	 * @default undefined
 	 */
 	searchInputName: Config.string(),
+
+	/**
+	 * Value of the search input.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	searchValue: Config.string(),
 
 	/**
 	 * Flag to indicate if the managment toolbar will control the selection of
