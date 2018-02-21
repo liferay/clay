@@ -72,9 +72,19 @@
 		label: string
 	]>}
 
+	{let $attributes kind="attributes"}
+		{if $elementClasses}
+			class="{$elementClasses}"
+		{/if}
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
 	{let $isActive: $selectedItems and $selectedItems > 0 /}
 
-	<div>
+	<div {$attributes}>
 		{if $isActive}
 			{call .active}
 				{param _handleActionClicked: $_handleActionClicked /}
@@ -83,7 +93,6 @@
 				{param _handleSelectAllClicked: $_handleSelectAllClicked /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 				{param actionItems: $actionItems /}
-				{param elementClasses: $elementClasses /}
 				{param selectedItems: $selectedItems /}
 				{param showInfoButton: $showInfoButton /}
 				{param spritemap: $spritemap /}
@@ -105,10 +114,8 @@
 				{param contentRenderer: $contentRenderer ?: '' /}
 				{param creationMenu: $creationMenu /}
 				{param disabled: $totalItems == 0 /}
-				{param elementClasses: $elementClasses /}
 				{param filterItems: $filterItems /}
 				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
-				{param id: $id /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
@@ -122,9 +129,9 @@
 		{/if}
 
 		{if $searchValue and $totalItems > 0}
-		    {call .tbar}
+		    {call .resultsBar}
 		        {param _handleClearResultsClick: $_handleClearResultsClick /}
-				{param disabled: $selectedItems > 0 /}
+				{param disabled: $isActive /}
 		        {param searchValue: $searchValue /}
 		        {param totalItems: $totalItems /}
 		    {/call}
@@ -151,25 +158,11 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? elementClasses: string}
-	{@param? id: string}
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
 	{@param? totalItems: number}
 
-	{let $navAttributes kind="attributes"}
-		class="management-bar management-bar-primary navbar navbar-expand-md
-			{if $elementClasses}
-				{sp}{$elementClasses}
-			{/if}
-		"
-
-		{if $id}
-			id="{$id}"
-		{/if}
-	{/let}
-
-	<nav {$navAttributes}>
+	<nav class="management-bar management-bar-primary navbar navbar-expand-md">
 		<div class="container">
 			<ul class="navbar-nav">
 				<li class="nav-item">
@@ -284,7 +277,6 @@
 		]>
 	]}
 	{@param? disabled: bool}
-	{@param? elementClasses: string}
 	{@param? filterItems: list<[
 		checked: bool,
 		disabled: bool,
@@ -295,7 +287,6 @@
 		type: string
 	]>}
 	{@param? hideFiltersDoneButton: bool}
-	{@param? id: string}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
@@ -310,19 +301,7 @@
 		label: string
 	]>}
 
-	{let $navAttributes kind="attributes"}
-		class="management-bar management-bar-light navbar navbar-expand-md
-			{if $elementClasses}
-				{sp}{$elementClasses}
-			{/if}
-		"
-
-		{if $id}
-			id="{$id}"
-		{/if}
-	{/let}
-
-	<nav {$navAttributes}>
+	<nav class="management-bar management-bar-light navbar navbar-expand-md">
 		{let $onlySearch: $showSearch and not $creationMenu and not $selectable and not $filterItems and not $sortingOrder and not $viewTypes /}
 
 		{let $containerClasses kind="text"}
@@ -540,7 +519,7 @@
 /**
  * This renders the search results bar.
  */
-{template .tbar}
+{template .resultsBar}
 	{@param? _handleClearResultsClick: any}
 	{@param? disabled: bool}
 	{@param? searchValue: string}
