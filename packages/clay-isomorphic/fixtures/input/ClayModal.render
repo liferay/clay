@@ -1,0 +1,18 @@
+{
+    "visible": "(bool|null)",
+    "elementClasses": "(null|string)",
+    "footerButtons": [
+        "(list<unknown>|null)"
+    ],
+    "body": "(html|null|string)",
+    "handleClickCloseButtonFooter_": "(any|null)",
+    "title": "(null|string)",
+    "url": "(null|string)",
+    "spritemap": "(null|string)",
+    "size": "(null|string)",
+    "handleClickFooterButton_": "(any|null)",
+    "id": "(null|string)",
+    "isTransitioning_": "(bool|null)",
+    "handleCloseModal_": "(any|null)",
+    "status": "(null|string)"
+}

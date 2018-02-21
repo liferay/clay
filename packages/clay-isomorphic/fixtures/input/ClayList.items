@@ -1,0 +1,10 @@
+{
+    "schema": "([fields: list<[contentRenderer: string, contentRendererMap: unknown, fieldName: string, fieldsMap: unknown, iconShapesMap: unknown, iconsMap: unknown, labelStylesMap: unknown]>, inputName: string, inputNameField: string, inputNamesMap: unknown, inputValueField: string])",
+    "spritemap": "(null|string)",
+    "groupName": "(null|string)",
+    "selectable": "(bool|null)",
+    "items": [
+        "(list<unknown>)"
+    ],
+    "handleItemToggled_": "(any|null)"
+}

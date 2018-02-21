@@ -1,0 +1,18 @@
+{
+    "actionItems": [
+        "(list<[href: string, label: string, separator: bool]>|null)"
+    ],
+    "selectable": "(bool|null)",
+    "icon": "(null|string)",
+    "elementClasses": "(null|string)",
+    "title": "(string)",
+    "inputName": "(null|string)",
+    "handleItemCheckboxClick_": "(any|null)",
+    "spritemap": "(string)",
+    "groupName": "(null|string)",
+    "inputValue": "(null|string)",
+    "disabled": "(bool|null)",
+    "href": "(null|string)",
+    "id": "(null|string)",
+    "selected": "(bool|null)"
+}
