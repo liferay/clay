@@ -163,9 +163,9 @@
 	{@param? showInfoButton: bool}
 	{@param? totalItems: number}
 
-	<nav class="management-bar management-bar-primary navbar navbar-expand-md">
+	<nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
 		<div class="container">
-			<ul class="navbar-nav">
+			<ul class="navbar-nav navbar-nav-expand">
 				<li class="nav-item">
 					{call ClayCheckbox.render}
 						{param checked: true /}
@@ -182,7 +182,7 @@
 						<span class="navbar-breakpoint-down-d-none">items selected</span>
 					</span>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item nav-item-shrink">
 					{if $selectedItems < $totalItems}
 						{call ClayButton.render}
 							{param elementClasses: 'nav-btn' /}
@@ -602,7 +602,7 @@
 					<span class="input-group-inset-item input-group-inset-item-after">
 						{if not $onlySearch}
 							{call ClayButton.render}
-								{param elementClasses: 'navbar-breakpoint-d-none' /}
+								{param elementClasses: 'd-none' /}
 								{param events: ['click': $_handleCloseMobileSearchClick] /}
 								{param icon: 'times' /}
 								{param spritemap: $spritemap /}
@@ -612,7 +612,6 @@
 
 						{call ClayButton.render}
 							{param disabled: $disabled /}
-							{param elementClasses: $onlySearch ? '' : 'navbar-breakpoint-d-block' /}
 							{param events: ['click': $_handleSearchSearchClick] /}
 							{param icon: 'search' /}
 							{param ref: 'searchButton' /}
