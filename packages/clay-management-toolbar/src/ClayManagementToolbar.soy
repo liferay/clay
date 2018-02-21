@@ -74,22 +74,22 @@
 
 	{let $isActive: $selectedItems and $selectedItems > 0 /}
 
-	{if $isActive}
-		{call .active}
-			{param _handleActionClicked: $_handleActionClicked /}
-			{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
-			{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
-			{param _handleSelectAllClicked: $_handleSelectAllClicked /}
-			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
-			{param actionItems: $actionItems /}
-			{param elementClasses: $elementClasses /}
-			{param selectedItems: $selectedItems /}
-			{param showInfoButton: $showInfoButton /}
-			{param spritemap: $spritemap /}
-			{param totalItems: $totalItems /}
-		{/call}
-	{else}
-		<div>
+	<div>
+		{if $isActive}
+			{call .active}
+				{param _handleActionClicked: $_handleActionClicked /}
+				{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
+				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
+				{param _handleSelectAllClicked: $_handleSelectAllClicked /}
+				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
+				{param actionItems: $actionItems /}
+				{param elementClasses: $elementClasses /}
+				{param selectedItems: $selectedItems /}
+				{param showInfoButton: $showInfoButton /}
+				{param spritemap: $spritemap /}
+				{param totalItems: $totalItems /}
+			{/call}
+		{else}
 			{call .default}
 				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
@@ -112,17 +112,24 @@
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
-				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}
-				{param totalItems: $totalItems /}
 				{param viewTypes: $viewTypes /}
 			{/call}
-		</div>
-	{/if}
+		{/if}
+
+		{if $searchValue and $totalItems > 0}
+		    {call .tbar}
+		        {param _handleClearResultsClick: $_handleClearResultsClick /}
+				{param disabled: $selectedItems > 0 /}
+		        {param searchValue: $searchValue /}
+		        {param totalItems: $totalItems /}
+		    {/call}
+		{/if}
+	</div>
 {/template}
 
 /**
@@ -252,7 +259,6 @@
 {template .default}
 	{@param spritemap: string}
 	{@param? _handleCloseMobileSearchClick: any}
-	{@param? _handleClearResultsClick: any}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
@@ -293,12 +299,10 @@
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
-	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
-	{@param? totalItems: number}
 	{@param? viewTypes: list<[
 		active: bool,
 		disabled: bool,
@@ -485,14 +489,6 @@
 			</ul>
 		</div>
 	</nav>
-
-	{if $searchValue and $totalItems > 0}
-	    {call .tbar}
-	        {param _handleClearResultsClick: $_handleClearResultsClick /}
-	        {param searchValue: $searchValue /}
-	        {param totalItems: $totalItems /}
-	    {/call}
-	{/if}
 {/template}
 
 /**
@@ -546,6 +542,7 @@
  */
 {template .tbar}
 	{@param? _handleClearResultsClick: any}
+	{@param? disabled: bool}
 	{@param? searchValue: string}
 	{@param? totalItems: number}
 
@@ -561,6 +558,7 @@
 				</li>
 				<li class="tbar-item">
 					{call ClayButton.render}
+						{param disabled: $disabled /}
 						{param elementClasses: 'component-link tbar-link' /}
 						{param events: ['click': $_handleClearResultsClick] /}
 						{param label: 'Clear' /}
