@@ -6,6 +6,7 @@
 {template .render}
 	{@param spritemap: string}
 	{@param? _handleActionClicked: any}
+	{@param? _handleClearResultsClick: any}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleDeselectAllClicked: any}
@@ -57,6 +58,7 @@
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
+	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
@@ -70,52 +72,72 @@
 		label: string
 	]>}
 
+	{let $attributes kind="attributes"}
+		{if $elementClasses}
+			class="{$elementClasses}"
+		{/if}
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
 	{let $isActive: $selectedItems and $selectedItems > 0 /}
 
-	{if $isActive}
-		{call .active}
-			{param _handleActionClicked: $_handleActionClicked /}
-			{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
-			{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
-			{param _handleSelectAllClicked: $_handleSelectAllClicked /}
-			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
-			{param actionItems: $actionItems /}
-			{param elementClasses: $elementClasses /}
-			{param selectedItems: $selectedItems /}
-			{param showInfoButton: $showInfoButton /}
-			{param spritemap: $spritemap /}
-			{param totalItems: $totalItems /}
-		{/call}
-	{else}
-		{call .default}
-			{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
-			{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
-			{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
-			{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
-			{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
-			{param _handleSearchSearchClick: $_handleSearchSearchClick /}
-			{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
-			{param _handleSortingButtonClicked: $_handleSortingButtonClicked /}
-			{param _handleViewTypeClicked: $_handleViewTypeClicked /}
-			{param _showSearchMobile: $_showSearchMobile /}
-			{param contentRenderer: $contentRenderer ?: '' /}
-			{param creationMenu: $creationMenu /}
-			{param disabled: $totalItems == 0 /}
-			{param elementClasses: $elementClasses /}
-			{param filterItems: $filterItems /}
-			{param hideFiltersDoneButton: $hideFiltersDoneButton /}
-			{param id: $id /}
-			{param searchActionURL: $searchActionURL /}
-			{param searchFormName: $searchFormName /}
-			{param searchInputName: $searchInputName /}
-			{param selectable: $selectable /}
-			{param showInfoButton: $showInfoButton /}
-			{param showSearch: $showSearch != false /}
-			{param sortingOrder: $sortingOrder /}
-			{param spritemap: $spritemap /}
-			{param viewTypes: $viewTypes /}
-		{/call}
-	{/if}
+	<div {$attributes}>
+		{if $isActive}
+			{call .active}
+				{param _handleActionClicked: $_handleActionClicked /}
+				{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
+				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
+				{param _handleSelectAllClicked: $_handleSelectAllClicked /}
+				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
+				{param actionItems: $actionItems /}
+				{param selectedItems: $selectedItems /}
+				{param showInfoButton: $showInfoButton /}
+				{param spritemap: $spritemap /}
+				{param totalItems: $totalItems /}
+			{/call}
+		{else}
+			{call .default}
+				{param _handleClearResultsClick: $_handleClearResultsClick /}
+				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
+				{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+				{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
+				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
+				{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
+				{param _handleSearchSearchClick: $_handleSearchSearchClick /}
+				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
+				{param _handleSortingButtonClicked: $_handleSortingButtonClicked /}
+				{param _handleViewTypeClicked: $_handleViewTypeClicked /}
+				{param _showSearchMobile: $_showSearchMobile /}
+				{param contentRenderer: $contentRenderer ?: '' /}
+				{param creationMenu: $creationMenu /}
+				{param disabled: $totalItems == 0 /}
+				{param filterItems: $filterItems /}
+				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
+				{param searchActionURL: $searchActionURL /}
+				{param searchFormName: $searchFormName /}
+				{param searchInputName: $searchInputName /}
+				{param searchValue: $searchValue /}
+				{param selectable: $selectable /}
+				{param showInfoButton: $showInfoButton /}
+				{param showSearch: $showSearch != false /}
+				{param sortingOrder: $sortingOrder /}
+				{param spritemap: $spritemap /}
+				{param viewTypes: $viewTypes /}
+			{/call}
+		{/if}
+
+		{if $searchValue and $totalItems > 0}
+		    {call .resultsBar}
+		        {param _handleClearResultsClick: $_handleClearResultsClick /}
+				{param disabled: $isActive /}
+		        {param searchValue: $searchValue /}
+		        {param totalItems: $totalItems /}
+		    {/call}
+		{/if}
+	</div>
 {/template}
 
 /**
@@ -137,25 +159,11 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? elementClasses: string}
-	{@param? id: string}
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
 	{@param? totalItems: number}
 
-	{let $navAttributes kind="attributes"}
-		class="management-bar management-bar-primary navbar navbar-expand-md
-			{if $elementClasses}
-				{sp}{$elementClasses}
-			{/if}
-		"
-
-		{if $id}
-			id="{$id}"
-		{/if}
-	{/let}
-
-	<nav {$navAttributes}>
+	<nav class="management-bar management-bar-primary navbar navbar-expand-md">
 		<div class="container">
 			<ul class="navbar-nav">
 				<li class="nav-item">
@@ -270,7 +278,6 @@
 		]>
 	]}
 	{@param? disabled: bool}
-	{@param? elementClasses: string}
 	{@param? filterItems: list<[
 		checked: bool,
 		disabled: bool,
@@ -281,10 +288,10 @@
 		type: string
 	]>}
 	{@param? hideFiltersDoneButton: bool}
-	{@param? id: string}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
+	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
@@ -296,19 +303,7 @@
 		label: string
 	]>}
 
-	{let $navAttributes kind="attributes"}
-		class="management-bar management-bar-light navbar navbar-expand-md
-			{if $elementClasses}
-				{sp}{$elementClasses}
-			{/if}
-		"
-
-		{if $id}
-			id="{$id}"
-		{/if}
-	{/let}
-
-	<nav {$navAttributes}>
+	<nav class="management-bar management-bar-light navbar navbar-expand-md">
 		{let $onlySearch: $showSearch and not $creationMenu and not $selectable and not $filterItems and not $sortingOrder and not $viewTypes /}
 
 		{let $containerClasses kind="text"}
@@ -411,6 +406,7 @@
 						{param searchActionURL: $searchActionURL /}
 						{param searchFormName: $searchFormName /}
 						{param searchInputName: $searchInputName /}
+						{param searchValue: $searchValue /}
 						{param spritemap: $spritemap /}
 					{/delcall}
 				</div>
@@ -524,6 +520,40 @@
 {/template}
 
 /**
+ * This renders the search results bar.
+ */
+{template .resultsBar}
+	{@param? _handleClearResultsClick: any}
+	{@param? disabled: bool}
+	{@param? searchValue: string}
+	{@param? totalItems: number}
+
+	<nav class="tbar subnav-tbar subnav-tbar-primary">
+		<div class="container-fluid container-fluid-max-xl">
+			<ul class="tbar-nav">
+				<li class="tbar-item tbar-item-expand">
+					<div class="tbar-section">
+						<span class="text-truncate-inline">
+							<span class="text-truncate">{$totalItems} results for <strong>{$searchValue}</strong></span>
+						</span>
+					</div>
+				</li>
+				<li class="tbar-item">
+					{call ClayButton.render}
+						{param disabled: $disabled /}
+						{param elementClasses: 'component-link tbar-link' /}
+						{param events: ['click': $_handleClearResultsClick] /}
+						{param label: 'Clear' /}
+						{param ref: 'clearSearch' /}
+						{param style: 'unstyled' /}
+					{/call}
+				</li>
+			</ul>
+		</div>
+	</nav>
+{/template}
+
+/**
  * This renders the search form.
  */
 {deltemplate ClayManagementToolbar.SearchForm}
@@ -535,6 +565,7 @@
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
+	{@param? searchValue: string}
 
 	{let $searchFormContent kind="html"}
 		{let $searchFormAttributes kind="attributes"}
@@ -563,6 +594,7 @@
 						placeholder="Search for..."
 						ref="search"
 						type="text"
+						value="{$searchValue}"
 					{/let}
 
 					<input {$inputAttributes} />
