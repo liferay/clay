@@ -9,13 +9,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param? _handleItemToggled: any}
@@ -61,13 +62,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
@@ -114,13 +116,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
@@ -173,13 +176,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
@@ -198,13 +202,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
@@ -216,8 +221,6 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $_handleItemToggled ] /}
-		{param fileType: $item[$schema.fieldsMap.fileType] /}
-		{param fileTypeStyle: $schema.fileTypeStylesMap ? $schema.fileTypeStylesMap[$item[$schema.fieldsMap.fileType]] ?: $schema.fileTypeStylesMap['*'] : null /}
 		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
@@ -239,6 +242,9 @@
 		{param selectable: $selectable /}
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
+		{param stickerLabel: $item[$schema.fieldsMap.stickerLabel] /}
+		{param stickerShape: $schema.stickerShapesMap ? $schema.stickerShapesMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerShapesMap['*'] : null /}
+		{param stickerStyle: $schema.stickerStylesMap ? $schema.stickerStylesMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerStylesMap['*'] : null /}
 		{param subtitle: $item[$schema.fieldsMap.description] /}
 		{param title: $item[$schema.fieldsMap.title] /}
 	{/call}
@@ -254,13 +260,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
@@ -305,13 +312,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
@@ -323,8 +331,6 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $_handleItemToggled ] /}
-		{param fileType: $item[$schema.fieldsMap.fileType] /}
-		{param fileTypeStyle: $schema.fileTypeStylesMap ? $schema.fileTypeStylesMap[$item[$schema.fieldsMap.fileType]] ?: $schema.fileTypeStylesMap['*'] : null /}
 		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $schema.iconsMap ? $schema.iconsMap[$item[$schema.fieldsMap.icon]] ?: $schema.iconsMap['*'] : $item[$schema.fieldsMap.icon] /}
@@ -348,6 +354,9 @@
 		{param selectable: $selectable /}
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
+		{param stickerLabel: $item[$schema.fieldsMap.stickerLabel] /}
+		{param stickerShape: $schema.stickerShapesMap ? $schema.stickerShapesMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerShapesMap['*'] : null /}
+		{param stickerStyle: $schema.stickerStylesMap ? $schema.stickerStylesMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerStylesMap['*'] : null /}
 		{param subtitle: $item[$schema.fieldsMap.description] /}
 		{param title: $item[$schema.fieldsMap.title] /}
 	{/call}
@@ -363,13 +372,14 @@
 		contentRendererMap: ?,
 		fieldName: string,
 		fieldsMap: ?,
-		fileTypeStylesMap: ?,
 		iconsMap: ?,
 		inputName: string,
 		inputNameField: string,
 		inputNamesMap: ?,
 		inputValueField: string,
 		labelStylesMap: ?,
+		stickerShapesMap: ?,
+		stickerStylesMap: ?,
 		userColorsMap: ?
 	]}
 	{@param spritemap: string}
