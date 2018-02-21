@@ -4,125 +4,125 @@
  * This renders the component's whole content.
  */
 {template .render}
-    {@param name: string}
-    {@param? _handleItemToggled: any}
-    {@param? actionItems: list<[
-        href: string,
-        label: string,
-        separator: bool
-    ]>}
-    {@param? disabled: bool}
-    {@param? elementClasses: string}
-    {@param? groupName: string}
-    {@param? href: string}
-    {@param? id: string}
-    {@param? imageAlt: string}
-    {@param? imageSrc: string}
-    {@param? initials: string}
-    {@param? inputName: string}
-    {@param? inputValue: string}
-    {@param? selectable: bool}
-    {@param? selected: bool}
-    {@param? spritemap: string}
-    {@param? subtitle: string}
-    {@param? userColor: string}
+	{@param name: string}
+	{@param? _handleItemToggled: any}
+	{@param? actionItems: list<[
+		href: string,
+		label: string,
+		separator: bool
+	]>}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? groupName: string}
+	{@param? href: string}
+	{@param? id: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? initials: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? selectable: bool}
+	{@param? selected: bool}
+	{@param? spritemap: string}
+	{@param? subtitle: string}
+	{@param? userColor: string}
 
-    {let $classes kind="text"}
-        user-card
-        {if $elementClasses}
-            {sp}{$elementClasses}
-        {/if}
-    {/let}
+	{let $classes kind="text"}
+		user-card
+		{if $elementClasses}
+			{sp}{$elementClasses}
+		{/if}
+	{/let}
 
-    {call ClayCardBase.render}
-        {param actionItems: $actionItems /}
-        {param contentRenderer: 'user' /}
-        {param disabled: $disabled /}
-        {param elementClasses: $elementClasses /}
-        {param events: ['itemToggled': $_handleItemToggled ] /}
-        {param fileType: $initials /}
-        {param fileTypeStyle: $userColor /}
-        {param groupName: $groupName /}
-        {param href: $href /}
-        {param id: $id /}
-        {param imageAlt: $imageAlt /}
-        {param imageSrc: $imageSrc /}
-        {param inputName: $inputName /}
-        {param inputValue: $inputValue /}
-        {param ref: 'card' /}
-        {param selectable: $selectable /}
-        {param selected: $selected /}
-        {param spritemap: $spritemap /}
-        {param subtitle: $subtitle /}
-        {param title: $name /}
-    {/call}
+	{call ClayCardBase.render}
+		{param actionItems: $actionItems /}
+		{param contentRenderer: 'user' /}
+		{param disabled: $disabled /}
+		{param elementClasses: $elementClasses /}
+		{param events: ['itemToggled': $_handleItemToggled ] /}
+		{param groupName: $groupName /}
+		{param href: $href /}
+		{param id: $id /}
+		{param imageAlt: $imageAlt /}
+		{param imageSrc: $imageSrc /}
+		{param inputName: $inputName /}
+		{param inputValue: $inputValue /}
+		{param ref: 'card' /}
+		{param selectable: $selectable /}
+		{param selected: $selected /}
+		{param spritemap: $spritemap /}
+		{param stickerLabel: $initials /}
+		{param stickerStyle: $userColor /}
+		{param subtitle: $subtitle /}
+		{param title: $name /}
+	{/call}
 {/template}
 
 /**
  * This renders the information area of the card.
  */
 {deltemplate ClayCardBase.DescriptiveArea variant="'user'"}
-    {@param title: string}
-    {@param? actionItems: list<[
-    	href: string,
-    	label: string,
-    	separator: bool
-    ]>}
-    {@param? href: string}
-    {@param? labels: list<?>}
-    {@param? labelStylesMap: ?}
-    {@param? spritemap: string}
-    {@param? subtitle: string}
+	{@param title: string}
+	{@param? actionItems: list<[
+		href: string,
+		label: string,
+		separator: bool
+	]>}
+	{@param? href: string}
+	{@param? labels: list<?>}
+	{@param? labelStylesMap: ?}
+	{@param? spritemap: string}
+	{@param? subtitle: string}
 
-    <div class="card-body">
-    	<div class="card-row">
-    		<div class="autofit-col autofit-col-expand">
-    			{if $href}
-    				{call ClayLink.render}
-    					{param elementClasses: 'card-title text-truncate' /}
-    					{param href: $href /}
-    					{param label: $title /}
-    				{/call}
-    			{elseif $title}
-    				<div class="card-title text-truncate">{$title}</div>
-    			{/if}
+	<div class="card-body">
+		<div class="card-row">
+			<div class="autofit-col autofit-col-expand">
+				{if $href}
+					{call ClayLink.render}
+						{param elementClasses: 'card-title text-truncate' /}
+						{param href: $href /}
+						{param label: $title /}
+					{/call}
+				{elseif $title}
+					<div class="card-title text-truncate">{$title}</div>
+				{/if}
 
-    			{if $subtitle}
-    				<div class="card-subtitle text-truncate">{$subtitle}</div>
-    			{/if}
-    		</div>
+				{if $subtitle}
+					<div class="card-subtitle text-truncate">{$subtitle}</div>
+				{/if}
+			</div>
 
-    		{if $actionItems and $spritemap}
-    			<div class="autofit-col">
-    				{call ClayActionsDropdown.render}
-    					{param items: $actionItems /}
-    					{param spritemap: $spritemap /}
-    				{/call}
-    			</div>
-    		{/if}
-    	</div>
-    </div>
+			{if $actionItems and $spritemap}
+				<div class="autofit-col">
+					{call ClayActionsDropdown.render}
+						{param items: $actionItems /}
+						{param spritemap: $spritemap /}
+					{/call}
+				</div>
+			{/if}
+		</div>
+	</div>
 {/deltemplate}
 
 /**
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'user'"}
-    {@param? fileType: string}
-    {@param? fileTypeStyle: string}
-    {@param? icon: string}
-    {@param? imageAlt: string}
-    {@param? imageSrc: string}
-    {@param? spritemap: string}
+	{@param? icon: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? spritemap: string}
+	{@param? stickerLabel: string}
+	{@param? stickerStyle: string}
 
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-        {call ClaySticker.render}
-            {param imageAlt: $imageAlt /}
-            {param imageSrc: $imageSrc /}
-            {param label: $fileType /}
-            {param shape: 'circle' /}
-            {param size: 'xl' /}
-            {param style: $fileTypeStyle ?: 'primary' /}
-        {/call}
-    </div>
+	<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+		{call ClaySticker.render}
+			{param imageAlt: $imageAlt /}
+			{param imageSrc: $imageSrc /}
+			{param label: $stickerLabel /}
+			{param shape: 'circle' /}
+			{param size: 'xl' /}
+			{param style: $stickerStyle ?: 'primary' /}
+		{/call}
+	</div>
 {/deltemplate}

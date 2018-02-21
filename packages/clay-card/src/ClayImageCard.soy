@@ -13,8 +13,6 @@
     ]>}
     {@param? disabled: bool}
     {@param? elementClasses: string}
-    {@param? fileType: string}
-    {@param? fileTypeStyle: string}
     {@param? groupName: string}
     {@param? href: string}
     {@param? icon: string}
@@ -28,6 +26,9 @@
     {@param? selectable: bool}
     {@param? selected: bool}
     {@param? spritemap: string}
+    {@param? stickerLabel: string}
+    {@param? stickerShape: string}
+    {@param? stickerStyle: string}
     {@param? subtitle: string}
 
     {let $classes kind="text"}
@@ -43,8 +44,6 @@
         {param disabled: $disabled /}
         {param elementClasses: $classes /}
         {param events: ['itemToggled': $_handleItemToggled ] /}
-        {param fileType: $fileType /}
-        {param fileTypeStyle: $fileTypeStyle /}
         {param groupName: $groupName /}
         {param href: $href /}
         {param icon: $icon /}
@@ -59,6 +58,9 @@
         {param selectable: $selectable /}
         {param selected: $selected /}
         {param spritemap: $spritemap /}
+        {param stickerLabel: $stickerLabel /}
+        {param stickerShape: $stickerShape /}
+        {param stickerStyle: $stickerStyle /}
         {param subtitle: $subtitle /}
         {param title: $title /}
     {/call}
@@ -68,12 +70,13 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'image'"}
-    {@param? fileType: string}
-    {@param? fileTypeStyle: string}
     {@param? icon: string}
     {@param? imageAlt: string}
     {@param? imageSrc: string}
     {@param? spritemap: string}
+    {@param? stickerLabel: string}
+    {@param? stickerShape: string}
+    {@param? stickerStyle: string}
 
     	{let $aspectRatioClasses kind="text"}
     		aspect-ratio-item-center-middle aspect-ratio-item-fluid
@@ -104,11 +107,12 @@
     		</div>
     	{/if}
 
-    	{if $fileType}
+    	{if $stickerLabel}
     		{call ClaySticker.render}
-    			{param label: $fileType /}
+    			{param label: $stickerLabel /}
     			{param position: 'bottom-left' /}
-    			{param style: $fileTypeStyle ?: 'primary' /}
+    			{param shape: $stickerShape ?: 'rounded' /}
+    			{param style: $stickerStyle ?: 'primary' /}
     		{/call}
     	{/if}
 {/deltemplate}
