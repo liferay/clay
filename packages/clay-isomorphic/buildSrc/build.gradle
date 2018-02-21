@@ -1,0 +1,9 @@
+repositories {
+    maven {
+        url "https://cdn.lfrs.sl/repository.liferay.com/nexus/content/groups/public"
+    }
+}
+
+dependencies {
+    compile group: "com.google.template", name: "soy", version: "2015-04-10"
+}
