@@ -60,213 +60,6 @@ exports[`ClayFileCard should render a ClayFileCard with classes 1`] = `
 </div>
 `;
 
-exports[`ClayFileCard should render a ClayFileCard with file type 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`danger color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-danger sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`dark color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-dark sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`info color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-info sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`light color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-light sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`primary color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`secondary color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-secondary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`success color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-success sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayFileCard should render a ClayFileCard with file type style \`warning color\` 1`] = `
-<div class="card-type-asset card file-card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
-        <title>documents-and-media</title>
-        <use xlink:href="icons.svg#documents-and-media"></use>
-      </svg>
-    </div>
-    <span class="sticker sticker-warning sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`ClayFileCard should render a ClayFileCard with href 1`] = `
 <div class="card-type-asset card file-card">
   <div class="aspect-ratio card-item-first">
@@ -484,6 +277,259 @@ exports[`ClayFileCard should render a ClayFileCard with one label 1`] = `
         <div class="card-detail">
           <span class="label label-secondary">Approved</span>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker shape \`circle\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-primary sticker-bottom-left rounded-circle">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker shape \`rounded\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`danger color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-danger sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`dark color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-dark sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`info color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-info sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`light color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-light sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`primary color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`secondary color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-secondary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`success color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-success sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayFileCard should render a ClayFileCard with sticker style \`warning color\` 1`] = `
+<div class="card-type-asset card file-card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media" focusable="false">
+        <title>documents-and-media</title>
+        <use xlink:href="icons.svg#documents-and-media"></use>
+      </svg>
+    </div>
+    <span class="sticker sticker-warning sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>
