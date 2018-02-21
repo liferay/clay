@@ -147,6 +147,17 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should render a dropdown with an icon and label trigger', () => {
+		clayDropdown = new ClayDropdown({
+			icon: 'list',
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render a searchable dropdown', () => {
 		clayDropdown = new ClayDropdown({
 			items: items,
