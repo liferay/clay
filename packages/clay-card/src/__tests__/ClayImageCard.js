@@ -305,98 +305,120 @@ describe('ClayImageCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type', () => {
+	it('should render a ClayImageCard with sticker', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `danger color`', () => {
+	it('should render a ClayImageCard with sticker shape `circle`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'danger',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerShape: 'circle',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `dark color`', () => {
+	it('should render a ClayImageCard with sticker shape `rounded`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'dark',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerShape: 'rounded',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `info color`', () => {
+	it('should render a ClayImageCard with sticker style `danger color`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'info',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'danger',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `light color`', () => {
+	it('should render a ClayImageCard with sticker style `dark color`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'light',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'dark',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `primary color`', () => {
+	it('should render a ClayImageCard with sticker style `info color`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'primary',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'info',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `secondary color`', () => {
+	it('should render a ClayImageCard with sticker style `light color`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'secondary',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'light',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `success color`', () => {
+	it('should render a ClayImageCard with sticker style `primary color`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'success',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'primary',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayImageCard with file type `warning color`', () => {
+	it('should render a ClayImageCard with sticker style `secondary color`', () => {
 		component = new ClayImageCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'warning',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'secondary',
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayImageCard with sticker style `success color`', () => {
+		component = new ClayImageCard({
+			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'success',
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayImageCard with sticker style `warning color`', () => {
+		component = new ClayImageCard({
+			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'warning',
 			title: 'My Title',
 		});
 

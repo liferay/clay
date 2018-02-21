@@ -285,98 +285,120 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type', () => {
+	it('should render a ClayFileCard with sticker', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `danger color`', () => {
+	it('should render a ClayFileCard with sticker shape `circle`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'danger',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerShape: 'circle',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `dark color`', () => {
+	it('should render a ClayFileCard with sticker shape `rounded`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'dark',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerShape: 'rounded',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `info color`', () => {
+	it('should render a ClayFileCard with sticker style `danger color`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'info',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'danger',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `light color`', () => {
+	it('should render a ClayFileCard with sticker style `dark color`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'light',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'dark',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `primary color`', () => {
+	it('should render a ClayFileCard with sticker style `info color`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'primary',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'info',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `secondary color`', () => {
+	it('should render a ClayFileCard with sticker style `light color`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'secondary',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'light',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `success color`', () => {
+	it('should render a ClayFileCard with sticker style `primary color`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'success',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'primary',
 			title: 'My Title',
 		});
 
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayFileCard with file type style `warning color`', () => {
+	it('should render a ClayFileCard with sticker style `secondary color`', () => {
 		component = new ClayFileCard({
-			fileType: 'DOC',
-			fileTypeStyle: 'warning',
 			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'secondary',
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayFileCard with sticker style `success color`', () => {
+		component = new ClayFileCard({
+			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'success',
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayFileCard with sticker style `warning color`', () => {
+		component = new ClayFileCard({
+			spritemap: spritemap,
+			stickerLabel: 'DOC',
+			stickerStyle: 'warning',
 			title: 'My Title',
 		});
 
