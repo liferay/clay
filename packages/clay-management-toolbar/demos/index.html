@@ -66,6 +66,13 @@
 		</div>
 	</div>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With search results bar with active state</h4>
+			<div id="search-results-bar-active-state"></div>
+		</div>
+	</div>
+
 	<script type="text/javascript">
 		const actionItems = [
 			{
@@ -268,6 +275,9 @@
 		//With search results bar
 		new metal.ClayManagementToolbar({
 			creationMenu: true,
+			events: {
+				'clearButtonClicked': handleClearButton
+			},
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -277,9 +287,6 @@
 			spritemap: spritemap,
 			totalItems: 6,
 			viewTypes: viewTypes,
-			events: {
-				'clearButtonClicked': handleClearButton
-			},
 		},
 		'#search-results-bar');
 
@@ -287,6 +294,23 @@
 			this.searchValue = null;
 			this.totalItems = null;
 		}
+
+		//With search results bar with active state
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			creationMenu: true,
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			searchValue: 'red',
+			selectable: true,
+			selectedItems: 2,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+		},
+		'#search-results-bar-active-state');
 	</script>
 </body>
 </html>
