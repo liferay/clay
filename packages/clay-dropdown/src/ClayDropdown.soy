@@ -23,6 +23,7 @@
   {let $trigger kind="html"}
     {if $icon}
       {call ClayIcon.render}
+        {param elementClasses: $label ? 'inline-item inline-item-before' : '' /}
         {param spritemap: $spritemap /}
         {param symbol: $icon /}
       {/call}
