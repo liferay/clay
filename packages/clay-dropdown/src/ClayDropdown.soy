@@ -36,6 +36,7 @@
 
     {if not $icon}
       {call ClayIcon.render}
+        {param elementClasses: 'inline-item inline-item-after' /}
         {param spritemap: $spritemap /}
         {param symbol: 'caret-bottom' /}
       {/call}
