@@ -6,8 +6,8 @@
 {template .render}
 	{@param spritemap: string}
 	{@param? _handleActionClicked: any}
-	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleClearResultsClick: any}
+	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
@@ -91,8 +91,8 @@
 			{/call}
 		{else}
 			{call .default}
-				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
+				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 				{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
 				{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
