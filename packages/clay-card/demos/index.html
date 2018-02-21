@@ -37,11 +37,22 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Image Card with file type</h4>
+			<h4>Image Card with sticker</h4>
 			<div class="row">
-				<div class="col-md-4" id="filetype-image-card-block"></div>
-				<div class="col-md-4" id="filetype-image-card-icon-block"></div>
-				<div class="col-md-4" id="filetype-image-card-empty-block"></div>
+				<div class="col-md-4" id="sticker-image-card-block"></div>
+				<div class="col-md-4" id="sticker-image-card-icon-block"></div>
+				<div class="col-md-4" id="sticker-image-card-empty-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Image Card with sticker shape</h4>
+			<div class="row">
+				<div class="col-md-4" id="sticker-shape-image-card-block"></div>
+				<div class="col-md-4" id="sticker-shape-image-card-icon-block"></div>
+				<div class="col-md-4" id="sticker-shape-image-card-empty-block"></div>
 			</div>
 		</div>
 	</div>
@@ -146,12 +157,12 @@
 		'#image-card-empty-block');
 
 		/*
-		 * Image Card with filetype
+		 * Image Card with sticker
 		 */
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'JPG',
-			fileTypeStyle: 'danger',
+			stickerLabel: 'JPG',
+			stickerStyle: 'danger',
 			href: '#1',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
@@ -159,36 +170,76 @@
 			subtitle: 'Author Action',
 			title: 'thumbnail_kyoto.jpg',
 		},
-		'#filetype-image-card-block');
+		'#sticker-image-card-block');
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'SVG',
-			fileTypeStyle: 'warning',
+			stickerLabel: 'SVG',
+			stickerStyle: 'warning',
 			icon: 'camera',
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
 		},
-		'#filetype-image-card-icon-block');
+		'#sticker-image-card-icon-block');
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'PNG',
-			fileTypeStyle: 'info',
+			stickerLabel: 'PNG',
+			stickerStyle: 'info',
 			spritemap: spritemap,
 			subtitle: 'Author Action',
 			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
 		},
-		'#filetype-image-card-empty-block');
+		'#sticker-image-card-empty-block');
+
+		/*
+		 * Image Card with sticker shape
+		 */
+		new metal.ClayImageCard({
+			actionItems: items,
+			stickerLabel: 'TT',
+			stickerShape: 'circle',
+			stickerStyle: 'danger',
+			href: '#1',
+			imageAlt: 'thumbnail',
+			imageSrc: image,
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'thumbnail_kyoto.jpg',
+		},
+		'#sticker-shape-image-card-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			stickerLabel: 'TT',
+			stickerShape: 'circle',
+			stickerStyle: 'warning',
+			icon: 'camera',
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		},
+		'#sticker-shape-image-card-icon-block');
+
+		new metal.ClayImageCard({
+			actionItems: items,
+			stickerLabel: 'TT',
+			stickerShape: 'circle',
+			stickerStyle: 'info',
+			spritemap: spritemap,
+			subtitle: 'Author Action',
+			title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg',
+		},
+		'#sticker-shape-image-card-empty-block');
 
 		/*
 		 * Image Card with labels
 		 */
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'JPG',
-			fileTypeStyle: 'danger',
+			stickerLabel: 'JPG',
+			stickerStyle: 'danger',
 			href: '#1',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
@@ -206,8 +257,8 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'SVG',
-			fileTypeStyle: 'warning',
+			stickerLabel: 'SVG',
+			stickerStyle: 'warning',
 			labels: [
 				{
 					label: 'Approved',
@@ -227,8 +278,8 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'PNG',
-			fileTypeStyle: 'info',
+			stickerLabel: 'PNG',
+			stickerStyle: 'info',
 			labels: [
 				{
 					label: 'Approved',
@@ -254,8 +305,8 @@
 		 */
 		 new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'JPG',
-			fileTypeStyle: 'danger',
+			stickerLabel: 'JPG',
+			stickerStyle: 'danger',
 			href: '#1',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
@@ -275,8 +326,8 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'SVG',
-			fileTypeStyle: 'warning',
+			stickerLabel: 'SVG',
+			stickerStyle: 'warning',
 			icon: 'camera',
 			labels: [
 				{
@@ -298,8 +349,8 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			fileType: 'PNG',
-			fileTypeStyle: 'info',
+			stickerLabel: 'PNG',
+			stickerStyle: 'info',
 			labels: [
 				{
 					label: 'Approved',
@@ -327,8 +378,8 @@
 		 */
 		new metal.ClayFileCard({
 			actionItems: items,
-			fileType: 'PDF',
-			fileTypeStyle: 'danger',
+			stickerLabel: 'PDF',
+			stickerStyle: 'danger',
 			labels: [
 				{
 					label: 'Approved',
@@ -343,8 +394,8 @@
 
 		new metal.ClayFileCard({
 			actionItems: items,
-			fileType: 'TXT',
-			fileTypeStyle: 'warning',
+			stickerLabel: 'TXT',
+			stickerStyle: 'warning',
 			labels: [
 				{
 					label: 'Approved',
@@ -365,8 +416,8 @@
 
 		new metal.ClayFileCard({
 			actionItems: items,
-			fileType: 'DOC',
-			fileTypeStyle: 'info',
+			stickerLabel: 'DOC',
+			stickerStyle: 'info',
 			icon: 'list',
 			labels: [
 				{
