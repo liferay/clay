@@ -290,10 +290,10 @@ let defaultConfig = {
 					'*': 'success',
 				},
 				stickerShapesMap: {
-					'PDF': 'circle',
+					PDF: 'circle',
 				},
 				stickerStylesMap: {
-					'PDF': 'danger',
+					PDF: 'danger',
 				},
 				userColorsMap: {
 					'fusion': 'danger',
