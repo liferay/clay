@@ -1114,7 +1114,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           <form role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1188,7 +1188,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           <form role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
