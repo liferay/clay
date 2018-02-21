@@ -23,6 +23,7 @@
 	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? triggerClasses: string}
+	{@param? triggerSize: string}
 
 	{let $attributes kind="attributes"}
 		class="dropdown
@@ -46,6 +47,7 @@
 			{param disabled: $disabled /}
 			{param expanded: $expanded /}
 			{param label: $label /}
+			{param size: $triggerSize /}
 			{param style: $style /}
 		{/call}
 
@@ -202,6 +204,7 @@
 	{@param? classes: string}
 	{@param? disabled: bool}
 	{@param? expanded: bool}
+	{@param? size: string}
 	{@param? style: string}
 
 	{let $buttonAttributes kind="attributes"}
@@ -216,6 +219,10 @@
 		class="dropdown-toggle btn
 			{if $classes}
 				{sp}{$classes}
+			{/if}
+
+			{if $size}
+				{sp}btn-{$size}
 			{/if}
 
 			{if $style}
