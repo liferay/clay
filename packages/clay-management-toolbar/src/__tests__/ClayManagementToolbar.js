@@ -414,6 +414,19 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with search results bar when state is active', () => {
+		managementToolbar = new ClayManagementToolbar({
+			id: 'myId',
+			searchValue: 'foo',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a selectable management toolbar and emit an event on checkbox click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
