@@ -658,7 +658,7 @@ ChartBase.STATE = {
 		padding: Config.object().string(),
 		show: Config.bool(),
 		tick: Config.shapeOf({
-			count: Config.bool(),
+			count: Config.number(),
 			outer: Config.bool(),
 			values: Config.array(),
 		}),
