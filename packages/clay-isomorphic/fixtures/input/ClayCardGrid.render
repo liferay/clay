@@ -1,0 +1,11 @@
+{
+    "schema": "([contentRenderer: string, contentRendererMap: unknown, fieldName: string, fieldsMap: unknown, fileTypeStylesMap: unknown, iconsMap: unknown, inputName: string, inputNameField: string, inputNamesMap: unknown, inputValueField: string, labelStylesMap: unknown, userColorsMap: unknown])",
+    "spritemap": "(null|string)",
+    "selectable": "(bool|null)",
+    "elementClasses": "(null|string)",
+    "id": "(null|string)",
+    "items": [
+        "(list<unknown>|null)"
+    ],
+    "handleItemToggled_": "(any|null)"
+}
