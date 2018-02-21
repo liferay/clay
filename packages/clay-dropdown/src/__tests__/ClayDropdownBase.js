@@ -60,6 +60,25 @@ describe('ClayDropdownBase', function() {
 				},
 			],
 			label: 'Trigger',
+			triggerSize: 'sm',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
+	it('should render a dropdown with trigger szie', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+				{
+					href: 'item2url',
+					label: 'Item 2',
+				},
+			],
+			label: 'Trigger',
 			triggerClasses: 'my-cutsom-class',
 		});
 
