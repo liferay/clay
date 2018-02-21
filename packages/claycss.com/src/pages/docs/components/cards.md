@@ -31,7 +31,7 @@ weight: 100
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label"></span>
 							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-							<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+							<span class="sticker sticker-bottom-left sticker-danger rounded-circle">JPG</span>
 						</label>
 					</div>
 				</div>
@@ -81,8 +81,6 @@ weight: 100
 			'label': 'Save'
 		]
 	] /}
-	{param fileType: 'JPG' /}
-	{param fileTypeStyle: 'danger' /}
 	{param imageAlt: 'thumbnail' /}
 	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
 	{param labels: [
@@ -93,6 +91,9 @@ weight: 100
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param stickerLabel: 'JPG' /}
+	{param stickerShape: 'danger' /}
+	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'thumbnail_coffee.jpg' /}
 {/call}
@@ -100,13 +101,14 @@ weight: 100
 ```text/html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
-	fileType="JPG"
-	fileTypeStyle="danger"
 	imageAlt="thumbnail"
 	imageSrc="/images/thumbnail_coffee.jpg"
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	spritemap="/vendor/lexicon/icons.svg"
+	stickerLabel="JPG"
+	stickerShape="circle"
+	stickerStyle="danger"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
@@ -120,7 +122,7 @@ weight: 100
 					<input class="custom-control-input" type="checkbox">
 					<span class="custom-control-label"></span>
 					<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
-					<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+					<span class="sticker sticker-bottom-left sticker-danger rounded-circle">JPG</span>
 				</label>
 			</div>
 		</div>
@@ -218,8 +220,6 @@ weight: 100
 			'label': 'Save'
 		]
 	] /}
-	{param fileType: 'JPG' /}
-	{param fileTypeStyle: 'danger' /}
 	{param imageAlt: 'thumbnail' /}
 	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
 	{param labels: [
@@ -232,20 +232,22 @@ weight: 100
 	{param selected: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param subtitle: 'Author Action' /}
+	{param stickerLabel: 'JPG' /}
+	{param stickerStyle: 'danger' /}
 	{param title: 'thumbnail_coffee.jpg' /}
 {/call}
 ```
 ```text/html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
-	fileType="JPG"
-	fileTypeStyle="danger"
 	imageAlt="thumbnail"
 	imageSrc="/images/thumbnail_coffee.jpg"
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	selected="true"
 	spritemap="/vendor/lexicon/icons.svg"
+	stickerLabel="JPG"
+	stickerStyle="danger"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
@@ -348,8 +350,6 @@ weight: 100
 			'label': 'Save'
 		]
 	] /}
-	{param fileType: 'PNG' /}
-	{param fileTypeStyle: 'info' /}
 	{param labels: [
 		[
 			'label': 'Rejected',
@@ -358,6 +358,8 @@ weight: 100
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param stickerLabel: 'PNG' /}
+	{param stickerStyle: 'info' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'empty-background.png' /}
 {/call}
@@ -365,11 +367,11 @@ weight: 100
 ```text/html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
-	fileType="PNG"
-	fileTypeStyle="info"
 	labels='[{"label": "Rejected", "style": "danger"}]'
 	selectable="true"
 	spritemap="/vendor/lexicon/icons.svg"
+	stickerLabel="PNG"
+	stickerStyle="info"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
@@ -495,8 +497,6 @@ weight: 100
 		]
 	] /}
 	{param icon: 'camera' /}
-	{param fileType: 'SVG' /}
-	{param fileTypeStyle: 'warning' /}
 	{param labels: [
 		[
 			'label': 'Approved',
@@ -505,6 +505,8 @@ weight: 100
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param stickerLabel: 'SVG' /}
+	{param stickerStyle: 'warning' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg' /}
 {/call}
@@ -512,9 +514,9 @@ weight: 100
 {call ClayImageCard.render}
 	{param imageAlt: 'thumbnail' /}
 	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
-	{param fileType: 'JPG' /}
-	{param fileTypeStyle: 'danger' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param stickerLabel: 'JPG' /}
+	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'thumbnail_coffee.jpg' /}
 {/call}
@@ -522,22 +524,22 @@ weight: 100
 ```text/html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
-	fileType="SVG"
-	fileTypeStyle="warning"
 	icon="camera"
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	spritemap="/vendor/lexicon/icons.svg"
+	stickerLabel="SVG"
+	stickerStyle="warning"
 	subtitle="Author Action"
 	title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.jpg">
 </clay-image-card>
 
 <clay-image-card
-	fileType="JPG"
-	fileTypeStyle="danger"
 	imageAlt="thumbnail"
 	imageSrc="/images/thumbnail_coffee.jpg"
 	spritemap="/vendor/lexicon/icons.svg"
+	stickerLabel="JPG"
+	stickerStyle="danger"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
@@ -876,8 +878,6 @@ weight: 100
 
 ```soy
 {call ClayFileCard.render}
-	{param fileType: 'DOC' /}
-	{param fileTypeStyle: 'danger' /}
 	{param icon: 'documents-and-media' /}
 	{param labels: [
 		[
@@ -886,6 +886,8 @@ weight: 100
 		]
 	] /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param stickerLabel: 'DOC' /}
+	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Stevie Ray Vaughn' /}
 	{param title: 'deliverable.doc' /}
 {/call}
@@ -902,8 +904,6 @@ weight: 100
 			'label': 'Save'
 		]
 	] /}
-	{param fileType: 'DOC' /}
-	{param fileTypeStyle: 'danger' /}
 	{param icon: 'documents-and-media' /}
 	{param labels: [
 		[
@@ -913,29 +913,31 @@ weight: 100
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param stickerLabel: 'DOC' /}
+	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Stevie Ray Vaughn' /}
 	{param title: 'deliverable.doc' /}
 {/call}
 ```
 ```text/html
 <clay-file-card
-	fileType="DOC"
-	fileTypeStyle="danger"
 	icon="documents-and-media"
 	labels='[{"label": "Approved", "style": "success"}]'
 	spritemap="/vendor/lexicon/icons.svg"
+	stickerLabel="DOC"
+	stickerStyle="danger"
 	subtitle="Stevie Ray Vaughn"
 	title="deliverable.doc">
 </clay-file-card>
 
 <clay-file-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
-	fileType="DOC"
-	fileTypeStyle="danger"
 	icon="documents-and-media"
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	spritemap="/vendor/lexicon/icons.svg"
+	stickerLabel="DOC"
+	stickerStyle="danger"
 	subtitle="Stevie Ray Vaughn"
 	title="deliverable.doc">
 </clay-file-card>

@@ -57,33 +57,6 @@ ClayFileCard.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Type of the file represented in the card.
-	 * @instance
-	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	fileType: Config.string(),
-
-	/**
-	 * Style of type of the file represented in the card.
-	 * @instance
-	 * @memberof ClayFileCard
-	 * @type {?string}
-	 * @default primary
-	 */
-	fileTypeStyle: Config.oneOf([
-		'danger',
-		'dark',
-		'info',
-		'light',
-		'primary',
-		'secondary',
-		'success',
-		'warning',
-	]).value('primary'),
-
-	/**
 	 * Group Index the card belongs to.
 	 * @instance
 	 * @memberof ClayFileCard
@@ -195,6 +168,42 @@ ClayFileCard.STATE = {
 	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
+
+	/**
+	 * Label for the sticker represented in the card.
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	stickerLabel: Config.string(),
+
+	/**
+	 * Shape for the sticker represented in the card.
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?string}
+	 * @default rounded
+	 */
+	stickerShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
+
+	/**
+	 * Style of sticker represented in the card.
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?string}
+	 * @default primary
+	 */
+	stickerStyle: Config.oneOf([
+		'danger',
+		'dark',
+		'info',
+		'light',
+		'primary',
+		'secondary',
+		'success',
+		'warning',
+	]).value('primary'),
 
 	/**
 	 * Subtitle of the card.

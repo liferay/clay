@@ -46,159 +46,6 @@ exports[`ClayImageCard should render a ClayImageCard with classes 1`] = `
 </div>
 `;
 
-exports[`ClayImageCard should render a ClayImageCard with file type \`danger color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-danger sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type \`dark color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-dark sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type \`info color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-info sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type \`light color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-light sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type \`primary color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type \`secondary color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-secondary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type \`success color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-success sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type \`warning color\` 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-warning sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayImageCard should render a ClayImageCard with file type 1`] = `
-<div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">My Title</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`ClayImageCard should render a ClayImageCard with href 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first"></div>
@@ -381,6 +228,193 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
         <div class="card-detail">
           <span class="label label-secondary">Approved</span>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-primary sticker-bottom-left rounded-circle">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker shape \`rounded\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`danger color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-danger sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`dark color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-dark sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`info color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-info sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`light color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-light sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`primary color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`secondary color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-secondary sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`success color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-success sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayImageCard should render a ClayImageCard with sticker style \`warning color\` 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-warning sticker-bottom-left">
+      <span class="sticker-overlay">DOC</span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
       </div>
     </div>
   </div>

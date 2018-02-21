@@ -124,19 +124,16 @@ const schema = {
 	fieldsMap: {
 		contentRenderer: 'type',
 		description: 'origin',
-		fileType: 'format',
 		href: 'downloadHref',
 		icon: 'type',
 		imageAlt: 'name',
 		imageSrc: 'image',
 		initials: 'initials',
 		labels: 'spicyLevel',
+		stickerLabel: 'format',
 		title: 'name',
 		userColor: 'style',
 		username: 'name',
-	},
-	fileTypeStylesMap: {
-		PDF: 'danger',
 	},
 	iconsMap: {
 		'folder': 'folder',
@@ -153,6 +150,12 @@ const schema = {
 		'Spicy': 'warning',
 		'Very Spicy': 'danger',
 		'*': 'success',
+	},
+	stickerShapesMap: {
+		PDF: 'circle',
+	},
+	stickerStylesMap: {
+		PDF: 'danger',
 	},
 	userColorsMap: {
 		'fusion': 'danger',
