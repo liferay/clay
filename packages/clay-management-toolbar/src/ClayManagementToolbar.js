@@ -49,20 +49,20 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
-	 * Hides the search in mobile devices
-	 * @private
-	 */
-	_handleCloseMobileSearchClick() {
-		this._showSearchMobile = false;
-	}
-
-	/**
 	 * Continues the propagation of the clear button clicked event
 	 * @param {!Event} event
 	 * @private
 	 */
 	_handleClearResultsClick(event) {
 		this.emit('clearButtonClicked', event);
+	}
+
+	/**
+	 * Hides the search in mobile devices
+	 * @private
+	 */
+	_handleCloseMobileSearchClick() {
+		this._showSearchMobile = false;
 	}
 
 	/**
