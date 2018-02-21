@@ -1,0 +1,19 @@
+{
+    "handleItemClick_": "(any|null)",
+    "icon": "(null|string)",
+    "itemsIconAlignment": "(null|string)",
+    "elementClasses": "(null|string)",
+    "label": "(html|null|string)",
+    "triggerClasses": "(null|string)",
+    "searchable": "(bool|null)",
+    "button": "(null|unknown)",
+    "spritemap": "(string)",
+    "expanded": "(bool|null)",
+    "disabled": "(bool|null)",
+    "style": "(null|string)",
+    "handleButtonClick_": "(any|null)",
+    "id": "(null|string)",
+    "items": [
+        "(list<unknown>)"
+    ]
+}

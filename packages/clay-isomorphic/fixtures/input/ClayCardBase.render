@@ -1,0 +1,28 @@
+{
+    "actionItems": [
+        "(list<[href: string, label: string, separator: bool]>|null)"
+    ],
+    "selectable": "(bool|null)",
+    "icon": "(null|string)",
+    "imageSrc": "(null|string)",
+    "contentRenderer": "(null|string)",
+    "elementClasses": "(null|string)",
+    "title": "(string)",
+    "imageAlt": "(null|string)",
+    "inputName": "(null|string)",
+    "labelStylesMap": "(null|unknown)",
+    "labels": [
+        "(list<unknown>|null)"
+    ],
+    "handleItemCheckboxClick_": "(any|null)",
+    "spritemap": "(null|string)",
+    "groupName": "(null|string)",
+    "subtitle": "(null|string)",
+    "inputValue": "(null|string)",
+    "disabled": "(bool|null)",
+    "href": "(null|string)",
+    "id": "(null|string)",
+    "fileType": "(null|string)",
+    "selected": "(bool|null)",
+    "fileTypeStyle": "(null|string)"
+}

@@ -1,0 +1,29 @@
+{
+    "hideFiltersDoneButton": "(bool|null)",
+    "handleViewTypeClicked_": "(any|null)",
+    "sortingOrder": "(null|string)",
+    "handleOpenMobileSearchClick_": "(any|null)",
+    "handleSortingButtonClicked_": "(any|null)",
+    "selectable": "(bool|null)",
+    "handleCloseMobileSearchClick_": "(any|null)",
+    "contentRenderer": "(null|string)",
+    "elementClasses": "(null|string)",
+    "searchInputName": "(null|string)",
+    "searchActionURL": "(null|string)",
+    "handleSelectPageCheckboxChanged_": "(any|null)",
+    "handleSearchSearchClick_": "(any|null)",
+    "showSearch_": "(bool|null)",
+    "handleFilterDoneButtonClick_": "(any|null)",
+    "spritemap": "(string)",
+    "handleCreationButtonClicked_": "(any|null)",
+    "viewTypes": [
+        "(list<[active: bool, disabled: bool, icon: string, label: string]>|null)"
+    ],
+    "filterItems": [
+        "(list<[checked: bool, disabled: bool, inputName: string, inputValue: string, label: string, separator: bool, type: string]>|null)"
+    ],
+    "searchFormName": "(null|string)",
+    "disabled": "(bool|null)",
+    "creationMenu": "([button: unknown, caption: string, helpText: string, items: list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>]|null)",
+    "id": "(null|string)"
+}
