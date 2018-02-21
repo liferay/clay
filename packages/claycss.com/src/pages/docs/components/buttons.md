@@ -258,9 +258,11 @@ weight: 100
 > This button type is used only in sites and not in administration. The icon emphasizes and helps to understand the action. The label must be the same icon purpose.
 
 <button class="btn btn-secondary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#share"></use>
-	</svg>
+	<span class="inline-item inline-item-before">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use xlink:href="/vendor/lexicon/icons.svg#share"></use>
+		</svg>
+	</span>
 	Share
 </button>
 
@@ -282,9 +284,11 @@ weight: 100
 ```
 ```text/html
 <button class="btn btn-secondary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#share"></use>
-	</svg>
+	<span class="inline-item inline-item-before">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use xlink:href="/vendor/lexicon/icons.svg#share"></use>
+		</svg>
+	</span>
 	Share
 </button>
 ```
