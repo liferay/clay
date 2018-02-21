@@ -44,7 +44,15 @@ th {
 	}
 
 	td {
+		border-bottom-width: $table-data-border-bottom-width;
+		border-left-width: $table-data-border-left-width;
+		border-right-width: $table-data-border-right-width;
+		border-top-width: $table-data-border-top-width;
+
+		border-color: $table-data-border-color;
+		border-style: $table-data-border-style;
 		position: relative;
+		vertical-align: $table-data-vertical-align;
 	}
 
 	td,
@@ -101,6 +109,11 @@ th {
 				border-top-width: $table-border-width;
 			}
 		}
+	}
+
+	td,
+	th {
+		border-width: $table-bordered-border-width;
 	}
 }
 
