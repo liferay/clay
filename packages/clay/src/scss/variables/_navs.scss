@@ -4,6 +4,9 @@ $nav-item-monospaced-size: 2rem !default; // 32px
 
 $nav-btn-margin-x: 0.25rem !default; // 4px
 $nav-btn-margin-y: (($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) - $nav-item-monospaced-size) / 2 !default;
+$nav-btn-padding-x: $btn-padding-x-sm !default;
+$nav-btn-padding-y: 0 !default;
+
 
 // Nav Nested
 

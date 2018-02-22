@@ -50,13 +50,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -739,13 +739,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -1428,13 +1428,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -2072,9 +2072,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with classes 1`] 
 exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped items and deselect a selected item on click 1`] = `
 <div class="clay-dataset-display">
   <div>
-    <nav class="management-bar management-bar-primary navbar navbar-expand-md">
+    <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
       <div class="container">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
               <label>
@@ -2090,7 +2090,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
               <span class="navbar-breakpoint-down-d-none">items selected</span>
             </span>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-shrink">
             <button class="btn nav-btn btn-link" type="button">Select all</button>
           </li>
         </ul>
@@ -2295,13 +2295,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -2606,9 +2606,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with id 1`] = `<d
 exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and deselect a selected item on click 1`] = `
 <div class="clay-dataset-display">
   <div>
-    <nav class="management-bar management-bar-primary navbar navbar-expand-md">
+    <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
       <div class="container">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
               <label>
@@ -2624,7 +2624,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
               <span class="navbar-breakpoint-down-d-none">items selected</span>
             </span>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-shrink">
             <button class="btn nav-btn btn-link" type="button">Select all</button>
           </li>
         </ul>
@@ -2826,13 +2826,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -3685,13 +3685,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -4682,13 +4682,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -5371,13 +5371,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -5677,9 +5677,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
 exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected grouped items 1`] = `
 <div class="clay-dataset-display">
   <div>
-    <nav class="management-bar management-bar-primary navbar navbar-expand-md">
+    <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
       <div class="container">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
               <label>
@@ -5695,7 +5695,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <span class="navbar-breakpoint-down-d-none">items selected</span>
             </span>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-shrink">
             <button class="btn nav-btn btn-link" type="button">Select all</button>
           </li>
         </ul>
@@ -6186,9 +6186,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
 exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected items 1`] = `
 <div class="clay-dataset-display">
   <div>
-    <nav class="management-bar management-bar-primary navbar navbar-expand-md">
+    <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
       <div class="container">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
               <label>
@@ -6204,7 +6204,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <span class="navbar-breakpoint-down-d-none">items selected</span>
             </span>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-shrink">
             <button class="btn nav-btn btn-link" type="button">Select all</button>
           </li>
         </ul>
@@ -6558,13 +6558,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
-                    <button class="btn navbar-breakpoint-d-block btn-unstyled" aria-label="search" type="submit">
+                    <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>

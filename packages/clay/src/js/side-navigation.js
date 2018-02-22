@@ -107,6 +107,7 @@
 			options.breakpoint = toInt(options.breakpoint);
 			options.container = options.container || toggler.data('target') || toggler.attr('href');
 			options.gutter = toInt(options.gutter);
+			options.heightType = options.heightType || (options.equalHeight ? 'equalHeight' : false);
 			options.rtl = doc.attr('dir') === 'rtl';
 			options.width = toInt(options.width);
 			options.widthOriginal = options.width;
@@ -116,7 +117,7 @@
 			if (useDataAttribute) {
 				options.closedClass = toggler.data('closed-class') || 'closed';
 				options.content = toggler.data('content');
-				options.equalHeight = false;
+				options.equalHeight = false; // equalHeight option is deprecated
 				options.loadingIndicatorTPL = toggler.data('loading-indicator-tpl') || options.loadingIndicatorTPL;
 				options.openClass = toggler.data('open-class') || 'open';
 				options.toggler = toggler;
@@ -152,7 +153,14 @@
 
 			var els = content.add(navigation).add(menu);
 
-			els.css(attribute, '');
+			if (Array.isArray(attribute)) {
+				for (var i = 0; i < attribute.length; i++) {
+					els.css(attribute[i], '');
+				}
+			}
+			else {
+				els.css(attribute, '');
+			}
 		},
 
 		destroy: function() {
@@ -213,6 +221,7 @@
 			var paddingDirection = 'padding-' + positionDirection;
 
 			content.css(paddingDirection, '').css(positionDirection, '');
+
 			navigation.css('width', '');
 
 			if (sidenavRight) {
@@ -272,25 +281,75 @@
 
 			var options = instance.options;
 
-			if (options.equalHeight) {
-				var container = $(options.container);
+			var container = $(options.container);
+			var content = options.content;
+			var navigation = options.navigation;
 
-				var content = options.content;
-				var navigation = options.navigation;
+			var type = instance.mobile ? options.typeMobile : options.type;
 
-				var type = instance.mobile ? options.typeMobile : options.type;
+			if (type !== 'fixed' && type !== 'fixed-push') {
+				var contentNode = container.find(content).first();
+				var navNode = container.find(navigation).first();
+				var sideNavMenuNode = container.find('.sidenav-menu').first();
 
-				if (type !== 'fixed' && type !== 'fixed-push') {
-					var contentNode = container.find(content).first();
-					var navNode = container.find(navigation).first();
-					var sideNavMenuNode = container.find('.sidenav-menu').first();
+				var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-					var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
+				contentNode.css('min-height', tallest);
 
-					contentNode.css('min-height', tallest);
-					navNode.css('min-height', tallest);
-					sideNavMenuNode.css('min-height', tallest);
+				navNode.css({
+					'min-height': tallest,
+					'height': '100%'
+				});
+
+				sideNavMenuNode.css({
+					'min-height': tallest,
+					'height': '100%'
+				});
+			}
+		},
+
+		setFullHeight: function() {
+			var instance = this;
+
+			var options = instance.options;
+
+			var container = $(options.container);
+			var navigation = options.navigation;
+
+			var type = instance.mobile ? options.typeMobile : options.type;
+
+			if (type === 'relative') {
+				var navNode = container.find(navigation).first();
+				var sidenavMenuNode = container.find('.sidenav-menu').first();
+
+				var minHeight = doc.innerHeight() - navNode.offset().top;
+
+				if (sidenavMenuNode.innerHeight() + navNode.offset().top > doc.innerHeight()) {
+					minHeight = sidenavMenuNode.innerHeight();
 				}
+
+				navNode.css({
+					'min-height': minHeight,
+					'height': '100%'
+				});
+
+				sidenavMenuNode.css({
+					'min-height': minHeight,
+					'height': '100%'
+				});
+			}
+		},
+
+		setHeight: function() {
+			var instance = this;
+
+			var options = instance.options;
+
+			if (options.heightType === 'equalHeight') {
+				instance.setEqualHeight();
+			}
+			else if (options.heightType === 'fullHeight') {
+				instance.setFullHeight();
 			}
 		},
 
@@ -326,12 +385,15 @@
 				container.one(
 					'urlLoaded.lexicon.sidenav',
 					function(event) {
-						instance.setEqualHeight();
+						instance.setHeight();
 					}
 				);
 
 				instance._loadUrl(menu, url, container);
 			}
+
+			navigation.css('width', width);
+			menu.css('width', width);
 
 			var positionDirection = options.rtl ? 'right' : 'left';
 
@@ -345,11 +407,32 @@
 			var type = mobile ? options.typeMobile : options.type;
 
 			if (type !== 'fixed') {
-				content.css(pushContentCssProperty, offset);
-			}
+				var navigationStartX = container.hasClass('open') ? navigation.offset().left - options.gutter : navigation.offset().left - offset;
 
-			navigation.css('width', width);
-			menu.css('width', width);
+				var contentStartX = content.offset().left;
+				var contentWidth = content.innerWidth();
+
+				var padding = '';
+
+				if ((options.rtl && sidenavRight) || (!options.rtl && options.position === 'left')) {
+					navigationStartX = navigation.offset().left + offset;
+
+					if (navigationStartX > contentStartX) {
+						padding = navigationStartX - contentStartX;
+					}
+				}
+				else if ((options.rtl && options.position === 'left') || (!options.rtl && sidenavRight)) {
+					if (navigationStartX < contentStartX + contentWidth) {
+						padding = (contentStartX + contentWidth) - navigationStartX;
+
+						if (padding >= offset) {
+							padding = offset;
+						}
+					}
+				}
+
+				content.css(pushContentCssProperty, padding);
+			}
 		},
 
 		showSimpleSidenav: function() {
@@ -441,7 +524,7 @@
 				var menu = container.find('.sidenav-menu').first();
 
 				if (container.hasClass('closed')) {
-					instance.clearStyle('min-height');
+					instance.clearStyle(['min-height', 'height']);
 
 					toggler.removeClass('open').removeClass('sidenav-transition');
 
@@ -465,7 +548,7 @@
 			});
 
 			if (closed) {
-				instance.setEqualHeight();
+				instance.setHeight();
 
 				menu.css('width', width);
 
@@ -726,7 +809,8 @@
 
 				if ((!desktop && screenStartDesktop) || (desktop && !screenStartDesktop)) {
 					instance.hideSidenav();
-					instance.clearStyle('min-height');
+
+					instance.clearStyle([ 'min-height', 'height' ]);
 
 					container.addClass('closed').removeClass('open');
 					toggler.removeClass('active').removeClass('open');
@@ -763,9 +847,10 @@
 				}
 
 				if (!closed) {
-					instance.clearStyle('min-height');
+					instance.clearStyle([ 'min-height', 'height' ]);
+
 					instance.showSidenav();
-					instance.setEqualHeight();
+					instance.setHeight();
 				}
 			});
 		},
@@ -817,7 +902,7 @@
 			}
 			else {
 				instance.showSidenav();
-				instance.setEqualHeight();
+				instance.setHeight();
 			}
 
 			container.removeClass('sidenav-js-fouc');
@@ -953,25 +1038,27 @@
 
 	/**
 	 * Plugin options
-	 * @property {String|Number}  breakpoint  The window width that defines the desktop size.
-	 * @property {String}         content     The class or ID of the content container.
+	 * @property {String|Number}  breakpoint   The window width that defines the desktop size.
+	 * @property {String}         content      The class or ID of the content container.
 	 * @property {String}         container    The class or ID of the sidenav container.
-	 * @property {String|Number}  gutter      The space between the sidenav-slider and the sidenav-content.
-	 * @property {String|Boolean} equalHeight The height of content and navigation should be equal.
-	 * @property {String}         navigation  The class or ID of the navigation container.
-	 * @property {String}         position    The position of the sidenav-slider. Possible values: left, right
-	 * @property {String}         type        The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
-	 * @property {String}         typeMobile  The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
-	 * @property {String|Boolean} useDelegate The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
-	 * @property {String|Object}  url         The URL or $.ajax config object to fetch the content to inject into .sidebar-body
-	 * @property {String|Number}  width       The width of the side navigation.
+	 * @property {String|Number}  gutter       The space between the sidenav-slider and the sidenav-content.
+	 * @property {String|Boolean} equalHeight  The height of content and navigation should be equal. This is deprecated.
+	 * @property {String}         heightType   Calculates the height of sidenav when type is relative. Possible values: `fullHeight`, `equalHeight`
+	 * @property {String}         navigation   The class or ID of the navigation container.
+	 * @property {String}         position     The position of the sidenav-slider. Possible values: left, right
+	 * @property {String}         type         The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
+	 * @property {String}         typeMobile   The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
+	 * @property {String|Boolean} useDelegate  The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
+	 * @property {String|Object}  url          The URL or $.ajax config object to fetch the content to inject into .sidebar-body
+	 * @property {String|Number}  width        The width of the side navigation.
 	 */
 
 	Plugin.defaults = {
 		breakpoint: 768,
 		content: '.sidenav-content',
-		equalHeight: true,
+		equalHeight: true, // equalHeight option is deprecated, use heightType instead
 		gutter: '15px',
+		heightType: null,
 		loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>',
 		navigation: '.sidenav-menu-slider',
 		position: 'left',
