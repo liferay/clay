@@ -126,6 +126,17 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should render a dropdown with trigger size', () => {
+		clayDropdown = new ClayDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+			triggerSize: 'sm',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render an expanded dropdown', () => {
 		clayDropdown = new ClayDropdown({
 			expanded: true,
@@ -141,6 +152,17 @@ describe('ClayDropdown', function() {
 		clayDropdown = new ClayDropdown({
 			icon: 'list',
 			items: items,
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
+	it('should render a dropdown with an icon and label trigger', () => {
+		clayDropdown = new ClayDropdown({
+			icon: 'list',
+			items: items,
+			label: 'Trigger',
 			spritemap: 'icons.svg',
 		});
 

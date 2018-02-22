@@ -350,6 +350,15 @@ ClayDropdownBase.STATE = {
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
+
+	/**
+	 * Size of the trigger button.
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	triggerSize: Config.oneOf(['sm']),
 };
 
 Soy.register(ClayDropdownBase, templates);
