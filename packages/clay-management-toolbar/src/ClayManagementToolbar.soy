@@ -250,6 +250,52 @@
 {/template}
 
 /**
+ * This renders the creation menu.
+ */
+{template .creationMenu}
+	{@param creationMenu: ?}
+	{@param spritemap: string}
+	{@param? _handleCreationButtonClicked: any}
+
+	{if $creationMenu.items}
+		{call ClayDropdownBase.render}
+			{param button: $creationMenu.button /}
+			{param caption: $creationMenu.caption /}
+			{param helpText: $creationMenu.helpText /}
+			{param items: $creationMenu.items /}
+			{param label kind="html"}
+				{call ClayIcon.render}
+					{param spritemap: $spritemap /}
+					{param symbol: 'plus' /}
+				{/call}
+			{/param}
+
+			{param ref: 'creationMenuDropdown' /}
+			{param spritemap: $spritemap /}
+			{param style: 'primary' /}
+			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+		{/call}
+	{elseif $creationMenu == true}
+		{call ClayButton.render}
+			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
+			{param events: ['click': $_handleCreationButtonClicked ] /}
+			{param icon: 'plus' /}
+			{param ref: 'creationMenu' /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{else}
+		{call ClayLink.render}
+			{param ariaLabel: 'add' /}
+			{param buttonStyle: 'primary' /}
+			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param href: $creationMenu /}
+			{param icon: 'plus' /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{/if}
+{/template}
+
+/**
  * This renders the component's active content.
  */
 {template .default}
@@ -487,52 +533,6 @@
 			</ul>
 		</div>
 	</nav>
-{/template}
-
-/**
- * This renders the creation menu.
- */
-{template .creationMenu}
-	{@param creationMenu: ?}
-	{@param spritemap: string}
-	{@param? _handleCreationButtonClicked: any}
-
-	{if $creationMenu.items}
-		{call ClayDropdownBase.render}
-			{param button: $creationMenu.button /}
-			{param caption: $creationMenu.caption /}
-			{param helpText: $creationMenu.helpText /}
-			{param items: $creationMenu.items /}
-			{param label kind="html"}
-				{call ClayIcon.render}
-					{param spritemap: $spritemap /}
-					{param symbol: 'plus' /}
-				{/call}
-			{/param}
-
-			{param ref: 'creationMenuDropdown' /}
-			{param spritemap: $spritemap /}
-			{param style: 'primary' /}
-			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
-		{/call}
-	{elseif $creationMenu == true}
-		{call ClayButton.render}
-			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
-			{param events: ['click': $_handleCreationButtonClicked ] /}
-			{param icon: 'plus' /}
-			{param ref: 'creationMenu' /}
-			{param spritemap: $spritemap /}
-		{/call}
-	{else}
-		{call ClayLink.render}
-			{param ariaLabel: 'add' /}
-			{param buttonStyle: 'primary' /}
-			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
-			{param href: $creationMenu /}
-			{param icon: 'plus' /}
-			{param spritemap: $spritemap /}
-		{/call}
-	{/if}
 {/template}
 
 /**

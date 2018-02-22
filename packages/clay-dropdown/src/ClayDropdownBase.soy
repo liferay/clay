@@ -285,6 +285,28 @@
 {/template}
 
 /**
+ * Renders the dropdown menu content
+ */
+{deltemplate ClayDropdownBase.Content}
+	{@param? _handleItemClick: any}
+	{@param? contentRenderer: string}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? spritemap: string}
+
+	{if $items}
+		<ul class="list-unstyled">
+			{call .items}
+				{param _handleItemClick: $_handleItemClick /}
+				{param items: $items /}
+				{param itemsIconAlignment: $itemsIconAlignment /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</ul>
+	{/if}
+{/deltemplate}
+
+/**
  * Renders list item
  */
 {deltemplate ClayDropdownBase.Item}
@@ -536,27 +558,5 @@
 
 	{if $separator}
 		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-	{/if}
-{/deltemplate}
-
-/**
- * Renders the dropdown menu content
- */
-{deltemplate ClayDropdownBase.Content}
-	{@param? _handleItemClick: any}
-	{@param? contentRenderer: string}
-	{@param? items: list<?>}
-	{@param? itemsIconAlignment: string}
-	{@param? spritemap: string}
-
-	{if $items}
-		<ul class="list-unstyled">
-			{call .items}
-				{param _handleItemClick: $_handleItemClick /}
-				{param items: $items /}
-				{param itemsIconAlignment: $itemsIconAlignment /}
-				{param spritemap: $spritemap /}
-			{/call}
-		</ul>
 	{/if}
 {/deltemplate}
