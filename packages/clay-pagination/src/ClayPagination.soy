@@ -94,7 +94,7 @@
 				{call .range}
 					{param baseHref: $baseHref /}
 					{param endPage: $totalPages /}
-					{param initPage: $currentPage + 2 /}
+					{param initPage: $currentPage == 1 ? 4 : $currentPage + 2 /}
 				{/call}
 			{/if}
 
