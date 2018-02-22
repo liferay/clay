@@ -61,6 +61,7 @@
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
+	{@param? showAdvancedSearch: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
@@ -121,6 +122,7 @@
 				{param searchInputName: $searchInputName /}
 				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
+				{param showAdvancedSearch: $showAdvancedSearch /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
 				{param sortingOrder: $sortingOrder /}
@@ -293,6 +295,7 @@
 	{@param? searchInputName: string}
 	{@param? searchValue: string}
 	{@param? selectable: bool}
+	{@param? showAdvancedSearch: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
@@ -405,6 +408,19 @@
 						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
 						{param searchFormName: $searchFormName /}
+						{param searchInput kind="html"}
+							{call .searchInput}
+								{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
+								{param _handleSearchSearchClick: $_handleSearchSearchClick /}
+								{param contentRenderer: $contentRenderer /}
+								{param disabled: $disabled /}
+								{param onlySearch: $onlySearch /}
+								{param searchInputName: $searchInputName /}
+								{param searchValue: $searchValue /}
+								{param showAdvancedSearch: $showAdvancedSearch /}
+								{param spritemap: $spritemap /}
+							{/call}
+						{/param}
 						{param searchInputName: $searchInputName /}
 						{param searchValue: $searchValue /}
 						{param spritemap: $spritemap /}
@@ -554,6 +570,72 @@
 {/template}
 
 /**
+ * This renders the search main input.
+ */
+{template .searchInput}
+	{@param spritemap: string}
+	{@param? _handleCloseMobileSearchClick: any}
+	{@param? _handleSearchSearchClick: any}
+	{@param? contentRenderer: string}
+	{@param? disabled: bool}
+	{@param? onlySearch: bool}
+	{@param? searchInputName: string}
+	{@param? searchValue: string}
+	{@param? showAdvancedSearch: bool}
+
+	<div class="input-group">
+		<div class="input-group-item">
+			{let $inputAttributes kind="attributes"}
+				aria-label="Search"
+				{if $disabled}
+					disabled
+				{/if}
+
+				class="form-control input-group-inset input-group-inset-after"
+				name="{$searchInputName}"
+				placeholder="Search for..."
+				ref="search"
+				type="text"
+				value="{$searchValue}"
+			{/let}
+
+			<input {$inputAttributes} />
+
+			<span class="input-group-inset-item input-group-inset-item-after">
+				{if not $onlySearch}
+					{call ClayButton.render}
+						{param elementClasses: 'd-none' /}
+						{param events: ['click': $_handleCloseMobileSearchClick] /}
+						{param icon: 'times' /}
+						{param spritemap: $spritemap /}
+						{param style: 'unstyled' /}
+					{/call}
+				{/if}
+
+				{call ClayButton.render}
+					{param disabled: $disabled /}
+					{param events: ['click': $_handleSearchSearchClick] /}
+					{param icon: 'search' /}
+					{param ref: 'searchButton' /}
+					{param spritemap: $spritemap /}
+					{param style: 'unstyled' /}
+					{param type: 'submit' /}
+				{/call}
+
+				{if $showAdvancedSearch}
+					{call ClayDropdown.render}
+						{param contentRenderer: $contentRenderer /}
+						{param icon: 'angle-down' /}
+						{param items: [] /}
+						{param spritemap: $spritemap /}
+					{/call}
+				{/if}
+			</span>
+		</div>
+	</div>
+{/template}
+
+/**
  * This renders the search form.
  */
 {deltemplate ClayManagementToolbar.SearchForm}
@@ -564,6 +646,7 @@
 	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
+	{@param? searchInput: html}
 	{@param? searchInputName: string}
 	{@param? searchValue: string}
 
@@ -581,47 +664,7 @@
 		{/let}
 
 		<form {$searchFormAttributes}>
-			<div class="input-group">
-				<div class="input-group-item">
-					{let $inputAttributes kind="attributes"}
-						aria-label="Search"
-						{if $disabled}
-							disabled
-						{/if}
-
-						class="form-control input-group-inset input-group-inset-after"
-						name="{$searchInputName}"
-						placeholder="Search for..."
-						ref="search"
-						type="text"
-						value="{$searchValue}"
-					{/let}
-
-					<input {$inputAttributes} />
-
-					<span class="input-group-inset-item input-group-inset-item-after">
-						{if not $onlySearch}
-							{call ClayButton.render}
-								{param elementClasses: 'd-none' /}
-								{param events: ['click': $_handleCloseMobileSearchClick] /}
-								{param icon: 'times' /}
-								{param spritemap: $spritemap /}
-								{param style: 'unstyled' /}
-							{/call}
-						{/if}
-
-						{call ClayButton.render}
-							{param disabled: $disabled /}
-							{param events: ['click': $_handleSearchSearchClick] /}
-							{param icon: 'search' /}
-							{param ref: 'searchButton' /}
-							{param spritemap: $spritemap /}
-							{param style: 'unstyled' /}
-							{param type: 'submit' /}
-						{/call}
-					</span>
-				</div>
-			</div>
+			{$searchInput}
 		</form>
 	{/let}
 
