@@ -213,6 +213,45 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
 </div>
 `;
 
+exports[`ClayManagementToolbar should render a management toolbar with advanced search 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit">
+        <form role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+                <div class="dropdown">
+                  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down" focusable="false">
+                      <title>angle-down</title>
+                      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav"></ul>
+    </div>
+  </nav>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled"></ul>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with ascending sorting 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
