@@ -95,6 +95,10 @@
 
 .dropdown-section {
 	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+
+	.form-group {
+		margin-bottom: $dropdown-item-indicator-spacer-y;
+	}
 }
 
 .dropdown-menu {
