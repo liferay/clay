@@ -52,15 +52,17 @@ class ClayAlertBase extends Component {
 	 * @private
 	 */
 	_defaultHideAlert() {
-		this._delayTime = 0;
-		this._visible = false;
+		if (!this.isDisposed()) {
+			this._delayTime = 0;
+			this._visible = false;
 
-		if (this._timer) {
-			clearTimeout(this._timer);
-		}
+			if (this._timer) {
+				clearTimeout(this._timer);
+			}
 
-		if (this.destroyOnHide) {
-			this.dispose();
+			if (this.destroyOnHide) {
+				this.dispose();
+			}
 		}
 	}
 
