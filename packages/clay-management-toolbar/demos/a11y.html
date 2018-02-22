@@ -54,6 +54,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>With Advanced Search</h4>
+			<div id="advanced-search-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Without Search</h4>
 			<div id="without-search-block"></div>
 		</div>
@@ -186,6 +193,15 @@
 			spritemap: spritemap,
 		},
 		'#only-search-block');
+
+		//With Advanced Search
+		new metal.ClayManagementToolbar({
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			showAdvancedSearch: true,
+			spritemap: spritemap,
+		},
+		'#advanced-search-block');
 
 		//Without Search
 		new metal.ClayManagementToolbar({
