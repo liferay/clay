@@ -78,7 +78,10 @@ const ChartBase = {
 			const config = this._constructChartConfig();
 			this.bbChart = bb.generate(config);
 
-			this.on('columnsChanged', this._handleColumnsOrDataChanged.bind(this));
+			this.on(
+				'columnsChanged',
+				this._handleColumnsOrDataChanged.bind(this)
+			);
 			this.on('dataChanged', this._handleColumnsOrDataChanged.bind(this));
 			this.on('groupsChanged', this._handleGroupsChanged.bind(this));
 			this.on('_loadingChanged', this._handleLoadingChanged.bind(this));
@@ -768,7 +771,7 @@ ChartBase.STATE = {
 			regions: Config.array(),
 			type: Config.oneOf(types.all),
 			x: Config.string(),
-		}),
+		})
 	),
 
 	/**
