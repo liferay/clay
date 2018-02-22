@@ -4,7 +4,7 @@ import Component from 'metal-component';
 import dom from 'metal-dom';
 import Soy from 'metal-soy';
 
-import templates from './MainNavigation.soy';
+import templates from './MainNavigation.soy.js';
 
 class MainNavigation extends Component {
 	handleCollapseClick_(event) {
