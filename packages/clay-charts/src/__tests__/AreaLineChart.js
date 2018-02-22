@@ -20,7 +20,7 @@ afterAll(() => {
 describe('AreaLineChart', function() {
 	it('should be pass correct type to billboard.js', async () => {
 		await new AreaLineChart({
-			columns: [],
+			data: [],
 		});
 
 		const config = bb.generate.mock.calls[0][0];

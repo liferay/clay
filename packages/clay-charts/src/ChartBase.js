@@ -74,14 +74,12 @@ const ChartBase = {
 		const data = this.data || this.columns;
 
 		this._resolveData(data).then(data => {
-			this.columns = data;
-			this.data = data;
-
+			this._resolvedData = data;
 			const config = this._constructChartConfig();
 			this.bbChart = bb.generate(config);
 
-			this.on('columnsChanged', this._handleColumnsChanged.bind(this));
-			this.on('dataChanged', this._handleDataChanged.bind(this));
+			this.on('columnsChanged', this._handleColumnsOrDataChanged.bind(this));
+			this.on('dataChanged', this._handleColumnsOrDataChanged.bind(this));
 			this.on('groupsChanged', this._handleGroupsChanged.bind(this));
 			this.on('_loadingChanged', this._handleLoadingChanged.bind(this));
 			this.on('regionsChanged', this._handleRegionsChanged.bind(this));
@@ -200,7 +198,7 @@ const ChartBase = {
 	 * @protected
 	 */
 	_constructColumnsConfig: function() {
-		const {columns} = this._getStateObj();
+		const columns = this._resolvedData;
 		const config = {
 			columns: this._createColumnsArray(columns),
 		};
@@ -431,36 +429,29 @@ const ChartBase = {
 	},
 
 	/**
-	 * Maps `columns` state to chart via `bb.load` method.
-	 * @protected
-	 */
-	_handleColumnsChanged: function({prevVal}) {
-		const data = this._constructDataConfig(false);
-		const newVal = data.columns;
-		prevVal = this._createColumnsArray(prevVal);
-
-		const removedIds = this._resolveRemovedColumns(newVal, prevVal);
-
-		if (removedIds.length) {
-			data.unload = removedIds;
-		}
-
-		this.bbChart.load(data);
-
-		if (data.xs) {
-			this.bbChart.xs(this._mapXSValues(data.xs));
-		}
-	},
-
-	/**
-	 * Handles `data` changes.
+	 * Maps `columns` or `data` state to chart via `bb.load` method.
 	 * @param {Object} event The change event.
 	 * @protected
-	 * @return {Promise}
 	 */
-	_handleDataChanged(event) {
-		return this.resolveData_(event.newVal).then(data => {
-			this.columns = data;
+	_handleColumnsOrDataChanged: function(event) {
+		this._resolveData(event.newVal).then(val => {
+			const prevVal = this._createColumnsArray(this._resolvedData);
+
+			this._resolvedData = val;
+
+			const data = this._constructDataConfig(false);
+			const newVal = data.columns;
+			const removedIds = this._resolveRemovedColumns(newVal, prevVal);
+
+			if (removedIds.length) {
+				data.unload = removedIds;
+			}
+
+			this.bbChart.load(data);
+
+			if (data.xs) {
+				this.bbChart.xs(this._mapXSValues(data.xs));
+			}
 		});
 	},
 
@@ -765,24 +756,20 @@ ChartBase.STATE = {
 	 * @default undefined
 	 * @deprecated since 2.0.0-rc.2
 	 */
-	columns: Config.oneOfType([
-		Config.arrayOf(
-			Config.shapeOf({
-				axis: Config.oneOf(['y', 'y2']),
-				class: Config.string(),
-				color: Config.string(),
-				data: Config.array().required(),
-				hide: Config.bool(),
-				id: Config.required().string(),
-				name: Config.string(),
-				regions: Config.array(),
-				type: Config.oneOf(types.all),
-				x: Config.string(),
-			})
-		),
-		Config.func(),
-		Config.string(),
-	]),
+	columns: Config.arrayOf(
+		Config.shapeOf({
+			axis: Config.oneOf(['y', 'y2']),
+			class: Config.string(),
+			color: Config.string(),
+			data: Config.array().required(),
+			hide: Config.bool(),
+			id: Config.required().string(),
+			name: Config.string(),
+			regions: Config.array(),
+			type: Config.oneOf(types.all),
+			x: Config.string(),
+		}),
+	),
 
 	/**
 	 * Data that will be rendered to the chart.

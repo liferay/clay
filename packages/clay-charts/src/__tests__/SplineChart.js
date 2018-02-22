@@ -20,7 +20,7 @@ afterAll(() => {
 describe('SplineChart', function() {
 	it('should be pass correct type to billboard.js', async () => {
 		await new SplineChart({
-			columns: [],
+			data: [],
 		});
 
 		const config = bb.generate.mock.calls[0][0];

@@ -17,10 +17,10 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe.only('Chart', () => {
+describe('Chart', () => {
 	it('should be pass correctly formatted configuration options to billboard.js', async () => {
 		const chart = await new Chart({
-			columns: [],
+			data: [],
 		});
 		const config = bb.generate.mock.calls[0][0];
 		expect(config.bindto).toBe(chart.refs.chart);
@@ -31,7 +31,7 @@ describe.only('Chart', () => {
 
 	it('should format columns array into billboard.js compatible data', async () => {
 		await new Chart({
-			columns: [
+			data: [
 				{
 					axis: 'y',
 					class: 'data1',
@@ -86,7 +86,7 @@ describe.only('Chart', () => {
 		});
 
 		const chart = await new Chart({
-			columns: [],
+			data: [],
 			type: 'line',
 		});
 
@@ -95,7 +95,7 @@ describe.only('Chart', () => {
 		expect(transformMock.mock.calls[0][0]).toBe('spline');
 	});
 
-	it('should rerender chart when new columns are passed', async () => {
+	it('should rerender chart when new data is passed', async () => {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
@@ -103,7 +103,7 @@ describe.only('Chart', () => {
 		});
 
 		const chart = await new Chart({
-			columns: [
+			data: [
 				{
 					id: 'data1',
 					data: [1, 2, 3],
@@ -111,19 +111,23 @@ describe.only('Chart', () => {
 			],
 		});
 
-		chart.columns = [
-			{
-				id: 'data1',
-				data: [1, 2, 3, 4],
-			},
-		];
+		/** */
+		async function updateData() {
+			chart.data = [
+				{
+					id: 'data1',
+					data: [1, 2, 3, 4],
+				},
+			];
+		}
+		await updateData();
 
 		const config = JSON.stringify(loadMock.mock.calls[0][0]);
 
 		expect(config).toMatchSnapshot();
 	});
 
-	it('should unload removed columns when new columns are passed', async () => {
+	it('should unload removed data when new data is passed', async () => {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
@@ -131,7 +135,7 @@ describe.only('Chart', () => {
 		});
 
 		const chart = await new Chart({
-			columns: [
+			data: [
 				{
 					id: 'data1',
 					data: [1, 2, 3],
@@ -139,12 +143,17 @@ describe.only('Chart', () => {
 			],
 		});
 
-		chart.columns = [
-			{
-				id: 'data2',
-				data: [1, 2, 3],
-			},
-		];
+		/** */
+		async function updateData() {
+			chart.data = [
+				{
+					id: 'data2',
+					data: [1, 2, 3],
+				},
+			];
+		}
+
+		await updateData();
 
 		const config = JSON.stringify(loadMock.mock.calls[0][0]);
 
