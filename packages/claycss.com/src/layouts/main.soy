@@ -1,10 +1,11 @@
 {namespace main}
 
 /**
- * @param content
- * @param? elementClasses
  */
 {template .render}
+	{@param content: ?}
+	{@param? elementClasses: string}
+
 	<div class="{$elementClasses ?: 'main'}">
 		<main class="content">
 			{$content}
@@ -13,9 +14,9 @@
 {/template}
 
 /**
- * @param site
  */
 {template .topbar}
+	{@param site: ?}
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		{call .logo data="all" /}
@@ -23,18 +24,20 @@
 {/template}
 
 /**
- * @param site
  */
 {template .logo}
+	{@param site: ?}
+
 	<div class="navbar-header navbar-header-left-xs">
 		<a class="navbar-brand" href="/">{$site.title}</a>
 	</div>
 {/template}
 
 /**
- * @param site
  */
 {template .menu}
+	{@param site: ?}
+
 	<div class="navbar-header navbar-header-right">
 		<button aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbarCollapseSite" data-toggle="collapse" type="button">
 			<svg class="lexicon-icon">

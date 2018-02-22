@@ -1,11 +1,12 @@
 {namespace MainNavigation}
 
 /**
- * @param section
- * @param? currentDepth
- * @param? depth
  */
 {template .render}
+	{@param section: ?}
+	{@param? currentDepth: number}
+	{@param? depth: number}
+
 	{let $localCurrentDepth: $currentDepth ?: 0 /}
 
 	{if $section.children}
@@ -34,9 +35,10 @@
 {/template}
 
 /**
- * @param page
  */
 {template .anchor}
+	{@param page: ?}
+
 	{if $page.icon}
 		<svg class="clay-icon icon-monospaced">
 			<use xlink:href="/images/icons/lexicon-site-icons.svg#{$page.icon}" />
