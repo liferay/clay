@@ -1,6 +1,6 @@
 {
   "name": "clay-card",
-  "version": "2.0.0-rc.2",
+  "version": "2.0.0-rc.3",
   "description": "Metal ClayCard component",
   "license": "BSD",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-card",
@@ -27,12 +27,12 @@
     "metal"
   ],
   "dependencies": {
-    "clay-checkbox": "^2.0.0-rc.2",
-    "clay-dropdown": "^2.0.0-rc.2",
-    "clay-icon": "^2.0.0-rc.2",
-    "clay-label": "^2.0.0-rc.2",
-    "clay-link": "^2.0.0-rc.2",
-    "clay-sticker": "^2.0.0-rc.2",
+    "clay-checkbox": "^2.0.0-rc.3",
+    "clay-dropdown": "^2.0.0-rc.3",
+    "clay-icon": "^2.0.0-rc.3",
+    "clay-label": "^2.0.0-rc.3",
+    "clay-link": "^2.0.0-rc.3",
+    "clay-sticker": "^2.0.0-rc.3",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
@@ -45,8 +45,8 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay-components": "^1.0.0-alpha.2",
-    "clay": "^2.0.0-rc.2",
+    "browserslist-config-clay-components": "^2.0.0-rc.3",
+    "clay": "^2.0.0-rc.3",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^6.0.0",
     "webpack": "^3.0.0"
