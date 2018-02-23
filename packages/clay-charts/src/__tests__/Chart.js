@@ -167,4 +167,55 @@ describe('Chart', () => {
 			];
 		});
 	});
+
+	it('should consume `data` as a Promise', done => {
+		const data = [
+			{
+				id: 'data2',
+				data: [1, 2, 3],
+			},
+		];
+
+		const chart = new Chart({
+			data() {
+				return Promise.resolve(data);
+			},
+		});
+
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
+			expect(config.data.columns[0].length).toBe(4);
+			expect(config.data.columns[0][0]).toBe('data2');
+			expect(config.data.columns[0][1]).toBe(1);
+			expect(config.data.columns[0][2]).toBe(2);
+			expect(config.data.columns[0][3]).toBe(3);
+			expect(chart._resolvedData).toBe(data);
+			done();
+		});
+	});
+
+	it('should consume data as an Array', done => {
+		const data = [
+			{
+				id: 'data1',
+				data: [4, 5, 6, 7],
+			},
+		];
+
+		const chart = new Chart({
+			data: data,
+		});
+
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
+			expect(config.data.columns[0].length).toBe(5);
+			expect(config.data.columns[0][0]).toBe('data1');
+			expect(config.data.columns[0][1]).toBe(4);
+			expect(config.data.columns[0][2]).toBe(5);
+			expect(config.data.columns[0][3]).toBe(6);
+			expect(config.data.columns[0][4]).toBe(7);
+			expect(chart._resolvedData).toBe(data);
+			done();
+		});
+	});
 });
