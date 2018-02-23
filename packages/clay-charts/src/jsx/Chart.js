@@ -11,7 +11,7 @@ class ChartJSX extends JSXComponent {
 	 * @inheritDoc
 	 */
 	render() {
-		const loading = this.props.loading;
+		const loading = this.props._loading;
 
 		return (
 			<div class="metal-chart-container">

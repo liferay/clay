@@ -1,3 +1,4 @@
+import {isFunction, isObject, isString} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -52,7 +53,15 @@ class Geomap extends Component {
 		this.path = d3.geoPath().projection(this.projection);
 		this._selected = null;
 
-		d3.json(this.data, this._onDataLoad.bind(this));
+		this._onDataLoadHandler = this._onDataLoad.bind(this);
+
+		this._resolveData()
+			.then(val => {
+				this._onDataLoadHandler.apply(this, [null, val]);
+			})
+			.catch(err => {
+				this._onDataLoadHandler.apply(this, [err, null]);
+			});
 	}
 
 	/**
@@ -162,6 +171,28 @@ class Geomap extends Component {
 			.on('mouseout', this._handleMouseOut.bind(this))
 			.on('mouseover', this._handleMouseOver.bind(this));
 	}
+
+	/**
+	 * @return {Promise}
+	 * @protected
+	 */
+	_resolveData() {
+		return new Promise((resolve, reject) => {
+			if (isString(this.data)) {
+				d3.json(this.data, (err, data) => {
+					if (err) {
+						reject(err);
+					} else {
+						resolve(data);
+					}
+				});
+			} else if (isObject(this.data) && !isFunction(this.data)) {
+				resolve(this.data);
+			} else if (isFunction(this.data)) {
+				resolve(this.data());
+			}
+		});
+	}
 }
 
 Soy.register(Geomap, templates);
@@ -234,13 +265,17 @@ Geomap.STATE = {
 	}),
 
 	/**
-	 * Path to the geo-json data
+	 * Geo-json data
 	 * @instance
 	 * @memberof Geomap
-	 * @type {?String|undefined}
+	 * @type {?Function|?Object|?String}
 	 * @default undefined
 	 */
-	data: Config.string().required(),
+	data: Config.oneOfType([
+		Config.func(),
+		Config.object(),
+		Config.string(),
+	]).required(),
 };
 
 export {Geomap};
