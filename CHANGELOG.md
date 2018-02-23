@@ -1,10 +1,58 @@
 # Change Log
 
+## [v2.0.0-rc.3](https://github.com/liferay/clay/tree/v2.0.0-rc.3) (2018-02-23)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.2...v2.0.0-rc.3)
+
+**Implemented enhancements:**
+
+- Add Advanced Search to ClayManagementToolbar [\#609](https://github.com/liferay/clay/issues/609)
+- Change API for the stickers on ClayCards [\#603](https://github.com/liferay/clay/issues/603)
+- Dropdown trigger need space between icon and label when both are passed [\#597](https://github.com/liferay/clay/issues/597)
+- Create `data` API to replace `columns` in Charts [\#526](https://github.com/liferay/clay/issues/526)
+
+**Fixed bugs:**
+
+- Prevent component from breaking during server side rendering [\#626](https://github.com/liferay/clay/issues/626)
+- Range in ClayPagination is wrong [\#623](https://github.com/liferay/clay/issues/623)
+- Button toggle from site menu is broken on Mobile [\#615](https://github.com/liferay/clay/issues/615)
+- The tick count for axisY should expect a number not a bool [\#610](https://github.com/liferay/clay/issues/610)
+- Safari: Card Page doesn't properly layout cards [\#590](https://github.com/liferay/clay/issues/590)
+
+**Closed issues:**
+
+- Migrate site to Electric 3 [\#617](https://github.com/liferay/clay/issues/617)
+- Update some Button markups, Dropdowns and Subnav in claycss [\#613](https://github.com/liferay/clay/issues/613)
+- `.table` should have border-bottom and content should be vertically centered [\#594](https://github.com/liferay/clay/issues/594)
+- Form Inline from BS4 is not supported by Clay [\#592](https://github.com/liferay/clay/issues/592)
+- ClayAlert disposed instances issues [\#582](https://github.com/liferay/clay/issues/582)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.3 [\#632](https://github.com/liferay/clay/pull/632) ([jbalsas](https://github.com/jbalsas))
+- \#594 Update `.table` styles to match Lexicon 2 [\#631](https://github.com/liferay/clay/pull/631) ([carloslancha](https://github.com/carloslancha))
+- Migrate claycss.com to electric 3 | Fixes \#617 [\#630](https://github.com/liferay/clay/pull/630) ([carloslancha](https://github.com/carloslancha))
+- Create `data` API to replace `columns` in Charts [\#629](https://github.com/liferay/clay/pull/629) ([julien](https://github.com/julien))
+- Check if the dispose has already been done and does nothing | Fixes \#582 [\#625](https://github.com/liferay/clay/pull/625) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fix ClayPagination range | Fixes \#623 [\#624](https://github.com/liferay/clay/pull/624) ([carloslancha](https://github.com/carloslancha))
+- Add Advanced Search to ClayManagementToolbar | Fixes \#609 [\#622](https://github.com/liferay/clay/pull/622) ([carloslancha](https://github.com/carloslancha))
+- Add Sidebar.js for toggle classes of sidebar | Fixes \#615 [\#616](https://github.com/liferay/clay/pull/616) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update some Button markups, Dropdowns and Subnav in claycss | Fixes \#613 [\#614](https://github.com/liferay/clay/pull/614) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Regen snapshots | Fixes \#481 [\#612](https://github.com/liferay/clay/pull/612) ([carloslancha](https://github.com/carloslancha))
+- \#610 Check for Number instead of Boolean on axisY.tick.count prop [\#611](https://github.com/liferay/clay/pull/611) ([kienD](https://github.com/kienD))
+- Add search results bar in ClayManagementToolbar | Fixes \#572 [\#608](https://github.com/liferay/clay/pull/608) ([carloslancha](https://github.com/carloslancha))
+- Change API for the stickers on ClayCards | Fixes \#603 [\#606](https://github.com/liferay/clay/pull/606) ([carloslancha](https://github.com/carloslancha))
+- Dropdown trigger need space between icon and label when both are passed | Fixes \#597 [\#599](https://github.com/liferay/clay/pull/599) ([carloslancha](https://github.com/carloslancha))
+- Update metal-soy in clay-charts [\#596](https://github.com/liferay/clay/pull/596) ([carloslancha](https://github.com/carloslancha))
+- Breaking: \(Fixes \#592\) Remove references to BS4's `.form-inline` comp… [\#593](https://github.com/liferay/clay/pull/593) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#590\) Mixin `clay-custom-grid-columns` added option to… [\#591](https://github.com/liferay/clay/pull/591) ([pat270](https://github.com/pat270))
+- Update the URL of the packages in the package.json [\#589](https://github.com/liferay/clay/pull/589) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.0.0-rc.2](https://github.com/liferay/clay/tree/v2.0.0-rc.2) (2018-02-20)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.1...v2.0.0-rc.2)
 
 **Implemented enhancements:**
 
+- Add search results bar in ClayManagementToolbar [\#572](https://github.com/liferay/clay/issues/572)
 - Implement Search only content markup in ManagmentToolbar [\#543](https://github.com/liferay/clay/issues/543)
 
 **Fixed bugs:**
@@ -135,7 +183,7 @@
 **Merged pull requests:**
 
 - Generates CHANGELOG [\#480](https://github.com/liferay/clay/pull/480) ([jbalsas](https://github.com/jbalsas))
-- Publish lib dir to npm [\#478](https://github.com/liferay/clay/pull/478) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Publish lib dir to npm [\#478](https://github.com/liferay/clay/pull/478) ([robframpton](https://github.com/robframpton))
 
 ## [v2.0.0-beta.7](https://github.com/liferay/clay/tree/v2.0.0-beta.7) (2018-01-25)
 [Full Changelog](https://github.com/liferay/clay/compare/v1.0.0-alpha.16...v2.0.0-beta.7)
@@ -165,15 +213,15 @@
 - \#453 Added `.container-form-lg`, `.menubar-vertical-expand-lg`, and demos to break at lg breakpoint [\#471](https://github.com/liferay/clay/pull/471) ([pat270](https://github.com/pat270))
 - Update icons url [\#470](https://github.com/liferay/clay/pull/470) ([carloslancha](https://github.com/carloslancha))
 - Claycss general adjustment [\#469](https://github.com/liferay/clay/pull/469) ([marcoscv-work](https://github.com/marcoscv-work))
-- Update yarn.lock [\#468](https://github.com/liferay/clay/pull/468) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Update yarn.lock [\#468](https://github.com/liferay/clay/pull/468) ([robframpton](https://github.com/robframpton))
 - Add disabled state to ClayManagementToolbar | Fixes \#439 [\#465](https://github.com/liferay/clay/pull/465) ([carloslancha](https://github.com/carloslancha))
-- Update atlas.css urls in demos [\#464](https://github.com/liferay/clay/pull/464) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Update atlas.css urls in demos [\#464](https://github.com/liferay/clay/pull/464) ([robframpton](https://github.com/robframpton))
 - Fix icon markup on ClayHorizontalCard | Fixes \#462 [\#463](https://github.com/liferay/clay/pull/463) ([carloslancha](https://github.com/carloslancha))
 - Use new markup for ClayDropdown  | Fixes \#425 and \#450 [\#461](https://github.com/liferay/clay/pull/461) ([carloslancha](https://github.com/carloslancha))
-- Run npm compile script [\#457](https://github.com/liferay/clay/pull/457) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Run npm compile script [\#457](https://github.com/liferay/clay/pull/457) ([robframpton](https://github.com/robframpton))
 - Update some markups at claycss.com [\#455](https://github.com/liferay/clay/pull/455) ([matuzalemsteles](https://github.com/matuzalemsteles))
 - Fix render unnecessary custom-control-label-text on other components in ClayCheckbox [\#451](https://github.com/liferay/clay/pull/451) ([matuzalemsteles](https://github.com/matuzalemsteles))
-- Build [\#449](https://github.com/liferay/clay/pull/449) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Build [\#449](https://github.com/liferay/clay/pull/449) ([robframpton](https://github.com/robframpton))
 - Update: \(Fixes \#447\) Forms in ios have shadow on top due to default b… [\#448](https://github.com/liferay/clay/pull/448) ([pat270](https://github.com/pat270))
 - Clay Table Updates [\#446](https://github.com/liferay/clay/pull/446) ([pat270](https://github.com/pat270))
 - Fixes \#429 and \#444 [\#445](https://github.com/liferay/clay/pull/445) ([carloslancha](https://github.com/carloslancha))
@@ -183,12 +231,12 @@
 - Managementtoolbar markup fix [\#440](https://github.com/liferay/clay/pull/440) ([marcoscv-work](https://github.com/marcoscv-work))
 - Update: \(\#429\) Badges added option to configure `$badge-spacer-x` and… [\#438](https://github.com/liferay/clay/pull/438) ([pat270](https://github.com/pat270))
 - Update Bootstrap to 572d00a \(v4.0.0\) [\#437](https://github.com/liferay/clay/pull/437) ([pat270](https://github.com/pat270))
-- Remove unused dep from clay-portal [\#436](https://github.com/liferay/clay/pull/436) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Remove unused dep from clay-portal [\#436](https://github.com/liferay/clay/pull/436) ([robframpton](https://github.com/robframpton))
 - Search icon fix [\#435](https://github.com/liferay/clay/pull/435) ([marcoscv-work](https://github.com/marcoscv-work))
 - Remove lint-staged and related tasks [\#434](https://github.com/liferay/clay/pull/434) ([carloslancha](https://github.com/carloslancha))
 - Add BubbleChart [\#433](https://github.com/liferay/clay/pull/433) ([julien](https://github.com/julien))
 - Updates Sidebar and related components to Lexicon V2 [\#432](https://github.com/liferay/clay/pull/432) ([pat270](https://github.com/pat270))
-- Implement Portals for clay-dropdown components [\#428](https://github.com/liferay/clay/pull/428) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Implement Portals for clay-dropdown components [\#428](https://github.com/liferay/clay/pull/428) ([robframpton](https://github.com/robframpton))
 - Card markup update [\#424](https://github.com/liferay/clay/pull/424) ([marcoscv-work](https://github.com/marcoscv-work))
 
 ## [v1.0.0-alpha.16](https://github.com/liferay/clay/tree/v1.0.0-alpha.16) (2018-01-17)
@@ -205,7 +253,7 @@
 - Update css classes for checkbox,list and radio [\#415](https://github.com/liferay/clay/pull/415) ([julien](https://github.com/julien))
 - Empty string for contentRenderers are mandatory to make it work in java [\#414](https://github.com/liferay/clay/pull/414) ([carloslancha](https://github.com/carloslancha))
 - Fix ClayPagination range when current page is last page [\#413](https://github.com/liferay/clay/pull/413) ([carloslancha](https://github.com/carloslancha))
-- Ensure that NODE\_ENV variable is set to 'test' on all environments to avoid inconsistencies during Metal's render/attach lifecycle [\#411](https://github.com/liferay/clay/pull/411) ([Robert-Frampton](https://github.com/Robert-Frampton))
+- Ensure that NODE\_ENV variable is set to 'test' on all environments to avoid inconsistencies during Metal's render/attach lifecycle [\#411](https://github.com/liferay/clay/pull/411) ([robframpton](https://github.com/robframpton))
 
 ## [v.1.0.0-alpha.15](https://github.com/liferay/clay/tree/v.1.0.0-alpha.15) (2018-01-15)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-beta.6...v.1.0.0-alpha.15)
