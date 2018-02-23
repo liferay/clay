@@ -313,6 +313,15 @@ ClayManagementToolbar.STATE = {
 	selectedItems: Config.number(),
 
 	/**
+	 * Flag to indicate if advanced search should be shown or not.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default false
+	 */
+	showAdvancedSearch: Config.bool().value(false),
+
+	/**
 	 * Flag to indicate if the Info button should be shown or not.
 	 * @instance
 	 * @memberof ClayManagementToolbar
