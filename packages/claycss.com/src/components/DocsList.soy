@@ -1,9 +1,10 @@
 {namespace DocsList}
 
 /**
- * @param section
  */
 {template .render}
+	{@param section: ?}
+
 	{if $section.children}
 		<div class="docs-list row">
 			{foreach $childId in $section.childIds}
@@ -22,9 +23,10 @@
 {/template}
 
 /**
- * @param page
  */
 {template .anchor}
+	{@param page: ?}
+
 	<div class="docs-item">
 		<a href="{$page.url}">
 			<span>{$page.title}</span>

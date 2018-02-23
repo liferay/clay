@@ -1,6 +1,7 @@
 import Component from 'metal-component';
 import {Config} from 'metal-state';
 import {domData} from 'metal-dom';
+import {isServerSide} from 'metal';
 
 /**
  * Clay Component.
@@ -11,6 +12,10 @@ class ClayComponent extends Component {
 	 */
 	attached() {
 		super.attached();
+
+		if (isServerSide()) {
+			return;
+		}
 
 		let getAttribute = this.element.getAttribute.bind(this.element);
 

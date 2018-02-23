@@ -1,6 +1,7 @@
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
+import {isServerSide} from 'metal';
 import * as d3 from 'd3';
 
 import templates from './Geomap.soy.js';
@@ -13,6 +14,10 @@ class Geomap extends Component {
 	 * @inheritDoc
 	 */
 	attached() {
+		if (isServerSide()) {
+			return;
+		}
+
 		const w =
 			typeof this._width === 'string' ? this._width : `${this._width}px`;
 		const h =
@@ -48,6 +53,19 @@ class Geomap extends Component {
 		this._selected = null;
 
 		d3.json(this.data, this._onDataLoad.bind(this));
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		if (isServerSide()) {
+			return;
+		}
+
+		if (this.svg) {
+			this.svg.remove();
+		}
 	}
 
 	/**

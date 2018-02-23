@@ -7,9 +7,10 @@ title: "Search"
 {namespace pageDocsSearch}
 
 /**
- * @param site
  */
 {template .render}
+	{@param site: ?}
+
 	{call main.render data="all"}
 		{param elementClasses: 'docs' /}
 		{param content kind="html"}
