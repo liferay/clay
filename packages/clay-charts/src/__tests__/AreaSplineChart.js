@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import AreaSplineChart from '../AreaSplineChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('AreaSplineChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new AreaSplineChart({
-			columns: [],
+describe('AreaSplineChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new AreaSplineChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('area-spline');
+			expect(config.data.type).toBe('area-spline');
+			done();
+		});
 	});
 });

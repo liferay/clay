@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import StepChart from '../StepChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('StepChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new StepChart({
-			columns: [],
+describe('StepChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new StepChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('step');
+			expect(config.data.type).toBe('step');
+			done();
+		});
 	});
 });

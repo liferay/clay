@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import AreaLineChart from '../AreaLineChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('AreaLineChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new AreaLineChart({
-			columns: [],
+describe('AreaLineChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new AreaLineChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('area');
+			expect(config.data.type).toBe('area');
+			done();
+		});
 	});
 });

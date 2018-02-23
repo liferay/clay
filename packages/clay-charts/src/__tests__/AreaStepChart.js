@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import AreaStepChart from '../AreaStepChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('AreaStepChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new AreaStepChart({
-			columns: [],
+describe('AreaStepChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new AreaStepChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('area-step');
+			expect(config.data.type).toBe('area-step');
+			done();
+		});
 	});
 });

@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import PieChart from '../PieChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('PieChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new PieChart({
-			columns: [],
+describe('PieChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new PieChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('pie');
+			expect(config.data.type).toBe('pie');
+			done();
+		});
 	});
 });

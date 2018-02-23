@@ -1,6 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Geomap should not throw an error 1`] = `
+exports[`Geomap should accept data as a function 1`] = `
+<div style="width: 100%; height: 100%;">
+  <svg width="100%" height="100%">
+    <rect fill="rgba(1, 1, 1, 0)" width="100%" height="100%"></rect>
+    <g>
+      <g></g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Geomap should accept data as a string 1`] = `
+<div style="width: 100%; height: 100%;">
+  <svg width="100%" height="100%">
+    <rect fill="rgba(1, 1, 1, 0)" width="100%" height="100%"></rect>
+    <g>
+      <g></g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Geomap should accept data as an object 1`] = `
 <div style="width: 100%; height: 100%;">
   <svg width="100%" height="100%">
     <rect fill="rgba(1, 1, 1, 0)" width="100%" height="100%"></rect>
