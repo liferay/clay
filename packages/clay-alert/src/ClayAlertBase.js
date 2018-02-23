@@ -4,6 +4,7 @@ import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
+import {isServerSide} from 'metal';
 
 import templates from './ClayAlertBase.soy.js';
 
@@ -22,6 +23,10 @@ class ClayAlertBase extends Component {
 	 * @inheritDoc
 	 */
 	rendered() {
+		if (isServerSide()) {
+			return;
+		}
+
 		if (
 			this.autoClose &&
 			(this.type === 'stripe' || this.type === 'toast')
@@ -52,15 +57,17 @@ class ClayAlertBase extends Component {
 	 * @private
 	 */
 	_defaultHideAlert() {
-		this._delayTime = 0;
-		this._visible = false;
+		if (!this.isDisposed()) {
+			this._delayTime = 0;
+			this._visible = false;
 
-		if (this._timer) {
-			clearTimeout(this._timer);
-		}
+			if (this._timer) {
+				clearTimeout(this._timer);
+			}
 
-		if (this.destroyOnHide) {
-			this.dispose();
+			if (this.destroyOnHide) {
+				this.dispose();
+			}
 		}
 	}
 

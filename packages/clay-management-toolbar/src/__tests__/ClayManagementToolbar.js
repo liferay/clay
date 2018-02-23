@@ -73,6 +73,15 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with advanced search', () => {
+		managementToolbar = new ClayManagementToolbar({
+			showAdvancedSearch: true,
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with selection enabled', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
@@ -391,6 +400,42 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with search results bar', () => {
+		managementToolbar = new ClayManagementToolbar({
+			id: 'myId',
+			searchValue: 'foo',
+			selectable: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with search results bar only when totalItems is greater than zero', () => {
+		managementToolbar = new ClayManagementToolbar({
+			id: 'myId',
+			searchValue: 'foo',
+			selectable: true,
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with search results bar when state is active', () => {
+		managementToolbar = new ClayManagementToolbar({
+			id: 'myId',
+			searchValue: 'foo',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a selectable management toolbar and emit an event on checkbox click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
@@ -641,6 +686,25 @@ describe('ClayManagementToolbar', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
 			'infoButtonClicked',
+			expect.any(Object)
+		);
+	});
+
+	it('should render a management toolbar and emit an event on clear button click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			searchValue: 'foo',
+			selectable: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.clearSearch.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'clearButtonClicked',
 			expect.any(Object)
 		);
 	});

@@ -158,6 +158,15 @@ ClayDropdown.STATE = {
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
+
+	/**
+	 * Size of the trigger button.
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	triggerSize: Config.oneOf(['sm']),
 };
 
 defineWebComponent('clay-dropdown', ClayDropdown);

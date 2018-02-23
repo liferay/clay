@@ -10,6 +10,18 @@
 	@return $val;
 }
 
+// Returns a number with the opposite sign, generally used for null values so
+// Sass doesn't output value '-null'
+// @param $num - a number
+
+@function math-sign($num) {
+	@if (type-of($num) == 'number') {
+		@return -($num);
+	}
+
+	@return null;
+}
+
 // Helper for displaying warning messages for required variables
 // @param $var - The variable to check
 // @param $msg - The error message

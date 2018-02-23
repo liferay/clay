@@ -4,7 +4,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
 <div class="clay-pagination-bar pagination-bar">
   <div class="dropdown pagination-items-per-page">
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
@@ -58,7 +58,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
 <div class="clay-pagination-bar pagination-bar my-custom-class">
   <div class="dropdown pagination-items-per-page">
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
@@ -112,7 +112,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
 <div class="clay-pagination-bar pagination-bar" id="myId">
   <div class="dropdown pagination-items-per-page">
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
@@ -166,7 +166,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
 <div class="clay-pagination-bar pagination-bar">
   <div class="dropdown pagination-items-per-page">
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
@@ -220,7 +220,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
 <div class="clay-pagination-bar pagination-bar">
   <div class="dropdown pagination-items-per-page">
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
@@ -277,7 +277,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
 <div class="clay-pagination-bar pagination-bar">
   <div class="dropdown pagination-items-per-page">
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
@@ -334,7 +334,7 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
 <div class="clay-pagination-bar pagination-bar">
   <div class="dropdown pagination-items-per-page">
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>

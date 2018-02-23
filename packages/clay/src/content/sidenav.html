@@ -16,11 +16,11 @@ section: Components (JS)
 </head>
 
 <body>
-    <div class="sidenav-container" id="mySidenavContainerId">
-        <a class="btn btn-default sidenav-toggler" href="#mySidenavContainerId">
-            <span class="glyphicon glyphicon-align-justify"></span> Toggle
-        </a>
+    <a class="btn btn-secondary sidenav-toggler" href="#mySidenavContainerId">
+        Toggle
+    </a>
 
+    <div class="sidenav-container" id="mySidenavContainerId">
         <div class="sidenav-menu-slider">
             <div class="sidenav-menu">
                 ... Your Side Nav Content ...
@@ -39,6 +39,7 @@ section: Components (JS)
             content: '.sidenav-content', // The class or ID of the content. Default: '.sidenav-content'.
             equalHeight: true, // The height of content and navigation should be equal.
             gutter: '15px', // The space between the sidenav-slider and the sidenav-content. Default: 15px.
+            heightType: null, // Calculates the height of sidenav when type is relative. Possible values: `fullHeight`, `equalHeight`
             loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>', // Loading indicator template
             navigation: '.sidenav-menu-slider', // The class or ID of the slider. Default: '.sidenav-menu-slider'.
             position: 'left', // The position of the sidenav-slider. Possible values: left, right. Default: 'left'.
@@ -64,7 +65,7 @@ section: Components (JS)
 			Avoid the flash of unstyled content when using the Javascript api by adding the class <span class="text-danger">sidenav-js-fouc</span> to the <span class="text-danger">sidenav-container</span>.
 		</div>
 
-		<button class="active btn btn-default open sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
+		<button class="active btn btn-secondary open sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
 			Sidenav Toggler
 		</button>
 
@@ -87,7 +88,7 @@ section: Components (JS)
 
 <div class="clay-site-row-spacer row sidenav-demo-container">
 	<div class="col-md-12">
-		<button class="active btn btn-default open sidenav-toggler1" style="margin-bottom:5px;">
+		<button class="active btn btn-secondary open sidenav-toggler1" style="margin-bottom:5px;">
 			Sidenav Toggler 1
 		</button>
 
@@ -119,53 +120,38 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" id="simpleToggle1">Simple Sidenav Toggler</a>
+			<a class="btn btn-secondary" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" id="simpleToggle1">Simple Sidenav Toggler</a>
 
-			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav">
+			<a class="btn btn-secondary" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav">
 				Another Simple Sidenav Toggler
 			</a>
 		</div>
 
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
-			<div class="sidebar sidebar-default sidenav-menu">
-				<div class="sidebar-header">
-					<ul class="sidebar-actions">
-						<li>
-							<a class="sidenav-close" href="#1" id="sidenavClose1">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-								</svg>
-							</a>
-						</li>
-					</ul>
-
-					<a class="sidebar-title" href="#1">
-						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-staging sticker sticker-default sticker-static">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
-						</svg>
-						<span>Simple Sidenav</span>
-					</a>
-				</div>
-
-				<div class="sidebar-body"></div>
-
-				<div class="sidebar-footer">
-					<div class="nameplate">
-						<div class="nameplate-field">
-							<div class="user-icon user-icon-warning">
-								:D
-							</div>
-						</div>
-
-						<div class="nameplate-content">
-							Joe Bloggs<br>
-							Subheading
-						</div>
-
-						<div class="nameplate-field">
-							<a class="icon-monospaced" href="#1"></a>
-						</div>
+			<div class="sidebar sidebar-light sidenav-menu">
+				<nav class="component-tbar tbar">
+					<div class="container-fluid">
+						<ul class="tbar-nav">
+							<li class="tbar-item tbar-item-expand">
+								<div class="tbar-section">
+									<span class="text-truncate-inline">
+										<span class="text-truncate">Simple Sidenav</span>
+									</span>
+								</div>
+							</li>
+							<li class="tbar-item">
+								<a class="component-action" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
+				</nav>
+
+				<div class="sidebar-body">
+					Some body content...
 				</div>
 			</div>
 		</div>
@@ -177,61 +163,38 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" data-content="body" data-toggle="sidenav" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
+			<button class="btn btn-secondary" data-content="body" data-target="#simpleSidenav2" data-toggle="sidenav" type="button">Simple Sidenav 2 Toggler</button>
 
-			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-type-mobile="fixed-push" href="#simpleSidenav2">
+			<button class="btn btn-secondary" data-content="body" data-target="#simpleSidenav2" data-toggle="sidenav" data-type-mobile="fixed-push" type="button">
 				Another Simple Sidenav 2 Toggler
-			</a>
-
-			<a class="btn btn-default" href="#1" id="showSimpleSidenav2">
-				Show Simple Sidenav 2
-			</a>
-
-			<a class="btn btn-default" href="#1" id="hideSimpleSidenav2">
-				Hide Simple Sidenav 2
-			</a>
+			</button>
 		</div>
 
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
-			<div class="sidebar sidebar-default sidenav-menu">
-				<div class="sidebar-header">
-					<ul class="sidebar-actions">
-						<li>
-							<a class="sidenav-close" href="#1">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-								</svg>
-							</a>
-						</li>
-					</ul>
-
-					<a class="sidebar-title" href="#1">
-						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-home sticker sticker-danger sticker-static">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
-						</svg>
-						<span>Simple Sidenav 2</span>
-					</a>
-				</div>
-
-				<div class="sidebar-body"></div>
-
-				<div class="sidebar-footer">
-					<div class="nameplate">
-						<div class="nameplate-field">
-							<div class="user-icon user-icon-warning">
-								:D
-							</div>
-						</div>
-
-						<div class="nameplate-content">
-							Joe Bloggs<br>
-							Subheading
-						</div>
-
-						<div class="nameplate-field">
-							<a class="icon-monospaced" href="#1"></a>
-						</div>
+			<div class="sidebar sidebar-light sidenav-menu">
+				<nav class="component-tbar tbar">
+					<div class="container-fluid">
+						<ul class="tbar-nav">
+							<li class="tbar-item tbar-item-expand">
+								<div class="tbar-section">
+									<span class="text-truncate-inline">
+										<span class="text-truncate">Simple Sidenav 2</span>
+									</span>
+								</div>
+							</li>
+							<li class="tbar-item">
+								<a class="component-action" data-content="body" data-toggle="sidenav" href="#simpleSidenav2" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
+				</nav>
+
+				<div class="sidebar-body">
+					Some body content...
 				</div>
 			</div>
 		</div>
@@ -241,10 +204,10 @@ section: Components (JS)
 </head>
 
 <div id="#wrapper">
-    <a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
+    <a class="btn btn-secondary" data-content="body" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
 
     <div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
-        <div class="sidebar sidebar-default sidenav-menu">
+        <div class="sidebar sidebar-light sidenav-menu">
             ...
         </div>
     </div>
@@ -266,50 +229,32 @@ section: Components (JS)
 		</blockquote>
 
 		<div>
-			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-url="{{rootPath}}/partials/alerts" href="#simpleSidenav3">Simple Sidenav 3 Toggler</a>
+			<a class="btn btn-secondary" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-url="{{rootPath}}/partials/alerts" href="#simpleSidenav3" role="button">Simple Sidenav 3 Toggler</a>
 		</div>
 
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav3">
-			<div class="sidebar sidebar-default sidenav-menu">
-				<div class="sidebar-header">
-					<ul class="sidebar-actions">
-						<li>
-							<a class="sidenav-close" href="#1">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-								</svg>
-							</a>
-						</li>
-					</ul>
-
-					<a class="sidebar-title" href="#1">
-						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-home sticker sticker-static sticker-warning">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
-						</svg>
-						<span>Simple Sidenav 3</span>
-					</a>
-				</div>
-
-				<div class="sidebar-body"></div>
-
-				<div class="sidebar-footer">
-					<div class="nameplate">
-						<div class="nameplate-field">
-							<div class="user-icon user-icon-warning">
-								:D
-							</div>
-						</div>
-
-						<div class="nameplate-content">
-							Joe Bloggs<br>
-							Subheading
-						</div>
-
-						<div class="nameplate-field">
-							<a class="icon-monospaced" href="#1"></a>
-						</div>
+			<div class="sidebar sidebar-light sidenav-menu">
+				<nav class="component-tbar tbar">
+					<div class="container-fluid">
+						<ul class="tbar-nav">
+							<li class="tbar-item tbar-item-expand">
+								<div class="tbar-section">
+									<span class="text-truncate-inline">
+										<span class="text-truncate">Simple Sidenav 3</span>
+									</span>
+								</div>
+							</li>
+							<li class="tbar-item">
+								<a class="component-action" data-content="body" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav3" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
-				</div>
+				</nav>
+				<div class="sidebar-body"></div>
 			</div>
 		</div>
 
@@ -319,7 +264,7 @@ section: Components (JS)
 		</blockquote>
 
 		<pre><code>```<div class="sidenav-container">
-    <a class="btn btn-default sidenav-toggler" href="">
+    <a class="btn btn-secondary sidenav-toggler" href="">
         <span class="glyphicon glyphicon-align-justify"></span> Toggle
     </a>
 
@@ -456,18 +401,7 @@ $('#myTogglerId').sideNavigation('hide').sideNavigation('visible'); // returns f
 
 	$('.sidenav-toggler1').sideNavigation({
 		container: '#mySidenavContainerId1',
+		typeMobile: 'fixed',
 		position: 'right'
-	});
-
-	$('#showSimpleSidenav2').on('click', function(event) {
-		event.preventDefault();
-
-		$('[href="#simpleSidenav2"]').first().sideNavigation('show');
-	});
-
-	$('#hideSimpleSidenav2').on('click', function(event) {
-		event.preventDefault();
-
-		$('[href="#simpleSidenav2"]').first().sideNavigation('hide');
 	});
 </script>

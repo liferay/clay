@@ -19,10 +19,12 @@
 	{@param? searchable: bool}
 	{@param? style: string}
 	{@param? triggerClasses: string}
+	{@param? triggerSize: string}
 
   {let $trigger kind="html"}
     {if $icon}
       {call ClayIcon.render}
+        {param elementClasses: $label ? 'inline-item inline-item-before' : '' /}
         {param spritemap: $spritemap /}
         {param symbol: $icon /}
       {/call}
@@ -34,6 +36,7 @@
 
     {if not $icon}
       {call ClayIcon.render}
+        {param elementClasses: 'inline-item inline-item-after' /}
         {param spritemap: $spritemap /}
         {param symbol: 'caret-bottom' /}
       {/call}
@@ -58,5 +61,6 @@
     {param spritemap: $spritemap /}
     {param style: $style /}
     {param triggerClasses: $triggerClasses /}
+    {param triggerSize: $triggerSize /}
   {/call}
 {/template}

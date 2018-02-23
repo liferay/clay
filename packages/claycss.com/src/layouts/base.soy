@@ -1,51 +1,51 @@
 {namespace base}
 
 /**
- * @param content
- * @param page
- * @param serialized
- * @param site
  */
 {template .render private="true"}
-<!DOCTYPE html>
-<html lang="en" class="{$page.title}">
-	<head>
-		<meta charset="UTF-8">
-		<meta content="minimum-scale=1.0, width=device-width" name="viewport">
-		<meta name="description" content="{$page.description ?: ''}">
+	{@param content: ?}
+	{@param page: ?}
+	{@param serialized: ?}
+	{@param site: ?}
 
-		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="16x16 32x32" />
+	<html lang="en" class="{$page.title}">
+		<head>
+			<meta charset="UTF-8">
+			<meta content="minimum-scale=1.0, width=device-width" name="viewport">
+			<meta name="description" content="{$page.description ?: ''}">
 
-		<title>{$page.title} - {$site.title}</title>
+			<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="16x16 32x32" />
 
-		<!-- inject:css -->
-		<!-- endinject -->
+			<title>{$page.title} - {$site.title}</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
-
-		<script src="/scripts/jquery.min.js"></script>
-		<script src="/scripts/popper.js"></script>
-
-		<!-- inject:js -->
-		<!-- endinject -->
-
-		<script>svg4everybody();</script>
-
-		<link id="mainCssLink" rel="stylesheet" href="/styles/main.css">
-	</head>
-	<body data-senna>
-		<div data-senna-surface id="wrapper">
-			<div class="senna-loading-bar"></div>
-
-			<!-- inject:metal:js -->
-				<div>
-					{$content}
-				</div>
+			<!-- inject:css -->
 			<!-- endinject -->
-		</div>
 
-		<!-- inject:vendor:js -->
-		<!-- endinject -->
-	</body>
-</html>
+			<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+
+			<script src="/scripts/jquery.min.js"></script>
+			<script src="/scripts/popper.js"></script>
+
+			<!-- inject:js -->
+			<!-- endinject -->
+
+			<script>svg4everybody();</script>
+
+			<link id="mainCssLink" rel="stylesheet" href="/styles/main.css">
+		</head>
+		<body data-senna>
+			<div data-senna-surface id="wrapper">
+				<div class="senna-loading-bar"></div>
+
+				<!-- inject:metal:js -->
+					<div>
+						{$content}
+					</div>
+				<!-- endinject -->
+			</div>
+
+			<!-- inject:vendor:js -->
+			<!-- endinject -->
+		</body>
+	</html>
 {/template}

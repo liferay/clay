@@ -23,6 +23,7 @@
 	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? triggerClasses: string}
+	{@param? triggerSize: string}
 
 	{let $attributes kind="attributes"}
 		class="dropdown
@@ -46,6 +47,7 @@
 			{param disabled: $disabled /}
 			{param expanded: $expanded /}
 			{param label: $label /}
+			{param size: $triggerSize /}
 			{param style: $style /}
 		{/call}
 
@@ -65,6 +67,45 @@
 			{param spritemap: $spritemap /}
 		{/call}
 	</div>
+{/template}
+
+/**
+ * Renders a list of items
+ */
+{template .items}
+	{@param items: list<?>}
+	{@param? _handleItemClick: any}
+	{@param? contentRenderer: string}
+	{@param? itemsIconAlignment: string}
+	{@param? spritemap: string}
+
+	{foreach $item in $items}
+		{let $variant kind="text"}
+			{if isNonnull($contentRenderer) and $contentRenderer != ''}
+				{$contentRenderer}
+			{elseif $item.type}
+				{$item.type}
+			{else}
+				item
+			{/if}
+		{/let}
+
+		{delcall ClayDropdownBase.Item variant="$variant"}
+			{param _handleItemClick: $_handleItemClick /}
+			{param active: $item.active /}
+			{param checked: $item.checked /}
+			{param disabled: $item.disabled /}
+			{param href: $item.href /}
+			{param icon: $item.icon /}
+			{param inputName: $item.inputName /}
+			{param inputValue: $item.inputValue /}
+			{param items: $item.items /}
+			{param itemsIconAlignment: $itemsIconAlignment /}
+			{param label: $item.label ? '' + $item.label : '' /}
+			{param separator: $item.separator /}
+			{param spritemap: $spritemap /}
+		{/delcall}
+	{/foreach}
 {/template}
 
 /**
@@ -111,22 +152,22 @@
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 
-	{let $listAttributes kind="attributes"}
-		class="dropdown-menu
-			{if $itemsIconAlignment == 'left'}
-				{sp}dropdown-menu-indicator-start
-			{elseif $itemsIconAlignment == 'right'}
-				{sp}dropdown-menu-indicator-end
-			{/if}
-
-			{if $expanded}
-				{sp}show
-			{/if}
-		"
-		ref="menu"
-	{/let}
-
 	{let $dropdownMenu kind="html"}
+		{let $listAttributes kind="attributes"}
+			class="dropdown-menu
+				{if $itemsIconAlignment == 'left'}
+					{sp}dropdown-menu-indicator-start
+				{elseif $itemsIconAlignment == 'right'}
+					{sp}dropdown-menu-indicator-end
+				{/if}
+
+				{if $expanded}
+					{sp}show
+				{/if}
+			"
+			ref="menu"
+		{/let}
+
 		<div {$listAttributes}>
 			{if $helpText}
 				<div class="alert alert-fluid alert-info" role="alert">
@@ -142,14 +183,13 @@
 			{/if}
 
 			{let $listItemsContent kind="html"}
-				<ul class="list-unstyled">
-					{delcall ClayDropdownBase.Items variant="$contentRenderer"}
-						{param _handleItemClick: $_handleItemClick /}
-						{param items: $items /}
-						{param itemsIconAlignment: $itemsIconAlignment /}
-						{param spritemap: $spritemap /}
-					{/delcall}
-				</ul>
+				{delcall ClayDropdownBase.Content variant="$contentRenderer"}
+					{param _handleItemClick: $_handleItemClick /}
+					{param contentRenderer: $contentRenderer /}
+					{param items: $items /}
+					{param itemsIconAlignment: $itemsIconAlignment /}
+					{param spritemap: $spritemap /}
+				{/delcall}
 			{/let}
 
 			{let $captionContent kind="html"}
@@ -202,6 +242,7 @@
 	{@param? classes: string}
 	{@param? disabled: bool}
 	{@param? expanded: bool}
+	{@param? size: string}
 	{@param? style: string}
 
 	{let $buttonAttributes kind="attributes"}
@@ -216,6 +257,10 @@
 		class="dropdown-toggle btn
 			{if $classes}
 				{sp}{$classes}
+			{/if}
+
+			{if $size}
+				{sp}btn-{$size}
 			{/if}
 
 			{if $style}
@@ -238,6 +283,28 @@
 		{$label}
 	</button>
 {/template}
+
+/**
+ * Renders the dropdown menu content
+ */
+{deltemplate ClayDropdownBase.Content}
+	{@param? _handleItemClick: any}
+	{@param? contentRenderer: string}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? spritemap: string}
+
+	{if $items}
+		<ul class="list-unstyled">
+			{call .items}
+				{param _handleItemClick: $_handleItemClick /}
+				{param items: $items /}
+				{param itemsIconAlignment: $itemsIconAlignment /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</ul>
+	{/if}
+{/deltemplate}
 
 /**
  * Renders list item
@@ -389,12 +456,12 @@
 	{/if}
 
 	{if $items}
-		{delcall ClayDropdownBase.Items}
+		{call .items}
 			{param _handleItemClick: $_handleItemClick /}
 			{param items: $items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param spritemap: $spritemap /}
-		{/delcall}
+		{/call}
 	{/if}
 
 	{if $separator}
@@ -478,13 +545,13 @@
 	<li aria-label="{$label}" role="radiogroup">
 		{if $items}
 			<ul class="list-unstyled">
-				{delcall ClayDropdownBase.Items}
+				{call .items}
 					{param _handleItemClick: $_handleItemClick /}
 					{param contentRenderer: 'radio' /}
 					{param items: $items /}
 					{param itemsIconAlignment: $itemsIconAlignment /}
 					{param spritemap: $spritemap /}
-				{/delcall}
+				{/call}
 			</ul>
 		{/if}
 	</li>
@@ -492,43 +559,4 @@
 	{if $separator}
 		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 	{/if}
-{/deltemplate}
-
-/**
- * Renders a list of items
- */
-{deltemplate ClayDropdownBase.Items}
-	{@param items: list<?>}
-	{@param? _handleItemClick: any}
-	{@param? contentRenderer: string}
-	{@param? itemsIconAlignment: string}
-	{@param? spritemap: string}
-
-	{foreach $item in $items}
-		{let $variant kind="text"}
-			{if isNonnull($contentRenderer) and $contentRenderer != ''}
-				{$contentRenderer}
-			{elseif $item.type}
-				{$item.type}
-			{else}
-				item
-			{/if}
-		{/let}
-
-		{delcall ClayDropdownBase.Item variant="$variant"}
-			{param _handleItemClick: $_handleItemClick /}
-			{param active: $item.active /}
-			{param checked: $item.checked /}
-			{param disabled: $item.disabled /}
-			{param href: $item.href /}
-			{param icon: $item.icon /}
-			{param inputName: $item.inputName /}
-			{param inputValue: $item.inputValue /}
-			{param items: $item.items /}
-			{param itemsIconAlignment: $itemsIconAlignment /}
-			{param label: $item.label ? '' + $item.label : '' /}
-			{param separator: $item.separator /}
-			{param spritemap: $spritemap /}
-		{/delcall}
-	{/foreach}
 {/deltemplate}

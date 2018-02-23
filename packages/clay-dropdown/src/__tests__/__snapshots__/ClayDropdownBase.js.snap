@@ -560,6 +560,22 @@ exports[`ClayDropdownBase should render a dropdown with secondary button 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with trigger custom classes 1`] = `
 <div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-sm btn-unstyled" type="button">Trigger</button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="item1url">Item 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="item2url">Item 2</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayDropdownBase should render a dropdown with trigger szie 1`] = `
+<div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn my-cutsom-class btn-unstyled" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">

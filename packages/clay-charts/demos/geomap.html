@@ -27,6 +27,12 @@
 	</div>
 
 	<script type="text/javascript">
+		var data = {
+			features: [{
+				properties: {},
+			}],
+		};
+
 		var geomap = new metal.Geomap({
 			color: {
 				range: {
@@ -36,7 +42,23 @@
 				selected: '#ff3300',
 				value: 'gdp_md_est',
 			},
-			data: 'data/world-low-res.geo.json',
+
+			// Pass data as a string
+			// data: 'data/world-low-res.geo.json',
+
+			// Pass data as an object
+			// data: {
+			//   features: [{
+			//     properties: {},
+			//   }],
+			// },
+
+			// Pass data as a Promise
+			data: () => {
+				return fetch('data/world-low-res.geo.json')
+					.then(res => res.json());
+			},
+
 		}, '#map');
 
 

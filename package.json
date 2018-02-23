@@ -15,7 +15,7 @@
     "soy": "lerna run soy",
     "start": "http-server . -p 4000",
     "test": "npm run build && npm run jest && npm run a11y",
-    "electric": "npm run soy && npm run compile && cd packages/claycss.com && el",
+    "electric": "npm run soy && npm run compile && cd packages/claycss.com && ../../node_modules/electric-cli/bin/electric.js",
     "web": "npm run electric -- run",
     "deploy": "npm run electric -- deploy"
   },

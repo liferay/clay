@@ -78,23 +78,15 @@ weight: 100
 		<ul class="list-unstyled">
 			<li><a class="dropdown-item" href="#1">Edit</a></li>
 			<li><a class="dropdown-item" href="#2">Preview</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#3">Expire</a></li>
 			<li><a class="dropdown-item" href="#4">View History</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#5">Permissions</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#6">Copy</a></li>
 			<li><a class="dropdown-item" href="#7">Move</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#8">Move to Recycle Bin</a></li>
 		</ul>
 	</div>
@@ -156,23 +148,15 @@ weight: 100
 	<ul class="list-unstyled">
 		<li><a class="dropdown-item" href="#1">Edit</a></li>
 		<li><a class="dropdown-item" href="#2">Preview</a></li>
-	</ul>
-	<div class="dropdown-divider"></div>
-	<ul class="list-unstyled">
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 		<li><a class="dropdown-item" href="#3">Expire</a></li>
 		<li><a class="dropdown-item" href="#4">View History</a></li>
-	</ul>
-	<div class="dropdown-divider"></div>
-	<ul class="list-unstyled">
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 		<li><a class="dropdown-item" href="#5">Permissions</a></li>
-	</ul>
-	<div class="dropdown-divider"></div>
-	<ul class="list-unstyled">
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 		<li><a class="dropdown-item" href="#6">Copy</a></li>
 		<li><a class="dropdown-item" href="#7">Move</a></li>
-	</ul>
-	<div class="dropdown-divider"></div>
-	<ul class="list-unstyled">
+		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 		<li><a class="dropdown-item" href="#8">Move to Recycle Bin</a></li>
 	</ul>
 </div>
@@ -205,10 +189,10 @@ weight: 100
 					</label>
 				</div>
 			</li>
-			<li class="disabled dropdown-item">
+			<li class="dropdown-item">
 				<div class="custom-control custom-checkbox">
 					<label>
-						<input disabled class="custom-control-input" type="checkbox">
+						<input disabled="disabled" class="custom-control-input" type="checkbox">
 						<span class="custom-control-label">
 							<span class="custom-control-label-text">Disabled Option</span>
 						</span>
@@ -278,10 +262,10 @@ weight: 100
 				</label>
 			</div>
 		</li>
-		<li class="disabled dropdown-item">
+		<li class="dropdown-item">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input disabled class="custom-control-input" type="checkbox">
+					<input disabled="disabled" class="custom-control-input" type="checkbox">
 					<span class="custom-control-label">
 						<span class="custom-control-label-text">Disabled Option</span>
 					</span>
@@ -369,10 +353,12 @@ weight: 100
 				</div>
 			</div>
 		</div>
-		<a class="active dropdown-item" href="#1">Selected Option</a>
-		<a class="dropdown-item" href="#2">Normal Option</a>
-		<a class="disabled dropdown-item" href="#3">Disabled Option</a>
 	</form>
+	<ul class="list-unstyled">
+		<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
+		<li><a class="dropdown-item" href="#2">Normal Option</a></li>
+		<li><a class="disabled dropdown-item" href="#3">Disabled Option</a></li>
+	</ul>
 </div>
 ```
 
@@ -404,7 +390,7 @@ weight: 100
 				</a>
 			</li>
 			<li>
-				<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+				<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
 			</li>
 		</ul>
 	</div>
@@ -466,7 +452,7 @@ weight: 100
 			</a>
 		</li>
 		<li>
-			<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+			<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
 		</li>
 	</ul>
 </div>
@@ -500,7 +486,7 @@ weight: 100
 				</a>
 			</li>
 			<li>
-				<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+				<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
 			</li>
 		</ul>
 	</div>
@@ -563,7 +549,7 @@ weight: 100
 			</a>
 		</li>
 		<li>
-			<a class="disabled dropdown-item" href="#1">Disabled Option</a>
+			<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
 		</li>
 	</ul>
 </div>
@@ -595,8 +581,8 @@ weight: 100
 		</form>
 		<form>
 			<div class="inline-scroller">
-				<div class="dropdown-subheader">Filter by</div>
 				<ul class="list-unstyled">
+					<li class="dropdown-subheader" role="presentation">Filter by</li>
 					<li class="active dropdown-item">
 						<div class="custom-control custom-checkbox">
 							<label>
@@ -617,19 +603,17 @@ weight: 100
 							</label>
 						</div>
 					</li>
-					<li class="disabled dropdown-item">
+					<li class="dropdown-item">
 						<div class="custom-control custom-checkbox">
 							<label>
-								<input disabled class="custom-control-input" type="checkbox">
+								<input disabled="disabled" class="custom-control-input" type="checkbox">
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Disabled Option</span>
 								</span>
 							</label>
 						</div>
 					</li>
-				</ul>
-				<div class="dropdown-subheader">Order by</div>
-				<ul class="list-unstyled">
+					<li class="dropdown-subheader" role="presentation">Order by</li>
 					<li class="active dropdown-item">
 						<div class="custom-control custom-radio">
 							<label>
@@ -650,10 +634,10 @@ weight: 100
 							</label>
 						</div>
 					</li>
-					<li class="disabled dropdown-item">
+					<li class="dropdown-item">
 						<div class="custom-control custom-radio">
 							<label>
-								<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+								<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Disabled Option</span>
 								</span>
@@ -813,8 +797,8 @@ weight: 100
 	</form>
 	<form>
 		<div class="inline-scroller">
-			<div class="dropdown-subheader">Filter by</div>
 			<ul class="list-unstyled">
+				<li class="dropdown-subheader" role="presentation">Filter by</li>
 				<li class="active dropdown-item">
 					<div class="custom-control custom-checkbox">
 						<label>
@@ -835,19 +819,17 @@ weight: 100
 						</label>
 					</div>
 				</li>
-				<li class="disabled dropdown-item">
+				<li class="dropdown-item">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input disabled class="custom-control-input" type="checkbox">
+							<input disabled="disabled" class="custom-control-input" type="checkbox">
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Disabled Option</span>
 							</span>
 						</label>
 					</div>
 				</li>
-			</ul>
-			<div class="dropdown-subheader">Order by</div>
-			<ul class="list-unstyled">
+				<li class="dropdown-subheader" role="presentation">Order by</li>
 				<li class="active dropdown-item">
 					<div class="custom-control custom-radio">
 						<label>
@@ -868,10 +850,10 @@ weight: 100
 						</label>
 					</div>
 				</li>
-				<li class="disabled dropdown-item">
+				<li class="dropdown-item">
 					<div class="custom-control custom-radio">
 						<label>
-							<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+							<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Disabled Option</span>
 							</span>
@@ -907,23 +889,15 @@ weight: 100
 		<ul class="list-unstyled">
 			<li><a class="dropdown-item" href="#1">Edit</a></li>
 			<li><a class="dropdown-item" href="#1">Preview</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Expire</a></li>
 			<li><a class="dropdown-item" href="#1">View History</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Permissions</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Copy</a></li>
 			<li><a class="dropdown-item" href="#1">Move</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
 		</ul>
 	</div>
@@ -1076,23 +1050,15 @@ weight: 100
 		<ul class="list-unstyled">
 			<li><a class="dropdown-item" href="#1">Edit</a></li>
 			<li><a class="dropdown-item" href="#1">Preview</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Expire</a></li>
 			<li><a class="dropdown-item" href="#1">View History</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Permissions</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Copy</a></li>
 			<li><a class="dropdown-item" href="#1">Move</a></li>
-		</ul>
-		<div class="dropdown-divider"></div>
-		<ul class="list-unstyled">
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 			<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
 		</ul>
 	</div>

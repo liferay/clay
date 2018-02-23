@@ -262,7 +262,7 @@ let defaultConfig = {
 				fieldsMap: {
 					contentRenderer: 'type',
 					description: 'origin',
-					fileType: 'format',
+					stickerLabel: 'format',
 					href: 'downloadHref',
 					icon: 'type',
 					imageAlt: 'name',
@@ -272,9 +272,6 @@ let defaultConfig = {
 					title: 'name',
 					userColor: 'style',
 					username: 'name',
-				},
-				fileTypeStylesMap: {
-					PDF: 'danger',
 				},
 				iconsMap: {
 					'folder': 'folder',
@@ -291,6 +288,12 @@ let defaultConfig = {
 					'Spicy': 'warning',
 					'Very Spicy': 'danger',
 					'*': 'success',
+				},
+				stickerShapesMap: {
+					PDF: 'circle',
+				},
+				stickerStylesMap: {
+					PDF: 'danger',
 				},
 				userColorsMap: {
 					'fusion': 'danger',

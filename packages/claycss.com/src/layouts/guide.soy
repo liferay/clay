@@ -1,10 +1,11 @@
 {namespace guide}
 
 /**
- * @param page
- * @param site
  */
 {template .render}
+	{@param page: ?}
+	{@param site: ?}
+
 	{call main.render data="all"}
 		{param elementClasses: 'docs' /}
 		{param content kind="html"}
@@ -18,10 +19,11 @@
 {/template}
 
 /**
- * @param page
- * @param content
  */
 {template .guide}
+	{@param page: ?}
+	{@param content: ?}
+
 	<div class="sidebar-offset">
 		<header>
 			<div class="clay-site-container container-fluid">

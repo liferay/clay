@@ -338,8 +338,41 @@
 			]
 		};
 
-		var lineChart = new metal.LineChart({
-			columns: dummyData.columns_1,
+		var lineChartData = {
+			columns_1: 'data/dummy-data-columns-1.json',
+			columns_2: 'data/dummy-data-columns-2.json',
+			columns_3: function() {
+				return Promise.resolve([
+					{
+						data: [230, 190, 300, 500, 300, 400],
+						id: 'data1',
+						name: 'Data 1 (this data set has 3 columns)'
+					},
+					{
+						data: [50, 20, 10, 40, 15, 25],
+						id: 'data2'
+					},
+					{
+						data: [130, 150, 200, 300, 200, 100],
+						id: 'data3'
+					}
+				])
+			},
+			columns_4: [
+				{
+					data: [50, 20, 10, 40, 15, 25],
+					id: 'data1',
+					name: 'Data 1'
+				},
+				{
+					data: [130, 150, 200, 300, 200, 100],
+					id: 'data2'
+				}
+			]
+		};
+
+		var lineChartWithData = new metal.LineChart({
+			data: lineChartData.columns_1,
 			tooltip: {
 				format: {
 					value(d) {
@@ -352,45 +385,45 @@
 					position: 'right'
 			},
 		}, '#line');
-		createChartControls(lineChart, 'line');
+		createChartControls(lineChartWithData, 'line', lineChartData);
 
 		var splineChart = new metal.SplineChart({
-			columns: dummyData.columns_1
+			data: dummyData.columns_1
 		}, '#spline');
 		createChartControls(splineChart, 'spline');
 
 		var stepChart = new metal.StepChart({
-			columns: dummyData.columns_1
+			data: dummyData.columns_1
 		}, '#step');
 		createChartControls(stepChart, 'step');
 
 		var areaLineChart = new metal.AreaLineChart({
-			columns: dummyData.columns_1
+			data: dummyData.columns_1
 		}, '#area');
 		createChartControls(areaLineChart, 'area');
 
 		var areaSplineChart = new metal.AreaSplineChart({
-			columns: dummyData.columns_2
+			data: dummyData.columns_2
 		}, '#area-spline');
 		createChartControls(areaSplineChart, 'area-spline');
 
 		var areaStepChart = new metal.AreaStepChart({
-			columns: dummyData.columns_3
+			data: dummyData.columns_3
 		}, '#area-step');
 		createChartControls(areaStepChart, 'area-step');
 
 		var barChart = new metal.BarChart({
-			columns: dummyData.columns_1
+			data: dummyData.columns_1
 		}, '#bar');
 		createChartControls(barChart, 'bar');
 
 		var scatterChart = new metal.ScatterChart({
-			columns: dummyData.columns_1
+			data: dummyData.columns_1
 		}, '#scatter');
 		createChartControls(scatterChart, 'scatter');
 
 		var pieChart = new metal.PieChart({
-			columns: dummyPercentData.columns_1,
+			data: dummyPercentData.columns_1,
 			color: {
 				tiles: true
 			},
@@ -409,12 +442,12 @@
 		createChartControls(pieChart, 'pie', dummyPercentData);
 
 		var donutChart = new metal.DonutChart({
-			columns: dummyPercentData.columns_1,
+			data: dummyPercentData.columns_1,
 		}, '#donut');
 		createChartControls(donutChart, 'donut', dummyPercentData);
 
 		var gaugeChart = new metal.GaugeChart({
-			columns: dummyGaugeData.columns_1
+			data: dummyGaugeData.columns_1
 		}, '#gauge');
 		createChartControls(gaugeChart, 'gauge', dummyGaugeData);
 
@@ -422,12 +455,12 @@
 			bubble: {
 				maxR: 50
 			},
-			columns: dummyData.columns_1,
+			data: dummyData.columns_1,
 			labels: false,
 			point: {
 				pattern: ['circle']
 			},
-			type: 'bubble',
+			type: 'bubble'
 		}, '#bubble');
 
 		function createChartControls(chart, type, data) {
@@ -451,7 +484,8 @@
 
 			dataSelect.addEventListener('change', function(event) {
 				chart.loading = false;
-				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
+
+				chart.data = data ? data[dataSelect.value] : dummyData[dataSelect.value];
 			});
 
 			element.parentNode.appendChild(chartControls);

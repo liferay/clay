@@ -1,7 +1,7 @@
 $table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
 
 $table-head-border-bottom-width: null !default;
-$table-head-border-top-width: null !default;
+$table-head-border-top-width: 0 !default;
 $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
@@ -10,6 +10,15 @@ $table-head-link: () !default;
 
 $table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
 $table-head-title-text-truncate-max-width: calc(100% - 1em - #{$table-head-title-inline-item-spacer-x}) !default;
+
+$table-data-border-bottom-width: $table-border-width !default;
+$table-data-border-left-width: 0 !default;
+$table-data-border-right-width: 0 !default;
+$table-data-border-top-width: $table-border-width !default;
+
+$table-data-border-color: $table-border-color !default;
+$table-data-border-style: solid !default;
+$table-data-vertical-align: middle !default;
 
 $table-divider-bg: #FFF !default;
 $table-divider-color: null !default;
@@ -26,6 +35,10 @@ $table-quick-action-menu-active-bg: #DADADA !default;
 $table-quick-action-menu-hover-bg: #ECECEC !default;
 
 $table-cell-expand-min-width: 12.5rem !default; // 200px
+
+// Table Bordered
+
+$table-bordered-border-width: $table-border-width !default;
 
 // Table Title
 

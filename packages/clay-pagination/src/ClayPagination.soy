@@ -94,7 +94,7 @@
 				{call .range}
 					{param baseHref: $baseHref /}
 					{param endPage: $totalPages /}
-					{param initPage: $currentPage + 2 /}
+					{param initPage: $currentPage == 1 ? 4 : $currentPage + 2 /}
 				{/call}
 			{/if}
 
@@ -194,23 +194,25 @@
 /**
  * Renders a dropdown list of items
  */
-{deltemplate ClayDropdownBase.Items variant="'paginationdropdownitems'"}
-	{@param items: list<?>}
+{deltemplate ClayDropdownBase.Content variant="'paginationdropdownitems'"}
 	{@param? _handleItemClick: any}
 	{@param? contentRenderer: string}
+	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
 	{@param? spritemap: string}
 
-	{let $baseHref: $items[0].baseHref /}
-	{let $endPage: $items[0].endPage /}
-	{let $initPage: $items[0].initPage /}
+	{if $items}
+		{let $baseHref: $items[0].baseHref /}
+		{let $endPage: $items[0].endPage /}
+		{let $initPage: $items[0].initPage /}
 
-	<ul class="list-unstyled">
-		{for $page in range($initPage, $endPage)}
-			{delcall ClayDropdownBase.Item variant="'item'"}
-				{param href: $baseHref + $page /}
-				{param label: '' + $page /}
-			{/delcall}
-		{/for}
-	</ul>	
+		<ul class="list-unstyled">
+			{for $page in range($initPage, $endPage)}
+				{delcall ClayDropdownBase.Item variant="'item'"}
+					{param href: $baseHref + $page /}
+					{param label: '' + $page /}
+				{/delcall}
+			{/for}
+		</ul>
+	{/if}
 {/deltemplate}

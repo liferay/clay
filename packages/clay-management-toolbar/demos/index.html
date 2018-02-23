@@ -54,15 +54,31 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>With Advanced Search</h4>
+			<div id="advanced-search-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Without Search</h4>
 			<div id="without-search-block"></div>
 		</div>
 	</div>
 
-	<div id="container0"></div>
-	<div id="container1"></div>
-	<div id="container2"></div>
-	<div id="container3"></div>
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With search results bar</h4>
+			<div id="search-results-bar"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With search results bar with active state</h4>
+			<div id="search-results-bar-active-state"></div>
+		</div>
+	</div>
 
 	<script type="text/javascript">
 		const actionItems = [
@@ -251,6 +267,15 @@
 		},
 		'#only-search-block');
 
+		//With Advanced Search
+		new metal.ClayManagementToolbar({
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			showAdvancedSearch: true,
+			spritemap: spritemap,
+		},
+		'#advanced-search-block');
+
 		//Without Search
 		new metal.ClayManagementToolbar({
 			creationMenu: '#creationPageURL',
@@ -262,6 +287,46 @@
 			viewTypes: viewTypes,
 		},
 		'#without-search-block');
+
+		//With search results bar
+		new metal.ClayManagementToolbar({
+			creationMenu: true,
+			events: {
+				'clearButtonClicked': handleClearButton
+			},
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			searchValue: 'red',
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+		},
+		'#search-results-bar');
+
+		function handleClearButton(event) {
+			this.searchValue = null;
+			this.totalItems = null;
+		}
+
+		//With search results bar with active state
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			creationMenu: true,
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			searchValue: 'red',
+			selectable: true,
+			selectedItems: 2,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+		},
+		'#search-results-bar-active-state');
 	</script>
 </body>
 </html>

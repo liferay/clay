@@ -3,11 +3,103 @@
 exports[`ClayDropdown should render a disabled dropdown with items 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" disabled="" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
   </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="item1url">Item 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="item2url">Item 2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="item1ur3">Item 3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item disabled" href="javascript:;">Item 4</a>
+    </li>
+    <li class="dropdown-item">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 5</span>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="dropdown-item active">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 7</span>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="dropdown-item">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 7</span>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="dropdown-subheader" role="presentation">Radio Group</li>
+    <li aria-label="Radio Group" role="radiogroup">
+      <ul class="list-unstyled">
+        <li class="dropdown-item">
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 8</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="dropdown-item active">
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 9</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 10</span>
+              </span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+`;
+
+exports[`ClayDropdown should render a dropdown with an icon and label trigger 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list inline-item inline-item-before" focusable="false">
+      <title>list</title>
+      <use xlink:href="icons.svg#list"></use>
+    </svg>Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -189,7 +281,7 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
 exports[`ClayDropdown should render a dropdown with classes 1`] = `
 <div class="dropdown my-custom-class">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -282,7 +374,7 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
 exports[`ClayDropdown should render a dropdown with id 1`] = `
 <div class="dropdown" id="myId">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -375,7 +467,7 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
 exports[`ClayDropdown should render a dropdown with items 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -468,7 +560,100 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
 exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn my-custom-class btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+      <title>caret-bottom</title>
+      <use xlink:href="icons.svg#caret-bottom"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="item1url">Item 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="item2url">Item 2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item active" href="item1ur3">Item 3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item disabled" href="javascript:;">Item 4</a>
+    </li>
+    <li class="dropdown-item">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 5</span>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="dropdown-item active">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 7</span>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="dropdown-item">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <label>
+          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+          <span class="custom-control-label">
+            <span class="custom-control-label-text">Item 7</span>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="dropdown-subheader" role="presentation">Radio Group</li>
+    <li aria-label="Radio Group" role="radiogroup">
+      <ul class="list-unstyled">
+        <li class="dropdown-item">
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 8</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="dropdown-item active">
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 9</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="custom-control custom-radio custom-control-inline">
+            <label>
+              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">Item 10</span>
+              </span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+  </ul>
+</div>
+`;
+
+exports[`ClayDropdown should render a dropdown with trigger size 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-sm btn-unstyled" type="button">Trigger
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -561,7 +746,7 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
 exports[`ClayDropdown should render a searchable dropdown 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -671,7 +856,7 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
 exports[`ClayDropdown should render an expanded dropdown 1`] = `
 <div class="dropdown show">
   <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
       <title>caret-bottom</title>
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>

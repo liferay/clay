@@ -1,0 +1,741 @@
+---
+title: List View Template (Info Panel)
+section: Visual Tests
+---
+
+<nav class="application-bar application-bar-dark navbar navbar-expand-md">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="navbar-title navbar-text-truncate">My Application Name</div>
+		<ul class="navbar-nav">
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+					<li><a class="dropdown-item" href="#1">Action</a></li>
+					<li><a class="dropdown-item" href="#1">Another action</a></li>
+					<li><a class="dropdown-item" href="#1">Something else here</a></li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#1">Separated link</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
+	<div class="container-fluid container-fluid-max-xl">
+		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
+			<span class="navbar-text-truncate">App Section 2</span>
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</a>
+		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
+			<div class="container-fluid container-fluid-max-xl">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">App Section 1</span>
+						</a>
+					</li>
+					<li aria-label="Current Page" class="nav-item">
+						<a class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">App Section 2</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">App Section 3</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item show-dropdown-on-collapse">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
+							<span class="navbar-text-truncate">More</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+							</svg>
+						</a>
+						<ul aria-labelledby="" class="dropdown-menu">
+							<li><a class="dropdown-item" href="#1">App Section 4</a></li>
+							<li><a class="dropdown-item" href="#1">App Section 5</a></li>
+							<li><a class="dropdown-item" href="#1">App Section 6</a></li>
+							<li><a class="dropdown-item" href="#1">App Section 7</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav navbar-nav-expand">
+			<li class="nav-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-label"></span>
+					</label>
+				</div>
+			</li>
+			<li class="nav-item">
+				<span class="navbar-text">
+					1 of 8
+					<span class="navbar-breakpoint-down-d-none">items selected</span>
+				</span>
+			</li>
+			<li class="nav-item nav-item-shrink">
+				<button class="btn btn-link nav-btn" type="button">
+					<span class="text-truncate-inline">
+						<span class="text-truncate">Select All the Things</span>
+					</span>
+				</button>
+			</li>
+		</ul>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#uniqueSidenavCollapseId1" id="uniqueSidenavToggler1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item navbar-breakpoint-down-d-none">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item navbar-breakpoint-down-d-none">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right" role="menu">
+					<li>
+						<a class="dropdown-item" href="#1">Remove</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">Download</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="closed sidenav-container" id="uniqueSidenavCollapseId1">
+	<div class="sidenav-menu-slider">
+		<div class="sidebar sidebar-light sidenav-menu">
+			<nav class="component-tbar tbar">
+				<div class="container-fluid">
+					<ul class="tbar-nav">
+						<li class="tbar-item">
+							<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+								</svg>
+							</a>
+						</li>
+						<li class="tbar-item tbar-item-expand">
+							<div class="tbar-section">
+								<span class="text-truncate-inline">
+									<span class="text-truncate">Item 1 of 3,138,732,873,467,182,321,341,231,234,342,559,827,334,424</span>
+								</span>
+							</div>
+						</li>
+						<li class="tbar-item">
+							<a class="component-action" href="#1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+								</svg>
+							</a>
+						</li>
+						<li class="tbar-item">
+							<a class="component-action sidenav-close" href="#1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="sidebar-header">
+				<div class="autofit-row sidebar-section">
+					<div class="autofit-col autofit-col-expand">
+						<h4 class="component-title">
+							<span class="text-truncate-inline">
+								<a class="text-truncate" href="#1">Image1.jpg</a>
+							</span>
+						</h4>
+						<p class="component-subtitle">Basic Document</p>
+					</div>
+					<div class="autofit-col">
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#1" role="button">Download</a></li>
+								<li><a class="dropdown-item" href="#1">Edit</a></li>
+								<li><a class="dropdown-item" href="#1">Move</a></li>
+								<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								<li><a class="dropdown-item" href="#1">Permissions</a></li>
+								<li><a class="dropdown-item" href="#1" role="button">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-body">
+				<nav class="component-navigation-bar navbar navigation-bar navbar-collapse-absolute navbar-expand-md navbar-underline">
+					<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
+						<span class="navbar-text-truncate">Details</span>
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</a>
+					<div class="collapse navbar-collapse" id="sidebarLightCollapse00">
+						<ul class="nav navbar-nav" role="tablist">
+							<li class="nav-item">
+								<a aria-controls="sidebarLightDetails" class="active nav-link" data-toggle="tab" href="#sidebarLightDetails" id="sidebarLightDetailsTab" role="tab">
+									<span class="navbar-text-truncate">Details</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a aria-controls="sidebarLightVersions" class="nav-link" data-toggle="tab" href="#sidebarLightVersions" id="sidebarLightVersionsTab" role="tab">
+									<span class="navbar-text-truncate">Versions</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="tab-content">
+					<div aria-labelledby="sidebarLightDetailsTab" class="active fade show tab-pane" id="sidebarLightDetails" role="tabpanel">
+						<div class="aspect-ratio aspect-ratio-16-to-9 sidebar-panel" style="margin-top:1.5rem;">
+							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="{{rootPath}}/images/DeathtoStock_Desk4.jpg">
+							<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
+						</div>
+						<dl class="sidebar-dl sidebar-section">
+							<dt class="sidebar-dt">Url</dt>
+							<dd class="sidebar-dd">
+								<a href="#1">http://localhost:8080/documents/20140/</a>
+							</dd>
+							<dt class="sidebar-dt">Webdav Url</dt>
+							<dd class="sidebar-dd">
+								<a href="#1">http://localhost:8080/webdav/guest/</a>
+							</dd>
+							<dt class="sidebar-dt">Created</dt>
+							<dd class="sidebar-dd">
+								<a href="#1">Helen Smith</a>
+							</dd>
+							<dt class="sidebar-dt">Description</dt>
+							<dd class="sidebar-dd">A picture of a person using a ruler and exacto knife to cut construction paper.</dd>
+							<dt class="sidebar-dt">Size</dt>
+							<dd class="sidebar-dd">745KB</dd>
+							<dt class="sidebar-dt">Extension</dt>
+							<dd class="sidebar-dd">PNG</dd>
+							<dt class="sidebar-dt">Version</dt>
+							<dd class="sidebar-dd">2.0</dd>
+							<dt class="sidebar-dt">Tags</dt>
+							<dd class="sidebar-dd">
+								<span class="label label-lg label-secondary">Tag One</span>
+								<span class="label label-lg label-secondary">Tag Two</span>
+								<span class="label label-lg label-secondary">Tag Three</span>
+								<span class="label label-lg label-secondary">Tag Four</span>
+								<span class="label label-lg label-secondary">Tag Five</span>
+								<span class="label label-lg label-secondary">Tag Six</span>
+								<span class="label label-lg label-secondary">Tag Seven</span>
+								<span class="label label-lg label-secondary">Tag Eight</span>
+							</dd>
+							<dt class="sidebar-dt">Related Assets</dt>
+							<dd class="sidebar-dd">
+								<ul class="list-group sidebar-list-group">
+									<li class="list-group-item list-group-item-flex">
+										<div class="autofit-col">
+											<div class="sticker sticker-secondary">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+												</svg>
+											</div>
+										</div>
+										<div class="autofit-col autofit-col-expand">
+											<section class="autofit-section">
+												<div class="list-group-title text-truncate-inline">
+													<a class="text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+												</div>
+											</section>
+										</div>
+									</li>
+									<li class="list-group-item list-group-item-flex">
+										<div class="autofit-col">
+											<div class="sticker sticker-secondary">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+												</svg>
+											</div>
+										</div>
+										<div class="autofit-col autofit-col-expand">
+											<section class="autofit-section">
+												<div class="list-group-title text-truncate-inline">
+													<a class="text-truncate" href="#1">Surf Blog Entry Two</a>
+												</div>
+											</section>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div aria-labelledby="sidebarLightVersionsTab" class="fade tab-pane" id="sidebarLightVersions" role="tabpanel">
+						<ul class="list-group sidebar-list-group">
+							<li class="list-group-item list-group-item-flex">
+								<div class="autofit-col autofit-col-expand">
+									<div class="list-group-title">Version 1.2</div>
+									<div class="list-group-subtitle">By Helen, on 8/31/17 9:15am</div>
+									<div class="list-group-subtext">No Change Log</div>
+								</div>
+								<div class="autofit-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<ul aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
+											<li><a class="dropdown-item" href="#1" role="button">Download</a></li>
+											<li><a class="dropdown-item" href="#1">Edit</a></li>
+											<li><a class="dropdown-item" href="#1">Move</a></li>
+											<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+											<li><a class="dropdown-item" href="#1">Permissions</a></li>
+											<li><a class="dropdown-item" href="#1" role="button">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item list-group-item-flex">
+								<div class="autofit-col autofit-col-expand">
+									<div class="list-group-title">Version 1.1</div>
+									<div class="list-group-subtitle">By Helen, on 8/31/17 8:00am</div>
+									<div class="list-group-subtext">No Change Log</div>
+								</div>
+								<div class="autofit-col">
+									<div class="dropdown dropdown-action">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</a>
+										<ul aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">
+											<li><a class="dropdown-item" href="#1" role="button">Download</a></li>
+											<li><a class="dropdown-item" href="#1">Edit</a></li>
+											<li><a class="dropdown-item" href="#1">Move</a></li>
+											<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+											<li><a class="dropdown-item" href="#1">Permissions</a></li>
+											<li><a class="dropdown-item" href="#1" role="button">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid container-fluid-max-xl container-view sidenav-content">
+		<form>
+			<ul class="list-group list-group-notification show-quick-actions-on-hover">
+				<li class="list-group-header">
+					<h3 class="list-group-header-title">Group 1</h3>
+				</li>
+				<li class="active list-group-item list-group-item-flex">
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input checked class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="sticker sticker-secondary">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example One</a>
+							</h4>
+							<p class="list-group-subtext">Second Level Text</p>
+						</section>
+					</div>
+					<div class="autofit-col">
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#expand" />
+								</svg>
+							</a>
+						</div>
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<li><a class="dropdown-item" href="#1">Remove</a></li>
+								<li><a class="dropdown-item" href="#1">Download</a></li>
+								<li><a class="dropdown-item" href="#1">Checkout</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-flex">
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="sticker sticker-secondary">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example Two</a>
+							</h4>
+						</section>
+					</div>
+					<div class="autofit-col">
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#expand" />
+								</svg>
+							</a>
+						</div>
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<li><a class="dropdown-item" href="#1">Remove</a></li>
+								<li><a class="dropdown-item" href="#1">Download</a></li>
+								<li><a class="dropdown-item" href="#1">Checkout</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-header">
+					<h3 class="list-group-header-title">Group 2</h3>
+				</li>
+				<li class="list-group-item list-group-item-flex">
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="sticker sticker-secondary">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example One</a>
+							</h4>
+							<p class="list-group-subtext">Second Level Text</p>
+							<div class="list-group-detail">
+								<span class="label label-warning">Pending</span>
+							</div>
+						</section>
+					</div>
+					<div class="autofit-col">
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#expand" />
+								</svg>
+							</a>
+						</div>
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<li><a class="dropdown-item" href="#1">Remove</a></li>
+								<li><a class="dropdown-item" href="#1">Download</a></li>
+								<li><a class="dropdown-item" href="#1">Checkout</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-flex">
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="sticker sticker-secondary">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example Two</a>
+							</h4>
+							<p class="list-group-subtext">Second Level Text</p>
+							<div class="list-group-detail">
+								<span class="label label-info">Info</span>
+							</div>
+						</section>
+					</div>
+					<div class="autofit-col">
+						<div class="quick-action-menu">
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="quick-action-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#expand" />
+								</svg>
+							</a>
+						</div>
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+								<li><a class="dropdown-item" href="#1">Remove</a></li>
+								<li><a class="dropdown-item" href="#1">Download</a></li>
+								<li><a class="dropdown-item" href="#1">Checkout</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-header">
+					<h3 class="list-group-header-title">Group 3</h3>
+				</li>
+				<li class="list-group-item list-group-item-flex">
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example One</a>
+							</h4>
+						</section>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-flex">
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example Two</a>
+							</h4>
+						</section>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-flex">
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example Three</a>
+							</h4>
+						</section>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-flex">
+					<div class="autofit-col autofit-col-expand">
+						<section class="autofit-section">
+							<h4 class="list-group-title">
+								<a href="#1">Account Example Four</a>
+							</h4>
+						</section>
+					</div>
+				</li>
+			</ul>
+		</form>
+		<div class="pagination-bar">
+			<div class="dropdown pagination-items-per-page">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+					10 entries
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
+					</svg>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-top">
+					<li><a class="dropdown-item" href="#1">5</a></li>
+					<li><a class="dropdown-item" href="#1">10</a></li>
+					<li><a class="dropdown-item" href="#1">20</a></li>
+					<li><a class="dropdown-item" href="#1">30</a></li>
+					<li><a class="dropdown-item" href="#1">50</a></li>
+				</ul>
+			</div>
+			<div class="pagination-results">Showing 223,922 to 223,932 of 1,292,203 entries.</div>
+			<ul class="pagination">
+				<li class="disabled page-item">
+					<a class="page-link" href="#1">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+						</svg>
+						<span class="sr-only">Previous</span>
+					</a>
+				</li>
+				<li class="active page-item"><a class="page-link" href="#1">22,392</a></li>
+				<li class="page-item"><a class="page-link" href="#1">22,393</a></li>
+				<li class="dropdown page-item">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
+					<ul class="dropdown-menu dropdown-menu-top-center">
+						<li>
+							<ul class="inline-scroller">
+								<li><a class="dropdown-item" href="#1">22,394</a></li>
+								<li><a class="dropdown-item" href="#1">22,395</a></li>
+								<li><a class="dropdown-item" href="#1">22,396</a></li>
+								<li><a class="dropdown-item" href="#1">22,397</a></li>
+								<li><a class="dropdown-item" href="#1">22,398</a></li>
+								<li><a class="dropdown-item" href="#1">22,399</a></li>
+								<li><a class="dropdown-item" href="#1">22,400</a></li>
+								<li><a class="dropdown-item" href="#1">22,401</a></li>
+								<li><a class="dropdown-item" href="#1">22,402</a></li>
+								<li><a class="dropdown-item" href="#1">22,403</a></li>
+								<li><a class="dropdown-item" href="#1">22,404</a></li>
+								<li><a class="dropdown-item" href="#1">22,405</a></li>
+								<li><a class="dropdown-item" href="#1">22,406</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="page-item"><a class="page-link" href="#1">129,221</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#1">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+						</svg>
+						<span class="sr-only">Next</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('.list-group .list-group-item input[type="checkbox"]').on('click', function(event) {
+		$(this).closest('.list-group-item').toggleClass('active');
+	});
+
+	$(document).on('focus', '.heading-anchor', function(event) {
+		$('.list-group').find('.list-group-item-flex').removeClass('focus');
+	});
+
+	$(document).on('click', 'body', function(event) {
+		$('.list-group').find('.list-group-item-flex').removeClass('focus');
+	});
+
+	$('.list-group').on('focus', '.list-group-item-flex', function(event) {
+		var $this = $(this);
+		$this.closest('.list-group').find('.list-group-item-flex').removeClass('focus');
+		$this.closest('.list-group-item-flex').addClass('focus');
+	});
+
+	$('#uniqueSidenavToggler1').sideNavigation({
+		gutter: '12px', // The space between the sidenav-slider and the sidenav-content. Default: 15px.
+		heightType: 'fullHeight',
+		position: 'right', // The position of the sidenav-slider. Possible values: left, right. Default: 'left'.
+		type: 'relative', // The type of sidenav in desktop. Possible values: relative, fixed, fixed-push. Default: 'relative'.
+		typeMobile: 'fixed', // The type of sidenav in mobile. Possible values: relative, fixed, fixed-push. Default: 'relative'.
+		width: '320px' // The width of the side navigation. Default: '225px'.
+	});
+</script>

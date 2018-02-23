@@ -4,87 +4,91 @@
  * This renders the component's whole content.
  */
 {template .render}
-    {@param spritemap: string}
-    {@param title: string}
-    {@param? _handleItemToggled: any}
-    {@param? actionItems: list<[
-        href: string,
-        label: string,
-        separator: bool
-    ]>}
-    {@param? disabled: bool}
-    {@param? elementClasses: string}
-    {@param? fileType: string}
-    {@param? fileTypeStyle: string}
-    {@param? groupName: string}
-    {@param? href: string}
-    {@param? icon: string}
-    {@param? id: string}
-    {@param? inputName: string}
-    {@param? inputValue: string}
-    {@param? labels: list<?>}
-    {@param? labelStylesMap: ?}
-    {@param? selectable: bool}
-    {@param? selected: bool}
-    {@param? subtitle: string}
+	{@param spritemap: string}
+	{@param title: string}
+	{@param? _handleItemToggled: any}
+	{@param? actionItems: list<[
+		href: string,
+		label: string,
+		separator: bool
+	]>}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? groupName: string}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? id: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? labels: list<?>}
+	{@param? labelStylesMap: ?}
+	{@param? selectable: bool}
+	{@param? selected: bool}
+	{@param? stickerLabel: string}
+	{@param? stickerShape: string}
+	{@param? stickerStyle: string}
+	{@param? subtitle: string}
 
-    {let $classes kind="text"}
-        file-card
-        {if $elementClasses}
-            {sp}{$elementClasses}
-        {/if}
-    {/let}
+	{let $classes kind="text"}
+		file-card
+		{if $elementClasses}
+			{sp}{$elementClasses}
+		{/if}
+	{/let}
 
-    {call ClayCardBase.render}
-        {param actionItems: $actionItems /}
-        {param contentRenderer: 'file' /}
-        {param disabled: $disabled /}
-        {param elementClasses: $classes /}
-        {param events: ['itemToggled': $_handleItemToggled ] /}
-        {param fileType: $fileType /}
-        {param fileTypeStyle: $fileTypeStyle /}
+	{call ClayCardBase.render}
+		{param actionItems: $actionItems /}
+		{param contentRenderer: 'file' /}
+		{param disabled: $disabled /}
+		{param elementClasses: $classes /}
+		{param events: ['itemToggled': $_handleItemToggled ] /}
 		{param groupName: $groupName /}
-        {param href: $href /}
-        {param icon: $icon ?: 'documents-and-media' /}
-        {param id: $id /}
-        {param inputName: $inputName /}
-        {param inputValue: $inputValue /}
-        {param labels: $labels /}
-        {param labelStylesMap: $labelStylesMap /}
-        {param ref: 'card' /}
-        {param selectable: $selectable /}
-        {param selected: $selected /}
-        {param spritemap: $spritemap /}
-        {param subtitle: $subtitle /}
-        {param title: $title /}
-    {/call}
+		{param href: $href /}
+		{param icon: $icon ?: 'documents-and-media' /}
+		{param id: $id /}
+		{param inputName: $inputName /}
+		{param inputValue: $inputValue /}
+		{param labels: $labels /}
+		{param labelStylesMap: $labelStylesMap /}
+		{param ref: 'card' /}
+		{param selectable: $selectable /}
+		{param selected: $selected /}
+		{param spritemap: $spritemap /}
+		{param stickerLabel: $stickerLabel /}
+		{param stickerShape: $stickerShape /}
+		{param stickerStyle: $stickerStyle /}
+		{param subtitle: $subtitle /}
+		{param title: $title /}
+	{/call}
 {/template}
 
 /**
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'file'"}
-    {@param? fileType: string}
-    {@param? fileTypeStyle: string}
-    {@param? icon: string}
-    {@param? imageAlt: string}
-    {@param? imageSrc: string}
-    {@param? spritemap: string}
+	{@param? icon: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? spritemap: string}
+	{@param? stickerLabel: string}
+	{@param? stickerShape: string}
+	{@param? stickerStyle: string}
 
-    {if $icon and $spritemap}
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-            {call ClayIcon.render}
-                {param spritemap: $spritemap /}
-                {param symbol: $icon /}
-            {/call}
-        </div>
-    {/if}
+	{if $icon and $spritemap}
+		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+			{call ClayIcon.render}
+				{param spritemap: $spritemap /}
+				{param symbol: $icon /}
+			{/call}
+		</div>
+	{/if}
 
-    {if $fileType}
-        {call ClaySticker.render}
-            {param label: $fileType /}
-            {param position: 'bottom-left' /}
-            {param style: $fileTypeStyle ?: 'primary' /}
-        {/call}
-    {/if}
+	{if $stickerLabel}
+		{call ClaySticker.render}
+			{param label: $stickerLabel /}
+			{param position: 'bottom-left' /}
+			{param shape: $stickerShape ?: 'rounded' /}
+			{param style: $stickerStyle ?: 'primary' /}
+		{/call}
+	{/if}
 {/deltemplate}
