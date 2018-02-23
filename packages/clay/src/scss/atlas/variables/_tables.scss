@@ -37,11 +37,11 @@ $table-title: map-merge((
 
 $table-action-link: () !default;
 $table-action-link: map-merge((
-	color: $dropdown-action-toggle-color,
+	color: $secondary,
 	font-size: 1rem, // 16px
-	hover-bg: $dropdown-action-toggle-hover-bg,
-	hover-color: $dropdown-action-toggle-hover-color,
-	active-bg: $dropdown-action-toggle-active-bg
+	hover-bg: rgba(0, 0, 0, 0.02),
+	hover-color: $body-color,
+	active-bg: rgba(0, 0, 0, 0.04)
 ), $table-action-link);
 
 // Table Link
@@ -86,7 +86,7 @@ $table-list-link: map-merge((
 
 $table-list-action-link: () !default;
 $table-list-action-link: map-merge((
-	color: $dropdown-action-toggle-color,
-	hover-bg: $dropdown-action-toggle-hover-bg,
-	hover-color: $dropdown-action-toggle-hover-color
+	color: $secondary,
+	hover-bg: rgba(0, 0, 0, 0.02),
+	hover-color: $body-color
 ), $table-list-action-link);
