@@ -182,6 +182,14 @@
 	}
 }
 
+.btn-outline-borderless:not(:disabled):not(.disabled):active {
+	border-color: transparent;
+}
+
+.show > .btn-outline-borderless.dropdown-toggle {
+	border-color: transparent;
+}
+
 // Loading Icons with Buttons
 
 .btn .loading-animation {

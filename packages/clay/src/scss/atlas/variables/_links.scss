@@ -31,18 +31,33 @@ $component-subtitle-link: map-merge((
 $component-action: () !default;
 $component-action: map-merge((
 	font-size: 1rem, // 16px
-	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61),
+	active-bg: rgba(0, 0, 0, 0.04),
 	active-color: $body-color,
-	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	hover-bg: rgba(0, 0, 0, 0.02),
 	hover-color: $body-color,
+	btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
 	disabled-bg: transparent
 ), $component-action);
 
 // Link Outline
 
+$link-outline-primary: () !default;
+$link-outline-primary: map-merge((
+	hover-bg: lighten(saturate($primary, 3.40), 43.14),
+	hover-color: $primary,
+	btn-focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
+	btn-focus-outline: 0,
+	active-bg: lighten(desaturate($primary, 42.05), 41.76),
+	active-color: $primary
+), $link-outline-primary);
+
 $link-outline-secondary: () !default;
 $link-outline-secondary: map-merge((
 	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
-	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	active-bg: rgba(0, 0, 0, 0.04),
+	active-color: $body-color,
+	btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
+	btn-focus-outline: 0,
+	hover-bg: rgba(0, 0, 0, 0.02),
 	hover-color: $body-color
 ), $link-outline-secondary);
