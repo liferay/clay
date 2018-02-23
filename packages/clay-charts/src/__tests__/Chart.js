@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import Chart from '../Chart';
 
 beforeAll(() => {
@@ -18,19 +15,24 @@ afterAll(() => {
 });
 
 describe('Chart', () => {
-	it('should be pass correctly formatted configuration options to billboard.js', async () => {
-		const chart = await new Chart({
+	it('should be pass correctly formatted configuration options to billboard.js', done => {
+		const chart = new Chart({
 			data: [],
 		});
-		const config = bb.generate.mock.calls[0][0];
-		expect(config.bindto).toBe(chart.refs.chart);
 
-		config.bindto = undefined;
-		expect(JSON.stringify(config)).toMatchSnapshot();
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
+			expect(config.bindto).toBe(chart.refs.chart);
+
+			config.bindto = undefined;
+
+			expect(JSON.stringify(config)).toMatchSnapshot();
+			done();
+		});
 	});
 
-	it('should format columns array into billboard.js compatible data', async () => {
-		await new Chart({
+	it('should format columns array into billboard.js compatible data', done => {
+		const chart = new Chart({
 			data: [
 				{
 					axis: 'y',
@@ -71,38 +73,43 @@ describe('Chart', () => {
 			],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
+			config.bindto = undefined;
 
-		config.bindto = undefined;
-
-		expect(JSON.stringify(config)).toMatchSnapshot();
+			expect(JSON.stringify(config)).toMatchSnapshot();
+			done();
+		});
 	});
 
-	it('should transform chart new type is passed', async () => {
+	it('should transform chart new type is passed', done => {
 		const transformMock = jest.fn();
 
 		bb.generate.mockReturnValue({
 			transform: transformMock,
 		});
 
-		const chart = await new Chart({
+		const chart = new Chart({
 			data: [],
 			type: 'line',
 		});
 
-		chart.type = 'spline';
+		chart.on('chartReady', () => {
+			chart.type = 'spline';
 
-		expect(transformMock.mock.calls[0][0]).toBe('spline');
+			expect(transformMock.mock.calls[0][0]).toBe('spline');
+			done();
+		});
 	});
 
-	it('should rerender chart when new data is passed', async () => {
+	it('should rerender chart when new data is passed', done => {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
 			load: loadMock,
 		});
 
-		const chart = await new Chart({
+		const chart = new Chart({
 			data: [
 				{
 					id: 'data1',
@@ -111,30 +118,31 @@ describe('Chart', () => {
 			],
 		});
 
-		/** */
-		async function updateData() {
+		chart.on('chartReady', () => {
+			chart.on('dataResolved', () => {
+				const config = JSON.stringify(loadMock.mock.calls[0][0]);
+
+				expect(config).toMatchSnapshot();
+				done();
+			});
+
 			chart.data = [
 				{
 					id: 'data1',
 					data: [1, 2, 3, 4],
 				},
 			];
-		}
-		await updateData();
-
-		const config = JSON.stringify(loadMock.mock.calls[0][0]);
-
-		expect(config).toMatchSnapshot();
+		});
 	});
 
-	it('should unload removed data when new data is passed', async () => {
+	it('should unload removed data when new data is passed', done => {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
 			load: loadMock,
 		});
 
-		const chart = await new Chart({
+		const chart = new Chart({
 			data: [
 				{
 					id: 'data1',
@@ -143,20 +151,20 @@ describe('Chart', () => {
 			],
 		});
 
-		/** */
-		async function updateData() {
+		chart.on('chartReady', () => {
+			chart.on('dataResolved', () => {
+				const config = JSON.stringify(loadMock.mock.calls[0][0]);
+
+				expect(config).toMatchSnapshot();
+				done();
+			});
+
 			chart.data = [
 				{
 					id: 'data2',
 					data: [1, 2, 3],
 				},
 			];
-		}
-
-		await updateData();
-
-		const config = JSON.stringify(loadMock.mock.calls[0][0]);
-
-		expect(config).toMatchSnapshot();
+		});
 	});
 });
