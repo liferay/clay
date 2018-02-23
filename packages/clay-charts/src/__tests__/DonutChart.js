@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import DonutChart from '../DonutChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('DonutChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new DonutChart({
-			columns: [],
+describe('DonutChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new DonutChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('donut');
+			expect(config.data.type).toBe('donut');
+			done();
+		});
 	});
 });

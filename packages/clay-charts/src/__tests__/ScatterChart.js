@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import ScatterChart from '../ScatterChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('ScatterChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new ScatterChart({
-			columns: [],
+describe('ScatterChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new ScatterChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('scatter');
+			expect(config.data.type).toBe('scatter');
+			done();
+		});
 	});
 });

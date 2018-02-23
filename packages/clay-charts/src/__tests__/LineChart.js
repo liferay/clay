@@ -1,7 +1,4 @@
-'use strict';
-
 import {bb} from 'billboard.js';
-
 import LineChart from '../LineChart';
 
 beforeAll(() => {
@@ -17,14 +14,17 @@ afterAll(() => {
 	bb.generate.mockRestore();
 });
 
-describe('LineChart', function() {
-	it('should be pass correct type to billboard.js', () => {
-		new LineChart({
-			columns: [],
+describe('LineChart', () => {
+	it('should be pass correct type to billboard.js', done => {
+		const chart = new LineChart({
+			data: [],
 		});
 
-		const config = bb.generate.mock.calls[0][0];
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
 
-		expect(config.data.type).toBe('line');
+			expect(config.data.type).toBe('line');
+			done();
+		});
 	});
 });
