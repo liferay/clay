@@ -3822,9 +3822,9 @@ ejs@^2.3.1:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.7.tgz#cc872c168880ae3c7189762fd5ffc00896c9518a"
 
-electric-base-components@alpha:
-  version "2.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/electric-base-components/-/electric-base-components-2.0.0-alpha.10.tgz#c02d8e4f150a1fad36adb941177514b33192f8c7"
+electric-base-components@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/electric-base-components/-/electric-base-components-3.0.2.tgz#837602b8180f35270856fc6ed3a2669e9015e20f"
   dependencies:
     metal-affix "^2.0.0"
     metal-ajax "^2.0.3"
@@ -3834,6 +3834,12 @@ electric-base-components@alpha:
     metal-tabs "^2.3.0"
     metal-toggler "^2.0.0"
     metal-tooltip "^2.0.3"
+
+electric-clay-components@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/electric-clay-components/-/electric-clay-components-3.0.1.tgz#093bb0e437b109f041092915ce3daf693f9764b8"
+  dependencies:
+    electric-base-components "^3.0.2"
 
 electric-cli@^3.0.1:
   version "3.0.1"
@@ -3848,12 +3854,6 @@ electric-cli@^3.0.1:
     run-sequence "^1.2.2"
     update-notifier "^2.1.0"
     yargs "^6.6.0"
-
-electric-quartz-components@alpha:
-  version "2.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/electric-quartz-components/-/electric-quartz-components-2.0.0-alpha.3.tgz#b073728a5646008973d17b9a0681be3aa3d252c3"
-  dependencies:
-    electric-base-components alpha
 
 electric@^3.0.1:
   version "3.0.1"
