@@ -1,5 +1,6 @@
 import {bb, d3} from 'billboard.js';
 import {Config} from 'metal-state';
+import {isServerSide} from 'metal';
 import types from './utils/types';
 
 const PROP_NAME_MAP = {
@@ -70,6 +71,10 @@ const ChartBase = {
 	 * @inheritDoc
 	 */
 	attached() {
+		if (isServerSide()) {
+			return;
+		}
+
 		const config = this._constructChartConfig();
 
 		this.bbChart = bb.generate(config);
@@ -83,6 +88,19 @@ const ChartBase = {
 		this.on('xChanged', this._handleXChanged.bind(this));
 
 		this._loading = false;
+	},
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		if (isServerSide()) {
+			return;
+		}
+
+		if (this.bbChart) {
+			this.bbChart.destroy();
+		}
 	},
 
 	/**
