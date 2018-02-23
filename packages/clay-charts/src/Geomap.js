@@ -55,12 +55,15 @@ class Geomap extends Component {
 		d3.json(this.data, this._onDataLoad.bind(this));
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	disposed() {
 		if (isServerSide()) {
 			return;
 		}
 
-		if (this.svg) {
+		if (this.svg) {
 			this.svg.remove();
 		}
 	}
