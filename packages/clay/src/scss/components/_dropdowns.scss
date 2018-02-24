@@ -95,6 +95,10 @@
 
 .dropdown-section {
 	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+
+	.form-group + .form-group {
+		margin-top: $dropdown-item-padding-y * 2;
+	}
 }
 
 .dropdown-menu {
@@ -140,6 +144,10 @@
 		&:last-child {
 			margin-bottom: -$dropdown-padding-y;
 		}
+	}
+
+	.form-group {
+		margin-bottom: 0;
 	}
 
 	.inline-scroller {
