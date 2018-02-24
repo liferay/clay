@@ -5,35 +5,221 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Dropdown Action</h3>
 
-		<blockquote class="blockquote">
-			<p>A monospaced <code>dropdown-toggle</code> for a dropdown containing several actions, add <code>dropdown-action</code> to <code>dropdown</code>.</p>
-		</blockquote>
+<h3>Dropdown in Lexicon Sites with Button</h3>
 
-<div class="dropdown dropdown-action">
-	<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-		</svg>
-	</a>
-	<ul aria-labelledby="dropdownAction1" class="dropdown-menu">
-		<li><a class="dropdown-item" href="#1">Download</a></li>
-		<li><a class="dropdown-item" href="#1">Edit</a></li>
-		<li><a class="dropdown-item" href="#1">Move</a></li>
-		<li><a class="dropdown-item" href="#1">Checkout</a></li>
-		<li><a class="dropdown-item" href="#1">Permissions</a></li>
-		<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
-	</ul>
+<blockquote class="blockquote">
+	<p><code>.link-outline-*</code> can be used on <code>.dropdown-toggle</code> with an <code>a</code> or <code>button</code> tag. Use an <code>a</code> with <code>href</code> if you want no focus outline on click and the browser default focus outline on tab. A <code>button</code> will have a custom focus outline on click and tab.</p>
+
+	<p>Using Bootstrap 4's <code>.btn</code> classes will always have a custom focus outline on click and tab.</p>
+</blockquote>
+
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-primary dropdown-toggle" data-toggle="dropdown" id="dropdownSites1" type="button">
+						Dropdown
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownSites1" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-borderless link-outline-primary dropdown-toggle" data-toggle="dropdown" id="dropdownSites2" type="button">
+						Dropdown
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownSites2" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownSites3" type="button">
+						Order by: newest
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownSites3" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-borderless link-outline-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownSites4" type="button">
+						Order by: newest
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownSites4" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown dropdown-action">
+					<button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-borderless link-outline-primary dropdown-toggle" data-toggle="dropdown" id="dropdownSites5" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownSites5" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" id="dropdownBtnSites1" type="button">
+						Dropdown
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownBtnSites1" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-outline-primary btn-sm dropdown-toggle" data-toggle="dropdown" id="dropdownBtnSites2" type="button">
+						Dropdown
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownBtnSites2" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-outline-borderless btn-outline-primary btn-sm dropdown-toggle" data-toggle="dropdown" id="dropdownBtnSites3" type="button">
+						Dropdown
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownBtnSites3" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id="dropdownBtnSites4" type="button">
+						Order by: newest
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownBtnSites4" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-outline-borderless btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id="dropdownBtnSites6" type="button">
+						Order by: newest
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownBtnSites6" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown dropdown-action">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-outline-borderless btn-outline-primary dropdown-toggle" data-toggle="dropdown" id="dropdownBtnSites7" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</button>
+					<ul aria-labelledby="dropdownBtnSites7" class="dropdown-menu">
+						<li><a class="dropdown-item" href="#1">Download</a></li>
+						<li><a class="dropdown-item" href="#1">Edit</a></li>
+						<li><a class="dropdown-item" href="#1">Move</a></li>
+						<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						<li><a class="dropdown-item" href="#1">Permissions</a></li>
+						<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-		<div class="dropdown dropdown-action">
-			<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="dropdownAction2" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+<h3>Dropdown in Lexicon Sites with Anchor</h3>
+
+<div class="card">
+	<div class="card-body">
+		<div class="dropdown">
+			<a aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-primary dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownSitesAnchor1" role="button">
+				Dropdown
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
 				</svg>
-			</button>
-			<ul aria-labelledby="dropdownAction2" class="dropdown-menu">
+			</a>
+			<ul aria-labelledby="dropdownSitesAnchor1" class="dropdown-menu">
 				<li><a class="dropdown-item" href="#1">Download</a></li>
 				<li><a class="dropdown-item" href="#1">Edit</a></li>
 				<li><a class="dropdown-item" href="#1">Move</a></li>
@@ -42,6 +228,132 @@ section: Components
 				<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
 			</ul>
 		</div>
+
+		<div class="dropdown">
+			<a aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-borderless link-outline-primary dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownSitesAnchor2" role="button">
+				Dropdown
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</a>
+			<ul aria-labelledby="dropdownSitesAnchor2" class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Download</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">Move</a></li>
+				<li><a class="dropdown-item" href="#1">Checkout</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown">
+			<a aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-secondary dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownSitesAnchor4" role="button">
+				Order by: newest
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</a>
+			<ul aria-labelledby="dropdownSitesAnchor4" class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Download</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">Move</a></li>
+				<li><a class="dropdown-item" href="#1">Checkout</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown">
+			<a aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-borderless link-outline-secondary dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownSitesAnchor4" role="button">
+				Order by: newest
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</a>
+			<ul aria-labelledby="dropdownSitesAnchor4" class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Download</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">Move</a></li>
+				<li><a class="dropdown-item" href="#1">Checkout</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown dropdown-action">
+			<a aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-primary link-outline-borderless dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownSitesAnchor5" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+				</svg>
+			</a>
+			<ul aria-labelledby="dropdownSitesAnchor5" class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Download</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">Move</a></li>
+				<li><a class="dropdown-item" href="#1">Checkout</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+			<h3>Dropdown Action</h3>
+
+			<blockquote class="blockquote">
+				<p>A monospaced <code>dropdown-toggle</code> for a dropdown containing several actions, add <code>dropdown-action</code> to <code>dropdown</code>.</p>
+			</blockquote>
+
+<h3>Dropdown Action Component Action with Anchor</h3>
+
+<div class="card">
+	<div class="card-body">
+		<div class="dropdown dropdown-action">
+			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+				</svg>
+			</a>
+			<ul aria-labelledby="dropdownAction1" class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Download</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">Move</a></li>
+				<li><a class="dropdown-item" href="#1">Checkout</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<h3>Dropdown Action Component Action with Button</h3>
+
+<div class="card">
+	<div class="card-body">
+		<div class="dropdown dropdown-action">
+			<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownBtnAction1" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+				</svg>
+			</button>
+			<ul aria-labelledby="dropdownBtnAction1" class="dropdown-menu">
+				<li><a class="dropdown-item" href="#1">Download</a></li>
+				<li><a class="dropdown-item" href="#1">Edit</a></li>
+				<li><a class="dropdown-item" href="#1">Move</a></li>
+				<li><a class="dropdown-item" href="#1">Checkout</a></li>
+				<li><a class="dropdown-item" href="#1">Permissions</a></li>
+				<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
 	</div>
 </div>
 
@@ -853,14 +1165,6 @@ section: Components
 </div>
 
 <script>
-	$('#mainContent').on(
-		'click',
-		'a',
-		function(event) {
-			event.preventDefault();
-		}
-	);
-
 	$('input[type="checkbox"]').change(
 		function(event) {
 			$(this).closest('.dropdown-item').toggleClass('active', this.checked);
