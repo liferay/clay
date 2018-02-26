@@ -1142,7 +1142,7 @@ ChartBase.STATE = {
 			enabled: Config.oneOf(['x', 'y']).required(),
 			end: Config.number().required(),
 			start: Config.number().required(),
-		}),
+		})
 	),
 
 	/**
