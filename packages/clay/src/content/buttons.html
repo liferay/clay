@@ -5,6 +5,24 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Button Unstyled</h3>
+
+		<blockquote class="blockquote">
+			<p>This is resets Boostrap 4's <code>.btn</code> styles so that a button can be styled like a link. You can omit the <code>.btn</code> class to retain the browser default focus style. This was created to help those that are concerned about the separation between content and presentation.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			Browsers will generally apply the focus outline on click for buttons which might throw off the presentation if buttons and links are mixed. It will require detailed attention to hover, focus, and active styles.
+		</div>
+
+		<button class="btn-unstyled" type="button">.btn-unstyled</button>
+		<a href="#1" role="button">Anchor</a>
+		<button class="btn btn-unstyled" type="button">.btn.btn-unstyled</button>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Button</h3>
 
 		<h6>Normal</h6>
@@ -21,7 +39,6 @@ section: Components
 		<button class="btn btn-dark" type="button">Dark</button>
 
 <button class="btn btn-link" type="button">Link</button>
-<button class="btn btn-unstyled" type="button">Unstyled</button>
 
 		<h6>Focus</h6>
 <button class="btn btn-primary focus" type="button">Primary</button>
@@ -37,7 +54,6 @@ section: Components
 		<button class="btn btn-dark focus" type="button">Dark</button>
 
 <button class="btn btn-link focus" type="button">Link</button>
-<button class="btn btn-unstyled focus" type="button">Unstyled</button>
 
 		<h6>Active</h6>
 <button class="active btn btn-primary" type="button">Primary</button>
@@ -53,7 +69,6 @@ section: Components
 		<button class="active btn btn-dark" type="button">Dark</button>
 
 <button class="active btn btn-link" type="button">Link</button>
-<button class="active btn btn-unstyled" type="button">Unstyled</button>
 
 		<h6>Disabled</h6>
 <button class="btn btn-primary" disabled type="button">Primary</button>
@@ -70,7 +85,6 @@ section: Components
 		<button class="btn btn-dark" disabled type="button">Dark</button>
 
 <button class="btn btn-link" disabled type="button">Link</button>
-<button class="btn btn-unstyled" disabled type="button">Unstyled</button>
 
 		<h6>Anchor and Input Elements as Buttons</h6>
 		<input class="btn btn-primary" type="button" value="Input" />
@@ -257,7 +271,6 @@ section: Components
 		<button class="btn btn-monospaced btn-dark" type="button">H</button>
 
 <button class="btn btn-monospaced btn-link" type="button">I</button>
-<button class="btn btn-monospaced btn-unstyled" type="button">J</button>
 
 	</div>
 </div>
