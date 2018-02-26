@@ -1,5 +1,7 @@
+import com.google.template.soy.data.SanitizedContent.ContentKind;
 import com.google.template.soy.data.SoyListData;
 import com.google.template.soy.data.SoyMapData;
+import com.google.template.soy.data.UnsafeSanitizedContentOrdainer;
 import com.google.template.soy.soytree.TemplateRegistry;
 import com.google.template.soy.tofu.SoyTofu;
 
@@ -63,15 +65,60 @@ class SoyTest {
 	}
 
 	def _getSoyData() {
+		def templateNode = _templateRegistry.basicTemplatesMap[namespace];
+		def templateParams = templateNode.params.inject([:]) {result, value -> 
+			result[value.name()] = value;
+			return result;
+		}
+
 		try {
+			
 			def json = new File("./fixtures/input/${namespace}").text;
 			def jsonSlurper = new JsonSlurper();
 			def params = jsonSlurper.parseText(json);
 			
 			def data = new SoyMapData();
 			
-			params.entrySet().forEach {entry -> 
-				data.put(entry.key, entry.value);
+			params.entrySet().forEach {entry ->
+				def value = entry.value
+			
+				try{
+					def paramType = templateParams[entry.key].type();
+					
+					if (_isOfType(paramType, ["string"])) {
+						// leave value as is
+					}
+					else if (_isOfType(paramType, ["html"])) {
+						value = UnsafeSanitizedContentOrdainer.ordainAsSafe(
+							entry.value,
+							ContentKind.HTML);
+					}					
+					else if (_isOfType(paramType, ["uri"])) {
+						value = UnsafeSanitizedContentOrdainer.ordainAsSafe(
+							entry.value,
+							ContentKind.URI);
+					}					
+					else if (_isOfType(paramType, ["js"])) {
+						value = UnsafeSanitizedContentOrdainer.ordainAsSafe(
+							entry.value,
+							ContentKind.JS);
+					}					
+					else if (_isOfType(paramType, ["css"])) {
+						value = UnsafeSanitizedContentOrdainer.ordainAsSafe(
+							entry.value,
+							ContentKind.CSS);
+					}					
+					else if (_isOfType(paramType, ["attributes"])) {
+						value = UnsafeSanitizedContentOrdainer.ordainAsSafe(
+							entry.value,
+							ContentKind.ATTRIBUTES);
+					}					
+				} 
+				catch(e) {
+					// ignore
+				}
+
+				data.put(entry.key, value);
 			};
 
 			return data;
