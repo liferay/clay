@@ -251,7 +251,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
 `;
 
 exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
-<div class="card-type-directory form-check form-check-card form-check-middle-left">
+<div class="card-type-directory form-check form-check-card form-check-middle-left active">
   <div class="custom-control custom-checkbox">
     <label>
       <input checked="" class="custom-control-input" ref="input" type="checkbox">
