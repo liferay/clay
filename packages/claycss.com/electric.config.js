@@ -29,7 +29,7 @@ if (clayPath) {
 }
 
 const excludedComponents = /.*pagination/;
-const metalComponents = ['electric-clay-components']
+const metalComponents = ['electric-quartz-components']
 	.concat(fs.readdirSync('../').filter(f => f.match(/^clay-.*/) && !f.match(excludedComponents)));
 const pathSrc = 'src';
 const ignoreDirs = ['components', 'layouts', 'pages', 'partials', 'styles'];
