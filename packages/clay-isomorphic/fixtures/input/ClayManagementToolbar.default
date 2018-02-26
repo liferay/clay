@@ -1,29 +1,57 @@
 {
-    "hideFiltersDoneButton": "(bool|null)",
-    "handleViewTypeClicked_": "(any|null)",
-    "sortingOrder": "(null|string)",
-    "handleOpenMobileSearchClick_": "(any|null)",
-    "handleSortingButtonClicked_": "(any|null)",
-    "selectable": "(bool|null)",
-    "handleCloseMobileSearchClick_": "(any|null)",
-    "contentRenderer": "(null|string)",
-    "elementClasses": "(null|string)",
-    "searchInputName": "(null|string)",
-    "searchActionURL": "(null|string)",
-    "handleSelectPageCheckboxChanged_": "(any|null)",
-    "handleSearchSearchClick_": "(any|null)",
-    "showSearch_": "(bool|null)",
-    "handleFilterDoneButtonClick_": "(any|null)",
-    "spritemap": "(string)",
-    "handleCreationButtonClicked_": "(any|null)",
+    "hideFiltersDoneButton": false,
+    "handleViewTypeClicked_": "",
+    "sortingOrder": "asc",
+    "handleOpenMobileSearchClick_": "",
+    "handleSortingButtonClicked_": "",
+    "selectable": false,
+    "handleCloseMobileSearchClick_": "",
+    "contentRenderer": "",
+    "elementClasses": "element-class-1 element-class-2",
+    "searchInputName": "",
+    "searchActionURL": "",
+    "handleSelectPageCheckboxChanged_": "",
+    "handleSearchSearchClick_": "",
+    "showSearch_": false,
+    "handleFilterDoneButtonClick_": "",
+    "spritemap": "spritemap.svg",
+    "handleCreationButtonClicked_": "",
     "viewTypes": [
-        "(list<[active: bool, disabled: bool, icon: string, label: string]>|null)"
+        {
+            "active": true,
+            "disabled": false,
+            "icon": "icon",
+            "label": "label"
+        }
     ],
     "filterItems": [
-        "(list<[checked: bool, disabled: bool, inputName: string, inputValue: string, label: string, separator: bool, type: string]>|null)"
+        {
+            "checked": false,
+            "disabled": true,
+            "inputName": "input-name",
+            "inputValue": "input-value",
+            "label": "label",
+            "separator": false,
+            "type": "type"
+        }
     ],
-    "searchFormName": "(null|string)",
-    "disabled": "(bool|null)",
-    "creationMenu": "([button: unknown, caption: string, helpText: string, items: list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>]|null)",
-    "id": "(null|string)"
+    "searchFormName": "search-form-name",
+    "disabled": false,
+    "creationMenu": {
+        "button": {},
+        "caption": "caption",
+        "helpText": "help text",
+        "items": [
+            {
+                "disabled": false,
+                "href": "https://www.claycss.com",
+                "icon": "icon",
+                "label": "label",
+                "quickAction": false,
+                "separator": false,
+                "type": "type"
+            }
+        ]
+    },
+    "id": "clay-management-toolbar"
 }

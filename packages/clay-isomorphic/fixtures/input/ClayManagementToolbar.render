@@ -1,36 +1,65 @@
 {
-    "hideFiltersDoneButton": "(bool|null)",
-    "handleViewTypeClicked_": "(any|null)",
+    "hideFiltersDoneButton": true,
+    "handleViewTypeClicked_": "",
     "actionItems": [
         "(list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>|null)"
+
     ],
     "handleSortingButtonClicked_": "(any|null)",
-    "selectable": "(bool|null)",
-    "elementClasses": "(null|string)",
-    "searchActionURL": "(null|string)",
-    "handleDeselectAllClicked_": "(any|null)",
-    "handleSelectPageCheckboxChanged_": "(any|null)",
-    "handleSearchSearchClick_": "(any|null)",
-    "showSearch_": "(bool|null)",
+    "selectable": false,
+    "elementClasses": "element-class-1 element-class-2",
+    "searchActionURL": "https://google.com",
+    "handleDeselectAllClicked_": "",
+    "handleSelectPageCheckboxChanged_": "",
+    "handleSearchSearchClick_": "",
+    "showSearch_": false,
     "filterItems": [
-        "(list<[checked: bool, disabled: bool, inputName: string, inputValue: string, label: string, separator: bool, type: string]>|null)"
+        {
+            "checked": false,
+            "disabled": true,
+            "inputName": "input-name",
+            "inputValue": "input-value",
+            "label": "label",
+            "separator": false,
+            "type": "type"
+        }
     ],
-    "creationMenu": "([button: unknown, caption: string, helpText: string, items: list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>]|null)",
-    "id": "(null|string)",
-    "sortingOrder": "(null|string)",
-    "totalItems": "(float|int|null)",
-    "handleOpenMobileSearchClick_": "(any|null)",
-    "handleCloseMobileSearchClick_": "(any|null)",
-    "handleActionClicked_": "(any|null)",
-    "contentRenderer": "(null|string)",
-    "searchInputName": "(null|string)",
-    "handleSelectAllClicked_": "(any|null)",
-    "handleFilterDoneButtonClick_": "(any|null)",
-    "spritemap": "(string)",
-    "handleCreationButtonClicked_": "(any|null)",
+    "creationMenu": {
+        "button": {},
+        "caption": "caption",
+        "helpText": "help text",
+        "items": [
+            {
+                "disabled": false,
+                "href": "https://www.claycss.com",
+                "icon": "icon",
+                "label": "label",
+                "quickAction": false,
+                "separator": false,
+                "type": "type"
+            }
+        ]
+    },
+    "id": "id",
+    "sortingOrder": "asc",
+    "totalItems": 100,
+    "handleOpenMobileSearchClick_": "",
+    "handleCloseMobileSearchClick_": "",
+    "handleActionClicked_": "",
+    "contentRenderer": "",
+    "searchInputName": "",
+    "handleSelectAllClicked_": "",
+    "handleFilterDoneButtonClick_": "",
+    "spritemap": "spritemap.svg",
+    "handleCreationButtonClicked_": "",
     "viewTypes": [
-        "(list<[active: bool, disabled: bool, icon: string, label: string]>|null)"
+        {
+            "active": false,
+            "disabled": false,
+            "icon": "icon",
+            "label": "label"
+        }
     ],
-    "searchFormName": "(null|string)",
-    "selectedItems": "(float|int|null)"
+    "searchFormName": "search-form-name",
+    "selectedItems": 1
 }

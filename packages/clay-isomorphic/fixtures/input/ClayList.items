@@ -1,10 +1,25 @@
 {
-    "schema": "([fields: list<[contentRenderer: string, contentRendererMap: unknown, fieldName: string, fieldsMap: unknown, iconShapesMap: unknown, iconsMap: unknown, labelStylesMap: unknown]>, inputName: string, inputNameField: string, inputNamesMap: unknown, inputValueField: string])",
-    "spritemap": "(null|string)",
-    "groupName": "(null|string)",
-    "selectable": "(bool|null)",
+    "schema": {
+       "fields": [
+           {
+                "contentRenderer": "",
+                "contentRendererMap": {},
+                "fieldName": "",
+                "fieldsMap": {},
+                "iconShapesMap": {},
+                "iconsMap": {},
+                "labelStylesMap": {},
+                "inputName": "",
+                "inputNameField": "",
+                "inputNamesMap": {},
+                "inputValueField": ""
+           }
+       ]
+    },
+    "spritemap": "spritemap.svg",
+    "groupName": "clay-list-items-group-name",
+    "selectable": true,
     "items": [
-        "(list<unknown>)"
     ],
-    "handleItemToggled_": "(any|null)"
+    "handleItemToggled_": ""
 }

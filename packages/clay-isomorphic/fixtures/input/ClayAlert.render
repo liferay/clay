@@ -1,10 +1,10 @@
 {
-    "spritemap": "(string)",
-    "closeable": "(bool|null)",
-    "handleHide_": "(any|null)",
-    "style": "(null|string)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
-    "message": "(html|string)",
-    "title": "(string)"
+    "spritemap": "spritemap.svg",
+    "closeable": false,
+    "handleHide_": "",
+    "style": "warning",
+    "elementClasses": "alert-class-1 alert-class-2",
+    "id": "alert-warning",
+    "message": "build failed",
+    "title": "Warning"
 }

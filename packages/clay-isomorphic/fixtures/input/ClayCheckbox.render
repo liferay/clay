@@ -1,14 +1,14 @@
 {
-    "ariaLabelledBy": "(null|string)",
-    "labelContent": "(html|null)",
-    "inline": "(bool|null)",
-    "indeterminate": "(bool|null)",
-    "name": "(null|string)",
-    "checked": "(bool|null)",
-    "disabled": "(bool|null)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
-    "label": "(null|string)",
-    "value": "(null|string)",
-    "hideLabel": "(bool|null)"
+    "ariaLabelledBy": "Clay CheckBox Aria Labelled By",
+    "labelContent": "<span>label content</span>",
+    "inline": false,
+    "indeterminate": false,
+    "name": "Clay Checkbox Name",
+    "checked": true,
+    "disabled": false,
+    "elementClasses": "clay-checkbox-1 clay-checkbox-2 clay-checkbox-3",
+    "id": "clay-checkbox",
+    "label": "Clay Checkbox Label",
+    "value": "Clay Checkbox Value",
+    "hideLabel": false
 }

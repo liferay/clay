@@ -1,18 +1,17 @@
 {
-    "visible": "(bool|null)",
-    "elementClasses": "(null|string)",
+    "visible": false,
+    "elementClasses": "clay-modal-1 clay-modal-2",
     "footerButtons": [
-        "(list<unknown>|null)"
     ],
-    "body": "(html|null|string)",
-    "handleClickCloseButtonFooter_": "(any|null)",
-    "title": "(null|string)",
-    "url": "(null|string)",
+    "body": "Clay Modal Body",
+    "handleClickCloseButtonFooter_": "",
+    "title": "Clay Modal Title",
+    "url": "http://www.claycss.com",
     "spritemap": "(null|string)",
-    "size": "(null|string)",
-    "handleClickFooterButton_": "(any|null)",
-    "id": "(null|string)",
-    "isTransitioning_": "(bool|null)",
-    "handleCloseModal_": "(any|null)",
-    "status": "(null|string)"
+    "size": "sm",
+    "handleClickFooterButton_": "",
+    "id": "clay-modal",
+    "isTransitioning_": false,
+    "handleCloseModal_": "",
+    "status": "Clay Modal Status"
 }

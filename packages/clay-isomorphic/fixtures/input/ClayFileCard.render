@@ -1,25 +1,35 @@
 {
     "actionItems": [
-        "(list<[href: string, label: string, separator: bool]>|null)"
+        {
+            "href": "https://www.claycss.com",
+            "label": "Clay",
+            "separator": true
+        },
+        {
+            "href": "https://www.github.com",
+            "label": "GitHub",
+            "separator": false
+        }
     ],
-    "selectable": "(bool|null)",
-    "icon": "(null|string)",
-    "elementClasses": "(null|string)",
-    "title": "(string)",
-    "handleItemToggled_": "(any|null)",
-    "inputName": "(null|string)",
-    "labelStylesMap": "(null|unknown)",
+    "selectable": false,
+    "icon": "plus",
+    "elementClasses": "clay-file-card-1 clay-file-card-2",
+    "title": "Clay File Card Title",
+    "handleItemToggled_": "",
+    "inputName": "",
+    "labelStylesMap": "",
     "labels": [
-        "(list<unknown>|null)"
+        "clay-file-card-label-1",
+        "clay-file-card-label-2"
     ],
-    "spritemap": "(string)",
-    "groupName": "(null|string)",
-    "subtitle": "(null|string)",
-    "inputValue": "(null|string)",
-    "disabled": "(bool|null)",
-    "href": "(null|string)",
-    "id": "(null|string)",
-    "fileType": "(null|string)",
-    "selected": "(bool|null)",
-    "fileTypeStyle": "(null|string)"
+    "spritemap": "spritemap.svg",
+    "groupName": "clay-file-card-group-name",
+    "subtitle": "Clay File Card Subtitle",
+    "inputValue": "Clay File Card Input Value",
+    "disabled": false,
+    "href": "https://www.claycss.com",
+    "id": "clay-file-card",
+    "fileType": "jpg",
+    "selected": false,
+    "fileTypeStyle": ""
 }

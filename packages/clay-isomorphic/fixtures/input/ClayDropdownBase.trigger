@@ -1,7 +1,7 @@
 {
-    "expanded": "(bool|null)",
-    "classes": "(null|string)",
-    "disabled": "(bool|null)",
-    "style": "(null|string)",
-    "label": "(html|string)"
+    "expanded": false,
+    "classes": "clay-dropdown-base-1 clay-dropdown-base-2",
+    "disabled": false,
+    "style": "",
+    "label": "Clay DropDown Base Label"
 }

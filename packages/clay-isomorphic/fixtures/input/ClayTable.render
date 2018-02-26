@@ -1,15 +1,30 @@
 {
-    "schema": "([fields: list<[contentRenderer: string, contentRendererMap: unknown, fieldName: string, fieldsMap: unknown, label: string, sortable: bool, sortingOrder: string]>, inputName: string, inputNameField: string, inputNamesMap: unknown, inputValueField: string])",
-    "spritemap": "(null|string)",
-    "size": "(null|string)",
-    "handleSortingClick_": "(any|null)",
-    "selectable": "(bool|null)",
-    "handleCellContentClick_": "(any|null)",
-    "showActionsMenu": "(bool|null)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
+    "schema": {
+        "fields": [
+            {
+                "contentRenderer": "",
+                "contentRendererMap": {},
+                "fieldName": "field-name",
+                "fieldsName": {},
+                "label": "label",
+                "sortable": false,
+                "sortingOrder": "asc"
+            }
+        ],
+        "inputName": "input-name",
+        "inputNameField": "input-name-field",
+        "inputNamesMap": {},
+        "inputValueField": "input-value-field"
+    },
+    "spritemap": "spritemap.svg",
+    "size": "sm",
+    "handleSortingClick_": "",
+    "selectable": false,
+    "handleCellContentClick_": "",
+    "showActionsMenu": true,
+    "elementClasses": "element-class-1 element-class-2",
+    "id": "id",
     "items": [
-        "(list<unknown>|null)"
     ],
-    "handleItemToggled_": "(any|null)"
+    "handleItemToggled_": ""
 }

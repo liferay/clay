@@ -1,7 +1,23 @@
 {
-    "schema": "([fields: list<[contentRenderer: string, contentRendererMap: unknown, fieldName: string, fieldsMap: unknown, label: string, sortable: bool, sortingOrder: string]>, inputName: string, inputNameField: string, inputNamesMap: unknown, inputValueField: string])",
-    "spritemap": "(null|string)",
-    "handleSortingClick_": "(any|null)",
-    "selectable": "(bool|null)",
-    "showActionsMenu": "(bool|null)"
+    "schema": {
+        "fields": [
+            {
+                "contentRenderer": "",
+                "contentRendererMap": {},
+                "fieldName": "field-name",
+                "fieldsName": {},
+                "label": "label",
+                "sortable": false,
+                "sortingOrder": "asc"
+            }
+        ],
+        "inputName": "input-name",
+        "inputNameField": "input-name-field",
+        "inputNamesMap": {},
+        "inputValueField": "input-value-field"
+    },
+    "spritemap": "spritemap.svg",
+    "handleSortingClick_": "",
+    "selectable": false,
+    "showActionsMenu": true
 }

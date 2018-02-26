@@ -1,10 +1,10 @@
 {
-    "ariaLabelledBy": "(null|string)",
-    "labelContent": "(html|null)",
-    "name": "(null|string)",
-    "checked": "(bool|null)",
-    "disabled": "(bool|null)",
-    "label": "(null|string)",
-    "value": "(null|string)",
-    "hideLabel": "(bool|null)"
+    "ariaLabelledBy": "clay-checkbox-input-label",
+    "labelContent": "<p>Clay Checkbox Label Content</p>",
+    "name": "clay-checkbox",
+    "checked": false,
+    "disabled": false,
+    "label": "Clay Checkbox Label",
+    "value": "Clay Checkbox Value",
+    "hideLabel": false
 }

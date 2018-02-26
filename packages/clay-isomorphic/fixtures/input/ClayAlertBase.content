@@ -1,8 +1,8 @@
 {
-    "spritemap": "(string)",
-    "closeable": "(bool|null)",
-    "handleCloseClick_": "(any|null)",
-    "style": "(null|string)",
-    "message": "(html|string)",
-    "title": "(string)"
+    "spritemap": "spritemap.svg",
+    "closeable": false,
+    "handleCloseClick_": "",
+    "style": "danger",
+    "message": "Clay Alert Base Content",
+    "title": "Clay Alert Base Title"
 }

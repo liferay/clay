@@ -1,9 +1,18 @@
 {
-    "spritemap": "(string)",
+    "spritemap": "spritemap.svg",
     "actionItems": [
-        "(list<[href: string, label: string, separator: bool]>|null)"
+        {
+            "href": "https://www.claycss.com",
+            "label": "ClayCSS",
+            "separator": true
+        },
+        {
+            "href": "https://www.github.com",
+            "label": "GitHub",
+            "separator": false
+        }
     ],
-    "icon": "(null|string)",
-    "href": "(null|string)",
-    "title": "(string)"
+    "icon": "clay-horizontal-card-icon",
+    "href": "https://www.claycss.com",
+    "title": "Clay Horizontal Card Title"
 }

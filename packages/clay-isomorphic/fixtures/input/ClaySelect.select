@@ -1,9 +1,8 @@
 {
     "options": [
-        "(list<unknown>)"
     ],
-    "multiple": "(bool|null)",
-    "name": "(null|string)",
-    "disabled": "(bool|null)",
-    "label": "(null|string)"
+    "multiple": false,
+    "name": "clay-select-name",
+    "disabled": false,
+    "label": "clay-select-label"
 }

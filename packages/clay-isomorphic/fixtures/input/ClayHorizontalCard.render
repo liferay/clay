@@ -1,18 +1,27 @@
 {
     "actionItems": [
-        "(list<[href: string, label: string, separator: bool]>|null)"
+        {
+            "href": "https://www.claycss.com",
+            "label": "Clay CSS",
+            "separator": true
+        },
+        {
+            "href": "https://www.github.com",
+            "label": "GitHub",
+            "separator": false
+        }
     ],
-    "selectable": "(bool|null)",
-    "icon": "(null|string)",
-    "elementClasses": "(null|string)",
-    "title": "(string)",
-    "inputName": "(null|string)",
-    "handleItemCheckboxClick_": "(any|null)",
-    "spritemap": "(string)",
-    "groupName": "(null|string)",
-    "inputValue": "(null|string)",
-    "disabled": "(bool|null)",
-    "href": "(null|string)",
-    "id": "(null|string)",
-    "selected": "(bool|null)"
+    "selectable": false,
+    "icon": "plus",
+    "elementClasses": "clay-horizontal-card-1 clay-horizontal-card-2",
+    "title": "Clay Horizontal Card Title",
+    "inputName": "clay-horizontal-card-input",
+    "handleItemCheckboxClick_": "",
+    "spritemap": "spritemap.svg",
+    "groupName": "clay-horizontal-card-group",
+    "inputValue": "Clay Horizontal Card Input Value",
+    "disabled": false,
+    "href": "https://www.claycss.com",
+    "id": "clay-horizontal-card",
+    "selected": false
 }

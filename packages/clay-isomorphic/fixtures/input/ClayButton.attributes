@@ -1,15 +1,15 @@
 {
-    "icon": "(null|string)",
-    "elementClasses": "(null|string)",
-    "label": "(html|null|string)",
-    "type": "(null|string)",
-    "ariaLabel": "(null|string)",
-    "size": "(null|string)",
-    "name": "(null|string)",
-    "block": "(bool|null)",
-    "disabled": "(bool|null)",
-    "monospaced": "(bool|null)",
-    "style": "(null|string)",
-    "id": "(null|string)",
-    "value": "(null|string)"
+    "icon": "clay-button-icon",
+    "elementClasses": "clay-button-1 clay-button-2 clay-button3",
+    "label": "Clay Button Label",
+    "type": "button",
+    "ariaLabel": "button",
+    "size": "sm",
+    "name": "clay-button",
+    "block": true,
+    "disabled": false,
+    "monospaced": false,
+    "style": "link",
+    "id": "clay-button",
+    "value": "Clay Button Value"
 }

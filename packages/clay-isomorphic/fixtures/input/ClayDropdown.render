@@ -1,19 +1,18 @@
 {
-    "handleItemClick_": "(any|null)",
-    "icon": "(null|string)",
-    "itemsIconAlignment": "(null|string)",
-    "elementClasses": "(null|string)",
-    "label": "(html|null|string)",
-    "triggerClasses": "(null|string)",
-    "searchable": "(bool|null)",
-    "button": "(null|unknown)",
-    "spritemap": "(string)",
-    "expanded": "(bool|null)",
-    "disabled": "(bool|null)",
-    "style": "(null|string)",
-    "handleButtonClick_": "(any|null)",
-    "id": "(null|string)",
+    "handleItemClick_": "",
+    "icon": "plus",
+    "itemsIconAlignment": "left",
+    "elementClasses": "clay-dropdown-1 clay-dropdown-2",
+    "label": "Clay Dropdown Label",
+    "triggerClasses": "clay-dropdown-trigger",
+    "searchable": false,
+    "button": "",
+    "spritemap": "spritemap.svg",
+    "expanded": false,
+    "disabled": false,
+    "style": "clay-dropdown-style",
+    "handleButtonClick_": "",
+    "id": "clay-dropdown",
     "items": [
-        "(list<unknown>)"
     ]
 }

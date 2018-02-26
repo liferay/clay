@@ -1,22 +1,31 @@
 {
     "actionItems": [
-        "(list<[href: string, label: string, separator: bool]>|null)"
+       {
+            "href": "href1",
+            "label": "label1",
+            "separator": false
+       },
+       {
+            "href": "href2",
+            "label": "label2",
+            "separator": true
+        }
     ],
-    "initials": "(null|string)",
-    "selectable": "(bool|null)",
-    "imageSrc": "(null|string)",
-    "elementClasses": "(null|string)",
-    "imageAlt": "(null|string)",
-    "handleItemToggled_": "(any|null)",
-    "inputName": "(null|string)",
-    "spritemap": "(null|string)",
-    "groupName": "(null|string)",
-    "subtitle": "(null|string)",
-    "userColor": "(null|string)",
-    "name": "(string)",
-    "inputValue": "(null|string)",
-    "disabled": "(bool|null)",
-    "href": "(null|string)",
-    "id": "(null|string)",
-    "selected": "(bool|null)"
+    "initials": "TT",
+    "selectable": true,
+    "imageSrc": "clay-user-card-image-src",
+    "elementClasses": "clay-user-card-1 clay-user-card-2",
+    "imageAlt": "Clay User Card Image Alt",
+    "handleItemToggled_": "",
+    "inputName": "clay-user-card-input",
+    "spritemap": "spritemap.svg",
+    "groupName": "clay-user-card-groupname",
+    "subtitle": "Clay User Card Subtitle",
+    "userColor": "red",
+    "name": "Clay User Card Name",
+    "inputValue": "Clay User Card Input value",
+    "disabled": false,
+    "href": "clay-user-card-href",
+    "id": "clay-user-card",
+    "selected": false
 }

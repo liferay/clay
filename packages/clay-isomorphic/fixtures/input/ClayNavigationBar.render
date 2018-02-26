@@ -1,12 +1,21 @@
 {
-    "spritemap": "(string)",
-    "visible_": "(bool|null)",
-    "elementClasses": "(null|string)",
-    "handleClickToggler_": "(any|null)",
-    "id": "(null|string)",
-    "isTransitioning_": "(bool|null)",
-    "inverted": "(bool|null)",
+    "spritemap": "spritemap.svg",
+    "visible_": false,
+    "elementClasses": "clay-navigation-bar-1 clay-navigation-bar-2",
+    "handleClickToggler_": "",
+    "id": "clay-navigation",
+    "isTransitioning_": false,
+    "inverted": false,
     "items": [
-        "(list<[active: bool, href: string, label: string]>)"
+        {
+            "active": true,
+            "href": "https://www.claycss.com",
+            "label": "Clay CSS"
+        },
+        {
+            "active": false,
+            "href": "https://www.github.com",
+            "label": "GitHub"
+        }
     ]
 }

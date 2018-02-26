@@ -1,11 +1,11 @@
 {
-    "closeable": "(bool|null)",
-    "spritemap": "(null|string)",
-    "handleCloseButtonClick_": "(any|null)",
-    "size": "(null|string)",
-    "style": "(null|string)",
-    "elementClasses": "(null|string)",
-    "href": "(null|string)",
-    "id": "(null|string)",
-    "label": "(null|string)"
+    "closeable": false,
+    "spritemap": "spritemap.svg",
+    "handleCloseButtonClick_": "",
+    "size": "sm",
+    "style": "",
+    "elementClasses": "clay-label-1 clay-label-2",
+    "href": "clay-label-href",
+    "id": "clay-label",
+    "label": "Clay Label"
 }

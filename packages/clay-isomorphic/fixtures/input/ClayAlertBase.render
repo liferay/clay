@@ -1,13 +1,13 @@
 {
-    "spritemap": "(string)",
-    "closeable": "(bool|null)",
-    "visible_": "(bool|null)",
-    "handleCloseClick_": "(any|null)",
-    "style": "(null|string)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
-    "message": "(html|string)",
-    "title": "(string)",
-    "type": "(null|string)",
-    "autoClose": "(bool|null)"
+    "spritemap": "spritemap.svg",
+    "closeable": false,
+    "visible_": true,
+    "handleCloseClick_": "",
+    "style": "danger",
+    "elementClasses": "clay-alert-base-1 clay-alert-base-2",
+    "id": "clay-alert-base-1",
+    "message": "Clay Alert Base Message",
+    "title": "Clay Alert Base Title",
+    "type": "embedded",
+    "autoClose": true
 }

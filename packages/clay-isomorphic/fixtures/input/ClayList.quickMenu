@@ -1,6 +1,21 @@
 {
-    "spritemap": "(string)",
+    "spritemap": "spritemap.svg",
     "items": [
-        "(list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool]>)"
+        {
+            "disabled": false,
+            "href": "https://www.claycss.com",
+            "icon": "icon1",
+            "label": "label1",
+            "quickAction": true,
+            "separator": true
+        },
+        {
+            "disabled": true,
+            "href": "https://www.github.com",
+            "icon": "icon2",
+            "label": "label2",
+            "quickAction": false,
+            "separator": false
+        }
     ]
 }

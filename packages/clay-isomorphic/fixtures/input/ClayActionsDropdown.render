@@ -1,16 +1,18 @@
 {
     "button": "(null|unknown)",
-    "spritemap": "(string)",
-    "expanded": "(bool|null)",
-    "helpText": "(null|string)",
-    "handleItemClick_": "(any|null)",
-    "itemsIconAlignment": "(null|string)",
-    "caption": "(null|string)",
-    "disabled": "(bool|null)",
-    "elementClasses": "(null|string)",
-    "handleButtonClick_": "(any|null)",
-    "id": "(null|string)",
+    "spritemap": "spritemap.svg",
+    "expanded": false,
+    "helpText": "help text",
+    "handleItemClick_": "",
+    "itemsIconAlignment": "left",
+    "caption": "caption",
+    "disabled": false,
+    "elementClasses": "action-dropdown-1 action-dropdown-2",
+    "handleButtonClick_": "",
+    "id": "action-dropdown-id",
     "items": [
-        "(list<unknown>)"
+        {
+
+        }
     ]
 }

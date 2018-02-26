@@ -1,17 +1,16 @@
 {
-    "helpText": "(null|string)",
-    "handleItemClick_": "(any|null)",
-    "portalElementId": "(null|string)",
-    "itemsIconAlignment": "(null|string)",
-    "caption": "(null|string)",
-    "contentRenderer": "(null|string)",
-    "searchable": "(bool|null)",
-    "button": "(null|unknown)",
-    "handleSearch_": "(any|null)",
-    "spritemap": "(null|string)",
-    "expanded": "(bool|null)",
-    "handleButtonClick_": "(any|null)",
+    "helpText": "Clay Dropdown Base Help Text",
+    "handleItemClick_": "",
+    "portalElementId": "clay-dropdown-base-portal-element",
+    "itemsIconAlignment": "left",
+    "caption": "Clay Dropdown Base Caption",
+    "contentRenderer": "",
+    "searchable": true,
+    "button": "",
+    "handleSearch_": "",
+    "spritemap": "spritemap.svg",
+    "expanded": false,
+    "handleButtonClick_": "",
     "items": [
-        "(list<unknown>)"
     ]
 }

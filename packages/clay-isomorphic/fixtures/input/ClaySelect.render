@@ -1,12 +1,11 @@
 {
     "options": [
-        "(list<unknown>)"
     ],
-    "multiple": "(bool|null)",
-    "name": "(null|string)",
-    "disabled": "(bool|null)",
-    "wrapperType": "(null|string)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
-    "label": "(null|string)"
+    "multiple": true,
+    "name": "clay-select-name",
+    "disabled": false,
+    "wrapperType": "snoop dogg",
+    "elementClasses": "clay-select-1 clay-select-2",
+    "id": "clay-select",
+    "label": "Clay Select Label"
 }

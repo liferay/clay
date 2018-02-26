@@ -1,12 +1,27 @@
 {
-    "schema": "([fields: list<[contentRenderer: string, contentRendererMap: unknown, fieldName: string, fieldsMap: unknown, label: string, sortable: bool, sortingOrder: string]>, inputName: string, inputNameField: string, inputNamesMap: unknown, inputValueField: string])",
-    "spritemap": "(null|string)",
-    "groupName": "(null|string)",
-    "selectable": "(bool|null)",
-    "handleCellContentClick_": "(any|null)",
-    "showActionsMenu": "(bool|null)",
+    "schema": {
+        "fields": [
+            {
+                "contentRenderer": "",
+                "contentRendererMap": {},
+                "fieldName": "field-name",
+                "fieldsName": {},
+                "label": "label",
+                "sortable": false,
+                "sortingOrder": "asc"
+            }
+        ],
+        "inputName": "input-name",
+        "inputNameField": "input-name-field",
+        "inputNamesMap": {},
+        "inputValueField": "input-value-field"
+    },
+    "spritemap": "spritemap.svg",
+    "groupName": "group-name",
+    "selectable": false,
+    "handleCellContentClick_": "",
+    "showActionsMenu": false,
     "items": [
-        "(list<unknown>)"
     ],
-    "handleItemToggled_": "(any|null)"
+    "handleItemToggled_": ""
 }

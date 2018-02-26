@@ -1,8 +1,17 @@
 {
-    "spritemap": "(string)",
-    "visible_": "(bool|null)",
-    "isTransitioning_": "(bool|null)",
+    "spritemap": "spritemap.svg",
+    "visible_": false,
+    "isTransitioning_": false,
     "items": [
-        "(list<[active: bool, href: string, label: string]>)"
+        {
+            "active": false,
+            "href": "http://www.claycss.com",
+            "label": "Clay CSS"
+        },
+        {
+            "active": true,
+            "href": "http://www.github.com",
+            "label": "GitHub"
+        }
     ]
 }

@@ -1,12 +1,12 @@
 {
-    "labelContent": "(html|null)",
-    "inline": "(bool|null)",
-    "name": "(null|string)",
-    "checked": "(bool|null)",
-    "disabled": "(bool|null)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
-    "label": "(null|string)",
-    "value": "(null|string)",
-    "hideLabel": "(bool|null)"
+    "labelContent": "Clay Radio Label Content",
+    "inline": false,
+    "name": "clay-radio-label-name",
+    "checked": false,
+    "disabled": false,
+    "elementClasses": "clay-radio-1 clay-radio-2",
+    "id": "clay-radio-1",
+    "label": "Clay Radio Label",
+    "value": "Clay Radio Value",
+    "hideLabel": false
 }

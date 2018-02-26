@@ -1,10 +1,23 @@
 {
-    "schema": "([contentRenderer: string, contentRendererMap: unknown, fieldName: string, fieldsMap: unknown, fileTypeStylesMap: unknown, iconsMap: unknown, inputName: string, inputNameField: string, inputNamesMap: unknown, inputValueField: string, labelStylesMap: unknown, userColorsMap: unknown])",
-    "spritemap": "(string)",
-    "groupName": "(null|string)",
-    "selectable": "(bool|null)",
+    "schema": {
+        "contentRenderer": "",
+        "contentRendererMap": {},
+        "fieldName": "",
+        "fieldsMap": {},
+        "fileTypeStylesMap": {},
+        "iconsMap": null,
+        "inputName": "",
+        "inputNameField": "",
+        "inputNamesMap": {},
+        "inputValueField": "",
+        "labelStylesMap": {},
+        "userColorsMap": {}
+    },
+    "spritemap": "spritemap.svg",
+    "groupName": "clay-card-grid-items-group-name",
+    "selectable": false,
     "items": [
-        "(list<unknown>)"
+
     ],
     "handleItemToggled_": "(any|null)"
 }

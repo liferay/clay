@@ -1,8 +1,8 @@
 {
-    "spritemap": "(string)",
-    "baseHref": "(null|string)",
-    "totalPages": "(float|int)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
-    "currentPage": "(float|int)"
+    "spritemap": "spritemap.svg",
+    "baseHref": "baseHref",
+    "totalPages": 2,
+    "elementClasses": "clay-pagination-1 clay-pagination-2",
+    "id": "clay-pagination",
+    "currentPage": 1
 }

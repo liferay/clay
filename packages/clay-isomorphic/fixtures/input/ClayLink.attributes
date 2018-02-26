@@ -1,11 +1,11 @@
 {
-    "download": "(null|string)",
-    "buttonStyle": "(null|string)",
-    "ariaExpanded": "(bool|null)",
-    "style": "(null|string)",
-    "elementClasses": "(null|string)",
-    "href": "(null|string)",
-    "id": "(null|string)",
-    "ariaLabel": "(null|string)",
-    "target": "(null|string)"
+    "download": "clay-link-download",
+    "buttonStyle": "unstyled",
+    "ariaExpanded": true,
+    "style": "danger",
+    "elementClasses": "clay-link-1 clay-link-2",
+    "href": "https://www.claycss.com",
+    "id": "clay-link",
+    "ariaLabel": "Clay Link Aria Label",
+    "target": "clay-link-target"
 }

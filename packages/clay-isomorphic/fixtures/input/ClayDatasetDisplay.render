@@ -1,38 +1,75 @@
 {
-    "hideFiltersDoneButton": "(bool|null)",
-    "handleViewTypeClicked_": "(any|null)",
+    "hideFiltersDoneButton": true,
+    "handleViewTypeClicked_": "",
     "actionItems": [
-        "(list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>|null)"
+        {
+            "disabled": true,
+            "href": "https://www.claycss.com",
+            "icon": "clay-icon",
+            "label": "Clay CSS",
+            "quickAction": false,
+            "separator": false,
+            "type": "some type"
+        }
     ],
-    "handleSortingButtonClicked_": "(any|null)",
-    "selectable": "(bool|null)",
+    "handleSortingButtonClicked_": "",
+    "selectable": false,
     "selectedItems_": [
-        "(list<unknown>|null)"
     ],
-    "elementClasses": "(null|string)",
-    "searchActionURL": "(null|string)",
-    "title": "(null|string)",
-    "handleDeselectAllClicked_": "(any|null)",
-    "handleSelectPageCheckboxChanged_": "(any|null)",
-    "selectedView": "(int|null)",
-    "handleItemToggled_": "(any|null)",
-    "handleFilterDoneClicked_": "(any|null)",
-    "handleSearch_": "(any|null)",
-    "totalItems_": "(float|int|null)",
+    "elementClasses": "clay-dataset-display-class-1 clay-dataset-display-class-2",
+    "searchActionURL": "https://google.com?q=$1",
+    "title": "Clay Dataset Display Title",
+    "handleDeselectAllClicked_": "",
+    "handleSelectPageCheckboxChanged_": "",
+    "selectedView": 0,
+    "handleItemToggled_": "",
+    "handleFilterDoneClicked_": "",
+    "handleSearch_": "",
+    "totalItems_": 1,
     "filterItems": [
-        "(list<[checked: bool, disabled: bool, inputName: string, inputValue: string, label: string, separator: bool, type: string]>|null)"
+        {
+            "checked": false,
+            "disabled": false,
+            "inputName": "input name",
+            "inputValue": "input value",
+            "label": "label",
+            "separator": false,
+            "type": "type"
+        }
     ],
-    "creationMenu": "([button: unknown, caption: string, helpText: string, items: list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>]|null)",
-    "id": "(null|string)",
+    "creationMenu": {
+        "button": {},
+        "caption": "caption",
+        "helpText": "help text",
+        "items": [
+            {
+                "disabled": false,
+                "href": "https://www.claycss.com",
+                "icon": "icon",
+                "label": "label",
+                "quickAction": false,
+                "separator": false,
+                "type": "type"
+            }
+        ]
+    },
+    "id": "clay-dataset-display",
     "views": [
-        "(list<[active: bool, contentRenderer: string, disabled: bool, icon: string, label: string, schema: unknown]>|null)"
+        {
+            "active": true,
+            "contentRenderer": "",
+            "disabled": false,
+            "icon": "icon",
+            "label": "label",
+            "schema": {}
+        }
     ],
-    "sortingOrder": "(null|string)",
-    "handleActionClicked_": "(any|null)",
-    "searchInputName": "(null|string)",
-    "handleSelectAllClicked_": "(any|null)",
-    "spritemap": "(string)",
-    "handleCreationButtonClicked_": "(any|null)",
-    "searchFormName": "(null|string)",
-    "items": "(null|unknown)"
+    "sortingOrder": "asc",
+    "handleActionClicked_": "",
+    "searchInputName": "search-input-name",
+    "handleSelectAllClicked_": "",
+    "spritemap": "spritemap.svg",
+    "handleCreationButtonClicked_": "",
+    "searchFormName": "search-form-name",
+    "items": ""
 }

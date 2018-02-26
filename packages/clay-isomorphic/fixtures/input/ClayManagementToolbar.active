@@ -1,14 +1,14 @@
 {
-    "spritemap": "(string)",
-    "totalItems": "(float|int|null)",
+    "spritemap": "spritemap.svg",
+    "totalItems": 3,
     "actionItems": [
-        "(list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>|null)"
+
     ],
-    "handleActionClicked_": "(any|null)",
-    "elementClasses": "(null|string)",
-    "id": "(null|string)",
-    "handleDeselectAllClicked_": "(any|null)",
-    "handleSelectPageCheckboxChanged_": "(any|null)",
-    "handleSelectAllClicked_": "(any|null)",
-    "selectedItems": "(float|int|null)"
+    "handleActionClicked_": "",
+    "elementClasses": "clay-management-toolbar-1 clay-management-toolbar-2",
+    "id": "clay-management-toolbar",
+    "handleDeselectAllClicked_": "",
+    "handleSelectPageCheckboxChanged_": "",
+    "handleSelectAllClicked_": "",
+    "selectedItems": 1
 }
