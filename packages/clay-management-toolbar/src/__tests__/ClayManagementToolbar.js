@@ -227,6 +227,33 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with links as view types', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			viewTypes: [
+				{
+					active: true,
+					href: '#list',
+					icon: 'list',
+					label: 'List',
+				},
+				{
+					disabled: true,
+					href: '#table',
+					icon: 'table',
+					label: 'Table',
+				},
+				{
+					href: '#cards',
+					icon: 'cards2',
+					label: 'Card',
+				},
+			],
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a managment toolbar with plus button', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
