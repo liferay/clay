@@ -65,8 +65,8 @@ describe('ClayRadio', function() {
 
 	it('should render a radio with hidden label', () => {
 		clayRadio = new ClayRadio({
-			hideLabel: true,
 			label: 'My Radio',
+			showLabel: false,
 		});
 
 		expect(clayRadio).toMatchSnapshot();

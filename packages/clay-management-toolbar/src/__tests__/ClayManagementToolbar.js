@@ -196,7 +196,7 @@ describe('ClayManagementToolbar', function() {
 					type: 'item',
 				},
 			],
-			hideFiltersDoneButton: true,
+			showFiltersDoneButton: false,
 			spritemap: spritemap,
 		});
 

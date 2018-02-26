@@ -239,16 +239,6 @@ ClayManagementToolbar.STATE = {
 	filterItems: filterItemsValidator,
 
 	/**
-	 * Flag to indicate if the `Done` button in filter dropdown should be hide or
-	 * not.
-	 * @instance
-	 * @memberof ClayManagementToolbar
-	 * @type {?bool}
-	 * @default false
-	 */
-	hideFiltersDoneButton: Config.bool().value(false),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayManagementToolbar
@@ -320,6 +310,16 @@ ClayManagementToolbar.STATE = {
 	 * @default false
 	 */
 	showAdvancedSearch: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate if the `Done` button in filter dropdown should be shown or
+	 * not.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default true
+	 */
+	showFiltersDoneButton: Config.bool().value(true),
 
 	/**
 	 * Flag to indicate if the Info button should be shown or not.

@@ -7,12 +7,12 @@
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
-	{@param? hideLabel: bool}
 	{@param? id: string}
 	{@param? inline: bool}
 	{@param? label: string}
 	{@param? labelContent: html}
 	{@param? name: string}
+	{@param? showLabel: bool}
 	{@param? value: string}
 
 	{let $attributes kind="attributes"}
@@ -35,10 +35,10 @@
 		{call .input}
 			{param checked: $checked /}
 			{param disabled: $disabled /}
-			{param hideLabel: $hideLabel /}
 			{param label: $label /}
 			{param labelContent: $labelContent /}
 			{param name: $name /}
+			{param showLabel: $showLabel ?: true /}
 			{param value: $value /}
 		{/call}
 	</div>
@@ -50,10 +50,10 @@
 {template .input}
 	{@param? checked: bool}
 	{@param? disabled: bool}
-	{@param? hideLabel: bool}
 	{@param? label: string}
 	{@param? labelContent: html}
 	{@param? name: string}
+	{@param? showLabel: bool}
 	{@param? value: string}
 
 	<label>
@@ -89,7 +89,7 @@
 			{else}
 				{let $spanLabelClasses kind="text"}
 					custom-control-label-text
-					{if $hideLabel}
+					{if not $showLabel}
 						{sp}sr-only
 					{/if}
 				{/let}
