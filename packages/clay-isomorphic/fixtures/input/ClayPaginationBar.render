@@ -1,0 +1,19 @@
+{
+    "spritemap": "spritemap.svg",
+    "entries": [
+        {
+            "href": "href1",
+            "label": 1
+        },
+        {
+            "href": "href2",
+            "label": 2
+        }
+    ],
+    "baseHref": "baseHref",
+    "selectedEntry": 1,
+    "totalEntries": 2,
+    "elementClasses": "clay-pagination-1 clay-pagination-2",
+    "id": "clay-pagination",
+    "currentPage": 1
+}

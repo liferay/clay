@@ -1,0 +1,31 @@
+{
+    "schema": {
+        "fields": [
+            {
+                "contentRenderer": "",
+                "contentRendererMap": {},
+                "fieldName": "field-name",
+                "fieldsName": "id",
+                "label": "label",
+                "sortable": false,
+                "sortingOrder": "asc"
+            }
+        ],
+        "inputName": "",
+        "inputNameField": "name",
+        "inputNamesMap": {},
+        "inputValueField": "id"
+    },
+    "spritemap": "spritemap.svg",
+    "item": {
+        "id": "1",
+        "name": "Photos",
+        "type": "folder"
+    },
+    "groupName": "group-name",
+    "selectable": false,
+    "handleCellContentClick_": "",
+    "showActionsMenu": false,
+    "handleItemToggled_": "",
+    "showActionsMenu": false
+}

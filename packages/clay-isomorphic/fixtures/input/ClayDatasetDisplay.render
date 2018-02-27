@@ -1,0 +1,75 @@
+{
+    "showFiltersDoneButton": true,
+    "handleViewTypeClicked_": "",
+    "actionItems": [
+        {
+            "disabled": true,
+            "href": "https://www.claycss.com",
+            "icon": "clay-icon",
+            "label": "Clay CSS",
+            "quickAction": false,
+            "separator": false,
+            "type": "some type"
+        }
+    ],
+    "handleSortingButtonClicked_": "",
+    "selectable": false,
+    "selectedItems_": [
+    ],
+    "elementClasses": "clay-dataset-display-class-1 clay-dataset-display-class-2",
+    "searchActionURL": "https://google.com?q=$1",
+    "title": "Clay Dataset Display Title",
+    "handleDeselectAllClicked_": "",
+    "handleSelectPageCheckboxChanged_": "",
+    "selectedView": 0,
+    "handleItemToggled_": "",
+    "handleFilterDoneClicked_": "",
+    "handleSearch_": "",
+    "totalItems_": 1,
+    "filterItems": [
+        {
+            "checked": false,
+            "disabled": false,
+            "inputName": "input name",
+            "inputValue": "input value",
+            "label": "label",
+            "separator": false,
+            "type": "type"
+        }
+    ],
+    "creationMenu": {
+        "button": {},
+        "caption": "caption",
+        "helpText": "help text",
+        "items": [
+            {
+                "disabled": false,
+                "href": "https://www.claycss.com",
+                "icon": "icon",
+                "label": "label",
+                "quickAction": false,
+                "separator": false,
+                "type": "type"
+            }
+        ]
+    },
+    "id": "clay-dataset-display",
+    "views": [
+        {
+            "active": true,
+            "contentRenderer": "",
+            "disabled": false,
+            "icon": "icon",
+            "label": "label",
+            "schema": {}
+        }
+    ],
+    "sortingOrder": "asc",
+    "handleActionClicked_": "",
+    "searchInputName": "search-input-name",
+    "handleSelectAllClicked_": "",
+    "spritemap": "spritemap.svg",
+    "handleCreationButtonClicked_": "",
+    "searchFormName": "search-form-name",
+    "items": ""
+}

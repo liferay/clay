@@ -1,0 +1,57 @@
+{
+    "item": {
+        "id": "1",
+        "name": "Photos",
+        "type": "folder"
+    },
+    "schema": {
+        "contentRenderer": "",
+        "contentRendererMap": {
+		    "chef": "user",
+		    "folder": "horizontal",
+		    "MKV": "file",
+            "title": "name"
+        },
+        "fieldName": "",
+        "fieldsMap": {
+            "contentRenderer": "type",
+            "description": "origin",
+            "href": "downloadHref",
+            "icon": "type",
+            "imageAlt": "name",
+            "imageSrc": "image",
+            "initials": "initials",
+            "labels": "spicyLevel",
+            "stickerLabel": "format",
+            "title": "name",
+            "userColor": "style",
+            "username": "name"
+        },
+        "fileTypeStylesMap": {},
+        "iconsMap": {
+            "folder": "folder",
+            "*": "exclamation-circle",
+        },
+        "inputName": "",
+        "inputNameField": "type",
+        "inputNamesMap": {
+		    "folder": "folder",
+			"chef": "chef",
+			"*": "recipe"
+		},
+        "inputValueField": "id",
+        "labelStylesMap": {
+            "Spicy": "warning",
+			"Very Spicy": "danger",
+		    "*": "success"
+        },
+        "userColorsMap": {
+            "fusion": "danger",
+		    "*": "primary"
+        }
+    },
+    "spritemap": "spritemap.svg",
+    "groupName": "clay-card-grid-item-group-name",
+    "selectable": false,
+    "handleItemToggled_": ""
+}
