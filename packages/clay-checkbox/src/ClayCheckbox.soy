@@ -41,7 +41,7 @@
 			{param label: $label /}
 			{param labelContent: $labelContent /}
 			{param name: $name /}
-			{param showLabel: $showLabel ?: true /}
+			{param showLabel: isNonnull($showLabel) ? $showLabel : true /}
 			{param value: $value /}
 		{/call}
 	</div>

@@ -123,7 +123,7 @@
 				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
 				{param showAdvancedSearch: $showAdvancedSearch /}
-				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
+				{param showFiltersDoneButton: isNonnull($showFiltersDoneButton) ? $showFiltersDoneButton : true /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
 				{param sortingOrder: $sortingOrder /}

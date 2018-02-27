@@ -105,7 +105,7 @@
 				{param searchInputName: $searchInputName /}
 				{param selectable: $selectable /}
 				{param selectedItems: $_selectedItems ? length($_selectedItems) : 0 /}
-				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
+				{param showFiltersDoneButton: isNonnull($showFiltersDoneButton) ? $showFiltersDoneButton : true /}
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}
 				{param totalItems: $_totalItems /}
