@@ -31,13 +31,18 @@
 	<div {$attributes}>
 		{let $selectedEntryItem: $entries[$selectedEntry] /}
 
-		{call ClayDropdown.render}
-			{param elementClasses: 'pagination-items-per-page' /}
-			{param items: $entries /}
-			{param label: $selectedEntryItem.label + ' Items' /}
-			{param spritemap: $spritemap /}
-		{/call}
+		{let $selectedEntryLabel kind="text"}
+            {$selectedEntryItem.label}
+            {sp}Items
+        {/let}
 
+        {call ClayDropdown.render}
+            {param elementClasses: 'pagination-items-per-page' /}
+            {param items: $entries /}
+            {param label: $selectedEntryLabel /}
+            {param spritemap: $spritemap /}
+        {/call}
+		 
 		<div class="pagination-results">
 			Showing
 			{sp}{($currentPage - 1) * $selectedEntryItem.label + 1}

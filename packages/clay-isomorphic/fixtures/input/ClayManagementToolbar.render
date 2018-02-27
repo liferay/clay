@@ -1,0 +1,36 @@
+{
+    "hideFiltersDoneButton": "(bool|null)",
+    "handleViewTypeClicked_": "(any|null)",
+    "actionItems": [
+        "(list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>|null)"
+    ],
+    "handleSortingButtonClicked_": "(any|null)",
+    "selectable": "(bool|null)",
+    "elementClasses": "(null|string)",
+    "searchActionURL": "(null|string)",
+    "handleDeselectAllClicked_": "(any|null)",
+    "handleSelectPageCheckboxChanged_": "(any|null)",
+    "handleSearchSearchClick_": "(any|null)",
+    "showSearch_": "(bool|null)",
+    "filterItems": [
+        "(list<[checked: bool, disabled: bool, inputName: string, inputValue: string, label: string, separator: bool, type: string]>|null)"
+    ],
+    "creationMenu": "([button: unknown, caption: string, helpText: string, items: list<[disabled: bool, href: string, icon: string, label: string, quickAction: bool, separator: bool, type: string]>]|null)",
+    "id": "(null|string)",
+    "sortingOrder": "(null|string)",
+    "totalItems": "(float|int|null)",
+    "handleOpenMobileSearchClick_": "(any|null)",
+    "handleCloseMobileSearchClick_": "(any|null)",
+    "handleActionClicked_": "(any|null)",
+    "contentRenderer": "(null|string)",
+    "searchInputName": "(null|string)",
+    "handleSelectAllClicked_": "(any|null)",
+    "handleFilterDoneButtonClick_": "(any|null)",
+    "spritemap": "(string)",
+    "handleCreationButtonClicked_": "(any|null)",
+    "viewTypes": [
+        "(list<[active: bool, disabled: bool, icon: string, label: string]>|null)"
+    ],
+    "searchFormName": "(null|string)",
+    "selectedItems": "(float|int|null)"
+}
