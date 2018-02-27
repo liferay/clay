@@ -71,11 +71,11 @@ class ClayDatasetDisplay extends Component {
 
 	/**
 	 * Continues the propagation of the action item clicked event
-	 * @param {!Event} event
+	 * @param {!Object} item
 	 * @private
 	 */
-	_handleActionClicked(event) {
-		this.emit('actionClicked', event);
+	_handleActionClicked(item) {
+		this.emit('actionClicked', item);
 	}
 
 	/**
@@ -213,14 +213,14 @@ class ClayDatasetDisplay extends Component {
 
 	/**
 	 * Changes the view on management toolbar view type click.
-	 * @param {!Event} event
+	 * @param {!Object} item
 	 * @private
 	 */
-	_handleViewTypeClicked(event) {
+	_handleViewTypeClicked(item) {
 		this.views[this.selectedView].active = false;
 
 		for (let [index, view] of this.views.entries()) {
-			if (view === event.viewType) {
+			if (view === item) {
 				this.views[index].active = true;
 				this.selectedView = index;
 				break;
