@@ -1,152 +1,163 @@
 ---
 title: Grid
-section: Components
+description: "The aim of the Lexicon layout framework is to provide a common structural reference that contributes to streamlining the component construction and page composition processes as well as favoring visual consistency between the different elements of the interface."
+pattern: "designPrinciples/grid"
+layout: "guide"
+weight: 100
 ---
 
-<div class="clay-site-row-spacer">
-	<h3>Container</h3>
+### Description
+{$page.description}
 
-	<blockquote class="blockquote">
-		<p><code>.container</code> has a specific <code>max-width</code> for each grid breakpoint (e.g., Atlas 540px wide, 720px wide, 960px wide, and 1248px wide).</p>
-	</blockquote>
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-	<table>
-		<thead>
-			<tr>
-				<th colspan="2">Base</th>
-			</tr>
-			<tr>
-				<th>Breakpoint (min-width)</th>
-				<th>Container (max-width)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>576px</td>
-				<td>540px</td>
-			</tr>
-			<tr>
-				<td>768px</td>
-				<td>720px</td>
-			</tr>
-			<tr>
-				<td>992px</td>
-				<td>960px</td>
-			</tr>
-			<tr>
-				<td>1200px</td>
-				<td>1140px</td>
-			</tr>
-		</tbody>
-	</table>
+<article id="container">
+<h3 class="component-title">
+	<a href="#container">Container</a>
+</h3>
 
-	<table class="mb-4">
-		<thead>
-			<tr>
-				<th colspan="2">Atlas</th>
-			</tr>
-			<tr>
-				<th>Breakpoint (min-width)</th>
-				<th>Container (max-width)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>576px</td>
-				<td>540px</td>
-			</tr>
-			<tr>
-				<td>768px</td>
-				<td>720px</td>
-			</tr>
-			<tr>
-				<td>992px</td>
-				<td>960px</td>
-			</tr>
-			<tr>
-				<td>1280px</td>
-				<td>1248px</td>
-			</tr>
-		</tbody>
-	</table>
+> <code>.container</code> has a specific <code>max-width</code> for each grid breakpoint (e.g., Atlas 540px wide, 720px wide, 960px wide, and 1248px wide).
 
-	<div class="bg-primary container">
-		<div class="text-white">
-			container
-		</div>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Base</th>
+		</tr>
+		<tr>
+			<th>Breakpoint (min-width)</th>
+			<th>Container (max-width)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>576px</td>
+			<td>540px</td>
+		</tr>
+		<tr>
+			<td>768px</td>
+			<td>720px</td>
+		</tr>
+		<tr>
+			<td>992px</td>
+			<td>960px</td>
+		</tr>
+		<tr>
+			<td>1200px</td>
+			<td>1140px</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="mb-4">
+	<thead>
+		<tr>
+			<th colspan="2">Atlas</th>
+		</tr>
+		<tr>
+			<th>Breakpoint (min-width)</th>
+			<th>Container (max-width)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>576px</td>
+			<td>540px</td>
+		</tr>
+		<tr>
+			<td>768px</td>
+			<td>720px</td>
+		</tr>
+		<tr>
+			<td>992px</td>
+			<td>960px</td>
+		</tr>
+		<tr>
+			<td>1280px</td>
+			<td>1248px</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="bg-primary container">
+	<div class="text-white">
+		container
 	</div>
-
 </div>
 
-<div class="clay-site-row-spacer">
-	<h3>Container Fluid</h3>
+```text/html
+<div class="container"></div>
+```
 
-	<blockquote class="blockquote">
-		<p><a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a></p>
+</article>
 
-		<p>Use <code>.container-fluid</code> with <code>.container-fluid-max-{sm|md|lg|xl}</code> to create fluid containers that don't expand beyond a set width (e.g., For Atlas xl => 1248px).</p>
-	</blockquote>
 
-	<table>
-		<thead>
-			<tr>
-				<th colspan="2">Base</th>
-			</tr>
-			<tr>
-				<th>Name</th>
-				<th>Container Fluid (max-width)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>.container-fluid-max-sm</td>
-				<td>540px</td>
-			</tr>
-			<tr>
-				<td>.container-fluid-max-md</td>
-				<td>720px</td>
-			</tr>
-			<tr>
-				<td>.container-fluid-max-lg</td>
-				<td>960px</td>
-			</tr>
-			<tr>
-				<td>.container-fluid-max-xl</td>
-				<td>1140px</td>
-			</tr>
-		</tbody>
-	</table>
+<article id="container-fluid">
+<h3 class="component-title">
+	<a href="#container-fluid">Container Fluid</a>
+</h3>
 
-	<table class="mb-4">
-		<thead>
-			<tr>
-				<th colspan="2">Atlas</th>
-			</tr>
-			<tr>
-				<th>Name</th>
-				<th>Container Fluid (max-width)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>.container-fluid-max-sm</td>
-				<td>540px</td>
-			</tr>
-			<tr>
-				<td>.container-fluid-max-md</td>
-				<td>720px</td>
-			</tr>
-			<tr>
-				<td>.container-fluid-max-lg</td>
-				<td>960px</td>
-			</tr>
-			<tr>
-				<td>.container-fluid-max-xl</td>
-				<td>1248px</td>
-			</tr>
-		</tbody>
-	</table>
+> <a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a>
 
+> Use <code>.container-fluid</code> with <code>.container-fluid-max-{literal}{{/literal}sm|md|lg|xl{literal}}{/literal}</code> to create fluid containers that don't expand beyond a set width (e.g., For Atlas xl => 1248px).
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Base</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<th>Container Fluid (max-width)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>.container-fluid-max-sm</td>
+			<td>540px</td>
+		</tr>
+		<tr>
+			<td>.container-fluid-max-md</td>
+			<td>720px</td>
+		</tr>
+		<tr>
+			<td>.container-fluid-max-lg</td>
+			<td>960px</td>
+		</tr>
+		<tr>
+			<td>.container-fluid-max-xl</td>
+			<td>1140px</td>
+		</tr>
+	</tbody>
+</table>
+<table class="mb-4">
+	<thead>
+		<tr>
+			<th colspan="2">Atlas</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<th>Container Fluid (max-width)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>.container-fluid-max-sm</td>
+			<td>540px</td>
+		</tr>
+		<tr>
+			<td>.container-fluid-max-md</td>
+			<td>720px</td>
+		</tr>
+		<tr>
+			<td>.container-fluid-max-lg</td>
+			<td>960px</td>
+		</tr>
+		<tr>
+			<td>.container-fluid-max-xl</td>
+			<td>1248px</td>
+		</tr>
+	</tbody>
+</table>
 <div class="bg-primary container-fluid container-fluid-max-sm">
 	<div class="text-white">
 		container-fluid-max-sm
@@ -168,34 +179,41 @@ section: Components
 	</div>
 </div>
 
-</div>
+```text/html
+<div class="container-fluid container-fluid-max-sm"></div>
 
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Container Form Lg</h3>
+<div class="container-fluid container-fluid-max-md"></div>
 
-		<blockquote class="blockquote">
-			Use <code>.container-form-lg</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
-		</blockquote>
+<div class="container-fluid container-fluid-max-lg"></div>
 
-		<div class="alert alert-warning">
-			If you need additional breakpoints such as <code>.container-form-{sm|md|xl}</code> you will need to define them yourself.
-		</div>
+<div class="container-fluid container-fluid-max-xl"></div>
+```
 
+</article>
+
+
+<article id="container-form-lg">
+<h3 class="component-title">
+	<a href="#container-form-lg">Container Form Lg</a>
+</h3>
+
+> Use <code>.container-form-lg</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
+
+<div class="alert alert-warning">If you need additional breakpoints such as <code>.container-form-{literal}{{/literal}sm|md|xl{literal}}{/literal}</code> you will need to define them yourself.</div>
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 					</svg>
 				</a>
 			</li>
@@ -205,7 +223,7 @@ section: Components
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
@@ -225,31 +243,32 @@ section: Components
 	</div>
 </div>
 
-	</div>
-</div>
+```text/html
+<div class="container-fluid container-fluid-max-xl container-form-lg"></div>
+```
 
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Container View</h3>
+</article>
 
-		<blockquote class="blockquote">
-			Use <code>.container-view</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and view pages (e.g., <a href="../test-card-view-template/">Card View</a>, <a href="../test-table-view-template/">Table View</a>, or <a href="../test-list-view-template/">List View</a>). This class only modifies the <code>padding</code> on the container.
-		</blockquote>
 
+<article id="container-view">
+<h3 class="component-title">
+	<a href="#container-view">Container View</a>
+</h3>
+> Use <code>.container-view</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and view pages (e.g., Card View, Table View, or List View). This class only modifies the <code>padding</code> on the container.
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 					</svg>
 				</a>
 			</li>
@@ -259,7 +278,7 @@ section: Components
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
@@ -283,10 +302,10 @@ section: Components
 						<th colspan="2">
 							Item Title
 							<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-up" />
+								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-up" />
 							</svg>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#order-arrow-down" />
+								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-down" />
 							</svg>
 						</th>
 						<th>Size</th>
@@ -322,24 +341,24 @@ section: Components
 							<div class="quick-action-menu">
 								<a class="quick-action-item" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+										<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 									</svg>
 								</a>
 								<a class="quick-action-item" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+										<use xlink:href="/vendor/lexicon/icons.svg#download" />
 									</svg>
 								</a>
 								<a class="quick-action-item" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#expand" />
+										<use xlink:href="/vendor/lexicon/icons.svg#expand" />
 									</svg>
 								</a>
 							</div>
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -356,5 +375,8 @@ section: Components
 	</form>
 </div>
 
-	</div>
-</div>
+```text/html
+<div class="container-fluid container-fluid-max-xl container-view"></div>
+```
+
+</article>

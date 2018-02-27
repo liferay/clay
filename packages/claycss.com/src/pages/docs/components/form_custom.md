@@ -5,9 +5,10 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="clay-custom-checkbox">
-
-### Custom Checkbox
+<article id="custom-checkbox">
+<h3 class="component-title">
+	<a href="#custom-checkbox">Custom Checkbox</a>
+</h3>
 
 <div class="sheet">
 	<div class="form-group">
@@ -29,7 +30,7 @@ weight: 100
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+				<input class="custom-control-input" type="checkbox">
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Indeterminate</span>
 				</span>
@@ -55,7 +56,7 @@ weight: 100
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" disabled type="checkbox">
+				<input class="custom-control-input" disabled type="checkbox">
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Indeterminate Disabled</span>
 				</span>
@@ -185,9 +186,10 @@ weight: 100
 </article>
 
 
-<article id="clay-custom-radio">
-
-### Custom Radio
+<article id="custom-radio">
+<h3 class="component-title">
+	<a href="#custom-radio">Custom Radio</a>
+</h3>
 
 <div class="sheet">
 	<div class="form-group">
@@ -261,9 +263,10 @@ weight: 100
 </article>
 
 
-<article id="clay-custom-controls-stacked">
-
-### Custom Controls Inline
+<article id="custom-controls-inline">
+<h3 class="component-title">
+	<a href="#custom-controls-inline">Custom Controls Inline</a>
+</h3>
 
 <div class="sheet">
 	<div class="form-group">
@@ -334,18 +337,3 @@ weight: 100
 ```
 
 </article>
-
-
-<script>
-{literal}
-$(function() {
-	$('.clay-site-custom-checkbox-indeterminate').prop('indeterminate', true);
-	$('[data-clay-site-toggle="file"]').on('change', function(event) {
-		var path = $(this).val();
-		var name = path.substring(path.lastIndexOf("\\") + 1, path.length);
-		var input = $(this).data('clay-site-content');
-		$(input).val(name);
-	});
-});
-{/literal}
-</script>

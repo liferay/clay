@@ -25,7 +25,7 @@ weight: 100
 		<ul class="list-unstyled">
 			<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
 			<li><a class="dropdown-item" href="#3">Normal Option</a></li>
-			<li><a class="disabled dropdown-item" href="#4">Disabled Option</a></li>
+			<li><a class="disabled dropdown-item" href="#4" tabindex="-1">Disabled Option</a></li>
 		</ul>
 	</div>
 </div>
@@ -64,7 +64,7 @@ weight: 100
 	<ul class="list-unstyled">
 		<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
 		<li><a class="dropdown-item" href="#3">Normal Option</a></li>
-		<li><a class="disabled dropdown-item" href="#4">Disabled Option</a></li>
+		<li><a class="disabled dropdown-item" href="#4" tabindex="-1">Disabled Option</a></li>
 	</ul>
 </div>
 ```
@@ -189,7 +189,7 @@ weight: 100
 					</label>
 				</div>
 			</li>
-			<li class="dropdown-item">
+			<li class="disabled dropdown-item">
 				<div class="custom-control custom-checkbox">
 					<label>
 						<input disabled="disabled" class="custom-control-input" type="checkbox">
@@ -262,7 +262,7 @@ weight: 100
 				</label>
 			</div>
 		</li>
-		<li class="dropdown-item">
+		<li class="disabled dropdown-item">
 			<div class="custom-control custom-checkbox">
 				<label>
 					<input disabled="disabled" class="custom-control-input" type="checkbox">
@@ -274,6 +274,78 @@ weight: 100
 		</li>
 	</ul>
 </div>
+```
+
+#### Dropdown with Other Form Elements
+
+<div class="clay-site-dropdown-menu-container">
+	<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+		<li class="dropdown-section form-group">
+			<label for="basicInputTypeText1">
+				Text 1
+			</label>
+			<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text">
+		</li>
+		<li class="dropdown-subheader">Form Section</li>
+		<li class="dropdown-section">
+			<div class="form-group">
+				<label for="basicInputTypeText2">
+					Text 2
+				</label>
+				<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text">
+			</div>
+		</li>
+		<li class="dropdown-section">
+			<div class="form-group">
+				<label for="basicInputTypeText3">
+					Text 3
+				</label>
+				<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text">
+			</div>
+			<div class="form-group">
+				<label for="basicInputTypeTextarea">Textarea</label>
+				<textarea class="form-control form-control-sm" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+			</div>
+		</li>
+		<li class="dropdown-subheader">Order by</li>
+		<li><a class="active dropdown-item" href="#1">Author</a></li>
+		<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
+	</ul>
+</div>
+
+```text/html
+<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+	<li class="dropdown-section form-group">
+		<label for="basicInputTypeText1">
+			Text 1
+		</label>
+		<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text">
+	</li>
+	<li class="dropdown-subheader">Form Section</li>
+	<li class="dropdown-section">
+		<div class="form-group">
+			<label for="basicInputTypeText2">
+				Text 2
+			</label>
+			<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text">
+		</div>
+	</li>
+	<li class="dropdown-section">
+		<div class="form-group">
+			<label for="basicInputTypeText3">
+				Text 3
+			</label>
+			<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text">
+		</div>
+		<div class="form-group">
+			<label for="basicInputTypeTextarea">Textarea</label>
+			<textarea class="form-control form-control-sm" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+		</div>
+	</li>
+	<li class="dropdown-subheader">Order by</li>
+	<li><a class="active dropdown-item" href="#1">Author</a></li>
+	<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
+</ul>
 ```
 
 #### Dropdown with search field
@@ -288,7 +360,7 @@ weight: 100
 					<div class="input-group-item">
 						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 						<span class="input-group-inset-item input-group-inset-item-after">
-							<button class="btn btn-link" type="button">
+							<button class="btn btn-unstyled" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 									<use xlink:href="/vendor/lexicon/icons.svg#search" />
 								</svg>
@@ -301,7 +373,7 @@ weight: 100
 		<ul class="list-unstyled">
 			<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
 			<li><a class="dropdown-item" href="#2">Normal Option</a></li>
-			<li><a class="disabled dropdown-item" href="#3">Disabled Option</a></li>
+			<li><a class="disabled dropdown-item" href="#3" tabindex="-1">Disabled Option</a></li>
 		</ul>
 	</div>
 </div>
@@ -344,7 +416,7 @@ weight: 100
 				<div class="input-group-item">
 					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 					<span class="input-group-inset-item input-group-inset-item-after">
-						<button class="btn btn-link" type="button">
+						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
@@ -357,7 +429,7 @@ weight: 100
 	<ul class="list-unstyled">
 		<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
 		<li><a class="dropdown-item" href="#2">Normal Option</a></li>
-		<li><a class="disabled dropdown-item" href="#3">Disabled Option</a></li>
+		<li><a class="disabled dropdown-item" href="#3" tabindex="-1">Disabled Option</a></li>
 	</ul>
 </div>
 ```
@@ -390,7 +462,7 @@ weight: 100
 				</a>
 			</li>
 			<li>
-				<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
+				<a class="disabled dropdown-item" href="javascript:;" tabindex="-1">Disabled Option</a>
 			</li>
 		</ul>
 	</div>
@@ -452,7 +524,7 @@ weight: 100
 			</a>
 		</li>
 		<li>
-			<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
+			<a class="disabled dropdown-item" href="javascript:;" tabindex="-1">Disabled Option</a>
 		</li>
 	</ul>
 </div>
@@ -486,7 +558,7 @@ weight: 100
 				</a>
 			</li>
 			<li>
-				<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
+				<a class="disabled dropdown-item" href="javascript:;" tabindex="-1">Disabled Option</a>
 			</li>
 		</ul>
 	</div>
@@ -549,7 +621,7 @@ weight: 100
 			</a>
 		</li>
 		<li>
-			<a class="disabled dropdown-item" href="javascript:;">Disabled Option</a>
+			<a class="disabled dropdown-item" href="javascript:;" tabindex="-1">Disabled Option</a>
 		</li>
 	</ul>
 </div>
@@ -569,7 +641,7 @@ weight: 100
 					<div class="input-group-item">
 						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 						<span class="input-group-inset-item input-group-inset-item-after">
-							<button class="btn btn-link" type="button">
+							<button class="btn btn-unstyled" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 									<use xlink:href="/vendor/lexicon/icons.svg#search" />
 								</svg>
@@ -603,7 +675,7 @@ weight: 100
 							</label>
 						</div>
 					</li>
-					<li class="dropdown-item">
+					<li class="disabled dropdown-item">
 						<div class="custom-control custom-checkbox">
 							<label>
 								<input disabled="disabled" class="custom-control-input" type="checkbox">
@@ -634,7 +706,7 @@ weight: 100
 							</label>
 						</div>
 					</li>
-					<li class="dropdown-item">
+					<li class="disabled dropdown-item">
 						<div class="custom-control custom-radio">
 							<label>
 								<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
@@ -785,7 +857,7 @@ weight: 100
 				<div class="input-group-item">
 					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 					<span class="input-group-inset-item input-group-inset-item-after">
-						<button class="btn btn-link" type="button">
+						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
@@ -819,7 +891,7 @@ weight: 100
 						</label>
 					</div>
 				</li>
-				<li class="dropdown-item">
+				<li class="disabled dropdown-item">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input disabled="disabled" class="custom-control-input" type="checkbox">
@@ -850,7 +922,7 @@ weight: 100
 						</label>
 					</div>
 				</li>
-				<li class="dropdown-item">
+				<li class="disabled dropdown-item">
 					<div class="custom-control custom-radio">
 						<label>
 							<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
@@ -1092,7 +1164,7 @@ weight: 100
 				</ul>
 			</div>
 			<li>
-				<a class="disabled dropdown-item" href="#1">Disabled</a>
+				<a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a>
 			</li>
 			<div class="dropdown-divider"></div>
 			<li>
@@ -1114,7 +1186,7 @@ weight: 100
 			<ul class="list-unstyled">
 				<li><a class="dropdown-item" href="#1">D Structure</a></li>
 				<li><a class="dropdown-item" href="#1">F Structure</a></li>
-				<li><a class="disabled dropdown-item" href="#1">H Structure</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">H Structure</a></li>
 				<li><a class="dropdown-item" href="#1">J Structure</a></li>
 				<li><a class="dropdown-item" href="#1">L Structure</a></li>
 				<li><a class="dropdown-item" href="#1">M Structure</a></li>
@@ -1158,7 +1230,7 @@ weight: 100
 			</ul>
 		</div>
 		<li>
-			<a class="disabled dropdown-item" href="#1">Disabled</a>
+			<a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a>
 		</li>
 		<div class="dropdown-divider"></div>
 		<li>
@@ -1178,7 +1250,7 @@ weight: 100
 		<ul class="list-unstyled">
 			<li><a class="dropdown-item" href="#1">D Structure</a></ul>
 			<li><a class="dropdown-item" href="#1">F Structure</a></ul>
-			<li><a class="disabled dropdown-item" href="#1">H Structure</a></ul>
+			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">H Structure</a></ul>
 			<li><a class="dropdown-item" href="#1">J Structure</a></ul>
 			<li><a class="dropdown-item" href="#1">L Structure</a></ul>
 			<li><a class="dropdown-item" href="#1">M Structure</a></ul>
