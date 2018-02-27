@@ -1,17 +1,49 @@
 {
     "schema": {
         "contentRenderer": "",
-        "contentRendererMap": {},
+        "contentRendererMap": {
+		    "chef": "user",
+		    "folder": "horizontal",
+		    "MKV": "file",
+            "title": "name"
+        },
         "fieldName": "",
-        "fieldsMap": {},
+        "fieldsMap": {
+            "contentRenderer": "type",
+            "description": "origin",
+            "href": "downloadHref",
+            "icon": "type",
+            "imageAlt": "name",
+            "imageSrc": "image",
+            "initials": "initials",
+            "labels": "spicyLevel",
+            "stickerLabel": "format",
+            "title": "name",
+            "userColor": "style",
+            "username": "name"
+        },
         "fileTypeStylesMap": {},
-        "iconsMap": null,
+        "iconsMap": {
+            "folder": "folder",
+            "*": "exclamation-circle",
+        },
         "inputName": "",
-        "inputNameField": "",
-        "inputNamesMap": {},
-        "inputValueField": "",
-        "labelStylesMap": {},
-        "userColorsMap": {}
+        "inputNameField": "type",
+        "inputNamesMap": {
+		    "folder": "folder",
+			"chef": "chef",
+			"*": "recipe"
+		},
+        "inputValueField": "id",
+        "labelStylesMap": {
+            "Spicy": "warning",
+			"Very Spicy": "danger",
+		    "*": "success"
+        },
+        "userColorsMap": {
+            "fusion": "danger",
+		    "*": "primary"
+        }
     },
     "spritemap": "spritemap.svg",
     "item": "clay-card-item",
