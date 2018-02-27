@@ -97,7 +97,6 @@ ClayCheckbox.STATE = {
 
 	/**
 	 * Custom content of the checkbox label. Use it to use your custom html.
-	 * If this is used label and showLabel params are ignored.
 	 * @instance
 	 * @memberof ClayCheckbox
 	 * @type {?html|undefined}
