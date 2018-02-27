@@ -74,8 +74,8 @@ describe('ClayCheckbox', function() {
 
 	it('should render a checkbox with hidden label', () => {
 		clayCheckbox = new ClayCheckbox({
-			hideLabel: true,
 			label: 'My Checkbox',
+			showLabel: false,
 		});
 
 		expect(clayCheckbox).toMatchSnapshot();

@@ -50,7 +50,6 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? items: ?}
 	{@param? searchActionURL: string}
@@ -58,6 +57,7 @@
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedView: int}
+	{@param? showFiltersDoneButton: bool}
 	{@param? sortingOrder: string}
 	{@param? title: string}
 	{@param? views: list<[
@@ -99,13 +99,13 @@
 					'viewTypeClicked': $_handleViewTypeClicked
 				] /}
 				{param filterItems: $filterItems /}
-				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 				{param ref: 'managementToolbar' /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
 				{param selectable: $selectable /}
 				{param selectedItems: $_selectedItems ? length($_selectedItems) : 0 /}
+				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}
 				{param totalItems: $_totalItems /}

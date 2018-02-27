@@ -324,16 +324,6 @@ ClayDatasetDisplay.STATE = {
 	filterItems: filterItemsValidator,
 
 	/**
-	 * Flag to indicate if the `Done` button in management toolbar filter dropdown
-	 * should be hide or not.
-	 * @instance
-	 * @memberof ClayDatasetDisplay
-	 * @type {?bool}
-	 * @default false
-	 */
-	hideFiltersDoneButton: Config.bool().value(false),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -395,6 +385,16 @@ ClayDatasetDisplay.STATE = {
 	 * @default undefined
 	 */
 	selectedView: Config.number(),
+
+	/**
+	 * Flag to indicate if the `Done` button in management toolbar filter dropdown
+	 * should be shown or not.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?bool}
+	 * @default true
+	 */
+	showFiltersDoneButton: Config.bool().value(true),
 
 	/**
 	 * Sorting order.

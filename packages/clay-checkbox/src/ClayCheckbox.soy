@@ -8,13 +8,13 @@
 	{@param? checked: bool}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
-	{@param? hideLabel: bool}
 	{@param? id: string}
 	{@param? indeterminate: bool}
 	{@param? inline: bool}
 	{@param? label: string}
 	{@param? labelContent: html}
 	{@param? name: string}
+	{@param? showLabel: bool}
 	{@param? value: string}
 
 	{let $attributes kind="attributes"}
@@ -38,10 +38,10 @@
 			{param ariaLabelledBy: $ariaLabelledBy /}
 			{param checked: $indeterminate or $checked /}
 			{param disabled: $disabled /}
-			{param hideLabel: $hideLabel /}
 			{param label: $label /}
 			{param labelContent: $labelContent /}
 			{param name: $name /}
+			{param showLabel: $showLabel ?: true /}
 			{param value: $value /}
 		{/call}
 	</div>
@@ -54,10 +54,10 @@
 	{@param? ariaLabelledBy: string}
 	{@param? checked: bool}
 	{@param? disabled: bool}
-	{@param? hideLabel: bool}
 	{@param? label: string}
 	{@param? labelContent: html}
 	{@param? name: string}
+	{@param? showLabel: bool}
 	{@param? value: string}
 
 	<label>
@@ -94,7 +94,7 @@
 			{if $label}
 				{let $spanLabelClasses kind="text"}
 					custom-control-label-text
-					{if $hideLabel}
+					{if not $showLabel}
 						{sp}sr-only
 					{/if}
 				{/let}
