@@ -47,6 +47,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>With links as viewTypes</h4>
+			<div id="link-view-types-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>With Only Search</h4>
 			<div id="only-search-block"></div>
 		</div>
@@ -133,6 +140,26 @@
 			},
 		];
 
+		const linkViewTypes= [
+			{
+				active: true,
+				href: '#list',
+				icon: 'list',
+				label: 'List',
+			},
+			{
+				disabled: true,
+				href: '#table',
+				icon: 'table',
+				label: 'Table',
+			},
+			{
+				href: '#card',
+				icon: 'cards2',
+				label: 'Card',
+			},
+		];
+
 		const spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
 
 		//Default State
@@ -185,6 +212,31 @@
 			viewTypes: viewTypes,
 		},
 		'#disabled-block');
+
+		//Link View Types
+		new metal.ClayManagementToolbar({
+			creationMenu: {
+				items: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					}
+				]
+			},
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			selectable: true,
+			showInfoButton: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			viewTypes: linkViewTypes,
+		},
+		'#link-view-types-block');
 
 		//With Only Search
 		new metal.ClayManagementToolbar({

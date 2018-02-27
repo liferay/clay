@@ -434,6 +434,7 @@ ClayDatasetDisplay.STATE = {
 		Config.shapeOf({
 			active: Config.bool().value(false),
 			disabled: Config.bool().value(false),
+			href: Config.string(),
 			icon: Config.string().required(),
 			id: Config.string().required(),
 			label: Config.string().required(),

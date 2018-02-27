@@ -910,6 +910,92 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
 </div>
 `;
 
+exports[`ClayManagementToolbar should render a management toolbar with links as view types 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+        <div class="container-fluid container-fluid-max-xl">
+          <form role="search">
+            <div class="input-group">
+              <div class="input-group-item">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <span class="input-group-inset-item input-group-inset-item-after">
+                  <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn-unstyled" aria-label="search" type="submit">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                      <title>search</title>
+                      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item navbar-breakpoint-d-none">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+              <title>search</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="dropdown nav-item">
+          <div class="dropdown">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
+              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
+                <title>list</title>
+                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item active" href="#list">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
+            <title>list</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+          </svg>
+        </div>List</a>
+    </li>
+    <li>
+      <a class=" dropdown-item disabled" href="javascript:;">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
+            <title>table</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+          </svg>
+        </div>Table</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#cards">
+        <div class="dropdown-item-indicator">
+          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
+            <title>cards2</title>
+            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+          </svg>
+        </div>Card</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with no search 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
