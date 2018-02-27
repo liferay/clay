@@ -569,7 +569,7 @@ const ChartBase = {
 		} else if (isFunction(data)) {
 			return data().then(val => val);
 		} else if (isString(data)) {
-			return fetch(data)
+			return fetch(data, {cors: 'cors'})
 				.then(res => res.json())
 				.then(res => res.data);
 		}
