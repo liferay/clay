@@ -3,16 +3,183 @@ title: Grid
 section: Components
 ---
 
+<div class="clay-site-row-spacer">
+	<h3>Container</h3>
+
+	<blockquote class="blockquote">
+		<p><code>.container</code> has a specific <code>max-width</code> for each grid breakpoint (e.g., Atlas 540px wide, 720px wide, 960px wide, and 1248px wide).</p>
+	</blockquote>
+
+	<table>
+		<thead>
+			<tr>
+				<th colspan="2">Base</th>
+			</tr>
+			<tr>
+				<th>Breakpoint (min-width)</th>
+				<th>Container (max-width)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>576px</td>
+				<td>540px</td>
+			</tr>
+			<tr>
+				<td>768px</td>
+				<td>720px</td>
+			</tr>
+			<tr>
+				<td>992px</td>
+				<td>960px</td>
+			</tr>
+			<tr>
+				<td>1200px</td>
+				<td>1140px</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="mb-4">
+		<thead>
+			<tr>
+				<th colspan="2">Atlas</th>
+			</tr>
+			<tr>
+				<th>Breakpoint (min-width)</th>
+				<th>Container (max-width)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>576px</td>
+				<td>540px</td>
+			</tr>
+			<tr>
+				<td>768px</td>
+				<td>720px</td>
+			</tr>
+			<tr>
+				<td>992px</td>
+				<td>960px</td>
+			</tr>
+			<tr>
+				<td>1280px</td>
+				<td>1248px</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="bg-primary container">
+		<div class="text-white">
+			container
+		</div>
+	</div>
+
+</div>
+
+<div class="clay-site-row-spacer">
+	<h3>Container Fluid</h3>
+
+	<blockquote class="blockquote">
+		<p><a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a></p>
+
+		<p>Use <code>.container-fluid</code> with <code>.container-fluid-max-{sm|md|lg|xl}</code> to create fluid containers that don't expand beyond a set width (e.g., For Atlas xl => 1248px).</p>
+	</blockquote>
+
+	<table>
+		<thead>
+			<tr>
+				<th colspan="2">Base</th>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<th>Container Fluid (max-width)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>.container-fluid-max-sm</td>
+				<td>540px</td>
+			</tr>
+			<tr>
+				<td>.container-fluid-max-md</td>
+				<td>720px</td>
+			</tr>
+			<tr>
+				<td>.container-fluid-max-lg</td>
+				<td>960px</td>
+			</tr>
+			<tr>
+				<td>.container-fluid-max-xl</td>
+				<td>1140px</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="mb-4">
+		<thead>
+			<tr>
+				<th colspan="2">Atlas</th>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<th>Container Fluid (max-width)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>.container-fluid-max-sm</td>
+				<td>540px</td>
+			</tr>
+			<tr>
+				<td>.container-fluid-max-md</td>
+				<td>720px</td>
+			</tr>
+			<tr>
+				<td>.container-fluid-max-lg</td>
+				<td>960px</td>
+			</tr>
+			<tr>
+				<td>.container-fluid-max-xl</td>
+				<td>1248px</td>
+			</tr>
+		</tbody>
+	</table>
+
+<div class="bg-primary container-fluid container-fluid-max-sm">
+	<div class="text-white">
+		container-fluid-max-sm
+	</div>
+</div>
+<div class="bg-secondary container-fluid container-fluid-max-md">
+	<div class="text-white">
+		container-fluid-max-md
+	</div>
+</div>
+<div class="bg-success container-fluid container-fluid-max-lg">
+	<div class="text-white">
+		container-fluid-max-lg
+	</div>
+</div>
+<div class="bg-danger container-fluid container-fluid-max-xl">
+	<div class="text-white">
+		container-fluid-max-xl
+	</div>
+</div>
+
+</div>
+
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Container Form Lg</h3>
 
 		<blockquote class="blockquote">
-			Use <code>.container-form-lg</code> with <code>.container</code> to properly space between application controls and the form.
+			Use <code>.container-form-lg</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
 		</blockquote>
 
 		<div class="alert alert-warning">
-			If you need more breakpoints such as <code>.container-form-{sm|md|xl}</code> you will need to define them yourself.
+			If you need additional breakpoints such as <code>.container-form-{sm|md|xl}</code> you will need to define them yourself.
 		</div>
 
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
@@ -66,7 +233,7 @@ section: Components
 		<h3>Container View</h3>
 
 		<blockquote class="blockquote">
-			Use <code>.container-view</code> with <code>.container</code> to properly space between application controls and view pages (e.g., <a href="../test-card-view-template/">Card View</a>, <a href="../test-table-view-template/">Table View</a>, or <a href="../test-list-view-template/">List View</a>).
+			Use <code>.container-view</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and view pages (e.g., <a href="../test-card-view-template/">Card View</a>, <a href="../test-table-view-template/">Table View</a>, or <a href="../test-list-view-template/">List View</a>). This class only modifies the <code>padding</code> on the container.
 		</blockquote>
 
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
@@ -191,41 +358,3 @@ section: Components
 
 	</div>
 </div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<div class="alert alert-warning clay-site-grid-width">
-			<span class="clay-site-grid-width-sm">container-fluid-max-sm: </span>
-			<span class="clay-site-grid-width-md">container-fluid-max-md: </span>
-			<span class="clay-site-grid-width-lg">container-fluid-max-lg: </span>
-			<span class="clay-site-grid-width-xl">container-fluid-max-xl: </span>
-		</div>
-
-		<blockquote class="blockquote">
-			<p><a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a></p>
-		</blockquote>
-
-		<h3>Container Fluid</h3>
-
-		<blockquote class="blockquote">
-			<p>Use classes <code>container-fluid-max-sm</code>, <code>container-fluid-max-md</code>, <code>container-fluid-max-lg</code>, and <code>container-fluid-max-xl</code> with <code>container-fluid</code> to create fluid containers that doesn't expand beyond a set width e.g 1280px.</p>
-		</blockquote>
-
-		<div class="clay-site-container-fluid-switcher">
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-sm main-nav-container" type="button">container-fluid-max-sm</button>
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-md main-nav-container" type="button">container-fluid-max-md</button>
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-lg main-nav-container" type="button">container-fluid-max-lg</button>
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-xl main-nav-container" type="button">container-fluid-max-xl</button>
-			<button class="btn btn-info" data-container-classes="container main-nav-container" type="button">reset</button>
-		</div>
-	</div>
-</div>
-
-<script>
-	$('.clay-site-container-fluid-switcher .btn').on('click', function(event) {
-		var container = $('.main-nav-container');
-		var data = $(this).data('container-classes');
-		container.attr('class', '');
-		container.addClass(data);
-	});
-</script>
