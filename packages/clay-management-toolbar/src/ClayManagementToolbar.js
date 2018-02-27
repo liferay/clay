@@ -17,6 +17,29 @@ import templates from './ClayManagementToolbar.soy.js';
  */
 class ClayManagementToolbar extends Component {
 	/**
+	 * Returns the dropdown index of the element.
+	 * @param {!Node} element
+	 * @return {?array|undefined} the index.
+	 * @private
+	 */
+	_getQuickItemIndex(element) {
+		let index = Array.prototype.indexOf.call(
+			Array.prototype.filter.call(
+				element.parentElement.children,
+				childrenElement =>
+					childrenElement.getAttribute('role') !== 'presentation'
+			),
+			element
+		);
+
+		if (this.showInfoButton) {
+			index--;
+		}
+
+		return index;
+	}
+
+	/**
 	 * Continues the propagation of the action item clicked event
 	 * @param {!Object} item
 	 * @private
@@ -84,6 +107,19 @@ class ClayManagementToolbar extends Component {
 	 */
 	_handleOpenMobileSearchClick() {
 		this._showSearchMobile = true;
+	}
+
+	/**
+	 * Continues the propagation of the action item clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleQuickActionClicked(event) {
+		let element = event.delegateTarget;
+		let elementIndex = this._getQuickItemIndex(element);
+		let item = this.actionItems[elementIndex];
+
+		this.emit('actionClicked', item);
 	}
 
 	/**
