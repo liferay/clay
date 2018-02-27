@@ -1,14 +1,21 @@
 ---
 title: Header
-description: Components
+description: "Header is toolbar that allows identification, navigation and display actions."
+pattern: "Navigation/header"
 layout: "guide"
 weight: 100
 ---
 
-<article id="navbar-application-bar">
+### Description
+{$page.description}
 
-### Header
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
+<article id="header">
+<h3 class="component-title">
+	<a href="#header">Header</a>
+</h3>
+<div class="alert alert-warning">Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes.</div>
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
