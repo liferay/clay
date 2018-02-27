@@ -1,0 +1,21 @@
+{
+    "spritemap": "spritemap.svg",
+    "items": [
+        {
+            "disabled": false,
+            "href": "https://www.claycss.com",
+            "icon": "icon1",
+            "label": "label1",
+            "quickAction": true,
+            "separator": true
+        },
+        {
+            "disabled": true,
+            "href": "https://www.github.com",
+            "icon": "icon2",
+            "label": "label2",
+            "quickAction": false,
+            "separator": false
+        }
+    ]
+}

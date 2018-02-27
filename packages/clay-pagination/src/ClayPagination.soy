@@ -4,9 +4,9 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param currentPage: number}
+	{@param currentPage: int}
 	{@param spritemap: string}
-	{@param totalPages: number}
+	{@param totalPages: int}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
@@ -127,7 +127,7 @@
 	{@param? baseHref: string}
 	{@param? icon: string}
 	{@param? label: string}
-	{@param? page: number}
+	{@param? page: int}
 	{@param? spritemap: string}
 
 	{let $classes kind="text"}
@@ -169,8 +169,8 @@
  * Renders a page range dropdown
  */
 {template .range}
-	{@param endPage: number}
-	{@param initPage: number}
+	{@param endPage: int}
+	{@param initPage: int}
 	{@param? baseHref: string}
 
 	<li>

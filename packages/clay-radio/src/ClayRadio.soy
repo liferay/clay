@@ -84,9 +84,7 @@
 		<input {$inputAttributes} />
 
 		<span class="custom-control-label">
-			{if $labelContent}
-				{$labelContent}
-			{else}
+			{if $label}
 				{let $spanLabelClasses kind="text"}
 					custom-control-label-text
 					{if not $showLabel}
@@ -97,5 +95,9 @@
 				<span class="{$spanLabelClasses}">{$label}</span>
 			{/if}
 		</span>
+
+		{if $labelContent}
+			{$labelContent}
+		{/if}
 	</label>
 {/template}

@@ -72,7 +72,6 @@ ClayRadio.STATE = {
 
 	/**
 	 * Custom content of the radio label. Use it to use your custom html.
-	 * If this is used label and showLabel params are ignored.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?html|undefined}
