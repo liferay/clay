@@ -5,22 +5,27 @@
                 "contentRenderer": "",
                 "contentRendererMap": {},
                 "fieldName": "field-name",
-                "fieldsName": {},
+                "fieldsName": "id",
                 "label": "label",
                 "sortable": false,
                 "sortingOrder": "asc"
             }
         ],
-        "inputName": "input-name",
-        "inputNameField": "input-name-field",
+        "inputName": "",
+        "inputNameField": "name",
         "inputNamesMap": {},
-        "inputValueField": "input-value-field"
+        "inputValueField": "id"
     },
     "spritemap": "spritemap.svg",
-    "item": {},
+    "item": {
+        "id": "1",
+        "name": "Photos",
+        "type": "folder"
+    },
     "groupName": "group-name",
     "selectable": false,
     "handleCellContentClick_": "",
     "showActionsMenu": false,
-    "handleItemToggled_": ""
+    "handleItemToggled_": "",
+    "showActionsMenu": false
 }

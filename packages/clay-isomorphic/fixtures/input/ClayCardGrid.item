@@ -1,4 +1,9 @@
 {
+    "item": {
+        "id": "1",
+        "name": "Photos",
+        "type": "folder"
+    },
     "schema": {
         "contentRenderer": "",
         "contentRendererMap": {
@@ -46,7 +51,6 @@
         }
     },
     "spritemap": "spritemap.svg",
-    "item": "clay-card-item",
     "groupName": "clay-card-grid-item-group-name",
     "selectable": false,
     "handleItemToggled_": ""

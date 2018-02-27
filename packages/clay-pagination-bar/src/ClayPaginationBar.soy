@@ -4,14 +4,14 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param currentPage: number}
+	{@param currentPage: int}
 	{@param entries: list<[
 		href: string,
-		label: number
+		label: int
 	]>}
 	{@param selectedEntry: int}
 	{@param spritemap: string}
-	{@param totalEntries: number}
+	{@param totalEntries: int}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
@@ -42,7 +42,7 @@
             {param label: $selectedEntryLabel /}
             {param spritemap: $spritemap /}
         {/call}
-		 
+
 		<div class="pagination-results">
 			Showing
 			{sp}{($currentPage - 1) * $selectedEntryItem.label + 1}
@@ -50,14 +50,12 @@
 			{sp}{$currentPage * $selectedEntryItem.label < $totalEntries ? $currentPage * $selectedEntryItem.label : $totalEntries}
 			{sp}of {$totalEntries} entries.
 		</div>
-		
-		{let $totalPages: $totalEntries / $selectedEntryItem.label /}
 
 		{call ClayPagination.render}
 			{param baseHref: $baseHref /}
 			{param currentPage: $currentPage /}
 			{param spritemap: $spritemap /}
-			{param totalPages: $totalPages /}
+			{param totalPages: ceiling($totalEntries / $selectedEntryItem.label) /}
 		{/call}
 	</div>
 {/template}

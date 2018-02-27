@@ -18,26 +18,43 @@
 	{@param? style: string}
 
 	{let $attributes kind="attributes"}
-		{call .attributes}
-			{param elementClasses: $elementClasses /}
-			{param id: $id /}
-			{param outside: $outside /}
-			{param position: $position /}
-			{param shape: $shape /}
-			{param size: $size /}
-			{param style: $style /}
-		{/call}
-	{/let}
+		class="sticker
+				{sp}sticker-{$style ?: 'primary'}
 
-	<span {$attributes}>
-		{call .content}
-			{param icon: $icon /}
-			{param imageAlt: $imageAlt /}
-			{param imageSrc: $imageSrc /}
-			{param label: $label /}
-			{param spritemap: $spritemap /}
-		{/call}
-	</span>
+			{if $position}
+				{if $outside}
+					{sp}sticker-outside
+				{/if}
+				{sp}sticker-{$position}
+			{/if}
+
+			{if $shape == 'circle'}
+				{sp}rounded-circle
+			{/if}
+
+			{if $size}
+				{sp}sticker-{$size}
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+		{/let}
+
+		<span {$attributes}>
+			{call .content}
+				{param icon: $icon /}
+				{param imageAlt: $imageAlt /}
+				{param imageSrc: $imageSrc /}
+				{param label: $label /}
+				{param spritemap: $spritemap /}
+			{/call}
+		</span>
 {/template}
 
 /**
@@ -81,44 +98,4 @@
 	{/let}
 
 	<img {$imageAttributes} />
-{/template}
-
-/**
- * Renders html attributes for sticker element
- */
-{template .attributes kind="attributes"}
-	{@param? elementClasses: string}
-	{@param? id: string}
-	{@param? outside: bool}
-	{@param? position: string}
-	{@param? shape: string}
-	{@param? size: string}
-	{@param? style: string}
-
-	class="sticker
-		{sp}sticker-{$style ?: 'primary'}
-
-		{if $position}
-			{if $outside}
-				{sp}sticker-outside
-			{/if}
-			{sp}sticker-{$position}
-		{/if}
-
-		{if $shape == 'circle'}
-			{sp}rounded-circle
-		{/if}
-
-		{if $size}
-			{sp}sticker-{$size}
-		{/if}
-
-		{if $elementClasses}
-			{sp}{$elementClasses}
-		{/if}
-	"
-
-	{if $id}
-		id="{$id}"
-	{/if}
 {/template}
