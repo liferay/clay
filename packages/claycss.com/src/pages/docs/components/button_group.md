@@ -6,8 +6,9 @@ weight: 100
 ---
 
 <article id="button-group">
-
-### Button Group
+<h3 class="component-title">
+	<a href="#button-group">Button Group</a>
+</h3>
 
 <div class="btn-group" role="group">
 	<button class="btn btn-secondary" type="button">Day</button>
@@ -29,8 +30,9 @@ weight: 100
 
 
 <article id="split-button-dropdowns">
-
-### Split Button Dropdowns
+<h3 class="component-title">
+	<a href="#split-button-dropdowns">Split Button Dropdowns</a>
+</h3>
 
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
@@ -196,8 +198,9 @@ weight: 100
 
 
 <article id="split-button-dropups">
-
-### Split Button Dropups
+<h3 class="component-title">
+	<a href="#split-button-dropups">Split Button Dropups</a>
+</h3>
 
 <div class="btn-group dropup" role="group">
 	<button class="btn btn-primary" type="button">Right dropup</button>
@@ -267,8 +270,9 @@ weight: 100
 
 
 <article id="vertical-button-group">
-
-### Vertical Button Group
+<h3 class="component-title">
+	<a href="#vertical-button-group">Vertical Button Group</a>
+</h3>
 
 <div class="btn-group-vertical" role="group">
 	<button class="btn btn-secondary" type="button">Button</button>
@@ -358,8 +362,9 @@ weight: 100
 
 
 <article id="button-toolbar">
-
-### Button Toolbar
+<h3 class="component-title">
+	<a href="#button-toolbar">Button Toolbar</a>
+</h3>
 
 <div aria-label="Toolbar with button groups" class="btn-toolbar" role="toolbar">
 	<div aria-label="First group" class="btn-group" role="group">
@@ -377,8 +382,12 @@ weight: 100
 		<button type="button" class="btn btn-secondary">8</button>
 	</div>
 	<div class="input-group">
-		<span class="input-group-addon">@</span>
-		<input aria-label="Input group example" aria-describedby="btnGroupAddon" class="form-control" placeholder="Input group example" type="text">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">@</span>
+		</div>
+		<div class="input-group-item input-group-append">
+			<input aria-label="Input group example" aria-describedby="btnGroupAddon" class="form-control" placeholder="Input group example" type="text">
+		</div>
 	</div>
 </div>
 
@@ -399,8 +408,12 @@ weight: 100
 		<button type="button" class="btn btn-secondary">8</button>
 	</div>
 	<div class="input-group">
-		<span class="input-group-addon">@</span>
-		<input aria-label="Input group example" aria-describedby="btnGroupAddon" class="form-control" placeholder="Input group example" type="text">
+		<div class="input-group-item input-group-item-shrink input-group-prepend">
+			<span class="input-group-text">@</span>
+		</div>
+		<div class="input-group-item input-group-append">
+			<input aria-label="Input group example" aria-describedby="btnGroupAddon" class="form-control" placeholder="Input group example" type="text">
+		</div>
 	</div>
 </div>
 ```
@@ -409,8 +422,9 @@ weight: 100
 
 
 <article id="button-group-sizes">
-
-### Button Group Sizes
+<h3 class="component-title">
+	<a href="#button-group-sizes">Button Group Sizes</a>
+</h3>
 
 <div class="btn-group btn-group-sm" role="group">
 	<button class="btn btn-secondary" type="button">Left</button>

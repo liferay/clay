@@ -71,11 +71,11 @@ class ClayDatasetDisplay extends Component {
 
 	/**
 	 * Continues the propagation of the action item clicked event
-	 * @param {!Event} event
+	 * @param {!Object} item
 	 * @private
 	 */
-	_handleActionClicked(event) {
-		this.emit('actionClicked', event);
+	_handleActionClicked(item) {
+		this.emit('actionClicked', item);
 	}
 
 	/**
@@ -213,14 +213,14 @@ class ClayDatasetDisplay extends Component {
 
 	/**
 	 * Changes the view on management toolbar view type click.
-	 * @param {!Event} event
+	 * @param {!Object} item
 	 * @private
 	 */
-	_handleViewTypeClicked(event) {
+	_handleViewTypeClicked(item) {
 		this.views[this.selectedView].active = false;
 
 		for (let [index, view] of this.views.entries()) {
-			if (view === event.viewType) {
+			if (view === item) {
 				this.views[index].active = true;
 				this.selectedView = index;
 				break;
@@ -324,16 +324,6 @@ ClayDatasetDisplay.STATE = {
 	filterItems: filterItemsValidator,
 
 	/**
-	 * Flag to indicate if the `Done` button in management toolbar filter dropdown
-	 * should be hide or not.
-	 * @instance
-	 * @memberof ClayDatasetDisplay
-	 * @type {?bool}
-	 * @default false
-	 */
-	hideFiltersDoneButton: Config.bool().value(false),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -397,6 +387,16 @@ ClayDatasetDisplay.STATE = {
 	selectedView: Config.number(),
 
 	/**
+	 * Flag to indicate if the `Done` button in management toolbar filter dropdown
+	 * should be shown or not.
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?bool}
+	 * @default true
+	 */
+	showFiltersDoneButton: Config.bool().value(true),
+
+	/**
 	 * Sorting order.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -434,6 +434,7 @@ ClayDatasetDisplay.STATE = {
 		Config.shapeOf({
 			active: Config.bool().value(false),
 			disabled: Config.bool().value(false),
+			href: Config.string(),
 			icon: Config.string().required(),
 			id: Config.string().required(),
 			label: Config.string().required(),

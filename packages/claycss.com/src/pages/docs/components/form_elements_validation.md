@@ -19,7 +19,7 @@ weight: 100
 <div class="sheet">
 	<div class="form-group">
 		<label for="inputNormal1">
-			normal
+			normal{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
@@ -40,7 +40,7 @@ weight: 100
 	</div>
 	<div class="form-group has-success">
 		<label for="inputSuccess1">
-			has-success
+			has-success{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
@@ -61,7 +61,7 @@ weight: 100
 	</div>
 	<div class="form-group has-warning">
 		<label for="inputWarning1">
-			has-warning
+			has-warning{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
@@ -82,7 +82,7 @@ weight: 100
 	</div>
 	<div class="form-group has-error">
 		<label for="inputError1">
-			has-error
+			has-error{sp}
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
@@ -210,7 +210,7 @@ weight: 100
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Checkbox with Success</span>
+								<span class="custom-control-label-text">Custom Checkbox with Success{sp}</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 								</svg>
@@ -223,7 +223,7 @@ weight: 100
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Checkbox with Warning</span>
+								<span class="custom-control-label-text">Custom Checkbox with Warning{sp}</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 								</svg>
@@ -236,7 +236,7 @@ weight: 100
 						<label>
 							<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Checkbox with Error</span>
+								<span class="custom-control-label-text">Custom Checkbox with Error{sp}</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 								</svg>
@@ -253,7 +253,10 @@ weight: 100
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Radio with Success</span>
+								<span class="custom-control-label-text">Custom Radio with Success{sp}</span>
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+									<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+								</svg>
 							</span>
 						</label>
 					</div>
@@ -263,7 +266,10 @@ weight: 100
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Radio with Warning</span>
+								<span class="custom-control-label-text">Custom Radio with Warning{sp}</span>
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+									<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+								</svg>
 							</span>
 						</label>
 					</div>
@@ -273,7 +279,10 @@ weight: 100
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Radio with Error</span>
+								<span class="custom-control-label-text">Custom Radio with Error{sp}</span>
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+									<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+								</svg>
 							</span>
 						</label>
 					</div>
@@ -333,6 +342,9 @@ weight: 100
 				<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Radio with Success</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+					</svg>
 				</span>
 			</label>
 		</div>
@@ -343,6 +355,9 @@ weight: 100
 				<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Radio with Warning</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+					</svg>
 				</span>
 			</label>
 		</div>
@@ -353,6 +368,9 @@ weight: 100
 				<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Radio with Error</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+					</svg>
 				</span>
 			</label>
 		</div>
@@ -372,7 +390,7 @@ weight: 100
 	<div class="has-success">
 		<div class="form-group">
 			<label for="selectElementSuccess">
-				Select Element with Success
+				Select Element with Success{sp}
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>
@@ -388,7 +406,7 @@ weight: 100
 	<div class="has-warning">
 		<div class="form-group">
 			<label for="selectElementWarning">
-				Select Box with Warning
+				Select Box with Warning{sp}
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>
@@ -404,7 +422,7 @@ weight: 100
 	<div class="has-error">
 		<div class="form-group">
 			<label for="selectElementError">
-				Select Box with Error
+				Select Box with Error{sp}
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>
@@ -482,7 +500,7 @@ weight: 100
 	<div class="has-success">
 		<div class="form-group">
 			<label for="multipleSelectElementSuccess">
-				Multiple Select Element with Success
+				Multiple Select Element with Success{sp}
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>
@@ -498,7 +516,7 @@ weight: 100
 	<div class="has-warning">
 		<div class="form-group">
 			<label for="multipleSelectElementWarning">
-				Multiple Select Element with Warning
+				Multiple Select Element with Warning{sp}
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>
@@ -514,7 +532,7 @@ weight: 100
 	<div class="has-error">
 		<div class="form-group">
 			<label for="multipleSelectElementError">
-				Multiple Select Element with Error
+				Multiple Select Element with Error{sp}
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 				</svg>

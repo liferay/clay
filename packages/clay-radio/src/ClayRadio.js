@@ -44,15 +44,6 @@ ClayRadio.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Flag to indicate if label should be hide.
-	 * @instance
-	 * @memberof ClayRadio
-	 * @type {?bool}
-	 * @default false
-	 */
-	hideLabel: Config.bool().value(false),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
@@ -81,7 +72,6 @@ ClayRadio.STATE = {
 
 	/**
 	 * Custom content of the radio label. Use it to use your custom html.
-	 * If this is used label and hideLabel params are ignored.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?html|undefined}
@@ -97,6 +87,15 @@ ClayRadio.STATE = {
 	 * @default undefined
 	 */
 	name: Config.string(),
+
+	/**
+	 * Flag to indicate if label should be hide.
+	 * @instance
+	 * @memberof ClayRadio
+	 * @type {?bool}
+	 * @default true
+	 */
+	showLabel: Config.bool().value(true),
 
 	/**
 	 * Value to be applied to the element.

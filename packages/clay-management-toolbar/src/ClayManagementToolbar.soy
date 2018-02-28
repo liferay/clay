@@ -13,6 +13,7 @@
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
+	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSearchSearchClick: any}
 	{@param? _handleSelectAllClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
@@ -53,7 +54,6 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? hideFiltersDoneButton: bool}
 	{@param? id: string}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
@@ -62,6 +62,7 @@
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
 	{@param? showAdvancedSearch: bool}
+	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
@@ -69,6 +70,7 @@
 	{@param? viewTypes: list<[
 		active: bool,
 		disabled: bool,
+		href: string,
 		icon: string,
 		label: string
 	]>}
@@ -91,6 +93,7 @@
 				{param _handleActionClicked: $_handleActionClicked /}
 				{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
+				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
 				{param _handleSelectAllClicked: $_handleSelectAllClicked /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 				{param actionItems: $actionItems /}
@@ -116,13 +119,13 @@
 				{param creationMenu: $creationMenu /}
 				{param disabled: $totalItems == 0 /}
 				{param filterItems: $filterItems /}
-				{param hideFiltersDoneButton: $hideFiltersDoneButton /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
 				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
 				{param showAdvancedSearch: $showAdvancedSearch /}
+				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
 				{param sortingOrder: $sortingOrder /}
@@ -150,6 +153,7 @@
 	{@param? _handleActionClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleInfoButtonClicked: any}
+	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSelectAllClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? actionItems: list<[
@@ -172,10 +176,10 @@
 					{call ClayCheckbox.render}
 						{param checked: true /}
 						{param events: ['change': $_handleSelectPageCheckboxChanged] /}
-						{param hideLabel: true /}
 						{param indeterminate: $selectedItems < $totalItems /}
 						{param label: 'Select Page' /}
 						{param ref: 'selectPageCheckbox' /}
+						{param showLabel: false /}
 					{/call}
 				</li>
 				<li class="nav-item">
@@ -223,7 +227,7 @@
 					{if $actionItems}
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
-								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleActionClicked}">
+								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleQuickActionClicked}">
 									{call ClayButton.render}
 										{param elementClasses: 'quick-action-item' /}
 										{param icon: $item.icon /}
@@ -335,19 +339,20 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? hideFiltersDoneButton: bool}
 	{@param? searchActionURL: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? showAdvancedSearch: bool}
+	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
 	{@param? viewTypes: list<[
 		active: bool,
 		disabled: bool,
+		href: string,
 		icon: string,
 		label: string
 	]>}
@@ -370,9 +375,9 @@
 						{call ClayCheckbox.render}
 							{param disabled: $disabled /}
 							{param events: ['change': $_handleSelectPageCheckboxChanged] /}
-							{param hideLabel: true /}
 							{param label: 'Select Page' /}
 							{param ref: 'selectPageCheckbox' /}
+							{param showLabel: false /}
 						{/call}
 					</li>
 				{/if}
@@ -397,9 +402,9 @@
 
 					<li class="dropdown nav-item">
 						{call ClayDropdownBase.render}
-							{param button: $hideFiltersDoneButton ? null : [
+							{param button: $showFiltersDoneButton ? [
 								'label': 'Done'
-							] /}
+							] : null /}
 							{param disabled: $disabled /}
 							{param events: ['buttonClicked': $_handleFilterDoneButtonClick] /}
 							{param items: $filterItems /}

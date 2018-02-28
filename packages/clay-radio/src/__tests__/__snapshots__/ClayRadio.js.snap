@@ -48,11 +48,10 @@ exports[`ClayRadio should render a radio with custom label content 1`] = `
 <div class="custom-control custom-radio">
   <label>
     <input class="custom-control-input" ref="input" type="radio" role="radio">
-    <span class="custom-control-label">
-      <div>
-        <p>My Radio</p>
-      </div>
-    </span>
+    <span class="custom-control-label"></span>
+    <div>
+      <p>My Radio</p>
+    </div>
   </label>
 </div>
 `;

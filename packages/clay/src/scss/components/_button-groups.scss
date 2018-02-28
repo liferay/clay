@@ -12,6 +12,21 @@
 	}
 }
 
+.btn-group {
+	flex-wrap: wrap;
+}
+
+.btn-group-item {
+	align-items: center;
+	display: inline-flex;
+	margin-right: $btn-group-item-margin-right;
+}
+
+.btn-group-item:last-child,
+.btn-group-item-last {
+	margin-right: 0;
+}
+
 .btn-toolbar {
 	.btn-group,
 	.input-group {

@@ -22,8 +22,8 @@ class ClayManagementToolbar extends Component {
 	 * @return {?array|undefined} the index.
 	 * @private
 	 */
-	_getDropdownItemIndex(element) {
-		return Array.prototype.indexOf.call(
+	_getQuickItemIndex(element) {
+		let index = Array.prototype.indexOf.call(
 			Array.prototype.filter.call(
 				element.parentElement.children,
 				childrenElement =>
@@ -31,21 +31,21 @@ class ClayManagementToolbar extends Component {
 			),
 			element
 		);
+
+		if (this.showInfoButton) {
+			index--;
+		}
+
+		return index;
 	}
 
 	/**
 	 * Continues the propagation of the action item clicked event
-	 * @param {!Event} event
+	 * @param {!Object} item
 	 * @private
 	 */
-	_handleActionClicked(event) {
-		let element = event.delegateTarget;
-		let elementIndex = this._getDropdownItemIndex(element);
-		let item = this.actionItems[elementIndex];
-
-		this.emit('actionClicked', {
-			action: item,
-		});
+	_handleActionClicked(item) {
+		this.emit('actionClicked', item);
 	}
 
 	/**
@@ -110,6 +110,19 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the action item clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleQuickActionClicked(event) {
+		let element = event.delegateTarget;
+		let elementIndex = this._getQuickItemIndex(element);
+		let item = this.actionItems[elementIndex];
+
+		this.emit('actionClicked', item);
+	}
+
+	/**
 	 * Continues the propagation of the search button clicked event
 	 * @param {!Event} event
 	 * @return {Boolean} If the event has been prevented or not.
@@ -149,17 +162,11 @@ class ClayManagementToolbar extends Component {
 
 	/**
 	 * Continues the propagation of the view type item clicked event
-	 * @param {!Event} event
+	 * @param {!object} item
 	 * @private
 	 */
-	_handleViewTypeClicked(event) {
-		let element = event.delegateTarget;
-		let elementIndex = this._getDropdownItemIndex(element);
-		let item = this.viewTypes[elementIndex];
-
-		this.emit('viewTypeClicked', {
-			viewType: item,
-		});
+	_handleViewTypeClicked(item) {
+		this.emit('viewTypeClicked', item);
 	}
 }
 
@@ -239,16 +246,6 @@ ClayManagementToolbar.STATE = {
 	filterItems: filterItemsValidator,
 
 	/**
-	 * Flag to indicate if the `Done` button in filter dropdown should be hide or
-	 * not.
-	 * @instance
-	 * @memberof ClayManagementToolbar
-	 * @type {?bool}
-	 * @default false
-	 */
-	hideFiltersDoneButton: Config.bool().value(false),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayManagementToolbar
@@ -322,6 +319,16 @@ ClayManagementToolbar.STATE = {
 	showAdvancedSearch: Config.bool().value(false),
 
 	/**
+	 * Flag to indicate if the `Done` button in filter dropdown should be shown or
+	 * not.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 * @default true
+	 */
+	showFiltersDoneButton: Config.bool().value(true),
+
+	/**
 	 * Flag to indicate if the Info button should be shown or not.
 	 * @instance
 	 * @memberof ClayManagementToolbar
@@ -378,6 +385,7 @@ ClayManagementToolbar.STATE = {
 		Config.shapeOf({
 			active: Config.bool().value(false),
 			disabled: Config.bool().value(false),
+			href: Config.string(),
 			icon: Config.string().required(),
 			label: Config.string().required(),
 		})

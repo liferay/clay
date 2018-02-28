@@ -92,7 +92,6 @@
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
 					{param events: ['change': $_handleItemToggled] /}
-					{param hideLabel: true /}
 					{param label: $item.selected ? 'Select' : 'Deselect' /}
 					{param name kind="text"}
 						{if $schema.inputName}
@@ -106,6 +105,7 @@
 						{/if}
 					{/param}
 
+					{param showLabel: false /}
 					{param value: $item[$schema.inputValueField] /}
 				{/call}
 			</div>

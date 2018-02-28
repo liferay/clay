@@ -569,7 +569,7 @@ const ChartBase = {
 		} else if (isFunction(data)) {
 			return data().then(val => val);
 		} else if (isString(data)) {
-			return fetch(data)
+			return fetch(data, {cors: 'cors'})
 				.then(res => res.json())
 				.then(res => res.data);
 		}
@@ -1136,12 +1136,14 @@ ChartBase.STATE = {
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	regions: Config.shapeOf({
-		class: Config.string(),
-		enabled: Config.oneOf(['x', 'y']).required(),
-		end: Config.array().required(),
-		start: Config.number().required(),
-	}),
+	regions: Config.arrayOf(
+		Config.shapeOf({
+			class: Config.string(),
+			enabled: Config.oneOf(['x', 'y']).required(),
+			end: Config.number().required(),
+			start: Config.number().required(),
+		})
+	),
 
 	/**
 	 * Determines if chart auto resizes when viewport size changes.

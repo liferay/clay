@@ -161,6 +161,15 @@ ClayLink.STATE = {
 	 * @default undefined
 	 */
 	target: Config.oneOf(['_blank', '_self']),
+
+	/**
+	 * Sets the HTML attribute title on the anchor tag.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	title: Config.string(),
 };
 
 defineWebComponent('clay-link', ClayLink);

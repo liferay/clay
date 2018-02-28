@@ -19,19 +19,54 @@
 	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? target: string}
+	{@param? title: string}
 
 	{let $attributes kind="attributes"}
-		{call .attributes}
-			{param ariaExpanded: $ariaExpanded /}
-			{param ariaLabel: $ariaLabel /}
-			{param buttonStyle: $buttonStyle /}
-			{param download: $download /}
-			{param elementClasses: $elementClasses /}
-			{param href: $href /}
-			{param id: $id /}
-			{param style: $style /}
-			{param target: $target /}
-		{/call}
+		{if $ariaExpanded}
+			aria-expanded="true"
+		{elseif $ariaExpanded == false}
+			aria-expanded="false"
+		{/if}
+
+		{if $ariaLabel}
+			aria-label="{$ariaLabel}"
+		{/if}
+
+		{let $classes kind="text"}
+			{if $buttonStyle}
+				btn btn-{$buttonStyle}
+			{elseif $style}
+				link-{$style}
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		{/let}
+
+		{if $classes}
+			class="{$classes}"
+		{/if}
+
+		{if $download}
+			download="{$download}"
+		{/if}
+
+		{if $href}
+			href="{$href}"
+		{/if}
+
+		{if $id}
+			id="{$id}"
+		{/if}
+
+		{if $target}
+			target="{$target}"
+		{/if}
+
+		{if $title}
+			title="{$title}"
+		{/if}
 	{/let}
 
 	<a {$attributes}>
@@ -89,61 +124,4 @@
 		{param spritemap: $spritemap /}
 		{param symbol: $icon /}
 	{/call}
-{/template}
-
-/**
- * Renders html attributes for anchor element
- */
-{template .attributes kind="attributes"}
-	{@param? ariaExpanded: bool}
-	{@param? ariaLabel: string}
-	{@param? buttonStyle: string}
-	{@param? download: string}
-	{@param? elementClasses: string}
-	{@param? href: string}
-	{@param? id: string}
-	{@param? style: string}
-	{@param? target: string}
-
-	{if $ariaExpanded}
-		aria-expanded="true"
-	{elseif $ariaExpanded == false}
-		aria-expanded="false"
-	{/if}
-
-	{if $ariaLabel}
-		aria-label="{$ariaLabel}"
-	{/if}
-
-	{let $classes kind="text"}
-		{if $buttonStyle}
-			btn btn-{$buttonStyle}
-		{elseif $style}
-			link-{$style}
-		{/if}
-
-		{if $elementClasses}
-			{sp}{$elementClasses}
-		{/if}
-	{/let}
-
-	{if $classes}
-		class="{$classes}"
-	{/if}
-
-	{if $download}
-		download="{$download}"
-	{/if}
-
-	{if $href}
-		href="{$href}"
-	{/if}
-
-	{if $id}
-		id="{$id}"
-	{/if}
-
-	{if $target}
-		target="{$target}"
-	{/if}
 {/template}

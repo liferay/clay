@@ -38,6 +38,10 @@ $btn-monospaced-size-mobile: null !default;
 $btn-monospaced-size-lg-mobile: null !default;
 $btn-monospaced-size-sm-mobile: null !default;
 
+// Button Group
+
+$btn-group-item-margin-right: map-get($spacers, 2) !default;
+
 // Button Toolbar
 
 $btn-toolbar-spacer-x: 0.5rem !default; // 8px

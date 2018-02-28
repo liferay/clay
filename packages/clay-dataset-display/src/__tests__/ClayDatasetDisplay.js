@@ -251,6 +251,7 @@ let defaultConfig = {
 	views: [
 		{
 			contentRenderer: 'cards',
+			href: '#cards',
 			icon: 'cards2',
 			label: 'Cards',
 			schema: {

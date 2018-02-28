@@ -1,0 +1,35 @@
+{
+    "actionItems": [
+        {
+            "href": "https://www.claycss.com",
+            "label": "Clay",
+            "separator": true
+        },
+        {
+            "href": "https://www.github.com",
+            "label": "GitHub",
+            "separator": false
+        }
+    ],
+    "selectable": false,
+    "icon": "plus",
+    "elementClasses": "clay-file-card-1 clay-file-card-2",
+    "title": "Clay File Card Title",
+    "handleItemToggled_": "",
+    "inputName": "",
+    "labelStylesMap": "",
+    "labels": [
+        "clay-file-card-label-1",
+        "clay-file-card-label-2"
+    ],
+    "spritemap": "spritemap.svg",
+    "groupName": "clay-file-card-group-name",
+    "subtitle": "Clay File Card Subtitle",
+    "inputValue": "Clay File Card Input Value",
+    "disabled": false,
+    "href": "https://www.claycss.com",
+    "id": "clay-file-card",
+    "fileType": "jpg",
+    "selected": false,
+    "fileTypeStyle": ""
+}

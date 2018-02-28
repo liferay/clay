@@ -60,15 +60,6 @@ ClayCheckbox.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Flag to indicate if label should be hide.
-	 * @instance
-	 * @memberof ClayCheckbox
-	 * @type {?bool}
-	 * @default false
-	 */
-	hideLabel: Config.bool().value(false),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
@@ -106,7 +97,6 @@ ClayCheckbox.STATE = {
 
 	/**
 	 * Custom content of the checkbox label. Use it to use your custom html.
-	 * If this is used label and hideLabel params are ignored.
 	 * @instance
 	 * @memberof ClayCheckbox
 	 * @type {?html|undefined}
@@ -122,6 +112,15 @@ ClayCheckbox.STATE = {
 	 * @default undefined
 	 */
 	name: Config.string(),
+
+	/**
+	 * Flag to indicate if label should be hide.
+	 * @instance
+	 * @memberof ClayCheckbox
+	 * @type {?bool}
+	 * @default true
+	 */
+	showLabel: Config.bool().value(true),
 
 	/**
 	 * Value to be applied to the element.
