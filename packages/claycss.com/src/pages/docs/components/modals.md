@@ -36,8 +36,7 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -88,8 +87,14 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -116,8 +121,7 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -166,8 +170,14 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -196,8 +206,7 @@ weight: 100
 				<h4><a href="#1">Modal Body</a></h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -248,8 +257,14 @@ weight: 100
 				<h4><a href="#1">Modal Body</a></h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -356,8 +371,7 @@ weight: 100
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
-				<button class="btn btn-primary" type="button">Add</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -568,8 +582,14 @@ weight: 100
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
-				<button class="btn btn-primary" type="button">Add</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -613,8 +633,7 @@ weight: 100
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
-				<button class="btn btn-primary" type="button">Add</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -654,8 +673,14 @@ weight: 100
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
-				<button class="btn btn-primary" type="button">Add</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -690,8 +715,7 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -740,8 +764,14 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -821,8 +851,7 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -861,8 +890,14 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -893,8 +928,7 @@ weight: 100
 				<iframe src="/"></iframe>
 			</div>
 			<div class="modal-footer">
-				<a class="btn btn-secondary" data-dismiss="modal" href="#1" role="button">Cancel</a>
-				<button class="btn btn-primary" type="button">Add</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -941,8 +975,14 @@ weight: 100
 				<iframe src="/"></iframe>
 			</div>
 			<div class="modal-footer">
-				<a class="btn btn-secondary" data-dismiss="modal" href="#1" role="button">Cancel</a>
-				<button class="btn btn-primary" type="button">Add</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -979,12 +1019,11 @@ weight: 100
 			</div>
 			<div class="modal-footer">
 				<div class="modal-item-first">
-					<button class="btn btn-primary" type="button">Primary</button>{sp}
-				</div>
-				<div class="modal-item">Some other content</div>{sp}
-				<div class="modal-item-last">
-					<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
 					<button class="btn btn-primary" type="button">Primary</button>
+				</div>
+				<div class="modal-item">Some other content</div>
+				<div class="modal-item-last">
+					<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 				</div>
 			</div>
 		</div>
@@ -1013,8 +1052,7 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -1043,11 +1081,10 @@ weight: 100
 			</div>
 			<div class="modal-footer">
 				<div class="modal-item-first">
-					<button class="btn btn-primary" type="button">Primary</button>{sp}
+					<button class="btn btn-primary" type="button">Primary</button>
 				</div>
 				<div class="modal-item-last">
-					<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
-					<button class="btn btn-primary" type="button">Primary</button>
+					<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 				</div>
 			</div>
 		</div>
@@ -1076,8 +1113,7 @@ weight: 100
 				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>{sp}
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -1238,8 +1274,14 @@ weight: 100
 				</div>
 				<div class="modal-item">Some other content</div>
 				<div class="modal-item-last">
-					<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-					<button class="btn btn-primary" type="button">Primary</button>
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">Primary</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1291,8 +1333,7 @@ weight: 100
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
 			</div>
 		</div>
 	</div>
@@ -1335,8 +1376,14 @@ weight: 100
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-				<button class="btn btn-primary" type="button">Primary</button>
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

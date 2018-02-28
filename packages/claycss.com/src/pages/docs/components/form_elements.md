@@ -19,7 +19,7 @@ weight: 100
 <div class="sheet">
 	<div class="form-group">
 		<label for="basicInputTypeText">
-			Text
+			Text{sp}
 			<span class="reference-mark">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
 					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
@@ -306,46 +306,6 @@ weight: 100
 	</div>
 </div>
 
-```text/html
-<div class="form-group">
-	<label class="disabled" for="disabledTextInput">Text Input</label>
-	<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
-</div>
-
-<div class="form-group">
-	<label class="disabled" for="disabledPasswordInput">Password Input</label>
-	<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password">
-</div>
-
-<div class="form-group">
-	<label class="disabled" for="disabledTextarea">Textarea</label>
-	<textarea class="form-control" disabled id="disabledTextarea" placeholder="Placeholder">Plunger pot, extra siphon latte</textarea>
-</div>
-
-<div class="form-group">
-	<label class="disabled" for="disabledSelectElement">Select Element</label>
-	<select class="form-control" disabled id="disabledSelectElement">
-		<option>Sample 1</option>
-		<option>Sample 2</option>
-		<option>Sample 3</option>
-		<option>Sample 4</option>
-	</select>
-</div>
-
-<div class="form-group">
-	<label class="disabled" for="disabledSelectElementMulti">Select Element with Multiple Select Options</label>
-	<select class="form-control" disabled id="disabledSelectElementMulti" multiple>
-		<option>Sample 1</option>
-		<option>Sample 2</option>
-		<option>Sample 3</option>
-		<option>Sample 4</option>
-		<option>Sample 5</option>
-		<option>Sample 6</option>
-		<option>Sample 7</option>
-		<option>Sample 8</option>
-	</select>
-</div>
-```
 ```soy
 {call ClaySelect.render}
 	{param disabled: true /}
@@ -395,6 +355,46 @@ weight: 100
 		],
 	] /}
 {/call}
+```
+```text/html
+<div class="form-group">
+	<label class="disabled" for="disabledTextInput">Text Input</label>
+	<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+</div>
+
+<div class="form-group">
+	<label class="disabled" for="disabledPasswordInput">Password Input</label>
+	<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password">
+</div>
+
+<div class="form-group">
+	<label class="disabled" for="disabledTextarea">Textarea</label>
+	<textarea class="form-control" disabled id="disabledTextarea" placeholder="Placeholder">Plunger pot, extra siphon latte</textarea>
+</div>
+
+<div class="form-group">
+	<label class="disabled" for="disabledSelectElement">Select Element</label>
+	<select class="form-control" disabled id="disabledSelectElement">
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+	</select>
+</div>
+
+<div class="form-group">
+	<label class="disabled" for="disabledSelectElementMulti">Select Element with Multiple Select Options</label>
+	<select class="form-control" disabled id="disabledSelectElementMulti" multiple>
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+		<option>Sample 5</option>
+		<option>Sample 6</option>
+		<option>Sample 7</option>
+		<option>Sample 8</option>
+	</select>
+</div>
 ```
 
 </article>
@@ -663,8 +663,14 @@ weight: 100
 		</div>
 	</div>
 	<div class="form-group">
-		<button class="btn btn-primary" type="submit">Submit</button>{sp}
-		<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+		<div class="btn-group">
+			<div class="btn-group-item">
+				<button class="btn btn-primary" type="submit">Submit</button>
+			</div>
+			<div class="btn-group-item">
+				<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -790,8 +796,14 @@ weight: 100
 </div>
 
 <div class="form-group">
-	<button class="btn btn-primary" type="submit">Submit</button>
-	<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+	<div class="btn-group">
+		<div class="btn-group-item">
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</div>
+		<div class="btn-group-item">
+			<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+		</div>
+	</div>
 </div>
 ```
 
@@ -853,8 +865,14 @@ weight: 100
 			</div>
 		</div>
 		<div class="form-group">
-			<button class="btn btn-primary" type="submit">Submit</button>{sp}
-			<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+			<div class="btn-group">
+				<div class="btn-group-item">
+					<button class="btn btn-primary" type="submit">Submit</button>
+				</div>
+				<div class="btn-group-item">
+					<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+				</div>
+			</div>
 		</div>
 	</form>
 </div>
@@ -906,8 +924,14 @@ weight: 100
 		</div>
 	</div>
 	<div class="form-group">
-		<button class="btn btn-primary" type="submit">Submit</button>
-		<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+		<div class="btn-group">
+			<div class="btn-group-item">
+				<button class="btn btn-primary" type="submit">Submit</button>
+			</div>
+			<div class="btn-group-item">
+				<a class="btn btn-secondary" href="#1" role="button">Clear</a>
+			</div>
+		</div>
 	</div>
 </form>
 ```
