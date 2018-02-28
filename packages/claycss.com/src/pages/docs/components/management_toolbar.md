@@ -474,15 +474,152 @@ weight: 100
 
 </article>
 
-<script>
-{literal}
-$(function() {
-	$('.clay-site-open-overlay .navbar-nav .navbar-breakpoint-d-none:first-child .nav-link').on('click', function(event) {
-		$(this).closest('.navbar').find('.navbar-overlay-sm-down').addClass('show');
-	});
-	$('.clay-site-open-overlay .input-group-inset-item .btn-unstyled').on('click', function(event) {
-		$(this).closest('.navbar-overlay-sm-down').removeClass('show');
-	});
-});
-{/literal}
-</script>
+
+<article id="management-toolbar-with-only-search">
+<h3 class="component-title">
+	<a href="#management-toolbar-with-only-search">Management Toolbar with Only Search</a>
+</h3>
+
+<div>
+	<nav class="management-bar management-bar-light navbar navbar-expand-md">
+		<div class="container-fluid container-fluid-max-xl">
+			<div class="navbar-form navbar-form-autofit">
+				<form role="search">
+					<div class="input-group">
+						<div class="input-group-item">
+							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+							<span class="input-group-inset-item input-group-inset-item-after">
+								<button class="btn btn-unstyled" type="submit">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="/vendor/lexicon/icons.svg#search" />
+									</svg>
+								</button>
+								<button class="btn btn-unstyled d-none" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="/vendor/lexicon/icons.svg#times" />
+									</svg>
+								</button>
+							</span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+</div>
+
+```text/html
+<nav class="management-bar management-bar-light navbar navbar-expand-md">
+	<div class="container-fluid container-fluid-max-xl">
+		<div class="navbar-form navbar-form-autofit">
+			<form role="search">
+				<div class="input-group">
+					<div class="input-group-item">
+						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+						<span class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled" type="submit">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled d-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								</svg>
+							</button>
+						</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</nav>
+```
+
+</article>
+
+
+<article id="management-toolbar-search-summary">
+<h3 class="component-title">
+	<a href="#management-toolbar-search-summary">Management Toolbar Search Summary</a>
+</h3>
+
+<div>
+	<nav class="tbar subnav-tbar subnav-tbar-primary">
+		<div class="container-fluid container-fluid-max-xl">
+			<ul class="tbar-nav">
+				<li class="tbar-item tbar-item-expand">
+					<div class="tbar-section">
+						<span class="component-title text-truncate-inline">
+							<span class="text-truncate">Results for Master (19 Items)</span>
+						</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+```text/html
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="tbar-nav">
+			<li class="tbar-item tbar-item-expand">
+				<div class="tbar-section">
+					<span class="component-title text-truncate-inline">
+						<span class="text-truncate">Results for Master (19 Items)</span>
+					</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+```
+
+</article>
+
+
+<article id="management-toolbar-search-results">
+<h3 class="component-title">
+	<a href="#management-toolbar-search-results">Management Toolbar Seach Results</a>
+</h3>
+
+<div>
+	<nav class="tbar subnav-tbar subnav-tbar-primary">
+		<div class="container-fluid container-fluid-max-xl">
+			<ul class="tbar-nav">
+				<li class="tbar-item tbar-item-expand">
+					<div class="tbar-section">
+						<span class="component-text text-truncate-inline">
+							<span class="text-truncate">25,392 results for <strong>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</strong></span>
+						</span>
+					</div>
+				</li>
+				<li class="tbar-item">
+					<button class="btn btn-unstyled component-link tbar-link" type="button">Clear</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+```text/html
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="tbar-nav">
+			<li class="tbar-item tbar-item-expand">
+				<div class="tbar-section">
+					<span class="component-text text-truncate-inline">
+						<span class="text-truncate">25,392 results for <strong>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</strong></span>
+					</span>
+				</div>
+			</li>
+			<li class="tbar-item">
+				<button class="btn btn-unstyled component-link tbar-link" type="button">Clear</button>
+			</li>
+		</ul>
+	</div>
+</nav>
+```
+
+</article>
