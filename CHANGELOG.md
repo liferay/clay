@@ -1,5 +1,42 @@
 # Change Log
 
+## [v2.0.0-rc.4](https://github.com/liferay/clay/tree/v2.0.0-rc.4) (2018-02-28)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.3...v2.0.0-rc.4)
+
+**Fixed bugs:**
+
+- Soy Compilation error [\#633](https://github.com/liferay/clay/issues/633)
+
+**Closed issues:**
+
+- Dropdown should emit an event sending the clicked item on click [\#660](https://github.com/liferay/clay/issues/660)
+- Create a pattern to space `.btn` 1rem [\#654](https://github.com/liferay/clay/issues/654)
+- Add 2 new social svg icons [\#646](https://github.com/liferay/clay/issues/646)
+- ClayManagementToolbar viewType object needs to accept href [\#641](https://github.com/liferay/clay/issues/641)
+- form-groups in a dropdown [\#619](https://github.com/liferay/clay/issues/619)
+- Nav nested has lost its previous styles [\#405](https://github.com/liferay/clay/issues/405)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.4 [\#669](https://github.com/liferay/clay/pull/669) ([jbalsas](https://github.com/jbalsas))
+- Adding support for title attribute in links [\#666](https://github.com/liferay/clay/pull/666) ([4lejandrito](https://github.com/4lejandrito))
+- Update: \(Closes \#405\) Mixin `clay-nav-variant` add more configuration… [\#664](https://github.com/liferay/clay/pull/664) ([pat270](https://github.com/pat270))
+- ignore clay-isomorphic on claycss [\#663](https://github.com/liferay/clay/pull/663) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- \#654 Create a pattern to space `.btn` 1rem [\#662](https://github.com/liferay/clay/pull/662) ([pat270](https://github.com/pat270))
+- Update ClayDatasetDisplay demos | Fixes \#660 [\#661](https://github.com/liferay/clay/pull/661) ([carloslancha](https://github.com/carloslancha))
+- Add testSoy task to travis [\#658](https://github.com/liferay/clay/pull/658) ([carloslancha](https://github.com/carloslancha))
+- ClayCSS Update Several pages [\#653](https://github.com/liferay/clay/pull/653) ([pat270](https://github.com/pat270))
+- Rename hideLabel params to showLabel for consistency [\#652](https://github.com/liferay/clay/pull/652) ([carloslancha](https://github.com/carloslancha))
+- Site: Buttons separate `.btn-unstyled` from Button examples and add s… [\#648](https://github.com/liferay/clay/pull/648) ([pat270](https://github.com/pat270))
+- New: \(Fixes \#646\) Lexicon Icons added Facebook and Linkedin icons [\#647](https://github.com/liferay/clay/pull/647) ([pat270](https://github.com/pat270))
+- Fix region parameter in ChartBase [\#645](https://github.com/liferay/clay/pull/645) ([julien](https://github.com/julien))
+- Add `cors` to fetch options [\#643](https://github.com/liferay/clay/pull/643) ([julien](https://github.com/julien))
+- ViewType object accepts href | Fixes \#641 [\#642](https://github.com/liferay/clay/pull/642) ([carloslancha](https://github.com/carloslancha))
+- Revert "Use electric-clay-components instead of electric-quartz-components" [\#639](https://github.com/liferay/clay/pull/639) ([carloslancha](https://github.com/carloslancha))
+- \#619 form-groups in a dropdown [\#636](https://github.com/liferay/clay/pull/636) ([pat270](https://github.com/pat270))
+- Use electric-clay-components instead of electric-quartz-components \#534 [\#635](https://github.com/liferay/clay/pull/635) ([zenorocha](https://github.com/zenorocha))
+- Add missing param into ClayCardBase.Visual area implementation in ClayUserCard | Fixes \#633 [\#634](https://github.com/liferay/clay/pull/634) ([carloslancha](https://github.com/carloslancha))
+
 ## [v2.0.0-rc.3](https://github.com/liferay/clay/tree/v2.0.0-rc.3) (2018-02-23)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.2...v2.0.0-rc.3)
 
