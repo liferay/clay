@@ -19,6 +19,7 @@
 	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? target: string}
+	{@param? title: string}
 
 	{let $attributes kind="attributes"}
 		{if $ariaExpanded}
@@ -61,6 +62,10 @@
 
 		{if $target}
 			target="{$target}"
+		{/if}
+
+		{if $title}
+			title="{$title}"
 		{/if}
 	{/let}
 

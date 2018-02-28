@@ -175,4 +175,12 @@ describe('ClayLink', function() {
 			'myValue'
 		);
 	});
+
+	it('should render a link with title', () => {
+		link = new ClayLink({
+			title: 'title',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
 });
