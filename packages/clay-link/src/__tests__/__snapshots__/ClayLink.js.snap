@@ -65,3 +65,5 @@ exports[`ClayLink should render a link with target 1`] = `<a target="_blank"></a
 exports[`ClayLink should render a link without the aria expanded 1`] = `<a></a>`;
 
 exports[`ClayLink should render the default markup 1`] = `<a></a>`;
+
+exports[`ClayLink should render a link with title 1`] = `<a title="title"></a>`;
