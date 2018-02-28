@@ -22,8 +22,8 @@ class ClayManagementToolbar extends Component {
 	 * @return {?array|undefined} the index.
 	 * @private
 	 */
-	_getDropdownItemIndex(element) {
-		return Array.prototype.indexOf.call(
+	_getQuickItemIndex(element) {
+		let index = Array.prototype.indexOf.call(
 			Array.prototype.filter.call(
 				element.parentElement.children,
 				childrenElement =>
@@ -31,21 +31,21 @@ class ClayManagementToolbar extends Component {
 			),
 			element
 		);
+
+		if (this.showInfoButton) {
+			index--;
+		}
+
+		return index;
 	}
 
 	/**
 	 * Continues the propagation of the action item clicked event
-	 * @param {!Event} event
+	 * @param {!Object} item
 	 * @private
 	 */
-	_handleActionClicked(event) {
-		let element = event.delegateTarget;
-		let elementIndex = this._getDropdownItemIndex(element);
-		let item = this.actionItems[elementIndex];
-
-		this.emit('actionClicked', {
-			action: item,
-		});
+	_handleActionClicked(item) {
+		this.emit('actionClicked', item);
 	}
 
 	/**
@@ -110,6 +110,19 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the action item clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleQuickActionClicked(event) {
+		let element = event.delegateTarget;
+		let elementIndex = this._getQuickItemIndex(element);
+		let item = this.actionItems[elementIndex];
+
+		this.emit('actionClicked', item);
+	}
+
+	/**
 	 * Continues the propagation of the search button clicked event
 	 * @param {!Event} event
 	 * @return {Boolean} If the event has been prevented or not.
@@ -149,17 +162,11 @@ class ClayManagementToolbar extends Component {
 
 	/**
 	 * Continues the propagation of the view type item clicked event
-	 * @param {!Event} event
+	 * @param {!object} item
 	 * @private
 	 */
-	_handleViewTypeClicked(event) {
-		let element = event.delegateTarget;
-		let elementIndex = this._getDropdownItemIndex(element);
-		let item = this.viewTypes[elementIndex];
-
-		this.emit('viewTypeClicked', {
-			viewType: item,
-		});
+	_handleViewTypeClicked(item) {
+		this.emit('viewTypeClicked', item);
 	}
 }
 

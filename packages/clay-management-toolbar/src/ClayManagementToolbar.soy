@@ -13,6 +13,7 @@
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
+	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSearchSearchClick: any}
 	{@param? _handleSelectAllClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
@@ -92,6 +93,7 @@
 				{param _handleActionClicked: $_handleActionClicked /}
 				{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
+				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
 				{param _handleSelectAllClicked: $_handleSelectAllClicked /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 				{param actionItems: $actionItems /}
@@ -151,6 +153,7 @@
 	{@param? _handleActionClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleInfoButtonClicked: any}
+	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSelectAllClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? actionItems: list<[
@@ -224,7 +227,7 @@
 					{if $actionItems}
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
-								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleActionClicked}">
+								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleQuickActionClicked}">
 									{call ClayButton.render}
 										{param elementClasses: 'quick-action-item' /}
 										{param icon: $item.icon /}

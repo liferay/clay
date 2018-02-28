@@ -23,11 +23,11 @@ class ClayActionsDropdown extends Component {
 
 	/**
 	 * Continues the propagation of the item clicked event
-	 * @param {!Event} event
+	 * @param {!Object} item
 	 * @protected
 	 */
-	_handleItemClick(event) {
-		this.emit('itemClicked', event);
+	_handleItemClick(item) {
+		this.emit('itemClicked', item);
 	}
 }
 

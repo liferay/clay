@@ -59,6 +59,23 @@ class ClayDropdownBase extends Component {
 	}
 
 	/**
+	 * Returns the dropdown index of the element.
+	 * @param {!Node} element
+	 * @return {?array|undefined} the index.
+	 * @private
+	 */
+	_getDropdownItemIndex(element) {
+		return Array.prototype.indexOf.call(
+			Array.prototype.filter.call(
+				element.parentElement.children,
+				childrenElement =>
+					childrenElement.getAttribute('role') !== 'presentation'
+			),
+			element
+		);
+	}
+
+	/**
 	 * Handles document click in order to hide menu.
 	 * @param {!Event} event
 	 * @protected
@@ -89,7 +106,11 @@ class ClayDropdownBase extends Component {
 	 * @protected
 	 */
 	_handleItemClick(event) {
-		this.emit('itemClicked', event);
+		let element = event.delegateTarget;
+		let elementIndex = this._getDropdownItemIndex(element);
+		let item = this.items[elementIndex];
+
+		this.emit('itemClicked', item);
 	}
 
 	/**
