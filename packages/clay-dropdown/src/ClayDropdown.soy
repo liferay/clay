@@ -21,46 +21,46 @@
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
 
-  {let $trigger kind="html"}
-    {if $icon}
-      {call ClayIcon.render}
-        {param elementClasses: $label ? 'inline-item inline-item-before' : '' /}
-        {param spritemap: $spritemap /}
-        {param symbol: $icon /}
-      {/call}
-    {/if}
+	{let $trigger kind="html"}
+		{if $icon}
+			{call ClayIcon.render}
+				{param elementClasses: $label ? 'inline-item inline-item-before' : '' /}
+				{param spritemap: $spritemap /}
+				{param symbol: $icon /}
+			{/call}
+		{/if}
 
-    {if $label}
-      {$label}
-    {/if}
+		{if $label}
+			{$label}
+		{/if}
 
-    {if not $icon}
-      {call ClayIcon.render}
-        {param elementClasses: 'inline-item inline-item-after' /}
-        {param spritemap: $spritemap /}
-        {param symbol: 'caret-bottom' /}
-      {/call}
-    {/if}
-  {/let}
+		{if not $icon}
+			{call ClayIcon.render}
+				{param elementClasses: 'inline-item inline-item-after' /}
+				{param spritemap: $spritemap /}
+				{param symbol: 'caret-bottom' /}
+			{/call}
+		{/if}
+	{/let}
 
 	{call ClayDropdownBase.render}
-    {param button: $button /}
-    {param disabled: $disabled /}
-    {param elementClasses: $elementClasses /}
-    {param events: [
-      'buttonClicked': $_handleButtonClick,
-      'itemClicked': $_handleItemClick
-    ]/}
-    {param expanded: $expanded /}
-    {param id: $id /}
-    {param items: $items /}
-    {param itemsIconAlignment: $itemsIconAlignment /}
-    {param label: $trigger /}
-    {param ref: 'dropdown' /}
-    {param searchable: $searchable /}
-    {param spritemap: $spritemap /}
-    {param style: $style /}
-    {param triggerClasses: $triggerClasses /}
-    {param triggerSize: $triggerSize /}
-  {/call}
+		{param button: $button /}
+		{param disabled: $disabled /}
+		{param elementClasses: $elementClasses /}
+		{param events: [
+			'buttonClicked': $_handleButtonClick,
+			'itemClicked': $_handleItemClick
+		]/}
+		{param expanded: $expanded /}
+		{param id: $id /}
+		{param items: $items /}
+		{param itemsIconAlignment: $itemsIconAlignment /}
+		{param label: $trigger /}
+		{param ref: 'dropdown' /}
+		{param searchable: $searchable /}
+		{param spritemap: $spritemap /}
+		{param style: $style /}
+		{param triggerClasses: $triggerClasses /}
+		{param triggerSize: $triggerSize /}
+	{/call}
 {/template}
