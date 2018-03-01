@@ -96,6 +96,8 @@
 
 .alert-notifications {
 	.alert {
+		@include box-shadow($alert-notifications-box-shadow);
+
 		width: $alert-notifications-max-width;
 
 		@include clay-scale-component {
