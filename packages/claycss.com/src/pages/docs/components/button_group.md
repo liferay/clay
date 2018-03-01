@@ -1,9 +1,58 @@
 ---
 title: Button Group
-description: Components
+description: "Button groups are used to switch between complementary views for example, but they must never be used for complementary actions and Change and Cancel or Save and Cancel. In those cases the use of single buttons is the correct solution."
 layout: "guide"
+pattern: "buttons"
 weight: 100
 ---
+
+### Description
+
+{$page.description}
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
+<article id="button-group-item">
+<h3 class="component-title">
+	<a href="#button-group-item">Button Group Item</a>
+</h3>
+
+> A component for spacing buttons without having to worry about white space added by browsers. This should be used for complementary actions.
+
+<div class="btn-group">
+	<div class="btn-group-item">
+		<button class="btn btn-primary" type="submit">Submit</button>
+	</div>
+	<div class="btn-group-item">
+		<button class="btn btn-secondary" type="button">Cancel</button>
+	</div>
+	<div class="btn-group-item">
+		<button class="btn btn-outline-secondary btn-outline-borderless" type="button">Back</button>
+	</div>
+	<div class="btn-group-item">
+		<a href="#1" role="button">Link</a>
+	</div>
+</div>
+
+```text/html
+<div class="btn-group">
+	<div class="btn-group-item">
+		<button class="btn btn-primary" type="submit">Submit</button>
+	</div>
+	<div class="btn-group-item">
+		<button class="btn btn-secondary" type="button">Cancel</button>
+	</div>
+	<div class="btn-group-item">
+		<button class="btn btn-outline-secondary btn-outline-borderless" type="button">Back</button>
+	</div>
+	<div class="btn-group-item">
+		<a href="#1" role="button">Link</a>
+	</div>
+</div>
+```
+
+</article>
+
 
 <article id="button-group">
 <h3 class="component-title">

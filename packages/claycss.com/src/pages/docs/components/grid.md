@@ -200,46 +200,49 @@ weight: 100
 > Use <code>.container-form-lg</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
 
 <div class="alert alert-warning">If you need additional breakpoints such as <code>.container-form-{literal}{{/literal}sm|md|xl{literal}}{/literal}</code> you will need to define them yourself.</div>
-<nav class="application-bar application-bar-dark navbar navbar-expand-md">
-	<div class="container-fluid container-fluid-max-xl">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
-					</svg>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
-					</svg>
-				</a>
-			</li>
-		</ul>
-		<h1 class="navbar-title navbar-text-truncate">Application</h1>
-		<ul class="navbar-nav">
-			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
-					<li><a class="dropdown-item" href="#1">Action</a></li>
-					<li><a class="dropdown-item" href="#1">Another action</a></li>
-					<li><a class="dropdown-item" href="#1">Something else here</a></li>
-					<li class="dropdown-divider"></li>
-					<li><a class="dropdown-item" href="#1">Separated link</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</nav>
-<div class="container-fluid container-fluid-max-xl container-form-lg">
-	<div class="sheet sheet-lg">
-		<h2 class="sheet-title">Form Title</h2>
+
+<div>
+	<nav class="application-bar application-bar-dark navbar navbar-expand-md">
+		<div class="container-fluid container-fluid-max-xl">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link nav-link-monospaced" href="#1">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+							<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
+						</svg>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link nav-link-monospaced" href="#1">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+						</svg>
+					</a>
+				</li>
+			</ul>
+			<h1 class="navbar-title navbar-text-truncate">Application</h1>
+			<ul class="navbar-nav">
+				<li class="dropdown nav-item">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+						<li><a class="dropdown-item" href="#1">Action</a></li>
+						<li><a class="dropdown-item" href="#1">Another action</a></li>
+						<li><a class="dropdown-item" href="#1">Something else here</a></li>
+						<li class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#1">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid container-fluid-max-xl container-form-lg">
+		<div class="sheet sheet-lg">
+			<h2 class="sheet-title">Form Title</h2>
+		</div>
 	</div>
 </div>
 
@@ -254,125 +257,129 @@ weight: 100
 <h3 class="component-title">
 	<a href="#container-view">Container View</a>
 </h3>
+
 > Use <code>.container-view</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and view pages (e.g., Card View, Table View, or List View). This class only modifies the <code>padding</code> on the container.
-<nav class="application-bar application-bar-dark navbar navbar-expand-md">
-	<div class="container-fluid container-fluid-max-xl">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
-					</svg>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link nav-link-monospaced" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
-					</svg>
-				</a>
-			</li>
-		</ul>
-		<h1 class="navbar-title navbar-text-truncate">Application</h1>
-		<ul class="navbar-nav">
-			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
-					<li><a class="dropdown-item" href="#1">Action</a></li>
-					<li><a class="dropdown-item" href="#1">Another action</a></li>
-					<li><a class="dropdown-item" href="#1">Something else here</a></li>
-					<li class="dropdown-divider"></li>
-					<li><a class="dropdown-item" href="#1">Separated link</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</nav>
-<div class="container-fluid container-fluid-max-xl container-view">
-	<form>
-		<div class="table-responsive-lg">
-			<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
-				<thead>
-					<tr>
-						<th></th>
-						<th colspan="2">
-							Item Title
-							<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-up" />
-							</svg>
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-down" />
-							</svg>
-						</th>
-						<th>Size</th>
-						<th>Status</th>
-						<th>Creation Date</th>
-						<th>Modification Date</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<div class="custom-control custom-checkbox">
-								<label>
-									<input class="custom-control-input" type="checkbox">
-									<span class="custom-control-label"></span>
-								</label>
-							</div>
-						</td>
-						<td>
-							<span class="sticker sticker-danger">PNG</span>
-						</td>
-						<td class="table-cell-expand">
-							<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-						</td>
-						<td>700KB</td>
-						<td>
-							<span class="label label-success">Approved</span>
-						</td>
-						<td>6 days ago</td>
-						<td>4 days ago</td>
-						<td>
-							<div class="quick-action-menu">
-								<a class="quick-action-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="/vendor/lexicon/icons.svg#trash" />
-									</svg>
-								</a>
-								<a class="quick-action-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="/vendor/lexicon/icons.svg#download" />
-									</svg>
-								</a>
-								<a class="quick-action-item" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-										<use xlink:href="/vendor/lexicon/icons.svg#expand" />
-									</svg>
-								</a>
-							</div>
-							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<li><a class="dropdown-item" href="#1">Remove</a></li>
-									<li><a class="dropdown-item" href="#1">Download</a></li>
-									<li><a class="dropdown-item" href="#1">Checkout</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+
+<div>
+	<nav class="application-bar application-bar-dark navbar navbar-expand-md">
+		<div class="container-fluid container-fluid-max-xl">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link nav-link-monospaced" href="#1">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+							<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
+						</svg>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link nav-link-monospaced" href="#1">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+						</svg>
+					</a>
+				</li>
+			</ul>
+			<h1 class="navbar-title navbar-text-truncate">Application</h1>
+			<ul class="navbar-nav">
+				<li class="dropdown nav-item">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+						<li><a class="dropdown-item" href="#1">Action</a></li>
+						<li><a class="dropdown-item" href="#1">Another action</a></li>
+						<li><a class="dropdown-item" href="#1">Something else here</a></li>
+						<li class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#1">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
 		</div>
-	</form>
+	</nav>
+	<div class="container-fluid container-fluid-max-xl container-view">
+		<form>
+			<div class="table-responsive">
+				<table class="show-quick-actions-on-hover table table-autofit table-heading-nowrap table-list">
+					<thead>
+						<tr>
+							<th></th>
+							<th colspan="2">
+								Item Title
+								<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
+									<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-up" />
+								</svg>
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+									<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-down" />
+								</svg>
+							</th>
+							<th>Size</th>
+							<th>Status</th>
+							<th>Creation Date</th>
+							<th>Modification Date</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="custom-control custom-checkbox">
+									<label>
+										<input class="custom-control-input" type="checkbox">
+										<span class="custom-control-label"></span>
+									</label>
+								</div>
+							</td>
+							<td>
+								<span class="sticker sticker-danger">PNG</span>
+							</td>
+							<td class="table-cell-expand">
+								<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+							</td>
+							<td>700KB</td>
+							<td>
+								<span class="label label-success">Approved</span>
+							</td>
+							<td>6 days ago</td>
+							<td>4 days ago</td>
+							<td>
+								<div class="quick-action-menu">
+									<a class="quick-action-item" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+											<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+										</svg>
+									</a>
+									<a class="quick-action-item" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+											<use xlink:href="/vendor/lexicon/icons.svg#download" />
+										</svg>
+									</a>
+									<a class="quick-action-item" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+											<use xlink:href="/vendor/lexicon/icons.svg#expand" />
+										</svg>
+									</a>
+								</div>
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+										<li><a class="dropdown-item" href="#1">Remove</a></li>
+										<li><a class="dropdown-item" href="#1">Download</a></li>
+										<li><a class="dropdown-item" href="#1">Checkout</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</div>
 </div>
 
 ```text/html

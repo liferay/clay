@@ -39,12 +39,6 @@
 		margin-bottom: 2em;
 		padding: 0 1em;
 	}
-
-	table {
-		@extend .table;
-		@extend .table-sm;
-		@extend .table-list;
-	}
 }
 
 .about {
