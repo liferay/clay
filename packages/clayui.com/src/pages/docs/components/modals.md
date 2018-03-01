@@ -914,14 +914,14 @@ weight: 100
 	{param size: 'full-screen' /}
 	{param spritemap: '/vendor/lexicon/icons.svg' /}
 	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
-	{param url: 'https://claycss.com' /}
+	{param url: 'https://clayui.com' /}
 {/call}
 ```
 ```text/html
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
 	spritemap="/vendor/lexicon/icons.svg"
-	title="Add Picture to Documents and Media Library in Liferay Seven" url="https://claycss.com">
+	title="Add Picture to Documents and Media Library in Liferay Seven" url="https://clayui.com">
 </clay-modal>
 ```
 ```text/html
