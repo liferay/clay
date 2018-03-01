@@ -19,7 +19,7 @@ weight: 9
 				'selected': '#4b9bff',
 				'value': 'gdp_md_est'
 		] /}
-		{param data: 'http://localhost:8888/assets/world-low-res.geo.json' /}
+		{param data: '/assets/world-low-res.geo.json' /}
 	{/call}
 </div>
 
@@ -33,7 +33,7 @@ weight: 9
 			'selected': '#4b9bff',
 			'value': 'gdp_md_est'
 	] /}
-	{param data: 'http://localhost:8888/assets/world-low-res.geo.json' /}
+	{param data: '/assets/world-low-res.geo.json' /}
 {/call}
 ```
 ```jsx
@@ -46,7 +46,7 @@ weight: 9
 			selected: '#4b9bff'
 			value: 'gdp_md_est'
 	}
-	data='http://localhost:8888/assets/world-low-res.geo.json'
+	data='/assets/world-low-res.geo.json'
 />
 ```
 
