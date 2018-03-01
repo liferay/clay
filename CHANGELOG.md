@@ -1,5 +1,26 @@
 # Change Log
 
+## [v2.0.0-rc.5](https://github.com/liferay/clay/tree/v2.0.0-rc.5) (2018-03-01)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.4...v2.0.0-rc.5)
+
+**Closed issues:**
+
+- Add missing dependency with metal in clay-component [\#679](https://github.com/liferay/clay/issues/679)
+- Fix url for Geomap in clay-charts [\#676](https://github.com/liferay/clay/issues/676)
+- Alert Notification \(Toast\) should have box-shadow [\#673](https://github.com/liferay/clay/issues/673)
+- Change claycss.com to clayui.com [\#671](https://github.com/liferay/clay/issues/671)
+- Links don't support "title" attribute [\#665](https://github.com/liferay/clay/issues/665)
+- Wrong parameter types in clay-charts [\#644](https://github.com/liferay/clay/issues/644)
+- Add `cors` to fetch options in clay-charts [\#640](https://github.com/liferay/clay/issues/640)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.5 [\#682](https://github.com/liferay/clay/pull/682) ([jbalsas](https://github.com/jbalsas))
+- Change claycss.com to clayui.com [\#681](https://github.com/liferay/clay/pull/681) ([julien](https://github.com/julien))
+- Add missing dependency | Fixes \#679 [\#680](https://github.com/liferay/clay/pull/680) ([carloslancha](https://github.com/carloslancha))
+- New: \(Fixes \#673\) Alert Notifications add box-shadow in Atlas and add… [\#674](https://github.com/liferay/clay/pull/674) ([pat270](https://github.com/pat270))
+- More ClayCSS Docs [\#672](https://github.com/liferay/clay/pull/672) ([pat270](https://github.com/pat270))
+
 ## [v2.0.0-rc.4](https://github.com/liferay/clay/tree/v2.0.0-rc.4) (2018-02-28)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.3...v2.0.0-rc.4)
 
