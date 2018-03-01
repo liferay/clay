@@ -3768,13 +3768,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3782,7 +3782,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3817,13 +3817,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3831,7 +3831,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3875,13 +3875,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3889,7 +3889,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3930,13 +3930,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3944,7 +3944,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3985,13 +3985,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3999,7 +3999,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4040,13 +4040,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4054,7 +4054,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4095,13 +4095,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4109,7 +4109,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4150,13 +4150,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4164,7 +4164,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4202,13 +4202,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4216,7 +4216,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4251,13 +4251,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4265,7 +4265,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4300,13 +4300,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4314,7 +4314,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
