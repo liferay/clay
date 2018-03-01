@@ -17,6 +17,12 @@ $alert-link-font-weight: $font-weight-semi-bold !default;
 
 $alert-indicator-font-size: !default;
 
+// Alert Notification
+
+$alert-notifications-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3) !default;
+
+// Alert Variants
+
 $alert-primary-color: $primary !default;
 $alert-primary-bg: lighten(saturate($alert-primary-color, 3.40), 43.14) !default;
 $alert-primary-border-color: lighten(saturate($alert-primary-color, 3.40), 21.18) !default;

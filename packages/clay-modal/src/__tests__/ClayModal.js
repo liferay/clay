@@ -101,7 +101,7 @@ describe('ClayModal', function() {
 
 	it('should render a modal with iframe as body', () => {
 		clayModal = new ClayModal({
-			url: 'http://www.claycss.com',
+			url: 'http://www.clayui.com',
 		});
 
 		expect(clayModal).toMatchSnapshot();
