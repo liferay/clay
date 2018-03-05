@@ -47,6 +47,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Disabled State with Search Enabled</h4>
+			<div id="disabled-with-search-enabledblock"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>With links as viewTypes</h4>
 			<div id="link-view-types-block"></div>
 		</div>
@@ -285,6 +292,33 @@
 			viewTypes: viewTypes,
 		},
 		'#disabled-block');
+
+		//Disabled State with enabled Search
+		new metal.ClayManagementToolbar({
+			creationMenu: {
+				items: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					}
+				]
+			},
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			searchValue: 'Carcamusas',
+			selectable: true,
+			showInfoButton: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 0,
+			viewTypes: viewTypes,
+		},
+		'#disabled-with-search-enabledblock');
 
 		//Link View Types
 		new metal.ClayManagementToolbar({
