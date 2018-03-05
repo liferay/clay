@@ -113,6 +113,30 @@ label {
 	}
 }
 
+.form-control-plaintext {
+	background-clip: border-box;
+	border-width: $input-border-width;
+
+	@if not ($input-font-size == $font-size-base) {
+		font-size: $input-font-size;
+	}
+
+	height: $input-height;
+	min-width: 0;
+
+	@if not ($input-padding-y == $btn-padding-y) {
+		padding-bottom: $input-padding-y;
+		padding-top: $input-padding-y;
+	}
+
+	text-overflow: ellipsis;
+
+	@include clay-scale-component {
+		font-size: $input-font-size-mobile;
+		height: $input-height-mobile;
+	}
+}
+
 // Select
 
 .form-control[multiple],
@@ -159,8 +183,14 @@ select.form-control:not([multiple]):not([size]) {
 
 // Textarea
 
-textarea.form-control {
-	height: $input-textarea-height;
+textarea {
+	&.form-control {
+		height: $input-textarea-height;
+	}
+
+	&.form-control-plaintext {
+		height: $input-textarea-height;
+	}
 }
 
 // File
