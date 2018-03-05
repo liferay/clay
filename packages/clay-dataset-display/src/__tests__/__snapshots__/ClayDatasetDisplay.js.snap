@@ -45,7 +45,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -734,7 +734,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -1423,7 +1423,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -2290,7 +2290,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -2821,7 +2821,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -3680,7 +3680,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -4677,7 +4677,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -5366,7 +5366,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
@@ -6553,7 +6553,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
         </ul>
         <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
           <div class="container-fluid container-fluid-max-xl">
-            <form action="mySearchURL" name="mySearchName" role="search">
+            <form action="mySearchURL" method="POST" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
