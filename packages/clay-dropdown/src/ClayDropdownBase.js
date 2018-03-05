@@ -110,7 +110,7 @@ class ClayDropdownBase extends Component {
 		let elementIndex = this._getDropdownItemIndex(element);
 		let item = this.items[elementIndex];
 
-		this.emit('itemClicked', item);
+		this.emit('itemClicked', {event, item});
 	}
 
 	/**
