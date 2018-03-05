@@ -4,7 +4,7 @@ $input-border-bottom-width: 0.0625rem !default;
 $input-border-left-width: 0.0625rem !default;
 $input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
 
-$input-font-size: null !default;
+$input-font-size: $font-size-base !default;
 $input-font-size-mobile: null !default;
 $input-height-mobile: null !default;
 $input-height-inner-mobile: null !default;
@@ -53,6 +53,24 @@ $input-readonly-focus-color: null !default;
 $input-readonly-cursor: null !default;
 
 $input-textarea-height: 150px !default;
+
+// Form Control Label (Labels inside Form Control)
+
+$form-control-label-size: () !default;
+$form-control-label-size: map-merge((
+	height: 1.25rem
+), $form-control-label-size);
+
+// Form Control Tag Group
+
+$form-control-tag-group-padding-y: ($input-height-inner - map-get($form-control-label-size, height) - ($label-spacer-y * 2)) / 2 !default;
+
+// Form Control Inset
+
+$form-control-inset-min-height: $input-font-size * $input-line-height !default;
+$form-control-inset-margin-y: ($input-height-inner - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
+
+// Form Group
 
 $form-group-margin-bottom-mobile: null !default;
 
@@ -186,3 +204,13 @@ $input-group-secondary-addon-color: $white !default;
 // Input Group Inset
 
 $input-group-inset-item-color: $input-group-addon-color !default;
+
+// Input Group Stacked
+
+$input-group-stacked-sm-down: () !default;
+$input-group-stacked-sm-down: map-merge((
+	breakpoint: sm,
+	item-margin-bottom: 0.5rem,
+	item-margin-left: 0,
+	shrink-margin-right: 0.5rem
+), $input-group-stacked-sm-down);

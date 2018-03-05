@@ -256,19 +256,15 @@
 	order: 9;
 }
 
+// Input Group Stacked
+
+.input-group-stacked-sm-down {
+	@include clay-input-group-stacked($input-group-stacked-sm-down);
+}
+
 // Input Group Sizes
 
 .input-group-lg {
-	.input-group-inset-item {
-		.btn {
-			font-size: $btn-font-size-lg;
-
-			@include clay-scale-component {
-				font-size: $btn-font-size-lg-mobile;
-			}
-		}
-	}
-
 	.input-group-item {
 		.btn {
 			font-size: $btn-font-size-lg;
@@ -300,6 +296,7 @@
 			}
 		}
 
+		> .btn,
 		.form-control,
 		.form-file .btn {
 			font-size: $input-font-size-lg;
@@ -337,6 +334,33 @@
 			padding-top: $input-group-addon-padding-y-lg;
 		}
 	}
+
+	.input-group-inset-item {
+		.btn {
+			font-size: $btn-font-size-lg;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-lg-mobile;
+			}
+		}
+
+		.form-file {
+			height: 75%;
+
+			.btn {
+				font-size: $btn-font-size-lg;
+				height: 100%;
+				padding-bottom: 0;
+				padding-top: 0;
+				padding-left: ($btn-padding-x - 0.1875rem);
+				padding-right: ($btn-padding-x - 0.1875rem);
+
+				@include clay-scale-component {
+					font-size: $btn-font-size-lg-mobile;
+				}
+			}
+		}
+	}
 }
 
 .input-group-sm {
@@ -371,6 +395,7 @@
 			}
 		}
 
+		> .btn,
 		.form-control,
 		.form-file .btn {
 			font-size: $input-font-size-sm;
@@ -415,6 +440,23 @@
 
 			@include clay-scale-component {
 				font-size: $btn-font-size-sm-mobile;
+			}
+		}
+
+		.form-file {
+			height: 75%;
+
+			.btn {
+				font-size: $btn-font-size-sm;
+				height: 100%;
+				padding-bottom: 0;
+				padding-top: 0;
+				padding-left: ($btn-padding-x - 0.1875rem);
+				padding-right: ($btn-padding-x - 0.1875rem);
+
+				@include clay-scale-component {
+					font-size: $btn-font-size-sm-mobile;
+				}
 			}
 		}
 	}
