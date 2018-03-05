@@ -9,7 +9,7 @@ require('gulp-storage')(gulp);
 
 gulp.storage.create('claycss', 'claycss.json');
 
-const generateIconData = require('./lib/icons');
+const generateIconData = require('./utils/icons');
 
 let clayJSPath = path.join(clay.srcDir, 'js');
 
