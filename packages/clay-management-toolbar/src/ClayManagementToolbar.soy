@@ -223,7 +223,7 @@
 					{if $showInfoButton}
 						<li class="nav-item">
 							{call ClayButton.render}
-								{param elementClasses: 'component-action nav-link nav-link-monospaced' /}
+								{param elementClasses: 'nav-link nav-link-monospaced' /}
 								{param events: ['click': $_handleInfoButtonClicked] /}
 								{param icon: 'info-circle-open' /}
 								{param ref: 'infoButton' /}
@@ -247,7 +247,7 @@
 										{/call}
 									{else}
 										{call ClayButton.render}
-											{param elementClasses: 'component-action quick-action-item' /}
+											{param elementClasses: 'nav-link nav-link-monospaced quick-action-item' /}
 											{param icon: $item.icon /}
 											{param ref: 'quickAction' + index($item) /}
 											{param spritemap: $spritemap /}
@@ -263,7 +263,7 @@
 								{param events: ['itemClicked': $_handleActionClicked] /}
 								{param items: $actionItems /}
 								{param spritemap: $spritemap /}
-								{param triggerClasses: 'component-action' /}
+								{param triggerClasses: 'nav-link nav-link-monospaced' /}
 							{/call}
 						</li>
 					{/if}
