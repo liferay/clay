@@ -157,40 +157,48 @@
 	{if $buttons}
 		<div class="modal-footer">
 			<div class="modal-item-first">
-				{foreach $button in $buttons}
-					{if $button.alignment == 'left'}
-						{call ClayButton.render}
-							{param events: ['click': $_handleClickFooterButton] /}
-							{param label: $button.label /}
-							{param style: $button.style ?: 'secondary' /}
-							{param type: not $button.type or $button.type == 'close' ? 'button' : $button.type /}
-						{/call}
-						{sp}
-					{/if}
-				{/foreach}
+				<div class="btn-group">
+					{foreach $button in $buttons}
+						{if $button.position == 'left'}
+							<div class="btn-group-item">
+								{call ClayButton.render}
+									{param events: ['click': $_handleClickFooterButton] /}
+									{param label: $button.label /}
+									{param style: $button.style ?: 'secondary' /}
+									{param type: not $button.type or $button.type == 'close' ? 'button' : $button.type /}
+								{/call}
+							</div>
+						{/if}
+					{/foreach}
+				</div>
 			</div>
 			<div class="modal-item-last">
-				{foreach $button in $buttons}
-					{if not $button.alignment or $button.alignment == 'right'}
-						{if $button.type == 'close'}
-							{call ClayButton.render}
-								{param elementClasses: 'close-modal' /}
-								{param events: ['click': $_handleClickCloseButtonFooter] /}
-								{param label: $button.label /}
-								{param style: 'secondary' /}
-								{param type: 'button' /}
-							{/call}
-						{else}
-							{call ClayButton.render}
-								{param events: ['click': $_handleClickFooterButton] /}
-								{param label: $button.label /}
-								{param style: $button.style ?: 'primary' /}
-								{param type: $button.type /}
-							{/call}
+				<div class="btn-group">
+					{foreach $button in $buttons}
+						{if not $button.position or $button.position == 'right'}
+							{if $button.type == 'close'}
+								<div class="btn-group-item">
+									{call ClayButton.render}
+										{param elementClasses: 'close-modal' /}
+										{param events: ['click': $_handleClickCloseButtonFooter] /}
+										{param label: $button.label /}
+										{param style: 'secondary' /}
+										{param type: 'button' /}
+									{/call}
+								</div>
+							{else}
+								<div class="btn-group-item">
+									{call ClayButton.render}
+										{param events: ['click': $_handleClickFooterButton] /}
+										{param label: $button.label /}
+										{param style: $button.style ?: 'primary' /}
+										{param type: $button.type /}
+									{/call}
+								</div>
+							{/if}
 						{/if}
-						{sp}
-					{/if}
-				{/foreach}
+					{/foreach}
+				</div>
 			</div>
 		</div>
 	{/if}
