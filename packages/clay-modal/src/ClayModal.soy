@@ -10,7 +10,12 @@
 	{@param? _isTransitioning: bool}
 	{@param? body: string|html}
 	{@param? elementClasses: string}
-	{@param? footerButtons: list<?>}
+	{@param? footerButtons: list<[
+		alignment: string,
+		label: string,
+		style: string,
+		type: string
+	]>}
 	{@param? id: string}
 	{@param? size: string}
 	{@param? spritemap: string}
@@ -152,14 +157,19 @@
 {template .footer}
 	{@param? _handleClickCloseButtonFooter: any}
 	{@param? _handleClickFooterButton: any}
-	{@param? buttons: list<?>}
+	{@param? buttons: list<[
+		alignment: string,
+		label: string,
+		style: string,
+		type: string
+	]>}
 
 	{if $buttons}
 		<div class="modal-footer">
 			<div class="modal-item-first">
 				<div class="btn-group">
 					{foreach $button in $buttons}
-						{if $button.position == 'left'}
+						{if $button.alignment == 'left'}
 							<div class="btn-group-item">
 								{call ClayButton.render}
 									{param events: ['click': $_handleClickFooterButton] /}
@@ -175,7 +185,7 @@
 			<div class="modal-item-last">
 				<div class="btn-group">
 					{foreach $button in $buttons}
-						{if not $button.position or $button.position == 'right'}
+						{if not $button.alignment or $button.alignment == 'right'}
 							{if $button.type == 'close'}
 								<div class="btn-group-item">
 									{call ClayButton.render}
