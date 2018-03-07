@@ -204,7 +204,7 @@ ClayManagementToolbar.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	clearResultsHref: Config.string(),
+	clearResultsURL: Config.string(),
 
 	/**
 	 * Name of the content renderer to use template variants.
@@ -362,7 +362,7 @@ ClayManagementToolbar.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	sortingHref: Config.string(),
+	sortingURL: Config.string(),
 
 	/**
 	 * Sorting order.

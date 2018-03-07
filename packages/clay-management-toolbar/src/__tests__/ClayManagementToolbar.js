@@ -111,8 +111,8 @@ describe('ClayManagementToolbar', function() {
 
 	it('should render a management toolbar with sorting href', () => {
 		managementToolbar = new ClayManagementToolbar({
-			sortingHref: '#sorting',
 			sortingOrder: 'desc',
+			sortingURL: '#sorting',
 			spritemap: spritemap,
 		});
 
@@ -772,7 +772,7 @@ describe('ClayManagementToolbar', function() {
 
 	it('should render a management toolbar with a clear results link', () => {
 		managementToolbar = new ClayManagementToolbar({
-			clearResultsHref: '#clear',
+			clearResultsURL: '#clear',
 			searchValue: 'foo',
 			selectable: true,
 			spritemap: spritemap,

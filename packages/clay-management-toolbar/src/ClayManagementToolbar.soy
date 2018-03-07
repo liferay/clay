@@ -29,7 +29,7 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? clearResultsHref: string}
+	{@param? clearResultsURL: string}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
 		button: ?,
@@ -66,8 +66,8 @@
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
-	{@param? sortingHref: string}
 	{@param? sortingOrder: string}
+	{@param? sortingURL: string}
 	{@param? totalItems: number}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -130,8 +130,8 @@
 				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
-				{param sortingHref: $sortingHref /}
 				{param sortingOrder: $sortingOrder /}
+				{param sortingURL: $sortingURL /}
 				{param spritemap: $spritemap /}
 				{param viewTypes: $viewTypes /}
 			{/call}
@@ -140,7 +140,7 @@
 		{if $searchValue and $totalItems > 0}
 			{call .resultsBar}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
-				{param clearResultsHref: $clearResultsHref /}
+				{param clearResultsURL: $clearResultsURL /}
 				{param searchValue: $searchValue /}
 				{param totalItems: $totalItems /}
 			{/call}
@@ -351,8 +351,8 @@
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
-	{@param? sortingHref: string}
 	{@param? sortingOrder: string}
+	{@param? sortingURL: string}
 	{@param? viewTypes: list<[
 		active: bool,
 		disabled: bool,
@@ -431,11 +431,11 @@
 							{/if}
 						{/let}
 
-						{if $sortingHref}
+						{if $sortingURL}
 							{call ClayLink.render}
 								{param elementClasses: $sortingClasses /}
 								{param events: ['click': $_handleSortingButtonClicked] /}
-								{param href: $sortingHref /}
+								{param href: $sortingURL /}
 								{param icon: 'order-arrow' /}
 								{param ref: 'sortingButton' /}
 								{param spritemap: $spritemap /}
@@ -561,7 +561,7 @@
 {template .resultsBar}
 	{@param searchValue: string}
 	{@param? _handleClearResultsClick: any}
-	{@param? clearResultsHref: string}
+	{@param? clearResultsURL: string}
 	{@param? totalItems: number}
 
 	<nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -575,11 +575,11 @@
 					</div>
 				</li>
 				<li class="tbar-item">
-					{if $clearResultsHref}
+					{if $clearResultsURL}
 						{call ClayLink.render}
 							{param elementClasses: 'component-link tbar-link' /}
 							{param events: ['click': $_handleClearResultsClick] /}
-							{param href: $clearResultsHref /}
+							{param href: $clearResultsURL /}
 							{param label: 'Clear' /}
 							{param ref: 'clearSearch' /}
 						{/call}
