@@ -1,4 +1,11 @@
-import * as d3 from 'd3';
+const path = require('path');
+const fs = require('fs');
+const geoData = fs.readFileSync(
+	path.join(__dirname, '../../demos/data/world-low-res.geo.json'),
+	{encoding: 'utf-8'}
+);
+const mockData = {data: JSON.parse(geoData)};
+
 import Geomap from '../Geomap';
 
 /**
@@ -11,9 +18,19 @@ function createMap(config = {}) {
 }
 
 describe('Geomap', () => {
-	it('should accept data as a string', () => {
-		d3.json = jest.fn();
+	beforeEach(() => {
+		global.fetch = jest.fn().mockImplementation(() =>
+			Promise.resolve({
+				json: jest.fn().mockImplementation(() => Promise.resolve(mockData)),
+			})
+		);
+	});
 
+	afterEach(() => {
+		global.fetch.mockRestore();
+	});
+
+	it('should accept data as a string', () => {
 		const geomap = createMap({
 			data: './data/world-low-res.geo.json',
 		});
@@ -23,13 +40,7 @@ describe('Geomap', () => {
 
 	it('should accept data as an object', () => {
 		const geomap = createMap({
-			data: {
-				features: [
-					{
-						properties: {},
-					},
-				],
-			},
+			data: mockData.data,
 		});
 
 		expect(geomap).toMatchSnapshot();
@@ -40,13 +51,7 @@ describe('Geomap', () => {
 			data: () => {
 				return new Promise(resolve => {
 					setTimeout(() => {
-						resolve({
-							features: [
-								{
-									properties: {},
-								},
-							],
-						});
+						resolve(mockData.data);
 					}, 500);
 				});
 			},

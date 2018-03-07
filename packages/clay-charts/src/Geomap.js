@@ -1,5 +1,5 @@
-import {isFunction, isObject, isString} from 'metal';
 import Component from 'metal-component';
+import DataComponent from './DataComponent';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 import {isServerSide} from 'metal';
@@ -18,6 +18,8 @@ class Geomap extends Component {
 		if (isServerSide()) {
 			return;
 		}
+
+		this._setupPolling();
 
 		const w =
 			typeof this._width === 'string' ? this._width : `${this._width}px`;
@@ -55,7 +57,7 @@ class Geomap extends Component {
 
 		this._onDataLoadHandler = this._onDataLoad.bind(this);
 
-		this._resolveData()
+		this._resolveData(this.data)
 			.then(val => {
 				this._onDataLoadHandler.apply(this, [null, val]);
 			})
@@ -70,6 +72,10 @@ class Geomap extends Component {
 	disposed() {
 		if (isServerSide()) {
 			return;
+		}
+
+		if (this._pollingInterval) {
+			clearTimeout(this._pollingInterval);
 		}
 
 		if (this.svg) {
@@ -173,25 +179,18 @@ class Geomap extends Component {
 	}
 
 	/**
-	 * @return {Promise}
+	 * @inheritDoc
+	 * @param {Object} data The updated data
 	 * @protected
 	 */
-	_resolveData() {
-		return new Promise((resolve, reject) => {
-			if (isString(this.data)) {
-				d3.json(this.data, (err, data) => {
-					if (err) {
-						reject(err);
-					} else {
-						resolve(data);
-					}
-				});
-			} else if (isObject(this.data) && !isFunction(this.data)) {
-				resolve(this.data);
-			} else if (isFunction(this.data)) {
-				resolve(this.data());
-			}
-		});
+	_updateData(data) {
+		this._resolveData(data)
+			.then(val => {
+				this._onDataLoadHandler.apply(this, [null, val]);
+			})
+			.catch(err => {
+				this._onDataLoadHandler.apply(this, [err, null]);
+			});
 	}
 }
 
@@ -263,20 +262,10 @@ Geomap.STATE = {
 		selected: '#4b9bff',
 		value: 'pop_est',
 	}),
-
-	/**
-	 * Geo-json data
-	 * @instance
-	 * @memberof Geomap
-	 * @type {?Function|?Object|?String}
-	 * @default undefined
-	 */
-	data: Config.oneOfType([
-		Config.func(),
-		Config.object(),
-		Config.string(),
-	]).required(),
 };
+
+Object.assign(Geomap.prototype, DataComponent);
+Object.assign(Geomap.STATE, DataComponent.STATE);
 
 export {Geomap};
 export default Geomap;

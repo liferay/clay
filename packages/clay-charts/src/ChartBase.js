@@ -1,5 +1,4 @@
 import {bb, d3} from 'billboard.js';
-import {isFunction, isString} from 'metal';
 import {Config} from 'metal-state';
 import {isServerSide} from 'metal';
 import types from './utils/types';
@@ -77,6 +76,7 @@ const ChartBase = {
 		}
 
 		this._resolveData(this.data).then(data => {
+			this._setupPolling();
 			this._resolvedData = data;
 			const config = this._constructChartConfig();
 			this.bbChart = bb.generate(config);
@@ -101,6 +101,10 @@ const ChartBase = {
 	disposed() {
 		if (isServerSide()) {
 			return;
+		}
+
+		if (this._pollingInterval) {
+			clearInterval(this._pollingInterval);
 		}
 
 		if (this.bbChart) {
@@ -460,27 +464,7 @@ const ChartBase = {
 	 * @protected
 	 */
 	_handleDataChanged(event) {
-		this._resolveData(event.newVal).then(val => {
-			const prevVal = this._createDataArray(this._resolvedData);
-
-			this._resolvedData = val;
-
-			const data = this._constructDataConfig(false);
-			const newVal = data.columns;
-			const removedIds = this._resolveRemovedData(newVal, prevVal);
-
-			if (removedIds.length) {
-				data.unload = removedIds;
-			}
-
-			this.bbChart.load(data);
-
-			if (data.xs) {
-				this.bbChart.xs(this._mapXSValues(data.xs));
-			}
-
-			this.emit('dataResolved', data);
-		});
+		this._updateData(event.newVal);
 	},
 
 	/**
@@ -558,24 +542,6 @@ const ChartBase = {
 	},
 
 	/**
-	 * Check's the data or columns option and resolves this `data_` accordingly.
-	 * @return {Promise}
-	 * @param {?Array|Function|String} data the data to resolve.
-	 * @protected
-	 */
-	_resolveData(data) {
-		if (Array.isArray(data)) {
-			return Promise.resolve(data);
-		} else if (isFunction(data)) {
-			return data().then(val => val);
-		} else if (isString(data)) {
-			return fetch(data, {cors: 'cors'})
-				.then(res => res.json())
-				.then(res => res.data);
-		}
-	},
-
-	/**
 	 * Determines which ids should be passed to the unload property.
 	 * @static
 	 * @param {Array} newData
@@ -603,6 +569,35 @@ const ChartBase = {
 	 */
 	_setColumns(columns) {
 		this.data = columns;
+	},
+
+	/**
+	 * Updates the chart's data.
+	 * @param {Object} data The new data to load
+	 * @protected
+	 */
+	_updateData(data) {
+		this._resolveData(data).then(val => {
+			const prevVal = this._createDataArray(this._resolvedData);
+
+			this._resolvedData = val;
+
+			const data = this._constructDataConfig(false);
+			const newVal = data.columns;
+			const removedIds = this._resolveRemovedData(newVal, prevVal);
+
+			if (removedIds.length) {
+				data.unload = removedIds;
+			}
+
+			this.bbChart.load(data);
+
+			if (data.xs) {
+				this.bbChart.xs(this._mapXSValues(data.xs));
+			}
+
+			this.emit('dataResolved', data);
+		});
 	},
 };
 
@@ -797,32 +792,6 @@ ChartBase.STATE = {
 		setter: '_setColumns',
 		valueFn: '_getColumns',
 	},
-
-	/**
-	 * Data that will be rendered to the chart.
-	 * @instance
-	 * @memberof ChartBase
-	 * @type {?Array|undefined}
-	 * @default undefined
-	 */
-	data: Config.oneOfType([
-		Config.arrayOf(
-			Config.shapeOf({
-				axis: Config.oneOf(['y', 'y2']),
-				class: Config.string(),
-				color: Config.string(),
-				data: Config.array().required(),
-				hide: Config.bool(),
-				id: Config.required().string(),
-				name: Config.string(),
-				regions: Config.array(),
-				type: Config.oneOf(types.all),
-				x: Config.string(),
-			})
-		),
-		Config.func(),
-		Config.string(),
-	]),
 
 	/**
 	 * Configuration options for donut chart.
