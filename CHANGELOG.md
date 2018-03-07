@@ -1,5 +1,36 @@
 # Change Log
 
+## [v2.0.0-rc.6](https://github.com/liferay/clay/tree/v2.0.0-rc.6) (2018-03-07)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.5...v2.0.0-rc.6)
+
+**Fixed bugs:**
+
+- Watch script doesn't working on clayui.com [\#696](https://github.com/liferay/clay/issues/696)
+
+**Closed issues:**
+
+- Management Toolbar Search input should not be disabled after a search [\#691](https://github.com/liferay/clay/issues/691)
+- Create markup for LABELS INPUT FIELD [\#690](https://github.com/liferay/clay/issues/690)
+- Create markup for AUTOCOMPLETE TEXT FIELD and SEARCH FIELD [\#688](https://github.com/liferay/clay/issues/688)
+- Navbars increase max-width on `.navbar-text-truncate` [\#685](https://github.com/liferay/clay/issues/685)
+- Management Toolbar search form need method POST [\#684](https://github.com/liferay/clay/issues/684)
+- Create markup for Simple File Upload [\#675](https://github.com/liferay/clay/issues/675)
+- Update ClayModal with new markup [\#667](https://github.com/liferay/clay/issues/667)
+
+**Merged pull requests:**
+
+- Updates changelog to v2.0.0-rc.5 [\#703](https://github.com/liferay/clay/pull/703) ([jbalsas](https://github.com/jbalsas))
+- Add data-attributes to DOM | Fixes \#700 [\#702](https://github.com/liferay/clay/pull/702) ([carloslancha](https://github.com/carloslancha))
+- \#690 Markup for Lexicon Input Labels Field [\#701](https://github.com/liferay/clay/pull/701) ([pat270](https://github.com/pat270))
+- Regen snapshots [\#699](https://github.com/liferay/clay/pull/699) ([carloslancha](https://github.com/carloslancha))
+- Add generate icon data | Fixes \#696 [\#698](https://github.com/liferay/clay/pull/698) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Regen ClayManagementToolbar snapshots with method POST [\#694](https://github.com/liferay/clay/pull/694) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Management Toolbar search form need method POST | Fixes \#684 [\#693](https://github.com/liferay/clay/pull/693) ([carloslancha](https://github.com/carloslancha))
+- Management Toolbar Search input should not be disabled after a search | Fixes \#691 [\#692](https://github.com/liferay/clay/pull/692) ([carloslancha](https://github.com/carloslancha))
+- \#688 Autocomplete Text Field and Search Field markup [\#689](https://github.com/liferay/clay/pull/689) ([pat270](https://github.com/pat270))
+- \#675 Create Simple File Upload pattern [\#687](https://github.com/liferay/clay/pull/687) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#685\) Navbar `.navbar-text-truncate` should have max-w… [\#686](https://github.com/liferay/clay/pull/686) ([pat270](https://github.com/pat270))
+
 ## [v2.0.0-rc.5](https://github.com/liferay/clay/tree/v2.0.0-rc.5) (2018-03-01)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.4...v2.0.0-rc.5)
 
