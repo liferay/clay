@@ -39,6 +39,17 @@ class ClayComponent extends Component {
 			}
 		}
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	rendered(...args) {
+		super.rendered(...args);
+
+		for (let dataKey in this.data) {
+			this.element.setAttribute('data-' + dataKey, this.data[dataKey]);
+		}
+	}
 }
 
 /**
