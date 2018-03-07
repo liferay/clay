@@ -356,6 +356,15 @@ ClayManagementToolbar.STATE = {
 	showSearch: Config.bool().value(true),
 
 	/**
+	 * Sorting url.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	sortingHref: Config.string(),
+
+	/**
 	 * Sorting order.
 	 * @instance
 	 * @memberof ClayManagementToolbar

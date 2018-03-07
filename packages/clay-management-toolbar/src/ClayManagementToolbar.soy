@@ -66,6 +66,7 @@
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
+	{@param? sortingHref: string}
 	{@param? sortingOrder: string}
 	{@param? totalItems: number}
 	{@param? viewTypes: list<[
@@ -129,6 +130,7 @@
 				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
+				{param sortingHref: $sortingHref /}
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}
 				{param viewTypes: $viewTypes /}
@@ -349,6 +351,7 @@
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
+	{@param? sortingHref: string}
 	{@param? sortingOrder: string}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -428,15 +431,26 @@
 							{/if}
 						{/let}
 
-						{call ClayButton.render}
-							{param disabled: $disabled /}
-							{param elementClasses: $sortingClasses /}
-							{param events: ['click': $_handleSortingButtonClicked] /}
-							{param icon: 'order-arrow' /}
-							{param ref: 'sortingButton' /}
-							{param spritemap: $spritemap /}
-							{param style: 'unstyled' /}
-						{/call}
+						{if $sortingHref}
+							{call ClayLink.render}
+								{param elementClasses: $sortingClasses /}
+								{param events: ['click': $_handleSortingButtonClicked] /}
+								{param href: $sortingHref /}
+								{param icon: 'order-arrow' /}
+								{param ref: 'sortingButton' /}
+								{param spritemap: $spritemap /}
+							{/call}
+						{else}
+							{call ClayButton.render}
+								{param disabled: $disabled /}
+								{param elementClasses: $sortingClasses /}
+								{param events: ['click': $_handleSortingButtonClicked] /}
+								{param icon: 'order-arrow' /}
+								{param ref: 'sortingButton' /}
+								{param spritemap: $spritemap /}
+								{param style: 'unstyled' /}
+							{/call}
+						{/if}
 					</li>
 				{/if}
 			</ul>
