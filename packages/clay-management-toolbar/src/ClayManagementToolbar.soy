@@ -559,9 +559,9 @@
  * This renders the search results bar.
  */
 {template .resultsBar}
+	{@param searchValue: string}
 	{@param? _handleClearResultsClick: any}
 	{@param? clearResultsHref: string}
-	{@param? searchValue: string}
 	{@param? totalItems: number}
 
 	<nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -625,7 +625,10 @@
 				placeholder="Search for..."
 				ref="search"
 				type="text"
-				value="{$searchValue}"
+
+				{if $searchValue}
+					value="{$searchValue}"
+				{/if}
 			{/let}
 
 			<input {$inputAttributes} />
