@@ -1,13 +1,24 @@
+import {Component} from 'metal-component';
 import {isFunction, isObject, isString} from 'metal';
 import {Config} from 'metal-state';
 import types from './utils/types';
 
 /**
- * DataComponent prototype.
+ * DataComponent class.
  *
  * @mixin
  */
-const DataComponent = {
+class DataComponent extends Component {
+	/**
+	 * Cleanup resources
+	 */
+	cleanup() {
+		if (this._pollingInterval) {
+			clearInterval(this._pollingInterval);
+			this._pollingInterval = null;
+		}
+	}
+
 	/**
 	 * Check's the data or columns option and resolves this `data_` accordingly.
 	 * @return {Promise}
@@ -23,10 +34,8 @@ const DataComponent = {
 			return fetch(data, {cors: 'cors'})
 				.then(res => res.json())
 				.then(res => res.data);
-		} else {
-			Promise.reject(`Invalid type for data: ${data}`);
 		}
-	},
+	}
 
 	/**
 	 * Sets up the polling interval.
@@ -41,8 +50,8 @@ const DataComponent = {
 				this._updateData(this.data);
 			}, this.pollingInterval);
 		}
-	},
-};
+	}
+}
 
 /**
  * State definition.

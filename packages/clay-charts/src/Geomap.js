@@ -1,4 +1,3 @@
-import Component from 'metal-component';
 import DataComponent from './DataComponent';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -10,7 +9,7 @@ import templates from './Geomap.soy.js';
 /**
  * Geomap component
  */
-class Geomap extends Component {
+class Geomap extends DataComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -74,9 +73,7 @@ class Geomap extends Component {
 			return;
 		}
 
-		if (this._pollingInterval) {
-			clearTimeout(this._pollingInterval);
-		}
+		this.cleanup();
 
 		if (this.svg) {
 			this.svg.remove();
@@ -264,7 +261,6 @@ Geomap.STATE = {
 	}),
 };
 
-Object.assign(Geomap.prototype, DataComponent);
 Object.assign(Geomap.STATE, DataComponent.STATE);
 
 export {Geomap};

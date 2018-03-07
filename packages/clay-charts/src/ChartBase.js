@@ -103,9 +103,7 @@ const ChartBase = {
 			return;
 		}
 
-		if (this._pollingInterval) {
-			clearInterval(this._pollingInterval);
-		}
+		this.cleanup();
 
 		if (this.bbChart) {
 			this.bbChart.destroy();
