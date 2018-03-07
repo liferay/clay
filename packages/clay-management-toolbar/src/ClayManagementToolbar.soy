@@ -29,6 +29,7 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? clearResultsHref: string}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
 		button: ?,
@@ -135,12 +136,12 @@
 		{/if}
 
 		{if $searchValue and $totalItems > 0}
-		    {call .resultsBar}
-		        {param _handleClearResultsClick: $_handleClearResultsClick /}
-				{param disabled: $isActive /}
-		        {param searchValue: $searchValue /}
-		        {param totalItems: $totalItems /}
-		    {/call}
+			{call .resultsBar}
+				{param _handleClearResultsClick: $_handleClearResultsClick /}
+				{param clearResultsHref: $clearResultsHref /}
+				{param searchValue: $searchValue /}
+				{param totalItems: $totalItems /}
+			{/call}
 		{/if}
 	</div>
 {/template}
@@ -545,7 +546,7 @@
  */
 {template .resultsBar}
 	{@param? _handleClearResultsClick: any}
-	{@param? disabled: bool}
+	{@param? clearResultsHref: string}
 	{@param? searchValue: string}
 	{@param? totalItems: number}
 
@@ -560,14 +561,23 @@
 					</div>
 				</li>
 				<li class="tbar-item">
-					{call ClayButton.render}
-						{param disabled: $disabled /}
-						{param elementClasses: 'component-link tbar-link' /}
-						{param events: ['click': $_handleClearResultsClick] /}
-						{param label: 'Clear' /}
-						{param ref: 'clearSearch' /}
-						{param style: 'unstyled' /}
-					{/call}
+					{if $clearResultsHref}
+						{call ClayLink.render}
+							{param elementClasses: 'component-link tbar-link' /}
+							{param events: ['click': $_handleClearResultsClick] /}
+							{param href: $clearResultsHref /}
+							{param label: 'Clear' /}
+							{param ref: 'clearSearch' /}
+						{/call}
+					{else}
+						{call ClayButton.render}
+							{param elementClasses: 'component-link tbar-link' /}
+							{param events: ['click': $_handleClearResultsClick] /}
+							{param label: 'Clear' /}
+							{param ref: 'clearSearch' /}
+							{param style: 'unstyled' /}
+						{/call}
+					{/if}
 				</li>
 			</ul>
 		</div>

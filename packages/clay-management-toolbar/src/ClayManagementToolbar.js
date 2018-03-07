@@ -198,6 +198,15 @@ ClayManagementToolbar.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Url for clear results link.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	clearResultsHref: Config.string(),
+
+	/**
 	 * Name of the content renderer to use template variants.
 	 * @instance
 	 * @memberof ClayManagementToolbar
