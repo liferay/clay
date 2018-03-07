@@ -94,10 +94,6 @@ a.label {
 	min-height: 0;
 	position: relative;
 
-	a {
-		display: inline-flex;
-	}
-
 	.btn-unstyled {
 		color: inherit;
 		display: inline-flex;
@@ -105,23 +101,17 @@ a.label {
 	}
 
 	.close {
-		color: inherit;
-		display: inline-flex;
-		font-size: $label-lexicon-icon-height;
-		opacity: 1;
-	}
-
-	.btn-unstyled,
-	.close {
-		.lexicon-icon {
-			width: 1em;
-		}
+		@include clay-link($label-close);
 	}
 
 	.lexicon-icon {
 		height: $label-lexicon-icon-height;
 		margin-top: $label-lexicon-icon-margin-top;
 		width: $label-lexicon-icon-width;
+	}
+
+	.text-truncate-inline {
+		display: inline-flex;
 	}
 }
 

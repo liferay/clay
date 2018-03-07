@@ -43,7 +43,8 @@ $card-subtitle: map-merge((
 
 $card-subtitle-link: () !default;
 $card-subtitle-link: map-merge((
-	color: map-get($card-subtitle, color)
+	color: map-get($card-subtitle, color),
+	hover-color: darken($secondary, 15%)
 ), $card-subtitle-link);
 
 // Card Link

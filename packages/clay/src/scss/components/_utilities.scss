@@ -21,10 +21,14 @@
 // Close
 
 .close {
-	text-align: center;
+	cursor: $link-cursor;
+	float: none;
 
-	&:not([disabled]):not(.disabled) {
-		cursor: $btn-cursor;
+	@include clay-link($close);
+
+	&:disabled,
+	&.disabled {
+		cursor: $disabled-cursor;
 	}
 }
 
@@ -63,6 +67,17 @@
 	@extend %autofit-row-end;
 }
 
+.autofit-padded {
+	> .autofit-col {
+		padding-bottom: $autofit-padded-col-padding-y;
+		padding-left: $autofit-padded-col-padding-x;
+		padding-right: $autofit-padded-col-padding-x;
+		padding-top: $autofit-padded-col-padding-y;
+	}
+}
+
+// Autofit Columns
+
 %autofit-col {
 	display: flex;
 	flex-direction: column;
@@ -86,6 +101,8 @@
 	@extend %autofit-col-expand;
 }
 
+// Autofit Section
+
 %autofit-section {
 	max-width: 100%;
 }
@@ -93,6 +110,8 @@
 .autofit-section {
 	@extend %autofit-section;
 }
+
+// Autofit Float
 
 %autofit-float {
 	@include clay-autofit-float;

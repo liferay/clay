@@ -29,6 +29,24 @@ $label-border-radius: $border-radius !default;
 $label-border-style: solid !default;
 $label-border-width: 0.0625rem !default;
 
+// Label Close
+
+$label-close: () !default;
+$label-close: map-merge((
+	color: inherit,
+	opacity: 1,
+	hover-color: inherit,
+	hover-opacity: 1,
+	focus-opacity: 1,
+	border-radius: 1px,
+	display: inline-flex,
+	font-size: inherit,
+	height: auto,
+	width: auto
+), $label-close);
+
+// Label Sizes
+
 $label-lg: () !default;
 $label-lg: map-merge((
 	font-size: 0.875rem, // 14px

@@ -73,10 +73,6 @@
 	min-height: 0;
 	position: relative;
 
-	a {
-		display: inline-flex;
-	}
-
 	.btn-unstyled {
 		color: inherit;
 		display: inline-flex;
@@ -84,23 +80,17 @@
 	}
 
 	.close {
-		color: inherit;
-		display: inline-flex;
-		font-size: $badge-lexicon-icon-height;
-		opacity: 1;
-	}
-
-	.btn-unstyled,
-	.close {
-		.lexicon-icon {
-			width: 1em;
-		}
+		@include clay-link($badge-close);
 	}
 
 	.lexicon-icon {
 		height: $badge-lexicon-icon-height;
 		margin-top: $badge-lexicon-icon-margin-top;
 		width: $badge-lexicon-icon-width;
+	}
+
+	.text-truncate-inline {
+		display: inline-flex;
 	}
 }
 

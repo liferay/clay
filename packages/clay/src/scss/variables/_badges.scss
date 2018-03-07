@@ -17,6 +17,20 @@ $badge-link-hover-color: null !default;
 $badge-link-text-decoration: underline !default;
 $badge-link-hover-text-decoration: none !default;
 
+$badge-close: () !default;
+$badge-close: map-merge((
+	color: inherit,
+	opacity: 1,
+	hover-color: inherit,
+	hover-opacity: 1,
+	focus-opacity: 1,
+	border-radius: 1px,
+	display: inline-flex,
+	font-size: inherit,
+	height: auto,
+	width: auto
+), $badge-close);
+
 // Badge Variants
 
 $badge-primary-bg: null !default;

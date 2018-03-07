@@ -6,7 +6,11 @@
 	$header-border-color: map-get($map, header-border-color);
 	$header-color: map-get($map, header-color);
 
+	// header-close-color is deprecated in v2.0.0-rc.12 use header-close instead
+
 	$header-close-color: setter(map-get($map, header-close-color), $header-color);
+
+	$header-close: setter(map-get($map, header-close), ());
 
 	$body-bg: map-get($map, body-bg);
 	$body-color: map-get($map, body-color);
@@ -14,9 +18,21 @@
 	$footer-border-color: map-get($map, footer-border-color);
 	$footer-border-color: map-get($map, footer-border-color);
 
-	.btn-monospaced,
-	.close {
+	// Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
+
+	.btn-monospaced {
 		color: $header-close-color;
+	}
+
+	.close {
+		@include clay-link($header-close);
+	}
+
+	button.close {
+		&:focus {
+			box-shadow: map-get($header-close, btn-focus-box-shadow);
+			outline: map-get($header-close, btn-focus-outline);
+		}
 	}
 
 	.modal-header {

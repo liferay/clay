@@ -23,6 +23,10 @@
 .progress-group {
 	align-items: center;
 	display: flex;
+
+	.component-subtitle {
+		@include clay-link($progress-group-subtitle);
+	}
 }
 
 .progress-group-addon {
@@ -51,6 +55,11 @@
 
 .progress-group-stacked {
 	display: block;
+
+	.progress {
+		margin-bottom: $progress-group-stacked-progress-margin-bottom;
+		margin-top: $progress-group-stacked-progress-margin-top;
+	}
 
 	.progress-group-addon {
 		margin-left: 0;

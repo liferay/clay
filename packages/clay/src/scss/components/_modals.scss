@@ -37,6 +37,10 @@
 	}
 }
 
+.modal-body-flush {
+	padding: 0;
+}
+
 .modal-footer {
 	background-color: $modal-footer-bg;
 
@@ -100,11 +104,10 @@
 	vertical-align: middle;
 }
 
-// Modal Buttons
+// Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
 
 .modal {
-	.btn-monospaced,
-	.close {
+	.btn-monospaced {
 		color: $modal-btn-monospaced-color;
 		font-size: $modal-btn-monospaced-font-size;
 		min-width: $modal-btn-monospaced-size;
@@ -127,18 +130,36 @@
 	}
 }
 
-.btn-monospaced,
-.close {
+.btn-monospaced {
 	+ .modal-title {
 		margin-left: $modal-btn-monospaced-spacer-x;
 	}
 }
 
 .modal-title {
-	+ .btn-monospaced,
-	+ .close {
+	+ .btn-monospaced {
 		margin-left: $modal-btn-monospaced-spacer-x;
 	}
+}
+
+// Modal Close
+
+.modal .close {
+	&:first-child {
+		margin-left: -$modal-close-spacer-x;
+	}
+
+	&:last-child {
+		margin-right: -$modal-close-spacer-x;
+	}
+}
+
+.close + .modal-title {
+	margin-left: $modal-close-spacer-x;
+}
+
+.modal-title + .close {
+	margin-right: $modal-close-spacer-x;
 }
 
 // Modal Iframe

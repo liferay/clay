@@ -5,6 +5,7 @@
 		border-width: $alert-border-width;
 	}
 
+	display: block;
 	font-size: $alert-font-size;
 
 	.close {
@@ -27,6 +28,14 @@
 		font-size: $alert-lead-font-size;
 		font-weight: $alert-lead-font-weight;
 		margin-right: $alert-lead-spacer-x;
+	}
+
+	.component-title {
+		@include clay-text-typography($alert-title);
+	}
+
+	.component-subtitle {
+		@include clay-text-typography($alert-subtitle);
 	}
 }
 
@@ -144,6 +153,36 @@
 		left: $alert-notifications-fixed-left-mobile;
 		right: $alert-notifications-fixed-right-mobile;
 		top: $alert-notifications-fixed-top-mobile;
+	}
+}
+
+// Alert List
+
+.alert-list {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	.close {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+// Alert in Modal
+
+.modal-body {
+	.alert {
+		.close {
+			right: $modal-inner-padding;
+		}
+	}
+
+	.alert-list {
+		.alert-fluid:last-child {
+			margin-bottom: -$alert-fluid-border-bottom-width;
+		}
 	}
 }
 
