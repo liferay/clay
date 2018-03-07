@@ -47,7 +47,9 @@ class ClayComponent extends Component {
 		super.rendered(...args);
 
 		for (let dataKey in this.data) {
-			this.element.setAttribute('data-' + dataKey, this.data[dataKey]);
+			if (Object.prototype.hasOwnProperty.call(this.data, dataKey)) {
+				this.element.setAttribute('data-' + dataKey, this.data[dataKey]);
+			}
 		}
 	}
 }
