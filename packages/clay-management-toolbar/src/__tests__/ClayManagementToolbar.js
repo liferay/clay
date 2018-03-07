@@ -760,6 +760,27 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
+	it('should render a management toolbar with a clear results link', () => {
+		managementToolbar = new ClayManagementToolbar({
+			clearResultsHref: '#clear',
+			searchValue: 'foo',
+			selectable: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.clearSearch.element.click();
+
+		expect(spy).toHaveBeenCalledWith(
+			'clearButtonClicked',
+			expect.any(Object)
+		);
+	});
+
 	it('should render a management toolbar and emit an event on clear button click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			searchValue: 'foo',
