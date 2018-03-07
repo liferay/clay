@@ -109,6 +109,16 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with sorting href', () => {
+		managementToolbar = new ClayManagementToolbar({
+			sortingHref: '#sorting',
+			sortingOrder: 'desc',
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with filters dropdown with items of type checkbox', () => {
 		managementToolbar = new ClayManagementToolbar({
 			filterItems: [
