@@ -349,12 +349,10 @@
 
 %dropdown-full-wide-dropdown-menu {
 	max-width: none;
-	padding: 5px 0;
 	width: 100%;
 
 	@include media-breakpoint-up(md) {
 		max-height: none;
-		padding: 20px 0;
 		width: 100%;
 	}
 }

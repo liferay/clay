@@ -111,6 +111,80 @@ label {
 		height: 0;
 		width: 0;
 	}
+
+	.label {
+		@include clay-label-size($form-control-label-size);
+	}
+}
+
+.form-control-plaintext {
+	background-clip: border-box;
+	border-width: $input-border-width;
+
+	@if not ($input-font-size == $font-size-base) {
+		font-size: $input-font-size;
+	}
+
+	height: $input-height;
+	min-width: 0;
+
+	@if not ($input-padding-y == $btn-padding-y) {
+		padding-bottom: $input-padding-y;
+		padding-top: $input-padding-y;
+	}
+
+	text-overflow: ellipsis;
+
+	@include clay-scale-component {
+		font-size: $input-font-size-mobile;
+		height: $input-height-mobile;
+	}
+}
+
+.form-control-hidden {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+div {
+	&.form-control {
+		height: auto;
+		min-height: $input-height;
+	}
+
+	&.form-control-lg {
+		min-height: $input-height-lg;
+	}
+
+	&.form-control-sm {
+		min-height: $input-height-sm;
+	}
+}
+
+.form-control-tag-group {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	padding-bottom: $form-control-tag-group-padding-y;
+	padding-top: $form-control-tag-group-padding-y;
+}
+
+.form-control-inset {
+	background-color: transparent;
+	border-width: 0;
+	color: $input-color;
+	flex-grow: 1;
+	margin-bottom: $form-control-inset-margin-y;
+	margin-top: $form-control-inset-margin-y;
+	min-height: $form-control-inset-min-height;
+	padding: 0;
+
+	&:focus {
+		outline: 0;
+	}
 }
 
 // Select
@@ -159,8 +233,14 @@ select.form-control:not([multiple]):not([size]) {
 
 // Textarea
 
-textarea.form-control {
-	height: $input-textarea-height;
+textarea {
+	&.form-control {
+		height: $input-textarea-height;
+	}
+
+	&.form-control-plaintext {
+		height: $input-textarea-height;
+	}
 }
 
 // File

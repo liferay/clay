@@ -455,7 +455,7 @@
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
 						{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 						{param _handleSearchSearchClick: $_handleSearchSearchClick /}
-						{param disabled: $disabled /}
+						{param disabled: $disabled and not $searchValue /}
 						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
 						{param searchFormName: $searchFormName /}
@@ -464,7 +464,7 @@
 								{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 								{param _handleSearchSearchClick: $_handleSearchSearchClick /}
 								{param contentRenderer: $contentRenderer /}
-								{param disabled: $disabled /}
+								{param disabled: $disabled and not $searchValue/}
 								{param onlySearch: $onlySearch /}
 								{param searchInputName: $searchInputName /}
 								{param searchValue: $searchValue /}
@@ -661,6 +661,7 @@
 				action="{$searchActionURL}"
 			{/if}
 
+			method="POST"
 			{if $searchFormName}
 				name="{$searchFormName}"
 			{/if}

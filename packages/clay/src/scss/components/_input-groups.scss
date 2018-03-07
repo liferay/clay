@@ -88,6 +88,20 @@
 	}
 }
 
+// Input Group Prepend and Append Rounded Corners
+
+.input-group > .input-group-prepend > .form-file .btn,
+.input-group > .input-group-append:not(:last-child) > .form-file .btn,
+.input-group > .input-group-append:last-child > .form-file:not(:last-child) .btn {
+	@include border-right-radius(0);
+}
+
+.input-group > .input-group-append > .form-file .btn,
+.input-group > .input-group-prepend:not(:first-child) > .form-file .btn,
+.input-group > .input-group-prepend:first-child > .form-file:not(:first-child) .btn {
+	@include border-left-radius(0);
+}
+
 // Input Group Text
 
 .input-group-text {
@@ -242,19 +256,15 @@
 	order: 9;
 }
 
+// Input Group Stacked
+
+.input-group-stacked-sm-down {
+	@include clay-input-group-stacked($input-group-stacked-sm-down);
+}
+
 // Input Group Sizes
 
 .input-group-lg {
-	.input-group-inset-item {
-		.btn {
-			font-size: $btn-font-size-lg;
-
-			@include clay-scale-component {
-				font-size: $btn-font-size-lg-mobile;
-			}
-		}
-	}
-
 	.input-group-item {
 		.btn {
 			font-size: $btn-font-size-lg;
@@ -286,13 +296,27 @@
 			}
 		}
 
-		.form-control {
+		> .btn,
+		.form-control,
+		.form-file .btn {
 			font-size: $input-font-size-lg;
 			height: $input-height-lg;
 			line-height: $input-line-height-lg;
 			padding-bottom: $input-padding-y-lg;
 			padding-left: $input-padding-x-lg;
 			padding-right: $input-padding-x-lg;
+			padding-top: $input-padding-y-lg;
+
+			@include clay-scale-component {
+				height: $input-height-lg-mobile;
+			}
+		}
+
+		.form-control-plaintext {
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			line-height: $input-line-height-lg;
+			padding-bottom: $input-padding-y-lg;
 			padding-top: $input-padding-y-lg;
 
 			@include clay-scale-component {
@@ -308,6 +332,33 @@
 			padding-left: $input-group-addon-padding-x-lg;
 			padding-right: $input-group-addon-padding-x-lg;
 			padding-top: $input-group-addon-padding-y-lg;
+		}
+	}
+
+	.input-group-inset-item {
+		.btn {
+			font-size: $btn-font-size-lg;
+
+			@include clay-scale-component {
+				font-size: $btn-font-size-lg-mobile;
+			}
+		}
+
+		.form-file {
+			height: 75%;
+
+			.btn {
+				font-size: $btn-font-size-lg;
+				height: 100%;
+				padding-bottom: 0;
+				padding-top: 0;
+				padding-left: ($btn-padding-x - 0.1875rem);
+				padding-right: ($btn-padding-x - 0.1875rem);
+
+				@include clay-scale-component {
+					font-size: $btn-font-size-lg-mobile;
+				}
+			}
 		}
 	}
 }
@@ -344,13 +395,27 @@
 			}
 		}
 
-		.form-control {
+		> .btn,
+		.form-control,
+		.form-file .btn {
 			font-size: $input-font-size-sm;
 			height: $input-height-sm;
 			line-height: $input-line-height-sm;
 			padding-bottom: $input-padding-y-sm;
 			padding-left: $input-padding-x-sm;
 			padding-right: $input-padding-x-sm;
+			padding-top: $input-padding-y-sm;
+
+			@include clay-scale-component {
+				height: $input-height-sm-mobile;
+			}
+		}
+
+		.form-control-plaintext {
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			line-height: $input-line-height-sm;
+			padding-bottom: $input-padding-y-sm;
 			padding-top: $input-padding-y-sm;
 
 			@include clay-scale-component {
@@ -375,6 +440,23 @@
 
 			@include clay-scale-component {
 				font-size: $btn-font-size-sm-mobile;
+			}
+		}
+
+		.form-file {
+			height: 75%;
+
+			.btn {
+				font-size: $btn-font-size-sm;
+				height: 100%;
+				padding-bottom: 0;
+				padding-top: 0;
+				padding-left: ($btn-padding-x - 0.1875rem);
+				padding-right: ($btn-padding-x - 0.1875rem);
+
+				@include clay-scale-component {
+					font-size: $btn-font-size-sm-mobile;
+				}
 			}
 		}
 	}
