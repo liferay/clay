@@ -18,7 +18,7 @@ describe('ClayComponent', function() {
 		}
 	});
 
-	it('should create a ClayComponent with `virtual` data attributes', () => {
+	it('should create a ClayComponent with data attributes', () => {
 		component = new ClayComponent({
 			data: {
 				'my-attribute': 'Luke Skywalker',
@@ -28,6 +28,8 @@ describe('ClayComponent', function() {
 		expect(component.element.getAttribute('data-my-attribute')).toEqual(
 			'Luke Skywalker'
 		);
+
+		expect(component).toMatchSnapshot();
 	});
 
 	it('should create a ClayComponent with accesible data attributes from dom', () => {
