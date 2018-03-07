@@ -11,6 +11,7 @@
 	font-weight: $label-font-weight;
 	line-height: $label-height - ($label-border-width * 2);
 	margin-bottom: $label-spacer-y;
+	margin-right: $label-spacer-x;
 	margin-top: $label-spacer-y;
 	max-width: 100%;
 	padding-bottom: $label-padding-y;
@@ -30,10 +31,6 @@
 			color: $label-link-hover-color;
 			text-decoration: $label-link-hover-text-decoration;
 		}
-	}
-
-	~ .label {
-		margin-left: $label-spacer-x;
 	}
 
 	.inline-item {

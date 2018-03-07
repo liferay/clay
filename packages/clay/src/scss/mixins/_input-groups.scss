@@ -1,0 +1,32 @@
+@mixin clay-input-group-stacked($map) {
+	$breakpoint: setter(map-get($map, breakpoint), md);
+	$breakpoint-down: clay-breakpoint-prev($breakpoint);
+
+	$item-margin-bottom: map-get($map, item-margin-bottom);
+	$item-margin-left: map-get($map, item-margin-left);
+	$item-margin-right: map-get($map, item-margin-right);
+	$item-margin-top: map-get($map, item-margin-top);
+
+	$shrink-margin-bottom: map-get($map, shrink-margin-bottom);
+	$shrink-margin-left: map-get($map, shrink-margin-left);
+	$shrink-margin-right: map-get($map, shrink-margin-right);
+	$shrink-margin-top: map-get($map, shrink-margin-top);
+
+	@include media-breakpoint-down($breakpoint-down) {
+		.input-group-item {
+			margin-bottom: $item-margin-bottom;
+			margin-left: $item-margin-left;
+			margin-right: $item-margin-right;
+			margin-top: $item-margin-top;
+			width: 100%;
+		}
+
+		.input-group-item-shrink {
+			margin-bottom: $shrink-margin-bottom;
+			margin-left: $shrink-margin-left;
+			margin-right: $shrink-margin-right;
+			margin-top: $shrink-margin-top;
+			width: auto;
+		}
+	}
+}

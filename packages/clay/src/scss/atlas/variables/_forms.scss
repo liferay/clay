@@ -105,7 +105,18 @@ $input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-col
 $input-select-icon-disabled-color: $text-muted !default;
 $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
-// Form Group Autofit
+// Form Control Label (Labels inside Form Control)
+
+$form-control-label-size: () !default;
+$form-control-label-size: map-merge((
+	border-width: 0.0625rem,
+	font-size: 0.8125rem, // 13px
+	height: 1.5rem, // 24px
+	padding-x: 0.625rem, // 10px
+	text-transform: none
+), $form-control-label-size);
+
+// Form Group
 
 $form-group-item-label-spacer: ($input-label-font-size * $line-height-base) + $input-label-margin-bottom !default;
 
