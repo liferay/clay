@@ -231,13 +231,23 @@
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
 								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleQuickActionClicked}">
-									{call ClayButton.render}
-										{param elementClasses: 'quick-action-item' /}
-										{param icon: $item.icon /}
-										{param ref: 'quickAction' + index($item) /}
-										{param spritemap: $spritemap /}
-										{param style: 'unstyled' /}
-									{/call}
+									{if $item.href}
+										{call ClayLink.render}
+											{param elementClasses: 'quick-action-item' /}
+											{param href: $item.href /}
+											{param icon: $item.icon /}
+											{param ref: 'quickAction' + index($item) /}
+											{param spritemap: $spritemap /}
+										{/call}
+									{else}
+										{call ClayButton.render}
+											{param elementClasses: 'quick-action-item' /}
+											{param icon: $item.icon /}
+											{param ref: 'quickAction' + index($item) /}
+											{param spritemap: $spritemap /}
+											{param style: 'unstyled' /}
+										{/call}
+									{/if}
 								</li>
 							{/if}
 						{/foreach}
