@@ -1,9 +1,3 @@
-// const path = require('path');
-// const fs = require('fs');
-// const geoData = fs.readFileSync(
-// 	path.join(__dirname, '../../demos/data/world-low-res.geo.json'),
-// 	{encoding: 'utf-8'}
-// );
 const mockData = {data: {}};
 
 import DataComponent from '../DataComponent';

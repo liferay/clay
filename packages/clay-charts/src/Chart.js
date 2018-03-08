@@ -11,7 +11,7 @@ import templates from './Chart.soy.js';
 class Chart extends DataComponent {}
 
 Object.assign(Chart.prototype, ChartBase);
-Chart.STATE = Object.assign({}, ChartBase.STATE, DataComponent.STATE);
+Chart.STATE = Object.assign({}, ChartBase.STATE);
 
 Soy.register(Chart, templates);
 

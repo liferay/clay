@@ -261,7 +261,5 @@ Geomap.STATE = {
 	}),
 };
 
-Object.assign(Geomap.STATE, DataComponent.STATE);
-
 export {Geomap};
 export default Geomap;
