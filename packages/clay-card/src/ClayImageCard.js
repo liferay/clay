@@ -59,7 +59,7 @@ ClayImageCard.STATE = {
 	/**
 	 * Group Index the card belongs to.
 	 * @instance
-	 * @memberof ClayImageCards
+	 * @memberof ClayImageCard
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -217,7 +217,7 @@ ClayImageCard.STATE = {
 	/**
 	 * Shape for the sticker represented in the card.
 	 * @instance
-	 * @memberof ClayImageCards
+	 * @memberof ClayImageCard
 	 * @type {?string}
 	 * @default rounded
 	 */
