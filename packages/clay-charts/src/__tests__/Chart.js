@@ -190,6 +190,7 @@ describe('Chart', () => {
 			expect(config.data.columns[0][2]).toBe(2);
 			expect(config.data.columns[0][3]).toBe(3);
 			expect(chart._resolvedData).toBe(data);
+
 			done();
 		});
 	});
@@ -215,6 +216,30 @@ describe('Chart', () => {
 			expect(config.data.columns[0][3]).toBe(6);
 			expect(config.data.columns[0][4]).toBe(7);
 			expect(chart._resolvedData).toBe(data);
+			done();
+		});
+	});
+
+	it('should support a pollingInterval', done => {
+		const data = [
+			{
+				id: 'data1',
+				data: [1, 2, 3, 4],
+			},
+			{
+				id: 'data2',
+				data: [5, 6, 7, 8],
+			},
+		];
+
+		const chart = new Chart({
+			data: data,
+			pollingInterval: 500,
+		});
+
+		chart.on('chartReady', () => {
+			expect(chart._resolvedData).toBe(data);
+			expect(chart._pollingInterval).toBeDefined();
 			done();
 		});
 	});
