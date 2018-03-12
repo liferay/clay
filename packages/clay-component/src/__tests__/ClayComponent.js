@@ -55,6 +55,8 @@ describe('ClayComponent', function() {
 	it('should create a ClayComponent and element.getAttribute must return null in case no attribute exists', () => {
 		component = new MyComponent();
 
-		expect(component.element.getAttribute('non-existing-attribute')).toBe('');
+		expect(component.element.getAttribute('non-existing-attribute')).toBe(
+			''
+		);
 	});
 });
