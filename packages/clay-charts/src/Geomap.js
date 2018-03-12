@@ -18,8 +18,6 @@ class Geomap extends DataComponent {
 			return;
 		}
 
-		this._setupPolling();
-
 		const w =
 			typeof this._width === 'string' ? this._width : `${this._width}px`;
 		const h =
@@ -69,11 +67,11 @@ class Geomap extends DataComponent {
 	 * @inheritDoc
 	 */
 	disposed() {
+		super.disposed();
+
 		if (isServerSide()) {
 			return;
 		}
-
-		this.cleanup();
 
 		if (this.svg) {
 			this.svg.remove();

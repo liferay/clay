@@ -85,7 +85,7 @@ describe('DataComponent', () => {
 		});
 		component._setupPolling();
 		expect(component._pollingInterval).toBeDefined();
-		component.cleanup();
+		component.dispose();
 		expect(component._pollingInterval).toBe(null);
 	});
 });

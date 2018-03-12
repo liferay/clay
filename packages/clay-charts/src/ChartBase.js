@@ -76,7 +76,6 @@ const ChartBase = {
 		}
 
 		this._resolveData(this.data).then(data => {
-			this._setupPolling();
 			this._resolvedData = data;
 			const config = this._constructChartConfig();
 			this.bbChart = bb.generate(config);
@@ -99,11 +98,11 @@ const ChartBase = {
 	 * @inheritDoc
 	 */
 	disposed() {
+		super.disposed();
+
 		if (isServerSide()) {
 			return;
 		}
-
-		this.cleanup();
 
 		if (this.bbChart) {
 			this.bbChart.destroy();

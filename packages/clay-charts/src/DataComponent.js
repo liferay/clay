@@ -12,7 +12,7 @@ class DataComponent extends Component {
 	/**
 	 * Cleanup resources
 	 */
-	cleanup() {
+	disposed() {
 		if (this._pollingInterval) {
 			clearInterval(this._pollingInterval);
 			this._pollingInterval = null;
@@ -26,6 +26,8 @@ class DataComponent extends Component {
 	 * @protected
 	 */
 	_resolveData(data) {
+		this._setupPolling();
+
 		if (Array.isArray(data) || (isObject(data) && !isFunction(data))) {
 			return Promise.resolve(data);
 		} else if (isFunction(data)) {
