@@ -26,7 +26,7 @@ class ClayComponent extends Component {
 				attributeValue = domData.get(this.element, attributeName);
 			}
 
-			return attributeValue;
+			return typeof attributeValue !== 'undefined' ? attributeValue : '';
 		};
 
 		for (let dataKey in this.data) {
