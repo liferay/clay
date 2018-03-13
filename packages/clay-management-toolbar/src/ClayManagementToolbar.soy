@@ -9,6 +9,7 @@
 	{@param? _handleClearResultsClick: any}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
@@ -113,6 +114,7 @@
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 				{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+				{param _handleCreationMenuMoreButtonClicked: $_handleCreationMenuMoreButtonClicked /}
 				{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
@@ -277,10 +279,12 @@
 	{@param creationMenu: ?}
 	{@param spritemap: string}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuMoreButtonClicked: any}
 
 	{if $creationMenu.mainItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
+			{param events: ['moreButtonClicked': $_handleCreationMenuMoreButtonClicked] /}
 			{param favoriteItems: $creationMenu.favoriteItems /}
 			{param helpText: $creationMenu.helpText /}
 			{param mainItems: $creationMenu.mainItems /}
@@ -315,6 +319,7 @@
 	{@param spritemap: string}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
@@ -555,6 +560,7 @@
 					<li class="nav-item">
 						{call .creationMenu}
 							{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+							{param _handleCreationMenuMoreButtonClicked: $_handleCreationMenuMoreButtonClicked /}
 							{param creationMenu: $creationMenu /}
 							{param spritemap: $spritemap /}
 						{/call}

@@ -75,6 +75,15 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the creation menu more button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleCreationMenuMoreButtonClicked(event) {
+		this.emit('creationMenuMoreButtonClicked', event);
+	}
+
+	/**
 	 * Continues the propagation of the deselect all button clicked event
 	 * @param {!Event} event
 	 * @private
