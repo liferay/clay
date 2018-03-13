@@ -44,6 +44,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-secondary" type="button">More</button>
     </div>
@@ -98,6 +99,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 8 
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption">Showing 10 of 12 elements</div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-secondary" type="button">More</button>
     </div>
@@ -165,6 +167,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 15
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption">Showing 15 of 20 elements</div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-secondary" type="button">More</button>
     </div>
@@ -190,6 +193,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with cl
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 2 of 2 elements</div>
 </div>
 `;
 
@@ -219,6 +223,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with fa
       <a class=" dropdown-item" href="#favorite2">favorite2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 4 of 4 elements</div>
 </div>
 `;
 
@@ -240,6 +245,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with id
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 2 of 2 elements</div>
 </div>
 `;
 
@@ -261,6 +267,7 @@ exports[`ClayCreationMenuDropdown should render a disabled creation menu dropdow
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 2 of 2 elements</div>
 </div>
 `;
 
@@ -282,6 +289,7 @@ exports[`ClayCreationMenuDropdown should render an expanded creation menu dropdo
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 2 of 2 elements</div>
 </div>
 `;
 
@@ -303,5 +311,6 @@ exports[`ClayCreationMenuDropdown should render default markdown 1`] = `
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 2 of 2 elements</div>
 </div>
 `;

@@ -720,6 +720,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <a class=" dropdown-item" href="#fav2">Favorite 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 4 of 4 elements</div>
 </div>
 `;
 
@@ -811,6 +812,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-secondary" type="button">More</button>
     </div>
@@ -880,6 +882,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <a class=" dropdown-item" href="#2">Add Content 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 2 of 2 elements</div>
 </div>
 `;
 
@@ -942,6 +945,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <a class=" dropdown-item" href="#1">Add Content 1</a>
     </li>
   </ul>
+  <div class="dropdown-caption">Showing 1 of 1 elements</div>
 </div>
 `;
 
