@@ -264,7 +264,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a managment toolbar with plus button', () => {
+	it('should render a managment toolbar with creation menu', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
 			creationMenu: true,
@@ -273,7 +273,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a managment toolbar with plus link', () => {
+	it('should render a managment toolbar with creation link', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
 			creationMenu: '#1',
@@ -282,11 +282,11 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with plus button with one option', () => {
+	it('should render a management toolbar with creation menu with one option', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
 			creationMenu: {
-				items: [
+				mainItems: [
 					{
 						href: '#1',
 						label: 'Add Content 1',
@@ -298,11 +298,95 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with plus button with more than one option', () => {
+	it('should render a management toolbar with creation menu with more than one option', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
 			creationMenu: {
-				items: [
+				mainItems: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					},
+				],
+			},
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with creation menu with main and favorite items', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			creationMenu: {
+				favoriteItems: [
+					{
+						href: '#fav1',
+						label: 'Favorite 1',
+					},
+					{
+						href: '#fav2',
+						label: 'Favorite 2',
+					},
+				],
+				mainItems: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					},
+				],
+			},
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with creation menu with main items and 7 favorite items when more than 7 are passed', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			creationMenu: {
+				favoriteItems: [
+					{
+						href: '#fav1',
+						label: 'Favorite 1',
+					},
+					{
+						href: '#fav2',
+						label: 'Favorite 2',
+					},
+					{
+						href: '#fav3',
+						label: 'Favorite 3',
+					},
+					{
+						href: '#fav4',
+						label: 'Favorite 4',
+					},
+					{
+						href: '#fav5',
+						label: 'Favorite 5',
+					},
+					{
+						href: '#fav6',
+						label: 'Favorite 6',
+					},
+					{
+						href: '#fav7',
+						label: 'Favorite 7',
+					},
+					{
+						href: '#fav8',
+						label: 'Favorite 8',
+					},
+				],
+				mainItems: [
 					{
 						href: '#1',
 						label: 'Add Content 1',
@@ -595,7 +679,7 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on plus button click', () => {
+	it('should render a management toolbar and emit an event on creation menu click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			creationMenu: true,
 			spritemap: spritemap,
