@@ -8,7 +8,6 @@
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
-	{@param? caption: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
@@ -18,9 +17,17 @@
 	{@param? itemsIconAlignment: string}
 	{@param? triggerClasses: string}
 
+  {let $totalMainItems: length($mainItems) /}
+  {let $totalFavoriteItems: $favoriteItems ? length($favoriteItems) : 0 /}
+  {let $totalItems: ($favoriteItems ? length($favoriteItems) : 0) + length($mainItems) /}
+
   {let $maxFavoriteItems: 7 /}
   {let $maxMainItems: 8 /}
   {let $maxTotalItems: 15 /}
+
+  {let $showingItems: ((not $favoriteItems and $totalMainItems > $maxTotalItems) ? $maxTotalItems : 
+    ($totalMainItems > $maxMainItems ? $maxMainItems : $totalMainItems)) +
+    ($totalFavoriteItems > $maxFavoriteItems ? $maxFavoriteItems : $totalFavoriteItems) /}
 
   {let $trigger kind="html"}
     {call ClayIcon.render}
@@ -46,16 +53,14 @@
     'type': 'group'
   ]] /}
 
-  {let $showMoreButton: (not $favoriteItems and $mainItems and length($mainItems) > $maxTotalItems) 
-    or ($favoriteItems and length($favoriteItems) > $maxFavoriteItems)
-    or ($mainItems and length($mainItems) > $maxMainItems) /}
+  {let $showMoreButton: $showingItems < $totalItems /}
 
 	{call ClayDropdownBase.render}
     {param button: $showMoreButton ? [
       'label': 'More',
       'style': 'secondary'
     ] : null /}
-    {param caption: $caption /}
+    {param caption: 'Showing ' + $showingItems + ' of ' + $totalItems + ' elements' /}
     {param disabled: $disabled /}
     {param elementClasses: $elementClasses /}
     {param events: [

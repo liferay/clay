@@ -51,15 +51,6 @@ ClayCreationMenuDropdown.STATE = {
 	}),
 
 	/**
-	 * Caption text of the dropdown.
-	 * @instance
-	 * @memberof ClayCreationMenuDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	caption: Config.string(),
-
-	/**
 	 * Flag to indicate if menu is disabled
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
