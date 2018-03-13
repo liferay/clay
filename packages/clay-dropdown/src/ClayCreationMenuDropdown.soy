@@ -1,0 +1,68 @@
+{namespace ClayCreationMenuDropdown}
+
+/**
+ * This renders an actions dropdown.
+ */
+{template .render}
+	{@param mainItems: list<?>}
+	{@param spritemap: string}
+	{@param? _handleButtonClick: any}
+	{@param? _handleItemClick: any}
+	{@param? caption: string}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? favoriteItems: list<?>}
+	{@param? expanded: bool}
+	{@param? helpText: string}
+	{@param? id: string}
+	{@param? itemsIconAlignment: string}
+	{@param? triggerClasses: string}
+
+  {let $maxFavoriteItems: 7 /}
+
+  {let $trigger kind="html"}
+    {call ClayIcon.render}
+      {param spritemap: $spritemap /}
+      {param symbol: 'plus' /}
+    {/call}
+  {/let}
+
+  {let $items: $favoriteItems ? [[
+    'items': $mainItems,
+    'separator': true,
+    'type': 'group'
+  ],[
+    'items': $favoriteItems,
+    'label': 'Favorites',
+    'maxItems': $maxFavoriteItems,
+    'type': 'group'
+  ]] : [[
+    'items': $mainItems,
+    'separator': false,
+    'type': 'group'
+  ]] /}
+
+	{call ClayDropdownBase.render}
+    {param button: ($favoriteItems and length($favoriteItems) > $maxFavoriteItems) ? [
+      'label': 'More',
+      'style': 'secondary'
+    ] : null /}
+    {param caption: $caption /}
+    {param disabled: $disabled /}
+    {param elementClasses: $elementClasses /}
+    {param events: [
+      'buttonClicked': $_handleButtonClick,
+      'itemClicked': $_handleItemClick
+    ]/}
+    {param expanded: $expanded /}
+    {param helpText: $helpText /}
+    {param id: $id /}
+    {param items: $items /}
+    {param itemsIconAlignment: $itemsIconAlignment /}
+    {param label: $trigger /}
+    {param ref: 'dropdown' /}
+    {param style: 'primary' /}
+    {param spritemap: $spritemap /}
+    {param triggerClasses: $triggerClasses /}
+  {/call}
+{/template}
