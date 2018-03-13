@@ -80,7 +80,7 @@
 	{@param? maxItems: int}
 	{@param? spritemap: string}
 
-	{for $index in range($maxItems < length($items) ? $maxItems : length($items))}
+	{for $index in range($maxItems and $maxItems < length($items) ? $maxItems : length($items))}
 		{let $item: $items[$index] /}
 
 		{let $variant kind="text"}
