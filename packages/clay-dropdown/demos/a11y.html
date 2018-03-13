@@ -159,8 +159,22 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Creation Menu Dropdown with more favorite items</h4>
-			<div id="creation-menu-with-more-block"></div>
+			<h4>Creation Menu Dropdown with more than 7 favorite items</h4>
+			<div id="creation-menu-with-more-favorites-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Creation Menu Dropdown with more than 8 main items and favorite items</h4>
+			<div id="creation-menu-with-more-main-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Creation Menu Dropdown with more than 15 main items</h4>
+			<div id="creation-menu-with-more-total-block"></div>
 		</div>
 	</div>
 
@@ -1033,8 +1047,148 @@
 					],
 					spritemap: spritemap,
 				},
-				'#creation-menu-with-more-block'
+				'#creation-menu-with-more-favorites-block'
 			);
+
+			new metal.ClayCreationMenuDropdown(
+					{
+						mainItems: [
+							{
+								href: '#1',
+								label: 'Main 1',
+							},
+							{
+								href: '#2',
+								label: 'Main 2',
+							},
+							{
+								href: '#3',
+								label: 'Main 3',
+							},
+							{
+								href: '#4',
+								label: 'Main 4',
+							},
+							{
+								href: '#5',
+								label: 'Main 5',
+							},
+							{
+								href: '#6',
+								label: 'Main 6',
+							},
+							{
+								href: '#7',
+								label: 'Main 7',
+							},
+							{
+								href: '#8',
+								label: 'Main 8',
+							},
+							{
+								href: '#9',
+								label: 'Main 9',
+							},
+							{
+								href: '#10',
+								label: 'Main 10',
+							},
+						],
+						favoriteItems: [
+							{
+								href: '#fav1',
+								label: 'Fav 1',
+							},
+							{
+								href: '#fav2',
+								label: 'Fav 2',
+							},
+							{
+								href: '#fav3',
+								label: 'Fav 3',
+							},
+							{
+								href: '#fav4',
+								label: 'Fav 4',
+							},
+						],
+						spritemap: spritemap,
+					},
+					'#creation-menu-with-more-main-block'
+				);
+
+			new metal.ClayCreationMenuDropdown(
+					{
+						mainItems: [
+							{
+								href: '#1',
+								label: 'Main 1',
+							},
+							{
+								href: '#2',
+								label: 'Main 2',
+							},
+							{
+								href: '#3',
+								label: 'Main 3',
+							},
+							{
+								href: '#4',
+								label: 'Main 4',
+							},
+							{
+								href: '#5',
+								label: 'Main 5',
+							},
+							{
+								href: '#6',
+								label: 'Main 6',
+							},
+							{
+								href: '#7',
+								label: 'Main 7',
+							},
+							{
+								href: '#8',
+								label: 'Main 8',
+							},
+							{
+								href: '#9',
+								label: 'Main 9',
+							},
+							{
+								href: '#10',
+								label: 'Main 10',
+							},
+							{
+								href: '#11',
+								label: 'Main 11',
+							},
+							{
+								href: '#12',
+								label: 'Main 12',
+							},
+							{
+								href: '#13',
+								label: 'Main 13',
+							},
+							{
+								href: '#14',
+								label: 'Main 14',
+							},
+							{
+								href: '#15',
+								label: 'Main 15',
+							},
+							{
+								href: '#16',
+								label: 'Main 16',
+							},
+						],
+						spritemap: spritemap,
+					},
+					'#creation-menu-with-more-total-block'
+				);
 	</script>
 </body>
 </html>
