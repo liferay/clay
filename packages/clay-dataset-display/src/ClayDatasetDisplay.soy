@@ -27,17 +27,21 @@
 		type: string
 	]>}
 	{@param? creationMenu: bool|string|[
-		button: ?,
 		caption: string,
-		helpText: string,
-		items: list<[
+		favoriteItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
-			quickAction: bool,
-			separator: bool,
-			type: string
+			separator: bool
+		]>,
+		helpText: string,
+		mainItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
 		]>
 	]}
 	{@param? elementClasses: string}

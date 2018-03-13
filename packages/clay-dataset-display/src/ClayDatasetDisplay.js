@@ -3,6 +3,7 @@ import 'clay-list';
 import 'clay-table';
 import {
 	actionItemsValidator,
+	creationMenuItemsValidator,
 	filterItemsValidator,
 } from 'clay-management-toolbar';
 import {Config} from 'metal-state';
@@ -298,10 +299,10 @@ ClayDatasetDisplay.STATE = {
 		Config.bool().value(false),
 		Config.string(),
 		Config.shapeOf({
-			button: Config.object(),
 			caption: Config.string(),
+			favoriteItems: creationMenuItemsValidator,
 			helpText: Config.string(),
-			items: actionItemsValidator,
+			mainItems: creationMenuItemsValidator,
 		}),
 	]),
 
