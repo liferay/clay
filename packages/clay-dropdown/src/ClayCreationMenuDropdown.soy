@@ -19,6 +19,8 @@
 	{@param? triggerClasses: string}
 
   {let $maxFavoriteItems: 7 /}
+  {let $maxMainItems: 8 /}
+  {let $maxTotalItems: 15 /}
 
   {let $trigger kind="html"}
     {call ClayIcon.render}
@@ -29,6 +31,7 @@
 
   {let $items: $favoriteItems ? [[
     'items': $mainItems,
+    'maxItems': $maxMainItems,
     'separator': true,
     'type': 'group'
   ],[
@@ -38,12 +41,17 @@
     'type': 'group'
   ]] : [[
     'items': $mainItems,
+    'maxItems': $maxTotalItems,
     'separator': false,
     'type': 'group'
   ]] /}
 
+  {let $showMoreButton: (not $favoriteItems and $mainItems and length($mainItems) > $maxTotalItems) 
+    or ($favoriteItems and length($favoriteItems) > $maxFavoriteItems)
+    or ($mainItems and length($mainItems) > $maxMainItems) /}
+
 	{call ClayDropdownBase.render}
-    {param button: ($favoriteItems and length($favoriteItems) > $maxFavoriteItems) ? [
+    {param button: $showMoreButton ? [
       'label': 'More',
       'style': 'secondary'
     ] : null /}
