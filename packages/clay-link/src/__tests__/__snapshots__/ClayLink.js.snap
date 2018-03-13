@@ -29,7 +29,7 @@ exports[`ClayLink should render a link with icon 1`] = `
 
 exports[`ClayLink should render a link with icon and label 1`] = `
 <a>
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus inline-item inline-item-before" focusable="false">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
   </svg>My Link</a>
@@ -51,7 +51,7 @@ exports[`ClayLink should render a link with image and image alt 1`] = `
 
 exports[`ClayLink should render a link with label and icon 1`] = `
 <a>My Link
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus inline-item inline-item-after" focusable="false">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
   </svg>
@@ -62,8 +62,8 @@ exports[`ClayLink should render a link with secondary style 1`] = `<a class="lin
 
 exports[`ClayLink should render a link with target 1`] = `<a target="_blank"></a>`;
 
+exports[`ClayLink should render a link with title 1`] = `<a title="title"></a>`;
+
 exports[`ClayLink should render a link without the aria expanded 1`] = `<a></a>`;
 
 exports[`ClayLink should render the default markup 1`] = `<a></a>`;
-
-exports[`ClayLink should render a link with title 1`] = `<a title="title"></a>`;
