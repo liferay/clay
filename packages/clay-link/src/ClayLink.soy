@@ -97,6 +97,7 @@
 	{else}
 		{if $icon and $iconAlignment == 'left' and $spritemap}
 			{call .icon}
+				{param elementClasses: $label ? 'inline-item inline-item-before' : '' /}
 				{param icon: $icon /}
 				{param spritemap: $spritemap /}
 			{/call}
@@ -106,6 +107,7 @@
 
 		{if $icon and $iconAlignment == 'right' and $spritemap}
 			{call .icon}
+				{param elementClasses: 'inline-item inline-item-after' /}
 				{param icon: $icon /}
 				{param spritemap: $spritemap /}
 			{/call}
@@ -117,10 +119,12 @@
  * Renders icon element
  */
 {template .icon}
+	{@param elementClasses: string}
 	{@param icon: string}
 	{@param spritemap: string}
 
 	{call ClayIcon.render}
+		{param elementClasses: $elementClasses /}
 		{param spritemap: $spritemap /}
 		{param symbol: $icon /}
 	{/call}
