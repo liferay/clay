@@ -1,5 +1,34 @@
 # Change Log
 
+## [v2.0.0-rc.7](https://github.com/liferay/clay/tree/v2.0.0-rc.7) (2018-03-13)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.6...v2.0.0-rc.7)
+
+**Implemented enhancements:**
+
+- Add href for sorting button in Management Toolbar [\#706](https://github.com/liferay/clay/issues/706)
+- Add href to clear results link in management toolbar [\#705](https://github.com/liferay/clay/issues/705)
+- Add polling\_interval option to Charts [\#544](https://github.com/liferay/clay/issues/544)
+
+**Fixed bugs:**
+
+- Don't render search value if null [\#708](https://github.com/liferay/clay/issues/708)
+
+**Closed issues:**
+
+- Creation Menu needs to have the max items logic [\#717](https://github.com/liferay/clay/issues/717)
+- ClayComponent.getAttribute does not respect the spec when the attribute has no value [\#715](https://github.com/liferay/clay/issues/715)
+- Quick action items in management toolbar can be links [\#711](https://github.com/liferay/clay/issues/711)
+- Links with icons and text show them together [\#710](https://github.com/liferay/clay/issues/710)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.7 [\#726](https://github.com/liferay/clay/pull/726) ([jbalsas](https://github.com/jbalsas))
+- \#600 Breaking Dropdown Action Toggle and Quick Action Item require `.component-action` [\#725](https://github.com/liferay/clay/pull/725) ([carloslancha](https://github.com/carloslancha))
+- Returning empty string when no attribute is present | Fixes \#715 [\#720](https://github.com/liferay/clay/pull/720) ([carloslancha](https://github.com/carloslancha))
+- Fix JSDoc on ClayImageCard [\#712](https://github.com/liferay/clay/pull/712) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Various fixes | Fixes \#705 \#706 \#708 \#710 \#711 \#717 [\#707](https://github.com/liferay/clay/pull/707) ([carloslancha](https://github.com/carloslancha))
+- Add pollingInterval option to Charts [\#704](https://github.com/liferay/clay/pull/704) ([julien](https://github.com/julien))
+
 ## [v2.0.0-rc.6](https://github.com/liferay/clay/tree/v2.0.0-rc.6) (2018-03-07)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.5...v2.0.0-rc.6)
 
@@ -105,6 +134,7 @@
 - Range in ClayPagination is wrong [\#623](https://github.com/liferay/clay/issues/623)
 - Button toggle from site menu is broken on Mobile [\#615](https://github.com/liferay/clay/issues/615)
 - The tick count for axisY should expect a number not a bool [\#610](https://github.com/liferay/clay/issues/610)
+- `btn-sm` is not working with `btn-unstyled` [\#600](https://github.com/liferay/clay/issues/600)
 - Safari: Card Page doesn't properly layout cards [\#590](https://github.com/liferay/clay/issues/590)
 
 **Closed issues:**
