@@ -54,7 +54,7 @@
 
 	$enabled: map-get($custom-grid-props, enabled);
 
-	@if ($custom-grid-props && $enabled) {
+	@if ($custom-grid-props and $enabled) {
 		display: block;
 		flex-basis: map-get(map-get($custom-grid-props, base), min-width);
 		flex-grow: 1;

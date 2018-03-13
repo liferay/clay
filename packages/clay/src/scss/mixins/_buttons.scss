@@ -17,7 +17,7 @@
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
 	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
-	$loading-animation: map-get($map, loading-animation);
+	$loading-animation: setter(map-get($map, loading-animation), $clay-unset-placeholder);
 
 	background-color: $bg;
 	border-color: $border-color;
