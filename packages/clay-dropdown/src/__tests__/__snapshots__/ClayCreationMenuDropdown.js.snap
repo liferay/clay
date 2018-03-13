@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 favorite items and more button when more than 7 favorite items are passed 1`] = `
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 favorite items and more button when more than 7 secondary items are passed 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
@@ -52,7 +52,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 
 </div>
 `;
 
-exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 8 main items and more button when more than 8 main items and at least one favorite item are passed 1`] = `
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 8 primary items and more button when more than 8 primary items and at least one secondary item are passed 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
@@ -107,7 +107,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 8 
 </div>
 `;
 
-exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 15 main items and more button when more than 15 main items and at no favorite item are passed 1`] = `
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 15 primary items and more button when more than 15 primary items and at no secondary item are passed 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
