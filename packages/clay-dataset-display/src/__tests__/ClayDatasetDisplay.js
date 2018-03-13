@@ -581,6 +581,24 @@ describe('ClayDatasetDisplay', function() {
 		);
 	});
 
+	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu more button click', () => {
+		jest.useFakeTimers();
+
+		component = new ClayDatasetDisplay(defaultConfig);
+
+		const spy = jest.spyOn(component, 'emit');
+
+		component.refs.managementToolbar.refs.creationMenuDropdown.refs.dropdown.refs.portal.refs.dropdownButton.element.click();
+
+		jest.runAllTimers();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'creationMenuMoreButtonClicked',
+			expect.any(Object)
+		);
+	});
+
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar search', () => {
 		jest.useFakeTimers();
 
