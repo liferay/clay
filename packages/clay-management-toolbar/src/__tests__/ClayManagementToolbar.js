@@ -696,6 +696,68 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
+	it('should render a management toolbar and emit an event on creation menu more button click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			creationMenu: {
+				favoriteItems: [
+					{
+						href: '#fav1',
+						label: 'Favorite 1',
+					},
+					{
+						href: '#fav2',
+						label: 'Favorite 2',
+					},
+					{
+						href: '#fav3',
+						label: 'Favorite 3',
+					},
+					{
+						href: '#fav4',
+						label: 'Favorite 4',
+					},
+					{
+						href: '#fav5',
+						label: 'Favorite 5',
+					},
+					{
+						href: '#fav6',
+						label: 'Favorite 6',
+					},
+					{
+						href: '#fav7',
+						label: 'Favorite 7',
+					},
+					{
+						href: '#fav8',
+						label: 'Favorite 8',
+					},
+				],
+				mainItems: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					},
+				],
+			},
+			spritemap: spritemap,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.creationMenuDropdown.refs.dropdown.refs.portal.refs.dropdownButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'creationMenuMoreButtonClicked',
+			expect.any(Object)
+		);
+	});
+
 	it('should render a management toolbar and emit an event on select all button click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
