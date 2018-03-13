@@ -60,7 +60,7 @@
       'label': 'More',
       'style': 'secondary'
     ] : null /}
-    {param caption: 'Showing ' + $showingItems + ' of ' + $totalItems + ' elements' /}
+    {param caption: $showMoreButton ? 'Showing ' + $showingItems + ' of ' + $totalItems + ' elements' :  null /}
     {param disabled: $disabled /}
     {param elementClasses: $elementClasses /}
     {param events: [
