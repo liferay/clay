@@ -264,7 +264,7 @@
 						{if $actionItem.quickAction and $actionItem.icon}
 							{call ClayLink.render}
 								{param ariaLabel: $actionItem.label /}
-								{param elementClasses: 'quick-action-item' /}
+								{param elementClasses: 'component-action quick-action-item' /}
 								{param href: $actionItem.href /}
 								{param icon: $actionItem.icon /}
 								{param spritemap: $spritemap /}
@@ -276,6 +276,7 @@
 				{call ClayActionsDropdown.render}
 					{param items: $item.actionItems /}
 					{param spritemap: $spritemap /}
+					{param triggerClasses: 'component-action' /}
 				{/call}
 			</td>
 		{/if}

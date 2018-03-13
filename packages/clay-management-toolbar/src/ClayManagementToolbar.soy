@@ -247,7 +247,7 @@
 										{/call}
 									{else}
 										{call ClayButton.render}
-											{param elementClasses: 'quick-action-item' /}
+											{param elementClasses: 'nav-link nav-link-monospaced quick-action-item' /}
 											{param icon: $item.icon /}
 											{param ref: 'quickAction' + index($item) /}
 											{param spritemap: $spritemap /}
@@ -263,6 +263,7 @@
 								{param events: ['itemClicked': $_handleActionClicked] /}
 								{param items: $actionItems /}
 								{param spritemap: $spritemap /}
+								{param triggerClasses: 'nav-link nav-link-monospaced' /}
 							{/call}
 						</li>
 					{/if}
