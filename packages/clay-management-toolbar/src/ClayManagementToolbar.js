@@ -2,14 +2,23 @@ import 'clay-button';
 import 'clay-checkbox';
 import 'clay-icon';
 import 'clay-link';
-// eslint-disable-next-line
-import { ClayActionsDropdown, ClayDropdownBase } from 'clay-dropdown';
+/* eslint-disable */
+import {
+	ClayActionsDropdown,
+	ClayCreationMenuDropdown,
+	ClayDropdownBase,
+} from 'clay-dropdown';
+/* eslint-enable */
 import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
-import {actionItemsValidator, filterItemsValidator} from './validators';
+import {
+	actionItemsValidator,
+	creationMenuItemsValidator,
+	filterItemsValidator,
+} from './validators';
 import templates from './ClayManagementToolbar.soy.js';
 
 /**
@@ -72,6 +81,15 @@ class ClayManagementToolbar extends Component {
 	 */
 	_handleCreationButtonClicked(event) {
 		this.emit('creationButtonClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the creation menu more button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleCreationMenuMoreButtonClicked(event) {
+		this.emit('creationMenuMoreButtonClicked', event);
 	}
 
 	/**
@@ -198,6 +216,15 @@ ClayManagementToolbar.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Url for clear results link.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	clearResultsURL: Config.string(),
+
+	/**
 	 * Name of the content renderer to use template variants.
 	 * @instance
 	 * @memberof ClayManagementToolbar
@@ -220,10 +247,10 @@ ClayManagementToolbar.STATE = {
 		Config.bool().value(false),
 		Config.string(),
 		Config.shapeOf({
-			button: Config.object(),
 			caption: Config.string(),
 			helpText: Config.string(),
-			items: actionItemsValidator,
+			primaryItems: creationMenuItemsValidator,
+			secondaryItems: creationMenuItemsValidator,
 		}),
 	]),
 
@@ -345,6 +372,15 @@ ClayManagementToolbar.STATE = {
 	 * @default true
 	 */
 	showSearch: Config.bool().value(true),
+
+	/**
+	 * Sorting url.
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	sortingURL: Config.string(),
 
 	/**
 	 * Sorting order.

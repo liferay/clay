@@ -10,6 +10,7 @@ let itemShape = {
 	inputName: Config.string(),
 	inputValue: Config.string(),
 	label: Config.oneOfType([Config.number(), Config.string()]),
+	maxItems: Config.number(),
 	separator: Config.bool().value(false),
 	type: Config.oneOf(['checkbox', 'group', 'item', 'radiogroup']).value(
 		'item'

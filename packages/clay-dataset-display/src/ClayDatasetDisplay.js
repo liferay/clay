@@ -3,6 +3,7 @@ import 'clay-list';
 import 'clay-table';
 import {
 	actionItemsValidator,
+	creationMenuItemsValidator,
 	filterItemsValidator,
 } from 'clay-management-toolbar';
 import {Config} from 'metal-state';
@@ -85,6 +86,15 @@ class ClayDatasetDisplay extends Component {
 	 */
 	_handleCreationButtonClicked(event) {
 		this.emit('creationButtonClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the creation menu more button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleCreationMenuMoreButtonClicked(event) {
+		this.emit('creationMenuMoreButtonClicked', event);
 	}
 
 	/**
@@ -298,10 +308,10 @@ ClayDatasetDisplay.STATE = {
 		Config.bool().value(false),
 		Config.string(),
 		Config.shapeOf({
-			button: Config.object(),
 			caption: Config.string(),
 			helpText: Config.string(),
-			items: actionItemsValidator,
+			primaryItems: creationMenuItemsValidator,
+			secondaryItems: creationMenuItemsValidator,
 		}),
 	]),
 

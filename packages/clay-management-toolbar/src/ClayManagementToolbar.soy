@@ -9,6 +9,7 @@
 	{@param? _handleClearResultsClick: any}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
@@ -29,19 +30,24 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? clearResultsURL: string}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
-		button: ?,
 		caption: string,
 		helpText: string,
-		items: list<[
+		primaryItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
-			quickAction: bool,
-			separator: bool,
-			type: string
+			separator: bool
+		]>,
+		secondaryItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
 		]>
 	]}
 	{@param? elementClasses: string}
@@ -66,6 +72,7 @@
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
+	{@param? sortingURL: string}
 	{@param? totalItems: number}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -107,6 +114,7 @@
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 				{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+				{param _handleCreationMenuMoreButtonClicked: $_handleCreationMenuMoreButtonClicked /}
 				{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
@@ -129,18 +137,19 @@
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
 				{param sortingOrder: $sortingOrder /}
+				{param sortingURL: $sortingURL /}
 				{param spritemap: $spritemap /}
 				{param viewTypes: $viewTypes /}
 			{/call}
 		{/if}
 
 		{if $searchValue and $totalItems > 0}
-		    {call .resultsBar}
-		        {param _handleClearResultsClick: $_handleClearResultsClick /}
-				{param disabled: $isActive /}
-		        {param searchValue: $searchValue /}
-		        {param totalItems: $totalItems /}
-		    {/call}
+			{call .resultsBar}
+				{param _handleClearResultsClick: $_handleClearResultsClick /}
+				{param clearResultsURL: $clearResultsURL /}
+				{param searchValue: $searchValue /}
+				{param totalItems: $totalItems /}
+			{/call}
 		{/if}
 	</div>
 {/template}
@@ -228,13 +237,23 @@
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
 								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleQuickActionClicked}">
-									{call ClayButton.render}
-										{param elementClasses: 'quick-action-item' /}
-										{param icon: $item.icon /}
-										{param ref: 'quickAction' + index($item) /}
-										{param spritemap: $spritemap /}
-										{param style: 'unstyled' /}
-									{/call}
+									{if $item.href}
+										{call ClayLink.render}
+											{param elementClasses: 'quick-action-item' /}
+											{param href: $item.href /}
+											{param icon: $item.icon /}
+											{param ref: 'quickAction' + index($item) /}
+											{param spritemap: $spritemap /}
+										{/call}
+									{else}
+										{call ClayButton.render}
+											{param elementClasses: 'quick-action-item' /}
+											{param icon: $item.icon /}
+											{param ref: 'quickAction' + index($item) /}
+											{param spritemap: $spritemap /}
+											{param style: 'unstyled' /}
+										{/call}
+									{/if}
 								</li>
 							{/if}
 						{/foreach}
@@ -260,23 +279,17 @@
 	{@param creationMenu: ?}
 	{@param spritemap: string}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuMoreButtonClicked: any}
 
-	{if $creationMenu.items}
-		{call ClayDropdownBase.render}
-			{param button: $creationMenu.button /}
+	{if $creationMenu.primaryItems}
+		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
+			{param events: ['moreButtonClicked': $_handleCreationMenuMoreButtonClicked] /}
 			{param helpText: $creationMenu.helpText /}
-			{param items: $creationMenu.items /}
-			{param label kind="html"}
-				{call ClayIcon.render}
-					{param spritemap: $spritemap /}
-					{param symbol: 'plus' /}
-				{/call}
-			{/param}
-
+			{param primaryItems: $creationMenu.primaryItems /}
 			{param ref: 'creationMenuDropdown' /}
+			{param secondaryItems: $creationMenu.secondaryItems /}
 			{param spritemap: $spritemap /}
-			{param style: 'primary' /}
 			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
 		{/call}
 	{elseif $creationMenu == true}
@@ -306,6 +319,7 @@
 	{@param spritemap: string}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
@@ -316,17 +330,21 @@
 	{@param? _showSearchMobile: bool}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
-		button: ?,
 		caption: string,
 		helpText: string,
-		items: list<[
+		primaryItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
-			quickAction: bool,
-			separator: bool,
-			type: string
+			separator: bool
+		]>,
+		secondaryItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
 		]>
 	]}
 	{@param? disabled: bool}
@@ -349,6 +367,7 @@
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
+	{@param? sortingURL: string}
 	{@param? viewTypes: list<[
 		active: bool,
 		disabled: bool,
@@ -427,15 +446,26 @@
 							{/if}
 						{/let}
 
-						{call ClayButton.render}
-							{param disabled: $disabled /}
-							{param elementClasses: $sortingClasses /}
-							{param events: ['click': $_handleSortingButtonClicked] /}
-							{param icon: 'order-arrow' /}
-							{param ref: 'sortingButton' /}
-							{param spritemap: $spritemap /}
-							{param style: 'unstyled' /}
-						{/call}
+						{if $sortingURL}
+							{call ClayLink.render}
+								{param elementClasses: $sortingClasses /}
+								{param events: ['click': $_handleSortingButtonClicked] /}
+								{param href: $sortingURL /}
+								{param icon: 'order-arrow' /}
+								{param ref: 'sortingButton' /}
+								{param spritemap: $spritemap /}
+							{/call}
+						{else}
+							{call ClayButton.render}
+								{param disabled: $disabled /}
+								{param elementClasses: $sortingClasses /}
+								{param events: ['click': $_handleSortingButtonClicked] /}
+								{param icon: 'order-arrow' /}
+								{param ref: 'sortingButton' /}
+								{param spritemap: $spritemap /}
+								{param style: 'unstyled' /}
+							{/call}
+						{/if}
 					</li>
 				{/if}
 			</ul>
@@ -530,6 +560,7 @@
 					<li class="nav-item">
 						{call .creationMenu}
 							{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+							{param _handleCreationMenuMoreButtonClicked: $_handleCreationMenuMoreButtonClicked /}
 							{param creationMenu: $creationMenu /}
 							{param spritemap: $spritemap /}
 						{/call}
@@ -544,9 +575,9 @@
  * This renders the search results bar.
  */
 {template .resultsBar}
+	{@param searchValue: string}
 	{@param? _handleClearResultsClick: any}
-	{@param? disabled: bool}
-	{@param? searchValue: string}
+	{@param? clearResultsURL: string}
 	{@param? totalItems: number}
 
 	<nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -560,14 +591,23 @@
 					</div>
 				</li>
 				<li class="tbar-item">
-					{call ClayButton.render}
-						{param disabled: $disabled /}
-						{param elementClasses: 'component-link tbar-link' /}
-						{param events: ['click': $_handleClearResultsClick] /}
-						{param label: 'Clear' /}
-						{param ref: 'clearSearch' /}
-						{param style: 'unstyled' /}
-					{/call}
+					{if $clearResultsURL}
+						{call ClayLink.render}
+							{param elementClasses: 'component-link tbar-link' /}
+							{param events: ['click': $_handleClearResultsClick] /}
+							{param href: $clearResultsURL /}
+							{param label: 'Clear' /}
+							{param ref: 'clearSearch' /}
+						{/call}
+					{else}
+						{call ClayButton.render}
+							{param elementClasses: 'component-link tbar-link' /}
+							{param events: ['click': $_handleClearResultsClick] /}
+							{param label: 'Clear' /}
+							{param ref: 'clearSearch' /}
+							{param style: 'unstyled' /}
+						{/call}
+					{/if}
 				</li>
 			</ul>
 		</div>
@@ -601,7 +641,10 @@
 				placeholder="Search for..."
 				ref="search"
 				type="text"
-				value="{$searchValue}"
+
+				{if $searchValue}
+					value="{$searchValue}"
+				{/if}
 			{/let}
 
 			<input {$inputAttributes} />

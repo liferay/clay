@@ -1,0 +1,84 @@
+{namespace ClayCreationMenuDropdown}
+
+/**
+ * This renders an actions dropdown.
+ */
+{template .render}
+	{@param primaryItems: list<?>}
+	{@param spritemap: string}
+	{@param? _handleButtonClick: any}
+	{@param? _handleItemClick: any}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? expanded: bool}
+	{@param? helpText: string}
+	{@param? id: string}
+	{@param? itemsIconAlignment: string}
+  {@param? maxPrimaryItems: int}
+  {@param? maxSecondaryItems: int}
+  {@param? maxTotalItems: int}
+	{@param? secondaryItems: list<?>}
+	{@param? triggerClasses: string}
+
+  {let $totalPrimaryItems: length($primaryItems) /}
+  {let $totalSecondaryItems: $secondaryItems ? length($secondaryItems) : 0 /}
+  {let $totalItems: ($secondaryItems ? length($secondaryItems) : 0) + length($primaryItems) /}
+
+  {let $defaultMaxPrimaryItems: $maxPrimaryItems ?: 8 /}
+  {let $defaultMaxSecondaryItems: $maxSecondaryItems ?: 7 /}
+  {let $defaultMaxTotalItems: $maxTotalItems ?: 15 /}
+
+  {let $showingItems: ((not $secondaryItems and $totalPrimaryItems > $defaultMaxTotalItems) ? $defaultMaxTotalItems : 
+    ($totalPrimaryItems > $defaultMaxPrimaryItems ? $defaultMaxPrimaryItems : $totalPrimaryItems)) +
+    ($totalSecondaryItems > $defaultMaxSecondaryItems ? $defaultMaxSecondaryItems : $totalSecondaryItems) /}
+
+  {let $trigger kind="html"}
+    {call ClayIcon.render}
+      {param spritemap: $spritemap /}
+      {param symbol: 'plus' /}
+    {/call}
+  {/let}
+
+  {let $items: $secondaryItems ? [[
+    'items': $primaryItems,
+    'maxItems': $defaultMaxPrimaryItems,
+    'separator': true,
+    'type': 'group'
+  ],[
+    'items': $secondaryItems,
+    'label': 'Favorites',
+    'maxItems': $defaultMaxSecondaryItems,
+    'type': 'group'
+  ]] : [[
+    'items': $primaryItems,
+    'maxItems': $defaultMaxTotalItems,
+    'separator': false,
+    'type': 'group'
+  ]] /}
+
+  {let $showMoreButton: $showingItems < $totalItems /}
+
+	{call ClayDropdownBase.render}
+    {param button: $showMoreButton ? [
+      'label': 'More',
+      'style': 'secondary'
+    ] : null /}
+    {param caption: $showMoreButton ? 'Showing ' + $showingItems + ' of ' + $totalItems + ' elements' :  null /}
+    {param disabled: $disabled /}
+    {param elementClasses: $elementClasses /}
+    {param events: [
+      'buttonClicked': $_handleButtonClick,
+      'itemClicked': $_handleItemClick
+    ]/}
+    {param expanded: $expanded /}
+    {param helpText: $helpText /}
+    {param id: $id /}
+    {param items: $items /}
+    {param itemsIconAlignment: $itemsIconAlignment /}
+    {param label: $trigger /}
+    {param ref: 'dropdown' /}
+    {param spritemap: $spritemap /}
+    {param style: 'primary' /}
+    {param triggerClasses: $triggerClasses /}
+  {/call}
+{/template}

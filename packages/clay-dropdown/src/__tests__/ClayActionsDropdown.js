@@ -143,7 +143,7 @@ describe('ClayActionsDropdown', function() {
 			spritemap: 'icons.svg',
 		});
 
-		const spy = jest.spyOn(clayActionsDropdown.refs.dropdown, 'emit');
+		const spy = jest.spyOn(clayActionsDropdown, 'emit');
 
 		const element =
 			clayActionsDropdown.refs.dropdown.refs.portal.refs.dropdownButton

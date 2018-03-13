@@ -7,6 +7,7 @@
 	{@param spritemap: string}
 	{@param? _handleActionClicked: any}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleFilterDoneClicked: any}
 	{@param? _handleItemToggled: any}
@@ -27,17 +28,21 @@
 		type: string
 	]>}
 	{@param? creationMenu: bool|string|[
-		button: ?,
 		caption: string,
 		helpText: string,
-		items: list<[
+		primaryItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
-			quickAction: bool,
-			separator: bool,
-			type: string
+			separator: bool
+		]>,
+		secondaryItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
 		]>
 	]}
 	{@param? elementClasses: string}
@@ -90,6 +95,7 @@
 				{param events: [
 					'actionClicked': $_handleActionClicked,
 					'creationButtonClicked': $_handleCreationButtonClicked,
+					'creationMenuMoreButtonClicked': $_handleCreationMenuMoreButtonClicked,
 					'deselectAllClicked': $_handleDeselectAllClicked,
 					'filterDoneClicked': $_handleFilterDoneClicked,
 					'search': $_handleSearch,
