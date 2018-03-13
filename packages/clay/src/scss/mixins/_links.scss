@@ -24,6 +24,7 @@
 	$text-align: map-get($map, text-align);
 	$text-decoration: map-get($map, text-decoration);
 	$text-transform: map-get($map, text-transform);
+	$transition: map-get($map, transition);
 	$vertical-align: map-get($map, vertical-align);
 	$width: map-get($map, width);
 
@@ -50,6 +51,9 @@
 	$disabled-cursor: map-get($map, disabled-cursor);
 	$disabled-opacity: map-get($map, disabled-opacity);
 	$disabled-pointer-events: map-get($map, disabled-pointer-events);
+
+	$btn-focus-box-shadow: map-get($map, btn-focus-box-shadow);
+	$btn-focus-outline: map-get($map, btn-focus-outline);
 
 	$lexicon-icon-margin-bottom: map-get($map, lexicon-icon-margin-bottom);
 	$lexicon-icon-margin-left: map-get($map, lexicon-icon-margin-left);
@@ -81,6 +85,7 @@
 	text-align: $text-align;
 	text-decoration: $text-decoration;
 	text-transform: $text-transform;
+	transition: $transition;
 	vertical-align: $vertical-align;
 	width: $width;
 
@@ -88,6 +93,15 @@
 		background-color: $hover-bg;
 		color: $hover-color;
 		text-decoration: $hover-text-decoration;
+	}
+
+	@at-root {
+		button#{&} {
+			&:focus {
+				box-shadow: $btn-focus-box-shadow;
+				outline: $btn-focus-outline;
+			}
+		}
 	}
 
 	&:focus {

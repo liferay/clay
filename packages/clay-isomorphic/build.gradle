@@ -2,15 +2,15 @@ import java.io.File;
 
 task testSoy << {
 	def soyFiles = fileTree(
-		dir: "..", 
-		include: "clay-*/**/*.soy", 
+		dir: "..",
+		include: "clay-*/**/*.soy",
 		excludes: ["**/__tests__/**/*", "clay-isomorphic/**/*"]
 	).files;
-	
+
 	def suite = new SoyTestSuite(soyFiles);
-	
+
 	def results = suite.run();
-	
+
 	def failed = 0;
 
 	results.forEach {result ->
@@ -19,33 +19,49 @@ task testSoy << {
 		}
 		else {
 			failed++;
-			
+
 			if (result.error) {
-				println "💥 " + result.namespace + 
+				println "💥 " + result.namespace +
 					" [" + result.error.message + "]";
 			}
 			else {
-				println "👎 " + result.namespace + 
+				println "👎 " + result.namespace +
 					" [Unexpected output: ${result.output}]";
 			}
 		}
 	};
-	
+
 	if (failed > 0) {
 		throw new GradleException(
 			"${failed} soy tests failed 😢 (see previous output for more info)");
 	}
 }
 
-task createMissingFixtures << {
+task regenerateFixturesExpected << {
 	def soyFiles = fileTree(
-		dir: "..", 
-		include: "clay-*/**/*.soy", 
+		dir: "..",
+		include: "clay-*/**/*.soy",
 		excludes: ["**/__tests__/**/*", "clay-isomorphic/**/*"]
 	).files;
-	
+
 	def suite = new SoyTestSuite(soyFiles);
-	
+
+	def results = suite.run();
+
+	results.forEach {result ->
+		result.test.regenerateFixturesExpected();
+	};
+}
+
+task createMissingFixtures << {
+	def soyFiles = fileTree(
+		dir: "..",
+		include: "clay-*/**/*.soy",
+		excludes: ["**/__tests__/**/*", "clay-isomorphic/**/*"]
+	).files;
+
+	def suite = new SoyTestSuite(soyFiles);
+
 	def results = suite.run();
 
 	results.forEach {result ->

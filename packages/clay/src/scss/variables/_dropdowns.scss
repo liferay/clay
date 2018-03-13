@@ -39,22 +39,12 @@ $dropdown-item-indicator-spacer-x: 1rem !default;
 
 // Dropdown Action
 
-$dropdown-action-toggle-bg: null !default;
 $dropdown-action-toggle-border-radius: $border-radius !default;
-$dropdown-action-toggle-color: $link-color !default;
 $dropdown-action-toggle-font-size: null !default;
 $dropdown-action-toggle-size: $btn-monospaced-size-sm !default;
 
-$dropdown-action-toggle-hover-bg: null !default;
-$dropdown-action-toggle-hover-color: $link-hover-color !default;
-
-$dropdown-action-toggle-disabled-bg: null !default;
-$dropdown-action-toggle-disabled-color: $btn-link-disabled-color !default;
 $dropdown-action-toggle-disabled-cursor: $disabled-cursor !default;
 $dropdown-action-toggle-disabled-opacity: 0.65 !default;
-
-$dropdown-action-toggle-active-bg: null !default;
-$dropdown-action-toggle-active-color: null !default;
 
 // Alert inside Dropdowns
 

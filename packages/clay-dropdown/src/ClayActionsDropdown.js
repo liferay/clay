@@ -130,6 +130,15 @@ ClayActionsDropdown.STATE = {
 	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
+
+	/**
+	 * CSS classes to be applied to the trigger element.
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	triggerClasses: Config.string(),
 };
 
 defineWebComponent('clay-actions-dropdown', ClayActionsDropdown);
