@@ -21,9 +21,11 @@ let creationMenuItem = {
 	icon: Config.string(),
 	label: Config.string().required(),
 	separator: Config.bool().value(false),
-}
+};
 
-const creationMenuItemsValidator = Config.arrayOf(Config.shapeOf(creationMenuItem));
+const creationMenuItemsValidator = Config.arrayOf(
+	Config.shapeOf(creationMenuItem)
+);
 
 creationMenuItem.items = creationMenuItemsValidator;
 
@@ -43,4 +45,8 @@ const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
 
 filterItemShape.items = filterItemsValidator;
 
-export {actionItemsValidator, creationMenuItemsValidator, filterItemsValidator};
+export {
+	actionItemsValidator,
+	creationMenuItemsValidator,
+	filterItemsValidator,
+};

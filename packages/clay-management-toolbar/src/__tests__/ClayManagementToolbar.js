@@ -749,6 +749,7 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
+		// eslint-disable-next-line
 		managementToolbar.refs.creationMenuDropdown.refs.dropdown.refs.portal.refs.dropdownButton.element.click();
 
 		expect(spy).toHaveBeenCalled();

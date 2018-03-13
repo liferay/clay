@@ -2,14 +2,23 @@ import 'clay-button';
 import 'clay-checkbox';
 import 'clay-icon';
 import 'clay-link';
-// eslint-disable-next-line
-import { ClayActionsDropdown, ClayCreationMenuDropdown, ClayDropdownBase } from 'clay-dropdown';
+/* eslint-disable */
+import {
+	ClayActionsDropdown,
+	ClayCreationMenuDropdown,
+	ClayDropdownBase,
+} from 'clay-dropdown';
+/* eslint-enable */
 import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
-import {actionItemsValidator, creationMenuItemsValidator, filterItemsValidator} from './validators';
+import {
+	actionItemsValidator,
+	creationMenuItemsValidator,
+	filterItemsValidator,
+} from './validators';
 import templates from './ClayManagementToolbar.soy.js';
 
 /**

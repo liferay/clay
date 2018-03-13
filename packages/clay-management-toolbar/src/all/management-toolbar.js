@@ -1,4 +1,13 @@
 import ClayManagementToolbar from '../ClayManagementToolbar';
-import {actionItemsValidator, creationMenuItemsValidator, filterItemsValidator} from '../validators';
+import {
+	actionItemsValidator,
+	creationMenuItemsValidator,
+	filterItemsValidator,
+} from '../validators';
 
-export {actionItemsValidator, ClayManagementToolbar, creationMenuItemsValidator, filterItemsValidator};
+export {
+	actionItemsValidator,
+	ClayManagementToolbar,
+	creationMenuItemsValidator,
+	filterItemsValidator,
+};

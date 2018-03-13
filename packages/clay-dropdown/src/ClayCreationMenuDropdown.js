@@ -138,8 +138,8 @@ ClayCreationMenuDropdown.STATE = {
 	 * @type {!string}
 	 * @default undefined
 	 */
-  spritemap: Config.string().required(),
-  
+	spritemap: Config.string().required(),
+
 	/**
 	 * CSS classes to be applied to the trigger element.
 	 * @instance

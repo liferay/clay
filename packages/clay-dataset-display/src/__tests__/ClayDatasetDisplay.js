@@ -588,6 +588,7 @@ describe('ClayDatasetDisplay', function() {
 
 		const spy = jest.spyOn(component, 'emit');
 
+		// eslint-disable-next-line
 		component.refs.managementToolbar.refs.creationMenuDropdown.refs.dropdown.refs.portal.refs.dropdownButton.element.click();
 
 		jest.runAllTimers();
