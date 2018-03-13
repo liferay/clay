@@ -4,30 +4,33 @@
  * This renders an actions dropdown.
  */
 {template .render}
-	{@param mainItems: list<?>}
+	{@param primaryItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
-	{@param? favoriteItems: list<?>}
 	{@param? helpText: string}
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
+  {@param? maxPrimaryItems: int}
+  {@param? maxSecondaryItems: int}
+  {@param? maxTotalItems: int}
+	{@param? secondaryItems: list<?>}
 	{@param? triggerClasses: string}
 
-  {let $totalMainItems: length($mainItems) /}
-  {let $totalFavoriteItems: $favoriteItems ? length($favoriteItems) : 0 /}
-  {let $totalItems: ($favoriteItems ? length($favoriteItems) : 0) + length($mainItems) /}
+  {let $totalPrimaryItems: length($primaryItems) /}
+  {let $totalSecondaryItems: $secondaryItems ? length($secondaryItems) : 0 /}
+  {let $totalItems: ($secondaryItems ? length($secondaryItems) : 0) + length($primaryItems) /}
 
-  {let $maxFavoriteItems: 7 /}
-  {let $maxMainItems: 8 /}
-  {let $maxTotalItems: 15 /}
+  {let $defaultMaxPrimaryItems: $maxPrimaryItems ?: 8 /}
+  {let $defaultMaxSecondaryItems: $maxSecondaryItems ?: 7 /}
+  {let $defaultMaxTotalItems: $maxTotalItems ?: 15 /}
 
-  {let $showingItems: ((not $favoriteItems and $totalMainItems > $maxTotalItems) ? $maxTotalItems : 
-    ($totalMainItems > $maxMainItems ? $maxMainItems : $totalMainItems)) +
-    ($totalFavoriteItems > $maxFavoriteItems ? $maxFavoriteItems : $totalFavoriteItems) /}
+  {let $showingItems: ((not $secondaryItems and $totalPrimaryItems > $defaultMaxTotalItems) ? $defaultMaxTotalItems : 
+    ($totalPrimaryItems > $defaultMaxPrimaryItems ? $defaultMaxPrimaryItems : $totalPrimaryItems)) +
+    ($totalSecondaryItems > $defaultMaxSecondaryItems ? $defaultMaxSecondaryItems : $totalSecondaryItems) /}
 
   {let $trigger kind="html"}
     {call ClayIcon.render}
@@ -36,19 +39,19 @@
     {/call}
   {/let}
 
-  {let $items: $favoriteItems ? [[
-    'items': $mainItems,
-    'maxItems': $maxMainItems,
+  {let $items: $secondaryItems ? [[
+    'items': $primaryItems,
+    'maxItems': $defaultMaxPrimaryItems,
     'separator': true,
     'type': 'group'
   ],[
-    'items': $favoriteItems,
+    'items': $secondaryItems,
     'label': 'Favorites',
-    'maxItems': $maxFavoriteItems,
+    'maxItems': $defaultMaxSecondaryItems,
     'type': 'group'
   ]] : [[
-    'items': $mainItems,
-    'maxItems': $maxTotalItems,
+    'items': $primaryItems,
+    'maxItems': $defaultMaxTotalItems,
     'separator': false,
     'type': 'group'
   ]] /}

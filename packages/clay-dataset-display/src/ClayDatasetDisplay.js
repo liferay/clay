@@ -309,9 +309,9 @@ ClayDatasetDisplay.STATE = {
 		Config.string(),
 		Config.shapeOf({
 			caption: Config.string(),
-			favoriteItems: creationMenuItemsValidator,
 			helpText: Config.string(),
-			mainItems: creationMenuItemsValidator,
+			primaryItems: creationMenuItemsValidator,
+			secondaryItems: creationMenuItemsValidator,
 		}),
 	]),
 

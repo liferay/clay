@@ -24,7 +24,17 @@ const actionItemsWithQuickItems = [
 ];
 
 let creationMenuConfig = {
-	favoriteItems: [
+	primaryItems: [
+		{
+			href: '#1',
+			label: 'Add Content 1',
+		},
+		{
+			href: '#2',
+			label: 'Add Content 2',
+		},
+	],
+	secondaryItems: [
 		{
 			href: '#fav1',
 			label: 'Favorite 1',
@@ -56,16 +66,6 @@ let creationMenuConfig = {
 		{
 			href: '#fav8',
 			label: 'Favorite 8',
-		},
-	],
-	mainItems: [
-		{
-			href: '#1',
-			label: 'Add Content 1',
-		},
-		{
-			href: '#2',
-			label: 'Add Content 2',
 		},
 	],
 };

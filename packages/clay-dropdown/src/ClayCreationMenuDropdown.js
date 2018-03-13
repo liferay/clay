@@ -78,15 +78,6 @@ ClayCreationMenuDropdown.STATE = {
 	expanded: Config.bool().value(false),
 
 	/**
-	 * List of favorite menu items.
-	 * @instance
-	 * @memberof ClayCreationMenuDropdown
-	 * @type {?Array|undefined}
-	 * @default undefined
-	 */
-	favoriteItems: itemsValidator,
-
-	/**
 	 * Help text to be shown on top of the open dropdown.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
@@ -107,20 +98,56 @@ ClayCreationMenuDropdown.STATE = {
 	/**
 	 * Position in which item icon will be placed. Needed if any item has icons.
 	 * @instance
-	 * @memberof ClayDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
-	 * List of main menu items.
+	 * Maximum number of primary items to show.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?int|undefined}
+	 * @default 8
+	 */
+	maxPrimaryItems: Config.number().value(8),
+
+	/**
+	 * Maximum number of secondary items to show.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?int|undefined}
+	 * @default 7
+	 */
+	maxSecondaryItems: Config.number().value(7),
+
+	/**
+	 * Maximum number of total items to show.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?int|undefined}
+	 * @default 15
+	 */
+	maxTotalItems: Config.number().value(15),
+
+	/**
+	 * List of primary menu items.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {!Array}
 	 * @default undefined
 	 */
-	mainItems: itemsValidator.required(),
+	primaryItems: itemsValidator.required(),
+
+	/**
+	 * List of secondary menu items.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?Array|undefined}
+	 * @default undefined
+	 */
+	secondaryItems: itemsValidator,
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

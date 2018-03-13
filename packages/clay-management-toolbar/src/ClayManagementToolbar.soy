@@ -34,15 +34,15 @@
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
 		caption: string,
-		favoriteItems: list<[
+		helpText: string,
+		primaryItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
 			separator: bool
 		]>,
-		helpText: string,
-		mainItems: list<[
+		secondaryItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
@@ -281,14 +281,14 @@
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleCreationMenuMoreButtonClicked: any}
 
-	{if $creationMenu.mainItems}
+	{if $creationMenu.primaryItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
 			{param events: ['moreButtonClicked': $_handleCreationMenuMoreButtonClicked] /}
-			{param favoriteItems: $creationMenu.favoriteItems /}
 			{param helpText: $creationMenu.helpText /}
-			{param mainItems: $creationMenu.mainItems /}
+			{param primaryItems: $creationMenu.primaryItems /}
 			{param ref: 'creationMenuDropdown' /}
+			{param secondaryItems: $creationMenu.secondaryItems /}
 			{param spritemap: $spritemap /}
 			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
 		{/call}
@@ -331,15 +331,15 @@
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
 		caption: string,
-		favoriteItems: list<[
+		helpText: string,
+		primaryItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
 			separator: bool
 		]>,
-		helpText: string,
-		mainItems: list<[
+		secondaryItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
