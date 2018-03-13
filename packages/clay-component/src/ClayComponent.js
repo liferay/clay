@@ -1,7 +1,7 @@
 import Component from 'metal-component';
 import {Config} from 'metal-state';
 import {domData} from 'metal-dom';
-import {isServerSide} from 'metal';
+import {core, isServerSide} from 'metal';
 
 /**
  * Clay Component.
@@ -26,7 +26,7 @@ class ClayComponent extends Component {
 				attributeValue = domData.get(this.element, attributeName);
 			}
 
-			return typeof attributeValue !== 'undefined' ? attributeValue : '';
+			return core.isDefAndNotNull(attributeValue) ? attributeValue : '';
 		};
 
 		for (let dataKey in this.data) {
