@@ -18,7 +18,7 @@ class ClayCreationMenuDropdown extends Component {
 	 * @protected
 	 */
 	_handleButtonClick(event) {
-		this.emit('buttonClicked', event);
+		this.emit('moreButtonClicked', event);
 	}
 
 	/**
