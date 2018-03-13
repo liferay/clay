@@ -5,7 +5,7 @@ let clayCreationMenuDropdown;
 let getItems = function(maxItems, name) {
 	let items = [];
 
-	for (let i=1; i <= maxItems; i++) {
+	for (let i = 1; i <= maxItems; i++) {
 		items.push({
 			href: '#' + name + i,
 			label: name + i,
