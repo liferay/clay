@@ -196,7 +196,7 @@ describe('ClayDropdown', function() {
 			spritemap: 'icons.svg',
 		});
 
-		const spy = jest.spyOn(clayDropdown.refs.dropdown, 'emit');
+		const spy = jest.spyOn(clayDropdown, 'emit');
 
 		const element =
 			clayDropdown.refs.dropdown.refs.portal.refs.dropdownButton.element;

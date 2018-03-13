@@ -24,7 +24,7 @@ const actionItemsWithQuickItems = [
 ];
 
 let creationMenuConfig = {
-	items: [
+	primaryItems: [
 		{
 			href: '#1',
 			label: 'Add Content 1',
@@ -32,6 +32,40 @@ let creationMenuConfig = {
 		{
 			href: '#2',
 			label: 'Add Content 2',
+		},
+	],
+	secondaryItems: [
+		{
+			href: '#fav1',
+			label: 'Favorite 1',
+		},
+		{
+			href: '#fav2',
+			label: 'Favorite 2',
+		},
+		{
+			href: '#fav3',
+			label: 'Favorite 3',
+		},
+		{
+			href: '#fav4',
+			label: 'Favorite 4',
+		},
+		{
+			href: '#fav5',
+			label: 'Favorite 5',
+		},
+		{
+			href: '#fav6',
+			label: 'Favorite 6',
+		},
+		{
+			href: '#fav7',
+			label: 'Favorite 7',
+		},
+		{
+			href: '#fav8',
+			label: 'Favorite 8',
 		},
 	],
 };
@@ -527,7 +561,7 @@ describe('ClayDatasetDisplay', function() {
 		);
 	});
 
-	it('should render a ClayDatasetDisplay and emit an event on management toolbar plus button click', () => {
+	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu button click', () => {
 		jest.useFakeTimers();
 
 		defaultConfig.creationMenu = true;
@@ -543,6 +577,25 @@ describe('ClayDatasetDisplay', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
 			'creationButtonClicked',
+			expect.any(Object)
+		);
+	});
+
+	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu more button click', () => {
+		jest.useFakeTimers();
+
+		component = new ClayDatasetDisplay(defaultConfig);
+
+		const spy = jest.spyOn(component, 'emit');
+
+		// eslint-disable-next-line
+		component.refs.managementToolbar.refs.creationMenuDropdown.refs.dropdown.refs.portal.refs.dropdownButton.element.click();
+
+		jest.runAllTimers();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'creationMenuMoreButtonClicked',
 			expect.any(Object)
 		);
 	});

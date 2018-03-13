@@ -16,37 +16,39 @@
 	{@param? helpText: string}
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
+	{@param? triggerClasses: string}
 
-  {let $dropdownElementClasses kind="text"}
-    dropdown-action
-    {if $elementClasses}
-      {sp}{$elementClasses}
-    {/if}
-  {/let}
+	{let $dropdownElementClasses kind="text"}
+		dropdown-action
+		{if $elementClasses}
+			{sp}{$elementClasses}
+		{/if}
+	{/let}
 
-  {let $trigger kind="html"}
-    {call ClayIcon.render}
-      {param spritemap: $spritemap /}
-      {param symbol: 'ellipsis-v' /}
-    {/call}
-  {/let}
+	{let $trigger kind="html"}
+		{call ClayIcon.render}
+			{param spritemap: $spritemap /}
+			{param symbol: 'ellipsis-v' /}
+		{/call}
+	{/let}
 
 	{call ClayDropdownBase.render}
-    {param button: $button /}
-    {param caption: $caption /}
-    {param disabled: $disabled /}
-    {param elementClasses: $dropdownElementClasses /}
-    {param events: [
-      'buttonClicked': $_handleButtonClick,
-      'itemClicked': $_handleItemClick
-    ]/}
-    {param expanded: $expanded /}
-    {param helpText: $helpText /}
-    {param id: $id /}
-    {param items: $items /}
-    {param itemsIconAlignment: $itemsIconAlignment /}
-    {param label: $trigger /}
-    {param ref: 'dropdown' /}
-    {param spritemap: $spritemap /}
-  {/call}
+		{param button: $button /}
+		{param caption: $caption /}
+		{param disabled: $disabled /}
+		{param elementClasses: $dropdownElementClasses /}
+		{param events: [
+			'buttonClicked': $_handleButtonClick,
+			'itemClicked': $_handleItemClick
+		]/}
+		{param expanded: $expanded /}
+		{param helpText: $helpText /}
+		{param id: $id /}
+		{param items: $items /}
+		{param itemsIconAlignment: $itemsIconAlignment /}
+		{param label: $trigger /}
+		{param ref: 'dropdown' /}
+		{param spritemap: $spritemap /}
+		{param triggerClasses: $triggerClasses /}
+	{/call}
 {/template}

@@ -16,8 +16,13 @@
 
 // Link Outline
 
+button.link-outline {
+	cursor: $btn-cursor;
+}
+
 .link-outline {
 	align-items: center;
+	background-color: transparent;
 	border-color: transparent;
 
 	@include border-radius($link-outline-border-radius);
@@ -100,17 +105,4 @@
 	@include clay-link($component-action);
 
 	@extend %link-monospaced;
-}
-
-button.component-action {
-	@extend %btn-unstyled;
-
-	@include transition($btn-transition);
-
-	vertical-align: middle;
-
-	&:focus {
-		box-shadow: $btn-focus-box-shadow;
-		outline: 0;
-	}
 }

@@ -6,19 +6,19 @@ import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
 import itemsValidator from './items_validator';
-import templates from './ClayActionsDropdown.soy.js';
+import templates from './ClayCreationMenuDropdown.soy.js';
 
 /**
  * Implementation for Metal Clay Action Dropdown.
  */
-class ClayActionsDropdown extends Component {
+class ClayCreationMenuDropdown extends Component {
 	/**
 	 * Handles footer button click.
 	 * @param {!Event} event
 	 * @protected
 	 */
 	_handleButtonClick(event) {
-		this.emit('buttonClicked', event);
+		this.emit('moreButtonClicked', event);
 	}
 
 	/**
@@ -36,11 +36,11 @@ class ClayActionsDropdown extends Component {
  * @static
  * @type {!Object}
  */
-ClayActionsDropdown.STATE = {
+ClayCreationMenuDropdown.STATE = {
 	/**
 	 * Button configuration to place a button at dropdown footer.
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -51,18 +51,9 @@ ClayActionsDropdown.STATE = {
 	}),
 
 	/**
-	 * Caption text of the dropdown.
-	 * @instance
-	 * @memberof ClayActionsDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	caption: Config.string(),
-
-	/**
 	 * Flag to indicate if menu is disabled
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -71,7 +62,7 @@ ClayActionsDropdown.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -80,7 +71,7 @@ ClayActionsDropdown.STATE = {
 	/**
 	 * Flag to indicate if menu is expanded.
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?bool}
 	 * @default false
 	 */
@@ -89,7 +80,7 @@ ClayActionsDropdown.STATE = {
 	/**
 	 * Help text to be shown on top of the open dropdown.
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -98,34 +89,70 @@ ClayActionsDropdown.STATE = {
 	/**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
-	 * List of menu items.
-	 * @instance
-	 * @memberof ClayActionsDropdown
-	 * @type {!Array}
-	 * @default undefined
-	 */
-	items: itemsValidator.required(),
-
-	/**
 	 * Position in which item icon will be placed. Needed if any item has icons.
 	 * @instance
-	 * @memberof ClayDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
+	 * Maximum number of primary items to show.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?int|undefined}
+	 * @default 8
+	 */
+	maxPrimaryItems: Config.number().value(8),
+
+	/**
+	 * Maximum number of secondary items to show.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?int|undefined}
+	 * @default 7
+	 */
+	maxSecondaryItems: Config.number().value(7),
+
+	/**
+	 * Maximum number of total items to show.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?int|undefined}
+	 * @default 15
+	 */
+	maxTotalItems: Config.number().value(15),
+
+	/**
+	 * List of primary menu items.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {!Array}
+	 * @default undefined
+	 */
+	primaryItems: itemsValidator.required(),
+
+	/**
+	 * List of secondary menu items.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?Array|undefined}
+	 * @default undefined
+	 */
+	secondaryItems: itemsValidator,
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {!string}
 	 * @default undefined
 	 */
@@ -134,16 +161,16 @@ ClayActionsDropdown.STATE = {
 	/**
 	 * CSS classes to be applied to the trigger element.
 	 * @instance
-	 * @memberof ClayActionsDropdown
+	 * @memberof ClayCreationMenuDropdown
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
 };
 
-defineWebComponent('clay-actions-dropdown', ClayActionsDropdown);
+defineWebComponent('clay-creation-menu-dropdown', ClayCreationMenuDropdown);
 
-Soy.register(ClayActionsDropdown, templates);
+Soy.register(ClayCreationMenuDropdown, templates);
 
-export {ClayActionsDropdown};
-export default ClayActionsDropdown;
+export {ClayCreationMenuDropdown};
+export default ClayCreationMenuDropdown;

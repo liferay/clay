@@ -189,6 +189,7 @@
 			selectable: true,
 			selectedItems: 5,
 			showInfoButton: true,
+			sortingURL: '#sorting',
 			spritemap: spritemap,
 			totalItems: 10,
 		},
@@ -197,7 +198,7 @@
 		//Disabled State
 		new metal.ClayManagementToolbar({
 			creationMenu: {
-				items: [
+				secondaryItems: [
 					{
 						href: '#1',
 						label: 'Add Content 1',
@@ -206,7 +207,17 @@
 						href: '#2',
 						label: 'Add Content 2',
 					}
-				]
+				],
+				primaryItems: [
+					{
+						href: '#fav1',
+						label: 'Favorite 1',
+					},
+					{
+						href: '#fav2',
+						label: 'Favorite 2',
+					}
+				],
 			},
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
@@ -223,7 +234,7 @@
 		//Disabled State with enabled Search
 		new metal.ClayManagementToolbar({
 			creationMenu: {
-				items: [
+				secondaryItems: [
 					{
 						href: '#1',
 						label: 'Add Content 1',
@@ -232,7 +243,17 @@
 						href: '#2',
 						label: 'Add Content 2',
 					}
-				]
+				],
+				primaryItems: [
+					{
+						href: '#fav1',
+						label: 'Favorite 1',
+					},
+					{
+						href: '#fav2',
+						label: 'Favorite 2',
+					}
+				],
 			},
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
@@ -250,7 +271,7 @@
 		//Link View Types
 		new metal.ClayManagementToolbar({
 			creationMenu: {
-				items: [
+				secondaryItems: [
 					{
 						href: '#1',
 						label: 'Add Content 1',
@@ -259,7 +280,17 @@
 						href: '#2',
 						label: 'Add Content 2',
 					}
-				]
+				],
+				primaryItems: [
+					{
+						href: '#fav1',
+						label: 'Favorite 1',
+					},
+					{
+						href: '#fav2',
+						label: 'Favorite 2',
+					}
+				],
 			},
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
@@ -319,6 +350,7 @@
 		//With search results bar with active state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
+			clearResultsURL: '#clear',
 			creationMenu: true,
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',

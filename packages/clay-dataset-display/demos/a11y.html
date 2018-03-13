@@ -175,7 +175,17 @@
 		new metal.ClayDatasetDisplay({
 			actionItems: actionItemsWithQuickItems,
 			creationMenu: {
-				items: [
+				primaryItems: [
+					{
+						href: '#fav1',
+						label: 'Favorite 1',
+					},
+					{
+						href: '#fav2',
+						label: 'Favorite 2',
+					}
+				],
+				secondaryItems: [
 					{
 						href: '#1',
 						label: 'Add Content 1',
@@ -184,7 +194,7 @@
 						href: '#2',
 						label: 'Add Content 2',
 					}
-				]
+				],
 			},
 			filterItems: [
 				{

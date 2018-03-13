@@ -678,14 +678,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -1367,14 +1398,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -2056,14 +2118,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -2096,24 +2189,24 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="trash" type="button">
+            <a class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="download" type="button">
+            <a class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item">
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -2590,14 +2683,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -2630,24 +2754,24 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="trash" type="button">
+            <a class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="download" type="button">
+            <a class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item">
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -2907,7 +3031,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       </div>
                       <div class="autofit-col">
                         <div class="dropdown dropdown-action">
-                          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                               <title>ellipsis-v</title>
                               <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -2946,7 +3070,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       </div>
                       <div class="autofit-col">
                         <div class="dropdown dropdown-action">
-                          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                               <title>ellipsis-v</title>
                               <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -2995,7 +3119,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3034,7 +3158,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3073,7 +3197,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3117,7 +3241,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3156,7 +3280,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3200,7 +3324,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3239,7 +3363,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3277,7 +3401,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3313,7 +3437,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   </div>
                   <div class="autofit-col">
                     <div class="dropdown dropdown-action">
-                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+                      <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
                           <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3470,14 +3594,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -3768,13 +3923,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3782,7 +3937,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3817,13 +3972,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3831,7 +3986,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3875,13 +4030,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3889,7 +4044,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3930,13 +4085,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3944,7 +4099,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -3985,13 +4140,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -3999,7 +4154,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4040,13 +4195,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4054,7 +4209,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4095,13 +4250,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4109,7 +4264,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4150,13 +4305,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4164,7 +4319,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4202,13 +4357,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4216,7 +4371,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4251,13 +4406,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4265,7 +4420,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4300,13 +4455,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
           <div class="autofit-col">
             <div class="quick-action-menu">
-              <a aria-label="Remove" class=" quick-action-item" href="#1">
+              <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
-              <a aria-label="Download" class=" quick-action-item" href="#2">
+              <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
@@ -4314,7 +4469,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               </a>
             </div>
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -4467,14 +4622,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -5310,14 +5496,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -5663,14 +5880,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -5701,24 +5949,24 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="trash" type="button">
+            <a class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="download" type="button">
+            <a class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item">
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -6210,24 +6458,24 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="trash" type="button">
+            <a class=" quick-action-item" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item navbar-breakpoint-down-d-none">
-            <button class="btn quick-action-item btn-unstyled" aria-label="download" type="button">
+            <a class=" quick-action-item" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="nav-item">
             <div class="dropdown dropdown-action">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -7002,14 +7250,45 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
