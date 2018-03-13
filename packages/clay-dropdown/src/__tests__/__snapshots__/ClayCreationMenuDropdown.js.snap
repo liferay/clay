@@ -14,33 +14,154 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li>
-          <a class=" dropdown-item" href="#1">Edit</a>
+          <a class=" dropdown-item" href="#main1">main1</a>
         </li>
         <li>
-          <a class=" dropdown-item" href="#1">Preview</a>
+          <a class=" dropdown-item" href="#main2">main2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
         <li class="dropdown-subheader" role="presentation">Favorites</li>
         <li>
-          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+          <a class=" dropdown-item" href="#favorite1">favorite1</a>
         </li>
         <li>
-          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+          <a class=" dropdown-item" href="#favorite2">favorite2</a>
         </li>
         <li>
-          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+          <a class=" dropdown-item" href="#favorite3">favorite3</a>
         </li>
         <li>
-          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+          <a class=" dropdown-item" href="#favorite4">favorite4</a>
         </li>
         <li>
-          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+          <a class=" dropdown-item" href="#favorite5">favorite5</a>
         </li>
         <li>
-          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+          <a class=" dropdown-item" href="#favorite6">favorite6</a>
         </li>
         <li>
-          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+          <a class=" dropdown-item" href="#favorite7">favorite7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 8 main items and more button when more than 8 main items and at least one favorite item are passed 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#main1">main1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main2">main2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main3">main3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main4">main4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main5">main5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main6">main6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main7">main7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main8">main8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#favorite1">favorite1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#favorite2">favorite2</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 15 main items and more button when more than 15 main items and at no favorite item are passed 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#main1">main1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main2">main2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main3">main3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main4">main4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main5">main5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main6">main6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main7">main7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main8">main8</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main9">main9</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main10">main10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main11">main11</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main12">main12</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main13">main13</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main14">main14</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#main15">main15</a>
         </li>
       </ul>
     </div>
@@ -63,10 +184,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with cl
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#1">Edit</a>
+      <a class=" dropdown-item" href="#main1">main1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#1">Preview</a>
+      <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
 </div>
@@ -84,18 +205,18 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with fa
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#1">Edit</a>
+      <a class=" dropdown-item" href="#main1">main1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#1">Preview</a>
+      <a class=" dropdown-item" href="#main2">main2</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
     <li class="dropdown-subheader" role="presentation">Favorites</li>
     <li>
-      <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+      <a class=" dropdown-item" href="#favorite1">favorite1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+      <a class=" dropdown-item" href="#favorite2">favorite2</a>
     </li>
   </ul>
 </div>
@@ -113,10 +234,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with id
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#1">Edit</a>
+      <a class=" dropdown-item" href="#main1">main1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#1">Preview</a>
+      <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
 </div>
@@ -134,10 +255,10 @@ exports[`ClayCreationMenuDropdown should render a disabled creation menu dropdow
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#1">Edit</a>
+      <a class=" dropdown-item" href="#main1">main1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#1">Preview</a>
+      <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
 </div>
@@ -155,10 +276,10 @@ exports[`ClayCreationMenuDropdown should render an expanded creation menu dropdo
 <div class="dropdown-menu show" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#1">Edit</a>
+      <a class=" dropdown-item" href="#main1">main1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#1">Preview</a>
+      <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
 </div>
@@ -176,10 +297,10 @@ exports[`ClayCreationMenuDropdown should render default markdown 1`] = `
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#1">Edit</a>
+      <a class=" dropdown-item" href="#main1">main1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#1">Preview</a>
+      <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
 </div>
