@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 favorite items and more button when more than 7 favorite items are passed 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Edit</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#1">Preview</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with classes 1`] = `
+<div class="dropdown my-custom-class">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with favorite items 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+    <li class="dropdown-subheader" role="presentation">Favorites</li>
+    <li>
+      <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with id 1`] = `
+<div class="dropdown" id="myId">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a disabled creation menu dropdown 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" disabled="" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render an expanded creation menu dropdown 1`] = `
+<div class="dropdown show">
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu show" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render default markdown 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Edit</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#1">Preview</a>
+    </li>
+  </ul>
+</div>
+`;
