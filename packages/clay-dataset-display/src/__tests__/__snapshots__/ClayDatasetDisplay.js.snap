@@ -678,14 +678,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -1367,14 +1397,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -2056,14 +2116,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -2590,14 +2680,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -3470,14 +3590,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -4467,14 +4617,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -5310,14 +5490,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -5663,14 +5873,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 
@@ -7002,14 +7242,44 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li class="dropdown-subheader" role="presentation">Favorites</li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
 </div>
 `;
 

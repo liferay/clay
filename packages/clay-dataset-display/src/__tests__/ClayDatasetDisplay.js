@@ -24,7 +24,41 @@ const actionItemsWithQuickItems = [
 ];
 
 let creationMenuConfig = {
-	items: [
+	favoriteItems: [
+		{
+			href: '#fav1',
+			label: 'Favorite 1',
+		},
+		{
+			href: '#fav2',
+			label: 'Favorite 2',
+		},
+		{
+			href: '#fav3',
+			label: 'Favorite 3',
+		},
+		{
+			href: '#fav4',
+			label: 'Favorite 4',
+		},
+		{
+			href: '#fav5',
+			label: 'Favorite 5',
+		},
+		{
+			href: '#fav6',
+			label: 'Favorite 6',
+		},
+		{
+			href: '#fav7',
+			label: 'Favorite 7',
+		},
+		{
+			href: '#fav8',
+			label: 'Favorite 8',
+		},
+	],
+	mainItems: [
 		{
 			href: '#1',
 			label: 'Add Content 1',
@@ -527,7 +561,7 @@ describe('ClayDatasetDisplay', function() {
 		);
 	});
 
-	it('should render a ClayDatasetDisplay and emit an event on management toolbar plus button click', () => {
+	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu button click', () => {
 		jest.useFakeTimers();
 
 		defaultConfig.creationMenu = true;
