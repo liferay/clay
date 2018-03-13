@@ -150,6 +150,20 @@
 		</div>
 	</div>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Creation Menu Dropdown</h4>
+			<div id="creation-menu-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Creation Menu Dropdown with more favorite items</h4>
+			<div id="creation-menu-with-more-block"></div>
+		</div>
+	</div>
+
 
 	<script>
 		const spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
@@ -930,8 +944,97 @@
 				spritemap: spritemap,
 				label: 'Trigger Label',
 			},
-			'#actions-event-block'
+			'#actions-events-block'
 		);
+
+		/**
+		 * Creaton Menu Dropdown
+		 **/
+		new metal.ClayCreationMenuDropdown(
+				{
+					mainItems: [
+						{
+							href: '#1',
+							label: 'Edit',
+						},
+						{
+							href: '#1',
+							label: 'Preview',
+						},
+					],
+					favoriteItems: [
+						{
+							href: '#fav1',
+							label: 'Fav 1',
+						},
+						{
+							href: '#fav2',
+							label: 'Fav 2',
+						},
+						{
+							href: '#fav3',
+							label: 'Fav 3',
+						},
+						{
+							href: '#fav4',
+							label: 'Fav 4',
+						},
+					],
+					spritemap: spritemap,
+				},
+				'#creation-menu-block'
+			);
+
+			new metal.ClayCreationMenuDropdown(
+				{
+					mainItems: [
+						{
+							href: '#1',
+							label: 'Edit',
+						},
+						{
+							href: '#1',
+							label: 'Preview',
+						},
+					],
+					favoriteItems: [
+						{
+							href: '#fav1',
+							label: 'Fav 1',
+						},
+						{
+							href: '#fav2',
+							label: 'Fav 2',
+						},
+						{
+							href: '#fav3',
+							label: 'Fav 3',
+						},
+						{
+							href: '#fav4',
+							label: 'Fav 4',
+						},
+						{
+							href: '#fav5',
+							label: 'Fav 5',
+						},
+						{
+							href: '#fav6',
+							label: 'Fav 6',
+						},
+						{
+							href: '#fav7',
+							label: 'Fav 7',
+						},
+						{
+							href: '#fav8',
+							label: 'Fav 8',
+						},
+					],
+					spritemap: spritemap,
+				},
+				'#creation-menu-with-more-block'
+			);
 	</script>
 </body>
 </html>
