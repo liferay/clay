@@ -63,7 +63,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </div>
-        <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+        <span class="sticker sticker-danger sticker-bottom-left user-icon">
           <span class="sticker-overlay">PDF</span>
         </span>
       </div>
@@ -84,7 +84,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
-        <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+        <span class="sticker sticker-danger sticker-bottom-left user-icon">
           <span class="sticker-overlay">PDF</span>
         </span>
       </div>
@@ -105,7 +105,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
-        <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+        <span class="sticker sticker-danger sticker-bottom-left user-icon">
           <span class="sticker-overlay">PDF</span>
         </span>
       </div>
@@ -131,7 +131,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </div>
-        <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+        <span class="sticker sticker-danger sticker-bottom-left user-icon">
           <span class="sticker-overlay">PDF</span>
         </span>
       </div>
@@ -152,7 +152,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
-        <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+        <span class="sticker sticker-danger sticker-bottom-left user-icon">
           <span class="sticker-overlay">PDF</span>
         </span>
       </div>
@@ -178,7 +178,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </div>
-        <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+        <span class="sticker sticker-danger sticker-bottom-left user-icon">
           <span class="sticker-overlay">PDF</span>
         </span>
       </div>
@@ -202,7 +202,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <span class="sticker sticker-danger rounded-circle sticker-xl">
+          <span class="sticker sticker-danger user-icon sticker-xl">
             <span class="sticker-overlay">FA</span>
           </span>
         </div>
@@ -220,7 +220,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <span class="sticker sticker-primary rounded-circle sticker-xl">
+          <span class="sticker sticker-primary user-icon sticker-xl">
             <span class="sticker-overlay">
               <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
             </span>
@@ -240,7 +240,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <span class="sticker sticker-primary rounded-circle sticker-xl">
+          <span class="sticker sticker-primary user-icon sticker-xl">
             <span class="sticker-overlay">AC</span>
           </span>
         </div>

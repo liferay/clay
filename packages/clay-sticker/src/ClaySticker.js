@@ -125,24 +125,13 @@ ClaySticker.STATE = {
 	spritemap: Config.string(),
 
 	/**
-	 * Sticker style. Available sizes are: `danger`, `dark`, `info`, `light`,
-	 * `primary`, `secondary`, `success`, `warning`.
+	 * Sticker style.
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?string}
 	 * @default primary
 	 */
-	style: Config.oneOf([
-		'danger',
-		'dark',
-		'info',
-		'light',
-		'primary',
-		'secondary',
-		'success',
-		'unstyled',
-		'warning',
-	]).value('primary'),
+	style: Config.string().value('primary'),
 };
 
 defineWebComponent('clay-sticker', ClaySticker);
