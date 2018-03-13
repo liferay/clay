@@ -89,6 +89,15 @@ class ClayDatasetDisplay extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the creation menu more button clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleCreationMenuMoreButtonClicked(event) {
+		this.emit('creationMenuMoreButtonClicked', event);
+	}
+
+	/**
 	 * Deselects all items on management toolbar deselect all button click.
 	 * @private
 	 */
