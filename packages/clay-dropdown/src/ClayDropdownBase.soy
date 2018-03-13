@@ -77,9 +77,12 @@
 	{@param? _handleItemClick: any}
 	{@param? contentRenderer: string}
 	{@param? itemsIconAlignment: string}
+	{@param? maxItems: int}
 	{@param? spritemap: string}
 
-	{foreach $item in $items}
+	{for $index in range($maxItems < length($items) ? $maxItems : length($items))}
+		{let $item: $items[$index] /}
+
 		{let $variant kind="text"}
 			{if isNonnull($contentRenderer) and $contentRenderer != ''}
 				{$contentRenderer}
@@ -102,10 +105,11 @@
 			{param items: $item.items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param label: $item.label ? '' + $item.label : '' /}
+			{param maxItems: $item.maxItems /}
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
 		{/delcall}
-	{/foreach}
+	{/for}
 {/template}
 
 /**
@@ -321,6 +325,7 @@
 	{@param? inputValue: string}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
+	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
@@ -398,6 +403,7 @@
 	{@param? inputValue: string}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
+	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
@@ -446,6 +452,7 @@
 	{@param? inputValue: string}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
+	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
@@ -460,6 +467,7 @@
 			{param _handleItemClick: $_handleItemClick /}
 			{param items: $items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
+			{param maxItems: $maxItems /}
 			{param spritemap: $spritemap /}
 		{/call}
 	{/if}
@@ -484,6 +492,7 @@
 	{@param? inputValue: string}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
+	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
@@ -533,6 +542,7 @@
 	{@param? inputValue: string}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
+	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
 
@@ -550,6 +560,7 @@
 					{param contentRenderer: 'radio' /}
 					{param items: $items /}
 					{param itemsIconAlignment: $itemsIconAlignment /}
+					{param maxItems: $maxItems /}
 					{param spritemap: $spritemap /}
 				{/call}
 			</ul>
