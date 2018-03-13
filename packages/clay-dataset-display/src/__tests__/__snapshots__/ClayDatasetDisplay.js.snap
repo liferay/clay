@@ -2978,7 +2978,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
                       </svg>
                     </div>
-                    <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+                    <span class="sticker sticker-danger sticker-bottom-left user-icon">
                       <span class="sticker-overlay">PDF</span>
                     </span>
                   </label>
@@ -3017,7 +3017,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
-                    <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+                    <span class="sticker sticker-danger sticker-bottom-left user-icon">
                       <span class="sticker-overlay">PDF</span>
                     </span>
                   </label>
@@ -3056,7 +3056,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
-                    <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+                    <span class="sticker sticker-danger sticker-bottom-left user-icon">
                       <span class="sticker-overlay">PDF</span>
                     </span>
                   </label>
@@ -3100,7 +3100,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
                       </svg>
                     </div>
-                    <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+                    <span class="sticker sticker-danger sticker-bottom-left user-icon">
                       <span class="sticker-overlay">PDF</span>
                     </span>
                   </label>
@@ -3139,7 +3139,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
-                    <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+                    <span class="sticker sticker-danger sticker-bottom-left user-icon">
                       <span class="sticker-overlay">PDF</span>
                     </span>
                   </label>
@@ -3183,7 +3183,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
                       </svg>
                     </div>
-                    <span class="sticker sticker-danger sticker-bottom-left rounded-circle">
+                    <span class="sticker sticker-danger sticker-bottom-left user-icon">
                       <span class="sticker-overlay">PDF</span>
                     </span>
                   </label>
@@ -3225,7 +3225,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                      <span class="sticker sticker-danger rounded-circle sticker-xl">
+                      <span class="sticker sticker-danger user-icon sticker-xl">
                         <span class="sticker-overlay">FA</span>
                       </span>
                     </div>
@@ -3261,7 +3261,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                      <span class="sticker sticker-primary rounded-circle sticker-xl">
+                      <span class="sticker sticker-primary user-icon sticker-xl">
                         <span class="sticker-overlay">
                           <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
                         </span>
@@ -3299,7 +3299,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-                      <span class="sticker sticker-primary rounded-circle sticker-xl">
+                      <span class="sticker sticker-primary user-icon sticker-xl">
                         <span class="sticker-overlay">AC</span>
                       </span>
                     </div>
@@ -3855,7 +3855,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -3910,7 +3910,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -3965,7 +3965,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -4020,7 +4020,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -4075,7 +4075,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -4130,7 +4130,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -4188,7 +4188,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -4237,7 +4237,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
@@ -4286,7 +4286,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </div>
           <div class="autofit-col">
-            <span class="sticker sticker-primary rounded-circle">
+            <span class="sticker sticker-primary user-icon">
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>

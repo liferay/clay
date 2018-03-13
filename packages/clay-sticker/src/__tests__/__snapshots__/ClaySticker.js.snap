@@ -67,7 +67,7 @@ exports[`ClaySticker should render a bottom right positioned sticker 1`] = `
 `;
 
 exports[`ClaySticker should render a circle sticker 1`] = `
-<span class="sticker sticker-primary rounded-circle">
+<span class="sticker sticker-primary user-icon">
   <span class="sticker-overlay"></span>
 </span>
 `;

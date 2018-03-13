@@ -254,7 +254,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left rounded-circle">
+    <span class="sticker sticker-primary sticker-bottom-left user-icon">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
