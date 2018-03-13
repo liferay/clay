@@ -32,17 +32,21 @@
 	{@param? clearResultsURL: string}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
-		button: ?,
 		caption: string,
-		helpText: string,
-		items: list<[
+		favoriteItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
-			quickAction: bool,
-			separator: bool,
-			type: string
+			separator: bool
+		]>,
+		helpText: string,
+		mainItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
 		]>
 	]}
 	{@param? elementClasses: string}
@@ -274,22 +278,14 @@
 	{@param spritemap: string}
 	{@param? _handleCreationButtonClicked: any}
 
-	{if $creationMenu.items}
-		{call ClayDropdownBase.render}
-			{param button: $creationMenu.button /}
+	{if $creationMenu.mainItems}
+		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
+			{param favoriteItems: $creationMenu.favoriteItems /}
 			{param helpText: $creationMenu.helpText /}
-			{param items: $creationMenu.items /}
-			{param label kind="html"}
-				{call ClayIcon.render}
-					{param spritemap: $spritemap /}
-					{param symbol: 'plus' /}
-				{/call}
-			{/param}
-
+			{param mainItems: $creationMenu.mainItems /}
 			{param ref: 'creationMenuDropdown' /}
 			{param spritemap: $spritemap /}
-			{param style: 'primary' /}
 			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
 		{/call}
 	{elseif $creationMenu == true}
@@ -329,17 +325,21 @@
 	{@param? _showSearchMobile: bool}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: bool|string|[
-		button: ?,
 		caption: string,
-		helpText: string,
-		items: list<[
+		favoriteItems: list<[
 			disabled: bool,
 			href: string,
 			icon: string,
 			label: string,
-			quickAction: bool,
-			separator: bool,
-			type: string
+			separator: bool
+		]>,
+		helpText: string,
+		mainItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
 		]>
 	]}
 	{@param? disabled: bool}

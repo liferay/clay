@@ -3,13 +3,13 @@ import 'clay-checkbox';
 import 'clay-icon';
 import 'clay-link';
 // eslint-disable-next-line
-import { ClayActionsDropdown, ClayDropdownBase } from 'clay-dropdown';
+import { ClayActionsDropdown, ClayCreationMenuDropdown, ClayDropdownBase } from 'clay-dropdown';
 import {Config} from 'metal-state';
 import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
-import {actionItemsValidator, filterItemsValidator} from './validators';
+import {actionItemsValidator, creationMenuItemsValidator, filterItemsValidator} from './validators';
 import templates from './ClayManagementToolbar.soy.js';
 
 /**
@@ -229,10 +229,10 @@ ClayManagementToolbar.STATE = {
 		Config.bool().value(false),
 		Config.string(),
 		Config.shapeOf({
-			button: Config.object(),
 			caption: Config.string(),
+			favoriteItems: creationMenuItemsValidator,
 			helpText: Config.string(),
-			items: actionItemsValidator,
+			mainItems: creationMenuItemsValidator,
 		}),
 	]),
 

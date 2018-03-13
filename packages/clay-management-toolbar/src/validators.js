@@ -15,6 +15,18 @@ const actionItemsValidator = Config.arrayOf(Config.shapeOf(actionItemShape));
 
 actionItemShape.items = actionItemsValidator;
 
+let creationMenuItem = {
+	disabled: Config.bool().value(false),
+	href: Config.string().required(),
+	icon: Config.string(),
+	label: Config.string().required(),
+	separator: Config.bool().value(false),
+}
+
+const creationMenuItemsValidator = Config.arrayOf(Config.shapeOf(creationMenuItem));
+
+creationMenuItem.items = creationMenuItemsValidator;
+
 let filterItemShape = {
 	checked: Config.bool().value(false),
 	disabled: Config.bool().value(false),
@@ -31,4 +43,4 @@ const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
 
 filterItemShape.items = filterItemsValidator;
 
-export {actionItemsValidator, filterItemsValidator};
+export {actionItemsValidator, creationMenuItemsValidator, filterItemsValidator};
