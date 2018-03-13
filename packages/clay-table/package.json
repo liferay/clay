@@ -1,6 +1,6 @@
 {
   "name": "clay-table",
-  "version": "2.0.0-rc.6",
+  "version": "2.0.0-rc.7",
   "description": "Metal ClayTable component",
   "license": "BSD",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-table",
@@ -27,12 +27,12 @@
     "metal"
   ],
   "dependencies": {
-    "clay-button": "^2.0.0-rc.6",
-    "clay-checkbox": "^2.0.0-rc.6",
-    "clay-dropdown": "^2.0.0-rc.6",
-    "clay-label": "^2.0.0-rc.6",
-    "clay-link": "^2.0.0-rc.6",
-    "clay-progress-bar": "^2.0.0-rc.6",
+    "clay-button": "^2.0.0-rc.7",
+    "clay-checkbox": "^2.0.0-rc.7",
+    "clay-dropdown": "^2.0.0-rc.7",
+    "clay-label": "^2.0.0-rc.7",
+    "clay-link": "^2.0.0-rc.7",
+    "clay-progress-bar": "^2.0.0-rc.7",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
@@ -46,7 +46,7 @@
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
     "browserslist-config-clay-components": "^2.0.0-rc.3",
-    "clay": "^2.0.0-rc.6",
+    "clay": "^2.0.0-rc.7",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^6.0.0",
     "webpack": "^3.0.0"
