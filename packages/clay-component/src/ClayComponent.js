@@ -5,6 +5,7 @@ import {core, isServerSide} from 'metal';
 
 /**
  * Clay Component.
+ * @extends Component
  */
 class ClayComponent extends Component {
 	/**

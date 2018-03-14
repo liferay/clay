@@ -15,6 +15,7 @@ import templates from './ClayDatasetDisplay.soy.js';
 
 /**
  * Metal ClayDatasetDisplay component.
+ * @extends Component
  */
 class ClayDatasetDisplay extends Component {
 	/**
@@ -274,7 +275,7 @@ ClayDatasetDisplay.STATE = {
 	 * The selected items of the item list. For internatl purposes.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	_selectedItems: Config.array().internal(),
@@ -283,7 +284,7 @@ ClayDatasetDisplay.STATE = {
 	 * The total number of items in the item list. For internatl purposes.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?int|undefined}
+	 * @type {?(number|undefined)}
 	 * @default undefined
 	 */
 	_totalItems: Config.number().internal(),
@@ -292,7 +293,7 @@ ClayDatasetDisplay.STATE = {
 	 * List of items to display in the management toolbar actions menu.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
@@ -301,7 +302,7 @@ ClayDatasetDisplay.STATE = {
 	 * Configuration of the management bar plus button.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?object|string|bool|undefined}
+	 * @type {?(object|string|bool|undefined)}
 	 * @default undefined
 	 */
 	creationMenu: Config.oneOfType([
@@ -319,7 +320,7 @@ ClayDatasetDisplay.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -328,7 +329,7 @@ ClayDatasetDisplay.STATE = {
 	 * List of filter menu items.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	filterItems: filterItemsValidator,
@@ -337,7 +338,7 @@ ClayDatasetDisplay.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -346,7 +347,7 @@ ClayDatasetDisplay.STATE = {
 	 * Items of the dataset.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	items: Config.array(),
@@ -355,7 +356,7 @@ ClayDatasetDisplay.STATE = {
 	 * URL of the search form action
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	searchActionURL: Config.string(),
@@ -364,7 +365,7 @@ ClayDatasetDisplay.STATE = {
 	 * Name of the search form.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	searchFormName: Config.string(),
@@ -373,7 +374,7 @@ ClayDatasetDisplay.STATE = {
 	 * Name of the search input.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	searchInputName: Config.string(),
@@ -391,7 +392,7 @@ ClayDatasetDisplay.STATE = {
 	 * Position in the views list of the selected view.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?number|undefined}
+	 * @type {?(number|undefined)}
 	 * @default undefined
 	 */
 	selectedView: Config.number(),
@@ -410,7 +411,7 @@ ClayDatasetDisplay.STATE = {
 	 * Sorting order.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default asc
 	 */
 	sortingOrder: Config.oneOf(['asc', 'desc']).value('asc'),
@@ -428,7 +429,7 @@ ClayDatasetDisplay.STATE = {
 	 * Header of the list.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	title: Config.string(),
@@ -437,7 +438,7 @@ ClayDatasetDisplay.STATE = {
 	 * List of view items.
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	views: Config.arrayOf(

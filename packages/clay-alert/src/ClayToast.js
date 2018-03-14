@@ -8,6 +8,7 @@ import templates from './ClayToast.soy.js';
 
 /**
  * Metal Clay Toast component.
+ * @extends Component
  */
 class ClayToast extends Component {
 	/**
@@ -64,7 +65,7 @@ ClayToast.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayToast
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -73,7 +74,7 @@ ClayToast.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayToast
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -82,7 +83,7 @@ ClayToast.STATE = {
 	 * The message of alert
 	 * @instance
 	 * @memberof ClayToast
-	 * @type {!html|string}
+	 * @type {!(html|string)}
 	 */
 	message: Config.any().required(),
 

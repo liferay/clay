@@ -9,6 +9,7 @@ import templates from './ClayLabel.soy.js';
 
 /**
  * Metal Clay Label component.
+ * @extends Component
  */
 class ClayLabel extends Component {
 	/**
@@ -39,7 +40,7 @@ ClayLabel.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -48,7 +49,7 @@ ClayLabel.STATE = {
 	 * HREF in label.
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	href: Config.string(),
@@ -57,7 +58,7 @@ ClayLabel.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -66,7 +67,7 @@ ClayLabel.STATE = {
 	 * The label of the badge element.
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.string(),
@@ -75,7 +76,7 @@ ClayLabel.STATE = {
 	 * The size of the label element.
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	size: Config.oneOf(['lg']),
@@ -84,7 +85,7 @@ ClayLabel.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),

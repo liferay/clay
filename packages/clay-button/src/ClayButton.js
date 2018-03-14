@@ -8,6 +8,7 @@ import templates from './ClayButton.soy.js';
 
 /**
  * Metal Clay Button component.
+ * @extends ClayComponent
  */
 class ClayButton extends ClayComponent {}
 
@@ -21,7 +22,7 @@ ClayButton.STATE = {
 	 * Aria label attribute for the button element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	ariaLabel: Config.string(),
@@ -57,7 +58,7 @@ ClayButton.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -66,7 +67,7 @@ ClayButton.STATE = {
 	 * Icon to be rendered in the button.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	icon: Config.string(),
@@ -84,7 +85,7 @@ ClayButton.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -93,7 +94,7 @@ ClayButton.STATE = {
 	 * The label of the button content.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?html|string|undefined}
+	 * @type {?(html|string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.any(),
@@ -111,7 +112,7 @@ ClayButton.STATE = {
 	 * The name attribute value of the element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	name: Config.string(),
@@ -121,7 +122,7 @@ ClayButton.STATE = {
 	 * button size.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	size: Config.oneOf(['sm']),
@@ -130,7 +131,7 @@ ClayButton.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -140,7 +141,7 @@ ClayButton.STATE = {
 	 * purposes.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default primary
 	 */
 	style: Config.oneOf(['link', 'primary', 'secondary', 'unstyled']).value(
@@ -160,7 +161,7 @@ ClayButton.STATE = {
 	 * The value attribute value of the element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	value: Config.string(),

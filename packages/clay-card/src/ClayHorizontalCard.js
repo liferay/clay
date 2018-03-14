@@ -13,6 +13,7 @@ import templates from './ClayHorizontalCard.soy.js';
 
 /**
  * Metal ClayHorizontalCard component.
+ * @extends Component
  */
 class ClayHorizontalCard extends Component {
 	/**
@@ -35,7 +36,7 @@ ClayHorizontalCard.STATE = {
 	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
@@ -53,7 +54,7 @@ ClayHorizontalCard.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -62,7 +63,7 @@ ClayHorizontalCard.STATE = {
 	 * Group Index the card belongs to.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	groupName: Config.string(),
@@ -71,7 +72,7 @@ ClayHorizontalCard.STATE = {
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	href: Config.string(),
@@ -89,7 +90,7 @@ ClayHorizontalCard.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -98,7 +99,7 @@ ClayHorizontalCard.STATE = {
 	 * Name to be applied to the input element.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputName: Config.string(),
@@ -107,7 +108,7 @@ ClayHorizontalCard.STATE = {
 	 * Value to be applied to the input element.
 	 * @instance
 	 * @memberof ClayHorizontalCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputValue: Config.string(),

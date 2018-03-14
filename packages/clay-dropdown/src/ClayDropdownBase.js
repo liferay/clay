@@ -16,6 +16,7 @@ import templates from './ClayDropdownBase.soy.js';
 
 /**
  * Implementation of the base for Metal Clay Dropdown.
+ * @extends Component
  */
 class ClayDropdownBase extends Component {
 	/**
@@ -203,7 +204,7 @@ ClayDropdownBase.STATE = {
 	 * The current position of the tooltip after being aligned via `Align.align`.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {number}
+	 * @type {!number}
 	 * @default Align.isValidPosition
 	 */
 	_alignedPosition: Config.validator(Align.isValidPosition).internal(),
@@ -223,7 +224,7 @@ ClayDropdownBase.STATE = {
 	 * Button configuration to place a button at dropdown footer.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
@@ -236,7 +237,7 @@ ClayDropdownBase.STATE = {
 	 * Caption text of the dropdown.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	caption: Config.string(),
@@ -245,7 +246,7 @@ ClayDropdownBase.STATE = {
 	 * Content Renderer name of items.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	contentRenderer: Config.string(),
@@ -263,7 +264,7 @@ ClayDropdownBase.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -281,7 +282,7 @@ ClayDropdownBase.STATE = {
 	 * Help text to be shown on top of the open dropdown.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	helpText: Config.string(),
@@ -290,7 +291,7 @@ ClayDropdownBase.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -308,7 +309,7 @@ ClayDropdownBase.STATE = {
 	 * Position in which item icons will be placed. Needed if any item has icons.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
@@ -317,7 +318,7 @@ ClayDropdownBase.STATE = {
 	 * Label of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {!html|string}
+	 * @type {!(html|string)}
 	 * @default undefined
 	 */
 	label: Config.any().required(),
@@ -347,7 +348,7 @@ ClayDropdownBase.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -367,7 +368,7 @@ ClayDropdownBase.STATE = {
 	 * CSS classes to be applied to the trigger element.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
@@ -376,7 +377,7 @@ ClayDropdownBase.STATE = {
 	 * Size of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	triggerSize: Config.oneOf(['sm']),

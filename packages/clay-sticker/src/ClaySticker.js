@@ -8,6 +8,7 @@ import templates from './ClaySticker.soy.js';
 
 /**
  * Implementation of the Metal Clay Link.
+ * @extends Component
  */
 class ClaySticker extends Component {}
 
@@ -21,7 +22,7 @@ ClaySticker.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -30,7 +31,7 @@ ClaySticker.STATE = {
 	 * Render ClayIcon in the ClaySticker element.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	icon: Config.string(),
@@ -39,7 +40,7 @@ ClaySticker.STATE = {
 	 * Id to be applied to the sticker element.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -48,7 +49,7 @@ ClaySticker.STATE = {
 	 * Alternate text of the image.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageAlt: Config.string(),
@@ -57,7 +58,7 @@ ClaySticker.STATE = {
 	 * Source of the image to be rendered inside the sticker.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageSrc: Config.string(),
@@ -66,7 +67,7 @@ ClaySticker.STATE = {
 	 * Sets the text or HTML to be rendered inside sticker.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?html|string|undefined}
+	 * @type {?(html|string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.any(),
@@ -87,7 +88,7 @@ ClaySticker.STATE = {
 	 * and `top-right`.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	position: Config.oneOf([
@@ -101,7 +102,7 @@ ClaySticker.STATE = {
 	 * Sticker size. Available sizes are `sm`, `lg`, `xl`.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	size: Config.oneOf(['lg', 'sm', 'xl']),
@@ -119,7 +120,7 @@ ClaySticker.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),

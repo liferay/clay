@@ -8,6 +8,7 @@ import templates from './ClayAlert.soy.js';
 
 /**
  * Metal Clay Alert component.
+ * @extends Component
  */
 class ClayAlert extends Component {
 	/**
@@ -64,7 +65,7 @@ ClayAlert.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -73,7 +74,7 @@ ClayAlert.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -82,7 +83,7 @@ ClayAlert.STATE = {
 	 * The message of alert
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {!html|string}
+	 * @type {!(html|string)}
 	 */
 	message: Config.any().required(),
 

@@ -10,6 +10,7 @@ import templates from './ClayAlertBase.soy.js';
 
 /**
  * Metal Clay Alert Base component.
+ * @extends Component
  */
 class ClayAlertBase extends Component {
 	/**
@@ -177,7 +178,7 @@ ClayAlertBase.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {?string|undefined}
+	 * @type {(?string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -186,7 +187,7 @@ ClayAlertBase.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {?string|undefined}
+	 * @type {(?string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -195,7 +196,7 @@ ClayAlertBase.STATE = {
 	 * The message of alert
 	 * @instance
 	 * @memberof ClayAlertBase
-	 * @type {!html|string}
+	 * @type {!(html|string)}
 	 */
 	message: Config.any().required(),
 

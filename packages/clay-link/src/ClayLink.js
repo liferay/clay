@@ -8,6 +8,7 @@ import templates from './ClayLink.soy.js';
 
 /**
  * Implementation of the Metal Clay Link.
+ * @extends ClayComponent
  */
 class ClayLink extends ClayComponent {}
 
@@ -21,7 +22,7 @@ ClayLink.STATE = {
 	 * Aria label attribute for the anchor element.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	ariaLabel: Config.string(),
@@ -30,7 +31,7 @@ ClayLink.STATE = {
 	 * Aria Expanded attribute for the anchor element.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?bool|undefined}
+	 * @type {?(bool|undefined)}
 	 * @default undefined
 	 */
 	ariaExpanded: Config.bool(),
@@ -40,7 +41,7 @@ ClayLink.STATE = {
 	 * ignored.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	buttonStyle: Config.oneOf(['link', 'primary', 'secondary']),
@@ -58,7 +59,7 @@ ClayLink.STATE = {
 	 * Sets the download attribute on the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	download: Config.string(),
@@ -67,7 +68,7 @@ ClayLink.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -76,7 +77,7 @@ ClayLink.STATE = {
 	 * Sets the HTML attribute href on the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	href: Config.string(),
@@ -85,7 +86,7 @@ ClayLink.STATE = {
 	 * Icon to be rendered in the link.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	icon: Config.string(),
@@ -103,7 +104,7 @@ ClayLink.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -112,7 +113,7 @@ ClayLink.STATE = {
 	 * Alternative text of the image to be rendered inside the link.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageAlt: Config.string(),
@@ -121,7 +122,7 @@ ClayLink.STATE = {
 	 * Source of the image to be rendered inside the link.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageSrc: Config.string(),
@@ -130,7 +131,7 @@ ClayLink.STATE = {
 	 * Sets the text or HTML to be rendered inside the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?html|string|undefined}
+	 * @type {?(html|string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.any(),
@@ -148,7 +149,7 @@ ClayLink.STATE = {
 	 * The css class that colors the button.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	style: Config.oneOf(['secondary']),
@@ -157,7 +158,7 @@ ClayLink.STATE = {
 	 * Sets the HTML attribute target on the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	target: Config.oneOf(['_blank', '_self']),
@@ -166,7 +167,7 @@ ClayLink.STATE = {
 	 * Sets the HTML attribute title on the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	title: Config.string(),

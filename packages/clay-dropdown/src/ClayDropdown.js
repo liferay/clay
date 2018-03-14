@@ -10,6 +10,7 @@ import templates from './ClayDropdown.soy.js';
 
 /**
  * Implementation for Metal Clay Dropdown.
+ * @extends Component
  */
 class ClayDropdown extends Component {
 	/**
@@ -41,7 +42,7 @@ ClayDropdown.STATE = {
 	 * Button configuration to place a button at dropdown footer.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
@@ -63,7 +64,7 @@ ClayDropdown.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -81,7 +82,7 @@ ClayDropdown.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -90,7 +91,7 @@ ClayDropdown.STATE = {
 	 * Icon to use in the trigger.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	icon: Config.string(),
@@ -108,7 +109,7 @@ ClayDropdown.STATE = {
 	 * Position in which item icon will be placed. Needed if any item has icons.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
@@ -117,7 +118,7 @@ ClayDropdown.STATE = {
 	 * Label of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?html|string|undefined}
+	 * @type {?(html|string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.any(),
@@ -154,7 +155,7 @@ ClayDropdown.STATE = {
 	 * CSS classes to be applied to the trigger element.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
@@ -163,7 +164,7 @@ ClayDropdown.STATE = {
 	 * Size of the trigger button.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	triggerSize: Config.oneOf(['sm']),

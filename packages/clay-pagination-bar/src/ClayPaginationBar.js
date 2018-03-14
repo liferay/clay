@@ -9,6 +9,7 @@ import templates from './ClayPaginationBar.soy.js';
 
 /**
  * Metal ClayPaginationBar component.
+ * @extends Component
  */
 class ClayPaginationBar extends Component {}
 
@@ -22,7 +23,7 @@ ClayPaginationBar.STATE = {
 	 * Href to create each pagination page complete href.
 	 * @instance
 	 * @memberof ClayPaginationBar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	baseHref: Config.string(),
@@ -40,7 +41,7 @@ ClayPaginationBar.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayPaginationBar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -64,7 +65,7 @@ ClayPaginationBar.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayPaginationBar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -73,7 +74,7 @@ ClayPaginationBar.STATE = {
 	 * Entries index that points to selected entry.
 	 * @instance
 	 * @memberof ClayPaginationBar
-	 * @type {?int|undefined}
+	 * @type {?(number|undefined)}
 	 * @default undefined
 	 */
 	selectedEntry: Config.number().required(),

@@ -7,6 +7,7 @@ import templates from './ClaySelect.soy.js';
 
 /**
  * Metal Clay Select component.
+ * @extends Component
  */
 class ClaySelect extends Component {}
 
@@ -29,7 +30,7 @@ ClaySelect.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClaySelect
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -38,7 +39,7 @@ ClaySelect.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClaySelect
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -58,7 +59,7 @@ ClaySelect.STATE = {
 	 * Label of the select element.
 	 * @instance
 	 * @memberof ClaySelect
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.string(),
@@ -76,7 +77,7 @@ ClaySelect.STATE = {
 	 * Name of the select element.
 	 * @instance
 	 * @memberof ClaySelect
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	name: Config.string(),

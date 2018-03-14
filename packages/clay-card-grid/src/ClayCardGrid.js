@@ -16,6 +16,7 @@ import templates from './ClayCardGrid.soy.js';
 
 /**
  * Metal ClayCardGrid component.
+ * @extends Component
  */
 class ClayCardGrid extends Component {
 	/**
@@ -38,7 +39,7 @@ ClayCardGrid.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -47,7 +48,7 @@ ClayCardGrid.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -56,7 +57,7 @@ ClayCardGrid.STATE = {
 	 * List of items.
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	items: Config.array(),
@@ -96,7 +97,7 @@ ClayCardGrid.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -105,7 +106,7 @@ ClayCardGrid.STATE = {
 	 * Header of the list group.
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	title: Config.string(),

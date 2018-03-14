@@ -7,6 +7,7 @@ import templates from './ClayBadge.soy.js';
 
 /**
  * Metal Clay Badge component.
+ * @extends Component
  */
 class ClayBadge extends Component {}
 
@@ -20,7 +21,7 @@ ClayBadge.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayBadge
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -29,8 +30,8 @@ ClayBadge.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayBadge
-	 * @type {?string|undefined}
-	 * default undefined
+	 * @type {?(string|undefined)}
+	 * @default undefined
 	 */
 	id: Config.string(),
 
@@ -39,7 +40,7 @@ ClayBadge.STATE = {
 	 * @instance
 	 * @memberof ClayBadge
 	 * @type {!string}
-	 * default undefined
+	 * @default undefined
 	 */
 	label: Config.string().required(),
 

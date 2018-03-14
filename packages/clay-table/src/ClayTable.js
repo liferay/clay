@@ -16,6 +16,7 @@ import templates from './ClayTable.soy.js';
 
 /**
  * Metal ClayTable component.
+ * @extends Component
  */
 class ClayTable extends Component {
 	/**
@@ -109,7 +110,7 @@ ClayTable.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayTable
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -118,7 +119,7 @@ ClayTable.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayTable
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -127,7 +128,7 @@ ClayTable.STATE = {
 	 * List of items to display in the table.
 	 * @instance
 	 * @memberof ClayTable
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	items: Config.array(),
@@ -179,7 +180,7 @@ ClayTable.STATE = {
 	 * Table responsive sizes. Available `lg`, `md`, `sm` and `xl`.
 	 * @instance
 	 * @memberof ClayTable
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	size: Config.oneOf(['lg', 'md', 'sm', 'xl']),
@@ -188,7 +189,7 @@ ClayTable.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayTable
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),

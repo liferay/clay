@@ -10,6 +10,7 @@ import templates from './ClayActionsDropdown.soy.js';
 
 /**
  * Implementation for Metal Clay Action Dropdown.
+ * @extends Component
  */
 class ClayActionsDropdown extends Component {
 	/**
@@ -41,7 +42,7 @@ ClayActionsDropdown.STATE = {
 	 * Button configuration to place a button at dropdown footer.
 	 * @instance
 	 * @memberof ClayActionsDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
@@ -54,7 +55,7 @@ ClayActionsDropdown.STATE = {
 	 * Caption text of the dropdown.
 	 * @instance
 	 * @memberof ClayActionsDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	caption: Config.string(),
@@ -72,7 +73,7 @@ ClayActionsDropdown.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayActionsDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -90,7 +91,7 @@ ClayActionsDropdown.STATE = {
 	 * Help text to be shown on top of the open dropdown.
 	 * @instance
 	 * @memberof ClayActionsDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	helpText: Config.string(),
@@ -99,7 +100,7 @@ ClayActionsDropdown.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayActionsDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -117,7 +118,7 @@ ClayActionsDropdown.STATE = {
 	 * Position in which item icon will be placed. Needed if any item has icons.
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
@@ -135,7 +136,7 @@ ClayActionsDropdown.STATE = {
 	 * CSS classes to be applied to the trigger element.
 	 * @instance
 	 * @memberof ClayActionsDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),

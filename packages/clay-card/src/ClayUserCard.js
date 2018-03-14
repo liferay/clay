@@ -13,6 +13,7 @@ import templates from './ClayUserCard.soy.js';
 
 /**
  * Metal ClayUserCard component.
+ * @extends Component
  */
 class ClayUserCard extends Component {
 	/**
@@ -35,7 +36,7 @@ ClayUserCard.STATE = {
 	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
@@ -53,7 +54,7 @@ ClayUserCard.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -62,7 +63,7 @@ ClayUserCard.STATE = {
 	 * Group Index the card belongs to.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	groupName: Config.string(),
@@ -71,7 +72,7 @@ ClayUserCard.STATE = {
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	href: Config.string(),
@@ -80,7 +81,7 @@ ClayUserCard.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -89,7 +90,7 @@ ClayUserCard.STATE = {
 	 * Alternate text of the image.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageAlt: Config.string(),
@@ -98,7 +99,7 @@ ClayUserCard.STATE = {
 	 * Source of the image to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageSrc: Config.string(),
@@ -107,7 +108,7 @@ ClayUserCard.STATE = {
 	 * Initials of the user.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	initials: Config.string(),
@@ -116,7 +117,7 @@ ClayUserCard.STATE = {
 	 * Name to be applied to the input element.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputName: Config.string(),
@@ -125,7 +126,7 @@ ClayUserCard.STATE = {
 	 * Value to be applied to the input element.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputValue: Config.string(),
@@ -161,7 +162,7 @@ ClayUserCard.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -170,7 +171,7 @@ ClayUserCard.STATE = {
 	 * Subtitle of the card.
 	 * @instance
 	 * @memberof ClayUserCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	subtitle: Config.string(),

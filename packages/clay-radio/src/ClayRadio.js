@@ -7,6 +7,7 @@ import templates from './ClayRadio.soy.js';
 
 /**
  * Implementation of the Metal Clay Radio.
+ * @extends Component
  */
 class ClayRadio extends Component {}
 
@@ -38,7 +39,7 @@ ClayRadio.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -47,7 +48,7 @@ ClayRadio.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -65,7 +66,7 @@ ClayRadio.STATE = {
 	 * Label of the input. Required for accesibility.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.string(),
@@ -74,7 +75,7 @@ ClayRadio.STATE = {
 	 * Custom content of the radio label. Use it to use your custom html.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?html|undefined}
+	 * @type {?(html|undefined)}
 	 * @default undefined
 	 */
 	labelContent: Config.any(),
@@ -83,7 +84,7 @@ ClayRadio.STATE = {
 	 * Name to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	name: Config.string(),
@@ -101,7 +102,7 @@ ClayRadio.STATE = {
 	 * Value to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	value: Config.string(),

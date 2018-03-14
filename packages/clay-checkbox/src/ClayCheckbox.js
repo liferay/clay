@@ -7,6 +7,7 @@ import templates from './ClayCheckbox.soy.js';
 
 /**
  * Implementation of the Metal Clay Checkbox.
+ * @extends Component
  */
 class ClayCheckbox extends Component {
 	/**
@@ -27,7 +28,7 @@ ClayCheckbox.STATE = {
 	 * Aria labelled by attribute to apply to the input.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	ariaLabelledBy: Config.string(),
@@ -54,7 +55,7 @@ ClayCheckbox.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -63,7 +64,7 @@ ClayCheckbox.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -90,7 +91,7 @@ ClayCheckbox.STATE = {
 	 * Label of the input. Required for accesibility.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	label: Config.string(),
@@ -99,7 +100,7 @@ ClayCheckbox.STATE = {
 	 * Custom content of the checkbox label. Use it to use your custom html.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?html|undefined}
+	 * @type {?(html|undefined)}
 	 * @default undefined
 	 */
 	labelContent: Config.any(),
@@ -108,7 +109,7 @@ ClayCheckbox.STATE = {
 	 * Name to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	name: Config.string(),
@@ -126,7 +127,7 @@ ClayCheckbox.STATE = {
 	 * Value to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	value: Config.string(),

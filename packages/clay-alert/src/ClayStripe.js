@@ -8,6 +8,7 @@ import templates from './ClayStripe.soy.js';
 
 /**
  * Metal Clay Stripe component.
+ * @extends Component
  */
 class ClayStripe extends Component {
 	/**
@@ -64,7 +65,7 @@ ClayStripe.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayStripe
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -73,7 +74,7 @@ ClayStripe.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayStripe
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),

@@ -8,6 +8,7 @@ import templates from './ClayProgressBar.soy.js';
 
 /**
  * Metal Clay Button component.
+ * @extends Component
  */
 class ClayProgressBar extends Component {}
 
@@ -21,7 +22,7 @@ ClayProgressBar.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayProgressBar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -30,7 +31,7 @@ ClayProgressBar.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayProgressBar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),

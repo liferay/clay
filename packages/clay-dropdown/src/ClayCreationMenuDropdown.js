@@ -10,6 +10,7 @@ import templates from './ClayCreationMenuDropdown.soy.js';
 
 /**
  * Implementation for Metal Clay Action Dropdown.
+ * @extends Component
  */
 class ClayCreationMenuDropdown extends Component {
 	/**
@@ -41,7 +42,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * Button configuration to place a button at dropdown footer.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	button: Config.shapeOf({
@@ -63,7 +64,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -81,7 +82,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * Help text to be shown on top of the open dropdown.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	helpText: Config.string(),
@@ -90,7 +91,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -99,7 +100,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * Position in which item icon will be placed. Needed if any item has icons.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
@@ -108,7 +109,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * Maximum number of primary items to show.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?int|undefined}
+	 * @type {?(number|undefined)}
 	 * @default 8
 	 */
 	maxPrimaryItems: Config.number().value(8),
@@ -117,7 +118,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * Maximum number of secondary items to show.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?int|undefined}
+	 * @type {?(number|undefined)}
 	 * @default 7
 	 */
 	maxSecondaryItems: Config.number().value(7),
@@ -126,7 +127,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * Maximum number of total items to show.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?int|undefined}
+	 * @type {?(number|undefined)}
 	 * @default 15
 	 */
 	maxTotalItems: Config.number().value(15),
@@ -144,7 +145,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * List of secondary menu items.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?Array|undefined}
+	 * @type {?(Array|undefined)}
 	 * @default undefined
 	 */
 	secondaryItems: itemsValidator,
@@ -162,7 +163,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * CSS classes to be applied to the trigger element.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	triggerClasses: Config.string(),

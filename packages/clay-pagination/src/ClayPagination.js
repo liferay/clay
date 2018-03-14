@@ -10,6 +10,7 @@ import templates from './ClayPagination.soy.js';
 
 /**
  * Metal ClayPagination component.
+ * @extends Component
  */
 class ClayPagination extends Component {}
 
@@ -23,7 +24,7 @@ ClayPagination.STATE = {
 	 * Href to create each page complete href.
 	 * @instance
 	 * @memberof ClayPagination
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	baseHref: Config.string(),
@@ -41,7 +42,7 @@ ClayPagination.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayPagination
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -50,7 +51,7 @@ ClayPagination.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayPagination
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),

@@ -7,6 +7,7 @@ import templates from './ClayIcon.soy.js';
 
 /**
  * Implementation of the Metal Clay Icon.
+ * @extends Component
  */
 class ClayIcon extends Component {}
 
@@ -20,7 +21,7 @@ ClayIcon.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -38,7 +39,7 @@ ClayIcon.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -65,7 +66,7 @@ ClayIcon.STATE = {
 	 * The title of the Clay SVG Icon.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	title: Config.string(),

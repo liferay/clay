@@ -13,6 +13,7 @@ const KEY_CODE_ESC = 27;
 
 /**
  * Metal ClayModal component.
+ * @extends Component
  */
 class ClayModal extends Component {
 	/**
@@ -192,7 +193,7 @@ ClayModal.STATE = {
 	 * Body of the modal.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|html|undefined}
+	 * @type {?(string|html|undefined)}
 	 * @default undefined
 	 */
 	body: Config.any(),
@@ -201,7 +202,7 @@ ClayModal.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -210,7 +211,7 @@ ClayModal.STATE = {
 	 * Buttons of the footer.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	footerButtons: Config.arrayOf(
@@ -228,7 +229,7 @@ ClayModal.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -249,7 +250,7 @@ ClayModal.STATE = {
 	 * The size of element modal.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	size: Config.oneOf(['full-screen', 'lg', 'sm']),
@@ -258,7 +259,7 @@ ClayModal.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -267,7 +268,7 @@ ClayModal.STATE = {
 	 * Status messages.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	status: Config.oneOf(['danger', 'info', 'success', 'warning']),
@@ -276,7 +277,7 @@ ClayModal.STATE = {
 	 * Title of the modal.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	title: Config.string(),
@@ -285,7 +286,7 @@ ClayModal.STATE = {
 	 * Url to place an iframe in the body of the modal.
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	url: Config.string(),

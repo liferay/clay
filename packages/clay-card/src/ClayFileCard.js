@@ -11,6 +11,7 @@ import templates from './ClayFileCard.soy.js';
 
 /**
  * Metal ClayFileCard component.
+ * @extends Component
  */
 class ClayFileCard extends Component {
 	/**
@@ -33,7 +34,7 @@ ClayFileCard.STATE = {
 	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
@@ -51,7 +52,7 @@ ClayFileCard.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -60,7 +61,7 @@ ClayFileCard.STATE = {
 	 * Group Index the card belongs to.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	groupName: Config.string(),
@@ -69,7 +70,7 @@ ClayFileCard.STATE = {
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	href: Config.string(),
@@ -87,7 +88,7 @@ ClayFileCard.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -96,7 +97,7 @@ ClayFileCard.STATE = {
 	 * Name to be applied to the input element.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputName: Config.string(),
@@ -105,7 +106,7 @@ ClayFileCard.STATE = {
 	 * Value to be applied to the input element.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputValue: Config.string(),
@@ -114,7 +115,7 @@ ClayFileCard.STATE = {
 	 * Labels of the card.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	labels: Config.arrayOf(
@@ -137,7 +138,7 @@ ClayFileCard.STATE = {
 	 * Object that maps specific label values with desired styles.
 	 * @instance
 	 * @memberof ClayCardBase
-	 * @type {?object|undefined}
+	 * @type {?(object|undefined)}
 	 * @default undefined
 	 */
 	labelStylesMap: Config.object(),
@@ -173,7 +174,7 @@ ClayFileCard.STATE = {
 	 * Label for the sticker represented in the card.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	stickerLabel: Config.string(),
@@ -209,7 +210,7 @@ ClayFileCard.STATE = {
 	 * Subtitle of the card.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	subtitle: Config.string(),

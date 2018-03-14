@@ -11,6 +11,7 @@ import templates from './ClayImageCard.soy.js';
 
 /**
  * Metal ClayImageCard component.
+ * @extends Component
  */
 class ClayImageCard extends Component {
 	/**
@@ -33,7 +34,7 @@ ClayImageCard.STATE = {
 	 * List of items to display in the actions menu.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?array|object|undefined}
+	 * @type {?(array|object|undefined)}
 	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
@@ -51,7 +52,7 @@ ClayImageCard.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -60,7 +61,7 @@ ClayImageCard.STATE = {
 	 * Group Index the card belongs to.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	groupName: Config.string(),
@@ -69,7 +70,7 @@ ClayImageCard.STATE = {
 	 * Url to be applied to the title of the card.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	href: Config.string(),
@@ -78,7 +79,7 @@ ClayImageCard.STATE = {
 	 * Icon to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	icon: Config.string(),
@@ -87,7 +88,7 @@ ClayImageCard.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -96,7 +97,7 @@ ClayImageCard.STATE = {
 	 * Alternate text of the image.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageAlt: Config.string(),
@@ -105,7 +106,7 @@ ClayImageCard.STATE = {
 	 * Source of the image to be rendered in the visual area of the card.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	imageSrc: Config.string(),
@@ -114,7 +115,7 @@ ClayImageCard.STATE = {
 	 * Name to be applied to the input element.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputName: Config.string(),
@@ -123,7 +124,7 @@ ClayImageCard.STATE = {
 	 * Value to be applied to the input element.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputValue: Config.string(),
@@ -132,7 +133,7 @@ ClayImageCard.STATE = {
 	 * Labels of the card.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	labels: Config.arrayOf(
@@ -155,7 +156,7 @@ ClayImageCard.STATE = {
 	 * Object that maps specific label values with desired styles.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?object|undefined}
+	 * @type {?(object|undefined)}
 	 * @default undefined
 	 */
 	labelStylesMap: Config.object(),
@@ -182,7 +183,7 @@ ClayImageCard.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string(),
@@ -191,7 +192,7 @@ ClayImageCard.STATE = {
 	 * Label for the sticker represented in the card.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	stickerLabel: Config.string(),
@@ -227,7 +228,7 @@ ClayImageCard.STATE = {
 	 * Subtitle of the card.
 	 * @instance
 	 * @memberof ClayImageCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	subtitle: Config.string(),

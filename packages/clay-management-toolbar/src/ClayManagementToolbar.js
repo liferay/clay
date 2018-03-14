@@ -23,12 +23,13 @@ import templates from './ClayManagementToolbar.soy.js';
 
 /**
  * Metal ClayManagementToolbar component.
+ * @extends Component
  */
 class ClayManagementToolbar extends Component {
 	/**
 	 * Returns the dropdown index of the element.
 	 * @param {!Node} element
-	 * @return {?array|undefined} the index.
+	 * @return {?(array|undefined)} the index.
 	 * @private
 	 */
 	_getQuickItemIndex(element) {
@@ -210,7 +211,7 @@ ClayManagementToolbar.STATE = {
 	 * List of items to display in the actions menu on active state.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
@@ -219,7 +220,7 @@ ClayManagementToolbar.STATE = {
 	 * Url for clear results link.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	clearResultsURL: Config.string(),
@@ -228,7 +229,7 @@ ClayManagementToolbar.STATE = {
 	 * Name of the content renderer to use template variants.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	contentRenderer: Config.string(),
@@ -240,7 +241,7 @@ ClayManagementToolbar.STATE = {
 	 * Set `object` to render a dropdown menu with items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?object|string|bool|undefined}
+	 * @type {?(object|string|bool|undefined)}
 	 * @default undefined
 	 */
 	creationMenu: Config.oneOfType([
@@ -258,7 +259,7 @@ ClayManagementToolbar.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	elementClasses: Config.string(),
@@ -267,7 +268,7 @@ ClayManagementToolbar.STATE = {
 	 * List of filter menu items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	filterItems: filterItemsValidator,
@@ -276,7 +277,7 @@ ClayManagementToolbar.STATE = {
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	id: Config.string(),
@@ -285,7 +286,7 @@ ClayManagementToolbar.STATE = {
 	 * URL of the search form action
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	searchActionURL: Config.string(),
@@ -294,7 +295,7 @@ ClayManagementToolbar.STATE = {
 	 * Name of the search form.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	searchFormName: Config.string(),
@@ -303,7 +304,7 @@ ClayManagementToolbar.STATE = {
 	 * Name of the search input.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	searchInputName: Config.string(),
@@ -312,7 +313,7 @@ ClayManagementToolbar.STATE = {
 	 * Value of the search input.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	searchValue: Config.string(),
@@ -322,7 +323,7 @@ ClayManagementToolbar.STATE = {
 	 * elements.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?bool|undefined}
+	 * @type {?(bool|undefined)}
 	 * @default undefined
 	 */
 	selectable: Config.bool().value(false),
@@ -331,7 +332,7 @@ ClayManagementToolbar.STATE = {
 	 * Number of selected items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?number|undefined}
+	 * @type {?(number|undefined)}
 	 * @default undefined
 	 */
 	selectedItems: Config.number(),
@@ -377,7 +378,7 @@ ClayManagementToolbar.STATE = {
 	 * Sorting url.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	sortingURL: Config.string(),
@@ -386,7 +387,7 @@ ClayManagementToolbar.STATE = {
 	 * Sorting order.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	sortingOrder: Config.oneOf(['asc', 'desc']),
@@ -395,7 +396,7 @@ ClayManagementToolbar.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
@@ -405,7 +406,7 @@ ClayManagementToolbar.STATE = {
 	 * will appear disabled.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?number|undefined}
+	 * @type {?(number|undefined)}
 	 * @default undefined
 	 */
 	totalItems: Config.number(),
@@ -414,7 +415,7 @@ ClayManagementToolbar.STATE = {
 	 * List of view items.
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?array|undefined}
+	 * @type {?(array|undefined)}
 	 * @default undefined
 	 */
 	viewTypes: Config.arrayOf(
