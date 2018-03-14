@@ -237,7 +237,7 @@
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
 								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleQuickActionClicked}">
-									{if $item.href}
+									{if isNonnull($item.href)}
 										{call ClayLink.render}
 											{param elementClasses: 'quick-action-item' /}
 											{param href: $item.href /}
