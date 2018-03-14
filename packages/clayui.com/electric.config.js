@@ -50,9 +50,28 @@ module.exports = {
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
 	metalComponents: metalComponents,
+	apiConfig: {
+		layout: 'main',
+		project: {
+			docsConfig: {
+				shallow: true
+			},
+			refs: ['v2.0.0-rc.7'],
+			repo: 'clay',
+			soyAPIEntitiesPath: '../../../partials/ElectricAPIEntities.soy.js',
+			src: [
+				'packages/clay-*!(isomorphic)/src/Clay*.js',
+			],
+			srcPath: 'packages',
+			user: 'liferay',
+		},
+	},
 	resolveModules: ['../../node_modules'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths],
+	},
+	entryPoints: {
+		electricAPI: path.join(__dirname, 'src/partials/ElectricAPIBundle.js'),
 	},
 	staticStc: staticSrc,
 	vendorSrc: [
