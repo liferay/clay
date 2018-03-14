@@ -30,6 +30,26 @@
 							<span class="title">{$site.title} </span>
 							<small>by Liferay</small>
 						</a>
+                        <div class="btn-group">
+                            <button aria-expanded="false" aria-haspopup="true" class="btn btn-sm btn-version dropdown-toggle" data-toggle="dropdown" type="button">
+                                {$project.ref}
+                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom ml-1">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu ml-2 mt-2">
+                                {foreach $ref in $project.refs}
+                                    {let $classes kind="text"}
+                                        dropdown-item
+                                        {if $project.ref == $ref}
+                                            {sp}active
+                                        {/if}
+                                    {/let}
+
+                                    <a class="{$classes}" href="/api/{$ref}">{$ref}</a>
+                                {/foreach}
+                            </div>
+                        </div>
 					</div>
 				</div>
 
