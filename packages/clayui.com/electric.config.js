@@ -56,7 +56,7 @@ module.exports = {
 			docsConfig: {
 				shallow: true
 			},
-			refs: ['v2.0.0-rc.7'],
+			refs: ['v2.0.0-rc.9', 'v2.0.0-rc.8'],
 			repo: 'clay',
 			soyAPIEntitiesPath: '../../../partials/ElectricAPIEntities.soy.js',
 			src: [
