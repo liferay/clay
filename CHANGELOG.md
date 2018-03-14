@@ -1,16 +1,18 @@
 # Change Log
 
-## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
-
-[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.7...HEAD)
+## [v2.0.0-rc.9](https://github.com/liferay/clay/tree/v2.0.0-rc.9) (2018-03-14)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.7...v2.0.0-rc.9)
 
 **Closed issues:**
 
+- Soy throws an error when a quick Item is passed without href to the ManagementToolbar [\#733](https://github.com/liferay/clay/issues/733)
 - Missing metal import in clay-charts [\#729](https://github.com/liferay/clay/issues/729)
 - Warning about `&&` usage instead of `and` [\#723](https://github.com/liferay/clay/issues/723)
 
 **Merged pull requests:**
 
+- v2.0.0-rc.9 [\#735](https://github.com/liferay/clay/pull/735) ([jbalsas](https://github.com/jbalsas))
+- Check if item href is not null for quick items in management toolbar | Fixes \#733 [\#734](https://github.com/liferay/clay/pull/734) ([carloslancha](https://github.com/carloslancha))
 - v2.0.0-rc.8 [\#732](https://github.com/liferay/clay/pull/732) ([jbalsas](https://github.com/jbalsas))
 - Adds missing metal dependency [\#731](https://github.com/liferay/clay/pull/731) ([jbalsas](https://github.com/jbalsas))
 - Adds missing metal dependency [\#730](https://github.com/liferay/clay/pull/730) ([jbalsas](https://github.com/jbalsas))
