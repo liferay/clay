@@ -130,9 +130,9 @@
 	}
 }
 
-// User Icon
+// Sticker Circle
 
-.user-icon,
-.user-icon .sticker-overlay {
-	@include border-radius($user-icon-border-radius);
+.sticker-circle,
+.sticker-circle .sticker-overlay {
+	@include border-radius($sticker-circle-border-radius);
 }
