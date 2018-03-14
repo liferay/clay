@@ -105,7 +105,7 @@ th {
 	thead {
 		td,
 		th {
-			@if ($table-head-border-top-width == 0 && $table-head-border-top-width) {
+			@if ($table-head-border-top-width == 0 and $table-head-border-top-width) {
 				border-top-width: $table-border-width;
 			}
 		}
