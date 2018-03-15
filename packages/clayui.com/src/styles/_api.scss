@@ -136,3 +136,22 @@
 	background-color: #f3f3f3;
 	color: #6B6C7E;
 }
+
+.docs-home-top {
+  padding: 60px 0 72px;
+}
+
+ @media (min-width: 960px) {
+	.docs-home-top {
+		padding: 96px 0 144px;
+	}
+}
+
+.docs-home-top-title {
+    font-weight: 700;
+    color: rgba(14, 20, 26, 0.8);
+    font-size: 3.42676rem;
+    line-height: calc(3rem * 1.5);
+    text-align: center;
+    margin: 0 0 12px;
+}
