@@ -63,12 +63,14 @@ const DEFAULT_POINT_PATTERNS = [
 
 /**
  * Chart Base prototype.
+ * @class ChartBase
  *
  * @mixin
  */
 const ChartBase = {
 	/**
 	 * @inheritDoc
+	 * @memberof ChartBase
 	 */
 	attached() {
 		if (isServerSide()) {
@@ -96,6 +98,7 @@ const ChartBase = {
 
 	/**
 	 * @inheritDoc
+	 * @memberof ChartBase
 	 */
 	disposed() {
 		super.disposed();
@@ -111,6 +114,7 @@ const ChartBase = {
 
 	/**
 	 * @inheritDoc
+	 * @memberof ChartBase
 	 */
 	shouldUpdate() {
 		return false;
@@ -118,6 +122,7 @@ const ChartBase = {
 
 	/**
 	 * Constructs `axis` billboard config property.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {Object}
 	 */
@@ -134,6 +139,7 @@ const ChartBase = {
 
 	/**
 	 * Constructs config object for `bb.generate` method.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {Object}
 	 */
@@ -212,6 +218,7 @@ const ChartBase = {
 
 	/**
 	 * Constructs various `data` billboard properties from `data` state.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {Object}
 	 */
@@ -257,6 +264,7 @@ const ChartBase = {
 	/**
 	 * When tiles for true always leave `colors` empty,
 	 * this ensures that` colors.tiles` is more important.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {Object}
 	 */
@@ -272,6 +280,7 @@ const ChartBase = {
 
 	/**
 	 * Constructs `data` billboard config property.
+	 * @memberof ChartBase
 	 * @param {boolean} attachListeners
 	 * @protected
 	 * @return {Object}
@@ -346,6 +355,7 @@ const ChartBase = {
 
 	/**
 	 * Constructs color tiles for passed to billboard.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {Object}
 	 */
@@ -364,6 +374,7 @@ const ChartBase = {
 
 	/**
 	 * Constructs `zoom` billboard config property.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {Object}
 	 */
@@ -396,6 +407,7 @@ const ChartBase = {
 
 	/**
 	 * Converts `data` state into consumable array for billboard.js
+	 * @memberof ChartBase
 	 * @param {Array} data
 	 * @protected
 	 * @return {Array}
@@ -408,6 +420,7 @@ const ChartBase = {
 
 	/**
 	 * Emits event based on arguments array.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_emitChartEvent() {
@@ -416,6 +429,7 @@ const ChartBase = {
 
 	/**
 	 * Gets all columns
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {?Object}
 	 */
@@ -425,6 +439,7 @@ const ChartBase = {
 
 	/**
 	 * Gets column by column id.
+	 * @memberof ChartBase
 	 * @param {string} id column id
 	 * @protected
 	 * @return {?Object}
@@ -437,6 +452,7 @@ const ChartBase = {
 
 	/**
 	 * Retrieves state object, used to allow JSX implementation.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {Object}
 	 */
@@ -446,6 +462,7 @@ const ChartBase = {
 
 	/**
 	 * Get all tiles of the DOM.
+	 * @memberof ChartBase
 	 * @protected
 	 * @return {?Elements}
 	 */
@@ -457,6 +474,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `data` state to chart via `bb.load` method.
+	 * @memberof ChartBase
 	 * @param {Object} event The change event.
 	 * @protected
 	 */
@@ -466,6 +484,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `groups` state to chart via `bb.groups` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleGroupsChanged({newVal}) {
@@ -474,6 +493,7 @@ const ChartBase = {
 
 	/**
 	 * Handles `loading` state.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleLoadingChanged({newVal}) {
@@ -488,6 +508,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `regions` state to chart via `bb.regions` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleRegionsChanged({newVal}) {
@@ -496,6 +517,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `size` state to chart via `bb.resize` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleSizeChanged({newVal}) {
@@ -504,6 +526,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `type` state to chart via `bb.transform` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleTypeChanged({newVal}) {
@@ -512,6 +535,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `x` state to chart via `bb.x` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleXChanged({newVal}) {
@@ -522,6 +546,7 @@ const ChartBase = {
 
 	/**
 	 * Maps xs value to data points.
+	 * @memberof ChartBase
 	 * @param {Object} xs
 	 * @protected
 	 * @return {Object}
@@ -540,6 +565,7 @@ const ChartBase = {
 
 	/**
 	 * Determines which ids should be passed to the unload property.
+	 * @memberof ChartBase
 	 * @param {Array} newData
 	 * @param {Array} prevData
 	 * @return {Array}
@@ -561,6 +587,7 @@ const ChartBase = {
 
 	/**
 	 * Set's the chart's data
+	 * @memberof ChartBase
 	 * @param {?Object} columns The data to use.
 	 * @protected
 	 */
@@ -570,6 +597,7 @@ const ChartBase = {
 
 	/**
 	 * Updates the chart's data.
+	 * @memberof ChartBase
 	 * @param {Object} data The new data to load
 	 * @protected
 	 */
