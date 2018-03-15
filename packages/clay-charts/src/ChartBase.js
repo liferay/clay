@@ -1,7 +1,8 @@
-import {bb, d3} from 'billboard.js';
+import {bb} from 'billboard.js';
 import {Config} from 'metal-state';
 import {isServerSide} from 'metal';
 import types from './utils/types';
+import * as d3 from 'd3';
 
 const PROP_NAME_MAP = {
 	axis: 'axes',
@@ -846,15 +847,7 @@ ChartBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	emptyLabelText: Config.string().setter(value => {
-		return value
-			? {
-				empty: {
-					label: {
-						text: value,
-					},
-				},
-			}
-			: value;
+		return value ? {empty: {label: {text: value}}} : value;
 	}),
 
 	/**
@@ -972,11 +965,7 @@ ChartBase.STATE = {
 	 * @type {?(Array|undefined)}
 	 */
 	keys: Config.array().setter(value => {
-		return value
-			? {
-				value,
-			}
-			: value;
+		return value ? {value} : value;
 	}),
 
 	/**
@@ -1147,11 +1136,7 @@ ChartBase.STATE = {
 	 * @type {?(boolean|undefined)}
 	 */
 	resizeAuto: Config.bool().setter(value => {
-		return value
-			? {
-				auto: value,
-			}
-			: value;
+		return value ? {auto: value} : value;
 	}),
 
 	/**
@@ -1199,13 +1184,7 @@ ChartBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	splineInterpolationType: Config.string().setter(value => {
-		return value
-			? {
-				interpolation: {
-					type: value,
-				},
-			}
-			: value;
+		return value ? {interpolation: {type: value}} : value;
 	}),
 
 	/**
@@ -1231,11 +1210,7 @@ ChartBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	svgClassname: Config.string().setter(value => {
-		return value
-			? {
-				classname: value,
-			}
-			: value;
+		return value ? {classname: value} : value;
 	}),
 
 	/**
@@ -1282,11 +1257,7 @@ ChartBase.STATE = {
 	 * @type {?(number|undefined)}
 	 */
 	transitionDuration: Config.number().setter(value => {
-		return value
-			? {
-				duration: value,
-			}
-			: value;
+		return value ? {duration: value} : value;
 	}),
 
 	/**
