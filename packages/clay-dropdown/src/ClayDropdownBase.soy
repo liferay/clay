@@ -211,14 +211,25 @@
 					{$captionContent}
 
 					<div class="dropdown-section">
-						{call ClayButton.render}
-							{param block: true /}
-							{param events: ['click': $_handleButtonClick ]/}
-							{param label: $button.label /}
-							{param ref: 'dropdownButton' /}
-							{param style: $button.style /}
-							{param type: $button.type ?: 'button' /}
-						{/call}
+						{if isNonnull($button.href)}
+							{call ClayLink.render}
+								{param elementClasses: 'btn-block' /}
+								{param buttonStyle: $button.buttonStyle /}
+								{param events: ['click': $_handleButtonClick] /}
+								{param href: $button.href /}
+								{param label: $button.label /}
+								{param ref: 'dropdownButton' /}
+							{/call}
+						{else}
+							{call ClayButton.render}
+								{param block: true /}
+								{param events: ['click': $_handleButtonClick ]/}
+								{param label: $button.label /}
+								{param ref: 'dropdownButton' /}
+								{param style: $button.style /}
+								{param type: $button.type ?: 'button' /}
+							{/call}
+						{/if}
 					</div>
 				</form>
 			{else}
