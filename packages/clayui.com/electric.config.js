@@ -54,13 +54,15 @@ module.exports = {
 		layout: 'main',
 		project: {
 			docsConfig: {
-				shallow: true
+				inferPrivate: '^_',
+				shallow: true,
 			},
 			refs: ['v2.0.0-rc.9', 'v2.0.0-rc.8'],
 			repo: 'clay',
 			soyAPIEntitiesPath: '../../../partials/ElectricAPIEntities.soy.js',
 			src: [
 				'packages/clay-*!(isomorphic)/src/Clay*.js',
+				'packages/clay-charts/src/*.js'
 			],
 			srcPath: 'packages',
 			user: 'liferay',
