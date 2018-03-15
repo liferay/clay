@@ -1,7 +1,8 @@
-import {bb, d3} from 'billboard.js';
+import {bb} from 'billboard.js';
 import {Config} from 'metal-state';
 import {isServerSide} from 'metal';
 import types from './utils/types';
+import * as d3 from 'd3';
 
 const PROP_NAME_MAP = {
 	axis: 'axes',
@@ -825,7 +826,7 @@ ChartBase.STATE = {
 						text: value,
 					},
 				},
-			}
+			  }
 			: value;
 	}),
 
@@ -947,7 +948,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				value,
-			}
+			  }
 			: value;
 	}),
 
@@ -1122,7 +1123,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				auto: value,
-			}
+			  }
 			: value;
 	}),
 
@@ -1176,7 +1177,7 @@ ChartBase.STATE = {
 				interpolation: {
 					type: value,
 				},
-			}
+			  }
 			: value;
 	}),
 
@@ -1206,7 +1207,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				classname: value,
-			}
+			  }
 			: value;
 	}),
 
@@ -1257,7 +1258,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				duration: value,
-			}
+			  }
 			: value;
 	}),
 
