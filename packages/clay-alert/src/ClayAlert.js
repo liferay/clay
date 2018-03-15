@@ -45,37 +45,37 @@ class ClayAlert extends Component {
 ClayAlert.STATE = {
 	/**
 	 * Flag to indicate if the alert is closeable.
+	 * @default false
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?bool}
-	 * @default false
 	 */
 	closeable: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.
+	 * @default false
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?bool}
-	 * @default false
 	 */
 	destroyOnHide: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
@@ -89,28 +89,28 @@ ClayAlert.STATE = {
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * The style of alert
+	 * @default info
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?string}
-	 * @default info
 	 */
 	style: Config.oneOf(['danger', 'info', 'success', 'warning']).value('info'),
 
 	/**
 	 * The title of alert
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {!string}
-	 * @default undefined
 	 */
 	title: Config.string().required(),
 };

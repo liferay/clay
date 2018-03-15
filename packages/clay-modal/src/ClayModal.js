@@ -191,28 +191,28 @@ class ClayModal extends Component {
 ClayModal.STATE = {
 	/**
 	 * Body of the modal.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|html|undefined)}
-	 * @default undefined
 	 */
 	body: Config.any(),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Buttons of the footer.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	footerButtons: Config.arrayOf(
 		Config.shapeOf({
@@ -227,20 +227,20 @@ ClayModal.STATE = {
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * Adds transitions when show is called.
+	 * @default false
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?bool}
-	 * @default false
 	 * @private
+	 * @type {?bool}
 	 */
 	_isTransitioning: Config.bool()
 		.value(false)
@@ -248,56 +248,56 @@ ClayModal.STATE = {
 
 	/**
 	 * The size of element modal.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	size: Config.oneOf(['full-screen', 'lg', 'sm']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	spritemap: Config.string(),
 
 	/**
 	 * Status messages.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	status: Config.oneOf(['danger', 'info', 'success', 'warning']),
 
 	/**
 	 * Title of the modal.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	title: Config.string(),
 
 	/**
 	 * Url to place an iframe in the body of the modal.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayModal
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	url: Config.string(),
 
 	/**
 	 * Modal visible when show is called.
+	 * @default false
 	 * @instance
 	 * @memberof ClayModal
-	 * @type {?bool}
-	 * @default false
 	 * @private
+	 * @type {?bool}
 	 */
 	visible: Config.bool().value(false),
 };

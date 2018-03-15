@@ -34,118 +34,118 @@ class ClayHorizontalCard extends Component {
 ClayHorizontalCard.STATE = {
 	/**
 	 * List of items to display in the actions menu.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
 
 	/**
 	 * Flag to indicate if the card is disabled or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Group Index the card belongs to.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	groupName: Config.string(),
 
 	/**
 	 * Url to be applied to the title of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	href: Config.string(),
 
 	/**
 	 * Icon of the card.
+	 * @default folder
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?string}
-	 * @default folder
 	 */
 	icon: Config.string().value('folder'),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * Name to be applied to the input element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	inputName: Config.string(),
 
 	/**
 	 * Value to be applied to the input element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	inputValue: Config.string(),
 
 	/**
 	 * Flag to indicate if the card is selectable or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?bool}
-	 * @default false
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the card is selected or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {?bool}
-	 * @default false
 	 */
 	selected: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * Title of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayHorizontalCard
 	 * @type {!string}
-	 * @default undefined
 	 */
 	title: Config.string().required(),
 };

@@ -20,65 +20,65 @@ class ClaySticker extends Component {}
 ClaySticker.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Render ClayIcon in the ClaySticker element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	icon: Config.string(),
 
 	/**
 	 * Id to be applied to the sticker element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * Alternate text of the image.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	imageAlt: Config.string(),
 
 	/**
 	 * Source of the image to be rendered inside the sticker.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	imageSrc: Config.string(),
 
 	/**
 	 * Sets the text or HTML to be rendered inside sticker.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(html|string|undefined)}
-	 * @default undefined
 	 */
 	label: Config.any(),
 
 	/**
 	 * Flag to indicate if the sticker should be positioned on the outside
 	 * corners when position is defined.
+	 * @default false
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?bool}
-	 * @default false
 	 */
 	outside: Config.bool().value(false),
 
@@ -86,10 +86,10 @@ ClaySticker.STATE = {
 	 * Position of the sticker in relation to the contents.
 	 * Available positions are `bottom-left`, `bottom-right`, `top-left`
 	 * and `top-right`.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	position: Config.oneOf([
 		'bottom-left',
@@ -100,38 +100,38 @@ ClaySticker.STATE = {
 
 	/**
 	 * Sticker size. Available sizes are `sm`, `lg`, `xl`.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	size: Config.oneOf(['lg', 'sm', 'xl']),
 
 	/**
 	 * Shape of the sticker. Available shapes are `circle`, `rounded`.
+	 * @default rounded
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?string}
-	 * @default rounded
 	 */
 	shape: Config.oneOf(['circle', 'rounded']).value('rounded'),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	spritemap: Config.string(),
 
 	/**
 	 * Sticker style. Available sizes are: `danger`, `dark`, `info`, `light`,
 	 * `primary`, `secondary`, `success`, `warning`.
+	 * @default primary
 	 * @instance
 	 * @memberof ClaySticker
 	 * @type {?string}
-	 * @default primary
 	 */
 	style: Config.oneOf([
 		'danger',

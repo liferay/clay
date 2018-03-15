@@ -29,73 +29,73 @@ class ClayLabel extends Component {
 ClayLabel.STATE = {
 	/**
 	 * True or false to activate the close button.
+	 * @default false
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?bool}
-	 * @default false
 	 */
 	closeable: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * HREF in label.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	href: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * The label of the badge element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	label: Config.string(),
 
 	/**
 	 * The size of the label element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	size: Config.oneOf(['lg']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	spritemap: Config.string(),
 
 	/**
 	 * Label style color.
+	 * @default secondary
 	 * @instance
 	 * @memberof ClayLabel
 	 * @type {?string}
-	 * @default secondary
 	 */
 	style: Config.oneOf([
 		'danger',

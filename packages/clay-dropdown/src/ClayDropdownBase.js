@@ -62,8 +62,8 @@ class ClayDropdownBase extends Component {
 	/**
 	 * Returns the dropdown index of the element.
 	 * @param {!Node} element
-	 * @return {?array|undefined} the index.
 	 * @private
+	 * @return {?array|undefined} the index.
 	 */
 	_getDropdownItemIndex(element) {
 		return Array.prototype.indexOf.call(
@@ -202,19 +202,19 @@ class ClayDropdownBase extends Component {
 ClayDropdownBase.STATE = {
 	/**
 	 * The current position of the tooltip after being aligned via `Align.align`.
+	 * @default Align.isValidPosition
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {!number}
-	 * @default Align.isValidPosition
 	 */
 	_alignedPosition: Config.validator(Align.isValidPosition).internal(),
 
 	/**
 	 * Element selector used to position dropdown according to trigger position.
+	 * @default .dropdown-toggle
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?string}
-	 * @default .dropdown-toggle
 	 */
 	_alignElementSelector: Config.string()
 		.value('.dropdown-toggle')
@@ -222,10 +222,10 @@ ClayDropdownBase.STATE = {
 
 	/**
 	 * Button configuration to place a button at dropdown footer.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	button: Config.shapeOf({
 		label: Config.string().required(),
@@ -235,100 +235,100 @@ ClayDropdownBase.STATE = {
 
 	/**
 	 * Caption text of the dropdown.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	caption: Config.string(),
 
 	/**
 	 * Content Renderer name of items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	contentRenderer: Config.string(),
 
 	/**
 	 * Flag to indicate if menu is disabled
+	 * @default false
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Flag to indicate if menu is expanded.
+	 * @default false
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?bool}
-	 * @default false
 	 */
 	expanded: Config.bool().value(false),
 
 	/**
 	 * Help text to be shown on top of the open dropdown.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	helpText: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * List of menu items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {!array}
-	 * @default undefined
 	 */
 	items: itemsValidator.required(),
 
 	/**
 	 * Position in which item icons will be placed. Needed if any item has icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
 	 * Label of the trigger button.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {!(html|string)}
-	 * @default undefined
 	 */
 	label: Config.any().required(),
 
 	/**
 	 * Id to be used for portal element.
+	 * @default clay_dropdown_portal
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {!string}
-	 * @default clay_dropdown_portal
 	 */
 	portalElementId: Config.string()
 		.value('clay_dropdown_portal')
@@ -337,28 +337,28 @@ ClayDropdownBase.STATE = {
 	/**
 	 * Flag to indicate if menu has a search field and search through elements
 	 * is possible.
+	 * @default false
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?bool}
-	 * @default false
 	 */
 	searchable: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	spritemap: Config.string(),
 
 	/**
 	 * Style of the trigger button.
+	 * @default unstyled
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?string}
-	 * @default unstyled
 	 */
 	style: Config.oneOf(['link', 'primary', 'secondary', 'unstyled']).value(
 		'unstyled'
@@ -366,19 +366,19 @@ ClayDropdownBase.STATE = {
 
 	/**
 	 * CSS classes to be applied to the trigger element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
 
 	/**
 	 * Size of the trigger button.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	triggerSize: Config.oneOf(['sm']),
 };

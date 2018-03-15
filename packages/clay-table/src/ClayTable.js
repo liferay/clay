@@ -108,38 +108,38 @@ class ClayTable extends Component {
 ClayTable.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * List of items to display in the table.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	items: Config.array(),
 
 	/**
 	 * Schema of the table containing an element per column with label and the
 	 * name of the field with the value.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {!object}
-	 * @default undefined
 	 */
 	schema: Config.shapeOf({
 		fields: Config.arrayOf(
@@ -160,37 +160,37 @@ ClayTable.STATE = {
 
 	/**
 	 * Flag to indicate if the table items are selectable or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?bool}
-	 * @default false
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the rows will show an actions menu or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?bool}
-	 * @default false
 	 */
 	showActionsMenu: Config.bool().value(false),
 
 	/**
 	 * Table responsive sizes. Available `lg`, `md`, `sm` and `xl`.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	size: Config.oneOf(['lg', 'md', 'sm', 'xl']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	spritemap: Config.string(),
 };

@@ -17,11 +17,11 @@ class ClayPortal extends Component {}
  */
 ClayPortal.STATE = {
 	/**
-	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPortal
 	 * @type {!(html|string)}
-	 * @default undefined
+	 * CSS classes to be applied to the element.
 	 */
 	content: Config.required(),
 };

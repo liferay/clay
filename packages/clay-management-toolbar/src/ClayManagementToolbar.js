@@ -29,8 +29,8 @@ class ClayManagementToolbar extends Component {
 	/**
 	 * Returns the dropdown index of the element.
 	 * @param {!Node} element
-	 * @return {?(array|undefined)} the index.
 	 * @private
+	 * @return {?(array|undefined)} the index.
 	 */
 	_getQuickItemIndex(element) {
 		let index = Array.prototype.indexOf.call(
@@ -144,8 +144,8 @@ class ClayManagementToolbar extends Component {
 	/**
 	 * Continues the propagation of the search button clicked event
 	 * @param {!Event} event
-	 * @return {Boolean} If the event has been prevented or not.
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSearchSearchClick(event) {
 		return !this.emit('search', event);
@@ -198,10 +198,10 @@ ClayManagementToolbar.STATE = {
 	/**
 	 * Flag to indicate if search should be shown or not. This is for the
 	 * hide/show interaction in small devices.
+	 * @default false
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?bool}
-	 * @default false
 	 */
 	_showSearchMobile: Config.bool()
 		.internal()
@@ -209,28 +209,28 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * List of items to display in the actions menu on active state.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
 
 	/**
 	 * Url for clear results link.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	clearResultsURL: Config.string(),
 
 	/**
 	 * Name of the content renderer to use template variants.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	contentRenderer: Config.string(),
 
@@ -239,10 +239,10 @@ ClayManagementToolbar.STATE = {
 	 * Set `true` to render a plain button that will emit an event onclick.
 	 * Set `string` to use it as link href to render a link styled button.
 	 * Set `object` to render a dropdown menu with items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(object|string|bool|undefined)}
-	 * @default undefined
 	 */
 	creationMenu: Config.oneOfType([
 		Config.bool().value(false),
@@ -257,166 +257,166 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * List of filter menu items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	filterItems: filterItemsValidator,
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * URL of the search form action
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	searchActionURL: Config.string(),
 
 	/**
 	 * Name of the search form.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	searchFormName: Config.string(),
 
 	/**
 	 * Name of the search input.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	searchInputName: Config.string(),
 
 	/**
 	 * Value of the search input.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	searchValue: Config.string(),
 
 	/**
 	 * Flag to indicate if the managment toolbar will control the selection of
 	 * elements.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(bool|undefined)}
-	 * @default undefined
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * Number of selected items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(number|undefined)}
-	 * @default undefined
 	 */
 	selectedItems: Config.number(),
 
 	/**
 	 * Flag to indicate if advanced search should be shown or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?bool}
-	 * @default false
 	 */
 	showAdvancedSearch: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the `Done` button in filter dropdown should be shown or
 	 * not.
+	 * @default true
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?bool}
-	 * @default true
 	 */
 	showFiltersDoneButton: Config.bool().value(true),
 
 	/**
 	 * Flag to indicate if the Info button should be shown or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?bool}
-	 * @default false
 	 */
 	showInfoButton: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if search should be shown or not.
+	 * @default true
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?bool}
-	 * @default true
 	 */
 	showSearch: Config.bool().value(true),
 
 	/**
 	 * Sorting url.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	sortingURL: Config.string(),
 
 	/**
 	 * Sorting order.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	sortingOrder: Config.oneOf(['asc', 'desc']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * Total number of items. If totalItems is 0 most of the elements in the bar
 	 * will appear disabled.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(number|undefined)}
-	 * @default undefined
 	 */
 	totalItems: Config.number(),
 
 	/**
 	 * List of view items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	viewTypes: Config.arrayOf(
 		Config.shapeOf({

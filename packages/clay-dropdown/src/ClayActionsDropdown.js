@@ -40,10 +40,10 @@ class ClayActionsDropdown extends Component {
 ClayActionsDropdown.STATE = {
 	/**
 	 * Button configuration to place a button at dropdown footer.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	button: Config.shapeOf({
 		label: Config.string().required(),
@@ -53,91 +53,91 @@ ClayActionsDropdown.STATE = {
 
 	/**
 	 * Caption text of the dropdown.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	caption: Config.string(),
 
 	/**
 	 * Flag to indicate if menu is disabled
+	 * @default false
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Flag to indicate if menu is expanded.
+	 * @default false
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?bool}
-	 * @default false
 	 */
 	expanded: Config.bool().value(false),
 
 	/**
 	 * Help text to be shown on top of the open dropdown.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	helpText: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * List of menu items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {!Array}
-	 * @default undefined
 	 */
 	items: itemsValidator.required(),
 
 	/**
 	 * Position in which item icon will be placed. Needed if any item has icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * CSS classes to be applied to the trigger element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
 };

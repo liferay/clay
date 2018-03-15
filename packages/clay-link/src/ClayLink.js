@@ -20,155 +20,155 @@ class ClayLink extends ClayComponent {}
 ClayLink.STATE = {
 	/**
 	 * Aria label attribute for the anchor element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	ariaLabel: Config.string(),
 
 	/**
 	 * Aria Expanded attribute for the anchor element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(bool|undefined)}
-	 * @default undefined
 	 */
 	ariaExpanded: Config.bool(),
 
 	/**
 	 * The css class to act as a button. If this is defined `style` param is
 	 * ignored.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	buttonStyle: Config.oneOf(['link', 'primary', 'secondary']),
 
 	/**
 	 * Data to add to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?object}
-	 * @default undefined
 	 */
 	data: Config.object(),
 
 	/**
 	 * Sets the download attribute on the anchor tag.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	download: Config.string(),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Sets the HTML attribute href on the anchor tag.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	href: Config.string(),
 
 	/**
 	 * Icon to be rendered in the link.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	icon: Config.string(),
 
 	/**
 	 * Render position of the ClayIcon in the ClayLink element.
+	 * @default left
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?string}
-	 * @default left
 	 */
 	iconAlignment: Config.oneOf(['left', 'right']).value('left'),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * Alternative text of the image to be rendered inside the link.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	imageAlt: Config.string(),
 
 	/**
 	 * Source of the image to be rendered inside the link.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	imageSrc: Config.string(),
 
 	/**
 	 * Sets the text or HTML to be rendered inside the anchor tag.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(html|string|undefined)}
-	 * @default undefined
 	 */
 	label: Config.any(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?string|undefined}
-	 * @default undefined
 	 */
 	spritemap: Config.string(),
 
 	/**
 	 * The css class that colors the button.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	style: Config.oneOf(['secondary']),
 
 	/**
 	 * Sets the HTML attribute target on the anchor tag.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	target: Config.oneOf(['_blank', '_self']),
 
 	/**
 	 * Sets the HTML attribute title on the anchor tag.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	title: Config.string(),
 };

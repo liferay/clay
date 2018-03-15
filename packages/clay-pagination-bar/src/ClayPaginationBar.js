@@ -21,37 +21,37 @@ class ClayPaginationBar extends Component {}
 ClayPaginationBar.STATE = {
 	/**
 	 * Href to create each pagination page complete href.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	baseHref: Config.string(),
 
 	/**
 	 * Current pagination page number.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {!number}
-	 * @default undefined
 	 */
 	currentPage: Config.number().required(),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * List of available number of entries.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {!array}
-	 * @default undefined
 	 */
 	entries: Config.arrayOf(
 		Config.shapeOf({
@@ -63,37 +63,37 @@ ClayPaginationBar.STATE = {
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * Entries index that points to selected entry.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {?(number|undefined)}
-	 * @default undefined
 	 */
 	selectedEntry: Config.number().required(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * Total number of entries.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPaginationBar
 	 * @type {!number}
-	 * @default undefined
 	 */
 	totalEntries: Config.number().required(),
 };

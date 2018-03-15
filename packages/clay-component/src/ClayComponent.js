@@ -66,10 +66,10 @@ class ClayComponent extends Component {
 ClayComponent.STATE = {
 	/**
 	 * Data to add to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayComponent
 	 * @type {?object}
-	 * @default undefined
 	 */
 	data: Config.object(),
 };

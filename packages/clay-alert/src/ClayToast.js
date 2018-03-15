@@ -45,42 +45,43 @@ class ClayToast extends Component {
 ClayToast.STATE = {
 	/**
 	 * Flag to indicate if alert should be automatically closed.
+	 * @default false
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {?bool}
-	 * @default false
 	 */
 	autoClose: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.
+	 * @default false
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {?bool}
-	 * @default false
 	 */
 	destroyOnHide: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * The message of alert
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {!(html|string)}
@@ -89,28 +90,28 @@ ClayToast.STATE = {
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * The style of alert
+	 * @default info
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {?string}
-	 * @default info
 	 */
 	style: Config.oneOf(['danger', 'info', 'success', 'warning']).value('info'),
 
 	/**
 	 * The title of alert
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {!string}
-	 * @default undefined
 	 */
 	title: Config.string().required(),
 };

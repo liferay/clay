@@ -35,118 +35,118 @@ class ClayCardBase extends Component {
 ClayCardBase.STATE = {
 	/**
 	 * List of items to display in the actions menu.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	actionItems: actionItemsValidator,
 
 	/**
 	 * Content Renderer name of card.
+	 * @default image
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?array}
-	 * @default image
 	 */
 	contentRenderer: Config.oneOf(['image', 'file', 'user']).value('image'),
 
 	/**
 	 * Flag to indicate if the card is disabled or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Group Index the card belongs to.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	groupName: Config.string(),
 
 	/**
 	 * Url to be applied to the title of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	href: Config.string(),
 
 	/**
 	 * Icon to be rendered in the visual area of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	icon: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * Alternate text of the image.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	imageAlt: Config.string(),
 
 	/**
 	 * Source of the image to be rendered in the visual area of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	imageSrc: Config.string(),
 
 	/**
 	 * Name to be applied to the input element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	inputName: Config.string(),
 
 	/**
 	 * Value to be applied to the input element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	inputValue: Config.string(),
 
 	/**
 	 * Labels of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	labels: Config.arrayOf(
 		Config.oneOfType([

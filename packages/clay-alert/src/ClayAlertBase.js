@@ -138,10 +138,10 @@ class ClayAlertBase extends Component {
 ClayAlertBase.STATE = {
 	/**
 	 * Flag to indicate the visibility of the alert
+	 * @default true
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {?bool}
-	 * @default true
 	 */
 	_visible: Config.bool()
 		.internal()
@@ -149,51 +149,52 @@ ClayAlertBase.STATE = {
 
 	/**
 	 * Flag to indicate if alert should be automatically closed.
+	 * @default false
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {?bool}
-	 * @default false
 	 */
 	autoClose: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the alert is closeable.
+	 * @default false
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {?bool}
-	 * @default false
 	 */
 	closeable: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.
+	 * @default false
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {?bool}
-	 * @default false
 	 */
 	destroyOnHide: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {(?string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {(?string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * The message of alert
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {!(html|string)}
@@ -202,37 +203,37 @@ ClayAlertBase.STATE = {
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * The style of alert
+	 * @default info
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {?string}
-	 * @default info
 	 */
 	style: Config.oneOf(['danger', 'info', 'success', 'warning']).value('info'),
 
 	/**
 	 * The title of alert
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {!string}
-	 * @default undefined
 	 */
 	title: Config.string().required(),
 
 	/**
 	 * The type of alert
+	 * @default embedded
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {?string}
-	 * @default embedded
 	 */
 	type: Config.oneOf(['embedded', 'stripe', 'toast']).value('embedded'),
 };

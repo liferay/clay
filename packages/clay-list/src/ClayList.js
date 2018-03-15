@@ -36,46 +36,46 @@ class ClayList extends Component {
 ClayList.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * List of items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
 	 * @type {?(array|undefined)}
-	 * @default undefined
 	 */
 	items: Config.array(),
 
 	/**
 	 * Flag to indicate if the list group items are selectable.
+	 * @default false
 	 * @instance
 	 * @memberof ClayList
 	 * @type {?(bool|undefined)}
-	 * @default false
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * Schema mapping list item fields with item data properties.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
 	 * @type {!object}
-	 * @default undefined
 	 */
 	schema: Config.shapeOf({
 		fields: Config.arrayOf(
@@ -96,10 +96,10 @@ ClayList.STATE = {
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	spritemap: Config.string(),
 };

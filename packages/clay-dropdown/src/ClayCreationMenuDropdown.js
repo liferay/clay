@@ -40,10 +40,10 @@ class ClayCreationMenuDropdown extends Component {
 ClayCreationMenuDropdown.STATE = {
 	/**
 	 * Button configuration to place a button at dropdown footer.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	button: Config.shapeOf({
 		label: Config.string().required(),
@@ -53,118 +53,118 @@ ClayCreationMenuDropdown.STATE = {
 
 	/**
 	 * Flag to indicate if menu is disabled
+	 * @default false
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Flag to indicate if menu is expanded.
+	 * @default false
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?bool}
-	 * @default false
 	 */
 	expanded: Config.bool().value(false),
 
 	/**
 	 * Help text to be shown on top of the open dropdown.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	helpText: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	id: Config.string(),
 
 	/**
 	 * Position in which item icon will be placed. Needed if any item has icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
 	 * Maximum number of primary items to show.
+	 * @default 8
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(number|undefined)}
-	 * @default 8
 	 */
 	maxPrimaryItems: Config.number().value(8),
 
 	/**
 	 * Maximum number of secondary items to show.
+	 * @default 7
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(number|undefined)}
-	 * @default 7
 	 */
 	maxSecondaryItems: Config.number().value(7),
 
 	/**
 	 * Maximum number of total items to show.
+	 * @default 15
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(number|undefined)}
-	 * @default 15
 	 */
 	maxTotalItems: Config.number().value(15),
 
 	/**
 	 * List of primary menu items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {!Array}
-	 * @default undefined
 	 */
 	primaryItems: itemsValidator.required(),
 
 	/**
 	 * List of secondary menu items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(Array|undefined)}
-	 * @default undefined
 	 */
 	secondaryItems: itemsValidator,
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * CSS classes to be applied to the trigger element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
-	 * @default undefined
 	 */
 	triggerClasses: Config.string(),
 };
