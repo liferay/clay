@@ -5,6 +5,7 @@ import {core, isServerSide} from 'metal';
 
 /**
  * Clay Component.
+ * @extends Component
  */
 class ClayComponent extends Component {
 	/**
@@ -65,10 +66,10 @@ class ClayComponent extends Component {
 ClayComponent.STATE = {
 	/**
 	 * Data to add to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayComponent
 	 * @type {?object}
-	 * @default undefined
 	 */
 	data: Config.object(),
 };

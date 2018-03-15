@@ -8,6 +8,7 @@ const KEY_CODE_SPACE = 32;
 
 /**
  * Collapse Metal Clay component.
+ * @extends State
  */
 class ClayCollapse extends State {
 	/**

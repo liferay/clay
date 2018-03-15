@@ -21,9 +21,9 @@ class DataComponent extends Component {
 
 	/**
 	 * Check's the data or columns option and resolves this `data_` accordingly.
-	 * @return {Promise}
-	 * @param {?Array|Function|String} data the data to resolve.
+	 * @param {?(Array|Function|String)} data the data to resolve.
 	 * @protected
+	 * @return {Promise}
 	 */
 	_resolveData(data) {
 		this._setupPolling();
@@ -63,10 +63,10 @@ class DataComponent extends Component {
 DataComponent.STATE = {
 	/**
 	 * Data that will be rendered to the chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Array|undefined}
-	 * @default undefined
+	 * @type {?(Array|undefined)}
 	 */
 	data: Config.oneOfType([
 		Config.arrayOf(
@@ -90,10 +90,10 @@ DataComponent.STATE = {
 
 	/**
 	 * Set an interval (in ms) to fetch the data.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
 	 * @type {?Number}
-	 * @default undefined
 	 */
 	pollingInterval: Config.number(),
 };

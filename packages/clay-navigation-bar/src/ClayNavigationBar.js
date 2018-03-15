@@ -8,6 +8,7 @@ import templates from './ClayNavigationBar.soy.js';
 
 /**
  * Metal Clay Navbar component.
+ * @extends Component
  */
 class ClayNavigationBar extends Component {
 	/**
@@ -77,11 +78,11 @@ class ClayNavigationBar extends Component {
 ClayNavigationBar.STATE = {
 	/**
 	 * The toggle animation.
+	 * @default false
 	 * @instance
 	 * @memberof ClayNavigationBar
-	 * @type {?boolean}
-	 * @default false
 	 * @private
+	 * @type {?boolean}
 	 */
 	_isTransitioning: Config.bool()
 		.value(false)
@@ -89,11 +90,11 @@ ClayNavigationBar.STATE = {
 
 	/**
 	 * Navmenus visible in mobile when click in the button.
+	 * @default false
 	 * @instance
 	 * @memberof ClayNavigationBar
-	 * @type {?bool}
-	 * @default false
 	 * @private
+	 * @type {?bool}
 	 */
 	_visible: Config.bool()
 		.value(false)
@@ -101,37 +102,37 @@ ClayNavigationBar.STATE = {
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayNavigationBar
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayNavigationBar
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * The display style attribute.
+	 * @default false
 	 * @instance
 	 * @memberof ClayNavigationBar
 	 * @type {?boolean}
-	 * @default false
 	 */
 	inverted: Config.bool().value(false),
 
 	/**
 	 * List of items to show in the Navbar.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayNavigationBar
 	 * @type {!Array}
-	 * @default undefined
 	 */
 	items: Config.arrayOf(
 		Config.shapeOf({
@@ -143,10 +144,10 @@ ClayNavigationBar.STATE = {
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayNavigationBar
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 };

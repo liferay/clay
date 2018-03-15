@@ -11,10 +11,10 @@ class PieChart extends Chart {}
 PieChart.STATE = {
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default pie
 	 * @instance
 	 * @memberof PieChart
-	 * @type {?string|undefined}
-	 * @default pie
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.percentage).value('pie'),
 };

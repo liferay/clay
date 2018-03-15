@@ -15,6 +15,7 @@ import templates from './ClayDatasetDisplay.soy.js';
 
 /**
  * Metal ClayDatasetDisplay component.
+ * @extends Component
  */
 class ClayDatasetDisplay extends Component {
 	/**
@@ -63,8 +64,8 @@ class ClayDatasetDisplay extends Component {
 
 	/**
 	 * Returns the selected items.
-	 * @return {?array|undefined} the items.
 	 * @private
+	 * @return {?array|undefined} the items.
 	 */
 	getSelectedItems() {
 		return this._selectedItems;
@@ -272,37 +273,37 @@ class ClayDatasetDisplay extends Component {
 ClayDatasetDisplay.STATE = {
 	/**
 	 * The selected items of the item list. For internatl purposes.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	_selectedItems: Config.array().internal(),
 
 	/**
 	 * The total number of items in the item list. For internatl purposes.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?int|undefined}
-	 * @default undefined
+	 * @type {?(number|undefined)}
 	 */
 	_totalItems: Config.number().internal(),
 
 	/**
 	 * List of items to display in the management toolbar actions menu.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	actionItems: actionItemsValidator,
 
 	/**
 	 * Configuration of the management bar plus button.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?object|string|bool|undefined}
-	 * @default undefined
+	 * @type {?(object|string|bool|undefined)}
 	 */
 	creationMenu: Config.oneOfType([
 		Config.bool().value(false),
@@ -317,128 +318,128 @@ ClayDatasetDisplay.STATE = {
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * List of filter menu items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	filterItems: filterItemsValidator,
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * Items of the dataset.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	items: Config.array(),
 
 	/**
 	 * URL of the search form action
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	searchActionURL: Config.string(),
 
 	/**
 	 * Name of the search form.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	searchFormName: Config.string(),
 
 	/**
 	 * Name of the search input.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	searchInputName: Config.string(),
 
 	/**
 	 * Flag to indicate if the dataset is selectable.
+	 * @default false
 	 * @instance
 	 * @memberof ClayDatasetDisplay
 	 * @type {?bool}
-	 * @default false
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * Position in the views list of the selected view.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?number|undefined}
-	 * @default undefined
+	 * @type {?(number|undefined)}
 	 */
 	selectedView: Config.number(),
 
 	/**
 	 * Flag to indicate if the `Done` button in management toolbar filter dropdown
 	 * should be shown or not.
+	 * @default true
 	 * @instance
 	 * @memberof ClayDatasetDisplay
 	 * @type {?bool}
-	 * @default true
 	 */
 	showFiltersDoneButton: Config.bool().value(true),
 
 	/**
 	 * Sorting order.
+	 * @default asc
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
-	 * @default asc
+	 * @type {?(string|undefined)}
 	 */
 	sortingOrder: Config.oneOf(['asc', 'desc']).value('asc'),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * Header of the list.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	title: Config.string(),
 
 	/**
 	 * List of view items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	views: Config.arrayOf(
 		Config.shapeOf({

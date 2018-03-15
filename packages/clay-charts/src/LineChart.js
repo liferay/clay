@@ -11,10 +11,10 @@ class LineChart extends Chart {}
 LineChart.STATE = {
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default line
 	 * @instance
 	 * @memberof LineChart
-	 * @type {?string|undefined}
-	 * @default line
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.point).value('line'),
 };

@@ -8,6 +8,7 @@ import templates from './ClayStripe.soy.js';
 
 /**
  * Metal Clay Stripe component.
+ * @extends Component
  */
 class ClayStripe extends Component {
 	/**
@@ -44,42 +45,43 @@ class ClayStripe extends Component {
 ClayStripe.STATE = {
 	/**
 	 * Flag to indicate if alert should be automatically closed.
+	 * @default false
 	 * @instance
 	 * @memberof ClayStripe
 	 * @type {?bool}
-	 * @default false
 	 */
 	autoClose: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.
+	 * @default false
 	 * @instance
 	 * @memberof ClayStripe
 	 * @type {?bool}
-	 * @default false
 	 */
 	destroyOnHide: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayStripe
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayStripe
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * The message of alert
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayStripe
 	 * @type {!html|string}
@@ -88,28 +90,28 @@ ClayStripe.STATE = {
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayStripe
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * The style of alert
+	 * @default info
 	 * @instance
 	 * @memberof ClayStripe
 	 * @type {?string}
-	 * @default info
 	 */
 	style: Config.oneOf(['danger', 'info', 'success', 'warning']).value('info'),
 
 	/**
 	 * The title of alert
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayStripe
 	 * @type {!string}
-	 * @default undefined
 	 */
 	title: Config.string().required(),
 };

@@ -15,6 +15,7 @@ import templates from './ClayList.soy.js';
 
 /**
  * Metal ClayList component.
+ * @extends Component
  */
 class ClayList extends Component {
 	/**
@@ -35,46 +36,46 @@ class ClayList extends Component {
 ClayList.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * List of items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	items: Config.array(),
 
 	/**
 	 * Flag to indicate if the list group items are selectable.
+	 * @default false
 	 * @instance
 	 * @memberof ClayList
-	 * @type {?bool|undefined}
-	 * @default false
+	 * @type {?(bool|undefined)}
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * Schema mapping list item fields with item data properties.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
 	 * @type {!object}
-	 * @default undefined
 	 */
 	schema: Config.shapeOf({
 		fields: Config.arrayOf(
@@ -95,10 +96,10 @@ ClayList.STATE = {
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayList
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	spritemap: Config.string(),
 };

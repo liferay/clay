@@ -7,6 +7,7 @@ import templates from './ClayRadio.soy.js';
 
 /**
  * Implementation of the Metal Clay Radio.
+ * @extends Component
  */
 class ClayRadio extends Component {}
 
@@ -18,91 +19,91 @@ class ClayRadio extends Component {}
 ClayRadio.STATE = {
 	/**
 	 * Flag to indicate if checkbox is checked.
+	 * @default false
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default false
 	 */
 	checked: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if checkbox is disabled.
+	 * @default false
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * Flag to indicate if input should be wrapped to be inline or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default false
 	 */
 	inline: Config.bool().value(false),
 
 	/**
 	 * Label of the input. Required for accesibility.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	label: Config.string(),
 
 	/**
 	 * Custom content of the radio label. Use it to use your custom html.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?html|undefined}
-	 * @default undefined
+	 * @type {?(html|undefined)}
 	 */
 	labelContent: Config.any(),
 
 	/**
 	 * Name to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	name: Config.string(),
 
 	/**
 	 * Flag to indicate if label should be hide.
+	 * @default true
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default true
 	 */
 	showLabel: Config.bool().value(true),
 
 	/**
 	 * Value to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayRadio
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	value: Config.string(),
 };

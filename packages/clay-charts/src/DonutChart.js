@@ -11,10 +11,10 @@ class DonutChart extends Chart {}
 DonutChart.STATE = {
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default donut
 	 * @instance
 	 * @memberof DonutChart
-	 * @type {?string|undefined}
-	 * @default donut
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.percentage).value('donut'),
 };
