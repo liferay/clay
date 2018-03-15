@@ -826,7 +826,7 @@ ChartBase.STATE = {
 						text: value,
 					},
 				},
-			  }
+			}
 			: value;
 	}),
 
@@ -948,7 +948,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				value,
-			  }
+			}
 			: value;
 	}),
 
@@ -1123,7 +1123,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				auto: value,
-			  }
+			}
 			: value;
 	}),
 
@@ -1177,7 +1177,7 @@ ChartBase.STATE = {
 				interpolation: {
 					type: value,
 				},
-			  }
+			}
 			: value;
 	}),
 
@@ -1207,7 +1207,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				classname: value,
-			  }
+			}
 			: value;
 	}),
 
@@ -1258,7 +1258,7 @@ ChartBase.STATE = {
 		return value
 			? {
 				duration: value,
-			  }
+			}
 			: value;
 	}),
 
