@@ -11,10 +11,10 @@ class AreaStepChart extends Chart {}
 AreaStepChart.STATE = {
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default area
 	 * @instance
 	 * @memberof AreaStepChart
-	 * @type {?string|undefined}
-	 * @default area
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.area).value('area-step'),
 };

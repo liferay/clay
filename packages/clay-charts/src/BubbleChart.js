@@ -10,19 +10,19 @@ class BubbleChart extends Chart {}
 BubbleChart.STATE = {
 	/**
 	 * Labels visibility
+	 * @default true
 	 * @instance
 	 * @memberof BubbleChart
 	 * @type {Boolean}
-	 * @default true
 	 */
 	labels: Config.bool().value(true),
 
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default donut
 	 * @instance
 	 * @memberof DonutChart
-	 * @type {?string|undefined}
-	 * @default donut
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.string().value('bubble'),
 };

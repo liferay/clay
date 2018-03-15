@@ -81,8 +81,8 @@ class Geomap extends DataComponent {
 	/**
 	 * Fill function
 	 * @param {Object} d
-	 * @return {Number}
 	 * @protected
+	 * @return {Number}
 	 */
 	_fillFn(d) {
 		const value = d && d.properties ? d.properties[this.color.value] : 0;
@@ -201,24 +201,24 @@ Geomap.STATE = {
 	 * Minimum value for domain
 	 * @instance
 	 * @memberof Geomap
-	 * @type {Number}
+	 * @type {!Number}
 	 */
 	_domainMin: Config.number().internal(),
 
 	/**
 	 * Maximum value for domain
 	 * @instance
-	 * @memberOf Geomap
-	 * @type {Number}
+	 * @memberof Geomap
+	 * @type {!Number}
 	 */
 	_domainMax: Config.number().internal(),
 
 	/**
 	 * Height of the map
+	 * @default 480
 	 * @instance
 	 * @memberof Geomap
 	 * @type {?Number}
-	 * @default 480
 	 */
 	_height: Config.oneOfType([Config.string(), Config.number()])
 		.value('100%')
@@ -226,10 +226,10 @@ Geomap.STATE = {
 
 	/**
 	 * Width of the map
+	 * @default 640
 	 * @instance
 	 * @memberof Geomap
 	 * @type {?Number}
-	 * @default 640
 	 */
 	_width: Config.oneOfType([Config.string(), Config.number()])
 		.value('100%')
@@ -237,10 +237,10 @@ Geomap.STATE = {
 
 	/**
 	 * Color configuration.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
 	 * @type {?Object}
-	 * @default undefined
 	 */
 	color: Config.shapeOf({
 		range: Config.shapeOf({
