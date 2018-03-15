@@ -19,6 +19,7 @@
   {@param? maxTotalItems: int}
 	{@param? secondaryItems: list<?>}
 	{@param? triggerClasses: string}
+  {@param? viewMoreURL: string}
 
   {let $secondaryItemsFirstGroup: $secondaryItems and $secondaryItems[0] ? $secondaryItems[0] : null /}
   {let $secondaryItemsSecondGroup: $secondaryItems and $secondaryItems[1] ? $secondaryItems[1] : null /}
@@ -70,10 +71,15 @@
     $primaryDropdownItems
   ] /}
 
-  {let $showMoreButton: $showingItems < $totalItems ? [
-    'label': 'More',
-    'style': 'secondary'
-  ] : null /}
+  {let $showMoreButton: $showingItems < $totalItems ? 
+    isNonnull($viewMoreURL) ? [
+      'buttonStyle': 'secondary',
+      'href': $viewMoreURL,
+      'label': 'More',
+    ] : [
+      'label': 'More',
+      'style': 'secondary'
+    ] : null /}
 
   {let $caption: $showMoreButton ? 'Showing ' + $showingItems + ' of ' + $totalItems + ' elements' :  null/}
 

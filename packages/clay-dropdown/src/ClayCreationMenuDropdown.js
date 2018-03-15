@@ -167,6 +167,15 @@ ClayCreationMenuDropdown.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerClasses: Config.string(),
+
+	/**
+	 * The url for the view more button in case is rendered.
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?(string|undefined)}
+	 * @default undefined
+	 */
+	viewMoreURL: Config.string(),
 };
 
 defineWebComponent('clay-creation-menu-dropdown', ClayCreationMenuDropdown);
