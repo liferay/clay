@@ -819,15 +819,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	emptyLabelText: Config.string().setter(value => {
-		return value
-			? {
-				empty: {
-					label: {
-						text: value,
-					},
-				},
-			}
-			: value;
+		return value ? {empty: {label: {text: value}}} : value;
 	}),
 
 	/**
@@ -945,11 +937,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	keys: Config.array().setter(value => {
-		return value
-			? {
-				value,
-			}
-			: value;
+		return value ? {value} : value;
 	}),
 
 	/**
@@ -1120,11 +1108,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	resizeAuto: Config.bool().setter(value => {
-		return value
-			? {
-				auto: value,
-			}
-			: value;
+		return value ? {auto: value} : value;
 	}),
 
 	/**
@@ -1172,13 +1156,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	splineInterpolationType: Config.string().setter(value => {
-		return value
-			? {
-				interpolation: {
-					type: value,
-				},
-			}
-			: value;
+		return value ? {interpolation: {type: value}} : value;
 	}),
 
 	/**
@@ -1204,11 +1182,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	svgClassname: Config.string().setter(value => {
-		return value
-			? {
-				classname: value,
-			}
-			: value;
+		return value ? {classname: value} : value;
 	}),
 
 	/**
@@ -1255,11 +1229,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	transitionDuration: Config.number().setter(value => {
-		return value
-			? {
-				duration: value,
-			}
-			: value;
+		return value ? {duration: value} : value;
 	}),
 
 	/**
