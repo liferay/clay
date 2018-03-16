@@ -21,7 +21,7 @@ BubbleChart.STATE = {
 	 * The variety of chart that will be rendered.
 	 * @default donut
 	 * @instance
-	 * @memberof DonutChart
+	 * @memberof BubbleChart
 	 * @type {?(string|undefined)}
 	 */
 	type: Config.string().value('bubble'),
