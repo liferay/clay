@@ -228,6 +228,7 @@ ClayDropdownBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	button: Config.shapeOf({
+		href: Config.string(),
 		label: Config.string().required(),
 		style: Config.oneOf(['primary', 'secondary']).value('primary'),
 		type: Config.oneOf(['button', 'reset', 'submit']).value('button'),

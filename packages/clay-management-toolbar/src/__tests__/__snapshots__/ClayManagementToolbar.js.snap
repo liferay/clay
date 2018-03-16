@@ -838,14 +838,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
     <li>
       <a class=" dropdown-item" href="#2">Add Content 2</a>
     </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li class="dropdown-subheader" role="presentation">Favorites</li>
-    <li>
-      <a class=" dropdown-item" href="#fav1">Favorite 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#fav2">Favorite 2</a>
-    </li>
+    <li class="dropdown-subheader" role="presentation">Favorite 1</li>
   </ul>
 </div>
 `;
@@ -904,45 +897,15 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
   </nav>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <form>
-    <div class="inline-scroller">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#1">Add Content 1</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#2">Add Content 2</a>
-        </li>
-        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li class="dropdown-subheader" role="presentation">Favorites</li>
-        <li>
-          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
-        </li>
-      </ul>
-    </div>
-    <div class="dropdown-caption">Showing 9 of 10 elements</div>
-    <div class="dropdown-section">
-      <button class="btn btn-block btn-secondary" type="button">More</button>
-    </div>
-  </form>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#1">Add Content 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#2">Add Content 2</a>
+    </li>
+    <li class="dropdown-subheader" role="presentation">Favorite 1</li>
+  </ul>
 </div>
 `;
 
