@@ -161,7 +161,7 @@
 {/template}
 
 /**
- *
+ */
 {template .entityType}
 	{@param entityData: ?}
 
@@ -171,7 +171,7 @@
 		{else}
 			{foreach $tag in $entityData.tags}
 				{if $tag.title == 'type'}
-					{if not $tag.type.type == 'UnionType'}
+					{if $tag.type.type != 'UnionType'}
 						{if $tag.type.type == 'NonNullableType'}!{/if}
 
 						{let $syntaxType kind="text"}
@@ -212,7 +212,7 @@
 	{/let}
 
 	{if $entitySyntax}
-		<span>{$entitySyntax}</span>
+		<span>Type: {$entitySyntax}</span>
 	{/if}
 {/template}
 
