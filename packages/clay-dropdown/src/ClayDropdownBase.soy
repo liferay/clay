@@ -213,8 +213,8 @@
 					<div class="dropdown-section">
 						{if isNonnull($button.href)}
 							{call ClayLink.render}
-								{param elementClasses: 'btn-block' /}
 								{param buttonStyle: $button.buttonStyle /}
+								{param elementClasses: 'btn-block' /}
 								{param events: ['click': $_handleButtonClick] /}
 								{param href: $button.href /}
 								{param label: $button.label /}
