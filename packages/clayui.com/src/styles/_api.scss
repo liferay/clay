@@ -135,6 +135,12 @@
 .btn-version {
 	background-color: #f3f3f3;
 	color: #6B6C7E;
+	margin-right: 21px;
+	margin-top: 2px;
+
+	~.dropdown-menu {
+	    min-width: 140px;
+	}
 }
 
 .docs-home-top {
