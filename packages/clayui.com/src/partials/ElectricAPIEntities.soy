@@ -117,6 +117,10 @@
 	<div class="entity-header">
 		{call .entityName data="all" /}
 
+		{call .entityType}
+			{param entityData: $entityData /}
+		{/call}
+
 		{let $loc: $entityData.context.loc /}
 
 		{let $filePath: $entityData.context.file + '#L' + $loc.start.line + ($loc.end.line != $loc.start.line ? '-L' + $loc.end.line : '') /}
@@ -151,11 +155,65 @@
 						{/call}
 					{/if}
 				)
-			{elseif $entityData.type}
-				<span class="entity-name-type">:{$entityData.type}</span>
 			{/if}
 		</a>
 	</h1>
+{/template}
+
+/**
+ *
+{template .entityType}
+	{@param entityData: ?}
+
+	{let $entitySyntax kind="text"}
+		{if $entityData.type}
+			{$entityData.type}
+		{else}
+			{foreach $tag in $entityData.tags}
+				{if $tag.title == 'type'}
+					{if not $tag.type.type == 'UnionType'}
+						{if $tag.type.type == 'NonNullableType'}!{/if}
+
+						{let $syntaxType kind="text"}
+							{foreach $elem in $tag.type.expression.elements}
+								{switch $elem.type}
+									{case 'UndefinedLiteral'}
+										undefined
+									{case 'AllLiteral'}
+										any
+									{case 'NullLiteral'}
+										null
+									{case 'VoidLiteral'}
+										void
+									{case 'NameExpression'}
+										{$elem.name}
+								{/switch}
+
+								{if not isLast($elem)}
+									{'|'}
+								{/if}
+							{/foreach}
+						{/let}
+
+						{switch $tag.type.expression.type}
+							{case 'UnionType'}
+								({$syntaxType})
+							{case 'ArrayType'}
+								[{$syntaxType}]
+							{case 'RecordType'}
+								{'{'}{$syntaxType}{'}'}
+						{/switch}
+
+						{if $tag.type.type == 'NullableType'}?{/if}
+					{/if}
+				{/if}
+			{/foreach}
+		{/if}
+	{/let}
+
+	{if $entitySyntax}
+		<span>{$entitySyntax}</span>
+	{/if}
 {/template}
 
 /**
