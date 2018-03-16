@@ -21,8 +21,8 @@
 	{@param? triggerClasses: string}
   {@param? viewMoreURL: string}
 
-  {let $secondaryItemsFirstGroup: $secondaryItems and $secondaryItems[0] ? $secondaryItems[0] : null /}
-  {let $secondaryItemsSecondGroup: $secondaryItems and $secondaryItems[1] ? $secondaryItems[1] : null /}
+  {let $secondaryItemsFirstGroup: isNonnull($secondaryItems) ? isNonnull($secondaryItems[0]) ? $secondaryItems[0] : null : null /}
+  {let $secondaryItemsSecondGroup: isNonnull($secondaryItems) ? isNonnull($secondaryItems[1]) ? $secondaryItems[1] : null : null /}
 
   {let $totalPrimaryItems: length($primaryItems) /}
   {let $totalSecondaryItemsFirstGroup: $secondaryItemsFirstGroup and $secondaryItemsFirstGroup.items ? length($secondaryItemsFirstGroup.items) : 0 /}
