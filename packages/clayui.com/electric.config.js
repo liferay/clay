@@ -57,7 +57,7 @@ module.exports = {
 				inferPrivate: '^_',
 				shallow: true,
 			},
-			refs: ['v2.0.0-rc.9', 'v2.0.0-rc.8'],
+			refs: ['v2.0.0-rc.10', 'v2.0.0-rc.9'],
 			repo: 'clay',
 			soyAPIEntitiesPath: '../../../partials/ElectricAPIEntities.soy.js',
 			src: [
