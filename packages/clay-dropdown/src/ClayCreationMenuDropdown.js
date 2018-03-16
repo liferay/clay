@@ -106,7 +106,8 @@ ClayCreationMenuDropdown.STATE = {
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
-	 * Maximum number of primary items to show.
+	 * Maximum number of primary items to show. Only take in account when
+	 * secondaryItems are passed, otherwise maxTotalItems is used.
 	 * @default 8
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown
