@@ -10,6 +10,7 @@ import templates from './ClayDropdown.soy.js';
 
 /**
  * Implementation for Metal Clay Dropdown.
+ * @extends Component
  */
 class ClayDropdown extends Component {
 	/**
@@ -39,10 +40,10 @@ class ClayDropdown extends Component {
 ClayDropdown.STATE = {
 	/**
 	 * Button configuration to place a button at dropdown footer.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	button: Config.shapeOf({
 		label: Config.string().required(),
@@ -52,119 +53,119 @@ ClayDropdown.STATE = {
 
 	/**
 	 * Flag to indicate if menu is disabled
+	 * @default false
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Flag to indicate if menu is expanded.
+	 * @default false
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {?bool}
-	 * @default false
 	 */
 	expanded: Config.bool().value(false),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * Icon to use in the trigger.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	icon: Config.string(),
 
 	/**
 	 * List of menu items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {!Array}
-	 * @default undefined
 	 */
 	items: itemsValidator.required(),
 
 	/**
 	 * Position in which item icon will be placed. Needed if any item has icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
 
 	/**
 	 * Label of the trigger button.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?html|string|undefined}
-	 * @default undefined
+	 * @type {?(html|string|undefined)}
 	 */
 	label: Config.any(),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements
 	 * is possible.
+	 * @default false
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {?bool}
-	 * @default false
 	 */
 	searchable: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * Style of the trigger button.
+	 * @default unstyled
 	 * @instance
 	 * @memberof ClayDropdown
 	 * @type {?string}
-	 * @default unstyled
 	 */
 	style: Config.oneOf(['secondary', 'unstyled']).value('unstyled'),
 
 	/**
 	 * CSS classes to be applied to the trigger element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	triggerClasses: Config.string(),
 
 	/**
 	 * Size of the trigger button.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdown
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	triggerSize: Config.oneOf(['sm']),
 };

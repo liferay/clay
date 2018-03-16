@@ -16,6 +16,7 @@ import templates from './ClayCardGrid.soy.js';
 
 /**
  * Metal ClayCardGrid component.
+ * @extends Component
  */
 class ClayCardGrid extends Component {
 	/**
@@ -36,37 +37,37 @@ class ClayCardGrid extends Component {
 ClayCardGrid.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * List of items.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	items: Config.array(),
 
 	/**
 	 * Schema mapping list item fields with item data properties.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardGrid
 	 * @type {!object}
-	 * @default undefined
 	 */
 	schema: Config.shapeOf({
 		contentRenderer: Config.string(),
@@ -85,28 +86,28 @@ ClayCardGrid.STATE = {
 
 	/**
 	 * Flag to indicate if the list group items are selectable.
+	 * @default false
 	 * @instance
 	 * @memberof ClayCardGrid
 	 * @type {?bool}
-	 * @default false
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	spritemap: Config.string(),
 
 	/**
 	 * Header of the list group.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardGrid
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	title: Config.string(),
 };

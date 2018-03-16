@@ -6,6 +6,7 @@ import templates from './ClayPortal.soy.js';
 
 /**
  * Metal ClayPortal component.
+ * @extends Component
  */
 class ClayPortal extends Component {}
 
@@ -16,11 +17,11 @@ class ClayPortal extends Component {}
  */
 ClayPortal.STATE = {
 	/**
-	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPortal
-	 * @type {!html|string}
-	 * @default undefined
+	 * @type {!(html|string)}
+	 * CSS classes to be applied to the element.
 	 */
 	content: Config.required(),
 };

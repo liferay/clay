@@ -6,7 +6,6 @@ let itemShape = {
 	disabled: Config.bool().value(false),
 	href: Config.string(),
 	icon: Config.string(),
-	id: Config.string(),
 	inputName: Config.string(),
 	inputValue: Config.string(),
 	label: Config.oneOfType([Config.number(), Config.string()]),

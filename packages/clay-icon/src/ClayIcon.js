@@ -7,6 +7,7 @@ import templates from './ClayIcon.soy.js';
 
 /**
  * Implementation of the Metal Clay Icon.
+ * @extends Component
  */
 class ClayIcon extends Component {}
 
@@ -18,55 +19,55 @@ class ClayIcon extends Component {}
 ClayIcon.STATE = {
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Flag to indicate if the svg is focusable or not
+	 * @default false
 	 * @instance
 	 * @memberof ClayIcon
 	 * @type {?bool}
-	 * @default false
 	 */
 	focusable: Config.bool().value(false),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayIcon
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * The name of the Clay SVG Icon e.g. `plus`.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayIcon
 	 * @type {!string}
-	 * @default undefined
 	 */
 	symbol: Config.string().required(),
 
 	/**
 	 * The title of the Clay SVG Icon.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	title: Config.string(),
 };

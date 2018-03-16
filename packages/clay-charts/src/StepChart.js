@@ -11,10 +11,10 @@ class StepChart extends Chart {}
 StepChart.STATE = {
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default step
 	 * @instance
 	 * @memberof StepChart
-	 * @type {?string|undefined}
-	 * @default step
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.point).value('step'),
 };

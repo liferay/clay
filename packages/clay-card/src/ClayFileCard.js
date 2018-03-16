@@ -11,6 +11,7 @@ import templates from './ClayFileCard.soy.js';
 
 /**
  * Metal ClayFileCard component.
+ * @extends Component
  */
 class ClayFileCard extends Component {
 	/**
@@ -31,64 +32,64 @@ class ClayFileCard extends Component {
 ClayFileCard.STATE = {
 	/**
 	 * List of items to display in the actions menu.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	actionItems: actionItemsValidator,
 
 	/**
 	 * Flag to indicate if the card is disabled or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?bool}
-	 * @default false
 	 */
 	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Group Index the card belongs to.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	groupName: Config.string(),
 
 	/**
 	 * Url to be applied to the title of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	href: Config.string(),
 
 	/**
 	 * Icon to be rendered in the visual area of the card.
+	 * @default documents-and-media
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?string}
-	 * @default documents-and-media
 	 */
 	icon: Config.string().value('documents-and-media'),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
@@ -96,26 +97,26 @@ ClayFileCard.STATE = {
 	 * Name to be applied to the input element.
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
+	 * @type {?(string|undefined)}
 	 * @default undefined
 	 */
 	inputName: Config.string(),
 
 	/**
 	 * Value to be applied to the input element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	inputValue: Config.string(),
 
 	/**
 	 * Labels of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	labels: Config.arrayOf(
 		Config.oneOfType([
@@ -135,64 +136,64 @@ ClayFileCard.STATE = {
 
 	/**
 	 * Object that maps specific label values with desired styles.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayCardBase
-	 * @type {?object|undefined}
-	 * @default undefined
+	 * @type {?(object|undefined)}
 	 */
 	labelStylesMap: Config.object(),
 
 	/**
 	 * Flag to indicate if the card is selectable or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?bool}
-	 * @default false
 	 */
 	selectable: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate if the card is selected or not.
+	 * @default false
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?bool}
-	 * @default false
 	 */
 	selected: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * Label for the sticker represented in the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	stickerLabel: Config.string(),
 
 	/**
 	 * Shape for the sticker represented in the card.
+	 * @default rounded
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?string}
-	 * @default rounded
 	 */
 	stickerShape: Config.oneOf(['circle', 'rounded']).value('rounded'),
 
 	/**
 	 * Style of sticker represented in the card.
+	 * @default primary
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {?string}
-	 * @default primary
 	 */
 	stickerStyle: Config.oneOf([
 		'danger',
@@ -207,19 +208,19 @@ ClayFileCard.STATE = {
 
 	/**
 	 * Subtitle of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	subtitle: Config.string(),
 
 	/**
 	 * Title of the card.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayFileCard
 	 * @type {!string}
-	 * @default undefined
 	 */
 	title: Config.string().required(),
 };

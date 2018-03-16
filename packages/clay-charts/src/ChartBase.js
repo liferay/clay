@@ -1,7 +1,8 @@
-import {bb, d3} from 'billboard.js';
+import {bb} from 'billboard.js';
 import {Config} from 'metal-state';
 import {isServerSide} from 'metal';
 import types from './utils/types';
+import * as d3 from 'd3';
 
 const PROP_NAME_MAP = {
 	axis: 'axes',
@@ -63,12 +64,14 @@ const DEFAULT_POINT_PATTERNS = [
 
 /**
  * Chart Base prototype.
+ * @class ChartBase
  *
  * @mixin
  */
 const ChartBase = {
 	/**
 	 * @inheritDoc
+	 * @memberof ChartBase
 	 */
 	attached() {
 		if (isServerSide()) {
@@ -96,6 +99,7 @@ const ChartBase = {
 
 	/**
 	 * @inheritDoc
+	 * @memberof ChartBase
 	 */
 	disposed() {
 		super.disposed();
@@ -111,6 +115,7 @@ const ChartBase = {
 
 	/**
 	 * @inheritDoc
+	 * @memberof ChartBase
 	 */
 	shouldUpdate() {
 		return false;
@@ -118,8 +123,9 @@ const ChartBase = {
 
 	/**
 	 * Constructs `axis` billboard config property.
-	 * @return {Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {Object}
 	 */
 	_constructAxisConfig() {
 		const state = this._getStateObj();
@@ -134,8 +140,9 @@ const ChartBase = {
 
 	/**
 	 * Constructs config object for `bb.generate` method.
-	 * @return {Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {Object}
 	 */
 	_constructChartConfig() {
 		const state = this._getStateObj();
@@ -212,8 +219,9 @@ const ChartBase = {
 
 	/**
 	 * Constructs various `data` billboard properties from `data` state.
-	 * @return {Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {Object}
 	 */
 	_constructChartDataConfig() {
 		const data = this._resolvedData;
@@ -257,8 +265,9 @@ const ChartBase = {
 	/**
 	 * When tiles for true always leave `colors` empty,
 	 * this ensures that` colors.tiles` is more important.
-	 * @return {Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {Object}
 	 */
 	_constructColorsConfig() {
 		let {colors, color} = this._getStateObj();
@@ -272,9 +281,10 @@ const ChartBase = {
 
 	/**
 	 * Constructs `data` billboard config property.
+	 * @memberof ChartBase
 	 * @param {boolean} attachListeners
-	 * @return {Object}
 	 * @protected
+	 * @return {Object}
 	 */
 	_constructDataConfig(attachListeners = true) {
 		const state = this._getStateObj();
@@ -346,8 +356,9 @@ const ChartBase = {
 
 	/**
 	 * Constructs color tiles for passed to billboard.
-	 * @return {Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {Object}
 	 */
 	_constructTilesConfig() {
 		const {color} = this._getStateObj();
@@ -364,8 +375,9 @@ const ChartBase = {
 
 	/**
 	 * Constructs `zoom` billboard config property.
-	 * @return {Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {Object}
 	 */
 	_constructZoomConfig() {
 		const state = this._getStateObj();
@@ -396,9 +408,10 @@ const ChartBase = {
 
 	/**
 	 * Converts `data` state into consumable array for billboard.js
+	 * @memberof ChartBase
 	 * @param {Array} data
-	 * @return {Array}
 	 * @protected
+	 * @return {Array}
 	 */
 	_createDataArray(data) {
 		return data.map(({data, id}) => {
@@ -408,6 +421,7 @@ const ChartBase = {
 
 	/**
 	 * Emits event based on arguments array.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_emitChartEvent() {
@@ -416,8 +430,9 @@ const ChartBase = {
 
 	/**
 	 * Gets all columns
-	 * @return {?Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {?Object}
 	 */
 	_getColumns() {
 		return this.data;
@@ -425,9 +440,10 @@ const ChartBase = {
 
 	/**
 	 * Gets column by column id.
+	 * @memberof ChartBase
 	 * @param {string} id column id
-	 * @return {?Object}
 	 * @protected
+	 * @return {?Object}
 	 */
 	_getData(id) {
 		return this.data.find(data => {
@@ -437,8 +453,9 @@ const ChartBase = {
 
 	/**
 	 * Retrieves state object, used to allow JSX implementation.
-	 * @return {Object}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {Object}
 	 */
 	_getStateObj() {
 		return this;
@@ -446,8 +463,9 @@ const ChartBase = {
 
 	/**
 	 * Get all tiles of the DOM.
-	 * @return {?Elements}
+	 * @memberof ChartBase
 	 * @protected
+	 * @return {?Elements}
 	 */
 	_getTiles() {
 		return DEFAULT_TILES.filter(val => {
@@ -457,6 +475,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `data` state to chart via `bb.load` method.
+	 * @memberof ChartBase
 	 * @param {Object} event The change event.
 	 * @protected
 	 */
@@ -466,6 +485,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `groups` state to chart via `bb.groups` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleGroupsChanged({newVal}) {
@@ -474,6 +494,7 @@ const ChartBase = {
 
 	/**
 	 * Handles `loading` state.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleLoadingChanged({newVal}) {
@@ -488,6 +509,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `regions` state to chart via `bb.regions` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleRegionsChanged({newVal}) {
@@ -496,6 +518,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `size` state to chart via `bb.resize` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleSizeChanged({newVal}) {
@@ -504,6 +527,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `type` state to chart via `bb.transform` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleTypeChanged({newVal}) {
@@ -512,6 +536,7 @@ const ChartBase = {
 
 	/**
 	 * Maps `x` state to chart via `bb.x` method.
+	 * @memberof ChartBase
 	 * @protected
 	 */
 	_handleXChanged({newVal}) {
@@ -522,9 +547,10 @@ const ChartBase = {
 
 	/**
 	 * Maps xs value to data points.
+	 * @memberof ChartBase
 	 * @param {Object} xs
-	 * @return {Object}
 	 * @protected
+	 * @return {Object}
 	 */
 	_mapXSValues(xs) {
 		return Object.keys(xs).reduce((xsValues, key) => {
@@ -540,10 +566,11 @@ const ChartBase = {
 
 	/**
 	 * Determines which ids should be passed to the unload property.
-	 * @static
+	 * @memberof ChartBase
 	 * @param {Array} newData
 	 * @param {Array} prevData
 	 * @return {Array}
+	 * @static
 	 */
 	_resolveRemovedData(newData, prevData) {
 		const ids = newData.map(data => data[0]);
@@ -561,6 +588,7 @@ const ChartBase = {
 
 	/**
 	 * Set's the chart's data
+	 * @memberof ChartBase
 	 * @param {?Object} columns The data to use.
 	 * @protected
 	 */
@@ -570,6 +598,7 @@ const ChartBase = {
 
 	/**
 	 * Updates the chart's data.
+	 * @memberof ChartBase
 	 * @param {Object} data The new data to load
 	 * @protected
 	 */
@@ -613,10 +642,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Data that will be rendered to the chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	area: Config.shapeOf({
 		above: Config.bool().value(false),
@@ -625,19 +654,19 @@ ChartBase.STATE = {
 
 	/**
 	 * Switches the x and y axis.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	axisRotated: Config.bool(),
 
 	/**
 	 * Styling and behavior of x axis.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	axisX: Config.shapeOf({
 		categories: Config.array(),
@@ -668,10 +697,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Styling and behavior of y2 axis.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	axisY2: Config.shapeOf({
 		center: Config.number(),
@@ -693,10 +722,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Styling and behavior of y axis.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	axisY: Config.shapeOf({
 		center: Config.number(),
@@ -719,10 +748,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Styling and behavior of bars.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	bar: Config.shapeOf({
 		width: Config.number(),
@@ -730,10 +759,10 @@ ChartBase.STATE = {
 	}),
 
 	/** Styling and behavior of bubbles.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	bubble: Config.shapeOf({
 		maxR: Config.number(),
@@ -741,10 +770,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Defines a custom color pattern for chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	color: Config.shapeOf({
 		pattern: Config.array().value(DEFAULT_COLORS),
@@ -761,29 +790,29 @@ ChartBase.STATE = {
 
 	/**
 	 * Defines a custom colors for data in chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	colors: Config.object().value({}),
 
 	/**
 	 * Sets billboard's data.color config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Function|undefined}
-	 * @default undefined
+	 * @type {?(Function|undefined)}
 	 */
 	colorFormatter: Config.func(),
 
 	/**
 	 * Data that will be rendered to the chart.
-	 * @instance
-	 * @memberof ChartBase
-	 * @type {?Array|undefined}
 	 * @default undefined
 	 * @deprecated since 2.0.0-rc.2
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?(Array|undefined)}
 	 */
 	columns: {
 		setter: '_setColumns',
@@ -792,10 +821,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Configuration options for donut chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	donut: Config.shapeOf({
 		label: Config.shapeOf({
@@ -812,29 +841,21 @@ ChartBase.STATE = {
 
 	/**
 	 * Sets label for when no data is loaded.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	emptyLabelText: Config.string().setter(value => {
-		return value
-			? {
-				empty: {
-					label: {
-						text: value,
-					},
-				},
-			}
-			: value;
+		return value ? {empty: {label: {text: value}}} : value;
 	}),
 
 	/**
 	 * Configuration options for guage chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	gauge: Config.shapeOf({
 		fullCircle: Config.bool(),
@@ -852,10 +873,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Configuration options for grid chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
 	 * @type {?Object|undefined}
-	 * @default undefined
 	 */
 	grid: Config.shapeOf({
 		// Cross reference this with source code, have a feeling this info is wrong
@@ -895,28 +916,28 @@ ChartBase.STATE = {
 
 	/**
 	 * Sets billboard's data.groups config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Array|undefined}
-	 * @default undefined
+	 * @type {?(Array|undefined)}
 	 */
 	groups: Config.array(),
 
 	/**
 	 * If set to true hides all data.
+	 * @default false
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {boolean|undefined}
-	 * @default false
+	 * @type {?(boolean|undefined)}
 	 */
 	hide: Config.bool().value(false),
 
 	/**
 	 * Intersection display options.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	intersection: Config.shapeOf({
 		enabled: Config.bool(),
@@ -929,34 +950,30 @@ ChartBase.STATE = {
 
 	/**
 	 * Sets billboard's data.json config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Array|boolean|undefined}
-	 * @default undefined
+	 * @type {?(Array|boolean|undefined)}
 	 */
 	json: Config.array(),
 
 	/**
 	 * Sets billboard's data.keys config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Array|undefined}
-	 * @default undefined
+	 * @type {?(Array|undefined)}
 	 */
 	keys: Config.array().setter(value => {
-		return value
-			? {
-				value,
-			}
-			: value;
+		return value ? {value} : value;
 	}),
 
 	/**
 	 * Sets billboard's data.labels config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Boolean|Function|undefined}
-	 * @default undefined
+	 * @type {?(Boolean|Function|undefined)}
 	 */
 	labels: Config.bool()
 		.func()
@@ -978,10 +995,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Legend display options.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	legend: Config.shapeOf({
 		contents: Config.shapeOf({
@@ -1006,10 +1023,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Display settings for chart lines.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	line: Config.shapeOf({
 		classes: Config.array(),
@@ -1023,28 +1040,28 @@ ChartBase.STATE = {
 
 	/**
 	 * Sets billboard's data.mimeType config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	mimeType: Config.string(),
 
 	/**
 	 * Sets billboard's data.order config.
+	 * @default desc
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default "desc"
+	 * @type {?(string|undefined)}
 	 */
 	order: Config.string().value('desc'),
 
 	/**
 	 * Sets padding on chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	padding: Config.shapeOf({
 		bottom: Config.number(),
@@ -1055,10 +1072,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Configuration options for pie chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	pie: Config.shapeOf({
 		label: Config.shapeOf({
@@ -1073,10 +1090,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Configuration options for chart points.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	point: Config.shapeOf({
 		show: Config.bool(),
@@ -1097,10 +1114,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Creates custom regions on chart that can be styled.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	regions: Config.arrayOf(
 		Config.shapeOf({
@@ -1113,35 +1130,31 @@ ChartBase.STATE = {
 
 	/**
 	 * Determines if chart auto resizes when viewport size changes.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?boolean|undefined}
-	 * @default undefined
+	 * @type {?(boolean|undefined)}
 	 */
 	resizeAuto: Config.bool().setter(value => {
-		return value
-			? {
-				auto: value,
-			}
-			: value;
+		return value ? {auto: value} : value;
 	}),
 
 	/**
 	 * Load data from a multidimensional array. Sets billboard's `data.rows`
 	 * config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?array|undefined}
-	 * @default undefined
+	 * @type {?(array|undefined)}
 	 */
 	rows: Config.array(),
 
 	/**
 	 * Sets billboard's `data.selection` config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	selection: Config.shapeOf({
 		draggable: Config.bool(),
@@ -1153,10 +1166,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Sets size of chart.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	size: Config.shapeOf({
 		height: Config.number(),
@@ -1165,27 +1178,21 @@ ChartBase.STATE = {
 
 	/**
 	 * Determines interpolation type of spline charts.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	splineInterpolationType: Config.string().setter(value => {
-		return value
-			? {
-				interpolation: {
-					type: value,
-				},
-			}
-			: value;
+		return value ? {interpolation: {type: value}} : value;
 	}),
 
 	/**
 	 * Config options for subcharts.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	subchart: Config.shapeOf({
 		show: Config.bool(),
@@ -1197,25 +1204,21 @@ ChartBase.STATE = {
 
 	/**
 	 * Customizes classname for svg element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	svgClassname: Config.string().setter(value => {
-		return value
-			? {
-				classname: value,
-			}
-			: value;
+		return value ? {classname: value} : value;
 	}),
 
 	/**
 	 * Display options for title element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	title: Config.shapeOf({
 		text: Config.string(),
@@ -1230,10 +1233,10 @@ ChartBase.STATE = {
 
 	/**
 	 * Display options for tooltip.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	tooltip: Config.shapeOf({
 		show: Config.bool(),
@@ -1248,79 +1251,75 @@ ChartBase.STATE = {
 
 	/**
 	 * Sets duration of transitions.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?number|undefined}
-	 * @default undefined
+	 * @type {?(number|undefined)}
 	 */
 	transitionDuration: Config.number().setter(value => {
-		return value
-			? {
-				duration: value,
-			}
-			: value;
+		return value ? {duration: value} : value;
 	}),
 
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default line
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default line
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.all).value('line'),
 
 	/**
 	 * Load a CSV or JSON file from a URL.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	url: Config.string(),
 
 	/**
 	 * Sets billboard's data.x config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	x: Config.string(),
 
 	/**
 	 * Sets billboard's data.xFormat config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	xFormat: Config.string(),
 
 	/**
 	 * Sets billboard's data.xLocaltime config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {boolean|undefined}
-	 * @default undefined
+	 * @type {?(boolean|undefined)}
 	 */
 	xLocaltime: Config.bool(),
 
 	/**
 	 * Sets billboard's data.xSort config.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	xSort: Config.bool(),
 
 	/**
 	 * Configuration for bb chart zoom capabilities.
+	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
+	 * @type {?(Object|undefined)}
 	 */
 	zoom: Config.shapeOf({
 		enabled: Config.bool().value(true),

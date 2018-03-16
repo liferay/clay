@@ -11,10 +11,10 @@ class AreaSplineChart extends Chart {}
 AreaSplineChart.STATE = {
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default area-spline
 	 * @instance
 	 * @memberof AreaSplineChart
-	 * @type {?string|undefined}
-	 * @default area-spline
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.area).value('area-spline'),
 };

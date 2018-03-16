@@ -36,36 +36,40 @@ let creationMenuConfig = {
 	],
 	secondaryItems: [
 		{
-			href: '#fav1',
-			label: 'Favorite 1',
-		},
-		{
-			href: '#fav2',
-			label: 'Favorite 2',
-		},
-		{
-			href: '#fav3',
-			label: 'Favorite 3',
-		},
-		{
-			href: '#fav4',
-			label: 'Favorite 4',
-		},
-		{
-			href: '#fav5',
-			label: 'Favorite 5',
-		},
-		{
-			href: '#fav6',
-			label: 'Favorite 6',
-		},
-		{
-			href: '#fav7',
-			label: 'Favorite 7',
-		},
-		{
-			href: '#fav8',
-			label: 'Favorite 8',
+			items: [
+				{
+					href: '#fav1',
+					label: 'Favorite 1',
+				},
+				{
+					href: '#fav2',
+					label: 'Favorite 2',
+				},
+				{
+					href: '#fav3',
+					label: 'Favorite 3',
+				},
+				{
+					href: '#fav4',
+					label: 'Favorite 4',
+				},
+				{
+					href: '#fav5',
+					label: 'Favorite 5',
+				},
+				{
+					href: '#fav6',
+					label: 'Favorite 6',
+				},
+				{
+					href: '#fav7',
+					label: 'Favorite 7',
+				},
+				{
+					href: '#fav8',
+					label: 'Favorite 8',
+				},
+			],
 		},
 	],
 };

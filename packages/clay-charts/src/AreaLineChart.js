@@ -11,10 +11,10 @@ class AreaLineChart extends Chart {}
 AreaLineChart.STATE = {
 	/**
 	 * The variety of chart that will be rendered.
+	 * @default area
 	 * @instance
 	 * @memberof AreaLineChart
-	 * @type {?string|undefined}
-	 * @default area
+	 * @type {?(string|undefined)}
 	 */
 	type: Config.oneOf(types.area).value('area'),
 };

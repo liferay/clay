@@ -10,6 +10,7 @@ import templates from './ClayPagination.soy.js';
 
 /**
  * Metal ClayPagination component.
+ * @extends Component
  */
 class ClayPagination extends Component {}
 
@@ -21,55 +22,55 @@ class ClayPagination extends Component {}
 ClayPagination.STATE = {
 	/**
 	 * Href to create each page complete href.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPagination
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	baseHref: Config.string(),
 
 	/**
 	 * Current page number.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPagination
 	 * @type {!number}
-	 * @default undefined
 	 */
 	currentPage: Config.number().required(),
 
 	/**
 	 * CSS classes to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPagination
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
 	/**
 	 * Id to be applied to the element.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPagination
-	 * @type {?string|undefined}
-	 * @default undefined
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPagination
 	 * @type {!string}
-	 * @default undefined
 	 */
 	spritemap: Config.string().required(),
 
 	/**
 	 * Total number of pages to show.
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayPagination
 	 * @type {!number}
-	 * @default undefined
 	 */
 	totalPages: Config.number().required(),
 };
