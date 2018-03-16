@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 favorite items and more button when more than 7 secondary items are passed 1`] = `
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" disabled="" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -10,168 +10,35 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 7 
   </button>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <form>
-    <div class="inline-scroller">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#main1">main1</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main2">main2</a>
-        </li>
-        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li class="dropdown-subheader" role="presentation">Favorites</li>
-        <li>
-          <a class=" dropdown-item" href="#favorite1">favorite1</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#favorite2">favorite2</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#favorite3">favorite3</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#favorite4">favorite4</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#favorite5">favorite5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#favorite6">favorite6</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#favorite7">favorite7</a>
-        </li>
-      </ul>
-    </div>
-    <div class="dropdown-caption">Showing 9 of 10 elements</div>
-    <div class="dropdown-section">
-      <button class="btn btn-block btn-secondary" type="button">More</button>
-    </div>
-  </form>
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#main1">main1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#main2">main2</a>
+    </li>
+  </ul>
 </div>
 `;
 
-exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 8 primary items and more button when more than 8 primary items and at least one secondary item are passed 1`] = `
-<div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown expanded 1`] = `
+<div class="dropdown show">
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
     </svg>
   </button>
 </div>
-<div class="dropdown-menu" ref="menu">
-  <form>
-    <div class="inline-scroller">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#main1">main1</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main2">main2</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main3">main3</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main4">main4</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main5">main5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main6">main6</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main7">main7</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main8">main8</a>
-        </li>
-        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li class="dropdown-subheader" role="presentation">Favorites</li>
-        <li>
-          <a class=" dropdown-item" href="#favorite1">favorite1</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#favorite2">favorite2</a>
-        </li>
-      </ul>
-    </div>
-    <div class="dropdown-caption">Showing 10 of 12 elements</div>
-    <div class="dropdown-section">
-      <button class="btn btn-block btn-secondary" type="button">More</button>
-    </div>
-  </form>
-</div>
-`;
-
-exports[`ClayCreationMenuDropdown should render a creation menu dropdown with 15 primary items and more button when more than 15 primary items and at no secondary item are passed 1`] = `
-<div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
-      <title>plus</title>
-      <use xlink:href="icons.svg#plus"></use>
-    </svg>
-  </button>
-</div>
-<div class="dropdown-menu" ref="menu">
-  <form>
-    <div class="inline-scroller">
-      <ul class="list-unstyled">
-        <li>
-          <a class=" dropdown-item" href="#main1">main1</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main2">main2</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main3">main3</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main4">main4</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main5">main5</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main6">main6</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main7">main7</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main8">main8</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main9">main9</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main10">main10</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main11">main11</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main12">main12</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main13">main13</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main14">main14</a>
-        </li>
-        <li>
-          <a class=" dropdown-item" href="#main15">main15</a>
-        </li>
-      </ul>
-    </div>
-    <div class="dropdown-caption">Showing 15 of 20 elements</div>
-    <div class="dropdown-section">
-      <button class="btn btn-block btn-secondary" type="button">More</button>
-    </div>
-  </form>
+<div class="dropdown-menu show" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#main1">main1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#main2">main2</a>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -191,35 +58,6 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with cl
     </li>
     <li>
       <a class=" dropdown-item" href="#main2">main2</a>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`ClayCreationMenuDropdown should render a creation menu dropdown with favorite items 1`] = `
-<div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
-      <title>plus</title>
-      <use xlink:href="icons.svg#plus"></use>
-    </svg>
-  </button>
-</div>
-<div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#main1">main1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#main2">main2</a>
-    </li>
-    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li class="dropdown-subheader" role="presentation">Favorites</li>
-    <li>
-      <a class=" dropdown-item" href="#favorite1">favorite1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#favorite2">favorite2</a>
     </li>
   </ul>
 </div>
@@ -246,9 +84,9 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with id
 </div>
 `;
 
-exports[`ClayCreationMenuDropdown should render a disabled creation menu dropdown 1`] = `
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the default primary and passed total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" disabled="" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -258,37 +96,1921 @@ exports[`ClayCreationMenuDropdown should render a disabled creation menu dropdow
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#main1">main1</a>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#main2">main2</a>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
   </ul>
 </div>
 `;
 
-exports[`ClayCreationMenuDropdown should render an expanded creation menu dropdown 1`] = `
-<div class="dropdown show">
-  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the default primary and total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
     </svg>
   </button>
 </div>
-<div class="dropdown-menu show" ref="menu">
+<div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item" href="#main1">main1</a>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
     <li>
-      <a class=" dropdown-item" href="#main2">main2</a>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
   </ul>
 </div>
 `;
 
-exports[`ClayCreationMenuDropdown should render default markdown 1`] = `
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the passed primary and default total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the passed primary and total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary and passed total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary9">primary9</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary10">primary10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary11">primary11</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary12">primary12</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary13">primary13</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary14">primary14</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary15">primary15</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary16">primary16</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary17">primary17</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary18">primary18</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary19">primary19</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary20">primary20</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 20 of 22 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary and total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary9">primary9</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary10">primary10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary11">primary11</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary12">primary12</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary13">primary13</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary14">primary14</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary15">primary15</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 15 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary maximum and less than the default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary6">primary6</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary7">primary7</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary8">primary8</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary9">primary9</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary10">primary10</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary maximum and less than the passed total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary6">primary6</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary7">primary7</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary8">primary8</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary9">primary9</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary10">primary10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary11">primary11</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary12">primary12</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary13">primary13</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary14">primary14</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary15">primary15</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary16">primary16</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary17">primary17</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary18">primary18</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the passed primary and default total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary9">primary9</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary10">primary10</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary11">primary11</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary12">primary12</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary13">primary13</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary14">primary14</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary15">primary15</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 15 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the passed primary maximum and less than the default total maximums 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary6">primary6</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary7">primary7</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary8">primary8</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary9">primary9</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary10">primary10</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary11">primary11</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary12">primary12</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than default secondary maximum and together less than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+    <li>
+      <a class=" dropdown-item" href="#secondary1">secondary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary2">secondary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary3">secondary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary4">secondary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary5">secondary5</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than default secondary maximum and together less than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+    <li>
+      <a class=" dropdown-item" href="#secondary1">secondary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary2">secondary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary3">secondary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary4">secondary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary5">secondary5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary6">secondary6</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than default secondary maximum and together more than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 10 of 11 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together less than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+    <li>
+      <a class=" dropdown-item" href="#secondary1">secondary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary2">secondary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary3">secondary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary4">secondary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary5">secondary5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary6">secondary6</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary7">secondary7</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary8">secondary8</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together less than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+    <li>
+      <a class=" dropdown-item" href="#secondary1">secondary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary2">secondary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary3">secondary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary4">secondary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary5">secondary5</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary6">secondary6</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary7">secondary7</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary8">secondary8</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together more than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary7">secondary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary8">secondary8</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 15 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together more than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary7">secondary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary8">secondary8</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary9">secondary9</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 16 of 17 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together less than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 13 of 14 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together less than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 14 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together more than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 14 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together more than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 12 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together less than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 12 of 13 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together less than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 12 of 14 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together more than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 14 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together more than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 12 of 16 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than default secondary maximum and together less than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary7">secondary7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 15 of 18 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than default secondary maximum and together more than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary7">secondary7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 15 of 18 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than default secondary maximum and together more than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary7">secondary7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 15 of 18 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together less than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 12 of 14 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together less than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 12 of 18 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together more than default total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary7">secondary7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 15 of 22 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together more than passed total maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#primary1">primary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary2">primary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary3">primary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary4">primary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary5">primary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary6">primary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary7">primary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#primary8">primary8</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#secondary1">secondary1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary2">secondary2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary3">secondary3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary4">secondary4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary5">secondary5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary6">secondary6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary7">secondary7</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary8">secondary8</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary9">secondary9</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#secondary10">secondary10</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 18 of 22 elements</div>
+    <div class="dropdown-section">
+      <button class="btn btn-block btn-secondary" type="button">More</button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group with label 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#primary1">primary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary2">primary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary3">primary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary4">primary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#primary5">primary5</a>
+    </li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+    <li class="dropdown-subheader" role="presentation">Secondary</li>
+    <li>
+      <a class=" dropdown-item" href="#secondary1">secondary1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary2">secondary2</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary3">secondary3</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary4">secondary4</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#secondary5">secondary5</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with the default markdown 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
