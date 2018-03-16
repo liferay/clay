@@ -30,13 +30,51 @@
   {let $totalSecondaryItems: $totalSecondaryItemsFirstGroup + $totalSecondaryItemsSecondGroup /}
   {let $totalItems: $totalPrimaryItems + $totalSecondaryItems /}
 
-  {let $defaultMaxPrimaryItems: $maxPrimaryItems ?: 8 /}
-  {let $defaultMaxSecondaryItems: $maxSecondaryItems ?: 7 /}
+  {let $defaultMaxPrimaryItems:
+    $maxPrimaryItems ?
+      $totalPrimaryItems > $maxPrimaryItems ?
+        $maxPrimaryItems
+      :
+        $totalPrimaryItems
+    :
+      $totalPrimaryItems > 8 ?
+        8
+      :
+        $totalPrimaryItems
+   /}
+  {let $tempDefaultMaxSecondaryItems: 
+    $maxSecondaryItems ?
+      $totalSecondaryItems > $maxSecondaryItems ?
+        $maxSecondaryItems
+      :
+        $totalSecondaryItems
+    :
+      $totalSecondaryItems > 7 ?
+        7
+      :
+        $totalSecondaryItems
+  /}
   {let $defaultMaxTotalItems: $maxTotalItems ?: 15 /}
+  {let $defaultMaxSecondaryItems: $tempDefaultMaxSecondaryItems > $defaultMaxTotalItems - $defaultMaxPrimaryItems ? $defaultMaxTotalItems - $defaultMaxPrimaryItems : $tempDefaultMaxSecondaryItems /}
 
-  {let $showingItems: ((not $secondaryItems and $totalPrimaryItems > $defaultMaxTotalItems) ? $defaultMaxTotalItems : 
-    ($totalPrimaryItems > $defaultMaxPrimaryItems ? $defaultMaxPrimaryItems : $totalPrimaryItems)) +
-    ($totalSecondaryItems > $defaultMaxSecondaryItems ? $defaultMaxSecondaryItems : $totalSecondaryItems) /}
+  {let $showingItems: 
+    $totalSecondaryItems == 0 ? 
+      $totalPrimaryItems > $defaultMaxTotalItems ?
+        $defaultMaxTotalItems
+      :
+        $totalPrimaryItems
+    :
+      $totalPrimaryItems > $defaultMaxPrimaryItems ?
+        $totalSecondaryItems > $defaultMaxSecondaryItems ?
+          $defaultMaxPrimaryItems + $defaultMaxSecondaryItems
+        :
+          $defaultMaxPrimaryItems + $totalSecondaryItems
+      :
+        $totalSecondaryItems > $defaultMaxSecondaryItems ?
+          $totalPrimaryItems + $defaultMaxSecondaryItems
+        :
+          $totalPrimaryItems + $totalSecondaryItems        
+  /}
 
   {let $primaryDropdownItems: [
     'items': $primaryItems,
