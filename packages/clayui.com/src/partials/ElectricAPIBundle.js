@@ -22,17 +22,12 @@ class ElectricApiBundle extends Component {
 			input: document.querySelector('input[name="query"]')
 		});
 
-		this.dropdowns_ = new Toggler({
-			content: '.version-dropdown .dropdown-menu',
-			header: '.version-dropdown .btn'
-		});
+		Toggler.CSS_EXPANDED = 'open';
 
 		this.toggler_ = new Toggler({
 			content: '.sidebar-toggler-content',
-			header: '.sidebar-header'
+			header: '.sidebar-toggler'
 		});
-
-		this.docClickHandler_ = dom.on(document, 'click', this.handleDocClick_.bind(this));
 	}
 
 	disposed() {
@@ -40,19 +35,7 @@ class ElectricApiBundle extends Component {
 			return;
 		}
 
-		this.docClickHandler_.removeListener();
-		this.dropdowns_.dispose();
 		this.toggler_.dispose();
-	}
-
-	handleDocClick_(event) {
-		if (!dom.parent(event.target, '.version-dropdown')) {
-			let expanded = document.querySelector('.toggler-header-expanded');
-
-			if (expanded) {
-				this.dropdowns_.toggle(expanded);
-			}
-		}
 	}
 }
 
