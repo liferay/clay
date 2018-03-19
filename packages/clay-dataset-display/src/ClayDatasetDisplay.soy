@@ -30,6 +30,9 @@
 	{@param? creationMenu: bool|string|[
 		caption: string,
 		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
 		primaryItems: list<[
 			disabled: bool,
 			href: string,
@@ -41,9 +44,17 @@
 			disabled: bool,
 			href: string,
 			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
 			label: string,
 			separator: bool
-		]>
+		]>,
+		viewMoreURL: string
 	]}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
