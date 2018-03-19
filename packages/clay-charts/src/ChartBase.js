@@ -102,8 +102,6 @@ const ChartBase = {
 	 * @memberof ChartBase
 	 */
 	disposed() {
-		super.disposed();
-
 		if (isServerSide()) {
 			return;
 		}
