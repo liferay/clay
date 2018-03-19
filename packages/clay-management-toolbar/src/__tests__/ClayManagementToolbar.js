@@ -344,7 +344,7 @@ describe('ClayManagementToolbar', function() {
 								label: 'Favorite 2',
 							},
 						],
-					}
+					},
 				],
 			},
 		});
