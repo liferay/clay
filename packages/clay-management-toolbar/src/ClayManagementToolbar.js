@@ -250,8 +250,12 @@ ClayManagementToolbar.STATE = {
 		Config.shapeOf({
 			caption: Config.string(),
 			helpText: Config.string(),
+			maxPrimaryItems: Config.number(),
+			maxSecondaryItems: Config.number(),
+			maxTotalItems: Config.number(),
 			primaryItems: creationMenuItemsValidator,
 			secondaryItems: creationMenuItemsValidator,
+			viewMoreURL: Config.string(),
 		}),
 	]),
 

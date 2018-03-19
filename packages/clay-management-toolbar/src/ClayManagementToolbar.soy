@@ -35,6 +35,9 @@
 	{@param? creationMenu: bool|string|[
 		caption: string,
 		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
 		primaryItems: list<[
 			disabled: bool,
 			href: string,
@@ -46,9 +49,17 @@
 			disabled: bool,
 			href: string,
 			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
 			label: string,
 			separator: bool
-		]>
+		]>,
+		viewMoreURL: string
 	]}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
@@ -287,11 +298,15 @@
 			{param caption: $creationMenu.caption /}
 			{param events: ['moreButtonClicked': $_handleCreationMenuMoreButtonClicked] /}
 			{param helpText: $creationMenu.helpText /}
+			{param maxPrimaryItems: $creationMenu.maxPrimaryItems /}
+			{param maxSecondaryItems: $creationMenu.maxSecondaryItems /}
+			{param maxTotalItems: $creationMenu.maxTotalItems /}
 			{param primaryItems: $creationMenu.primaryItems /}
 			{param ref: 'creationMenuDropdown' /}
 			{param secondaryItems: $creationMenu.secondaryItems /}
 			{param spritemap: $spritemap /}
 			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param viewMoreURL: $creationMenu.viewMoreURL /}
 		{/call}
 	{elseif $creationMenu == true}
 		{call ClayButton.render}
@@ -333,6 +348,9 @@
 	{@param? creationMenu: bool|string|[
 		caption: string,
 		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
 		primaryItems: list<[
 			disabled: bool,
 			href: string,
@@ -344,9 +362,17 @@
 			disabled: bool,
 			href: string,
 			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
 			label: string,
 			separator: bool
-		]>
+		]>,
+		viewMoreURL: string
 	]}
 	{@param? disabled: bool}
 	{@param? filterItems: list<[
