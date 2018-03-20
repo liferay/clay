@@ -155,12 +155,12 @@
 			{/call}
 		{/if}
 
-		{if $searchValue and $totalItems > 0}
+		{if $searchValue}
 			{call .resultsBar}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param clearResultsURL: $clearResultsURL /}
 				{param searchValue: $searchValue /}
-				{param totalItems: $totalItems /}
+				{param totalItems: $totalItems ?: 0 /}
 			{/call}
 		{/if}
 	</div>
