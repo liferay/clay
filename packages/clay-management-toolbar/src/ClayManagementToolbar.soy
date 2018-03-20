@@ -61,6 +61,7 @@
 		]>,
 		viewMoreURL: string
 	]}
+	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
 		checked: bool,
@@ -136,7 +137,7 @@
 				{param _showSearchMobile: $_showSearchMobile /}
 				{param contentRenderer: $contentRenderer ?: '' /}
 				{param creationMenu: $creationMenu /}
-				{param disabled: $totalItems == 0 /}
+				{param disabled: $disabled /}
 				{param filterItems: $filterItems /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}

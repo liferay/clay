@@ -260,6 +260,15 @@ ClayManagementToolbar.STATE = {
 	]),
 
 	/**
+	 * Flag to indicate if the managment toolbar is disabled or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 */
+	disabled: Config.bool().value(false),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance
