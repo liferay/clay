@@ -8,7 +8,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
             <label>
-              <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+              <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
                 <span class="custom-control-label-text sr-only">Select Page</span>
               </span>
@@ -17,7 +17,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" disabled="" type="button">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
               <span class="navbar-breakpoint-down-d-none">Filter and Order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                   <title>caret-bottom</title>
@@ -34,7 +34,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
           </div>
         </li>
         <li class="nav-item">
-          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
               <title>order-arrow</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
@@ -47,7 +47,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
           <form method="POST" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" disabled="" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -55,7 +55,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
                       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                     </svg>
                   </button>
-                  <button class="btn btn-unstyled" aria-label="search" disabled="disabled" type="submit">
+                  <button class="btn btn-unstyled" aria-label="search" type="submit">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                       <title>search</title>
                       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -69,7 +69,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
       </div>
       <ul class="navbar-nav">
         <li class="nav-item navbar-breakpoint-d-none">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -170,7 +170,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
             <label>
-              <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+              <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
                 <span class="custom-control-label-text sr-only">Select Page</span>
               </span>
@@ -179,7 +179,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" disabled="" type="button">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
               <span class="navbar-breakpoint-down-d-none">Filter and Order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                   <title>caret-bottom</title>
@@ -196,7 +196,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
           </div>
         </li>
         <li class="nav-item">
-          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
               <title>order-arrow</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
@@ -231,7 +231,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
       </div>
       <ul class="navbar-nav">
         <li class="nav-item navbar-breakpoint-d-none">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -255,6 +255,24 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
               </svg>
             </button>
           </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="tbar subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="tbar-nav">
+        <li class="tbar-item tbar-item-expand">
+          <div class="tbar-section">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">0 results for
+                <strong>carcamusas</strong>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li class="tbar-item">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
         </li>
       </ul>
     </div>
@@ -1795,6 +1813,24 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
             </svg>
           </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="tbar subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="tbar-nav">
+        <li class="tbar-item tbar-item-expand">
+          <div class="tbar-section">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">0 results for
+                <strong>foo</strong>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li class="tbar-item">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
         </li>
       </ul>
     </div>
