@@ -371,7 +371,15 @@
 
 			var container = $(options.container);
 			var content = container.find(options.content).first();
-			var navigation = container.find(options.navigation).first();
+            var navigation;
+
+            if(container.find(options.navigation).length){
+                navigation = container.find(options.navigation).first();
+            }
+            else {
+                navigation = $(options.navigation);
+            }
+
 			var menu = navigation.find('.sidenav-menu').first();
 
 			var sidenavRight = instance._isSidenavRight();
