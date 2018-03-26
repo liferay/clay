@@ -5,7 +5,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with a different 
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col">
-        <span class="sticker sticker-unstyled">
+        <span class="sticker sticker-rounded sticker-unstyled">
           <span class="sticker-overlay">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
               <title>list</title>
@@ -27,7 +27,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col">
-        <span class="sticker sticker-unstyled">
+        <span class="sticker sticker-rounded sticker-unstyled">
           <span class="sticker-overlay">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
               <title>folder</title>
@@ -69,7 +69,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with classes 1`] 
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col">
-        <span class="sticker sticker-unstyled">
+        <span class="sticker sticker-rounded sticker-unstyled">
           <span class="sticker-overlay">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
               <title>folder</title>
@@ -91,7 +91,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with href 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col">
-        <span class="sticker sticker-unstyled">
+        <span class="sticker sticker-rounded sticker-unstyled">
           <span class="sticker-overlay">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
               <title>folder</title>
@@ -113,7 +113,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col">
-        <span class="sticker sticker-unstyled">
+        <span class="sticker sticker-rounded sticker-unstyled">
           <span class="sticker-overlay">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
               <title>folder</title>
@@ -140,7 +140,7 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
         <div class="card-body">
           <div class="card-row">
             <div class="autofit-col">
-              <span class="sticker sticker-unstyled">
+              <span class="sticker sticker-rounded sticker-unstyled">
                 <span class="sticker-overlay">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                     <title>folder</title>
@@ -170,7 +170,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = 
         <div class="card-body">
           <div class="card-row">
             <div class="autofit-col">
-              <span class="sticker sticker-unstyled">
+              <span class="sticker sticker-rounded sticker-unstyled">
                 <span class="sticker-overlay">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                     <title>folder</title>
@@ -200,7 +200,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
         <div class="card-body">
           <div class="card-row">
             <div class="autofit-col">
-              <span class="sticker sticker-unstyled">
+              <span class="sticker sticker-rounded sticker-unstyled">
                 <span class="sticker-overlay">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                     <title>folder</title>
@@ -230,7 +230,7 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
         <div class="card-body">
           <div class="card-row">
             <div class="autofit-col">
-              <span class="sticker sticker-unstyled">
+              <span class="sticker sticker-rounded sticker-unstyled">
                 <span class="sticker-overlay">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                     <title>folder</title>
@@ -260,7 +260,7 @@ exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
         <div class="card-body">
           <div class="card-row">
             <div class="autofit-col">
-              <span class="sticker sticker-unstyled">
+              <span class="sticker sticker-rounded sticker-unstyled">
                 <span class="sticker-overlay">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                     <title>folder</title>
@@ -285,7 +285,7 @@ exports[`ClayHorizontalCard should render the default markup 1`] = `
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col">
-        <span class="sticker sticker-unstyled">
+        <span class="sticker sticker-rounded sticker-unstyled">
           <span class="sticker-overlay">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
               <title>folder</title>

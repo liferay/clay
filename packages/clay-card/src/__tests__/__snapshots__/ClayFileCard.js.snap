@@ -292,7 +292,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker 1`] = `
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -315,7 +315,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker shape \`circle\`
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-primary sticker-bottom-left rounded-circle">
+    <span class="sticker sticker-circle sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -338,7 +338,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker shape \`rounded\
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -361,7 +361,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`danger c
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-danger sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -384,7 +384,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`dark col
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-dark sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-dark sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -407,7 +407,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`info col
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-info sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-info sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -430,7 +430,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`light co
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-light sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-light sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -453,7 +453,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`primary 
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -476,7 +476,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`secondar
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-secondary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-secondary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -499,7 +499,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`success 
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-success sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-success sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -522,7 +522,7 @@ exports[`ClayFileCard should render a ClayFileCard with sticker style \`warning 
         <use xlink:href="icons.svg#documents-and-media"></use>
       </svg>
     </div>
-    <span class="sticker sticker-warning sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-warning sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>

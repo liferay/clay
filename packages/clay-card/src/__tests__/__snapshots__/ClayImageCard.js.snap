@@ -237,7 +237,7 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -254,7 +254,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left rounded-circle">
+    <span class="sticker sticker-circle sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -271,7 +271,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle
 exports[`ClayImageCard should render a ClayImageCard with sticker shape \`rounded\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -288,7 +288,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker shape \`rounde
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`danger color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-danger sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -305,7 +305,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`danger
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`dark color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-dark sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-dark sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -322,7 +322,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`dark c
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`info color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-info sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-info sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -339,7 +339,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`info c
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`light color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-light sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-light sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -356,7 +356,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`light 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`primary color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -373,7 +373,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`primar
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`secondary color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-secondary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-secondary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -390,7 +390,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`second
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`success color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-success sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-success sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -407,7 +407,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`succes
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`warning color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-warning sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-warning sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
