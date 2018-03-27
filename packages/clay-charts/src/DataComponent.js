@@ -28,15 +28,19 @@ class DataComponent extends Component {
 	_resolveData(data) {
 		this._setupPolling();
 
-		if (Array.isArray(data) || (isObject(data) && !isFunction(data))) {
-			return Promise.resolve(data);
-		} else if (isFunction(data)) {
-			return data().then(val => val);
-		} else if (isString(data)) {
-			return fetch(data, {cors: 'cors'})
-				.then(res => res.json())
-				.then(res => res.data);
-		}
+		return new Promise((resolve, reject) => {
+			if (Array.isArray(data) || (isObject(data) && !isFunction(data))) {
+				resolve(data);
+			} else if (isFunction(data)) {
+				data().then(val => resolve(val));
+			} else if (isString(data)) {
+				fetch(data, {cors: 'cors'})
+					.then(res => res.json())
+					.then(res => resolve(res.data));
+			} else {
+				reject(`Could not resolve data: ${data}`);
+			}
+		});
 	}
 
 	/**
