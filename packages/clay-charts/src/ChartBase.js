@@ -893,7 +893,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
+	 * @type {?(Object|undefined)}
 	 */
 	grid: Config.shapeOf({
 		// Cross reference this with source code, have a feeling this info is wrong
