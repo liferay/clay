@@ -43,7 +43,7 @@ $component-action: map-merge((
 
 $link-outline-primary: () !default;
 $link-outline-primary: map-merge((
-	hover-bg: lighten(saturate($primary, 3.40), 43.14),
+	hover-bg: lighten($primary, 44.90),
 	hover-color: $primary,
 	btn-focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
 	btn-focus-outline: 0,

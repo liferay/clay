@@ -52,5 +52,5 @@ $subnav-tbar-light: map-merge((
 
 $subnav-tbar-primary: () !default;
 $subnav-tbar-primary: map-merge((
-	bg-color: lighten(saturate($primary, 3.40), 31.18)
+	bg-color: lighten($primary, 32.94)
 ), $subnav-tbar-primary);

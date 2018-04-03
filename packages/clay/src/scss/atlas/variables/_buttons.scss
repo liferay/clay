@@ -38,11 +38,11 @@ $btn-group-item-margin-right: 1rem !default;
 // Button Variants
 
 $btn-primary: (
-	hover-bg: darken(saturate($primary, 3.40), 6.86),
+	hover-bg: darken($primary, 5.10),
 	hover-border-color: transparent,
-	focus-box-shadow: 0 0 0 2px rgba(darken(saturate($primary, 3.40), 6.86), 0.5),
+	focus-box-shadow: 0 0 0 2px rgba(darken($primary, 5.10), 0.5),
 	disabled-bg: $primary,
-	active-bg: darken(saturate($primary, 3.40), 11.76),
+	active-bg: darken($primary, 10.00),
 	active-border-color: transparent,
 	active-box-shadow: none
 ) !default;
@@ -131,10 +131,10 @@ $btn-dark: (
 // Button Outline Variant
 
 $btn-outline-primary: (
-	hover-bg: lighten(saturate($primary, 3.40), 43.14),
+	hover-bg: lighten($primary, 44.90),
 	hover-color: $primary,
-	focus-bg: lighten(saturate($primary, 3.40), 43.14),
-	focus-box-shadow: 0 0 0 2px rgba(darken(saturate($primary, 3.40), 6.86), 0.25),
+	focus-bg: lighten($primary, 44.90),
+	focus-box-shadow: 0 0 0 2px rgba(darken($primary, 5.10), 0.25),
 	focus-color: $primary,
 	disabled-bg: transparent,
 	disabled-border-color: map-get($btn-primary, bg),

@@ -19,7 +19,7 @@ $label-lg: (
 
 $label-primary-color: $primary !default;
 $label-primary-hover-color: $label-primary-color !default;
-$label-primary-border-color: lighten(saturate($label-primary-color, 3.40), 21.18) !default;
+$label-primary-border-color: lighten($label-primary-color, 22.94) !default;
 $label-primary-hover-border-color: $label-primary-border-color !default;
 
 $label-secondary-color: $secondary !default;

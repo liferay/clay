@@ -10,12 +10,12 @@ $custom-control-indicator-active-border-color: $custom-control-indicator-border-
 $custom-control-indicator-active-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1) !default;
 $custom-control-indicator-active-checked-bg: $component-active-bg !default;
 $custom-control-indicator-active-checked-border-color: $custom-control-indicator-active-checked-bg !default;
-$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px lighten(saturate($component-active-bg, 3.40), 21.18) !default;
+$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px lighten($component-active-bg, 22.94) !default;
 $custom-control-indicator-checked-border-color: $custom-control-indicator-active-checked-bg !default;
 $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-active-checked-bg !default;
 $custom-control-indicator-disabled-bg: $input-disabled-bg !default;
 $custom-control-indicator-disabled-border-color: $input-disabled-border-color !default;
-$custom-control-indicator-disabled-checked-bg: lighten(saturate($component-active-bg, 3.40), 31.18) !default;
+$custom-control-indicator-disabled-checked-bg: lighten($component-active-bg, 32.94) !default;
 $custom-control-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-bg !default;
 
 // Custom Control Description
