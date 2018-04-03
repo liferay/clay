@@ -47,7 +47,7 @@ $font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI
 
 // Theme Base Colors
 
-$primary: #1865FB !default;
+$primary: #0B5FFF !default;
 $secondary: #6B6C7E !default;
 $success: #287D3D !default;
 $info: #2E5AAC !default;
@@ -74,10 +74,10 @@ $body-bg: #F1F2F5 !default;
 $body-color: #272833 !default;
 $text-muted: lighten(saturate(adjust-hue($body-color, -1), 0.22), 51.96) !default;
 
-$link-color: #1865FB !default;
+$link-color: #0B5FFF !default;
 $link-hover-color: darken($link-color, 8%) !default;
 
-$component-active-bg: #1865FB !default;
+$component-active-bg: #0B5FFF !default;
 $component-active-color: #FFF !default;
 
 $border-radius: 0.25rem !default; // 4px

@@ -29,7 +29,7 @@ $management-bar-light: map-merge((
 
 $management-bar-primary: () !default;
 $management-bar-primary: map-merge((
-	bg: lighten(saturate($primary, 3.40), 43.14),
+	bg: lighten($primary, 44.90),
 	border-color: $primary,
 	color: $navbar-light-color,
 	link-color: $navbar-light-color,
