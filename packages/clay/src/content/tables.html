@@ -19,8 +19,8 @@ section: Components
 			<code>show-quick-actions-on-hover</code> will need Javascript to add class <code>table-focus</code> on the table row when an item inside is focused to make it keyboard accessible.
 		</div>
 
-<div class="table-responsive-lg">
-	<table class="show-quick-actions-on-hover table table-autofit table-list">
+<div class="table-responsive">
+	<table class="show-quick-actions-on-hover table table-autofit table-list table-nowrap">
 		<thead>
 			<tr>
 				<th></th>
@@ -1009,6 +1009,217 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Table List (Inline Edit Table) Example</h3>
+
+<div class="table-responsive">
+	<table class="table table-autofit table-list table-nowrap">
+		<thead>
+			<tr>
+				<th>
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title=""></span>
+					</span>
+				</th>
+				<th class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="Title">Title</span>
+					</span>
+				</th>
+				<th class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="Author">Author</span>
+					</span>
+				</th>
+				<th class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="Modified Date">Modified Date</span>
+					</span>
+				</th>
+				<th class="table-column-text-end"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<div class="table-list-title">
+						<a class="text-truncate-inline" href="#1">
+							<span class="text-truncate" title="Web Content 342122-322-abcdefg">Web Content 342122-322-abcdefg</span>
+						</a>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<a class="table-list-link text-truncate-inline" href="#1">
+						<span class="text-truncate" title="Marge Peggie Margaret Meg Maggie Miller">Marge Peggie Margaret Meg Maggie Miller</span>
+					</a>
+				</td>
+				<td class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="35 Seconds Ago">35 Seconds Ago</span>
+					</span>
+				</td>
+				<td class="table-column-text-end">
+					<div class="btn-group btn-group-nowrap">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary btn-sm" type="button">Edit</button>
+						</div>
+						<div class="btn-group-item">
+							<div class="dropdown dropdown-action">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<div class="table-list-title">
+						<a class="text-truncate-inline" href="#1">
+							<span class="text-truncate" title="Web Content C">Web Content C</span>
+						</a>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<a class="table-list-link text-truncate-inline" href="#1">
+						<span class="text-truncate" title="Arnold Geen">Arnold Geen</span>
+					</a>
+				</td>
+				<td class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="15 Minutes Ago">15 Minutes Ago</span>
+					</span>
+				</td>
+				<td class="table-column-text-end">
+					<div class="btn-group btn-group-nowrap">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary btn-sm" type="button">Edit</button>
+						</div>
+						<div class="btn-group-item">
+							<div class="dropdown dropdown-action">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<input class="form-control form-control-sm" type="text" value="Web Content B">
+				</td>
+				<td class="table-cell-expand">
+					<input class="form-control form-control-sm" type="text" value="Matthew Richards">
+				</td>
+				<td class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="20 Minutes Ago">20 Minutes Ago</span>
+					</span>
+				</td>
+				<td class="table-column-text-end">
+					<div class="btn-group btn-group-nowrap">
+						<div class="btn-group-item">
+							<button class="btn btn-primary btn-sm" type="button">Save</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<div class="table-list-title">
+						<a class="text-truncate-inline" href="#1">
+							<span class="text-truncate" title="Web Content E">Web Content E</span>
+						</a>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<a class="table-list-link text-truncate-inline" href="#1">
+						<span class="text-truncate" title="Michael Dellen">Michael Dellen</span>
+					</a>
+				</td>
+				<td class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="5 Minutes Ago">5 Minutes Ago</span>
+					</span>
+				</td>
+				<td class="table-column-text-end">
+					<div class="btn-group btn-group-nowrap">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary btn-sm" type="button">Edit</button>
+						</div>
+						<div class="btn-group-item">
+							<div class="dropdown dropdown-action">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Table Helpers</h3>
 
 		<blockquote class="blockquote">
@@ -1179,10 +1390,20 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Table Column Text-{start|center|end}</h3>
+
+		<blockquote class="blockquote">
+			<p>We have added some classes to help horizontally align contents inside a table column. The classes <code>table-column-text-start</code>, <code>table-column-text-center</code>, and <code>table-column-text-end</code> will align text left, center, and right respectively.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Table</h3>
 
 		<div class="alert alert-warning">
-			Because of the dynamic nature of content in tables, we left it to the developer to size and align columns inside tables. Add a unique class to each column and min-width / max-width to space the tables to your specific requirements. In the example below to center the remove icon create class, <code>remove-column</code> for example, and add it to each th/td element in the column. In your CSS set <code>```.remove-column { text-align: center; }```</code>.
+			Because of the dynamic nature of content in tables, we left it to the developer to size and align columns inside tables. Add a unique class to each column and min-width / max-width to space the tables to your specific requirements.
 		</div>
 
 		<div class="table-responsive">
@@ -1191,7 +1412,7 @@ section: Components
 					<tr>
 						<th class="table-cell-expand">Name</th>
 						<th class="table-cell-expand">Roles</th>
-						<th>Remove</th>
+						<th class="table-column-text-center">Remove</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -1215,7 +1436,7 @@ section: Components
 							</a>(.table-action-link),
 							<span>and some regular text</span>
 						</td>
-						<td>
+						<td class="table-column-text-center">
 							<button class="btn btn-unstyled table-action-link" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle" />
@@ -1232,7 +1453,7 @@ section: Components
 						<td class="table-cell-expand">
 							<a class="table-link" href="#1">Liferay Site Owner</a>
 						</td>
-						<td>
+						<td class="table-column-text-center">
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle" />
@@ -1249,7 +1470,7 @@ section: Components
 						<td class="table-cell-expand">
 							<a class="table-link" href="#1">Liferay Site Owner</a>
 						</td>
-						<td>
+						<td class="table-column-text-center">
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle" />
@@ -1266,7 +1487,7 @@ section: Components
 						<td class="table-cell-expand">
 							<a class="table-link" href="#1">Liferay Site Owner</a>
 						</td>
-						<td>
+						<td class="table-column-text-center">
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle" />
