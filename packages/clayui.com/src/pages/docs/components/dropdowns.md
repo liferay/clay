@@ -952,7 +952,7 @@ weight: 100
 > A monospaced `dropdown-toggle` for a dropdown containing several actions, add `dropdown-action` to `dropdown`.
 
 <div class="dropdown dropdown-action">
-	<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
+	<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 			<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 		</svg>
