@@ -10,11 +10,13 @@ $label-spacer-x: 0.25rem !default; // 4px
 $label-spacer-y: 0.125rem !default; // 2px
 $label-text-transform: null !default;
 
-$label-lexicon-icon-height: 0.7em !default;
-$label-lexicon-icon-margin-top: -0.1em !default;
-$label-lexicon-icon-width: auto !default;
+$label-lexicon-icon-height: 0.875em !default;
+$label-lexicon-icon-margin-top: 0 !default;
+$label-lexicon-icon-width: 0.875em !default;
 
 $label-dismissible-text-transform: null !default;
+
+$label-item-spacer-x: 0.5em !default;
 
 $label-anchor-text-decoration: none !default;
 $label-anchor-hover-text-decoration: null !default;
