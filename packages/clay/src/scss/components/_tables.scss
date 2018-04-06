@@ -22,6 +22,7 @@ th {
 
 .table {
 	border-collapse: collapse;
+	margin-bottom: $table-margin-bottom;
 
 	thead {
 		td,
@@ -84,6 +85,18 @@ th {
 	.form-check {
 		margin-bottom: 0;
 	}
+}
+
+.table-column-text-start {
+	text-align: left;
+}
+
+.table-column-text-center {
+	text-align: center;
+}
+
+.table-column-text-end {
+	text-align: right;
 }
 
 %table-cell-expand {
@@ -568,8 +581,7 @@ th {
 	}
 }
 
-// Chrome 61.0.3163.100 bug, box-shadow on th td with .table-responsive causes
-// vertical scrollbar to appear.
+// Table Responsive
 
 .table-responsive {
 	@each $breakpoint in map-keys($grid-breakpoints) {
@@ -577,9 +589,7 @@ th {
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
 		&#{$infix} {
-			@include media-breakpoint-down($breakpoint) {
-				overflow-y: hidden;
-			}
+			margin-bottom: $table-responsive-margin-bottom;
 		}
 	}
 }
