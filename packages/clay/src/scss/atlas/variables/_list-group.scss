@@ -11,7 +11,7 @@ $list-group-item-padding-y: 1rem !default; // 16px
 // List Group Header
 
 $list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
-$list-group-header-padding-y: 0.78125rem !default; // 12.5px
+$list-group-header-padding-y: 0.53125rem !default; // 8.5px
 
 $list-group-header-title: () !default;
 $list-group-header-title: map-merge((
