@@ -128,7 +128,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`danger co
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-danger">Approved</span>
+          <span class="label label-danger">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -144,7 +148,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`info colo
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-info">Approved</span>
+          <span class="label label-info">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -160,7 +168,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`secondary
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-secondary">Approved</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -176,7 +188,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`success c
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-success">Approved</span>
+          <span class="label label-success">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -192,7 +208,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`warning c
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-warning">Approved</span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -208,9 +228,21 @@ exports[`ClayImageCard should render a ClayImageCard with labels with styles map
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-success">Approved</span>
-          <span class="label label-warning">Pending</span>
-          <span class="label label-danger">Error</span>
+          <span class="label label-success">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Pending</span>
+            </span>
+          </span>
+          <span class="label label-danger">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Error</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -226,7 +258,11 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-secondary">Approved</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -443,8 +479,16 @@ exports[`ClayImageCard should render a ClayImageCard with two labels 1`] = `
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-secondary">Approved</span>
-          <span class="label label-secondary">Pending</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Pending</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -460,8 +504,16 @@ exports[`ClayImageCard should render a ClayImageCard with two labels with styles
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-warning">Approved</span>
-          <span class="label label-danger">Peding</span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
+          <span class="label label-danger">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Peding</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
