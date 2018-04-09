@@ -32,7 +32,7 @@
 	]>}
 	{@param? clearResultsURL: string}
 	{@param? contentRenderer: string}
-	{@param? creationMenu: bool|[
+	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
 		maxPrimaryItems: int,
@@ -80,6 +80,7 @@
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
 	{@param? showAdvancedSearch: bool}
+	{@param? showCreationMenu: bool}
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
@@ -145,6 +146,7 @@
 				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
 				{param showAdvancedSearch: $showAdvancedSearch /}
+				{param showCreationMenu: $showCreationMenu ?: true /}
 				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
@@ -289,12 +291,40 @@
  * This renders the creation menu.
  */
 {template .creationMenu}
-	{@param creationMenu: ?}
 	{@param spritemap: string}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleCreationMenuMoreButtonClicked: any}
+	{@param? creationMenu: [
+		caption: string,
+		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
+		primaryItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
+		]>,
+		secondaryItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
+			label: string,
+			separator: bool
+		]>,
+		viewMoreURL: string
+	]}
 
-	{if $creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and not $creationMenu.secondaryItems}
+	{if $creationMenu and $creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and not $creationMenu.secondaryItems}
 		{let $item: $creationMenu.primaryItems[0] /}
 
 		{call ClayLink.render}
@@ -305,7 +335,7 @@
 			{param icon: 'plus' /}
 			{param spritemap: $spritemap /}
 		{/call}
-	{elseif $creationMenu.primaryItems}
+	{elseif $creationMenu and $creationMenu.primaryItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
 			{param events: ['moreButtonClicked': $_handleCreationMenuMoreButtonClicked] /}
@@ -348,7 +378,7 @@
 	{@param? _handleViewTypeClicked: any}
 	{@param? _showSearchMobile: bool}
 	{@param? contentRenderer: string}
-	{@param? creationMenu: bool|[
+	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
 		maxPrimaryItems: int,
@@ -393,6 +423,7 @@
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? showAdvancedSearch: bool}
+	{@param? showCreationMenu: bool}
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
@@ -586,7 +617,7 @@
 					</li>
 				{/if}
 
-				{if $creationMenu}
+				{if $showCreationMenu}
 					<li class="nav-item">
 						{call .creationMenu}
 							{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
