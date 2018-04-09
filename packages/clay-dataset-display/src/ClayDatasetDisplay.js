@@ -305,26 +305,16 @@ ClayDatasetDisplay.STATE = {
 	 * @memberof ClayDatasetDisplay
 	 * @type {?(object|string|bool|undefined)}
 	 */
-	creationMenu: Config.oneOfType([
-		Config.bool().value(false),
-		Config.string(),
-		Config.shapeOf({
-			caption: Config.string(),
-			helpText: Config.string(),
-			primaryItems: creationMenuItemsValidator,
-			secondaryItems: creationMenuItemsValidator,
-		}),
-		Config.shapeOf({
-			caption: Config.string(),
-			helpText: Config.string(),
-			maxPrimaryItems: Config.number(),
-			maxSecondaryItems: Config.number(),
-			maxTotalItems: Config.number(),
-			primaryItems: creationMenuItemsValidator,
-			secondaryItems: creationMenuItemsValidator,
-			viewMoreURL: Config.string(),
-		}),
-	]),
+	creationMenu: Config.shapeOf({
+		caption: Config.string(),
+		helpText: Config.string(),
+		maxPrimaryItems: Config.number(),
+		maxSecondaryItems: Config.number(),
+		maxTotalItems: Config.number(),
+		primaryItems: creationMenuItemsValidator,
+		secondaryItems: creationMenuItemsValidator,
+		viewMoreURL: Config.string(),
+	}),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -406,6 +396,16 @@ ClayDatasetDisplay.STATE = {
 	 * @type {?(number|undefined)}
 	 */
 	selectedView: Config.number(),
+
+	/**
+	 * Flag to indicate if management toolbar creation menu button should be
+	 * shown or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?bool}
+	 */
+	showCreationMenu: Config.bool().value(true),
 
 	/**
 	 * Flag to indicate if the `Done` button in management toolbar filter dropdown

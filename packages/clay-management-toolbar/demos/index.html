@@ -61,6 +61,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>With only one Creation Menu item</h4>
+			<div id="one-creation-menu-item-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>With Only Search</h4>
 			<div id="only-search-block"></div>
 		</div>
@@ -244,7 +251,6 @@
 
 		//Default State
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -501,10 +507,33 @@
 		},
 		'#link-view-types-block');
 
+		//Only one Creation Menu Item
+		new metal.ClayManagementToolbar({
+			creationMenu: {
+				primaryItems: [
+					{
+						href: '#primary1',
+						label: 'Primary 1',
+					}
+				],
+				viewMoreURL: '#viewMore',
+			},
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			selectable: true,
+			showInfoButton: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			viewTypes: linkViewTypes,
+		},
+		'#one-creation-menu-item-block');
+
 		//With Only Search
 		new metal.ClayManagementToolbar({
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
+			showCreationMenu: false,
 			spritemap: spritemap,
 		},
 		'#only-search-block');
@@ -514,13 +543,13 @@
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
 			showAdvancedSearch: true,
+			showCreationMenu: false,
 			spritemap: spritemap,
 		},
 		'#advanced-search-block');
 
 		//Without Search
 		new metal.ClayManagementToolbar({
-			creationMenu: '#creationPageURL',
 			filterItems: filterItems,
 			showSearch: false,
 			selectable: true,
@@ -532,7 +561,6 @@
 
 		//With search results bar
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
 			events: {
 				'clearButtonClicked': handleClearButton
 			},
@@ -557,7 +585,6 @@
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
 			clearResultsURL: '#clear',
-			creationMenu: true,
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
