@@ -267,16 +267,15 @@ describe('ClayManagementToolbar', function() {
 	it('should render a managment toolbar with creation menu', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
-			creationMenu: true,
 		});
 
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a managment toolbar with creation link', () => {
+	it('should render a managment toolbar without creation menu', () => {
 		managementToolbar = new ClayManagementToolbar({
+			showCreationMenu: false,
 			spritemap: spritemap,
-			creationMenu: '#1',
 		});
 
 		expect(managementToolbar).toMatchSnapshot();
@@ -690,7 +689,6 @@ describe('ClayManagementToolbar', function() {
 
 	it('should render a management toolbar and emit an event on creation menu click', () => {
 		managementToolbar = new ClayManagementToolbar({
-			creationMenu: true,
 			spritemap: spritemap,
 		});
 
