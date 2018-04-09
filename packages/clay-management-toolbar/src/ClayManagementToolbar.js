@@ -246,7 +246,6 @@ ClayManagementToolbar.STATE = {
 	 */
 	creationMenu: Config.oneOfType([
 		Config.bool().value(false),
-		Config.string(),
 		Config.shapeOf({
 			caption: Config.string(),
 			helpText: Config.string(),
