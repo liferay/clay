@@ -354,7 +354,7 @@ ClayManagementToolbar.STATE = {
 	 * @type {?bool}
 	 */
 	showAdvancedSearch: Config.bool().value(false),
-	
+
 	/**
 	 * Flag to indicate if creation menu button should be shown or not.
 	 * @default true

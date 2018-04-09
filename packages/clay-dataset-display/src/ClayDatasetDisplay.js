@@ -396,7 +396,7 @@ ClayDatasetDisplay.STATE = {
 	 * @type {?(number|undefined)}
 	 */
 	selectedView: Config.number(),
-	
+
 	/**
 	 * Flag to indicate if management toolbar creation menu button should be
 	 * shown or not.
