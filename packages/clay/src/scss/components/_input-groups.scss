@@ -461,3 +461,19 @@
 		}
 	}
 }
+
+// Input Group Password
+
+.input-group-password {
+	.form-control[type="text"] ~ .input-group-inset-item {
+		.input-password-label {
+			display: none;
+		}
+	}
+
+	.form-control[type="password"] ~ .input-group-inset-item {
+		.input-text-label {
+			display: none;
+		}
+	}
+}
