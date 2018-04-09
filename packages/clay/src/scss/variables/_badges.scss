@@ -6,9 +6,11 @@ $badge-line-height: null !default;
 $badge-spacer-x: 0.25rem !default; // 4px
 $badge-spacer-y: 0.125rem !default; // 2px
 
-$badge-lexicon-icon-height: 0.7em !default;
-$badge-lexicon-icon-margin-top: -0.1em !default;
-$badge-lexicon-icon-width: auto !default;
+$badge-lexicon-icon-height: 0.8125em !default;
+$badge-lexicon-icon-margin-top: 0 !default;
+$badge-lexicon-icon-width: 0.8125em !default;
+
+$badge-item-spacer-x: 0.5em !default;
 
 $badge-link-color: #FFF !default;
 $badge-link-hover-color: null !default;

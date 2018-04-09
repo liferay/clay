@@ -5,9 +5,12 @@ $label-height: 1rem !default; // 16px
 $label-padding-x: 0.5rem !default; // 8px
 $label-text-transform: uppercase !default;
 
-$label-lexicon-icon-height: 0.8em !default;
+$label-item-spacer-x: 0.85714em !default;
 
 $label-anchor-hover-text-decoration: underline !default;
+
+$label-link-text-decoration: none !default;
+$label-link-hover-text-decoration: underline !default;
 
 $label-lg: (
 	font-size: 0.8125rem, // 13px

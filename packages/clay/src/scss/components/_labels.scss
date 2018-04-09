@@ -6,7 +6,7 @@
 	border-style: $label-border-style;
 	border-width: $label-border-width;
 	color: $label-color;
-	display: inline-block;
+	display: inline-flex;
 	font-size: $label-font-size;
 	font-weight: $label-font-weight;
 	line-height: $label-height - ($label-border-width * 2);
@@ -33,6 +33,8 @@
 		}
 	}
 
+	// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
+	// pattern instead
 	.inline-item {
 		a {
 			align-items: center;
@@ -83,6 +85,62 @@ a.label {
 .label-dismissible {
 	text-transform: $label-dismissible-text-transform;
 }
+
+.label-item {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	justify-content: center;
+	min-height: 0;
+	position: relative;
+
+	a {
+		display: inline-flex;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+		display: inline-flex;
+		font-size: $label-lexicon-icon-height;
+	}
+
+	.close {
+		color: inherit;
+		display: inline-flex;
+		font-size: $label-lexicon-icon-height;
+		opacity: 1;
+	}
+
+	.btn-unstyled,
+	.close {
+		.lexicon-icon {
+			width: 1em;
+		}
+	}
+
+	.lexicon-icon {
+		height: $label-lexicon-icon-height;
+		margin-top: $label-lexicon-icon-margin-top;
+		width: $label-lexicon-icon-width;
+	}
+}
+
+.label-item-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 1rem;
+	word-wrap: break-word;
+}
+
+.label-item-before {
+	margin-right: $label-item-spacer-x;
+}
+
+.label-item-after {
+	margin-left: $label-item-spacer-x;
+}
+
+// Label Sizes
 
 .label-lg {
 	@include clay-label-size($label-lg);

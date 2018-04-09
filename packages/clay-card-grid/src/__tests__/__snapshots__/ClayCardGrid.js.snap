@@ -73,7 +73,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <a class=" card-title text-truncate" href="#">Hamburger</a>
             <div class="card-subtitle text-truncate">U.S.A</div>
             <div class="card-detail">
-              <span class="label label-success">No Spicy</span>
+              <span class="label label-success">
+                <span class="text-truncate-inline">
+                  <span class="text-truncate">No Spicy</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -94,7 +98,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <a class=" card-title text-truncate" href="#">Ramen</a>
             <div class="card-subtitle text-truncate">China</div>
             <div class="card-detail">
-              <span class="label label-warning">Spicy</span>
+              <span class="label label-warning">
+                <span class="text-truncate-inline">
+                  <span class="text-truncate">Spicy</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -115,7 +123,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <a class=" card-title text-truncate" href="#">Paella</a>
             <div class="card-subtitle text-truncate">Spain</div>
             <div class="card-detail">
-              <span class="label label-success">No Spicy</span>
+              <span class="label label-success">
+                <span class="text-truncate-inline">
+                  <span class="text-truncate">No Spicy</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -141,7 +153,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <a class=" card-title text-truncate" href="#">Pizza</a>
             <div class="card-subtitle text-truncate">Italy</div>
             <div class="card-detail">
-              <span class="label label-success">No Spicy</span>
+              <span class="label label-success">
+                <span class="text-truncate-inline">
+                  <span class="text-truncate">No Spicy</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -162,7 +178,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <a class=" card-title text-truncate" href="#">Carcamusas</a>
             <div class="card-subtitle text-truncate">Toledo</div>
             <div class="card-detail">
-              <span class="label label-warning">Spicy</span>
+              <span class="label label-warning">
+                <span class="text-truncate-inline">
+                  <span class="text-truncate">Spicy</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -188,7 +208,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <a class=" card-title text-truncate" href="#">Tacos</a>
             <div class="card-subtitle text-truncate">Mexico</div>
             <div class="card-detail">
-              <span class="label label-danger">Very Spicy</span>
+              <span class="label label-danger">
+                <span class="text-truncate-inline">
+                  <span class="text-truncate">Very Spicy</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
