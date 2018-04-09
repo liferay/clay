@@ -61,6 +61,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>With only one Creation Menu item</h4>
+			<div id="one-creation-menu-item-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>With Only Search</h4>
 			<div id="only-search-block"></div>
 		</div>
@@ -428,6 +435,28 @@
 		},
 		'#link-view-types-block');
 
+		//Only one Creation Menu Item
+		new metal.ClayManagementToolbar({
+			creationMenu: {
+				primaryItems: [
+					{
+						href: '#primary1',
+						label: 'Primary 1',
+					}
+				],
+				viewMoreURL: '#viewMore',
+			},
+			filterItems: filterItems,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			selectable: true,
+			showInfoButton: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			viewTypes: linkViewTypes,
+		},
+		'#one-creation-menu-item-block');
+
 		//With Only Search
 		new metal.ClayManagementToolbar({
 			searchFormName: 'mySearchName',
@@ -447,7 +476,7 @@
 
 		//Without Search
 		new metal.ClayManagementToolbar({
-			creationMenu: '#creationPageURL',
+			creationMenu: true,
 			filterItems: filterItems,
 			showSearch: false,
 			selectable: true,
