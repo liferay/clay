@@ -1,18 +1,101 @@
 # Change Log
 
+## [v2.0.0-rc.11](https://github.com/liferay/clay/tree/v2.0.0-rc.11) (2018-04-10)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.10...v2.0.0-rc.11)
+
+**Fixed bugs:**
+
+- The compilation process clayui.com is broken [\#741](https://github.com/liferay/clay/issues/741)
+- Electric Does Not Render Charts Components [\#740](https://github.com/liferay/clay/issues/740)
+
+**Closed issues:**
+
+- Management Toolbar Creation Menu param should only admit creation param objects [\#782](https://github.com/liferay/clay/issues/782)
+- Label removable has disproportionate close button [\#777](https://github.com/liferay/clay/issues/777)
+- Remove white space between `table-responsive` and `table` when there is overflow [\#773](https://github.com/liferay/clay/issues/773)
+- Management Toolbar should admit a disabled param [\#771](https://github.com/liferay/clay/issues/771)
+- There is no clear button when there are no search results [\#770](https://github.com/liferay/clay/issues/770)
+- Create Password Field demo [\#768](https://github.com/liferay/clay/issues/768)
+- Update Bootstrap 4 in preparation for v4.1 [\#766](https://github.com/liferay/clay/issues/766)
+- Add more SVG Icons [\#762](https://github.com/liferay/clay/issues/762)
+- Create lifecycle tests for clay-charts [\#759](https://github.com/liferay/clay/issues/759)
+- Clay sticker shape classes needs to be updated [\#755](https://github.com/liferay/clay/issues/755)
+- Management Toolbar is not using Creation Menu properly  [\#753](https://github.com/liferay/clay/issues/753)
+- list-group-header should has 32px height [\#746](https://github.com/liferay/clay/issues/746)
+- Primary color should be: \#0B5FFF instead of \#1865FB [\#714](https://github.com/liferay/clay/issues/714)
+- Icons in buttons should always be 16px [\#713](https://github.com/liferay/clay/issues/713)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.11 [\#784](https://github.com/liferay/clay/pull/784) ([jbalsas](https://github.com/jbalsas))
+- SF | Fixes \#782 [\#783](https://github.com/liferay/clay/pull/783) ([carloslancha](https://github.com/carloslancha))
+- \(\#777\) Badges and Labels added new pattern for truncating text [\#781](https://github.com/liferay/clay/pull/781) ([carloslancha](https://github.com/carloslancha))
+- Update: \(Fixes \#746\) Atlas List Group change `$list-group-header-padd… [\#780](https://github.com/liferay/clay/pull/780) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#713\) Atlas Button change `$btn-inline-item-font-size-… [\#779](https://github.com/liferay/clay/pull/779) ([pat270](https://github.com/pat270))
+- Clay UI Docs update Tables [\#775](https://github.com/liferay/clay/pull/775) ([pat270](https://github.com/pat270))
+- \(\#773\) Remove white space between `table-responsive` and `table` when there is overflow [\#774](https://github.com/liferay/clay/pull/774) ([pat270](https://github.com/pat270))
+- Management Toolbar should admit a disabled param and add clear button when there are no search results [\#772](https://github.com/liferay/clay/pull/772) ([carloslancha](https://github.com/carloslancha))
+- \(\#768\) Added `input-group-password` [\#769](https://github.com/liferay/clay/pull/769) ([pat270](https://github.com/pat270))
+- Update: Bootstrap 4 to 10c64bd [\#767](https://github.com/liferay/clay/pull/767) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#714\) Primary Color should be based on \#0B5FFF [\#764](https://github.com/liferay/clay/pull/764) ([pat270](https://github.com/pat270))
+- \(\#762\) Added new SVG Icons for use in System Settings and Alloy Editor [\#763](https://github.com/liferay/clay/pull/763) ([pat270](https://github.com/pat270))
+- Create lifecycle tests for clay-charts [\#760](https://github.com/liferay/clay/pull/760) ([julien](https://github.com/julien))
+- Regen testSoy fixtures | Fixes \#755 [\#757](https://github.com/liferay/clay/pull/757) ([carloslancha](https://github.com/carloslancha))
+- Management Toolbar is not using Creation Menu properly | Fixes \#753 [\#754](https://github.com/liferay/clay/pull/754) ([carloslancha](https://github.com/carloslancha))
+- SF | Fixes \#749 [\#752](https://github.com/liferay/clay/pull/752) ([carloslancha](https://github.com/carloslancha))
+- Generate API Documents [\#748](https://github.com/liferay/clay/pull/748) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
+## [v2.0.0-rc.10](https://github.com/liferay/clay/tree/v2.0.0-rc.10) (2018-03-16)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.9...v2.0.0-rc.10)
+
+**Implemented enhancements:**
+
+- Update billboard.js in clay-charts [\#743](https://github.com/liferay/clay/issues/743)
+
+**Fixed bugs:**
+
+- Style of the quick actions menu is broken on ClayManagementToolbar [\#738](https://github.com/liferay/clay/issues/738)
+
+**Closed issues:**
+
+- Improve Creation Menu items logic [\#749](https://github.com/liferay/clay/issues/749)
+- Clay Link should not add inline-item inline-item-after class if there's no label [\#745](https://github.com/liferay/clay/issues/745)
+- `Type` tags are incorrect in JSDOC [\#736](https://github.com/liferay/clay/issues/736)
+- Create electric-clay-components to use on claycss.com [\#534](https://github.com/liferay/clay/issues/534)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.10 [\#751](https://github.com/liferay/clay/pull/751) ([jbalsas](https://github.com/jbalsas))
+- Improve Creation Menu items logic | Fixes \#749 [\#750](https://github.com/liferay/clay/pull/750) ([carloslancha](https://github.com/carloslancha))
+- Adds new JSDOC tags to ChartBase [\#747](https://github.com/liferay/clay/pull/747) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Updates billboard.js to 1.3.0 [\#744](https://github.com/liferay/clay/pull/744) ([julien](https://github.com/julien))
+- Fixes the quick action style in ClayManagementToolbar | Fixes \#738 [\#739](https://github.com/liferay/clay/pull/739) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fix tag type JSDOC when use multiple types | Fixes \#736 [\#737](https://github.com/liferay/clay/pull/737) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Site: \(\#721\) User icon to sticker-circle [\#724](https://github.com/liferay/clay/pull/724) ([marcoscv-work](https://github.com/marcoscv-work))
+
 ## [v2.0.0-rc.9](https://github.com/liferay/clay/tree/v2.0.0-rc.9) (2018-03-14)
-[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.7...v2.0.0-rc.9)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.8...v2.0.0-rc.9)
 
 **Closed issues:**
 
 - Soy throws an error when a quick Item is passed without href to the ManagementToolbar [\#733](https://github.com/liferay/clay/issues/733)
-- Missing metal import in clay-charts [\#729](https://github.com/liferay/clay/issues/729)
-- Warning about `&&` usage instead of `and` [\#723](https://github.com/liferay/clay/issues/723)
+- Generate API docs [\#657](https://github.com/liferay/clay/issues/657)
 
 **Merged pull requests:**
 
 - v2.0.0-rc.9 [\#735](https://github.com/liferay/clay/pull/735) ([jbalsas](https://github.com/jbalsas))
 - Check if item href is not null for quick items in management toolbar | Fixes \#733 [\#734](https://github.com/liferay/clay/pull/734) ([carloslancha](https://github.com/carloslancha))
+
+## [v2.0.0-rc.8](https://github.com/liferay/clay/tree/v2.0.0-rc.8) (2018-03-14)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.7...v2.0.0-rc.8)
+
+**Closed issues:**
+
+- Missing metal import in clay-charts [\#729](https://github.com/liferay/clay/issues/729)
+- Warning about `&&` usage instead of `and` [\#723](https://github.com/liferay/clay/issues/723)
+
+**Merged pull requests:**
+
 - v2.0.0-rc.8 [\#732](https://github.com/liferay/clay/pull/732) ([jbalsas](https://github.com/jbalsas))
 - Adds missing metal dependency [\#731](https://github.com/liferay/clay/pull/731) ([jbalsas](https://github.com/jbalsas))
 - Adds missing metal dependency [\#730](https://github.com/liferay/clay/pull/730) ([jbalsas](https://github.com/jbalsas))
