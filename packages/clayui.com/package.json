@@ -1,6 +1,6 @@
 {
   "name": "clayui.com",
-  "version": "2.0.0-rc.10",
+  "version": "2.0.0-rc.11",
   "private": true,
   "repository": {
     "type": "git",
@@ -11,15 +11,15 @@
     "watch": "concurrent --kill-others \"gulp watch\" \"el run\""
   },
   "dependencies": {
-    "clay": "^2.0.0-rc.10",
+    "clay": "^2.0.0-rc.11",
     "jquery": "^3.2.1",
     "metal-storage": "^1.1.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
     "countries-list": "^2.0.0",
-    "electric-cli": "^3.0.4",
     "electric-clay-components": "^3.0.1",
+    "electric-cli": "^3.0.4",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "gulp-storage": "^1.0.6",
