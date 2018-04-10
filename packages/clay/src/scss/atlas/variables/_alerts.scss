@@ -24,8 +24,8 @@ $alert-notifications-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3) !defa
 // Alert Variants
 
 $alert-primary-color: $primary !default;
-$alert-primary-bg: lighten(saturate($alert-primary-color, 3.40), 43.14) !default;
-$alert-primary-border-color: lighten(saturate($alert-primary-color, 3.40), 21.18) !default;
+$alert-primary-bg: lighten($alert-primary-color, 44.90) !default;
+$alert-primary-border-color: lighten($alert-primary-color, 22.94) !default;
 $alert-primary-close-color: $alert-primary-color !default;
 $alert-primary-lead-color: $alert-primary-color !default;
 $alert-primary-link-color: $link-color !default;

@@ -29,7 +29,7 @@ if (clayPath) {
 }
 
 const excludedComponents = /.*(pagination|isomorphic)/g;
-const metalComponents = ['electric-quartz-components']
+const metalComponents = ['electric-clay-components']
 	.concat(fs.readdirSync('../').filter(f => f.match(/^clay-.*/) && !f.match(excludedComponents)));
 const pathSrc = 'src';
 const ignoreDirs = ['components', 'layouts', 'pages', 'partials', 'styles'];
@@ -50,9 +50,30 @@ module.exports = {
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
 	metalComponents: metalComponents,
+	apiConfig: {
+		layout: 'main',
+		project: {
+			docsConfig: {
+				inferPrivate: '^_',
+				shallow: true,
+			},
+			refs: ['v2.0.0-rc.10', 'v2.0.0-rc.9'],
+			repo: 'clay',
+			soyAPIEntitiesPath: '../../../partials/ElectricAPIEntities.soy.js',
+			src: [
+				'packages/clay-*!(isomorphic)/src/Clay*.js',
+				'packages/clay-charts/src/*.js'
+			],
+			srcPath: 'packages',
+			user: 'liferay',
+		},
+	},
 	resolveModules: ['../../node_modules'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths],
+	},
+	entryPoints: {
+		electricAPI: path.join(__dirname, 'src/partials/ElectricAPIBundle.js'),
 	},
 	staticStc: staticSrc,
 	vendorSrc: [

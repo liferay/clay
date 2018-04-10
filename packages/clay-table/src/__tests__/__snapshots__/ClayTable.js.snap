@@ -475,7 +475,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field and
           </h4>
         </td>
         <td>
-          <span class="label label-secondary">No Spicy</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">No Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -487,7 +491,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field and
           </h4>
         </td>
         <td>
-          <span class="label label-secondary">Spicy</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -499,7 +507,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field and
           </h4>
         </td>
         <td>
-          <span class="label label-secondary">No Spicy</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">No Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -511,7 +523,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field and
           </h4>
         </td>
         <td>
-          <span class="label label-secondary">No Spicy</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">No Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -523,7 +539,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field and
           </h4>
         </td>
         <td>
-          <span class="label label-secondary">Spicy</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -535,7 +555,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field and
           </h4>
         </td>
         <td>
-          <span class="label label-secondary">Very Spicy</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Very Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
     </tbody>
@@ -562,7 +586,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field wit
           </h4>
         </td>
         <td>
-          <span class="label label-success">No Spicy</span>
+          <span class="label label-success">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">No Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -574,7 +602,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field wit
           </h4>
         </td>
         <td>
-          <span class="label label-warning">Spicy</span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -586,7 +618,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field wit
           </h4>
         </td>
         <td>
-          <span class="label label-success">No Spicy</span>
+          <span class="label label-success">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">No Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -598,7 +634,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field wit
           </h4>
         </td>
         <td>
-          <span class="label label-success">No Spicy</span>
+          <span class="label label-success">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">No Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -610,7 +650,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field wit
           </h4>
         </td>
         <td>
-          <span class="label label-warning">Spicy</span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
       <tr>
@@ -622,7 +666,11 @@ exports[`ClayTable should render a ClayTable with an schema with label field wit
           </h4>
         </td>
         <td>
-          <span class="label label-danger">Very Spicy</span>
+          <span class="label label-danger">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Very Spicy</span>
+            </span>
+          </span>
         </td>
       </tr>
     </tbody>

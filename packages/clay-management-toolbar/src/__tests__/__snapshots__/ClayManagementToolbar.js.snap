@@ -8,7 +8,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
             <label>
-              <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+              <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
                 <span class="custom-control-label-text sr-only">Select Page</span>
               </span>
@@ -17,7 +17,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" disabled="" type="button">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
               <span class="navbar-breakpoint-down-d-none">Filter and Order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                   <title>caret-bottom</title>
@@ -34,7 +34,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
           </div>
         </li>
         <li class="nav-item">
-          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
               <title>order-arrow</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
@@ -47,7 +47,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
           <form method="POST" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" disabled="" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -55,7 +55,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
                       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
                     </svg>
                   </button>
-                  <button class="btn btn-unstyled" aria-label="search" disabled="disabled" type="submit">
+                  <button class="btn btn-unstyled" aria-label="search" type="submit">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                       <title>search</title>
                       <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -69,7 +69,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
       </div>
       <ul class="navbar-nav">
         <li class="nav-item navbar-breakpoint-d-none">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -93,6 +93,14 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
               </svg>
             </button>
           </div>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
         </li>
       </ul>
     </div>
@@ -170,7 +178,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
             <label>
-              <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+              <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
                 <span class="custom-control-label-text sr-only">Select Page</span>
               </span>
@@ -179,7 +187,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         </li>
         <li class="dropdown nav-item">
           <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" disabled="" type="button">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
               <span class="navbar-breakpoint-down-d-none">Filter and Order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                   <title>caret-bottom</title>
@@ -196,7 +204,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
           </div>
         </li>
         <li class="nav-item">
-          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
               <title>order-arrow</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
@@ -231,7 +239,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
       </div>
       <ul class="navbar-nav">
         <li class="nav-item navbar-breakpoint-d-none">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" disabled="disabled" type="button">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
@@ -255,6 +263,32 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
               </svg>
             </button>
           </div>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="tbar subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="tbar-nav">
+        <li class="tbar-item tbar-item-expand">
+          <div class="tbar-section">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">0 results for
+                <strong>carcamusas</strong>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li class="tbar-item">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
         </li>
       </ul>
     </div>
@@ -371,6 +405,14 @@ exports[`ClayManagementToolbar should render a management toolbar with a clear r
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
         </li>
@@ -530,7 +572,16 @@ exports[`ClayManagementToolbar should render a management toolbar with advanced 
           </div>
         </form>
       </div>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>
@@ -587,6 +638,14 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
             </svg>
           </button>
         </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -615,7 +674,16 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
           </div>
         </form>
       </div>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>
@@ -755,25 +823,16 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           </button>
         </li>
         <li class="nav-item">
-          <div class="dropdown">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
-                <title>plus</title>
-                <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
-              </svg>
-            </button>
-          </div>
+          <a aria-label="Add Content 1" class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
-</div>
-<div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-  </ul>
 </div>
 `;
 
@@ -838,7 +897,13 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
     <li>
       <a class=" dropdown-item" href="#2">Add Content 2</a>
     </li>
-    <li class="dropdown-subheader" role="presentation">Favorite 1</li>
+    <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+    <li>
+      <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+    </li>
   </ul>
 </div>
 `;
@@ -897,15 +962,44 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
   </nav>
 </div>
 <div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Add Content 1</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Add Content 2</a>
-    </li>
-    <li class="dropdown-subheader" role="presentation">Favorite 1</li>
-  </ul>
+  <form>
+    <div class="inline-scroller">
+      <ul class="list-unstyled">
+        <li>
+          <a class=" dropdown-item" href="#1">Add Content 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#2">Add Content 2</a>
+        </li>
+        <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+        <li>
+          <a class=" dropdown-item" href="#fav1">Favorite 1</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav2">Favorite 2</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav3">Favorite 3</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav4">Favorite 4</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav5">Favorite 5</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav6">Favorite 6</a>
+        </li>
+        <li>
+          <a class=" dropdown-item" href="#fav7">Favorite 7</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-section">
+      <a class="btn btn-secondary btn-block" href="#viewMore">More</a>
+    </div>
+  </form>
 </div>
 `;
 
@@ -954,6 +1048,14 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
         </li>
@@ -1018,6 +1120,14 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
         </li>
@@ -1092,6 +1202,14 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
         </li>
@@ -1190,6 +1308,14 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
             </svg>
           </button>
         </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -1271,6 +1397,14 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
             </svg>
           </button>
         </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -1345,7 +1479,16 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
           </div>
         </form>
       </div>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>
@@ -1408,6 +1551,14 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open" focusable="false">
               <title>info-circle-open</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle-open"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
         </li>
@@ -1505,6 +1656,14 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
             </button>
           </div>
         </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -1547,7 +1706,16 @@ exports[`ClayManagementToolbar should render a management toolbar with no search
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container">
       <ul class="navbar-nav"></ul>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>
@@ -1575,7 +1743,16 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
           </div>
         </form>
       </div>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>
@@ -1603,7 +1780,16 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
           </div>
         </form>
       </div>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>
@@ -1631,7 +1817,16 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
           </div>
         </form>
       </div>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>
@@ -1684,6 +1879,14 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
         </li>
@@ -1760,6 +1963,32 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
             </svg>
           </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="tbar subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="tbar-nav">
+        <li class="tbar-item tbar-item-expand">
+          <div class="tbar-section">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">0 results for
+                <strong>foo</strong>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li class="tbar-item">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
         </li>
       </ul>
     </div>
@@ -1864,6 +2093,14 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
             </svg>
           </button>
         </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -1915,6 +2152,14 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
               <title>search</title>
               <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
         </li>
@@ -2002,6 +2247,14 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
             </button>
           </div>
         </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -2039,98 +2292,29 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a managment toolbar with creation link 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
-      <ul class="navbar-nav"></ul>
-      <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-        <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
-            <div class="input-group">
-              <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
-                <span class="input-group-inset-item input-group-inset-item-after">
-                  <button class="btn d-none btn-unstyled" aria-label="times" type="button">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                      <title>times</title>
-                      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                  <button class="btn btn-unstyled" aria-label="search" type="submit">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
-                      <title>search</title>
-                      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
-                    </svg>
-                  </button>
-                </span>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <ul class="navbar-nav">
-        <li class="nav-item navbar-breakpoint-d-none">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
-              <title>search</title>
-              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
-            </svg>
-          </button>
-        </li>
-        <li class="nav-item">
-          <a aria-label="add" class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
-              <title>plus</title>
-              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
 exports[`ClayManagementToolbar should render a managment toolbar with creation menu 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
-      <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-        <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
-            <div class="input-group">
-              <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
-                <span class="input-group-inset-item input-group-inset-item-after">
-                  <button class="btn d-none btn-unstyled" aria-label="times" type="button">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                      <title>times</title>
-                      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                  <button class="btn btn-unstyled" aria-label="search" type="submit">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
-                      <title>search</title>
-                      <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
-                    </svg>
-                  </button>
-                </span>
-              </div>
+      <div class="navbar-form navbar-form-autofit">
+        <form method="POST" role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
       <ul class="navbar-nav">
-        <li class="nav-item navbar-breakpoint-d-none">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
-              <title>search</title>
-              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
-            </svg>
-          </button>
-        </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
@@ -2140,6 +2324,34 @@ exports[`ClayManagementToolbar should render a managment toolbar with creation m
           </button>
         </li>
       </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a managment toolbar without creation menu 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit">
+        <form method="POST" role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav"></ul>
     </div>
   </nav>
 </div>
@@ -2167,7 +2379,16 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
           </div>
         </form>
       </div>
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>

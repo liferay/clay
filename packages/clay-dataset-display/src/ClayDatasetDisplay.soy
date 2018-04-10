@@ -27,9 +27,12 @@
 		separator: bool,
 		type: string
 	]>}
-	{@param? creationMenu: bool|string|[
+	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
 		primaryItems: list<[
 			disabled: bool,
 			href: string,
@@ -41,9 +44,17 @@
 			disabled: bool,
 			href: string,
 			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
 			label: string,
 			separator: bool
-		]>
+		]>,
+		viewMoreURL: string
 	]}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
@@ -62,6 +73,7 @@
 	{@param? searchInputName: string}
 	{@param? selectable: bool}
 	{@param? selectedView: int}
+	{@param? showCreationMenu: bool}
 	{@param? showFiltersDoneButton: bool}
 	{@param? sortingOrder: string}
 	{@param? title: string}
@@ -111,6 +123,7 @@
 				{param searchInputName: $searchInputName /}
 				{param selectable: $selectable /}
 				{param selectedItems: $_selectedItems ? length($_selectedItems) : 0 /}
+				{param showCreationMenu: $showCreationMenu ?: true /}
 				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
 				{param sortingOrder: $sortingOrder /}
 				{param spritemap: $spritemap /}

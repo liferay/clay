@@ -46,7 +46,7 @@ weight: 100
 						</div>
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
@@ -137,7 +137,7 @@ weight: 100
 				</div>
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
@@ -185,7 +185,7 @@ weight: 100
 						</div>
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
@@ -276,7 +276,7 @@ weight: 100
 				</div>
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
@@ -316,7 +316,7 @@ weight: 100
 					</div>
 					<div class="autofit-col">
 						<div class="dropdown dropdown-action">
-							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
@@ -392,7 +392,7 @@ weight: 100
 			</div>
 			<div class="autofit-col">
 				<div class="dropdown dropdown-action">
-					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+					<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 						</svg>
@@ -445,7 +445,7 @@ weight: 100
 						</div>
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
@@ -572,7 +572,7 @@ weight: 100
 				</div>
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
@@ -661,7 +661,7 @@ weight: 100
 						</div>
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
@@ -773,7 +773,7 @@ weight: 100
 				</div>
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
@@ -854,7 +854,7 @@ weight: 100
 						</div>
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
@@ -992,7 +992,7 @@ weight: 100
 				</div>
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
@@ -1061,7 +1061,7 @@ weight: 100
 								</div>
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
-										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 											</svg>
@@ -1159,7 +1159,7 @@ weight: 100
 						</div>
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
-								<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>

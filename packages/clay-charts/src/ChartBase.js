@@ -1,6 +1,6 @@
 import {bb} from 'billboard.js';
 import {Config} from 'metal-state';
-import {isServerSide} from 'metal';
+import {isDefAndNotNull, isServerSide} from 'metal';
 import types from './utils/types';
 import * as d3 from 'd3';
 
@@ -78,23 +78,42 @@ const ChartBase = {
 			return;
 		}
 
-		this._resolveData(this.data).then(data => {
-			this._resolvedData = data;
-			const config = this._constructChartConfig();
-			this.bbChart = bb.generate(config);
+		this._resolveData(this.data)
+			.then(data => {
+				if (!isDefAndNotNull(data)) {
+					this.emit(
+						'chartError',
+						new Error('unable to load Chart data.')
+					);
+					return;
+				}
 
-			this.on('dataChanged', this._handleDataChanged.bind(this));
-			this.on('groupsChanged', this._handleGroupsChanged.bind(this));
-			this.on('_loadingChanged', this._handleLoadingChanged.bind(this));
-			this.on('regionsChanged', this._handleRegionsChanged.bind(this));
-			this.on('sizeChanged', this._handleSizeChanged.bind(this));
-			this.on('typeChanged', this._handleTypeChanged.bind(this));
-			this.on('xChanged', this._handleXChanged.bind(this));
+				this._resolvedData = data;
 
-			this.emit('chartReady');
+				const config = this._constructChartConfig();
+				this.bbChart = bb.generate(config);
 
-			this._loading = false;
-		});
+				this.on('dataChanged', this._handleDataChanged.bind(this));
+				this.on('groupsChanged', this._handleGroupsChanged.bind(this));
+				this.on(
+					'_loadingChanged',
+					this._handleLoadingChanged.bind(this)
+				);
+				this.on(
+					'regionsChanged',
+					this._handleRegionsChanged.bind(this)
+				);
+				this.on('sizeChanged', this._handleSizeChanged.bind(this));
+				this.on('typeChanged', this._handleTypeChanged.bind(this));
+				this.on('xChanged', this._handleXChanged.bind(this));
+
+				this.emit('chartReady');
+
+				this._loading = false;
+			})
+			.catch(err => {
+				this.emit('chartError', err);
+			});
 	},
 
 	/**
@@ -102,8 +121,6 @@ const ChartBase = {
 	 * @memberof ChartBase
 	 */
 	disposed() {
-		super.disposed();
-
 		if (isServerSide()) {
 			return;
 		}
@@ -876,7 +893,7 @@ ChartBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Object|undefined}
+	 * @type {?(Object|undefined)}
 	 */
 	grid: Config.shapeOf({
 		// Cross reference this with source code, have a feeling this info is wrong

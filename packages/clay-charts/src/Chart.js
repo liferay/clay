@@ -10,6 +10,7 @@ import templates from './Chart.soy.js';
  */
 class Chart extends DataComponent {}
 
+Object.setPrototypeOf(ChartBase, DataComponent.prototype);
 Object.assign(Chart.prototype, ChartBase);
 Chart.STATE = Object.assign({}, ChartBase.STATE);
 

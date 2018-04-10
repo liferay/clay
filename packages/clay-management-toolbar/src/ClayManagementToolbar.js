@@ -244,16 +244,25 @@ ClayManagementToolbar.STATE = {
 	 * @memberof ClayManagementToolbar
 	 * @type {?(object|string|bool|undefined)}
 	 */
-	creationMenu: Config.oneOfType([
-		Config.bool().value(false),
-		Config.string(),
-		Config.shapeOf({
-			caption: Config.string(),
-			helpText: Config.string(),
-			primaryItems: creationMenuItemsValidator,
-			secondaryItems: creationMenuItemsValidator,
-		}),
-	]),
+	creationMenu: Config.shapeOf({
+		caption: Config.string(),
+		helpText: Config.string(),
+		maxPrimaryItems: Config.number(),
+		maxSecondaryItems: Config.number(),
+		maxTotalItems: Config.number(),
+		primaryItems: creationMenuItemsValidator,
+		secondaryItems: creationMenuItemsValidator,
+		viewMoreURL: Config.string(),
+	}),
+
+	/**
+	 * Flag to indicate if the managment toolbar is disabled or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 */
+	disabled: Config.bool().value(false),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -345,6 +354,15 @@ ClayManagementToolbar.STATE = {
 	 * @type {?bool}
 	 */
 	showAdvancedSearch: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate if creation menu button should be shown or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 */
+	showCreationMenu: Config.bool().value(true),
 
 	/**
 	 * Flag to indicate if the `Done` button in filter dropdown should be shown or

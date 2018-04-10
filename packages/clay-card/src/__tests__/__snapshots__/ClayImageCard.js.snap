@@ -128,7 +128,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`danger co
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-danger">Approved</span>
+          <span class="label label-danger">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -144,7 +148,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`info colo
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-info">Approved</span>
+          <span class="label label-info">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -160,7 +168,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`secondary
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-secondary">Approved</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -176,7 +188,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`success c
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-success">Approved</span>
+          <span class="label label-success">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -192,7 +208,11 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`warning c
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-warning">Approved</span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -208,9 +228,21 @@ exports[`ClayImageCard should render a ClayImageCard with labels with styles map
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-success">Approved</span>
-          <span class="label label-warning">Pending</span>
-          <span class="label label-danger">Error</span>
+          <span class="label label-success">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Pending</span>
+            </span>
+          </span>
+          <span class="label label-danger">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Error</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -226,7 +258,11 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-secondary">Approved</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -237,7 +273,7 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -254,7 +290,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left rounded-circle">
+    <span class="sticker sticker-circle sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -271,7 +307,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle
 exports[`ClayImageCard should render a ClayImageCard with sticker shape \`rounded\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -288,7 +324,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker shape \`rounde
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`danger color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-danger sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -305,7 +341,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`danger
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`dark color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-dark sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-dark sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -322,7 +358,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`dark c
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`info color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-info sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-info sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -339,7 +375,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`info c
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`light color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-light sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-light sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -356,7 +392,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`light 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`primary color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-primary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -373,7 +409,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`primar
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`secondary color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-secondary sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-secondary sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -390,7 +426,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`second
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`success color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-success sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-success sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -407,7 +443,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`succes
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`warning color\` 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-warning sticker-bottom-left">
+    <span class="sticker sticker-rounded sticker-warning sticker-bottom-left">
       <span class="sticker-overlay">DOC</span>
     </span>
   </div>
@@ -443,8 +479,16 @@ exports[`ClayImageCard should render a ClayImageCard with two labels 1`] = `
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-secondary">Approved</span>
-          <span class="label label-secondary">Pending</span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
+          <span class="label label-secondary">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Pending</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -460,8 +504,16 @@ exports[`ClayImageCard should render a ClayImageCard with two labels with styles
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
-          <span class="label label-warning">Approved</span>
-          <span class="label label-danger">Peding</span>
+          <span class="label label-warning">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Approved</span>
+            </span>
+          </span>
+          <span class="label label-danger">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Peding</span>
+            </span>
+          </span>
         </div>
       </div>
     </div>

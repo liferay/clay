@@ -1,3 +1,9 @@
+$table-responsive-margin-bottom: 1.5rem !default;
+
+// Table
+
+$table-margin-bottom: 0 !default;
+
 $table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
 
 $table-head-border-bottom-width: null !default;
@@ -90,7 +96,7 @@ $table-list-border-color: $table-border-color !default;
 $table-list-border-width: 0.0625rem !default; // 1px
 $table-list-border-radius: 6px !default;
 $table-list-font-size: null !default;
-$table-list-margin-bottom: 1.5rem !default;
+$table-list-margin-bottom: $table-list-border-width !default;
 $table-list-margin-top: null !default;
 
 $table-list-head-bg: null !default;

@@ -14,67 +14,103 @@
 	{@param? helpText: string}
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
-  {@param? maxPrimaryItems: int}
-  {@param? maxSecondaryItems: int}
-  {@param? maxTotalItems: int}
+	{@param? maxPrimaryItems: int}
+	{@param? maxSecondaryItems: int}
+	{@param? maxTotalItems: int}
 	{@param? secondaryItems: list<?>}
 	{@param? triggerClasses: string}
-  {@param? viewMoreURL: string}
+	{@param? viewMoreURL: string}
 
-  {let $secondaryItemsFirstGroup: isNonnull($secondaryItems) ? isNonnull($secondaryItems[0]) ? $secondaryItems[0] : null : null /}
-  {let $secondaryItemsSecondGroup: isNonnull($secondaryItems) ? isNonnull($secondaryItems[1]) ? $secondaryItems[1] : null : null /}
+	{let $secondaryItemsFirstGroup: 
+		isNonnull($secondaryItems) ? 
+			isNonnull($secondaryItems[0]) ? 
+				$secondaryItems[0] 
+			:
+				null
+		:
+			null
+	/}
 
-  {let $totalPrimaryItems: length($primaryItems) /}
-  {let $totalSecondaryItemsFirstGroup: $secondaryItemsFirstGroup and $secondaryItemsFirstGroup.items ? length($secondaryItemsFirstGroup.items) : 0 /}
-  {let $totalSecondaryItemsSecondGroup: $secondaryItemsSecondGroup and $secondaryItemsSecondGroup.items ? length($secondaryItemsSecondGroup.items) : 0 /}
-  {let $totalSecondaryItems: $totalSecondaryItemsFirstGroup + $totalSecondaryItemsSecondGroup /}
-  {let $totalItems: $totalPrimaryItems + $totalSecondaryItems /}
+	{let $secondaryItemsSecondGroup: 
+		isNonnull($secondaryItems) ?
+			isNonnull($secondaryItems[1]) ?
+				$secondaryItems[1]
+			:
+				null
+		:
+			null
+	/}
 
-  {let $defaultMaxPrimaryItems:
-    $maxPrimaryItems ?
-      $totalPrimaryItems > $maxPrimaryItems ?
-        $maxPrimaryItems
-      :
-        $totalPrimaryItems
-    :
-      $totalPrimaryItems > 8 ?
-        8
-      :
-        $totalPrimaryItems
-   /}
-  {let $tempDefaultMaxSecondaryItems: 
-    $maxSecondaryItems ?
-      $totalSecondaryItems > $maxSecondaryItems ?
-        $maxSecondaryItems
-      :
-        $totalSecondaryItems
-    :
-      $totalSecondaryItems > 7 ?
-        7
-      :
-        $totalSecondaryItems
-  /}
-  {let $defaultMaxTotalItems: $maxTotalItems ?: 15 /}
-  {let $defaultMaxSecondaryItems: $tempDefaultMaxSecondaryItems > $defaultMaxTotalItems - $defaultMaxPrimaryItems ? $defaultMaxTotalItems - $defaultMaxPrimaryItems : $tempDefaultMaxSecondaryItems /}
+	{let $totalPrimaryItems: length($primaryItems) /}
+	{let $totalSecondaryItemsFirstGroup:
+		isNonnull($secondaryItemsFirstGroup) and isNonnull($secondaryItemsFirstGroup.items) ?
+			length($secondaryItemsFirstGroup.items)
+		:
+			0
+	/}
 
-  {let $showingItems: 
-    $totalSecondaryItems == 0 ? 
-      $totalPrimaryItems > $defaultMaxTotalItems ?
-        $defaultMaxTotalItems
-      :
-        $totalPrimaryItems
-    :
-      $totalPrimaryItems > $defaultMaxPrimaryItems ?
-        $totalSecondaryItems > $defaultMaxSecondaryItems ?
-          $defaultMaxPrimaryItems + $defaultMaxSecondaryItems
-        :
-          $defaultMaxPrimaryItems + $totalSecondaryItems
-      :
-        $totalSecondaryItems > $defaultMaxSecondaryItems ?
-          $totalPrimaryItems + $defaultMaxSecondaryItems
-        :
-          $totalPrimaryItems + $totalSecondaryItems        
-  /}
+	{let $totalSecondaryItemsSecondGroup:
+		isNonnull($secondaryItemsSecondGroup) and isNonnull($secondaryItemsSecondGroup.items) ?
+			length($secondaryItemsSecondGroup.items)
+		:
+			0
+	/}
+
+	{let $totalSecondaryItems: $totalSecondaryItemsFirstGroup + $totalSecondaryItemsSecondGroup /}
+	{let $totalItems: $totalPrimaryItems + $totalSecondaryItems /}
+
+	{let $defaultMaxPrimaryItems:
+		$maxPrimaryItems ?
+		$totalPrimaryItems > $maxPrimaryItems ?
+			$maxPrimaryItems
+		:
+			$totalPrimaryItems
+		:
+		$totalPrimaryItems > 8 ?
+			8
+		:
+			$totalPrimaryItems
+	/}
+
+	{let $tempDefaultMaxSecondaryItems: 
+		$maxSecondaryItems ?
+		$totalSecondaryItems > $maxSecondaryItems ?
+			$maxSecondaryItems
+		:
+			$totalSecondaryItems
+		:
+		$totalSecondaryItems > 7 ?
+			7
+		:
+			$totalSecondaryItems
+	/}
+
+	{let $defaultMaxTotalItems: $maxTotalItems ?: 15 /}
+	{let $defaultMaxSecondaryItems:
+		$tempDefaultMaxSecondaryItems > $defaultMaxTotalItems - $defaultMaxPrimaryItems ?
+			$defaultMaxTotalItems - $defaultMaxPrimaryItems
+		:
+		$tempDefaultMaxSecondaryItems
+	/}
+
+	{let $showingItems: 
+		$totalSecondaryItems == 0 ? 
+			$totalPrimaryItems > $defaultMaxTotalItems ?
+				$defaultMaxTotalItems
+			:
+				$totalPrimaryItems
+		:
+			$totalPrimaryItems > $defaultMaxPrimaryItems ?
+				$totalSecondaryItems > $defaultMaxSecondaryItems ?
+					$defaultMaxPrimaryItems + $defaultMaxSecondaryItems
+				:
+					$defaultMaxPrimaryItems + $totalSecondaryItems
+			:
+				$totalSecondaryItems > $defaultMaxSecondaryItems ?
+					$totalPrimaryItems + $defaultMaxSecondaryItems
+				:
+					$totalPrimaryItems + $totalSecondaryItems        
+	/}
 
   {let $primaryDropdownItems: [
     'items': $primaryItems,
@@ -83,41 +119,66 @@
     'type': 'group'
   ] /}
 
-  {let $secondaryDropdownItemsSecondGroup: $secondaryItemsSecondGroup and $totalSecondaryItemsFirstGroup < $defaultMaxSecondaryItems ? [
-    'items': $secondaryItemsSecondGroup.items,
-    'label': $secondaryItemsSecondGroup.label,
-    'maxItems': $defaultMaxSecondaryItems - $totalSecondaryItemsFirstGroup,
-    'type': 'group'
-  ] : null /}
+  {let $secondaryDropdownItemsSecondGroup: 
+  	$secondaryItemsSecondGroup and $totalSecondaryItemsFirstGroup < $defaultMaxSecondaryItems ? 
+		[
+			'items': $secondaryItemsSecondGroup.items,
+			'label': $secondaryItemsSecondGroup.label,
+			'maxItems': $defaultMaxSecondaryItems - $totalSecondaryItemsFirstGroup,
+			'type': 'group'
+  		]
+	: 
+		null
+	/}
 
-  {let $secondaryDropdownItemsFirstGroup: $secondaryItemsFirstGroup ? [
-    'items': $secondaryItemsFirstGroup.items,
-    'label': $secondaryItemsFirstGroup.label,
-    'maxItems': $defaultMaxSecondaryItems,
-    'separator': $secondaryItemsFirstGroup.separator and isNonnull($secondaryDropdownItemsSecondGroup),
-    'type': 'group'
-  ] : null /}
+  {let $secondaryDropdownItemsFirstGroup:
+  	$secondaryItemsFirstGroup ?
+  		[
+			'items': $secondaryItemsFirstGroup.items,
+			'label': $secondaryItemsFirstGroup.label,
+			'maxItems': $defaultMaxSecondaryItems,
+			'separator': $secondaryItemsFirstGroup.separator and isNonnull($secondaryDropdownItemsSecondGroup),
+			'type': 'group'
+  		]
+	:
+		null
+	/}
 
-  {let $items: $secondaryDropdownItemsFirstGroup and $secondaryDropdownItemsSecondGroup ? [
-    $primaryDropdownItems,
-    $secondaryDropdownItemsFirstGroup,
-    $secondaryDropdownItemsSecondGroup
-  ] : $secondaryDropdownItemsFirstGroup ? [
-    $primaryDropdownItems,
-    $secondaryDropdownItemsFirstGroup   
-  ] : [
-    $primaryDropdownItems
-  ] /}
+	{let $items: 
+		$secondaryDropdownItemsFirstGroup and $secondaryDropdownItemsSecondGroup ? 
+			[
+				$primaryDropdownItems,
+				$secondaryDropdownItemsFirstGroup,
+				$secondaryDropdownItemsSecondGroup
+			]
+		:
+			$secondaryDropdownItemsFirstGroup ?
+				[
+					$primaryDropdownItems,
+					$secondaryDropdownItemsFirstGroup   
+				]
+			:
+				[
+					$primaryDropdownItems
+				]
+	/}
 
-  {let $showMoreButton: $showingItems < $totalItems ? 
-    isNonnull($viewMoreURL) ? [
-      'buttonStyle': 'secondary',
-      'href': $viewMoreURL,
-      'label': 'More',
-    ] : [
-      'label': 'More',
-      'style': 'secondary'
-    ] : null /}
+	{let $showMoreButton:
+		$showingItems < $totalItems ? 
+			isNonnull($viewMoreURL) ?
+				[
+					'buttonStyle': 'secondary',
+					'href': $viewMoreURL,
+					'label': 'More',
+				] 
+			:
+				[
+					'label': 'More',
+					'style': 'secondary'
+				]
+		:
+			null
+	/}
 
   {let $caption: $showMoreButton ? 'Showing ' + $showingItems + ' of ' + $totalItems + ' elements' :  null/}
 
@@ -129,23 +190,23 @@
   {/let}
 
 	{call ClayDropdownBase.render}
-    {param button: $showMoreButton /}
-    {param caption: $caption /}
-    {param disabled: $disabled /}
-    {param elementClasses: $elementClasses /}
-    {param events: [
-      'buttonClicked': $_handleButtonClick,
-      'itemClicked': $_handleItemClick
-    ]/}
-    {param expanded: $expanded /}
-    {param helpText: $showMoreButton ? $helpText : null /}
-    {param id: $id /}
-    {param items: $items /}
-    {param itemsIconAlignment: $itemsIconAlignment /}
-    {param label: $trigger /}
-    {param ref: 'dropdown' /}
-    {param spritemap: $spritemap /}
-    {param style: 'primary' /}
-    {param triggerClasses: $triggerClasses /}
-  {/call}
+		{param button: $showMoreButton /}
+		{param caption: $caption /}
+		{param disabled: $disabled /}
+		{param elementClasses: $elementClasses /}
+		{param events: [
+			'buttonClicked': $_handleButtonClick,
+			'itemClicked': $_handleItemClick
+		] /}
+		{param expanded: $expanded /}
+		{param helpText: $showMoreButton ? $helpText : null /}
+		{param id: $id /}
+		{param items: $items /}
+		{param itemsIconAlignment: $itemsIconAlignment /}
+		{param label: $trigger /}
+		{param ref: 'dropdown' /}
+		{param spritemap: $spritemap /}
+		{param style: 'primary' /}
+		{param triggerClasses: $triggerClasses /}
+	{/call}
 {/template}

@@ -32,9 +32,12 @@
 	]>}
 	{@param? clearResultsURL: string}
 	{@param? contentRenderer: string}
-	{@param? creationMenu: bool|string|[
+	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
 		primaryItems: list<[
 			disabled: bool,
 			href: string,
@@ -46,10 +49,19 @@
 			disabled: bool,
 			href: string,
 			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
 			label: string,
 			separator: bool
-		]>
+		]>,
+		viewMoreURL: string
 	]}
+	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
 		checked: bool,
@@ -68,6 +80,7 @@
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
 	{@param? showAdvancedSearch: bool}
+	{@param? showCreationMenu: bool}
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
@@ -125,7 +138,7 @@
 				{param _showSearchMobile: $_showSearchMobile /}
 				{param contentRenderer: $contentRenderer ?: '' /}
 				{param creationMenu: $creationMenu /}
-				{param disabled: $totalItems == 0 /}
+				{param disabled: $disabled /}
 				{param filterItems: $filterItems /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
@@ -133,6 +146,7 @@
 				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
 				{param showAdvancedSearch: $showAdvancedSearch /}
+				{param showCreationMenu: $showCreationMenu ?: true /}
 				{param showFiltersDoneButton: $showFiltersDoneButton ?: true /}
 				{param showInfoButton: $showInfoButton /}
 				{param showSearch: $showSearch != false /}
@@ -143,12 +157,12 @@
 			{/call}
 		{/if}
 
-		{if $searchValue and $totalItems > 0}
+		{if $searchValue}
 			{call .resultsBar}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param clearResultsURL: $clearResultsURL /}
 				{param searchValue: $searchValue /}
-				{param totalItems: $totalItems /}
+				{param totalItems: $totalItems ?: 0 /}
 			{/call}
 		{/if}
 	</div>
@@ -277,37 +291,71 @@
  * This renders the creation menu.
  */
 {template .creationMenu}
-	{@param creationMenu: ?}
 	{@param spritemap: string}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleCreationMenuMoreButtonClicked: any}
+	{@param? creationMenu: [
+		caption: string,
+		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
+		primaryItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			label: string,
+			separator: bool
+		]>,
+		secondaryItems: list<[
+			disabled: bool,
+			href: string,
+			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
+			label: string,
+			separator: bool
+		]>,
+		viewMoreURL: string
+	]}
 
-	{if $creationMenu.primaryItems}
+	{if $creationMenu and $creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and not $creationMenu.secondaryItems}
+		{let $item: $creationMenu.primaryItems[0] /}
+
+		{call ClayLink.render}
+			{param ariaLabel: $item.label /}
+			{param buttonStyle: 'primary' /}
+			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param href: $item.href /}
+			{param icon: 'plus' /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{elseif $creationMenu and $creationMenu.primaryItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
 			{param events: ['moreButtonClicked': $_handleCreationMenuMoreButtonClicked] /}
 			{param helpText: $creationMenu.helpText /}
+			{param maxPrimaryItems: $creationMenu.maxPrimaryItems /}
+			{param maxSecondaryItems: $creationMenu.maxSecondaryItems /}
+			{param maxTotalItems: $creationMenu.maxTotalItems /}
 			{param primaryItems: $creationMenu.primaryItems /}
 			{param ref: 'creationMenuDropdown' /}
 			{param secondaryItems: $creationMenu.secondaryItems /}
 			{param spritemap: $spritemap /}
 			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param viewMoreURL: $creationMenu.viewMoreURL /}
 		{/call}
-	{elseif $creationMenu == true}
+	{else}
 		{call ClayButton.render}
 			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
 			{param events: ['click': $_handleCreationButtonClicked ] /}
 			{param icon: 'plus' /}
 			{param ref: 'creationMenu' /}
-			{param spritemap: $spritemap /}
-		{/call}
-	{else}
-		{call ClayLink.render}
-			{param ariaLabel: 'add' /}
-			{param buttonStyle: 'primary' /}
-			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
-			{param href: $creationMenu /}
-			{param icon: 'plus' /}
 			{param spritemap: $spritemap /}
 		{/call}
 	{/if}
@@ -330,9 +378,12 @@
 	{@param? _handleViewTypeClicked: any}
 	{@param? _showSearchMobile: bool}
 	{@param? contentRenderer: string}
-	{@param? creationMenu: bool|string|[
+	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
+		maxPrimaryItems: int,
+		maxSecondaryItems: int,
+		maxTotalItems: int,
 		primaryItems: list<[
 			disabled: bool,
 			href: string,
@@ -344,9 +395,17 @@
 			disabled: bool,
 			href: string,
 			icon: string,
+			items: list<[
+				disabled: bool,
+				href: string,
+				icon: string,
+				label: string,
+				separator: bool
+			]>,
 			label: string,
 			separator: bool
-		]>
+		]>,
+		viewMoreURL: string
 	]}
 	{@param? disabled: bool}
 	{@param? filterItems: list<[
@@ -364,6 +423,7 @@
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? showAdvancedSearch: bool}
+	{@param? showCreationMenu: bool}
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
 	{@param? showSearch: bool}
@@ -557,7 +617,7 @@
 					</li>
 				{/if}
 
-				{if $creationMenu}
+				{if $showCreationMenu}
 					<li class="nav-item">
 						{call .creationMenu}
 							{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}

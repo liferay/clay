@@ -5,9 +5,12 @@ $label-height: 1rem !default; // 16px
 $label-padding-x: 0.5rem !default; // 8px
 $label-text-transform: uppercase !default;
 
-$label-lexicon-icon-height: 0.8em !default;
+$label-item-spacer-x: 0.85714em !default;
 
 $label-anchor-hover-text-decoration: underline !default;
+
+$label-link-text-decoration: none !default;
+$label-link-hover-text-decoration: underline !default;
 
 $label-lg: (
 	font-size: 0.8125rem, // 13px
@@ -19,7 +22,7 @@ $label-lg: (
 
 $label-primary-color: $primary !default;
 $label-primary-hover-color: $label-primary-color !default;
-$label-primary-border-color: lighten(saturate($label-primary-color, 3.40), 21.18) !default;
+$label-primary-border-color: lighten($label-primary-color, 22.94) !default;
 $label-primary-hover-border-color: $label-primary-border-color !default;
 
 $label-secondary-color: $secondary !default;

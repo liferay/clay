@@ -4,6 +4,7 @@
 	border-width: $badge-border-width;
 	line-height: $badge-line-height;
 	margin-bottom: $badge-spacer-y;
+	margin-right: $badge-spacer-x;
 	margin-top: $badge-spacer-y;
 	max-width: 100%;
 	white-space: inherit;
@@ -19,10 +20,8 @@
 		}
 	}
 
-	~ .badge {
-		margin-left: $badge-spacer-x;
-	}
-
+	// Inline Item in Badges are deprecated in v2.0.0-rc.11 use .badge-item
+	// pattern instead
 	.inline-item {
 		a {
 			align-items: center;
@@ -61,6 +60,65 @@
 		}
 	}
 }
+
+.badge {
+	display: inline-flex;
+}
+
+.badge-item {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	justify-content: center;
+	min-height: 0;
+	position: relative;
+
+	a {
+		display: inline-flex;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+		display: inline-flex;
+		font-size: $badge-lexicon-icon-height;
+	}
+
+	.close {
+		color: inherit;
+		display: inline-flex;
+		font-size: $badge-lexicon-icon-height;
+		opacity: 1;
+	}
+
+	.btn-unstyled,
+	.close {
+		.lexicon-icon {
+			width: 1em;
+		}
+	}
+
+	.lexicon-icon {
+		height: $badge-lexicon-icon-height;
+		margin-top: $badge-lexicon-icon-margin-top;
+		width: $badge-lexicon-icon-width;
+	}
+}
+
+.badge-item-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 1rem;
+	word-wrap: break-word;
+}
+
+.badge-item-before {
+	margin-right: $badge-item-spacer-x;
+}
+
+.badge-item-after {
+	margin-left: $badge-item-spacer-x;
+}
+
 
 // Badge Variants
 

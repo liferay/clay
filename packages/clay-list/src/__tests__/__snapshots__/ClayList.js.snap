@@ -102,7 +102,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -128,7 +128,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -184,7 +184,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -199,7 +199,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -217,7 +217,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -235,7 +235,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -253,7 +253,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -271,7 +271,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -289,7 +289,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -307,7 +307,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -328,7 +328,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -343,7 +343,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -358,7 +358,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -468,7 +468,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -483,7 +483,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -501,7 +501,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -519,7 +519,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -537,7 +537,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -555,7 +555,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -573,7 +573,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -591,7 +591,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -612,7 +612,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -627,7 +627,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -642,7 +642,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -665,7 +665,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -680,7 +680,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary">
+      <span class="sticker sticker-rounded sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
@@ -698,7 +698,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -713,13 +713,17 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </h4>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
       <div class="list-group-detail">
-        <span class="label label-success">No Spicy</span>
+        <span class="label label-success">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">No Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -734,13 +738,17 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </h4>
       <p class="list-group-subtitle text-truncate">China</p>
       <div class="list-group-detail">
-        <span class="label label-warning">Spicy</span>
+        <span class="label label-warning">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -755,13 +763,17 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </h4>
       <p class="list-group-subtitle text-truncate">Spain</p>
       <div class="list-group-detail">
-        <span class="label label-success">No Spicy</span>
+        <span class="label label-success">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">No Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -776,13 +788,17 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </h4>
       <p class="list-group-subtitle text-truncate">Italy</p>
       <div class="list-group-detail">
-        <span class="label label-success">No Spicy</span>
+        <span class="label label-success">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">No Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -797,13 +813,17 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </h4>
       <p class="list-group-subtitle text-truncate">Toledo</p>
       <div class="list-group-detail">
-        <span class="label label-warning">Spicy</span>
+        <span class="label label-warning">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -818,7 +838,11 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </h4>
       <p class="list-group-subtitle text-truncate">Mexico</p>
       <div class="list-group-detail">
-        <span class="label label-danger">Very Spicy</span>
+        <span class="label label-danger">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">Very Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
   </li>
@@ -827,7 +851,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -842,7 +866,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -857,7 +881,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -877,7 +901,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -892,7 +916,11 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </h4>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
       <div class="list-group-detail">
-        <span class="label label-success">No Spicy</span>
+        <span class="label label-success">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">No Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
     <div class="autofit-col">
@@ -922,7 +950,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -937,7 +965,11 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </h4>
       <p class="list-group-subtitle text-truncate">China</p>
       <div class="list-group-detail">
-        <span class="label label-warning">Spicy</span>
+        <span class="label label-warning">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
     <div class="autofit-col">
@@ -967,7 +999,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -982,7 +1014,11 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </h4>
       <p class="list-group-subtitle text-truncate">Spain</p>
       <div class="list-group-detail">
-        <span class="label label-success">No Spicy</span>
+        <span class="label label-success">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">No Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
     <div class="autofit-col">
@@ -1012,7 +1048,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -1027,7 +1063,11 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </h4>
       <p class="list-group-subtitle text-truncate">Italy</p>
       <div class="list-group-detail">
-        <span class="label label-success">No Spicy</span>
+        <span class="label label-success">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">No Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
     <div class="autofit-col">
@@ -1057,7 +1097,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -1072,7 +1112,11 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </h4>
       <p class="list-group-subtitle text-truncate">Toledo</p>
       <div class="list-group-detail">
-        <span class="label label-warning">Spicy</span>
+        <span class="label label-warning">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
     <div class="autofit-col">
@@ -1102,7 +1146,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <span class="sticker sticker-primary rounded-circle">
+      <span class="sticker sticker-circle sticker-primary">
         <span class="sticker-overlay">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
@@ -1117,7 +1161,11 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </h4>
       <p class="list-group-subtitle text-truncate">Mexico</p>
       <div class="list-group-detail">
-        <span class="label label-danger">Very Spicy</span>
+        <span class="label label-danger">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">Very Spicy</span>
+          </span>
+        </span>
       </div>
     </div>
     <div class="autofit-col">

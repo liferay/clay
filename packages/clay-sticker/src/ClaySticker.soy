@@ -19,17 +19,15 @@
 
 	{let $attributes kind="attributes"}
 		class="sticker
+				{sp}sticker-{$shape ?: 'rounded'}
 				{sp}sticker-{$style ?: 'primary'}
 
 			{if $position}
 				{if $outside}
 					{sp}sticker-outside
 				{/if}
-				{sp}sticker-{$position}
-			{/if}
 
-			{if $shape == 'circle'}
-				{sp}rounded-circle
+				{sp}sticker-{$position}
 			{/if}
 
 			{if $size}
@@ -44,17 +42,17 @@
 		{if $id}
 			id="{$id}"
 		{/if}
-		{/let}
+	{/let}
 
-		<span {$attributes}>
-			{call .content}
-				{param icon: $icon /}
-				{param imageAlt: $imageAlt /}
-				{param imageSrc: $imageSrc /}
-				{param label: $label /}
-				{param spritemap: $spritemap /}
-			{/call}
-		</span>
+	<span {$attributes}>
+		{call .content}
+			{param icon: $icon /}
+			{param imageAlt: $imageAlt /}
+			{param imageSrc: $imageSrc /}
+			{param label: $label /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</span>
 {/template}
 
 /**

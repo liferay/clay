@@ -319,6 +319,82 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Input Group Password</h3>
+
+		<blockquote class="blockquote">
+			<p>A pattern for displaying the content inside a password input. Use <code>.input-text-label</code> inside <code>.input-group-inset-item</code> to display specific content for <code>.form-control[type="text"]</code> and <code>.input-password-label</code> for <code>.form-control[type="password"]</code>.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">This requires custom javascript to toggle the input type between text and password.</div>
+
+<div class="sheet">
+	<div class="form-group">
+		<label for="passwordFieldHidden">Password Field Hidden</label>
+		<div class="input-group input-group-password">
+			<div class="input-group-item">
+				<input aria-label="Password Hidden" class="form-control input-group-inset input-group-inset-after" id="passwordFieldHidden" type="password" value="my-seekret">
+				<div class="input-group-inset-item input-group-inset-item-after">
+					<button class="btn btn-unstyled" type="button">
+						<span class="input-text-label">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#hidden" />
+							</svg>
+						</span>
+						<span class="input-password-label">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#view" />
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="passwordFieldVisible">Password Field Visible</label>
+		<div class="input-group input-group-password">
+			<div class="input-group-item">
+				<input aria-label="Password Visible" class="form-control input-group-inset input-group-inset-after" id="passwordFieldVisible" type="text" value="my-seekret">
+				<div class="input-group-inset-item input-group-inset-item-after">
+					<button class="btn btn-secondary" type="button">
+						<span class="input-password-label">Show</span>
+						<span class="input-text-label">Hide</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="disabled" for="passwordFieldDisabled">Password Field Disabled</label>
+		<div class="input-group input-group-password">
+			<div class="input-group-item">
+				<input aria-label="Password Disabled" class="form-control input-group-inset input-group-inset-after" disabled id="passwordFieldDisabled" type="password" value="my-seekret">
+				<div class="input-group-inset-item input-group-inset-item-after">
+					<button class="btn btn-unstyled" disabled type="button">
+						<span class="input-password-label">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#view" />
+							</svg>
+						</span>
+						<span class="input-text-label">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#view" />
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Input Group Text Secondary</h3>
 
 <div class="sheet">
@@ -885,5 +961,17 @@ section: Components
 
 	$('.form-control-hidden').on('focus', function(event) {
 		$(this).parent().find('.form-control').focus();
+	});
+
+	$('.input-group-password .btn').on('click', function(event) {
+		var input = $(this).closest('.input-group-password').find('.form-control');
+		var inputType = input.attr('type');
+
+		if (inputType === 'password') {
+			input.attr('type', 'text');
+		}
+		else {
+			input.attr('type', 'password');
+		}
 	});
 </script>

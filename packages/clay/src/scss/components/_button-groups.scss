@@ -16,6 +16,10 @@
 	flex-wrap: wrap;
 }
 
+.btn-group-nowrap {
+	flex-wrap: nowrap;
+}
+
 .btn-group-item {
 	align-items: center;
 	display: inline-flex;

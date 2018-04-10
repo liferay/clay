@@ -57,25 +57,39 @@
 	{@param? label: string}
 	{@param? spritemap: string}
 
-	{if $href}
-		{call ClayLink.render}
-			{param href: $href /}
-			{param label: $label /}
-		{/call}
-	{else}
-		{$label}
-	{/if}
+	{let $labelContent kind="html"}
+		<span class="text-truncate-inline">
+			<span class="text-truncate">
+				{if $href}
+					{call ClayLink.render}
+						{param href: $href /}
+						{param label: $label /}
+					{/call}
+				{else}
+					{$label}
+				{/if}
+			</span>
+		</span>
+	{/let}
 
 	{if $closeable and $spritemap}
-		{call ClayButton.render}
-			{param ariaLabel: 'Close' /}
-			{param elementClasses: 'close' /}
-			{param events: [ 'click': $_handleCloseButtonClick] /}
-			{param icon: 'times' /}
-			{param iconAlignment: 'right' /}
-			{param spritemap: $spritemap /}
-			{param style: 'unstyled' /}
-			{param type: 'button' /}
-		{/call}
+		<span class="label-item label-item-expand">
+			{$labelContent}
+		</span>
+
+		<span class="label-item label-item-after">
+			{call ClayButton.render}
+				{param ariaLabel: 'Close' /}
+				{param elementClasses: 'close' /}
+				{param events: [ 'click': $_handleCloseButtonClick] /}
+				{param icon: 'times' /}
+				{param iconAlignment: 'right' /}
+				{param spritemap: $spritemap /}
+				{param style: 'unstyled' /}
+				{param type: 'button' /}
+			{/call}
+		</span>
+	{else}
+		{$labelContent}
 	{/if}
 {/template}

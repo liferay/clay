@@ -1,23 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayBadge should render a \`danger color\` badge 1`] = `<span class="badge badge-danger">Foo</span>`;
+exports[`ClayBadge should render a \`danger color\` badge 1`] = `
+<span class="badge badge-danger">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a \`default color\` badge 1`] = `<span class="badge badge-primary">Foo</span>`;
+exports[`ClayBadge should render a \`default color\` badge 1`] = `
+<span class="badge badge-primary">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a \`info color\` badge 1`] = `<span class="badge badge-info">Foo</span>`;
+exports[`ClayBadge should render a \`info color\` badge 1`] = `
+<span class="badge badge-info">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a \`primary color\` badge 1`] = `<span class="badge badge-primary">Foo</span>`;
+exports[`ClayBadge should render a \`primary color\` badge 1`] = `
+<span class="badge badge-primary">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a \`secondary color\` badge 1`] = `<span class="badge badge-secondary">Foo</span>`;
+exports[`ClayBadge should render a \`secondary color\` badge 1`] = `
+<span class="badge badge-secondary">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a \`success color\` badge 1`] = `<span class="badge badge-success">Foo</span>`;
+exports[`ClayBadge should render a \`success color\` badge 1`] = `
+<span class="badge badge-success">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a \`warning color\` badge 1`] = `<span class="badge badge-warning">Foo</span>`;
+exports[`ClayBadge should render a \`warning color\` badge 1`] = `
+<span class="badge badge-warning">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a badge with classes 1`] = `<span class="badge badge-primary my-custom-class">Foo</span>`;
+exports[`ClayBadge should render a badge with classes 1`] = `
+<span class="badge badge-primary my-custom-class">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a badge with id 1`] = `<span class="badge badge-primary" id="myId">Foo</span>`;
+exports[`ClayBadge should render a badge with id 1`] = `
+<span class="badge badge-primary" id="myId">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render a badge with label 1`] = `<span class="badge badge-primary">Bar</span>`;
+exports[`ClayBadge should render a badge with label 1`] = `
+<span class="badge badge-primary">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Bar</span>
+  </span>
+</span>
+`;
 
-exports[`ClayBadge should render the default markup 1`] = `<span class="badge badge-primary">Foo</span>`;
+exports[`ClayBadge should render the default markup 1`] = `
+<span class="badge badge-primary">
+  <span class="text-truncate-inline">
+    <span class="text-truncate">Foo</span>
+  </span>
+</span>
+`;
