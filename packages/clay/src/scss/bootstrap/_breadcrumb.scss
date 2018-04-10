@@ -5,20 +5,17 @@
   margin-bottom: $breadcrumb-margin-bottom;
   list-style: none;
   background-color: $breadcrumb-bg;
-  @include border-radius($breadcrumb-border-radius);
+  @include border-radius($border-radius);
 }
 
 .breadcrumb-item {
   // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item {
+  + .breadcrumb-item::before {
+    display: inline-block; // Suppress underlining of the separator in modern browsers
+    padding-right: $breadcrumb-item-padding;
     padding-left: $breadcrumb-item-padding;
-
-    &::before {
-      display: inline-block; // Suppress underlining of the separator in modern browsers
-      padding-right: $breadcrumb-item-padding;
-      color: $breadcrumb-divider-color;
-      content: $breadcrumb-divider;
-    }
+    color: $breadcrumb-divider-color;
+    content: "#{$breadcrumb-divider}";
   }
 
   // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
