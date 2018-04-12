@@ -10,9 +10,14 @@ $progress-height-lg: $progress-height * 2 !default;
 
 // Progress Group
 
+$progress-group-subtitle: () !default;
+
 $progress-group-addon-font-size: null !default;
 $progress-group-addon-font-weight: null !default;
 $progress-group-addon-spacer-x: 1rem !default;
+
+$progress-group-stacked-progress-margin-bottom: 0.25rem !default; // 4px
+$progress-group-stacked-progress-margin-top: 0.25rem !default; // 4px
 
 // Progress Variants
 

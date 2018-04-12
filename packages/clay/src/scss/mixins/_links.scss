@@ -17,6 +17,7 @@
 	$margin-left: map-get($map, margin-left);
 	$margin-right: map-get($map, margin-right);
 	$margin-top: map-get($map, margin-top);
+	$opacity: map-get($map, opacity);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
@@ -29,15 +30,14 @@
 	$width: map-get($map, width);
 
 	$hover-bg: map-get($map, hover-bg);
-	$hover-color: setter(
-		map-get($map, hover-color),
-		if($color, darken($color, 15%), null)
-	);
+	$hover-color: map-get($map, hover-color);
+	$hover-opacity: map-get($map, hover-opacity);
 	$hover-text-decoration: map-get($map, hover-text-decoration);
 
 	$focus-bg: map-get($map, focus-bg);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
 	$focus-color: map-get($map, focus-color);
+	$focus-opacity: map-get($map, focus-opacity);
 	$focus-outline: map-get($map, focus-outline);
 	$focus-text-decoration: map-get($map, focus-text-decoration);
 
@@ -78,6 +78,7 @@
 	margin-left: $margin-left;
 	margin-right: $margin-right;
 	margin-top: $margin-top;
+	opacity: $opacity;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
@@ -92,6 +93,7 @@
 	@include hover {
 		background-color: $hover-bg;
 		color: $hover-color;
+		opacity: $hover-opacity;
 		text-decoration: $hover-text-decoration;
 	}
 
@@ -108,6 +110,7 @@
 		background-color: $focus-bg;
 		box-shadow: $focus-box-shadow;
 		color: $focus-color;
+		opacity: $focus-opacity;
 		outline: $focus-outline;
 		text-decoration: $focus-text-decoration;
 	}

@@ -2,17 +2,20 @@ $single-link-font-weight: $font-weight-semi-bold !default;
 
 $component-link: () !default;
 $component-link: map-merge((
-	color: $secondary
+	color: $secondary,
+	hover-color: darken($secondary, 15%)
 ), $component-link);
 
 $link-primary: () !default;
 $link-primary: map-merge((
-	color: $primary
+	color: $primary,
+	hover-color: darken($primary, 15%)
 ), $link-primary);
 
 $link-secondary: () !default;
 $link-secondary: map-merge((
-	color: $secondary
+	color: $secondary,
+	hover-color: darken($secondary, 15%)
 ), $link-secondary);
 
 // Component Title
@@ -29,7 +32,8 @@ $component-title: map-merge((
 
 $component-title-link: () !default;
 $component-title-link: map-merge((
-	color: $body-color
+	color: $body-color,
+	hover-color: darken($body-color, 15%)
 ), $component-title-link);
 
 // Component Subtitle
@@ -42,7 +46,8 @@ $component-subtitle: map-merge((
 
 $component-subtitle-link: () !default;
 $component-subtitle-link: map-merge((
-	color: $secondary
+	color: $secondary,
+	hover-color: darken($secondary, 15%)
 ), $component-subtitle-link);
 
 // Component Action
