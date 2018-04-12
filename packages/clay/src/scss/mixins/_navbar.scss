@@ -406,6 +406,7 @@
 	$color: map-get($map, color);
 	$link-border-radius: map-get($map, link-border-radius);
 	$link-color: map-get($map, link-color);
+	$link-font-weight: map-get($map, link-font-weight);
 	$link-hover-color: map-get($map, link-hover-color);
 	$link-active-color: map-get($map, link-active-color);
 	$link-disabled-color: map-get($map, link-disabled-color);
@@ -413,11 +414,13 @@
 	$link-hover-bg: map-get($map, link-hover-bg);
 	$link-active-bg: map-get($map, link-active-bg);
 	$link-disabled-bg: map-get($map, link-disabled-bg);
+	$btn-font-weight: setter(map-get($map, btn-font-weight), $link-font-weight);
 	$brand-color: map-get($map, brand-color);
 	$brand-hover-color: map-get($map, brand-hover-color);
 	$brand-bg: map-get($map, brand-bg);
 	$brand-hover-bg: map-get($map, brand-hover-bg);
 	$toggler-color: setter(map-get($map, toggler-color), $link-color);
+	$toggler-font-weight: setter(map-get($map, toggler-font-weight), $link-font-weight);
 	$underline-active-bg: map-get($map, underline-active-bg);
 
 	@if ($enabled) {
@@ -433,6 +436,7 @@
 			@include border-radius($link-border-radius);
 
 			color: $link-color;
+			font-weight: $link-font-weight;
 
 			@include hover {
 				background-color: $link-hover-bg;
@@ -451,6 +455,10 @@
 			}
 		}
 
+		.nav-btn {
+			font-weight: $btn-font-weight;
+		}
+
 		.navbar-brand {
 			background-color: $brand-bg;
 			color: $brand-color;
@@ -463,6 +471,7 @@
 
 		.navbar-toggler {
 			color: $toggler-color;
+			font-weight: $toggler-font-weight;
 		}
 
 		.navbar-toggler-link {
@@ -492,6 +501,7 @@
 								.dropdown-header,
 								.dropdown-item {
 									color: $link-color;
+									font-weight: $link-font-weight;
 								}
 
 								.dropdown-divider {
