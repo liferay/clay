@@ -9,7 +9,8 @@
 	display: inline-flex;
 	font-size: $label-font-size;
 	font-weight: $label-font-weight;
-	line-height: $label-height - ($label-border-width * 2);
+	height: $label-height;
+	line-height: $label-line-height;
 	margin-bottom: $label-spacer-y;
 	margin-right: $label-spacer-x;
 	margin-top: $label-spacer-y;
@@ -94,10 +95,13 @@ a.label {
 	min-height: 0;
 	position: relative;
 
+	a {
+		display: inline-flex;
+	}
+
 	.btn-unstyled {
 		color: inherit;
 		display: inline-flex;
-		font-size: $label-lexicon-icon-height;
 	}
 
 	.close {
@@ -120,6 +124,10 @@ a.label {
 	flex-shrink: 1;
 	min-width: 1rem;
 	word-wrap: break-word;
+
+	a {
+		flex-direction: column;
+	}
 }
 
 .label-item-before {

@@ -54,11 +54,12 @@ $input-readonly-cursor: null !default;
 
 $input-textarea-height: 150px !default;
 
-// Form Control Label (Labels inside Form Control)
+// Form Control Label (Labels inside Form Control Tag Group)
 
 $form-control-label-size: () !default;
 $form-control-label-size: map-merge((
-	height: 1.25rem
+	border-width: 0.0625rem, // 1px
+	height: 1.25rem // 20px
 ), $form-control-label-size);
 
 // Form Control Tag Group

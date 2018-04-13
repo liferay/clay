@@ -1,8 +1,8 @@
 $label-border-radius: 0.125rem !default; // 2px
 $label-font-size: 0.625rem !default; // 10px
 $label-font-weight: $font-weight-semi-bold !default;
-$label-height: 1rem !default; // 16px
 $label-padding-x: 0.5rem !default; // 8px
+$label-padding-y: 0.125rem !default; // 2px
 $label-text-transform: uppercase !default;
 
 $label-item-spacer-x: 0.85714em !default;
@@ -13,9 +13,10 @@ $label-link-text-decoration: none !default;
 $label-link-hover-text-decoration: underline !default;
 
 $label-lg: (
-	font-size: 0.75rem, // 13px
+	font-size: 0.75rem, // 12px
 	height: 1.5rem, // 24px
-	padding-x: 0.625rem // 10px
+	padding-x: 0.625rem, // 10px
+	padding-y: 0.3125rem // 5px
 ) !default;
 
 // Label Variants
