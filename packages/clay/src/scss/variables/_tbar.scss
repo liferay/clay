@@ -15,10 +15,9 @@ $component-tbar: map-merge((
 
 $subnav-tbar-component-title: () !default;
 $subnav-tbar-component-title: map-merge((
-	font-size: 0.75rem,
+	font-size: 0.875rem,
 	font-weight: $font-weight-semi-bold,
-	line-height: normal,
-	text-transform: uppercase
+	line-height: normal
 ), $subnav-tbar-component-title);
 
 $subnav-tbar-component-link: () !default;
@@ -30,11 +29,13 @@ $subnav-tbar-component-link: map-merge((
 
 $subnav-tbar: () !default;
 $subnav-tbar: map-merge((
+	font-size: 0.875rem,
 	height: 2rem,
 	section-text-align: left,
 	strong-font-weight: $font-weight-semi-bold,
 	item-padding-x: 0.5rem,
 	btn-height: 1.625rem,
+	btn-line-height: 1,
 	btn-padding-y: 0,
 	component-link: $subnav-tbar-component-link,
 	component-title: $subnav-tbar-component-title,

@@ -1,10 +1,11 @@
 $enable-scaling-navbar: $enable-scaling-components !default;
 
 $navbar-border-radius: null !default;
+$navbar-font-size: null !default;
 
 $navbar-underline-active-bg: $component-active-bg !default;
 
-$navbar-title-font-size: 1.25rem !default;
+$navbar-title-font-size: 1.25rem !default; // 20px
 $navbar-title-font-weight: $font-weight-semi-bold !default;
 $navbar-title-margin-bottom: 0 !default;
 $navbar-title-text-transform: null !default;

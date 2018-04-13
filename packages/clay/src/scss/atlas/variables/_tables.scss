@@ -2,10 +2,10 @@ $table-bg: #FFF !default;
 $table-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $table-hover-bg: lighten($component-active-bg, 44.90) !default;
 $table-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$table-font-size: 0.875rem !default;
 
 $table-head-border-bottom-width: 1px !default;
 $table-head-color: $secondary !default;
-$table-head-font-size: 0.8125rem !default; // 13px
 $table-head-font-weight: $font-weight-semi-bold !default;
 
 $table-head-link: () !default;
@@ -16,9 +16,9 @@ $table-head-link: map-merge((
 
 $table-divider-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $table-divider-color: $secondary !default;
-$table-divider-font-size: 0.6875rem !default; // 11px
+$table-divider-font-size: 0.75rem !default; // 12px
 $table-divider-font-weight: $font-weight-semi-bold !default;
-$table-divider-padding: 0.5rem 0.75rem !default;
+$table-divider-padding: 0.4375rem 0.75rem !default;
 $table-divider-text-transform: uppercase !default;
 
 $table-quick-action-menu-accent-bg: $table-accent-bg !default;
@@ -30,7 +30,8 @@ $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
 $table-title: () !default;
 $table-title: map-merge((
-	color: $body-color
+	color: $body-color,
+	font-size: 0.875rem // 14px
 ), $table-title);
 
 // Table Action Link
@@ -67,7 +68,8 @@ $table-list-link-color: $secondary !default;
 $table-list-title: () !default;
 $table-list-title: map-merge((
 	color: $body-color,
-	line-height: 1.25
+	font-size: 0.875rem, // 14px
+	line-height: 1.45
 ), $table-list-title);
 
 $table-list-title-link: () !default;

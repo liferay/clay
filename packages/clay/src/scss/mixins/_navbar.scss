@@ -21,6 +21,7 @@
 	$link-margin-y: setter(map-get($map, link-margin-y), (($height - $border-bottom-width - $border-top-width) - $link-height) / 2);
 	$link-padding-x: setter(map-get($map, link-padding-x), $navbar-nav-link-padding-x);
 	$link-padding-y: setter(map-get($map, link-padding-y), ($link-height - ($font-size * $line-height-base)) / 2);
+	$btn-font-size: setter(map-get($map, btn-font-size), $font-size);
 	$btn-monospaced-font-size: map-get($map, btn-monospaced-font-size);
 	$btn-monospaced-size: map-get($map, btn-monospaced-size);
 	$btn-margin-x: setter(map-get($map, btn-margin-x), $link-padding-x);
@@ -46,6 +47,7 @@
 	$link-margin-y-mobile: setter(map-get($map, link-margin-y-mobile), (($height-mobile - $border-bottom-width - $border-top-width) - $link-height-mobile) / 2);
 	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), $link-padding-x);
 	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($link-height-mobile - ($font-size-mobile * $line-height-base)) / 2);
+	$btn-font-size-mobile: setter(map-get($map, btn-font-size-mobile), $font-size-mobile);
 	$btn-monospaced-font-size-mobile: setter(map-get($map, btn-monospaced-font-size-mobile), $btn-monospaced-font-size);
 	$btn-monospaced-size-mobile: setter(map-get($map, btn-monospaced-size-mobile), $btn-monospaced-size);
 	$btn-margin-x-mobile: setter(map-get($map, btn-margin-x-mobile), $link-padding-x-mobile);
@@ -135,6 +137,7 @@
 
 		.navbar-nav {
 			.nav-btn {
+				font-size: $btn-font-size-mobile;
 				height: $btn-monospaced-size-mobile;
 				margin-bottom: $btn-margin-y-mobile;
 				margin-left: $btn-margin-x-mobile;
@@ -281,6 +284,7 @@
 
 						.nav-btn {
 							@if ($scaling-navbar) {
+								font-size: $btn-font-size;
 								height: $btn-monospaced-size;
 								margin-bottom: $btn-margin-y;
 								margin-left: $btn-margin-x;

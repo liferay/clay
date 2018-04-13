@@ -5,18 +5,19 @@ $list-group-active-bg: $list-group-hover-bg !default;
 $list-group-active-border-color: $list-group-border-color !default;
 $list-group-active-color: !default;
 
+$list-group-font-size: 0.875rem !default; // 14px
 $list-group-item-padding-x: 1rem !default; // 16px
 $list-group-item-padding-y: 1rem !default; // 16px
 
 // List Group Header
 
 $list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
-$list-group-header-padding-y: 0.53125rem !default; // 8.5px
+$list-group-header-padding-y: 0.5rem !default; // 8px
 
 $list-group-header-title: () !default;
 $list-group-header-title: map-merge((
 	color: $secondary,
-	font-size: 0.6875rem, // 11px
+	font-size: 0.75rem, // 12px
 	text-transform: uppercase
 ), $list-group-header-title);
 
@@ -30,8 +31,8 @@ $list-group-title-link: map-merge((
 $list-group-title: () !default;
 $list-group-title: map-merge((
 	color: $body-color,
-	font-size: 0.9375rem, // 15px
-	line-height: 1.35
+	font-size: 0.875rem, // 14px
+	line-height: 1.45
 ), $list-group-title);
 
 // List Group Subtitle
@@ -45,7 +46,6 @@ $list-group-subtitle-link: map-merge((
 
 $list-group-text: () !default;
 $list-group-text: map-merge((
-	font-size: 0.875rem, // 14px
 	line-height: 1.45
 ), $list-group-text);
 
@@ -58,7 +58,6 @@ $list-group-text-link: map-merge((
 
 $list-group-subtext: () !default;
 $list-group-subtext: map-merge((
-	font-size: 0.875rem, // 14px
 	line-height: 1.45
 ), $list-group-subtext);
 

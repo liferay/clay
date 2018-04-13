@@ -1,6 +1,7 @@
 $application-bar-size: () !default;
 $application-bar-size: map-merge((
 	scaling-navbar: true,
+	font-size: $navbar-font-size,
 	height: 3.5rem,
 	height-mobile: 3rem,
 	btn-monospaced-font-size: 1rem,
