@@ -15,4 +15,5 @@ $progress-group-subtitle: map-merge((
 	font-weight: $font-weight-normal
 ), $progress-group-subtitle);
 
+$progress-group-addon-font-size: 0.875rem !default;
 $progress-group-addon-font-weight: $font-weight-semi-bold !default;

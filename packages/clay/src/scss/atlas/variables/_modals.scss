@@ -10,6 +10,7 @@ $modal-header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 4
 $modal-header-padding: 1.5rem !default; // 24px
 
 $modal-title-font-size: 1.25rem !default; // 20px
+$modal-title-font-weight: $font-weight-bold !default;
 
 // Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
 

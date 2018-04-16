@@ -4,6 +4,7 @@
 	$border-width: map-get($map, border-width);
 	$bg-color: map-get($map, bg-color);
 	$color: map-get($map, color);
+	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
 
 	$strong-font-weight: map-get($map, strong-font-weight);
@@ -12,7 +13,9 @@
 	$item-padding-y: map-get($map, item-padding-y);
 
 	$btn-height: map-get($map, btn-height);
-	$btn-font-size: map-get($map, btn-font-size);
+	$btn-font-size: setter(map-get($map, btn-font-size), $font-size);
+	$btn-font-weight: map-get($map, btn-font-weight);
+	$btn-line-height: map-get($map, btn-line-height);
 	$btn-margin-x: map-get($map, btn-margin-x);
 	$btn-margin-y: map-get($map, btn-margin-y);
 	$btn-padding-x: map-get($map, btn-padding-x);
@@ -50,6 +53,7 @@
 	border-style: $border-style;
 	border-width: $border-width;
 	color: $color;
+	font-size: $font-size;
 	height: $height;
 
 	strong {
@@ -73,7 +77,9 @@
 
 	.tbar-btn {
 		font-size: $btn-font-size;
+		font-weight: $btn-font-weight;
 		height: $btn-height;
+		line-height: $btn-line-height;
 		margin-bottom: $btn-margin-y;
 		margin-left: $btn-margin-x;
 		margin-right: $btn-margin-x;

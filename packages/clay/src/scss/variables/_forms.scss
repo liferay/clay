@@ -161,14 +161,13 @@ $input-select-icon-disabled: null !default;
 
 // Form Feedback
 
-$form-feedback-font-size: $font-size-sm !default;
 $form-feedback-font-weight: null !default;
 $form-feedback-margin-top: 0.25rem !default;
 
 $form-feedback-indicator-margin-x: 0.3125rem !default;
 
 $form-text-color: $text-muted !default;
-$form-text-font-size: $font-size-sm !default;
+$form-text-font-size: 0.875rem !default; // 14px
 $form-text-font-weight: null !default;
 
 // Form Group Autofit
