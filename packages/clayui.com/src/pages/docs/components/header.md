@@ -1,8 +1,8 @@
 ---
 title: Header
 description: "Header is toolbar that allows identification, navigation and display actions."
-pattern: "Navigation/header"
 layout: "guide"
+pattern: "Navigation/header"
 weight: 100
 ---
 
