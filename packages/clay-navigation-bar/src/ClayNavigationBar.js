@@ -26,7 +26,7 @@ class ClayNavigationBar extends Component {
 		const elementCollapse = this.element.querySelector('.navbar-collapse');
 
 		if (this._isTransitioning && !this._visible) {
-			const heightCollapse = elementCollapse.querySelector('.container')
+			const heightCollapse = elementCollapse.querySelector('.container-fluid.container-fluid-max-xl')
 				.clientHeight;
 
 			elementCollapse.setAttribute(
