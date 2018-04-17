@@ -16,7 +16,7 @@ section: Components
 		</div>
 
 		<div class="alert alert-warning">
-			Direct descendants of <code>.autofit-col</code> are <code>flex-direction: column;</code> (IE 10-11 workaround) therefore become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with <code>```<div class="autofit-section"></div>```</code>.
+			Direct descendants of <code>.autofit-col</code> are <code>flex-direction: column;</code> (IE 10-11 workaround because they don't respect min/max width or min/max height in flex items) become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content inside <code>.autofit-col</code> using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with <code>```<div class="autofit-section"></div>```</code>.
 		</div>
 
 		<div class="autofit-row autofit-padded">
@@ -144,12 +144,16 @@ section: Components
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<div class="card">
 			<div class="card-body">
-				<div class="autofit-row autofit-padded">
+				<div class="autofit-padded-no-gutters-x autofit-row">
 					<div class="autofit-col autofit-col-expand">
-						<h2 style="margin-bottom:2px;margin-top:2px;">
+						<h2 class="component-title" style="font-size:1.25rem;font-weight:700;">
 							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
 						</h2>
 						<div>Sept 25 - 3 Views</div>
@@ -171,10 +175,30 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Autofit Helpers</h3>
+		<h3>Autofit Spacing</h3>
 
 		<blockquote class="blockquote">
 			<p>The class <code>autofit-padded</code> should be added to <code>autofit-row</code> to give padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code>.</p>
+
+			<p>The class <code>autofit-padded-no-gutters-x</code> gives padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code> and has negative margins on the left and right to offset the padding (similar to Bootstrap's <code>row</code> class).</p>
+
+			<p>The class <code>autofit-padded-no-gutters-y</code> gives padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code> and has negative margins on the top and bottom to offset the padding (Generally used if nesting <code>.autofit-row</code>).</p>
+
+			<p>The class <code>autofit-padded-no-gutters</code> gives padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code> and has negative margins on the top, right, bottom, and left to offset the padding (Generally used if nesting <code>.autofit-row</code>).</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Autofit Row Vertical Alignment</h3>
+
+		<blockquote class="blockquote">
+			<p>Autofit Row vertically aligns to the top by default.</p>
+
+			<p>The class <code>autofit-row-center</code> will vertically align items in <code>autofit-row</code> to the middle.</p>
+
+			<p>The class <code>autofit-row-end</code> will vertically align items in <code>autofit-row</code> to the bottom.</p>
 		</blockquote>
 	</div>
 </div>
@@ -184,14 +208,14 @@ section: Components
 		<h3>Autofit Float</h3>
 
 		<blockquote class="blockquote">
-			<p>The component <code>.autofit-float-{sm|md|lg|xl}-down</code> simulates the behavior of floated elements on <code>.autofit-row</code>. The helper <code>.autofit-col-end</code> to any <code>.autofit-col</code> that should be "floated right".</p>
+			<p>The component <code>autofit-float</code> or <code>.autofit-float-{sm|md}-down</code> simulates the behavior of floated elements on <code>.autofit-row</code>. Items that break to a new line will be aligned to the left.</p>
 
 			<p>This pattern provides the benefit of aligning content via flexbox without losing the behavior of floated elements at the expense of extra markup.</p>
 		</blockquote>
 
 		<div class="card">
 			<div class="card-body">
-				<div class="autofit-float-sm-down autofit-padded autofit-row autofit-row-center">
+				<div class="autofit-float-sm-down autofit-padded-no-gutters-x autofit-row">
 					<div class="autofit-col autofit-col-expand">
 						<h4 class="component-title">
 							<span class="text-truncate-inline">
@@ -201,7 +225,7 @@ section: Components
 							</span>
 						</h4>
 					</div>
-					<div class="autofit-col autofit-col-end">
+					<div class="autofit-col">
 						<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
@@ -212,33 +236,33 @@ section: Components
 					</div>
 				</div>
 
-				<div class="autofit-float autofit-padded autofit-row">
+				<div class="autofit-float autofit-padded-no-gutters-x autofit-row">
 					<div class="autofit-col autofit-col-expand">
-						<h4 style="margin-top:7px;">
+						<h4 class="component-title">
 							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWord
 						</h4>
 					</div>
-					<div class="autofit-col autofit-col-end">
-						<div class="autofit-section">
-							<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
-								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#shortcut" />
-									</svg>
-								</span>RSS
-							</button>
-							<button class="btn btn-primary btn-sm" type="button">
-								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
-									</svg>
-								</span>Add Content
-							</button>
-						</div>
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#shortcut" />
+								</svg>
+							</span>RSS
+						</button>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-primary btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
+								</svg>
+							</span>Add Content
+						</button>
 					</div>
 				</div>
 
-				<div class="autofit-float autofit-padded autofit-row autofit-row-center">
+				<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
 					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
@@ -257,16 +281,18 @@ section: Components
 							</span>Like (25)
 						</button>
 					</div>
-					<div class="autofit-col">
-						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
-							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#flag-empty" />
-								</svg>
-							</span>Flag
-						</button>
+					<div class="autofit-col autofit-col-expand">
+						<div class="autofit-section">
+							<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+								<span class="inline-item inline-item-before">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#flag-empty" />
+									</svg>
+								</span>Flag
+							</button>
+						</div>
 					</div>
-					<div class="autofit-col autofit-col-end">
+					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
@@ -283,13 +309,123 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Mix the Two</h3>
+		<h3>Autofit Float End</h3>
+
+		<blockquote class="blockquote">
+			<p>Mimic "right floated" elements.</p>
+
+			<p>The component <code>.autofit-float-end</code> or <code>.autofit-float-end-{sm|md}-down</code> simulates the behavior of "right floated" elements on <code>.autofit-row</code>. Items that break to a new line will be aligned right.</p>
+
+			<p>Aligning items to the left will require nesting <code>autofit-float autofit-row</code> inside an <code>autofit-col autofit-col-expand</code> with the use of helper classes.</p>
+		</blockquote>
 
 		<div class="card">
 			<div class="card-body">
-				<div class="autofit-float autofit-padded autofit-row">
+				<div class="autofit-float-end-sm-down autofit-padded-no-gutters-x autofit-row">
 					<div class="autofit-col autofit-col-expand">
-						<h4>COMMENTS</h4>
+						<h4 class="component-title">
+							<span class="text-truncate-inline">
+								<span class="text-truncate">
+									ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+								</span>
+							</span>
+						</h4>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
+								</svg>
+							</span>Subscribe
+						</button>
+					</div>
+				</div>
+
+				<div class="autofit-float-end autofit-padded-no-gutters-x autofit-row">
+					<div class="autofit-col autofit-col-expand">
+						<h4 class="component-title">
+							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWord
+						</h4>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#shortcut" />
+								</svg>
+							</span>RSS
+						</button>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-primary btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
+								</svg>
+							</span>Add Content
+						</button>
+					</div>
+				</div>
+
+				<div class="autofit-float-end autofit-padded-no-gutters-x autofit-row autofit-row-center">
+					<div class="autofit-col autofit-col-expand">
+						<div class="autofit-float autofit-padded-no-gutters autofit-row">
+							<div class="autofit-col">
+								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#shortcut" />
+										</svg>
+									</span>View in context
+								</button>
+							</div>
+							<div class="autofit-col">
+								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#thumbs-up" />
+										</svg>
+									</span>Like (25)
+								</button>
+							</div>
+							<div class="autofit-col">
+								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#flag-empty" />
+										</svg>
+									</span>Flag
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="autofit-col">
+						<button class="btn btn-secondary" type="button">
+							<span class="inline-item inline-item-before">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#share" />
+								</svg>
+							</span>Share
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Nesting Autofit Rows</h3>
+
+		<div class="card">
+			<div class="card-body">
+				<div class="autofit-float autofit-padded-no-gutters-x autofit-row">
+					<div class="autofit-col autofit-col-expand">
+						<h4 class="component-title">COMMENTS</h4>
 					</div>
 					<div class="autofit-col autofit-col-end">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
@@ -301,7 +437,7 @@ section: Components
 						</button>
 					</div>
 				</div>
-				<div class="autofit-padded autofit-row">
+				<div class="autofit-padded-no-gutters-x autofit-row">
 					<div class="autofit-col">
 						<span class="sticker sticker-circle sticker-lg sticker-success">LC</span>
 					</div>
@@ -314,14 +450,14 @@ section: Components
 						</div>
 					</div>
 				</div>
-				<div class="autofit-padded autofit-row">
+				<div class="autofit-padded-no-gutters-x autofit-row">
 					<div class="autofit-col">
 						<span class="sticker sticker-circle sticker-lg sticker-warning">DA</span>
 					</div>
 					<div class="autofit-col autofit-col-expand">
 						<div class="autofit-row">
 							<div class="autofit-col autofit-col-expand">
-								<h5>David Aragones Otero</h5>
+								<h5 class="component-title">David Aragones Otero</h5>
 								<div>3 Hours Ago</div>
 							</div>
 							<div class="autofit-col">
@@ -343,7 +479,7 @@ section: Components
 							</div>
 						</div>
 						<p>Percolator beans french press extraction seasonal grinder plunger pot caramelization. Single origin, dark grinder cultivar aftertaste iced skinny cappuccino irish barista aftertaste fair trade.Sweet, carajillo decaffeinated, french press crema froth and organic a fair trade. In est cream brewed bar roast filter americano turkish.</p>
-						<div class="autofit-float autofit-padded autofit-row autofit-row-center">
+						<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
 							<div class="autofit-col">
 								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 									<span class="inline-item inline-item-before">
@@ -372,14 +508,14 @@ section: Components
 								</button>
 							</div>
 						</div>
-						<div class="autofit-padded autofit-row">
+						<div class="autofit-padded-no-gutters-x autofit-row">
 							<div class="autofit-col">
 								<span class="sticker sticker-circle sticker-lg sticker-success">LC</span>
 							</div>
 							<div class="autofit-col autofit-col-expand">
 								<div class="autofit-row">
 									<div class="autofit-col autofit-col-expand">
-										<h5>Laura Garcia Castano</h5>
+										<h5 class="component-title">Laura Garcia Castano</h5>
 										<div>2 Hours Ago</div>
 									</div>
 									<div class="autofit-col">
@@ -401,7 +537,7 @@ section: Components
 									</div>
 								</div>
 								<p>Percolator beans french press extraction seasonal grinder plunger pot caramelization. Single origin, dark grinder cultivar aftertaste iced skinny cappuccino irish barista aftertaste fair trade.Sweet, carajillo decaffeinated, french press crema froth and organic a fair trade. In est cream brewed bar roast filter americano turkish.</p>
-								<div class="autofit-float autofit-padded autofit-row autofit-row-center">
+								<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
 									<div class="autofit-col">
 										<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 											<span class="inline-item inline-item-before">
