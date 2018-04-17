@@ -714,9 +714,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       <p class="list-group-subtitle text-truncate">U.S.A</p>
       <div class="list-group-detail">
         <span class="label label-success">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">No Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">No Spicy</span>
         </span>
       </div>
     </div>
@@ -739,9 +737,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       <p class="list-group-subtitle text-truncate">China</p>
       <div class="list-group-detail">
         <span class="label label-warning">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">Spicy</span>
         </span>
       </div>
     </div>
@@ -764,9 +760,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       <p class="list-group-subtitle text-truncate">Spain</p>
       <div class="list-group-detail">
         <span class="label label-success">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">No Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">No Spicy</span>
         </span>
       </div>
     </div>
@@ -789,9 +783,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       <p class="list-group-subtitle text-truncate">Italy</p>
       <div class="list-group-detail">
         <span class="label label-success">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">No Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">No Spicy</span>
         </span>
       </div>
     </div>
@@ -814,9 +806,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       <p class="list-group-subtitle text-truncate">Toledo</p>
       <div class="list-group-detail">
         <span class="label label-warning">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">Spicy</span>
         </span>
       </div>
     </div>
@@ -839,9 +829,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       <p class="list-group-subtitle text-truncate">Mexico</p>
       <div class="list-group-detail">
         <span class="label label-danger">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">Very Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">Very Spicy</span>
         </span>
       </div>
     </div>
@@ -917,9 +905,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       <p class="list-group-subtitle text-truncate">U.S.A</p>
       <div class="list-group-detail">
         <span class="label label-success">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">No Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">No Spicy</span>
         </span>
       </div>
     </div>
@@ -966,9 +952,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       <p class="list-group-subtitle text-truncate">China</p>
       <div class="list-group-detail">
         <span class="label label-warning">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">Spicy</span>
         </span>
       </div>
     </div>
@@ -1015,9 +999,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       <p class="list-group-subtitle text-truncate">Spain</p>
       <div class="list-group-detail">
         <span class="label label-success">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">No Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">No Spicy</span>
         </span>
       </div>
     </div>
@@ -1064,9 +1046,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       <p class="list-group-subtitle text-truncate">Italy</p>
       <div class="list-group-detail">
         <span class="label label-success">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">No Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">No Spicy</span>
         </span>
       </div>
     </div>
@@ -1113,9 +1093,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       <p class="list-group-subtitle text-truncate">Toledo</p>
       <div class="list-group-detail">
         <span class="label label-warning">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">Spicy</span>
         </span>
       </div>
     </div>
@@ -1162,9 +1140,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       <p class="list-group-subtitle text-truncate">Mexico</p>
       <div class="list-group-detail">
         <span class="label label-danger">
-          <span class="text-truncate-inline">
-            <span class="text-truncate">Very Spicy</span>
-          </span>
+          <span class="label-item label-item-expand">Very Spicy</span>
         </span>
       </div>
     </div>
