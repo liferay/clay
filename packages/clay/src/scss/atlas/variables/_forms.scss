@@ -104,14 +104,15 @@ $input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-col
 $input-select-icon-disabled-color: $text-muted !default;
 $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
-// Form Control Label (Labels inside Form Control)
+// Form Control Label (Labels inside Form Control Tag Group)
 
 $form-control-label-size: () !default;
 $form-control-label-size: map-merge((
-	border-width: 0.0625rem,
-	font-size: $input-label-font-size, // 14px
+	border-width: 0.0625rem, // 1px
+	font-size: map-get($label-lg, font-size),
 	height: 1.5rem, // 24px
-	padding-x: 0.625rem, // 10px
+	padding-x: map-get($label-lg, padding-x),
+	padding-y: map-get($label-lg, padding-y),
 	text-transform: none
 ), $form-control-label-size);
 

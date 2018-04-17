@@ -3,9 +3,10 @@ $label-link-hover-color: #FFF !default;
 
 $label-font-size: 75% !default;
 $label-font-weight: $font-weight-bold !default;
-$label-height: 1.25rem !default; // 20px
+$label-height: null !default;
+$label-line-height: 1 !default;
 $label-padding-x: 0.4375rem !default; // 7px
-$label-padding-y: null !default; // 3px
+$label-padding-y: 0.1875rem !default; // 3px
 $label-spacer-x: 0.25rem !default; // 4px
 $label-spacer-y: 0.125rem !default; // 2px
 $label-text-transform: null !default;
@@ -50,8 +51,8 @@ $label-close: map-merge((
 $label-lg: () !default;
 $label-lg: map-merge((
 	font-size: 0.875rem, // 14px
-	height: 1.875rem, // 30px
 	padding-x: 1rem, // 16px
+	padding-y: 0.375rem, // 6px
 	text-transform: none
 ), $label-lg);
 
