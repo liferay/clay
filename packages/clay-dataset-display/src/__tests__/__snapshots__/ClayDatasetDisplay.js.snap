@@ -4,7 +4,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -101,7 +101,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -747,7 +747,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -844,7 +844,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -1490,7 +1490,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -1587,7 +1587,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -2235,7 +2235,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -2287,7 +2287,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -2411,7 +2411,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -2508,7 +2508,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -2799,7 +2799,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -2851,7 +2851,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -2972,7 +2972,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -3069,7 +3069,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
       </div>
     </nav>
   </div>
-  <div class="container container-view">
+  <div class="container-fluid container-fluid-max-xl container-view">
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
@@ -3885,7 +3885,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -3982,7 +3982,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
       </div>
     </nav>
   </div>
-  <div class="container container-view">
+  <div class="container-fluid container-fluid-max-xl container-view">
     <form>
       <ul class="list-group show-quick-actions-on-hover">
         <li class="list-group-header">
@@ -4936,7 +4936,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -5033,7 +5033,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -5679,7 +5679,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -5776,7 +5776,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -6062,7 +6062,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -6114,7 +6114,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -6595,7 +6595,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -6647,7 +6647,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -6944,7 +6944,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -7041,7 +7041,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
