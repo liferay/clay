@@ -23,20 +23,10 @@ class ClayNavigationBar extends Component {
 	 */
 	// eslint-disable-next-line
 	sync_isTransitioning() {
-		const elementCollapse = this.element.querySelector('.navbar-collapse');
-
 		if (this._isTransitioning && !this._visible) {
-			const heightCollapse = elementCollapse.querySelector(
-				'.container-fluid.container-fluid-max-xl'
-			).clientHeight;
-
-			elementCollapse.setAttribute(
-				'style',
-				`height: ${heightCollapse}px`
-			);
+			this._setCollapseHeight();
 		} else if (this._isTransitioning && this._visible) {
-			elementCollapse.setAttribute('style', 'height: 0');
-			elementCollapse.removeAttribute('style');
+			this._removeCollapseHeight();
 		}
 	}
 
@@ -45,6 +35,10 @@ class ClayNavigationBar extends Component {
 	 * @private
 	 */
 	_handleClickToggler() {
+		if (this._visible && !this._isTransitioning) {
+			this._setCollapseHeight();
+		}
+
 		if (!this._isTransitioning) {
 			this._isTransitioning = true;
 		}
@@ -64,10 +58,36 @@ class ClayNavigationBar extends Component {
 		) {
 			this._visible = true;
 			this._isTransitioning = false;
+			this._removeCollapseHeight();
 		} else if (element == event.target) {
 			this._visible = false;
 			this._isTransitioning = false;
 		}
+	}
+
+	/**
+	 * Removes height css property on `.navbar-collapse`
+	 * @private
+	 */
+	_removeCollapseHeight() {
+		const elementCollapse = this.element.querySelector('.navbar-collapse');
+		elementCollapse.style.removeProperty('height');
+	}
+
+	/**
+	 * Sets the height css property on `.navbar-collapse`
+	 * @private
+	 */
+	_setCollapseHeight() {
+		const elementCollapse = this.element.querySelector('.navbar-collapse');
+		const heightCollapse = elementCollapse.querySelector(
+			'.container-fluid'
+		).clientHeight;
+
+		elementCollapse.setAttribute(
+			'style',
+			`height: ${heightCollapse}px`
+		)
 	}
 }
 
