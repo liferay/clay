@@ -3,7 +3,7 @@
 exports[`ClayManagementToolbar should render a disabled management toolbar 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -173,7 +173,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
 exports[`ClayManagementToolbar should render a disabled management toolbar with enabled search 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -361,7 +361,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
 exports[`ClayManagementToolbar should render a management toolbar with a clear results link 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -443,7 +443,7 @@ exports[`ClayManagementToolbar should render a management toolbar with a clear r
 exports[`ClayManagementToolbar should render a management toolbar with actions as quick actions in active state 1`] = `
 <div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -494,7 +494,7 @@ exports[`ClayManagementToolbar should render a management toolbar with actions a
 exports[`ClayManagementToolbar should render a management toolbar with actions in active state 1`] = `
 <div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -593,7 +593,7 @@ exports[`ClayManagementToolbar should render a management toolbar with advanced 
 exports[`ClayManagementToolbar should render a management toolbar with ascending sorting 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
@@ -692,7 +692,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
 exports[`ClayManagementToolbar should render a management toolbar with classes in active state 1`] = `
 <div class="my-custom-class">
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -721,7 +721,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
 exports[`ClayManagementToolbar should render a management toolbar with creation menu with more than one option 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
@@ -786,7 +786,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
 exports[`ClayManagementToolbar should render a management toolbar with creation menu with one option 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
@@ -839,7 +839,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
 exports[`ClayManagementToolbar should render a management toolbar with creation menu with primary and secondary items 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
@@ -911,7 +911,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
 exports[`ClayManagementToolbar should render a management toolbar with creation menu with primary items and 7 secondary items when more than 7 are passed 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
@@ -1006,7 +1006,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
 exports[`ClayManagementToolbar should render a management toolbar with descending sorting 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced order-arrow-down-active btn-unstyled" aria-label="order-arrow" type="button">
@@ -1068,7 +1068,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items and no done button 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="dropdown nav-item">
           <div class="dropdown">
@@ -1150,7 +1150,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type checkbox 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="dropdown nav-item">
           <div class="dropdown">
@@ -1253,7 +1253,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type item 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="dropdown nav-item">
           <div class="dropdown">
@@ -1342,7 +1342,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items of type radio 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="dropdown nav-item">
           <div class="dropdown">
@@ -1497,7 +1497,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
 exports[`ClayManagementToolbar should render a management toolbar with id in active state 1`] = `
 <div id="myId">
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -1571,7 +1571,7 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
 exports[`ClayManagementToolbar should render a management toolbar with info button in active state 1`] = `
 <div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -1610,7 +1610,7 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
 exports[`ClayManagementToolbar should render a management toolbar with links as view types 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
@@ -1704,7 +1704,7 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
 exports[`ClayManagementToolbar should render a management toolbar with no search 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -1835,7 +1835,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
 exports[`ClayManagementToolbar should render a management toolbar with search results bar 1`] = `
 <div id="myId">
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -1917,7 +1917,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 exports[`ClayManagementToolbar should render a management toolbar with search results bar only when totalItems is greater than zero 1`] = `
 <div id="myId">
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -1999,7 +1999,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 exports[`ClayManagementToolbar should render a management toolbar with search results bar when state is active 1`] = `
 <div id="myId">
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -2046,7 +2046,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 exports[`ClayManagementToolbar should render a management toolbar with selection enabled 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -2110,7 +2110,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
 exports[`ClayManagementToolbar should render a management toolbar with sorting href 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class=" nav-link nav-link-monospaced order-arrow-down-active" href="#sorting">
@@ -2172,7 +2172,7 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
 exports[`ClayManagementToolbar should render a management toolbar with state active 1`] = `
 <div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
@@ -2201,7 +2201,7 @@ exports[`ClayManagementToolbar should render a management toolbar with state act
 exports[`ClayManagementToolbar should render a management toolbar with view types 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
