@@ -2,6 +2,7 @@
 	$border-width: setter(map-get($map, border-width), $label-border-width);
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
+	$line-height: map-get($map, line-height);
 	$padding-x: map-get($map, padding-x);
 	$padding-y: map-get($map, padding-y);
 	$text-transform: map-get($map, text-transform);
@@ -12,11 +13,9 @@
 
 	border-width: $border-width;
 	font-size: $font-size;
-
-	@if ($height) {
-		line-height: $height - ($border-width * 2);
-	}
-
+	height: auto;
+	line-height: $line-height;
+	min-height: $height;
 	padding-bottom: $padding-y;
 	padding-left: $padding-x;
 	padding-right: $padding-x;

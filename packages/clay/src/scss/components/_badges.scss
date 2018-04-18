@@ -72,11 +72,15 @@
 	justify-content: center;
 	min-height: 0;
 	position: relative;
+	text-align: left;
+
+	a {
+		display: inline-flex;
+	}
 
 	.btn-unstyled {
 		color: inherit;
 		display: inline-flex;
-		font-size: $badge-lexicon-icon-height;
 	}
 
 	.close {
@@ -88,17 +92,17 @@
 		margin-top: $badge-lexicon-icon-margin-top;
 		width: $badge-lexicon-icon-width;
 	}
-
-	.text-truncate-inline {
-		display: inline-flex;
-	}
 }
 
 .badge-item-expand {
 	flex-grow: 1;
 	flex-shrink: 1;
-	min-width: 1rem;
+	min-width: $badge-item-expand-min-width;
 	word-wrap: break-word;
+
+	a {
+		flex-direction: column;
+	}
 }
 
 .badge-item-before {

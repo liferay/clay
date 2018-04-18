@@ -58,24 +58,20 @@
 	{@param? spritemap: string}
 
 	{let $labelContent kind="html"}
-		<span class="text-truncate-inline">
-			<span class="text-truncate">
-				{if $href}
-					{call ClayLink.render}
-						{param href: $href /}
-						{param label: $label /}
-					{/call}
-				{else}
-					{$label}
-				{/if}
-			</span>
+		<span class="label-item label-item-expand">
+			{if $href}
+				{call ClayLink.render}
+					{param href: $href /}
+					{param label: $label /}
+				{/call}
+			{else}
+				{$label}
+			{/if}
 		</span>
 	{/let}
 
 	{if $closeable and $spritemap}
-		<span class="label-item label-item-expand">
-			{$labelContent}
-		</span>
+		{$labelContent}
 
 		<span class="label-item label-item-after">
 			{call ClayButton.render}
