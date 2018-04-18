@@ -702,7 +702,7 @@ ChartBase.STATE = {
 				max: Config.number(),
 			}),
 			fit: Config.bool(),
-			format: Config.func(),
+			format: Config.oneOfType([Config.func(), Config.string()]),
 			multiline: Config.bool(),
 			outer: Config.bool(),
 			rotate: Config.number(),
@@ -1140,8 +1140,14 @@ ChartBase.STATE = {
 		Config.shapeOf({
 			class: Config.string(),
 			enabled: Config.oneOf(['x', 'y']).required(),
-			end: Config.number().required(),
-			start: Config.number().required(),
+			end: Config.oneOfType([
+				Config.number(),
+				Config.string(),
+			]).required(),
+			start: Config.oneOfType([
+				Config.number(),
+				Config.string(),
+			]).required(),
 		})
 	),
 
