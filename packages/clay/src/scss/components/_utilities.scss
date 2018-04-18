@@ -47,6 +47,8 @@
 	@extend %autofit-row;
 }
 
+// Autofit Row Center
+
 %autofit-row-center {
 	> .autofit-col {
 		justify-content: center;
@@ -56,6 +58,8 @@
 .autofit-row-center {
 	@extend %autofit-row-center;
 }
+
+// Autofit Row End
 
 %autofit-row-end {
 	> .autofit-col {
@@ -67,7 +71,52 @@
 	@extend %autofit-row-end;
 }
 
+// Autofit Padded
+
 .autofit-padded {
+	> .autofit-col {
+		padding-bottom: $autofit-padded-col-padding-y;
+		padding-left: $autofit-padded-col-padding-x;
+		padding-right: $autofit-padded-col-padding-x;
+		padding-top: $autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded-no-gutters-x {
+	margin-left: math-sign($autofit-padded-col-padding-x);
+	margin-right: math-sign($autofit-padded-col-padding-x);
+	width: auto;
+
+	> .autofit-col {
+		padding-bottom: $autofit-padded-col-padding-y;
+		padding-left: $autofit-padded-col-padding-x;
+		padding-right: $autofit-padded-col-padding-x;
+		padding-top: $autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded-no-gutters-y {
+	margin-bottom: math-sign($autofit-padded-col-padding-y);
+	margin-left: math-sign($autofit-padded-col-padding-x);
+	margin-right: math-sign($autofit-padded-col-padding-x);
+	margin-top: math-sign($autofit-padded-col-padding-y);
+	width: auto;
+
+	> .autofit-col {
+		padding-bottom: $autofit-padded-col-padding-y;
+		padding-left: $autofit-padded-col-padding-x;
+		padding-right: $autofit-padded-col-padding-x;
+		padding-top: $autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded-no-gutters {
+	margin-bottom: math-sign($autofit-padded-col-padding-y);
+	margin-left: math-sign($autofit-padded-col-padding-x);
+	margin-right: math-sign($autofit-padded-col-padding-x);
+	margin-top: math-sign($autofit-padded-col-padding-y);
+	width: auto;
+
 	> .autofit-col {
 		padding-bottom: $autofit-padded-col-padding-y;
 		padding-left: $autofit-padded-col-padding-x;
@@ -129,6 +178,54 @@
 
 .autofit-float-sm-down {
 	@extend %autofit-float-sm-down;
+}
+
+// Autofit Float Md Down
+
+%autofit-float-md-down {
+	@include media-breakpoint-down(md) {
+		@include clay-autofit-float;
+	}
+}
+
+.autofit-float-md-down {
+	@extend %autofit-float-md-down;
+}
+
+// Autofit Float End
+
+%autofit-float-end {
+	@include clay-autofit-float;
+
+	justify-content: flex-end;
+}
+
+.autofit-float-end {
+	@extend %autofit-float-end;
+}
+
+%autofit-float-end-sm-down {
+	@include media-breakpoint-down(sm) {
+		@include clay-autofit-float;
+
+		justify-content: flex-end;
+	}
+}
+
+.autofit-float-end-sm-down {
+	@extend %autofit-float-end-sm-down;
+}
+
+%autofit-float-end-md-down {
+	@include media-breakpoint-down(md) {
+		@include clay-autofit-float;
+
+		justify-content: flex-end;
+	}
+}
+
+.autofit-float-end-md-down {
+	@extend %autofit-float-end-md-down;
 }
 
 // Headings (h1-6)
