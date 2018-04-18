@@ -9,7 +9,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with classes 1`] = `
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -33,7 +33,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with id 1`] = `
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -57,7 +57,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with more than one ele
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -86,7 +86,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with one active elemen
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -110,7 +110,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with one element 1`] =
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -134,7 +134,7 @@ exports[`ClayNavigationBar should render an inverted colored navigatiom bar with
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
