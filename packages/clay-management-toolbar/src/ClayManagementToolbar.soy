@@ -193,7 +193,7 @@
 	{@param? totalItems: number}
 
 	<nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-		<div class="container">
+		<div class="container-fluid container-fluid-max-xl">
 			<ul class="navbar-nav navbar-nav-expand">
 				<li class="nav-item">
 					{call ClayCheckbox.render}
@@ -440,15 +440,7 @@
 	<nav class="management-bar management-bar-light navbar navbar-expand-md">
 		{let $onlySearch: $showSearch and not $creationMenu and not $selectable and not $filterItems and not $sortingOrder and not $viewTypes /}
 
-		{let $containerClasses kind="text"}
-			{if $onlySearch}
-				container-fluid container-fluid-max-xl
-			{else}
-				container
-			{/if}
-		{/let}
-
-		<div class="{$containerClasses}">
+		<div class="container-fluid container-fluid-max-xl">
 			<ul class="navbar-nav">
 				{if $selectable}
 					<li class="nav-item">
