@@ -21,7 +21,6 @@ class ClayNavigationBar extends Component {
 	/**
 	 * @inheritDoc
 	 */
-	// eslint-disable-next-line
 	sync_isTransitioning() {
 		if (this._isTransitioning && !this._visible) {
 			this._setCollapseHeight();
@@ -50,7 +49,7 @@ class ClayNavigationBar extends Component {
 	 * @private
 	 */
 	_handleTransitionEnd(event) {
-		const element = this.element.querySelector('.navbar-collapse');
+		const element = this.refs.content;
 		if (
 			element == event.target &&
 			this._isTransitioning &&
@@ -70,8 +69,7 @@ class ClayNavigationBar extends Component {
 	 * @private
 	 */
 	_removeCollapseHeight() {
-		const elementCollapse = this.element.querySelector('.navbar-collapse');
-		elementCollapse.style.removeProperty('height');
+		this.refs.content.style.removeProperty('height');
 	}
 
 	/**
@@ -79,14 +77,11 @@ class ClayNavigationBar extends Component {
 	 * @private
 	 */
 	_setCollapseHeight() {
-		const elementCollapse = this.element.querySelector('.navbar-collapse');
-		const heightCollapse = elementCollapse.querySelector(
-			'.container-fluid'
-		).clientHeight;
+		const elementCollapse = this.refs.content;
 
 		elementCollapse.setAttribute(
 			'style',
-			`height: ${heightCollapse}px`
+			`height: ${elementCollapse.children[0].clientHeight}px`
 		)
 	}
 }
