@@ -21,6 +21,7 @@ class ClayNavigationBar extends Component {
 	/**
 	 * @inheritDoc
 	 */
+	// eslint-disable-next-line
 	sync_isTransitioning() {
 		if (this._isTransitioning && !this._visible) {
 			this._setCollapseHeight();
@@ -82,7 +83,7 @@ class ClayNavigationBar extends Component {
 		elementCollapse.setAttribute(
 			'style',
 			`height: ${elementCollapse.children[0].clientHeight}px`
-		)
+		);
 	}
 }
 
