@@ -6,14 +6,19 @@
 
   path, line {
     fill: none;
-    stroke: #000;
+    stroke: #e5e5eb;
   }
 
   text {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+
+    tspan {
+      fill: #6b6c7e;
+    }
   }
+
 }
 
 .bb-legend-item-tile,
