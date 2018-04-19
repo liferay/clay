@@ -48,9 +48,12 @@
 
 	color: $modal-footer-color;
 	flex-shrink: 0;
+	flex-wrap: wrap;
 	height: $modal-footer-height;
-	padding-bottom: 0;
-	padding-top: 0;
+	padding-bottom: $modal-footer-padding-y;
+	padding-left: $modal-footer-padding-x;
+	padding-right: $modal-footer-padding-x;
+	padding-top: $modal-footer-padding-y;
 
 	@include clay-scale-component {
 		height: $modal-footer-height-mobile;
@@ -58,6 +61,15 @@
 }
 
 // Modal Item
+
+.modal-item-first,
+.modal-item,
+.modal-item-last {
+	padding-bottom: $modal-item-padding-y;
+	padding-left: $modal-item-padding-x;
+	padding-right: $modal-item-padding-x;
+	padding-top: $modal-item-padding-y;
+}
 
 .modal-item-first {
 	margin-right: auto;
@@ -67,17 +79,9 @@
 	flex-grow: 1;
 }
 
-.modal-item-last {
-	margin-left: auto;
-}
-
 .modal-footer {
 	> .modal-item-first {
 		margin-right: auto;
-	}
-
-	> .modal-item-last {
-		margin-left: auto;
 	}
 }
 

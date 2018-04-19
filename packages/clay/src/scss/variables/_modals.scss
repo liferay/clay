@@ -11,10 +11,15 @@ $modal-body-color: null !default;
 $modal-footer-bg: null !default;
 $modal-footer-box-shadow: null !default;
 $modal-footer-color: null !default;
-$modal-footer-height: 4.5rem !default; // 72px
+$modal-footer-height: null !default;
+$modal-footer-padding-x: null !default;
+$modal-footer-padding-y: 0.75rem !default; // 12px
 $modal-footer-height-mobile: null !default;
 
-$modal-title-font-size: 1.25rem !default;
+$modal-item-padding-x: null !default;
+$modal-item-padding-y: 0.25rem !default; // 4px
+
+$modal-title-font-size: 1.25rem !default; // 20px
 $modal-title-font-weight: $font-weight-semi-bold !default;
 $modal-title-text-align: null !default;
 $modal-title-font-size-mobile: null !default;
