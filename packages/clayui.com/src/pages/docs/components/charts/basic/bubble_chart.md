@@ -9,8 +9,8 @@ weight: 7
 
 <article id="1">
 
-{call ClayChart.render}
-	{param columns: [
+{call ClayBubbleChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [100, 20, 30]
@@ -20,12 +20,11 @@ weight: 7
 			'data': [20, 70, 100]
 		]
 	] /}
-	{param type: 'bubble' /}
 {/call}
 
 ```soy
-{call ClayChart.render}
-	{param columns: [
+{call ClayBubbleChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [100, 20, 30]
@@ -35,12 +34,11 @@ weight: 7
 			'data': [20, 70, 100]
 		]
 	] /}
-	{param type: 'bubble' /}
 {/call}
 ```
 ```jsx
 <BubbleChart
-	columns={[
+	data={[
 		{
 			id: 'data1',
 			data: [100, 20, 30]

@@ -1,4 +1,6 @@
 import Chart from './Chart';
+import Soy from 'metal-soy';
+import templates from './BubbleChart.soy.js';
 import {Config} from 'metal-state';
 
 /**
@@ -26,6 +28,8 @@ BubbleChart.STATE = {
 	 */
 	type: Config.string().value('bubble'),
 };
+
+Soy.register(BubbleChart, templates);
 
 export {BubbleChart};
 export default BubbleChart;

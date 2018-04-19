@@ -1,4 +1,6 @@
 import Chart from './Chart';
+import Soy from 'metal-soy';
+import templates from './SplineChart.soy.js';
 import types from './utils/types';
 import {Config} from 'metal-state';
 
@@ -18,6 +20,8 @@ SplineChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('spline'),
 };
+
+Soy.register(SplineChart, templates);
 
 export {SplineChart};
 export default SplineChart;

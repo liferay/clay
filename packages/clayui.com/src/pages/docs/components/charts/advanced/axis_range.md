@@ -10,7 +10,12 @@ weight: 1
 <article id="1">
 
 {call ClayChart.render}
-	{param columns: [
+	{param axisY2: [
+		'max': 230,
+		'min': 10,
+		'show': true
+	] /}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [10, 90, 30, 120, 20, 160],
@@ -21,18 +26,18 @@ weight: 1
 			'data': [200, 150, 120, 90, 10, 75],
 			'axis': 'y2'
 		]
-	] /}
-	{param axisY2: [
-		'max': 230,
-		'min': 10,
-		'show': true
 	] /}
 {/call}
 
 
 ```soy
 {call ClayChart.render}
-	{param columns: [
+	{param axisY2: [
+		'max': 230,
+		'min': 10,
+		'show': true
+	] /}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [10, 90, 30, 120, 20, 160],
@@ -44,17 +49,17 @@ weight: 1
 			'axis': 'y2'
 		]
 	] /}
-	{param axisY2: [
-		'max': 230,
-		'min': 10,
-		'show': true
-	] /}
 {/call}
 ```
 
 ```jsx
 <Chart
-	columns={[
+	axisY2={
+		max: 230,
+		min: 10,
+		show: true
+	}
+	data={[
 		{
 			id: 'data1',
 			data: [10, 90, 30, 120, 20, 160],
@@ -66,11 +71,6 @@ weight: 1
 			axis: 'y2'
 		}
 	]}
-	axisY2={
-		max: 230,
-		min: 10,
-		show: true
-	}
 />
 ```
 </article>
