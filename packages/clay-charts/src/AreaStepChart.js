@@ -1,4 +1,6 @@
 import Chart from './Chart';
+import Soy from 'metal-soy';
+import templates from './AreaStepChart.soy.js';
 import types from './utils/types';
 import {Config} from 'metal-state';
 
@@ -18,6 +20,8 @@ AreaStepChart.STATE = {
 	 */
 	type: Config.oneOf(types.area).value('area-step'),
 };
+
+Soy.register(AreaStepChart, templates);
 
 export {AreaStepChart};
 export default AreaStepChart;

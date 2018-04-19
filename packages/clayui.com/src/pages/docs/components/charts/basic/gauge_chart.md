@@ -9,30 +9,28 @@ weight: 7
 
 <article id="1">
 
-{call ClayChart.render}
-	{param columns: [
+{call ClayGaugeChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [87.4]
 		]
 	] /}
-	{param type: 'gauge' /}
 {/call}
 
 ```soy
-{call ClayChart.render}
-	{param columns: [
+{call ClayGaugeChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [87.4]
 		]
 	] /}
-	{param type: 'gauge' /}
 {/call}
 ```
 ```jsx
 <GaugeChart
-	columns={[
+	data={[
 		{
 			id: 'data1',
 			data: [87.4]

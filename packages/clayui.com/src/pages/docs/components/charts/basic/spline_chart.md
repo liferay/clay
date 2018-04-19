@@ -9,8 +9,8 @@ weight: 1
 
 <article id="1">
 
-{call ClayChart.render}
-	{param columns: [
+{call ClaySplineChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [100, 20, 30]
@@ -20,12 +20,11 @@ weight: 1
 			'data': [20, 70, 100]
 		]
 	] /}
-	{param type: 'spline' /}
 {/call}
 
 ```soy
-{call ClayChart.render}
-	{param columns: [
+{call ClaySplineChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [100, 20, 30]
@@ -35,12 +34,11 @@ weight: 1
 			'data': [20, 70, 100]
 		]
 	] /}
-	{param type: 'spline' /}
 {/call}
 ```
 ```jsx
 <SplineChart
-	columns={[
+	data={[
 		{
 			id: 'data1',
 			data: [100, 20, 30]

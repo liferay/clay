@@ -171,7 +171,7 @@ const ChartBase = {
 		const config = {
 			area: state.area,
 			axis,
-			bindto: this.refs.chart,
+			bindto: this.element.querySelector('[ref="chart"]'),
 			bubble: state.bubble,
 			color: color,
 			data,
@@ -515,12 +515,15 @@ const ChartBase = {
 	 * @protected
 	 */
 	_handleLoadingChanged({newVal}) {
+		const chart = this.element.querySelector('[ref="chart"]');
+		const placeholder = this.element.querySelector('[ref="placeholder"]');
+
 		if (!newVal) {
-			this.refs.chart.removeAttribute('hidden');
-			this.refs.placeholder.setAttribute('hidden', 'hidden');
+			chart.removeAttribute('hidden');
+			placeholder.setAttribute('hidden', 'hidden');
 		} else {
-			this.refs.chart.setAttribute('hidden', 'hidden');
-			this.refs.placeholder.removeAttribute('hidden');
+			chart.setAttribute('hidden', 'hidden');
+			placeholder.removeAttribute('hidden');
 		}
 	},
 
@@ -702,7 +705,7 @@ ChartBase.STATE = {
 				max: Config.number(),
 			}),
 			fit: Config.bool(),
-			format: Config.func(),
+			format: Config.oneOfType([Config.func(), Config.string()]),
 			multiline: Config.bool(),
 			outer: Config.bool(),
 			rotate: Config.number(),
@@ -1140,8 +1143,14 @@ ChartBase.STATE = {
 		Config.shapeOf({
 			class: Config.string(),
 			enabled: Config.oneOf(['x', 'y']).required(),
-			end: Config.number().required(),
-			start: Config.number().required(),
+			end: Config.oneOfType([
+				Config.number(),
+				Config.string(),
+			]).required(),
+			start: Config.oneOfType([
+				Config.number(),
+				Config.string(),
+			]).required(),
 		})
 	),
 

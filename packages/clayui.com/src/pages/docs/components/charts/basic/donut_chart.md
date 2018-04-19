@@ -9,8 +9,8 @@ weight: 6
 
 <article id="1">
 
-{call ClayChart.render}
-	{param columns: [
+{call ClayDonutChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [30]
@@ -20,12 +20,11 @@ weight: 6
 			'data': [70]
 		]
 	] /}
-	{param type: 'donut' /}
 {/call}
 
 ```soy
-{call ClayChart.render}
-	{param columns: [
+{call ClayDonutChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [30]
@@ -35,12 +34,11 @@ weight: 6
 			'data': [70]
 		]
 	] /}
-	{param type: 'donut' /}
 {/call}
 ```
 ```jsx
 <DonutChart
-	columns={[
+	data={[
 		{
 			id: 'data1',
 			data: [30]

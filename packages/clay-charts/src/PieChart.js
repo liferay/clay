@@ -1,4 +1,6 @@
 import Chart from './Chart';
+import Soy from 'metal-soy';
+import templates from './PieChart.soy.js';
 import types from './utils/types';
 import {Config} from 'metal-state';
 
@@ -18,6 +20,8 @@ PieChart.STATE = {
 	 */
 	type: Config.oneOf(types.percentage).value('pie'),
 };
+
+Soy.register(PieChart, templates);
 
 export {PieChart};
 export default PieChart;
