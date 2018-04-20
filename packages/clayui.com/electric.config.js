@@ -62,7 +62,7 @@ module.exports = {
 			soyAPIEntitiesPath: '../../../partials/ElectricAPIEntities.soy.js',
 			src: [
 				'packages/clay-*!(isomorphic)/src/Clay*.js',
-				'packages/clay-charts/src/*.js'
+				'packages/clay-charts/src/*.js',
 			],
 			srcPath: 'packages',
 			user: 'liferay',
@@ -75,8 +75,11 @@ module.exports = {
 	entryPoints: {
 		electricAPI: path.join(__dirname, 'src/partials/ElectricAPIBundle.js'),
 	},
-	staticStc: staticSrc,
+	staticSrc: staticSrc,
 	vendorSrc: [
+		{
+			src: '!**billboard.css',
+		},
 		{
 			dest: 'dist/vendor/lexicon',
 			src: path.join(clay.buildDir, 'images', 'icons', '*'),
