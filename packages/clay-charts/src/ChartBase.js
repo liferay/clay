@@ -16,13 +16,13 @@ const PROP_NAME_MAP = {
 
 const DEFAULT_COLORS = [
 	'#4B9BFF',
-	'#FFD76E',
+	'#FFB46E',
 	'#FF5F5F',
-	'#9CE269',
-	'#AF78FF',
 	'#50D2A0',
 	'#FF73C3',
-	'#FFB64E',
+	'#9CE269',
+	'#AF78FF',
+	'#FFD76E',
 	'#5FC8FF',
 ];
 
