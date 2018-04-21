@@ -1,5 +1,6 @@
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
+	text-transform: $dropdown-header-text-transform;
 	white-space: normal;
 	word-wrap: break-word;
 
@@ -22,7 +23,10 @@
 	color: $dropdown-subheader-color;
 	font-size: $dropdown-subheader-font-size;
 	font-weight: $dropdown-subheader-font-weight;
-	padding: $dropdown-header-padding-y $dropdown-header-padding-x;
+	padding-bottom: $dropdown-subheader-padding-y;
+	padding-left: $dropdown-subheader-padding-x;
+	padding-right: $dropdown-subheader-padding-x;
+	padding-top: $dropdown-subheader-padding-y;
 	text-transform: $dropdown-subheader-text-transform;
 	white-space: normal;
 	word-wrap: break-word;
