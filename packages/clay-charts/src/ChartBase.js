@@ -696,7 +696,7 @@ ChartBase.STATE = {
 		localtime: Config.bool(),
 		max: Config.number(),
 		min: Config.number(),
-		padding: Config.object(),
+		padding: Config.oneOfType([Config.number(), Config.object()]),
 		show: Config.bool(),
 		tick: Config.shapeOf({
 			centered: Config.bool(),
@@ -730,7 +730,7 @@ ChartBase.STATE = {
 		label: Config.object().string(),
 		max: Config.number(),
 		min: Config.number(),
-		padding: Config.number(),
+		padding: Config.oneOfType([Config.number(), Config.object()]),
 		show: Config.bool(),
 		tick: Config.shapeOf({
 			count: Config.number(),
@@ -756,7 +756,7 @@ ChartBase.STATE = {
 		label: Config.object().string(),
 		max: Config.number(),
 		min: Config.number(),
-		padding: Config.object().string(),
+		padding: Config.oneOfType([Config.number(), Config.object()]),
 		show: Config.bool(),
 		tick: Config.shapeOf({
 			count: Config.number(),
