@@ -8,6 +8,7 @@ let actionItemShape = {
 	label: Config.string().required(),
 	quickAction: Config.bool(),
 	separator: Config.bool().value(false),
+	title: Config.string(),
 	type: Config.oneOf(['group', 'item']).value('item'),
 };
 
@@ -21,6 +22,7 @@ let creationMenuItem = {
 	icon: Config.string(),
 	label: Config.string().required(),
 	separator: Config.bool().value(false),
+	title: Config.string(),
 };
 
 const creationMenuItemsValidator = Config.arrayOf(
@@ -38,6 +40,7 @@ let filterItemShape = {
 	inputValue: Config.string(),
 	label: Config.string().required(),
 	separator: Config.bool().value(false),
+	title: Config.string(),
 	type: Config.oneOf(['checkbox', 'group', 'item', 'radiogroup']),
 };
 
