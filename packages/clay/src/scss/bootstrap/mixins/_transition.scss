@@ -6,8 +6,4 @@
       transition: $transition;
     }
   }
-
-  @media screen and (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
 }

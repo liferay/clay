@@ -4,8 +4,6 @@
 // Text
 //
 
-.text-monospace { font-family: $font-family-monospace; }
-
 // Alignment
 
 .text-justify  { text-align: justify !important; }
@@ -39,17 +37,13 @@
 
 // Contextual colors
 
-.text-white { color: $white !important; }
+.text-white { color: #fff !important; }
 
 @each $color, $value in $theme-colors {
   @include text-emphasis-variant(".text-#{$color}", $value);
 }
 
-.text-body { color: $body-color !important; }
 .text-muted { color: $text-muted !important; }
-
-.text-black-50 { color: rgba($black, .5) !important; }
-.text-white-50 { color: rgba($white, .5) !important; }
 
 // Misc
 
