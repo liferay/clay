@@ -28,8 +28,7 @@
 	</style>
 </head>
 <body>
-
-	<svg>
+	<svg style="display:none">
 		<defs>
 			<pattern id="circles" patternUnits="userSpaceOnUse" width="16" height="16" style="fill:rgba(0,0,0,0.3)">
 				<circle cx="4" cy="4" r="2"/>
@@ -142,6 +141,10 @@
 		<div id="bubble"></div>
 	</div>
 
+	<div class="clay-chart-example">
+		<h2>Predictive Forecasting</h2>
+		<div id="predictive"></div>
+	</div>
 
 	<div id="controls" style="display: none;">
 		<label>
@@ -382,6 +385,64 @@
 				pattern: ['circle']
 			}
 		}, '#bubble');
+
+		var predictiveChart = new metal.PredictiveChart({
+			axisXTickFormat: '%b',
+			data: [
+				{
+					data: [
+						130,
+						340,
+						200,
+						500,
+						80,
+						240,
+						40,
+						[370, 400, 430],
+						[210, 240, 270],
+						[150, 180, 210],
+						[60, 90, 120],
+						[310, 340, 370]
+					],
+					id: 'Product 1'
+				},
+				{
+					data: [
+						210,
+						160,
+						50,
+						125,
+						230,
+						110,
+						90,
+						{low: 170, mid: 200, high: 230},
+						{low: 10, mid: 40, high: 70},
+						{low: 350, mid: 380, high: 410},
+						{low: 260, mid: 290, high: 320},
+						{low: 30, mid: 70, high: 100}
+					],
+					id: 'Product 2'
+				}
+			],
+			predictionDate: new Date('2018-07-01'),
+			timeseries: [
+				'2018-01-01',
+				'2018-02-01',
+				'2018-03-01',
+				'2018-04-01',
+				'2018-05-01',
+				'2018-06-01',
+				'2018-07-01',
+				'2018-08-01',
+				'2018-09-01',
+				'2018-10-01',
+				'2018-11-01',
+				'2018-12-01'
+			]
+		}, '#predictive');
+		predictiveChart.on('chartError', err => {
+			console.log('Chart Error', err);
+		});
 
 		function createChartControls(chart, type, data) {
 			var element = document.getElementById(type);

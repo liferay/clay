@@ -1,15 +1,15 @@
-import DataComponent from './DataComponent';
+import * as d3 from 'd3';
+import Component from 'metal-component';
 import Soy from 'metal-soy';
+import templates from './Geomap.soy.js';
 import {Config} from 'metal-state';
 import {isServerSide} from 'metal';
-import * as d3 from 'd3';
-
-import templates from './Geomap.soy.js';
+import {resolveData} from './utils/data';
 
 /**
  * Geomap component
  */
-class Geomap extends DataComponent {
+class Geomap extends Component {
 	/**
 	 * @inheritDoc
 	 */
@@ -54,9 +54,21 @@ class Geomap extends DataComponent {
 
 		this._onDataLoadHandler = this._onDataLoad.bind(this);
 
-		this._resolveData(this.data)
+		const config = this.getInitialConfig();
+
+		resolveData(config.data)
 			.then(val => {
 				this._onDataLoadHandler.apply(this, [null, val]);
+
+				if (this._pollingInterval) {
+					clearInterval(this._pollingInterval);
+				}
+
+				if (this.pollingInterval) {
+					this._pollingInterval = setInterval(() => {
+						this._updateData(this.data);
+					}, this.pollingInterval);
+				}
 			})
 			.catch(err => {
 				this._onDataLoadHandler.apply(this, [err, null]);
@@ -71,6 +83,11 @@ class Geomap extends DataComponent {
 
 		if (isServerSide()) {
 			return;
+		}
+
+		if (this._pollingInterval) {
+			clearInterval(this._pollingInterval);
+			this._pollingInterval = null;
 		}
 
 		if (this.svg) {
@@ -179,7 +196,7 @@ class Geomap extends DataComponent {
 	 * @protected
 	 */
 	_updateData(data) {
-		this._resolveData(data)
+		resolveData(data)
 			.then(val => {
 				this._onDataLoadHandler.apply(this, [null, val]);
 			})
@@ -257,6 +274,24 @@ Geomap.STATE = {
 		selected: '#4b9bff',
 		value: 'pop_est',
 	}),
+
+	/**
+	 * Data that will be rendered to the chart.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?(Array|undefined)}
+	 */
+	data: Config.oneOfType([Config.object(), Config.func(), Config.string()]),
+
+	/**
+	 * Set an interval (in ms) to fetch the data.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Number}
+	 */
+	pollingInterval: Config.number(),
 };
 
 export {Geomap};

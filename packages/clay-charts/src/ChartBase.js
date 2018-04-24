@@ -1,6 +1,7 @@
 import {bb} from 'billboard.js';
 import {Config} from 'metal-state';
 import {isDefAndNotNull, isServerSide} from 'metal';
+import {resolveData} from './utils/data';
 import types from './utils/types';
 import * as d3 from 'd3';
 
@@ -78,8 +79,30 @@ const ChartBase = {
 			return;
 		}
 
-		this._resolveData(this.data)
+		this._addEventListeners();
+
+		const config = this.getInitialConfig();
+		const data = isDefAndNotNull(config.columns)
+			? config.columns
+			: config.data;
+
+		if (!data) {
+			return;
+		}
+
+		resolveData(data)
 			.then(data => {
+				this._resolvedData = data;
+
+				if (
+					isDefAndNotNull(this.props) &&
+					isDefAndNotNull(this.props._loading)
+				) {
+					this.props._loading = false;
+				} else {
+					this._loading = false;
+				}
+
 				if (!isDefAndNotNull(data)) {
 					this.emit(
 						'chartError',
@@ -88,28 +111,11 @@ const ChartBase = {
 					return;
 				}
 
-				this._resolvedData = data;
+				this._setupPolling();
 
 				const config = this._constructChartConfig();
 				this.bbChart = bb.generate(config);
-
-				this.on('dataChanged', this._handleDataChanged.bind(this));
-				this.on('groupsChanged', this._handleGroupsChanged.bind(this));
-				this.on(
-					'_loadingChanged',
-					this._handleLoadingChanged.bind(this)
-				);
-				this.on(
-					'regionsChanged',
-					this._handleRegionsChanged.bind(this)
-				);
-				this.on('sizeChanged', this._handleSizeChanged.bind(this));
-				this.on('typeChanged', this._handleTypeChanged.bind(this));
-				this.on('xChanged', this._handleXChanged.bind(this));
-
 				this.emit('chartReady');
-
-				this._loading = false;
 			})
 			.catch(err => {
 				this.emit('chartError', err);
@@ -125,9 +131,29 @@ const ChartBase = {
 			return;
 		}
 
+		if (this._pollingInterval) {
+			clearInterval(this._pollingInterval);
+			this._pollingInterval = null;
+		}
+
 		if (this.bbChart) {
 			this.bbChart.destroy();
 		}
+	},
+
+	/**
+	 * Adds event listeners
+	 * @memberof ChartBase
+	 * @protected
+	 */
+	_addEventListeners() {
+		this.on('dataChanged', this._handleDataChanged.bind(this));
+		this.on('groupsChanged', this._handleGroupsChanged.bind(this));
+		this.on('_loadingChanged', this._handleLoadingChanged.bind(this));
+		this.on('regionsChanged', this._handleRegionsChanged.bind(this));
+		this.on('sizeChanged', this._handleSizeChanged.bind(this));
+		this.on('typeChanged', this._handleTypeChanged.bind(this));
+		this.on('xChanged', this._handleXChanged.bind(this));
 	},
 
 	/**
@@ -617,13 +643,34 @@ const ChartBase = {
 	},
 
 	/**
+	 * Sets up the polling interval.
+	 * @memberof ChartBase
+	 * @protected
+	 */
+	_setupPolling() {
+		const config = this.getInitialConfig();
+		const data = config.data;
+		const pollingInterval = config.pollingInterval;
+
+		if (pollingInterval) {
+			if (this._pollingInterval) {
+				clearInterval(this._pollingInterval);
+			}
+
+			this._pollingInterval = setInterval(() => {
+				this._updateData(data);
+			}, pollingInterval);
+		}
+	},
+
+	/**
 	 * Updates the chart's data.
 	 * @memberof ChartBase
 	 * @param {Object} data The new data to load
 	 * @protected
 	 */
 	_updateData(data) {
-		this._resolveData(data).then(val => {
+		resolveData(data).then(val => {
 			const prevVal = this._createDataArray(this._resolvedData);
 
 			this._resolvedData = val;
@@ -838,6 +885,33 @@ ChartBase.STATE = {
 		setter: '_setColumns',
 		valueFn: '_getColumns',
 	},
+
+	/**
+	 * Data that will be rendered to the chart.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?(Array|undefined)}
+	 */
+	data: Config.oneOfType([
+		Config.arrayOf(
+			Config.shapeOf({
+				axis: Config.oneOf(['y', 'y2']),
+				class: Config.string(),
+				color: Config.string(),
+				data: Config.array().required(),
+				hide: Config.bool(),
+				id: Config.required().string(),
+				name: Config.string(),
+				regions: Config.array(),
+				type: Config.oneOf(types.all),
+				x: Config.string(),
+			})
+		),
+		Config.object(),
+		Config.func(),
+		Config.string(),
+	]),
 
 	/**
 	 * Configuration options for donut chart.
@@ -1131,6 +1205,15 @@ ChartBase.STATE = {
 	}).value({
 		pattern: DEFAULT_POINT_PATTERNS,
 	}),
+
+	/**
+	 * Set an interval (in ms) to fetch the data.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Number}
+	 */
+	pollingInterval: Config.number(),
 
 	/**
 	 * Creates custom regions on chart that can be styled.
