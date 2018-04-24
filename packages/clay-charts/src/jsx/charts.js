@@ -9,6 +9,7 @@ import GaugeChart from './GaugeChart';
 import Geomap from './Geomap';
 import LineChart from './LineChart';
 import PieChart from './PieChart';
+import PredictiveChart from './PredictiveChart';
 import ScatterChart from './ScatterChart';
 import SplineChart from './SplineChart';
 import StepChart from './StepChart';
@@ -28,6 +29,7 @@ export {
 	Geomap,
 	LineChart,
 	PieChart,
+	PredictiveChart,
 	ScatterChart,
 	SplineChart,
 	StepChart,

@@ -1,5 +1,5 @@
 import ChartBase from './ChartBase';
-import DataComponent from './DataComponent';
+import Component from 'metal-component';
 import Soy from 'metal-soy';
 import templates from './Chart.soy.js';
 
@@ -8,9 +8,8 @@ import templates from './Chart.soy.js';
  * @extends ChartBase
  * @extends Component
  */
-class Chart extends DataComponent {}
+class Chart extends Component {}
 
-Object.setPrototypeOf(ChartBase, DataComponent.prototype);
 Object.assign(Chart.prototype, ChartBase);
 Chart.STATE = Object.assign({}, ChartBase.STATE);
 

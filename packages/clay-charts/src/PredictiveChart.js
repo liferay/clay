@@ -50,9 +50,16 @@ class PredictiveChart extends Chart {
 	 */
 	attached() {
 		super.attached();
+	}
 
-		if (isDefAndNotNull(this.timeseries) && !this._getData('x')) {
-			this.data.push({data: this.timeseries, id: 'x'});
+	/**
+	 * @inheritDoc
+	 */
+	created() {
+		const config = this.getInitialConfig();
+
+		if (isDefAndNotNull(config.timeseries)) {
+			config.data.push({data: config.timeseries, id: 'x'});
 		}
 
 		if (isDefAndNotNull(this.data)) {
