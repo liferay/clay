@@ -330,7 +330,7 @@
 		{call ClayLink.render}
 			{param ariaLabel: $item.label /}
 			{param buttonStyle: 'primary' /}
-			{param elementClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
 			{param href: $item.href /}
 			{param icon: 'plus' /}
 			{param spritemap: $spritemap /}
@@ -347,7 +347,7 @@
 			{param ref: 'creationMenuDropdown' /}
 			{param secondaryItems: $creationMenu.secondaryItems /}
 			{param spritemap: $spritemap /}
-			{param triggerClasses: 'nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none' /}
+			{param triggerClasses: 'nav-btn nav-btn-monospaced' /}
 			{param viewMoreURL: $creationMenu.viewMoreURL /}
 		{/call}
 	{else}
@@ -705,7 +705,7 @@
 			<span class="input-group-inset-item input-group-inset-item-after">
 				{if not $onlySearch}
 					{call ClayButton.render}
-						{param elementClasses: 'd-none' /}
+						{param elementClasses: 'navbar-breakpoint-d-none' /}
 						{param events: ['click': $_handleCloseMobileSearchClick] /}
 						{param icon: 'times' /}
 						{param spritemap: $spritemap /}
