@@ -15,7 +15,6 @@
   border: $pagination-border-width solid $pagination-border-color;
 
   &:hover {
-    z-index: 2;
     color: $pagination-hover-color;
     text-decoration: none;
     background-color: $pagination-hover-bg;
@@ -24,7 +23,7 @@
 
   &:focus {
     z-index: 2;
-    outline: $pagination-focus-outline;
+    outline: 0;
     box-shadow: $pagination-focus-box-shadow;
   }
 
