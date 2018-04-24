@@ -50,7 +50,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -89,7 +89,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -781,7 +781,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -820,7 +820,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -1512,7 +1512,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -1551,7 +1551,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -2421,7 +2421,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -2460,7 +2460,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -2982,7 +2982,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -3021,7 +3021,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -3883,7 +3883,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -3922,7 +3922,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -4922,7 +4922,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -4961,7 +4961,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -5653,7 +5653,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -5692,7 +5692,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
@@ -6894,7 +6894,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
                         <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
@@ -6933,7 +6933,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
                   <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
