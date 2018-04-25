@@ -1,6 +1,6 @@
 import ClayIcon from '../ClayIcon';
 
-const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
+const spritemap = '../node_modules/clay-css/lib/images/icons/icons.svg';
 
 let clayIcon;
 
