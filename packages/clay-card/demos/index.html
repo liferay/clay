@@ -17,7 +17,7 @@
 		}
 	</style>
 
-	<script src="../build/globals/clay-card.js"></script>
+	<script src="./clay.js"></script>
 </head>
 <body class="container">
 	<h1 class="page-title">
@@ -111,7 +111,7 @@
 	</div>
 
 	<script type="text/javascript">
-		var spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
+		var spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
 		var image = './image1.jpg';
 		var items = [
 			{
@@ -128,7 +128,7 @@
 		/*
 		 * Image Card
 		 */
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			href: '#1',
 			imageAlt: 'thumbnail',
@@ -139,7 +139,7 @@
 		},
 		'#image-card-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			icon: 'camera',
 			spritemap: spritemap,
@@ -148,7 +148,7 @@
 		},
 		'#image-card-icon-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			spritemap: spritemap,
 			subtitle: 'Author Action',
@@ -159,7 +159,7 @@
 		/*
 		 * Image Card with sticker
 		 */
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
@@ -172,7 +172,7 @@
 		},
 		'#sticker-image-card-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'SVG',
 			stickerStyle: 'warning',
@@ -183,7 +183,7 @@
 		},
 		'#sticker-image-card-icon-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'PNG',
 			stickerStyle: 'info',
@@ -196,7 +196,7 @@
 		/*
 		 * Image Card with sticker shape
 		 */
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'TT',
 			stickerShape: 'circle',
@@ -210,7 +210,7 @@
 		},
 		'#sticker-shape-image-card-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'TT',
 			stickerShape: 'circle',
@@ -222,7 +222,7 @@
 		},
 		'#sticker-shape-image-card-icon-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'TT',
 			stickerShape: 'circle',
@@ -236,7 +236,7 @@
 		/*
 		 * Image Card with labels
 		 */
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
@@ -255,7 +255,7 @@
 		},
 		'#image-card-one-label-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'SVG',
 			stickerStyle: 'warning',
@@ -276,7 +276,7 @@
 		},
 		'#image-card-two-labels-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'PNG',
 			stickerStyle: 'info',
@@ -303,7 +303,7 @@
 		/*
 		 * Selectable Image Card
 		 */
-		 new metal.ClayImageCard({
+		 new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
@@ -324,7 +324,7 @@
 		},
 		'#selectable-image-card-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'SVG',
 			stickerStyle: 'warning',
@@ -347,7 +347,7 @@
 		},
 		'#selectable-image-card-icon-block');
 
-		new metal.ClayImageCard({
+		new clay.ClayImageCard({
 			actionItems: items,
 			stickerLabel: 'PNG',
 			stickerStyle: 'info',
@@ -376,7 +376,7 @@
 		/*
 		 * File Card
 		 */
-		new metal.ClayFileCard({
+		new clay.ClayFileCard({
 			actionItems: items,
 			stickerLabel: 'PDF',
 			stickerStyle: 'danger',
@@ -392,7 +392,7 @@
 		},
 		'#file-card-block');
 
-		new metal.ClayFileCard({
+		new clay.ClayFileCard({
 			actionItems: items,
 			stickerLabel: 'TXT',
 			stickerStyle: 'warning',
@@ -414,7 +414,7 @@
 		},
 		'#file-card-checked-block');
 
-		new metal.ClayFileCard({
+		new clay.ClayFileCard({
 			actionItems: items,
 			stickerLabel: 'DOC',
 			stickerStyle: 'info',
@@ -444,7 +444,7 @@
 		/*
 		 * User card
 		 */
-		new metal.ClayUserCard({
+		new clay.ClayUserCard({
 			actionItems: items,
 			initials: 'HS',
 			name: 'User Name',
@@ -454,7 +454,7 @@
 		},
 		'#user-card-block');
 
-		new metal.ClayUserCard({
+		new clay.ClayUserCard({
 			actionItems: items,
 			disabled: true,
 			imageAlt: 'thumbnail',
@@ -470,13 +470,13 @@
 		/*
 		 * Horizontal card
 		 */
-		new metal.ClayHorizontalCard({
+		new clay.ClayHorizontalCard({
 			spritemap: spritemap,
 			title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 		},
 		'#directory-block');
 
-		new metal.ClayHorizontalCard({
+		new clay.ClayHorizontalCard({
 			actionItems: items,
 			selectable: true,
 			selected: true,
