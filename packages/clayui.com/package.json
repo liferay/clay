@@ -1,6 +1,6 @@
 {
   "name": "clayui.com",
-  "version": "2.0.0-rc.11",
+  "version": "2.0.0-rc.12",
   "private": true,
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
     "watch": "concurrent --kill-others \"gulp watch\" \"el run\""
   },
   "dependencies": {
-    "clay-css": "^2.0.0-rc.11",
+    "clay-css": "^2.0.0-rc.12",
     "jquery": "^3.2.1",
     "metal-storage": "^1.1.0"
   },
