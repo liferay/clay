@@ -1,6 +1,8 @@
 .sticker {
 	align-items: center;
 
+	border-color: $sticker-border-color;
+
 	@include border-radius($sticker-border-radius);
 
 	border-style: $sticker-border-style;
