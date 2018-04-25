@@ -44,7 +44,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
