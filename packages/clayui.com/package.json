@@ -11,7 +11,7 @@
     "watch": "concurrent --kill-others \"gulp watch\" \"el run\""
   },
   "dependencies": {
-    "clay": "^2.0.0-rc.11",
+    "clay-css": "^2.0.0-rc.11",
     "jquery": "^3.2.1",
     "metal-storage": "^1.1.0"
   },

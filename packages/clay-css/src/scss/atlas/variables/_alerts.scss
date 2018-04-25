@@ -1,0 +1,100 @@
+$alert-padding-x: 1rem !default; // 16px
+$alert-padding-y: 1.09375rem !default; // 17.5px
+
+// For top only border use: 2px 0 0 0
+$alert-border-width: 0.0625rem !default;
+
+$alert-close-opacity: 1 !default;
+
+$alert-font-size: 0.875rem !default; // 14px
+
+$alert-lead-font-size: $alert-font-size !default;
+$alert-lead-font-weight: $font-weight-semi-bold !default;
+
+$alert-link-decoration: underline !default;
+$alert-link-hover-decoration: none !default;
+$alert-link-font-weight: $font-weight-semi-bold !default;
+
+$alert-indicator-font-size: !default;
+
+$alert-title: () !default;
+$alert-title: map-merge((
+	font-size: 0.875rem,
+	margin-bottom: 0.25rem,
+	margin-top: 0
+), $alert-title);
+
+$alert-subtitle: () !default;
+$alert-subtitle: map-merge((
+	font-size: 0.75rem,
+	font-weight: $font-weight-normal
+), $alert-subtitle);
+
+// Alert Notification
+
+$alert-notifications-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3) !default;
+
+// Alert Variants
+
+$alert-primary-color: $primary !default;
+$alert-primary-bg: lighten($alert-primary-color, 44.90) !default;
+$alert-primary-border-color: lighten($alert-primary-color, 22.94) !default;
+$alert-primary-close-color: $alert-primary-color !default;
+$alert-primary-close-hover-color: $alert-primary-color !default;
+$alert-primary-lead-color: $alert-primary-color !default;
+$alert-primary-link-color: $link-color !default;
+
+$alert-secondary-color: $secondary !default;
+$alert-secondary-bg: lighten(saturate(adjust-hue($alert-secondary-color, 3), 6.13), 46.08) !default;
+$alert-secondary-border-color: lighten(saturate(adjust-hue($alert-secondary-color, -3), 5.39), 23.92) !default;
+$alert-secondary-close-color: $alert-secondary-color !default;
+$alert-secondary-close-hover-color: $alert-secondary-color !default;
+$alert-secondary-lead-color: $alert-secondary-color !default;
+$alert-secondary-link-color: $link-color !default;
+
+$alert-info-color: $info !default;
+$alert-info-bg: lighten(desaturate(adjust-hue($alert-info-color, 1), 3.25), 52.94) !default;
+$alert-info-border-color: lighten(saturate($alert-info-color, 0.59), 28.04) !default;
+$alert-info-close-color: $alert-info-color !default;
+$alert-info-close-hover-color: $alert-info-color !default;
+$alert-info-lead-color: $alert-info-color !default;
+$alert-info-link-color: $link-color !default;
+
+$alert-success-color: $success !default;
+$alert-success-bg: lighten(desaturate($alert-success-color, 1.52), 62.94) !default;
+$alert-success-border-color: lighten(desaturate($alert-success-color, 0.14), 24.90) !default;
+$alert-success-close-color: $alert-success-color !default;
+$alert-success-close-hover-color: $alert-success-color !default;
+$alert-success-lead-color: $alert-success-color !default;
+$alert-success-link-color: $link-color !default;
+
+$alert-warning-color: $warning !default;
+$alert-warning-bg: lighten(adjust-hue($alert-warning-color, -1), 60.00) !default;
+$alert-warning-border-color: lighten($alert-warning-color, 24.90) !default;
+$alert-warning-close-color: $alert-warning-color !default;
+$alert-warning-close-hover-color: $alert-warning-color !default;
+$alert-warning-lead-color: $alert-warning-color !default;
+$alert-warning-link-color: $link-color !default;
+
+$alert-danger-color: $danger !default;
+$alert-danger-bg: lighten(saturate($alert-danger-color, 5.04), 50.00) !default;
+$alert-danger-border-color: lighten(desaturate($alert-danger-color, 0.25), 28.04) !default;
+$alert-danger-close-color: $alert-danger-color !default;
+$alert-danger-close-hover-color: $alert-danger-color !default;
+$alert-danger-lead-color: $alert-danger-color !default;
+$alert-danger-link-color: $link-color !default;
+
+$alert-light-color: $dark !default;
+$alert-light-border-color: lighten(desaturate($alert-light-color, 0.65), 64.90) !default;
+$alert-light-close-color: $secondary !default;
+$alert-light-close-hover-color: $secondary !default;
+$alert-light-lead-color: $alert-light-color !default;
+$alert-light-link-color: $link-color !default;
+
+$alert-dark-color: $light !default;
+$alert-dark-bg: darken(desaturate(adjust-hue($alert-dark-color, 11), 3.69), 69.61) !default;
+$alert-dark-border-color: darken(desaturate(adjust-hue($alert-dark-color, 10), 2.38), 77.45) !default;
+$alert-dark-close-color: $alert-dark-color !default;
+$alert-dark-close-hover-color: $alert-dark-color !default;
+$alert-dark-lead-color: $alert-dark-color !default;
+$alert-dark-link-color: $alert-dark-color !default;

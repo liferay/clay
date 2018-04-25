@@ -1,0 +1,141 @@
+.badge {
+	border-color: $badge-border-color;
+	border-style: $badge-border-style;
+	border-width: $badge-border-width;
+	line-height: $badge-line-height;
+	margin-bottom: $badge-spacer-y;
+	margin-right: $badge-spacer-x;
+	margin-top: $badge-spacer-y;
+	max-width: 100%;
+	white-space: inherit;
+	word-wrap: break-word;
+
+	a {
+		color: $badge-link-color;
+		text-decoration: $badge-link-text-decoration;
+
+		@include hover-focus {
+			color: $badge-link-hover-color;
+			text-decoration: $badge-link-hover-text-decoration;
+		}
+	}
+
+	// Inline Item in Badges are deprecated in v2.0.0-rc.11 use .badge-item
+	// pattern instead
+	.inline-item {
+		a {
+			align-items: center;
+			display: inline-flex;
+			margin-top: $badge-lexicon-icon-margin-top;
+		}
+
+		.btn-unstyled {
+			color: inherit;
+			display: inline-flex;
+			margin-top: $badge-lexicon-icon-margin-top;
+			max-width: none;
+		}
+
+		.close {
+			color: inherit;
+			display: inline-flex;
+			float: none;
+			font-size: inherit;
+			margin-top: $badge-lexicon-icon-margin-top;
+			opacity: 1;
+		}
+
+		a,
+		.btn-unstyled,
+		.close {
+			.lexicon-icon {
+				margin-top: 0;
+			}
+		}
+
+		.lexicon-icon {
+			height: $badge-lexicon-icon-height;
+			margin-top: $badge-lexicon-icon-margin-top;
+			width: $badge-lexicon-icon-width;
+		}
+	}
+}
+
+.badge {
+	display: inline-flex;
+}
+
+.badge-item {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	justify-content: center;
+	min-height: 0;
+	position: relative;
+	text-align: left;
+
+	a {
+		display: inline-flex;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+		display: inline-flex;
+	}
+
+	.close {
+		@include clay-link($badge-close);
+	}
+
+	.lexicon-icon {
+		height: $badge-lexicon-icon-height;
+		margin-top: $badge-lexicon-icon-margin-top;
+		width: $badge-lexicon-icon-width;
+	}
+}
+
+.badge-item-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: $badge-item-expand-min-width;
+	word-wrap: break-word;
+
+	a {
+		flex-direction: column;
+	}
+}
+
+.badge-item-before {
+	margin-right: $badge-item-spacer-x;
+}
+
+.badge-item-after {
+	margin-left: $badge-item-spacer-x;
+}
+
+
+// Badge Variants
+
+@each $color, $value in $badge-palette {
+	.badge-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+
+		&[href] {
+			@include hover-focus {
+				background-color: map-get($value, hover-bg);
+				border-color: map-get($value, hover-border-color);
+				color: map-get($value, hover-color);
+			}
+		}
+
+		a {
+			color: map-get($value, link-color);
+
+			@include hover-focus {
+				color: map-get($value, link-hover-color);
+			}
+		}
+	}
+}

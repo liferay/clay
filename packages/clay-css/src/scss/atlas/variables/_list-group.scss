@@ -1,0 +1,81 @@
+$list-group-border-color: rgba(220, 220, 220, 0.5) !default;
+$list-group-color: $secondary !default;
+$list-group-hover-bg: lighten($component-active-bg, 44.90) !default;
+$list-group-active-bg: $list-group-hover-bg !default;
+$list-group-active-border-color: $list-group-border-color !default;
+$list-group-active-color: !default;
+
+$list-group-font-size: 0.875rem !default; // 14px
+$list-group-item-padding-x: 1rem !default; // 16px
+$list-group-item-padding-y: 1rem !default; // 16px
+
+// List Group Header
+
+$list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
+$list-group-header-padding-y: 0.5rem !default; // 8px
+
+$list-group-header-title: () !default;
+$list-group-header-title: map-merge((
+	color: $secondary,
+	font-size: 0.75rem, // 12px
+	text-transform: uppercase
+), $list-group-header-title);
+
+// List Group Title
+
+$list-group-title-link: () !default;
+$list-group-title-link: map-merge((
+	hover-color: $clay-unset
+), $list-group-title-link);
+
+$list-group-title: () !default;
+$list-group-title: map-merge((
+	color: $body-color,
+	font-size: 0.875rem, // 14px
+	line-height: 1.45
+), $list-group-title);
+
+// List Group Subtitle
+
+$list-group-subtitle-link: () !default;
+$list-group-subtitle-link: map-merge((
+	hover-color: $body-color
+), $list-group-subtitle-link);
+
+// List Group Text
+
+$list-group-text: () !default;
+$list-group-text: map-merge((
+	line-height: 1.45
+), $list-group-text);
+
+$list-group-text-link: () !default;
+$list-group-text-link: map-merge((
+	hover-color: $body-color
+), $list-group-text-link);
+
+// List Group Subtext
+
+$list-group-subtext: () !default;
+$list-group-subtext: map-merge((
+	line-height: 1.45
+), $list-group-subtext);
+
+$list-group-subtext-link: () !default;
+$list-group-subtext-link: map-merge((
+	hover-color: $body-color
+), $list-group-subtext-link);
+
+// List Group Link
+
+$list-group-link-color: $body-color !default;
+$list-group-link-hover-color: $list-group-link-color !default;
+$list-group-link-active-color: $list-group-link-color !default;
+
+// List Group Notification
+
+$list-group-notification-item-primary: () !default;
+$list-group-notification-item-primary: map-merge((
+	border-left-color: lighten($component-active-bg, 22.94),
+	active-border-left-color: lighten($component-active-bg, 22.94)
+), $list-group-notification-item-primary);

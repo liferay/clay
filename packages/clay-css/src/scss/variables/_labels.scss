@@ -1,0 +1,215 @@
+$label-color: null !default;
+$label-link-hover-color: #FFF !default;
+
+$label-font-size: 75% !default;
+$label-font-weight: $font-weight-bold !default;
+$label-height: null !default;
+$label-line-height: 1 !default;
+$label-padding-x: 0.4375rem !default; // 7px
+$label-padding-y: 0.1875rem !default; // 3px
+$label-spacer-x: 0.25rem !default; // 4px
+$label-spacer-y: 0.125rem !default; // 2px
+$label-text-transform: null !default;
+
+$label-lexicon-icon-height: 0.875em !default;
+$label-lexicon-icon-margin-top: 0 !default;
+$label-lexicon-icon-width: 0.875em !default;
+
+$label-dismissible-text-transform: null !default;
+
+$label-item-spacer-x: 0.5em !default;
+
+$label-anchor-text-decoration: none !default;
+$label-anchor-hover-text-decoration: null !default;
+
+$label-link-text-decoration: underline !default;
+$label-link-hover-text-decoration: none !default;
+
+$label-border-color: $body-color !default;
+$label-border-radius: $border-radius !default;
+$label-border-style: solid !default;
+$label-border-width: 0.0625rem !default;
+
+// Label Close
+
+$label-close: () !default;
+$label-close: map-merge((
+	color: inherit,
+	opacity: 1,
+	hover-color: inherit,
+	hover-opacity: 1,
+	focus-opacity: 1,
+	border-radius: 1px,
+	display: inline-flex,
+	font-size: inherit,
+	height: auto,
+	width: auto
+), $label-close);
+
+// Label Sizes
+
+$label-lg: () !default;
+$label-lg: map-merge((
+	font-size: 0.875rem, // 14px
+	padding-x: 1rem, // 16px
+	padding-y: 0.375rem, // 6px
+	text-transform: none
+), $label-lg);
+
+// Label Variants
+
+$label-primary-color: $primary !default;
+$label-primary-hover-color: darken($label-primary-color, 10%) !default;
+$label-primary-bg: #FFF !default;
+$label-primary-hover-bg: null !default;
+$label-primary-border-color: $label-primary-color !default;
+$label-primary-hover-border-color: $label-primary-hover-color !default;
+$label-primary-link-color: $label-primary-color !default;
+$label-primary-link-hover-color: $label-primary-hover-color !default;
+
+$label-secondary-color: $secondary !default;
+$label-secondary-hover-color: darken($label-secondary-color, 10%) !default;
+$label-secondary-bg: #FFF !default;
+$label-secondary-hover-bg: null !default;
+$label-secondary-border-color: $label-secondary-color !default;
+$label-secondary-hover-border-color: $label-secondary-hover-color !default;
+$label-secondary-link-color: $label-secondary-color !default;
+$label-secondary-link-hover-color: $label-secondary-hover-color !default;
+
+$label-success-color: $success !default;
+$label-success-hover-color: darken($label-success-color, 10%) !default;
+$label-success-bg: #FFF !default;
+$label-success-hover-bg: null !default;
+$label-success-border-color: $label-success-color !default;
+$label-success-hover-border-color: $label-success-hover-color !default;
+$label-success-link-color: $label-success-color !default;
+$label-success-link-hover-color: $label-success-hover-color !default;
+
+$label-info-color: $info !default;
+$label-info-hover-color: darken($label-info-color, 10%) !default;
+$label-info-bg: #FFF !default;
+$label-info-hover-bg: null !default;
+$label-info-border-color: $label-info-color !default;
+$label-info-hover-border-color: $label-info-hover-color !default;
+$label-info-link-color: $label-info-color !default;
+$label-info-link-hover-color: $label-info-hover-color !default;
+
+$label-warning-color: $warning !default;
+$label-warning-hover-color: darken($label-warning-color, 10%) !default;
+$label-warning-bg: #FFF !default;
+$label-warning-hover-bg: null !default;
+$label-warning-border-color: $label-warning-color !default;
+$label-warning-hover-border-color: $label-warning-hover-color !default;
+$label-warning-link-color: $label-warning-color !default;
+$label-warning-link-hover-color: $label-warning-hover-color !default;
+
+$label-danger-color: $danger !default;
+$label-danger-hover-color: darken($label-danger-color, 10%) !default;
+$label-danger-bg: #FFF !default;
+$label-danger-hover-bg: null !default;
+$label-danger-border-color: $label-danger-color !default;
+$label-danger-hover-border-color: $label-danger-hover-color !default;
+$label-danger-link-color: $label-danger-color !default;
+$label-danger-link-hover-color: $label-danger-hover-color !default;
+
+$label-light-color: $light !default;
+$label-light-hover-color: darken($label-light-color, 10%) !default;
+$label-light-bg: null !default;
+$label-light-hover-bg: null !default;
+$label-light-border-color: $label-light-color !default;
+$label-light-hover-border-color: $label-light-hover-color !default;
+$label-light-link-color: $label-light-color !default;
+$label-light-link-hover-color: $label-light-hover-color !default;
+
+$label-dark-color: $dark !default;
+$label-dark-hover-color: darken($label-dark-color, 10%) !default;
+$label-dark-bg: #FFF !default;
+$label-dark-hover-bg: null !default;
+$label-dark-border-color: $label-dark-color !default;
+$label-dark-hover-border-color: $label-dark-hover-color !default;
+$label-dark-link-color: $label-dark-color !default;
+$label-dark-link-hover-color: $label-dark-hover-color !default;
+
+$label-palette: () !default;
+$label-palette: map-merge((
+	primary: (
+		bg: $label-primary-bg,
+		hover-bg: $label-primary-hover-bg,
+		border-color: $label-primary-border-color,
+		hover-border-color: $label-primary-hover-border-color,
+		color: $label-primary-color,
+		hover-color: $label-primary-hover-color,
+		link-color: $label-primary-link-color,
+		link-hover-color: $label-primary-link-hover-color
+	),
+	secondary: (
+		bg: $label-secondary-bg,
+		hover-bg: $label-secondary-hover-bg,
+		border-color: $label-secondary-border-color,
+		hover-border-color: $label-secondary-hover-border-color,
+		color: $label-secondary-color,
+		hover-color: $label-secondary-hover-color,
+		link-color: $label-secondary-link-color,
+		link-hover-color: $label-secondary-link-hover-color
+	),
+	success: (
+		bg: $label-success-bg,
+		hover-bg: $label-success-hover-bg,
+		border-color: $label-success-border-color,
+		hover-border-color: $label-success-hover-border-color,
+		color: $label-success-color,
+		hover-color: $label-success-hover-color,
+		link-color: $label-success-link-color,
+		link-hover-color: $label-success-link-hover-color
+	),
+	info: (
+		bg: $label-info-bg,
+		hover-bg: $label-info-hover-bg,
+		border-color: $label-info-border-color,
+		hover-border-color: $label-info-hover-border-color,
+		color: $label-info-color,
+		hover-color: $label-info-hover-color,
+		link-color: $label-info-link-color,
+		link-hover-color: $label-info-link-hover-color
+	),
+	warning: (
+		bg: $label-warning-bg,
+		hover-bg: $label-warning-hover-bg,
+		border-color: $label-warning-border-color,
+		hover-border-color: $label-warning-hover-border-color,
+		color: $label-warning-color,
+		hover-color: $label-warning-hover-color,
+		link-color: $label-warning-link-color,
+		link-hover-color: $label-warning-link-hover-color
+	),
+	danger: (
+		bg: $label-danger-bg,
+		hover-bg: $label-danger-hover-bg,
+		border-color: $label-danger-border-color,
+		hover-border-color: $label-danger-hover-border-color,
+		color: $label-danger-color,
+		hover-color: $label-danger-hover-color,
+		link-color: $label-danger-link-color,
+		link-hover-color: $label-danger-link-hover-color
+	),
+	dark: (
+		bg: $label-dark-bg,
+		hover-bg: $label-dark-hover-bg,
+		border-color: $label-dark-border-color,
+		hover-border-color: $label-dark-hover-border-color,
+		color: $label-dark-color,
+		hover-color: $label-dark-hover-color,
+		link-color: $label-dark-link-color,
+		link-hover-color: $label-dark-link-hover-color
+	),
+	light: (
+		bg: $label-light-bg,
+		hover-bg: $label-light-hover-bg,
+		border-color: $label-light-border-color,
+		hover-border-color: $label-light-hover-border-color,
+		color: $label-light-color,
+		hover-color: $label-light-hover-color,
+		link-color: $label-light-link-color,
+		link-hover-color: $label-light-link-hover-color
+	)
+), $label-palette);

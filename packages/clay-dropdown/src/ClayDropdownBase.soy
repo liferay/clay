@@ -108,6 +108,7 @@
 			{param maxItems: $item.maxItems /}
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
+			{param title: $item.title /}
 		{/delcall}
 	{/for}
 {/template}
@@ -339,6 +340,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? title: string}
 
 	{let $itemContent kind="html"}
 		{call ClayLink.render}
@@ -383,6 +385,8 @@
 					{$iconContent}
 				{/if}
 			{/param}
+
+			{param title: $title /}
 		{/call}
 	{/let}
 
@@ -417,6 +421,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? title: string}
 
 	{let $checkbox kind="html"}
 		{call ClayCheckbox.render}
@@ -466,6 +471,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? title: string}
 
 	{if $label and $label != ''}
 		<li class="dropdown-subheader" role="presentation">
@@ -506,6 +512,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? title: string}
 
 	{let $radio kind="html"}
 		{call ClayRadio.render}
@@ -556,6 +563,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? title: string}
 
 	{if $label and $label != ''}
 		<li class="dropdown-subheader" role="presentation">

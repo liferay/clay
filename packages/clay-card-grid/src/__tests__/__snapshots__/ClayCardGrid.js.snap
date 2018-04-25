@@ -18,7 +18,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
-                  <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
                 </svg>
               </span>
             </span>
@@ -39,7 +39,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
-                  <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
                 </svg>
               </span>
             </span>
@@ -60,7 +60,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </div>
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -74,9 +74,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <div class="card-subtitle text-truncate">U.S.A</div>
             <div class="card-detail">
               <span class="label label-success">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">No Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">No Spicy</span>
               </span>
             </div>
           </div>
@@ -99,9 +97,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <div class="card-subtitle text-truncate">China</div>
             <div class="card-detail">
               <span class="label label-warning">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">Spicy</span>
               </span>
             </div>
           </div>
@@ -124,9 +120,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <div class="card-subtitle text-truncate">Spain</div>
             <div class="card-detail">
               <span class="label label-success">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">No Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">No Spicy</span>
               </span>
             </div>
           </div>
@@ -140,7 +134,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </div>
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -154,9 +148,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <div class="card-subtitle text-truncate">Italy</div>
             <div class="card-detail">
               <span class="label label-success">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">No Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">No Spicy</span>
               </span>
             </div>
           </div>
@@ -179,9 +171,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <div class="card-subtitle text-truncate">Toledo</div>
             <div class="card-detail">
               <span class="label label-warning">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">Spicy</span>
               </span>
             </div>
           </div>
@@ -195,7 +185,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
         </div>
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -209,9 +199,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
             <div class="card-subtitle text-truncate">Mexico</div>
             <div class="card-detail">
               <span class="label label-danger">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">Very Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">Very Spicy</span>
               </span>
             </div>
           </div>

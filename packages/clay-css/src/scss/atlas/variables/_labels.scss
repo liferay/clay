@@ -1,0 +1,63 @@
+$label-border-radius: 0.125rem !default; // 2px
+$label-font-size: 0.625rem !default; // 10px
+$label-font-weight: $font-weight-semi-bold !default;
+$label-padding-x: 0.5rem !default; // 8px
+$label-padding-y: 0.125rem !default; // 2px
+$label-text-transform: uppercase !default;
+
+$label-item-spacer-x: 0.85714em !default;
+
+$label-anchor-hover-text-decoration: underline !default;
+
+$label-link-text-decoration: none !default;
+$label-link-hover-text-decoration: underline !default;
+
+$label-lg: (
+	font-size: 0.75rem, // 12px
+	height: 1.5rem, // 24px
+	padding-x: 0.625rem, // 10px
+	padding-y: 0.3125rem // 5px
+) !default;
+
+// Label Variants
+
+$label-primary-color: $primary !default;
+$label-primary-hover-color: $label-primary-color !default;
+$label-primary-border-color: lighten($label-primary-color, 22.94) !default;
+$label-primary-hover-border-color: $label-primary-border-color !default;
+
+$label-secondary-color: $secondary !default;
+$label-secondary-hover-color: $label-secondary-color !default;
+$label-secondary-border-color: lighten(saturate(adjust-hue($label-secondary-color, -2), 5.48), 37.06) !default;
+$label-secondary-hover-border-color: $label-secondary-border-color !default;
+
+$label-success-color: $success !default;
+$label-success-hover-color: $label-success-color !default;
+$label-success-border-color: lighten(desaturate($label-success-color, 0.14), 24.90) !default;
+$label-success-hover-border-color: $label-success-border-color !default;
+
+$label-info-color: $info !default;
+$label-info-hover-color: $label-info-color !default;
+$label-info-border-color: lighten(saturate($label-info-color, 0.59), 28.04) !default;
+$label-info-hover-border-color: $label-info-border-color !default;
+
+$label-warning-color: $warning !default;
+$label-warning-hover-color: $label-warning-color !default;
+$label-warning-border-color: lighten($label-warning-color, 24.90) !default;
+$label-warning-hover-border-color: $label-warning-border-color !default;
+
+$label-danger-color: $danger !default;
+$label-danger-hover-color: $label-danger-color !default;
+$label-danger-border-color: lighten(desaturate($label-danger-color, 0.25), 28.04) !default;
+$label-danger-hover-border-color: $label-danger-border-color !default;
+
+$label-light-color: $light !default;
+$label-light-hover-color: $label-light-color !default;
+$label-light-bg: $dark !default;
+$label-light-border-color: $light !default;
+$label-light-hover-border-color: $label-light-border-color !default;
+
+$label-dark-color: $dark !default;
+$label-dark-hover-color: $label-dark-color !default;
+$label-dark-border-color: $dark !default;
+$label-dark-hover-border-color: $label-dark-border-color !default;

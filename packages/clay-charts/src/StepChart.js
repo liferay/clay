@@ -1,4 +1,6 @@
 import Chart from './Chart';
+import Soy from 'metal-soy';
+import templates from './StepChart.soy.js';
 import types from './utils/types';
 import {Config} from 'metal-state';
 
@@ -18,6 +20,8 @@ StepChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('step'),
 };
+
+Soy.register(StepChart, templates);
 
 export {StepChart};
 export default StepChart;

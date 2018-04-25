@@ -1,4 +1,6 @@
 import Chart from './Chart';
+import Soy from 'metal-soy';
+import templates from './BarChart.soy.js';
 import types from './utils/types';
 import {Config} from 'metal-state';
 
@@ -18,6 +20,8 @@ BarChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('bar'),
 };
+
+Soy.register(BarChart, templates);
 
 export {BarChart};
 export default BarChart;

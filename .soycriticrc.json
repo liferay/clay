@@ -7,6 +7,10 @@
     {
       "regex": "(\\S+)",
       "replace": "{$1}"
+    },
+    {
+      "regex": "Clay(\\S+)",
+      "replace": "{$1}"
     }
   ],
   "implicitParams": {

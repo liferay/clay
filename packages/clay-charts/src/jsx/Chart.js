@@ -20,8 +20,13 @@ class ChartJSX extends JSXComponent {
 					ref="chart"
 					{...loading && {hidden: 'hidden'}}
 				/>
-				<div ref="placeholder" {...!loading && {hidden: 'hidden'}}>
-					<pre>loading...</pre>
+				<div
+					aria-hidden="true"
+					class="loading-icon"
+					ref="placeholder"
+					{...!loading && {hidden: 'hidden'}}
+				>
+					<span class="loading-animation" />
 				</div>
 			</div>
 		);

@@ -9,7 +9,7 @@ exports[`ClayProgressBar should render a completed progress bar 1`] = `
     <div class="progress-group-feedback">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
         <title>check-circle</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#check-circle"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle"></use>
       </svg>
     </div>
   </div>
@@ -25,7 +25,7 @@ exports[`ClayProgressBar should render a completed progress bar 2`] = `
     <div class="progress-group-feedback">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
         <title>check-circle</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#check-circle"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle"></use>
       </svg>
     </div>
   </div>

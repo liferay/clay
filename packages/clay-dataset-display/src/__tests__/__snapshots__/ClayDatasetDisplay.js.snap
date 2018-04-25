@@ -4,7 +4,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -22,13 +22,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -38,7 +38,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -50,16 +50,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -73,7 +73,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -82,17 +82,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -101,7 +101,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -113,7 +113,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -226,9 +226,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">10 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -267,9 +265,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -308,9 +304,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -349,9 +343,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -390,9 +382,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">50 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -431,9 +421,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-danger">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Very Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Very Spicy</span>
                 </span>
               </td>
               <td>
@@ -677,7 +665,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -686,7 +674,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -695,7 +683,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -747,7 +735,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -765,13 +753,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -781,7 +769,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -793,16 +781,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -816,7 +804,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -825,17 +813,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -844,7 +832,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -856,7 +844,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -969,9 +957,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">10 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -1010,9 +996,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -1051,9 +1035,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -1092,9 +1074,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -1133,9 +1113,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">50 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -1174,9 +1152,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-danger">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Very Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Very Spicy</span>
                 </span>
               </td>
               <td>
@@ -1420,7 +1396,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -1429,7 +1405,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -1438,7 +1414,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -1490,7 +1466,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -1508,13 +1484,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -1524,7 +1500,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -1536,16 +1512,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -1559,7 +1535,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -1568,17 +1544,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -1587,7 +1563,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -1599,7 +1575,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -1712,9 +1688,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">10 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -1753,9 +1727,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -1794,9 +1766,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -1835,9 +1805,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -1876,9 +1844,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">50 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -1917,9 +1883,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-danger">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Very Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Very Spicy</span>
                 </span>
               </td>
               <td>
@@ -2163,7 +2127,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -2172,7 +2136,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -2181,7 +2145,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -2235,7 +2199,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -2261,7 +2225,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
           </li>
@@ -2269,7 +2233,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </li>
@@ -2278,7 +2242,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -2287,7 +2251,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -2299,7 +2263,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -2411,7 +2375,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -2429,13 +2393,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -2445,7 +2409,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -2457,16 +2421,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -2480,7 +2444,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -2489,17 +2453,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -2508,7 +2472,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -2520,7 +2484,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -2727,7 +2691,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -2736,7 +2700,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -2745,7 +2709,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -2799,7 +2763,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -2825,7 +2789,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
           </li>
@@ -2833,7 +2797,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </li>
@@ -2842,7 +2806,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -2851,7 +2815,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -2863,7 +2827,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -2972,7 +2936,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -2990,13 +2954,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -3006,7 +2970,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -3018,16 +2982,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -3041,7 +3005,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -3050,17 +3014,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -3069,7 +3033,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
       </div>
     </nav>
   </div>
-  <div class="container container-view">
+  <div class="container-fluid container-fluid-max-xl container-view">
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
@@ -3089,7 +3053,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                           <span class="sticker-overlay">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                               <title>folder</title>
-                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                              <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
                             </svg>
                           </span>
                         </span>
@@ -3102,7 +3066,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                               <title>ellipsis-v</title>
-                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                              <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                             </svg>
                           </button>
                         </div>
@@ -3128,7 +3092,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                           <span class="sticker-overlay">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                               <title>folder</title>
-                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                              <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
                             </svg>
                           </span>
                         </span>
@@ -3141,7 +3105,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                           <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                               <title>ellipsis-v</title>
-                              <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                              <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                             </svg>
                           </button>
                         </div>
@@ -3167,7 +3131,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                         <title>exclamation-circle</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                       </svg>
                     </div>
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -3183,9 +3147,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="card-subtitle text-truncate">U.S.A</div>
                     <div class="card-detail">
                       <span class="label label-success">
-                        <span class="text-truncate-inline">
-                          <span class="text-truncate">No Spicy</span>
-                        </span>
+                        <span class="label-item label-item-expand">No Spicy</span>
                       </span>
                     </div>
                   </div>
@@ -3194,7 +3156,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3226,9 +3188,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="card-subtitle text-truncate">China</div>
                     <div class="card-detail">
                       <span class="label label-warning">
-                        <span class="text-truncate-inline">
-                          <span class="text-truncate">Spicy</span>
-                        </span>
+                        <span class="label-item label-item-expand">Spicy</span>
                       </span>
                     </div>
                   </div>
@@ -3237,7 +3197,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3269,9 +3229,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="card-subtitle text-truncate">Spain</div>
                     <div class="card-detail">
                       <span class="label label-success">
-                        <span class="text-truncate-inline">
-                          <span class="text-truncate">No Spicy</span>
-                        </span>
+                        <span class="label-item label-item-expand">No Spicy</span>
                       </span>
                     </div>
                   </div>
@@ -3280,7 +3238,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3301,7 +3259,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                         <title>exclamation-circle</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                       </svg>
                     </div>
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -3317,9 +3275,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="card-subtitle text-truncate">Italy</div>
                     <div class="card-detail">
                       <span class="label label-success">
-                        <span class="text-truncate-inline">
-                          <span class="text-truncate">No Spicy</span>
-                        </span>
+                        <span class="label-item label-item-expand">No Spicy</span>
                       </span>
                     </div>
                   </div>
@@ -3328,7 +3284,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3360,9 +3316,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="card-subtitle text-truncate">Toledo</div>
                     <div class="card-detail">
                       <span class="label label-warning">
-                        <span class="text-truncate-inline">
-                          <span class="text-truncate">Spicy</span>
-                        </span>
+                        <span class="label-item label-item-expand">Spicy</span>
                       </span>
                     </div>
                   </div>
@@ -3371,7 +3325,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3392,7 +3346,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                         <title>exclamation-circle</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                       </svg>
                     </div>
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -3408,9 +3362,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                     <div class="card-subtitle text-truncate">Mexico</div>
                     <div class="card-detail">
                       <span class="label label-danger">
-                        <span class="text-truncate-inline">
-                          <span class="text-truncate">Very Spicy</span>
-                        </span>
+                        <span class="label-item label-item-expand">Very Spicy</span>
                       </span>
                     </div>
                   </div>
@@ -3419,7 +3371,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3458,7 +3410,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3496,7 +3448,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3532,7 +3484,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                       <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                           <title>ellipsis-v</title>
-                          <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                          <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                       </button>
                     </div>
@@ -3661,7 +3613,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -3670,7 +3622,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -3679,7 +3631,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -3885,7 +3837,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -3903,13 +3855,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -3919,7 +3871,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -3931,16 +3883,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -3954,7 +3906,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -3963,17 +3915,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -3982,7 +3934,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
       </div>
     </nav>
   </div>
-  <div class="container container-view">
+  <div class="container-fluid container-fluid-max-xl container-view">
     <form>
       <ul class="list-group show-quick-actions-on-hover">
         <li class="list-group-header">
@@ -4004,7 +3956,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
                 </svg>
               </span>
             </span>
@@ -4017,13 +3969,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4031,7 +3983,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4053,7 +4005,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#folder"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
                 </svg>
               </span>
             </span>
@@ -4066,13 +4018,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4080,7 +4032,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4105,7 +4057,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4117,9 +4069,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <p class="list-group-subtitle text-truncate">U.S.A</p>
             <div class="list-group-detail">
               <span class="label label-success">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">No Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">No Spicy</span>
               </span>
             </div>
           </div>
@@ -4128,13 +4078,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4142,7 +4092,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4164,7 +4114,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4176,9 +4126,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <p class="list-group-subtitle text-truncate">China</p>
             <div class="list-group-detail">
               <span class="label label-warning">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">Spicy</span>
               </span>
             </div>
           </div>
@@ -4187,13 +4135,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4201,7 +4149,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4223,7 +4171,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4235,9 +4183,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <p class="list-group-subtitle text-truncate">Spain</p>
             <div class="list-group-detail">
               <span class="label label-success">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">No Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">No Spicy</span>
               </span>
             </div>
           </div>
@@ -4246,13 +4192,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4260,7 +4206,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4282,7 +4228,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4294,9 +4240,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <p class="list-group-subtitle text-truncate">Italy</p>
             <div class="list-group-detail">
               <span class="label label-success">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">No Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">No Spicy</span>
               </span>
             </div>
           </div>
@@ -4305,13 +4249,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4319,7 +4263,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4341,7 +4285,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4353,9 +4297,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <p class="list-group-subtitle text-truncate">Toledo</p>
             <div class="list-group-detail">
               <span class="label label-warning">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">Spicy</span>
               </span>
             </div>
           </div>
@@ -4364,13 +4306,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4378,7 +4320,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4400,7 +4342,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4412,9 +4354,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <p class="list-group-subtitle text-truncate">Mexico</p>
             <div class="list-group-detail">
               <span class="label label-danger">
-                <span class="text-truncate-inline">
-                  <span class="text-truncate">Very Spicy</span>
-                </span>
+                <span class="label-item label-item-expand">Very Spicy</span>
               </span>
             </div>
           </div>
@@ -4423,13 +4363,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4437,7 +4377,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4462,7 +4402,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4475,13 +4415,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4489,7 +4429,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4511,7 +4451,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4524,13 +4464,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4538,7 +4478,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4560,7 +4500,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <span class="sticker-overlay">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
                   <title>exclamation-circle</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#exclamation-circle"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
                 </svg>
               </span>
             </span>
@@ -4573,13 +4513,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                   <title>trash</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
                 </svg>
               </a>
               <a aria-label="Download" class=" component-action quick-action-item" href="#2">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                   <title>download</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
                 </svg>
               </a>
             </div>
@@ -4587,7 +4527,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -4712,7 +4652,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -4721,7 +4661,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -4730,7 +4670,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -4936,7 +4876,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -4954,13 +4894,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -4970,7 +4910,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -4982,16 +4922,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -5005,7 +4945,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -5014,17 +4954,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -5033,7 +4973,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -5045,7 +4985,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -5158,9 +5098,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <td class="text-right">10 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -5199,9 +5137,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -5240,9 +5176,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -5281,9 +5215,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -5322,9 +5254,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <td class="text-right">50 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -5363,9 +5293,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-danger">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Very Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Very Spicy</span>
                 </span>
               </td>
               <td>
@@ -5609,7 +5537,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -5618,7 +5546,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -5627,7 +5555,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -5679,7 +5607,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -5697,13 +5625,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -5713,7 +5641,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -5725,16 +5653,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -5748,7 +5676,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -5757,17 +5685,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -5776,7 +5704,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -5788,7 +5716,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -5992,7 +5920,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -6001,7 +5929,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -6010,7 +5938,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>
@@ -6062,7 +5990,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -6088,7 +6016,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
           </li>
@@ -6096,7 +6024,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </li>
@@ -6105,7 +6033,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -6114,7 +6042,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -6126,7 +6054,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -6239,9 +6167,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <td class="text-right">10 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -6280,9 +6206,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -6321,9 +6245,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -6362,9 +6284,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -6403,9 +6323,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <td class="text-right">50 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -6444,9 +6362,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-danger">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Very Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Very Spicy</span>
                 </span>
               </td>
               <td>
@@ -6595,7 +6511,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav navbar-nav-expand">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -6621,7 +6537,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#trash"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
               </svg>
             </a>
           </li>
@@ -6629,7 +6545,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#download"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
               </svg>
             </a>
           </li>
@@ -6638,7 +6554,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                   <title>ellipsis-v</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#ellipsis-v"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
                 </svg>
               </button>
             </div>
@@ -6647,7 +6563,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -6659,7 +6575,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -6696,9 +6612,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <td class="text-right">10 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -6737,9 +6651,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -6778,9 +6690,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -6819,9 +6729,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -6860,9 +6768,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <td class="text-right">50 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -6901,9 +6807,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-danger">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Very Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Very Spicy</span>
                 </span>
               </td>
               <td>
@@ -6944,7 +6848,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
 <div class="clay-dataset-display">
   <div>
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
-      <div class="container">
+      <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="custom-control custom-checkbox">
@@ -6962,13 +6866,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <span class="navbar-breakpoint-down-d-none">Filter and Order
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
                     <title>caret-bottom</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
                   </svg>
                 </span>
                 <span class="navbar-breakpoint-d-none">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                     <title>filter</title>
-                    <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#filter"></use>
+                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
                   </svg>
                 </span>
               </button>
@@ -6978,7 +6882,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                 <title>order-arrow</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
             </button>
           </li>
@@ -6990,16 +6894,16 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 <div class="input-group-item">
                   <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                   <span class="input-group-inset-item input-group-inset-item-after">
-                    <button class="btn d-none btn-unstyled" aria-label="times" type="button">
+                    <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                         <title>times</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                       </svg>
                     </button>
                     <button class="btn btn-unstyled" aria-label="search" type="submit">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                         <title>search</title>
-                        <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
                       </svg>
                     </button>
                   </span>
@@ -7013,7 +6917,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                 <title>search</title>
-                <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#search"></use>
+                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
               </svg>
             </button>
           </li>
@@ -7022,17 +6926,17 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
               <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                   <title>table</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
                 </svg>
               </button>
             </div>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn-primary" type="button">
+              <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                   <title>plus</title>
-                  <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#plus"></use>
+                  <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -7041,7 +6945,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
       </div>
     </nav>
   </div>
-  <div class="container container-no-gutters-sm-down container-view">
+  <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
       <div class="table-responsive">
         <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -7053,7 +6957,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                   <span class="inline-item inline-item-after">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                       <title>order-arrow-up</title>
-                      <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#order-arrow-up"></use>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
                     </svg>
                   </span>
                 </button>
@@ -7090,9 +6994,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
               <td class="text-right">10 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -7131,9 +7033,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -7172,9 +7072,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
               <td class="text-right">90 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -7213,9 +7111,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-success">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">No Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">No Spicy</span>
                 </span>
               </td>
               <td>
@@ -7254,9 +7150,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
               <td class="text-right">50 min.</td>
               <td>
                 <span class="label label-warning">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Spicy</span>
                 </span>
               </td>
               <td>
@@ -7295,9 +7189,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
               <td class="text-right">30 min.</td>
               <td>
                 <span class="label label-danger">
-                  <span class="text-truncate-inline">
-                    <span class="text-truncate">Very Spicy</span>
-                  </span>
+                  <span class="label-item label-item-expand">Very Spicy</span>
                 </span>
               </td>
               <td>
@@ -7433,7 +7325,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#cards2"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
         </div>Cards</a>
     </li>
@@ -7442,7 +7334,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#list"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
         </div>List</a>
     </li>
@@ -7451,7 +7343,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
-            <use xlink:href="../../../node_modules/clay/lib/images/icons/icons.svg#table"></use>
+            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
         </div>Table</a>
     </li>

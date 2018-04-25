@@ -1,0 +1,141 @@
+@mixin clay-tbar-variant($map) {
+	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$bg-color: map-get($map, bg-color);
+	$color: map-get($map, color);
+	$font-size: map-get($map, font-size);
+	$height: map-get($map, height);
+
+	$strong-font-weight: map-get($map, strong-font-weight);
+
+	$item-padding-x: map-get($map, item-padding-x);
+	$item-padding-y: map-get($map, item-padding-y);
+
+	$btn-height: map-get($map, btn-height);
+	$btn-font-size: setter(map-get($map, btn-font-size), $font-size);
+	$btn-font-weight: map-get($map, btn-font-weight);
+	$btn-line-height: map-get($map, btn-line-height);
+	$btn-margin-x: map-get($map, btn-margin-x);
+	$btn-margin-y: map-get($map, btn-margin-y);
+	$btn-padding-x: map-get($map, btn-padding-x);
+	$btn-padding-y: map-get($map, btn-padding-y);
+
+	$btn-monospaced-border-radius: map-get($map, btn-monospaced-border-radius);
+	$btn-monospaced-border-width: map-get($map, btn-monospaced-border-width);
+	$btn-monospaced-font-size: map-get($map, btn-monospaced-font-size);
+	$btn-monospaced-padding: map-get($map, btn-monospaced-padding);
+	$btn-monospaced-size: setter(map-get($map, btn-monospaced-size), $btn-height);
+
+	$link-margin-x: map-get($map, link-margin-x);
+	$link-margin-y: map-get($map, link-margin-y);
+	$link-padding-x: map-get($map, link-padding-x);
+	$link-padding-y: map-get($map, link-padding-y);
+
+	$link-monospaced-border-radius: map-get($map, link-monospaced-border-radius);
+	$link-monospaced-border-width: map-get($map, link-monospaced-border-width);
+	$link-monospaced-font-size: map-get($map, link-monospaced-font-size);
+	$link-monospaced-padding: map-get($map, link-monospaced-padding);
+	$link-monospaced-size: map-get($map, link-monospaced-size);
+
+	$section-text-align: map-get($map, section-text-align);
+
+	$component-action: setter(map-get($map, component-action), ());
+
+	$component-link: setter(map-get($map, component-link), ());
+
+	$component-title: setter(map-get($map, component-title), ());
+
+	$component-text: setter(map-get($map, component-text), ());
+
+	background-color: $bg-color;
+	border-color: $border-color;
+	border-style: $border-style;
+	border-width: $border-width;
+	color: $color;
+	font-size: $font-size;
+	height: $height;
+
+	strong {
+		font-weight: $strong-font-weight;
+	}
+
+	.component-action {
+		@include clay-link($component-action);
+	}
+
+	.component-link {
+		@include clay-link($component-link);
+	}
+
+	.tbar-item {
+		padding-bottom: $item-padding-y;
+		padding-left: $item-padding-x;
+		padding-right: $item-padding-x;
+		padding-top: $item-padding-y;
+	}
+
+	.tbar-btn {
+		font-size: $btn-font-size;
+		font-weight: $btn-font-weight;
+		height: $btn-height;
+		line-height: $btn-line-height;
+		margin-bottom: $btn-margin-y;
+		margin-left: $btn-margin-x;
+		margin-right: $btn-margin-x;
+		margin-top: $btn-margin-y;
+		padding-bottom: $btn-padding-y;
+		padding-left: $btn-padding-x;
+		padding-right: $btn-padding-x;
+		padding-top: $btn-padding-y;
+	}
+
+	.tbar-link {
+		margin-bottom: $link-margin-y;
+		margin-left: $link-margin-x;
+		margin-right: $link-margin-x;
+		margin-top: $link-margin-y;
+		padding-bottom: $link-padding-y;
+		padding-left: $link-padding-x;
+		padding-right: $link-padding-x;
+		padding-top: $link-padding-y;
+	}
+
+	.tbar-btn-monospaced {
+		border-radius: $btn-monospaced-border-radius;
+		border-width: $btn-monospaced-border-width;
+		font-size: $btn-monospaced-font-size;
+		height: $btn-monospaced-size;
+		padding: $btn-monospaced-padding;
+		width: $btn-monospaced-size;
+
+		.inline-item {
+			font-size: $btn-monospaced-font-size;
+		}
+	}
+
+	.tbar-link-monospaced {
+		border-radius: $link-monospaced-border-radius;
+		border-width: $link-monospaced-border-width;
+		font-size: $link-monospaced-font-size;
+		height: $link-monospaced-size;
+		padding: $link-monospaced-padding;
+		width: $link-monospaced-size;
+
+		.inline-item {
+			font-size: $link-monospaced-font-size;
+		}
+	}
+
+	.tbar-section {
+		text-align: $section-text-align;
+	}
+
+	.component-title {
+		@include clay-text-typography($component-title);
+	}
+
+	.component-text {
+		@include clay-text-typography($component-text);
+	}
+}

@@ -310,6 +310,22 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and d
 </div>
 `;
 
+exports[`ClayDropdownBase should render a dropdown with items of type item with title 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger</button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="item1url" title="title1">Item 1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="item2url" title="title2">Item 2</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">Trigger Label</button>

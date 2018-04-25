@@ -10,7 +10,7 @@ weight: 2
 <article id="1">
 
 {call ClayChart.render}
-	{param columns: [
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [10, 90, 30, 120, 20, 160],
@@ -27,7 +27,7 @@ weight: 2
 
 ```soy
 {call ClayChart.render}
-	{param columns: [
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [10, 90, 30, 120, 20, 160],
@@ -44,7 +44,7 @@ weight: 2
 
 ```jsx
 <Chart
-	columns={[
+	data={[
 		{
 			id: 'data1',
 			data: [10, 90, 30, 120, 20, 160],

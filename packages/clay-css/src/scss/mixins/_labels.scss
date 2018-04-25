@@ -1,0 +1,38 @@
+@mixin clay-label-size($map) {
+	$border-width: setter(map-get($map, border-width), $label-border-width);
+	$font-size: map-get($map, font-size);
+	$height: map-get($map, height);
+	$line-height: map-get($map, line-height);
+	$padding-x: map-get($map, padding-x);
+	$padding-y: map-get($map, padding-y);
+	$text-transform: map-get($map, text-transform);
+
+	$lexicon-icon-height: setter(map-get($map, lexicon-icon-height), map-get($map, lexicon-icon-width));
+	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
+	$lexicon-icon-width: map-get($map, lexicon-icon-width);
+
+	border-width: $border-width;
+	font-size: $font-size;
+	height: auto;
+	line-height: $line-height;
+	min-height: $height;
+	padding-bottom: $padding-y;
+	padding-left: $padding-x;
+	padding-right: $padding-x;
+	padding-top: $padding-y;
+	text-transform: $text-transform;
+
+	.inline-item {
+		a,
+		.btn-unstyled,
+		.close {
+			margin-top: $lexicon-icon-margin-top;
+		}
+
+		.lexicon-icon {
+			height: $lexicon-icon-height;
+			margin-top: $lexicon-icon-margin-top;
+			width: $lexicon-icon-width;
+		}
+	}
+}

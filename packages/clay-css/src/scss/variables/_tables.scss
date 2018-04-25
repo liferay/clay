@@ -1,0 +1,155 @@
+$table-responsive-margin-bottom: 1.5rem !default;
+
+// Table
+
+$table-font-size: null !default;
+$table-margin-bottom: 0 !default;
+
+$table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
+
+$table-head-border-bottom-width: null !default;
+$table-head-border-top-width: 0 !default;
+$table-head-font-size: null !default;
+$table-head-font-weight: null !default;
+$table-head-height: 36px !default;
+
+$table-head-link: () !default;
+
+$table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
+$table-head-title-text-truncate-max-width: calc(100% - 1em - #{$table-head-title-inline-item-spacer-x}) !default;
+
+$table-data-border-bottom-width: $table-border-width !default;
+$table-data-border-left-width: 0 !default;
+$table-data-border-right-width: 0 !default;
+$table-data-border-top-width: $table-border-width !default;
+
+$table-data-border-color: $table-border-color !default;
+$table-data-border-style: solid !default;
+$table-data-vertical-align: middle !default;
+
+$table-divider-bg: #FFF !default;
+$table-divider-color: null !default;
+$table-divider-font-weight: null !default;
+$table-divider-font-size: null !default;
+$table-divider-padding: $table-cell-padding !default;
+$table-divider-text-transform: null !default;
+
+$table-quick-action-menu-align-items: flex-start !default;
+$table-quick-action-menu-bg: if($table-bg == transparent, $body-bg, $table-bg) !default;
+$table-quick-action-menu-accent-bg: #F2F2F2 !default;
+$table-quick-action-menu-accent-active-bg: #E0E0E0 !default;
+$table-quick-action-menu-active-bg: #DADADA !default;
+$table-quick-action-menu-hover-bg: #ECECEC !default;
+
+$table-cell-expand-min-width: 12.5rem !default; // 200px
+
+// Table Bordered
+
+$table-bordered-border-width: $table-border-width !default;
+
+// Table Title
+
+$table-title: () !default;
+$table-title: map-merge((
+	font-size: $font-size-base, // 16px
+	font-weight: $font-weight-semi-bold,
+	line-height: $line-height-base,
+	margin-bottom: 0
+), $table-title);
+
+$table-title-link: () !default;
+$table-title-link: map-merge((
+	color: $body-color,
+	hover-color: $body-color
+), $table-title-link);
+
+// Table Link
+
+$table-link: () !default;
+$table-link: map-merge((
+	color: $gray-700,
+	hover-color: darken($gray-700, 15%)
+), $table-link);
+
+// Table Action Link
+
+$table-action-link: () !default;
+$table-action-link: map-merge((
+	align-items: center,
+	border-radius: $btn-border-radius,
+	display: inline-flex,
+	height: 2rem,
+	justify-content: center,
+	vertical-align: middle,
+	width: 2rem,
+	hover-text-decoration: none,
+	lexicon-icon-margin-top: 0
+), $table-action-link);
+
+// Table List
+
+$table-list-bg: #FFF !default;
+$table-list-color: null !default;
+$table-list-accent-bg: #F2F2F2 !default;
+$table-list-hover-bg: #ECECEC !default;
+$table-list-active-bg: #DADADA !default;
+
+$table-list-border-color: $table-border-color !default;
+$table-list-border-width: 0.0625rem !default; // 1px
+$table-list-border-radius: 6px !default;
+$table-list-font-size: null !default;
+$table-list-margin-bottom: $table-list-border-width !default;
+$table-list-margin-top: null !default;
+
+$table-list-head-bg: null !default;
+$table-list-head-font-size: null !default;
+$table-list-head-font-weight: null !default;
+$table-list-head-height: null !default;
+$table-list-head-vertical-alignment: null !default;
+
+$table-list-head-link: () !default;
+
+$table-list-quick-action-menu-align-items: center !default;
+$table-list-quick-action-menu-bg: $table-list-bg !default;
+$table-list-quick-action-menu-accent-bg: $table-list-accent-bg !default;
+$table-list-quick-action-menu-accent-active-bg: $table-list-active-bg !default;
+$table-list-quick-action-menu-active-bg: $table-list-active-bg !default;
+$table-list-quick-action-menu-hover-bg: $table-list-hover-bg !default;
+
+// Table List Title
+
+$table-list-title: () !default;
+$table-list-title: map-merge((
+	font-size: $font-size-base, // 16px
+	font-weight: $font-weight-semi-bold,
+	line-height: $headings-line-height,
+	margin-bottom: 0
+), $table-list-title);
+
+$table-list-title-link: () !default;
+$table-list-title-link: map-merge((
+	color: $body-color,
+	hover-color: $body-color
+), $table-list-title-link);
+
+// Table List Link
+
+$table-list-link: () !default;
+$table-list-link: map-merge((
+	color: $gray-700,
+	hover-color: darken($gray-700, 15%)
+), $table-list-link);
+
+// Table List Action Link
+
+$table-list-action-link: () !default;
+$table-list-action-link: map-merge((
+	align-items: center,
+	display: inline-flex,
+	height: 2rem,
+	justify-content: center,
+	vertical-align: middle,
+	width: 2rem,
+	hover-text-decoration: none,
+	lexicon-icon-margin-top: 0
+), $table-list-action-link);

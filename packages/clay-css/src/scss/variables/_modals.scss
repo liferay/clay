@@ -1,0 +1,109 @@
+$modal-content-border-radius: $border-radius-lg !default;
+
+$modal-header-bg: null !default;
+$modal-header-color: null !default;
+$modal-header-height: 4rem !default; // 64px
+$modal-header-height-mobile: null !default;
+
+$modal-body-bg: null !default;
+$modal-body-color: null !default;
+
+$modal-footer-bg: null !default;
+$modal-footer-box-shadow: null !default;
+$modal-footer-color: null !default;
+$modal-footer-height: null !default;
+$modal-footer-padding-x: null !default;
+$modal-footer-padding-y: 0.75rem !default; // 12px
+$modal-footer-height-mobile: null !default;
+
+$modal-item-padding-x: null !default;
+$modal-item-padding-y: 0.25rem !default; // 4px
+
+$modal-title-font-size: 1.25rem !default; // 20px
+$modal-title-font-weight: $font-weight-semi-bold !default;
+$modal-title-text-align: null !default;
+$modal-title-font-size-mobile: null !default;
+
+$modal-title-indicator-font-size: 0.875rem !default; // 14px
+$modal-title-indicator-spacer-x: 0.5rem !default; // 8px
+
+// Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
+
+$modal-btn-monospaced-size: 2rem !default;
+$modal-btn-monospaced-color: #000 !default;
+$modal-btn-monospaced-font-size: 1rem !default;
+$modal-btn-monospaced-opacity: 0.5 !default;
+$modal-btn-monospaced-hover-opacity: 0.75 !default;
+$modal-btn-monospaced-spacer-x: 0.3125rem !default; // 5px
+
+// Modal Close
+
+$modal-close-spacer-x: 0.3125rem !default; // 5px
+
+// Modal Success
+
+$modal-success: () !default;
+$modal-success: map-merge((
+	header-bg: theme-color-level(success, -10),
+	header-border-color: theme-color-level(success, -9),
+	header-color: theme-color-level(success, 6),
+	header-close: (
+		color: theme-color-level(success, 6),
+		hover-color: inherit,
+		focus-color: inherit,
+		disabled-color: inherit
+	)
+), $modal-success);
+
+// Modal Info
+
+$modal-info: () !default;
+$modal-info: map-merge((
+	header-bg: theme-color-level(info, -10),
+	header-border-color: theme-color-level(info, -9),
+	header-color: theme-color-level(info, 6),
+	header-close: (
+		color: theme-color-level(info, 6),
+		hover-color: inherit,
+		focus-color: inherit,
+		disabled-color: inherit
+	)
+), $modal-info);
+
+// Modal Warning
+
+$modal-warning: () !default;
+$modal-warning: map-merge((
+	header-bg: theme-color-level(warning, -10),
+	header-border-color: theme-color-level(warning, -9),
+	header-color: theme-color-level(warning, 6),
+	header-close: (
+		color: theme-color-level(warning, 6),
+		hover-color: inherit,
+		focus-color: inherit,
+		disabled-color: inherit
+	)
+), $modal-warning);
+
+// Modal Danger
+
+$modal-danger: () !default;
+$modal-danger: map-merge((
+	header-bg: theme-color-level(danger, -10),
+	header-border-color: theme-color-level(danger, -9),
+	header-color: theme-color-level(danger, 6),
+	header-close: (
+		color: theme-color-level(danger, 6),
+		hover-color: inherit,
+		focus-color: inherit,
+		disabled-color: inherit
+	)
+), $modal-danger);
+
+$modal-palette: () !default;
+$modal-palette: map-merge((
+	success: $modal-success,
+	info: $modal-info,
+	warning: $modal-warning,
+	danger: $modal-danger
+), $modal-palette);
