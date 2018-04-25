@@ -1,5 +1,84 @@
 # Change Log
 
+## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
+
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.12...HEAD)
+
+**Implemented enhancements:**
+
+- Reorganize clay-css and clay npm packages [\#837](https://github.com/liferay/clay/issues/837)
+- Clay-charts: Implement Predictive Chart [\#813](https://github.com/liferay/clay/issues/813)
+
+**Fixed bugs:**
+
+- Fix loading indicator in clay-charts [\#810](https://github.com/liferay/clay/issues/810)
+
+## [v2.0.0-rc.12](https://github.com/liferay/clay/tree/v2.0.0-rc.12) (2018-04-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.11...v2.0.0-rc.12)
+
+**Implemented enhancements:**
+
+- Table List borders top/bottom and left/right should be independently configurable [\#838](https://github.com/liferay/clay/issues/838)
+- Dropdown Items do accept a title attribute [\#832](https://github.com/liferay/clay/issues/832)
+- Update Bootstrap to v4.1.0 [\#807](https://github.com/liferay/clay/issues/807)
+- Autofit Row add more utilities to help ease alignment [\#803](https://github.com/liferay/clay/issues/803)
+- Add more Lexicon SVG Icons Priority Thread and RSS [\#800](https://github.com/liferay/clay/issues/800)
+- \[clay-charts\] Upgrade billboardJS version to 1.4 [\#794](https://github.com/liferay/clay/issues/794)
+- Typography adjustments for adaptation to system font [\#788](https://github.com/liferay/clay/issues/788)
+- Review the structure the charts hierarchy [\#761](https://github.com/liferay/clay/issues/761)
+
+**Fixed bugs:**
+
+- Sticker should have transparent border-color by default [\#840](https://github.com/liferay/clay/issues/840)
+- Management Toolbar on small screens [\#815](https://github.com/liferay/clay/issues/815)
+- Clay Component Navigation Bar should remove inline style `height` on transition end [\#806](https://github.com/liferay/clay/issues/806)
+- Label Lg space between text is too large when breaking into new line [\#798](https://github.com/liferay/clay/issues/798)
+- The distance between icon and text in icon+text buttons should be 8px [\#787](https://github.com/liferay/clay/issues/787)
+- Navigation Bar, Management Bar item links and buttons should have font-weight: 600 [\#785](https://github.com/liferay/clay/issues/785)
+- Clay Components should use `.container-fluid .container-fluid-max-xl` instead of `.container` [\#776](https://github.com/liferay/clay/issues/776)
+
+**Closed issues:**
+
+- Dropdown add Sass variable config options to `.dropdown-header` and `.dropdown-subheader` [\#829](https://github.com/liferay/clay/issues/829)
+- Stickers use `inline-flex` and make it consistent with badges and labels [\#827](https://github.com/liferay/clay/issues/827)
+- axisY.padding, axisX.padding and axisY2.padding expect different types [\#825](https://github.com/liferay/clay/issues/825)
+- Update colors in clay-charts [\#822](https://github.com/liferay/clay/issues/822)
+- Do not use querySelector if refs can be used [\#812](https://github.com/liferay/clay/issues/812)
+- Clay charts axis and axis text color [\#793](https://github.com/liferay/clay/issues/793)
+- typography change in charts [\#792](https://github.com/liferay/clay/issues/792)
+- Modal Footer with more than 2 buttons doesn't break well in mobile [\#791](https://github.com/liferay/clay/issues/791)
+- Fix tootlip in Charts [\#467](https://github.com/liferay/clay/issues/467)
+
+**Merged pull requests:**
+
+- v2.0.0-rc.12 [\#845](https://github.com/liferay/clay/pull/845) ([jbalsas](https://github.com/jbalsas))
+- Updates old references to clay, now called clay-css [\#844](https://github.com/liferay/clay/pull/844) ([jbalsas](https://github.com/jbalsas))
+- New: \(Fixes \#840\) Stickers added option to configure `$sticker-border… [\#841](https://github.com/liferay/clay/pull/841) ([pat270](https://github.com/pat270))
+- New: \(Fixes \#838\) Table List added options to configure `$table-list-… [\#839](https://github.com/liferay/clay/pull/839) ([pat270](https://github.com/pat270))
+- Don't hide creation menu and search input closing icon in management toolbar | Fixes \#815 [\#836](https://github.com/liferay/clay/pull/836) ([carloslancha](https://github.com/carloslancha))
+- Review clay-charts structure | Fixes \#761 [\#835](https://github.com/liferay/clay/pull/835) ([julien](https://github.com/julien))
+- Add support for title to links in dropdowns | Fixes \#832 [\#834](https://github.com/liferay/clay/pull/834) ([carloslancha](https://github.com/carloslancha))
+- New: \(Fixes \#829\) Dropdown add option to configure `$dropdown-subhead… [\#830](https://github.com/liferay/clay/pull/830) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#827\) Stickers should use `display: inline-flex` to ma… [\#828](https://github.com/liferay/clay/pull/828) ([pat270](https://github.com/pat270))
+- Fix the axis.padding API to expect a Number and Object | Fixes \#825 [\#826](https://github.com/liferay/clay/pull/826) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Updates colors in clay-charts | Fixes \#822 [\#824](https://github.com/liferay/clay/pull/824) ([julien](https://github.com/julien))
+- Fixes tooltip styles for clay-charts in clayui.com web | Fixes \#467 [\#823](https://github.com/liferay/clay/pull/823) ([julien](https://github.com/julien))
+- Updates typography in charts | Fixes \#792 [\#820](https://github.com/liferay/clay/pull/820) ([julien](https://github.com/julien))
+- Updates clay-charts axis and axis text color | Fixes \#793 [\#819](https://github.com/liferay/clay/pull/819) ([julien](https://github.com/julien))
+- Implement predictive Chart [\#818](https://github.com/liferay/clay/pull/818) ([julien](https://github.com/julien))
+- \(\#791\) Modal Footer with many items should break to new line [\#817](https://github.com/liferay/clay/pull/817) ([pat270](https://github.com/pat270))
+- ClayNavigationBar should remove `height` on `transitionend` and remove the use of querySelector in favor of refs | Fixes \#806 \#812 [\#816](https://github.com/liferay/clay/pull/816) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- \(\#776\) Clay Components use `container-fluid container-fluid-max-xl` instead of `container` [\#811](https://github.com/liferay/clay/pull/811) ([carloslancha](https://github.com/carloslancha))
+- \(\#798\) Adjust spacing between words that break to new line in Label and Badges and update ClayLabel and ClayBadge [\#809](https://github.com/liferay/clay/pull/809) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update: \(Fixes \#807\) Bootstrap to 8f7bd41 \(v4.1.0\) [\#808](https://github.com/liferay/clay/pull/808) ([pat270](https://github.com/pat270))
+- \(\#803\) Autofit Row added more utilities [\#804](https://github.com/liferay/clay/pull/804) ([pat270](https://github.com/pat270))
+- New: \(Fixes \#800\) Added Lexicon SVG Icons `announcement.svg`, `rss-fu… [\#801](https://github.com/liferay/clay/pull/801) ([pat270](https://github.com/pat270))
+- \(\#788\) Atlas adjust font sizes [\#797](https://github.com/liferay/clay/pull/797) ([pat270](https://github.com/pat270))
+- Update billboard.js to 1.4.1 | Fixes \#794 [\#795](https://github.com/liferay/clay/pull/795) ([julien](https://github.com/julien))
+- Update: \(Fixes \#787\) Utilities `.inline-item-before` and `inline-item… [\#790](https://github.com/liferay/clay/pull/790) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#785\) Atlas Application Bar, Navigation Bar, and Manag… [\#789](https://github.com/liferay/clay/pull/789) ([pat270](https://github.com/pat270))
+- \(\#709\) File upload modal [\#786](https://github.com/liferay/clay/pull/786) ([pat270](https://github.com/pat270))
+
 ## [v2.0.0-rc.11](https://github.com/liferay/clay/tree/v2.0.0-rc.11) (2018-04-10)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.10...v2.0.0-rc.11)
 
@@ -106,6 +185,7 @@
 
 **Implemented enhancements:**
 
+- Modals need to support designs in FILE UPLOADER [\#709](https://github.com/liferay/clay/issues/709)
 - Add href for sorting button in Management Toolbar [\#706](https://github.com/liferay/clay/issues/706)
 - Add href to clear results link in management toolbar [\#705](https://github.com/liferay/clay/issues/705)
 - Add polling\_interval option to Charts [\#544](https://github.com/liferay/clay/issues/544)
