@@ -209,34 +209,34 @@ th {
 
 	th,
 	td {
-		box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
-					0 #{$table-list-border-width} $table-list-border-color; // bottom
-		padding-top: $table-list-border-width + $table-cell-padding;
+		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
+					0 #{$table-list-border-y-width} $table-list-border-color; // bottom
+		padding-top: $table-list-border-y-width + $table-cell-padding;
 
 		&:first-child {
-			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
-						0 #{$table-list-border-width} $table-list-border-color, // bottom
-						inset #{$table-list-border-width} 0 $table-list-border-color; // left
-			padding-left: $table-list-border-width + $table-cell-padding;
-			padding-top: $table-list-border-width + $table-cell-padding;
+			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
+						0 #{$table-list-border-y-width} $table-list-border-color, // bottom
+						inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
+			padding-left: $table-list-border-x-width + $table-cell-padding;
+			padding-top: $table-list-border-y-width + $table-cell-padding;
 		}
 
 		&:last-child {
-			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
-						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
-						0 #{$table-list-border-width} $table-list-border-color; // bottom
-			padding-right: $table-list-border-width + $table-cell-padding;
-			padding-top: $table-list-border-width + $table-cell-padding;
+			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
+						inset #{-$table-list-border-x-width} 0 $table-list-border-color, // right
+						0 #{$table-list-border-y-width} $table-list-border-color; // bottom
+			padding-right: $table-list-border-x-width + $table-cell-padding;
+			padding-top: $table-list-border-y-width + $table-cell-padding;
 		}
 
 		&:only-child {
-			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
-						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
-						0 #{$table-list-border-width} $table-list-border-color, // bottom
-						inset #{$table-list-border-width} 0 $table-list-border-color; // left
-			padding-left: $table-list-border-width + $table-cell-padding;
-			padding-right: $table-list-border-width + $table-cell-padding;
-			padding-top: $table-list-border-width + $table-cell-padding;
+			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
+						inset #{-$table-list-border-x-width} 0 $table-list-border-color, // right
+						0 #{$table-list-border-y-width} $table-list-border-color, // bottom
+						inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
+			padding-left: $table-list-border-x-width + $table-cell-padding;
+			padding-right: $table-list-border-x-width + $table-cell-padding;
+			padding-top: $table-list-border-y-width + $table-cell-padding;
 		}
 	}
 
@@ -271,21 +271,20 @@ th {
 
 	th,
 	td {
-		box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
-					inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
-					0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
-					#{-$table-list-border-width / 2} #{$table-list-border-width / 2} 0 #{$table-list-border-width / 2} #{$table-list-border-color}; // left
-		padding-right: $table-list-border-width + $table-cell-padding;
-		padding-top: $table-list-border-width + $table-cell-padding;
+		box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color}, // top
+					inset #{-$table-list-border-x-width} 0 #{$table-list-border-color}, // right
+					0 #{$table-list-border-y-width} #{$table-list-border-color}; // bottom
+		padding-right: $table-list-border-x-width + $table-cell-padding;
+		padding-top: $table-list-border-y-width + $table-cell-padding;
 
 		&:first-child {
-			box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
-						inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
-						0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
-						inset #{$table-list-border-width} 0 #{$table-list-border-color}; // left
-			padding-left: $table-list-border-width + $table-cell-padding;
-			padding-right: $table-list-border-width + $table-cell-padding;
-			padding-top: $table-list-border-width + $table-cell-padding;
+			box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color}, // top
+						inset #{-$table-list-border-x-width} 0 #{$table-list-border-color}, // right
+						0 #{$table-list-border-y-width} #{$table-list-border-color}, // bottom
+						inset #{$table-list-border-x-width} 0 #{$table-list-border-color}; // left
+			padding-left: $table-list-border-x-width + $table-cell-padding;
+			padding-right: $table-list-border-x-width + $table-cell-padding;
+			padding-top: $table-list-border-y-width + $table-cell-padding;
 		}
 	}
 }
@@ -383,6 +382,16 @@ th {
 		font-weight: $table-divider-font-weight;
 		padding: $table-divider-padding;
 		text-transform: $table-divider-text-transform;
+	}
+}
+
+.table-list .table-divider {
+	td,
+	th {
+		padding-bottom: $table-list-divider-padding-y;
+		padding-left: $table-list-border-x-width + $table-list-divider-padding-x;
+		padding-right: $table-list-border-x-width + $table-list-divider-padding-x;
+		padding-top: $table-list-border-y-width + $table-list-divider-padding-y;
 	}
 }
 
@@ -540,7 +549,7 @@ th {
 		align-items: $table-list-quick-action-menu-align-items;
 		background-color: $table-list-quick-action-menu-bg;
 		bottom: 0;
-		top: $table-list-border-width;
+		top: $table-list-border-y-width;
 	}
 }
 

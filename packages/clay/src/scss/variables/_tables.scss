@@ -95,10 +95,15 @@ $table-list-hover-bg: #ECECEC !default;
 $table-list-active-bg: #DADADA !default;
 
 $table-list-border-color: $table-border-color !default;
-$table-list-border-width: 0.0625rem !default; // 1px
+
+$table-list-border-x-width: 0.0625rem !default; // 1px
+$table-list-border-y-width: 0.0625rem !default; // 1px
+
+$table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
+
 $table-list-border-radius: 6px !default;
 $table-list-font-size: null !default;
-$table-list-margin-bottom: $table-list-border-width !default;
+$table-list-margin-bottom: $table-list-border-y-width !default;
 $table-list-margin-top: null !default;
 
 $table-list-head-bg: null !default;
@@ -108,6 +113,9 @@ $table-list-head-height: null !default;
 $table-list-head-vertical-alignment: null !default;
 
 $table-list-head-link: () !default;
+
+$table-list-divider-padding-x: 0.75rem !default; // 12px
+$table-list-divider-padding-y: 0.75rem !default; // 12px
 
 $table-list-quick-action-menu-align-items: center !default;
 $table-list-quick-action-menu-bg: $table-list-bg !default;
