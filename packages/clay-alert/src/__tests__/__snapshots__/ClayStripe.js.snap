@@ -6,13 +6,13 @@ exports[`ClayStripe should render a "danger" style stripe 1`] = `
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
         <title>exclamation-full</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#exclamation-full"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-full"></use>
       </svg>
     </span>
     <strong class="lead">Danger!</strong>message</div>
@@ -25,13 +25,13 @@ exports[`ClayStripe should render a "success" style stripe 1`] = `
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full" focusable="false">
         <title>check-circle-full</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#check-circle-full"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle-full"></use>
       </svg>
     </span>
     <strong class="lead">Success!</strong>message</div>
@@ -44,13 +44,13 @@ exports[`ClayStripe should render a "warning" style stripe 1`] = `
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
         <title>warning-full</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#warning-full"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
       </svg>
     </span>
     <strong class="lead">Warning!</strong>message</div>
@@ -63,13 +63,13 @@ exports[`ClayStripe should render an "info" style stripe 1`] = `
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
         <title>info-circle</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>
     <strong class="lead">Info</strong>message</div>
@@ -82,13 +82,13 @@ exports[`ClayStripe should render an stripe with classes 1`] = `
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
         <title>info-circle</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>
     <strong class="lead">info</strong>message</div>
@@ -101,13 +101,13 @@ exports[`ClayStripe should render an stripe with id 1`] = `
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
         <title>info-circle</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>
     <strong class="lead">info</strong>message</div>
@@ -120,13 +120,13 @@ exports[`ClayStripe should render default markup 1`] = `
     <button class="btn close btn-unstyled" aria-label="Close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#times"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
       </svg>
     </button>
     <span class="alert-indicator">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
         <title>info-circle</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#info-circle"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
       </svg>
     </span>
     <strong class="lead">info</strong>message</div>
