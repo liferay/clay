@@ -9,8 +9,8 @@ weight: 5
 
 <article id="1">
 
-{call ClayChart.render}
-	{param columns: [
+{call ClayPieChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [30]
@@ -20,12 +20,11 @@ weight: 5
 			'data': [70]
 		]
 	] /}
-	{param type: 'pie' /}
 {/call}
 
 ```soy
-{call ClayChart.render}
-	{param columns: [
+{call ClayPieChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [30]
@@ -35,12 +34,12 @@ weight: 5
 			'data': [70]
 		]
 	] /}
-	{param type: 'pie' /}
 {/call}
 ```
+
 ```jsx
 <PieChart
-	columns={[
+	data={[
 		{
 			id: 'data1',
 			data: [30]

@@ -1,0 +1,119 @@
+$single-link-font-weight: $font-weight-semi-bold !default;
+
+$component-link: () !default;
+$component-link: map-merge((
+	color: $secondary,
+	hover-color: darken($secondary, 15%)
+), $component-link);
+
+$link-primary: () !default;
+$link-primary: map-merge((
+	color: $primary,
+	hover-color: darken($primary, 15%)
+), $link-primary);
+
+$link-secondary: () !default;
+$link-secondary: map-merge((
+	color: $secondary,
+	hover-color: darken($secondary, 15%)
+), $link-secondary);
+
+// Component Title
+
+$component-title: () !default;
+$component-title: map-merge((
+	color: $body-color,
+	font-size: 1.125rem,
+	font-weight: $headings-font-weight,
+	line-height: $headings-line-height,
+	margin-bottom: calc((#{$dropdown-action-toggle-size} - (1em * #{$headings-line-height})) / 2),
+	margin-top: calc((#{$dropdown-action-toggle-size} - (1em * #{$headings-line-height})) / 2)
+), $component-title);
+
+$component-title-link: () !default;
+$component-title-link: map-merge((
+	color: $body-color,
+	hover-color: darken($body-color, 15%)
+), $component-title-link);
+
+// Component Subtitle
+
+$component-subtitle: () !default;
+$component-subtitle: map-merge((
+	color: $secondary,
+	margin-bottom: 0
+), $component-subtitle);
+
+$component-subtitle-link: () !default;
+$component-subtitle-link: map-merge((
+	color: $secondary,
+	hover-color: darken($secondary, 15%)
+), $component-subtitle-link);
+
+// Component Action
+
+$component-action: () !default;
+$component-action: map-merge((
+	bg: transparent,
+	border-color: transparent,
+	border-radius: $border-radius,
+	color: $secondary,
+	hover-bg: $secondary,
+	hover-color: #FFF,
+	btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
+	btn-focus-outline: 0,
+	active-bg: $secondary,
+	active-color: #FFF,
+	disabled-bg: transparent,
+	disabled-color: $secondary,
+	disabled-cursor: $disabled-cursor,
+	disabled-opacity: $btn-disabled-opacity,
+	transition: $btn-transition
+), $component-action);
+
+// Link Outline
+
+$link-outline-border-radius: $btn-border-radius !default;
+$link-outline-border-width: $btn-border-width !default;
+$link-outline-font-size: $btn-font-size-sm !default;
+$link-outline-font-weight: $font-weight-semi-bold !default;
+$link-outline-line-height: $btn-line-height-sm !default;
+$link-outline-padding-x: $btn-padding-x-sm !default;
+$link-outline-padding-y: $btn-padding-y-sm !default;
+$link-outline-transition: $btn-transition !default;
+
+$link-outline-primary: () !default;
+$link-outline-primary: map-merge((
+	border-color: $primary,
+	color: $primary,
+	hover-bg: $primary,
+	hover-color: #FFF,
+	btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.5),
+	btn-focus-outline: 0,
+	disabled-bg: transparent,
+	disabled-color: $primary,
+	disabled-cursor: $btn-disabled-cursor,
+	disabled-opacity: $btn-disabled-opacity,
+	active-bg: $primary,
+	active-color: #FFF
+), $link-outline-primary);
+
+$link-outline-secondary: () !default;
+$link-outline-secondary: map-merge((
+	border-color: $secondary,
+	color: $secondary,
+	hover-bg: $secondary,
+	hover-color: #FFF,
+	btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
+	btn-focus-outline: 0,
+	disabled-bg: transparent,
+	disabled-color: $secondary,
+	disabled-cursor: $btn-disabled-cursor,
+	disabled-opacity: $btn-disabled-opacity,
+	active-bg: $secondary,
+	active-color: #FFF
+), $link-outline-secondary);
+
+// Link Monospaced
+
+$link-monospaced-size: $btn-monospaced-size-sm !default;

@@ -1,0 +1,46 @@
+$bg-checkered-fg: $gray-200 !default;
+$inline-scroller-max-height: 125px !default;
+
+// Autofit Row
+
+$autofit-col-expand-min-width: 3.125rem !default; // 50px
+
+$autofit-padded-col-padding-x: 0.5rem !default; // 8px
+$autofit-padded-col-padding-y: 0.25rem !default; // 4px
+
+// Close
+
+$close: () !default;
+$close: map-merge((
+	color: $black,
+	opacity: 0.5,
+	hover-opacity: 0.75,
+	focus-opacity: 0.75,
+	disabled-opacity: 0.25,
+	btn-focus-box-shadow: 0 0 0 $btn-focus-width $input-btn-focus-color,
+	btn-focus-outline: 0,
+	align-items: center,
+	border-radius: $btn-border-radius-sm,
+	display: inline-flex,
+	font-size: 1rem,
+	justify-content: center,
+	height: 2rem,
+	text-align: center,
+	width: 2rem,
+	transition: $btn-transition,
+	lexicon-icon-margin-top: 0
+), $close);
+
+// Heading
+
+$heading-spacer-x: 1rem; // 16px
+
+$heading-text-margin-bottom: auto;
+$heading-text-margin-top: auto;
+
+// Inline Item
+
+$inline-item-lexicon-icon-margin-top: -0.21429em !default;
+$inline-item-spacer-x: 0.5rem !default; // 8px
+
+$page-header-bg: $gray-200 !default;

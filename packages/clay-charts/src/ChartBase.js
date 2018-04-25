@@ -1,6 +1,7 @@
 import {bb} from 'billboard.js';
 import {Config} from 'metal-state';
 import {isDefAndNotNull, isServerSide} from 'metal';
+import {resolveData} from './utils/data';
 import types from './utils/types';
 import * as d3 from 'd3';
 
@@ -16,13 +17,13 @@ const PROP_NAME_MAP = {
 
 const DEFAULT_COLORS = [
 	'#4B9BFF',
-	'#FFD76E',
+	'#FFB46E',
 	'#FF5F5F',
-	'#9CE269',
-	'#AF78FF',
 	'#50D2A0',
 	'#FF73C3',
-	'#FFB64E',
+	'#9CE269',
+	'#AF78FF',
+	'#FFD76E',
 	'#5FC8FF',
 ];
 
@@ -78,8 +79,30 @@ const ChartBase = {
 			return;
 		}
 
-		this._resolveData(this.data)
+		this._addEventListeners();
+
+		const config = this.getInitialConfig();
+		const data = isDefAndNotNull(config.columns)
+			? config.columns
+			: config.data;
+
+		if (!data) {
+			return;
+		}
+
+		resolveData(data)
 			.then(data => {
+				this._resolvedData = data;
+
+				if (
+					isDefAndNotNull(this.props) &&
+					isDefAndNotNull(this.props._loading)
+				) {
+					this.props._loading = false;
+				} else {
+					this._loading = false;
+				}
+
 				if (!isDefAndNotNull(data)) {
 					this.emit(
 						'chartError',
@@ -88,28 +111,11 @@ const ChartBase = {
 					return;
 				}
 
-				this._resolvedData = data;
+				this._setupPolling();
 
 				const config = this._constructChartConfig();
 				this.bbChart = bb.generate(config);
-
-				this.on('dataChanged', this._handleDataChanged.bind(this));
-				this.on('groupsChanged', this._handleGroupsChanged.bind(this));
-				this.on(
-					'_loadingChanged',
-					this._handleLoadingChanged.bind(this)
-				);
-				this.on(
-					'regionsChanged',
-					this._handleRegionsChanged.bind(this)
-				);
-				this.on('sizeChanged', this._handleSizeChanged.bind(this));
-				this.on('typeChanged', this._handleTypeChanged.bind(this));
-				this.on('xChanged', this._handleXChanged.bind(this));
-
 				this.emit('chartReady');
-
-				this._loading = false;
 			})
 			.catch(err => {
 				this.emit('chartError', err);
@@ -125,9 +131,29 @@ const ChartBase = {
 			return;
 		}
 
+		if (this._pollingInterval) {
+			clearInterval(this._pollingInterval);
+			this._pollingInterval = null;
+		}
+
 		if (this.bbChart) {
 			this.bbChart.destroy();
 		}
+	},
+
+	/**
+	 * Adds event listeners
+	 * @memberof ChartBase
+	 * @protected
+	 */
+	_addEventListeners() {
+		this.on('dataChanged', this._handleDataChanged.bind(this));
+		this.on('groupsChanged', this._handleGroupsChanged.bind(this));
+		this.on('_loadingChanged', this._handleLoadingChanged.bind(this));
+		this.on('regionsChanged', this._handleRegionsChanged.bind(this));
+		this.on('sizeChanged', this._handleSizeChanged.bind(this));
+		this.on('typeChanged', this._handleTypeChanged.bind(this));
+		this.on('xChanged', this._handleXChanged.bind(this));
 	},
 
 	/**
@@ -171,7 +197,7 @@ const ChartBase = {
 		const config = {
 			area: state.area,
 			axis,
-			bindto: this.refs.chart,
+			bindto: this.element.querySelector('[ref="chart"]'),
 			bubble: state.bubble,
 			color: color,
 			data,
@@ -515,12 +541,15 @@ const ChartBase = {
 	 * @protected
 	 */
 	_handleLoadingChanged({newVal}) {
+		const chart = this.element.querySelector('[ref="chart"]');
+		const placeholder = this.element.querySelector('[ref="placeholder"]');
+
 		if (!newVal) {
-			this.refs.chart.removeAttribute('hidden');
-			this.refs.placeholder.setAttribute('hidden', 'hidden');
+			chart.removeAttribute('hidden');
+			placeholder.setAttribute('hidden', 'hidden');
 		} else {
-			this.refs.chart.setAttribute('hidden', 'hidden');
-			this.refs.placeholder.removeAttribute('hidden');
+			chart.setAttribute('hidden', 'hidden');
+			placeholder.removeAttribute('hidden');
 		}
 	},
 
@@ -614,13 +643,34 @@ const ChartBase = {
 	},
 
 	/**
+	 * Sets up the polling interval.
+	 * @memberof ChartBase
+	 * @protected
+	 */
+	_setupPolling() {
+		const config = this.getInitialConfig();
+		const data = config.data;
+		const pollingInterval = config.pollingInterval;
+
+		if (pollingInterval) {
+			if (this._pollingInterval) {
+				clearInterval(this._pollingInterval);
+			}
+
+			this._pollingInterval = setInterval(() => {
+				this._updateData(data);
+			}, pollingInterval);
+		}
+	},
+
+	/**
 	 * Updates the chart's data.
 	 * @memberof ChartBase
 	 * @param {Object} data The new data to load
 	 * @protected
 	 */
 	_updateData(data) {
-		this._resolveData(data).then(val => {
+		resolveData(data).then(val => {
 			const prevVal = this._createDataArray(this._resolvedData);
 
 			this._resolvedData = val;
@@ -693,7 +743,7 @@ ChartBase.STATE = {
 		localtime: Config.bool(),
 		max: Config.number(),
 		min: Config.number(),
-		padding: Config.object(),
+		padding: Config.oneOfType([Config.number(), Config.object()]),
 		show: Config.bool(),
 		tick: Config.shapeOf({
 			centered: Config.bool(),
@@ -702,7 +752,7 @@ ChartBase.STATE = {
 				max: Config.number(),
 			}),
 			fit: Config.bool(),
-			format: Config.func(),
+			format: Config.oneOfType([Config.func(), Config.string()]),
 			multiline: Config.bool(),
 			outer: Config.bool(),
 			rotate: Config.number(),
@@ -727,7 +777,7 @@ ChartBase.STATE = {
 		label: Config.object().string(),
 		max: Config.number(),
 		min: Config.number(),
-		padding: Config.number(),
+		padding: Config.oneOfType([Config.number(), Config.object()]),
 		show: Config.bool(),
 		tick: Config.shapeOf({
 			count: Config.number(),
@@ -753,7 +803,7 @@ ChartBase.STATE = {
 		label: Config.object().string(),
 		max: Config.number(),
 		min: Config.number(),
-		padding: Config.object().string(),
+		padding: Config.oneOfType([Config.number(), Config.object()]),
 		show: Config.bool(),
 		tick: Config.shapeOf({
 			count: Config.number(),
@@ -835,6 +885,33 @@ ChartBase.STATE = {
 		setter: '_setColumns',
 		valueFn: '_getColumns',
 	},
+
+	/**
+	 * Data that will be rendered to the chart.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?(Array|undefined)}
+	 */
+	data: Config.oneOfType([
+		Config.arrayOf(
+			Config.shapeOf({
+				axis: Config.oneOf(['y', 'y2']),
+				class: Config.string(),
+				color: Config.string(),
+				data: Config.array().required(),
+				hide: Config.bool(),
+				id: Config.required().string(),
+				name: Config.string(),
+				regions: Config.array(),
+				type: Config.oneOf(types.all),
+				x: Config.string(),
+			})
+		),
+		Config.object(),
+		Config.func(),
+		Config.string(),
+	]),
 
 	/**
 	 * Configuration options for donut chart.
@@ -1130,6 +1207,15 @@ ChartBase.STATE = {
 	}),
 
 	/**
+	 * Set an interval (in ms) to fetch the data.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Number}
+	 */
+	pollingInterval: Config.number(),
+
+	/**
 	 * Creates custom regions on chart that can be styled.
 	 * @default undefined
 	 * @instance
@@ -1140,8 +1226,14 @@ ChartBase.STATE = {
 		Config.shapeOf({
 			class: Config.string(),
 			enabled: Config.oneOf(['x', 'y']).required(),
-			end: Config.number().required(),
-			start: Config.number().required(),
+			end: Config.oneOfType([
+				Config.number(),
+				Config.string(),
+			]).required(),
+			start: Config.oneOfType([
+				Config.number(),
+				Config.string(),
+			]).required(),
 		})
 	),
 

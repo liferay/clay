@@ -36,7 +36,7 @@
 	{/let}
 
 	<nav {$attributes}>
-		<div class="container">
+		<div class="container-fluid container-fluid-max-xl">
 			{if $items}
 				{call .toggler}
 					{param _handleClickToggler: $_handleClickToggler /}
@@ -82,8 +82,8 @@
 		{/if}
 	{/let}
 
-	<div class="{$classes}">
-		<div class="container">
+	<div class="{$classes}" ref="content">
+		<div class="container-fluid container-fluid-max-xl">
 			{if $items}
 				{call .navmenu}
 					{param items: $items /}

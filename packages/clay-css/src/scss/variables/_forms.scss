@@ -1,0 +1,216 @@
+$input-border-top-width: 0.0625rem !default;
+$input-border-right-width: 0.0625rem !default;
+$input-border-bottom-width: 0.0625rem !default;
+$input-border-left-width: 0.0625rem !default;
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
+
+$input-font-size: $font-size-base !default;
+$input-font-size-mobile: null !default;
+$input-height-mobile: null !default;
+$input-height-inner-mobile: null !default;
+
+$input-font-size-lg: $font-size-lg !default;
+$input-font-size-lg-mobile: null !default;
+$input-height-lg-mobile: null !default;
+$input-height-inner-lg-mobile: null !default;
+
+$input-font-size-sm: $font-size-sm !default;
+$input-font-size-sm-mobile: null !default;
+$input-height-sm-mobile: null !default;
+$input-height-inner-sm-mobile: null !default;
+
+$input-disabled-border-color: null !default;
+$input-disabled-color: null !default;
+$input-disabled-cursor: $disabled-cursor !default;
+$input-disabled-opacity: null !default;
+$input-placeholder-disabled-color: null !default;
+
+$input-placeholder-focus-color: null !default;
+
+$input-label-color: null !default;
+$input-label-focus-color: null !default;
+$input-label-font-size: null !default;
+$input-label-font-size-mobile: null !default;
+$input-label-font-weight: null !default;
+$input-label-margin-bottom: null !default;
+
+$input-label-for-cursor: $link-cursor !default;
+
+$input-label-disabled-color: $text-muted !default;
+$input-label-disabled-cursor: $disabled-cursor !default;
+
+$input-label-reference-mark-color: $warning !default;
+$input-label-reference-mark-font-size: null !default;
+$input-label-reference-mark-spacer: null !default;
+$input-label-reference-mark-vertical-align: null !default;
+
+$input-readonly-bg: null !default;
+$input-readonly-focus-bg: null !default;
+$input-readonly-border-color: null !default;
+$input-readonly-focus-border-color: null !default;
+$input-readonly-color: null !default;
+$input-readonly-focus-color: null !default;
+$input-readonly-cursor: null !default;
+
+$input-textarea-height: 150px !default;
+
+// Form Control Label (Labels inside Form Control Tag Group)
+
+$form-control-label-size: () !default;
+$form-control-label-size: map-merge((
+	border-width: 0.0625rem, // 1px
+	height: 1.25rem // 20px
+), $form-control-label-size);
+
+// Form Control Tag Group
+
+$form-control-tag-group-padding-y: ($input-height-inner - map-get($form-control-label-size, height) - ($label-spacer-y * 2)) / 2 !default;
+
+// Form Control Inset
+
+$form-control-inset-min-height: $input-font-size * $input-line-height !default;
+$form-control-inset-margin-y: ($input-height-inner - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
+
+// Form Group
+
+$form-group-margin-bottom-mobile: null !default;
+
+$form-group-autofit-margin-bottom: $form-group-margin-bottom !default;
+
+// Form Control File
+
+$input-file-cursor: $link-cursor !default;
+
+// Form Check
+
+$form-check-input-cursor: $link-cursor !default;
+$form-check-input-disabled-cursor: $disabled-cursor !default;
+
+$form-check-label-cursor: $input-label-for-cursor !default;
+
+$form-check-label-text-margin-left: -0.3125rem !default; // 5px
+$form-check-label-text-padding-left: 0.5rem !default; // 8px
+$form-check-label-text-disabled-cursor: $disabled-cursor !default;
+
+// Input Variants
+
+$form-feedback-warning-color: $warning !default;
+
+$input-danger-bg: null !default;
+$input-danger-focus-bg: null !default;
+$input-danger-border-color: $form-feedback-invalid-color !default;
+$input-danger-focus-border-color: null !default;
+$input-danger-box-shadow: null !default;
+$input-danger-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-invalid-color, 0.25) !default;
+$input-danger-color: null !default;
+$input-danger-focus-color: null !default;
+
+$input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
+$input-danger-label-color: null !default;
+$input-danger-select-icon-color: $input-danger-border-color !default;
+$input-danger-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$input-success-bg: null !default;
+$input-success-focus-bg: null !default;
+$input-success-border-color: $form-feedback-valid-color !default;
+$input-success-focus-border-color: null !default;
+$input-success-box-shadow: null !default;
+$input-success-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-valid-color, 0.25) !default;
+$input-success-color: null !default;
+$input-success-focus-color: null !default;
+
+$input-success-checkbox-label-color: $form-feedback-valid-color !default;
+$input-success-label-color: null !default;
+$input-success-select-icon-color: $input-success-border-color !default;
+$input-success-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$input-warning-bg: null !default;
+$input-warning-focus-bg: null !default;
+$input-warning-border-color: $form-feedback-warning-color !default;
+$input-warning-focus-border-color: null !default;
+$input-warning-box-shadow: null !default;
+$input-warning-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-warning-color, 0.25) !default;
+$input-warning-color: null !default;
+$input-warning-focus-color: null !default;
+
+$input-warning-checkbox-label-color: $form-feedback-warning-color !default;
+$input-warning-label-color: null !default;
+$input-warning-select-icon-color: $input-warning-border-color !default;
+$input-warning-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+// Select Element
+
+$input-select-bg: null !default;
+$input-select-focus-bg: null !default;
+
+$input-select-bg-position: right $input-btn-padding-x center !default;
+$input-select-bg-size: $custom-select-bg-size !default;
+$input-select-cursor: $link-cursor !default;
+$input-select-padding-bottom: null !default;
+$input-select-padding-left: null !default;
+$input-select-padding-right: $custom-select-indicator-padding + $input-btn-padding-x !default;
+$input-select-padding-top: null !default;
+
+$input-select-icon-color: $input-color !default;
+$input-select-icon: $custom-select-indicator !default;
+
+$input-select-icon-focus-color: null !default;
+$input-select-icon-focus: null !default;
+
+$input-select-icon-disabled-color: null !default;
+$input-select-icon-disabled: null !default;
+
+// Form Feedback
+
+$form-feedback-font-weight: null !default;
+$form-feedback-margin-top: 0.25rem !default;
+
+$form-feedback-indicator-margin-x: 0.3125rem !default;
+
+$form-text-color: $text-muted !default;
+$form-text-font-size: 0.875rem !default; // 14px
+$form-text-font-weight: null !default;
+
+// Form Group Autofit
+
+$form-group-item-label-max-width: 12.5rem !default; // 200px
+$form-group-item-label-spacer: 2rem !default; // 32px
+
+// Input Group
+
+$input-group-addon-color: null !default;
+$input-group-addon-font-weight: null !default;
+$input-group-addon-min-width: 2.375rem !default; // 38px
+$input-group-addon-padding-x: null !default;
+$input-group-addon-padding-y: null !default;
+
+// Input Group Sizes
+
+$input-group-addon-min-width-lg: 3rem !default; // 48px
+$input-group-addon-padding-x-lg: $input-padding-x-lg !default;
+$input-group-addon-padding-y-lg: null !default;
+
+$input-group-addon-min-width-sm: 1.9375rem !default; // 31px
+$input-group-addon-padding-x-sm: $input-padding-x-sm !default;
+$input-group-addon-padding-y-sm: null !default;
+
+// Input Group Secondary
+
+$input-group-secondary-addon-bg: $secondary !default;
+$input-group-secondary-addon-border-color: $secondary !default;
+$input-group-secondary-addon-border-width: 0.0625rem !default; // 1px
+$input-group-secondary-addon-color: $white !default;
+
+// Input Group Inset
+
+$input-group-inset-item-color: $input-group-addon-color !default;
+
+// Input Group Stacked
+
+$input-group-stacked-sm-down: () !default;
+$input-group-stacked-sm-down: map-merge((
+	breakpoint: sm,
+	item-margin-bottom: 0.5rem,
+	item-margin-left: 0,
+	shrink-margin-right: 0.5rem
+), $input-group-stacked-sm-down);

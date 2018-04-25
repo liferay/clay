@@ -9,8 +9,8 @@ weight: 2
 
 <article id="1">
 
-{call ClayChart.render}
-	{param columns: [
+{call ClayStepChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [100, 20, 30]
@@ -20,12 +20,11 @@ weight: 2
 			'data': [20, 70, 100]
 		]
 	] /}
-	{param type: 'step' /}
 {/call}
 
 ```soy
-{call ClayChart.render}
-	{param columns: [
+{call ClayStepChart.render}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [100, 20, 30]
@@ -35,12 +34,11 @@ weight: 2
 			'data': [20, 70, 100]
 		]
 	] /}
-	{param type: 'step' /}
 {/call}
 ```
 ```jsx
 <StepChart
-	columns={[
+	data={[
 		{
 			id: 'data1',
 			data: [100, 20, 30]

@@ -1,0 +1,48 @@
+$nav-font-size: 0.875rem !default;
+
+$nav-link-disabled-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
+
+$nav-link-padding-x: 1rem !default; // 16px
+$nav-link-padding-y: 0.625rem !default; // 10px
+
+$nav-collapse-icon-closed: "\f0da" !default;
+$nav-collapse-icon-open: "\f0d7" !default;
+
+// Nav Nested
+
+$nav-nested-spacer-x: 1rem !default; // 16px
+
+// Nav Tabs
+
+$nav-tabs-border-color: transparent !default;
+$nav-tabs-font-size: 0.875rem !default; // 14px
+$nav-tabs-link-color: $secondary !default;
+
+$nav-tabs-link-hover-border-color: transparent !default;
+
+$nav-tabs-link-active-color: $body-color !default;
+$nav-tabs-link-active-bg: #FFF !default;
+
+$nav-tabs-link-active-border-color: transparent transparent $body-bg !default;
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
+$nav-tabs-link-show-bg: transparent !default;
+$nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color transparent !default;
+
+$nav-tabs-link-padding-y: 0.28125rem !default; // 4.5px
+
+$nav-tabs-tab-pane-bg: #FFF !default;
+$nav-tabs-tab-pane-border-radius: 4px !default;
+$nav-tabs-tab-pane-padding: 2rem !default;
+
+// Nav Underline
+
+$nav-underline-link-color: $secondary !default;
+
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+
+$nav-underline-link-disabled-color: $nav-link-disabled-color !default;
+
+$nav-underline-link-active-color: $body-color !default;
+$nav-underline-link-active-highlight: lighten($component-active-bg, 22.94) !default;
+$nav-underline-link-active-highlight-height: 0.25rem !default; // 4px

@@ -3,7 +3,7 @@ import ClayPagination from '../ClayPagination';
 let consoleErrorReference;
 let component;
 
-const spritemap = '../node_modules/clay/lib/images/icons/icons.svg';
+const spritemap = '../node_modules/clay-css/lib/images/icons/icons.svg';
 
 /**
  * Stubs console.error

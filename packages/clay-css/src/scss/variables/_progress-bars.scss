@@ -1,0 +1,56 @@
+$progress-min-width: 6.25rem !default; // 100px
+
+$progress-bar-box-shadow: null !default;
+
+// Progress Sizes
+
+$progress-border-radius-lg: $border-radius !default;
+$progress-font-size-lg: $font-size-lg !default;
+$progress-height-lg: $progress-height * 2 !default;
+
+// Progress Group
+
+$progress-group-subtitle: () !default;
+
+$progress-group-addon-font-size: null !default;
+$progress-group-addon-font-weight: null !default;
+$progress-group-addon-spacer-x: 1rem !default;
+
+$progress-group-stacked-progress-margin-bottom: 0.25rem !default; // 4px
+$progress-group-stacked-progress-margin-top: 0.25rem !default; // 4px
+
+// Progress Variants
+
+$progress-group-feedback-color: $primary !default;
+
+$progress-bar-danger-bg: $danger !default;
+$progress-group-feedback-danger-color: $progress-bar-danger-bg !default;
+
+$progress-bar-info-bg: $info !default;
+$progress-group-feedback-info-color: $progress-bar-info-bg !default;
+
+$progress-bar-success-bg: $success !default;
+$progress-group-feedback-success-color: $progress-bar-success-bg !default;
+
+$progress-bar-warning-bg: $warning !default;
+$progress-group-feedback-warning-color: $progress-bar-warning-bg !default;
+
+$progress-palette: () !default;
+$progress-palette: map-merge((
+	success: (
+		bar-bg: $progress-bar-success-bg,
+		group-feedback-color: $progress-group-feedback-success-color
+	),
+	info: (
+		bar-bg: $progress-bar-info-bg,
+		group-feedback-color: $progress-group-feedback-info-color
+	),
+	warning: (
+		bar-bg: $progress-bar-warning-bg,
+		group-feedback-color: $progress-group-feedback-warning-color
+	),
+	danger: (
+		bar-bg: $progress-bar-danger-bg,
+		group-feedback-color: $progress-group-feedback-danger-color
+	)
+), $progress-palette);

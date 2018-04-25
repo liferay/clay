@@ -1,8 +1,8 @@
 .loading-icon {
 	min-height: 320px;
-
-	.loading-icon-indicator {
-		top: 50%;
-		transform: scale(0.33334) translateY(-100%);
-	}
+	min-height: 320px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
 }

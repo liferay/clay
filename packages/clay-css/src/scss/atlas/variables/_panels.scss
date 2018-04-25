@@ -1,0 +1,28 @@
+// Panel Header
+
+$panel-header-border-bottom-width: 0 !default;
+$panel-header-link-hover-text-decoration: none !default;
+
+// Panel Footer
+
+$panel-footer-border-top-width: 0 !default;
+
+// Panel Title
+
+$panel-title-font-size: 0.875rem !default; // 14px
+$panel-title-text-transform: uppercase !default;
+
+// Panel Collapse Icon
+
+$panel-collapse-icon-font-size: 0.75rem !default; // 12px
+
+// Panel Variants
+
+$panel-secondary: (
+	border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
+	color: $secondary,
+	header-bg: null,
+	header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
+	footer-bg: null,
+	footer-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
+);

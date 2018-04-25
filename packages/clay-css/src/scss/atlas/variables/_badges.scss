@@ -1,0 +1,55 @@
+$badge-border-radius: 10rem !default;
+$badge-font-size: 0.625rem !default; // 10px
+$badge-font-weight: $font-weight-semi-bold !default;
+$badge-line-height: 1.1 !default;
+$badge-padding-x: 0.25rem !default; // 4px
+$badge-padding-y: 0.09375rem !default; // 1.5px
+
+$badge-item-spacer-x: 0.85714em !default;
+
+$badge-pill-border-radius: $border-radius !default;
+$badge-pill-padding-x: 0.25rem !default; // 4px
+
+// Badge Variants
+
+$badge-primary-color: #FFF !default;
+$badge-primary-bg: $primary !default;
+$badge-primary-hover-bg: $badge-primary-bg !default;
+$badge-primary-hover-color: $badge-primary-color !default;
+
+$badge-secondary-color: $dark !default;
+$badge-secondary-bg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$badge-secondary-hover-bg: $badge-secondary-bg !default;
+$badge-secondary-hover-color: $badge-secondary-color !default;
+$badge-secondary-link-color: $badge-secondary-color !default;
+
+$badge-success-color: #FFF !default;
+$badge-success-bg: $success !default;
+$badge-success-hover-bg: $badge-success-bg !default;
+$badge-success-hover-color: $badge-success-color !default;
+
+$badge-info-color: #FFF !default;
+$badge-info-bg: $info !default;
+$badge-info-hover-bg: $badge-info-bg !default;
+$badge-info-hover-color: $badge-info-color !default;
+
+$badge-warning-color: #FFF !default;
+$badge-warning-bg: $warning !default;
+$badge-warning-hover-bg: $badge-warning-bg !default;
+$badge-warning-hover-color: $badge-warning-color !default;
+
+$badge-danger-color: #FFF !default;
+$badge-danger-bg: $danger !default;
+$badge-danger-hover-bg: $badge-danger-bg !default;
+$badge-danger-hover-color: $badge-danger-color !default;
+
+$badge-light-color: $dark !default;
+$badge-light-bg: $light !default;
+$badge-light-hover-bg: $badge-light-bg !default;
+$badge-light-hover-color: $badge-light-color !default;
+$badge-light-link-color: $badge-light-color !default;
+
+$badge-dark-color: #FFF !default;
+$badge-dark-bg: $dark !default;
+$badge-dark-hover-bg: $badge-dark-bg !default;
+$badge-dark-hover-color: $badge-dark-color !default;

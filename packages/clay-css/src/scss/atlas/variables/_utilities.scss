@@ -1,0 +1,16 @@
+$bg-checkered-fg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+
+// Close
+
+$close: () !default;
+$close: map-merge((
+	color: $body-color,
+	opacity: 1,
+	hover-color: $body-color,
+	hover-opacity: 1,
+	focus-opacity: 1,
+	disabled-color: $secondary,
+	disabled-opacity: $btn-disabled-opacity
+), $close);
+
+$page-header-bg: #FFF !default;

@@ -1,0 +1,82 @@
+.progress {
+	flex-grow: 1;
+	min-width: $progress-min-width;
+}
+
+.progress-bar {
+	@if ($progress-bar-box-shadow) {
+		@include box-shadow($progress-bar-box-shadow);
+	}
+}
+
+.progress-lg,
+.progress-lg > .progress {
+	@include border-radius($progress-border-radius-lg);
+
+	font-size: $progress-font-size-lg;
+	height: $progress-height-lg;
+	line-height: $progress-height-lg;
+}
+
+// Progress Group
+
+.progress-group {
+	align-items: center;
+	display: flex;
+
+	.component-subtitle {
+		@include clay-link($progress-group-subtitle);
+	}
+}
+
+.progress-group-addon {
+	font-size: $progress-group-addon-font-size;
+	font-weight: $progress-group-addon-font-weight;
+	margin-right: $progress-group-addon-spacer-x;
+	text-align: center;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.progress ~ .progress-group-addon {
+	margin-left: $progress-group-addon-spacer-x;
+	margin-right: 0;
+}
+
+.progress-group-feedback {
+	color: $progress-group-feedback-color;
+}
+
+.progress-group-stacked {
+	display: block;
+
+	.progress {
+		margin-bottom: $progress-group-stacked-progress-margin-bottom;
+		margin-top: $progress-group-stacked-progress-margin-top;
+	}
+
+	.progress-group-addon {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+// Progress Variants
+
+@each $color, $value in $progress-palette {
+	.progress-#{$color} {
+		.progress-bar {
+			background-color: map-get($value, bar-bg);
+		}
+
+		.progress-group-feedback {
+			color: map-get($value, group-feedback-color);
+		}
+	}
+}

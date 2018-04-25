@@ -1,0 +1,171 @@
+.label {
+	border-color: $label-border-color;
+
+	@include border-radius($label-border-radius);
+
+	border-style: $label-border-style;
+	border-width: $label-border-width;
+	color: $label-color;
+	display: inline-flex;
+	font-size: $label-font-size;
+	font-weight: $label-font-weight;
+	height: $label-height;
+	line-height: $label-line-height;
+	margin-bottom: $label-spacer-y;
+	margin-right: $label-spacer-x;
+	margin-top: $label-spacer-y;
+	max-width: 100%;
+	padding-bottom: $label-padding-y;
+	padding-left: $label-padding-x;
+	padding-right: $label-padding-x;
+	padding-top: $label-padding-y;
+	text-transform: $label-text-transform;
+	white-space: inherit;
+	word-wrap: break-word;
+
+	a {
+		color: $label-color;
+		display: inline-block;
+		text-decoration: $label-link-text-decoration;
+
+		@include hover-focus {
+			color: $label-link-hover-color;
+			text-decoration: $label-link-hover-text-decoration;
+		}
+	}
+
+	// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
+	// pattern instead
+	.inline-item {
+		a {
+			align-items: center;
+			display: inline-flex;
+			margin-top: $label-lexicon-icon-margin-top;
+		}
+
+		.btn-unstyled {
+			color: inherit;
+			display: inline-flex;
+			margin-top: $label-lexicon-icon-margin-top;
+			max-width: none;
+		}
+
+		.close {
+			color: inherit;
+			display: inline-flex;
+			float: none;
+			font-size: inherit;
+			margin-top: $label-lexicon-icon-margin-top;
+			opacity: 1;
+		}
+
+		a,
+		.btn-unstyled,
+		.close {
+			.lexicon-icon {
+				margin-top: 0;
+			}
+		}
+
+		.lexicon-icon {
+			height: $label-lexicon-icon-height;
+			margin-top: $label-lexicon-icon-margin-top;
+			width: $label-lexicon-icon-width;
+		}
+	}
+}
+
+a.label {
+	text-decoration: $label-anchor-text-decoration;
+
+	@include hover-focus {
+		text-decoration: $label-anchor-hover-text-decoration;
+	}
+}
+
+.label-dismissible {
+	text-transform: $label-dismissible-text-transform;
+}
+
+.label-item {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	justify-content: center;
+	min-height: 0;
+	position: relative;
+
+	a {
+		display: inline-flex;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+		display: inline-flex;
+	}
+
+	.close {
+		@include clay-link($label-close);
+	}
+
+	.lexicon-icon {
+		height: $label-lexicon-icon-height;
+		margin-top: $label-lexicon-icon-margin-top;
+		width: $label-lexicon-icon-width;
+	}
+
+	.text-truncate-inline {
+		display: inline-flex;
+	}
+}
+
+.label-item-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 1rem;
+	word-wrap: break-word;
+
+	a {
+		flex-direction: column;
+	}
+}
+
+.label-item-before {
+	margin-right: $label-item-spacer-x;
+}
+
+.label-item-after {
+	margin-left: $label-item-spacer-x;
+}
+
+// Label Sizes
+
+.label-lg {
+	@include clay-label-size($label-lg);
+}
+
+// Label Variants
+
+@each $color, $value in $label-palette {
+	.label-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+
+		&[href] {
+			@include hover-focus {
+				background-color: map-get($value, hover-bg);
+				border-color: map-get($value, hover-border-color);
+				color: map-get($value, hover-color);
+			}
+		}
+
+		a {
+			color: map-get($value, link-color);
+
+			@include hover-focus {
+				color: map-get($value, link-hover-color);
+			}
+		}
+	}
+}

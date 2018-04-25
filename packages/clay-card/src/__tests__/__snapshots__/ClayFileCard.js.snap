@@ -136,9 +136,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`danger colo
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-danger">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
         </div>
       </div>
@@ -163,9 +161,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`info color\
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-info">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
         </div>
       </div>
@@ -190,9 +186,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`secondary c
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
         </div>
       </div>
@@ -217,9 +211,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`success col
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-success">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
         </div>
       </div>
@@ -244,9 +236,7 @@ exports[`ClayFileCard should render a ClayFileCard with labelStyle \`warning col
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-warning">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
         </div>
       </div>
@@ -271,19 +261,13 @@ exports[`ClayFileCard should render a ClayFileCard with labels with styles mappe
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-success">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
           <span class="label label-warning">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pending</span>
-            </span>
+            <span class="label-item label-item-expand">Pending</span>
           </span>
           <span class="label label-danger">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Error</span>
-            </span>
+            <span class="label-item label-item-expand">Error</span>
           </span>
         </div>
       </div>
@@ -308,9 +292,7 @@ exports[`ClayFileCard should render a ClayFileCard with one label 1`] = `
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
         </div>
       </div>
@@ -609,14 +591,10 @@ exports[`ClayFileCard should render a ClayFileCard with two labels 1`] = `
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-secondary">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
           <span class="label label-secondary">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pending</span>
-            </span>
+            <span class="label-item label-item-expand">Pending</span>
           </span>
         </div>
       </div>
@@ -641,14 +619,10 @@ exports[`ClayFileCard should render a ClayFileCard with two labels with styles 1
         <div class="card-title text-truncate">My Title</div>
         <div class="card-detail">
           <span class="label label-warning">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Approved</span>
-            </span>
+            <span class="label-item label-item-expand">Approved</span>
           </span>
           <span class="label label-danger">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pending</span>
-            </span>
+            <span class="label-item label-item-expand">Pending</span>
           </span>
         </div>
       </div>

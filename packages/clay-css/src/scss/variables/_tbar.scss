@@ -1,0 +1,57 @@
+$tbar-item-padding-x: 0.25rem !default;
+$tbar-item-padding-y: null !default;
+
+// Component Tbar
+
+$component-tbar: () !default;
+$component-tbar: map-merge((
+	border-color: $gray-300,
+	border-style: solid,
+	border-width: 0 0 0.0625rem 0,
+	height: 3.5rem
+), $component-tbar);
+
+// Subnav Tbar
+
+$subnav-tbar-component-title: () !default;
+$subnav-tbar-component-title: map-merge((
+	font-size: 0.875rem,
+	font-weight: $font-weight-semi-bold,
+	line-height: normal
+), $subnav-tbar-component-title);
+
+$subnav-tbar-component-link: () !default;
+$subnav-tbar-component-link: map-merge((
+	color: $link-color,
+	hover-color: $link-hover-color,
+	font-weight: $font-weight-semi-bold
+), $subnav-tbar-component-link);
+
+$subnav-tbar: () !default;
+$subnav-tbar: map-merge((
+	font-size: 0.875rem,
+	height: 2rem,
+	section-text-align: left,
+	strong-font-weight: $font-weight-semi-bold,
+	item-padding-x: 0.5rem,
+	btn-height: 1.625rem,
+	btn-line-height: 1,
+	btn-padding-y: 0,
+	component-link: $subnav-tbar-component-link,
+	component-title: $subnav-tbar-component-title,
+	link-padding-x: 0.25rem,
+	link-monospaced-border-radius: 0,
+	link-monospaced-border-width: 0,
+	link-monospaced-size: 2rem
+), $subnav-tbar);
+
+$subnav-tbar-light: () !default;
+$subnav-tbar-light: map-merge((
+	bg-color: $light,
+	color: $navbar-light-color
+), $subnav-tbar-light);
+
+$subnav-tbar-primary: () !default;
+$subnav-tbar-primary: map-merge((
+	bg-color: lighten($primary, 32.94)
+), $subnav-tbar-primary);

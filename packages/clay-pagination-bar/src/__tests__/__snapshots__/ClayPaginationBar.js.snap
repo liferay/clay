@@ -6,7 +6,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
   </div>
@@ -16,7 +16,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
       <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-left"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
         </svg>
       </a>
     </li>
@@ -30,7 +30,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
       <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-right"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
     </li>
@@ -60,7 +60,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
   </div>
@@ -70,7 +70,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
       <a aria-label="Previous Page" class=" page-link" href="#">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-left"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
         </svg>
       </a>
     </li>
@@ -84,7 +84,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
       <a aria-label="Next Page" class=" page-link" href="#2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-right"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
     </li>
@@ -114,7 +114,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
   </div>
@@ -124,7 +124,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
       <a aria-label="Previous Page" class=" page-link" href="#">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-left"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
         </svg>
       </a>
     </li>
@@ -138,7 +138,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
       <a aria-label="Next Page" class=" page-link" href="#2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-right"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
     </li>
@@ -168,7 +168,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
   </div>
@@ -178,7 +178,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
       <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-left"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
         </svg>
       </a>
     </li>
@@ -192,7 +192,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
       <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-right"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
     </li>
@@ -222,7 +222,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
   </div>
@@ -232,7 +232,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
       <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=1">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-left"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
         </svg>
       </a>
     </li>
@@ -249,7 +249,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
       <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=3">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-right"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
     </li>
@@ -279,7 +279,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
   </div>
@@ -289,7 +289,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
       <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-left"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
         </svg>
       </a>
     </li>
@@ -306,7 +306,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
       <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-right"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
     </li>
@@ -336,7 +336,7 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
     <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" type="button">10 Items
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
-        <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#caret-bottom"></use>
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
       </svg>
     </button>
   </div>
@@ -346,7 +346,7 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
       <a aria-label="Previous Page" class=" page-link" href="#mySite?curPage=">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-left"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
         </svg>
       </a>
     </li>
@@ -360,7 +360,7 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
       <a aria-label="Next Page" class=" page-link" href="#mySite?curPage=2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
-          <use xlink:href="../node_modules/clay/lib/images/icons/icons.svg#angle-right"></use>
+          <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
         </svg>
       </a>
     </li>

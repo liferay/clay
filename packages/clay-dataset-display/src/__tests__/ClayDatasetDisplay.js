@@ -193,7 +193,7 @@ let groupedItems = [
 	},
 ];
 
-let spritemap = '../../../node_modules/clay/lib/images/icons/icons.svg';
+let spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
 
 groupedItems.forEach(item => {
 	item.items.forEach(nestedItem => {

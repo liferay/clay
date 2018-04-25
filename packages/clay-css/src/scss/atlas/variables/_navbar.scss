@@ -1,0 +1,17 @@
+$navbar-font-size: 0.875rem !default; // 14px
+
+$navbar-underline-active-bg: lighten($component-active-bg, 22.94) !default;
+
+// Navbar Light
+
+$navbar-light-color: $secondary !default;
+$navbar-light-hover-color: $navbar-light-color !default;
+$navbar-light-active-color: $body-color !default;
+$navbar-light-disabled-color: $nav-link-disabled-color !default;
+
+// Navbar Dark
+
+$navbar-dark-color: #FFF !default;
+$navbar-dark-hover-color: $navbar-dark-color !default;
+$navbar-dark-active-color: $navbar-dark-color !default;
+$navbar-dark-disabled-color: $nav-link-disabled-color !default;

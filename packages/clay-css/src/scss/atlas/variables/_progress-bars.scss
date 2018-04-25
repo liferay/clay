@@ -1,0 +1,19 @@
+$progress-border-radius: 100px !default;
+$progress-box-shadow: none !default;
+$progress-font-size: 0.5625rem !default;
+$progress-height: 0.5rem !default;
+
+// Progress Sizes
+
+$progress-border-radius-lg: 100px !default;
+
+// Progress Group
+
+$progress-group-subtitle: () !default;
+$progress-group-subtitle: map-merge((
+	font-size: 0.75rem,
+	font-weight: $font-weight-normal
+), $progress-group-subtitle);
+
+$progress-group-addon-font-size: 0.875rem !default;
+$progress-group-addon-font-weight: $font-weight-semi-bold !default;

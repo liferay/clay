@@ -1,0 +1,60 @@
+// Sidebar Header Title
+
+$sidebar-header-component-title: () !default;
+$sidebar-header-component-title: map-merge((
+	font-size: 1.25rem // 20px,
+), $sidebar-header-component-title);
+
+// Sidebar Header Subtitle
+
+$sidebar-header-component-subtitle: () !default;
+$sidebar-header-component-subtitle: map-merge((
+	font-size: 0.75rem, // 12px
+	font-weight: $font-weight-normal
+), $sidebar-header-component-subtitle);
+
+// Sidebar DT
+
+$sidebar-dt: () !default;
+$sidebar-dt: map-merge((
+	font-size: 0.75rem // 12px
+), $sidebar-dt);
+
+// Sidebar DD
+
+$sidebar-dd: () !default;
+$sidebar-dd: map-merge((
+	font-size: 0.875rem // 14px
+), $sidebar-dd);
+
+// Sidebar List Group
+
+$sidebar-list-group-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+
+// Sidebar Light
+
+$sidebar-light: () !default;
+$sidebar-light: map-merge((
+	bg: #FFF,
+	border-left-width: 0,
+	box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+	panel-bg: $light,
+	dt: (
+		color: $secondary
+	),
+	dd: (
+		clay-link: (
+			color: $body-color,
+			hover-color: $clay-unset
+		)
+	),
+	sidebar-list-group-title: (
+		font-size: $clay-unset
+	)
+), $sidebar-light);
+
+$sidebar-light-navigation-bar: () !default;
+$sidebar-light-navigation-bar: map-merge((
+	bg: #FFF,
+	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06)
+), $sidebar-light-navigation-bar);

@@ -3,7 +3,9 @@
 const types = {
 	all: [
 		'area',
+		'area-line-range',
 		'area-spline',
+		'area-spline-range',
 		'area-step',
 		'bar',
 		'bubble',
@@ -16,7 +18,13 @@ const types = {
 		'step',
 	],
 
-	area: ['area', 'area-spline', 'area-step'],
+	area: [
+		'area',
+		'area-line-range',
+		'area-spline',
+		'area-spline-range',
+		'area-step',
+	],
 
 	gauge: ['gauge'],
 

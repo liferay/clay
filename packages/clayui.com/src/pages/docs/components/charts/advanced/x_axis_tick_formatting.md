@@ -9,8 +9,15 @@ weight: 5
 
 <article id="1">
 
-{call ClayChart.render}
-	{param columns: [
+{call ClayBarChart.render}
+	{param axisX: [
+		'localtime': false,
+		'tick': [
+			'format': '%Y-%m-%d %H:%M:%S'
+		],
+		'type': 'timeseries'
+	] /}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [30, 20, 50, 40, 60, 50]
@@ -21,19 +28,18 @@ weight: 5
 		]
 	] /}
 	{param x: 'x' /}
-	{param axisX: [
-		'type': 'timeseries',
-		'localtime': false,
-		'tick': [
-			'format': '%Y-%m-%d %H:%M:%S'
-		]
-	] /}
-	{param type: 'bar' /}
 {/call}
 
 ```soy
-{call ClayChart.render}
-	{param columns: [
+{call ClayBarChart.render}
+	{param axisX: [
+		'localtime': false,
+		'tick': [
+			'format': '%Y-%m-%d %H:%M:%S'
+		],
+		'type': 'timeseries'
+	] /}
+	{param data: [
 		[
 			'id': 'data1',
 			'data': [30, 20, 50, 40, 60, 50]
@@ -44,20 +50,19 @@ weight: 5
 		]
 	] /}
 	{param x: 'x' /}
-	{param axisX: [
-		'type': 'timeseries',
-		'localtime': false,
-		'tick': [
-			'format': '%Y-%m-%d %H:%M:%S'
-		]
-	] /}
-	{param type: 'bar' /}
 {/call}
 ```
 
 ```jsx
 <BarChart
-	columns={[
+	axisX={[
+		localtime: false,
+		tick: {
+			format: '%Y-%m-%d %H:%M:%S'
+		},
+		type: 'timeseries'
+	]}
+	data={[
 		{
 			id: 'data1',
 			data: [30, 20, 50, 40, 60, 50]
@@ -68,15 +73,6 @@ weight: 5
 		}
 	]}
 	x="x"
-	axisX={[
-		type: 'timeseries',
-		localtime: false,
-		tick: {
-			format: '%Y-%m-%d %H:%M:%S'
-		}
-	]}
 />
 ```
 </article>
-
-
