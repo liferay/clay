@@ -1,0 +1,57 @@
+{
+    "name": "clay",
+    "version": "2.0.0-rc.11",
+    "description": "Clay",
+    "license": "BSD",
+    "repository": "https://github.com/liferay/clay/tree/master/packages/clay",
+    "engines": {
+        "node": ">=0.12.0",
+        "npm": ">=3.0.0"
+    },
+    "main": "lib/clay.js",
+    "esnext:main": "src/clay.js",
+    "jsnext:main": "src/clay.js",
+    "files": [
+        "lib",
+        "src"
+    ],
+    "scripts": {
+        "build": "NODE_ENV='production' webpack",
+        "prepublish": "ncp ../clay-css/lib ./lib && npm run build"
+    },
+    "keywords": [
+        "clay",
+        "metal"
+    ],
+    "devDependencies": {
+        "clay-alert": "^2.0.0-rc.11",
+        "clay-badge": "^2.0.0-rc.11",
+        "clay-button": "^2.0.0-rc.11",
+        "clay-card": "^2.0.0-rc.11",
+        "clay-card-grid": "^2.0.0-rc.11",
+        "clay-checkbox": "^2.0.0-rc.11",
+        "clay-collapse": "^2.0.0-rc.11",
+        "clay-component": "^2.0.0-rc.11",
+        "clay-css": "^2.0.0-rc.11",
+        "clay-dataset-display": "^2.0.0-rc.11",
+        "clay-dropdown": "^2.0.0-rc.11",
+        "clay-icon": "^2.0.0-rc.11",
+        "clay-label": "^2.0.0-rc.11",
+        "clay-link": "^2.0.0-rc.11",
+        "clay-list": "^2.0.0-rc.11",
+        "clay-management-toolbar": "^2.0.0-rc.11",
+        "clay-modal": "^2.0.0-rc.11",
+        "clay-navigation-bar": "^2.0.0-rc.11",
+        "clay-pagination": "^2.0.0-rc.11",
+        "clay-pagination-bar": "^2.0.0-rc.11",
+        "clay-portal": "^2.0.0-rc.11",
+        "clay-progress-bar": "^2.0.0-rc.11",
+        "clay-radio": "^2.0.0-rc.11",
+        "clay-select": "^2.0.0-rc.11",
+        "clay-sticker": "^2.0.0-rc.11",
+        "clay-table": "^2.0.0-rc.11",
+        "ncp": "^2.0.0",
+        "uglifyjs-webpack-plugin": "^1.2.5",
+        "webpack": "^3.0.0"
+    }
+}
