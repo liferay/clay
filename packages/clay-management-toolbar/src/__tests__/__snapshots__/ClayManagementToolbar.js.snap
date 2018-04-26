@@ -44,7 +44,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -214,7 +214,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="carcamusas">
@@ -376,7 +376,7 @@ exports[`ClayManagementToolbar should render a management toolbar with a clear r
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
@@ -548,7 +548,7 @@ exports[`ClayManagementToolbar should render a management toolbar with advanced 
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
+        <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -606,7 +606,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -658,7 +658,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
+        <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -718,6 +718,43 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
 </div>
 `;
 
+exports[`ClayManagementToolbar should render a management toolbar with creation menu 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit">
+        <form method="GET" role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                    <title>search</title>
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with creation menu with more than one option 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -725,7 +762,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -790,7 +827,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -843,7 +880,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -915,7 +952,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1019,7 +1056,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1091,7 +1128,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1173,7 +1210,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1276,7 +1313,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1365,7 +1402,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1463,7 +1500,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
+        <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1529,7 +1566,7 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
+        <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1614,7 +1651,7 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1727,7 +1764,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form action="mySearchURL" method="POST" role="search">
+        <form action="mySearchURL" method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1764,7 +1801,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" name="mySearchName" role="search">
+        <form method="GET" name="mySearchName" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -1801,7 +1838,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
+        <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchName" placeholder="Search for..." ref="search" type="text">
@@ -1850,7 +1887,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
@@ -1932,7 +1969,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
@@ -2061,7 +2098,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -2123,7 +2160,7 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
       </ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -2205,7 +2242,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
         <div class="container-fluid container-fluid-max-xl">
-          <form method="POST" role="search">
+          <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
                 <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -2292,50 +2329,13 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a managment toolbar with creation menu 1`] = `
+exports[`ClayManagementToolbar should render a management toolbar without creation menu 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
-          <div class="input-group">
-            <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
-              <span class="input-group-inset-item input-group-inset-item-after">
-                <button class="btn btn-unstyled" aria-label="search" type="submit">
-                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
-                    <title>search</title>
-                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </form>
-      </div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
-              <title>plus</title>
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a managment toolbar without creation menu 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav"></ul>
-      <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
+        <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
@@ -2363,7 +2363,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav"></ul>
       <div class="navbar-form navbar-form-autofit">
-        <form method="POST" role="search">
+        <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
               <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">

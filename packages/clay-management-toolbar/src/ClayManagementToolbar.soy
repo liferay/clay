@@ -5,13 +5,15 @@
  */
 {template .render}
 	{@param spritemap: string}
-	{@param? _handleActionClicked: any}
+	{@param? _handleActionItemClicked: any}
 	{@param? _handleClearResultsClick: any}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuItemClicked: any}
 	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
+	{@param? _handleFilterItemClicked: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleQuickActionClicked: any}
@@ -74,6 +76,7 @@
 	]>}
 	{@param? id: string}
 	{@param? searchActionURL: string}
+	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? searchValue: string}
@@ -110,7 +113,7 @@
 	<div {$attributes}>
 		{if $isActive}
 			{call .active}
-				{param _handleActionClicked: $_handleActionClicked /}
+				{param _handleActionItemClicked: $_handleActionItemClicked /}
 				{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
@@ -127,8 +130,10 @@
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 				{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+				{param _handleCreationMenuItemClicked: $_handleCreationMenuItemClicked /}
 				{param _handleCreationMenuMoreButtonClicked: $_handleCreationMenuMoreButtonClicked /}
 				{param _handleFilterDoneButtonClick: $_handleFilterDoneButtonClick /}
+				{param _handleFilterItemClicked: $_handleFilterItemClicked /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleOpenMobileSearchClick: $_handleOpenMobileSearchClick /}
 				{param _handleSearchSearchClick: $_handleSearchSearchClick /}
@@ -141,6 +146,7 @@
 				{param disabled: $disabled /}
 				{param filterItems: $filterItems /}
 				{param searchActionURL: $searchActionURL /}
+				{param searchFormMethod: $searchFormMethod /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
 				{param searchValue: $searchValue /}
@@ -173,7 +179,7 @@
  */
 {template .active}
 	{@param spritemap: string}
-	{@param? _handleActionClicked: any}
+	{@param? _handleActionItemClicked: any}
 	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleQuickActionClicked: any}
@@ -274,7 +280,7 @@
 
 						<li class="nav-item">
 							{call ClayActionsDropdown.render}
-								{param events: ['itemClicked': $_handleActionClicked] /}
+								{param events: ['itemClicked': $_handleActionItemClicked] /}
 								{param items: $actionItems /}
 								{param spritemap: $spritemap /}
 								{param triggerClasses: 'nav-link nav-link-monospaced' /}
@@ -293,6 +299,7 @@
 {template .creationMenu}
 	{@param spritemap: string}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuItemClicked: any}
 	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? creationMenu: [
 		caption: string,
@@ -338,7 +345,10 @@
 	{elseif $creationMenu and $creationMenu.primaryItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
-			{param events: ['moreButtonClicked': $_handleCreationMenuMoreButtonClicked] /}
+			{param events: [
+				'itemClicked': $_handleCreationMenuItemClicked,
+				'moreButtonClicked': $_handleCreationMenuMoreButtonClicked
+			] /}
 			{param helpText: $creationMenu.helpText /}
 			{param maxPrimaryItems: $creationMenu.maxPrimaryItems /}
 			{param maxSecondaryItems: $creationMenu.maxSecondaryItems /}
@@ -368,8 +378,10 @@
 	{@param spritemap: string}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
+	{@param? _handleCreationMenuItemClicked: any}
 	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
+	{@param? _handleFilterItemClicked: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleSearchSearchClick: any}
@@ -418,6 +430,7 @@
 		type: string
 	]>}
 	{@param? searchActionURL: string}
+	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? searchValue: string}
@@ -478,10 +491,13 @@
 								'label': 'Done'
 							] : null /}
 							{param disabled: $disabled /}
-							{param events: ['buttonClicked': $_handleFilterDoneButtonClick] /}
+							{param events: [
+								'buttonClicked': $_handleFilterDoneButtonClick,
+								'itemClicked': $_handleFilterItemClicked,
+							] /}
 							{param items: $filterItems /}
 							{param label: $filtersTrigger /}
-							{param ref: 'filters' /}
+							{param ref: 'filtersDropdown' /}
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link' /}
 						{/call}
@@ -541,6 +557,7 @@
 						{param disabled: $disabled and not $searchValue /}
 						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
+						{param searchFormMethod: $searchFormMethod /}
 						{param searchFormName: $searchFormName /}
 						{param searchInput kind="html"}
 							{call .searchInput}
@@ -613,6 +630,7 @@
 					<li class="nav-item">
 						{call .creationMenu}
 							{param _handleCreationButtonClicked: $_handleCreationButtonClicked /}
+							{param _handleCreationMenuItemClicked: $_handleCreationMenuItemClicked /}
 							{param _handleCreationMenuMoreButtonClicked: $_handleCreationMenuMoreButtonClicked /}
 							{param creationMenu: $creationMenu /}
 							{param spritemap: $spritemap /}
@@ -746,6 +764,7 @@
 	{@param? disabled: bool}
 	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}
+	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInput: html}
 	{@param? searchInputName: string}
@@ -757,7 +776,8 @@
 				action="{$searchActionURL}"
 			{/if}
 
-			method="POST"
+			method="{$searchFormMethod ?: 'GET'}"
+
 			{if $searchFormName}
 				name="{$searchFormName}"
 			{/if}
