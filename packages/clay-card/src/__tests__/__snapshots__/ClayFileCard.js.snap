@@ -744,7 +744,7 @@ exports[`ClayFileCard should render a selectable disabled ClayFileCard 1`] = `
 `;
 
 exports[`ClayFileCard should render a selectable selected ClayFileCard 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left file-card">
+<div class="card-type-asset form-check form-check-card form-check-top-left active file-card">
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">

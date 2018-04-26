@@ -584,7 +584,7 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`val
 `;
 
 exports[`ClayImageCard should render a selected ClayImageCard 1`] = `
-<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+<div class="card-type-asset form-check form-check-card form-check-top-left active image-card">
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">

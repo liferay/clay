@@ -23,6 +23,8 @@ class ClayCardBase extends Component {
 	 * @private
 	 */
 	_handleItemCheckboxClick(event) {
+		this.selected = !this.selected;
+
 		this.emit('itemToggled', event);
 	}
 }
