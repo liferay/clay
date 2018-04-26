@@ -2,6 +2,7 @@ import Component from 'metal-component';
 import {Config} from 'metal-state';
 import {domData} from 'metal-dom';
 import {core, isServerSide} from 'metal';
+import {isObject} from 'util';
 
 /**
  * Clay Component.
@@ -11,8 +12,8 @@ class ClayComponent extends Component {
 	/**
 	 * @inheritDoc
 	 */
-	attached() {
-		super.attached();
+	attached(...args) {
+		super.attached(...args);
 
 		if (isServerSide()) {
 			return;
@@ -55,6 +56,71 @@ class ClayComponent extends Component {
 				);
 			}
 		}
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	buildFacade_(eventName, data, originalEvent) {
+		if (this.getShouldUseFacade()) {
+			const facade = {
+				data: data,
+				preventDefault: function() {
+					facade.preventedDefault = true;
+					if (
+						originalEvent &&
+						originalEvent.preventDefault &&
+						(!originalEvent.preventDefault ||
+							!originalEvent.defaultPrevented)
+					) {
+						originalEvent.preventDefault();
+					}
+				},
+				stopInmediatePropagation: function() {
+					if (
+						originalEvent &&
+						originalEvent.stopInmediatePropagation
+					) {
+						originalEvent.stopInmediatePropagation();
+					}
+				},
+				stopPropagation: function() {
+					if (originalEvent && originalEvent.stopPropagation) {
+						originalEvent.stopPropagation();
+					}
+				},
+				target: this,
+				type: eventName,
+			};
+
+			return facade;
+		}
+	}
+
+	/**
+	 * Execute each of the listeners in order with te supplied arguments.
+	 * @param {string|object} event
+	 * @param {*} opt_args [arg1], [arg2], [...]
+	 * @return {boolean} Returns true if event had listeners, false otherwise.
+	 */
+	emit(event, ...args) {
+		const eventName = isObject(event) ? event.name : event;
+		const facade = this.buildFacade_(
+			eventName,
+			event.data,
+			event.originalEvent
+		);
+
+		args = isObject(event) ? [facade] : args;
+
+		const listeners = this.getRawListeners_(eventName);
+
+		if (listeners.length === 0) {
+			return false;
+		}
+
+		this.runListeners_(listeners, args, facade);
+		return true;
 	}
 }
 
