@@ -543,7 +543,13 @@ describe('ClayDatasetDisplay', function() {
 		jest.runAllTimers();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('actionClicked', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'actionItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar filter done button click', () => {
@@ -553,7 +559,8 @@ describe('ClayDatasetDisplay', function() {
 
 		const spy = jest.spyOn(component, 'emit');
 
-		let filtersDropdown = component.refs.managementToolbar.refs.filters;
+		let filtersDropdown =
+			component.refs.managementToolbar.refs.filtersDropdown;
 		filtersDropdown.refs.portal.refs.dropdownButton.element.click();
 
 		jest.runAllTimers();
@@ -582,6 +589,50 @@ describe('ClayDatasetDisplay', function() {
 		expect(spy).toHaveBeenCalledWith(
 			'creationButtonClicked',
 			expect.any(Object)
+		);
+	});
+
+	it('should render a ClayDatasetDisplay and emit an event on creation menu item click', () => {
+		jest.useFakeTimers();
+
+		component = new ClayDatasetDisplay(defaultConfig);
+
+		const spy = jest.spyOn(component, 'emit');
+
+		const element =
+			component.refs.managementToolbar.refs.creationMenuDropdown.refs
+				.dropdown.refs.portal.element;
+		element.querySelector('ul li').click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'creationMenuItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
+	it('should render a ClayDatasetDisplay and emit an event on filter item click', () => {
+		jest.useFakeTimers();
+
+		component = new ClayDatasetDisplay(defaultConfig);
+
+		const spy = jest.spyOn(component, 'emit');
+
+		const element =
+			component.refs.managementToolbar.refs.filtersDropdown.refs.portal
+				.element;
+		element.querySelector('ul li:not(.dropdown-subheader)').click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'filterItemClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
