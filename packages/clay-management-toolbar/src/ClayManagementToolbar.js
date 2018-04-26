@@ -307,7 +307,7 @@ ClayManagementToolbar.STATE = {
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
 	 */
-	searchFormMethod: Config.string().value('GET'),
+	searchFormMethod: Config.oneOf(['GET', 'POST']).value('GET'),
 
 	/**
 	 * Name of the search form.

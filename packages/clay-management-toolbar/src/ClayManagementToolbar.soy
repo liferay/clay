@@ -762,7 +762,8 @@
 				action="{$searchActionURL}"
 			{/if}
 
-			method="{$searchFormMethod}"
+			method="{$searchFormMethod ?: 'GET'}"
+
 			{if $searchFormName}
 				name="{$searchFormName}"
 			{/if}
