@@ -1,17 +1,28 @@
 # Change Log
 
-## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
-
-[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.12...HEAD)
+## [v2.0.0](https://github.com/liferay/clay/tree/v2.0.0) (2018-04-26)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.12...v2.0.0)
 
 **Implemented enhancements:**
 
+- Propagate ManagementToolbar dropdown items click events [\#850](https://github.com/liferay/clay/issues/850)
 - Reorganize clay-css and clay npm packages [\#837](https://github.com/liferay/clay/issues/837)
 - Clay-charts: Implement Predictive Chart [\#813](https://github.com/liferay/clay/issues/813)
 
 **Fixed bugs:**
 
+- Management toolbar search form method should be GET by default [\#846](https://github.com/liferay/clay/issues/846)
 - Fix loading indicator in clay-charts [\#810](https://github.com/liferay/clay/issues/810)
+
+**Closed issues:**
+
+- Add installation/getting started instructions for metal-clay-components [\#419](https://github.com/liferay/clay/issues/419)
+
+**Merged pull requests:**
+
+- v2.0.0 [\#854](https://github.com/liferay/clay/pull/854) ([jbalsas](https://github.com/jbalsas))
+- Using GET by default \(although configurable\) in search forms. Fixes \#846 [\#852](https://github.com/liferay/clay/pull/852) ([carloslancha](https://github.com/carloslancha))
+- Propagate ManagementToolbar dropdown items click events | Fixes \#850 [\#851](https://github.com/liferay/clay/pull/851) ([carloslancha](https://github.com/carloslancha))
 
 ## [v2.0.0-rc.12](https://github.com/liferay/clay/tree/v2.0.0-rc.12) (2018-04-25)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.11...v2.0.0-rc.12)
