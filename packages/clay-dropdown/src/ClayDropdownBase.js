@@ -110,7 +110,8 @@ class ClayDropdownBase extends ClayComponent {
 	_handleItemClick(event) {
 		const element = event.delegateTarget;
 		const elementIndex = this._getDropdownItemIndex(element);
-		const flatenItems = this.items.map(item => item.items || item)
+		const flatenItems = this.items
+			.map(item => item.items || item)
 			.reduce((acc, cur) => acc.concat(cur), []);
 		const item = flatenItems[elementIndex];
 
