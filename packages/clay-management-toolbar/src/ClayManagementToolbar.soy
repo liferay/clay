@@ -74,6 +74,7 @@
 	]>}
 	{@param? id: string}
 	{@param? searchActionURL: string}
+	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? searchValue: string}
@@ -141,6 +142,7 @@
 				{param disabled: $disabled /}
 				{param filterItems: $filterItems /}
 				{param searchActionURL: $searchActionURL /}
+				{param searchFormMethod: $searchFormMethod /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
 				{param searchValue: $searchValue /}
@@ -418,6 +420,7 @@
 		type: string
 	]>}
 	{@param? searchActionURL: string}
+	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
 	{@param? searchValue: string}
@@ -541,6 +544,7 @@
 						{param disabled: $disabled and not $searchValue /}
 						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
+						{param searchFormMethod: $searchFormMethod /}
 						{param searchFormName: $searchFormName /}
 						{param searchInput kind="html"}
 							{call .searchInput}
@@ -746,6 +750,7 @@
 	{@param? disabled: bool}
 	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}
+	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInput: html}
 	{@param? searchInputName: string}
@@ -757,7 +762,7 @@
 				action="{$searchActionURL}"
 			{/if}
 
-			method="POST"
+			method="{$searchFormMethod}"
 			{if $searchFormName}
 				name="{$searchFormName}"
 			{/if}
