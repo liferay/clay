@@ -4,7 +4,7 @@ import 'clay-icon';
 import 'clay-link';
 import 'clay-portal';
 import 'clay-radio';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import Soy from 'metal-soy';
 import dom from 'metal-dom';
 import {Align} from 'metal-position';
@@ -16,9 +16,9 @@ import templates from './ClayDropdownBase.soy.js';
 
 /**
  * Implementation of the base for Metal Clay Dropdown.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayDropdownBase extends Component {
+class ClayDropdownBase extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -105,13 +105,20 @@ class ClayDropdownBase extends Component {
 	 * Continues the propagation of the item clicked event
 	 * @param {!Event} event
 	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemClick(event) {
 		let element = event.delegateTarget;
 		let elementIndex = this._getDropdownItemIndex(element);
 		let item = this.items[elementIndex];
 
-		this.emit('itemClicked', item);
+		return !this.emit({
+			data: {
+				item: item,
+			},
+			name: 'itemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -139,6 +146,7 @@ class ClayDropdownBase extends Component {
 	 * Handles Search in Dropdown.
 	 * @param {!Event} event
 	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSearch(event) {
 		let searchValue = event.delegateTarget.value.toLowerCase();
@@ -176,9 +184,13 @@ class ClayDropdownBase extends Component {
 			}
 		});
 
-		this.emit('itemsFiltered', {
-			originalItems: this._originalItems,
-			filteredItems: this.items,
+		return !this.emit({
+			data: {
+				filteredItems: this.items,
+				originalItems: this._originalItems,
+			},
+			name: 'itemsFiltered',
+			originalEvent: event,
 		});
 	}
 

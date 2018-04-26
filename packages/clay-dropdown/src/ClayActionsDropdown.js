@@ -1,6 +1,6 @@
 import 'clay-icon';
 import './ClayDropdownBase';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -10,9 +10,9 @@ import templates from './ClayActionsDropdown.soy.js';
 
 /**
  * Implementation for Metal Clay Action Dropdown.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayActionsDropdown extends Component {
+class ClayActionsDropdown extends ClayComponent {
 	/**
 	 * Handles footer button click.
 	 * @param {!Event} event
@@ -24,11 +24,16 @@ class ClayActionsDropdown extends Component {
 
 	/**
 	 * Continues the propagation of the item clicked event
-	 * @param {!Object} item
+	 * @param {!Event} event
 	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleItemClick(item) {
-		this.emit('itemClicked', item);
+	_handleItemClick(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'itemClicked',
+			originalEvent: event,
+		});
 	}
 }
 
