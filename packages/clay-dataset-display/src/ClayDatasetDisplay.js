@@ -7,7 +7,7 @@ import {
 	filterItemsValidator,
 } from 'clay-management-toolbar';
 import {Config} from 'metal-state';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -15,9 +15,9 @@ import templates from './ClayDatasetDisplay.soy.js';
 
 /**
  * Metal ClayDatasetDisplay component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayDatasetDisplay extends Component {
+class ClayDatasetDisplay extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -73,11 +73,16 @@ class ClayDatasetDisplay extends Component {
 
 	/**
 	 * Continues the propagation of the action item clicked event
-	 * @param {!Object} item
+	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleActionClicked(item) {
-		this.emit('actionClicked', item);
+	_handleActionItemClicked(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'actionItemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -87,6 +92,20 @@ class ClayDatasetDisplay extends Component {
 	 */
 	_handleCreationButtonClicked(event) {
 		this.emit('creationButtonClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the creation menu item clicked event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleCreationMenuItemClicked(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'creationMenuItemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -113,6 +132,20 @@ class ClayDatasetDisplay extends Component {
 	 */
 	_handleFilterDoneClicked(event) {
 		this.emit('filterDoneClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the filter item click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleFilterItemClicked(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'filterItemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -227,7 +260,7 @@ class ClayDatasetDisplay extends Component {
 	 * @param {!Object} item
 	 * @private
 	 */
-	_handleViewTypeClicked(item) {
+	_handleViewTypeItemClicked(item) {
 		this.views[this.selectedView].active = false;
 
 		for (let [index, view] of this.views.entries()) {

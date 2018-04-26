@@ -264,7 +264,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a managment toolbar with creation menu', () => {
+	it('should render a management toolbar with creation menu', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
 		});
@@ -272,7 +272,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a managment toolbar without creation menu', () => {
+	it('should render a management toolbar without creation menu', () => {
 		managementToolbar = new ClayManagementToolbar({
 			showCreationMenu: false,
 			spritemap: spritemap,
@@ -828,7 +828,7 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
-		let filters = managementToolbar.refs.filters;
+		let filters = managementToolbar.refs.filtersDropdown;
 		filters.refs.portal.refs.dropdownButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
@@ -849,6 +849,75 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('search', expect.any(Object));
+	});
+
+	it('should render a management toolbar with creation menu with options and emit an event on creation menu item click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			creationMenu: {
+				primaryItems: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+					},
+				],
+			},
+			spritemap: spritemap,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		const element =
+			managementToolbar.refs.creationMenuDropdown.refs.dropdown.refs
+				.portal.element;
+		element.querySelector('ul li').click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'creationMenuItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
+	it('should render a management toolbar with filters dropdown and emit an event on filter item click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterItems: [
+				{
+					label: 'Item 1',
+					inputName: 'item1checkbox',
+					inputValue: '1',
+					type: 'checkbox',
+				},
+				{
+					label: 'Item 2',
+					inputName: 'item2checkbox',
+					inputValue: '2',
+					type: 'checkbox',
+				},
+			],
+			spritemap: spritemap,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		const element =
+			managementToolbar.refs.filtersDropdown.refs.portal.element;
+		element.querySelector('ul li').click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'filterItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 
 	it('should render a management toolbar with view types and emit an event on viewType click', () => {
@@ -880,7 +949,13 @@ describe('ClayManagementToolbar', function() {
 		element.querySelector('ul li').click();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('viewTypeClicked', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'viewTypeItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 
 	it('should render a management toolbar with actions and emit an event on action click', () => {
@@ -910,7 +985,13 @@ describe('ClayManagementToolbar', function() {
 		managementToolbar.refs.quickAction0.element.click();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('actionClicked', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'actionItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 
 	it('should render a management toolbar with info button and emit an event on infoButton click', () => {

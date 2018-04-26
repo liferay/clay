@@ -10,7 +10,7 @@ import {
 } from 'clay-dropdown';
 /* eslint-enable */
 import {Config} from 'metal-state';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -23,9 +23,9 @@ import templates from './ClayManagementToolbar.soy.js';
 
 /**
  * Metal ClayManagementToolbar component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayManagementToolbar extends Component {
+class ClayManagementToolbar extends ClayComponent {
 	/**
 	 * Returns the dropdown index of the element.
 	 * @param {!Node} element
@@ -51,11 +51,16 @@ class ClayManagementToolbar extends Component {
 
 	/**
 	 * Continues the propagation of the action item clicked event
-	 * @param {!Object} item
+	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleActionClicked(item) {
-		this.emit('actionClicked', item);
+	_handleActionItemClicked(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'actionItemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -82,6 +87,20 @@ class ClayManagementToolbar extends Component {
 	 */
 	_handleCreationButtonClicked(event) {
 		this.emit('creationButtonClicked', event);
+	}
+
+	/**
+	 * Continues the propagation of the creation menu item clicked event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleCreationMenuItemClicked(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'creationMenuItemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -112,6 +131,20 @@ class ClayManagementToolbar extends Component {
 	}
 
 	/**
+	 * Continues the propagation of the filter item click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleFilterItemClicked(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'filterItemClicked',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Continues the propagation of the Info button clicked event
 	 * @param {!Event} event
 	 * @private
@@ -130,15 +163,22 @@ class ClayManagementToolbar extends Component {
 
 	/**
 	 * Continues the propagation of the action item clicked event
-	 * @param {!Event} event
+	 * @param {!MouseEvent} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleQuickActionClicked(event) {
 		let element = event.delegateTarget;
 		let elementIndex = this._getQuickItemIndex(element);
 		let item = this.actionItems[elementIndex];
 
-		this.emit('actionClicked', item);
+		return !this.emit({
+			data: {
+				item: item,
+			},
+			name: 'actionItemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -181,11 +221,16 @@ class ClayManagementToolbar extends Component {
 
 	/**
 	 * Continues the propagation of the view type item clicked event
-	 * @param {!object} item
+	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleViewTypeClicked(item) {
-		this.emit('viewTypeClicked', item);
+	_handleViewTypeClicked(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'viewTypeItemClicked',
+			originalEvent: event,
+		});
 	}
 }
 
