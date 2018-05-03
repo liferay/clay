@@ -1,5 +1,22 @@
 # Change Log
 
+## [v2.0.1](https://github.com/liferay/clay/tree/v2.0.1) (2018-05-03)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.0...v2.0.1)
+
+**Closed issues:**
+
+- More SVG Icons Analytics and Propagation [\#861](https://github.com/liferay/clay/issues/861)
+- clay-css `.close` utility default height and width [\#857](https://github.com/liferay/clay/issues/857)
+
+**Merged pull requests:**
+
+- 2.0.1 [\#865](https://github.com/liferay/clay/pull/865) ([jbalsas](https://github.com/jbalsas))
+- Organize guides into proper sections [\#864](https://github.com/liferay/clay/pull/864) ([jbalsas](https://github.com/jbalsas))
+- New: \(Fixes \#861\) Lexicon SVG Icons added  and  icons [\#862](https://github.com/liferay/clay/pull/862) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#859\) Fix whitespace issue with inline-scroller [\#860](https://github.com/liferay/clay/pull/860) ([pat270](https://github.com/pat270))
+- Add metal-componente missing dependency [\#856](https://github.com/liferay/clay/pull/856) ([carloslancha](https://github.com/carloslancha))
+- Set the expected from point.focus.expand.r to Number | Fixes \#853 [\#855](https://github.com/liferay/clay/pull/855) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.0.0](https://github.com/liferay/clay/tree/v2.0.0) (2018-04-26)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0-rc.12...v2.0.0)
 
@@ -11,6 +28,7 @@
 
 **Fixed bugs:**
 
+- point.focus.expand.r expects a boolean but the correct one is number in ClayCharts [\#853](https://github.com/liferay/clay/issues/853)
 - Management toolbar search form method should be GET by default [\#846](https://github.com/liferay/clay/issues/846)
 - Fix loading indicator in clay-charts [\#810](https://github.com/liferay/clay/issues/810)
 
