@@ -1,6 +1,6 @@
 const _ = require('lodash');
-const clay = require('clay');
-const countries = require('countries-list').countries
+const clayCSS = require('clay-css');
+const countries = require('countries-list').countries;
 const fs = require('fs');
 const langs = require('languages');
 const path = require('path');
@@ -8,14 +8,19 @@ const path = require('path');
 const alternateCodes = {
 	'in': 'id',
 	'iw': 'he',
-	'nb': 'no'
-}
+	'nb': 'no',
+};
 
+/**
+ *
+ * @param {*} data
+ * @return {*}
+ */
 function generateIconData(data) {
-	const iconsDoc = _.get(data, 'index.children.docs.children.components.children.icons-lexicon');
+	const iconsDoc = _.get(data, 'index.children.docs.children.components.children.icons');
 
 	if (iconsDoc) {
-		const iconsPath = path.join(clay.buildDir, 'images', 'icons');
+		const iconsPath = path.join(clayCSS.buildDir, 'images', 'icons');
 
 		let files = fs.readdirSync(iconsPath);
 
@@ -40,7 +45,7 @@ function generateIconData(data) {
 		flags = flags.map(mapSVG);
 
 		const flagData = flags.reduce(
-			function(prev, item, index) {
+			function(prev, item) {
 				prev[item] = getLangInfo(item);
 
 				return prev;
@@ -56,6 +61,11 @@ function generateIconData(data) {
 	return data;
 }
 
+/**
+ *
+ * @param {*} code
+ * @return {*}
+ */
 function getLangInfo(code) {
 	const parts = code.split('-');
 
@@ -75,7 +85,12 @@ function getLangInfo(code) {
 	return lang;
 }
 
-function mapSVG(item, index) {
+/**
+ *
+ * @param {*} item
+ * @return {*}
+ */
+function mapSVG(item) {
 	let iconName = path.basename(item, '.svg').toLowerCase();
 
 	if (_.startsWith(iconName, 'flags-')) {
