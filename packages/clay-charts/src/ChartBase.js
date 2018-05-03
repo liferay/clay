@@ -1195,7 +1195,7 @@ ChartBase.STATE = {
 		focus: Config.shapeOf({
 			expand: Config.shapeOf({
 				enabled: Config.bool(),
-				r: Config.bool(),
+				r: Config.number(),
 			}),
 			select: Config.shapeOf({
 				r: Config.number(),

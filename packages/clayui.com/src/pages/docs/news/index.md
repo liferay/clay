@@ -2,7 +2,7 @@
 title: "News"
 description: "Keep updated."
 layout: "guide"
-weight: 3
+weight: 40
 ---
 
 <time>September 30th, 2017</time>

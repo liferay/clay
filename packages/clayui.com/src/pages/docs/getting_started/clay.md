@@ -1,8 +1,8 @@
 ---
 title: "What is Clay"
-description: "User experience design language."
+description: ""
 layout: "guide"
-weight: 1
+weight: 2
 ---
 
 <article id="what-is-clay">
@@ -19,10 +19,6 @@ Because Clay is modeled after Lexicon's pattern library, you can rest assured, t
 
 ### Component Library
 
-Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.
-
-{call DocsList.render}
-	{param section: $page /}
-{/call}
+Browse Clay's extensive [Component Library](/docs/components), where you'll find useful components—with extensive code examples—for your web application.
 
 </article>

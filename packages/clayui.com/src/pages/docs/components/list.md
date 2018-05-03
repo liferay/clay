@@ -1,5 +1,5 @@
 ---
-title: List Groups
+title: List
 description: "List is a visual representation of a dataset that provides more flexibility for arranging the data to display than a table and that is less visual explicit than a card view."
 layout: "guide"
 pattern: "list"
