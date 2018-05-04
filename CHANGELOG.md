@@ -1,3 +1,6 @@
+### v1.0.27 - May 4, 2018
+* Update: (Fixes #859) Fix whitespace issue with inline-scroller
+
 ### v1.0.26 - November 27, 2017
 * Update: (Fixes [#379](https://github.com/liferay/clay/issues/379)) Glyphicon Font path should point to the right directory
 * Misc: Don't need to patch Bootstrap Variable file anymore
