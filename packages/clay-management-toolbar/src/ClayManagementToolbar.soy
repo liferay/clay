@@ -515,7 +515,7 @@
 							{/if}
 						{/let}
 
-						{if $sortingURL}
+						{if $sortingURL and not $disabled}
 							{call ClayLink.render}
 								{param elementClasses: $sortingClasses /}
 								{param events: ['click': $_handleSortingButtonClicked] /}
