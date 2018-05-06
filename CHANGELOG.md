@@ -1,5 +1,28 @@
 # Change Log
 
+## [v2.0.2](https://github.com/liferay/clay/tree/v2.0.2) (2018-05-06)
+[Full Changelog](https://github.com/liferay/clay/compare/v1.0.27...v2.0.2)
+
+**Merged pull requests:**
+
+- v2.0.2 [\#873](https://github.com/liferay/clay/pull/873) ([jbalsas](https://github.com/jbalsas))
+
+## [v1.0.27](https://github.com/liferay/clay/tree/v1.0.27) (2018-05-04)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.1...v1.0.27)
+
+**Fixed bugs:**
+
+- We should use isObject method from metal instead node [\#866](https://github.com/liferay/clay/issues/866)
+
+**Closed issues:**
+
+- Management Toolbar Sorting button appears enabled when toolbar is disabled [\#869](https://github.com/liferay/clay/issues/869)
+
+**Merged pull requests:**
+
+- Show disabled sorting button if management toolbar is disabled | Fixes \#869 [\#872](https://github.com/liferay/clay/pull/872) ([carloslancha](https://github.com/carloslancha))
+- Use isObject method from metal | Fix \#866 [\#867](https://github.com/liferay/clay/pull/867) ([carloslancha](https://github.com/carloslancha))
+
 ## [v2.0.1](https://github.com/liferay/clay/tree/v2.0.1) (2018-05-03)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.0...v2.0.1)
 
