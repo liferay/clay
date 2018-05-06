@@ -1,8 +1,7 @@
 import Component from 'metal-component';
 import {Config} from 'metal-state';
 import {domData} from 'metal-dom';
-import {core, isServerSide} from 'metal';
-import {isObject} from 'util';
+import {core, isObject, isServerSide} from 'metal';
 
 /**
  * Clay Component.
