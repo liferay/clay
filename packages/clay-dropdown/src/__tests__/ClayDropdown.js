@@ -115,6 +115,49 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should render a dropdown with the `link` style', () => {
+		clayDropdown = new ClayDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+			style: 'link',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
+	it('should render a dropdown with the `primary` style', () => {
+		clayDropdown = new ClayDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+			style: 'primary',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
+	it('should render a dropdown with the `secondary` style', () => {
+		clayDropdown = new ClayDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+			style: 'secondary',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
+	it('should render a dropdown with the `unstyled` style by default', () => {
+		clayDropdown = new ClayDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with trigger custom classes', () => {
 		clayDropdown = new ClayDropdown({
 			items: items,
