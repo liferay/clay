@@ -982,21 +982,25 @@ ChartBase.STATE = {
 		}),
 		x: Config.shapeOf({
 			show: Config.bool(),
-			lines: Config.shapeOf({
-				class: Config.string(),
-				position: Config.oneOf(['start', 'middle', 'end']),
-				text: Config.string(),
-				value: Config.string(),
-			}),
+			lines: Config.arrayOf(
+				Config.shapeOf({
+					class: Config.string(),
+					position: Config.oneOf(['start', 'middle', 'end']),
+					text: Config.string(),
+					value: Config.string(),
+				})
+			),
 		}),
 		y: Config.shapeOf({
 			show: Config.bool(),
-			lines: Config.shapeOf({
-				class: Config.string(),
-				position: Config.oneOf(['start', 'middle', 'end']),
-				text: Config.string(),
-				value: Config.string(),
-			}),
+			lines: Config.arrayOf(
+				Config.shapeOf({
+					class: Config.string(),
+					position: Config.oneOf(['start', 'middle', 'end']),
+					text: Config.string(),
+					value: Config.string(),
+				})
+			),
 		}),
 		ticks: Config.number(),
 	}).value({
