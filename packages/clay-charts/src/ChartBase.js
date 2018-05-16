@@ -1096,7 +1096,7 @@ ChartBase.STATE = {
 	 */
 	legend: Config.shapeOf({
 		contents: Config.shapeOf({
-			bindto: Config.string(),
+			bindto: Config.any(),
 			template: Config.oneOfType([Config.func(), Config.string()]),
 		}),
 		hide: Config.bool(),
