@@ -822,14 +822,14 @@ ChartBase.STATE = {
 	 * @type {?(Object|undefined)}
 	 */
 	bar: Config.shapeOf({
-		width: Config.oneOfType(
-			Config.number(), 
+		width: Config.oneOfType([
+			Config.number(),
 			Config.shapeOf({
-				max: config.number()
+				max: Config.number(),
 				ratio: Config.number(),
-			})
-		),
-		padding: Config.number()
+			}),
+		]),
+		padding: Config.number(),
 		zerobased: Config.bool(),
 	}),
 
