@@ -197,6 +197,7 @@ const ChartBase = {
 		const config = {
 			area: state.area,
 			axis,
+			bar: state.bar,
 			bindto: this.element.querySelector('[ref="chart"]'),
 			bubble: state.bubble,
 			color: color,
@@ -821,7 +822,14 @@ ChartBase.STATE = {
 	 * @type {?(Object|undefined)}
 	 */
 	bar: Config.shapeOf({
-		width: Config.number(),
+		width: Config.oneOfType([
+			Config.number(),
+			Config.shapeOf({
+				max: Config.number(),
+				ratio: Config.number(),
+			}),
+		]),
+		padding: Config.number(),
 		zerobased: Config.bool(),
 	}),
 
@@ -982,21 +990,25 @@ ChartBase.STATE = {
 		}),
 		x: Config.shapeOf({
 			show: Config.bool(),
-			lines: Config.shapeOf({
-				class: Config.string(),
-				position: Config.oneOf(['start', 'middle', 'end']),
-				text: Config.string(),
-				value: Config.string(),
-			}),
+			lines: Config.arrayOf(
+				Config.shapeOf({
+					class: Config.string(),
+					position: Config.oneOf(['start', 'middle', 'end']),
+					text: Config.string(),
+					value: Config.string(),
+				})
+			),
 		}),
 		y: Config.shapeOf({
 			show: Config.bool(),
-			lines: Config.shapeOf({
-				class: Config.string(),
-				position: Config.oneOf(['start', 'middle', 'end']),
-				text: Config.string(),
-				value: Config.string(),
-			}),
+			lines: Config.arrayOf(
+				Config.shapeOf({
+					class: Config.string(),
+					position: Config.oneOf(['start', 'middle', 'end']),
+					text: Config.string(),
+					value: Config.string(),
+				})
+			),
 		}),
 		ticks: Config.number(),
 	}).value({
@@ -1096,7 +1108,7 @@ ChartBase.STATE = {
 	 */
 	legend: Config.shapeOf({
 		contents: Config.shapeOf({
-			bindto: Config.string(),
+			bindto: Config.any(),
 			template: Config.oneOfType([Config.func(), Config.string()]),
 		}),
 		hide: Config.bool(),
