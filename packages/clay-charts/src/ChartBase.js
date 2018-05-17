@@ -197,6 +197,7 @@ const ChartBase = {
 		const config = {
 			area: state.area,
 			axis,
+			bar: state.bar,
 			bindto: this.element.querySelector('[ref="chart"]'),
 			bubble: state.bubble,
 			color: color,
@@ -821,7 +822,14 @@ ChartBase.STATE = {
 	 * @type {?(Object|undefined)}
 	 */
 	bar: Config.shapeOf({
-		width: Config.number(),
+		width: Config.oneOfType(
+			Config.number(), 
+			Config.shapeOf({
+				max: config.number()
+				ratio: Config.number(),
+			})
+		),
+		padding: Config.number()
 		zerobased: Config.bool(),
 	}),
 
