@@ -1,5 +1,39 @@
 # Change Log
 
+## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
+
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.3...HEAD)
+
+**Closed issues:**
+
+- Can this css library be used in other project apart from liferay related ? [\#410](https://github.com/liferay/clay/issues/410)
+
+## [v2.0.3](https://github.com/liferay/clay/tree/v2.0.3) (2018-05-17)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.2...v2.0.3)
+
+**Fixed bugs:**
+
+- bar is not passed to the Billboard in ChartBase and the validations are incorrect [\#903](https://github.com/liferay/clay/issues/903)
+- legend.contents.bindto expects an string only, but also receive HTMLElement/Object  [\#895](https://github.com/liferay/clay/issues/895)
+- Wrong space between label and icon in Filter and Order dropdown button in Management Toolbar [\#880](https://github.com/liferay/clay/issues/880)
+- Style of ClayDropdown out of sync with ClayDropdownBase [\#874](https://github.com/liferay/clay/issues/874)
+
+**Closed issues:**
+
+- Wrong Action Button states styles [\#884](https://github.com/liferay/clay/issues/884)
+- checkbox status in management bar [\#878](https://github.com/liferay/clay/issues/878)
+- grid.y.lines expects an object, but billboard.js takes an array of line objects [\#863](https://github.com/liferay/clay/issues/863)
+
+**Merged pull requests:**
+
+- v2.0.3 [\#905](https://github.com/liferay/clay/pull/905) ([jbalsas](https://github.com/jbalsas))
+- Fix bar API validations and passed to the Billboard | Fixes \#903 [\#904](https://github.com/liferay/clay/pull/904) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Removes redundant text-center classes [\#902](https://github.com/liferay/clay/pull/902) ([alexandervalencia](https://github.com/alexandervalencia))
+-  Adds consistency in style API between ClayDropdown and ClayDropdownBase | Fixes \#874 [\#898](https://github.com/liferay/clay/pull/898) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- grid.y.lines and grid.x.lines accept array of line objects | Fixes \#863 [\#897](https://github.com/liferay/clay/pull/897) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- legend.contents.bindto accepts object and string | Fixes \#895 [\#896](https://github.com/liferay/clay/pull/896) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Wrong space between label and icon in Filter and Order dropdown button in Management Toolbar | Fixes \#880 [\#881](https://github.com/liferay/clay/pull/881) ([carloslancha](https://github.com/carloslancha))
+
 ## [v2.0.2](https://github.com/liferay/clay/tree/v2.0.2) (2018-05-06)
 [Full Changelog](https://github.com/liferay/clay/compare/v1.0.27...v2.0.2)
 
