@@ -23,27 +23,6 @@ class ClayAlertBase extends Component {
 	/**
 	 * @inheritDoc
 	 */
-	rendered() {
-		if (isServerSide()) {
-			return;
-		}
-
-		if (
-			this.autoClose &&
-			(this.type === 'stripe' || this.type === 'toast')
-		) {
-			if (this._delayTime === undefined || this._delayTime > 0) {
-				this._delayTime =
-					(this.element.querySelector('a') ? 10 : 5) * 1000;
-			}
-
-			this._resumeTimeout();
-		}
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	disposed() {
 		if (this._timer) {
 			clearTimeout(this._timer);
@@ -51,6 +30,15 @@ class ClayAlertBase extends Component {
 		}
 		this._delayTime = undefined;
 		this._startDelayTime = undefined;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	rendered(firstRender) {
+		if (firstRender && !isServerSide()) {
+			this._startTimer();
+		}
 	}
 
 	/**
@@ -122,6 +110,22 @@ class ClayAlertBase extends Component {
 	}
 
 	/**
+	 * Sets the delayTime if passed, if it does not set the default, and starts.
+	 * @private
+	 */
+	_startTimer() {
+		if (this.autoClose && (this.type === 'stripe' || this.type === 'toast')) {
+			if (this.delayTime) {
+				this._delayTime = this.delayTime * 1000;
+			} else {
+				this._delayTime = (this.element.querySelector('a') ? 10 : 5) * 1000;
+			}
+
+			this._resumeTimeout();
+		}
+	}
+
+	/**
 	 * Emits hide alert.
 	 * @private
 	 */
@@ -173,6 +177,15 @@ ClayAlertBase.STATE = {
 	 * @type {?bool}
 	 */
 	destroyOnHide: Config.bool().value(false),
+
+	/**
+	 * Set time per second for alert autoclose.
+	 * @default undefineds
+	 * @instance
+	 * @memberof ClayAlertBase
+	 * @type {?number}
+	 */
+	delayTime: Config.number(),
 
 	/**
 	 * CSS classes to be applied to the element.
