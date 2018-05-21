@@ -274,7 +274,9 @@ weight: 100
 								</svg>
 							</span>
 							en-US
-							<span class="label label-info">Default</span>
+							<span class="label label-info">
+								<span class="label-item label-item-expand">Default</span>
+							</span>
 						</a>
 					</li>
 					<li>
@@ -285,7 +287,9 @@ weight: 100
 								</svg>
 							</span>
 							en-GB
-							<span class="label label-success">Translated</span>
+							<span class="label label-success">
+								<span class="label-item label-item-expand">Translated</span>
+							</span>
 						</a>
 					</li>
 					<li>
@@ -296,7 +300,9 @@ weight: 100
 								</svg>
 							</span>
 							es-ES
-							<span class="label label-success">Translated</span>
+							<span class="label label-success">
+								<span class="label-item label-item-expand">Translated</span>
+							</span>
 						</a>
 					</li>
 					<li>
@@ -307,7 +313,9 @@ weight: 100
 								</svg>
 							</span>
 							fr-FR
-							<span class="label label-warning">Not Translated</span>
+							<span class="label label-warning">
+								<span class="label-item label-item-expand">Not Translated</span>
+							</span>
 						</a>
 					</li>
 				</ul>
@@ -359,7 +367,9 @@ weight: 100
 							</svg>
 						</span>
 						en-US
-						<span class="label label-info">Default</span>
+						<span class="label label-info">
+							<span class="label-item label-item-expand">Default</span>
+						</span>
 					</a>
 				</li>
 				<li>
@@ -370,7 +380,9 @@ weight: 100
 							</svg>
 						</span>
 						en-GB
-						<span class="label label-success">Translated</span>
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Translated</span>
+						</span>
 					</a>
 				</li>
 				<li>
@@ -381,7 +393,9 @@ weight: 100
 							</svg>
 						</span>
 						es-ES
-						<span class="label label-success">Translated</span>
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Translated</span>
+						</span>
 					</a>
 				</li>
 				<li>
@@ -392,7 +406,9 @@ weight: 100
 							</svg>
 						</span>
 						fr-FR
-						<span class="label label-warning">Not Translated</span>
+						<span class="label label-warning">
+							<span class="label-item label-item-expand">Not Translated</span>
+						</span>
 					</a>
 				</li>
 			</ul>

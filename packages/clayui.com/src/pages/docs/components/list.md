@@ -29,9 +29,11 @@ weight: 100
 	</div>
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-			</svg>
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+				</svg>
+			</span>
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
@@ -216,9 +218,11 @@ weight: 100
 	</div>
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-			</svg>
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+				</svg>
+			</span>
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
@@ -277,9 +281,11 @@ weight: 100
 	</div>
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-			</svg>
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+				</svg>
+			</span>
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
@@ -466,9 +472,11 @@ weight: 100
 	</div>
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-				<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-			</svg>
+			<span class="inline-item">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+				</svg>
+			</span>
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
@@ -537,9 +545,11 @@ weight: 100
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+					</svg>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -740,9 +750,11 @@ weight: 100
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+					</svg>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -816,9 +828,11 @@ weight: 100
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+					</svg>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -827,7 +841,9 @@ weight: 100
 			</h4>
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
+				<span class="label label-success">
+					<span class="label-item label-item-expand">Approved</span>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col">
@@ -876,9 +892,11 @@ weight: 100
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+					</svg>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -887,7 +905,9 @@ weight: 100
 			</h4>
 			<p class="list-group-subtitle">Second Level Text</p>
 			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
+				<span class="label label-success">
+					<span class="label-item label-item-expand">Approved</span>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col">
@@ -1140,9 +1160,11 @@ weight: 100
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+					</svg>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -1151,7 +1173,9 @@ weight: 100
 			</h4>
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
+				<span class="label label-success">
+					<span class="label-item label-item-expand">Approved</span>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col">
@@ -1200,9 +1224,11 @@ weight: 100
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-				</svg>
+				<span class="inline-item">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+					</svg>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -1211,7 +1237,9 @@ weight: 100
 			</h4>
 			<p class="list-group-subtitle">Second Level Text</p>
 			<div class="list-group-detail">
-				<span class="label label-success">Approved</span>
+				<span class="label label-success">
+					<span class="label-item label-item-expand">Approved</span>
+				</span>
 			</div>
 		</div>
 		<div class="autofit-col">
