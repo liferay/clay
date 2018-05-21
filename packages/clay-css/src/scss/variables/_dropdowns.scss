@@ -9,6 +9,8 @@ $dropdown-font-size-mobile: null !default;
 
 $dropdown-header-font-size: null !default;
 $dropdown-header-font-size-mobile: null !default;
+$dropdown-header-margin-bottom: null !default;
+$dropdown-header-margin-top: null !default;
 $dropdown-header-padding-x: $dropdown-item-padding-x !default;
 $dropdown-header-padding-y: $dropdown-padding-y !default;
 $dropdown-header-text-transform: null !default;
@@ -16,6 +18,8 @@ $dropdown-header-text-transform: null !default;
 $dropdown-subheader-color: $dropdown-header-color !default;
 $dropdown-subheader-font-size: 0.75rem !default; // 12px
 $dropdown-subheader-font-weight: $font-weight-semi-bold !default;
+$dropdown-subheader-margin-bottom: null !default;
+$dropdown-subheader-margin-top: null !default;
 $dropdown-subheader-padding-x: $dropdown-header-padding-x !default;
 $dropdown-subheader-padding-y: $dropdown-header-padding-y !default;
 $dropdown-subheader-text-transform: uppercase !default;
