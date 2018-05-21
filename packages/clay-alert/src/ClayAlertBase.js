@@ -114,11 +114,15 @@ class ClayAlertBase extends Component {
 	 * @private
 	 */
 	_startTimer() {
-		if (this.autoClose && (this.type === 'stripe' || this.type === 'toast')) {
+		if (
+			this.autoClose &&
+			(this.type === 'stripe' || this.type === 'toast')
+		) {
 			if (this.delayTime) {
 				this._delayTime = this.delayTime * 1000;
 			} else {
-				this._delayTime = (this.element.querySelector('a') ? 10 : 5) * 1000;
+				this._delayTime =
+					(this.element.querySelector('a') ? 10 : 5) * 1000;
 			}
 
 			this._resumeTimeout();
