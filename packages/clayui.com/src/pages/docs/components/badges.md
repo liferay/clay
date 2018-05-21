@@ -18,12 +18,42 @@ weight: 100
 </h3>
 
 <div class="autofit-float autofit-row">
-	<div class="autofit-col"><div><span class="badge badge-primary">8</span><div>Primary</div></div></div>
-	<div class="autofit-col"><div><span class="badge badge-secondary">87</span><div>Secondary</div></div></div>
-	<div class="autofit-col"><div><span class="badge badge-info">91</span><div>Info</div></div></div>
-	<div class="autofit-col"><div><span class="badge badge-danger">130</span><div>Error</div></div></div>
-	<div class="autofit-col"><div><span class="badge badge-success">1.111</span><div>Success</div></div></div>
-	<div class="autofit-col"><div><span class="badge badge-warning">21</span><div>Warning</div></div></div>
+	<div class="autofit-col">
+		<div>
+			<span class="badge badge-primary"><span class="badge-item badge-item-expand">8</span></span>
+			<div>Primary</div>
+		</div>
+	</div>
+	<div class="autofit-col">
+		<div>
+			<span class="badge badge-secondary"><span class="badge-item badge-item-expand">87</span></span>
+			<div>Secondary</div>
+		</div>
+	</div>
+	<div class="autofit-col">
+		<div>
+			<span class="badge badge-info"><span class="badge-item badge-item-expand">91</span></span>
+			<div>Info</div>
+		</div>
+	</div>
+	<div class="autofit-col">
+		<div>
+			<span class="badge badge-danger"><span class="badge-item badge-item-expand">130</span></span>
+			<div>Error</div>
+		</div>
+	</div>
+	<div class="autofit-col">
+		<div>
+			<span class="badge badge-success"><span class="badge-item badge-item-expand">1.111</span></span>
+			<div>Success</div>
+		</div>
+	</div>
+	<div class="autofit-col">
+		<div>
+			<span class="badge badge-warning"><span class="badge-item badge-item-expand">21</span></span>
+			<div>Warning</div>
+		</div>
+	</div>
 </div>
 
 ```soy
@@ -65,12 +95,29 @@ weight: 100
 <clay-badge label="21" style="warning"></clay-badge>
 ```
 ```text/html
-<span class="badge badge-primary">8</span>
-<span class="badge badge-secondary">87</span>
-<span class="badge badge-info">91</span>
-<span class="badge badge-danger">130</span>
-<span class="badge badge-success">1.111</span>
-<span class="badge badge-warning">21</span>
+<span class="badge badge-primary">
+	<span class="badge-item badge-item-expand">8</span>
+</span>
+
+<span class="badge badge-secondary">
+	<span class="badge-item badge-item-expand">87</span>
+</span>
+
+<span class="badge badge-info">
+	<span class="badge-item badge-item-expand">91</span>
+</span>
+
+<span class="badge badge-danger">
+	<span class="badge-item badge-item-expand">130</span>
+</span>
+
+<span class="badge badge-success">
+	<span class="badge-item badge-item-expand">1.111</span>
+</span>
+
+<span class="badge badge-warning">
+	<span class="badge-item badge-item-expand">21</span>
+</span>
 ```
 
 </article>
