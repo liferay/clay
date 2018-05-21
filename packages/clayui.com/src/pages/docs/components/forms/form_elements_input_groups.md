@@ -267,54 +267,78 @@ weight: 100
 				</button>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li>
-						<a class="dropdown-item" href="#1">
-							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-									<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
-								</svg>
+						<a class="autofit-row dropdown-item" href="#1">
+							<span class="autofit-col autofit-col-expand">
+								<span class="autofit-section">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+											<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
+										</svg>
+									</span>
+									en-US
+								</span>
 							</span>
-							en-US
-							<span class="label label-info">
-								<span class="label-item label-item-expand">Default</span>
-							</span>
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="#1">
-							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-									<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
-								</svg>
-							</span>
-							en-GB
-							<span class="label label-success">
-								<span class="label-item label-item-expand">Translated</span>
+							<span class="autofit-col">
+								<span class="label label-info">
+									<span class="label-item label-item-expand">Default</span>
+								</span>
 							</span>
 						</a>
 					</li>
 					<li>
-						<a class="active dropdown-item" href="#1">
-							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-									<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
-								</svg>
+						<a class="autofit-row dropdown-item" href="#1">
+							<span class="autofit-col autofit-col-expand">
+								<span class="autofit-section">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+											<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
+										</svg>
+									</span>
+									en-GB
+								</span>
 							</span>
-							es-ES
-							<span class="label label-success">
-								<span class="label-item label-item-expand">Translated</span>
+							<span class="autofit-col">
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Translated</span>
+								</span>
 							</span>
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="#1">
-							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-									<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
-								</svg>
+						<a class="active autofit-row dropdown-item" href="#1">
+							<span class="autofit-col autofit-col-expand">
+								<span class="autofit-section">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+											<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+										</svg>
+									</span>
+									es-ES
+								</span>
 							</span>
-							fr-FR
-							<span class="label label-warning">
-								<span class="label-item label-item-expand">Not Translated</span>
+							<span class="autofit-col">
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Translated</span>
+								</span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a class="autofit-row dropdown-item" href="#1">
+							<span class="autofit-col autofit-col-expand">
+								<span class="autofit-section">
+									<span class="inline-item inline-item-before">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+											<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
+										</svg>
+									</span>
+									fr-FR
+								</span>
+							</span>
+							<span class="autofit-col">
+								<span class="label label-warning">
+									<span class="label-item label-item-expand">Not Translated</span>
+								</span>
 							</span>
 						</a>
 					</li>
@@ -360,54 +384,78 @@ weight: 100
 			</button>
 			<ul class="dropdown-menu dropdown-menu-right">
 				<li>
-					<a class="dropdown-item" href="#1">
-						<span class="inline-item inline-item-before">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-								<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
-							</svg>
+					<a class="autofit-row dropdown-item" href="#1">
+						<span class="autofit-col autofit-col-expand">
+							<span class="autofit-section">
+								<span class="inline-item inline-item-before">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+										<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
+									</svg>
+								</span>
+								en-US
+							</span>
 						</span>
-						en-US
-						<span class="label label-info">
-							<span class="label-item label-item-expand">Default</span>
-						</span>
-					</a>
-				</li>
-				<li>
-					<a class="dropdown-item" href="#1">
-						<span class="inline-item inline-item-before">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-								<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
-							</svg>
-						</span>
-						en-GB
-						<span class="label label-success">
-							<span class="label-item label-item-expand">Translated</span>
+						<span class="autofit-col">
+							<span class="label label-info">
+								<span class="label-item label-item-expand">Default</span>
+							</span>
 						</span>
 					</a>
 				</li>
 				<li>
-					<a class="active dropdown-item" href="#1">
-						<span class="inline-item inline-item-before">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-								<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
-							</svg>
+					<a class="autofit-row dropdown-item" href="#1">
+						<span class="autofit-col autofit-col-expand">
+							<span class="autofit-section">
+								<span class="inline-item inline-item-before">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+										<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
+									</svg>
+								</span>
+								en-GB
+							</span>
 						</span>
-						es-ES
-						<span class="label label-success">
-							<span class="label-item label-item-expand">Translated</span>
+						<span class="autofit-col">
+							<span class="label label-success">
+								<span class="label-item label-item-expand">Translated</span>
+							</span>
 						</span>
 					</a>
 				</li>
 				<li>
-					<a class="dropdown-item" href="#1">
-						<span class="inline-item inline-item-before">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-								<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
-							</svg>
+					<a class="active autofit-row dropdown-item" href="#1">
+						<span class="autofit-col autofit-col-expand">
+							<span class="autofit-section">
+								<span class="inline-item inline-item-before">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+										<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+									</svg>
+								</span>
+								es-ES
+							</span>
 						</span>
-						fr-FR
-						<span class="label label-warning">
-							<span class="label-item label-item-expand">Not Translated</span>
+						<span class="autofit-col">
+							<span class="label label-success">
+								<span class="label-item label-item-expand">Translated</span>
+							</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a class="autofit-row dropdown-item" href="#1">
+						<span class="autofit-col autofit-col-expand">
+							<span class="autofit-section">
+								<span class="inline-item inline-item-before">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+										<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
+									</svg>
+								</span>
+								fr-FR
+							</span>
+						</span>
+						<span class="autofit-col">
+							<span class="label label-warning">
+								<span class="label-item label-item-expand">Not Translated</span>
+							</span>
 						</span>
 					</a>
 				</li>
