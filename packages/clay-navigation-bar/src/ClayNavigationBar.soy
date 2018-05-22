@@ -106,7 +106,9 @@
 		{call ClayLink.render}
 			{param ariaLabel kind="text"}
 				{if $active}
-					{msg desc=""}current-page{/msg}
+					{msg desc="Help text to indicate that we are in the current page"}
+						current-page
+					{/msg}
 				{/if}
 			{/param}
 
@@ -169,7 +171,9 @@
 	{call ClayLink.render}
 		{param ariaExpanded: $_visible /}
 		{param ariaLabel kind="text"}
-			{msg desc=""}toggle-navigation{/msg}
+			{msg desc="Navigation items dropdown trigger help label"}
+				toggle-navigation
+			{/msg}
 		{/param}
 
 		{param elementClasses: $classes /}

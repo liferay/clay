@@ -212,9 +212,13 @@
 					{param events: ['change': $_handleItemToggled] /}
 					{param label kind="text"}
 						{if $item.selected}
-							{msg desc=""}select{/msg}
+							{msg desc="The word 'select' used as a verb"}
+								select
+							{/msg}
 						{else}
-							{msg desc=""}deselect{/msg}
+							{msg desc="The word 'deselect' used as a verb"}
+								deselect
+							{/msg}
 						{/if}
 					{/param}
 

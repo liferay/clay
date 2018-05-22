@@ -191,7 +191,9 @@
 		{param button: $showMoreButton /}
 		{param caption kind="text"}
 			{if $showMoreButton}
-				{msg desc=""}showing-{$showingItems}-of-{$totalItems}-elements{/msg}
+				{msg desc="Says how many items of the total are being showed"}
+					showing-{$showingItems}-of-{$totalItems}-elements
+				{/msg}
 			{/if}
 		{/param}
 
