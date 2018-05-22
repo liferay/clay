@@ -28,8 +28,8 @@ class ClayAlertBase extends Component {
 			clearTimeout(this._timer);
 			this._timer = undefined;
 		}
-		this._delayTime = undefined;
-		this._startDelayTime = undefined;
+		this._timeToDisappear = undefined;
+		this._startedTime = undefined;
 	}
 
 	/**
@@ -92,7 +92,7 @@ class ClayAlertBase extends Component {
 		if (this._timer) {
 			clearTimeout(this._timer);
 			this._timer = undefined;
-			this._delayTime -= new Date() - this._startDelayTime;
+			this._timeToDisappear -= new Date() - this._startedTime;
 		}
 	}
 
@@ -101,11 +101,11 @@ class ClayAlertBase extends Component {
 	 * @private
 	 */
 	_resumeTimeout() {
-		if (this._delayTime > 0) {
-			this._startDelayTime = new Date();
+		if (this._timeToDisappear > 0) {
+			this._startedTime = new Date();
 			this._timer = setTimeout(() => {
 				this.close();
-			}, this._delayTime);
+			}, this._timeToDisappear);
 		}
 	}
 
@@ -119,9 +119,9 @@ class ClayAlertBase extends Component {
 			(this.type === 'stripe' || this.type === 'toast')
 		) {
 			if (isNumber(this.autoClose)) {
-				this._delayTime = this.autoClose * 1000;
+				this._timeToDisappear = this.autoClose * 1000;
 			} else {
-				this._delayTime = (this.type === 'toast' ? 8 : 5) * 1000;
+				this._timeToDisappear = (this.type === 'toast' ? 8 : 5) * 1000;
 			}
 
 			this._resumeTimeout();
