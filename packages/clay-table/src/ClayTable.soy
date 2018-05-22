@@ -210,7 +210,14 @@
 					{param checked: $item.selected /}
 					{param disabled: $item.disabled /}
 					{param events: ['change': $_handleItemToggled] /}
-					{param label: $item.selected ? 'Select' : 'Deselect' /}
+					{param label kind="text"}
+						{if $item.selected}
+							{msg desc=""}select{/msg}
+						{else}
+							{msg desc=""}deselect{/msg}
+						{/if}
+					{/param}
+
 					{param name kind="text"}
 						{if $schema.inputName}
 							{$schema.inputName}
