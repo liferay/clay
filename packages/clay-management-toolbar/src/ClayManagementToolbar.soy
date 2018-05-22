@@ -209,18 +209,25 @@
 						{param events: ['change': $_handleSelectPageCheckboxChanged] /}
 						{param indeterminate: $selectedItems < $totalItems /}
 						{param label kind="text"}
-							{msg desc=""}select-page{/msg}
+							{msg desc="Select page checkbox label"}
+								select-page
+							{/msg}
 						{/param}
+
 						{param ref: 'selectPageCheckbox' /}
 						{param showLabel: false /}
 					{/call}
 				</li>
 				<li class="nav-item">
 					<span class="navbar-text">
-						{msg desc=""}{$selectedItems}-of-{$totalItems}{/msg}
+						{msg desc="Says how many items of the total are selected"}
+							{$selectedItems}-of-{$totalItems}
+						{/msg}
 						{sp}
 						<span class="navbar-breakpoint-down-d-none">
-							{msg desc=""}items-selected{/msg}
+							{msg desc="Items selected"}
+								items-selected
+							{/msg}
 						</span>
 					</span>
 				</li>
@@ -230,7 +237,9 @@
 							{param elementClasses: 'nav-btn' /}
 							{param events: ['click': $_handleSelectAllClicked] /}
 							{param label kind="text"}
-								{msg desc=""}select-all{/msg}
+								{msg desc="Select all button label"}
+									select-all
+								{/msg}
 							{/param}
 							{param ref: 'selectAllButton' /}
 							{param style: 'link' /}
@@ -240,7 +249,9 @@
 							{param elementClasses: 'nav-btn' /}
 							{param events: ['click': $_handleDeselectAllClicked] /}
 							{param label kind="text"}
-								{msg desc=""}deselect-all{/msg}
+								{msg desc="Deselect all button label"}
+									deselect-all
+								{/msg}
 							{/param}
 							{param ref: 'deselectAllButton' /}
 							{param style: 'link' /}
@@ -473,7 +484,9 @@
 							{param disabled: $disabled /}
 							{param events: ['change': $_handleSelectPageCheckboxChanged] /}
 							{param label kind="text"}
-								{msg desc=""}select-page{/msg}
+								{msg desc="Select page checkbox label"}
+									select-page
+								{/msg}
 							{/param}
 
 							{param ref: 'selectPageCheckbox' /}
@@ -485,7 +498,10 @@
 				{if $filterItems}
 					{let $filtersTrigger kind="html"}
 						<span class="navbar-breakpoint-down-d-none">
-							{msg desc=""}filter-and-order{/msg}
+							{msg desc="Filters and order dropdown trigger label"}
+								filter-and-order
+							{/msg}
+
 							{call ClayIcon.render}
 								{param elementClasses: 'inline-item inline-item-after' /}
 								{param spritemap: $spritemap /}
@@ -503,7 +519,9 @@
 
 					<li class="dropdown nav-item">
 						{let $doneString kind="text"}
-							{msg desc=""}done{/msg}
+							{msg desc="Done"}
+								done
+							{/msg}
 						{/let}
 
 						{call ClayDropdownBase.render}
@@ -679,7 +697,9 @@
 					<div class="tbar-section">
 						<span class="text-truncate-inline">
 							<span class="text-truncate">
-								{msg desc=""}{$totalItems}-results-for{/msg}
+								{msg desc="Says how many results there are for a search"}
+									{$totalItems}-results-for
+								{/msg}
 								<strong>{$searchValue}</strong>
 							</span>
 						</span>
@@ -692,7 +712,9 @@
 							{param events: ['click': $_handleClearResultsClick] /}
 							{param href: $clearResultsURL /}
 							{param label kind="text"}
-								{msg desc=""}clear{/msg}
+								{msg desc="Label for clear results link"}
+									clear
+								{/msg}
 							{/param}
 
 							{param ref: 'clearSearch' /}
@@ -702,7 +724,9 @@
 							{param elementClasses: 'component-link tbar-link' /}
 							{param events: ['click': $_handleClearResultsClick] /}
 							{param label kind="text"}
-								{msg desc=""}clear{/msg}
+								{msg desc="Label for clear results button"}
+									clear
+								{/msg}
 							{/param}
 
 							{param ref: 'clearSearch' /}
@@ -739,7 +763,10 @@
 
 				class="form-control input-group-inset input-group-inset-after"
 				name="{$searchInputName}"
-				placeholder="{msg desc=""}search-for{/msg}"
+				placeholder="
+					{msg desc="Search text input placeholder"}
+						search-for
+					{/msg}"
 				ref="search"
 				type="text"
 
