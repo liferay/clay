@@ -83,6 +83,15 @@
 		text-decoration: $link-decoration;
 	}
 
+	&.disabled,
+	&:disabled {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	@include hover {
 		text-decoration: $link-hover-decoration;
 	}

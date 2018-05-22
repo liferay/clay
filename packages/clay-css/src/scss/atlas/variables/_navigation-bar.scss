@@ -18,5 +18,6 @@ $navigation-bar-secondary: map-merge((
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-color: #FFF,
 	link-active-color: #FFF,
-	link-disabled-color: $nav-link-disabled-color
+	link-disabled-color: $nav-link-disabled-color,
+	link-disabled-opacity: 0.5
 ), $navigation-bar-secondary);
