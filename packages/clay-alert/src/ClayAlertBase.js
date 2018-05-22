@@ -4,7 +4,7 @@ import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
-import {isServerSide} from 'metal';
+import {isServerSide, isNumber} from 'metal';
 
 import templates from './ClayAlertBase.soy.js';
 
@@ -118,11 +118,10 @@ class ClayAlertBase extends Component {
 			this.autoClose &&
 			(this.type === 'stripe' || this.type === 'toast')
 		) {
-			if (this.delayTime) {
-				this._delayTime = this.delayTime * 1000;
+			if (isNumber(this.autoClose)) {
+				this._delayTime = this.autoClose * 1000;
 			} else {
-				this._delayTime =
-					(this.element.querySelector('a') ? 10 : 5) * 1000;
+				this._delayTime = (this.type === 'toast' ? 8 : 5) * 1000;
 			}
 
 			this._resumeTimeout();
@@ -156,13 +155,17 @@ ClayAlertBase.STATE = {
 		.value(true),
 
 	/**
-	 * Flag to indicate if alert should be automatically closed.
+	 * Flag to `true` to indicate whether the alert should be closed 
+	 * automatically with the default time.
 	 * @default false
 	 * @instance
 	 * @memberof ClayAlertBase
-	 * @type {?bool}
+	 * @type {?(bool|number)}
 	 */
-	autoClose: Config.bool().value(false),
+	autoClose: Config.oneOfType([
+		Config.bool().value(false),
+		Config.number()
+	]),
 
 	/**
 	 * Flag to indicate if the alert is closeable.
@@ -181,15 +184,6 @@ ClayAlertBase.STATE = {
 	 * @type {?bool}
 	 */
 	destroyOnHide: Config.bool().value(false),
-
-	/**
-	 * Set time per second for alert autoclose.
-	 * @default undefineds
-	 * @instance
-	 * @memberof ClayAlertBase
-	 * @type {?number}
-	 */
-	delayTime: Config.number(),
 
 	/**
 	 * CSS classes to be applied to the element.
