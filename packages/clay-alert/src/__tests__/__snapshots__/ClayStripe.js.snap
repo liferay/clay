@@ -3,7 +3,7 @@
 exports[`ClayStripe should render a "danger" style stripe 1`] = `
 <div class="alert alert-danger fade alert-dismissible alert-fluid show" role="alert">
   <div class="container-fluid container-fluid-max-xl">
-    <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <button class="btn close btn-unstyled" aria-label="close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -22,7 +22,7 @@ exports[`ClayStripe should render a "danger" style stripe 1`] = `
 exports[`ClayStripe should render a "success" style stripe 1`] = `
 <div class="alert alert-success fade alert-dismissible alert-fluid show" role="alert">
   <div class="container-fluid container-fluid-max-xl">
-    <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <button class="btn close btn-unstyled" aria-label="close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -41,7 +41,7 @@ exports[`ClayStripe should render a "success" style stripe 1`] = `
 exports[`ClayStripe should render a "warning" style stripe 1`] = `
 <div class="alert alert-warning fade alert-dismissible alert-fluid show" role="alert">
   <div class="container-fluid container-fluid-max-xl">
-    <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <button class="btn close btn-unstyled" aria-label="close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -60,7 +60,7 @@ exports[`ClayStripe should render a "warning" style stripe 1`] = `
 exports[`ClayStripe should render an "info" style stripe 1`] = `
 <div class="alert alert-info fade alert-dismissible alert-fluid show" role="alert">
   <div class="container-fluid container-fluid-max-xl">
-    <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <button class="btn close btn-unstyled" aria-label="close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -79,7 +79,7 @@ exports[`ClayStripe should render an "info" style stripe 1`] = `
 exports[`ClayStripe should render an stripe with classes 1`] = `
 <div class="alert alert-info fade alert-dismissible my-custom-class alert-fluid show" role="alert">
   <div class="container-fluid container-fluid-max-xl">
-    <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <button class="btn close btn-unstyled" aria-label="close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -98,7 +98,7 @@ exports[`ClayStripe should render an stripe with classes 1`] = `
 exports[`ClayStripe should render an stripe with id 1`] = `
 <div class="alert alert-info fade alert-dismissible alert-fluid show" id="myId" role="alert">
   <div class="container-fluid container-fluid-max-xl">
-    <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <button class="btn close btn-unstyled" aria-label="close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -117,7 +117,7 @@ exports[`ClayStripe should render an stripe with id 1`] = `
 exports[`ClayStripe should render default markup 1`] = `
 <div class="alert alert-info fade alert-dismissible alert-fluid show" role="alert">
   <div class="container-fluid container-fluid-max-xl">
-    <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <button class="btn close btn-unstyled" aria-label="close" type="button">
       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
         <title>times</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
