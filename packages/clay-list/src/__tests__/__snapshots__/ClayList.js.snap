@@ -71,7 +71,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
         <label>
           <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
           <span class="custom-control-label">
-            <span class="custom-control-label-text sr-only">Deselect</span>
+            <span class="custom-control-label-text sr-only">deselect</span>
           </span>
         </label>
       </div>
@@ -86,7 +86,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
         <label>
           <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
           <span class="custom-control-label">
-            <span class="custom-control-label-text sr-only">Deselect</span>
+            <span class="custom-control-label-text sr-only">deselect</span>
           </span>
         </label>
       </div>
