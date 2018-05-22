@@ -16,11 +16,11 @@ weight: 100
 
 ### Labels
 
-<span class="label label-secondary">Label Text</span>{sp}
-<span class="label label-info">Status</span>{sp}
-<span class="label label-warning">Pending</span>{sp}
-<span class="label label-danger">Rejected</span>{sp}
-<span class="label label-success">Approved</span>
+<span class="label label-secondary"><span class="label-item label-item-expand">Label Text</span></span>{sp}
+<span class="label label-info"><span class="label-item label-item-expand">Status</span></span>{sp}
+<span class="label label-warning"><span class="label-item label-item-expand">Pending</span></span>{sp}
+<span class="label label-danger"><span class="label-item label-item-expand">Rejected</span></span>{sp}
+<span class="label label-success"><span class="label-item label-item-expand">Approved</span></span>
 
 ```soy
 {call ClayLabel.render}
@@ -59,11 +59,25 @@ weight: 100
 <clay-label label="Approved" style="success"></clay-label>
 ```
 ```text/html
-<span class="label label-secondary">Label Text</span>
-<span class="label label-info">Status</span>
-<span class="label label-warning">Pending</span>
-<span class="label label-danger">Rejected</span>
-<span class="label label-success">Approved</span>
+<span class="label label-secondary">
+	<span class="label-item label-item-expand">Label Text</span>
+</span>
+
+<span class="label label-info">
+	<span class="label-item label-item-expand">Status</span>
+</span>
+
+<span class="label label-warning">
+	<span class="label-item label-item-expand">Pending</span>
+</span>
+
+<span class="label label-danger">
+	<span class="label-item label-item-expand">Rejected</span>
+</span>
+
+<span class="label label-success">
+	<span class="label-item label-item-expand">Approved</span>
+</span>
 ```
 
 </article>
@@ -74,8 +88,8 @@ weight: 100
 
 > Use `label-lg` to make the label larger or use the mixin `label-size($sassMap)` to create a custom sized label.
 
-<span class="label label-secondary">Normal Label</span>{sp}
-<span class="label label-lg label-secondary">Large Label</span>{sp}
+<span class="label label-secondary"><span class="label-item label-item-expand">Normal Label</span></span>{sp}
+<span class="label label-lg label-secondary"><span class="label-item label-item-expand">Large Label</span></span>{sp}
 
 ```soy
 {call ClayLabel.render}
@@ -93,8 +107,13 @@ weight: 100
 <clay-label label="Large Label" size="lg"></clay-label>
 ```
 ```text/html
-<span class="label label-secondary">Normal Label</span>
-<span class="label label-lg label-secondary">Large Label</span>
+<span class="label label-secondary">
+	<span class="label-item label-item-expand">Normal Label</span>
+</span>
+
+<span class="label label-lg label-secondary">
+	<span class="label-item label-item-expand">Large Label</span>
+</span>
 ```
 
 </article>
@@ -107,7 +126,7 @@ weight: 100
 
 > Used to identify, tag content, show status, to filter content or even to provide navigation to elements of same identification. It can be used with status colors.
 
-<span class="label label-secondary">Label Text</span>
+<span class="label label-secondary"><span class="label-item label-item-expand">Label Text</span></span>
 
 ```soy
 {call ClayLabel.render}
@@ -118,7 +137,9 @@ weight: 100
 <clay-label label="Normal Label"></clay-label>
 ```
 ```text/html
-<span class="label label-secondary">Label Text</span>
+<span class="label label-secondary">
+	<span class="label-item label-item-expand">Label Text</span>
+</span>
 ```
 
 #### Label removable
@@ -126,12 +147,12 @@ weight: 100
 > Used in filter bars, categories, etc. Always in default size and without status color. Use it only in default size.
 
 <span class="label label-dismissible label-secondary">
-	Label Text{sp}
-	<button aria-label="Close" class="btn close btn-unstyled" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
+	<span class="label-item label-item-expand">Label Text</span>
+	<span class="label-item label-item-after">
+		<button aria-label="Close" class="close" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times"><use xlink:href="/vendor/lexicon/icons.svg#times"></use></svg>
+		</button>
+	</span>
 </span>
 
 ```soy
@@ -145,12 +166,14 @@ weight: 100
 ```
 ```text/html
 <span class="label label-dismissible label-secondary">
-	Label Text{sp}
-	<button aria-label="Close" class="btn close btn-unstyled" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
-		</svg>
-	</button>
+	<span class="label-item label-item-expand">Label Text</span>
+	<span class="label-item label-item-after">
+		<button aria-label="Close" class="close" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
+			</svg>
+		</button>
+	</span>
 </span>
 ```
 
@@ -158,7 +181,7 @@ weight: 100
 
 > Used in sites to link to related content.
 
-<a class="label label-secondary" href="#1">Label Text</a>
+<a class="label label-secondary" href="#1"><span class="label-item label-item-expand">Label Text</span></a>
 
 ```soy
 {call ClayLabel.render}
@@ -170,7 +193,9 @@ weight: 100
 <clay-label href="#1" label="Label Text"></clay-label>
 ```
 ```text/html
-<a class="label label-primary" href="#1">Label Text</a>
+<a class="label label-primary" href="#1">
+	<span class="label-item label-item-expand">Label Text</span>
+</a>
 ```
 
 </article>

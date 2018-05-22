@@ -339,7 +339,9 @@ weight: 100
 							</td>
 							<td>700KB</td>
 							<td>
-								<span class="label label-success">Approved</span>
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Approved</span>
+								</span>
 							</td>
 							<td>6 days ago</td>
 							<td>4 days ago</td>

@@ -41,7 +41,9 @@ weight: 100
 							<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
 							<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 							<div class="card-detail">
-								<span class="label label-success">Approved</span>
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Approved</span>
+								</span>
 							</div>
 						</div>
 						<div class="autofit-col">
@@ -132,7 +134,9 @@ weight: 100
 					<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
 					<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 					<div class="card-detail">
-						<span class="label label-success">Approved</span>
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Approved</span>
+						</span>
 					</div>
 				</div>
 				<div class="autofit-col">
@@ -180,7 +184,9 @@ weight: 100
 							<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
 							<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 							<div class="card-detail">
-								<span class="label label-success">Approved</span>
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Approved</span>
+								</span>
 							</div>
 						</div>
 						<div class="autofit-col">
@@ -271,7 +277,9 @@ weight: 100
 					<div class="card-title text-truncate" title="thumbnail_coffee.jpg">thumbnail_coffee.jpg</div>
 					<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 					<div class="card-detail">
-						<span class="label label-success">Approved</span>
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Approved</span>
+						</span>
 					</div>
 				</div>
 				<div class="autofit-col">
@@ -311,7 +319,9 @@ weight: 100
 						<div class="card-title text-truncate" title="empty-background.png">empty-background.png</div>
 						<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 						<div class="card-detail">
-							<span class="label label-danger">Rejected</span>
+							<span class="label label-danger">
+								<span class="label-item label-item-expand">Rejected</span>
+							</span>
 						</div>
 					</div>
 					<div class="autofit-col">
@@ -387,7 +397,9 @@ weight: 100
 				<div class="card-title text-truncate" title="empty-background.png">empty-background.png</div>
 				<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 				<div class="card-detail">
-					<span class="label label-danger">Rejected</span>
+					<span class="label label-danger">
+						<span class="label-item label-item-expand">Rejected</span>
+					</span>
 				</div>
 			</div>
 			<div class="autofit-col">
@@ -440,7 +452,9 @@ weight: 100
 							<div class="card-title text-truncate" title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg">lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg</div>
 							<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 							<div class="card-detail">
-								<span class="label label-success">Approved</span>
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Approved</span>
+								</span>
 							</div>
 						</div>
 						<div class="autofit-col">
@@ -567,7 +581,9 @@ weight: 100
 					<div class="card-title text-truncate" title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg">lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg</div>
 					<div class="card-subtitle text-truncate" title="Author Action">Author Action</div>
 					<div class="card-detail">
-						<span class="label label-success">Approved</span>
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Approved</span>
+						</span>
 					</div>
 				</div>
 				<div class="autofit-col">
@@ -819,7 +835,9 @@ weight: 100
 						<div class="card-title text-truncate" title="deliverable.doc">deliverable.doc</div>
 						<div class="card-subtitle text-truncate" title="Stevie Ray Vaughn">Stevie Ray Vaughn</div>
 						<div class="card-detail">
-							<span class="label label-success">Approved</span>
+							<span class="label label-success">
+								<span class="label-item label-item-expand">Approved</span>
+							</span>
 						</div>
 					</div>
 				</div>
@@ -849,7 +867,9 @@ weight: 100
 							<div class="card-title text-truncate" title="deliverable.doc">deliverable.doc</div>
 							<div class="card-subtitle text-truncate" title="Stevie Ray Vaughn">Stevie Ray Vaughn</div>
 							<div class="card-detail">
-								<span class="label label-success">Approved</span>
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Approved</span>
+								</span>
 							</div>
 						</div>
 						<div class="autofit-col">
@@ -958,7 +978,9 @@ weight: 100
 				<div class="card-title text-truncate" title="deliverable.doc">deliverable.doc</div>
 				<div class="card-subtitle text-truncate" title="Stevie Ray Vaughn">Stevie Ray Vaughn</div>
 				<div class="card-detail">
-					<span class="label label-success">Approved</span>
+					<span class="label label-success">
+						<span class="label-item label-item-expand">Approved</span>
+					</span>
 				</div>
 			</div>
 		</div>
@@ -987,7 +1009,9 @@ weight: 100
 					<div class="card-title text-truncate" title="deliverable.doc">deliverable.doc</div>
 					<div class="card-subtitle text-truncate" title="Stevie Ray Vaughn">Stevie Ray Vaughn</div>
 					<div class="card-detail">
-						<span class="label label-success">Approved</span>
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Approved</span>
+						</span>
 					</div>
 				</div>
 				<div class="autofit-col">
@@ -1028,9 +1052,11 @@ weight: 100
 				<div class="card-row">
 					<div class="autofit-col">
 						<span class="sticker">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-								<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-							</svg>
+							<span class="inline-item">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+								</svg>
+							</span>
 						</span>
 					</div>
 					<div class="autofit-col autofit-col-expand autofit-col-gutters">
@@ -1051,9 +1077,11 @@ weight: 100
 							<div class="card-row">
 								<div class="autofit-col">
 									<span class="sticker">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-											<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-										</svg>
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+												<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+											</svg>
+										</span>
 									</span>
 								</div>
 								<div class="autofit-col autofit-col-expand autofit-col-gutters">
@@ -1127,9 +1155,11 @@ weight: 100
 		<div class="card-row">
 			<div class="flex-col">
 				<span class="sticker">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-					</svg>
+					<span class="inline-item">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 			<div class="autofit-col autofit-col-expand autofit-col-gutters">
@@ -1149,9 +1179,11 @@ weight: 100
 					<div class="card-row">
 						<div class="autofit-col">
 							<span class="sticker">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-								</svg>
+								<span class="inline-item">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+										<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+									</svg>
+								</span>
 							</span>
 						</div>
 						<div class="autofit-col autofit-col-expand autofit-col-gutters">
