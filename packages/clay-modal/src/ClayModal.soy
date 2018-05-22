@@ -120,6 +120,10 @@
 
 			{if $spritemap}
 				{call ClayButton.render}
+					{param ariaLabel kind="text"}
+						{msg desc=""}close{/msg}
+					{/param}
+	
 					{param elementClasses: 'close' /}
 					{param events: ['click': $_handleCloseModal] /}
 					{param icon: 'times' /}
