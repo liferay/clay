@@ -33,7 +33,10 @@
 
 		{let $selectedEntryLabel kind="text"}
             {$selectedEntryItem.label}
-            {sp}{msg desc=""}items{/msg}
+            {sp}
+			{msg desc="The word 'items'"}
+				items
+			{/msg}
         {/let}
 
         {call ClayDropdown.render}
@@ -48,7 +51,9 @@
 
 			{let $lastShowingEntry: $currentPage * $selectedEntryItem.label < $totalEntries ? $currentPage * $selectedEntryItem.label : $totalEntries /}
 
-			{msg desc=""}showing-{$firstShowingEntry}-to-{$lastShowingEntry}of-{$totalEntries}-entries{/msg}
+			{msg desc="Says which range of pages of the total are being showed"}
+				showing-{$firstShowingEntry}-to-{$lastShowingEntry}of-{$totalEntries}-entries
+			{/msg}
 		</div>
 
 		{call ClayPagination.render}
