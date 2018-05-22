@@ -113,7 +113,7 @@ describe('ClayToast', function() {
 	});
 
 	// eslint-disable-next-line
-	it('should close automatically a toast after 8 seconds when message has no links', function() {
+	it('should close automatically a toast after 8 seconds', function() {
 		jest.useFakeTimers();
 
 		toast = new ClayToast({
@@ -131,18 +131,18 @@ describe('ClayToast', function() {
 	});
 
 	// eslint-disable-next-line
-	it('should close automatically a toast after 8 seconds when message has links', function() {
+	it('should close automatically a toast after 12 seconds', function() {
 		jest.useFakeTimers();
 
 		toast = new ClayToast({
-			autoClose: true,
+			autoClose: 12,
 			message: 'message<a href="#">Link</a>',
 			spritemap: spritemap,
 			title: 'Success!',
 		});
 
 		expect(setTimeout.mock.calls.length).toBe(1);
-		expect(setTimeout.mock.calls[0][1]).toBe(8000);
+		expect(setTimeout.mock.calls[0][1]).toBe(12000);
 
 		jest.runAllTimers();
 		expect(toast._visible).toBeFalsy();

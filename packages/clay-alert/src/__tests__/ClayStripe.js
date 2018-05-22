@@ -113,7 +113,7 @@ describe('ClayStripe', function() {
 	});
 
 	// eslint-disable-next-line
-	it('should close automatically an stripe after 5 seconds when message has no links', function() {
+	it('should close automatically an stripe after 5 seconds', function() {
 		jest.useFakeTimers();
 
 		stripe = new ClayStripe({
@@ -131,11 +131,11 @@ describe('ClayStripe', function() {
 	});
 
 	// eslint-disable-next-line
-	it('should close automatically an stripe after 5 seconds when message has links', function() {
+	it('should close automatically an stripe after 10 seconds', function() {
 		jest.useFakeTimers();
 
 		stripe = new ClayStripe({
-			autoClose: true,
+			autoClose: 10,
 			message: 'message<a href="#">Link</a>',
 			spritemap: spritemap,
 			title: 'Success!',
