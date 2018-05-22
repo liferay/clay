@@ -75,7 +75,12 @@
 
 		<span class="label-item label-item-after">
 			{call ClayButton.render}
-				{param ariaLabel: 'Close' /}
+				{param ariaLabel kind="text"}
+					{msg desc="The word 'Close' used as a verb"}
+						close
+					{/msg}
+				{/param}
+
 				{param elementClasses: 'close' /}
 				{param events: [ 'click': $_handleCloseButtonClick] /}
 				{param icon: 'times' /}
