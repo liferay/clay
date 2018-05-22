@@ -25,7 +25,12 @@
 
 	<ul {$attributes}>
 		{call .item}
-			{param ariaLabel: 'Previous Page' /}
+			{param ariaLabel kind="text"}
+				{msg desc="Help text to indicate that this link goes to the previous page"}
+					previous-page
+				{/msg}
+			{/param}
+
 			{param baseHref: $baseHref /}
 			{param icon: 'angle-left' /}
 			{param page: $currentPage > 1 ? ($currentPage - 1) : null /}
@@ -109,7 +114,12 @@
 		{/if}
 
 		{call .item}
-			{param ariaLabel: 'Next Page' /}
+			{param ariaLabel kind="text"}
+				{msg desc="Help text to indicate that this link goes to the next page"}
+					next-page
+				{/msg}
+			{/param}
+
 			{param baseHref: $baseHref /}
 			{param icon: 'angle-right' /}
 			{param page: $currentPage < $totalPages ? ($currentPage + 1) : null /}
