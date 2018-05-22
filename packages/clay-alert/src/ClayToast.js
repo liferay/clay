@@ -44,17 +44,14 @@ class ClayToast extends Component {
  */
 ClayToast.STATE = {
 	/**
-	 * Flag to `true` to indicate whether the alert should be closed 
+	 * Flag to `true` to indicate whether the alert should be closed
 	 * automatically with the default time.
 	 * @default false
 	 * @instance
 	 * @memberof ClayToast
 	 * @type {?(bool|number)}
 	 */
-	autoClose: Config.oneOfType([
-		Config.bool().value(false),
-		Config.number()
-	]),
+	autoClose: Config.oneOfType([Config.bool().value(false), Config.number()]),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.
