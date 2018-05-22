@@ -187,7 +187,7 @@ ClayAlertBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {(?string|undefined)}
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
@@ -196,7 +196,7 @@ ClayAlertBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {(?string|undefined)}
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
