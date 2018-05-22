@@ -1,5 +1,7 @@
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
+	margin-bottom: $dropdown-header-margin-bottom;
+	margin-top: $dropdown-header-margin-top;
 	text-transform: $dropdown-header-text-transform;
 	white-space: normal;
 	word-wrap: break-word;
@@ -17,12 +19,18 @@
 	@include clay-scale-component {
 		font-size: $dropdown-header-font-size-mobile;
 	}
+
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 .dropdown-subheader {
 	color: $dropdown-subheader-color;
 	font-size: $dropdown-subheader-font-size;
 	font-weight: $dropdown-subheader-font-weight;
+	margin-bottom: $dropdown-subheader-margin-bottom;
+	margin-top: $dropdown-subheader-margin-top;
 	padding-bottom: $dropdown-subheader-padding-y;
 	padding-left: $dropdown-subheader-padding-x;
 	padding-right: $dropdown-subheader-padding-x;
@@ -30,6 +38,10 @@
 	text-transform: $dropdown-subheader-text-transform;
 	white-space: normal;
 	word-wrap: break-word;
+
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 .dropdown-caption {
