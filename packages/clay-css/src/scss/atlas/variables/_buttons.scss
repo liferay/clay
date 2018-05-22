@@ -148,7 +148,7 @@ $btn-outline-secondary: (
 	bg: null,
 	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
 	color: null,
-	hover-bg: rgba(0, 0, 0, 0.02),
+	hover-bg: rgba(#272833, 0.03),
 	hover-border-color: transparent,
 	hover-color: map-get($btn-secondary, hover-color),
 	focus-bg: map-get($btn-secondary, focus-bg),
@@ -158,7 +158,7 @@ $btn-outline-secondary: (
 	disabled-bg: transparent,
 	disabled-border-color: $secondary,
 	disabled-color: $secondary,
-	active-bg: rgba(0, 0, 0, 0.04),
+	active-bg: rgba(#272833, 0.06),
 	active-border-color: transparent,
 	active-box-shadow: map-get($btn-secondary, active-box-shadow),
 	active-color: map-get($btn-secondary, active-color)
