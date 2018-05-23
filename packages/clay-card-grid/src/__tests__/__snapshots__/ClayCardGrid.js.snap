@@ -15,7 +15,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         <div class="card-row">
           <div class="autofit-col">
             <span class="sticker sticker-rounded sticker-unstyled">
-              <span class="sticker-overlay">
+              <span class="inline-item">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
@@ -36,7 +36,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
         <div class="card-row">
           <div class="autofit-col">
             <span class="sticker sticker-rounded sticker-unstyled">
-              <span class="sticker-overlay">
+              <span class="inline-item">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
                   <title>folder</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>

@@ -65,7 +65,15 @@
 	{@param? label: html|string}
 	{@param? spritemap: string}
 
-	<span class="sticker-overlay">
+	{let $classes kind="text"}
+		{if $icon and $spritemap}
+			inline-item
+		{else}
+			sticker-overlay
+		{/if}
+	{/let}
+
+	<span class="{$classes}">
 		{if $icon and $spritemap}
 			{call ClayIcon.render}
 				{param spritemap: $spritemap /}

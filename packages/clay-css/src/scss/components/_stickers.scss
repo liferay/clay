@@ -25,6 +25,14 @@
 		margin: auto;
 	}
 
+	> .inline-item {
+		font-size: $sticker-inline-item-font-size;
+
+		.lexicon-icon {
+			margin-top: 0;
+		}
+	}
+
 	&.rounded .sticker-overlay {
 		border-radius: $rounded-border-radius;
 	}
