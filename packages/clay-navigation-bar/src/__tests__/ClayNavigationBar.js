@@ -86,6 +86,18 @@ describe('ClayNavigationBar', function() {
 		expect(navigationbar).toMatchSnapshot();
 	});
 
+	it('should render a navigatiom bar with n(2) items with id', function() {
+		navigationbar = new ClayNavigationBar({
+			items: [
+				{label: 'Page 1', href: '#1', id: 'pageId1'},
+				{label: 'Page 2', href: '#2', id: 'pageId2'},
+			],
+			spritemap: spritemap,
+		});
+
+		expect(navigationbar).toMatchSnapshot();
+	});
+
 	it('should fail when no items are passed', function() {
 		mockConsoleError();
 
@@ -116,5 +128,22 @@ describe('ClayNavigationBar', function() {
 				spritemap: spritemap,
 			});
 		}).toThrow();
+	});
+
+	it('should render a navigation bar and emit an event on nav item click', () => {
+		navigationbar = new ClayNavigationBar({
+			items: [
+				{label: 'Page 1', href: '#1', id: 'pageId1'},
+				{label: 'Page 2', href: '#2', id: 'pageId2'},
+			],
+			spritemap: spritemap,
+		});
+
+		const spy = jest.spyOn(navigationbar, 'emit');
+
+		navigationbar.refs.navItem1.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('itemClicked', expect.any(Object));
 	});
 });
