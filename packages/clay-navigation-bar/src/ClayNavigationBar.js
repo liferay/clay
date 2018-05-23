@@ -46,6 +46,7 @@ class ClayNavigationBar extends Component {
 
 	/**
 	 * Handles nav item click.
+	 * @param {!Event} event
 	 * @private
 	 */
 	_handleNavItemClicked(event) {
