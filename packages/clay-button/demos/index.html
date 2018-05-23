@@ -82,6 +82,9 @@
 		 */
 		new metal.ClayButton(
 			{
+				data: {
+					title: 'An example tooltip'
+				},
 				label: 'Default Button'
 			},
 			'#states-block'
@@ -98,6 +101,9 @@
 		new metal.ClayButton(
 			{
 				ariaLabel: 'My Description',
+				data: {
+					title: 'Another tooltip'
+				},
 				style: 'link',
 				label: 'Link Button'
 			},
@@ -117,6 +123,9 @@
 		 */
 		new metal.ClayButton(
 			{
+				data: {
+					title: 'Disabled component tooltip'
+				},
 				disabled: true,
 				label: 'Disabled Button'
 			},
@@ -135,6 +144,9 @@
 
 		new metal.ClayButton(
 			{
+				data: {
+					title: 'Small button tooltip'
+				},
 				label: 'Small Button',
 				size: 'sm'
 			},
@@ -160,6 +172,9 @@
 		new metal.ClayButton(
 			{
 				block: true,
+				data: {
+					title: 'Block button tooltip'
+				},
 				label: 'Block Button'
 			},
 			'#block-block'

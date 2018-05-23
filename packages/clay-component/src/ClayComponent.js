@@ -2,6 +2,7 @@ import Component from 'metal-component';
 import {Config} from 'metal-state';
 import {domData} from 'metal-dom';
 import {core, isObject, isServerSide} from 'metal';
+import {ClayTooltip} from 'clay-tooltip';
 
 /**
  * Clay Component.
@@ -16,6 +17,10 @@ class ClayComponent extends Component {
 
 		if (isServerSide()) {
 			return;
+		}
+
+		if (this.useTooltip) {
+			ClayTooltip.init();
 		}
 
 		let getAttribute = this.element.getAttribute.bind(this.element);
@@ -137,6 +142,15 @@ ClayComponent.STATE = {
 	 * @type {?object}
 	 */
 	data: Config.object(),
+
+	/**
+	 * Flag indicating if this component should use tooltips.
+	 * @default true
+	 * @instance
+	 * @memberof ClayComponent
+	 * @type {boolean}
+	 */
+	useTooltip: Config.bool().value(true),
 };
 
 export {ClayComponent};

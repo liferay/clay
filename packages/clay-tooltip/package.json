@@ -1,16 +1,16 @@
 {
-  "name": "clay-component",
+  "name": "clay-tooltip",
   "version": "2.0.3",
-  "description": "Clay Link Component",
+  "description": "Clay Tooltip Component",
   "license": "BSD",
-  "repository": "https://github.com/liferay/clay/tree/master/packages/clay-component",
+  "repository": "https://github.com/liferay/clay/tree/master/packages/clay-tooltip",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/ClayComponent.js",
-  "esnext:main": "src/ClayComponent.js",
-  "jsnext:main": "src/ClayComponent.js",
+  "main": "lib/ClayTooltip.js",
+  "esnext:main": "src/ClayTooltip.js",
+  "jsnext:main": "src/ClayTooltip.js",
   "files": [
     "lib",
     "src",
@@ -21,17 +21,19 @@
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "prepublish": "npm run soy && npm run compile",
     "link": "npm link",
-    "soy": "metalsoy"
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-portal/src/**/*.soy'"
   },
   "keywords": [
     "clay",
     "metal"
   ],
   "dependencies": {
-    "clay-tooltip": "^2.0.3",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-dom": "^2.16.0",
+    "metal-events": "^2.16.0",
+    "metal-position": "^2.1.0",
+    "metal-soy": "^2.16.0",
     "metal-state": "^2.16.0"
   },
   "devDependencies": {
@@ -40,8 +42,9 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay-components": "^2.0.3",
-    "clay-css": "^2.0.3",
+    "browserslist-config-clay-components": "^2.0.2",
+    "clay-css": "^2.0.2",
+    "metal-soy-loader": "^1.0.0-alpha.4",
     "metal-tools-soy": "^6.0.0",
     "webpack": "^3.0.0"
   },

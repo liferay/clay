@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Metal Clay Dropdown</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+	</style>
+
+	<script src="../build/globals/clay-tooltip.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Tooltip</h1>
+	</div>
+
+	<div style="margin:50px;width:150px" title="An example tooltip">
+		Mouse over me
+	</div>
+
+	<div style="position:absolute;right:0px" title="Another tooltip">
+		Here
+	</div>
+
+	<div style="position:absolute;top:200px;left:10px" title="Yet another tooltip">
+		And me
+	</div>
+
+	<div style="position:absolute;bottom:20px" title="A tooltip">
+		Last one
+	</div>
+
+	<script>
+		metal.ClayTooltip.init();
+	</script>
+</body>
+</html>
