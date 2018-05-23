@@ -25,7 +25,8 @@ $management-bar-light: map-merge((
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
 	link-active-color: $navbar-light-active-color,
-	link-disabled-color: $navbar-light-disabled-color
+	link-disabled-color: $navbar-light-disabled-color,
+	link-disabled-opacity: 1
 ), $management-bar-light);
 
 $management-bar-primary: () !default;
@@ -36,5 +37,6 @@ $management-bar-primary: map-merge((
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
 	link-active-color: $navbar-light-active-color,
-	link-disabled-color: $navbar-light-disabled-color
+	link-disabled-color: $navbar-light-disabled-color,
+	link-disabled-opacity: 1
 ), $management-bar-primary);
