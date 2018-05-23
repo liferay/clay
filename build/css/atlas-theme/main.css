@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.27
+* Lexicon 1.0.28
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.
@@ -8810,6 +8810,7 @@ fieldset[disabled] .btn {
   display: inline-block;
   fill: currentColor;
   height: 16px;
+  pointer-events: none;
   transform: translateZ(0);
   vertical-align: middle;
   width: 16px;
