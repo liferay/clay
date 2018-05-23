@@ -4,7 +4,7 @@ import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
-import {isServerSide, isNumber} from 'metal';
+import {isServerSide} from 'metal';
 
 import templates from './ClayAlertBase.soy.js';
 
@@ -114,15 +114,8 @@ class ClayAlertBase extends Component {
 	 * @private
 	 */
 	_startTimer() {
-		if (
-			this.autoClose &&
-			(this.type === 'stripe' || this.type === 'toast')
-		) {
-			if (isNumber(this.autoClose)) {
-				this._timeToDisappear = this.autoClose * 1000;
-			} else {
-				this._timeToDisappear = (this.type === 'toast' ? 8 : 5) * 1000;
-			}
+		if (this.autoClose) {
+			this._timeToDisappear = this.autoClose * 1000;
 
 			this._resumeTimeout();
 		}
@@ -155,14 +148,13 @@ ClayAlertBase.STATE = {
 		.value(true),
 
 	/**
-	 * Flag to `true` to indicate whether the alert should be closed
-	 * automatically with the default time.
-	 * @default false
+	 * Set the duration time to auto close the alert.
+	 * @default undfined
 	 * @instance
 	 * @memberof ClayAlertBase
-	 * @type {?(bool|number)}
+	 * @type {?number}
 	 */
-	autoClose: Config.oneOfType([Config.bool().value(false), Config.number()]),
+	autoClose: Config.number(),
 
 	/**
 	 * Flag to indicate if the alert is closeable.
