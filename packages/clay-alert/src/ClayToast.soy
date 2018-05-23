@@ -13,8 +13,10 @@
 	{@param? id: string}
 	{@param? style: string}
 
+	{let $timeToDisappear: $autoClose == true ? 8 : $autoClose == false ? null : $autoClose /}
+
 	{call ClayAlertBase.render}
-		{param autoClose: $autoClose /}
+		{param autoClose: $timeToDisappear /}
 		{param closeable: true /}
 		{param elementClasses: $elementClasses /}
 		{param events: ['hide': $_handleHide ] /}

@@ -51,7 +51,7 @@ ClayToast.STATE = {
 	 * @memberof ClayToast
 	 * @type {?(bool|number)}
 	 */
-	autoClose: Config.oneOfType([Config.bool().value(false), Config.number()]),
+	autoClose: Config.oneOfType([Config.bool(), Config.number()]).value(false),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.
