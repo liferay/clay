@@ -1,5 +1,8 @@
+### v1.0.28 - May 23, 2018
+* Update: ([#926](https://github.com/liferay/clay/issues/926)) Adds `pointer-events: none` to `.lexicon-icon` to prevent SVG title attributes from overriding HTML title attribute
+
 ### v1.0.27 - May 4, 2018
-* Update: (Fixes #859) Fix whitespace issue with inline-scroller
+* Update: (Fixes [#859](https://github.com/liferay/clay/issues/859)) Fix whitespace issue with inline-scroller
 
 ### v1.0.26 - November 27, 2017
 * Update: (Fixes [#379](https://github.com/liferay/clay/issues/379)) Glyphicon Font path should point to the right directory
