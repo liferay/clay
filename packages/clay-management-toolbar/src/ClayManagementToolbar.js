@@ -146,7 +146,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 */
 	_handleQuickActionClicked(event) {
 		let element = event.delegateTarget;
-		let elementIndex = element.getAttribute('data-clay-index');
+		let elementIndex = element.getAttribute('data-quick-action-index');
 		let item = this.actionItems[elementIndex];
 
 		return !this.emit({
