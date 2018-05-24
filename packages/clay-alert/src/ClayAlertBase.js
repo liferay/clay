@@ -23,34 +23,22 @@ class ClayAlertBase extends Component {
 	/**
 	 * @inheritDoc
 	 */
-	rendered() {
-		if (isServerSide()) {
-			return;
-		}
-
-		if (
-			this.autoClose &&
-			(this.type === 'stripe' || this.type === 'toast')
-		) {
-			if (this._delayTime === undefined || this._delayTime > 0) {
-				this._delayTime =
-					(this.element.querySelector('a') ? 10 : 5) * 1000;
-			}
-
-			this._resumeTimeout();
-		}
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	disposed() {
 		if (this._timer) {
 			clearTimeout(this._timer);
 			this._timer = undefined;
 		}
-		this._delayTime = undefined;
-		this._startDelayTime = undefined;
+		this._timeToDisappear = undefined;
+		this._startedTime = undefined;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	rendered(firstRender) {
+		if (firstRender && !isServerSide()) {
+			this._startTimer();
+		}
 	}
 
 	/**
@@ -104,7 +92,7 @@ class ClayAlertBase extends Component {
 		if (this._timer) {
 			clearTimeout(this._timer);
 			this._timer = undefined;
-			this._delayTime -= new Date() - this._startDelayTime;
+			this._timeToDisappear -= new Date() - this._startedTime;
 		}
 	}
 
@@ -113,11 +101,23 @@ class ClayAlertBase extends Component {
 	 * @private
 	 */
 	_resumeTimeout() {
-		if (this._delayTime > 0) {
-			this._startDelayTime = new Date();
+		if (this._timeToDisappear > 0) {
+			this._startedTime = new Date();
 			this._timer = setTimeout(() => {
 				this.close();
-			}, this._delayTime);
+			}, this._timeToDisappear);
+		}
+	}
+
+	/**
+	 * Sets the delayTime if passed, if it does not set the default, and starts.
+	 * @private
+	 */
+	_startTimer() {
+		if (this.autoClose) {
+			this._timeToDisappear = this.autoClose * 1000;
+
+			this._resumeTimeout();
 		}
 	}
 
@@ -148,13 +148,13 @@ ClayAlertBase.STATE = {
 		.value(true),
 
 	/**
-	 * Flag to indicate if alert should be automatically closed.
-	 * @default false
+	 * Set the duration time to auto close the alert.
+	 * @default undfined
 	 * @instance
 	 * @memberof ClayAlertBase
-	 * @type {?bool}
+	 * @type {?number}
 	 */
-	autoClose: Config.bool().value(false),
+	autoClose: Config.number(),
 
 	/**
 	 * Flag to indicate if the alert is closeable.
@@ -179,7 +179,7 @@ ClayAlertBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {(?string|undefined)}
+	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
 
@@ -188,7 +188,7 @@ ClayAlertBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlert
-	 * @type {(?string|undefined)}
+	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
 
