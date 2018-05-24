@@ -136,13 +136,13 @@
 // Button Monospaced
 
 .btn-monospaced {
-	align-items: center;
-	display: inline-flex;
-	flex-direction: column;
 	height: $btn-monospaced-size;
-	justify-content: center;
+	line-height: 1;
 	overflow: hidden;
-	padding: 0;
+	padding-bottom: $btn-monospaced-padding-y;
+	padding-left: $btn-monospaced-padding-x;
+	padding-right: $btn-monospaced-padding-x;
+	padding-top: $btn-monospaced-padding-y;
 	text-align: center;
 	white-space: normal;
 	width: $btn-monospaced-size;
@@ -155,6 +155,10 @@
 
 	&.btn-lg {
 		height: $btn-monospaced-size-lg;
+		padding-bottom: $btn-monospaced-padding-y-lg;
+		padding-left: $btn-monospaced-padding-x-lg;
+		padding-right: $btn-monospaced-padding-x-lg;
+		padding-top: $btn-monospaced-padding-y-lg;
 		width: $btn-monospaced-size-lg;
 
 		@include clay-scale-component {
@@ -165,6 +169,10 @@
 
 	&.btn-sm {
 		height: $btn-monospaced-size-sm;
+		padding-bottom: $btn-monospaced-padding-y-sm;
+		padding-left: $btn-monospaced-padding-x-sm;
+		padding-right: $btn-monospaced-padding-x-sm;
+		padding-top: $btn-monospaced-padding-y-sm;
 		width: $btn-monospaced-size-sm;
 
 		@include clay-scale-component {
