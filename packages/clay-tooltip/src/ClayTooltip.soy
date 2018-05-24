@@ -1,0 +1,40 @@
+{namespace ClayTooltip}
+
+/**
+ * This renders a tooltip.
+ */
+{template .render}
+	{@param? _content: html|string}
+	{@param? _showTooltip: bool}
+	{@param? alignedPosition: number}
+	{@param? classMap: ?}
+	{@param? elementClasses: string}
+	{@param? position: number}
+
+	{let $classes: $classMap ? $classMap : ['clay-tooltip-top-left', 'clay-tooltip-top', 'clay-tooltip-top-right', 'clay-tooltip-bottom-left', 'clay-tooltip-bottom', 'clay-tooltip-bottom-right', 'clay-tooltip-right', 'clay-tooltip-left'] /}
+	{let $currentPosition: $alignedPosition ?: $position /}
+	{let $positionClass: isNonnull($currentPosition) ? $classes[$currentPosition] : 'clay-tooltip-bottom' /}
+
+	{let $tooltipAttributes kind="attributes"}
+		class="tooltip
+			{sp}{$positionClass}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+
+			{if $_showTooltip}
+				{sp}show
+			{/if}			
+		"
+		role="tooltip"
+	{/let}
+
+	<div {$tooltipAttributes}>
+		<div class="arrow"></div>
+	
+		<div class="tooltip-inner">
+			{$_content}
+		</div>
+	</div>
+{/template}
