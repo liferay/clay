@@ -75,7 +75,7 @@ describe('ClayManagementToolbar', function() {
 
 	it('should render a management toolbar with search and customized placeholder', () => {
 		managementToolbar = new ClayManagementToolbar({
-			searchPlaceholder: 'Search thread...',
+			searchInputPlaceholder: 'Search thread...',
 			spritemap: spritemap,
 		});
 
