@@ -139,11 +139,25 @@ describe('ClayNavigationBar', function() {
 			spritemap: spritemap,
 		});
 
+		const dataToExpect = {
+			item: {
+				label: 'Page 2',
+				href: '#2',
+				id: 'pageId2',
+			},
+		};
+
 		const spy = jest.spyOn(navigationbar, 'emit');
 
 		navigationbar.refs.navItem1.element.click();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('itemClicked', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: dataToExpect,
+				name: 'itemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 });
