@@ -768,7 +768,14 @@
 
 				class="form-control input-group-inset input-group-inset-after"
 				name="{$searchInputName}"
-				placeholder="{$searchInputPlaceholder ?: 'Search for...'}"
+				{if $searchInputPlaceholder}
+					placeholder="{$searchInputPlaceholder}"
+				{else}
+					placeholder="
+						{msg desc="Search text input placeholder"}
+							search-for
+						{/msg}"
+				{/if}
 				ref="search"
 				type="text"
 

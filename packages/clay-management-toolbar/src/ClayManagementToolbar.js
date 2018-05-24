@@ -360,12 +360,12 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * Text of the search placeholder.
-	 * @default `Search for...`
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
 	 */
-	searchInputPlaceholder: Config.string().value('Search for...'),
+	searchInputPlaceholder: Config.string(),
 
 	/**
 	 * Value of the search input.
