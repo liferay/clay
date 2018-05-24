@@ -7,7 +7,6 @@
 	{@param items: list<[
 		active: bool,
 		href: string,
-		id: string,
 		label: string
 	]>}
 	{@param spritemap: string}
@@ -65,7 +64,6 @@
 	{@param items: list<[
 		active: bool,
 		href: string,
-		id: string,
 		label: string
 	]>}
 	{@param spritemap: string}
@@ -108,7 +106,6 @@
 	{@param label: string}
 	{@param? _handleNavItemClicked: any}
 	{@param? active: bool}
-	{@param? id: string}
 	{@param? index: number}
 
 	<li class="nav-item" data-nav-item-index="{$index}" data-onclick="{$_handleNavItemClicked}">
@@ -129,7 +126,6 @@
 			{/param}
 
 			{param href: $href /}
-			{param id: $id /}
 			{param label kind="html"}
 				<span class="navbar-text-truncate">{$label}</span>
 			{/param}
@@ -146,7 +142,6 @@
 	{@param items: list<[
 		active: bool,
 		href: string,
-		id: string,
 		label: string
 	]>}
 	{@param? _handleNavItemClicked: any}
@@ -157,7 +152,6 @@
 				{param _handleNavItemClicked: $_handleNavItemClicked /}
 				{param active: $page.active /}
 				{param href: $page.href /}
-				{param id: $page.id /}
 				{param index: index($page) /}
 				{param label: $page.label /}
 			{/call}
@@ -172,7 +166,6 @@
 	{@param items: list<[
 		active: bool,
 		href: string,
-		id: string,
 		label: string
 	]>}
 	{@param spritemap: string}
