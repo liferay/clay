@@ -86,18 +86,6 @@ describe('ClayNavigationBar', function() {
 		expect(navigationbar).toMatchSnapshot();
 	});
 
-	it('should render a navigatiom bar with n(2) items with id', function() {
-		navigationbar = new ClayNavigationBar({
-			items: [
-				{label: 'Page 1', href: '#1', id: 'pageId1'},
-				{label: 'Page 2', href: '#2', id: 'pageId2'},
-			],
-			spritemap: spritemap,
-		});
-
-		expect(navigationbar).toMatchSnapshot();
-	});
-
 	it('should fail when no items are passed', function() {
 		mockConsoleError();
 
@@ -133,8 +121,8 @@ describe('ClayNavigationBar', function() {
 	it('should render a navigation bar and emit an event on nav item click', () => {
 		navigationbar = new ClayNavigationBar({
 			items: [
-				{label: 'Page 1', href: '#1', id: 'pageId1'},
-				{label: 'Page 2', href: '#2', id: 'pageId2'},
+				{label: 'Page 1', href: '#1'},
+				{label: 'Page 2', href: '#2'},
 			],
 			spritemap: spritemap,
 		});
@@ -143,7 +131,6 @@ describe('ClayNavigationBar', function() {
 			item: {
 				label: 'Page 2',
 				href: '#2',
-				id: 'pageId2',
 			},
 		};
 
