@@ -10,7 +10,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
@@ -18,7 +18,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         <li class="dropdown nav-item">
           <div class="dropdown">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
-              <span class="navbar-breakpoint-down-d-none">Filter and Order
+              <span class="navbar-breakpoint-down-d-none">filter-and-order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                   <title>caret-bottom</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
@@ -47,7 +47,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -133,7 +133,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
       </ul>
     </div>
     <div class="dropdown-section">
-      <button class="btn btn-block btn-primary" type="button">Done</button>
+      <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
   </form>
 </div>
@@ -180,7 +180,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
@@ -188,7 +188,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         <li class="dropdown nav-item">
           <div class="dropdown">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
-              <span class="navbar-breakpoint-down-d-none">Filter and Order
+              <span class="navbar-breakpoint-down-d-none">filter-and-order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                   <title>caret-bottom</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
@@ -217,7 +217,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="carcamusas">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="carcamusas">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -281,14 +281,14 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         <li class="tbar-item tbar-item-expand">
           <div class="tbar-section">
             <span class="text-truncate-inline">
-              <span class="text-truncate">0 results for
+              <span class="text-truncate">0-results-for
                 <strong>carcamusas</strong>
               </span>
             </span>
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
         </li>
       </ul>
     </div>
@@ -321,7 +321,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
       </ul>
     </div>
     <div class="dropdown-section">
-      <button class="btn btn-block btn-primary" type="button">Done</button>
+      <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
   </form>
 </div>
@@ -368,7 +368,7 @@ exports[`ClayManagementToolbar should render a management toolbar with a clear r
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
@@ -379,7 +379,7 @@ exports[`ClayManagementToolbar should render a management toolbar with a clear r
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="foo">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -425,14 +425,14 @@ exports[`ClayManagementToolbar should render a management toolbar with a clear r
         <li class="tbar-item tbar-item-expand">
           <div class="tbar-section">
             <span class="text-truncate-inline">
-              <span class="text-truncate">10 results for
+              <span class="text-truncate">10-results-for
                 <strong>foo</strong>
               </span>
             </span>
           </div>
         </li>
         <li class="tbar-item">
-          <a class=" component-link tbar-link" href="#clear">Clear</a>
+          <a class=" component-link tbar-link" href="#clear">clear</a>
         </li>
       </ul>
     </div>
@@ -450,18 +450,18 @@ exports[`ClayManagementToolbar should render a management toolbar with actions a
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">1 of 10
-            <span class="navbar-breakpoint-down-d-none">items selected</span>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
         <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">Select all</button>
+          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -501,18 +501,18 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">1 of 10
-            <span class="navbar-breakpoint-down-d-none">items selected</span>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
         <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">Select all</button>
+          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -551,7 +551,7 @@ exports[`ClayManagementToolbar should render a management toolbar with advanced 
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -609,7 +609,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -661,7 +661,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -699,18 +699,18 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">1 of 10
-            <span class="navbar-breakpoint-down-d-none">items selected</span>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
         <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">Select all</button>
+          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
     </div>
@@ -727,7 +727,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -765,7 +765,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -830,7 +830,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -883,7 +883,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -955,7 +955,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1032,7 +1032,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
         </li>
       </ul>
     </div>
-    <div class="dropdown-caption">Showing 9 of 10 elements</div>
+    <div class="dropdown-caption">showing-9-of-10-elements</div>
     <div class="dropdown-section">
       <a class="btn btn-secondary btn-block" href="#viewMore">More</a>
     </div>
@@ -1059,7 +1059,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1110,7 +1110,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <li class="dropdown nav-item">
           <div class="dropdown">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
-              <span class="navbar-breakpoint-down-d-none">Filter and Order
+              <span class="navbar-breakpoint-down-d-none">filter-and-order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                   <title>caret-bottom</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
@@ -1131,7 +1131,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1192,7 +1192,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <li class="dropdown nav-item">
           <div class="dropdown">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
-              <span class="navbar-breakpoint-down-d-none">Filter and Order
+              <span class="navbar-breakpoint-down-d-none">filter-and-order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                   <title>caret-bottom</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
@@ -1213,7 +1213,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1281,7 +1281,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       </ul>
     </div>
     <div class="dropdown-section">
-      <button class="btn btn-block btn-primary" type="button">Done</button>
+      <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
   </form>
 </div>
@@ -1295,7 +1295,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <li class="dropdown nav-item">
           <div class="dropdown">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
-              <span class="navbar-breakpoint-down-d-none">Filter and Order
+              <span class="navbar-breakpoint-down-d-none">filter-and-order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                   <title>caret-bottom</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
@@ -1316,7 +1316,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1370,7 +1370,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       </ul>
     </div>
     <div class="dropdown-section">
-      <button class="btn btn-block btn-primary" type="button">Done</button>
+      <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
   </form>
 </div>
@@ -1384,7 +1384,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         <li class="dropdown nav-item">
           <div class="dropdown">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
-              <span class="navbar-breakpoint-down-d-none">Filter and Order
+              <span class="navbar-breakpoint-down-d-none">filter-and-order
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                   <title>caret-bottom</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
@@ -1405,7 +1405,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1488,7 +1488,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       </ul>
     </div>
     <div class="dropdown-section">
-      <button class="btn btn-block btn-primary" type="button">Done</button>
+      <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
   </form>
 </div>
@@ -1503,7 +1503,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -1541,18 +1541,18 @@ exports[`ClayManagementToolbar should render a management toolbar with id in act
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">1 of 10
-            <span class="navbar-breakpoint-down-d-none">items selected</span>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
         <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">Select all</button>
+          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
     </div>
@@ -1569,7 +1569,7 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -1615,18 +1615,18 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">1 of 10
-            <span class="navbar-breakpoint-down-d-none">items selected</span>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
         <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">Select all</button>
+          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -1654,7 +1654,7 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1767,7 +1767,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
         <form action="mySearchURL" method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -1804,7 +1804,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
         <form method="GET" name="mySearchName" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -1841,7 +1841,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchName" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchName" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -1879,7 +1879,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
@@ -1890,7 +1890,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="foo">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1936,14 +1936,14 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
         <li class="tbar-item tbar-item-expand">
           <div class="tbar-section">
             <span class="text-truncate-inline">
-              <span class="text-truncate">10 results for
+              <span class="text-truncate">10-results-for
                 <strong>foo</strong>
               </span>
             </span>
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
         </li>
       </ul>
     </div>
@@ -1961,7 +1961,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
@@ -1972,7 +1972,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text" value="foo">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="foo">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2018,14 +2018,14 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
         <li class="tbar-item tbar-item-expand">
           <div class="tbar-section">
             <span class="text-truncate-inline">
-              <span class="text-truncate">0 results for
+              <span class="text-truncate">0-results-for
                 <strong>foo</strong>
               </span>
             </span>
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
         </li>
       </ul>
     </div>
@@ -2043,18 +2043,18 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">1 of 10
-            <span class="navbar-breakpoint-down-d-none">items selected</span>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
         <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">Select all</button>
+          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
     </div>
@@ -2065,14 +2065,14 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
         <li class="tbar-item tbar-item-expand">
           <div class="tbar-section">
             <span class="text-truncate-inline">
-              <span class="text-truncate">10 results for
+              <span class="text-truncate">10-results-for
                 <strong>foo</strong>
               </span>
             </span>
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">Clear</button>
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
         </li>
       </ul>
     </div>
@@ -2090,7 +2090,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
             <label>
               <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
@@ -2101,7 +2101,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2163,7 +2163,7 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2216,18 +2216,18 @@ exports[`ClayManagementToolbar should render a management toolbar with state act
             <label>
               <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">Select Page</span>
+                <span class="custom-control-label-text sr-only">select-page</span>
               </span>
             </label>
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">1 of 10
-            <span class="navbar-breakpoint-down-d-none">items selected</span>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
         <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">Select all</button>
+          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
     </div>
@@ -2245,7 +2245,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2338,7 +2338,7 @@ exports[`ClayManagementToolbar should render a management toolbar without creati
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
@@ -2366,7 +2366,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
