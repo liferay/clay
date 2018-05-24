@@ -2221,7 +2221,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
@@ -2229,7 +2229,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
               </svg>
             </a>
           </li>
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="1">
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
@@ -2785,7 +2785,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
@@ -2793,7 +2793,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
               </svg>
             </a>
           </li>
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="1">
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
@@ -6012,7 +6012,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
@@ -6020,7 +6020,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               </svg>
             </a>
           </li>
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="1">
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
@@ -6533,7 +6533,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
             <a class=" nav-link nav-link-monospaced" href="#1">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
@@ -6541,7 +6541,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
               </svg>
             </a>
           </li>
-          <li class="nav-item navbar-breakpoint-down-d-none">
+          <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="1">
             <a class=" nav-link nav-link-monospaced" href="#2">
               <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
