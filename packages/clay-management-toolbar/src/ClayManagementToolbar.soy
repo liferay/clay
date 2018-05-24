@@ -63,6 +63,7 @@
 		]>,
 		viewMoreURL: string
 	]}
+	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
@@ -143,6 +144,7 @@
 				{param _showSearchMobile: $_showSearchMobile /}
 				{param contentRenderer: $contentRenderer ?: '' /}
 				{param creationMenu: $creationMenu /}
+				{param customData: $customData /}
 				{param disabled: $disabled /}
 				{param filterItems: $filterItems /}
 				{param searchActionURL: $searchActionURL /}
@@ -419,6 +421,7 @@
 		]>,
 		viewMoreURL: string
 	]}
+	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? filterItems: list<[
 		checked: bool,
@@ -555,6 +558,7 @@
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
 						{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 						{param _handleSearchSearchClick: $_handleSearchSearchClick /}
+						{param customData: $customData /}
 						{param disabled: $disabled and not $searchValue /}
 						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
@@ -762,6 +766,7 @@
 	{@param spritemap: string}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleSearchSearchClick: any}
+	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}

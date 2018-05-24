@@ -278,6 +278,15 @@ ClayManagementToolbar.STATE = {
 	}),
 
 	/**
+	 * Data that will be passed to deltemplates.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?object}
+	 */
+	customData: Config.object(),
+
+	/**
 	 * Flag to indicate if the managment toolbar is disabled or not.
 	 * @default false
 	 * @instance
