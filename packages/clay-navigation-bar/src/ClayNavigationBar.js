@@ -45,12 +45,22 @@ class ClayNavigationBar extends Component {
 	}
 
 	/**
-	 * Handles nav item click.
+	 * Continues the propagation of the item cliecked event
 	 * @param {!Event} event
 	 * @private
 	 */
 	_handleNavItemClicked(event) {
-		this.emit('itemClicked', event);
+		const element = event.delegateTarget;
+		const index = element.getAttribute('data-nav-item-index');
+		const item = this.items[index];
+
+		return !this.emit({
+			data: {
+				item: item,
+			},
+			name: 'itemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**

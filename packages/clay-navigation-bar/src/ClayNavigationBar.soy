@@ -111,7 +111,7 @@
 	{@param? id: string}
 	{@param? index: number}
 
-	<li class="nav-item">
+	<li class="nav-item" data-nav-item-index="{$index}" data-onclick="{$_handleNavItemClicked}">
 		{call ClayLink.render}
 			{param ariaLabel kind="text"}
 				{if $active}
@@ -128,13 +128,13 @@
 				{/if}
 			{/param}
 
-			{param events: ['click': $_handleNavItemClicked] /}
-
 			{param href: $href /}
 			{param id: $id /}
 			{param label kind="html"}
 				<span class="navbar-text-truncate">{$label}</span>
 			{/param}
+
+			{param ref: 'navItem' + $index /}
 		{/call}
 	</li>
 {/template}
