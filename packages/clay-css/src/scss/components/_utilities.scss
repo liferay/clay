@@ -37,10 +37,13 @@
 %autofit-row {
 	display: flex;
 	flex-wrap: nowrap;
-
-	@include list-unstyled;
-
 	width: 100%;
+
+	@at-root {
+		ul#{&} {
+			@include list-unstyled;
+		}
+	}
 }
 
 .autofit-row {
