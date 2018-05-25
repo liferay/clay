@@ -2,15 +2,20 @@
 title: Popovers and Tooltips
 description: Components
 layout: "guide"
+pattern: "popovers_tooltips"
 weight: 100
 ---
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="popovers">
 
 ### Popovers
 
+> Popovers and Tooltips are patterns to show help text in two different ways.
+
 <div class="clay-site-popover-display">
-	<div class="popover bs-popover-top">
+	<div class="popover clay-popover-top">
 		<div class="arrow"></div>
 		<div class="inline-scroller">
 			<div class="popover-header">Popover top</div>
@@ -19,7 +24,7 @@ weight: 100
 			</div>
 		</div>
 	</div>
-	<div class="popover bs-popover-right">
+	<div class="popover clay-popover-right">
 		<div class="arrow"></div>
 		<div class="inline-scroller">
 			<div class="popover-header">Popover right</div>
@@ -28,7 +33,7 @@ weight: 100
 			</div>
 		</div>
 	</div>
-	<div class="popover bs-popover-bottom">
+	<div class="popover clay-popover-bottom">
 		<div class="arrow"></div>
 		<div class="inline-scroller">
 			<div class="popover-header">Popover bottom</div>
@@ -38,7 +43,7 @@ weight: 100
 			</div>
 		</div>
 	</div>
-	<div class="popover bs-popover-left">
+	<div class="popover clay-popover-left">
 		<div class="arrow"></div>
 		<div class="inline-scroller">
 			<div class="popover-header">Popover left</div>
@@ -50,7 +55,7 @@ weight: 100
 </div>
 
 ```text/html
-<div class="popover bs-popover-top">
+<div class="popover clay-popover-top">
 	<div class="arrow"></div>
 	<div class="inline-scroller">
 		<div class="popover-header">Popover top</div>
@@ -60,7 +65,7 @@ weight: 100
 	</div>
 </div>
 
-<div class="popover bs-popover-right">
+<div class="popover clay-popover-right">
 	<div class="arrow"></div>
 	<div class="inline-scroller">
 		<div class="popover-header">Popover right</div>
@@ -70,7 +75,7 @@ weight: 100
 	</div>
 </div>
 
-<div class="popover bs-popover-bottom">
+<div class="popover clay-popover-bottom">
 	<div class="arrow"></div>
 	<div class="inline-scroller">
 		<div class="popover-header">Popover bottom</div>
@@ -81,7 +86,7 @@ weight: 100
 	</div>
 </div>
 
-<div class="popover bs-popover-left">
+<div class="popover clay-popover-left">
 	<div class="arrow"></div>
 	<div class="inline-scroller">
 		<div class="popover-header">Popover left</div>
@@ -99,26 +104,28 @@ weight: 100
 
 ### Tooltips
 
+> Tooltips are brief pieces of information that appear on hover state over an element to clarify the meaning or use of an interaction element for the user.
+
 <div class="clay-site-tooltip-display">
-	<div class="tooltip bs-tooltip-right" role="tooltip">
+	<div class="tooltip clay-tooltip-right" role="tooltip">
 		<div class="arrow"></div>
 		<div class="tooltip-inner">
 			<div>Tooltip on the right</div>
 		</div>
 	</div>
-	<div class="tooltip bs-tooltip-left" role="tooltip">
+	<div class="tooltip clay-tooltip-left" role="tooltip">
 		<div class="arrow"></div>
 		<div class="tooltip-inner">
 			<div>Tooltip on the left</div>
 		</div>
 	</div>
-	<div class="tooltip bs-tooltip-bottom" role="tooltip">
+	<div class="tooltip clay-tooltip-bottom" role="tooltip">
 		<div class="arrow"></div>
 		<div class="tooltip-inner">
 			<div>Tooltip on bottom</div>
 		</div>
 	</div>
-	<div class="tooltip bs-tooltip-top" role="tooltip">
+	<div class="tooltip clay-tooltip-top" role="tooltip">
 		<div class="arrow"></div>
 		<div class="tooltip-inner">
 			<div>Tooltip on top</div>
@@ -127,28 +134,28 @@ weight: 100
 </div>
 
 ```text/html
-<div class="tooltip bs-tooltip-right" role="tooltip">
+<div class="tooltip clay-tooltip-right" role="tooltip">
 	<div class="arrow"></div>
 	<div class="tooltip-inner">
 		<div>Tooltip on the right</div>
 	</div>
 </div>
 
-<div class="tooltip bs-tooltip-left" role="tooltip">
+<div class="tooltip clay-tooltip-left" role="tooltip">
 	<div class="arrow"></div>
 	<div class="tooltip-inner">
 		<div>Tooltip on the left</div>
 	</div>
 </div>
 
-<div class="tooltip bs-tooltip-bottom" role="tooltip">
+<div class="tooltip clay-tooltip-bottom" role="tooltip">
 	<div class="arrow"></div>
 	<div class="tooltip-inner">
 		<div>Tooltip on bottom</div>
 	</div>
 </div>
 
-<div class="tooltip bs-tooltip-top" role="tooltip">
+<div class="tooltip clay-tooltip-top" role="tooltip">
 	<div class="arrow"></div>
 	<div class="tooltip-inner">
 		<div>Tooltip on top</div>

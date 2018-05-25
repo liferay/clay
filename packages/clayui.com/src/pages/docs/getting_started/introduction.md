@@ -23,7 +23,7 @@ weight: 1
 > If you want to go beyond the static HTML, add our bundled library to get access to the full power of Clay!
 
 ```text/html
-<script src="https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js>
+<script src="https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js">
 ```
 
 ## Components
