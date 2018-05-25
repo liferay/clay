@@ -153,9 +153,11 @@ weight: 100
 
 <span class="sticker sticker-primary">JPG</span>{sp}
 <span class="sticker sticker-primary">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-		<use xlink:href="/vendor/lexicon/icons.svg#picture" />
-	</svg>
+	<span class="inline-item">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+			<use xlink:href="/vendor/lexicon/icons.svg#picture" />
+		</svg>
+	</span>
 </span>
 
 ```soy
@@ -185,9 +187,11 @@ weight: 100
 ```text/html
 <span class="sticker sticker-primary">JPG</span>
 <span class="sticker sticker-primary">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-		<use xlink:href="/vendor/lexicon/icons.svg#picture" />
-	</svg>
+	<span class="inline-item">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+			<use xlink:href="/vendor/lexicon/icons.svg#picture" />
+		</svg>
+	</span>
 </span>
 ```
 

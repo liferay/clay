@@ -409,15 +409,16 @@
 	$border-style: setter(map-get($map, border-style), solid);
 	$color: map-get($map, color);
 	$link-border-radius: map-get($map, link-border-radius);
+	$link-bg: map-get($map, link-bg);
 	$link-color: map-get($map, link-color);
 	$link-font-weight: map-get($map, link-font-weight);
-	$link-hover-color: map-get($map, link-hover-color);
-	$link-active-color: map-get($map, link-active-color);
-	$link-disabled-color: map-get($map, link-disabled-color);
-	$link-bg: map-get($map, link-bg);
 	$link-hover-bg: map-get($map, link-hover-bg);
+	$link-hover-color: map-get($map, link-hover-color);
 	$link-active-bg: map-get($map, link-active-bg);
+	$link-active-color: map-get($map, link-active-color);
 	$link-disabled-bg: map-get($map, link-disabled-bg);
+	$link-disabled-color: map-get($map, link-disabled-color);
+	$link-disabled-opacity: map-get($map, link-disabled-opacity);
 	$btn-font-weight: setter(map-get($map, btn-font-weight), $link-font-weight);
 	$brand-color: map-get($map, brand-color);
 	$brand-hover-color: map-get($map, brand-hover-color);
@@ -453,9 +454,11 @@
 				color: $link-active-color;
 			}
 
-			&.disabled {
+			&.disabled,
+			&:disabled {
 				background-color: $link-disabled-bg;
 				color: $link-disabled-color;
+				opacity: $link-disabled-opacity;
 			}
 		}
 

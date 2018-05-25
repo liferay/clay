@@ -58,6 +58,8 @@ $input-focus-box-shadow: none !default;
 $input-disabled-color: $text-muted !default;
 $input-disabled-bg: $input-bg !default;
 $input-disabled-border-color: $input-bg !default;
+$input-placeholder-disabled-color: $input-disabled-color !default;
+
 $input-label-disabled-color: $text-muted !default;
 
 $input-readonly-bg: $input-border-color !default;

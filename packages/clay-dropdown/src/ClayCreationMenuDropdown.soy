@@ -180,8 +180,6 @@
 			null
 	/}
 
-  {let $caption: $showMoreButton ? 'Showing ' + $showingItems + ' of ' + $totalItems + ' elements' :  null/}
-
    {let $trigger kind="html"}
     {call ClayIcon.render}
       {param spritemap: $spritemap /}
@@ -191,7 +189,14 @@
 
 	{call ClayDropdownBase.render}
 		{param button: $showMoreButton /}
-		{param caption: $caption /}
+		{param caption kind="text"}
+			{if $showMoreButton}
+				{msg desc="Says how many items of the total are being showed"}
+					showing-{$showingItems}-of-{$totalItems}-elements
+				{/msg}
+			{/if}
+		{/param}
+
 		{param disabled: $disabled /}
 		{param elementClasses: $elementClasses /}
 		{param events: [

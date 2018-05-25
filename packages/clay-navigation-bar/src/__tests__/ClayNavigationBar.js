@@ -117,4 +117,34 @@ describe('ClayNavigationBar', function() {
 			});
 		}).toThrow();
 	});
+
+	it('should render a navigation bar and emit an event on nav item click', () => {
+		navigationbar = new ClayNavigationBar({
+			items: [
+				{label: 'Page 1', href: '#1'},
+				{label: 'Page 2', href: '#2'},
+			],
+			spritemap: spritemap,
+		});
+
+		const dataToExpect = {
+			item: {
+				label: 'Page 2',
+				href: '#2',
+			},
+		};
+
+		const spy = jest.spyOn(navigationbar, 'emit');
+
+		navigationbar.refs.navItem1.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: dataToExpect,
+				name: 'itemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
 });

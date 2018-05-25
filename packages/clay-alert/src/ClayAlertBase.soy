@@ -9,7 +9,7 @@
 	{@param title: string}
 	{@param? _handleCloseClick: any}
 	{@param? _visible: bool}
-	{@param? autoClose: bool}
+	{@param? autoClose: any}
 	{@param? closeable: bool}
 	{@param? elementClasses: string}
 	{@param? id: string}
@@ -81,7 +81,12 @@
 
 	{if $closeable}
 		{call ClayButton.render}
-			{param ariaLabel: 'Close' /}
+			{param ariaLabel kind="text"}
+				{msg desc="The word 'Close' used as a verb"}
+					close
+				{/msg}
+			{/param}
+
 			{param elementClasses: 'close' /}
 			{param events: [ 'click': $_handleCloseClick ] /}
 			{param icon: 'times' /}

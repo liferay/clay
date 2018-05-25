@@ -137,14 +137,30 @@ weight: 100
 							<dd class="sidebar-dd">2.0</dd>
 							<dt class="sidebar-dt">Tags</dt>
 							<dd class="sidebar-dd">
-								<span class="label label-lg label-secondary">Tag One</span>
-								<span class="label label-lg label-secondary">Tag Two</span>
-								<span class="label label-lg label-secondary">Tag Three</span>
-								<span class="label label-lg label-secondary">Tag Four</span>
-								<span class="label label-lg label-secondary">Tag Five</span>
-								<span class="label label-lg label-secondary">Tag Six</span>
-								<span class="label label-lg label-secondary">Tag Seven</span>
-								<span class="label label-lg label-secondary">Tag Eight</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag One</span>
+								</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag Two</span>
+								</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag Three</span>
+								</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag Four</span>
+								</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag Five</span>
+								</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag Six</span>
+								</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag Seven</span>
+								</span>
+								<span class="label label-lg label-secondary">
+									<span class="label-item label-item-expand">Tag Eight</span>
+								</span>
 							</dd>
 							<dt class="sidebar-dt">Related Assets</dt>
 							<dd class="sidebar-dd">
@@ -152,9 +168,11 @@ weight: 100
 									<li class="list-group-item list-group-item-flex">
 										<div class="autofit-col">
 											<div class="sticker sticker-secondary">
-												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-													<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-												</svg>
+												<span class="inline-item">
+													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+														<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+													</svg>
+												</span>
 											</div>
 										</div>
 										<div class="autofit-col autofit-col-expand">
@@ -168,9 +186,11 @@ weight: 100
 									<li class="list-group-item list-group-item-flex">
 										<div class="autofit-col">
 											<div class="sticker sticker-secondary">
-												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-													<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-												</svg>
+												<span class="inline-item">
+													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+														<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+													</svg>
+												</span>
 											</div>
 										</div>
 										<div class="autofit-col autofit-col-expand">
@@ -360,14 +380,30 @@ weight: 100
 					<dd class="sidebar-dd">2.0</dd>
 					<dt class="sidebar-dt">Tags</dt>
 					<dd class="sidebar-dd">
-						<span class="label label-lg label-secondary">Tag One</span>
-						<span class="label label-lg label-secondary">Tag Two</span>
-						<span class="label label-lg label-secondary">Tag Three</span>
-						<span class="label label-lg label-secondary">Tag Four</span>
-						<span class="label label-lg label-secondary">Tag Five</span>
-						<span class="label label-lg label-secondary">Tag Six</span>
-						<span class="label label-lg label-secondary">Tag Seven</span>
-						<span class="label label-lg label-secondary">Tag Eight</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag One</span>
+						</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag Two</span>
+						</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag Three</span>
+						</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag Four</span>
+						</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag Five</span>
+						</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag Six</span>
+						</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag Seven</span>
+						</span>
+						<span class="label label-lg label-secondary">
+							<span class="label-item label-item-expand">Tag Eight</span>
+						</span>
 					</dd>
 					<dt class="sidebar-dt">Related Assets</dt>
 					<dd class="sidebar-dd">
@@ -375,9 +411,11 @@ weight: 100
 							<li class="list-group-item list-group-item-flex">
 								<div class="autofit-col">
 									<div class="sticker sticker-secondary">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-											<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-										</svg>
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+												<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+											</svg>
+										</span>
 									</div>
 								</div>
 								<div class="autofit-col autofit-col-expand">
@@ -391,9 +429,11 @@ weight: 100
 							<li class="list-group-item list-group-item-flex">
 								<div class="autofit-col">
 									<div class="sticker sticker-secondary">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-											<use xlink:href="/vendor/lexicon/icons.svg#folder" />
-										</svg>
+										<span class="inline-item">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+												<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+											</svg>
+										</span>
 									</div>
 								</div>
 								<div class="autofit-col autofit-col-expand">

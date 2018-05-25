@@ -30,8 +30,16 @@ $btn-section-font-size-sm: 0.5625rem !default; // 9px
 
 // Button Monospaced
 
+$btn-monospaced-padding-x: 0 !default;
+$btn-monospaced-padding-y: 0.1875rem !default; // 3px
 $btn-monospaced-size: 2.375rem !default; // 38px
+
+$btn-monospaced-padding-x-lg: 0 !default;
+$btn-monospaced-padding-y-lg: 0.3125rem !default; // 5px
 $btn-monospaced-size-lg: 3rem !default; // 48px
+
+$btn-monospaced-padding-x-sm: 0 !default;
+$btn-monospaced-padding-y-sm: 0.125rem !default; // 2px
 $btn-monospaced-size-sm: 1.9375rem !default; // 31px
 
 $btn-monospaced-size-mobile: null !default;

@@ -63,6 +63,7 @@
 		]>,
 		viewMoreURL: string
 	]}
+	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
@@ -79,6 +80,7 @@
 	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
+	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
@@ -143,12 +145,14 @@
 				{param _showSearchMobile: $_showSearchMobile /}
 				{param contentRenderer: $contentRenderer ?: '' /}
 				{param creationMenu: $creationMenu /}
+				{param customData: $customData /}
 				{param disabled: $disabled /}
 				{param filterItems: $filterItems /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormMethod: $searchFormMethod /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
+				{param searchInputPlaceholder: $searchInputPlaceholder /}
 				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
 				{param showAdvancedSearch: $showAdvancedSearch /}
@@ -206,15 +210,27 @@
 						{param checked: true /}
 						{param events: ['change': $_handleSelectPageCheckboxChanged] /}
 						{param indeterminate: $selectedItems < $totalItems /}
-						{param label: 'Select Page' /}
+						{param label kind="text"}
+							{msg desc="Select page checkbox label"}
+								select-page
+							{/msg}
+						{/param}
+
 						{param ref: 'selectPageCheckbox' /}
 						{param showLabel: false /}
 					{/call}
 				</li>
 				<li class="nav-item">
 					<span class="navbar-text">
-						{$selectedItems} of {$totalItems}{sp}
-						<span class="navbar-breakpoint-down-d-none">items selected</span>
+						{msg desc="Says how many items of the total are selected"}
+							{$selectedItems}-of-{$totalItems}
+						{/msg}
+						{sp}
+						<span class="navbar-breakpoint-down-d-none">
+							{msg desc="Items selected"}
+								items-selected
+							{/msg}
+						</span>
 					</span>
 				</li>
 				<li class="nav-item nav-item-shrink">
@@ -222,7 +238,11 @@
 						{call ClayButton.render}
 							{param elementClasses: 'nav-btn' /}
 							{param events: ['click': $_handleSelectAllClicked] /}
-							{param label: 'Select all' /}
+							{param label kind="text"}
+								{msg desc="Select all button label"}
+									select-all
+								{/msg}
+							{/param}
 							{param ref: 'selectAllButton' /}
 							{param style: 'link' /}
 						{/call}
@@ -230,7 +250,11 @@
 						{call ClayButton.render}
 							{param elementClasses: 'nav-btn' /}
 							{param events: ['click': $_handleDeselectAllClicked] /}
-							{param label: 'Deselect all' /}
+							{param label kind="text"}
+								{msg desc="Deselect all button label"}
+									deselect-all
+								{/msg}
+							{/param}
 							{param ref: 'deselectAllButton' /}
 							{param style: 'link' /}
 						{/call}
@@ -256,7 +280,7 @@
 					{if $actionItems}
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
-								<li class="nav-item navbar-breakpoint-down-d-none" data-onclick="{$_handleQuickActionClicked}">
+								<li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="{index($item)}" data-onclick="{$_handleQuickActionClicked}">
 									{if isNonnull($item.href)}
 										{call ClayLink.render}
 											{param elementClasses: 'nav-link nav-link-monospaced' /}
@@ -419,6 +443,7 @@
 		]>,
 		viewMoreURL: string
 	]}
+	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? filterItems: list<[
 		checked: bool,
@@ -433,6 +458,7 @@
 	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
+	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? showAdvancedSearch: bool}
@@ -460,7 +486,12 @@
 						{call ClayCheckbox.render}
 							{param disabled: $disabled /}
 							{param events: ['change': $_handleSelectPageCheckboxChanged] /}
-							{param label: 'Select Page' /}
+							{param label kind="text"}
+								{msg desc="Select page checkbox label"}
+									select-page
+								{/msg}
+							{/param}
+
 							{param ref: 'selectPageCheckbox' /}
 							{param showLabel: false /}
 						{/call}
@@ -470,7 +501,10 @@
 				{if $filterItems}
 					{let $filtersTrigger kind="html"}
 						<span class="navbar-breakpoint-down-d-none">
-							Filter and Order
+							{msg desc="Filters and order dropdown trigger label"}
+								filter-and-order
+							{/msg}
+
 							{call ClayIcon.render}
 								{param elementClasses: 'inline-item inline-item-after' /}
 								{param spritemap: $spritemap /}
@@ -487,9 +521,15 @@
 					{/let}
 
 					<li class="dropdown nav-item">
+						{let $doneString kind="text"}
+							{msg desc="Done"}
+								done
+							{/msg}
+						{/let}
+
 						{call ClayDropdownBase.render}
 							{param button: $showFiltersDoneButton ? [
-								'label': 'Done'
+								'label': $doneString
 							] : null /}
 							{param disabled: $disabled /}
 							{param events: [
@@ -555,6 +595,7 @@
 					{delcall ClayManagementToolbar.SearchForm variant="$contentRenderer"}
 						{param _handleCloseMobileSearchClick: $_handleCloseMobileSearchClick /}
 						{param _handleSearchSearchClick: $_handleSearchSearchClick /}
+						{param customData: $customData /}
 						{param disabled: $disabled and not $searchValue /}
 						{param onlySearch: $onlySearch /}
 						{param searchActionURL: $searchActionURL /}
@@ -568,6 +609,7 @@
 								{param disabled: $disabled and not $searchValue/}
 								{param onlySearch: $onlySearch /}
 								{param searchInputName: $searchInputName /}
+								{param searchInputPlaceholder: $searchInputPlaceholder /}
 								{param searchValue: $searchValue /}
 								{param showAdvancedSearch: $showAdvancedSearch /}
 								{param spritemap: $spritemap /}
@@ -658,7 +700,12 @@
 				<li class="tbar-item tbar-item-expand">
 					<div class="tbar-section">
 						<span class="text-truncate-inline">
-							<span class="text-truncate">{$totalItems} results for <strong>{$searchValue}</strong></span>
+							<span class="text-truncate">
+								{msg desc="Says how many results there are for a search"}
+									{$totalItems}-results-for
+								{/msg}
+								<strong>{$searchValue}</strong>
+							</span>
 						</span>
 					</div>
 				</li>
@@ -668,14 +715,24 @@
 							{param elementClasses: 'component-link tbar-link' /}
 							{param events: ['click': $_handleClearResultsClick] /}
 							{param href: $clearResultsURL /}
-							{param label: 'Clear' /}
+							{param label kind="text"}
+								{msg desc="Label for clear results link"}
+									clear
+								{/msg}
+							{/param}
+
 							{param ref: 'clearSearch' /}
 						{/call}
 					{else}
 						{call ClayButton.render}
 							{param elementClasses: 'component-link tbar-link' /}
 							{param events: ['click': $_handleClearResultsClick] /}
-							{param label: 'Clear' /}
+							{param label kind="text"}
+								{msg desc="Label for clear results button"}
+									clear
+								{/msg}
+							{/param}
+
 							{param ref: 'clearSearch' /}
 							{param style: 'unstyled' /}
 						{/call}
@@ -697,6 +754,7 @@
 	{@param? disabled: bool}
 	{@param? onlySearch: bool}
 	{@param? searchInputName: string}
+	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
 	{@param? showAdvancedSearch: bool}
 
@@ -710,7 +768,14 @@
 
 				class="form-control input-group-inset input-group-inset-after"
 				name="{$searchInputName}"
-				placeholder="Search for..."
+				{if $searchInputPlaceholder}
+					placeholder="{$searchInputPlaceholder}"
+				{else}
+					placeholder="
+						{msg desc="Search text input placeholder"}
+							search-for
+						{/msg}"
+				{/if}
 				ref="search"
 				type="text"
 
@@ -762,6 +827,7 @@
 	{@param spritemap: string}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleSearchSearchClick: any}
+	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? onlySearch: bool}
 	{@param? searchActionURL: string}

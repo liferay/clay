@@ -20,5 +20,6 @@ $application-bar-dark: map-merge((
 	link-color: $navbar-dark-color,
 	link-hover-color: $navbar-dark-hover-color,
 	link-active-color: $navbar-dark-active-color,
-	link-disabled-color: $navbar-dark-disabled-color
+	link-disabled-color: $navbar-dark-disabled-color,
+	link-disabled-opacity: 1
 ), $application-bar-dark);
