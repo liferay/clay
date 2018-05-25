@@ -80,6 +80,7 @@
 	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
+	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
@@ -151,6 +152,7 @@
 				{param searchFormMethod: $searchFormMethod /}
 				{param searchFormName: $searchFormName /}
 				{param searchInputName: $searchInputName /}
+				{param searchInputPlaceholder: $searchInputPlaceholder /}
 				{param searchValue: $searchValue /}
 				{param selectable: $selectable /}
 				{param showAdvancedSearch: $showAdvancedSearch /}
@@ -456,6 +458,7 @@
 	{@param? searchFormMethod: string}
 	{@param? searchFormName: string}
 	{@param? searchInputName: string}
+	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
 	{@param? selectable: bool}
 	{@param? showAdvancedSearch: bool}
@@ -606,6 +609,7 @@
 								{param disabled: $disabled and not $searchValue/}
 								{param onlySearch: $onlySearch /}
 								{param searchInputName: $searchInputName /}
+								{param searchInputPlaceholder: $searchInputPlaceholder /}
 								{param searchValue: $searchValue /}
 								{param showAdvancedSearch: $showAdvancedSearch /}
 								{param spritemap: $spritemap /}
@@ -750,6 +754,7 @@
 	{@param? disabled: bool}
 	{@param? onlySearch: bool}
 	{@param? searchInputName: string}
+	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
 	{@param? showAdvancedSearch: bool}
 
@@ -763,10 +768,14 @@
 
 				class="form-control input-group-inset input-group-inset-after"
 				name="{$searchInputName}"
-				placeholder="
-					{msg desc="Search text input placeholder"}
-						search-for
-					{/msg}"
+				{if $searchInputPlaceholder}
+					placeholder="{$searchInputPlaceholder}"
+				{else}
+					placeholder="
+						{msg desc="Search text input placeholder"}
+							search-for
+						{/msg}"
+				{/if}
 				ref="search"
 				type="text"
 
