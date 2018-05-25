@@ -8,8 +8,10 @@ import {dom} from 'metal-dom';
 
 import templates from './ClayTooltip.soy.js';
 
-const singleton = Symbol();
-const singletonEnforcer = Symbol();
+/**
+ * Singleton enforcer class
+ */
+class SingletonEnforcer {}
 
 /**
  * Implementation of ClayTooltip.
@@ -20,7 +22,7 @@ class ClayTooltip extends Component {
 	 * @inheritDoc
 	 */
 	constructor(enforcer, config, parentElement) {
-		if (enforcer !== singletonEnforcer) {
+		if (!enforcer) {
 			throw new Error('Use ClayTooltip.init to initialize ClayTooltip');
 		}
 		super(config, parentElement);
@@ -39,14 +41,14 @@ class ClayTooltip extends Component {
 	 * @return {ClayTooltip}
 	 */
 	static init(config, parentElement) {
-		if (!this[singleton]) {
-			this[singleton] = new ClayTooltip(
-				singletonEnforcer,
+		if (!this._instance) {
+			this._instance = new ClayTooltip(
+				new SingletonEnforcer(),
 				config,
 				parentElement
 			);
 		}
-		return this[singleton];
+		return this._instance;
 	}
 
 	/**
@@ -78,8 +80,15 @@ class ClayTooltip extends Component {
 	 */
 	_handleMouseEnter(event) {
 		const target = event.target;
-		const content =
-			target.getAttribute('data-title') || target.getAttribute('title');
+		let title = target.getAttribute('title');
+		if (title) {
+			target.setAttribute('data-title', title);
+			target.removeAttribute('title');
+		} else {
+			title = target.getAttribute('data-title');
+		}
+
+		const content = title;
 
 		this._content = content;
 		this.alignedPosition = Align.align(this.element, target, this.position);
@@ -92,7 +101,13 @@ class ClayTooltip extends Component {
 	 * @param {Object} event The event object.
 	 * @protected
 	 */
-	_handleMouseLeave() {
+	_handleMouseLeave(event) {
+		const target = event.target;
+		const title = target.getAttribute('data-title');
+		if (title) {
+			target.setAttribute('title', title);
+		}
+
 		this._showTooltip = false;
 	}
 
