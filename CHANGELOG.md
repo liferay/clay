@@ -1,7 +1,25 @@
 # Change Log
 
+## [v2.1.4](https://github.com/liferay/clay/tree/v2.1.4) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.2...v2.1.4)
+
+**Closed issues:**
+
+- NullPointer exception accessing domData in element.getAttribute [\#945](https://github.com/liferay/clay/issues/945)
+
+**Merged pull requests:**
+
+- v.2.1.3 [\#947](https://github.com/liferay/clay/pull/947) ([jbalsas](https://github.com/jbalsas))
+- Checks if this.element is still present [\#946](https://github.com/liferay/clay/pull/946) ([jbalsas](https://github.com/jbalsas))
+
 ## [v2.1.2](https://github.com/liferay/clay/tree/v2.1.2) (2018-05-25)
-[Full Changelog](https://github.com/liferay/clay/compare/v1.0.28...v2.1.2)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.1...v2.1.2)
+
+## [v2.1.1](https://github.com/liferay/clay/tree/v2.1.1) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.0...v2.1.1)
+
+## [v2.1.0](https://github.com/liferay/clay/tree/v2.1.0) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v1.0.28...v2.1.0)
 
 **Implemented enhancements:**
 
