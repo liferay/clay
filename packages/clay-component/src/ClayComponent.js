@@ -23,7 +23,7 @@ class ClayComponent extends Component {
 		this.element.getAttribute = attributeName => {
 			let attributeValue = getAttribute(attributeName);
 
-			if (!attributeValue) {
+			if (this.element && !attributeValue) {
 				attributeValue = domData.get(this.element, attributeName);
 			}
 
