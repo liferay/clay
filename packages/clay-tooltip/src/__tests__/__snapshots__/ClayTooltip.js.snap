@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayTooltip should allow setting selectors 1`] = `
+<div class="tooltip clay-tooltip-bottom" role="tooltip">
+  <div class="arrow"></div>
+  <div class="tooltip-inner"></div>
+</div>
+`;
+
+exports[`ClayTooltip should create a tooltip 1`] = `
+<div class="tooltip clay-tooltip-bottom" role="tooltip">
+  <div class="arrow"></div>
+  <div class="tooltip-inner"></div>
+</div>
+`;
