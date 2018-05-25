@@ -11,6 +11,7 @@
 	]>}
 	{@param spritemap: string}
 	{@param? _handleClickToggler: any}
+	{@param? _handleNavItemClicked: any}
 	{@param? _isTransitioning: bool}
 	{@param? _visible: bool}
 	{@param? elementClasses: string}
@@ -46,6 +47,7 @@
 				{/call}
 			{/if}
 			{call .content}
+				{param _handleNavItemClicked: $_handleNavItemClicked /}
 				{param _isTransitioning: $_isTransitioning /}
 				{param _visible: $_visible /}
 				{param items: $items /}
@@ -65,6 +67,7 @@
 		label: string
 	]>}
 	{@param spritemap: string}
+	{@param? _handleNavItemClicked: any}
 	{@param? _isTransitioning: bool}
 	{@param? _visible: bool}
 
@@ -86,6 +89,7 @@
 		<div class="container-fluid container-fluid-max-xl">
 			{if $items}
 				{call .navmenu}
+					{param _handleNavItemClicked: $_handleNavItemClicked /}
 					{param items: $items /}
 					{param spritemap: $spritemap /}
 				{/call}
@@ -100,9 +104,11 @@
 {template .navitem}
 	{@param href: string}
 	{@param label: string}
+	{@param? _handleNavItemClicked: any}
 	{@param? active: bool}
+	{@param? index: number}
 
-	<li class="nav-item">
+	<li class="nav-item" data-nav-item-index="{$index}" data-onclick="{$_handleNavItemClicked}">
 		{call ClayLink.render}
 			{param ariaLabel kind="text"}
 				{if $active}
@@ -123,6 +129,8 @@
 			{param label kind="html"}
 				<span class="navbar-text-truncate">{$label}</span>
 			{/param}
+
+			{param ref: 'navItem' + $index /}
 		{/call}
 	</li>
 {/template}
@@ -136,12 +144,15 @@
 		href: string,
 		label: string
 	]>}
+	{@param? _handleNavItemClicked: any}
 
 	<ul class="navbar-nav">
 		{foreach $page in $items}
 			{call .navitem}
+				{param _handleNavItemClicked: $_handleNavItemClicked /}
 				{param active: $page.active /}
 				{param href: $page.href /}
+				{param index: index($page) /}
 				{param label: $page.label /}
 			{/call}
 		{/foreach}
