@@ -108,7 +108,13 @@
 	{@param? active: bool}
 	{@param? index: number}
 
-	<li class="nav-item" data-nav-item-index="{$index}" data-onclick="{$_handleNavItemClicked}">
+	{let $navItemAttributes kind="attributes"}
+		class="nav-item"
+		data-nav-item-index="{$index}"
+		data-onclick="{$_handleNavItemClicked}"
+	{/let}
+
+	<li {$navItemAttributes}>
 		{call ClayLink.render}
 			{param ariaLabel kind="text"}
 				{if $active}

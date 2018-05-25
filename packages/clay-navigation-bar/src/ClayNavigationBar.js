@@ -45,7 +45,7 @@ class ClayNavigationBar extends Component {
 	}
 
 	/**
-	 * Continues the propagation of the item cliecked event
+	 * Continues the propagation of the item click event
 	 * @param {!Event} event
 	 * @private
 	 * @return {Boolean} If the event has been prevented or not.
