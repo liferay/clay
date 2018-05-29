@@ -343,51 +343,66 @@
 	{@param? title: string}
 
 	{let $itemContent kind="html"}
-		{call ClayLink.render}
-			{param elementClasses kind="text"}
-				dropdown-item
-				{if $active}
-					{sp}active
-				{/if}
+		{let $elementClasses kind="text"}
+			dropdown-item
+			{if $active}
+				{sp}active
+			{/if}
 
-				{if $disabled}
-					{sp}disabled
-				{/if}
-			{/param}
+			{if $disabled}
+				{sp}disabled
+			{/if}
+		{/let}
 
-			{param href kind="text"}
-				{if $disabled}
-					javascript:;
-				{elseif $href}
-					{$href}
-				{/if}
-			{/param}
-
-			{param label kind="html"}
-				{let $iconContent kind="html"}
-					{if $icon and $spritemap}
-						<div class="dropdown-item-indicator">
-							{call ClayIcon.render}
-								{param spritemap: $spritemap /}
-								{param symbol: $icon /}
-							{/call}
-						</div>
+		{if $href}
+			{call ClayLink.render}
+				{param elementClasses: $elementClasses /}
+				{param href kind="text"}
+					{if $disabled}
+						javascript:;
+					{elseif $href}
+						{$href}
 					{/if}
-				{/let}
+				{/param}
 
-				{if $icon and $itemsIconAlignment == 'left'}
-					{$iconContent}
-				{/if}
+				{param label kind="html"}
+					{let $iconContent kind="html"}
+						{if $icon and $spritemap}
+							<div class="dropdown-item-indicator">
+								{call ClayIcon.render}
+									{param spritemap: $spritemap /}
+									{param symbol: $icon /}
+								{/call}
+							</div>
+						{/if}
+					{/let}
 
-				{$label}
+					{if $icon and $itemsIconAlignment == 'left'}
+						{$iconContent}
+					{/if}
 
-				{if $icon and $itemsIconAlignment == 'right'}
-					{$iconContent}
-				{/if}
-			{/param}
+					{$label}
 
-			{param title: $title /}
-		{/call}
+					{if $icon and $itemsIconAlignment == 'right'}
+						{$iconContent}
+					{/if}
+				{/param}
+
+				{param title: $title /}
+			{/call}
+		{else}
+			{call ClayButton.render}
+				{param ariaLabel: $label /}
+				{param disabled: $disabled /}
+				{param elementClasses: $elementClasses /}
+				{param icon: $icon /}
+				{param iconAlignment: $itemsIconAlignment /}
+				{param label: $label /}
+				{param spritemap: $spritemap /}
+				{param size: 'sm' /}
+				{param style: 'link' /}
+			{/call}
+		{/if}
 	{/let}
 
 	{let $itemAttributes kind="attributes"}
