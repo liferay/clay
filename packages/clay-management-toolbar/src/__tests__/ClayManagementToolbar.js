@@ -789,43 +789,6 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on select all button click', () => {
-		managementToolbar = new ClayManagementToolbar({
-			selectable: true,
-			selectedItems: 1,
-			spritemap: spritemap,
-			totalItems: 10,
-		});
-
-		const spy = jest.spyOn(managementToolbar, 'emit');
-
-		managementToolbar.refs.selectAllButton.element.click();
-
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			'selectAllClicked',
-			expect.any(Object)
-		);
-	});
-
-	it('should render a management toolbar and emit an event on deselect all button click', () => {
-		managementToolbar = new ClayManagementToolbar({
-			selectable: true,
-			selectedItems: 10,
-			spritemap: spritemap,
-			totalItems: 10,
-		});
-		const spy = jest.spyOn(managementToolbar, 'emit');
-
-		managementToolbar.refs.deselectAllButton.element.click();
-
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			'deselectAllClicked',
-			expect.any(Object)
-		);
-	});
-
 	it('should render a management toolbar and emit an event on filter done button click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			filterItems: [
