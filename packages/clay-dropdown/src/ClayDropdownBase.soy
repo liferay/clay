@@ -353,6 +353,29 @@
 				{sp}disabled
 			{/if}
 		{/let}
+		
+		{let $labelContent kind="html"}
+			{let $iconContent kind="html"}
+				{if $icon and $spritemap}
+					<span class="dropdown-item-indicator">
+						{call ClayIcon.render}
+							{param spritemap: $spritemap /}
+							{param symbol: $icon /}
+						{/call}
+					</span>
+				{/if}
+			{/let}
+
+			{if $icon and $itemsIconAlignment == 'left'}
+				{$iconContent}
+			{/if}
+
+			{$label}
+
+			{if $icon and $itemsIconAlignment == 'right'}
+				{$iconContent}
+			{/if}
+		{/let}
 
 		{if $href}
 			{call ClayLink.render}
@@ -365,29 +388,7 @@
 					{/if}
 				{/param}
 
-				{param label kind="html"}
-					{let $iconContent kind="html"}
-						{if $icon and $spritemap}
-							<div class="dropdown-item-indicator">
-								{call ClayIcon.render}
-									{param spritemap: $spritemap /}
-									{param symbol: $icon /}
-								{/call}
-							</div>
-						{/if}
-					{/let}
-
-					{if $icon and $itemsIconAlignment == 'left'}
-						{$iconContent}
-					{/if}
-
-					{$label}
-
-					{if $icon and $itemsIconAlignment == 'right'}
-						{$iconContent}
-					{/if}
-				{/param}
-
+				{param label: $labelContent /}
 				{param title: $title /}
 			{/call}
 		{else}
@@ -395,9 +396,7 @@
 				{param ariaLabel: $label /}
 				{param disabled: $disabled /}
 				{param elementClasses: $elementClasses /}
-				{param icon: $icon /}
-				{param iconAlignment: $itemsIconAlignment /}
-				{param label: $label /}
+				{param label: $labelContent /}
 				{param size: 'sm' /}
 				{param spritemap: $spritemap /}
 				{param style: 'link' /}
