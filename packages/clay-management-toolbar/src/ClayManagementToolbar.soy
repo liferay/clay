@@ -493,7 +493,7 @@
 							{/param}
 
 							{param ref: 'selectPageCheckbox' /}
-							{param showLabel: false /}
+							{param showLabel: not $filterItems and not $sortingOrder and not $showSearch /}
 						{/call}
 					</li>
 				{/if}
