@@ -14,6 +14,8 @@ import {EventHandler} from 'metal-events';
 import itemsValidator from './items_validator';
 import templates from './ClayDropdownBase.soy.js';
 
+const KEY_CODE_ESC = 27;
+
 /**
  * Implementation of the base for Metal Clay Dropdown.
  * @extends ClayComponent
@@ -31,9 +33,10 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	created() {
 		this._eventHandler = new EventHandler();
+		this._eventHandlerKeyup = new EventHandler();
 
 		this._eventHandler.add(
-			dom.on(document, 'click', this._handleDocClick.bind(this))
+			dom.on(document, 'click', this._handleDocClick.bind(this), true)
 		);
 	}
 
@@ -57,6 +60,7 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	_close() {
 		this.expanded = false;
+		this._eventHandlerKeyup.removeAllListeners();
 	}
 
 	/**
@@ -122,6 +126,17 @@ class ClayDropdownBase extends ClayComponent {
 			name: 'itemClicked',
 			originalEvent: event,
 		});
+	}
+
+	/**
+	 * Handle click key code esc and close dropdown.
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleKeyup(event) {
+		if (event.keyCode === KEY_CODE_ESC) {
+			this._close();
+		}
 	}
 
 	/**
@@ -195,6 +210,17 @@ class ClayDropdownBase extends ClayComponent {
 			name: 'itemsFiltered',
 			originalEvent: event,
 		});
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncExpanded() {
+		if (this.expanded) {
+			this._eventHandlerKeyup.add(
+				dom.on(document, 'keyup', this._handleKeyup.bind(this), true)
+			);
+		}
 	}
 
 	/**
