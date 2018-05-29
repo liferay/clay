@@ -100,6 +100,16 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with selection enabled and no filters, sorting and search', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			showSearch: false,
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with ascending sorting', () => {
 		managementToolbar = new ClayManagementToolbar({
 			sortingOrder: 'asc',
