@@ -1,7 +1,40 @@
 # Change Log
 
+## [v2.1.5](https://github.com/liferay/clay/tree/v2.1.5) (2018-05-30)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.4...v2.1.5)
+
+**Implemented enhancements:**
+
+- Add label to checkbox on Management Toolbar [\#899](https://github.com/liferay/clay/issues/899)
+
+**Fixed bugs:**
+
+- Items with no href should not be links in dropdowns but should looks like one [\#941](https://github.com/liferay/clay/issues/941)
+
+**Closed issues:**
+
+- Remove select all and deselect all buttons from management toolbar [\#954](https://github.com/liferay/clay/issues/954)
+- ClayTooltip should use event.delegateTarget [\#948](https://github.com/liferay/clay/issues/948)
+- Clay documentation: Lexicon Grid pattern hyperling is broken [\#900](https://github.com/liferay/clay/issues/900)
+- Update Documentation with Browser Support Matrix [\#888](https://github.com/liferay/clay/issues/888)
+- Hidden inputs inside the management toolbar's search form  [\#876](https://github.com/liferay/clay/issues/876)
+- Button variation styles are not directly supported by Dropdown buttons [\#659](https://github.com/liferay/clay/issues/659)
+- Review this logic in ClayAlertBase [\#628](https://github.com/liferay/clay/issues/628)
+
+**Merged pull requests:**
+
+- v2.1.5 [\#957](https://github.com/liferay/clay/pull/957) ([carloslancha](https://github.com/carloslancha))
+- Remove select all and deselect all buttons from Management Toolbar | Fixes \#954 [\#955](https://github.com/liferay/clay/pull/955) ([carloslancha](https://github.com/carloslancha))
+- Render a button as a dropdown item if no href is passed to an item with default type | Fixes \#941 [\#953](https://github.com/liferay/clay/pull/953) ([carloslancha](https://github.com/carloslancha))
+- Add browser support to README | Fixes \#888 [\#952](https://github.com/liferay/clay/pull/952) ([carloslancha](https://github.com/carloslancha))
+- Add label to checkbox on Management Toolbar | Fixes \#899 [\#951](https://github.com/liferay/clay/pull/951) ([carloslancha](https://github.com/carloslancha))
+- Use event.delegateTarget instead of event.target | Fixes \#948 [\#949](https://github.com/liferay/clay/pull/949) ([julien](https://github.com/julien))
+
 ## [v2.1.4](https://github.com/liferay/clay/tree/v2.1.4) (2018-05-25)
-[Full Changelog](https://github.com/liferay/clay/compare/v2.1.2...v2.1.4)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.3...v2.1.4)
+
+## [v2.1.3](https://github.com/liferay/clay/tree/v2.1.3) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.2...v2.1.3)
 
 **Closed issues:**
 
