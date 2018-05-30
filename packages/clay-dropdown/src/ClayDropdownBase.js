@@ -36,7 +36,8 @@ class ClayDropdownBase extends ClayComponent {
 		this._eventHandlerKeyup = new EventHandler();
 
 		this._eventHandler.add(
-			dom.on(document, 'click', this._handleDocClick.bind(this), true)
+			dom.on(document, 'click', this._handleDocClick.bind(this), true),
+			dom.on(document, 'touchend', this._handleDocClick.bind(this), true),
 		);
 	}
 
