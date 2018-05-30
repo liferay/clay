@@ -33,12 +33,6 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	created() {
 		this._eventHandler = new EventHandler();
-		this._eventHandlerKeyup = new EventHandler();
-
-		this._eventHandler.add(
-			dom.on(document, 'click', this._handleDocClick.bind(this), true),
-			dom.on(document, 'touchend', this._handleDocClick.bind(this), true),
-		);
 	}
 
 	/**
@@ -61,7 +55,7 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	_close() {
 		this.expanded = false;
-		this._eventHandlerKeyup.removeAllListeners();
+		this._eventHandler.removeAllListeners();
 	}
 
 	/**
@@ -218,8 +212,20 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	syncExpanded() {
 		if (this.expanded) {
-			this._eventHandlerKeyup.add(
-				dom.on(document, 'keyup', this._handleKeyup.bind(this), true)
+			this._eventHandler.add(
+				dom.on(
+					document,
+					'click',
+					this._handleDocClick.bind(this),
+					true
+				),
+				dom.on(document, 'keyup', this._handleKeyup.bind(this), true),
+				dom.on(
+					document,
+					'touchend',
+					this._handleDocClick.bind(this),
+					true
+				)
 			);
 		}
 	}
