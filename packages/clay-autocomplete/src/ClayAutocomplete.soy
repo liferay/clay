@@ -1,0 +1,68 @@
+{namespace ClayAutocomplete}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? elementClasses: string}
+	{@param? id: string}
+	{@param suggestions: list<[label:html]>}
+	{@param? selectedSuggestionIndex: int}
+	{@param? value: string}
+	{@param? hasFocus: bool}
+	{@param? _handleSearch: any}
+	{@param? _handleFocus: any}
+	{@param? _handleBlur: any}
+	{@param? _handleKeydown: any}
+	{@param? _handleClick: any}
+	{@param? _handleHover: any}
+
+	{let $expanded: $hasFocus and $value and length($suggestions) /}
+
+	{let $attributes kind="attributes"}
+		class="clay-autocomplete dropdown-full form-group
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	{let $listAttributes kind="attributes"}
+		class="dropdown-menu
+			{if $expanded}
+				{sp}show
+			{/if}
+		"
+	{/let}
+
+	<div {$attributes}>
+		<input
+			class="form-control"
+			type="text"
+			value="{$value}"
+			data-oninput="{$_handleSearch}"
+			data-onfocus="{$_handleFocus}"
+			data-onblur="{$_handleBlur}"
+			data-onkeydown="{$_handleKeydown}"
+		>
+		<ul {$listAttributes}>
+			{foreach $item in $suggestions}
+				{let $elAttributes kind="attributes"}
+					class="dropdown-item
+						{if $selectedSuggestionIndex - 1 == index($item)}
+							{sp}active
+						{/if}
+					"
+				{/let}
+				{let $index: index($item) /}
+				<li>
+					<a {$elAttributes} data-onmousedown="{$_handleClick}" data-onmouseover="{$_handleHover}" data-index="{$index}">{$item.label}</a>
+				</li>
+			{/foreach}
+		</ul>
+	</div>
+{/template}

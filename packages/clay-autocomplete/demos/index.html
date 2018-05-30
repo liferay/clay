@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayAutocomplete</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+			padding: 50px 20px;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-autocomplete.js"></script>
+</head>
+
+<body class="container">
+	<h1 class="page-title">
+		ClayAutocomplete
+	</h1>
+
+	<div id="container"></div>
+
+	<div id="container2"></div>
+
+	<script type="text/javascript">
+
+		const ac = new metal.ClayAutocomplete({
+			dataSource: new Array(50).fill(1).map((e, i) => ({ label: `el${i}` })),
+			onSubmit: (...args) => console.log(args)
+		}, '#container');
+
+		const ac2 = new metal.ClayAutocomplete({
+			dataSource: '/packages/clay-autocomplete/demos/data.json',
+			onSubmit: (...args) => console.log(args)
+		}, '#container2');
+
+		ac.on('submitQuery', el => console.log(el))
+		ac2.on('submitQuery', el => console.log(el))
+
+	</script>
+</body>
+
+</html>
