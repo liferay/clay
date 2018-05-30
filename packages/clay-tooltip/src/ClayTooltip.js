@@ -79,7 +79,7 @@ class ClayTooltip extends Component {
 	 * @protected
 	 */
 	_handleMouseEnter(event) {
-		const target = event.target;
+		const target = event.delegateTarget;
 		let title = target.getAttribute('title');
 		if (title) {
 			target.setAttribute('data-title', title);
@@ -102,7 +102,7 @@ class ClayTooltip extends Component {
 	 * @protected
 	 */
 	_handleMouseLeave(event) {
-		const target = event.target;
+		const target = event.delegateTarget;
 		const title = target.getAttribute('data-title');
 		if (title) {
 			target.setAttribute('title', title);

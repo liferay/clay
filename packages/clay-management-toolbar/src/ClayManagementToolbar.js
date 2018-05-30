@@ -90,15 +90,6 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
-	 * Continues the propagation of the deselect all button clicked event
-	 * @param {!Event} event
-	 * @private
-	 */
-	_handleDeselectAllClicked(event) {
-		this.emit('deselectAllClicked', event);
-	}
-
-	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
@@ -166,15 +157,6 @@ class ClayManagementToolbar extends ClayComponent {
 	 */
 	_handleSearchSearchClick(event) {
 		return !this.emit('search', event);
-	}
-
-	/**
-	 * Continues the propagation of the select all button clicked event
-	 * @param {!Event} event
-	 * @private
-	 */
-	_handleSelectAllClicked(event) {
-		this.emit('selectAllClicked', event);
 	}
 
 	/**

@@ -140,31 +140,31 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item active">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item active btn-sm btn-link" aria-label="List" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
-        </div>List</a>
+        </span>List</button>
     </li>
     <li>
-      <a class=" dropdown-item disabled" href="javascript:;">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item disabled btn-sm btn-link" aria-label="Table" disabled="disabled" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
-        </div>Table</a>
+        </span>Table</button>
     </li>
     <li>
-      <a class=" dropdown-item">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item btn-sm btn-link" aria-label="Card" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
-        </div>Card</a>
+        </span>Card</button>
     </li>
   </ul>
 </div>
@@ -328,31 +328,31 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item active">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item active btn-sm btn-link" aria-label="List" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
-        </div>List</a>
+        </span>List</button>
     </li>
     <li>
-      <a class=" dropdown-item disabled" href="javascript:;">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item disabled btn-sm btn-link" aria-label="Table" disabled="disabled" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
-        </div>Table</a>
+        </span>Table</button>
     </li>
     <li>
-      <a class=" dropdown-item">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item btn-sm btn-link" aria-label="Card" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
-        </div>Card</a>
+        </span>Card</button>
     </li>
   </ul>
 </div>
@@ -460,9 +460,6 @@ exports[`ClayManagementToolbar should render a management toolbar with actions a
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
-        <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">select-all</button>
-        </li>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -482,7 +479,7 @@ exports[`ClayManagementToolbar should render a management toolbar with actions a
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item">Edit</a>
+      <button class="btn dropdown-item btn-sm btn-link" aria-label="Edit" type="button">Edit</button>
     </li>
     <li>
       <a class=" dropdown-item" href="#deleteurl">Delete</a>
@@ -510,9 +507,6 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
-        </li>
-        <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -708,9 +702,6 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
-        </li>
-        <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
     </div>
@@ -1551,9 +1542,6 @@ exports[`ClayManagementToolbar should render a management toolbar with id in act
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
-        <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">select-all</button>
-        </li>
       </ul>
     </div>
   </nav>
@@ -1624,9 +1612,6 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
-        </li>
-        <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">select-all</button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -1709,30 +1694,30 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#list">
-        <div class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
-        </div>List</a>
+        </span>List</a>
     </li>
     <li>
       <a class=" dropdown-item disabled" href="javascript:;">
-        <div class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
-        </div>Table</a>
+        </span>Table</a>
     </li>
     <li>
       <a class=" dropdown-item" href="#cards">
-        <div class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
-        </div>Card</a>
+        </span>Card</a>
     </li>
   </ul>
 </div>
@@ -2090,9 +2075,6 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
-        <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">select-all</button>
-        </li>
       </ul>
     </div>
   </nav>
@@ -2167,6 +2149,37 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
             </svg>
           </button>
         </li>
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with selection enabled and no filters, sorting and search 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text">select-page</span>
+              </span>
+            </label>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" type="button">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
@@ -2263,9 +2276,6 @@ exports[`ClayManagementToolbar should render a management toolbar with state act
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
-        <li class="nav-item nav-item-shrink">
-          <button class="btn nav-btn btn-link" type="button">select-all</button>
-        </li>
       </ul>
     </div>
   </nav>
@@ -2336,31 +2346,31 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
     <li>
-      <a class=" dropdown-item active">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item active btn-sm btn-link" aria-label="List" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
           </svg>
-        </div>List</a>
+        </span>List</button>
     </li>
     <li>
-      <a class=" dropdown-item disabled" href="javascript:;">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item disabled btn-sm btn-link" aria-label="Table" disabled="disabled" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
           </svg>
-        </div>Table</a>
+        </span>Table</button>
     </li>
     <li>
-      <a class=" dropdown-item">
-        <div class="dropdown-item-indicator">
+      <button class="btn dropdown-item btn-sm btn-link" aria-label="Card" type="button">
+        <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
           </svg>
-        </div>Card</a>
+        </span>Card</button>
     </li>
   </ul>
 </div>

@@ -11,14 +11,12 @@
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleCreationMenuItemClicked: any}
 	{@param? _handleCreationMenuMoreButtonClicked: any}
-	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleFilterItemClicked: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSearchSearchClick: any}
-	{@param? _handleSelectAllClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? _handleSortingButtonClicked: any}
 	{@param? _handleViewTypeClicked: any}
@@ -116,10 +114,8 @@
 		{if $isActive}
 			{call .active}
 				{param _handleActionItemClicked: $_handleActionItemClicked /}
-				{param _handleDeselectAllClicked: $_handleDeselectAllClicked /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
-				{param _handleSelectAllClicked: $_handleSelectAllClicked /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 				{param actionItems: $actionItems /}
 				{param selectedItems: $selectedItems /}
@@ -184,10 +180,8 @@
 {template .active}
 	{@param spritemap: string}
 	{@param? _handleActionItemClicked: any}
-	{@param? _handleDeselectAllClicked: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleQuickActionClicked: any}
-	{@param? _handleSelectAllClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? actionItems: list<[
 		disabled: bool,
@@ -232,33 +226,6 @@
 							{/msg}
 						</span>
 					</span>
-				</li>
-				<li class="nav-item nav-item-shrink">
-					{if $selectedItems < $totalItems}
-						{call ClayButton.render}
-							{param elementClasses: 'nav-btn' /}
-							{param events: ['click': $_handleSelectAllClicked] /}
-							{param label kind="text"}
-								{msg desc="Select all button label"}
-									select-all
-								{/msg}
-							{/param}
-							{param ref: 'selectAllButton' /}
-							{param style: 'link' /}
-						{/call}
-					{else}
-						{call ClayButton.render}
-							{param elementClasses: 'nav-btn' /}
-							{param events: ['click': $_handleDeselectAllClicked] /}
-							{param label kind="text"}
-								{msg desc="Deselect all button label"}
-									deselect-all
-								{/msg}
-							{/param}
-							{param ref: 'deselectAllButton' /}
-							{param style: 'link' /}
-						{/call}
-					{/if}
 				</li>
 			</ul>
 
@@ -493,7 +460,7 @@
 							{/param}
 
 							{param ref: 'selectPageCheckbox' /}
-							{param showLabel: false /}
+							{param showLabel: not $filterItems and not $sortingOrder and not $showSearch /}
 						{/call}
 					</li>
 				{/if}

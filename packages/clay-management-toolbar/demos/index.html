@@ -89,6 +89,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Without Filters, Sorting and Search</h4>
+			<div id="without-filter-sorting-search-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>With search results bar</h4>
 			<div id="search-results-bar"></div>
 		</div>
@@ -559,6 +566,15 @@
 			viewTypes: viewTypes,
 		},
 		'#without-search-block');
+
+		//Without Filters, Sorting and Search
+		new metal.ClayManagementToolbar({
+			showSearch: false,
+			selectable: true,
+			spritemap: spritemap,
+			viewTypes: viewTypes,
+		},
+		'#without-filter-sorting-search-block');
 
 		//With search results bar
 		new metal.ClayManagementToolbar({
