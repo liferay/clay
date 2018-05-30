@@ -208,6 +208,17 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
+	 * Handles blur window in order to hide menu.
+	 * @private
+	 */
+	_handleWinBlur() {
+		const activeElement = document.activeElement;
+		if (activeElement != null && activeElement.nodeName === 'IFRAME') {
+			this._close();
+		}
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	syncExpanded() {
@@ -225,7 +236,8 @@ class ClayDropdownBase extends ClayComponent {
 					'touchend',
 					this._handleDocClick.bind(this),
 					true
-				)
+				),
+				dom.on(window, 'blur', this._handleWinBlur.bind(this), true)
 			);
 		}
 	}
