@@ -1,6 +1,6 @@
 {
   "name": "clay-list",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Metal ClayList component",
   "license": "BSD",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-list-group",
@@ -28,10 +28,10 @@
     "metal"
   ],
   "dependencies": {
-    "clay-dropdown": "^2.1.5",
-    "clay-label": "^2.1.5",
-    "clay-link": "^2.1.5",
-    "clay-sticker": "^2.1.5",
+    "clay-dropdown": "^2.1.6",
+    "clay-label": "^2.1.6",
+    "clay-link": "^2.1.6",
+    "clay-sticker": "^2.1.6",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
@@ -44,8 +44,8 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay-components": "^2.1.5",
-    "clay-css": "^2.1.5",
+    "browserslist-config-clay-components": "^2.1.6",
+    "clay-css": "^2.1.6",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^6.0.0",
     "webpack": "^3.0.0"
