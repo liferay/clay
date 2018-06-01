@@ -1,14 +1,41 @@
 # Change Log
 
+## [v2.1.6](https://github.com/liferay/clay/tree/v2.1.6) (2018-06-01)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.5...v2.1.6)
+
+**Fixed bugs:**
+
+- NavigationBar Toggler navigates on click [\#965](https://github.com/liferay/clay/issues/965)
+- Split results key makes it impossible to localize [\#961](https://github.com/liferay/clay/issues/961)
+- Missing space in results-for output in ManagementToolbar [\#958](https://github.com/liferay/clay/issues/958)
+
+**Closed issues:**
+
+- Feature Request : Slider / Carousel [\#894](https://github.com/liferay/clay/issues/894)
+- Feature Request : Modernize Tiles [\#893](https://github.com/liferay/clay/issues/893)
+- Feature Request : Modernize Cards [\#892](https://github.com/liferay/clay/issues/892)
+- Feature Request : Inline Action Confirmation [\#890](https://github.com/liferay/clay/issues/890)
+- Feature Request : Social Sharing Bar [\#889](https://github.com/liferay/clay/issues/889)
+
+**Merged pull requests:**
+
+- v2.1.6 [\#968](https://github.com/liferay/clay/pull/968) ([carloslancha](https://github.com/carloslancha))
+- Join key parts into one | Fixes \#961 [\#967](https://github.com/liferay/clay/pull/967) ([carloslancha](https://github.com/carloslancha))
+- Prevent event default on toggler click | Fixes \#965 [\#966](https://github.com/liferay/clay/pull/966) ([carloslancha](https://github.com/carloslancha))
+- Adds {sp} to add a space between results-for and searchValue | Fixes \#958 [\#960](https://github.com/liferay/clay/pull/960) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Add events to ClayDropdown to close on mobile and when the esq is pressed and when the iframe is clicked [\#959](https://github.com/liferay/clay/pull/959) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.1.5](https://github.com/liferay/clay/tree/v2.1.5) (2018-05-30)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.4...v2.1.5)
 
 **Implemented enhancements:**
 
+- ClayDropdown should close when clicked on `document` on mobile and others [\#956](https://github.com/liferay/clay/issues/956)
 - Add label to checkbox on Management Toolbar [\#899](https://github.com/liferay/clay/issues/899)
 
 **Fixed bugs:**
 
+- ClayDropdown should close when clicked on `document` on mobile and others [\#956](https://github.com/liferay/clay/issues/956)
 - Items with no href should not be links in dropdowns but should looks like one [\#941](https://github.com/liferay/clay/issues/941)
 
 **Closed issues:**
