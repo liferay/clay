@@ -32,9 +32,12 @@ class ClayNavigationBar extends Component {
 
 	/**
 	 * Check the click and set transition true.
+	 * @param {!Event} event
 	 * @private
 	 */
-	_handleClickToggler() {
+	_handleClickToggler(event) {
+		event.preventDefault();
+
 		if (this._visible && !this._isTransitioning) {
 			this._setCollapseHeight();
 		}
