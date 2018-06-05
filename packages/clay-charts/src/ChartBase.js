@@ -995,7 +995,7 @@ ChartBase.STATE = {
 					class: Config.string(),
 					position: Config.oneOf(['start', 'middle', 'end']),
 					text: Config.string(),
-					value: Config.string(),
+					value: Config.any(),
 				})
 			),
 		}),
@@ -1006,7 +1006,7 @@ ChartBase.STATE = {
 					class: Config.string(),
 					position: Config.oneOf(['start', 'middle', 'end']),
 					text: Config.string(),
-					value: Config.string(),
+					value: Config.any(),
 				})
 			),
 		}),

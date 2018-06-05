@@ -288,6 +288,11 @@
 
 		.btn-monospaced {
 			height: $btn-monospaced-size-lg;
+			line-height: 1;
+			padding-bottom: $btn-monospaced-padding-y-lg;
+			padding-left: $btn-monospaced-padding-x-lg;
+			padding-right: $btn-monospaced-padding-x-lg;
+			padding-top: $btn-monospaced-padding-y-lg;
 			width: $btn-monospaced-size-lg;
 
 			@include clay-scale-component {
@@ -296,7 +301,6 @@
 			}
 		}
 
-		> .btn,
 		.form-control,
 		.form-file .btn {
 			font-size: $input-font-size-lg;
@@ -387,6 +391,11 @@
 
 		.btn-monospaced {
 			height: $btn-monospaced-size-sm;
+			line-height: 1;
+			padding-bottom: $btn-monospaced-padding-y-sm;
+			padding-left: $btn-monospaced-padding-x-sm;
+			padding-right: $btn-monospaced-padding-x-sm;
+			padding-top: $btn-monospaced-padding-y-sm;
 			width: $btn-monospaced-size-sm;
 
 			@include clay-scale-component {
@@ -395,7 +404,6 @@
 			}
 		}
 
-		> .btn,
 		.form-control,
 		.form-file .btn {
 			font-size: $input-font-size-sm;

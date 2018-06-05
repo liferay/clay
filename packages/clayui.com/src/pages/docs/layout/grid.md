@@ -9,7 +9,7 @@ weight: 100
 ### Description
 {$page.description}
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="container">
 <h3 class="component-title">
@@ -339,7 +339,9 @@ weight: 100
 							</td>
 							<td>700KB</td>
 							<td>
-								<span class="label label-success">Approved</span>
+								<span class="label label-success">
+									<span class="label-item label-item-expand">Approved</span>
+								</span>
 							</td>
 							<td>6 days ago</td>
 							<td>4 days ago</td>

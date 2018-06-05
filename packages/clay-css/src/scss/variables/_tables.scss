@@ -101,7 +101,7 @@ $table-list-border-y-width: 0.0625rem !default; // 1px
 
 $table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
 
-$table-list-border-radius: 6px !default;
+$table-list-border-radius: $border-radius !default;
 $table-list-font-size: null !default;
 $table-list-margin-bottom: $table-list-border-y-width !default;
 $table-list-margin-top: null !default;

@@ -32,9 +32,12 @@ class ClayNavigationBar extends Component {
 
 	/**
 	 * Check the click and set transition true.
+	 * @param {!Event} event
 	 * @private
 	 */
-	_handleClickToggler() {
+	_handleClickToggler(event) {
+		event.preventDefault();
+
 		if (this._visible && !this._isTransitioning) {
 			this._setCollapseHeight();
 		}
@@ -42,6 +45,26 @@ class ClayNavigationBar extends Component {
 		if (!this._isTransitioning) {
 			this._isTransitioning = true;
 		}
+	}
+
+	/**
+	 * Continues the propagation of the item click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleNavItemClicked(event) {
+		const element = event.delegateTarget;
+		const index = element.getAttribute('data-nav-item-index');
+		const item = this.items[index];
+
+		return !this.emit({
+			data: {
+				item: item,
+			},
+			name: 'itemClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**

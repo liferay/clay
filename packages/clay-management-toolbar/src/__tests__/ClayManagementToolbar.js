@@ -73,6 +73,15 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with search and customized placeholder', () => {
+		managementToolbar = new ClayManagementToolbar({
+			searchInputPlaceholder: 'Search thread...',
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with advanced search', () => {
 		managementToolbar = new ClayManagementToolbar({
 			showAdvancedSearch: true,
@@ -85,6 +94,16 @@ describe('ClayManagementToolbar', function() {
 	it('should render a management toolbar with selection enabled', () => {
 		managementToolbar = new ClayManagementToolbar({
 			selectable: true,
+			spritemap: spritemap,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with selection enabled and no filters, sorting and search', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			showSearch: false,
 			spritemap: spritemap,
 		});
 
@@ -770,43 +789,6 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on select all button click', () => {
-		managementToolbar = new ClayManagementToolbar({
-			selectable: true,
-			selectedItems: 1,
-			spritemap: spritemap,
-			totalItems: 10,
-		});
-
-		const spy = jest.spyOn(managementToolbar, 'emit');
-
-		managementToolbar.refs.selectAllButton.element.click();
-
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			'selectAllClicked',
-			expect.any(Object)
-		);
-	});
-
-	it('should render a management toolbar and emit an event on deselect all button click', () => {
-		managementToolbar = new ClayManagementToolbar({
-			selectable: true,
-			selectedItems: 10,
-			spritemap: spritemap,
-			totalItems: 10,
-		});
-		const spy = jest.spyOn(managementToolbar, 'emit');
-
-		managementToolbar.refs.deselectAllButton.element.click();
-
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			'deselectAllClicked',
-			expect.any(Object)
-		);
-	});
-
 	it('should render a management toolbar and emit an event on filter done button click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			filterItems: [
@@ -988,6 +970,57 @@ describe('ClayManagementToolbar', function() {
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
 				data: expect.any(Object),
+				name: 'actionItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
+	it('should render a management toolbar with actions mixed between quick actions and emit an event on action click and return the expected value', () => {
+		managementToolbar = new ClayManagementToolbar({
+			actionItems: [
+				{
+					label: 'Edit',
+					href: '#editurl',
+					icon: 'edit',
+					quickAction: true,
+				},
+				{
+					label: 'Download',
+					href: '#downloadurl',
+					icon: 'download',
+					quickAction: false,
+				},
+				{
+					label: 'Delete',
+					href: '#deleteurl',
+					icon: 'trash',
+					quickAction: true,
+				},
+			],
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		let dataToExpect = {
+			item: {
+				label: 'Delete',
+				href: '#deleteurl',
+				icon: 'trash',
+				quickAction: true,
+			},
+		};
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.quickAction2.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: dataToExpect,
 				name: 'actionItemClicked',
 				originalEvent: expect.any(Object),
 			})

@@ -27,29 +27,6 @@ import templates from './ClayManagementToolbar.soy.js';
  */
 class ClayManagementToolbar extends ClayComponent {
 	/**
-	 * Returns the dropdown index of the element.
-	 * @param {!Node} element
-	 * @private
-	 * @return {?(array|undefined)} the index.
-	 */
-	_getQuickItemIndex(element) {
-		let index = Array.prototype.indexOf.call(
-			Array.prototype.filter.call(
-				element.parentElement.children,
-				childrenElement =>
-					childrenElement.getAttribute('role') !== 'presentation'
-			),
-			element
-		);
-
-		if (this.showInfoButton) {
-			index--;
-		}
-
-		return index;
-	}
-
-	/**
 	 * Continues the propagation of the action item clicked event
 	 * @param {!Event} event
 	 * @private
@@ -113,15 +90,6 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
-	 * Continues the propagation of the deselect all button clicked event
-	 * @param {!Event} event
-	 * @private
-	 */
-	_handleDeselectAllClicked(event) {
-		this.emit('deselectAllClicked', event);
-	}
-
-	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
@@ -169,7 +137,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 */
 	_handleQuickActionClicked(event) {
 		let element = event.delegateTarget;
-		let elementIndex = this._getQuickItemIndex(element);
+		let elementIndex = element.getAttribute('data-quick-action-index');
 		let item = this.actionItems[elementIndex];
 
 		return !this.emit({
@@ -189,15 +157,6 @@ class ClayManagementToolbar extends ClayComponent {
 	 */
 	_handleSearchSearchClick(event) {
 		return !this.emit('search', event);
-	}
-
-	/**
-	 * Continues the propagation of the select all button clicked event
-	 * @param {!Event} event
-	 * @private
-	 */
-	_handleSelectAllClicked(event) {
-		this.emit('selectAllClicked', event);
 	}
 
 	/**
@@ -301,6 +260,15 @@ ClayManagementToolbar.STATE = {
 	}),
 
 	/**
+	 * Data that will be passed to deltemplates.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?object}
+	 */
+	customData: Config.object(),
+
+	/**
 	 * Flag to indicate if the managment toolbar is disabled or not.
 	 * @default false
 	 * @instance
@@ -371,6 +339,15 @@ ClayManagementToolbar.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	searchInputName: Config.string(),
+
+	/**
+	 * Text of the search placeholder.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	searchInputPlaceholder: Config.string(),
 
 	/**
 	 * Value of the search input.

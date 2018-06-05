@@ -35,7 +35,7 @@ exports[`ClayAlert should render a "warning" style alert 1`] = `
 
 exports[`ClayAlert should render a closeable alert 1`] = `
 <div class="alert alert-warning fade alert-dismissible show" role="alert">
-  <button class="btn close btn-unstyled" aria-label="Close" type="button">
+  <button class="btn close btn-unstyled" aria-label="close" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
       <title>times</title>
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>

@@ -1,12 +1,153 @@
 # Change Log
 
-## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
+## [v2.1.6](https://github.com/liferay/clay/tree/v2.1.6) (2018-06-01)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.5...v2.1.6)
 
-[Full Changelog](https://github.com/liferay/clay/compare/v2.0.3...HEAD)
+**Fixed bugs:**
+
+- NavigationBar Toggler navigates on click [\#965](https://github.com/liferay/clay/issues/965)
+- Split results key makes it impossible to localize [\#961](https://github.com/liferay/clay/issues/961)
+- Missing space in results-for output in ManagementToolbar [\#958](https://github.com/liferay/clay/issues/958)
 
 **Closed issues:**
 
+- Feature Request : Slider / Carousel [\#894](https://github.com/liferay/clay/issues/894)
+- Feature Request : Modernize Tiles [\#893](https://github.com/liferay/clay/issues/893)
+- Feature Request : Modernize Cards [\#892](https://github.com/liferay/clay/issues/892)
+- Feature Request : Inline Action Confirmation [\#890](https://github.com/liferay/clay/issues/890)
+- Feature Request : Social Sharing Bar [\#889](https://github.com/liferay/clay/issues/889)
+
+**Merged pull requests:**
+
+- v2.1.6 [\#968](https://github.com/liferay/clay/pull/968) ([carloslancha](https://github.com/carloslancha))
+- Join key parts into one | Fixes \#961 [\#967](https://github.com/liferay/clay/pull/967) ([carloslancha](https://github.com/carloslancha))
+- Prevent event default on toggler click | Fixes \#965 [\#966](https://github.com/liferay/clay/pull/966) ([carloslancha](https://github.com/carloslancha))
+- Adds {sp} to add a space between results-for and searchValue | Fixes \#958 [\#960](https://github.com/liferay/clay/pull/960) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Add events to ClayDropdown to close on mobile and when the esq is pressed and when the iframe is clicked [\#959](https://github.com/liferay/clay/pull/959) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
+## [v2.1.5](https://github.com/liferay/clay/tree/v2.1.5) (2018-05-30)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.4...v2.1.5)
+
+**Implemented enhancements:**
+
+- ClayDropdown should close when clicked on `document` on mobile and others [\#956](https://github.com/liferay/clay/issues/956)
+- Add label to checkbox on Management Toolbar [\#899](https://github.com/liferay/clay/issues/899)
+
+**Fixed bugs:**
+
+- ClayDropdown should close when clicked on `document` on mobile and others [\#956](https://github.com/liferay/clay/issues/956)
+- Items with no href should not be links in dropdowns but should looks like one [\#941](https://github.com/liferay/clay/issues/941)
+
+**Closed issues:**
+
+- Remove select all and deselect all buttons from management toolbar [\#954](https://github.com/liferay/clay/issues/954)
+- ClayTooltip should use event.delegateTarget [\#948](https://github.com/liferay/clay/issues/948)
+- Clay documentation: Lexicon Grid pattern hyperling is broken [\#900](https://github.com/liferay/clay/issues/900)
+- Update Documentation with Browser Support Matrix [\#888](https://github.com/liferay/clay/issues/888)
+- Hidden inputs inside the management toolbar's search form  [\#876](https://github.com/liferay/clay/issues/876)
+- Button variation styles are not directly supported by Dropdown buttons [\#659](https://github.com/liferay/clay/issues/659)
+- Review this logic in ClayAlertBase [\#628](https://github.com/liferay/clay/issues/628)
+
+**Merged pull requests:**
+
+- v2.1.5 [\#957](https://github.com/liferay/clay/pull/957) ([carloslancha](https://github.com/carloslancha))
+- Remove select all and deselect all buttons from Management Toolbar | Fixes \#954 [\#955](https://github.com/liferay/clay/pull/955) ([carloslancha](https://github.com/carloslancha))
+- Render a button as a dropdown item if no href is passed to an item with default type | Fixes \#941 [\#953](https://github.com/liferay/clay/pull/953) ([carloslancha](https://github.com/carloslancha))
+- Add browser support to README | Fixes \#888 [\#952](https://github.com/liferay/clay/pull/952) ([carloslancha](https://github.com/carloslancha))
+- Add label to checkbox on Management Toolbar | Fixes \#899 [\#951](https://github.com/liferay/clay/pull/951) ([carloslancha](https://github.com/carloslancha))
+- Use event.delegateTarget instead of event.target | Fixes \#948 [\#949](https://github.com/liferay/clay/pull/949) ([julien](https://github.com/julien))
+
+## [v2.1.4](https://github.com/liferay/clay/tree/v2.1.4) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.3...v2.1.4)
+
+## [v2.1.3](https://github.com/liferay/clay/tree/v2.1.3) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.2...v2.1.3)
+
+**Closed issues:**
+
+- NullPointer exception accessing domData in element.getAttribute [\#945](https://github.com/liferay/clay/issues/945)
+
+**Merged pull requests:**
+
+- v.2.1.3 [\#947](https://github.com/liferay/clay/pull/947) ([jbalsas](https://github.com/jbalsas))
+- Checks if this.element is still present [\#946](https://github.com/liferay/clay/pull/946) ([jbalsas](https://github.com/jbalsas))
+
+## [v2.1.2](https://github.com/liferay/clay/tree/v2.1.2) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.1...v2.1.2)
+
+## [v2.1.1](https://github.com/liferay/clay/tree/v2.1.1) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.0...v2.1.1)
+
+## [v2.1.0](https://github.com/liferay/clay/tree/v2.1.0) (2018-05-25)
+[Full Changelog](https://github.com/liferay/clay/compare/v1.0.28...v2.1.0)
+
+**Implemented enhancements:**
+
+- Pass custom data to deltemplates in ManagementToolbar [\#938](https://github.com/liferay/clay/issues/938)
+
+**Closed issues:**
+
+- New Lexicon SVG Icon merge [\#936](https://github.com/liferay/clay/issues/936)
+- Create ClayTooltip component [\#929](https://github.com/liferay/clay/issues/929)
+- SVG Title Attributes Override HTML Title attribute in 1.x [\#926](https://github.com/liferay/clay/issues/926)
+
+**Merged pull requests:**
+
+- v2.1.0 [\#944](https://github.com/liferay/clay/pull/944) ([carloslancha](https://github.com/carloslancha))
+- Pass item object on NavigationBar item click event | Fixes \#933 [\#943](https://github.com/liferay/clay/pull/943) ([carloslancha](https://github.com/carloslancha))
+- Add new page Typography in clayui.com and makes page popovers\_tooltips consistent with lexicon page popovers\_tooltips pattern [\#942](https://github.com/liferay/clay/pull/942) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Create ClayTooltip component | Fixes \#929 [\#940](https://github.com/liferay/clay/pull/940) ([julien](https://github.com/julien))
+- Add customData to deltemplate in management toolbar | Fixes \#938 [\#939](https://github.com/liferay/clay/pull/939) ([carloslancha](https://github.com/carloslancha))
+- New: \(Fixes \#936\) Icons add Lexicon icon merge [\#937](https://github.com/liferay/clay/pull/937) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#931\) Atlas `.btn-sm` padding left and right should be… [\#935](https://github.com/liferay/clay/pull/935) ([pat270](https://github.com/pat270))
+- Add new `searchPlaceholder` option to customize search placeholder | Fixes \#928 [\#932](https://github.com/liferay/clay/pull/932) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- \(\#871\) Localization dropdown menu labels should be aligned to the right [\#925](https://github.com/liferay/clay/pull/925) ([pat270](https://github.com/pat270))
+- Manage languages | Fixes \#576 [\#923](https://github.com/liferay/clay/pull/923) ([carloslancha](https://github.com/carloslancha))
+- Adds a new `delayTime` option and changes the ClayToast time to 8/s | Fixes \#910 [\#916](https://github.com/liferay/clay/pull/916) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update: \(\#910\) Alerts move `.alert-notifications-fixed` to the bottom… [\#915](https://github.com/liferay/clay/pull/915) ([pat270](https://github.com/pat270))
+- Fixes the data that is returned in the click action of a quick action in the management toolbar | Fixes \#901 [\#909](https://github.com/liferay/clay/pull/909) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
+## [v1.0.28](https://github.com/liferay/clay/tree/v1.0.28) (2018-05-23)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.0.3...v1.0.28)
+
+**Implemented enhancements:**
+
+- it should be possible to receive the clicked item in the ClayNavigationBar item click event [\#933](https://github.com/liferay/clay/issues/933)
+- Manage languages [\#576](https://github.com/liferay/clay/issues/576)
+
+**Fixed bugs:**
+
+- grid.x.lines.value and grid.y.lines.value must accept multiple values [\#907](https://github.com/liferay/clay/issues/907)
+- Clicking a quick action actually performs another one [\#901](https://github.com/liferay/clay/issues/901)
+- Icon inside sticker-sm to be 14px height [\#886](https://github.com/liferay/clay/issues/886)
+- No Disabled-Hover state for Filter and Order button [\#882](https://github.com/liferay/clay/issues/882)
+- Localization dropdown menu labels should be aligned to the right [\#871](https://github.com/liferay/clay/issues/871)
+- Mangagement toolbar: search field disabled state [\#870](https://github.com/liferay/clay/issues/870)
+
+**Closed issues:**
+
+- Update sizes for .btn-sm [\#931](https://github.com/liferay/clay/issues/931)
+- management bar search box placeholder to be possible to be customized [\#928](https://github.com/liferay/clay/issues/928)
+- Table List border-radius should be 4px [\#918](https://github.com/liferay/clay/issues/918)
+- Toast Alert needs to be placed at the bottom left and default auto closing time set to 8 secs [\#910](https://github.com/liferay/clay/issues/910)
+- Vertical padding of modals footer should be 16px [\#885](https://github.com/liferay/clay/issues/885)
+- Wrong borderless buttons states colors [\#883](https://github.com/liferay/clay/issues/883)
+- dropdown menu distance list to title [\#879](https://github.com/liferay/clay/issues/879)
+- Inline Scroller should shrink to fit smaller content [\#859](https://github.com/liferay/clay/issues/859)
 - Can this css library be used in other project apart from liferay related ? [\#410](https://github.com/liferay/clay/issues/410)
+
+**Merged pull requests:**
+
+- Add fix from https://github.com/liferay/clay/commit/0bec1327688a0fdaf… [\#927](https://github.com/liferay/clay/pull/927) ([gregory-bretall](https://github.com/gregory-bretall))
+- Update: \(Fixes \#882\) Application Bar, Navigation Bar, Management Bar … [\#924](https://github.com/liferay/clay/pull/924) ([pat270](https://github.com/pat270))
+- \(Fixes \#870\) Atlas set color for `$input-placeholder-disabled-color` [\#920](https://github.com/liferay/clay/pull/920) ([pat270](https://github.com/pat270))
+- \(Fixes \#918\) Table List border-radius should be 4px [\#919](https://github.com/liferay/clay/pull/919) ([pat270](https://github.com/pat270))
+- \(\#777\) Clay UI Docs update Label and Badge markup to new pattern [\#917](https://github.com/liferay/clay/pull/917) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#883\) Change hover and active background colors of `.b… [\#914](https://github.com/liferay/clay/pull/914) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#879\) Dropdown increase spacing of `.dropdown-header` … [\#913](https://github.com/liferay/clay/pull/913) ([pat270](https://github.com/pat270))
+- Add `.inline-item` to cases that use the icon in ClaySticker | Fixes \#886 [\#912](https://github.com/liferay/clay/pull/912) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Changes the validation of grid.x.lines.value and grid.y.lines.value to any | Fixes \#907 [\#908](https://github.com/liferay/clay/pull/908) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes Lexicon Grid pattern link [\#906](https://github.com/liferay/clay/pull/906) ([alexandervalencia](https://github.com/alexandervalencia))
 
 ## [v2.0.3](https://github.com/liferay/clay/tree/v2.0.3) (2018-05-17)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.0.2...v2.0.3)

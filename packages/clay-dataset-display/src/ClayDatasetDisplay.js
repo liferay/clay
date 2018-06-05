@@ -118,14 +118,6 @@ class ClayDatasetDisplay extends ClayComponent {
 	}
 
 	/**
-	 * Deselects all items on management toolbar deselect all button click.
-	 * @private
-	 */
-	_handleDeselectAllClicked() {
-		this._deselectAllItems();
-	}
-
-	/**
 	 * Continues the propagation of the filter done clicked event
 	 * @param {!Event} event
 	 * @private
@@ -229,14 +221,6 @@ class ClayDatasetDisplay extends ClayComponent {
 	 */
 	_handleSortingButtonClicked(event) {
 		this.emit('sortingButtonClicked', event);
-	}
-
-	/**
-	 * Selects all items on management toolbar select all button click.
-	 * @private
-	 */
-	_handleSelectAllClicked() {
-		this._selectAllItems();
 	}
 
 	/**
