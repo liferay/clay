@@ -1,4 +1,4 @@
-# [Clay](https://clayui.com/) &middot; [![Build Status](https://travis-ci.org/liferay/clay.svg?branch=master)](https://travis-ci.org/liferay/clay) [![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
+# 🏺 [Clay](https://clayui.com/) &middot; [![Build Status](https://travis-ci.org/liferay/clay.svg?branch=master)](https://travis-ci.org/liferay/clay) [![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
 
 Clay is Liferay's web implementation of [Lexicon Experience Language](https://lexicondesign.io/). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
 
