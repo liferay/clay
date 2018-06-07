@@ -84,6 +84,12 @@ $file-card: map-merge((
 	asset-icon-color: $gray-600
 ), $file-card);
 
+$user-card: () !default;
+$user-card: map-merge((
+	asset-icon-min-width: 2.5rem,
+	asset-icon-width: 26%
+), $user-card);
+
 $card-page-item-asset: () !default;
 $card-page-item-asset: map-merge((
 	base: (

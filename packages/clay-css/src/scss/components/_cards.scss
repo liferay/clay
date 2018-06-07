@@ -448,6 +448,10 @@
 	@include clay-card-type-asset-variant($file-card);
 }
 
+.user-card {
+	@include clay-card-type-asset-variant($user-card);
+}
+
 // Card Type Directory
 
 .card-type-directory {
