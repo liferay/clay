@@ -24,6 +24,7 @@
 	{@param? style: string}
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
+	{@param? triggerTitle: string}
 
 	{let $attributes kind="attributes"}
 		class="dropdown
@@ -49,6 +50,7 @@
 			{param label: $label /}
 			{param size: $triggerSize /}
 			{param style: $style /}
+			{param title: $triggerTitle /}
 		{/call}
 
 		{call .sections}
@@ -260,6 +262,7 @@
 	{@param? expanded: bool}
 	{@param? size: string}
 	{@param? style: string}
+	{@param? title: string}
 
 	{let $buttonAttributes kind="attributes"}
 		{if $expanded}
@@ -290,6 +293,10 @@
 			disabled
 		{else}
 			data-onclick="toggle"
+		{/if}
+
+		{if $title}
+			title="{$title}"
 		{/if}
 
 		type="button"
