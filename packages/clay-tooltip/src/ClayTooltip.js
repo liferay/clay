@@ -80,17 +80,26 @@ class ClayTooltip extends Component {
 	 */
 	_handleMouseEnter(event) {
 		const target = event.delegateTarget;
-		let title = target.getAttribute('title');
-		if (title) {
-			target.setAttribute('data-title', title);
+
+		const titleAttribute = target.getAttribute('title');
+
+		if (titleAttribute) {
+			target.setAttribute('data-title', titleAttribute);
+			target.setAttribute('data-restore-title', 'true');
 			target.removeAttribute('title');
-		} else {
-			title = target.getAttribute('data-title');
+		}
+		else if (target.tagName === 'svg') {
+			let titleTag = target.querySelector('title');
+
+			if (titleTag) {
+				target.setAttribute('data-title', titleTag.innerHTML);
+				target.setAttribute('data-restore-title', 'true');
+				titleTag.remove();
+			}
 		}
 
-		const content = title;
-
-		this._content = content;
+		this._content = target.getAttribute('data-title');
+		
 		this.alignedPosition = Align.align(this.element, target, this.position);
 		this._showTooltip = true;
 	}
@@ -103,9 +112,22 @@ class ClayTooltip extends Component {
 	 */
 	_handleMouseLeave(event) {
 		const target = event.delegateTarget;
+
 		const title = target.getAttribute('data-title');
-		if (title) {
-			target.setAttribute('title', title);
+		const restoreTitle = target.getAttribute('data-restore-title');
+
+		if (title && restoreTitle === 'true') {
+			if (target.tagName === 'svg') {
+				let titleTag = document.createElement('title');
+				titleTag.innerHTML = title;
+
+				target.appendChild(titleTag);
+			}
+			else {
+				target.setAttribute('title', title);
+			}
+
+			target.removeAttribute('data-restore-title');
 		}
 
 		this._showTooltip = false;
