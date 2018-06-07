@@ -87,8 +87,7 @@ class ClayTooltip extends Component {
 			target.setAttribute('data-title', titleAttribute);
 			target.setAttribute('data-restore-title', 'true');
 			target.removeAttribute('title');
-		}
-		else if (target.tagName === 'svg') {
+		} else if (target.tagName === 'svg') {
 			let titleTag = target.querySelector('title');
 
 			if (titleTag) {
@@ -99,7 +98,7 @@ class ClayTooltip extends Component {
 		}
 
 		this._content = target.getAttribute('data-title');
-		
+
 		this.alignedPosition = Align.align(this.element, target, this.position);
 		this._showTooltip = true;
 	}
@@ -122,8 +121,7 @@ class ClayTooltip extends Component {
 				titleTag.innerHTML = title;
 
 				target.appendChild(titleTag);
-			}
-			else {
+			} else {
 				target.setAttribute('title', title);
 			}
 
