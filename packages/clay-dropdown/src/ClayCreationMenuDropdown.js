@@ -175,6 +175,15 @@ ClayCreationMenuDropdown.STATE = {
 	triggerClasses: Config.string(),
 
 	/**
+	 * The title attribute of the trigger element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?(string|undefined)}
+	 */
+	triggerTitle: Config.string(),
+
+	/**
 	 * The url for the view more button in case is rendered.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown

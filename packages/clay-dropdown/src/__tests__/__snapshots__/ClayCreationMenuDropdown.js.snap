@@ -2,7 +2,7 @@
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" disabled="" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" disabled="" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -23,7 +23,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown disable
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown expanded 1`] = `
 <div class="dropdown show">
-  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -44,7 +44,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown expande
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with classes 1`] = `
 <div class="dropdown my-custom-class">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -65,7 +65,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with cl
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with id 1`] = `
 <div class="dropdown" id="myId">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -86,7 +86,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with id
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the default primary and passed total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -116,7 +116,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the default primary and total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -146,7 +146,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the passed primary and default total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -176,7 +176,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are less than the passed primary and total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -206,7 +206,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary and passed total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -289,7 +289,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary and total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -357,7 +357,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary maximum and less than the default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -402,7 +402,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the default primary maximum and less than the passed total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -471,7 +471,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the passed primary and default total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -539,7 +539,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only primary items which are more than the passed primary maximum and less than the default total maximums 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -590,7 +590,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than default secondary maximum and together less than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -636,7 +636,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than default secondary maximum and together less than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -685,7 +685,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than default secondary maximum and together more than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -739,7 +739,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together less than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -794,7 +794,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together less than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -849,7 +849,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together more than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -918,7 +918,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than passed secondary maximum and together more than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -990,7 +990,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together less than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1053,7 +1053,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together less than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1119,7 +1119,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together more than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1185,7 +1185,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than default secondary maximum and together more than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1245,7 +1245,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together less than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1305,7 +1305,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together less than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1365,7 +1365,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together more than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1431,7 +1431,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are less than passed secondary maximum and together more than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1491,7 +1491,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than default secondary maximum and together less than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1560,7 +1560,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than default secondary maximum and together more than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1629,7 +1629,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than default secondary maximum and together more than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1698,7 +1698,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together less than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1758,7 +1758,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together less than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1818,7 +1818,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together more than default total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1887,7 +1887,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are more than default primary maximum and secondary items are more than passed secondary maximum and together more than passed total maximum 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -1965,7 +1965,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group with label 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
@@ -2012,7 +2012,7 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with the default markdown 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" type="button">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>

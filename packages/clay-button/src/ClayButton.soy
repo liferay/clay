@@ -17,6 +17,7 @@
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: string}
+	{@param? title: string}
 	{@param? type: string}
 	{@param? value: string}
 
@@ -63,6 +64,10 @@
 
 		{if $name}
 			name="{$name}"
+		{/if}
+
+		{if $title}
+			title="{$title}"
 		{/if}
 
 		{if $value}

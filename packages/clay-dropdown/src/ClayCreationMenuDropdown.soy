@@ -19,6 +19,7 @@
 	{@param? maxTotalItems: int}
 	{@param? secondaryItems: list<?>}
 	{@param? triggerClasses: string}
+	{@param? triggerTitle: string}
 	{@param? viewMoreURL: string}
 
 	{let $secondaryItemsFirstGroup: 
@@ -180,12 +181,12 @@
 			null
 	/}
 
-   {let $trigger kind="html"}
-    {call ClayIcon.render}
-      {param spritemap: $spritemap /}
-      {param symbol: 'plus' /}
-    {/call}
-  {/let}
+	{let $trigger kind="html"}
+		{call ClayIcon.render}
+			{param spritemap: $spritemap /}
+			{param symbol: 'plus' /}
+		{/call}
+	{/let}
 
 	{call ClayDropdownBase.render}
 		{param button: $showMoreButton /}
@@ -213,5 +214,14 @@
 		{param spritemap: $spritemap /}
 		{param style: 'primary' /}
 		{param triggerClasses: $triggerClasses /}
+		{param triggerTitle kind="text"}
+			{if $triggerTitle}
+				{$triggerTitle}
+			{else}
+				{msg desc=""}
+					new
+				{/msg}
+			{/if}
+		{/param}
 	{/call}
 {/template}

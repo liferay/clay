@@ -36,10 +36,10 @@ $table-divider-text-transform: null !default;
 
 $table-quick-action-menu-align-items: flex-start !default;
 $table-quick-action-menu-bg: if($table-bg == transparent, $body-bg, $table-bg) !default;
-$table-quick-action-menu-accent-bg: #F2F2F2 !default;
-$table-quick-action-menu-accent-active-bg: #E0E0E0 !default;
-$table-quick-action-menu-active-bg: #DADADA !default;
-$table-quick-action-menu-hover-bg: #ECECEC !default;
+$table-quick-action-menu-accent-bg: $table-accent-bg !default;
+$table-quick-action-menu-accent-active-bg: $table-accent-bg !default;
+$table-quick-action-menu-active-bg: $table-active-bg !default;
+$table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
 $table-cell-expand-min-width: 12.5rem !default; // 200px
 

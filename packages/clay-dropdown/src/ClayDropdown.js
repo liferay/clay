@@ -168,6 +168,15 @@ ClayDropdown.STATE = {
 	triggerClasses: Config.string(),
 
 	/**
+	 * The title attribute of the trigger element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?(string|undefined)}
+	 */
+	triggerTitle: Config.string(),
+
+	/**
 	 * Size of the trigger button.
 	 * @default undefined
 	 * @instance

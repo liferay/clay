@@ -4,6 +4,7 @@ $table-hover-bg: lighten($component-active-bg, 44.90) !default;
 $table-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $table-font-size: 0.875rem !default;
 
+$table-head-bg: #FFF !default;
 $table-head-border-bottom-width: 1px !default;
 $table-head-color: $secondary !default;
 $table-head-font-weight: $font-weight-semi-bold !default;
@@ -60,6 +61,8 @@ $table-list-hover-bg: $table-hover-bg !default;
 $table-list-active-bg: $table-list-hover-bg !default;
 $table-list-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $table-list-color: $body-color !default;
+
+$table-list-head-bg: #FFF !default;
 
 $table-list-link-color: $secondary !default;
 

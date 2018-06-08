@@ -28,6 +28,8 @@ th {
 	thead {
 		td,
 		th {
+			// Webkit rendering issue with responsive-tables
+			background-color: $table-head-bg;
 			border-bottom-width: $table-head-border-bottom-width;
 			border-top-width: $table-head-border-top-width;
 		}
@@ -65,6 +67,15 @@ th {
 
 		&:last-child {
 			padding-right: $table-cell-gutters;
+		}
+	}
+
+	tbody,
+	tfoot {
+		td,
+		th {
+			// Webkit rendering issue with responsive-tables
+			background-color: $table-bg;
 		}
 	}
 
@@ -131,6 +142,39 @@ th {
 	}
 }
 
+// Table Striped
+
+.table-striped {
+	tbody tr:nth-of-type(odd) {
+		td,
+		th {
+			background-color: $table-accent-bg;
+		}
+	}
+}
+
+// Table Hover
+
+.table-hover {
+	tbody tr {
+		@include hover {
+			td,
+			th {
+				background-color: $table-hover-bg;
+			}
+		}
+	}
+}
+
+// Table Active
+
+.table .table-active {
+	> td,
+	> th {
+		background-color: $table-active-bg;
+	}
+}
+
 // Table Title
 
 .table-title {
@@ -156,8 +200,6 @@ th {
 // Table List Skin
 
 .table-list {
-	background-color: $table-list-bg;
-
 	@include border-radius($table-list-border-radius);
 
 	color: $table-list-color;
@@ -243,6 +285,7 @@ th {
 	thead {
 		td,
 		th {
+			// Webkit rendering issue with responsive-tables
 			background-color: $table-list-head-bg;
 			border-width: 0;
 			font-size: $table-list-head-font-size;
@@ -260,6 +303,8 @@ th {
 	tfoot {
 		td,
 		th {
+			// Webkit rendering issue with responsive-tables
+			background-color: $table-list-bg;
 			border-width: 0;
 			vertical-align: middle;
 		}
@@ -291,14 +336,20 @@ th {
 
 .table-list.table-striped {
 	tbody tr:nth-of-type(odd) {
-		background-color: $table-list-accent-bg;
+		td,
+		th {
+			background-color: $table-list-accent-bg;
+		}
 	}
 }
 
 .table-list.table-hover {
 	tbody tr {
 		@include hover {
-			background-color: $table-list-hover-bg;
+			td,
+			th {
+				background-color: $table-list-hover-bg;
+			}
 		}
 	}
 }

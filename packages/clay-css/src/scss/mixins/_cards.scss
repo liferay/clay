@@ -95,6 +95,8 @@
 	$aspect-ratio-checkered-bg: map-get($map, aspect-ratio-checkered-bg);
 
 	$asset-icon-color: map-get($map, asset-icon-color);
+	$asset-icon-min-width: map-get($map, asset-icon-min-width);
+	$asset-icon-width: map-get($map, asset-icon-width);
 
 	@if ($enabled) {
 		.aspect-ratio {
@@ -107,6 +109,8 @@
 
 		.card-type-asset-icon {
 			color: $asset-icon-color;
+			min-width: $asset-icon-min-width;
+			width: $asset-icon-width;
 		}
 	}
 }
