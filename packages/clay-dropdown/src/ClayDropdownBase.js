@@ -442,6 +442,15 @@ ClayDropdownBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerSize: Config.oneOf(['sm']),
+
+	/**
+	 * The title attribute of the trigger element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?(string|undefined)}
+	 */
+	triggerTitle: Config.string(),
 };
 
 Soy.register(ClayDropdownBase, templates);

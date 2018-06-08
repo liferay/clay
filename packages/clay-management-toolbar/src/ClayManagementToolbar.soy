@@ -240,6 +240,11 @@
 								{param ref: 'infoButton' /}
 								{param spritemap: $spritemap /}
 								{param style: 'unstyled' /}
+								{param title kind="text"}
+									{msg desc=""}
+										info-panel
+									{/msg}
+								{/param}
 							{/call}
 						</li>
 					{/if}
@@ -255,6 +260,7 @@
 											{param icon: $item.icon /}
 											{param ref: 'quickAction' + index($item) /}
 											{param spritemap: $spritemap /}
+											{param title: $item.label /}
 										{/call}
 									{else}
 										{call ClayButton.render}
@@ -263,6 +269,7 @@
 											{param ref: 'quickAction' + index($item) /}
 											{param spritemap: $spritemap /}
 											{param style: 'unstyled' /}
+											{param title: $item.label /}
 										{/call}
 									{/if}
 								</li>
@@ -325,14 +332,26 @@
 	{if $creationMenu and $creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and not $creationMenu.secondaryItems}
 		{let $item: $creationMenu.primaryItems[0] /}
 
-		{call ClayLink.render}
-			{param ariaLabel: $item.label /}
-			{param buttonStyle: 'primary' /}
-			{param elementClasses: 'nav-btn nav-btn-monospaced' /}
-			{param href: $item.href /}
-			{param icon: 'plus' /}
-			{param spritemap: $spritemap /}
-		{/call}
+		{if $item.href}
+			{call ClayLink.render}
+				{param ariaLabel: $item.label /}
+				{param buttonStyle: 'primary' /}
+				{param elementClasses: 'nav-btn nav-btn-monospaced' /}
+				{param href: $item.href /}
+				{param icon: 'plus' /}
+				{param spritemap: $spritemap /}
+				{param title: $item.label /}
+			{/call}
+		{else}
+			{call ClayButton.render}
+				{param elementClasses: 'nav-btn nav-btn-monospaced' /}
+				{param events: ['click': $_handleCreationButtonClicked ] /}
+				{param icon: 'plus' /}
+				{param ref: 'creationMenu' /}
+				{param spritemap: $spritemap /}
+				{param title: $item.label /}
+			{/call}
+		{/if}
 	{elseif $creationMenu and $creationMenu.primaryItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
@@ -358,6 +377,11 @@
 			{param icon: 'plus' /}
 			{param ref: 'creationMenu' /}
 			{param spritemap: $spritemap /}
+			{param title kind="text"}
+				{msg desc=""}
+					new
+				{/msg}
+			{/param}
 		{/call}
 	{/if}
 {/template}
@@ -531,6 +555,11 @@
 								{param icon: 'order-arrow' /}
 								{param ref: 'sortingButton' /}
 								{param spritemap: $spritemap /}
+								{param title kind="text"}
+									{msg desc=""}
+										order
+									{/msg}
+								{/param}
 							{/call}
 						{else}
 							{call ClayButton.render}
@@ -541,6 +570,11 @@
 								{param ref: 'sortingButton' /}
 								{param spritemap: $spritemap /}
 								{param style: 'unstyled' /}
+								{param title kind="text"}
+									{msg desc=""}
+										order
+									{/msg}
+								{/param}
 							{/call}
 						{/if}
 					</li>
@@ -612,6 +646,11 @@
 							{param ref: 'infoButton' /}
 							{param spritemap: $spritemap /}
 							{param style: 'unstyled' /}
+							{param title kind="text"}
+								{msg desc=""}
+									info
+								{/msg}
+							{/param}
 						{/call}
 					</li>
 				{/if}
@@ -632,6 +671,11 @@
 							{param ref: 'viewTypesDropdown' /}
 							{param spritemap: $spritemap /}
 							{param triggerClasses: 'nav-link nav-link-monospaced' /}
+							{param triggerTitle kind="text"}
+								{msg desc=""}
+									display-style
+								{/msg}
+							{/param}
 						{/call}
 					</li>
 				{/if}

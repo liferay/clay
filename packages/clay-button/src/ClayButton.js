@@ -149,6 +149,15 @@ ClayButton.STATE = {
 	),
 
 	/**
+	 * The title attribute of the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?(string|undefined)}
+	 */
+	title: Config.string(),
+
+	/**
 	 * The type attribute value of the element.
 	 * @default button
 	 * @instance
