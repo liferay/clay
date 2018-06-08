@@ -175,6 +175,44 @@ th {
 	}
 }
 
+// Table Disabled
+
+.table-disabled {
+	color: $table-disabled-color;
+
+	> td,
+	> th {
+		background-color: $table-disabled-bg;
+		cursor: $table-disabled-cursor;
+
+		a {
+			color: $table-disabled-color;
+			pointer-events: $table-disabled-pointer-events;
+		}
+	}
+
+	.table-title,
+	.table-list-title {
+		color: $table-disabled-color;
+	}
+}
+
+.table-hover .table-disabled:hover {
+	> td,
+	> th {
+		background-color: $table-disabled-bg;
+	}
+}
+
+.table-striped {
+	tbody .table-disabled:nth-of-type(odd) {
+		td,
+		th {
+			background-color: $table-disabled-bg;
+		}
+	}
+}
+
 // Table Title
 
 .table-title {
@@ -334,6 +372,8 @@ th {
 	}
 }
 
+// Table List Striped
+
 .table-list.table-striped {
 	tbody tr:nth-of-type(odd) {
 		td,
@@ -342,6 +382,8 @@ th {
 		}
 	}
 }
+
+// Table List Hover
 
 .table-list.table-hover {
 	tbody tr {
@@ -353,6 +395,8 @@ th {
 		}
 	}
 }
+
+// Table List Active
 
 .table-list.table-hover {
 	.table-active {
@@ -372,6 +416,44 @@ th {
 	> th,
 	> td {
 		background-color: $table-list-active-bg;
+	}
+}
+
+// Table List Disabled
+
+.table-list .table-disabled {
+	color: $table-list-disabled-color;
+
+	> td,
+	> th {
+		background-color: $table-list-disabled-bg;
+		cursor: $table-list-disabled-cursor;
+
+		a {
+			color: $table-list-disabled-color;
+			pointer-events: $table-list-disabled-pointer-events;
+		}
+	}
+
+	.table-title,
+	.table-list-title {
+		color: $table-list-disabled-color;
+	}
+}
+
+.table-list.table-hover .table-disabled:hover {
+	> td,
+	> th {
+		background-color: $table-list-disabled-bg;
+	}
+}
+
+.table-list.table-striped {
+	tbody .table-disabled:nth-of-type(odd) {
+		td,
+		th {
+			background-color: $table-list-disabled-bg;
+		}
 	}
 }
 
@@ -533,7 +615,7 @@ th {
 // Show Quick Action
 
 .show-quick-actions-on-hover {
-	tr:not(.table-active) {
+	tr:not(.table-active):not(.table-disabled) {
 		@include hover {
 			.quick-action-menu {
 				display: flex;
@@ -541,7 +623,7 @@ th {
 		}
 	}
 
-	.table-focus:not(.table-active) {
+	.table-focus:not(.table-active):not(.table-disabled) {
 		.quick-action-menu {
 			display: flex;
 		}
