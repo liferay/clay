@@ -1,5 +1,24 @@
 # Change Log
 
+## [v2.1.7](https://github.com/liferay/clay/tree/v2.1.7) (2018-06-08)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.6...v2.1.7)
+
+**Closed issues:**
+
+- Add more Lexicon SVG Icons [\#974](https://github.com/liferay/clay/issues/974)
+- Icon links and buttons need to have a title to show a tooltip [\#972](https://github.com/liferay/clay/issues/972)
+- Visual inconsistency when viewing a Table on Safari 11 / responsive version [\#950](https://github.com/liferay/clay/issues/950)
+- Cards should have bigger icons and ensure a minimum 40x40px size [\#719](https://github.com/liferay/clay/issues/719)
+
+**Merged pull requests:**
+
+- v2.1.7 [\#978](https://github.com/liferay/clay/pull/978) ([jbalsas](https://github.com/jbalsas))
+- Update: \(Fixes \#719\) Card added Sass map `$user-card` and set `.user-… [\#977](https://github.com/liferay/clay/pull/977) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#950\) Atlas Table should keep background color on resp… [\#976](https://github.com/liferay/clay/pull/976) ([pat270](https://github.com/pat270))
+- New: \(Fixes \#974\) Add Lexicon SVG Icons `environment`, `environment-c… [\#975](https://github.com/liferay/clay/pull/975) ([pat270](https://github.com/pat270))
+- Icon links and buttons need to have a title to show a tooltip | Fixes \#972 [\#973](https://github.com/liferay/clay/pull/973) ([carloslancha](https://github.com/carloslancha))
+- Update README.md with more informations [\#970](https://github.com/liferay/clay/pull/970) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.1.6](https://github.com/liferay/clay/tree/v2.1.6) (2018-06-01)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.5...v2.1.6)
 
