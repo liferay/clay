@@ -34,6 +34,8 @@ $alert-subtitle: map-merge((
 
 $alert-notifications-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3) !default;
 
+$alert-notifications-static-sm-down-box-shadow: none !default;
+
 // Alert Variants
 
 $alert-primary-color: $primary !default;

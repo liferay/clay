@@ -112,7 +112,7 @@
 		@include clay-scale-component {
 			clear: right;
 			float: right;
-			max-width: $alert-notifications-max-width;
+			max-width: $alert-notifications-max-width-mobile;
 			width: 100%;
 		}
 
@@ -152,6 +152,39 @@
 		left: $alert-notifications-fixed-left-mobile;
 		right: $alert-notifications-fixed-right-mobile;
 		top: $alert-notifications-fixed-top-mobile;
+	}
+}
+
+.alert-notifications-static-sm-down {
+	@include media-breakpoint-down(sm) {
+		position: static;
+
+		.alert {
+			@include box-shadow($alert-notifications-static-sm-down-box-shadow);
+
+			float: none;
+			margin-bottom: $alert-notifications-static-sm-down-margin-bottom;
+			margin-left: $alert-notifications-static-sm-down-margin-left;
+			margin-right: $alert-notifications-static-sm-down-margin-right;
+			margin-top: $alert-notifications-static-sm-down-margin-top;
+			width: auto;
+
+			&:last-child {
+				margin-bottom: $alert-notifications-static-sm-down-margin-bottom;
+			}
+		}
+	}
+}
+
+.container,
+.container-fluid {
+	.alert-notifications-static-sm-down {
+		.alert {
+			@include media-breakpoint-down(sm) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
 	}
 }
 
