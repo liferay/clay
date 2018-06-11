@@ -110,9 +110,7 @@
 		width: $alert-notifications-max-width;
 
 		@include clay-scale-component {
-			clear: right;
-			float: right;
-			max-width: $alert-notifications-max-width;
+			max-width: none;
 			width: 100%;
 		}
 

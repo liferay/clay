@@ -62,10 +62,10 @@ $alert-notifications-fixed-left: 1.25rem !default; // 20px
 $alert-notifications-fixed-right: null !default;
 $alert-notifications-fixed-top: null !default;
 
-$alert-notifications-fixed-bottom-mobile: null !default;
-$alert-notifications-fixed-left-mobile: 0.5rem !default; // 8px
-$alert-notifications-fixed-right-mobile: 0.5rem !default; // 8px
-$alert-notifications-fixed-top-mobile: 4.25rem !default; // 68px
+$alert-notifications-fixed-bottom-mobile: 1rem !default; // 16px
+$alert-notifications-fixed-left-mobile: ($grid-gutter-width / 2) !default;
+$alert-notifications-fixed-right-mobile: ($grid-gutter-width / 2) !default;
+$alert-notifications-fixed-top-mobile: null !default; // 68px
 
 $alert-notifications-box-shadow: null !default;
 $alert-notifications-max-width: 22.5rem !default; // 360px
