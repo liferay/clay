@@ -7,6 +7,11 @@ $table-margin-bottom: 0 !default;
 
 $table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
 
+$table-disabled-bg: #FFF !default;
+$table-disabled-color: #ACACAC !default;
+$table-disabled-cursor: $disabled-cursor !default;
+$table-disabled-pointer-events: none !default;
+
 $table-head-border-bottom-width: null !default;
 $table-head-border-top-width: 0 !default;
 $table-head-font-size: null !default;
@@ -93,6 +98,11 @@ $table-list-color: null !default;
 $table-list-accent-bg: #F2F2F2 !default;
 $table-list-hover-bg: #ECECEC !default;
 $table-list-active-bg: #DADADA !default;
+
+$table-list-disabled-bg: #FFF !default;
+$table-list-disabled-color: #ACACAC !default;
+$table-list-disabled-cursor: $disabled-cursor !default;
+$table-list-disabled-pointer-events: none !default;
 
 $table-list-border-color: $table-border-color !default;
 
