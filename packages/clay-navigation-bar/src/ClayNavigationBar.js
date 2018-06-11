@@ -1,6 +1,6 @@
 import 'clay-link';
+import ClayComponent from 'clay-component';
 import {Config} from 'metal-state';
-import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -10,7 +10,7 @@ import templates from './ClayNavigationBar.soy.js';
  * Metal Clay Navbar component.
  * @extends Component
  */
-class ClayNavigationBar extends Component {
+class ClayNavigationBar extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
