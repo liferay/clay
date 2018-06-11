@@ -100,8 +100,6 @@
 
 .autofit-padded-no-gutters-y {
 	margin-bottom: math-sign($autofit-padded-col-padding-y);
-	margin-left: math-sign($autofit-padded-col-padding-x);
-	margin-right: math-sign($autofit-padded-col-padding-x);
 	margin-top: math-sign($autofit-padded-col-padding-y);
 	width: auto;
 
