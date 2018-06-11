@@ -1,5 +1,23 @@
 # Change Log
 
+## [v2.1.8](https://github.com/liferay/clay/tree/v2.1.8) (2018-06-11)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.7...v2.1.8)
+
+**Fixed bugs:**
+
+- ClayNavigationBar does not emit the `itemClicked` event [\#981](https://github.com/liferay/clay/issues/981)
+
+**Closed issues:**
+
+- Clay CSS Table need `.table-disabled` class for table rows [\#964](https://github.com/liferay/clay/issues/964)
+
+**Merged pull requests:**
+
+- v2.1.8 [\#988](https://github.com/liferay/clay/pull/988) ([carloslancha](https://github.com/carloslancha))
+- Updates trash icon to follow icon guidelines \(proper viewbox\) [\#987](https://github.com/liferay/clay/pull/987) ([jbalsas](https://github.com/jbalsas))
+- Fix emit the `itemClicked` event from ClayNavigationBar | Fixes \#981 [\#982](https://github.com/liferay/clay/pull/982) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- New: \(Fixes \#964\) Table added `.table-disabled` for disabling table r… [\#980](https://github.com/liferay/clay/pull/980) ([pat270](https://github.com/pat270))
+
 ## [v2.1.7](https://github.com/liferay/clay/tree/v2.1.7) (2018-06-08)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.6...v2.1.7)
 
