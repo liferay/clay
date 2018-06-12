@@ -58,13 +58,23 @@ class ClayTooltip extends Component {
 		this._eventHandler = new EventHandler();
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	attached() {
 		this.addListener('transitionend', this._handleTransitionEnd, true);
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	rendered() {
 		if (this._target) {
-			const alignedPosition = Align.align(this.element, this._target, this.position);
+			const alignedPosition = Align.align(
+				this.element,
+				this._target,
+				this.position
+			);
 
 			if (this.alignedPosition !== alignedPosition) {
 				this.alignedPosition = alignedPosition;
@@ -89,7 +99,7 @@ class ClayTooltip extends Component {
 	/**
 	 * Handles mouseenter event.
 	 * @memberof ClayTooltip
-	 * @param {!Element} event
+	 * @param {!Element} element
 	 * @return {!String}
 	 * @private
 	 */
@@ -145,10 +155,9 @@ class ClayTooltip extends Component {
 	/**
 	 * Handles tooltip element mouseenter event.
 	 * @memberof ClayTooltip
-	 * @param {!Event} event
 	 * @private
 	 */
-	_handleMouseEnterTooltip(event) {
+	_handleMouseEnterTooltip() {
 		if (this._isTransitioning) {
 			this.visible = true;
 		}
@@ -272,7 +281,7 @@ class ClayTooltip extends Component {
 	 * @inheritDoc
 	 */
 	syncVisible() {
-		//This is needed to make fade transition work
+		// This is needed to make fade transition work
 	}
 
 	/**
