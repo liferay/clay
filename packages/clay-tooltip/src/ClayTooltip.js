@@ -148,6 +148,9 @@ class ClayTooltip extends Component {
 
 		this._content = content;
 
+		if (!this.visible) {
+			this.element.style.display = 'block';
+		}
 		this._isTransitioning = true;
 		this.visible = true;
 	}
@@ -185,6 +188,10 @@ class ClayTooltip extends Component {
 	 */
 	_handleTransitionEnd() {
 		this._isTransitioning = false;
+
+		if (!this.visible) {
+			this.element.style.display = 'none';
+		}
 	}
 
 	/**
