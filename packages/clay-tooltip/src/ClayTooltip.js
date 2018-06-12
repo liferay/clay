@@ -170,10 +170,12 @@ class ClayTooltip extends Component {
 	 * @private
 	 */
 	_handleMouseLeave(event) {
-		this._restoreTitle(event.delegateTarget);
+		if (this.visible) {
+			this._restoreTitle(event.delegateTarget);
 
-		this._isTransitioning = true;
-		this.visible = false;
+			this._isTransitioning = true;
+			this.visible = false;
+		}
 	}
 
 	/**
