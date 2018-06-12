@@ -156,6 +156,11 @@ fieldset {
 		margin-bottom: $sheet-subtitle-heading-text-margin-bottom;
 		margin-top: $sheet-subtitle-heading-text-margin-top;
 	}
+
+	a,
+	.btn {
+		text-transform: none;
+	}
 }
 
 a.sheet-subtitle {
