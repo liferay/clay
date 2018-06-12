@@ -58,6 +58,20 @@ class ClayTooltip extends Component {
 		this._eventHandler = new EventHandler();
 	}
 
+	attached() {
+		this.addListener('transitionend', this._handleTransitionEnd, true);
+	}
+
+	rendered() {
+		if (this._target) {
+			const alignedPosition = Align.align(this.element, this._target, this.position);
+
+			if (this.alignedPosition !== alignedPosition) {
+				this.alignedPosition = alignedPosition;
+			}
+		}
+	}
+
 	/**
 	 * @inheritDoc
 	 */
@@ -73,62 +87,117 @@ class ClayTooltip extends Component {
 	}
 
 	/**
-	 * Handles mouseenter events.
+	 * Handles mouseenter event.
 	 * @memberof ClayTooltip
-	 * @param {Object} event The event object.
-	 * @protected
+	 * @param {!Element} event
+	 * @return {!String}
+	 * @private
 	 */
-	_handleMouseEnter(event) {
-		const target = event.delegateTarget;
-
-		const titleAttribute = target.getAttribute('title');
+	_getContent(element) {
+		const titleAttribute = element.getAttribute('title');
 
 		if (titleAttribute) {
-			target.setAttribute('data-title', titleAttribute);
-			target.setAttribute('data-restore-title', 'true');
-			target.removeAttribute('title');
-		} else if (target.tagName === 'svg') {
-			let titleTag = target.querySelector('title');
+			element.setAttribute('data-title', titleAttribute);
+			element.setAttribute('data-restore-title', 'true');
+			element.removeAttribute('title');
+		} else if (element.tagName === 'svg') {
+			let titleTag = element.querySelector('title');
 
 			if (titleTag) {
-				target.setAttribute('data-title', titleTag.innerHTML);
-				target.setAttribute('data-restore-title', 'true');
+				element.setAttribute('data-title', titleTag.innerHTML);
+				element.setAttribute('data-restore-title', 'true');
 				titleTag.remove();
 			}
 		}
 
-		this._content = target.getAttribute('data-title');
+		return element.getAttribute('data-title');
+	}
 
-		this.alignedPosition = Align.align(this.element, target, this.position);
-		this._showTooltip = true;
+	/**
+	 * Handles click event.
+	 * @memberof ClayTooltip
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleMouseClick(event) {
+		this._restoreTitle(event.delegateTarget);
+
+		this._isTransitioning = true;
+		this.visible = false;
+	}
+
+	/**
+	 * Handles mouseenter event.
+	 * @memberof ClayTooltip
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleMouseEnter(event) {
+		const content = this._getContent(event.delegateTarget);
+		this._target = event.delegateTarget;
+
+		this._content = content;
+
+		this._isTransitioning = true;
+		this.visible = true;
+	}
+
+	/**
+	 * Handles tooltip element mouseenter event.
+	 * @memberof ClayTooltip
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleMouseEnterTooltip(event) {
+		if (this._isTransitioning) {
+			this.visible = true;
+		}
 	}
 
 	/**
 	 * Handles mouseleave events.
 	 * @memberof ClayTooltip
-	 * @param {Object} event The event object.
-	 * @protected
+	 * @param {!Event} event
+	 * @private
 	 */
 	_handleMouseLeave(event) {
-		const target = event.delegateTarget;
+		this._restoreTitle(event.delegateTarget);
 
-		const title = target.getAttribute('data-title');
-		const restoreTitle = target.getAttribute('data-restore-title');
+		this._isTransitioning = true;
+		this.visible = false;
+	}
+
+	/**
+	 * Handles transionend event.
+	 * @memberof ClayTooltip
+	 * @private
+	 */
+	_handleTransitionEnd() {
+		this._isTransitioning = false;
+	}
+
+	/**
+	 * Restores the title attribute to an element
+	 * @memberof ClayTooltip
+	 * @param {Element} element
+	 * @private
+	 */
+	_restoreTitle(element) {
+		const title = element.getAttribute('data-title');
+		const restoreTitle = element.getAttribute('data-restore-title');
 
 		if (title && restoreTitle === 'true') {
-			if (target.tagName === 'svg') {
+			if (element.tagName === 'svg') {
 				let titleTag = document.createElement('title');
 				titleTag.innerHTML = title;
 
-				target.appendChild(titleTag);
+				element.appendChild(titleTag);
 			} else {
-				target.setAttribute('title', title);
+				element.setAttribute('title', title);
 			}
 
-			target.removeAttribute('data-restore-title');
+			element.removeAttribute('data-restore-title');
 		}
-
-		this._showTooltip = false;
 	}
 
 	/**
@@ -136,7 +205,7 @@ class ClayTooltip extends Component {
 	 * @memberof ClayTooltip
 	 * @param {Object} val
 	 * @return {!Object}
-	 * @protected
+	 * @private
 	 */
 	setterClassMapFn_(val) {
 		return object.mixin(this.valueClassMapFn_(), val);
@@ -147,7 +216,7 @@ class ClayTooltip extends Component {
 	 * @memberof ClayTooltip
 	 * @param {Array.<string>} newValue  The new value of `this.selectors`.
 	 * @param {Array.<string>} prevValue The previous value of `this.selectors`.
-	 * @protected
+	 * @private
 	 */
 	syncSelectors(newValue, prevValue) {
 		if (newValue) {
@@ -169,6 +238,12 @@ class ClayTooltip extends Component {
 						'blur',
 						selector,
 						this._handleMouseLeave.bind(this)
+					),
+					dom.delegate(
+						document,
+						'click',
+						selector,
+						this._handleMouseClick.bind(this)
 					),
 					dom.delegate(
 						document,
@@ -194,9 +269,16 @@ class ClayTooltip extends Component {
 	}
 
 	/**
+	 * @inheritDoc
+	 */
+	syncVisible() {
+		//This is needed to make fade transition work
+	}
+
+	/**
 	 * Gets the default value for the `classMap` state.
 	 * @return {!Object}
-	 * @protected
+	 * @private
 	 */
 	valueClassMapFn_() {
 		return {
@@ -227,17 +309,6 @@ ClayTooltip.STATE = {
 	 */
 	_content: Config.any()
 		.value('')
-		.internal(),
-
-	/**
-	 * A flag indicating if the tooltip should be shown.
-	 * @default false
-	 * @instance
-	 * @memberof ClayTooltip
-	 * @type {boolean}
-	 */
-	_showTooltip: Config.bool()
-		.value(false)
 		.internal(),
 
 	/**
@@ -293,6 +364,16 @@ ClayTooltip.STATE = {
 	 * @type {!Array.<string>}
 	 */
 	selectors: Config.array().value(['[data-title]', '[title]']),
+
+	/**
+	 * Tooltip visible when show is called.
+	 * @default false
+	 * @instance
+	 * @memberof ClayTooltip
+	 * @private
+	 * @type {?bool}
+	 */
+	visible: Config.bool().value(false),
 };
 
 Soy.register(ClayTooltip, templates);
