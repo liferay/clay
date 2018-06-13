@@ -12,13 +12,6 @@ $modal-header-padding: 1.5rem !default; // 24px
 $modal-title-font-size: 1.25rem !default; // 20px
 $modal-title-font-weight: $font-weight-bold !default;
 
-// Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
-
-$modal-btn-monospaced-color: $body-color !default;
-$modal-btn-monospaced-font-size: 0.875rem !default; // 14px
-$modal-btn-monospaced-opacity: 1 !default;
-$modal-btn-monospaced-hover-opacity: 1 !default;
-
 // Modal Success
 
 $modal-success: () !default;

@@ -556,9 +556,15 @@
 								{param ref: 'sortingButton' /}
 								{param spritemap: $spritemap /}
 								{param title kind="text"}
-									{msg desc=""}
-										order
-									{/msg}
+									{if $sortingOrder == 'desc'}
+										{msg desc=""}
+											ascending
+										{/msg}
+									{else}
+										{msg desc=""}
+											descending
+										{/msg}
+									{/if}
 								{/param}
 							{/call}
 						{else}

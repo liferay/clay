@@ -108,44 +108,6 @@
 	vertical-align: middle;
 }
 
-// Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
-
-.modal {
-	.btn-monospaced {
-		color: $modal-btn-monospaced-color;
-		font-size: $modal-btn-monospaced-font-size;
-		min-width: $modal-btn-monospaced-size;
-
-		@include clay-monospace($modal-btn-monospaced-size);
-
-		opacity: $modal-btn-monospaced-opacity;
-
-		@include hover-focus {
-			opacity: $modal-btn-monospaced-hover-opacity;
-		}
-
-		&:first-child {
-			margin-left: -$modal-btn-monospaced-spacer-x;
-		}
-
-		&:last-child {
-			margin-right: -$modal-btn-monospaced-spacer-x;
-		}
-	}
-}
-
-.btn-monospaced {
-	+ .modal-title {
-		margin-left: $modal-btn-monospaced-spacer-x;
-	}
-}
-
-.modal-title {
-	+ .btn-monospaced {
-		margin-left: $modal-btn-monospaced-spacer-x;
-	}
-}
-
 // Modal Close
 
 .modal .close {
