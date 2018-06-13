@@ -1,0 +1,58 @@
+%autofit-row {
+	display: flex;
+	flex-wrap: nowrap;
+
+	@include list-unstyled;
+
+	width: 100%;
+}
+
+.autofit-row {
+	@extend %autofit-row;
+}
+
+
+// Autofit Columns
+
+%autofit-col {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	min-height: 0;
+	position: relative;
+}
+
+.autofit-col {
+	@extend %autofit-col;
+}
+
+%autofit-col-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: $autofit-col-expand-min-width;
+	word-wrap: break-word;
+}
+
+.autofit-col-expand {
+	@extend %autofit-col-expand;
+}
+
+// Autofit Section
+
+%autofit-section {
+	max-width: 100%;
+}
+
+.autofit-section {
+	@extend %autofit-section;
+}
+
+// Autofit Float
+
+%autofit-float {
+	@include clay-autofit-float;
+}
+
+.autofit-float {
+	@extend %autofit-float;
+}
