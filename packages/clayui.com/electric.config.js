@@ -32,7 +32,7 @@ module.exports = {
 	frontMatterHook: function(data) {
 		return generateIconData(data);
 	},
-	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
+	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy', 'javascript', 'shell', 'css'],
 	metalComponents: metalComponents,
 	resolveModules: ['../../node_modules'],
 	sassOptions: {
