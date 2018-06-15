@@ -9,6 +9,17 @@ $nav-btn-margin-y: (($line-height-base * $font-size-base) + ($nav-link-padding-y
 $nav-btn-padding-x: $btn-padding-x-sm !default;
 $nav-btn-padding-y: 0 !default;
 
+$nav-form-padding-bottom: 0 !default;
+$nav-form-padding-left: $nav-link-padding-x !default;
+$nav-form-padding-right: $nav-link-padding-x !default;
+$nav-form-padding-top: 0 !default;
+
+// Nav Stacked
+
+$nav-stacked-nav-form-padding-bottom: $nav-link-padding-y !default;
+$nav-stacked-nav-form-padding-left: 0.5rem !default;
+$nav-stacked-nav-form-padding-right: 0.5rem !default;
+$nav-stacked-nav-form-padding-top: $nav-link-padding-y !default;
 
 // Nav Nested
 
