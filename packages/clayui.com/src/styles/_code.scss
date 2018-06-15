@@ -1,0 +1,159 @@
+.code-container {
+	margin: calc(1rem * 1.5) 0;
+	position: relative;
+}
+
+.code-container.hide {
+	display: none;
+}
+
+.code-container .CodeMirror {
+	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
+	border-radius: 4px;
+	height: auto;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.code-container .CodeMirror-sizer {
+	margin-left: 60px !important;
+}
+
+.code-container .CodeMirror-gutter-wrapper {
+	left: -60px !important;
+}
+
+.code-container .CodeMirror-gutter.CodeMirror-linenumbers {
+	width: 60px !important;
+}
+
+.code-container .CodeMirror-linenumber {
+	color: rgba($white, 0.40);
+	font-size: 13px;
+	left: 24px !important;
+	line-height: 20px;
+	padding: 0;
+	text-align: left;
+	width: 36px !important;
+}
+
+.code-container .CodeMirror-lines {
+	padding: 12px 0;
+}
+
+.code-container .CodeMirror-gutters {
+	left: 0 !important;
+}
+
+.code-container pre {
+	border-width: 0;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0;
+	opacity: 0;
+	padding: 12px 4px;
+	position: relative;
+}
+
+.code-container pre code {
+	white-space: pre;
+}
+
+.code-container .CodeMirror pre {
+	font-size: 13px;
+	line-height: 20px;
+	margin: 0;
+	opacity: 1;
+	padding: 0;
+	z-index: 6;
+}
+
+.code-container .btn-copy {
+	@include transition(background 0.3s ease-in-out);
+
+	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
+	background: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+	height: 24px;
+	line-height: 20px;
+	padding: 0;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 24px;
+	z-index: 9;
+
+	&:focus {
+		box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+	}
+}
+
+.code-container .btn-copy .lexicon-icon {
+	height: 12px;
+	vertical-align: baseline;
+	width: 12px;
+}
+
+.code-container .btn-copy:hover {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.tooltip.bottom {
+	position: absolute;
+	top: 0;
+}
+
+.nav.nav-tabs.nav-code-tabs {
+	border-width: 0;
+	margin-bottom: -20px;
+	margin-top: 32px;
+	padding: 0 24px;
+}
+
+.nav.nav-tabs.nav-code-tabs > li > button {
+	background: transparent;
+	border-width: 0;
+	color: rgba($brand-secondary, 0.8);
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 20px;
+	margin-right: 12px;
+	padding: 0;
+	text-transform: uppercase;
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		color: rgba($brand-dark, 0.6);
+		outline: none;
+	}
+}
+
+.nav.nav-tabs.nav-code-tabs > li:last-child > button {
+	margin-right: 0;
+}
+
+.nav.nav-tabs.nav-code-tabs > li.active > button {
+	border-width: 0;
+	color: $brand-dark;
+
+	&:focus {
+		color: rgba($brand-dark, 0.6);
+	}
+}
+
+.nav.nav-tabs.nav-code-tabs {
+	li:nth-last-child(3) + li > button {
+		font-size: 0;
+
+		&:before {
+			content: 'WEB COMPONENTS';
+			display: inline-block;
+			font-size: 13px;
+		}
+	}
+}

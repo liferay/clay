@@ -1,0 +1,52 @@
+.docs {
+	header {
+		padding: $base-size / 2 0;
+
+		@media (min-width: $grid-float-breakpoint) {
+			padding: $base-size * 2 0 $base-size;
+		}
+
+		h1 {
+			font-size: $base-size * 1.5;
+			font-weight: 700;
+		}
+	}
+
+	article {
+		> h3 {
+			font-size: $base-size * 0.7;
+			font-weight: 700;
+			margin-bottom: $base-size * 1.2;
+			padding-top: $base-size * 1.5;
+			text-transform: uppercase;
+		}
+
+		> h4 {
+			font-weight: 600;
+			margin-bottom: $base-size * 1.2;
+			padding-top: $base-size * 1.1;
+			text-transform: uppercase;
+		}
+
+		> p {
+			margin-bottom: $base-size * 2;
+		}
+	}
+
+	blockquote {
+		border-left: 0.25em solid #dfe2e5;
+		color: #6a737d;
+		margin-bottom: 2em;
+		padding: 0 1em;
+	}
+}
+
+.about {
+	font-size: 18px;
+	padding: $base-size 0;
+}
+
+.about.about-inverted {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #FFF;
+}
