@@ -17,5 +17,29 @@ module.exports = {
                     )
             },
         },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+				name: "packages",
+				path: `${__dirname}/content`,
+			},
+        },
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-images',
+                    },
+                    {
+                        resolve: 'gatsby-remark-prismjs',
+                        options: {
+                            classPrefix: 'gatsby-code-'
+                        }
+                    }
+                ]
+            }
+        },
+        'gatsby-plugin-react-helmet'
     ]
 }
