@@ -12,9 +12,6 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 			allMarkdownRemark(limit: 1000) {
 				edges {
 					node {
-						frontmatter {
-							path
-						}
 						fields {
 							slug
 						}
