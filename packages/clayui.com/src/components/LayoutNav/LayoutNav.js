@@ -8,13 +8,12 @@ class LayoutNav extends Component {
     }
 
     getScrollTop() {
-        if (this.node == window) {
-            return this.node.pageYOffset;
+        if (this._rootNode == window) {
+            return this._rootNode.pageYOffset;
         }
-        if (this.node == document) {
-            return this.node.defaultView.pageYOffset;
+        if (this._rootNode == document) {
+            return this._rootNode.defaultView.pageYOffset;
         }
-        return this.node.scrollTop;
     }
 
     addScroll() {
