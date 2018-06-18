@@ -1,6 +1,5 @@
 ---
 title: "Nav Tabs"
-path: "/docs/nav-tabs.html"
 ---
 
 <article id="nav-tabs">

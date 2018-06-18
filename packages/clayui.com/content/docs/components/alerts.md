@@ -1,6 +1,5 @@
 ---
 title: "Alerts"
-path: "/docs/alerts.html"
 ---
 
 ### Description

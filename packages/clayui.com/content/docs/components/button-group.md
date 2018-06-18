@@ -1,6 +1,5 @@
 ---
 title: "Button Group"
-path: "/docs/button-group.html"
 ---
 
 ### Description

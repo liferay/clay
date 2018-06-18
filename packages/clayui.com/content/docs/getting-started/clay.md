@@ -1,6 +1,5 @@
 ---
 title: "What is Clay"
-path: "/docs/what-is-clay.html"
 ---
 
 <article id="what-is-clay">

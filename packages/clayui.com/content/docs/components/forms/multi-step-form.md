@@ -1,6 +1,5 @@
 ---
 title: "Multi Step Form"
-path: "/docs/multi-step-form.html"
 ---
 
 ### Description

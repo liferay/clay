@@ -1,6 +1,5 @@
 ---
 title: "Importing the JS Component"
-path: "/docs/importing-the-js-component.html"
 ---
 
 <article id="importing-the-js-component">

@@ -1,6 +1,5 @@
 ---
 title: "Form Elements (Input Groups)"
-path: "/docs/form-elements-input-groups.html"
 ---
 
 ### Description

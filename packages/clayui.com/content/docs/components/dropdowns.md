@@ -1,6 +1,5 @@
 ---
 title: "Dropdown Menu"
-path: "/docs/dropdowns.html"
 ---
 
 ### Description

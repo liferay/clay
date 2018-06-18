@@ -1,6 +1,5 @@
 ---
 title: "Images (Aspect Ratios)"
-path: "/docs/images/images-aspect-ratio.html"
 ---
 
 <article id="image-aspect-ratios">

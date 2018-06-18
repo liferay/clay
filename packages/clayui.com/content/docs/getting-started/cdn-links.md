@@ -1,6 +1,5 @@
 ---
 title: "CDN Links"
-path: "/docs/cdn-links.html"
 ---
 
 <article id="cdn-links">

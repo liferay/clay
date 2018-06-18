@@ -1,6 +1,5 @@
 ---
 title: "List"
-path: "/docs/list.html"
 ---
 
 ### Description

@@ -1,6 +1,5 @@
 ---
 title: "Popovers and Tooltips"
-path: "/docs/popovers-and-tooltips.html"
 ---
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/popovers_tooltips.html">Popovers and Tooltips Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>

@@ -1,6 +1,5 @@
 ---
 title: "Using JS Components with Metal.js"
-path: "/docs/using-js-components-with-metal.html"
 ---
 
 <article id="using-js-components-with-metal">

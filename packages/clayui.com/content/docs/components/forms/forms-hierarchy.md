@@ -1,6 +1,5 @@
 ---
 title: "Forms Hierarchy"
-path: "/docs/forms-hierarchy.html"
 ---
 
 ### Description

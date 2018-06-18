@@ -1,6 +1,5 @@
 ---
 title: "Web Components"
-path: "/docs/web-components.html"
 ---
 
 <article id="web-components">

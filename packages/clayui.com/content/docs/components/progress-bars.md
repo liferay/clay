@@ -1,6 +1,5 @@
 ---
 title: "Progress Bars"
-path: "/docs/progress-bars.html"
 ---
 
 ### Description

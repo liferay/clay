@@ -1,6 +1,5 @@
 ---
 title: "Pagination"
-path: "/docs/pagination.html"
 ---
 
 <article id="pagination">

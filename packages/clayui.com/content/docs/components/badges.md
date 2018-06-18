@@ -1,6 +1,5 @@
 ---
 title: "Badges"
-path: "/docs/badges.html"
 ---
 
 ### Description

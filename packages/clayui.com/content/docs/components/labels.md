@@ -1,6 +1,5 @@
 ---
 title: "Labels"
-path: "/docs/labels.html"
 ---
 
 ### Description

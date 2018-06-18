@@ -1,6 +1,5 @@
 ---
 title: "Form Elements (Custom)"
-path: "/docs/form-custom.html"
 ---
 
 <article id="custom-checkbox">

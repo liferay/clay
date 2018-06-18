@@ -1,6 +1,5 @@
 ---
 title: "Navigation Bar"
-path: "/docs/navigation-bar.html"
 ---
 
 ### Description

@@ -1,6 +1,5 @@
 ---
 title: "Buttons"
-path: "/docs/buttons.html"
 ---
 
 ### Description

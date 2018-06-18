@@ -1,6 +1,5 @@
 ---
 title: "Breadcrumbs"
-path: "/docs/breadcrumbs.html"
 ---
 
 ### Description

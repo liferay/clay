@@ -1,6 +1,5 @@
 ---
 title: Timelines
-path: "/docs/timelines.html"
 ---
 
 <article id="timeline">

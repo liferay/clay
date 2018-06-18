@@ -1,6 +1,5 @@
 ---
 title: "Table"
-path: "/docs/table.html"
 ---
 
 ### Description

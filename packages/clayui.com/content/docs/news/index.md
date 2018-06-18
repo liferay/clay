@@ -1,6 +1,5 @@
 ---
 title: "News"
-path: "/docs/news.html"
 ---
 
 <time>September 30th, 2017</time>

@@ -1,6 +1,5 @@
 ---
 title: "Panels"
-path: "/docs/panels.html"
 ---
 
 <article id="accordions-with-open-close-icon">

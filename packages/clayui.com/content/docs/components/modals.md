@@ -1,6 +1,5 @@
 ---
 title: "Modals"
-path: "/docs/modals.html"
 ---
 
 ### Description

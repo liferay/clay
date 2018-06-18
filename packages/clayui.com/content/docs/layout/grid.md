@@ -1,6 +1,5 @@
 ---
 title: "Grid"
-path: "/docs/grid.html"
 ---
 
 ### Description

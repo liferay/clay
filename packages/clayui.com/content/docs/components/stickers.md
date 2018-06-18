@@ -1,6 +1,5 @@
 ---
 title: "Stickers"
-path: "/docs/stickers.html"
 ---
 
 ### Description

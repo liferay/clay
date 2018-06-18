@@ -1,6 +1,5 @@
 ---
 title: "Form Elements"
-path: "/docs/form-elements.html"
 ---
 
 ### Description

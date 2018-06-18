@@ -1,6 +1,5 @@
 ---
 title: "Nav Underline"
-path: "/docs/nav-underline.html"
 ---
 
 <article id="nav-underline">

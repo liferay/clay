@@ -1,6 +1,5 @@
 ---
 title: "Icons"
-path: "/docs/icons.html"
 ---
 
 ### Description

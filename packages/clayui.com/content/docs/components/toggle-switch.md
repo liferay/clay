@@ -1,6 +1,5 @@
 ---
 title: "Toggle Switch"
-path: "/docs/toggle-switch.html"
 ---
 
 <article id="toggle-switch-with-data-attributes">

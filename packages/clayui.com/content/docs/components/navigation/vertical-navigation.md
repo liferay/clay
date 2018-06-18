@@ -1,6 +1,5 @@
 ---
 title: "Vertical Navigation"
-path: "/docs/vertical-navigation.html"
 ---
 
 ### Description

@@ -1,6 +1,5 @@
 ---
 title: "Management Toolbar"
-path: "/docs/management-toolbar.html"
 ---
 
 ### Description

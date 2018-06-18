@@ -1,6 +1,5 @@
 ---
 title: "Cards"
-path: "/docs/cards.html"
 ---
 
 ### Description

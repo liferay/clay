@@ -1,6 +1,5 @@
 ---
 title: "Header"
-path: "/docs/header.html"
 ---
 
 ### Description

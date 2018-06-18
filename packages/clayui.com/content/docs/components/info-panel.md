@@ -1,6 +1,5 @@
 ---
 title: "Info Panel"
-path: "/docs/info-panel.html"
 ---
 
 ### Description
