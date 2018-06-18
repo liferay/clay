@@ -18,15 +18,11 @@ class LayoutNav extends Component {
     }
 
     _addScroll() {
-        let reference = document.querySelector('.navbar-clay-site');
-
-        this.node.addEventListener('scroll', evt => {
-            if (this.getScrollTop() >= 50) {
-                reference.classList.add('scroll');
-            } else {
-                reference.classList.remove('scroll');
-            }
-        });
+        if (this._getScrollTop() >= 50) {
+            this.refs.navElement.classList.add('scroll');
+        } else {
+            this.refs.navElement.classList.remove('scroll');
+        }
     }
     
     componentDidMount() {
@@ -39,7 +35,7 @@ class LayoutNav extends Component {
 
     render() {
         return (
-            <nav className="navbar fixed-top navbar-clay-site navbar-expand-lg navbar-dark">
+            <nav ref="navElement" className="navbar fixed-top navbar-clay-site navbar-expand-lg navbar-dark">
                 <div className="container-fluid container-fluid-max-lg">
                     <div className="navbar-brand">
                         <img className="logo mr-2" src="/images/home/clay_logo_w.svg" alt="" />
