@@ -4,7 +4,7 @@ class LayoutNav extends Component {
     
     constructor() {
         super();
-        this.node = window;
+        this.node = window || document;
     }
 
     getScrollTop() {
