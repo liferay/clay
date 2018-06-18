@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     plugins: [
         {
-            resolve: `gatsby-plugin-sass`,
+            resolve: 'gatsby-plugin-sass',
             options: {
                 precision: 8,
                 includePaths: clay
