@@ -5,18 +5,18 @@ export default function Docs({data, location}) {
     const { frontmatter, html } = markdownRemark;
 
     return (
-        <div class="docs">
-            <main class="content">
-                <div class="sidebar-offset">
+        <div className="docs">
+            <main className="content">
+                <div className="sidebar-offset">
                     <header>
-                        <div class="clay-site-container container-fluid">
+                        <div className="clay-site-container container-fluid">
                             <h1>{frontmatter.title}</h1>
                         </div>
                     </header>
 
-                    <div class="clay-site-container container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
+                    <div className="clay-site-container container-fluid">
+                        <div className="row">
+                            <div className="col-md-12">
                                 <div
                                     dangerouslySetInnerHTML={{ __html: html }}
                                 />
