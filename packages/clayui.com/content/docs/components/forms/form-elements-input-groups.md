@@ -1,15 +1,13 @@
 ---
-title: Form Elements (Input Groups)
-description: "An Input Group is a text field with extra elements that makes the pattern more complete for a common or frequent use case."
-layout: "guide"
-pattern: "Forms/text_input_group"
-weight: 100
+title: "Form Elements (Input Groups)"
+path: "/docs/form-elements-input-groups.html"
 ---
 
 ### Description
-{$page.description}
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/{$page.pattern}.html">{$page.title} Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+An Input Group is a text field with extra elements that makes the pattern more complete for a common or frequent use case.
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input_group.html">Form Elements (Input Groups) Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="input-group-separated">
 <h3 class="component-title">
