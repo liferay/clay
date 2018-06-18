@@ -5,6 +5,7 @@ class LayoutNav extends Component {
     constructor() {
         super();
         this.node = window || document;
+        this.addScroll = this.addScroll.bind(this);
     }
 
     getScrollTop() {
@@ -29,11 +30,11 @@ class LayoutNav extends Component {
     }
     
     componentDidMount() {
-        this.addScroll();
+        this.node.addEventListener('scroll', this.addScroll, false);
     }
 
     componentWillUnmount() {
-        this.node.removeEventListener('scroll');
+        this.node.removeEventListener('scroll', this.addScroll, false);
     }
 
     render() {
