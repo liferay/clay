@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link";
 import LayoutNav from "../components/LayoutNav/LayoutNav";
 
 const Index = () => (
@@ -12,9 +13,9 @@ const Index = () => (
                         <div className="container-fluid container-fluid-max-lg">
                             <h1 className="h1">This is Clay</h1>
                             <h2 className="h3">A Web Implementation of Lexicon Experience Language</h2>
-                            <a className="btn btn-lg btn-light font-weight-bold mx-3 mb-4" href="/docs/getting_started/introduction.html">
+                            <Link to="/docs/getting_started/introduction.html" className="btn btn-lg btn-light font-weight-bold mx-3 mb-4">
                                 Get Started
-                            </a>
+                            </Link>
                             <a className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4" href="https://github.com/liferay/clay" target="_blank">
                                 <img className="mr-2" src="/images/home/file-download.svg" alt="" />Download
                             </a>
@@ -39,10 +40,10 @@ const Index = () => (
                                 </img>
                                 <h2 className="font-weight-bold">What is Clay?</h2>
                                 <p>Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.</p>
-                                <a href="docs/getting_started/clay.html" className="btn btn-sm text-uppercase font-weight-bold">
+                                <Link to="/docs/getting_started/clay.html" className="btn btn-sm text-uppercase font-weight-bold">
                                     <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
                                     Learn More
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -55,10 +56,10 @@ const Index = () => (
                                 </img>
                                 <h2 className="font-weight-bold">Release Notes</h2>
                                 <p>Stay up-to-date on Clay's progress, fixed issues, and new features by visiting our Release Notes.</p>
-                                <a href="/docs/news/" className="btn btn-sm text-uppercase font-weight-bold">
+                                <Link to="/docs/news" className="btn btn-sm text-uppercase font-weight-bold">
                                     <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
                                     Learn More
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -78,7 +79,10 @@ const Index = () => (
                                 <div className="card-body mx-4 pl-md-0 pt-5">
                                     <h2 className="font-weight-bold">Component Library</h2>
                                     <p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
-                                    <a href="/docs/components/alerts.html" className="btn btn-sm text-uppercase font-weight-bold"><img className="mr-2" src="/images/home/chevron-right.svg" alt="" />Learn More</a>
+                                    <Link to="/docs/components/alerts.html" className="btn btn-sm text-uppercase font-weight-bold">
+                                        <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
+                                        Learn More
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +101,7 @@ const Index = () => (
                     </div>
                     <div className="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
                         <div className="media-body mt-4 text-center text-lg-left">
-                            <p className="h1 font-weight-bold">Want to contribute? Found an issue? Head on over to the <a className="font-weight-bold" href="https://github.com/liferay/clay" target="_blank">GitHub repo.</a></p>
+                            <p className="h1 font-weight-bold">Want to contribute? Found an issue? Head on over to the <a href="https://github.com/liferay/clay" className="font-weight-bold" target="_blank">GitHub repo.</a></p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +123,9 @@ const Index = () => (
                                 <img className="mx-auto" src="/images/home/lexicon_symbol.svg" alt="" />
                                 <p>Visit the current Lexicon <br />
                                 Experience Language site</p>
-                                <a className="mb-3" target="_blank" href="https://lexicondesign.io/">Lexicon v2.0.0-alpha</a>
+                                <a href="https://lexicondesign.io/" className="mb-3" target="_blank">
+                                    Lexicon v2.0.0-alpha
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +135,9 @@ const Index = () => (
                                 <img className="mx-auto" src="/images/home/clay_logo_w.svg" alt="" />
                                 <p>Visit the previous version of <br />
                                 Clay at Lexicon CSS project site</p>
-                                <a className="mb-3" target="_blank" href="https://lexiconcss.wedeploy.io/">Lexicon CSS</a>
+                                <a href="https://lexiconcss.wedeploy.io/" className="mb-3" target="_blank">
+                                    Lexicon CSS
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -145,12 +153,12 @@ const Index = () => (
 
                         <div className="clearfix d-lg-none"></div>
 
-                        Brought to you by <a className="font-weight-bold" href="http://www.liferay.com" target="_blank">Liferay, Inc.</a>
+                        Brought to you by <a href="http://www.liferay.com" className="font-weight-bold" target="_blank">Liferay, Inc.</a>
 				    
                     </div>
 
                     <div className="col-lg text-center text-lg-right">
-                        <div>Powered by <a className="font-weight-bold" href="https://wedeploy.com/" target="_blank">WeDeploy™</a></div>
+                        <div>Powered by <a href="https://wedeploy.com/" className="font-weight-bold" target="_blank">WeDeploy™</a></div>
                     </div>
                 </div>
             </div>
