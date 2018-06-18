@@ -1,5 +1,19 @@
 # Change Log
 
+## [v2.1.11](https://github.com/liferay/clay/tree/v2.1.11) (2018-06-18)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.10...v2.1.11)
+
+**Closed issues:**
+
+- ClayTooltip avoid using for ... of loops [\#1020](https://github.com/liferay/clay/issues/1020)
+- Clay 1.x Nested Product Menu Text Squished [\#1015](https://github.com/liferay/clay/issues/1015)
+- Long Web Content Titles Extend Past Context Box, 1.x issue [\#1011](https://github.com/liferay/clay/issues/1011)
+
+**Merged pull requests:**
+
+- v2.1.11 [\#1024](https://github.com/liferay/clay/pull/1024) ([jbalsas](https://github.com/jbalsas))
+- Use for loop instead of for...of loop | Fixes \#1020 [\#1021](https://github.com/liferay/clay/pull/1021) ([julien](https://github.com/julien))
+
 ## [v2.1.10](https://github.com/liferay/clay/tree/v2.1.10) (2018-06-13)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.9...v2.1.10)
 
