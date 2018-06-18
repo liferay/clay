@@ -30,11 +30,10 @@ export default function Docs({data, location}) {
 }
 
 export const pageQuery = graphql`
-    query TemplateDocsMarkdown($path: String!) {
-        markdownRemark(frontmatter: { path: { eq: $path } }) {
+    query TemplateDocsMarkdown($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
             html
             frontmatter {
-                path
                 title
             }
         }

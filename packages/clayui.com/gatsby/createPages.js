@@ -15,6 +15,9 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 						frontmatter {
 							path
 						}
+						fields {
+							slug
+						}
 					}
 				}
 			}
@@ -26,9 +29,11 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 
 		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
 			createPage({
-				path: node.frontmatter.path,
+				path: node.fields.slug,
 				component: docsPostTemplate,
-				context: {},
+				context: {
+					slug: node.fields.slug,
+				},
 			});
 		});
 	});
