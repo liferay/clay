@@ -4,11 +4,11 @@ class LayoutNav extends Component {
     
     constructor() {
         super();
-        this.node = window || document;
-        this.addScroll = this.addScroll.bind(this);
+        this._rootNode = window || document;
+        this._addScroll = this._addScroll.bind(this);
     }
 
-    getScrollTop() {
+    _getScrollTop() {
         if (this._rootNode == window) {
             return this._rootNode.pageYOffset;
         }
@@ -17,7 +17,7 @@ class LayoutNav extends Component {
         }
     }
 
-    addScroll() {
+    _addScroll() {
         let reference = document.querySelector('.navbar-clay-site');
 
         this.node.addEventListener('scroll', evt => {
@@ -30,11 +30,11 @@ class LayoutNav extends Component {
     }
     
     componentDidMount() {
-        this.node.addEventListener('scroll', this.addScroll, false);
+        this._rootNode.addEventListener('scroll', this._addScroll, false);
     }
 
     componentWillUnmount() {
-        this.node.removeEventListener('scroll', this.addScroll, false);
+        this._rootNode.removeEventListener('scroll', this._addScroll, false);
     }
 
     render() {
