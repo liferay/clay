@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class LayoutNav extends Component {
-    
     constructor() {
         super();
         this._rootNode = window || document;
@@ -24,7 +23,7 @@ class LayoutNav extends Component {
             this.refs.navElement.classList.remove('scroll');
         }
     }
-    
+
     componentDidMount() {
         this._rootNode.addEventListener('scroll', this._addScroll, false);
     }
