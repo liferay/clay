@@ -108,7 +108,7 @@ class Index extends Component {
                     <div className="row">
                         <div className="col-md-4 ml-auto mr-lg-4 wow zoomIn" data-wow-duration="1.2s">
                             <div className="text-center text-lg-right">
-                                <img src="/images/home/participate02.svg" alt="" />
+                                    <img src={withPrefix("/images/home/participate02.svg")} alt="" />
                             </div>
                         </div>
                         <div className="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
