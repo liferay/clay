@@ -2,6 +2,7 @@ const clay = require('clay-css');
 const path = require('path');
 
 module.exports = {
+    pathPrefix: '/static',
     plugins: [
         {
             resolve: 'gatsby-plugin-sass',
