@@ -98,10 +98,33 @@
 	max-width: calc(100% - 24px);
 }
 
+// Nav Form
+
+.nav-form {
+	padding-bottom: $nav-stacked-nav-form-padding-bottom;
+	padding-left: $nav-stacked-nav-form-padding-left;
+	padding-right: $nav-stacked-nav-form-padding-right;
+	padding-top: $nav-stacked-nav-form-padding-top;
+}
+
+.nav .nav-form {
+	padding-bottom: $nav-form-padding-bottom;
+	padding-left: $nav-form-padding-left;
+	padding-right: $nav-form-padding-right;
+	padding-top: $nav-form-padding-top;
+}
+
 // Nav Stacked
 
 .nav-stacked {
 	display: block;
+
+	.nav-form {
+		padding-bottom: $nav-stacked-nav-form-padding-bottom;
+		padding-left: $nav-stacked-nav-form-padding-left;
+		padding-right: $nav-stacked-nav-form-padding-right;
+		padding-top: $nav-stacked-nav-form-padding-top;
+	}
 }
 
 // Nav Unstyled
