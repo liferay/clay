@@ -1,3 +1,4 @@
+import { window, document } from 'browser-monads';
 import React, { Component } from 'react';
 import Link from "gatsby-link";
 
