@@ -32,6 +32,7 @@
 	$collapse-max-width-mobile: map-get($map, collapse-max-width-mobile);
 	$collapse-left-mobile: setter(map-get($map, collapse-left-mobile), -0.0625rem); // -1px
 	$collapse-right-mobile: setter(map-get($map, collapse-right-mobile), -0.0625rem); // -1px
+	$collapse-z-index-mobile: map-get($map, collapse-z-index-mobile);
 
 	// .menubar-toggler
 
@@ -82,7 +83,7 @@
 				position: absolute;
 				right: $collapse-right-mobile;
 				top: 100%;
-				z-index: $zindex-navbar-collapse-absolute;
+				z-index: $collapse-z-index-mobile;
 
 				> .nav {
 					margin-bottom: $collapse-inner-spacer-y-mobile;
@@ -170,6 +171,7 @@
 	$toggler-border-color-mobile: map-get($map, toggler-border-color-mobile);
 	$toggler-border-style-mobile: map-get($map, toggler-border-style-mobile);
 	$toggler-color-mobile: setter(map-get($map, toggler-color-mobile), $link-active-color);
+	$toggler-font-size-mobile: map-get($map, toggler-font-size-mobile);
 	$toggler-font-weight-mobile: map-get($map, toggler-font-weight-mobile);
 
 	background-color: $bg;
@@ -200,6 +202,7 @@
 			border-color: $toggler-border-color-mobile;
 			border-style: $toggler-border-style-mobile;
 			color: $toggler-color-mobile;
+			font-size: $toggler-font-size-mobile;
 			font-weight: $toggler-font-weight-mobile;
 		}
 	}
