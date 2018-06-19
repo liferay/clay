@@ -1,0 +1,153 @@
+- title: Getting Started
+  id: getting-started
+  items:
+    - title: Introduction
+      id: introduction
+      link: /docs/getting-started/introduction
+    - title: CDN Links
+      id: cdn-links
+      link: /docs/getting-started/cdn-links
+    - title: Whats is Clay
+      id: clay
+      link: /docs/getting-started/clay
+    - title: Importing the JS Component
+      id: importing-the-js-component
+      link: /docs/getting-started/importing-the-js-component
+    - title: Web Components
+      id: web-components
+      link: /docs/getting-started/web-components
+- title: Advanced Guides
+  id: advanced-guides
+  items:
+    - title: Using JS Components with Metal.js
+      id: using-js-components-with-metal
+      link: /docs/advanced-guides/using-js-components-with-metal
+- title: Layout
+  id: layout
+  items:
+    - title: Grid
+      id: grid
+      link: /docs/layout/grid
+    - title: Typography
+      id: typography
+      link: /docs/layout/typography
+- title: Components
+  id: components
+  items:
+    - title: Alerts
+      id: alerts
+      link: /docs/components/alerts
+    - title: Badges
+      id: badges
+      link: /docs/components/badges
+    - title: Button Group
+      id: button-group
+      link: /docs/components/button-group
+    - title: Buttons
+      id: buttons
+      link: /docs/components/buttons
+    - title: Cards
+      id: cards
+      link: cards
+    - title: Dropdown Menu
+      id: dropdowns
+      link: /docs/components/dropdowns
+    - title: Forms
+      id: forms
+      items:
+        - title: Form Elements (Custom)
+          id: form-custom
+          link: /docs/components/forms/form-custom
+        - title: Form Elements (Input Groups)
+          id: form-elements-input-groups
+          link: /docs/components/forms/form-elements-input-groups
+        - title: Form Elements (validation)
+          id: form-elements-validation
+          link: /docs/components/forms/form-elements-validation
+        - title: Form Elements
+          id: form-elements
+          link: /docs/components/forms/form-elements
+        - title: Forms Hierarchy
+          id: forms-hierarchy
+          link: /docs/components/forms/forms-hierarchy
+        - title: Multi Step Form Simplified
+          id: multi-step-form-simplified
+          link: /docs/components/forms/multi-step-form-simplified
+        - title: Multi Step Form
+          id: multi-step-form
+          link: /docs/components/forms/multi-step-form
+    - title: Header
+      id: header
+      link: /docs/components/header
+    - title: Icons
+      id: icons
+      link: /docs/components/icons
+    - title: Images (Aspect Ratios)
+      id: images-aspect-ratio
+      link: /docs/components/images-aspect-ratio
+    - title: Info Panel
+      id: info-panel
+      link: /docs/components/info-panel
+    - title: Labels
+      id: labels
+      link: /docs/components/labels
+    - title: List
+      id: list
+      link: /docs/components/list
+    - title: Modals
+      id: modals
+      link: /docs/components/modals
+    - title: Pagination
+      id: pagination
+      link: /docs/components/pagination
+    - title: Panels
+      id: panels
+      link: /docs/components/panels
+    - title: Popovers and Tooltips
+      id: popovers
+      link: /docs/components/popovers
+    - title: Progress Bars
+      id: progress-bars
+      link: /docs/components/progress-bars
+    - title: Navigation
+      id: navigation
+      items:
+        - title: Breadcrumbs
+          id: breadcrumbs
+          link: /docs/components/navigation/breadcrumbs
+        - title: Nav Tabs
+          id: nav-tabs
+          link: /docs/components/navigation/nav-tabs
+        - title: Nav Underline
+          id: nav-underline
+          link: /docs/components/navigation/nav-underline
+        - title: Nav
+          id: nav
+          link: /docs/components/navigation/nav
+        - title: Navbar
+          id: navbar
+          link: /docs/components/navigation/navbar
+        - title: Vertical Navigation
+          id: vertical-navigation
+          link: /docs/components/navigation/vertical-navigation
+    - title: Toolbars
+      id: toolbars
+      items:
+        - title: Management Toolbar
+          id: management-toolbar
+          link: /docs/components/toolbars/management-toolbar
+    - title: Stickers
+      id: stickers
+      link: /docs/components/stickers
+    - title: Table
+      id: table
+      link: /docs/components/table
+    - title: Timelines
+      id: timelines
+      link: /docs/components/timelines
+    - title: Toggle Switch
+      id: toggle-switch
+      link: /docs/components/toggle-switch
+- title: News
+  id: news
+  link: /docs/news/index
