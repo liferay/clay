@@ -33,9 +33,13 @@
 	position: relative;
 
 	@include media-breakpoint-up(md) {
-		@include clearfix;
-
 		position: static;
+
+		&::after {
+			clear: both;
+			content: '';
+			display: block;
+		}
 	}
 }
 
