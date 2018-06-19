@@ -25,17 +25,23 @@
 
 			{if $visible}
 				{sp}show
-			{/if}			
+			{/if}
 		"
-		
+
 		data-onmouseenter="_handleMouseEnterTooltip"
 		data-onmouseleave="_handleMouseLeave"
+
+		{if not $visible}
+			{sp}hidden{sp}
+		{/if}
+
 		role="tooltip"
+
 	{/let}
 
 	<div {$tooltipAttributes}>
 		<div class="arrow"></div>
-	
+
 		<div class="tooltip-inner">
 			{$_content}
 		</div>

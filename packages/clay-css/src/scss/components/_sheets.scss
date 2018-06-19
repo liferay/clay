@@ -32,18 +32,20 @@
 }
 
 .sheet-header {
-	@include clearfix;
-
 	margin-bottom: $sheet-header-margin-bottom;
 
 	@include clay-scale-component {
 		margin-bottom: $sheet-header-margin-bottom-mobile;
 	}
+
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
 }
 
 .sheet-section {
-	@include clearfix;
-
 	margin-bottom: $sheet-section-margin-bottom;
 
 	@include clay-scale-component {
@@ -57,6 +59,12 @@
 			margin-bottom: -$sheet-section-margin-bottom-mobile;
 		}
 	}
+
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
 }
 
 fieldset {
@@ -66,8 +74,7 @@ fieldset {
 }
 
 .sheet-footer {
-	@include clearfix;
-
+	display: flex;
 	margin-bottom: $sheet-footer-margin-bottom;
 	margin-left: $sheet-footer-margin-left;
 	margin-right: $sheet-footer-margin-right;
@@ -78,6 +85,12 @@ fieldset {
 		margin-left: $sheet-footer-margin-left-mobile;
 		margin-right: $sheet-footer-margin-right-mobile;
 		margin-top: $sheet-footer-margin-top-mobile;
+	}
+
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
 	}
 }
 
