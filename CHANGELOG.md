@@ -1,13 +1,32 @@
 # Change Log
 
+## [v2.1.12](https://github.com/liferay/clay/tree/v2.1.12) (2018-06-19)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.11...v2.1.12)
+
+**Merged pull requests:**
+
+- v2.1.12 [\#1027](https://github.com/liferay/clay/pull/1027) ([jbalsas](https://github.com/jbalsas))
+- Updates management toolbar labels [\#1026](https://github.com/liferay/clay/pull/1026) ([julien](https://github.com/julien))
+- Uses hidden attribute for tooltips that are not visible | \#Fixes 1022 [\#1023](https://github.com/liferay/clay/pull/1023) ([julien](https://github.com/julien))
+- New: \(Fixes \#1017\) Mixin `clay-menubar-vertical-variant` added option… [\#1019](https://github.com/liferay/clay/pull/1019) ([pat270](https://github.com/pat270))
+- New: \(Fixes \#1014\) Nav added `.nav-form` for properly spacing search … [\#1016](https://github.com/liferay/clay/pull/1016) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#1009\) Button remove `backface-visibility` workaround … [\#1010](https://github.com/liferay/clay/pull/1010) ([pat270](https://github.com/pat270))
+- \(\#1007\) Change `.sheet-footer` to `display: flex` [\#1008](https://github.com/liferay/clay/pull/1008) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#1005\) Don't use clearfix mixin, too easily overridden… [\#1006](https://github.com/liferay/clay/pull/1006) ([pat270](https://github.com/pat270))
+
 ## [v2.1.11](https://github.com/liferay/clay/tree/v2.1.11) (2018-06-18)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.10...v2.1.11)
 
 **Closed issues:**
 
 - ClayTooltip avoid using for ... of loops [\#1020](https://github.com/liferay/clay/issues/1020)
+- Clay CSS Menubar Toggler font-size should be the same as Navigation Bar Toggler Link [\#1017](https://github.com/liferay/clay/issues/1017)
 - Clay 1.x Nested Product Menu Text Squished [\#1015](https://github.com/liferay/clay/issues/1015)
+- Clay CSS add `.nav-form` class for form elements inside `.nav` [\#1014](https://github.com/liferay/clay/issues/1014)
 - Long Web Content Titles Extend Past Context Box, 1.x issue [\#1011](https://github.com/liferay/clay/issues/1011)
+- Clay CSS Button remove `backface-visibility` property added in \#546 [\#1009](https://github.com/liferay/clay/issues/1009)
+- Clay CSS `.sheet-footer` should use display flex [\#1007](https://github.com/liferay/clay/issues/1007)
+- Clay CSS don't use Bootstrap's clearfix mixin [\#1005](https://github.com/liferay/clay/issues/1005)
 
 **Merged pull requests:**
 
