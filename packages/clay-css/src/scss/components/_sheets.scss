@@ -74,6 +74,7 @@ fieldset {
 }
 
 .sheet-footer {
+	display: flex;
 	margin-bottom: $sheet-footer-margin-bottom;
 	margin-left: $sheet-footer-margin-left;
 	margin-right: $sheet-footer-margin-right;

@@ -1,5 +1,61 @@
 # Change Log
 
+## [v2.1.11](https://github.com/liferay/clay/tree/v2.1.11) (2018-06-18)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.10...v2.1.11)
+
+**Closed issues:**
+
+- ClayTooltip avoid using for ... of loops [\#1020](https://github.com/liferay/clay/issues/1020)
+- Clay 1.x Nested Product Menu Text Squished [\#1015](https://github.com/liferay/clay/issues/1015)
+- Long Web Content Titles Extend Past Context Box, 1.x issue [\#1011](https://github.com/liferay/clay/issues/1011)
+
+**Merged pull requests:**
+
+- v2.1.11 [\#1024](https://github.com/liferay/clay/pull/1024) ([jbalsas](https://github.com/jbalsas))
+- Use for loop instead of for...of loop | Fixes \#1020 [\#1021](https://github.com/liferay/clay/pull/1021) ([julien](https://github.com/julien))
+
+## [v2.1.10](https://github.com/liferay/clay/tree/v2.1.10) (2018-06-13)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.9...v2.1.10)
+
+**Closed issues:**
+
+- Management Toolbar Sorting button tooltip should be ascending or descending [\#1002](https://github.com/liferay/clay/issues/1002)
+- Clay CSS `btn-monospaced` isn't the right size inside Modals [\#1000](https://github.com/liferay/clay/issues/1000)
+
+**Merged pull requests:**
+
+- v2.1.10 [\#1004](https://github.com/liferay/clay/pull/1004) ([carloslancha](https://github.com/carloslancha))
+- Change sorting tooltip | Fixes \#1002 [\#1003](https://github.com/liferay/clay/pull/1003) ([carloslancha](https://github.com/carloslancha))
+- Update: \(Fixes \#1000\) Modals remove `modal-btn-monospaced` pattern in… [\#1001](https://github.com/liferay/clay/pull/1001) ([pat270](https://github.com/pat270))
+
+## [v2.1.9](https://github.com/liferay/clay/tree/v2.1.9) (2018-06-12)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.8...v2.1.9)
+
+**Implemented enhancements:**
+
+- Tooltip doesn't render in the correct position, should dissapear on click and should be possible to select tooltip text [\#995](https://github.com/liferay/clay/issues/995)
+
+**Fixed bugs:**
+
+- Wrong language key for info in management toolbar [\#997](https://github.com/liferay/clay/issues/997)
+- Tooltip doesn't render in the correct position, should dissapear on click and should be possible to select tooltip text [\#995](https://github.com/liferay/clay/issues/995)
+
+**Closed issues:**
+
+- Clay CSS `.autofit-padded-no-gutters-y` should only offset top and bottom padding [\#993](https://github.com/liferay/clay/issues/993)
+- Clay CSS `.sheet-subtitle` with anchor tag styled like button shouldn't capitalize text [\#991](https://github.com/liferay/clay/issues/991)
+- Some icons don't have the proper viewport 0 0 512 512 [\#979](https://github.com/liferay/clay/issues/979)
+
+**Merged pull requests:**
+
+- v2.1.9 [\#999](https://github.com/liferay/clay/pull/999) ([carloslancha](https://github.com/carloslancha))
+- Fix info key | Fixes \#997 [\#998](https://github.com/liferay/clay/pull/998) ([carloslancha](https://github.com/carloslancha))
+-  Fix tooltip position and allow tooltip mouseover | Fixes \#995 [\#996](https://github.com/liferay/clay/pull/996) ([carloslancha](https://github.com/carloslancha))
+- Update: \(Fixes \#993\) Utilities `.autofit-padded-no-gutters-y` should … [\#994](https://github.com/liferay/clay/pull/994) ([pat270](https://github.com/pat270))
+- \(\#991\) Sheet Subtitle with link styled like `.btn` shouldn't be uppercase [\#992](https://github.com/liferay/clay/pull/992) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#979\) Lexicon SVG Icons `calendar`, `date`, `download`… [\#990](https://github.com/liferay/clay/pull/990) ([pat270](https://github.com/pat270))
+- Update: \(\#910\) Alert Notifications Fixed should be full width and ali… [\#989](https://github.com/liferay/clay/pull/989) ([pat270](https://github.com/pat270))
+
 ## [v2.1.8](https://github.com/liferay/clay/tree/v2.1.8) (2018-06-11)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.7...v2.1.8)
 
