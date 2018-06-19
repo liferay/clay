@@ -48,6 +48,15 @@ $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
 $table-cell-expand-min-width: 12.5rem !default; // 200px
 
+$table-cell-expand-small-max-width: 12.5rem !default; // 200px
+$table-cell-expand-small-width: 25% !default;
+
+$table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smaller-width: 15% !default;
+
+$table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smallest-width: 10% !default;
+
 // Table Bordered
 
 $table-bordered-border-width: $table-border-width !default;

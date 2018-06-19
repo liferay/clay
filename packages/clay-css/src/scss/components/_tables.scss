@@ -490,6 +490,24 @@ th {
 	.table-cell-expand {
 		@extend %table-cell-expand;
 	}
+
+	.table-cell-expand-small {
+		max-width: $table-cell-expand-small-max-width;
+		width: $table-cell-expand-small-width;
+		word-wrap: break-word;
+	}
+
+	.table-cell-expand-smaller {
+		max-width: $table-cell-expand-smaller-max-width;
+		width: $table-cell-expand-smaller-width;
+		word-wrap: break-word;
+	}
+
+	.table-cell-expand-smallest {
+		max-width: $table-cell-expand-smallest-max-width;
+		width: $table-cell-expand-smallest-width;
+		word-wrap: break-word;
+	}
 }
 
 .table-nowrap {
