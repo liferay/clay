@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from "gatsby-link";
 
 class LayoutNav extends Component {
     constructor() {
@@ -42,12 +43,12 @@ class LayoutNav extends Component {
                     </div>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a className="nav-link ml-3" href="/docs/getting_started/introduction.html">Getting Started</a>
+                            <Link className="nav-link ml-3" to="/docs/getting-started/introduction.html">Getting Started</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link ml-3" href="/docs/components/alerts.html">
+                            <Link className="nav-link ml-3" to="/docs/components/alerts.html">
                                 Components Library
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <a className="mx-3 mr-lg-0" href="https://github.com/liferay/clay" target="_blank">
