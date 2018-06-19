@@ -26,7 +26,7 @@ class Index extends Component {
                                     <div className="container-fluid container-fluid-max-lg">
                                         <h1 className="h1">This is Clay</h1>
                                         <h2 className="h3">A Web Implementation of Lexicon Experience Language</h2>
-                                        <Link to="/docs/getting_started/introduction.html" className="btn btn-lg btn-light font-weight-bold mx-3 mb-4">
+                                        <Link to="/docs/getting-started/introduction.html" className="btn btn-lg btn-light font-weight-bold mx-3 mb-4">
                                             Get Started
                                         </Link>
                                         <a className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4" href="https://github.com/liferay/clay" target="_blank">
@@ -53,7 +53,7 @@ class Index extends Component {
                                             </img>
                                             <h2 className="font-weight-bold">What is Clay?</h2>
                                             <p>Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.</p>
-                                            <Link to="/docs/getting_started/clay.html" className="btn btn-sm text-uppercase font-weight-bold">
+                                            <Link to="/docs/getting-started/clay.html" className="btn btn-sm text-uppercase font-weight-bold">
                                                 <img className="mr-2" src={withPrefix("/images/home/chevron-right.svg")} alt="" />
                                                 Learn More
                                             </Link>
