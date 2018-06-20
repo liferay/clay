@@ -14,7 +14,7 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						compact: false,
-						presets: ['babel-preset-env'],
+						presets: ['@babel/preset-env'],
 						plugins: ['babel-plugin-transform-node-env-inline'],
 					},
 				},
