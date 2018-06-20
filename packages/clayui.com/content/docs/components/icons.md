@@ -48,7 +48,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 {foreach $icon in $page.icons}
 	<li>
 		<svg class="lexicon-icon lexicon-icon-{$icon}">
-			<use xlink:href="/vendor/lexicon/icons.svg#{$icon}" />
+			<use xlink:href="/images/icons/icons.svg#{$icon}" />
 		</svg>
 		<span>{$icon}</span>
 	</li>
@@ -74,7 +74,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 {foreach $flag in $page.flags}
 	<li>
 		<svg class="lexicon-icon lexicon-icon-{$flag}">
-			<use xlink:href="/vendor/lexicon/icons.svg#{$flag}" />
+			<use xlink:href="/images/icons/icons.svg#{$flag}" />
 		</svg>
 		<span>{$page.flagData[$flag]} ({$flag})</span>
 	</li>
@@ -129,13 +129,13 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 
 <div class="lexicon-icon-examples">
 	<svg class="lexicon-icon lexicon-icon-asterisk">
-		<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+		<use xlink:href="/images/icons/icons.svg#asterisk" />
 	</svg>
 	<svg class="lexicon-icon lexicon-icon-logout">
-		<use xlink:href="/vendor/lexicon/icons.svg#logout" />
+		<use xlink:href="/images/icons/icons.svg#logout" />
 	</svg>
 	<svg class="lexicon-icon lexicon-icon-exclamation-full">
-		<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full" />
+		<use xlink:href="/images/icons/icons.svg#exclamation-full" />
 	</svg>
 </div>
 

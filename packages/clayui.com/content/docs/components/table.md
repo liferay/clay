@@ -24,14 +24,14 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/vendor/lexicon/icons.svg#drag" />
+								<use xlink:href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="ID">ID</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-down" />
+								<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
 							</svg>
 						</span>
 					</a>
@@ -40,14 +40,14 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/vendor/lexicon/icons.svg#drag" />
+								<use xlink:href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-down" />
+								<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
 							</svg>
 						</span>
 					</a>
@@ -57,7 +57,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/vendor/lexicon/icons.svg#drag" />
+								<use xlink:href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span>
@@ -70,7 +70,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Author">Author</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-up" />
+								<use xlink:href="/images/icons/icons.svg#order-arrow-up" />
 							</svg>
 						</span>
 					</a>
@@ -109,24 +109,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -166,24 +166,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -221,24 +221,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -276,24 +276,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -319,14 +319,14 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/vendor/lexicon/icons.svg#drag" />
+								<use xlink:href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="ID">ID</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-down" />
+								<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
 							</svg>
 						</span>
 					</a>
@@ -335,14 +335,14 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/vendor/lexicon/icons.svg#drag" />
+								<use xlink:href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-down" />
+								<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
 							</svg>
 						</span>
 					</a>
@@ -352,7 +352,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/vendor/lexicon/icons.svg#drag" />
+								<use xlink:href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span>
@@ -365,7 +365,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Author">Author</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
-								<use xlink:href="/vendor/lexicon/icons.svg#order-arrow-up" />
+								<use xlink:href="/images/icons/icons.svg#order-arrow-up" />
 							</svg>
 						</span>
 					</a>
@@ -404,24 +404,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -461,24 +461,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -516,24 +516,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -571,24 +571,24 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+								<use xlink:href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+								<use xlink:href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+								<use xlink:href="/images/icons/icons.svg#info-circle-open" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -675,7 +675,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -718,7 +718,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -786,7 +786,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -863,7 +863,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -906,7 +906,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -974,7 +974,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1027,7 +1027,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 							<a href="#1">link</a>,
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-									<use xlink:href="/vendor/lexicon/icons.svg#share" />
+									<use xlink:href="/images/icons/icons.svg#share" />
 								</svg>
 							</a>(.table-action-link),
 							<span>and some regular text</span>
@@ -1035,7 +1035,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<button class="btn btn-unstyled table-action-link" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</button>
 						</td>
@@ -1052,7 +1052,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</a>
 						</td>
@@ -1069,7 +1069,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</a>
 						</td>
@@ -1086,7 +1086,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</a>
 						</td>
@@ -1138,7 +1138,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 							<a href="#1">link</a>,
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-									<use xlink:href="/vendor/lexicon/icons.svg#share" />
+									<use xlink:href="/images/icons/icons.svg#share" />
 								</svg>
 							</a>(.table-action-link),
 							<span>and some regular text</span>
@@ -1146,7 +1146,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<button class="btn btn-unstyled table-action-link" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</button>
 						</td>
@@ -1163,7 +1163,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</a>
 						</td>
@@ -1180,7 +1180,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</a>
 						</td>
@@ -1197,7 +1197,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 						<td>
 							<a class="table-action-link" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+									<use xlink:href="/images/icons/icons.svg#times-circle" />
 								</svg>
 							</a>
 						</td>

@@ -12,7 +12,7 @@ title: "Pagination"
 	<li class="disabled page-item">
 		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-				<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+				<use xlink:href="/images/icons/icons.svg#angle-left" />
 			</svg>
 			<span class="sr-only">Previous</span>
 		</a>
@@ -43,7 +43,7 @@ title: "Pagination"
 	<li class="page-item">
 		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-				<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+				<use xlink:href="/images/icons/icons.svg#angle-right" />
 			</svg>
 			<span class="sr-only">Next</span>
 		</a>
@@ -55,7 +55,7 @@ title: "Pagination"
 	<li class="disabled page-item">
 		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-				<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+				<use xlink:href="/images/icons/icons.svg#angle-left" />
 			</svg>
 			<span class="sr-only">Previous</span>
 		</a>
@@ -86,7 +86,7 @@ title: "Pagination"
 	<li class="page-item">
 		<a class="page-link" href="#1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-				<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+				<use xlink:href="/images/icons/icons.svg#angle-right" />
 			</svg>
 			<span class="sr-only">Next</span>
 		</a>
@@ -108,7 +108,7 @@ title: "Pagination"
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
+				<use xlink:href="/images/icons/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -124,7 +124,7 @@ title: "Pagination"
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+					<use xlink:href="/images/icons/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -155,7 +155,7 @@ title: "Pagination"
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -169,7 +169,7 @@ title: "Pagination"
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
+				<use xlink:href="/images/icons/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -185,7 +185,7 @@ title: "Pagination"
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+					<use xlink:href="/images/icons/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -216,7 +216,7 @@ title: "Pagination"
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>

@@ -19,7 +19,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 			Text{sp}
 			<span class="reference-mark">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-					<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+					<use xlink:href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</span>
 		</label>
@@ -65,7 +65,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 		Text
 		<span class="reference-mark">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</span>
 	</label>

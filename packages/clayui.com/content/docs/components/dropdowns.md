@@ -44,14 +44,14 @@ A dropdown is a list of options related to the element that triggers it.
 			'label': 'Disabled Option'
 		]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param label: 'Trigger Label' /}
 {/call}
 ```
 ```text/html
 <clay-dropdown
 	items='[{"active": true, "href": "#", "label": "Selected Option"}, {"href": "#", "label": "Normal Option"}, {"disabled": true, "href": "#", "label": "Disabled Option"}]'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
@@ -128,14 +128,14 @@ A dropdown is a list of options related to the element that triggers it.
 			'label': 'Move to Recycle Bin'
 		]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param label: 'Trigger Label' /}
 {/call}
 ```
 ```text/html
 <clay-dropdown
 	items='[{"href": "#", "label": "Edit"}, {"href": "#", "label": "Preview", "separator": true}, {"href": "#", "label": "Expire"}, {"href": "#", "label": "View History", "separator": true}, {"href": "#", "label": "Permissions", "separator": true}, {"href": "#", "label": "Copy"}, {"href": "#", "label": "Move", "separator": true}, {"href": "#", "label": "Move to Recycle Bin"}]'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
@@ -224,14 +224,14 @@ A dropdown is a list of options related to the element that triggers it.
 			'type': 'checkbox'
 		]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param label: 'Trigger Label' /}
 {/call}
 ```
 ```text/html
 <clay-dropdown
 	items='[{"active": true, "checked": true, "inputName": "item1checkbox", "inputValue": "1", "label": "Selected Option", "type": "checkbox"}, {"inputName": "item2checkbox", "inputValue": "2", "label": "Normal Option", "type": "checkbox"}, {"disabled": true, "inputName": "item3checkbox", "inputValue": "3", "label": "Disabled Option", "type": "checkbox"}]'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
@@ -358,7 +358,7 @@ A dropdown is a list of options related to the element that triggers it.
 						<span class="input-group-inset-item input-group-inset-item-after">
 							<button class="btn btn-unstyled" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+									<use xlink:href="/images/icons/icons.svg#search" />
 								</svg>
 							</button>
 						</span>
@@ -392,7 +392,7 @@ A dropdown is a list of options related to the element that triggers it.
 		]
 	] /}
 	{param searchable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param label: 'Trigger Label' /}
 {/call}
 ```
@@ -400,7 +400,7 @@ A dropdown is a list of options related to the element that triggers it.
 <clay-dropdown
 	items=""
 	searchable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
@@ -414,7 +414,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<span class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								<use xlink:href="/images/icons/icons.svg#search" />
 							</svg>
 						</button>
 					</span>
@@ -441,7 +441,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<a class="dropdown-item" href="#1">
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 					Normal Option
@@ -451,7 +451,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<a class="dropdown-item" href="#1">
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 					Second Option
@@ -484,7 +484,7 @@ A dropdown is a list of options related to the element that triggers it.
 		]
 	] /}
 	{param itemsIconAlignment: 'left' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param label: 'Trigger Label' /}
 {/call}
 ```
@@ -492,7 +492,7 @@ A dropdown is a list of options related to the element that triggers it.
 <clay-dropdown
 	items='[{"href": "#1", "icon": "check", "label": "Normal Option"}, {"href": "#2", "icon": "check", "label": "Second Option"}, {"disabled": "true", "href": "#3", "label": "Disabled Option"}]'
 	itemsIconAlignment="left"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
@@ -503,7 +503,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<a class="dropdown-item" href="#1">
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 				Normal Option
@@ -513,7 +513,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<a class="dropdown-item" href="#1">
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 				Second Option
@@ -538,7 +538,7 @@ A dropdown is a list of options related to the element that triggers it.
 					Selected Option
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 				</a>
@@ -548,7 +548,7 @@ A dropdown is a list of options related to the element that triggers it.
 					Regular Option
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 				</a>
@@ -581,7 +581,7 @@ A dropdown is a list of options related to the element that triggers it.
 		]
 	] /}
 	{param itemsIconAlignment: 'right' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param label: 'Trigger Label' /}
 {/call}
 ```
@@ -589,7 +589,7 @@ A dropdown is a list of options related to the element that triggers it.
 <clay-dropdown
 	items='[{"active": "true", "href": "#1", "icon": "check", "label": "Selected Option"}, {"href": "#2", "icon": "check", "label": "Regular Option"}, {"disabled": "true", "href": "#3", "label": "Disabled Option"}]'
 	itemsIconAlignment="right"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
@@ -601,7 +601,7 @@ A dropdown is a list of options related to the element that triggers it.
 				Selected Option
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 			</a>
@@ -611,7 +611,7 @@ A dropdown is a list of options related to the element that triggers it.
 				Regular Option
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 			</a>
@@ -639,7 +639,7 @@ A dropdown is a list of options related to the element that triggers it.
 						<span class="input-group-inset-item input-group-inset-item-after">
 							<button class="btn btn-unstyled" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+									<use xlink:href="/images/icons/icons.svg#search" />
 								</svg>
 							</button>
 						</span>
@@ -782,7 +782,7 @@ A dropdown is a list of options related to the element that triggers it.
 		]
 	] /}
 	{param searchable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param label: 'Trigger Label' /}
 {/call}
 ```
@@ -841,7 +841,7 @@ A dropdown is a list of options related to the element that triggers it.
 		}
 	]'
 	searchable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
@@ -855,7 +855,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<span class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								<use xlink:href="/images/icons/icons.svg#search" />
 							</svg>
 						</button>
 					</span>
@@ -950,7 +950,7 @@ A dropdown is a list of options related to the element that triggers it.
 <div class="dropdown dropdown-action">
 	<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-			<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+			<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 		</svg>
 	</button>
 	<div aria-labelledby="dropdownAction1" class="dropdown-menu">
@@ -1036,7 +1036,7 @@ A dropdown is a list of options related to the element that triggers it.
 			'type': 'group'
 		]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
 ```text/html
@@ -1104,14 +1104,14 @@ A dropdown is a list of options related to the element that triggers it.
 			"type": 'group'
 		},
 	]'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 </clay-dropdown>
 ```
 ```text/html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-			<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+			<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 		</svg>
 	</button>
 	<div aria-labelledby="dropdownAction1" class="dropdown-menu">

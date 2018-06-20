@@ -12,12 +12,12 @@ title: "Panels"
 			<span class="panel-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -32,12 +32,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -52,12 +52,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #3</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -72,12 +72,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #4</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -92,12 +92,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #5</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -112,12 +112,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #6</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -136,12 +136,12 @@ title: "Panels"
 			<span class="panel-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -156,12 +156,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -176,12 +176,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #3</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -196,12 +196,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #4</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -216,12 +216,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #5</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -236,12 +236,12 @@ title: "Panels"
 			<span class="panel-title">Collapsible Group Item #6</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+					<use xlink:href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+					<use xlink:href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>

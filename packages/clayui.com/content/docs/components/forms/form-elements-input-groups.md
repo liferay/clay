@@ -257,7 +257,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-							<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+							<use xlink:href="/images/icons/icons.svg#es-es"></use>
 						</svg>
 					</span>
 					<span class="btn-section">es-ES</span>
@@ -269,7 +269,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-											<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
+											<use xlink:href="/images/icons/icons.svg#en-us"></use>
 										</svg>
 									</span>
 									en-US
@@ -288,7 +288,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-											<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
+											<use xlink:href="/images/icons/icons.svg#en-gb"></use>
 										</svg>
 									</span>
 									en-GB
@@ -307,7 +307,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-											<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+											<use xlink:href="/images/icons/icons.svg#es-es"></use>
 										</svg>
 									</span>
 									es-ES
@@ -326,7 +326,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-											<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
+											<use xlink:href="/images/icons/icons.svg#fr-fr"></use>
 										</svg>
 									</span>
 									fr-FR
@@ -374,7 +374,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-						<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+						<use xlink:href="/images/icons/icons.svg#es-es"></use>
 					</svg>
 				</span>
 				<span class="btn-section">es-ES</span>
@@ -386,7 +386,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-										<use xlink:href="/vendor/lexicon/icons.svg#en-us"></use>
+										<use xlink:href="/images/icons/icons.svg#en-us"></use>
 									</svg>
 								</span>
 								en-US
@@ -405,7 +405,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-										<use xlink:href="/vendor/lexicon/icons.svg#en-gb"></use>
+										<use xlink:href="/images/icons/icons.svg#en-gb"></use>
 									</svg>
 								</span>
 								en-GB
@@ -424,7 +424,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-										<use xlink:href="/vendor/lexicon/icons.svg#es-es"></use>
+										<use xlink:href="/images/icons/icons.svg#es-es"></use>
 									</svg>
 								</span>
 								es-ES
@@ -443,7 +443,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-										<use xlink:href="/vendor/lexicon/icons.svg#fr-fr"></use>
+										<use xlink:href="/images/icons/icons.svg#fr-fr"></use>
 									</svg>
 								</span>
 								fr-FR
@@ -485,12 +485,12 @@ An Input Group is a text field with extra elements that makes the pattern more c
 					<div class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled d-md-none" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								<use xlink:href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
 						<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								<use xlink:href="/images/icons/icons.svg#search" />
 							</svg>
 						</button>
 					</div>
@@ -504,12 +504,12 @@ An Input Group is a text field with extra elements that makes the pattern more c
 					<div class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-								<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+								<use xlink:href="/images/icons/icons.svg#times-circle" />
 							</svg>
 						</button>
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								<use xlink:href="/images/icons/icons.svg#search" />
 							</svg>
 						</button>
 					</div>
@@ -535,7 +535,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 					<div class="input-group-inset-item input-group-inset-item-before">
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								<use xlink:href="/images/icons/icons.svg#search" />
 							</svg>
 						</button>
 					</div>
@@ -562,12 +562,12 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled d-md-none" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/vendor/lexicon/icons.svg#times" />
+					<use xlink:href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 			<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
+					<use xlink:href="/images/icons/icons.svg#search" />
 				</svg>
 			</button>
 		</div>
@@ -580,12 +580,12 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-					<use xlink:href="/vendor/lexicon/icons.svg#times-circle" />
+					<use xlink:href="/images/icons/icons.svg#times-circle" />
 				</svg>
 			</button>
 			<button class="btn btn-unstyled" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
+					<use xlink:href="/images/icons/icons.svg#search" />
 				</svg>
 			</button>
 		</div>
@@ -607,7 +607,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<div class="input-group-inset-item input-group-inset-item-before">
 			<button class="btn btn-unstyled" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
+					<use xlink:href="/images/icons/icons.svg#search" />
 				</svg>
 			</button>
 		</div>
@@ -785,7 +785,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<div class="input-group">
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/images/icons/icons.svg#caret-bottom" /></svg></span>
 				</button>
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -807,7 +807,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 			</div>
 			<div class="input-group-append input-group-item input-group-item-shrink">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/images/icons/icons.svg#caret-bottom" /></svg></span>
 				</button>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -826,7 +826,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</button>
@@ -855,7 +855,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</button>
@@ -898,7 +898,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink input-group-prepend">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/images/icons/icons.svg#caret-bottom" /></svg></span>
 			</button>
 			<ul class="dropdown-menu">
 				<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -921,7 +921,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		</div>
 		<div class="input-group-append input-group-item input-group-item-shrink">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" /></svg></span>
+				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="/images/icons/icons.svg#caret-bottom" /></svg></span>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-right">
 				<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -941,7 +941,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+						<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</span>
 			</button>
@@ -971,7 +971,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+						<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</span>
 			</button>
@@ -1039,7 +1039,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<label for="inputGroupLgSeparated">
 			Label Input Group Lg
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<div class="input-group input-group-lg">
@@ -1052,7 +1052,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+						<use xlink:href="/images/icons/icons.svg#trash" />
 					</svg>
 				</button>
 			</div>
@@ -1062,14 +1062,14 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<label for="inputGroupNormalSeparated">
 			Label
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<div class="input-group">
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-primary" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+						<use xlink:href="/images/icons/icons.svg#trash" />
 					</svg>
 				</button>
 			</div>
@@ -1079,7 +1079,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+						<use xlink:href="/images/icons/icons.svg#trash" />
 					</svg>
 				</button>
 			</div>
@@ -1089,7 +1089,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<label for="inputGroupSmSeparated">
 			Label Input Group Sm
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<div class="input-group input-group-sm">
@@ -1102,7 +1102,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-unstyled" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+						<use xlink:href="/images/icons/icons.svg#trash" />
 					</svg>
 				</button>
 			</div>
@@ -1157,7 +1157,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	<label for="inputGroupLgSeparated">
 		Label Input Group Lg
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+			<use xlink:href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
 	<div class="input-group input-group-lg">
@@ -1170,7 +1170,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-unstyled" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					<use xlink:href="/images/icons/icons.svg#trash" />
 				</svg>
 			</button>
 		</div>
@@ -1181,14 +1181,14 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	<label for="inputGroupNormalSeparated">
 		Label
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+			<use xlink:href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-primary" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					<use xlink:href="/images/icons/icons.svg#trash" />
 				</svg>
 			</button>
 		</div>
@@ -1198,7 +1198,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-unstyled" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					<use xlink:href="/images/icons/icons.svg#trash" />
 				</svg>
 			</button>
 		</div>
@@ -1209,7 +1209,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	<label for="inputGroupSmSeparated">
 		Label Input Group Sm
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
+			<use xlink:href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
 	<div class="input-group input-group-sm">
@@ -1222,7 +1222,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-unstyled" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					<use xlink:href="/images/icons/icons.svg#trash" />
 				</svg>
 			</button>
 		</div>

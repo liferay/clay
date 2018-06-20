@@ -22,13 +22,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 					<div class="alert alert-dismissible alert-danger" role="alert">
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+								<use xlink:href="/images/icons/icons.svg#exclamation-full"></use>
 							</svg>
 						</span>
 						<strong class="lead">Error:</strong> This is an error message
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								<use xlink:href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -41,13 +41,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 					<div class="alert alert-dismissible alert-info" role="alert">
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-								<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+								<use xlink:href="/images/icons/icons.svg#info-circle"></use>
 							</svg>
 						</span>
 						<strong class="lead">Info:</strong> This is an info message.
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								<use xlink:href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -62,13 +62,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 					<div class="alert alert-dismissible alert-success" role="alert">
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-								<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+								<use xlink:href="/images/icons/icons.svg#check-circle-full"></use>
 							</svg>
 						</span>
 						<strong class="lead">Success:</strong> This is a success message
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								<use xlink:href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -81,13 +81,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 					<div class="alert alert-dismissible alert-warning" role="alert">
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-								<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+								<use xlink:href="/images/icons/icons.svg#warning-full"></use>
 							</svg>
 						</span>
 						<strong class="lead">Warning:</strong> This is a warning message.
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								<use xlink:href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -118,7 +118,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+			<use xlink:href="/images/icons/icons.svg#exclamation-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong> This is an error message
@@ -127,7 +127,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+			<use xlink:href="/images/icons/icons.svg#check-circle-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong> This is a success message
@@ -136,7 +136,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-info" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+			<use xlink:href="/images/icons/icons.svg#info-circle"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong> This is an info message
@@ -145,7 +145,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+			<use xlink:href="/images/icons/icons.svg#warning-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong> This is a warning message
@@ -154,27 +154,27 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 ```soy
 {call ClayAlert.render}
 	{param message: 'This is an error message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'danger' /}
 	{param title: 'Error' /}
 {/call}
 
 {call ClayAlert.render}
 	{param message: 'This is a success message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
 {/call}
 
 {call ClayAlert.render}
 	{param message: 'This is an info message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Info' /}
 {/call}
 
 {call ClayAlert.render}
 	{param message: 'This is a warning message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
 {/call}
@@ -183,27 +183,27 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <clay-alert
 	style="danger"
 	message='This is an error message'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Error">
 </clay-alert>
 
 <clay-alert
 	style="success"
 	message='This is a success message'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Success">
 </clay-alert>
 
 <clay-alert
 	message="This is an info message"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Info">
 </clay-alert>
 
 <clay-alert
 	style="warning"
 	message='This alert is a warning message'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Warning">
 </clay-alert>
 ```
@@ -211,7 +211,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+			<use xlink:href="/images/icons/icons.svg#exclamation-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong>This is an error message
@@ -220,7 +220,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+			<use xlink:href="/images/icons/icons.svg#check-circle-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong>This is a success message
@@ -229,7 +229,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-info" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+			<use xlink:href="/images/icons/icons.svg#info-circle"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong>This is an info message
@@ -238,7 +238,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+			<use xlink:href="/images/icons/icons.svg#warning-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Error:</strong>This is a warning message
@@ -257,13 +257,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+				<use xlink:href="/images/icons/icons.svg#exclamation-full"></use>
 			</svg>
 		</span>
 		<strong class="lead">Danger</strong> This is an error message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -273,13 +273,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+				<use xlink:href="/images/icons/icons.svg#check-circle-full"></use>
 			</svg>
 		</span>
 		<strong class="lead">Success</strong> This is a success message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -289,13 +289,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+				<use xlink:href="/images/icons/icons.svg#info-circle"></use>
 			</svg>
 		</span>
 		<strong class="lead">Info</strong> This is an info message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -305,13 +305,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+				<use xlink:href="/images/icons/icons.svg#warning-full"></use>
 			</svg>
 		</span>
 		<strong class="lead">Warning</strong> This is a warning message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -320,27 +320,27 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 ```soy
 {call ClayStripe.render}
 	{param message: 'This is an error message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'danger' /}
 	{param title: 'Error' /}
 {/call}
 
 {call ClayStripe.render}
 	{param message: 'This is a success message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
 {/call}
 
 {call ClayStripe.render}
 	{param message: 'This is an info message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Info' /}
 {/call}
 
 {call ClayStripe.render}
 	{param message: 'This is a warning message' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
 {/call}
@@ -349,27 +349,27 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <clay-stripe
 	style="danger"
 	message='This is an error message'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Error"
 </clay-stripe>
 
 <clay-stripe
 	style="success"
 	message='This is a success message'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Success"
 ></clay-stripe>
 
 <clay-stripe
 	message='This is an info message'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Info"
 </clay-stripe>
 
 <clay-stripe
 	style="warning"
 	message='This is a warning message'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Warning"
 </clay-stripe>
 ```
@@ -378,13 +378,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full"></use>
+				<use xlink:href="/images/icons/icons.svg#exclamation-full"></use>
 			</svg>
 		</span>
 		<strong class="lead">Danger</strong> This is an error message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -394,13 +394,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+				<use xlink:href="/images/icons/icons.svg#check-circle-full"></use>
 			</svg>
 		</span>
 		<strong class="lead">Success</strong> This is a success message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -410,13 +410,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="/vendor/lexicon/icons.svg#info-circle"></use>
+				<use xlink:href="/images/icons/icons.svg#info-circle"></use>
 			</svg>
 		</span>
 		<strong class="lead">Info</strong> This is an info message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -426,13 +426,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	<div class="container">
 		<span class="alert-indicator">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-				<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+				<use xlink:href="/images/icons/icons.svg#warning-full"></use>
 			</svg>
 		</span>
 		<strong class="lead">Warning</strong> This is a warning message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times" />
+				<use xlink:href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -454,7 +454,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+			<use xlink:href="/images/icons/icons.svg#warning-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
@@ -466,7 +466,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 		This alert is a <a href="#">warning message</a>.
 	{/param}
 
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'warning' /}
 	{param title: 'Warning' /}
 {/call}
@@ -474,7 +474,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 ```text/html
 <clay-alert
 	style="warning"
-	message='This alert is a <a href="#">warning message</a>.' spritemap="/vendor/lexicon/icons.svg"
+	message='This alert is a <a href="#">warning message</a>.' spritemap="/images/icons/icons.svg"
 	title="Warning">
 </clay-alert>
 ```
@@ -482,7 +482,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#warning-full"></use>
+			<use xlink:href="/images/icons/icons.svg#warning-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
@@ -498,13 +498,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+			<use xlink:href="/images/icons/icons.svg#check-circle-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Success:</strong> This is a success closeable alert
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
+			<use xlink:href="/images/icons/icons.svg#times" />
 		</svg>
 	</button>
 </div>
@@ -513,7 +513,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 {call ClayAlert.render}
 	{param closeable: true /}
 	{param message: This is a success closeable alert /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'success' /}
 	{param title: 'Success' /}
 {/call}
@@ -523,7 +523,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	closeable="true"
 	style="success"
 	message='This is a success closeable alert'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Success">
 </clay-alert>
 ```
@@ -531,13 +531,13 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full"></use>
+			<use xlink:href="/images/icons/icons.svg#check-circle-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Success:</strong> This is a success closeable alert
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/vendor/lexicon/icons.svg#times" />
+			<use xlink:href="/images/icons/icons.svg#times" />
 		</svg>
 	</button>
 </div>

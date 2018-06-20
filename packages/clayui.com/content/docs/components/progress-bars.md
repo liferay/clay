@@ -38,7 +38,7 @@ Progress bar is a progress indicator used to show the completion percentage of a
 		<div class="progress-group-addon">
 			<div class="progress-group-feedback">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-					<use xlink:href="/vendor/lexicon/icons.svg#check-circle" />
+					<use xlink:href="/images/icons/icons.svg#check-circle" />
 				</svg>
 			</div>
 		</div>
@@ -47,35 +47,35 @@ Progress bar is a progress indicator used to show the completion percentage of a
 
 ```soy
 {call ClayProgressBar.render}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param value: 30 /}
 {/call}
 
 {call ClayProgressBar.render}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param status: 'warning' /}
 	{param value: 70 /}
 {/call}
 
 {call ClayProgressBar.render}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param status: 'complete' /}
 {/call}
 ```
 ```text/html
 <clay-progress-bar
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	value="30">
 </clay-progress-bar>
 
 <clay-progress-bar
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	status="warning"
 	value="70">
 </clay-progress-bar>
 
 <clay-progress-bar
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	status="complete">
 </clay-progress-bar>
 ```
@@ -101,7 +101,7 @@ Progress bar is a progress indicator used to show the completion percentage of a
 	<div class="progress-group-addon">
 		<div class="progress-group-feedback">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-				<use xlink:href="/vendor/lexicon/icons.svg#check-circle" />
+				<use xlink:href="/images/icons/icons.svg#check-circle" />
 			</svg>
 		</div>
 	</div>

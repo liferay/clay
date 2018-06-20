@@ -24,7 +24,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -56,7 +56,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 			]
 	] /}
 	{param size: 'sm' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Modal Title' /}
 {/call}
 ```
@@ -64,7 +64,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 <clay-modal
 	body="<h4>Modal Body</h4>"
 	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' size="sm"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
@@ -77,7 +77,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -113,7 +113,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -144,14 +144,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				'type': 'close'
 			]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Modal Title' /}
 {/call}
 ```
 ```text/html
 <clay-modal
 	body="<h4>Modal Body</h4>"
-	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/vendor/lexicon/icons.svg"
+	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
@@ -164,7 +164,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -202,7 +202,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -234,7 +234,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 			]
 	] /}
 	{param size: 'lg' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Modal Title' /}
 {/call}
 ```
@@ -242,7 +242,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 <clay-modal
 	body="<h4>Modal Body</h4>"
 	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' size="lg"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
@@ -255,7 +255,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -291,7 +291,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -483,7 +483,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 			]
 	] /}
 	{param size: 'full-screen' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
 {/call}
 ```
@@ -491,7 +491,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 <clay-modal
 	body="..."
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Add Picture to Documents and Media Library in Liferay Seven">
 </clay-modal>
 ```
@@ -504,7 +504,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -620,7 +620,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -662,7 +662,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -723,7 +723,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -754,14 +754,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				'type': 'close'
 			]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Modal Title' /}
 {/call}
 ```
 ```text/html
 <clay-modal
 	body="<h4>Modal Body</h4>"
-	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/vendor/lexicon/icons.svg"
+	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
@@ -774,7 +774,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -810,7 +810,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -827,14 +827,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 		<h4>Modal Body</h4>
 	{/param}
 
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Modal Title' /}
 {/call}
 ```
 ```text/html
 <clay-modal
 	body="<h4>Modal Body</h4>"
- 	spritemap="/vendor/lexicon/icons.svg"
+ 	spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
@@ -847,7 +847,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -894,13 +894,13 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				'type': 'close'
 			]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
 ```text/html
 <clay-modal
 	body="<h4>Modal Body</h4>"
-	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/vendor/lexicon/icons.svg">
+	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/images/icons/icons.svg">
 </clay-modal>
 ```
 ```text/html
@@ -944,7 +944,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -972,7 +972,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 			]
 	] /}
 	{param size: 'full-screen' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
 	{param url: 'https://clayui.com' /}
 {/call}
@@ -980,7 +980,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 ```text/html
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="Add Picture to Documents and Media Library in Liferay Seven" url="https://clayui.com">
 </clay-modal>
 ```
@@ -993,7 +993,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -1031,14 +1031,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayModalDangerLabel">
 					<span class="modal-title-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-							<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full" />
+							<use xlink:href="/images/icons/icons.svg#exclamation-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -1065,14 +1065,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayModalInfoLabel">
 					<span class="modal-title-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-							<use xlink:href="/vendor/lexicon/icons.svg#info-circle" />
+							<use xlink:href="/images/icons/icons.svg#info-circle" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -1095,14 +1095,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayModalSuccessLabel">
 					<span class="modal-title-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-							<use xlink:href="/vendor/lexicon/icons.svg#check-circle-full" />
+							<use xlink:href="/images/icons/icons.svg#check-circle-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -1128,14 +1128,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayModalWarningLabel">
 					<span class="modal-title-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-							<use xlink:href="/vendor/lexicon/icons.svg#warning-full" />
+							<use xlink:href="/images/icons/icons.svg#warning-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -1173,7 +1173,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				'position': 'left'
 			]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param status: 'danger' /}
 	{param title: 'Modal Title' /}
 {/call}
@@ -1195,7 +1195,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				'type': 'close'
 			]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param status: 'info' /}
 	{param title: 'Modal Title' /}
 {/call}
@@ -1221,7 +1221,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				'position': 'left'
 			]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param status: 'success' /}
 	{param title: 'Modal Title' /}
 {/call}
@@ -1243,7 +1243,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				'type': 'close'
 			]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param status: 'warning' /}
 	{param title: 'Modal Title' /}
 {/call}
@@ -1251,28 +1251,28 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 ```text/html
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	status="danger"
 	title="Modal Title">
 </clay-modal>
 
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	status="info"
 	title="Modal Title">
 </clay-modal>
 
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	status="success"
 	title="Modal Title">
 </clay-modal>
 
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	status="warning"
 	title="Modal Title">
 </clay-modal>
@@ -1286,14 +1286,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="clayModalDangerLabel">
 					<span class="modal-title-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-							<use xlink:href="/vendor/lexicon/icons.svg#exclamation-full" />
+							<use xlink:href="/images/icons/icons.svg#exclamation-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -1337,7 +1337,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -1382,7 +1382,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>

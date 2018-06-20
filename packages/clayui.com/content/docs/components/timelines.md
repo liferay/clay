@@ -217,7 +217,7 @@ title: Timelines
 				Panel Text #1
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-radio-button">
-						<use xlink:href="/vendor/lexicon/icons.svg#radio-button" />
+						<use xlink:href="/images/icons/icons.svg#radio-button" />
 					</svg>
 				</div>
 			</div>
@@ -229,7 +229,7 @@ title: Timelines
 				Panel Text #2
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-remove-role">
-						<use xlink:href="/vendor/lexicon/icons.svg#remove-role" />
+						<use xlink:href="/images/icons/icons.svg#remove-role" />
 					</svg>
 				</div>
 			</div>
@@ -241,7 +241,7 @@ title: Timelines
 				Panel Text #3
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-repository">
-						<use xlink:href="/vendor/lexicon/icons.svg#repository" />
+						<use xlink:href="/images/icons/icons.svg#repository" />
 					</svg>
 				</div>
 			</div>
@@ -257,7 +257,7 @@ title: Timelines
 				Panel Text #1
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-radio-button">
-						<use xlink:href="/vendor/lexicon/icons.svg#radio-button" />
+						<use xlink:href="/images/icons/icons.svg#radio-button" />
 					</svg>
 				</div>
 			</div>
@@ -269,7 +269,7 @@ title: Timelines
 				Panel Text #2
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-remove-role">
-						<use xlink:href="/vendor/lexicon/icons.svg#remove-role" />
+						<use xlink:href="/images/icons/icons.svg#remove-role" />
 					</svg>
 				</div>
 			</div>
@@ -281,7 +281,7 @@ title: Timelines
 				Panel Text #3
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-repository">
-						<use xlink:href="/vendor/lexicon/icons.svg#repository" />
+						<use xlink:href="/images/icons/icons.svg#repository" />
 					</svg>
 				</div>
 			</div>

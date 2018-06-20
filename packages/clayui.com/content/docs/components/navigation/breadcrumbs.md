@@ -89,10 +89,10 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb2Dropdown1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+				<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
 			</svg>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
+				<use xlink:href="/images/icons/icons.svg#caret-bottom"></use>
 			</svg>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
@@ -121,10 +121,10 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+				<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
 			</svg>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom"></use>
+				<use xlink:href="/images/icons/icons.svg#caret-bottom"></use>
 			</svg>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">

@@ -24,7 +24,7 @@ Information panel is an information container where to display relevant informat
 						<li class="tbar-item">
 							<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-									<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+									<use xlink:href="/images/icons/icons.svg#angle-left" />
 								</svg>
 							</a>
 						</li>
@@ -38,14 +38,14 @@ Information panel is an information container where to display relevant informat
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-									<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+									<use xlink:href="/images/icons/icons.svg#angle-right" />
 								</svg>
 							</a>
 						</li>
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+									<use xlink:href="/images/icons/icons.svg#times" />
 								</svg>
 							</a>
 						</li>
@@ -66,7 +66,7 @@ Information panel is an information container where to display relevant informat
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<ul class="dropdown-menu">
@@ -86,7 +86,7 @@ Information panel is an information container where to display relevant informat
 					<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 						<span class="navbar-text-truncate">Details</span>
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</a>
 					<div class="collapse navbar-collapse" id="sidebarLightCollapse00">
@@ -166,7 +166,7 @@ Information panel is an information container where to display relevant informat
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-														<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+														<use xlink:href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
 											</div>
@@ -184,7 +184,7 @@ Information panel is an information container where to display relevant informat
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-														<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+														<use xlink:href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
 											</div>
@@ -213,7 +213,7 @@ Information panel is an information container where to display relevant informat
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
@@ -237,7 +237,7 @@ Information panel is an information container where to display relevant informat
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">
@@ -267,7 +267,7 @@ Information panel is an information container where to display relevant informat
 				<li class="tbar-item">
 					<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-							<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
+							<use xlink:href="/images/icons/icons.svg#angle-left" />
 						</svg>
 					</a>
 				</li>
@@ -281,14 +281,14 @@ Information panel is an information container where to display relevant informat
 				<li class="tbar-item">
 					<a class="component-action" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
 						</svg>
 					</a>
 				</li>
 				<li class="tbar-item">
 					<a class="component-action" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
+							<use xlink:href="/images/icons/icons.svg#times" />
 						</svg>
 					</a>
 				</li>
@@ -309,7 +309,7 @@ Information panel is an information container where to display relevant informat
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 						</svg>
 					</a>
 					<ul class="dropdown-menu">
@@ -329,7 +329,7 @@ Information panel is an information container where to display relevant informat
 			<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 				<span class="navbar-text-truncate">Details</span>
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div class="collapse navbar-collapse" id="sidebarLightCollapse00">
@@ -409,7 +409,7 @@ Information panel is an information container where to display relevant informat
 									<div class="sticker sticker-secondary">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+												<use xlink:href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</div>
@@ -427,7 +427,7 @@ Information panel is an information container where to display relevant informat
 									<div class="sticker sticker-secondary">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+												<use xlink:href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</div>
@@ -456,7 +456,7 @@ Information panel is an information container where to display relevant informat
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
@@ -480,7 +480,7 @@ Information panel is an information container where to display relevant informat
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">

@@ -49,7 +49,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 				<div class="multi-step-indicator-label">Step 05</div>
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+						<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -57,7 +57,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						5. Step Five
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -65,7 +65,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						6. Step Six
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -73,7 +73,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						7. Step Seven
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -81,7 +81,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						8. Step Eight
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -141,7 +141,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 			<div class="multi-step-indicator-label">Step 05</div>
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-					<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+					<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
 				</svg>
 			</a>
 			<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -149,7 +149,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 					5. Step Five
 					<span aria-hidden="true" class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
 				</a>
@@ -157,7 +157,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 					6. Step Six
 					<span aria-hidden="true" class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
 				</a>
@@ -165,7 +165,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 					7. Step Seven
 					<span aria-hidden="true" class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
 				</a>
@@ -173,7 +173,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 					8. Step Eight
 					<span aria-hidden="true" class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/vendor/lexicon/icons.svg#check" />
+							<use xlink:href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
 				</a>
@@ -244,7 +244,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 			<div class="dropdown multi-step-indicator">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+						<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
 					</svg>
 				</a>
 				<ul class="dropdown-menu dropdown-menu-indicator-end">
@@ -253,7 +253,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 							5. Step Five
 							<span aria-hidden="true" class="dropdown-item-indicator">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-									<use xlink:href="/vendor/lexicon/icons.svg#check" />
+									<use xlink:href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
 						</a>
@@ -263,7 +263,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 							6. Step Six
 							<span aria-hidden="true" class="dropdown-item-indicator">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-									<use xlink:href="/vendor/lexicon/icons.svg#check" />
+									<use xlink:href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
 						</a>
@@ -273,7 +273,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 							7. Step Seven
 							<span aria-hidden="true" class="dropdown-item-indicator">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-									<use xlink:href="/vendor/lexicon/icons.svg#check" />
+									<use xlink:href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
 						</a>
@@ -283,7 +283,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 							8. Step Eight
 							<span aria-hidden="true" class="dropdown-item-indicator">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-									<use xlink:href="/vendor/lexicon/icons.svg#check" />
+									<use xlink:href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
 						</a>
@@ -348,7 +348,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 		<div class="dropdown multi-step-indicator">
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-					<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+					<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
 				</svg>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-indicator-end">
@@ -357,7 +357,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						5. Step Five
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -367,7 +367,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						6. Step Six
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -377,7 +377,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						7. Step Seven
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -387,7 +387,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 						8. Step Eight
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/vendor/lexicon/icons.svg#check" />
+								<use xlink:href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>

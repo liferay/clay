@@ -20,7 +20,7 @@ title: "Nav Tabs"
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -28,7 +28,7 @@ title: "Nav Tabs"
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -36,7 +36,7 @@ title: "Nav Tabs"
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -76,7 +76,7 @@ title: "Nav Tabs"
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -84,7 +84,7 @@ title: "Nav Tabs"
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -92,7 +92,7 @@ title: "Nav Tabs"
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/vendor/lexicon/icons.svg#check" />
+						<use xlink:href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>

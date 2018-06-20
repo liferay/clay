@@ -39,12 +39,12 @@ Definition of the content hierarchy inside a form structure and the components u
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+						<use xlink:href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -94,12 +94,12 @@ Definition of the content hierarchy inside a form structure and the components u
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
+						<use xlink:href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>

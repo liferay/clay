@@ -299,7 +299,7 @@ title: "Images (Aspect Ratios)"
 		<div class="aspect-ratio aspect-ratio-16-to-9">
 			<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+					<use xlink:href="/images/icons/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -324,7 +324,7 @@ title: "Images (Aspect Ratios)"
 <div class="aspect-ratio aspect-ratio-16-to-9">
 	<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-			<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+			<use xlink:href="/images/icons/icons.svg#folder" />
 		</svg>
 	</div>
 </div>

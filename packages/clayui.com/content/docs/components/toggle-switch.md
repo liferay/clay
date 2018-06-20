@@ -128,12 +128,12 @@ title: "Toggle Switch"
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 					<span class="button-icon button-icon-on toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock">
-							<use xlink:href="/vendor/lexicon/icons.svg#unlock" />
+							<use xlink:href="/images/icons/icons.svg#unlock" />
 						</svg>
 					</span>
 					<span class="button-icon button-icon-off toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock">
-							<use xlink:href="/vendor/lexicon/icons.svg#lock" />
+							<use xlink:href="/images/icons/icons.svg#lock" />
 						</svg>
 					</span>
 				</span>
@@ -148,12 +148,12 @@ title: "Toggle Switch"
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
 					<span class="button-icon button-icon-on toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-live">
-							<use xlink:href="/vendor/lexicon/icons.svg#live" />
+							<use xlink:href="/images/icons/icons.svg#live" />
 						</svg>
 					</span>
 					<span class="button-icon button-icon-off toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-staging">
-							<use xlink:href="/vendor/lexicon/icons.svg#staging" />
+							<use xlink:href="/images/icons/icons.svg#staging" />
 						</svg>
 					</span>
 				</span>
@@ -168,12 +168,12 @@ title: "Toggle Switch"
 				<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
 					<span class="button-icon button-icon-on toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-open">
-							<use xlink:href="/vendor/lexicon/icons.svg#product-menu-open" />
+							<use xlink:href="/images/icons/icons.svg#product-menu-open" />
 						</svg>
 					</span>
 					<span class="button-icon button-icon-off toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-							<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
+							<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
 						</svg>
 					</span>
 				</span>
@@ -190,12 +190,12 @@ title: "Toggle Switch"
 			<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 				<span class="button-icon button-icon-on toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock">
-						<use xlink:href="/vendor/lexicon/icons.svg#unlock" />
+						<use xlink:href="/images/icons/icons.svg#unlock" />
 					</svg>
 				</span>
 				<span class="button-icon button-icon-off toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock">
-						<use xlink:href="/vendor/lexicon/icons.svg#lock" />
+						<use xlink:href="/images/icons/icons.svg#lock" />
 					</svg>
 				</span>
 			</span>
@@ -211,12 +211,12 @@ title: "Toggle Switch"
 			<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
 				<span class="button-icon button-icon-on toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-live">
-						<use xlink:href="/vendor/lexicon/icons.svg#live" />
+						<use xlink:href="/images/icons/icons.svg#live" />
 					</svg>
 				</span>
 				<span class="button-icon button-icon-off toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-staging">
-						<use xlink:href="/vendor/lexicon/icons.svg#staging" />
+						<use xlink:href="/images/icons/icons.svg#staging" />
 					</svg>
 				</span>
 			</span>
@@ -232,12 +232,12 @@ title: "Toggle Switch"
 			<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
 				<span class="button-icon button-icon-on toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-open" />
+						<use xlink:href="/images/icons/icons.svg#product-menu-open" />
 					</svg>
 				</span>
 				<span class="button-icon button-icon-off toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
+						<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
 					</svg>
 				</span>
 			</span>
@@ -263,12 +263,12 @@ title: "Toggle Switch"
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 					<span class="button-icon button-icon-on toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock">
-							<use xlink:href="/vendor/lexicon/icons.svg#unlock" />
+							<use xlink:href="/images/icons/icons.svg#unlock" />
 						</svg>
 					</span>
 					<span class="button-icon button-icon-off toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock">
-							<use xlink:href="/vendor/lexicon/icons.svg#lock" />
+							<use xlink:href="/images/icons/icons.svg#lock" />
 						</svg>
 					</span>
 				</span>
@@ -283,12 +283,12 @@ title: "Toggle Switch"
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
 					<span class="button-icon button-icon-on toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-live">
-							<use xlink:href="/vendor/lexicon/icons.svg#live" />
+							<use xlink:href="/images/icons/icons.svg#live" />
 						</svg>
 					</span>
 					<span class="button-icon button-icon-off toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-staging">
-							<use xlink:href="/vendor/lexicon/icons.svg#staging" />
+							<use xlink:href="/images/icons/icons.svg#staging" />
 						</svg>
 					</span>
 				</span>
@@ -302,12 +302,12 @@ title: "Toggle Switch"
 				<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
 					<span class="button-icon button-icon-on toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-open">
-							<use xlink:href="/vendor/lexicon/icons.svg#product-menu-open" />
+							<use xlink:href="/images/icons/icons.svg#product-menu-open" />
 						</svg>
 					</span>
 					<span class="button-icon button-icon-off toggle-switch-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-							<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
+							<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
 						</svg>
 					</span>
 				</span>
@@ -324,12 +324,12 @@ title: "Toggle Switch"
 			<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 				<span class="button-icon button-icon-on toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock">
-						<use xlink:href="/vendor/lexicon/icons.svg#unlock" />
+						<use xlink:href="/images/icons/icons.svg#unlock" />
 					</svg>
 				</span>
 				<span class="button-icon button-icon-off toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock">
-						<use xlink:href="/vendor/lexicon/icons.svg#lock" />
+						<use xlink:href="/images/icons/icons.svg#lock" />
 					</svg>
 				</span>
 			</span>
@@ -345,12 +345,12 @@ title: "Toggle Switch"
 			<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
 				<span class="button-icon button-icon-on toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-live">
-						<use xlink:href="/vendor/lexicon/icons.svg#live" />
+						<use xlink:href="/images/icons/icons.svg#live" />
 					</svg>
 				</span>
 				<span class="button-icon button-icon-off toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-staging">
-						<use xlink:href="/vendor/lexicon/icons.svg#staging" />
+						<use xlink:href="/images/icons/icons.svg#staging" />
 					</svg>
 				</span>
 			</span>
@@ -365,12 +365,12 @@ title: "Toggle Switch"
 			<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
 				<span class="button-icon button-icon-on toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-open">
-						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-open" />
+						<use xlink:href="/images/icons/icons.svg#product-menu-open" />
 					</svg>
 				</span>
 				<span class="button-icon button-icon-off toggle-switch-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="/vendor/lexicon/icons.svg#product-menu-closed" />
+						<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
 					</svg>
 				</span>
 			</span>

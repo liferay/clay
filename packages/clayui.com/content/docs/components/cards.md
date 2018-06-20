@@ -45,7 +45,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -87,7 +87,7 @@ Cards are a very specific visual representation of data.
 		]
 	] /}
 	{param selectable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param stickerLabel: 'JPG' /}
 	{param stickerShape: 'danger' /}
 	{param stickerStyle: 'danger' /}
@@ -102,7 +102,7 @@ Cards are a very specific visual representation of data.
 	imageSrc="/images/thumbnail_coffee.jpg"
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	stickerLabel="JPG"
 	stickerShape="circle"
 	stickerStyle="danger"
@@ -138,7 +138,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -188,7 +188,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -231,7 +231,7 @@ Cards are a very specific visual representation of data.
 	] /}
 	{param selectable: true /}
 	{param selected: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param subtitle: 'Author Action' /}
 	{param stickerLabel: 'JPG' /}
 	{param stickerStyle: 'danger' /}
@@ -246,7 +246,7 @@ Cards are a very specific visual representation of data.
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	selected="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	stickerLabel="JPG"
 	stickerStyle="danger"
 	subtitle="Author Action"
@@ -281,7 +281,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -323,7 +323,7 @@ Cards are a very specific visual representation of data.
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -362,7 +362,7 @@ Cards are a very specific visual representation of data.
 		]
 	] /}
 	{param selectable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param stickerLabel: 'PNG' /}
 	{param stickerStyle: 'info' /}
 	{param subtitle: 'Author Action' /}
@@ -374,7 +374,7 @@ Cards are a very specific visual representation of data.
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
 	labels='[{"label": "Rejected", "style": "danger"}]'
 	selectable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	stickerLabel="PNG"
 	stickerStyle="info"
 	subtitle="Author Action"
@@ -401,7 +401,7 @@ Cards are a very specific visual representation of data.
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 						</svg>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
@@ -434,7 +434,7 @@ Cards are a very specific visual representation of data.
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-									<use xlink:href="/vendor/lexicon/icons.svg#camera" />
+									<use xlink:href="/images/icons/icons.svg#camera" />
 								</svg>
 							</div>
 							<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
@@ -456,7 +456,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -513,7 +513,7 @@ Cards are a very specific visual representation of data.
 		]
 	] /}
 	{param selectable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param stickerLabel: 'SVG' /}
 	{param stickerStyle: 'warning' /}
 	{param subtitle: 'Author Action' /}
@@ -523,7 +523,7 @@ Cards are a very specific visual representation of data.
 {call ClayImageCard.render}
 	{param imageAlt: 'thumbnail' /}
 	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param stickerLabel: 'JPG' /}
 	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Author Action' /}
@@ -536,7 +536,7 @@ Cards are a very specific visual representation of data.
 	icon="camera"
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	stickerLabel="SVG"
 	stickerStyle="warning"
 	subtitle="Author Action"
@@ -546,7 +546,7 @@ Cards are a very specific visual representation of data.
 <clay-image-card
 	imageAlt="thumbnail"
 	imageSrc="/images/thumbnail_coffee.jpg"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	stickerLabel="JPG"
 	stickerStyle="danger"
 	subtitle="Author Action"
@@ -563,7 +563,7 @@ Cards are a very specific visual representation of data.
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-							<use xlink:href="/vendor/lexicon/icons.svg#camera" />
+							<use xlink:href="/images/icons/icons.svg#camera" />
 						</svg>
 					</div>
 					<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
@@ -585,7 +585,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -674,7 +674,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -698,7 +698,7 @@ Cards are a very specific visual representation of data.
 {call ClayUserCard.render}
 	{param initials: 'HS' /}
 	{param name: 'User Name' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param subtitle: 'Latest Action' /}
 	{param userColor: 'danger' /}
 {/call}
@@ -718,7 +718,7 @@ Cards are a very specific visual representation of data.
 	{param initials: 'HS' /}
 	{param name: 'User Name' /}
 	{param selectable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param subtitle: 'Latest Action' /}
 	{param userColor: 'danger' /}
 {/call}
@@ -727,7 +727,7 @@ Cards are a very specific visual representation of data.
 <clay-user-card
 	initials="HS"
 	name="User Name"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	subtitle="Latest Action"
 	userColor="danger">
 </clay-user-card>
@@ -737,7 +737,7 @@ Cards are a very specific visual representation of data.
 	initials="HS"
 	name="User Name"
 	selectable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	subtitle="Latest Action"
 	userColor="danger">
 </clay-user-card>
@@ -786,7 +786,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -819,7 +819,7 @@ Cards are a very specific visual representation of data.
 			<div class="aspect-ratio card-item-first">
 				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-						<use xlink:href="/vendor/lexicon/icons.svg#documents-and-media" />
+						<use xlink:href="/images/icons/icons.svg#documents-and-media" />
 					</svg>
 				</div>
 				<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -849,7 +849,7 @@ Cards are a very specific visual representation of data.
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-									<use xlink:href="/vendor/lexicon/icons.svg#documents-and-media" />
+									<use xlink:href="/images/icons/icons.svg#documents-and-media" />
 								</svg>
 							</div>
 							<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -871,7 +871,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -900,7 +900,7 @@ Cards are a very specific visual representation of data.
 			'style': 'success'
 		]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param stickerLabel: 'DOC' /}
 	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Stevie Ray Vaughn' /}
@@ -927,7 +927,7 @@ Cards are a very specific visual representation of data.
 		]
 	] /}
 	{param selectable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param stickerLabel: 'DOC' /}
 	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Stevie Ray Vaughn' /}
@@ -938,7 +938,7 @@ Cards are a very specific visual representation of data.
 <clay-file-card
 	icon="documents-and-media"
 	labels='[{"label": "Approved", "style": "success"}]'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	stickerLabel="DOC"
 	stickerStyle="danger"
 	subtitle="Stevie Ray Vaughn"
@@ -950,7 +950,7 @@ Cards are a very specific visual representation of data.
 	icon="documents-and-media"
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	stickerLabel="DOC"
 	stickerStyle="danger"
 	subtitle="Stevie Ray Vaughn"
@@ -962,7 +962,7 @@ Cards are a very specific visual representation of data.
 	<div class="aspect-ratio card-item-first">
 		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-				<use xlink:href="/vendor/lexicon/icons.svg#documents-and-media" />
+				<use xlink:href="/images/icons/icons.svg#documents-and-media" />
 			</svg>
 		</div>
 		<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -991,7 +991,7 @@ Cards are a very specific visual representation of data.
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-							<use xlink:href="/vendor/lexicon/icons.svg#documents-and-media" />
+							<use xlink:href="/images/icons/icons.svg#documents-and-media" />
 						</svg>
 					</div>
 					<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -1013,7 +1013,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -1049,7 +1049,7 @@ Cards are a very specific visual representation of data.
 						<span class="sticker">
 							<span class="inline-item">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+									<use xlink:href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
 						</span>
@@ -1074,7 +1074,7 @@ Cards are a very specific visual representation of data.
 									<span class="sticker">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+												<use xlink:href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</span>
@@ -1086,7 +1086,7 @@ Cards are a very specific visual representation of data.
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<div class="dropdown-menu dropdown-menu-right">
@@ -1110,7 +1110,7 @@ Cards are a very specific visual representation of data.
 
 ```soy
 {call ClayHorizontalCard.render}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual' /}
 {/call}
 
@@ -1127,20 +1127,20 @@ Cards are a very specific visual representation of data.
 		]
 	] /}
 	{param selectable: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual' /}
 {/call}
 ```
 ```text/html
 <clay-horizontal-card
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
 </clay-horizontal-card>
 
 <clay-horizontal-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
 	selectable="true"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
 </clay-horizontal-card>
 ```
@@ -1152,7 +1152,7 @@ Cards are a very specific visual representation of data.
 				<span class="sticker">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+							<use xlink:href="/images/icons/icons.svg#folder" />
 						</svg>
 					</span>
 				</span>
@@ -1176,7 +1176,7 @@ Cards are a very specific visual representation of data.
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+										<use xlink:href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -1188,7 +1188,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">

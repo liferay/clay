@@ -146,7 +146,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 	<span class="label-item label-item-expand">Label Text</span>
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times"><use xlink:href="/vendor/lexicon/icons.svg#times"></use></svg>
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times"><use xlink:href="/images/icons/icons.svg#times"></use></svg>
 		</button>
 	</span>
 </span>
@@ -166,7 +166,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/vendor/lexicon/icons.svg#times"></use>
+				<use xlink:href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>
 	</span>

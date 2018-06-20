@@ -17,13 +17,13 @@ Buttons communicate an action to happen on user interaction.
 <button class="btn btn-primary" type="button">Primary</button>{sp}
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>{sp}
 <button class="btn btn-secondary" type="button">Secondary</button>{sp}
 <button class="btn btn-monospaced btn-secondary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>{sp}
 <button class="btn btn-link" type="button">Link</button>
@@ -37,7 +37,7 @@ Buttons communicate an action to happen on user interaction.
 {call ClayButton.render}
 	{param icon: 'blogs' /}
 	{param monospaced: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 
 {call ClayButton.render}
@@ -49,7 +49,7 @@ Buttons communicate an action to happen on user interaction.
 {call ClayButton.render}
 	{param icon: 'blogs' /}
 	{param monospaced: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'secondary' /}
 {/call}
 
@@ -62,11 +62,11 @@ Buttons communicate an action to happen on user interaction.
 ```text/html
 <clay-button label="Primary" type="button"></clay-button>
 
-<clay-button icon="blogs" monospaced="true" spritemap="/vendor/lexicon/icons.svg"></clay-button>
+<clay-button icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 
 <clay-button label="Secondary" style="secondary" type="button"></clay-button>
 
-<clay-button icon="blogs" monospaced="true" spritemap="/vendor/lexicon/icons.svg" style="secondary"></clay-button>
+<clay-button icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg" style="secondary"></clay-button>
 
 <clay-button label="Link" style="link" type="button"></clay-button>
 ```
@@ -74,13 +74,13 @@ Buttons communicate an action to happen on user interaction.
 <button class="btn btn-primary" type="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 <button class="btn btn-secondary" type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 <button class="btn btn-link" type="button">Link</button>
@@ -91,13 +91,13 @@ Buttons communicate an action to happen on user interaction.
 <button class="btn btn-primary" disabled type="button">Primary</button>{sp}
 <button class="btn btn-monospaced btn-primary" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>{sp}
 <button class="btn btn-secondary" disabled type="button">Secondary</button>{sp}
 <button class="btn btn-monospaced btn-secondary" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>{sp}
 <button class="btn btn-link" disabled type="button">Link</button>
@@ -113,7 +113,7 @@ Buttons communicate an action to happen on user interaction.
 	{param disabled: true /}
 	{param icon: 'blogs' /}
 	{param monospaced: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 
 {call ClayButton.render}
@@ -127,7 +127,7 @@ Buttons communicate an action to happen on user interaction.
 	{param disabled: true /}
 	{param icon: 'blogs' /}
 	{param monospaced: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'secondary' /}
 {/call}
 
@@ -141,11 +141,11 @@ Buttons communicate an action to happen on user interaction.
 ```text/html
 <clay-button disabled="true" label="Primary" type="button"></clay-button>
 
-<clay-button disabled="true" icon="blogs" monospaced="true" spritemap="/vendor/lexicon/icons.svg"></clay-button>
+<clay-button disabled="true" icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 
 <clay-button disabled="true" label="Secondary" style="secondary" type="button"></clay-button>
 
-<clay-button disabled="true" icon="blogs" monospaced="true" spritemap="/vendor/lexicon/icons.svg" style="secondary"></clay-button>
+<clay-button disabled="true" icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg" style="secondary"></clay-button>
 
 <clay-button disabled="true" label="Link" style="link" type="button"></clay-button>
 ```
@@ -153,13 +153,13 @@ Buttons communicate an action to happen on user interaction.
 <button class="btn btn-primary"  disabledtype="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 <button class="btn btn-secondary" disabled type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 <button class="btn btn-link" disabled type="button">Link</button>
@@ -208,12 +208,12 @@ Buttons communicate an action to happen on user interaction.
 
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>{sp}
 <button class="btn btn-monospaced btn-secondary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 
@@ -221,30 +221,30 @@ Buttons communicate an action to happen on user interaction.
 {call ClayButton.render}
 	{param icon: 'blogs' /}
 	{param monospaced: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 
 {call ClayButton.render}
 	{param icon: 'blogs' /}
 	{param monospaced: true /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'secondary' /}
 {/call}
 ```
 ```text/html
-<clay-button icon="blogs" monospaced="true" spritemap="/vendor/lexicon/icons.svg"></clay-button>
+<clay-button icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 
-<clay-button icon="blogs" monospaced="true" spritemap="/vendor/lexicon/icons.svg" style="secondary"></clay-button>
+<clay-button icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg" style="secondary"></clay-button>
 ```
 ```text/html
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 <button class="btn btn-monospaced btn-secondary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#blogs"></use>
+		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 ```
@@ -256,7 +256,7 @@ Buttons communicate an action to happen on user interaction.
 <button class="btn btn-secondary" type="button">
 	<span class="inline-item inline-item-before">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-			<use xlink:href="/vendor/lexicon/icons.svg#share"></use>
+			<use xlink:href="/images/icons/icons.svg#share"></use>
 		</svg>
 	</span>
 	Share
@@ -266,7 +266,7 @@ Buttons communicate an action to happen on user interaction.
 {call ClayButton.render}
 	{param label: 'Share' /}
 	{param icon: 'share' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'secondary' /}
 {/call}
 ```
@@ -274,7 +274,7 @@ Buttons communicate an action to happen on user interaction.
 <clay-button
 	label="share"
 	icon="share"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	style="secondary">
 </clay-button>
 ```
@@ -282,7 +282,7 @@ Buttons communicate an action to happen on user interaction.
 <button class="btn btn-secondary" type="button">
 	<span class="inline-item inline-item-before">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-			<use xlink:href="/vendor/lexicon/icons.svg#share"></use>
+			<use xlink:href="/images/icons/icons.svg#share"></use>
 		</svg>
 	</span>
 	Share
@@ -327,7 +327,7 @@ Buttons communicate an action to happen on user interaction.
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu">
@@ -340,7 +340,7 @@ Buttons communicate an action to happen on user interaction.
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu">
@@ -366,7 +366,7 @@ Buttons communicate an action to happen on user interaction.
 			'url': '#1'
 		]
 	] /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param triggerLabel: 'Primary' /}
 	{param triggerStyle: 'primary' /}
 {/call}
@@ -374,7 +374,7 @@ Buttons communicate an action to happen on user interaction.
 ```text/html
 <clay-dropdown
 	items='[{"label": "Action", "url": "#1"},{"separator": true, "type": : "group"},{"label": "Scope", "url": "#1"}]'
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	triggerLabel="Primary"
 	triggerStyle="primary">
 </clay-dropdown>
@@ -384,7 +384,7 @@ Buttons communicate an action to happen on user interaction.
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu">
@@ -397,7 +397,7 @@ Buttons communicate an action to happen on user interaction.
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu">
@@ -416,7 +416,7 @@ Buttons communicate an action to happen on user interaction.
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
@@ -429,7 +429,7 @@ Buttons communicate an action to happen on user interaction.
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
@@ -444,7 +444,7 @@ Buttons communicate an action to happen on user interaction.
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
@@ -457,7 +457,7 @@ Buttons communicate an action to happen on user interaction.
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
@@ -494,7 +494,7 @@ Buttons communicate an action to happen on user interaction.
 
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use xlink:href="/vendor/lexicon/icons.svg#plus"></use>
+		<use xlink:href="/images/icons/icons.svg#plus"></use>
 	</svg>
 </button>
 
@@ -503,16 +503,16 @@ Buttons communicate an action to happen on user interaction.
 	{param icon: 'plus' /}
 	{param monospaced: true /}
 	{param size: 'sm' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
 ```text/html
-<clay-button icon="plus" size="sm" monospaced="true" spritemap="/vendor/lexicon/icons.svg"></clay-button>
+<clay-button icon="plus" size="sm" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 ```
 ```text/html
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-		<use xlink:href="/vendor/lexicon/icons.svg#plus"></use>
+		<use xlink:href="/images/icons/icons.svg#plus"></use>
 	</svg>
 </button>
 ```
@@ -523,7 +523,7 @@ Buttons communicate an action to happen on user interaction.
 
 <button class="btn btn-monospaced btn-sm btn-unstyled" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-		<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v"></use>
+		<use xlink:href="/images/icons/icons.svg#ellipsis-v"></use>
 	</svg>
 </button>
 
@@ -532,16 +532,16 @@ Buttons communicate an action to happen on user interaction.
 	{param icon: 'ellipsis-v' /}
 	{param monospaced: true /}
 	{param size: 'sm' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
 ```text/html
-<clay-button icon="ellipsis-v" size="sm" monospaced="true" spritemap="/vendor/lexicon/icons.svg"></clay-button>
+<clay-button icon="ellipsis-v" size="sm" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 ```
 ```text/html
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-		<use xlink:href="/vendor/lexicon/ellipsis-v.svg#plus"></use>
+		<use xlink:href="/images/icons/ellipsis-v.svg#plus"></use>
 	</svg>
 </button>
 ```

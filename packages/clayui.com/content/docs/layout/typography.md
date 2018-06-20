@@ -91,18 +91,18 @@ title: "Typography"
 
 <div class="sheet">
     <div>Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span> with text.</div>
-    <div>Reference Mark<span class="reference-mark" id="referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/vendor/lexicon/icons.svg#asterisk" /></svg></span> with lexicon-icon-asterisk.</div>
+    <div>Reference Mark<span class="reference-mark" id="referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/images/icons/icons.svg#asterisk" /></svg></span> with lexicon-icon-asterisk.</div>
     <h4>Footnotes</h4>
     <div><a class="reference-mark" href="#referenceMark1">[1]</a> A reference to the text above, respectively.</div>
-    <div><a class="reference-mark" href="#referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/vendor/lexicon/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
+    <div><a class="reference-mark" href="#referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/images/icons/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
 </div>
 
 ```text/html
 <div>Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span> with text.</div>
-<div>Reference Mark<span class="reference-mark" id="referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/vendor/lexicon/icons.svg#asterisk" /></svg></span> with lexicon-icon-asterisk.</div>
+<div>Reference Mark<span class="reference-mark" id="referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/images/icons/icons.svg#asterisk" /></svg></span> with lexicon-icon-asterisk.</div>
 <h4>Footnotes</h4>
 <div><a class="reference-mark" href="#referenceMark1">[1]</a> A reference to the text above, respectively.</div>
-<div><a class="reference-mark" href="#referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/vendor/lexicon/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
+<div><a class="reference-mark" href="#referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/images/icons/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
 ```
 </article>
 

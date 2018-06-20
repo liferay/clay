@@ -151,7 +151,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary">
 	<span class="inline-item">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-			<use xlink:href="/vendor/lexicon/icons.svg#picture" />
+			<use xlink:href="/images/icons/icons.svg#picture" />
 		</svg>
 	</span>
 </span>
@@ -164,7 +164,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 {call ClaySticker.render}
 	{param icon: 'picture' /}
-	{param spritemap: '/vendor/lexicon/icons.svg' /}
+	{param spritemap: '/images/icons/icons.svg' /}
 	{param style: 'primary' /}
 {/call}
 ```
@@ -176,7 +176,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 <clay-sticker
 	icon="picture"
-	spritemap="/vendor/lexicon/icons.svg"
+	spritemap="/images/icons/icons.svg"
 	style="primary">
 </clay-sticker>
 ```
@@ -185,7 +185,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary">
 	<span class="inline-item">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-			<use xlink:href="/vendor/lexicon/icons.svg#picture" />
+			<use xlink:href="/images/icons/icons.svg#picture" />
 		</svg>
 	</span>
 </span>

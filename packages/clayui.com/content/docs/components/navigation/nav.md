@@ -72,12 +72,12 @@ title: "Nav"
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+							<use xlink:href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -90,12 +90,12 @@ title: "Nav"
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-										<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+										<use xlink:href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-										<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+										<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
 							</a>
@@ -117,12 +117,12 @@ title: "Nav"
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+							<use xlink:href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -138,12 +138,12 @@ title: "Nav"
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+							<use xlink:href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -167,12 +167,12 @@ title: "Nav"
 			Basic Information
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+					<use xlink:href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -185,12 +185,12 @@ title: "Nav"
 						Documents and Media
 						<span class="collapse-icon-closed">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-								<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+								<use xlink:href="/images/icons/icons.svg#caret-right" />
 							</svg>
 						</span>
 						<span class="collapse-icon-open">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-								<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+								<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</span>
 					</a>
@@ -212,12 +212,12 @@ title: "Nav"
 			SEO
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+					<use xlink:href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -233,12 +233,12 @@ title: "Nav"
 			Advanced
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+					<use xlink:href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -271,12 +271,12 @@ title: "Nav"
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+							<use xlink:href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -289,12 +289,12 @@ title: "Nav"
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-										<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+										<use xlink:href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-										<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+										<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
 							</a>
@@ -316,12 +316,12 @@ title: "Nav"
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+							<use xlink:href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -337,12 +337,12 @@ title: "Nav"
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+							<use xlink:href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -366,12 +366,12 @@ title: "Nav"
 			Basic Information
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+					<use xlink:href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -384,12 +384,12 @@ title: "Nav"
 						Documents and Media
 						<span class="collapse-icon-closed">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-								<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+								<use xlink:href="/images/icons/icons.svg#caret-right" />
 							</svg>
 						</span>
 						<span class="collapse-icon-open">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-								<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+								<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</span>
 					</a>
@@ -411,12 +411,12 @@ title: "Nav"
 			SEO
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+					<use xlink:href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -432,12 +432,12 @@ title: "Nav"
 			Advanced
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-right" />
+					<use xlink:href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
