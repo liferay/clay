@@ -1,5 +1,8 @@
 import React from "react";
 
+import docsSidebar from "../data/sidebars/doc-links.yaml"
+import Sidebar from '../components/Sidebar';
+
 export default function Docs({data, location}) {
     const { markdownRemark } = data;
     const { frontmatter, html } = markdownRemark;
@@ -7,6 +10,7 @@ export default function Docs({data, location}) {
     return (
         <div className="docs">
             <main className="content">
+                <Sidebar sectionsList={docsSidebar} location={location} />
                 <div className="sidebar-offset">
                     <header>
                         <div className="clay-site-container container-fluid">
