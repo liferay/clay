@@ -51,7 +51,6 @@ class Index extends Component {
                     <section className="teasers" id="teasers">
                         <div className="container-fluid container-fluid-max-lg">
                             <div className="row mb-4">
-                                
                                 <div className="col-1 d-none d-md-block">
                                     <div className="vertical-title text-uppercase text-nowrap">Explore Clay</div>
                                 </div>
@@ -59,8 +58,7 @@ class Index extends Component {
                                 <div className="col-md-5 text-center">
                                     <div className="card wow fadeInUp">
                                         <div className="card-body mx-4">
-                                            <img className="mx-auto" src={withPrefix("/images/home/what.svg")} alt="">
-                                            </img>
+                                            <img className="mx-auto" src={withPrefix("/images/home/what.svg")} alt="" />
                                             <h2 className="font-weight-bold">What is Clay?</h2>
                                             <p>Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.</p>
                                             <Link to="/docs/getting-started/clay.html" className="btn btn-sm text-uppercase font-weight-bold">
@@ -74,9 +72,7 @@ class Index extends Component {
                                 <div className="col-md-5 text-center mt-4 mt-md-0">
                                     <div className="card wow fadeInUp" data-wow-delay="0.1s">
                                         <div className="card-body mx-4">
-                                            <img className="mx-auto" src={withPrefix("/images/home/news.svg")} alt="">
-                                            
-                                            </img>
+                                            <img className="mx-auto" src={withPrefix("/images/home/news.svg")} alt="" />
                                             <h2 className="font-weight-bold">Release Notes</h2>
                                             <p>Stay up-to-date on Clay's progress, fixed issues, and new features by visiting our Release Notes.</p>
                                             <Link to="/docs/news" className="btn btn-sm text-uppercase font-weight-bold">
@@ -87,25 +83,25 @@ class Index extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="row">
-                            <div className="col-md-10 mx-auto">
-                                <div className="card wow fadeInLeft" data-wow-offset="100">
-                                    <div className="row">
-                                        <div className="col-md-6 text-center">
-                                            <div className="card-body mx-4">
-                                                <img className="pt-5" src={withPrefix("/images/home/library03.svg")} alt="" />
+                            <div className="row">
+                                <div className="col-md-10 mx-auto">
+                                    <div className="card wow fadeInLeft" data-wow-offset="100">
+                                        <div className="row">
+                                            <div className="col-md-6 text-center">
+                                                <div className="card-body mx-4">
+                                                    <img className="pt-5" src={withPrefix("/images/home/library03.svg")} alt="" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="col-md-6 text-center text-md-left">
-                                            <div className="card-body mx-4 pl-md-0 pt-5">
-                                                <h2 className="font-weight-bold">Component Library</h2>
-                                                <p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
-                                                <Link to="/docs/components/alerts.html" className="btn btn-sm text-uppercase font-weight-bold">
-                                                    <img className="mr-2" src={withPrefix("/images/home/chevron-right.svg")} alt="" />
-                                                    Learn More
-                                                </Link>
+                                            <div className="col-md-6 text-center text-md-left">
+                                                <div className="card-body mx-4 pl-md-0 pt-5">
+                                                    <h2 className="font-weight-bold">Component Library</h2>
+                                                    <p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
+                                                    <Link to="/docs/components/alerts.html" className="btn btn-sm text-uppercase font-weight-bold">
+                                                        <img className="mr-2" src={withPrefix("/images/home/chevron-right.svg")} alt="" />
+                                                        Learn More
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
