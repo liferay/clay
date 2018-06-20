@@ -10,15 +10,8 @@ title: "Introduction"
 
 To test the Clay components for web with a minimal configuration, load the CSS and JS from the JSDelivr.
 
-## CSS:
-> Copy-paste the stylesheet <link> into your <head> before all other stylesheets to load our Atlas skin.
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css">
-```
-
-## JS:
-> If you want to go beyond the static HTML, add our bundled library to get access to the full power of Clay!
-```html
 <script src="https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js"></script>
 ```
 
