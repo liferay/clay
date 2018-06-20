@@ -15,6 +15,7 @@ class HTML extends Component {
                     {this.props.headComponents}
 
                     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" />
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
                 </head>
                 <body {...this.props.bodyAttributes}>
                     <div
@@ -22,6 +23,7 @@ class HTML extends Component {
                         dangerouslySetInnerHTML={{ __html: this.props.body }}
                     />
                     {this.props.postBodyComponents}
+                    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
                 </body>
             </html>
         );
