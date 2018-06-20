@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
 import favicon32 from '../static/images/favicon-32x32.png';
 

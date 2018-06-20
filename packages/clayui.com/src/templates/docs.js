@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Helmet from "react-helmet"
+import React, { Component } from 'react';
+import Helmet from 'react-helmet'
 
-import docsSidebar from "../data/sidebars/doc-links.yaml"
+import docsSidebar from '../data/sidebars/doc-links.yaml'
 import Sidebar from '../components/Sidebar';
 import CodeTabs from '../components/CodeTabs';
 
