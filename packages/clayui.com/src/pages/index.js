@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from "react-helmet"
 import Link, { withPrefix } from "gatsby-link";
 import LayoutNav from "../components/LayoutNav/LayoutNav";
 import {WOW} from "wowjs";
@@ -14,8 +15,17 @@ class Index extends Component {
     }
 
     render() {
+        const description = "This is Clay. A web implementation of the Lexicon Experience Language; built by Liferay.";
+
         return (
             <div className="home">
+                <Helmet>
+                    <title>Clay</title>
+                    <meta name="description" content={description} />
+                    <meta name="og:description" content={description} />
+                    <meta name="twitter:description" content={description} />
+                    <meta name="og:title" content="Clay" />
+                </Helmet>
                 <main className="content">
                     <header className="header">
                         <LayoutNav />
