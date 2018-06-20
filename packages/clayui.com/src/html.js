@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 
+import favicon32 from '../static/images/favicon-32x32.png';
+
 class HTML extends Component {
     render() {
         return(
@@ -11,7 +13,7 @@ class HTML extends Component {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                     />
-                    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="16x16 32x32" />
+                    <link rel="shortcut icon" type="image/png" href={favicon32} sizes="16x16 32x32"/>
                     {this.props.headComponents}
 
                     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" />
