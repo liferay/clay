@@ -27,12 +27,6 @@
   "keywords": [
     "metal"
   ],
-  "babel": {
-    "presets": [
-      "metal-jsx",
-      "es2015"
-    ]
-  },
   "dependencies": {
     "billboard.js": "1.4.1",
     "d3": "5.0.0",
@@ -43,13 +37,12 @@
     "metal-state": "^2.16.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.0.0",
+    "@babel/cli": "7.0.0-beta.51",
+    "@babel/core": "7.0.0-beta.51",
+    "@babel/preset-env": "7.0.0-beta.51",
+    "babel-loader": "^8.0.0-beta",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-metal": "^4.0.0",
-    "babel-preset-metal-jsx": "^0.1.1",
+    "babel-plugin-incremental-dom": "3.4.0",
     "browserslist-config-clay-components": "^2.1.12",
     "clay-css": "^2.1.12",
     "css-loader": "^0.28.4",

@@ -249,8 +249,7 @@ class ClayTooltip extends Component {
 
 			this._eventHandler.removeAllListeners();
 
-			for (let i = 0, l = newSelectors.length; i < l; i++) {
-				const selector = newSelectors[i];
+			for (let selector of newSelectors) {
 
 				this._eventHandler.add(
 					dom.delegate(

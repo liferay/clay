@@ -1,0 +1,6 @@
+{
+	"presets": [
+			"./babel-preset-metal-jsx",
+			["@babel/preset-env"]
+	]
+}
