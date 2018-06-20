@@ -4815,6 +4815,14 @@ in-publish@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/in-publish/-/in-publish-2.0.0.tgz#e20ff5e3a2afc2690320b6dc552682a9c7fadf51"
 
+incremental-dom-string@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/incremental-dom-string/-/incremental-dom-string-0.0.2.tgz#d4a6abd5916df6346aae022c9ffac5fb90458ae6"
+
+incremental-dom@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/incremental-dom/-/incremental-dom-0.5.1.tgz#52f4539c3e9eee7cd112a6da052fb7162fefb0c3"
+
 indent-string@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-2.1.0.tgz#8e2d48348742121b4a8218b7a137e9a52049dc80"
@@ -6165,6 +6173,81 @@ merge-stream@^1.0.0:
 merge@^1.1.3, merge@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
+
+metal-component@^2.0.0, metal-component@^2.16.5:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-component/-/metal-component-2.16.5.tgz#e0bd4fdda80c0e0b4b354f996a972f8796906601"
+  dependencies:
+    metal "^2.16.5"
+    metal-dom "^2.16.5"
+    metal-events "^2.16.5"
+    metal-state "^2.16.5"
+
+metal-dom@^2.16.5:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-dom/-/metal-dom-2.16.5.tgz#f78e9460863d6fc0f746cf1ea5060fc15af6c33f"
+  dependencies:
+    metal "^2.16.5"
+    metal-events "^2.16.5"
+
+metal-events@^2.16.5, metal-events@^2.2.3:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-events/-/metal-events-2.16.5.tgz#f953ad0f03b1c0d7804ebb4de035f83586f00f21"
+  dependencies:
+    metal "^2.16.5"
+
+metal-incremental-dom@^2.16.5:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-incremental-dom/-/metal-incremental-dom-2.16.5.tgz#b7e2ec877de8ebd8a7803014251526a0068fcedd"
+  dependencies:
+    incremental-dom "^0.5.1"
+    incremental-dom-string "0.0.2"
+    metal "^2.16.5"
+    metal-component "^2.16.5"
+    metal-dom "^2.16.5"
+
+metal-keyboard-focus@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/metal-keyboard-focus/-/metal-keyboard-focus-2.0.1.tgz#323704c47d93b640fad599ac65a0e8dee5a5045f"
+  dependencies:
+    metal "^2.0.0"
+    metal-events "^2.2.3"
+
+metal-soy-bundle@^2.16.5:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-soy-bundle/-/metal-soy-bundle-2.16.5.tgz#17a65616631eede91a872743a13bc6e816c8c372"
+  dependencies:
+    metal-incremental-dom "^2.16.5"
+
+metal-soy@^2.0.0:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-soy/-/metal-soy-2.16.5.tgz#d2bdaf29ada1703f5000246f1975364fefca6aed"
+  dependencies:
+    metal "^2.16.5"
+    metal-component "^2.16.5"
+    metal-dom "^2.16.5"
+    metal-incremental-dom "^2.16.5"
+    metal-soy-bundle "^2.16.5"
+    metal-state "^2.16.5"
+
+metal-state@^2.16.5:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-state/-/metal-state-2.16.5.tgz#47c2a1b985c04a4e7e9aaacb623219a36a9c82fa"
+  dependencies:
+    metal "^2.16.5"
+    metal-events "^2.16.5"
+
+metal-tabs@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/metal-tabs/-/metal-tabs-2.3.1.tgz#3dda4197356e9a63636bc903cb5dc7b04c520c44"
+  dependencies:
+    metal-component "^2.0.0"
+    metal-keyboard-focus "^2.0.0"
+    metal-soy "^2.0.0"
+
+metal@^2.0.0, metal@^2.16.5:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal/-/metal-2.16.5.tgz#7976267c0ff98f9113991caf7e948c769163f7fb"
 
 methods@~1.1.2:
   version "1.1.2"
