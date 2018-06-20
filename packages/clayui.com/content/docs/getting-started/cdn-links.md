@@ -18,7 +18,7 @@ Feel free to choose a specific version of the [CDN](https://www.jsdelivr.com/pac
 
 > If you want to go beyond the static HTML, add our bundled library to get access to the full power of Clay!
 ```html
-<script src= "https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js"></script>
 ```
 
 </article>
