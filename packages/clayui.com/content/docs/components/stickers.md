@@ -14,9 +14,9 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 > Stickers come in 4 sizes sm, normal, lg, and xl . Create your own custom size with the `sticker-size` mixin.
 
-<span class="sticker sticker-primary sticker-sm">133</span>{sp}
-<span class="sticker sticker-secondary">133</span>{sp}
-<span class="sticker sticker-lg sticker-success">133</span>{sp}
+<span class="sticker sticker-primary sticker-sm">133</span>
+<span class="sticker sticker-secondary">133</span>
+<span class="sticker sticker-lg sticker-success">133</span>
 <span class="sticker sticker-danger sticker-xl">133</span>
 
 ```soy
@@ -77,11 +77,11 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 ### Colors
 
-<span class="sticker sticker-primary">133</span>{sp}
-<span class="sticker sticker-secondary">133</span>{sp}
-<span class="sticker sticker-success">133</span>{sp}
-<span class="sticker sticker-info">133</span>{sp}
-<span class="sticker sticker-warning">133</span>{sp}
+<span class="sticker sticker-primary">133</span>
+<span class="sticker sticker-secondary">133</span>
+<span class="sticker sticker-success">133</span>
+<span class="sticker sticker-info">133</span>
+<span class="sticker sticker-warning">133</span>
 <span class="sticker sticker-danger">133</span>
 
 ```soy
@@ -147,7 +147,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 > Use it only with files and folders. You can place up to 3 characters inside it or an icon. Always capital letters.
 
-<span class="sticker sticker-primary">JPG</span>{sp}
+<span class="sticker sticker-primary">JPG</span>
 <span class="sticker sticker-primary">
 	<span class="inline-item">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
@@ -195,7 +195,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 > Use it only with people. You can places up to 2 characters inside it or an image. Always capital letters.
 
-<span class="sticker sticker-primary rounded-circle">JP</span>{sp}
+<span class="sticker sticker-primary rounded-circle">JP</span>
 <span class="sticker sticker-primary rounded-circle">
 	<span class="sticker-overlay">
 		<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">

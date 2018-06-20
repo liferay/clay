@@ -23,7 +23,7 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-					<span class="navbar-text-truncate">Filter and Order</span>{sp}
+					<span class="navbar-text-truncate">Filter and Order</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/images/icons/icons.svg#caret-bottom" />
 					</svg>

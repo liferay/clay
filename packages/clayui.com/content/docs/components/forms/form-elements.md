@@ -16,7 +16,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 <div class="sheet">
 	<div class="form-group">
 		<label for="basicInputTypeText">
-			Text{sp}
+			Text
 			<span class="reference-mark">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
 					<use xlink:href="/images/icons/icons.svg#asterisk" />

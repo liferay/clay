@@ -12,10 +12,10 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 ### Labels
 
-<span class="label label-secondary"><span class="label-item label-item-expand">Label Text</span></span>{sp}
-<span class="label label-info"><span class="label-item label-item-expand">Status</span></span>{sp}
-<span class="label label-warning"><span class="label-item label-item-expand">Pending</span></span>{sp}
-<span class="label label-danger"><span class="label-item label-item-expand">Rejected</span></span>{sp}
+<span class="label label-secondary"><span class="label-item label-item-expand">Label Text</span></span>
+<span class="label label-info"><span class="label-item label-item-expand">Status</span></span>
+<span class="label label-warning"><span class="label-item label-item-expand">Pending</span></span>
+<span class="label label-danger"><span class="label-item label-item-expand">Rejected</span></span>
 <span class="label label-success"><span class="label-item label-item-expand">Approved</span></span>
 
 ```soy
@@ -84,8 +84,8 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 > Use `label-lg` to make the label larger or use the mixin `label-size($sassMap)` to create a custom sized label.
 
-<span class="label label-secondary"><span class="label-item label-item-expand">Normal Label</span></span>{sp}
-<span class="label label-lg label-secondary"><span class="label-item label-item-expand">Large Label</span></span>{sp}
+<span class="label label-secondary"><span class="label-item label-item-expand">Normal Label</span></span>
+<span class="label label-lg label-secondary"><span class="label-item label-item-expand">Large Label</span></span>
 
 ```soy
 {call ClayLabel.render}

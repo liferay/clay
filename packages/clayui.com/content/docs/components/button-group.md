@@ -91,7 +91,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -104,7 +104,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-info" type="button">Info</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-info btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -117,7 +117,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-success" type="button">Success</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-success btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -130,7 +130,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-warning" type="button">Warning</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-warning btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -143,7 +143,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-danger" type="button">Danger</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-danger btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -156,7 +156,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 
 ```html
 <div class="btn-group dropdown" role="group">
@@ -261,7 +261,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Separated link</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropup" role="group">
 	<button class="btn btn-secondary" type="button">Dropup</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -276,7 +276,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Separated link</a>
 	</div>
-</div>{sp}
+</div>
 
 ```html
 <div class="btn-group dropup" role="group">
@@ -475,17 +475,17 @@ Button groups are used to switch between complementary views for example, but th
 	<button class="btn btn-secondary" type="button">Left</button>
 	<button class="btn btn-secondary" type="button">Middle</button>
 	<button class="btn btn-secondary" type="button">Right</button>
-</div>{sp}
+</div>
 <div class="btn-group" role="group">
 	<button class="btn btn-secondary" type="button">Left</button>
 	<button class="btn btn-secondary" type="button">Middle</button>
 	<button class="btn btn-secondary" type="button">Right</button>
-</div>{sp}
+</div>
 <div class="btn-group btn-group-lg" role="group">
 	<button class="btn btn-secondary" type="button">Left</button>
 	<button class="btn btn-secondary" type="button">Middle</button>
 	<button class="btn btn-secondary" type="button">Right</button>
-</div>{sp}
+</div>
 
 ```html
 <div class="btn-group btn-group-sm" role="group">
@@ -517,7 +517,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -530,7 +530,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group btn-group-lg dropdown" role="group">
 	<button class="btn btn-info" type="button">Info</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-info btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -543,7 +543,7 @@ Button groups are used to switch between complementary views for example, but th
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 
 ```html
 <div class="btn-group btn-group-sm dropdown" role="group">
@@ -626,7 +626,7 @@ Button groups are used to switch between complementary views for example, but th
 			<a class="dropdown-item" href="#1">Dropdown link</a>
 		</div>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group-vertical" role="group">
 	<button class="btn btn-secondary" type="button">Button</button>
 	<button class="btn btn-secondary" type="button">Button</button>
@@ -666,7 +666,7 @@ Button groups are used to switch between complementary views for example, but th
 			<a class="dropdown-item" href="#1">Dropdown link</a>
 		</div>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group-vertical btn-group-lg" role="group">
 	<button class="btn btn-secondary" type="button">Button</button>
 	<button class="btn btn-secondary" type="button">Button</button>
@@ -706,7 +706,7 @@ Button groups are used to switch between complementary views for example, but th
 			<a class="dropdown-item" href="#1">Dropdown link</a>
 		</div>
 	</div>
-</div>{sp}
+</div>
 
 ```html
 <div class="btn-group-vertical btn-group-sm" role="group">

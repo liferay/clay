@@ -14,18 +14,18 @@ Buttons communicate an action to happen on user interaction.
 
 #### Default state
 
-<button class="btn btn-primary" type="button">Primary</button>{sp}
+<button class="btn btn-primary" type="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
-</button>{sp}
-<button class="btn btn-secondary" type="button">Secondary</button>{sp}
+</button>
+<button class="btn btn-secondary" type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
-</button>{sp}
+</button>
 <button class="btn btn-link" type="button">Link</button>
 
 ```soy
@@ -88,18 +88,18 @@ Buttons communicate an action to happen on user interaction.
 
 #### Disabled State
 
-<button class="btn btn-primary" disabled type="button">Primary</button>{sp}
+<button class="btn btn-primary" disabled type="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
-</button>{sp}
-<button class="btn btn-secondary" disabled type="button">Secondary</button>{sp}
+</button>
+<button class="btn btn-secondary" disabled type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
-</button>{sp}
+</button>
 <button class="btn btn-link" disabled type="button">Link</button>
 
 ```soy
@@ -171,7 +171,7 @@ Buttons communicate an action to happen on user interaction.
 
 ### Sizes
 
-<button class="btn btn-primary btn-sm" type="button">Small</button>{sp}
+<button class="btn btn-primary btn-sm" type="button">Small</button>
 <button class="btn btn-primary" type="button">Default</button>
 
 ```soy
@@ -210,7 +210,7 @@ Buttons communicate an action to happen on user interaction.
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/images/icons/icons.svg#blogs"></use>
 	</svg>
-</button>{sp}
+</button>
 <button class="btn btn-monospaced btn-secondary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/images/icons/icons.svg#blogs"></use>
@@ -293,7 +293,7 @@ Buttons communicate an action to happen on user interaction.
 
 > All buttons can also be configured at block level. Use this configuration in those cases that you need the user to realize there is an important action to be done. It could be used as a load more action below a list, as an example. Please do not use it in forms. Be always careful with the type button to use, primary is not always the best choice neither the only configuration.
 
-<button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>{sp}
+<button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
 <button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
 
 ```soy
@@ -335,7 +335,7 @@ Buttons communicate an action to happen on user interaction.
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
@@ -348,7 +348,7 @@ Buttons communicate an action to happen on user interaction.
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 
 ```soy
 {call ClayDropdown.render}
@@ -424,7 +424,7 @@ Buttons communicate an action to happen on user interaction.
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -452,7 +452,7 @@ Buttons communicate an action to happen on user interaction.
 		<div class="dropdown-divider"></div>
 		<a class="dropdown-item" href="#1">Scope</a>
 	</div>
-</div>{sp}
+</div>
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">

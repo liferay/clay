@@ -16,7 +16,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 <div class="sheet">
 	<div class="form-group">
 		<label for="inputNormal1">
-			normal{sp}
+			normal
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
@@ -37,7 +37,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	</div>
 	<div class="form-group has-success">
 		<label for="inputSuccess1">
-			has-success{sp}
+			has-success
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
@@ -58,7 +58,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	</div>
 	<div class="form-group has-warning">
 		<label for="inputWarning1">
-			has-warning{sp}
+			has-warning
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
@@ -79,7 +79,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	</div>
 	<div class="form-group has-error">
 		<label for="inputError1">
-			has-error{sp}
+			has-error
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 				<use xlink:href="/images/icons/icons.svg#asterisk" />
 			</svg>
@@ -207,7 +207,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Checkbox with Success{sp}</span>
+								<span class="custom-control-label-text">Custom Checkbox with Success</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/images/icons/icons.svg#asterisk" />
 								</svg>
@@ -220,7 +220,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Checkbox with Warning{sp}</span>
+								<span class="custom-control-label-text">Custom Checkbox with Warning</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/images/icons/icons.svg#asterisk" />
 								</svg>
@@ -233,7 +233,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 						<label>
 							<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Checkbox with Error{sp}</span>
+								<span class="custom-control-label-text">Custom Checkbox with Error</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/images/icons/icons.svg#asterisk" />
 								</svg>
@@ -250,7 +250,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Radio with Success{sp}</span>
+								<span class="custom-control-label-text">Custom Radio with Success</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/images/icons/icons.svg#asterisk" />
 								</svg>
@@ -263,7 +263,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Radio with Warning{sp}</span>
+								<span class="custom-control-label-text">Custom Radio with Warning</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/images/icons/icons.svg#asterisk" />
 								</svg>
@@ -276,7 +276,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 						<label>
 							<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
 							<span class="custom-control-label">
-								<span class="custom-control-label-text">Custom Radio with Error{sp}</span>
+								<span class="custom-control-label-text">Custom Radio with Error</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 									<use xlink:href="/images/icons/icons.svg#asterisk" />
 								</svg>
@@ -387,7 +387,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	<div class="has-success">
 		<div class="form-group">
 			<label for="selectElementSuccess">
-				Select Element with Success{sp}
+				Select Element with Success
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/images/icons/icons.svg#asterisk" />
 				</svg>
@@ -403,7 +403,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	<div class="has-warning">
 		<div class="form-group">
 			<label for="selectElementWarning">
-				Select Box with Warning{sp}
+				Select Box with Warning
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/images/icons/icons.svg#asterisk" />
 				</svg>
@@ -419,7 +419,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	<div class="has-error">
 		<div class="form-group">
 			<label for="selectElementError">
-				Select Box with Error{sp}
+				Select Box with Error
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/images/icons/icons.svg#asterisk" />
 				</svg>
@@ -497,7 +497,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	<div class="has-success">
 		<div class="form-group">
 			<label for="multipleSelectElementSuccess">
-				Multiple Select Element with Success{sp}
+				Multiple Select Element with Success
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/images/icons/icons.svg#asterisk" />
 				</svg>
@@ -513,7 +513,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	<div class="has-warning">
 		<div class="form-group">
 			<label for="multipleSelectElementWarning">
-				Multiple Select Element with Warning{sp}
+				Multiple Select Element with Warning
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/images/icons/icons.svg#asterisk" />
 				</svg>
@@ -529,7 +529,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	<div class="has-error">
 		<div class="form-group">
 			<label for="multipleSelectElementError">
-				Multiple Select Element with Error{sp}
+				Multiple Select Element with Error
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="/images/icons/icons.svg#asterisk" />
 				</svg>

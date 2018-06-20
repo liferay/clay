@@ -1023,7 +1023,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 `modal-danger`, `modal-info`, `modal-success`, or `modal-warning` are helper classes that style a modal based on that state, add it to modal-dialog.
 
-<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>{sp}
+<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>
 <div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">
 	<div class="modal-danger modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -1057,7 +1057,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 		</div>
 	</div>
 </div>
-<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>{sp}
+<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>
 <div aria-labelledby="clayModalInfoLabel" class="fade modal" id="clayModalInfo" role="dialog" tabindex="-1">
 	<div class="modal-info modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -1087,7 +1087,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 		</div>
 	</div>
 </div>
-<button class="btn btn-success" data-target="#clayModalSuccess" data-toggle="modal" type="button">Modal Success</button>{sp}
+<button class="btn btn-success" data-target="#clayModalSuccess" data-toggle="modal" type="button">Modal Success</button>
 <div aria-labelledby="clayModalSuccessLabel" class="fade modal" id="clayModalSuccess" role="dialog" tabindex="-1">
 	<div class="modal-success modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -1120,7 +1120,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 		</div>
 	</div>
 </div>
-<button class="btn btn-warning" data-target="#clayModalWarning" data-toggle="modal" type="button">Modal Warning</button>{sp}
+<button class="btn btn-warning" data-target="#clayModalWarning" data-toggle="modal" type="button">Modal Warning</button>
 <div aria-labelledby="clayModalWarningLabel" class="fade modal" id="clayModalWarning" role="dialog" tabindex="-1">
 	<div class="modal-warning modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">

@@ -749,7 +749,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					</span>
 				</td>
 				<td colspan="2">
-					<button class="btn btn-primary btn-sm" type="button">Save</button>{sp}
+					<button class="btn btn-primary btn-sm" type="button">Save</button>
 					<button class="btn btn-secondary btn-sm" type="button">Cancel</button>
 				</td>
 			</tr>
@@ -937,7 +937,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 					</span>
 				</td>
 				<td colspan="2">
-					<button class="btn btn-primary btn-sm" type="button">Save</button>{sp}
+					<button class="btn btn-primary btn-sm" type="button">Save</button>
 					<button class="btn btn-secondary btn-sm" type="button">Cancel</button>
 				</td>
 			</tr>
