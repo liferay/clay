@@ -202,6 +202,8 @@ const ChartBase = {
 			bubble: state.bubble,
 			color: color,
 			data,
+			donut: state.donut,
+			gauge: state.gauge,
 			grid: state.grid,
 			legend: state.legend,
 			line: state.line,
