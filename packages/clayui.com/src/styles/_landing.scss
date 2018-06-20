@@ -61,7 +61,7 @@
 
 .intro {
     background-color: $brand-dark;
-    background-image: url(/images/home/patternbg.svg);
+    background-image: url('/images/home/patternbg.svg');
     background-size: auto;
     color: $brand-light;
     margin-bottom: 32px;
@@ -150,7 +150,7 @@
 .contact-us {
     background-attachment: fixed;
     background-color: $brand-light;
-    background-image: url(/images/home/bg_white.svg);
+    background-image: url('/images/home/bg_white.svg');
     background-position: center;
     padding: 96px 0;
 
