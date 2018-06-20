@@ -94,7 +94,7 @@ title: "Form Elements (Custom)"
 	{param label: 'Indeterminate disabled' /}
 {/call}
 ```
-```text/html
+```html
 <clay-checkbox label="Unchecked"></clay-checkbox>
 
 <clay-checkbox
@@ -124,7 +124,7 @@ title: "Form Elements (Custom)"
 	label="Indeterminate disabled">
 </clay-checkbox>
 ```
-```text/html
+```html
 <div class="custom-control custom-checkbox">
 	<label>
 		<input class="custom-control-input" type="checkbox">
@@ -223,7 +223,7 @@ title: "Form Elements (Custom)"
 	{param name: 'radio' /}
 {/call}
 ```
-```text/html
+```html
 <clay-radio
 	checked="true"
 	id="radio1"
@@ -237,7 +237,7 @@ title: "Form Elements (Custom)"
 	name="radio">
 </clay-radio>
 ```
-```text/html
+```html
 <div class="custom-control custom-radio">
 	<label>
 		<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
@@ -300,7 +300,7 @@ title: "Form Elements (Custom)"
 	{param name: 'radio-stacked' /}
 {/call}
 ```
-```text/html
+```html
 <clay-radio
 	disabled="true"
 	id="radioStacked3"
@@ -314,7 +314,7 @@ title: "Form Elements (Custom)"
 	name="radio-stacked">
 </clay-radio>
 ```
-```text/html
+```html
 <div class="custom-control custom-control-inline custom-radio">
 	<label>
 		<input class="custom-control-input" disabled id="radioStacked3" name="radio-stacked" type="radio">

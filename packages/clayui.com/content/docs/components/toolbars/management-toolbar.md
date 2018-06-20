@@ -238,7 +238,7 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 	{param totalItems: 7 /}
 {/call}
 ```
-```text/html
+```html
 <clay-management-toolbar
 	creationMenu='
 		"items": [
@@ -293,7 +293,7 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 	totalItems="7">
 </clay-management-toolbar>
 ```
-```text/html
+```html
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">
@@ -504,7 +504,7 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 	</nav>
 </div>
 
-```text/html
+```html
 <nav class="management-bar management-bar-light navbar navbar-expand-md">
 	<div class="container-fluid container-fluid-max-xl">
 		<div class="navbar-form navbar-form-autofit">
@@ -556,7 +556,7 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 	</nav>
 </div>
 
-```text/html
+```html
 <nav class="tbar subnav-tbar subnav-tbar-primary">
 	<div class="container-fluid container-fluid-max-xl">
 		<ul class="tbar-nav">
@@ -599,7 +599,7 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 	</nav>
 </div>
 
-```text/html
+```html
 <nav class="tbar subnav-tbar subnav-tbar-primary">
 	<div class="container-fluid container-fluid-max-xl">
 		<ul class="tbar-nav">

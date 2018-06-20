@@ -30,7 +30,7 @@ Multi step form simplified is used as a progressive disclosure method to guide t
 	</div>
 </div>
 
-```text/html
+```html
 <div class="tbar subnav-tbar subnav-tbar-light">
 	<div class="container-fluid container-fluid-max-xl">
 		<div class="tbar-nav">

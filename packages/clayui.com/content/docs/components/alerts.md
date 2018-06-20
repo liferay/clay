@@ -97,7 +97,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	</div>
 </div>
 
-```text/html
+```html
 <div class="alert-container container">
 	<div class="alert-notifications alert-notifications-absolute">
 		<div class="alert alert-dismissible alert-danger" role="alert">
@@ -179,7 +179,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	{param title: 'Warning' /}
 {/call}
 ```
-```text/html
+```html
 <clay-alert
 	style="danger"
 	message='This is an error message'
@@ -207,7 +207,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	title="Warning">
 </clay-alert>
 ```
-```text/html
+```html
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
@@ -345,7 +345,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	{param title: 'Warning' /}
 {/call}
 ```
-```text/html
+```html
 <clay-stripe
 	style="danger"
 	message='This is an error message'
@@ -373,7 +373,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	title="Warning"
 </clay-stripe>
 ```
-```text/html
+```html
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
@@ -471,14 +471,14 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	{param title: 'Warning' /}
 {/call}
 ```
-```text/html
+```html
 <clay-alert
 	style="warning"
 	message='This alert is a <a href="#">warning message</a>.' spritemap="/images/icons/icons.svg"
 	title="Warning">
 </clay-alert>
 ```
-```text/html
+```html
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
@@ -518,7 +518,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	{param title: 'Success' /}
 {/call}
 ```
-```text/html
+```html
 <clay-alert
 	closeable="true"
 	style="success"
@@ -527,7 +527,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 	title="Success">
 </clay-alert>
 ```
-```text/html
+```html
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
@@ -551,7 +551,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 
 > A fixed positioned container for placing alerts on the top right corner of the page. This component can generally be placed anywhere on the page.
 
-```text/html
+```html
 <div class="alert-notifications alert-notifications-fixed">
 	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
 		...

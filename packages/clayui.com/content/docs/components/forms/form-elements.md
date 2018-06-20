@@ -59,7 +59,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label for="basicInputTypeText">
 		Text
@@ -194,7 +194,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	] /}
 {/call}
 ```
-```text/html
+```html
 <clay-select
 	id="regularSelectElement"
 	label="Regular Select Element"
@@ -208,7 +208,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	options='[{"label":"Sample 1", "value": "1", "label":"Sample 2", "value": "2"}]'>
 </clay-select>
 ```
-```text/html
+```html
 <div class="form-group">
 	<label for="regularSelectElement">Regular Select Element</label>
 	<select class="form-control" id="regularSelectElement">
@@ -249,7 +249,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label class="sr-only" for="inputFile">FILE UPLOAD</label>
 	<input id="inputFile" type="file">
@@ -353,7 +353,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	] /}
 {/call}
 ```
-```text/html
+```html
 <div class="form-group">
 	<label class="disabled" for="disabledTextInput">Text Input</label>
 	<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
@@ -428,7 +428,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	</fieldset>
 </div>
 
-```text/html
+```html
 <fieldset disabled>
 	<div class="form-group">
 		<label>Use fieldset to group related elements in a form and ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
@@ -473,7 +473,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label for="readonlyTextInput">Text Input (Read Only)</label>
 	<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
@@ -508,7 +508,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label for="smallTextInput">Small text input</label>
 	<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
@@ -671,7 +671,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group-autofit">
 	<div class="form-group-item">
 		<label for="formInlineAutofitTextInput1">
@@ -874,7 +874,7 @@ Forms is one of the most used patterns in Lexicon. Forms capture information fro
 	</form>
 </div>
 
-```text/html
+```html
 <style>
 	@media (min-width: 576px) {
 		.my-custom-form .form-group-item-label {

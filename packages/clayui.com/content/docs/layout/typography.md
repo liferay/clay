@@ -18,7 +18,7 @@ title: "Typography"
     <h6>h6 Article Heading <small>Sub text</small></h6>
 </div>
 
-```text/html
+```html
 <h1>h1 Article Heading <small>Sub text</small></h1>
 <h2>h2 Article Heading <small>Sub text</small></h2>
 <h3>h3 Article Heading <small>Sub text</small></h3>
@@ -37,7 +37,7 @@ title: "Typography"
     <p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
 </div>
 
-```text/html
+```html
 <p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
 ```
 </article>
@@ -64,7 +64,7 @@ title: "Typography"
     <p>capitalized text: <span class="text-capitalize">capitalized text</span></p>
 </div>
 
-```text/html
+```html
 <p><a href="#1">Anchor Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a></p>
 <p><span>Regular Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span></p>
 <p><mark>Marked Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</mark></p>
@@ -97,7 +97,7 @@ title: "Typography"
     <div><a class="reference-mark" href="#referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/images/icons/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
 </div>
 
-```text/html
+```html
 <div>Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span> with text.</div>
 <div>Reference Mark<span class="reference-mark" id="referenceMark4"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="/images/icons/icons.svg#asterisk" /></svg></span> with lexicon-icon-asterisk.</div>
 <h4>Footnotes</h4>
@@ -117,7 +117,7 @@ title: "Typography"
     <p class="text-truncate">Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
 </div>
 
-```text/html
+```html
 <p class="text-truncate">Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
 ```
 </article>
@@ -135,7 +135,7 @@ title: "Typography"
     </p>
 </div>
 
-```text/html
+```html
 <a class="text-truncate-inline" href="#1"><span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></a> Milk filter lungo as galão roast that crema <a class="text-truncate-inline" href="#1"><span class="text-truncate">
 ```
 </article>
@@ -169,7 +169,7 @@ title: "Typography"
     </div>
 </div>
 
-```text/html
+```html
 <a href="#1" class="text-muted">text-muted: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
 <a href="#1" class="text-primary">text-primary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
 <a href="#1" class="text-secondary">text-secondary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
@@ -206,7 +206,7 @@ title: "Typography"
     </div>
 </div>
 
-```text/html
+```html
 <span class="bg-primary">bg-primary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
 <span class="bg-secondary">bg-secondary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
 <span class="bg-success">bg-success: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
@@ -234,7 +234,7 @@ title: "Typography"
     </address>
 </div>
 
-```text/html
+```html
 <address>
     <strong>Liferay, Inc.</strong><br>
     1400 Montefino Ave.<br>
@@ -257,7 +257,7 @@ title: "Typography"
     <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
 </div>
 
-```text/html
+```html
 <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
 ```
 </article>
@@ -271,7 +271,7 @@ title: "Typography"
     <p>For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit settings.</p>
 </div>
 
-```text/html
+```html
 <p>For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit settings.</p>
 ```
 </article>
@@ -285,7 +285,7 @@ title: "Typography"
     <p>For example, <var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
 </div>
 
-```text/html
+```html
 <p>For example, <var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
 ```
 </article>
@@ -299,7 +299,7 @@ title: "Typography"
     <samp>This text is meant to be treated as sample output from a computer program.</samp>
 </div>
 
-```text/html
+```html
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
 ```
 </article>
@@ -319,7 +319,7 @@ title: "Typography"
     </blockquote>
 </div>
 
-```text/html
+```html
 <blockquote class="blockquote">
     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</div>
 </blockquote>

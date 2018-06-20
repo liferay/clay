@@ -129,7 +129,7 @@ title: "Panels"
 	</div>
 </div>
 
-```text/html
+```html
 <div aria-orientation="vertical" class="panel-group" id="accordion03" role="tablist">
 	<div class="panel panel-secondary">
 		<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed panel-header panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">

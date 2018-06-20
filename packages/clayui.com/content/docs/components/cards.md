@@ -95,7 +95,7 @@ Cards are a very specific visual representation of data.
 	{param title: 'thumbnail_coffee.jpg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
 	imageAlt="thumbnail"
@@ -110,7 +110,7 @@ Cards are a very specific visual representation of data.
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
 ```
-```text/html
+```html
 <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
 	<div class="card">
 		<div class="aspect-ratio card-item-first">
@@ -238,7 +238,7 @@ Cards are a very specific visual representation of data.
 	{param title: 'thumbnail_coffee.jpg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
 	imageAlt="thumbnail"
@@ -253,7 +253,7 @@ Cards are a very specific visual representation of data.
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
 ```
-```text/html
+```html
 <div class="active card-type-asset form-check form-check-card form-check-top-left image-card">
 	<div class="card">
 		<div class="aspect-ratio card-item-first">
@@ -369,7 +369,7 @@ Cards are a very specific visual representation of data.
 	{param title: 'empty-background.png' /}
 {/call}
 ```
-```text/html
+```html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
 	labels='[{"label": "Rejected", "style": "danger"}]'
@@ -381,7 +381,7 @@ Cards are a very specific visual representation of data.
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
 ```
-```text/html
+```html
 <div class="card card-type-asset image-card">
 	<div class="aspect-ratio card-item-first">
 		<span class="sticker sticker-bottom-left sticker-info">PNG</span>
@@ -530,7 +530,7 @@ Cards are a very specific visual representation of data.
 	{param title: 'thumbnail_coffee.jpg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-image-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
 	icon="camera"
@@ -553,7 +553,7 @@ Cards are a very specific visual representation of data.
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
 ```
-```text/html
+```html
 <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
 	<div class="card">
 		<div class="aspect-ratio card-item-first">
@@ -723,7 +723,7 @@ Cards are a very specific visual representation of data.
 	{param userColor: 'danger' /}
 {/call}
 ```
-```text/html
+```html
 <clay-user-card
 	initials="HS"
 	name="User Name"
@@ -742,7 +742,7 @@ Cards are a very specific visual representation of data.
 	userColor="danger">
 </clay-user-card>
 ```
-```text/html
+```html
 <div class="card card-type-asset user-card">
 	<div class="aspect-ratio card-item-first">
 		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -934,7 +934,7 @@ Cards are a very specific visual representation of data.
 	{param title: 'deliverable.doc' /}
 {/call}
 ```
-```text/html
+```html
 <clay-file-card
 	icon="documents-and-media"
 	labels='[{"label": "Approved", "style": "success"}]'
@@ -957,7 +957,7 @@ Cards are a very specific visual representation of data.
 	title="deliverable.doc">
 </clay-file-card>
 ```
-```text/html
+```html
 <div class="card card-type-asset file-card">
 	<div class="aspect-ratio card-item-first">
 		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -1131,7 +1131,7 @@ Cards are a very specific visual representation of data.
 	{param title: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual' /}
 {/call}
 ```
-```text/html
+```html
 <clay-horizontal-card
 	spritemap="/images/icons/icons.svg"
 	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
@@ -1144,7 +1144,7 @@ Cards are a very specific visual representation of data.
 	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
 </clay-horizontal-card>
 ```
-```text/html
+```html
 <div class="card card-horizontal card-type-directory">
 	<div class="card-body">
 		<div class="card-row">

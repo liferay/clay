@@ -64,7 +64,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -165,7 +165,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -249,7 +249,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline timeline-right">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -345,7 +345,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline timeline-center">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -444,7 +444,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline timeline-center timeline-even">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -538,7 +538,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline timeline-center timeline-odd">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">
@@ -632,7 +632,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline timeline-center timeline-even timeline-right-xs-only">
 	<li class="timeline-item">
 		<div class="panel panel-default">
@@ -741,7 +741,7 @@ title: Timelines
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="timeline timeline-center timeline-spacing-xl">
 	<li class="timeline-item">
 		<div class="panel panel-secondary">

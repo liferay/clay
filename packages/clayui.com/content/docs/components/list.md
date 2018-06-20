@@ -138,7 +138,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-list
 	items='[
 		{
@@ -202,7 +202,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	spritemap="/images/icons/icons.svg">
 </clay-list>
 ```
-```text/html
+```html
 <li class="list-group-item list-group-item-flex">
 	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
@@ -391,7 +391,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-list
 	items='[
 		{
@@ -456,7 +456,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	spritemap="/images/icons/icons.svg">
 </clay-list>
 ```
-```text/html
+```html
 <li class="list-group-item list-group-item-flex active">
 	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
@@ -661,7 +661,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-list
 	items='[
 		{
@@ -730,7 +730,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	spritemap="/images/icons/icons.svg">
 </clay-list>
 ```
-```text/html
+```html
 <ul class="list-group show-quick-actions-on-hover">
 	<li class="list-group-header">
 		<h3 class="list-group-header-title">List Section</h3>
@@ -1042,7 +1042,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-list
 	items='[
 		{
@@ -1140,7 +1140,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	spritemap="/images/icons/icons.svg">
 </clay-list>
 ```
-```text/html
+```html
 <ul class="list-group show-quick-actions-on-hover">
 	<li class="list-group-header">
 		<h3 class="list-group-header-title">List Section</h3>

@@ -43,7 +43,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	{param style: 'danger' /}
 {/call}
 ```
-```text/html
+```html
 <clay-sticker
 	label="133"
 	size="sm"
@@ -64,7 +64,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	style="danger">
 </clay-sticker>
 ```
-```text/html
+```html
 <span class="sticker sticker-primary sticker-sm">133</span>
 <span class="sticker sticker-secondary">133</span>
 <span class="sticker sticker-lg sticker-success">133</span>
@@ -115,7 +115,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	{param style: 'danger' /}
 {/call}
 ```
-```text/html
+```html
 <clay-sticker label="133"></clay-sticker>
 
 <clay-sticker label="133" style="secondary"></clay-sticker>
@@ -128,7 +128,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 <clay-sticker label="133" style="danger"></clay-sticker>
 ```
-```text/html
+```html
 <span class="sticker sticker-primary">133</span>
 <span class="sticker sticker-secondary">133</span>
 <span class="sticker sticker-success">133</span>
@@ -168,7 +168,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	{param style: 'primary' /}
 {/call}
 ```
-```text/html
+```html
 <clay-sticker
 	label="JPG"
 	style="primary">
@@ -180,7 +180,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	style="primary">
 </clay-sticker>
 ```
-```text/html
+```html
 <span class="sticker sticker-primary">JPG</span>
 <span class="sticker sticker-primary">
 	<span class="inline-item">
@@ -215,7 +215,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	{param shape: 'circle' /}
 {/call}
 ```
-```text/html
+```html
 <clay-sticker
 	label="JP"
 	style="primary"
@@ -228,7 +228,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	shape="circle">
 </clay-sticker>
 ```
-```text/html
+```html
 <span class="sticker sticker-primary rounded-circle">JP</span>
 <span class="sticker sticker-primary rounded-circle">
 	<span class="sticker-overlay">
@@ -307,7 +307,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	{param style: 'danger' /}
 {/call}
 ```
-```text/html
+```html
 <clay-sticker
 	label="133"
 	position="top-left"
@@ -332,7 +332,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	style="danger">
 </clay-sticker>
 ```
-```text/html
+```html
 <div class="aspect-ratio">
 	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
 	<span class="sticker sticker-danger sticker-top-left">PDF</span>

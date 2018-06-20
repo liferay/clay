@@ -62,7 +62,7 @@ Progress bar is a progress indicator used to show the completion percentage of a
 	{param status: 'complete' /}
 {/call}
 ```
-```text/html
+```html
 <clay-progress-bar
 	spritemap="/images/icons/icons.svg"
 	value="30">
@@ -79,7 +79,7 @@ Progress bar is a progress indicator used to show the completion percentage of a
 	status="complete">
 </clay-progress-bar>
 ```
-```text/html
+```html
 <div class="progress-group">
 	<div class="progress">
 		<div aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 30%;"></div>

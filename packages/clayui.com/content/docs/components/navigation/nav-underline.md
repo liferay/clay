@@ -14,7 +14,7 @@ title: "Nav Underline"
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 
-```text/html
+```html
 <ul class="nav nav-underline">
 	<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
@@ -86,7 +86,7 @@ title: "Nav Underline"
 	</div>
 </div>
 
-```text/html
+```html
 <ul class="nav nav-underline" role="tablist">
 	<li class="nav-item">
 		<a aria-controls="navUnderlineFields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#navUnderlineFields" id="navUnderlineFieldsTab" role="tab">Fields</a>

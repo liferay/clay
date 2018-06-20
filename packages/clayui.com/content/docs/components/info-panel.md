@@ -259,7 +259,7 @@ Information panel is an information container where to display relevant informat
 	</div>
 </div>
 
-```text/html
+```html
 <div class="sidebar sidebar-light">
 	<nav class="component-tbar tbar">
 		<div class="container-fluid">

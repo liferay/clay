@@ -29,12 +29,12 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 	{param symbol: 'add-cell' /}
 {/call}
 ```
-```text/html
+```html
 <clay-icon spritemap="path/to/icons.svg" symbol="add-column"></clay-icon>
 
 <clay-icon spritemap="path/to/icons.svg" symbol="add-cell"></clay-icon>
 ```
-```text/html
+```html
 <svg class="lexicon-icon">
 	<use xlink:href="path/to/icons.svg#add-column" />
 </svg>

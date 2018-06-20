@@ -50,7 +50,7 @@ title: "Pagination"
 	</li>
 </ul>
 
-```text/html
+```html
 <ul class="pagination">
 	<li class="disabled page-item">
 		<a class="page-link" href="#1" role="button">
@@ -163,7 +163,7 @@ title: "Pagination"
 	</ul>
 </div>
 
-```text/html
+```html
 <div class="pagination-bar">
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">

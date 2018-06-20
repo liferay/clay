@@ -10,14 +10,14 @@ title: "Introduction"
 
 To test the Clay components for web with a minimal configuration, load the CSS and JS from the JSDelivr.
 
-```text/html
+```html
 https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css
 https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js
 ```
 
 Then include some element in the HTML page where you want to render the component...
 
-```text/html
+```html
 <div id="myElement"></div>
 ```
 
@@ -68,7 +68,7 @@ npm install --save-dev babel-core babel-loader babel-preset-env webpack webpack-
 
 In order to demonstrate this our example consider creating an `index.html` file. This HTML file needs to include CSS and compiled JavaScript. Create this simple "Hello world!" in `index.html`.
 
-```text/html
+```html
 <html>
     <head>
         <title>My awesome Clay project!</title>

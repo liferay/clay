@@ -59,7 +59,7 @@ Buttons communicate an action to happen on user interaction.
 	{param type: 'button' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button label="Primary" type="button"></clay-button>
 
 <clay-button icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
@@ -70,7 +70,7 @@ Buttons communicate an action to happen on user interaction.
 
 <clay-button label="Link" style="link" type="button"></clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-primary" type="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
@@ -138,7 +138,7 @@ Buttons communicate an action to happen on user interaction.
 	{param type: 'button' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button disabled="true" label="Primary" type="button"></clay-button>
 
 <clay-button disabled="true" icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
@@ -149,7 +149,7 @@ Buttons communicate an action to happen on user interaction.
 
 <clay-button disabled="true" label="Link" style="link" type="button"></clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-primary"  disabledtype="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
@@ -184,12 +184,12 @@ Buttons communicate an action to happen on user interaction.
 	{param label: 'Default' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button label="Small" size="sm"></clay-button>
 
 <clay-button label="Default"></clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-secondary btn-sm" type="button">Small</button>
 
 <button class="btn btn-secondary" type="button">Default</button>
@@ -231,12 +231,12 @@ Buttons communicate an action to happen on user interaction.
 	{param style: 'secondary' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 
 <clay-button icon="blogs" monospaced="true" spritemap="/images/icons/icons.svg" style="secondary"></clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
 		<use xlink:href="/images/icons/icons.svg#blogs"></use>
@@ -270,7 +270,7 @@ Buttons communicate an action to happen on user interaction.
 	{param style: 'secondary' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button
 	label="share"
 	icon="share"
@@ -278,7 +278,7 @@ Buttons communicate an action to happen on user interaction.
 	style="secondary">
 </clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-secondary" type="button">
 	<span class="inline-item inline-item-before">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
@@ -308,12 +308,12 @@ Buttons communicate an action to happen on user interaction.
 	{param label: 'Normal Block Level Button' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button block="true" label="Small Block Level Button" size="sm"></clay-button>
 
 <clay-button block="true" label="Normal Block Level Button"></clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
 
 <button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
@@ -371,7 +371,7 @@ Buttons communicate an action to happen on user interaction.
 	{param triggerStyle: 'primary' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items='[{"label": "Action", "url": "#1"},{"separator": true, "type": : "group"},{"label": "Scope", "url": "#1"}]'
 	spritemap="/images/icons/icons.svg"
@@ -379,7 +379,7 @@ Buttons communicate an action to happen on user interaction.
 	triggerStyle="primary">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
@@ -439,7 +439,7 @@ Buttons communicate an action to happen on user interaction.
 	</div>
 </div>
 
-```text/html
+```html
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
@@ -479,7 +479,7 @@ Buttons communicate an action to happen on user interaction.
 	<button class="btn btn-secondary" disabled type="button">Agenda</button>
 </div>
 
-```text/html
+```html
 <div class="btn-group" role="group">
 	<button class="btn btn-secondary" type="button">Day</button>
 	<button class="active btn btn-secondary" type="button">Month</button>
@@ -506,10 +506,10 @@ Buttons communicate an action to happen on user interaction.
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button icon="plus" size="sm" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
 		<use xlink:href="/images/icons/icons.svg#plus"></use>
@@ -535,10 +535,10 @@ Buttons communicate an action to happen on user interaction.
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-button icon="ellipsis-v" size="sm" monospaced="true" spritemap="/images/icons/icons.svg"></clay-button>
 ```
-```text/html
+```html
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 		<use xlink:href="/images/icons/ellipsis-v.svg#plus"></use>

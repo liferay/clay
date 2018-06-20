@@ -81,7 +81,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 	</div>
 </div>
 
-```text/html
+```html
 <div class="container"></div>
 ```
 
@@ -176,7 +176,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 	</div>
 </div>
 
-```text/html
+```html
 <div class="container-fluid container-fluid-max-sm"></div>
 
 <div class="container-fluid container-fluid-max-md"></div>
@@ -243,7 +243,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 	</div>
 </div>
 
-```text/html
+```html
 <div class="container-fluid container-fluid-max-xl container-form-lg"></div>
 ```
 
@@ -381,7 +381,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 	</div>
 </div>
 
-```text/html
+```html
 <div class="container-fluid container-fluid-max-xl container-view"></div>
 ```
 

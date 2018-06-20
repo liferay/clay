@@ -31,7 +31,7 @@ title: "Toggle Switch"
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -88,7 +88,7 @@ title: "Toggle Switch"
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -182,7 +182,7 @@ title: "Toggle Switch"
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" type="checkbox">
@@ -316,7 +316,7 @@ title: "Toggle Switch"
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label class="toggle-switch">
 		<input class="toggle-switch-check" disabled type="checkbox">

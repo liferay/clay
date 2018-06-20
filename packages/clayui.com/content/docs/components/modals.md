@@ -60,7 +60,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param title: 'Modal Title' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	body="<h4>Modal Body</h4>"
 	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' size="sm"
@@ -68,7 +68,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	title="Modal Title">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
@@ -148,14 +148,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param title: 'Modal Title' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	body="<h4>Modal Body</h4>"
 	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
@@ -238,7 +238,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param title: 'Modal Title' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	body="<h4>Modal Body</h4>"
 	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' size="lg"
@@ -246,7 +246,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	title="Modal Title">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
@@ -487,7 +487,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param title: 'Add Picture to Documents and Media Library in Liferay Seven' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	body="..."
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
@@ -495,7 +495,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	title="Add Picture to Documents and Media Library in Liferay Seven">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
@@ -653,7 +653,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	</div>
 </div>
 
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
@@ -758,14 +758,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param title: 'Modal Title' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	body="<h4>Modal Body</h4>"
 	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
@@ -831,14 +831,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param title: 'Modal Title' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	body="<h4>Modal Body</h4>"
  	spritemap="/images/icons/icons.svg"
 	title="Modal Title">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
@@ -897,13 +897,13 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	body="<h4>Modal Body</h4>"
 	footerButtons='[{"label": "Primary"},{"label": "Close", "type": "close"}]' spritemap="/images/icons/icons.svg">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
@@ -977,14 +977,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param url: 'https://clayui.com' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
 	spritemap="/images/icons/icons.svg"
 	title="Add Picture to Documents and Media Library in Liferay Seven" url="https://clayui.com">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
@@ -1248,7 +1248,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	{param title: 'Modal Title' /}
 {/call}
 ```
-```text/html
+```html
 <clay-modal
 	footerButtons='[{"label": "Add"},{"label": "Close", "type": "close"}]' size="full-screen"
 	spritemap="/images/icons/icons.svg"
@@ -1277,7 +1277,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	title="Modal Title">
 </clay-modal>
 ```
-```text/html
+```html
 <button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>
 <div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">
 	<div class="modal-danger modal-dialog modal-full-screen-sm-down">
@@ -1373,7 +1373,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 	</div>
 </div>
 
-```text/html
+```html
 <button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal" type="button">Small Modal Inline Scroller</button>
 <div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">

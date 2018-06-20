@@ -121,7 +121,7 @@ Vertical navigation allows the navigation between the different pages.
 	</div>
 </div>
 
-```text/html
+```html
 <nav class="menubar menubar-transparent menubar-vertical-expand-lg">
 	<a aria-controls="menubarVerticalLgCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalLgCollapse01" role="button">
 		Details
@@ -340,7 +340,7 @@ Vertical navigation allows the navigation between the different pages.
 	</div>
 </div>
 
-```text/html
+```html
 <nav class="menubar menubar-transparent menubar-vertical-expand-md">
 	<a aria-controls="menubarVerticalCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalCollapse01" role="button">
 		Details

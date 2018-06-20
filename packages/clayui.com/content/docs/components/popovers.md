@@ -50,7 +50,7 @@ title: "Popovers and Tooltips"
 	</div>
 </div>
 
-```text/html
+```html
 <div class="popover clay-popover-top">
 	<div class="arrow"></div>
 	<div class="inline-scroller">
@@ -129,7 +129,7 @@ title: "Popovers and Tooltips"
 	</div>
 </div>
 
-```text/html
+```html
 <div class="tooltip clay-tooltip-right" role="tooltip">
 	<div class="arrow"></div>
 	<div class="tooltip-inner">

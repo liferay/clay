@@ -72,7 +72,7 @@ Header is toolbar that allows identification, navigation and display actions.
 	</div>
 </nav>
 
-```text/html
+```html
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">

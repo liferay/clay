@@ -47,7 +47,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink">
@@ -151,7 +151,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink input-group-prepend">
@@ -345,7 +345,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink">
@@ -555,7 +555,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	</div>
 </div>
 
-```text/html
+```html
 <div class="input-group">
 	<div class="input-group-item">
 		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
@@ -691,7 +691,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label for="">Custom Checkbox</label>
 	<div class="input-group">
@@ -871,7 +871,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink input-group-prepend">
@@ -1110,7 +1110,7 @@ An Input Group is a text field with extra elements that makes the pattern more c
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<div class="input-group input-group-lg">
 		<div class="input-group-item input-group-item-shrink input-group-prepend">

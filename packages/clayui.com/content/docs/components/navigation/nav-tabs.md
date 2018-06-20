@@ -61,7 +61,7 @@ title: "Nav Tabs"
 	</div>
 </div>
 
-```text/html
+```html
 <ul class="nav nav-tabs" role="tablist">
 	<li class="nav-item">
 		<a aria-controls="fields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#fields" id="fieldsTab" role="tab">Fields</a>

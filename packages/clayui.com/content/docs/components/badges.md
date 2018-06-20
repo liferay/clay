@@ -82,7 +82,7 @@ Badges help highlight important information such as notifications or new and unr
 	{param style: 'warning' /}
 {/call}
 ```
-```text/html
+```html
 <clay-badge label="8"></clay-badge>
 <clay-badge label="87" style="secondary"></clay-badge>
 <clay-badge label="91" style="info"></clay-badge>
@@ -90,7 +90,7 @@ Badges help highlight important information such as notifications or new and unr
 <clay-badge label="1.111" style="success"></clay-badge>
 <clay-badge label="21" style="warning"></clay-badge>
 ```
-```text/html
+```html
 <span class="badge badge-primary">
 	<span class="badge-item badge-item-expand">8</span>
 </span>

@@ -13,7 +13,7 @@ title: "Nav"
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 
-```text/html
+```html
 <ul class="nav">
 	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
@@ -42,7 +42,7 @@ title: "Nav"
 	</div>
 </div>
 
-```text/html
+```html
 <ul class="nav nav-stacked">
 	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
@@ -160,7 +160,7 @@ title: "Nav"
 	</div>
 </div>
 
-```text/html
+```html
 <ul class="nav nav-nested">
 	<li class="nav-item">
 		<a aria-controls="navCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01" role="button">
@@ -359,7 +359,7 @@ title: "Nav"
 	</div>
 </div>
 
-```text/html
+```html
 <ul class="nav nav-nested-margins">
 	<li class="nav-item">
 		<a aria-controls="navCollapse001" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001" role="button">

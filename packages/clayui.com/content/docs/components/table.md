@@ -309,7 +309,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 	</table>
 </div>
 
-```text/html
+```html
 <div class="table-responsive">
 	<table class="show-quick-actions-on-hover table table-autofit table-hover table-list table-nowrap">
 		<thead>
@@ -800,7 +800,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 	</table>
 </div>
 
-```text/html
+```html
 <div class="table-responsive">
 	<table class="table table-autofit table-list table-nowrap">
 		<thead>
@@ -1107,7 +1107,7 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 	</div>
 </div>
 
-```text/html
+```html
 <div class="sheet">
 	<div class="sheet-header">
 		<h4 class="sheet-title">Sites</h4>

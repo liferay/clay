@@ -96,7 +96,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-navbar
 	items='[
 		{"title": "App Section 1", "url": "#1"},
@@ -110,7 +110,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 	spritemap="/images/icons/icons.svg">
 </clay-navbar>
 ```
-```text/html
+```html
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
 	<div class="container">
 		<a aria-controls="navigationBarCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse00" role="button">
@@ -249,7 +249,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-navbar
 	inverted="true"
 	items='[
@@ -264,7 +264,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 	spritemap="/images/icons/icons.svg">
 </clay-navbar>
 ```
-```text/html
+```html
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
 	<div class="container">
 		<a aria-controls="navigationBarCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse00" role="button">

@@ -105,7 +105,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 	</ol>
 </div>
 
-```text/html
+```html
 <ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top">
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
@@ -309,7 +309,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 	</ol>
 </div>
 
-```text/html
+```html
 <ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-bottom">
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-title">Ticket Buyer Information</div>
@@ -472,7 +472,7 @@ A multi step form, also known as wizard, is a determinate progress bar. This pro
 	</ol>
 </div>
 
-```text/html
+```html
 <ol class="multi-step-nav multi-step-indicator-label-bottom multi-step-item-fixed-width">
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-title">Ticket Buyer Information</div>

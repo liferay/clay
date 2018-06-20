@@ -48,14 +48,14 @@ A dropdown is a list of options related to the element that triggers it.
 	{param label: 'Trigger Label' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items='[{"active": true, "href": "#", "label": "Selected Option"}, {"href": "#", "label": "Normal Option"}, {"disabled": true, "href": "#", "label": "Disabled Option"}]'
 	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<ul class="list-unstyled">
 		<li><a class="active dropdown-item" href="#1">Selected Option</a></li>
@@ -132,14 +132,14 @@ A dropdown is a list of options related to the element that triggers it.
 	{param label: 'Trigger Label' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items='[{"href": "#", "label": "Edit"}, {"href": "#", "label": "Preview", "separator": true}, {"href": "#", "label": "Expire"}, {"href": "#", "label": "View History", "separator": true}, {"href": "#", "label": "Permissions", "separator": true}, {"href": "#", "label": "Copy"}, {"href": "#", "label": "Move", "separator": true}, {"href": "#", "label": "Move to Recycle Bin"}]'
 	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<ul class="list-unstyled">
 		<li><a class="dropdown-item" href="#1">Edit</a></li>
@@ -228,14 +228,14 @@ A dropdown is a list of options related to the element that triggers it.
 	{param label: 'Trigger Label' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items='[{"active": true, "checked": true, "inputName": "item1checkbox", "inputValue": "1", "label": "Selected Option", "type": "checkbox"}, {"inputName": "item2checkbox", "inputValue": "2", "label": "Normal Option", "type": "checkbox"}, {"disabled": true, "inputName": "item3checkbox", "inputValue": "3", "label": "Disabled Option", "type": "checkbox"}]'
 	spritemap="/images/icons/icons.svg"
 	label="Trigger Label">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<ul class="list-unstyled">
 		<li class="active dropdown-item">
@@ -309,7 +309,7 @@ A dropdown is a list of options related to the element that triggers it.
 	</ul>
 </div>
 
-```text/html
+```html
 <ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<li class="dropdown-section form-group">
 		<label for="basicInputTypeText1">
@@ -396,7 +396,7 @@ A dropdown is a list of options related to the element that triggers it.
 	{param label: 'Trigger Label' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items=""
 	searchable="true"
@@ -404,7 +404,7 @@ A dropdown is a list of options related to the element that triggers it.
 	label="Trigger Label">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<form>
 		<div class="dropdown-section">
@@ -488,7 +488,7 @@ A dropdown is a list of options related to the element that triggers it.
 	{param label: 'Trigger Label' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items='[{"href": "#1", "icon": "check", "label": "Normal Option"}, {"href": "#2", "icon": "check", "label": "Second Option"}, {"disabled": "true", "href": "#3", "label": "Disabled Option"}]'
 	itemsIconAlignment="left"
@@ -496,7 +496,7 @@ A dropdown is a list of options related to the element that triggers it.
 	label="Trigger Label">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-start">
 	<ul class="list-unstyled">
 		<li>
@@ -585,7 +585,7 @@ A dropdown is a list of options related to the element that triggers it.
 	{param label: 'Trigger Label' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items='[{"active": "true", "href": "#1", "icon": "check", "label": "Selected Option"}, {"href": "#2", "icon": "check", "label": "Regular Option"}, {"disabled": "true", "href": "#3", "label": "Disabled Option"}]'
 	itemsIconAlignment="right"
@@ -593,7 +593,7 @@ A dropdown is a list of options related to the element that triggers it.
 	label="Trigger Label">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end">
 	<ul class="list-unstyled">
 		<li>
@@ -786,7 +786,7 @@ A dropdown is a list of options related to the element that triggers it.
 	{param label: 'Trigger Label' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	button='{"label": "Done", "style": "primary"}'
 	items='[
@@ -845,7 +845,7 @@ A dropdown is a list of options related to the element that triggers it.
 	label="Trigger Label">
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<form>
 		<div class="dropdown-section">
@@ -1039,7 +1039,7 @@ A dropdown is a list of options related to the element that triggers it.
 	{param spritemap: '/images/icons/icons.svg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-dropdown
 	items='[
 		{
@@ -1107,7 +1107,7 @@ A dropdown is a list of options related to the element that triggers it.
 	spritemap="/images/icons/icons.svg"
 </clay-dropdown>
 ```
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
@@ -1201,7 +1201,7 @@ A dropdown is a list of options related to the element that triggers it.
 	</div>
 </div>
 
-```text/html
+```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<ul class="list-unstyled">
 		<div class="dropdown-header">Dropdown Header</div>

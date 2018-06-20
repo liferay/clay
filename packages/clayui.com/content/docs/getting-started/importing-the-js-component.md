@@ -51,7 +51,7 @@ import {ClayBadge, ClayButton} from 'clay';
 
 You can render a Clay component on whatever element you want if you are not using a framework.
 
-```text/html
+```html
 <div id="my-element"></div>
 ```
 
@@ -74,7 +74,7 @@ Once added to your page, the Clay components are accessible globally on the page
 
 > See on [CDN Links](/docs/getting_started/cdn-links.html).
 
-```text/html
+```html
 <div id="element"></div>
 
 <script type="text/javascript">

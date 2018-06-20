@@ -52,7 +52,7 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 	</li>
 </ol>
 
-```text/html
+```html
 <ol class="breadcrumb">
 	<li class="breadcrumb-item">
 		<a class="breadcrumb-link" href="#1" title="Home">
@@ -116,7 +116,7 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 	</li>
 </ol>
 
-```text/html
+```html
 <ol class="breadcrumb">
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">

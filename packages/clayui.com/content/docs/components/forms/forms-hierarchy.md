@@ -67,7 +67,7 @@ Definition of the content hierarchy inside a form structure and the components u
 	</div>
 </div>
 
-```text/html
+```html
 <div class="sheet sheet-lg">
 	<div class="sheet-header">
 		<h2 class="sheet-title">Sheet Title</h2>

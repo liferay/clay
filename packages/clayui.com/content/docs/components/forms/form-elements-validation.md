@@ -100,7 +100,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<label for="inputNormal1">
 		normal
@@ -289,7 +289,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	</div>
 </div>
 
-```text/html
+```html
 <div class="form-group">
 	<div class="has-success">
 		<div class="custom-control custom-checkbox">
@@ -434,7 +434,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	</div>
 </div>
 
-```text/html
+```html
 <div class="has-success">
 	<div class="form-group">
 		<label for="selectElementSuccess">
@@ -544,7 +544,7 @@ Forms have inline validation. All form fields that can be checked against a set 
 	</div>
 </div>
 
-```text/html
+```html
 <div class="has-success">
 	<div class="form-group">
 		<label for="multipleSelectElementSuccess">

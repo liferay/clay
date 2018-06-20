@@ -43,7 +43,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 	{param style: 'success' /}
 {/call}
 ```
-```text/html
+```html
 <clay-label label="Label text"></clay-label>
 
 <clay-label label="Status" style="info"></clay-label>
@@ -54,7 +54,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 <clay-label label="Approved" style="success"></clay-label>
 ```
-```text/html
+```html
 <span class="label label-secondary">
 	<span class="label-item label-item-expand">Label Text</span>
 </span>
@@ -97,12 +97,12 @@ Labels are a mechanism to categorize information providing quick recognition.
 	{param size: 'lg' /}
 {/call}
 ```
-```text/html
+```html
 <clay-label label="Normal Label"></clay-label>
 
 <clay-label label="Large Label" size="lg"></clay-label>
 ```
-```text/html
+```html
 <span class="label label-secondary">
 	<span class="label-item label-item-expand">Normal Label</span>
 </span>
@@ -129,10 +129,10 @@ Labels are a mechanism to categorize information providing quick recognition.
 	{param label: 'Label Text' /}
 {/call}
 ```
-```text/html
+```html
 <clay-label label="Normal Label"></clay-label>
 ```
-```text/html
+```html
 <span class="label label-secondary">
 	<span class="label-item label-item-expand">Label Text</span>
 </span>
@@ -157,10 +157,10 @@ Labels are a mechanism to categorize information providing quick recognition.
 	{param label: 'Label Text' /}
 {/call}
 ```
-```text/html
+```html
 <clay-label closeable="true" label="Label Text"></clay-label>
 ```
-```text/html
+```html
 <span class="label label-dismissible label-secondary">
 	<span class="label-item label-item-expand">Label Text</span>
 	<span class="label-item label-item-after">
@@ -185,10 +185,10 @@ Labels are a mechanism to categorize information providing quick recognition.
 	{param label: 'Label Text' /}
 {/call}
 ```
-```text/html
+```html
 <clay-label href="#1" label="Label Text"></clay-label>
 ```
-```text/html
+```html
 <a class="label label-primary" href="#1">
 	<span class="label-item label-item-expand">Label Text</span>
 </a>
