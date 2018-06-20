@@ -17,13 +17,13 @@ Clay provides its components together and separate, if you feel you will not use
 
 > Using [npm](https://www.npmjs.com/):
 
-```shell
+```bash
 npm install clay --save
 ```
 
 > Or [yarn](https://yarnpkg.com/lang/en/):
 
-```shell
+```bash
 yarn add clay
 ```
 
@@ -31,13 +31,13 @@ yarn add clay
 
 > Using [npm](https://www.npmjs.com/):
 
-```shell
+```bash
 npm install clay-badge --save
 ```
 
 > Or [yarn](https://yarnpkg.com/lang/en/):
 
-```shell
+```bash
 yarn add clay-badge
 ```
 

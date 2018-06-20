@@ -11,15 +11,14 @@ Feel free to choose a specific version of the [CDN](https://www.jsdelivr.com/pac
 > Use any of the available automatic cdn distributions and copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our Atlas skin.
 
 ```html
-https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css">
 ```
 
 ## JS
 
 > If you want to go beyond the static HTML, add our bundled library to get access to the full power of Clay!
-
 ```html
-https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js
+<script src= "https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js"></script>
 ```
 
 </article>
