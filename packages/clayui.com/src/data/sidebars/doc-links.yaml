@@ -49,6 +49,69 @@
     - title: Cards
       id: cards
       link: cards
+    - title: Charts
+      id: charts
+      items:
+        - title:  Basic Examples
+          id: basic
+          items:
+            - title: Line Chart
+              id: line-chart
+              link: /docs/components/charts/basic/line-chart
+            - title: Spline Chart
+              id: spline-chart
+              link: /docs/components/charts/basic/spline-chart
+            - title: Step Chart
+              id: step-chart
+              link: /docs/components/charts/basic/step-chart
+            - title: Bar Chart
+              id: bar-chart
+              link: /docs/components/charts/basic/bar-chart
+            - title: Scatter Chart
+              id: scatter-chart
+              link: /docs/components/charts/basic/scatter-chart
+            - title: Pie Chart
+              id: pie-chart
+              link: /docs/components/charts/basic/pie-chart
+            - title: Donut Chart
+              id: donut-chart
+              link: /docs/components/charts/basic/donut-chart
+            - title: Bubble Chart
+              id: bubble-chart
+              link: /docs/components/charts/basic/bubble-chart
+            - title: Gauge Chart
+              id: gauge-chart
+              link: /docs/components/charts/basic/gauge-chart
+            - title: Combination Chart
+              id: combination-chart
+              link: /docs/components/charts/basic/combination-chart
+            - title: Geomap Chart
+              id: geomap-chart
+              link: /docs/components/charts/basic/geomap-chart
+        - title: Advanced Examples
+          id: advanced
+          items:
+            - title: Axis Label
+              id: axis-label
+              link: /docs/components/charts/advanced/axis-label
+            - title: Axis Range
+              id: axis-range
+              link: /docs/components/charts/advanced/axis-range
+            - title: Data Color
+              id: data-color
+              link: /docs/components/charts/advanced/data-color
+            - title: Gridlines
+              id: grid-lines
+              link: /docs/components/charts/advanced/grid-lines
+            - title: Regions
+              id: regions
+              link: /docs/components/charts/advanced/regions
+            - title: X Axis Tick Formatting
+              id: x-axis-tick-formatting
+              link: /docs/components/charts/advanced/x-axis-tick-formatting
+            - title: Predictive Forecasting
+              id: predictive-forecasting
+              link: /docs/components/charts/advanced/predictive-forecasting
     - title: Dropdown Menu
       id: dropdowns
       link: /docs/components/dropdowns
