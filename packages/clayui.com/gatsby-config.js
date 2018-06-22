@@ -30,6 +30,12 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: 'gatsby-remark-component',
+                        options: {
+                            components: ['clay-chart']
+                        }
+                    },
+                    {
                         resolve: 'gatsby-remark-images',
                     },
                     {
