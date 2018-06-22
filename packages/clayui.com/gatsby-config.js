@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = {
     pathPrefix: '/static',
     plugins: [
+        'gatsby-plugin-react-next',
         {
             resolve: 'gatsby-plugin-sass',
             options: {
