@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import rehypeReact from "rehype-react"
 import Helmet from 'react-helmet'
 
 import docsSidebar from '../data/sidebars/doc-links.yaml'
 import Sidebar from '../components/Sidebar';
 import CodeTabs from '../components/CodeTabs';
+import Graph from '../components/Graph';
+
+const renderAst = new rehypeReact({
+    createElement: React.createElement,
+    components: { "clay-chart": Graph }
+}).Compiler;
 
 export default class Docs extends Component {
     componentDidMount() {
@@ -17,7 +24,7 @@ export default class Docs extends Component {
     render() {
         const { data, location } = this.props;
         const { markdownRemark } = data;
-        const { frontmatter, html, excerpt, timeToRead } = markdownRemark;
+        const { frontmatter, htmlAst, excerpt, timeToRead } = markdownRemark;
         const title = `${frontmatter.title} - Clay`;
 
         return (
@@ -47,9 +54,7 @@ export default class Docs extends Component {
                         <div className="clay-site-container container-fluid">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div
-                                        dangerouslySetInnerHTML={{ __html: html }}
-                                    />
+                                    {renderAst(htmlAst)}
                                 </div>
                             </div>
                         </div>
@@ -63,7 +68,7 @@ export default class Docs extends Component {
 export const pageQuery = graphql`
     query TemplateDocsMarkdown($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
+            htmlAst
             excerpt
             timeToRead
             frontmatter {
