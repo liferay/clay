@@ -25,13 +25,17 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 		}
 
 		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-			createPage({
-				path: node.fields.slug,
-				component: docsPostTemplate,
-				context: {
-					slug: node.fields.slug,
-				},
-			});
+			const { slug } = node.fields;
+
+			if (slug.includes('docs/')) {
+				createPage({
+					path: slug,
+					component: docsPostTemplate,
+					context: {
+						slug,
+					},
+				});
+			}
 		});
 	});
 };
