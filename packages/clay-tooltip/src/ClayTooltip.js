@@ -63,6 +63,10 @@ class ClayTooltip extends Component {
 	 */
 	attached() {
 		this.addListener('transitionend', this._handleTransitionEnd, true);
+
+		if (!this.visible) {
+			this.element.style.display = 'none';
+		}
 	}
 
 	/**
