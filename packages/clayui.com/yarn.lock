@@ -59,8 +59,8 @@
     "@types/react-router" "*"
 
 "@types/react-router@*":
-  version "4.0.26"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.26.tgz#4489c873642baa633014294a6d0a290001ba9860"
+  version "4.0.27"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.27.tgz#553f54df7c4b09d6046b0201ce9b91c46b2940e3"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
@@ -86,9 +86,25 @@ accepts@^1.3.0, accepts@~1.3.4, accepts@~1.3.5:
     mime-types "~2.1.18"
     negotiator "0.6.1"
 
+acorn-dynamic-import@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/acorn-dynamic-import/-/acorn-dynamic-import-3.0.0.tgz#901ceee4c7faaef7e07ad2a47e890675da50a278"
+  dependencies:
+    acorn "^5.0.0"
+
+acorn-jsx@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-4.1.1.tgz#e8e41e48ea2fe0c896740610ab6a4ffd8add225e"
+  dependencies:
+    acorn "^5.0.3"
+
 acorn@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
+
+acorn@^5.0.0, acorn@^5.0.3, acorn@^5.4.1:
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
 
 address@1.0.3, address@^1.0.1:
   version "1.0.3"
@@ -627,6 +643,13 @@ babel-plugin-check-es2015-constants@^6.22.0, babel-plugin-check-es2015-constants
   dependencies:
     babel-runtime "^6.22.0"
 
+babel-plugin-incremental-dom@^3.3.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-incremental-dom/-/babel-plugin-incremental-dom-3.4.0.tgz#f08e7856afbe6f17f866d8ca6eda977237795fb1"
+  dependencies:
+    babel-plugin-syntax-jsx "^6.8.0"
+    babel-types "^6.0.0"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -1129,6 +1152,12 @@ babel-preset-flow@^6.23.0:
   dependencies:
     babel-plugin-transform-flow-strip-types "^6.22.0"
 
+babel-preset-metal-jsx@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-metal-jsx/-/babel-preset-metal-jsx-0.1.1.tgz#a99dbe9055c672a7f04a8684bba0d068ee4a76d2"
+  dependencies:
+    babel-plugin-incremental-dom "^3.3.0"
+
 babel-preset-react@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
@@ -1218,7 +1247,7 @@ babel-traverse@^6.24.1, babel-traverse@^6.26.0:
     invariant "^2.2.2"
     lodash "^4.17.4"
 
-babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
+babel-types@^6.0.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
   dependencies:
@@ -1596,6 +1625,19 @@ bser@^2.0.0:
   dependencies:
     node-int64 "^0.4.0"
 
+buble@^0.19.3:
+  version "0.19.3"
+  resolved "https://registry.yarnpkg.com/buble/-/buble-0.19.3.tgz#01e9412062cff1da6f20342b6ecd72e7bf699d02"
+  dependencies:
+    acorn "^5.4.1"
+    acorn-dynamic-import "^3.0.0"
+    acorn-jsx "^4.1.1"
+    chalk "^2.3.1"
+    magic-string "^0.22.4"
+    minimist "^1.2.0"
+    os-homedir "^1.0.1"
+    vlq "^1.0.0"
+
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
@@ -1784,7 +1826,7 @@ chalk@2.4.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@2.4.1, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.4.1:
+chalk@2.4.1, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
   dependencies:
@@ -1903,6 +1945,40 @@ classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
+clay-alert@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-alert/-/clay-alert-2.1.12.tgz#7f4d033e74ebe6984866397b08ce917f953cdbd9"
+  dependencies:
+    clay-button "^2.1.12"
+    clay-icon "^2.1.12"
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-badge@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-badge/-/clay-badge-2.1.12.tgz#129cd67265a6eefc107b69a28b74f7eaface70ea"
+  dependencies:
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-button@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-button/-/clay-button-2.1.12.tgz#47d82a242f9054e64f43af12b03d55f90da5b161"
+  dependencies:
+    clay-component "^2.1.12"
+    clay-icon "^2.1.12"
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
 clay-charts@^2.1.12:
   version "2.1.12"
   resolved "https://registry.yarnpkg.com/clay-charts/-/clay-charts-2.1.12.tgz#70132bc01c250fe18a1479bd4c31b402c253633e"
@@ -1915,13 +1991,87 @@ clay-charts@^2.1.12:
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
 
+clay-checkbox@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-checkbox/-/clay-checkbox-2.1.12.tgz#47fa05cc26d0acb6e6b40a72b17c6af67bb179a6"
+  dependencies:
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-component@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-component/-/clay-component-2.1.12.tgz#a883082bbb8a9f2998f4cf5748615e3ae03ed042"
+  dependencies:
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-dom "^2.16.0"
+    metal-state "^2.16.0"
+
 clay-css@^2.1.10:
   version "2.1.12"
   resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.1.12.tgz#343bf8334549845cbfbceba02a5c07f523b63e4f"
 
-clay@^2.1.10:
+clay-dropdown@^2.1.12:
   version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay/-/clay-2.1.12.tgz#4e47eea151694dd54e406a77f60756c0f0b24400"
+  resolved "https://registry.yarnpkg.com/clay-dropdown/-/clay-dropdown-2.1.12.tgz#acc4548c5a975dc70e92760c45c41543bf74d843"
+  dependencies:
+    clay-button "^2.1.12"
+    clay-checkbox "^2.1.12"
+    clay-component "^2.1.12"
+    clay-icon "^2.1.12"
+    clay-link "^2.1.12"
+    clay-portal "^2.1.12"
+    clay-radio "^2.1.12"
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-dom "^2.16.0"
+    metal-events "^2.16.0"
+    metal-position "^2.1.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-icon@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-icon/-/clay-icon-2.1.12.tgz#ebf8231d512d6f79ea1318235a6bed703b1aab60"
+  dependencies:
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-link@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-link/-/clay-link-2.1.12.tgz#87fb8a8260eb59a70cdfae98644de1ac50cbadcb"
+  dependencies:
+    clay-component "^2.1.12"
+    clay-icon "^2.1.12"
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-portal@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-portal/-/clay-portal-2.1.12.tgz#83b5ed5168a63ae8322f9adc35c044b8615386ab"
+  dependencies:
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+
+clay-radio@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-radio/-/clay-radio-2.1.12.tgz#08b60eed91b5478cef59fab7babcdadb62fa0cc2"
+  dependencies:
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
 
 cli-boxes@^1.0.0:
   version "1.0.0"
@@ -2152,6 +2302,14 @@ component-inherit@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
 
+component-props@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/component-props/-/component-props-1.1.1.tgz#f9b7df9b9927b6e6d97c9bd272aa867670f34944"
+
+component-xor@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/component-xor/-/component-xor-0.0.4.tgz#c55d83ccc1b94cd5089a4e93fa7891c7263e59aa"
+
 compressible@~2.0.13:
   version "2.0.14"
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.14.tgz#326c5f507fbb055f54116782b969a81b67a29da7"
@@ -2259,7 +2417,7 @@ core-js@^1.0.0, core-js@^1.2.6:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
 
-core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.1:
+core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.5.1:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
@@ -3028,6 +3186,13 @@ dom-helpers@^3.2.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
 
+dom-iterator@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/dom-iterator/-/dom-iterator-1.0.0.tgz#9c09899846ec41c2d257adc4d6015e4759ef05ad"
+  dependencies:
+    component-props "1.1.1"
+    component-xor "0.0.4"
+
 dom-serializer@0, dom-serializer@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.1.0.tgz#073c697546ce0780ce23be4a28e293e40bc30c82"
@@ -3164,8 +3329,8 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.47:
-  version "1.3.49"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.49.tgz#651384b0d81f078a96639b2b36975141b7915004"
+  version "1.3.50"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.50.tgz#7438b76f92b41b919f3fbdd350fbd0757dacddf7"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -6285,6 +6450,12 @@ ltcdr@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ltcdr/-/ltcdr-2.2.1.tgz#5ab87ad1d4c1dab8e8c08bbf037ee0c1902287cf"
 
+magic-string@^0.22.4:
+  version "0.22.5"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.22.5.tgz#8e9cf5afddf44385c1da5bc2a6a0dbd10b03657e"
+  dependencies:
+    vlq "^0.2.2"
+
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -6471,7 +6642,7 @@ merge@^1.1.3, merge@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
-metal-component@^2.0.0, metal-component@^2.13.2, metal-component@^2.16.5:
+metal-component@^2.0.0, metal-component@^2.13.2, metal-component@^2.16.0, metal-component@^2.16.5:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal-component/-/metal-component-2.16.5.tgz#e0bd4fdda80c0e0b4b354f996a972f8796906601"
   dependencies:
@@ -6480,14 +6651,14 @@ metal-component@^2.0.0, metal-component@^2.13.2, metal-component@^2.16.5:
     metal-events "^2.16.5"
     metal-state "^2.16.5"
 
-metal-dom@^2.16.5:
+metal-dom@^2.0.0, metal-dom@^2.16.0, metal-dom@^2.16.5:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal-dom/-/metal-dom-2.16.5.tgz#f78e9460863d6fc0f746cf1ea5060fc15af6c33f"
   dependencies:
     metal "^2.16.5"
     metal-events "^2.16.5"
 
-metal-events@^2.16.5, metal-events@^2.2.3:
+metal-events@^2.16.0, metal-events@^2.16.5, metal-events@^2.2.3, metal-events@^2.6.4:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal-events/-/metal-events-2.16.5.tgz#f953ad0f03b1c0d7804ebb4de035f83586f00f21"
   dependencies:
@@ -6503,7 +6674,7 @@ metal-incremental-dom@^2.16.5:
     metal-component "^2.16.5"
     metal-dom "^2.16.5"
 
-metal-jsx@^2.13.2:
+metal-jsx@^2.13.2, metal-jsx@^2.16.5:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal-jsx/-/metal-jsx-2.16.5.tgz#cab313f51116dc26b140c4ef5cef694b2e828091"
   dependencies:
@@ -6519,6 +6690,13 @@ metal-keyboard-focus@^2.0.0:
   dependencies:
     metal "^2.0.0"
     metal-events "^2.2.3"
+
+metal-position@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/metal-position/-/metal-position-2.1.1.tgz#9b0d2c1bdc4e770fa0db7316268f85a480c6e4bb"
+  dependencies:
+    metal "^2.0.0"
+    metal-dom "^2.0.0"
 
 metal-soy-bundle@^2.16.5:
   version "2.16.5"
@@ -6537,6 +6715,13 @@ metal-soy@^2.0.0, metal-soy@^2.16.0:
     metal-soy-bundle "^2.16.5"
     metal-state "^2.16.5"
 
+metal-state@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/metal-state/-/metal-state-2.7.0.tgz#5568acd38c1cd8efccafb9008960d508df7fa252"
+  dependencies:
+    metal "^2.6.4"
+    metal-events "^2.6.4"
+
 metal-state@^2.16.0, metal-state@^2.16.5:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal-state/-/metal-state-2.16.5.tgz#47c2a1b985c04a4e7e9aaacb623219a36a9c82fa"
@@ -6552,7 +6737,14 @@ metal-tabs@^2.3.1:
     metal-keyboard-focus "^2.0.0"
     metal-soy "^2.0.0"
 
-metal@^2.0.0, metal@^2.16.2, metal@^2.16.5:
+metal-web-component@^2.16.0:
+  version "2.16.5"
+  resolved "https://registry.yarnpkg.com/metal-web-component/-/metal-web-component-2.16.5.tgz#958431a0c8c135d5c16fc0c2e8c7346d5c92f643"
+  dependencies:
+    metal "^2.16.5"
+    metal-state "2.7.0"
+
+metal@^2.0.0, metal@^2.16.0, metal@^2.16.2, metal@^2.16.5, metal@^2.6.4:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal/-/metal-2.16.5.tgz#7976267c0ff98f9113991caf7e948c769163f7fb"
 
@@ -8132,7 +8324,7 @@ pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
-prismjs@^1.15.0:
+prismjs@^1.15.0, prismjs@^1.6.0:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
   optionalDependencies:
@@ -8414,6 +8606,17 @@ react-hot-loader@^3.0.0-beta.6:
     react-proxy "^3.0.0-alpha.0"
     redbox-react "^1.3.6"
     source-map "^0.6.1"
+
+react-live@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/react-live/-/react-live-1.10.1.tgz#3736be3e8281e455b3cca781506813c55abed011"
+  dependencies:
+    buble "^0.19.3"
+    core-js "^2.4.1"
+    dom-iterator "^1.0.0"
+    prismjs "^1.6.0"
+    prop-types "^15.5.8"
+    unescape "^0.2.0"
 
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
@@ -10288,8 +10491,8 @@ trough@^1.0.0:
     glob "^6.0.4"
 
 tslib@^1.6.0:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.2.tgz#8be0cc9a1f6dc7727c38deb16c2ebd1a2892988e"
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
 tty-browserify@0.0.0:
   version "0.0.0"
@@ -10364,6 +10567,10 @@ underscore.string@^3.3.4:
   dependencies:
     sprintf-js "^1.0.3"
     util-deprecate "^1.0.2"
+
+unescape@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/unescape/-/unescape-0.2.0.tgz#b78b9b60c86f1629df181bf53eee3bc8d6367ddf"
 
 unherit@^1.0.4:
   version "1.1.1"
@@ -10724,6 +10931,14 @@ vinyl@^1.0.0:
     clone "^1.0.0"
     clone-stats "^0.0.1"
     replace-ext "0.0.1"
+
+vlq@^0.2.2:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
+
+vlq@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vlq/-/vlq-1.0.0.tgz#8101be90843422954c2b13eb27f2f3122bdcc806"
 
 vm-browserify@0.0.4:
   version "0.0.4"
