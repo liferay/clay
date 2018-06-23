@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import rehypeReact from "rehype-react"
 import Helmet from 'react-helmet'
+import fixHtmlAst from '../utils/fixHtmlAst';
 
 import docsSidebar from '../data/sidebars/doc-links.yaml'
 import Sidebar from '../components/Sidebar';
@@ -26,6 +27,11 @@ export default class Docs extends Component {
         const { markdownRemark } = data;
         const { frontmatter, htmlAst, excerpt, timeToRead } = markdownRemark;
         const title = `${frontmatter.title} - Clay`;
+
+        // This is a hook to fix `xlink:href` for xlinkHref, even if we 
+        // switch the docs to xlinkHref the AST passes in small letters. 
+        // We are correcting until we have a solution in the package.
+        fixHtmlAst(htmlAst);
 
         return (
             <div className="docs">
