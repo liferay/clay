@@ -8,11 +8,15 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "babel-preset-metal-jsx": "^0.1.1",
     "browser-monads": "^1.0.0",
     "classnames": "^2.2.6",
-    "clay": "^2.1.10",
+    "clay-alert": "^2.1.12",
+    "clay-badge": "^2.1.12",
+    "clay-button": "^2.1.12",
     "clay-charts": "^2.1.12",
     "clay-css": "^2.1.10",
+    "clay-dropdown": "^2.1.12",
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-google-analytics": "^1.0.31",
@@ -26,9 +30,11 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "metal-dom": "^2.16.5",
+    "metal-jsx": "^2.16.5",
     "metal-tabs": "^2.3.1",
     "prismjs": "^1.15.0",
     "react-helmet": "^5.2.0",
+    "react-live": "^1.10.1",
     "rehype-react": "^3.0.2",
     "wowjs": "^1.1.3"
   }
