@@ -1,6 +1,7 @@
 import { window, document } from 'browser-monads';
 import React, { Component } from 'react';
 import Link from "gatsby-link";
+import classnames from 'classnames';
 
 class LayoutNav extends Component {
     constructor() {
@@ -35,13 +36,19 @@ class LayoutNav extends Component {
     }
 
     render() {
+        const { fixed = true } = this.props;
+
+        const styles = classnames('navbar navbar-clay-site navbar-expand-lg navbar-dark', {
+            'fixed-top': fixed,
+        });
+
         return (
-            <nav ref="navElement" className="navbar fixed-top navbar-clay-site navbar-expand-lg navbar-dark">
+            <nav ref="navElement" className={styles}>
                 <div className="container-fluid container-fluid-max-lg">
-                    <div className="navbar-brand">
+                    <Link to="/" className="navbar-brand">
                         <img className="logo mr-2" src="/images/home/clay_logo_w.svg" alt="" />
                         <span className="title align-middle">Clay</span>
-                    </div>
+                    </Link>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link className="nav-link ml-3" to="/docs/getting-started/introduction.html">Getting Started</Link>
