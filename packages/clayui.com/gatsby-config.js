@@ -5,6 +5,7 @@ module.exports = {
     pathPrefix: '/static',
     plugins: [
         'gatsby-plugin-react-next',
+        'gatsby-transformer-try-examples',
         {
             resolve: 'gatsby-plugin-sass',
             options: {
