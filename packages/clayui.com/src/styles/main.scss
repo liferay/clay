@@ -4,16 +4,17 @@
 @import "clay-site/variables";
 
 @import "animations";
+@import "api";
 @import "autocomplete";
 @import "code";
-@import "prismjs";
+@import "docsearch";
 @import "footer";
 @import "guide";
-@import "navbar";
-@import "sidebar";
 @import "landing";
-@import "api";
-@import "docsearch";
+@import "navbar";
+@import "prismjs";
+@import "sidebar";
+@import "try";
 
 @import "clay-site/clay-site";
 @import "clay-site/content-clay-site";
