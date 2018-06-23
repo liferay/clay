@@ -45,6 +45,9 @@ module.exports = {
                         options: {
                             classPrefix: 'gatsby-code-'
                         }
+                    },
+                    {
+                        resolve: 'gatsby-remark-use-clipboard'
                     }
                 ]
             }
