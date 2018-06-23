@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Helmet from 'react-helmet'
+import Helmet from 'react-helmet';
 import Link, { withPrefix } from 'gatsby-link';
-import LayoutNav from '../components/LayoutNav/LayoutNav';
+import LayoutNav from '../components/LayoutNav';
 import {WOW} from 'wowjs';
 
 class Index extends Component {
