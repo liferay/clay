@@ -29,9 +29,11 @@ class Graph extends Component {
         if (this._consoleWarns()) {
             return;
         }
-    
-        const Chart = ClayCharts[component];
-        this._chart = new Chart(JSON.parse(props), this.refs[`clay-charts-${component}`]);
+
+        if (typeof window !== 'undefined') {
+            const Chart = ClayCharts[component];
+            this._chart = new Chart(JSON.parse(props), this.refs[`clay-charts-${component}`]);
+        }
     }
 
     componentWillUnmount() {
@@ -39,7 +41,9 @@ class Graph extends Component {
             return;
         }
 
-        this._chart.dispose();
+        if (typeof window !== 'undefined') {
+            this._chart.dispose();
+        }
     }
 
     render() {
