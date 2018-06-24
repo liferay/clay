@@ -16,7 +16,9 @@ const fixHtmlAst = (htmlAst) => {
         return array;
     }
 
-    return htmlAst.children = browseArray(htmlAst.children);
+    htmlAst.children = browseArray(htmlAst.children);
+
+    return htmlAst;
 };
 
-export default fixHtmlAst;
+module.exports = fixHtmlAst;

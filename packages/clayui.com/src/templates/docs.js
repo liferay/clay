@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import rehypeReact from "rehype-react"
 import Helmet from 'react-helmet'
-import fixHtmlAst from '../utils/fixHtmlAst';
 
 import docsSidebar from '../data/sidebars/doc-links.yaml'
 import Sidebar from '../components/Sidebar';
@@ -23,15 +22,11 @@ export default class Docs extends Component {
     }
 
     render() {
-        const { data, location } = this.props;
+        const { data, location, pathContext } = this.props;
+        const { htmlASTTreated } = pathContext;
         const { markdownRemark } = data;
         const { frontmatter, htmlAst, excerpt, timeToRead } = markdownRemark;
         const title = `${frontmatter.title} - Clay`;
-
-        // This is a hook to fix `xlink:href` for xlinkHref, even if we 
-        // switch the docs to xlinkHref the AST passes in small letters. 
-        // We are correcting until we have a solution in the package.
-        fixHtmlAst(htmlAst);
 
         return (
             <div className="docs">
@@ -60,7 +55,7 @@ export default class Docs extends Component {
                         <div className="clay-site-container container-fluid">
                             <div className="row">
                                 <div className="col-md-12">
-                                    {renderAst(htmlAst)}
+                                    {renderAst(JSON.parse(htmlASTTreated))}
                                 </div>
                             </div>
                         </div>
