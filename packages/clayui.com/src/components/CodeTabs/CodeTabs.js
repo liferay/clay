@@ -3,18 +3,13 @@ import Tabs from 'metal-tabs';
 
 class CodeTabs {
     constructor() {
-        let className = 'gatsby-highlight';
-        let dictionary = [
-            'javascript': 'Javascript',
-            'scss': 'SCSS',
-            'shell': 'SHELL'
-        ];
+        let className = 'code-container';
 
         let tabGroupsData = [];
         let elements = Array.prototype.slice.call(document.querySelectorAll(`.${className}`));
         elements.forEach(element => {
             tabGroupsData.push({
-                label: this._getTabLabelFromElement(element, dictionary),
+                label: this._getTabLabelFromElement(element),
                 element: element
             });
 
@@ -27,9 +22,8 @@ class CodeTabs {
         });
     }
 
-    _getTabLabelFromElement(element, dictionary) {
-        let tabLabel = element.getAttribute('data-language');
-        return dictionary[tabLabel] || tabLabel;
+    _getTabLabelFromElement(element) {
+        return element.querySelector('.gatsby-highlight').getAttribute('data-language');
     }
 
     _hide(element) {
