@@ -1,17 +1,17 @@
-.gatsby-highlight {
+.code-container {
 	margin: calc(1rem * 1.5) 0;
 	position: relative;
 }
 
-.gatsby-highlight.hide {
+.code-container.hide {
 	display: none;
 }
 
-.gatsby-highlight pre code {
+.code-container pre code {
 	white-space: pre;
 }
 
-.gatsby-highlight .btn-copy {
+.code-container .btn-copy {
 	@include transition(background 0.3s ease-in-out);
 
 	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
@@ -31,13 +31,13 @@
 	}
 }
 
-.gatsby-highlight .btn-copy .lexicon-icon {
+.code-container .btn-copy .lexicon-icon {
 	height: 12px;
 	vertical-align: baseline;
 	width: 12px;
 }
 
-.gatsby-highlight.btn-copy:hover {
+.code-container.btn-copy:hover {
 	background: rgba(255, 255, 255, 0.8);
 }
 
