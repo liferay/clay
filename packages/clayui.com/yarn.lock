@@ -2073,6 +2073,18 @@ clay-radio@^2.1.12:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
+clay-tooltip@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/clay-tooltip/-/clay-tooltip-2.1.12.tgz#afc74989fc68e82714da56937b58e329bfbe7edb"
+  dependencies:
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-dom "^2.16.0"
+    metal-events "^2.16.0"
+    metal-position "^2.1.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -6642,6 +6654,14 @@ merge@^1.1.3, merge@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
+metal-clipboard@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/metal-clipboard/-/metal-clipboard-2.0.0.tgz#c0c996a2f6b81f84197c86d0e22b81c6605ee5f0"
+  dependencies:
+    metal "^2.0.0"
+    metal-dom "^2.0.0"
+    metal-state "^2.0.0"
+
 metal-component@^2.0.0, metal-component@^2.13.2, metal-component@^2.16.0, metal-component@^2.16.5:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal-component/-/metal-component-2.16.5.tgz#e0bd4fdda80c0e0b4b354f996a972f8796906601"
@@ -6722,7 +6742,7 @@ metal-state@2.7.0:
     metal "^2.6.4"
     metal-events "^2.6.4"
 
-metal-state@^2.16.0, metal-state@^2.16.5:
+metal-state@^2.0.0, metal-state@^2.16.0, metal-state@^2.16.5:
   version "2.16.5"
   resolved "https://registry.yarnpkg.com/metal-state/-/metal-state-2.16.5.tgz#47c2a1b985c04a4e7e9aaacb623219a36a9c82fa"
   dependencies:
