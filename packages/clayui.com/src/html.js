@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import favicon32 from '../static/images/favicon-32x32.png';
-
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
     try {
@@ -31,12 +29,15 @@ class HTML extends Component {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                     />
-                    <link rel="shortcut icon" type="image/png" href={favicon32} sizes="16x16 32x32"/>
+                    <link rel="shortcut icon" type="image/png" href="/images/favicon-32x32.png" sizes="16x16 32x32"/>
                     {this.props.headComponents}
 
                     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" />
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
                     {css}
+                    <script type="text/javascript" src="/js/jquery.min.js"></script>
+                    <script type="text/javascript" src="/js/popper.js"></script>
+                    <script type="text/javascript" src="/js/bootstrap.js"></script>
                 </head>
                 <body {...this.props.bodyAttributes}>
                     <div
