@@ -32,6 +32,9 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: 'gatsby-remark-foreach-icons'
+                    },
+                    {
                         resolve: 'gatsby-remark-component',
                         options: {
                             components: ['clay-chart']
