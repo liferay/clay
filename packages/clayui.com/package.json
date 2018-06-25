@@ -18,6 +18,7 @@
     "clay-css": "^2.1.10",
     "clay-dropdown": "^2.1.12",
     "clay-tooltip": "^2.1.12",
+    "countries-list": "^2.3.2",
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-google-analytics": "^1.0.31",
@@ -30,6 +31,7 @@
     "gatsby-remark-prismjs": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
+    "languages": "^0.1.3",
     "metal-clipboard": "^2.0.0",
     "metal-dom": "^2.16.5",
     "metal-jsx": "^2.16.5",
@@ -39,5 +41,8 @@
     "react-live": "^1.10.1",
     "rehype-react": "^3.0.2",
     "wowjs": "^1.1.3"
+  },
+  "devDependencies": {
+    "globby": "^8.0.1"
   }
 }
