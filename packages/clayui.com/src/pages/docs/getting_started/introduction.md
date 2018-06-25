@@ -37,9 +37,9 @@ new clay.ClayButton(
 
 ## Using Clay with ES2015 and Sass
 
-### Step 1: Setup webpack
+### Step 1: Set up webpack
 
-Let's use the [webpack](https://webpack.js.org/) to demonstrate how you will group our JavaScript and Sass. First create a folder with a name you want and then create a `package.json` that looks like this:
+Let's use the [webpack](https://webpack.js.org/) to demonstrate how you will group our JavaScript and Sass. First create a folder with a name you want, and then create a package.json that looks like this:
 
 ```
 {
@@ -49,7 +49,7 @@ Let's use the [webpack](https://webpack.js.org/) to demonstrate how you will gro
 }
 ```
 
-You will need all of these dependencies installed in your project:
+The following dependencies are required in your project:
 
 * **babel-core**
 * **babel-loader**: Compile JavaScript using babel
@@ -63,13 +63,13 @@ You will need all of these dependencies installed in your project:
 * **extract-loader**: Extract the CSS into a `.css` file
 * **file-loader**: Serves the `.css` file as a public URL
 
-To install all these dependencies consider running this command:
+Run the command below to install the required dependencies:
 
 ```shell
 npm install --save-dev babel-core babel-loader babel-preset-env webpack webpack-dev-server webpack-cli css-loader sass-loader node-sass extract-loader file-loader
 ```
 
-In order to demonstrate this our example consider creating an `index.html` file. This HTML file needs to include CSS and compiled JavaScript. Create this simple "Hello world!" in `index.html`.
+To demonstrate this, consider creating an `index.html` file. This HTML file needs to include CSS and compiled JavaScript. Create this simple "Hello world!" in `index.html`:
 
 ```text/html
 <html>
@@ -152,41 +152,41 @@ To test the webpack configuration, run:
 npm run start
 ```
 
-And it opens `http://localhost:8080` in the browser. You should see `Hello World!` in red color.
+And it opens `http://localhost:8080` in the browser. You should see `Hello World!` written in red.
 
 ### Step 2: Install Clay component
 
-In order to install Clay you can choose to install the separate packages or install with all packages, see [Importing the JS Component](/docs/getting_started/importing-the-js-component.html). To proceed with this we will install only the `ClayBadge` package, consider running the command to do this:
+You can install Clay packages individually or install all packages at once. See [Importing the JS Component](/docs/getting_started/importing-the-js-component.html) for more information. In this example, we will install only the `ClayBadge` package, using the command below:
 
 ```shell
 npm install --save clay-badge
 ```
 
-Next, do the import of `ClayBadge` in `app.js`:
+Next, import `ClayBadge` in `app.js`:
 
 ```javascript
 import ClayBadge from 'clay-badge';
 import './app.scss';
 ```
 
-If you look at the screen you will see the same thing as before, but we will go forward to know how to use the `ClayBadge`.
+If you look at the screen, you will see the same thing as before. Next you can learn how to use the `ClayBadge`.
 
-### Step 3: Install Clay css
+### Step 3: Install Clay CSS
 
-To install `clay-css`, consider running the command:
+To install `clay-css`, run the command below:
 
 ```shell
 npm install --save clay-css
 ```
 
-In order for `sass-loader` to see Clay's `.scss` files, configure `webpack.config.js` the loader `sass-loader` options. You need to import the `clay-css` and path package from node.js to move on:
+In order for `sass-loader` to see Clay's `.scss` files, you must configure `webpack.config.js` with the `sass-loader` loader options. This requires the `clay-css` and `path` package from node.js:
 
 ```javascript
 const clay = require('clay-css');
 const path = require('path');
 ```
 
-Configure the loader `sass-loader` in `webpack.config.js` to see the clay:
+Configure `webpack.config.js` to use the `sass-loader` loader, so it can recognize the clay `.scss` files:
 
 ```javascript
 // ...
@@ -206,17 +206,17 @@ Configure the loader `sass-loader` in `webpack.config.js` to see the clay:
 // ...
 ```
 
-Then do the `clay-css` import in your `app.scss`:
+Then import the `clay-css` in your `app.scss`:
 
 ```text/scss
 @import "atlas";
 ```
 
-See the screen in the browser and you can already see some changes of `clay-css` in action.
+If you look in the browser, you can already see some `clay-css` changes in action.
 
 ### Step 4: Using component of Clay
 
-Since we already have our component imported into our JS, we can start using it, for this we need to create an instance of our component in `app.js`:
+Since we already have our component imported into our JS, we can start using it. To do this, we must create an instance of our component in `app.js`:
 
 ```javascript
 // ...
@@ -224,7 +224,7 @@ Since we already have our component imported into our JS, we can start using it,
 const clayBadge = new ClayBadge({});
 ```
 
-If you try to look at the screen again you may see errors being triggered on the console, some components have required properties to render, consider passing `label` in this case to be rendered:
+At this point, you may see some errors in the browser console. This is expected. Some components require certain properties to render. In this example, you can set the `label` property to resolve the errors:
 
 ```javascript
 // ...
@@ -236,7 +236,7 @@ const clayBadge = new ClayBadge(
 );
 ```
 
-If you look at the screen, you can see our first component of Clay being rendered on screen, incredible no !?
+If you look at the browser now, you can see our first Clay component rendered. Isn't it incredible !?
 
 This demo is available on github, feel free to tinker.
 

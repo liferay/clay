@@ -7,11 +7,11 @@ weight: 3
 
 <article id="cdn-links">
 
-Feel free to choose a specific version of the [CDN](https://www.jsdelivr.com/package/npm/clay) if you want to keep track of the changes we make. But if you feel at ease and want to keep Clay always up to date, move on.
+Feel free to choose a specific version of the [CDN](https://www.jsdelivr.com/package/npm/clay) if you want to keep track of the changes we make. If, instead, you want to use the most up to date version of Clay, follow the instructions in the next section.
 
 ## CSS
 
-> Use any of the available automatic cdn distributions and copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our Atlas skin.
+> To load our Atlas skin, use any of the available automatic CDN distributions and copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets.
 
 ```text/html
 https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css
