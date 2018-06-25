@@ -15,25 +15,25 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 	});
 
 	createRedirect({
-		fromPath: '/docs',
+		fromPath: '/docs/',
 		redirectInBrowser: true,
 		toPath: '/docs/getting-started/introduction.html',
 	});
 
 	createRedirect({
-		fromPath: '/docs/layout',
+		fromPath: '/docs/layout/',
 		redirectInBrowser: true,
 		toPath: '/docs/layout/grid.html',
 	});
 
 	createRedirect({
-		fromPath: '/docs/advanced-guides',
+		fromPath: '/docs/advanced-guides/',
 		redirectInBrowser: true,
 		toPath: '/docs/advanced-guides/using-js-components-with-metal.html',
 	});
 
 	createRedirect({
-		fromPath: '/docs/getting-started',
+		fromPath: '/docs/getting-started/',
 		redirectInBrowser: true,
 		toPath: '/docs/getting-started/introduction.html',
 	});
