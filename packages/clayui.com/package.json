@@ -3,6 +3,7 @@
   "name": "clayui.com",
   "license": "MIT",
   "scripts": {
+    "deploy": "gatsby build && gh-pages -d wedeploy",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
@@ -43,6 +44,7 @@
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
+    "gh-pages": "^1.2.0",
     "globby": "^8.0.1"
   }
 }
