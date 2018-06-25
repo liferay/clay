@@ -14,7 +14,7 @@ The pillar to give colors and structure to Clay, where is the css and examples o
 
 All components that follow clay-css marking and Lexicon use cases, developed on [Metal.js](https://metaljs.com/) with [Soy (Closure templates)](https://developers.google.com/closure/templates/docs/commands).
 
-### [Clayui.com](./packages/clayui.com)
+### [Clayui.com](./clayui.com)
 
 Contains the source code and documentation powering [clayui.com](https://clayui.com/).
 
