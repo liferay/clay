@@ -4,9 +4,39 @@ const path = require("path");
 const fixHtmlAst = require("../src/utils/fixHtmlAst");
 
 module.exports = async ({ boundActionCreators, graphql }) => {
-	const { createPage } = boundActionCreators;
+	const { createPage, createRedirect } = boundActionCreators;
 
 	const docsPostTemplate = path.resolve(__dirname, '../src/templates/docs.js');
+
+	createRedirect({
+		fromPath: '/index.html',
+		redirectInBrowser: true,
+		toPath: '/',
+	});
+
+	createRedirect({
+		fromPath: '/docs',
+		redirectInBrowser: true,
+		toPath: '/docs/getting-started/introduction.html',
+	});
+
+	createRedirect({
+		fromPath: '/docs/layout',
+		redirectInBrowser: true,
+		toPath: '/docs/layout/grid.html',
+	});
+
+	createRedirect({
+		fromPath: '/docs/advanced-guides',
+		redirectInBrowser: true,
+		toPath: '/docs/advanced-guides/using-js-components-with-metal.html',
+	});
+
+	createRedirect({
+		fromPath: '/docs/getting-started',
+		redirectInBrowser: true,
+		toPath: '/docs/getting-started/introduction.html',
+	});
 
 	return graphql(`
 		{
