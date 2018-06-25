@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import Navigation from './Navigation';
-import Link, { withPrefix } from 'gatsby-link';
+import Link from 'gatsby-link';
 
 class Sidebar extends Component { 
 	_handleOnClick() {
@@ -15,13 +15,13 @@ class Sidebar extends Component {
 			<div>
 				<div className="navbar navbar-mobile navbar-expand-lg navbar-header">
 					<Link to="/" className="navbar-brand d-flex">
-						<img className="logo mr-2" src={withPrefix('/images/clay_logo_w.png')} alt="" />
+						<img className="logo mr-2" src="/images/clay_logo_w.png" alt="" />
 						<span className="title h1 font-weight-bold mb-0 p-1">Clay </span>
 					</Link>
 
 					<button onClick={this._handleOnClick.bind(this)} className="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
-							<use xlinkHref={withPrefix("/images/icons/icons.svg#bars")} />
+							<use xlinkHref="/images/icons/icons.svg#bars" />
 						</svg>
 					</button>
 				</div>
@@ -31,7 +31,7 @@ class Sidebar extends Component {
 						<div className="sidebar-header">
 							<div className="navbar navbar-expand-lg navbar-header">
 								<Link className="navbar-brand" to="/">
-									<img className="logo mr-2" src={withPrefix("/images/clay_logo_w.png")} alt="Clay" />
+									<img className="logo mr-2" src="/images/clay_logo_w.png" alt="Clay" />
 									<span className="title">Clay </span>
 									<small>by Liferay</small>
 								</Link>
@@ -49,13 +49,13 @@ class Sidebar extends Component {
 							<li className="d-block mb-3">
 								<a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay/issues" target="_blank">
 									<svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
-										<use xlinkHref={withPrefix("/images/icons/icons.svg#comments")} />
+										<use xlinkHref="/images/icons/icons.svg#comments" />
 									</svg>
 								</a>
 							</li>
 							<li className="d-block">
 								<a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay" target="_blank">
-									<img className="lexicon-icon" src={withPrefix("/images/home/GitHub-Mark-64px.svg")} alt="" />
+									<img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="" />
 								</a>
 							</li>
 						</ul>

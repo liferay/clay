@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import Link, { withPrefix } from 'gatsby-link';
+import Link from 'gatsby-link';
 import LayoutNav from '../components/LayoutNav';
 import {WOW} from 'wowjs';
 
@@ -40,7 +40,7 @@ class Index extends Component {
                                             Get Started
                                         </Link>
                                         <a className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4" href="https://github.com/liferay/clay" target="_blank">
-                                            <img className="mr-2" src={withPrefix("/images/home/file-download.svg")} alt="" />Download
+                                            <img className="mr-2" src="/images/home/file-download.svg" alt="" />Download
                                         </a>
                                     </div>
                                 </div>
@@ -58,11 +58,11 @@ class Index extends Component {
                                 <div className="col-md-5 text-center">
                                     <div className="card wow fadeInUp">
                                         <div className="card-body mx-4">
-                                            <img className="mx-auto" src={withPrefix("/images/home/what.svg")} alt="" />
+                                            <img className="mx-auto" src="/images/home/what.svg" alt="" />
                                             <h2 className="font-weight-bold">What is Clay?</h2>
                                             <p>Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.</p>
                                             <Link to="/docs/getting-started/clay.html" className="btn btn-sm text-uppercase font-weight-bold">
-                                                <img className="mr-2" src={withPrefix("/images/home/chevron-right.svg")} alt="" />
+                                                <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
                                                 Learn More
                                             </Link>
                                         </div>
@@ -72,11 +72,11 @@ class Index extends Component {
                                 <div className="col-md-5 text-center mt-4 mt-md-0">
                                     <div className="card wow fadeInUp" data-wow-delay="0.1s">
                                         <div className="card-body mx-4">
-                                            <img className="mx-auto" src={withPrefix("/images/home/news.svg")} alt="" />
+                                            <img className="mx-auto" src="/images/home/news.svg" alt="" />
                                             <h2 className="font-weight-bold">Release Notes</h2>
                                             <p>Stay up-to-date on Clay's progress, fixed issues, and new features by visiting our Release Notes.</p>
                                             <Link to="/docs/news" className="btn btn-sm text-uppercase font-weight-bold">
-                                                <img className="mr-2" src={withPrefix("/images/home/chevron-right.svg")} alt="" />
+                                                <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
                                                 Learn More
                                             </Link>
                                         </div>
@@ -90,7 +90,7 @@ class Index extends Component {
                                         <div className="row">
                                             <div className="col-md-6 text-center">
                                                 <div className="card-body mx-4">
-                                                    <img className="pt-5" src={withPrefix("/images/home/library03.svg")} alt="" />
+                                                    <img className="pt-5" src="/images/home/library03.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div className="col-md-6 text-center text-md-left">
@@ -98,7 +98,7 @@ class Index extends Component {
                                                     <h2 className="font-weight-bold">Component Library</h2>
                                                     <p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
                                                     <Link to="/docs/components/alerts.html" className="btn btn-sm text-uppercase font-weight-bold">
-                                                        <img className="mr-2" src={withPrefix("/images/home/chevron-right.svg")} alt="" />
+                                                        <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
                                                         Learn More
                                                     </Link>
                                                 </div>
@@ -115,7 +115,7 @@ class Index extends Component {
                             <div className="row">
                                 <div className="col-md-4 ml-auto mr-lg-4 wow zoomIn" data-wow-duration="1.2s">
                                     <div className="text-center text-lg-right">
-                                            <img src={withPrefix("/images/home/participate02.svg")} alt="" />
+                                            <img src="/images/home/participate02.svg" alt="" />
                                     </div>
                                 </div>
                                 <div className="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
@@ -139,7 +139,7 @@ class Index extends Component {
                                 <div className="col-md-5 ml-auto mb-4">
                                     <div className="card h-100 wow fadeInUp">
                                         <div className="card-body mx-5">
-                                            <img className="mx-auto" src={withPrefix("/images/home/lexicon_symbol.svg")} alt="" />
+                                            <img className="mx-auto" src="/images/home/lexicon_symbol.svg" alt="" />
                                             <p>Visit the current Lexicon <br />
                                             Experience Language site</p>
                                             <a href="https://lexicondesign.io/" className="mb-3" target="_blank">
@@ -151,7 +151,7 @@ class Index extends Component {
                                 <div className="col-md-5 mr-auto mb-4">
                                     <div className="card h-100 wow fadeInUp" data-wow-delay="0.1s">
                                         <div className="card-body mx-5">
-                                            <img className="mx-auto" src={withPrefix("/images/home/clay_logo_w.svg")} alt="" />
+                                            <img className="mx-auto" src="/images/home/clay_logo_w.svg" alt="" />
                                             <p>Visit the previous version of <br />
                                             Clay at Lexicon CSS project site</p>
                                             <a href="https://lexiconcss.wedeploy.io/" className="mb-3" target="_blank">
@@ -168,7 +168,7 @@ class Index extends Component {
                         <div className="container-fluid container-fluid-max-lg">
                             <div className="row">
                                 <div className="col-lg text-center text-lg-left mb-4 mb-lg-0">
-                                    <img className="logo" src={withPrefix("/images/liferayLogo.png")}/>
+                                    <img className="logo" src="/images/liferayLogo.png"/>
 
                                     <div className="clearfix d-lg-none"></div>
 

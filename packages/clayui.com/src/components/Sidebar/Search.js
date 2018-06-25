@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Link, { withPrefix } from "gatsby-link";
+import Link from "gatsby-link";
 
 class Search extends Component {
 	state = {
@@ -36,7 +36,7 @@ class Search extends Component {
 
 						<span className="input-group-addon">
 							<svg className="lexicon-icon">
-								<use xlinkHref={withPrefix('/images/icons/icons.svg#search')} />
+								<use xlinkHref="/images/icons/icons.svg#search" />
 							</svg>
 						</span>
 					</div>

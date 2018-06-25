@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import rehypeReact from "rehype-react"
-import Helmet from 'react-helmet'
+import rehypeReact from "rehype-react";
+import Helmet from 'react-helmet';
 
-import docsSidebar from '../data/sidebars/doc-links.yaml'
+import docsSidebar from '../data/sidebars/doc-links.yaml';
 import Sidebar from '../components/Sidebar';
 import CodeTabs from '../components/CodeTabs';
 import Graph from '../components/Graph';

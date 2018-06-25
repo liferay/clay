@@ -2,7 +2,6 @@ const clay = require('clay-css');
 const path = require('path');
 
 module.exports = {
-    pathPrefix: '/static',
     plugins: [
         'gatsby-plugin-react-next',
         'gatsby-transformer-try-examples',
