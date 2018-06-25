@@ -45,14 +45,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 <a href="#lexicon-icon-explanation">Why do we use SVG?</a>
 
 <ul class="lexicon-icon-list list-unstyled">
-{foreach $icon in $page.icons}
-	<li>
-		<svg class="lexicon-icon lexicon-icon-{$icon}">
-			<use xlink:href="/images/icons/icons.svg#{$icon}" />
-		</svg>
-		<span>{$icon}</span>
-	</li>
-{/foreach}
+	[foreach Icons]
 </ul>
 
 </article>
@@ -71,14 +64,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 > To use the flags below, follow the same process as above, but the name of the icon is the locale and country code indicated in parenthesis (e.g. to use the Japanese icon, you would use `ja-jp`)
 
 <ul class="lexicon-icon-list list-unstyled">
-{foreach $flag in $page.flags}
-	<li>
-		<svg class="lexicon-icon lexicon-icon-{$flag}">
-			<use xlink:href="/images/icons/icons.svg#{$flag}" />
-		</svg>
-		<span>{$page.flagData[$flag]} ({$flag})</span>
-	</li>
-{/foreach}
+	[foreach Flags]
 </ul>
 
 </article>
