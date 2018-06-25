@@ -18,7 +18,7 @@ You can start by choosing how to import your component: by [npm](/docs/getting_s
 
 Once you import your component into your application, you just use it as an HTML TAG. Consider:
 
-```text/html
+```html
 <clay-button label="Primary" type="button"></clay-button>
 ```
 

@@ -17,13 +17,13 @@ You can import the entire library of Clay components at once in your application
 
 > Using [npm](https://www.npmjs.com/):
 
-```shell
+```bash
 npm install clay --save
 ```
 
 > Or [yarn](https://yarnpkg.com/lang/en/):
 
-```shell
+```bash
 yarn add clay
 ```
 
@@ -31,13 +31,13 @@ yarn add clay
 
 > Using [npm](https://www.npmjs.com/):
 
-```shell
+```bash
 npm install clay-badge --save
 ```
 
 > Or [yarn](https://yarnpkg.com/lang/en/):
 
-```shell
+```bash
 yarn add clay-badge
 ```
 
@@ -51,7 +51,7 @@ import {ClayBadge, ClayButton} from 'clay';
 
 You can render a Clay component on whatever element you want if you are not using a framework.
 
-```text/html
+```html
 <div id="my-element"></div>
 ```
 
@@ -74,7 +74,7 @@ Once added to your page, the Clay components are accessible globally on the page
 
 > See [CDN Links](/docs/getting-started/cdn-links.html).
 
-```text/html
+```html
 <div id="element"></div>
 
 <script type="text/javascript">

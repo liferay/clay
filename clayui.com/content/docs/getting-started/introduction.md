@@ -10,14 +10,14 @@ title: "Introduction"
 
 To test the Clay components for web with a minimal configuration, load the CSS and JS from the JSDelivr.
 
-```text/html
+```html
 https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css
 https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js
 ```
 
 Then include some element in the HTML page where you want to render the component...
 
-```text/html
+```html
 <div id="myElement"></div>
 ```
 
@@ -38,7 +38,7 @@ new clay.ClayButton(
 
 Let's use the [webpack](https://webpack.js.org/) to demonstrate how you will group our JavaScript and Sass. First create a folder with a name you want, and then create a package.json that looks like this:
 
-```
+```json
 {
     "scripts": {
         "start": "webpack-dev-server"
@@ -62,13 +62,13 @@ The following dependencies are required in your project:
 
 Run the command below to install the required dependencies:
 
-```shell
+```bash
 npm install --save-dev babel-core babel-loader babel-preset-env webpack webpack-dev-server webpack-cli css-loader sass-loader node-sass extract-loader file-loader
 ```
 
 To demonstrate this, consider creating an `index.html` file. This HTML file needs to include CSS and compiled JavaScript. Create this simple "Hello world!" in `index.html`:
 
-```text/html
+```html
 <html>
     <head>
         <title>My awesome Clay project!</title>
@@ -84,7 +84,7 @@ To demonstrate this, consider creating an `index.html` file. This HTML file need
 
 Create a simple Sass `app.scss` file:
 
-```text/x-scss
+```scss
 body {
     color: red;
 }
@@ -145,7 +145,7 @@ module.exports = {
 
 To test the webpack configuration, run:
 
-```shell
+```bash
 npm run start
 ```
 
@@ -155,7 +155,7 @@ And it opens `http://localhost:8080` in the browser. You should see `Hello World
 
 You can install Clay packages individually or install all packages at once. See [Importing the JS Component](/docs/getting_started/importing-the-js-component.html) for more information. In this example, we will install only the `ClayBadge` package, using the command below:
 
-```shell
+```bash
 npm install --save clay-badge
 ```
 
@@ -172,7 +172,7 @@ If you look at the screen, you will see the same thing as before. Next you can l
 
 To install `clay-css`, run the command below:
 
-```shell
+```bash
 npm install --save clay-css
 ```
 
@@ -205,7 +205,7 @@ Configure `webpack.config.js` to use the `sass-loader` loader, so it can recogni
 
 Then import the `clay-css` in your `app.scss`:
 
-```text/scss
+```scss
 @import "atlas";
 ```
 
