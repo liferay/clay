@@ -116,6 +116,16 @@ class CodeEditor extends Component {
                     ClayActionsDropdown,
                     ClayCreationMenuDropdown,
                     ClayButton,
+                ],
+                [
+                    'ClayBadge',
+                    'ClayAlert',
+                    'ClayStripe',
+                    'ClayToast',
+                    'ClayDropdown',
+                    'ClayActionsDropdown',
+                    'ClayCreationMenuDropdown',
+                    'ClayButton',
                 ]
             );
         } catch (error) {

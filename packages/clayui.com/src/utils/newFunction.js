@@ -1,12 +1,8 @@
-const newFunction = (Component, mountNode, compiled, [...components]) => {
-    const stringNames = components.map(element => {
-        return element.name;
-    });
-
+const newFunction = (Component, mountNode, compiled, [...components], [...names]) => {
     new Function(
         'Component', 
         'mountNode',
-        ...stringNames,
+        ...names,
         compiled,
     )(
         Component,
