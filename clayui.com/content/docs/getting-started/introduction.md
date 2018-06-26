@@ -11,8 +11,8 @@ title: "Introduction"
 To test the Clay components for web with a minimal configuration, load the CSS and JS from the JSDelivr.
 
 ```html
-https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css
-https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css">
+<script src="https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js"></script>
 ```
 
 Then include some element in the HTML page where you want to render the component...
