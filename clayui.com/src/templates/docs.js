@@ -21,7 +21,7 @@ export default class Docs extends Component {
 
     componentWillUnmount() {
         this._codeTabs = null;
-        this._codeClipboard = null;
+        this._codeClipboard.dispose();
     }
 
     render() {
