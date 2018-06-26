@@ -61,6 +61,7 @@
             width: 50%;
             display: flex;
             flex-direction: column;
+            max-height: 100vh;
 
             .try-playground-title {
                 background-color: rgb(236, 236, 236);
@@ -69,6 +70,7 @@
 
             .try-playground-live--preview {
                 padding: 1rem;
+                overflow: auto;
             }
 
             &.try-live-error {
