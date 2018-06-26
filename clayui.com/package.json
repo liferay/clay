@@ -3,7 +3,7 @@
   "name": "clayui.com",
   "license": "MIT",
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d wedeploy",
+    "deploy": "gatsby build && gh-pages -d public -b wedeploy",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
