@@ -241,13 +241,17 @@ class ClayDatasetDisplay extends ClayComponent {
 
 	/**
 	 * Changes the view on management toolbar view type click.
-	 * @param {!Object} item
+	 * @param {!Event} event
 	 * @private
 	 */
-	_handleViewTypeItemClicked(item) {
+	_handleViewTypeItemClicked(event) {
+		const item = event.data.item;
+
 		this.views[this.selectedView].active = false;
 
-		for (let [index, view] of this.views.entries()) {
+		const views = this.views.entries();
+		
+		for (let [index, view] of views) {
 			if (view === item) {
 				this.views[index].active = true;
 				this.selectedView = index;
