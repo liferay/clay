@@ -5,8 +5,8 @@ title: "Geomap Chart"
 <article id="1">
 
 <div style="width:100%;height:380px;">
-	<clay-chart component="BubbleChart"
-	props='{"color": {"range": {"min": "#b1d4ff", "max": "#0065e4"}, "selected": "#4b9bff", "value": "gdp_md_est"}, "data": "/static/world-low-res.geo.json"}'></clay-chart>
+	<clay-chart component="Geomap"
+	props='{"color": {"range": {"min": "#b1d4ff", "max": "#0065e4"}, "selected": "#4b9bff", "value": "gdp_md_est"}, "data": "/world-low-res.geo.json"}'></clay-chart>
 </div>
 
 ```soy
@@ -24,14 +24,14 @@ title: "Geomap Chart"
 ```
 ```jsx
 <ClayGeomap
-	color={
+	color={{
 			range: {
 				min: '#b1d4ff',
 				max: '#0065e4'
 			},
-			selected: '#4b9bff'
+			selected: '#4b9bff',
 			value: 'gdp_md_est'
-	}
+	}}
 	data='/assets/world-low-res.geo.json'
 />
 ```
