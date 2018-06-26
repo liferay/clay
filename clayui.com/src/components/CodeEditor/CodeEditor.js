@@ -140,8 +140,11 @@ class CodeEditor extends Component {
 
     _updateState(code) {
         try {
+            const template = `const App = (props) => {return ${code}};
+            Component.render(App, mountNode);`;
+
             return {
-                compiled: compileES6(code),
+                compiled: compileES6(template),
                 error: null,
                 code,
             };
