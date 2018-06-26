@@ -33,7 +33,7 @@ Contains the source code and documentation powering [clayui.com](https://clayui.
 
 You can find the Clay documentation on the [site](https://clayui.com/docs/components/alerts.html).
 
-* [Getting Started](https://clayui.com/docs/getting_started/introduction.html)
+* [Getting Started](https://clayui.com/docs/getting-started/introduction.html)
 * [Layout](https://clayui.com/docs/layout/grid.html)
 * [Components Library](https://clayui.com/docs/components/alerts.html)
 * [News](https://clayui.com/docs/news/)
@@ -66,7 +66,7 @@ Each package contains a page with demos, check.
 
 Clay is available as the `clay` package in npm for components and for css like `clay-css`. It is also available on a [CDN](https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js) for components and for css, [check](https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css). But if you just want the separate components, it's also available in the npm as [clay-](https://www.npmjs.com/search?q=clay-).
 
-See the [Getting Started](https://clayui.com/docs/getting_started/introduction.html) guide for more information.
+See the [Getting Started](https://clayui.com/docs/getting-started/introduction.html) guide for more information.
 
 Even if your application does not use the framework [Metal.js](https://metaljs.com/) Clay is flexible and can be used as WebComponents see some examples with:
 
