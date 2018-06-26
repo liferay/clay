@@ -169,7 +169,7 @@ class CodeEditor extends Component {
 
     _updateState(code) {
         try {
-            const template = `const App = (props) => {return ${code}};
+            const template = `const App = (props) => {return(<div>${code}</div>)};
             Component.render(App, mountNode);`;
 
             return {
