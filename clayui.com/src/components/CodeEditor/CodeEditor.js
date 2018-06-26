@@ -15,6 +15,7 @@ import {
     ClayCreationMenuDropdown,
 } from 'clay-dropdown';
 import ClayButton from 'clay-button';
+import * as ClayCharts from 'clay-charts';
 
 import {LiveEditor, LiveProvider} from 'react-live';
 
@@ -116,6 +117,20 @@ class CodeEditor extends Component {
                     ClayActionsDropdown,
                     ClayCreationMenuDropdown,
                     ClayButton,
+                    ClayCharts.AreaLineChart,
+                    ClayCharts.AreaSplineChart,
+                    ClayCharts.AreaStepChart,
+                    ClayCharts.BarChart,
+                    ClayCharts.BubbleChart,
+                    ClayCharts.DonutChart,
+                    ClayCharts.GaugeChart,
+                    ClayCharts.Geomap,
+                    ClayCharts.LineChart,
+                    ClayCharts.PieChart,
+                    ClayCharts.PredictiveChart,
+                    ClayCharts.ScatterChart,
+                    ClayCharts.SplineChart,
+                    ClayCharts.StepChart,
                 ],
                 [
                     'ClayBadge',
@@ -126,6 +141,20 @@ class CodeEditor extends Component {
                     'ClayActionsDropdown',
                     'ClayCreationMenuDropdown',
                     'ClayButton',
+                    'AreaLineChart',
+                    'AreaSplineChart',
+                    'AreaStepChart',
+                    'BarChart',
+                    'BubbleChart',
+                    'DonutChart',
+                    'GaugeChart',
+                    'Geomap',
+                    'LineChart',
+                    'PieChart',
+                    'PredictiveChart',
+                    'ScatterChart',
+                    'SplineChart',
+                    'StepChart',
                 ]
             );
         } catch (error) {
