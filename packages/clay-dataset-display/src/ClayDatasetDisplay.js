@@ -250,7 +250,7 @@ class ClayDatasetDisplay extends ClayComponent {
 		this.views[this.selectedView].active = false;
 
 		const views = this.views.entries();
-		
+
 		for (let [index, view] of views) {
 			if (view === item) {
 				this.views[index].active = true;

@@ -533,8 +533,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar action click', () => {
-		
-
 		recipesItems[0].selected = true;
 
 		component = new ClayDatasetDisplay(defaultConfig);
@@ -556,8 +554,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar filter done button click', () => {
-		
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -576,8 +572,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu button click', () => {
-		
-
 		defaultConfig.creationMenu = undefined;
 
 		component = new ClayDatasetDisplay(defaultConfig);
@@ -596,8 +590,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on creation menu item click', () => {
-		
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -618,8 +610,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on filter item click', () => {
-		
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -640,8 +630,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu more button click', () => {
-		
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -659,8 +647,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar search', () => {
-		
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -674,8 +660,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar sorting button click', () => {
-		
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -692,8 +676,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and select all items on management toolbar checkbox click', () => {
-		
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -721,8 +703,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with selected items and deselect all items on management toolbar checked checkbox click', () => {
-		
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -749,8 +729,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with items and select an item on click', () => {
-		
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -776,8 +754,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with grouped items and select an item on click', () => {
-		
-
 		defaultConfig.items = [
 			{
 				items: [
@@ -810,8 +786,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with items and deselect a selected item on click', () => {
-		
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -842,8 +816,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with grouped items and deselect a selected item on click', () => {
-		
-
 		defaultConfig.items = [
 			{
 				items: [
@@ -890,14 +862,13 @@ describe('ClayDatasetDisplay', function() {
 		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element.querySelectorAll('ul li')[1].click();
 
 		jest.runAllTimers();
-		
+
 		expect(component).toMatchSnapshot();
 
 		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element.querySelectorAll('ul li')[2].click();
 
 		jest.runAllTimers();
-		
-		expect(component).toMatchSnapshot();
 
+		expect(component).toMatchSnapshot();
 	});
 });
