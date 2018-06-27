@@ -24,6 +24,6 @@ module.exports = {
 	},
 	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
 	resolve: {
-		mainFields: ['esnext:main', 'main'],
+		mainFields: ['browser', 'esnext:main', 'main'],
 	},
 };
