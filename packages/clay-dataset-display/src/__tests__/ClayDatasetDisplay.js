@@ -558,17 +558,13 @@ describe('ClayDatasetDisplay', function() {
 
 		const spy = jest.spyOn(component, 'emit');
 
-		let filtersDropdown =
-			component.refs.managementToolbar.refs.filtersDropdown;
+		let filtersDropdown = component.refs.managementToolbar.refs.filtersDropdown;
 		filtersDropdown.refs.portal.refs.dropdownButton.element.click();
 
 		jest.runAllTimers();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			'filterDoneClicked',
-			expect.any(Object)
-		);
+		expect(spy).toHaveBeenCalledWith('filterDoneClicked', expect.any(Object));
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu button click', () => {
@@ -595,8 +591,8 @@ describe('ClayDatasetDisplay', function() {
 		const spy = jest.spyOn(component, 'emit');
 
 		const element =
-			component.refs.managementToolbar.refs.creationMenuDropdown.refs
-				.dropdown.refs.portal.element;
+			component.refs.managementToolbar.refs.creationMenuDropdown.refs.dropdown
+				.refs.portal.element;
 		element.querySelector('ul li').click();
 
 		expect(spy).toHaveBeenCalled();
@@ -615,8 +611,7 @@ describe('ClayDatasetDisplay', function() {
 		const spy = jest.spyOn(component, 'emit');
 
 		const element =
-			component.refs.managementToolbar.refs.filtersDropdown.refs.portal
-				.element;
+			component.refs.managementToolbar.refs.filtersDropdown.refs.portal.element;
 		element.querySelector('ul li:not(.dropdown-subheader)').click();
 
 		expect(spy).toHaveBeenCalled();
@@ -697,9 +692,7 @@ describe('ClayDatasetDisplay', function() {
 
 		jest.runAllTimers();
 
-		expect(component.getSelectedItems().length).toEqual(
-			component._totalItems
-		);
+		expect(component.getSelectedItems().length).toEqual(component._totalItems);
 	});
 
 	it('should render a ClayDatasetDisplay with selected items and deselect all items on management toolbar checked checkbox click', () => {
@@ -859,13 +852,17 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(component).toMatchSnapshot();
 
-		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element.querySelectorAll('ul li')[1].click();
+		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element
+			.querySelectorAll('ul li')[1]
+			.click();
 
 		jest.runAllTimers();
 
 		expect(component).toMatchSnapshot();
 
-		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element.querySelectorAll('ul li')[2].click();
+		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element
+			.querySelectorAll('ul li')[2]
+			.click();
 
 		jest.runAllTimers();
 
