@@ -1,32 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
+const webpackCommonConfig = require('clay-config').webpackCommonConfig;
 
-module.exports = {
-	entry: ['./src/all/dropdown.js'],
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /(node_modules|bower_components)/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						compact: false,
-						presets: ['babel-preset-env'],
-						plugins: ['babel-plugin-transform-node-env-inline'],
-					},
-				},
-			},
-		],
-	},
-	devtool: 'cheap-module-source-map',
-	output: {
-		library: 'metal',
-		libraryTarget: 'this',
+module.exports = Object.assign(webpackCommonConfig, {
+	entry: './src/all/dropdown.js',
+	output: Object.assign(webpackCommonConfig.output, {
 		filename: './build/globals/clay-dropdown.js',
-	},
-	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
-	resolve: {
-		mainFields: ['esnext:main', 'main'],
-	},
-};
+	}),
+});
