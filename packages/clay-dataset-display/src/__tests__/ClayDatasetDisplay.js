@@ -288,6 +288,7 @@ let defaultConfig = {
 	title: 'Group Header 1',
 	views: [
 		{
+			active: true,
 			contentRenderer: 'cards',
 			href: '#cards',
 			icon: 'cards2',
@@ -383,7 +384,6 @@ let defaultConfig = {
 			},
 		},
 		{
-			active: true,
 			contentRenderer: 'table',
 			icon: 'table',
 			label: 'Table',
@@ -449,8 +449,11 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	beforeEach(() => {
-		defaultConfig.items = groupedItems;
+		jest.useFakeTimers();
+
 		defaultConfig.creationMenu = creationMenuConfig;
+		defaultConfig.items = groupedItems;
+		defaultConfig.selectedView = 0;
 	});
 
 	it('should render the default markup', () => {
@@ -878,28 +881,23 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and change view on management toolbar view type click', () => {
-		jest.useFakeTimers();
+		defaultConfig.selectedView = 0;
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		expect(component).toMatchSnapshot();
 
-		let element =
-			component.refs.managementToolbar.refs.viewTypesDropdown.refs
-				.dropdown.refs.portal.element;
-		element.querySelectorAll('ul li')[1].click();
+		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element.querySelectorAll('ul li')[1].click();
 
 		jest.runAllTimers();
-
+		
 		expect(component).toMatchSnapshot();
 
-		element =
-			component.refs.managementToolbar.refs.viewTypesDropdown.refs
-				.dropdown.refs.portal.element;
-		element.querySelectorAll('ul li')[2].click();
+		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element.querySelectorAll('ul li')[2].click();
 
 		jest.runAllTimers();
-
+		
 		expect(component).toMatchSnapshot();
+
 	});
 });
