@@ -3,6 +3,10 @@ import ClayDropdownBase from '../ClayDropdownBase';
 let clayDropdownBase;
 
 describe('ClayDropdownBase', function() {
+	beforeEach(() => {
+		jest.useFakeTimers();
+	});
+
 	afterEach(() => {
 		if (clayDropdownBase) {
 			clayDropdownBase.dispose();
@@ -590,7 +594,6 @@ describe('ClayDropdownBase', function() {
 	});
 
 	it('should open dropdown', () => {
-		jest.useFakeTimers();
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
@@ -612,7 +615,6 @@ describe('ClayDropdownBase', function() {
 	});
 
 	it('should close dropdown', () => {
-		jest.useFakeTimers();
 		clayDropdownBase = new ClayDropdownBase({
 			expanded: true,
 			items: [
@@ -633,7 +635,6 @@ describe('ClayDropdownBase', function() {
 	});
 
 	it('should close dropdown on document click', () => {
-		jest.useFakeTimers();
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{

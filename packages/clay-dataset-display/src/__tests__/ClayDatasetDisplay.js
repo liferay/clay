@@ -288,6 +288,7 @@ let defaultConfig = {
 	title: 'Group Header 1',
 	views: [
 		{
+			active: true,
 			contentRenderer: 'cards',
 			href: '#cards',
 			icon: 'cards2',
@@ -383,7 +384,6 @@ let defaultConfig = {
 			},
 		},
 		{
-			active: true,
 			contentRenderer: 'table',
 			icon: 'table',
 			label: 'Table',
@@ -449,8 +449,11 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	beforeEach(() => {
-		defaultConfig.items = groupedItems;
+		jest.useFakeTimers();
+
 		defaultConfig.creationMenu = creationMenuConfig;
+		defaultConfig.items = groupedItems;
+		defaultConfig.selectedView = 0;
 	});
 
 	it('should render the default markup', () => {
@@ -530,8 +533,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar action click', () => {
-		jest.useFakeTimers();
-
 		recipesItems[0].selected = true;
 
 		component = new ClayDatasetDisplay(defaultConfig);
@@ -553,28 +554,20 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar filter done button click', () => {
-		jest.useFakeTimers();
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
 
-		let filtersDropdown =
-			component.refs.managementToolbar.refs.filtersDropdown;
+		let filtersDropdown = component.refs.managementToolbar.refs.filtersDropdown;
 		filtersDropdown.refs.portal.refs.dropdownButton.element.click();
 
 		jest.runAllTimers();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			'filterDoneClicked',
-			expect.any(Object)
-		);
+		expect(spy).toHaveBeenCalledWith('filterDoneClicked', expect.any(Object));
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu button click', () => {
-		jest.useFakeTimers();
-
 		defaultConfig.creationMenu = undefined;
 
 		component = new ClayDatasetDisplay(defaultConfig);
@@ -593,15 +586,13 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on creation menu item click', () => {
-		jest.useFakeTimers();
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
 
 		const element =
-			component.refs.managementToolbar.refs.creationMenuDropdown.refs
-				.dropdown.refs.portal.element;
+			component.refs.managementToolbar.refs.creationMenuDropdown.refs.dropdown
+				.refs.portal.element;
 		element.querySelector('ul li').click();
 
 		expect(spy).toHaveBeenCalled();
@@ -615,15 +606,12 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on filter item click', () => {
-		jest.useFakeTimers();
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
 
 		const element =
-			component.refs.managementToolbar.refs.filtersDropdown.refs.portal
-				.element;
+			component.refs.managementToolbar.refs.filtersDropdown.refs.portal.element;
 		element.querySelector('ul li:not(.dropdown-subheader)').click();
 
 		expect(spy).toHaveBeenCalled();
@@ -637,8 +625,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu more button click', () => {
-		jest.useFakeTimers();
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -656,8 +642,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar search', () => {
-		jest.useFakeTimers();
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -671,8 +655,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar sorting button click', () => {
-		jest.useFakeTimers();
-
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		const spy = jest.spyOn(component, 'emit');
@@ -689,8 +671,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and select all items on management toolbar checkbox click', () => {
-		jest.useFakeTimers();
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -712,14 +692,10 @@ describe('ClayDatasetDisplay', function() {
 
 		jest.runAllTimers();
 
-		expect(component.getSelectedItems().length).toEqual(
-			component._totalItems
-		);
+		expect(component.getSelectedItems().length).toEqual(component._totalItems);
 	});
 
 	it('should render a ClayDatasetDisplay with selected items and deselect all items on management toolbar checked checkbox click', () => {
-		jest.useFakeTimers();
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -746,8 +722,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with items and select an item on click', () => {
-		jest.useFakeTimers();
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -773,8 +747,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with grouped items and select an item on click', () => {
-		jest.useFakeTimers();
-
 		defaultConfig.items = [
 			{
 				items: [
@@ -807,8 +779,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with items and deselect a selected item on click', () => {
-		jest.useFakeTimers();
-
 		defaultConfig.items = [
 			{
 				id: '1',
@@ -839,8 +809,6 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with grouped items and deselect a selected item on click', () => {
-		jest.useFakeTimers();
-
 		defaultConfig.items = [
 			{
 				items: [
@@ -878,25 +846,23 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and change view on management toolbar view type click', () => {
-		jest.useFakeTimers();
+		defaultConfig.selectedView = 0;
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
 		expect(component).toMatchSnapshot();
 
-		let element =
-			component.refs.managementToolbar.refs.viewTypesDropdown.refs
-				.dropdown.refs.portal.element;
-		element.querySelectorAll('ul li')[1].click();
+		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element
+			.querySelectorAll('ul li')[1]
+			.click();
 
 		jest.runAllTimers();
 
 		expect(component).toMatchSnapshot();
 
-		element =
-			component.refs.managementToolbar.refs.viewTypesDropdown.refs
-				.dropdown.refs.portal.element;
-		element.querySelectorAll('ul li')[2].click();
+		component.refs.managementToolbar.refs.viewTypesDropdown.refs.dropdown.refs.portal.element
+			.querySelectorAll('ul li')[2]
+			.click();
 
 		jest.runAllTimers();
 
