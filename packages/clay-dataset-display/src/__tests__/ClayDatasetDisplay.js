@@ -533,7 +533,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar action click', () => {
-		jest.useFakeTimers();
+		
 
 		recipesItems[0].selected = true;
 
@@ -556,7 +556,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar filter done button click', () => {
-		jest.useFakeTimers();
+		
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
@@ -576,7 +576,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu button click', () => {
-		jest.useFakeTimers();
+		
 
 		defaultConfig.creationMenu = undefined;
 
@@ -596,7 +596,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on creation menu item click', () => {
-		jest.useFakeTimers();
+		
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
@@ -618,7 +618,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on filter item click', () => {
-		jest.useFakeTimers();
+		
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
@@ -640,7 +640,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu more button click', () => {
-		jest.useFakeTimers();
+		
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
@@ -659,7 +659,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar search', () => {
-		jest.useFakeTimers();
+		
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
@@ -674,7 +674,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar sorting button click', () => {
-		jest.useFakeTimers();
+		
 
 		component = new ClayDatasetDisplay(defaultConfig);
 
@@ -692,7 +692,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay and select all items on management toolbar checkbox click', () => {
-		jest.useFakeTimers();
+		
 
 		defaultConfig.items = [
 			{
@@ -721,7 +721,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with selected items and deselect all items on management toolbar checked checkbox click', () => {
-		jest.useFakeTimers();
+		
 
 		defaultConfig.items = [
 			{
@@ -749,7 +749,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with items and select an item on click', () => {
-		jest.useFakeTimers();
+		
 
 		defaultConfig.items = [
 			{
@@ -776,7 +776,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with grouped items and select an item on click', () => {
-		jest.useFakeTimers();
+		
 
 		defaultConfig.items = [
 			{
@@ -810,7 +810,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with items and deselect a selected item on click', () => {
-		jest.useFakeTimers();
+		
 
 		defaultConfig.items = [
 			{
@@ -842,7 +842,7 @@ describe('ClayDatasetDisplay', function() {
 	});
 
 	it('should render a ClayDatasetDisplay with grouped items and deselect a selected item on click', () => {
-		jest.useFakeTimers();
+		
 
 		defaultConfig.items = [
 			{

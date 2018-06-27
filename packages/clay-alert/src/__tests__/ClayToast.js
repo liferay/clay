@@ -14,6 +14,8 @@ function mockConsoleError() {
 describe('ClayToast', function() {
 	beforeEach(() => {
 		consoleErrorReference = console.error;
+
+		jest.useFakeTimers();
 	});
 
 	afterEach(() => {
@@ -114,8 +116,6 @@ describe('ClayToast', function() {
 
 	// eslint-disable-next-line
 	it('should close automatically a toast after 8 seconds', function() {
-		jest.useFakeTimers();
-
 		toast = new ClayToast({
 			autoClose: true,
 			message: 'message',
@@ -132,8 +132,6 @@ describe('ClayToast', function() {
 
 	// eslint-disable-next-line
 	it('should close automatically a toast after 12 seconds', function() {
-		jest.useFakeTimers();
-
 		toast = new ClayToast({
 			autoClose: 12,
 			message: 'message<a href="#">Link</a>',

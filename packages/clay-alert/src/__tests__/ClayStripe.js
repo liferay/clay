@@ -14,6 +14,7 @@ function mockConsoleError() {
 describe('ClayStripe', function() {
 	beforeEach(() => {
 		consoleErrorReference = console.error;
+		jest.useFakeTimers();
 	});
 
 	afterEach(() => {
@@ -114,8 +115,6 @@ describe('ClayStripe', function() {
 
 	// eslint-disable-next-line
 	it('should close automatically an stripe after 5 seconds', function() {
-		jest.useFakeTimers();
-
 		stripe = new ClayStripe({
 			autoClose: true,
 			message: 'message',
@@ -132,8 +131,6 @@ describe('ClayStripe', function() {
 
 	// eslint-disable-next-line
 	it('should close automatically an stripe after 10 seconds', function() {
-		jest.useFakeTimers();
-
 		stripe = new ClayStripe({
 			autoClose: 10,
 			message: 'message<a href="#">Link</a>',
