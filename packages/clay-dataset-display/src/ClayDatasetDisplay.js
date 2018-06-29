@@ -26,11 +26,15 @@ class ClayDatasetDisplay extends ClayComponent {
 		let totalItems = 0;
 
 		if (this.items) {
-			for (let item of this.items) {
+			for (let i = 0, l = this.items.length; i < l; i++) {
+				const item = this.items[i];
+
 				if (item.items) {
 					totalItems += item.items.length;
 
-					for (let childrenItem of item.items) {
+					for (let j = 0, k = item.items.length; j < k; j++) {
+						const childrenItem = item.items[j];
+
 						if (childrenItem.selected) {
 							selectedItems.push(childrenItem);
 						}
@@ -55,11 +59,22 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * @private
 	 */
 	_deselectAllItems() {
-		for (let item of this._selectedItems) {
-			item.selected = false;
-		}
+		this._selectedItems.map(item => (item.selected = false));
 
 		this._selectedItems = [];
+	}
+
+	/**
+	 * Flattens an array of items.
+	 * @param {Array} items
+	 * @return {Array}
+	 */
+	_flattenItems(items) {
+		return items.reduce((list, value) => {
+			return list.concat(
+				Array.isArray(value) ? this._flattenItems(value) : value
+			);
+		}, []);
 	}
 
 	/**
@@ -151,7 +166,13 @@ class ClayDatasetDisplay extends ClayComponent {
 		let itemId = event.target.getAttribute('value');
 
 		if (!checkedStatus) {
-			for (let [index, item] of this._selectedItems.entries()) {
+			const entries = Object.entries(this._selectedItems);
+
+			for (let i = 0, l = entries.length; i < l; i++) {
+				const entry = entries[i];
+				const index = entry[0];
+				let item = entry[1];
+
 				if (
 					item[
 						this.views[this.selectedView].schema.inputValueField
@@ -166,9 +187,13 @@ class ClayDatasetDisplay extends ClayComponent {
 			let found = false;
 
 			if (this.items) {
-				for (let item of this.items) {
+				for (let i = 0, l = this.items.length; i < l; i++) {
+					const item = this.items[i];
+
 					if (item.items) {
-						for (let childrenItem of item.items) {
+						for (let j = 0, k = item.items.length; j < k; j++) {
+							const childrenItem = item.items[j];
+
 							if (
 								childrenItem[
 									this.views[this.selectedView].schema
@@ -249,12 +274,12 @@ class ClayDatasetDisplay extends ClayComponent {
 
 		this.views[this.selectedView].active = false;
 
-		const views = this.views.entries();
+		for (let i = 0, l = this.views.length; i < l; i++) {
+			const view = this.views[i];
 
-		for (let [index, view] of views) {
 			if (view === item) {
-				this.views[index].active = true;
-				this.selectedView = index;
+				this.views[i].active = true;
+				this.selectedView = i;
 				break;
 			}
 		}
@@ -266,23 +291,19 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * @private
 	 */
 	_selectAllItems() {
-		let selectedItems = [];
-
-		for (let item of this.items) {
-			if (item.items) {
-				for (let childrenItem of item.items) {
-					childrenItem.selected = true;
-
-					selectedItems.push(childrenItem);
-				}
+		const selectedItems = this.items.map(item => {
+			if (Array.isArray(item.items)) {
+				return item.items.map(item => {
+					item.selected = true;
+					return item;
+				});
 			} else {
 				item.selected = true;
-
-				selectedItems.push(item);
+				return item;
 			}
-		}
+		});
 
-		this._selectedItems = selectedItems;
+		this._selectedItems = this._flattenItems(selectedItems);
 	}
 }
 
