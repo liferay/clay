@@ -868,4 +868,44 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(component).toMatchSnapshot();
 	});
+
+	it('should select and unselect all items', () => {
+		let totalItems = 0;
+		defaultConfig.items.map(item => {
+			if (Array.isArray(item.items)) {
+				item.items.map(() => totalItems++);
+			} else {
+				totalItems++;
+			}
+		});
+
+		component = new ClayDatasetDisplay(defaultConfig);
+
+		expect(component).toMatchSnapshot();
+
+		const checkbox = component.refs.managementToolbar.refs.selectPageCheckbox.element.querySelector(
+			'input[type="checkbox"]'
+		);
+
+		checkbox.click();
+
+		jest.runAllTimers();
+
+		expect(component).toMatchSnapshot();
+
+		let selectedItems = component.getSelectedItems().length;
+
+		expect(selectedItems).toBeGreaterThan(0);
+		expect(selectedItems).toEqual(totalItems);
+
+		checkbox.click();
+
+		jest.runAllTimers();
+
+		expect(component).toMatchSnapshot();
+
+		selectedItems = component.getSelectedItems().length;
+
+		expect(selectedItems).toBe(0);
+	});
 });
