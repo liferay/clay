@@ -13,9 +13,10 @@ import templates from './ClayAutocomplete.soy';
  */
 class ClayAutocomplete extends Component {
 	created() {
-		this.provider = new DataProvider(this.dataSource, {
+		this._query = this.value;
+		this.provider = new DataProvider(this.data, {
 			elements: this.maxSuggestions,
-			paramName: 'query',
+			paramName: this.paramName,
 		});
 		this.provider.on(
 			'suggestionsUpdated',
@@ -23,8 +24,14 @@ class ClayAutocomplete extends Component {
 		);
 	}
 
+	_clearSuggestions() {
+		if (this._suggestions.length > 0) {
+			this._updateSuggestions([]);
+		}
+	}
+
 	_updateSuggestions(list) {
-		this.suggestions = list;
+		this._suggestions = list;
 	}
 
 	_handleClick(event) {
@@ -32,18 +39,22 @@ class ClayAutocomplete extends Component {
 	}
 
 	_handleSearch(event) {
-		this.query = event.delegateTarget.value.toLowerCase();
-		this.value = this.query;
-		this.provider.updateSuggestions(this.query);
-		this.selectedSuggestionIndex = 0;
+		this.value = event.delegateTarget.value.toLowerCase();
+		if (this.value.length >= 3) {
+			this._query = this.value;
+			this.provider.updateSuggestions(this._query);
+		} else {
+			this._clearSuggestions();
+		}
+		this._selectedSuggestionIndex = 0;
 	}
 
 	_handleFocus() {
-		this.hasFocus = true;
+		this._hasFocus = true;
 	}
 
 	_handleBlur() {
-		this.hasFocus = false;
+		this._hasFocus = false;
 	}
 
 	_handleHover(e) {
@@ -51,60 +62,68 @@ class ClayAutocomplete extends Component {
 	}
 
 	_handleKeydown(event) {
+		this._hasFocus = true;
 		switch (event.key) {
 		case 'ArrowDown':
 			event.preventDefault();
-			this.selectSuggestion(this.selectedSuggestionIndex + 1);
+			this.selectSuggestion(this._selectedSuggestionIndex + 1);
 			break;
 
 		case 'ArrowUp':
 			event.preventDefault();
-			this.selectSuggestion(this.selectedSuggestionIndex - 1);
+			this.selectSuggestion(this._selectedSuggestionIndex - 1);
 			break;
 
 		case 'Enter':
 			event.target.blur();
 			this.submit(event);
 			break;
+
+		case 'Escape':
+			this._hasFocus = false;
+			this.selectSuggestion(0);
+			break;
 		}
 	}
 
 	selectSuggestion(pos) {
-		const total = this.suggestions.length + 1;
+		const total = this._suggestions.length + 1;
 
-		this.selectedSuggestionIndex = (pos + total) % total;
+		this._selectedSuggestionIndex = (pos + total) % total;
 
 		this.value =
-			this.selectedSuggestionIndex > 0
-				? this.suggestions[this.selectedSuggestionIndex - 1].label
-				: this.query;
+			this._selectedSuggestionIndex > 0
+				? this._suggestions[this._selectedSuggestionIndex - 1]
+				: this._query;
 	}
 
 	submit(event) {
 		this.emit('submitQuery', {
 			query: this.value,
-			element: this.suggestions[this.selectedSuggestionIndex - 1],
+			selectedItem: this._suggestions[this._selectedSuggestionIndex - 1],
 			originalEvent: event || null,
 		});
 	}
 }
 
-const itemShape = {
-	label: Config.string(),
-};
-
 ClayAutocomplete.STATE = {
-	dataSource: Config.oneOfType([
-		Config.arrayOf(Config.shapeOf(itemShape)),
-		Config.string(),
-	]),
-	suggestions: Config.arrayOf(Config.shapeOf(itemShape)).value([]),
-	maxSuggestions: Config.number().value(5),
-	selectedSuggestionIndex: Config.number().value(0),
+	_hasFocus: Config.bool()
+		.value(false)
+		.internal(),
+	_query: Config.string()
+		.value('')
+		.internal(),
+	_selectedSuggestionIndex: Config.number()
+		.value(0)
+		.internal(),
+	_suggestions: Config.array()
+		.value([])
+		.internal(),
+	data: Config.oneOfType([Config.array(), Config.string()]),
 	elementClasses: Config.string(),
-	hasFocus: Config.bool().value(false),
 	id: Config.string(),
-	query: Config.string().value(''),
+	maxSuggestions: Config.number().value(5),
+	paramName: Config.string().value('query'),
 	value: Config.string().value(''),
 };
 

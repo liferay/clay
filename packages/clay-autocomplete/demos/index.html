@@ -34,16 +34,14 @@
 	<script type="text/javascript">
 
 		const ac = new metal.ClayAutocomplete({
-			dataSource: new Array(50).fill(1).map((e, i) => ({ label: `el${i}` })),
-			onSubmit: (...args) => console.log(args)
+			data: new Array(50).fill(1).map((e, i) => (`el${i}`)),
+			events: { submitQuery: el => console.log(el) }
 		}, '#container');
 
 		const ac2 = new metal.ClayAutocomplete({
-			dataSource: '/packages/clay-autocomplete/demos/data.json',
-			onSubmit: (...args) => console.log(args)
+			data: '/packages/clay-autocomplete/demos/data.json?test=a&test2'
 		}, '#container2');
 
-		ac.on('submitQuery', el => console.log(el))
 		ac2.on('submitQuery', el => console.log(el))
 
 	</script>

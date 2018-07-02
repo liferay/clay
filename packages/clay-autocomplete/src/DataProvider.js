@@ -1,4 +1,5 @@
 import {isString} from 'metal';
+import Uri from 'metal-uri';
 import fuzzy from 'fuzzy';
 import EventEmitter from 'metal-events';
 
@@ -8,16 +9,14 @@ function getDataFromArray(query, data, cb) {
 	cb(
 		fuzzy
 			.filter(query, data, {
-				// pre: '<strong>',
-				// post: '</strong>',
-				extract: el => el.label,
+				extract: el => el,
 			})
-			.map(e => ({label: e.string}))
+			.map(e => e.string)
 	);
 }
 
 function getDataFromURL(query, url, paramName = 'q', cb) {
-	fetch(`${url}?${paramName}=${query}`)
+	fetch(new Uri(url).setParameterValue(paramName, query))
 		.then(response => response.json())
 		.then(json => cb(json));
 }

@@ -4,20 +4,20 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param _suggestions: list<?>}
+	{@param? _handleBlur: any}
+	{@param? _handleClick: any}
+	{@param? _handleFocus: any}
+	{@param? _handleHover: any}
+	{@param? _handleKeydown: any}
+	{@param? _handleSearch: any}
+	{@param? _hasFocus: bool}
+	{@param? _selectedSuggestionIndex: int}
 	{@param? elementClasses: string}
 	{@param? id: string}
-	{@param suggestions: list<[label:html]>}
-	{@param? selectedSuggestionIndex: int}
 	{@param? value: string}
-	{@param? hasFocus: bool}
-	{@param? _handleSearch: any}
-	{@param? _handleFocus: any}
-	{@param? _handleBlur: any}
-	{@param? _handleKeydown: any}
-	{@param? _handleClick: any}
-	{@param? _handleHover: any}
 
-	{let $expanded: $hasFocus and $value and length($suggestions) /}
+	{let $expanded: $_hasFocus and $value and length($_suggestions) /}
 
 	{let $attributes kind="attributes"}
 		class="clay-autocomplete dropdown-full form-group
@@ -50,19 +50,37 @@
 			data-onkeydown="{$_handleKeydown}"
 		>
 		<ul {$listAttributes}>
-			{foreach $item in $suggestions}
-				{let $elAttributes kind="attributes"}
-					class="dropdown-item
-						{if $selectedSuggestionIndex - 1 == index($item)}
-							{sp}active
-						{/if}
-					"
-				{/let}
-				{let $index: index($item) /}
+			{foreach $item in $_suggestions}
 				<li>
-					<a {$elAttributes} data-onmousedown="{$_handleClick}" data-onmouseover="{$_handleHover}" data-index="{$index}">{$item.label}</a>
+					{call .item}
+						{param item: $item /}
+						{param itemIndex: index($item) /}
+						{param _selectedSuggestionIndex: $_selectedSuggestionIndex /}
+						{param _handleClick: $_handleClick /}
+						{param _handleHover: $_handleHover /}
+					{/call}
 				</li>
 			{/foreach}
 		</ul>
 	</div>
+{/template}
+
+{template .item}
+	{@param item: string}
+	{@param itemIndex: int}
+	{@param? _selectedSuggestionIndex: int}
+	{@param _handleClick: any}
+	{@param _handleHover: any}
+
+	{let $elementAttributes kind="attributes"}
+		class="dropdown-item
+			{if $_selectedSuggestionIndex - 1 == $itemIndex}
+				{sp}active
+			{/if}
+		"
+		data-onmousedown="{$_handleClick}"
+		data-onmouseover="{$_handleHover}"
+		data-index="{$itemIndex}"
+	{/let}
+	<a {$elementAttributes}>{$item}</a>
 {/template}
