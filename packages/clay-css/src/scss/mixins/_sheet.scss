@@ -1,0 +1,28 @@
+@mixin sheet-footer-btn-block($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$breakpoint-down: map-get($map, breakpoint-down);
+
+	$btn-margin-bottom-mobile: map-get($map, btn-margin-bottom-mobile);
+
+	@if ($enabled) {
+		@include media-breakpoint-down($breakpoint-down) {
+			display: block;
+
+			.btn {
+				display: block;
+				margin-bottom: $btn-margin-bottom-mobile;
+				width: 100%;
+			}
+
+			.btn-group {
+				display: block;
+			}
+
+			.btn-group-item {
+				display: block;
+				margin-right: 0;
+			}
+		}
+	}
+}

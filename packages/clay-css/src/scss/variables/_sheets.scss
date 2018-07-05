@@ -40,6 +40,12 @@ $sheet-footer-margin-left-mobile: null !default;
 $sheet-footer-margin-right-mobile: null !default;
 $sheet-footer-margin-top-mobile: null !default;
 
+$sheet-footer-btn-block-sm-down: () !default;
+$sheet-footer-btn-block-sm-down: map-merge((
+	breakpoint-down: sm,
+	btn-margin-bottom-mobile: 1rem
+), $sheet-footer-btn-block-sm-down);
+
 // Sheet Sizes
 
 $sheet-lg-max-width: ceil(map-get($container-max-widths, lg) * 0.83333) !default; // 800px

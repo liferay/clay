@@ -101,6 +101,10 @@ fieldset {
 	}
 }
 
+.sheet-footer-btn-block-sm-down {
+	@include sheet-footer-btn-block($sheet-footer-btn-block-sm-down);
+}
+
 // Sheet Sizes
 
 .sheet-lg {
