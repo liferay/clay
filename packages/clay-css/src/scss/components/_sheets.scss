@@ -11,6 +11,13 @@
 	padding-right:  $sheet-padding-right;
 	padding-top: $sheet-padding-top;
 
+	@include clay-scale-component {
+		padding-bottom: $sheet-padding-bottom-mobile;
+		padding-left:  $sheet-padding-left-mobile;
+		padding-right:  $sheet-padding-right-mobile;
+		padding-top: $sheet-padding-top-mobile;
+	}
+
 	.panel-group {
 		&,
 		.panel:last-child .panel-body {
