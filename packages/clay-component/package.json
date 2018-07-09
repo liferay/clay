@@ -1,6 +1,6 @@
 {
   "name": "clay-component",
-  "version": "2.1.12",
+  "version": "2.2.0",
   "description": "Clay Link Component",
   "license": "BSD",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-component",
@@ -39,11 +39,11 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay": "^2.1.12",
-    "clay-css": "^2.1.12",
+    "browserslist-config-clay": "^2.2.0",
+    "clay-css": "^2.2.0",
     "metal-tools-soy": "^6.0.0",
     "webpack": "^3.0.0",
-    "webpack-config-clay": "^2.1.12"
+    "webpack-config-clay": "^2.2.0"
   },
   "browserslist": [
     "extends browserslist-config-clay"

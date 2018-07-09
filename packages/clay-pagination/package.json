@@ -1,6 +1,6 @@
 {
   "name": "clay-pagination",
-  "version": "2.1.12",
+  "version": "2.2.0",
   "description": "Metal ClayPagination component",
   "license": "BSD",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-pagination",
@@ -28,8 +28,8 @@
     "metal"
   ],
   "dependencies": {
-    "clay-dropdown": "^2.1.12",
-    "clay-link": "^2.1.12",
+    "clay-dropdown": "^2.2.0",
+    "clay-link": "^2.2.0",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
@@ -42,12 +42,12 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay": "^2.1.12",
-    "clay-css": "^2.1.12",
+    "browserslist-config-clay": "^2.2.0",
+    "clay-css": "^2.2.0",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^6.0.0",
     "webpack": "^3.0.0",
-    "webpack-config-clay": "^2.1.12"
+    "webpack-config-clay": "^2.2.0"
   },
   "browserslist": [
     "extends browserslist-config-clay"
