@@ -11,7 +11,7 @@
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "link": "lerna run link",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
-    "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay-components,clayui.com,generator-metal-clay,node_modules}/**'",
+    "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay,clayui.com,generator-metal-clay,node_modules}/**'",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "soy": "lerna run soy",
     "start": "http-server . -p 4000",
@@ -47,7 +47,7 @@
       "metal-jest-serializer"
     ],
     "testPathIgnorePatterns": [
-      "browserslist-config-clay-components",
+      "browserslist-config-clay",
       "fixtures"
     ],
     "transformIgnorePatterns": [

@@ -50,7 +50,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-metal": "^4.0.0",
     "babel-preset-metal-jsx": "^0.1.1",
-    "browserslist-config-clay-components": "^2.1.12",
+    "browserslist-config-clay": "^2.1.12",
     "clay-css": "^2.1.12",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.1",
@@ -63,6 +63,6 @@
     "webpack-config-clay": "^2.1.12"
   },
   "browserslist": [
-    "extends browserslist-config-clay-components"
+    "extends browserslist-config-clay"
   ]
 }
