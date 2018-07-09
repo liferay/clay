@@ -1,5 +1,39 @@
 # Change Log
 
+## [v2.2.0](https://github.com/liferay/clay/tree/v2.2.0) (2018-07-09)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.1.12...v2.2.0)
+
+**Fixed bugs:**
+
+- Cannot change view in DataSetDisplay component [\#1039](https://github.com/liferay/clay/issues/1039)
+- ClayTooltip is not fully hidden while not being used [\#1022](https://github.com/liferay/clay/issues/1022)
+
+**Closed issues:**
+
+- Some parts of the webpack config files are equal across all packages [\#1049](https://github.com/liferay/clay/issues/1049)
+- ClayTooltip is not included in clay package [\#1048](https://github.com/liferay/clay/issues/1048)
+- Form padding in mobile must be 16px and not 24px [\#1046](https://github.com/liferay/clay/issues/1046)
+- Clay dropdown markup isn't following the Lexicon guideline when using a radio button or checkbox [\#1044](https://github.com/liferay/clay/issues/1044)
+- ClayLink needs option to add a tooltip [\#1037](https://github.com/liferay/clay/issues/1037)
+- Clay transpilation doesn't work in IE 11 [\#1031](https://github.com/liferay/clay/issues/1031)
+- Clay CSS add more `.table-cell-\*` utilities for better spacing inside `.table-autofit` [\#1029](https://github.com/liferay/clay/issues/1029)
+- Clay CSS IE11 Dropdown Menu box-shadow is off [\#1028](https://github.com/liferay/clay/issues/1028)
+
+**Merged pull requests:**
+
+- v2.2.0 [\#1052](https://github.com/liferay/clay/pull/1052) ([carloslancha](https://github.com/carloslancha))
+- Add ClayTooltip to clay | Fixes \#1048 [\#1051](https://github.com/liferay/clay/pull/1051) ([carloslancha](https://github.com/carloslancha))
+- Rename module browserlist-config-clay-components | Fixes \#1049 [\#1050](https://github.com/liferay/clay/pull/1050) ([carloslancha](https://github.com/carloslancha))
+- \(\#1046\) Sheet should have 1rem padding in mobile and added .sheet-footer-btn-block-sm-down for block level buttons in mobile [\#1047](https://github.com/liferay/clay/pull/1047) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#1044\) Atlas set Checkbox labels to be normal and semi… [\#1045](https://github.com/liferay/clay/pull/1045) ([pat270](https://github.com/pat270))
+- Update viewtype event in dataset display | Fixes \#1039 [\#1043](https://github.com/liferay/clay/pull/1043) ([carloslancha](https://github.com/carloslancha))
+- New infra from clayui.com with Gatsbyjs [\#1040](https://github.com/liferay/clay/pull/1040) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Updates .eslint to forbid for of loops | Fixes \#1031 [\#1038](https://github.com/liferay/clay/pull/1038) ([julien](https://github.com/julien))
+- Hide Tooltip correctly | Fixes \#1022 [\#1036](https://github.com/liferay/clay/pull/1036) ([carloslancha](https://github.com/carloslancha))
+- Update: \(Fixes \#1028\) Atlas Dropdown Menu box shadow value so it work… [\#1035](https://github.com/liferay/clay/pull/1035) ([pat270](https://github.com/pat270))
+- Add donut and gauge in \_constructChartConfig | Fixes \#1033 [\#1034](https://github.com/liferay/clay/pull/1034) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- \(\#1029\) Table Autofit added `.table-cell-expand-small`, `.table-cell-expand-smaller`, and `.table-cell-expand-smallest` [\#1030](https://github.com/liferay/clay/pull/1030) ([pat270](https://github.com/pat270))
+
 ## [v2.1.12](https://github.com/liferay/clay/tree/v2.1.12) (2018-06-19)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.11...v2.1.12)
 
