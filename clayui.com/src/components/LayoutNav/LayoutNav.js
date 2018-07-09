@@ -59,11 +59,6 @@ class LayoutNav extends Component {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link ml-3" to="/try.html">
-                                Try
-                            </Link>
-                        </li>
-                        <li className="nav-item">
                             <a className="mx-3 mr-lg-0" href="https://github.com/liferay/clay" target="_blank">
                                 <img src="/images/home/GitHub-Mark-64px.svg" alt="" />
                             </a>
