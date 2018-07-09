@@ -1,5 +1,10 @@
 $sheet-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 
+$sheet-padding-bottom-mobile: null !default;
+$sheet-padding-left-mobile: 1rem !default; // 16px
+$sheet-padding-right-mobile: 1rem !default; // 16px
+$sheet-padding-top-mobile: 1rem !default; // 16px
+
 $sheet-header-margin-bottom-mobile: 2rem !default; // 32px
 
 $sheet-section-margin-bottom-mobile: 2rem !default; // 32px

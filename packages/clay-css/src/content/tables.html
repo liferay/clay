@@ -1224,6 +1224,8 @@ section: Components
 
 		<blockquote class="blockquote">
 			<p><code>table-autofit</code> constrains table columns to be only as wide as its content, but must be used with <code>table-cell-expand</code>. <code>table-cell-expand</code> will fill the remaining space.</p>
+
+			<p>Use <code>table-cell-expand-small</code>, <code>table-cell-expand-smaller</code>, <code>table-cell-expand-smallest</code> with <code>table-cell-expand</code> to size columns smaller relative to the widest column.</p>
 		</blockquote>
 
 		<div class="table-responsive">
@@ -1237,10 +1239,9 @@ section: Components
 								<span class="text-truncate" title="Description">Title</span>
 							</a>
 						</th>
-						<th>Status</th>
-						<th>Modified Date</th>
-						<th>Display Date</th>
-						<th>Author</th>
+						<th class="table-cell-expand-small">Modified Date</th>
+						<th class="table-cell-expand-smaller">Display Date</th>
+						<th class="table-cell-expand-smallest">Author</th>
 						<th>Type</th>
 					</tr>
 				</thead>
@@ -1262,10 +1263,9 @@ section: Components
 								</span>
 							</div>
 						</td>
-						<td>--</td>
-						<td>2 Hours Ago</td>
-						<td>--</td>
-						<td>Stanley Nelson</td>
+						<td class="table-cell-expand-small">2 Hours Ago</td>
+						<td class="table-cell-expand-smaller">--</td>
+						<td class="table-cell-expand-smallest">Stanley Nelson</td>
 						<td>Folder</td>
 					</tr>
 				</tbody>

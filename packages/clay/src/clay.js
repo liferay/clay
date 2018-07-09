@@ -44,6 +44,7 @@ import ClayRadio from 'clay-radio';
 import ClaySelect from 'clay-select';
 import ClaySticker from 'clay-sticker';
 import ClayTable from 'clay-table';
+import ClayTooltip from 'clay-tooltip';
 
 export {
 	ClayAlert,
@@ -81,4 +82,5 @@ export {
 	ClaySelect,
 	ClaySticker,
 	ClayTable,
+	ClayTooltip,
 };

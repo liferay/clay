@@ -1,0 +1,11 @@
+{
+  "name": "webpack-config-clay",
+  "version": "2.1.12",
+  "description": "Webpack configuration files for Clay components",
+  "license": "BSD",
+  "main": "src/webpack.config.js",
+  "repository": "https://github.com/liferay/clay/tree/master/packages/webpack-config-clay",
+  "dependencies": {
+    "webpack": "^3.0.0"
+  }
+}

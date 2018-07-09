@@ -62,9 +62,17 @@
 	&.active {
 		font-weight: $dropdown-link-active-font-weight;
 
-		label,
+		label {
+			color: $dropdown-link-active-color;
+		}
+
 		.form-check-label {
 			color: $dropdown-link-active-color;
+			font-weight: $dropdown-link-active-font-weight;
+		}
+
+		.custom-control-label {
+			font-weight: $dropdown-link-active-font-weight;
 		}
 	}
 
@@ -93,7 +101,7 @@
 	}
 
 	&.btn-unstyled {
-		font-weight: $font-weight-normal;
+		font-weight: $dropdown-link-font-weight;
 		padding: $dropdown-item-padding-y $dropdown-item-padding-x;
 		transition: none;
 	}
@@ -102,10 +110,18 @@
 		margin-bottom: 0;
 	}
 
+	.form-check-label {
+		font-weight: $dropdown-link-font-weight;
+	}
+
 	.custom-control {
 		margin-bottom: 0;
 		margin-right: 0;
 		min-height: $custom-control-indicator-size;
+	}
+
+	.custom-control-label {
+		font-weight: $dropdown-link-font-weight;
 	}
 }
 

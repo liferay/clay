@@ -5,6 +5,10 @@ let body = '<h4>Hello world!</h4>';
 let spritemap = 'icons.svg';
 
 describe('ClayModal', function() {
+	beforeEach(() => {
+		jest.useFakeTimers();
+	});
+
 	afterEach(() => {
 		if (clayModal) {
 			clayModal.dispose();
@@ -192,7 +196,6 @@ describe('ClayModal', function() {
 	});
 
 	it('should render a modal opened using the method show', () => {
-		jest.useFakeTimers();
 		clayModal = new ClayModal({
 			body: body,
 			spritemap: spritemap,
