@@ -28,7 +28,6 @@
     "metal"
   ],
   "dependencies": {
-    "clay-config": "^2.1.12",
     "clay-dropdown": "^2.1.12",
     "clay-pagination": "^2.1.12",
     "metal": "^2.16.0",
@@ -47,7 +46,8 @@
     "clay-css": "^2.1.12",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^6.0.0",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-config-clay": "^2.1.12"
   },
   "browserslist": [
     "extends browserslist-config-clay-components"

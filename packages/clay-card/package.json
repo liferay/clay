@@ -29,7 +29,6 @@
   ],
   "dependencies": {
     "clay-checkbox": "^2.1.12",
-    "clay-config": "^2.1.12",
     "clay-dropdown": "^2.1.12",
     "clay-icon": "^2.1.12",
     "clay-label": "^2.1.12",
@@ -51,7 +50,8 @@
     "clay-css": "^2.1.12",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^6.0.0",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-config-clay": "^2.1.12"
   },
   "browserslist": [
     "extends browserslist-config-clay-components"

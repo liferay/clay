@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "billboard.js": "1.4.1",
-    "clay-config": "^2.1.12",
     "d3": "5.0.0",
     "metal": "^2.16.2",
     "metal-component": "^2.13.2",
@@ -60,7 +59,8 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-config-clay": "^2.1.12"
   },
   "browserslist": [
     "extends browserslist-config-clay-components"

@@ -29,7 +29,6 @@
   ],
   "dependencies": {
     "clay-component": "^2.1.12",
-    "clay-config": "^2.1.12",
     "clay-link": "^2.1.12",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
@@ -44,9 +43,10 @@
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
     "browserslist-config-clay-components": "^2.1.12",
-    "clay": "^1.0.0-alpha.15",
+    "clay-css": "^2.1.12",
     "metal-tools-soy": "^6.0.0",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-config-clay": "^2.1.12"
   },
   "browserslist": [
     "extends browserslist-config-clay-components"

@@ -39,11 +39,12 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay-components": "^1.0.0-alpha.2",
-    "clay": "^2.0.0-beta.4",
+    "browserslist-config-clay-components": "^2.1.12",
+    "clay-css": "^2.1.12",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^6.0.0",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-config-clay": "^2.1.12"
   },
   "browserslist": [
     "extends browserslist-config-clay-components"

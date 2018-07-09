@@ -1,6 +1,6 @@
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
-const webpackCommonConfig = require('clay-config').webpackCommonConfig;
+const webpackCommonConfig = require('webpack-config-clay');
 
 module.exports = Object.assign(webpackCommonConfig, {
 	entry: './src/clay.js',
