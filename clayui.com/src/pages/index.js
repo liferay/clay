@@ -143,7 +143,7 @@ class Index extends Component {
                                             <p>Visit the current Lexicon <br />
                                             Experience Language site</p>
                                             <a href="https://lexicondesign.io/" className="mb-3" target="_blank">
-                                                Lexicon v2.0.0-alpha
+                                                Lexicon 2.0
                                             </a>
                                         </div>
                                     </div>
