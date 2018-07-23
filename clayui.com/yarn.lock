@@ -1960,21 +1960,21 @@ classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
-clay-alert@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-alert/-/clay-alert-2.1.12.tgz#7f4d033e74ebe6984866397b08ce917f953cdbd9"
+clay-alert@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-alert/-/clay-alert-2.2.0.tgz#ff18bdc5d39d27526c1a47debda06c5b7a054ca9"
   dependencies:
-    clay-button "^2.1.12"
-    clay-icon "^2.1.12"
+    clay-button "^2.2.0"
+    clay-icon "^2.2.0"
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-badge@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-badge/-/clay-badge-2.1.12.tgz#129cd67265a6eefc107b69a28b74f7eaface70ea"
+clay-badge@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-badge/-/clay-badge-2.2.0.tgz#195784a0c81120bcb8e3cc7f9588418a0254ba86"
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
@@ -1982,21 +1982,21 @@ clay-badge@^2.1.12:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-button@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-button/-/clay-button-2.1.12.tgz#47d82a242f9054e64f43af12b03d55f90da5b161"
+clay-button@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-button/-/clay-button-2.2.0.tgz#f401b49a4385955f29ddf410c9477a858b3b2636"
   dependencies:
-    clay-component "^2.1.12"
-    clay-icon "^2.1.12"
+    clay-component "^2.2.0"
+    clay-icon "^2.2.0"
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-charts@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-charts/-/clay-charts-2.1.12.tgz#70132bc01c250fe18a1479bd4c31b402c253633e"
+clay-charts@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-charts/-/clay-charts-2.2.0.tgz#f80a13e26e814ab16c0b3042b611bf7c00f28938"
   dependencies:
     billboard.js "1.4.1"
     d3 "5.0.0"
@@ -2006,9 +2006,9 @@ clay-charts@^2.1.12:
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
 
-clay-checkbox@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-checkbox/-/clay-checkbox-2.1.12.tgz#47fa05cc26d0acb6e6b40a72b17c6af67bb179a6"
+clay-checkbox@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-checkbox/-/clay-checkbox-2.2.0.tgz#f676cf484c908d91e173d6ab571fd8dafff091e0"
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
@@ -2016,30 +2016,30 @@ clay-checkbox@^2.1.12:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-component@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-component/-/clay-component-2.1.12.tgz#a883082bbb8a9f2998f4cf5748615e3ae03ed042"
+clay-component@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-component/-/clay-component-2.2.0.tgz#1d3bbb62ef5d70a068880c9f526d31cbc0cbd535"
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-dom "^2.16.0"
     metal-state "^2.16.0"
 
-clay-css@^2.1.10:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.1.12.tgz#343bf8334549845cbfbceba02a5c07f523b63e4f"
+clay-css@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.2.0.tgz#56a6105ba49884555e4841efb7da04de6aa2f84f"
 
-clay-dropdown@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-dropdown/-/clay-dropdown-2.1.12.tgz#acc4548c5a975dc70e92760c45c41543bf74d843"
+clay-dropdown@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-dropdown/-/clay-dropdown-2.2.0.tgz#8370165ed5421dbddcde4c23901d937a3fbac866"
   dependencies:
-    clay-button "^2.1.12"
-    clay-checkbox "^2.1.12"
-    clay-component "^2.1.12"
-    clay-icon "^2.1.12"
-    clay-link "^2.1.12"
-    clay-portal "^2.1.12"
-    clay-radio "^2.1.12"
+    clay-button "^2.2.0"
+    clay-checkbox "^2.2.0"
+    clay-component "^2.2.0"
+    clay-icon "^2.2.0"
+    clay-link "^2.2.0"
+    clay-portal "^2.2.0"
+    clay-radio "^2.2.0"
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-dom "^2.16.0"
@@ -2049,48 +2049,48 @@ clay-dropdown@^2.1.12:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-icon@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-icon/-/clay-icon-2.1.12.tgz#ebf8231d512d6f79ea1318235a6bed703b1aab60"
+clay-icon@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-icon/-/clay-icon-2.2.0.tgz#421738fbd170492a8f6520f2f92f01c9dad02018"
   dependencies:
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-link@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-link/-/clay-link-2.1.12.tgz#87fb8a8260eb59a70cdfae98644de1ac50cbadcb"
+clay-link@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-link/-/clay-link-2.2.0.tgz#f4622b176531f46e785759c800b9221c80ab3e61"
   dependencies:
-    clay-component "^2.1.12"
-    clay-icon "^2.1.12"
+    clay-component "^2.2.0"
+    clay-icon "^2.2.0"
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-portal@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-portal/-/clay-portal-2.1.12.tgz#83b5ed5168a63ae8322f9adc35c044b8615386ab"
+clay-portal@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-portal/-/clay-portal-2.2.0.tgz#3d194be77f34d8eb0a4c99a4ba9737dfda834c8f"
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
 
-clay-radio@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-radio/-/clay-radio-2.1.12.tgz#08b60eed91b5478cef59fab7babcdadb62fa0cc2"
+clay-radio@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-radio/-/clay-radio-2.2.0.tgz#0cff2e03eee3711843dc15dde9612094c0ba1b12"
   dependencies:
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-tooltip@^2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/clay-tooltip/-/clay-tooltip-2.1.12.tgz#afc74989fc68e82714da56937b58e329bfbe7edb"
+clay-tooltip@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clay-tooltip/-/clay-tooltip-2.2.0.tgz#42738ce2322760a1eb23f3fd2a2396389325c399"
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
