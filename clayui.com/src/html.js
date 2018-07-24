@@ -32,7 +32,6 @@ class HTML extends Component {
                     <link rel="shortcut icon" type="image/png" href="/images/favicon-32x32.png" sizes="16x16 32x32"/>
                     {this.props.headComponents}
 
-                    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" />
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
                     {css}
                     <script type="text/javascript" src="/js/jquery.min.js"></script>
