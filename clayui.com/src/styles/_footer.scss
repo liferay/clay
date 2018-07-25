@@ -20,7 +20,7 @@
 		}
 	}
 
-	.row img.logo {
+	img.logo {
 		margin: $base-size / 2 $base-size / 3;
 		max-height: $base-size * 1.333334;
 		padding: 0;
@@ -28,5 +28,29 @@
 		@media (min-width: $screen-md) {
 			margin: 0 $base-size / 2 0 0;
 		}
+	}
+}
+
+footer {
+	padding-top: 48px;
+
+	.social-icons {
+		margin: 0;
+		text-align: right;
+
+		li {
+			display: inline-flex;
+			height: 32px;
+			width: 32px;
+
+			img {
+				width: 16px;
+			}
+		}
+	}
+
+	.row {
+		border-top: 1px solid #CDCED9;
+		padding: 16px 0 48px;
 	}
 }

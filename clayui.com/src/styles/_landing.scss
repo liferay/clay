@@ -14,18 +14,27 @@
     }
 
     .card {
-        border-bottom: 14px solid $brand-light;
-        border-radius: 0;
+        border-radius: 12px;
         box-shadow: 4px 6px 36px rgba(48, 49, 63, 0.15);
         margin-bottom: 32px;
         min-height: 100%;
         transition: all 0.4s;
 
+        .learn-more {
+            color: #D2D3DD;
+            display: inline-flex;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
         &:hover {
             background-color: #FFF6F5;
-            border-color: $brand-dark;
             box-shadow: 6px 9px 36px rgba(48, 49, 63, 0.2);
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+
+            .learn-more {
+                color: $brand-dark;
+            }
         }
 
         h2 {
@@ -78,7 +87,6 @@
     }
 
     .btn-lg {
-        border-radius: 0;
         border-width: 2px;
         font-size: 1rem;
         font-weight: 700;
@@ -89,10 +97,8 @@
     .btn-light {
         border-color: $brand-light;
         color: $brand-dark;
-        font-size: 13px;
-        letter-spacing: 1.5px;
+        font-size: 16px;
         line-height: $base-size;
-        text-transform: uppercase;
     }
 
     .btn-outline-light {
@@ -124,24 +130,21 @@
 
     .h3 {
         color: rgba(255, 255, 255, 0.6);
-        font-size: 12px;
+        font-size: 18px;
         font-weight: 700;
         letter-spacing: 4px;
         line-height: 1.7;
         margin-bottom: 56px;
-        text-transform: uppercase;
 
         @include media-breakpoint-up(sm) {
-            font-size: 18px;
-            letter-spacing: 4px;
+            font-size: 28px;
+            letter-spacing: 0.4px;
             margin-bottom: 72px;
         }
     }
 }
 
 .teasers {
-    background-color: $brand-light;
-
     @include media-breakpoint-up(sm) {
         margin-top: -100px;
    }
@@ -202,6 +205,10 @@
 
         &:hover {
             background-color: #272833;
+
+            a {
+                color: #D2D3DD;
+            }
         }
 
         img.mx-auto {
@@ -210,17 +217,8 @@
         }
 
         a {
-            border-bottom: 3px solid #B3472D;
-            color: $brand-light;
-            display: inline-block;
-            font-weight: 700;
-            margin: 8px 0;
-            padding-bottom: 4px;
-
-            &:hover {
-                border-color: #DA816C;
-                text-decoration: none;
-            }
+            color: #545462;
+            font-weight: bold;
         }
     }
 }

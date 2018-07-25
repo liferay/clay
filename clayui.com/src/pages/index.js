@@ -61,8 +61,7 @@ class Index extends Component {
                                             <img className="mx-auto" src="/images/home/what.svg" alt="" />
                                             <h2 className="font-weight-bold">What is Clay?</h2>
                                             <p>Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.</p>
-                                            <Link to="/docs/getting-started/clay.html" className="btn btn-sm text-uppercase font-weight-bold">
-                                                <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
+                                            <Link to="/docs/getting-started/clay.html" className="learn-more">
                                                 Learn More
                                             </Link>
                                         </div>
@@ -75,8 +74,7 @@ class Index extends Component {
                                             <img className="mx-auto" src="/images/home/news.svg" alt="" />
                                             <h2 className="font-weight-bold">Release Notes</h2>
                                             <p>Stay up-to-date on Clay's progress, fixed issues, and new features by visiting our Release Notes.</p>
-                                            <Link to="/docs/news" className="btn btn-sm text-uppercase font-weight-bold">
-                                                <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
+                                            <Link to="/docs/news" className="learn-more">
                                                 Learn More
                                             </Link>
                                         </div>
@@ -97,8 +95,7 @@ class Index extends Component {
                                                 <div className="card-body mx-4 pl-md-0 pt-5">
                                                     <h2 className="font-weight-bold">Component Library</h2>
                                                     <p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
-                                                    <Link to="/docs/components/alerts.html" className="btn btn-sm text-uppercase font-weight-bold">
-                                                        <img className="mr-2" src="/images/home/chevron-right.svg" alt="" />
+                                                    <Link to="/docs/components/alerts.html" className="learn-more">
                                                         Learn More
                                                     </Link>
                                                 </div>
@@ -173,7 +170,6 @@ class Index extends Component {
                                     <div className="clearfix d-lg-none"></div>
 
                                     Brought to you by <a href="http://www.liferay.com" className="font-weight-bold" target="_blank">Liferay, Inc.</a>
-                                
                                 </div>
 
                                 <div className="col-lg text-center text-lg-right">
