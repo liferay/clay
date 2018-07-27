@@ -24,9 +24,9 @@
 }
 
 %scale-lexicon-icon {
-	height: 1em;
-	margin-top: -0.13em;
-	width: 1em;
+	height: $scale-lexicon-icon-size;
+	margin-top: $scale-lexicon-icon-margin-top;
+	width: $scale-lexicon-icon-size;
 }
 
 .scale-lexicon-icon.lexicon-icon,
@@ -176,7 +176,7 @@ a .icon-monospaced,
 
 .icon-monospaced {
 	&.lexicon-icon {
-		padding: lx-icon-padding($icon-monospaced-size, $lexicon-icon-size);
+		padding: $icon-monospaced-lexicon-icon-padding;
 	}
 
 	.lexicon-icon {
@@ -184,7 +184,7 @@ a .icon-monospaced,
 
 		@include monospace($icon-monospaced-size);
 
-		padding: lx-icon-padding($icon-monospaced-size, $lexicon-icon-size);
+		padding: $icon-monospaced-lexicon-icon-padding;
 	}
 }
 
