@@ -180,3 +180,9 @@ $table-list-action-link: map-merge((
 	hover-text-decoration: none,
 	lexicon-icon-margin-top: 0
 ), $table-list-action-link);
+
+// Table Valign
+
+$table-valign-top-body-cell-padding-top: 1rem !default;
+
+$table-valign-bottom-body-cell-padding-bottom: 1rem !default;
