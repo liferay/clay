@@ -54,7 +54,7 @@ section: Components
 						</span>
 					</a>
 				</th>
-				<th>Status</th>
+				<th><span class="inline-item">Status</span></th>
 				<th class="table-head-title">
 					<span class="inline-item inline-item-before">
 						<a href="#1">
@@ -66,7 +66,7 @@ section: Components
 						<span class="text-truncate" title="Modified Date">Modified Date</span>
 					</a>
 				</th>
-				<th>Display Date</th>
+				<th><span class="inline-item">Display Date</span></th>
 				<th class="table-head-title">
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Author">Author</span><span class="inline-item inline-item-after">
@@ -76,7 +76,7 @@ section: Components
 						</span>
 					</a>
 				</th>
-				<th>Type</th>
+				<th><span class="inline-item">Type</span></th>
 				<th></th>
 			</tr>
 		</thead>
@@ -1226,6 +1226,10 @@ section: Components
 			<p><code>table-autofit</code> constrains table columns to be only as wide as its content, but must be used with <code>table-cell-expand</code>. <code>table-cell-expand</code> will fill the remaining space.</p>
 
 			<p>Use <code>table-cell-expand-small</code>, <code>table-cell-expand-smaller</code>, <code>table-cell-expand-smallest</code> with <code>table-cell-expand</code> to size columns smaller relative to the widest column.</p>
+
+			<p>We have added <code>table-cell-minw-50</code>, <code>table-cell-minw-75</code>, <code>table-cell-minw-100</code>, <code>table-cell-minw-150</code>, <code>table-cell-minw-200</code>, <code>table-cell-minw-250</code>, <code>table-cell-minw-300</code>, <code>table-cell-minw-350</code>, <code>table-cell-minw-400</code> to set <code>min-width</code> 50px, 75px, 100px, 150px, 200px, 250px, 300px, 350px, 400px on a specific table column, respectively.</p>
+
+			<p>The helpers <code>table-cell-ws-normal</code> and <code>table-cell-ws-nowrap</code> sets <code>white-space</code> to normal or nowrap on a specific table column, respectively.</p>
 		</blockquote>
 
 		<div class="table-responsive">
@@ -1234,14 +1238,14 @@ section: Components
 					<tr>
 						<th></th>
 						<th>ID</th>
-						<th class="table-cell-expand">
+						<th class="table-cell-minw-300 table-cell-expand">
 							<a class="inline-item text-truncate-inline" href="#1">
 								<span class="text-truncate" title="Description">Title</span>
 							</a>
 						</th>
-						<th class="table-cell-expand-small">Modified Date</th>
+						<th class="table-cell-expand-small table-cell-ws-nowrap">Modified Date</th>
 						<th class="table-cell-expand-smaller">Display Date</th>
-						<th class="table-cell-expand-smallest">Author</th>
+						<th class="table-cell-minw-150 table-cell-expand-smallest">Author</th>
 						<th>Type</th>
 					</tr>
 				</thead>
@@ -1256,16 +1260,16 @@ section: Components
 							</div>
 						</td>
 						<td>21146</td>
-						<td class="table-cell-expand">
+						<td class="table-cell-minw-300 table-cell-expand">
 							<div class="table-title">
 								<span class="text-truncate-inline">
 									<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 								</span>
 							</div>
 						</td>
-						<td class="table-cell-expand-small">2 Hours Ago</td>
+						<td class="table-cell-expand-small table-cell-ws-nowrap">2 Hours Ago</td>
 						<td class="table-cell-expand-smaller">--</td>
-						<td class="table-cell-expand-smallest">Stanley Nelson</td>
+						<td class="table-cell-minw-150 table-cell-expand-smallest">Stanley Nelson</td>
 						<td>Folder</td>
 					</tr>
 				</tbody>
