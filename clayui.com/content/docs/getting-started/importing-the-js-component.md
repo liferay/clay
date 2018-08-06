@@ -72,7 +72,7 @@ const badge = new ClayBadge(
 
 Once added to your page, the Clay components are accessible globally on the page with all components.
 
-> See [CDN Links](/docs/getting-started/cdn-links.html).
+> See [Introduction](/docs/getting-started/introduction.html).
 
 ```html
 <div id="element"></div>
