@@ -63,12 +63,12 @@ export default class Docs extends Component {
                             </div>
                         </div>
 
-                        <footer class="clay-site-container container-fluid">
-                           <div class="row">
-                              <div class="col-6">
-                                 <p class="legal">Except as otherwise noted, the content of this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a> 4.0 license.</p>
+                        <footer className="clay-site-container container-fluid">
+                           <div className="row">
+                              <div className="col-6">
+                                 <p className="legal">Except as otherwise noted, the content of this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a> 4.0 license.</p>
                               </div>
-                              <div class="col-6 p-md-0">
+                              <div className="col-6 p-md-0">
                                  <ul className="social-icons">
                                     <li className="mr-2">
                                         <a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay/issues" target="_blank">
