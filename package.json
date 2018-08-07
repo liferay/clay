@@ -16,7 +16,10 @@
     "soy": "lerna run soy",
     "start": "http-server . -p 4000",
     "test": "npm run build && npm run jest && npm run a11y",
-    "testSoy": "cd packages/clay-isomorphic && ./gradlew testSoy"
+    "testSoy": "cd packages/clay-isomorphic && ./gradlew testSoy",
+    "webBuild": "cd clayui.com && npm run build",
+    "webDevelop": "cd clayui.com && npm run develop",
+    "webServe": "cd clayui.com && npm run serve"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
