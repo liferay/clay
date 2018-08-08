@@ -244,6 +244,41 @@ describe('Chart', () => {
 		});
 	});
 
+	it('should support xs property', done => {
+		const data = [
+			{
+				id: 'data1',
+				data: [1, 2, 3, 4],
+			},
+			{
+				id: 'data2',
+				data: [5, 6, 7, 8],
+			},
+		];
+
+		const chart = new Chart({
+			data: data,
+			xs: {
+				data1: 'x1',
+				data2: 'x2',
+			},
+		});
+
+		chart.on('chartReady', () => {
+			const config = bb.generate.mock.calls[0][0];
+
+			expect(config.data.xs).toBeInstanceOf(Object);
+			expect(config.data.xs.data1).toEqual('x1');
+			expect(config.data.xs.data2).toEqual('x2');
+
+			done();
+		});
+
+		chart.on('chartError', err => {
+			console.log('hou', err);
+		});
+	});
+
 	describe('lifecycle', () => {
 		let chart;
 
