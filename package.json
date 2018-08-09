@@ -17,7 +17,7 @@
     "start": "http-server . -p 4000",
     "test": "npm run build && npm run jest && npm run a11y",
     "testSoy": "cd packages/clay-isomorphic && ./gradlew testSoy",
-    "electric": "npm run soy && npm run compile && cd packages/clayui.com && ../../node_modules/electric-cli/bin/electric.js"
+    "site": "cd clayui.com && npm run build && npm run serve"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
