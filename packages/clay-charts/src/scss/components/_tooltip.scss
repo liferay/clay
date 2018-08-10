@@ -19,16 +19,12 @@
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
 }
 
 .bb-tooltip {
   border-spacing: 0;
-  background-color: #fff;
   empty-cells: show;
-  opacity: 0.9;
-  box-shadow: 7px 7px 12px -9px rgb(119,119,119);
 
   tr {
   }
