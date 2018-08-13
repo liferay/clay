@@ -1,7 +1,7 @@
 @import "atlas";
 @import "charts";
 
-@import "clay-site/variables";
+@import "site/variables";
 
 @import "animations";
 @import "api";
@@ -16,6 +16,6 @@
 @import "sidebar";
 @import "try";
 
-@import "clay-site/clay-site";
-@import "clay-site/content-clay-site";
-@import "clay-site/sidebar-clay-site";
+@import "site/site";
+@import "site/content-site";
+@import "site/sidebar-site";

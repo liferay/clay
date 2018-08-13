@@ -62,6 +62,30 @@ export default class Docs extends Component {
                                 </div>
                             </div>
                         </div>
+
+                        <footer class="clay-site-container container-fluid">
+                           <div class="row">
+                              <div class="col-6">
+                                 <p class="legal">Except as otherwise noted, the content of this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a> 4.0 license.</p>
+                              </div>
+                              <div class="col-6 p-md-0">
+                                 <ul className="social-icons">
+                                    <li className="mr-2">
+                                        <a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay/issues" target="_blank">
+                                            <svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
+                                                <use xlinkHref="/images/icons/icons.svg#comments" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay" target="_blank">
+                                            <img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="" />
+                                        </a>
+                                    </li>
+                                </ul>
+                              </div>
+                           </div>
+                        </footer>
                     </div>
                 </main>
             </div>
