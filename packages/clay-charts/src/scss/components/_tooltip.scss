@@ -5,7 +5,7 @@
   z-index: 1060;
   display: block;
   max-width: 276px;
-  padding: 1px;
+  padding: 12px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: normal;
@@ -19,16 +19,13 @@
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
+  box-shadow: 0 1px 15px -2px rgba(0, 0, 0, 0.2);
 }
 
 .bb-tooltip {
   border-spacing: 0;
-  background-color: #fff;
   empty-cells: show;
-  opacity: 0.9;
-  box-shadow: 7px 7px 12px -9px rgb(119,119,119);
 
   tr {
   }
