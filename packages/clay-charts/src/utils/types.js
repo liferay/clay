@@ -13,6 +13,7 @@ const types = {
 		'gauge',
 		'line',
 		'pie',
+		'radar',
 		'scatter',
 		'spline',
 		'step',
@@ -40,6 +41,8 @@ const types = {
 		'spline',
 		'step',
 	],
+
+	radar: ['radar'],
 };
 
 export {types};

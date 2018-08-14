@@ -146,6 +146,11 @@
 		<div id="predictive"></div>
 	</div>
 
+	<div class="clay-chart-example">
+		<h2>Radar</h2>
+		<div id="radar"></div>
+	</div>
+
 	<div id="controls" style="display: none;">
 		<label>
 			Change type:
@@ -443,6 +448,29 @@
 		predictiveChart.on('chartError', err => {
 			console.log('Chart Error', err);
 		});
+
+		var radarChart = new metal.RadarChart({
+			data: [
+				{
+					data: [330, 350, 200, 380, 150],
+					id: 'data1',
+				},
+				{
+					data: [130, 100, 30, 200, 80],
+					id: 'data2',
+				},
+				{
+					data: [230, 150, 85, 300, 250],
+					id: 'data3',
+				},
+				{
+					data: ['Data A', 'Data B', 'Data C', 'Data D', 'Data E'],
+					id: 'x',
+				},
+			],
+			labels: true,
+			x: 'x',
+		}, '#radar');
 
 		function createChartControls(chart, type, data) {
 			var element = document.getElementById(type);
