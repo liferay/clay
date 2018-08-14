@@ -95,7 +95,8 @@
 		line-height: $line-height-base;
 		transition: none;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			text-decoration: none;
 		}
 	}

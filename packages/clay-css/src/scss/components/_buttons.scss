@@ -91,7 +91,7 @@
 		}
 	}
 
-	@include hover {
+	&:hover {
 		text-decoration: $link-hover-decoration;
 	}
 }
@@ -204,7 +204,8 @@
 .btn-outline-borderless {
 	border-color: transparent;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		border-color: transparent;
 	}
 

@@ -90,7 +90,7 @@
 	vertical-align: $vertical-align;
 	width: $width;
 
-	@include hover {
+	&:hover {
 		background-color: $hover-bg;
 		color: $hover-color;
 		opacity: $hover-opacity;

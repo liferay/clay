@@ -41,7 +41,7 @@ button.link-outline {
 	transition: $link-outline-transition;
 	vertical-align: middle;
 
-	@include hover {
+	&:hover {
 		text-decoration: none;
 	}
 

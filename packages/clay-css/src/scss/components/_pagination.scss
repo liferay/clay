@@ -84,7 +84,8 @@
 		padding: $pagination-padding-y $pagination-padding-x;
 		text-decoration: none;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			background-color: $pagination-items-per-page-hover-bg;
 			border-color: $pagination-items-per-page-hover-border-color;
 			color: $pagination-items-per-page-hover-color;

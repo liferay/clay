@@ -14,7 +14,8 @@
 		color: $badge-link-color;
 		text-decoration: $badge-link-text-decoration;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			color: $badge-link-hover-color;
 			text-decoration: $badge-link-hover-text-decoration;
 		}
@@ -123,7 +124,8 @@
 		color: map-get($value, color);
 
 		&[href] {
-			@include hover-focus {
+			&:hover,
+			&:focus {
 				background-color: map-get($value, hover-bg);
 				border-color: map-get($value, hover-border-color);
 				color: map-get($value, hover-color);
@@ -133,7 +135,8 @@
 		a {
 			color: map-get($value, link-color);
 
-			@include hover-focus {
+			&:hover,
+			&:focus {
 				color: map-get($value, link-hover-color);
 			}
 		}
