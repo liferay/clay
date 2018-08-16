@@ -9,8 +9,6 @@ $popover-arrow-height: 0.3rem !default;
 $popover-arrow-offset: 0.625rem !default; // 10px
 $popover-arrow-width: $popover-arrow-height * 2 !default;
 
-$popover-inner-padding: 0 !default;
-
 $popover-header-bg: #FFF !default;
 $popover-header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $popover-header-color: $body-color !default;
