@@ -148,6 +148,9 @@ class ClayTooltip extends Component {
 	 */
 	_handleMouseEnter(event) {
 		const content = this._getContent(event.delegateTarget);
+
+		if (!content) return;
+
 		this._target = event.delegateTarget;
 
 		this._content = content;
