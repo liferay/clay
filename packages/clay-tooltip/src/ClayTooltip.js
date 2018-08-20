@@ -377,7 +377,7 @@ ClayTooltip.STATE = {
 	 */
 	position: {
 		validator: Align.isValidPosition,
-		value: Align.Bottom,
+		value: Align.Top,
 	},
 
 	/**
