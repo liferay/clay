@@ -231,7 +231,8 @@
 		color: $nav-underline-link-color;
 		padding: $nav-underline-link-padding-y $nav-underline-link-padding-x;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			color: $nav-underline-link-hover-color;
 		}
 

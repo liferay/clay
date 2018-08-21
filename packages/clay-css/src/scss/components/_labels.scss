@@ -28,7 +28,8 @@
 		display: inline-block;
 		text-decoration: $label-link-text-decoration;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			color: $label-link-hover-color;
 			text-decoration: $label-link-hover-text-decoration;
 		}
@@ -78,7 +79,8 @@
 a.label {
 	text-decoration: $label-anchor-text-decoration;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		text-decoration: $label-anchor-hover-text-decoration;
 	}
 }
@@ -153,7 +155,8 @@ a.label {
 		color: map-get($value, color);
 
 		&[href] {
-			@include hover-focus {
+			&:hover,
+			&:focus {
 				background-color: map-get($value, hover-bg);
 				border-color: map-get($value, hover-border-color);
 				color: map-get($value, hover-color);
@@ -163,7 +166,8 @@ a.label {
 		a {
 			color: map-get($value, link-color);
 
-			@include hover-focus {
+			&:hover,
+			&:focus {
 				color: map-get($value, link-hover-color);
 			}
 		}

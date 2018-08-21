@@ -220,7 +220,8 @@
 .list-group-link {
 	color: $list-group-link-color;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $list-group-link-hover-color;
 	}
 }
@@ -283,7 +284,7 @@
 
 .show-quick-actions-on-hover {
 	.list-group-item:not(.active) {
-		@include hover {
+		&:hover {
 			.quick-action-menu {
 				display: flex;
 			}

@@ -12,7 +12,8 @@
 
 	text-transform: $breadcrumb-text-transform;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $breadcrumb-link-hover-color;
 
 		@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
@@ -23,7 +24,8 @@
 	> .breadcrumb-text-truncate {
 		text-decoration: $breadcrumb-link-text-decoration;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			text-decoration: $breadcrumb-link-hover-text-decoration;
 		}
 	}
@@ -80,7 +82,8 @@
 	.dropdown-toggle {
 		text-decoration: none;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			text-decoration: none;
 		}
 	}
