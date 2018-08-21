@@ -70,19 +70,11 @@
 	@include clay-text-typography($list-group-title);
 }
 
-// .list-group-title a {
-// 	@include clay-link($list-group-title-link);
-// }
-
 // List Group Subtitle
 
 .list-group-subtitle {
 	@include clay-text-typography($list-group-subtitle);
 }
-
-// .list-group-subtitle a {
-// 	@include clay-link($list-group-subtitle-link);
-// }
 
 // List Group Text
 
@@ -90,18 +82,10 @@
 	@include clay-text-typography($list-group-text);
 }
 
-.list-group-text-link {
-	@include clay-link($list-group-text-link);
-}
-
 // List Group Subtext
 
 .list-group-subtext {
 	@include clay-text-typography($list-group-subtext);
-}
-
-.list-group-subtext-link {
-	@include clay-link($list-group-subtext-link);
 }
 
 // List Group Details
