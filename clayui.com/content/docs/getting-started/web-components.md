@@ -26,8 +26,8 @@ Once you import your component into your application, you just use it as an HTML
 
 We have created some example use cases in applications for `React`, `Vue`, and `Angular` for you to follow.
 
-* [Angular](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/angular-with-clay)
-* [React](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/react-with-clay)
-* [Vue](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/vue-with-clay)
+* [Angular](https://github.com/liferay/clay/tree/master/examples/angular-with-clay)
+* [React](https://github.com/liferay/clay/tree/master/examples/react-with-clay)
+* [Vue](https://github.com/liferay/clay/tree/master/examples/vue-with-clay)
 
 </article>
