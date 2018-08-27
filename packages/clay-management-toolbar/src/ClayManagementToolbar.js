@@ -1,3 +1,4 @@
+import './ClayResultsBar';
 import 'clay-button';
 import 'clay-checkbox';
 import 'clay-icon';
@@ -110,6 +111,15 @@ class ClayManagementToolbar extends ClayComponent {
 			name: 'filterItemClicked',
 			originalEvent: event,
 		});
+	}
+
+	/**
+	 * Continues the propagation of the filter label close clicked event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleFilterLabelCloseClicked(event) {
+		this.emit('infoButtonClicked', event);
 	}
 
 	/**
@@ -294,6 +304,19 @@ ClayManagementToolbar.STATE = {
 	 * @type {?(array|undefined)}
 	 */
 	filterItems: filterItemsValidator,
+
+	/**
+	 * List of filter label items.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(array|undefined)}
+	 */
+	filterLabels: Config.arrayOf(
+		Config.shapeOf({
+			label: Config.string(),
+		})
+	),
 
 	/**
 	 * Id to be applied to the element.

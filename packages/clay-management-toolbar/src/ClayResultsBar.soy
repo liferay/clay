@@ -1,0 +1,142 @@
+{namespace ClayResultsBar}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+    {@param spritemap: string}
+	{@param totalItems: number}
+	{@param? _handleClearResultsClick: any}
+    {@param? _handleFilterLabelCloseClicked: any}
+	{@param? clearResultsURL: string}
+	{@param? filterLabels: list<[
+		label: string
+	]>}
+	{@param? searchValue: string}
+
+	<nav class="tbar subnav-tbar subnav-tbar-primary">
+		<div class="container-fluid container-fluid-max-xl">
+			<ul class="tbar-nav">
+                {call .results}
+                    {param expand: not ($filterLabels and length($filterLabels) > 0) /}
+                    {param searchValue: $searchValue /}
+                    {param totalItems: $totalItems /}
+                {/call}
+            
+				{if $filterLabels}
+                    {call .filterLabels}
+                        {param _handleFilterLabelCloseClicked: $_handleFilterLabelCloseClicked /}	
+                        {param filterLabels: $filterLabels /}	
+                        {param spritemap: $spritemap /}	
+                    {/call}
+				{/if}
+
+                {call .clearResults}
+                    {param _handleClearResultsClick: $_handleClearResultsClick /}
+	                {param clearResultsURL: $clearResultsURL /}
+                {/call}
+			</ul>
+		</div>
+	</nav>
+{/template}
+
+/**
+ * This renders de clear results button or link
+ */
+{template .clearResults}
+	{@param? _handleClearResultsClick: any}
+	{@param? clearResultsURL: string}
+
+    <li class="tbar-item">
+        {if $clearResultsURL}
+            {call ClayLink.render}
+                {param elementClasses: 'component-link tbar-link' /}
+                {param events: ['click': $_handleClearResultsClick] /}
+                {param href: $clearResultsURL /}
+                {param label kind="text"}
+                    {msg desc="Label for clear results link"}
+                        clear
+                    {/msg}
+                {/param}
+
+                {param ref: 'clearSearch' /}
+            {/call}
+        {else}
+            {call ClayButton.render}
+                {param elementClasses: 'component-link tbar-link' /}
+                {param events: ['click': $_handleClearResultsClick] /}
+                {param label kind="text"}
+                    {msg desc="Label for clear results button"}
+                        clear
+                    {/msg}
+                {/param}
+
+                {param ref: 'clearSearch' /}
+                {param style: 'unstyled' /}
+            {/call}
+        {/if}
+    </li>
+{/template}
+
+/**
+ * This renders the list of filter labels
+ */
+{template .filterLabels}
+	{@param filterLabels: list<[
+		label: string
+	]>}
+	{@param spritemap: string}
+    {@param? _handleFilterLabelCloseClicked: any}
+
+    <li class="tbar-item tbar-item-expand">
+        <div class="tbar-section">
+            {foreach $filterLabel in $filterLabels}
+                {call ClayLabel.render}
+                    {param closeable: true /}
+                    {param events: ['close': $_handleFilterLabelCloseClicked] /}
+                    {param label kind="text"}
+                        {$filterLabel.label}
+                    {/param}
+
+                    {param ref: 'label' + index($filterLabel) /}
+                    {param size: 'lg' /}
+                    {param spritemap: $spritemap /}
+                {/call}
+            {/foreach}
+        </div>
+    </li>
+{/template}
+
+/**
+ * This renders the text indicatin how many results there are
+ */
+{template .results}
+	{@param totalItems: number}
+    {@param? expand: bool}
+	{@param? searchValue: string}
+
+    {let $elementClasses kind="text"}
+        tbar-item
+        {if $expand}
+            {sp}tbar-item-expand
+        {/if}
+    {/let}
+
+    <li class="{$elementClasses}">
+        <div class="tbar-section">
+            <span class="text-truncate-inline">
+                <span class="text-truncate">
+                    {if $searchValue}
+                        {msg desc="Says how many results there are for a search"}
+                            {$totalItems}-results-for-{$searchValue}
+                        {/msg}
+                    {else}
+                        {msg desc="Says how many results there are"}
+                            {$totalItems}-results-for
+                        {/msg}
+                    {/if}
+                </span>
+            </span>
+        </div>
+    </li>
+{/template}

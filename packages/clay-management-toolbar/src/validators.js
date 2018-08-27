@@ -32,6 +32,7 @@ const creationMenuItemsValidator = Config.arrayOf(
 creationMenuItem.items = creationMenuItemsValidator;
 
 let filterItemShape = {
+	active: Config.bool().value(false),
 	checked: Config.bool().value(false),
 	disabled: Config.bool().value(false),
 	href: Config.string(),
