@@ -41,7 +41,7 @@
 {/template}
 
 /**
- *
+ * This renders de clear results button or link
  */
 {template .clearResults}
 	{@param? _handleClearResultsClick: any}
@@ -79,7 +79,7 @@
 {/template}
 
 /**
- *
+ * This renders the list of filter labels
  */
 {template .filterLabels}
 	{@param filterLabels: list<[
@@ -107,6 +107,9 @@
     </li>
 {/template}
 
+/**
+ * This renders the text indicatin how many results there are
+ */
 {template .results}
 	{@param totalItems: number}
     {@param? expand: bool}
