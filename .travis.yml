@@ -23,7 +23,7 @@ language: java
 
 script:
   - npm run testSoy
-  - npm run build
   - npm run checkFormat
   - npm run lint
+  - npm run soy
   - npm run jest
