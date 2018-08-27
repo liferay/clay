@@ -13,6 +13,7 @@
 	{@param? _handleCreationMenuMoreButtonClicked: any}
 	{@param? _handleFilterDoneButtonClick: any}
 	{@param? _handleFilterItemClicked: any}
+	{@param? _handleFilterLabelCloseClicked: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleQuickActionClicked: any}
@@ -65,13 +66,27 @@
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
+		active: bool,
 		checked: bool,
 		disabled: bool,
 		inputName: string,
 		inputValue: string,
+		items: list<[
+			active: bool,
+			checked: bool,
+			disabled: bool,
+			inputName: string,
+			inputValue: string,
+			label: string,
+			separator: bool,
+			type: string
+		]>,
 		label: string,
 		separator: bool,
 		type: string
+	]>}
+	{@param? filterLabels: list<[
+		label: string
 	]>}
 	{@param? id: string}
 	{@param? searchActionURL: string}
@@ -163,11 +178,17 @@
 			{/call}
 		{/if}
 
-		{if $searchValue}
-			{call .resultsBar}
+		{let $isResultsBar: isNonnull($totalItems) and ($searchValue or $filterLabels) /}
+
+		{if $isResultsBar}
+			{call ClayResultsBar.render}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param clearResultsURL: $clearResultsURL /}
+				{param events: ['filterLabelCloseClicked': $_handleFilterLabelCloseClicked] /}
+				{param filterLabels: $filterLabels /}
+				{param ref: 'resultsBar' /}
 				{param searchValue: $searchValue /}
+				{param spritemap: $spritemap /}
 				{param totalItems: $totalItems ?: 0 /}
 			{/call}
 		{/if}
@@ -437,10 +458,21 @@
 	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? filterItems: list<[
+		active: bool,
 		checked: bool,
 		disabled: bool,
 		inputName: string,
 		inputValue: string,
+		items: list<[
+			active: bool,
+			checked: bool,
+			disabled: bool,
+			inputName: string,
+			inputValue: string,
+			label: string,
+			separator: bool,
+			type: string
+		]>,
 		label: string,
 		separator: bool,
 		type: string
@@ -697,63 +729,6 @@
 						{/call}
 					</li>
 				{/if}
-			</ul>
-		</div>
-	</nav>
-{/template}
-
-/**
- * This renders the search results bar.
- */
-{template .resultsBar}
-	{@param searchValue: string}
-	{@param? _handleClearResultsClick: any}
-	{@param? clearResultsURL: string}
-	{@param? totalItems: number}
-
-	<nav class="tbar subnav-tbar subnav-tbar-primary">
-		<div class="container-fluid container-fluid-max-xl">
-			<ul class="tbar-nav">
-				<li class="tbar-item tbar-item-expand">
-					<div class="tbar-section">
-						<span class="text-truncate-inline">
-							<span class="text-truncate">
-								{msg desc="Says how many results there are for a search"}
-									{$totalItems}-results-for-{$searchValue}
-								{/msg}
-							</span>
-						</span>
-					</div>
-				</li>
-				<li class="tbar-item">
-					{if $clearResultsURL}
-						{call ClayLink.render}
-							{param elementClasses: 'component-link tbar-link' /}
-							{param events: ['click': $_handleClearResultsClick] /}
-							{param href: $clearResultsURL /}
-							{param label kind="text"}
-								{msg desc="Label for clear results link"}
-									clear
-								{/msg}
-							{/param}
-
-							{param ref: 'clearSearch' /}
-						{/call}
-					{else}
-						{call ClayButton.render}
-							{param elementClasses: 'component-link tbar-link' /}
-							{param events: ['click': $_handleClearResultsClick] /}
-							{param label kind="text"}
-								{msg desc="Label for clear results button"}
-									clear
-								{/msg}
-							{/param}
-
-							{param ref: 'clearSearch' /}
-							{param style: 'unstyled' /}
-						{/call}
-					{/if}
-				</li>
 			</ul>
 		</div>
 	</nav>
