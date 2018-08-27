@@ -1967,7 +1967,49 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with search results bar only when totalItems is greater than zero 1`] = `
+exports[`ClayManagementToolbar should render a management toolbar with search results bar when state is active 1`] = `
+<div id="myId">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="tbar subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="tbar-nav">
+        <li class="tbar-item tbar-item-expand">
+          <div class="tbar-section">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">10-results-for-foo</span>
+            </span>
+          </div>
+        </li>
+        <li class="tbar-item">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with search results bar with filter labels 1`] = `
 <div id="myId">
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container-fluid container-fluid-max-xl">
@@ -2031,52 +2073,47 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
   <nav class="tbar subnav-tbar subnav-tbar-primary">
     <div class="container-fluid container-fluid-max-xl">
       <ul class="tbar-nav">
-        <li class="tbar-item tbar-item-expand">
-          <div class="tbar-section">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">0-results-for-foo</span>
-            </span>
-          </div>
-        </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with search results bar when state is active 1`] = `
-<div id="myId">
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <nav class="tbar subnav-tbar subnav-tbar-primary">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="tbar-nav">
-        <li class="tbar-item tbar-item-expand">
           <div class="tbar-section">
             <span class="text-truncate-inline">
               <span class="text-truncate">10-results-for-foo</span>
+            </span>
+          </div>
+        </li>
+        <li class="tbar-item tbar-item-expand">
+          <div class="tbar-section">
+            <span class="label label-secondary label-dismissible label-lg">
+              <span class="label-item label-item-expand">Label 1</span>
+              <span class="label-item label-item-after">
+                <button class="btn close btn-unstyled" aria-label="close" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span class="label label-secondary label-dismissible label-lg">
+              <span class="label-item label-item-expand">Label 2</span>
+              <span class="label-item label-item-after">
+                <button class="btn close btn-unstyled" aria-label="close" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span class="label label-secondary label-dismissible label-lg">
+              <span class="label-item label-item-expand">Label 3</span>
+              <span class="label-item label-item-after">
+                <button class="btn close btn-unstyled" aria-label="close" type="button">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                    <title>times</title>
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </button>
+              </span>
             </span>
           </div>
         </li>
