@@ -22,7 +22,7 @@ class ClayResultsBar extends ClayComponent {
 		this.emit('clearButtonClicked', event);
 	}
 
-    /**
+	/**
 	 * Continues the propagation of the filter label close clicked event
 	 * @param {!Event} event
 	 * @private
@@ -47,7 +47,7 @@ ClayResultsBar.STATE = {
 	 */
 	clearResultsURL: Config.string(),
 
-    /**
+	/**
 	 * List of filter label items.
 	 * @default undefined
 	 * @instance
@@ -58,7 +58,7 @@ ClayResultsBar.STATE = {
 		Config.shapeOf({
 			label: Config.any(),
 		})
-    ),
+	),
 
 	/**
 	 * Value of the search input.
@@ -69,7 +69,7 @@ ClayResultsBar.STATE = {
 	 */
 	searchValue: Config.string(),
 
-    /**
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance
