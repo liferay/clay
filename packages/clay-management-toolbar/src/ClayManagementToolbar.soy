@@ -66,10 +66,21 @@
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? filterItems: list<[
+		active: bool,
 		checked: bool,
 		disabled: bool,
 		inputName: string,
 		inputValue: string,
+		items: list<[
+			active: bool,
+			checked: bool,
+			disabled: bool,
+			inputName: string,
+			inputValue: string,
+			label: string,
+			separator: bool,
+			type: string
+		]>,
 		label: string,
 		separator: bool,
 		type: string
@@ -447,10 +458,21 @@
 	{@param? customData: ?}
 	{@param? disabled: bool}
 	{@param? filterItems: list<[
+		active: bool,
 		checked: bool,
 		disabled: bool,
 		inputName: string,
 		inputValue: string,
+		items: list<[
+			active: bool,
+			checked: bool,
+			disabled: bool,
+			inputName: string,
+			inputValue: string,
+			label: string,
+			separator: bool,
+			type: string
+		]>,
 		label: string,
 		separator: bool,
 		type: string
