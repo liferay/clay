@@ -48,7 +48,8 @@
     ],
     "testPathIgnorePatterns": [
       "browserslist-config-clay",
-      "fixtures"
+      "fixtures",
+      "<rootDir>/examples"
     ],
     "transformIgnorePatterns": [
       "<rootDir>.*(node_modules)(?!.*clay.*).*$"
