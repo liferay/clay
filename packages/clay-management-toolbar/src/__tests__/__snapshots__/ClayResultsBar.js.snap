@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+  <div class="container-fluid container-fluid-max-xl">
+    <ul class="tbar-nav">
+      <li class="tbar-item">
+        <div class="tbar-section">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">10-results-for</span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item tbar-item-expand">
+        <div class="tbar-section">
+          <span class="label label-secondary label-dismissible label-lg">
+            <span class="label-item label-item-expand">Label 1</span>
+            <span class="label-item label-item-after">
+              <button class="btn close btn-unstyled" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span class="label label-secondary label-dismissible label-lg">
+            <span class="label-item label-item-expand">Label 2</span>
+            <span class="label-item label-item-after">
+              <button class="btn close btn-unstyled" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span class="label label-secondary label-dismissible label-lg">
+            <span class="label-item label-item-expand">Label 3</span>
+            <span class="label-item label-item-after">
+              <button class="btn close btn-unstyled" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayResultsBar should render a results bar with filter labels and search value 1`] = `
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+  <div class="container-fluid container-fluid-max-xl">
+    <ul class="tbar-nav">
+      <li class="tbar-item">
+        <div class="tbar-section">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">10-results-for-my search</span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item tbar-item-expand">
+        <div class="tbar-section">
+          <span class="label label-secondary label-dismissible label-lg">
+            <span class="label-item label-item-expand">Label 1</span>
+            <span class="label-item label-item-after">
+              <button class="btn close btn-unstyled" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span class="label label-secondary label-dismissible label-lg">
+            <span class="label-item label-item-expand">Label 2</span>
+            <span class="label-item label-item-after">
+              <button class="btn close btn-unstyled" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span class="label label-secondary label-dismissible label-lg">
+            <span class="label-item label-item-expand">Label 3</span>
+            <span class="label-item label-item-after">
+              <button class="btn close btn-unstyled" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayResultsBar should render a results bar with search value 1`] = `
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+  <div class="container-fluid container-fluid-max-xl">
+    <ul class="tbar-nav">
+      <li class="tbar-item tbar-item-expand">
+        <div class="tbar-section">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">10-results-for-my search</span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayResultsBar should render the default markup 1`] = `
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+  <div class="container-fluid container-fluid-max-xl">
+    <ul class="tbar-nav">
+      <li class="tbar-item tbar-item-expand">
+        <div class="tbar-section">
+          <span class="text-truncate-inline">
+            <span class="text-truncate">10-results-for</span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
