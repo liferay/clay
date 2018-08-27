@@ -1,4 +1,5 @@
 import ClayManagementToolbar from '../ClayManagementToolbar';
+import ClayResultsBar from '../ClayResultsBar';
 import {
 	actionItemsValidator,
 	creationMenuItemsValidator,
@@ -8,6 +9,7 @@ import {
 export {
 	actionItemsValidator,
 	ClayManagementToolbar,
+	ClayResultsBar,
 	creationMenuItemsValidator,
 	filterItemsValidator,
 };
