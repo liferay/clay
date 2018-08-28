@@ -1,5 +1,58 @@
 # Change Log
 
+## [v2.3.0](https://github.com/liferay/clay/tree/v2.3.0) (2018-08-28)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.2.0...v2.3.0)
+
+**Implemented enhancements:**
+
+- Tooltip default position [\#1082](https://github.com/liferay/clay/issues/1082)
+
+**Fixed bugs:**
+
+- Clayui.com: Broken links and some more... [\#1070](https://github.com/liferay/clay/issues/1070)
+- ClayCharts does not pass the `donut` and `gauge` API to Billboard.js [\#1033](https://github.com/liferay/clay/issues/1033)
+- Clayui.com https://clayui.com/docs/getting\_started/introduction.html [\#962](https://github.com/liferay/clay/issues/962)
+
+**Closed issues:**
+
+- ClayCSS: Modal Variant Mixin $footer-border-color is declared twice [\#1090](https://github.com/liferay/clay/issues/1090)
+- ClayCSS: List Group variables $list-group-text-link and $list-group-subtext-link should follow same pattern as $list-group-title-link [\#1088](https://github.com/liferay/clay/issues/1088)
+- ClayCSS: Bootstrap 4's hover focus mixin is deprecated [\#1085](https://github.com/liferay/clay/issues/1085)
+- ClayCSS: Custom Control variable names don't follow Bootstrap pattern [\#1083](https://github.com/liferay/clay/issues/1083)
+- \[clay-charts\] Implement radar chart [\#1080](https://github.com/liferay/clay/issues/1080)
+- Update tooltip shadow in the clay-charts package defined by Lexicon [\#1077](https://github.com/liferay/clay/issues/1077)
+- \[clay-charts\] Upgrade billboardJS version to 1.5 [\#1072](https://github.com/liferay/clay/issues/1072)
+- Good practices / guidelines to write SCSS in Clay [\#1068](https://github.com/liferay/clay/issues/1068)
+- \[clay-charts\] "xs" is missing from the state declaration of ChartBase [\#1064](https://github.com/liferay/clay/issues/1064)
+- LexiconCSS: $btn-action-border-radius should actually change border-radius [\#1062](https://github.com/liferay/clay/issues/1062)
+- LexiconCSS: Move hardcoded values for %scale-lexicon-icon and .icon-monospaced .lexicon-icon to variables [\#1060](https://github.com/liferay/clay/issues/1060)
+- Update card shadow defined by Lexicon [\#1053](https://github.com/liferay/clay/issues/1053)
+
+**Merged pull requests:**
+
+- v2.3.0 [\#1117](https://github.com/liferay/clay/pull/1117) ([jbalsas](https://github.com/jbalsas))
+- Run just the `npm run soy` on the CI | Fixes \#1107 [\#1110](https://github.com/liferay/clay/pull/1110) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Changes default tooltip position as Bottom to Top [\#1096](https://github.com/liferay/clay/pull/1096) ([boton](https://github.com/boton))
+- ClayCSS: \(Fixes \#1090\) Modal Variant Mixin `$footer-border-color` dec… [\#1091](https://github.com/liferay/clay/pull/1091) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#1088\) List Group variables `$list-group-text-link` an… [\#1089](https://github.com/liferay/clay/pull/1089) ([pat270](https://github.com/pat270))
+- ClayCSS: \(Fixes \#1085\) Use :hover :focus pseudo classes instead of Bo… [\#1086](https://github.com/liferay/clay/pull/1086) ([pat270](https://github.com/pat270))
+- New: \(Fixes \#1083\) Custom Form added `$custom-control-indicator-check… [\#1084](https://github.com/liferay/clay/pull/1084) ([pat270](https://github.com/pat270))
+- Implement radar chart | Fixes \#1080 [\#1081](https://github.com/liferay/clay/pull/1081) ([julien](https://github.com/julien))
+- Apply box shadow defined by Lexicon and based on Clay popover shadow | \#1077 [\#1078](https://github.com/liferay/clay/pull/1078) ([interaminense](https://github.com/interaminense))
+- New: \(Fixes \#1068\) Clay CSS code guidelines [\#1075](https://github.com/liferay/clay/pull/1075) ([pat270](https://github.com/pat270))
+- Updates billboard to version 1.5.1 | Fixes \#1072 [\#1074](https://github.com/liferay/clay/pull/1074) ([julien](https://github.com/julien))
+- Remove script `electric` from root [\#1073](https://github.com/liferay/clay/pull/1073) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes the links on clayui.com and more | Fixes \#1070 [\#1071](https://github.com/liferay/clay/pull/1071) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Add xs property to CharBase's STATE | Fixes \#1064 [\#1067](https://github.com/liferay/clay/pull/1067) ([julien](https://github.com/julien))
+- ClayCSS \(\#1065\) New Table helpers [\#1066](https://github.com/liferay/clay/pull/1066) ([pat270](https://github.com/pat270))
+- Update: \(Fixes \#1062\) Button `$btn-action-border-radius` should chang… [\#1063](https://github.com/liferay/clay/pull/1063) ([pat270](https://github.com/pat270))
+- New: \(Fixes \#1060\) SVG Icons added option to customize `$scale-lexico… [\#1061](https://github.com/liferay/clay/pull/1061) ([pat270](https://github.com/pat270))
+- New styles from lexicondesign [\#1059](https://github.com/liferay/clay/pull/1059) ([marcoscv-work](https://github.com/marcoscv-work))
+- Update clay packages in clayui.com [\#1058](https://github.com/liferay/clay/pull/1058) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Update: \(Fixes \#1049\)  Update Yeoman generator to use webpack common config [\#1057](https://github.com/liferay/clay/pull/1057) ([victorg1991](https://github.com/victorg1991))
+- Update Lexicon Version [\#1055](https://github.com/liferay/clay/pull/1055) ([ahdezma](https://github.com/ahdezma))
+- Update: \(Fixes \#1053\) Atlas Card box-shadow should match Lexicon card… [\#1054](https://github.com/liferay/clay/pull/1054) ([pat270](https://github.com/pat270))
+
 ## [v2.2.0](https://github.com/liferay/clay/tree/v2.2.0) (2018-07-09)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.1.12...v2.2.0)
 
