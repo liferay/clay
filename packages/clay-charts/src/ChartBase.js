@@ -12,7 +12,6 @@ const PROP_NAME_MAP = {
 	name: 'names',
 	regions: 'regions',
 	type: 'types',
-	x: 'xs',
 };
 
 const DEFAULT_COLORS = [
@@ -1409,6 +1408,15 @@ ChartBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	x: Config.string(),
+
+	/**
+	 * Sets billboard's data.xs config.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?(object|undefined)}
+	 */
+	xs: Config.object(),
 
 	/**
 	 * Sets billboard's data.xFormat config.

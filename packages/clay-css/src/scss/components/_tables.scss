@@ -157,7 +157,7 @@ th {
 
 .table-hover {
 	tbody tr {
-		@include hover {
+		&:hover {
 			td,
 			th {
 				background-color: $table-hover-bg;
@@ -387,7 +387,7 @@ th {
 
 .table-list.table-hover {
 	tbody tr {
-		@include hover {
+		&:hover {
 			td,
 			th {
 				background-color: $table-list-hover-bg;
@@ -400,7 +400,7 @@ th {
 
 .table-list.table-hover {
 	.table-active {
-		@include hover {
+		&:hover {
 			background-color: $table-list-active-bg;
 
 			> th,
@@ -557,6 +557,19 @@ th {
 			vertical-align: bottom;
 		}
 	}
+
+	tbody {
+		td,
+		th {
+			padding-bottom: $table-valign-bottom-body-cell-padding-bottom;
+		}
+	}
+
+	&.show-quick-actions-on-hover {
+		.quick-action-menu {
+			align-items: flex-end;
+		}
+	}
 }
 
 .table-valign-middle {
@@ -579,13 +592,36 @@ th {
 			vertical-align: top;
 		}
 	}
+
+	tbody {
+		td,
+		th {
+			padding-top: $table-valign-top-body-cell-padding-top;
+		}
+	}
+
+	&.show-quick-actions-on-hover {
+		.quick-action-menu {
+			align-items: flex-start;
+		}
+	}
 }
 
 // Tbody Vertical Align
 
 .tbody-valign-bottom {
-	tbody td {
-		vertical-align: bottom;
+	tbody {
+		td,
+		th {
+			padding-bottom: $table-valign-bottom-body-cell-padding-bottom;
+			vertical-align: bottom;
+		}
+	}
+
+	&.show-quick-actions-on-hover {
+		.quick-action-menu {
+			align-items: flex-end;
+		}
 	}
 }
 
@@ -596,8 +632,18 @@ th {
 }
 
 .tbody-valign-top {
-	tbody td {
-		vertical-align: top;
+	tbody {
+		td,
+		th {
+			padding-top: $table-valign-top-body-cell-padding-top;
+			vertical-align: top;
+		}
+	}
+
+	&.show-quick-actions-on-hover {
+		.quick-action-menu {
+			align-items: flex-start;
+		}
 	}
 }
 
@@ -634,7 +680,7 @@ th {
 
 .show-quick-actions-on-hover {
 	tr:not(.table-active):not(.table-disabled) {
-		@include hover {
+		&:hover {
 			.quick-action-menu {
 				display: flex;
 			}
@@ -673,7 +719,7 @@ th {
 
 .table-hover {
 	tbody tr {
-		@include hover {
+		&:hover {
 			.quick-action-menu {
 				background-color: $table-quick-action-menu-hover-bg;
 			}
@@ -681,7 +727,7 @@ th {
 	}
 
 	tbody .table-active {
-		@include hover {
+		&:hover {
 			.quick-action-menu {
 				background-color: $table-quick-action-menu-active-bg;
 			}
@@ -720,7 +766,7 @@ th {
 
 .table-list.table-hover {
 	tbody tr {
-		@include hover {
+		&:hover {
 			.quick-action-menu {
 				background-color: $table-list-quick-action-menu-hover-bg;
 			}
@@ -728,7 +774,7 @@ th {
 	}
 
 	tbody .table-active {
-		@include hover {
+		&:hover {
 			.quick-action-menu {
 				background-color: $table-list-quick-action-menu-active-bg;
 			}
@@ -752,5 +798,57 @@ th {
 		&#{$infix} {
 			margin-bottom: $table-responsive-margin-bottom;
 		}
+	}
+}
+
+// Table Utilities
+
+.table {
+	// Min Width
+
+	.table-cell-minw-50 {
+		min-width: 50px;
+	}
+
+	.table-cell-minw-75 {
+		min-width: 75px;
+	}
+
+	.table-cell-minw-100 {
+		min-width: 100px;
+	}
+
+	.table-cell-minw-150 {
+		min-width: 150px;
+	}
+
+	.table-cell-minw-200 {
+		min-width: 200px;
+	}
+
+	.table-cell-minw-250 {
+		min-width: 250px;
+	}
+
+	.table-cell-minw-300 {
+		min-width: 300px;
+	}
+
+	.table-cell-minw-350 {
+		min-width: 350px;
+	}
+
+	.table-cell-minw-400 {
+		min-width: 400px;
+	}
+
+	// White Space
+
+	.table-cell-ws-normal {
+		white-space: normal;
+	}
+
+	.table-cell-ws-nowrap {
+		white-space: nowrap;
 	}
 }

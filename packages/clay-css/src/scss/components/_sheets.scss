@@ -191,7 +191,7 @@ a.sheet-subtitle {
 	color: $sheet-subtitle-link-color;
 	text-decoration: $sheet-subtitle-link-text-decoration;
 
-	@include hover {
+	&:hover {
 		color: $sheet-subtitle-link-hover-color;
 		text-decoration: $sheet-subtitle-link-hover-text-decoration;
 	}

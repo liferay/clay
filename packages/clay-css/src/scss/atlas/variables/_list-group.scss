@@ -44,27 +44,27 @@ $list-group-subtitle-link: map-merge((
 
 // List Group Text
 
-$list-group-text: () !default;
-$list-group-text: map-merge((
-	line-height: 1.45
-), $list-group-text);
-
 $list-group-text-link: () !default;
 $list-group-text-link: map-merge((
 	hover-color: $body-color
 ), $list-group-text-link);
 
-// List Group Subtext
-
-$list-group-subtext: () !default;
-$list-group-subtext: map-merge((
+$list-group-text: () !default;
+$list-group-text: map-merge((
 	line-height: 1.45
-), $list-group-subtext);
+), $list-group-text);
+
+// List Group Subtext
 
 $list-group-subtext-link: () !default;
 $list-group-subtext-link: map-merge((
 	hover-color: $body-color
 ), $list-group-subtext-link);
+
+$list-group-subtext: () !default;
+$list-group-subtext: map-merge((
+	line-height: 1.45
+), $list-group-subtext);
 
 // List Group Link
 

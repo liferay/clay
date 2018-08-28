@@ -44,7 +44,8 @@
 	font-weight: $alert-link-font-weight;
 	text-decoration: $alert-link-decoration;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		text-decoration: $alert-link-hover-decoration;
 	}
 }
@@ -194,7 +195,8 @@
 		.close {
 			color: map-get($value, close-color);
 
-			@include hover-focus {
+			&:hover,
+			&:focus {
 				color: map-get($value, close-hover-color);
 			}
 		}
@@ -202,7 +204,8 @@
 		.alert-link {
 			color: map-get($value, link-color);
 
-			@include hover-focus {
+			&:hover,
+			&:focus {
 				color: map-get($value, link-hover-color);
 			}
 		}

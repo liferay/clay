@@ -210,14 +210,15 @@
 	.nav-link {
 		color: $link-color;
 
-		@include hover-focus {
+		&:hover,
+		&:focus {
 			color: $link-hover-color;
 		}
 
 		@include media-breakpoint-down($breakpoint-down) {
 			color: $link-color-mobile;
 
-			@include hover {
+			&:hover {
 				background-color: $link-hover-bg-mobile;
 				color: $link-hover-color-mobile;
 			}

@@ -86,6 +86,8 @@ If you want to contribute to this project and do not know where to start [good f
 
 ### Setup
 
+#### Packages
+
 1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
 
 2. Install global dependencies:
@@ -123,6 +125,37 @@ If you want to contribute to this project and do not know where to start [good f
   ```
   npm run test
   ```
+
+#### Clayui.com
+
+To contribute to the documentation and the site in general, you can try to run locally to test your changes:
+
+1. Move to the site folder
+```
+cd clayui.com
+```
+
+2. Install dependencies:
+```
+yarn install
+```
+
+or 
+
+```
+npm install
+```
+
+3. Run in development environment
+```
+npm run develop
+```
+
+If you want to test in a production environment so that you do not take risks of inconsistencies, in the root folder:
+
+```
+npm run site
+```
 
 ### Important
 Since travis is failing on executing a11y tests due to out of date suid you need to execute `npm run a11y` locally before sending any pr to verify we're following accessibility standars.

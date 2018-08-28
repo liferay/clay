@@ -281,7 +281,8 @@
 							}
 
 							.dropdown-item {
-								@include hover-focus {
+								&:hover,
+								&:focus {
 									background-color: transparent;
 								}
 

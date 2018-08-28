@@ -45,20 +45,6 @@ class Sidebar extends Component {
 
 							<Navigation sectionList={sectionsList} location={location} />
 						</div>
-						<ul className="nav-icons">
-							<li className="d-block mb-3">
-								<a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay/issues" target="_blank">
-									<svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
-										<use xlinkHref="/images/icons/icons.svg#comments" />
-									</svg>
-								</a>
-							</li>
-							<li className="d-block">
-								<a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay" target="_blank">
-									<img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="" />
-								</a>
-							</li>
-						</ul>
 					</div>
 				</nav>
 			</div>

@@ -99,8 +99,8 @@
 	}
 
 	&:active:checked ~ .custom-control-label::before {
-		background-color: $custom-control-indicator-active-checked-bg;
-		border-color: $custom-control-indicator-active-checked-border-color;
+		background-color: $custom-control-indicator-checked-active-bg;
+		border-color: $custom-control-indicator-checked-active-border-color;
 	}
 
 	&:checked ~ .custom-control-label::before {
@@ -122,8 +122,8 @@
 	}
 
 	&:disabled:checked ~ .custom-control-label::before {
-		background-color: $custom-control-indicator-disabled-checked-bg;
-		border-color: $custom-control-indicator-disabled-checked-border-color;
+		background-color: $custom-control-indicator-checked-disabled-bg;
+		border-color: $custom-control-indicator-checked-disabled-border-color;
 	}
 }
 
@@ -149,8 +149,8 @@
 		}
 
 		&:disabled:indeterminate ~ .custom-control-label::before {
-			background-color: $custom-control-indicator-disabled-checked-bg;
-			border-color: $custom-control-indicator-disabled-checked-border-color;
+			background-color: $custom-control-indicator-checked-disabled-bg;
+			border-color: $custom-control-indicator-checked-disabled-border-color;
 		}
 	}
 }
@@ -168,7 +168,7 @@
 		}
 
 		&:disabled:checked ~ .custom-control-label::before {
-			border-color: $custom-radio-indicator-disabled-checked-border-color;
+			border-color: $custom-radio-indicator-checked-disabled-border-color;
 		}
 	}
 }

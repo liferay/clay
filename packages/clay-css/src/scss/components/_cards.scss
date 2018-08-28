@@ -311,7 +311,7 @@
 }
 
 .form-check-card {
-	@include hover {
+	&:hover {
 		.card {
 			box-shadow: $form-check-card-checked-box-shadow;
 		}
@@ -320,7 +320,7 @@
 
 .custom-control-input,
 .form-check-input {
-	@include hover {
+	&:hover {
 		~ .card {
 			box-shadow: $form-check-card-checked-box-shadow;
 		}

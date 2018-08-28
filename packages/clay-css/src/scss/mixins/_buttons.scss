@@ -23,7 +23,7 @@
 	border-color: $border-color;
 	color: $color;
 
-	@include hover {
+	&:hover {
 		background-color: $hover-bg;
 		border-color: $hover-border-color;
 		color: $hover-color;
