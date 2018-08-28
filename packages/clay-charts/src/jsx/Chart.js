@@ -11,10 +11,11 @@ class ChartJSX extends JSXComponent {
 	 * @inheritDoc
 	 */
 	render() {
+		const id = this.props.id;
 		const loading = this.props._loading;
 
 		return (
-			<div class="metal-chart-container">
+			<div class="metal-chart-container" {...id && {id}}>
 				<div
 					class="metal-chart"
 					ref="chart"

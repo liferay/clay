@@ -1040,6 +1040,15 @@ ChartBase.STATE = {
 	hide: Config.bool().value(false),
 
 	/**
+	 * Id to be applied to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?(string|undefined)}
+	 */
+	id: Config.string(),
+
+	/**
 	 * Intersection display options.
 	 * @default undefined
 	 * @instance

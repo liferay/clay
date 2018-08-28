@@ -5,8 +5,15 @@
  */
 {template .render}
 	{@param? _loading:  bool}
+	{@param? id: string}
 
-	<div class="metal-chart-container">
+  {let $attrs kind="attributes"}
+		{if $id}
+			id="{$id}"
+		{/if}
+  {/let}
+
+	<div class="metal-chart-container"{$attrs}>
 		{let $chartAttrs kind="attributes"}
 			{if $_loading}
 				hidden
