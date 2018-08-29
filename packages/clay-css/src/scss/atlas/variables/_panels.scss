@@ -18,11 +18,12 @@ $panel-collapse-icon-font-size: 0.75rem !default; // 12px
 
 // Panel Variants
 
-$panel-secondary: (
+$panel-secondary: () !default;
+$panel-secondary: map-merge((
 	border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
 	color: $secondary,
 	header-bg: null,
 	header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
 	footer-bg: null,
 	footer-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
-);
+), $panel-secondary);
