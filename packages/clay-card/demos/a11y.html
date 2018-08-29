@@ -19,7 +19,7 @@
 
 	<script src="../build/globals/clay-card.js"></script>
 </head>
-<body class="container">
+<body class="container" role="main">
 	<h1 class="page-title">
 		ClayCards
 	</h1>
@@ -115,12 +115,12 @@
 		var image = './image1.jpg';
 		var items = [
 			{
-				href: '#1',
+				href: '#image-card-block',
 				label: 'Edit',
 				separator: true,
 			},
 			{
-				href: '#1',
+				href: '#image-card-block',
 				label: 'Save',
 			}
 		];
@@ -130,7 +130,7 @@
 		 */
 		new metal.ClayImageCard({
 			actionItems: items,
-			href: '#1',
+			href: '#image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			spritemap: spritemap,
@@ -163,7 +163,7 @@
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#sticker-image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			spritemap: spritemap,
@@ -201,7 +201,7 @@
 			stickerLabel: 'TT',
 			stickerShape: 'circle',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#sticker-shape-image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			spritemap: spritemap,
@@ -240,7 +240,7 @@
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#image-card-one-label-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			labels: [
@@ -307,7 +307,7 @@
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#selectable-image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			labels: [
