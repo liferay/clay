@@ -8,7 +8,7 @@
 	{@param? _width: string}
 	{@param? id: string}
 
-  {let $attributes kind="attributes"}
+	{let $attributes kind="attributes"}
 		{if $id}
 			id="{$id}"
 		{/if}
@@ -22,7 +22,7 @@
 				height: {$_height};
 			{/if}
 		"
-  {/let}
+	{/let}
 
 	<div {$attributes}></div>
 {/template}
