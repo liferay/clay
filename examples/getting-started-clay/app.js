@@ -5,24 +5,22 @@ import './app.scss';
 let counter = 0;
 
 const clayBadge = new ClayBadge(
-    {
-        label: '0'
-    },
-    '#clayBadge'
+	{
+		label: '0',
+	},
+	'#clayBadge'
 );
 
-const clayButton = new ClayButton(
-    {
-        label: 'Click',
-        events: {
-            click: increment
-        }
-    },
-    '#clayButton'
+new ClayButton(
+	{
+		label: 'Click',
+		events: {
+			click: function() {
+				counter++;
+
+				clayBadge.label = String(counter);
+			},
+		},
+	},
+	'#clayButton'
 );
-
-function increment(event) {
-    counter++;
-
-    clayBadge.label = String(counter);
-};
