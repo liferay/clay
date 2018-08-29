@@ -1,17 +1,19 @@
 // Menubar Vertical MD
 
-$menubar-vertical-transparent-md: (
+$menubar-vertical-transparent-md: () !default;
+$menubar-vertical-transparent-md: map-merge((
 	bg-mobile: #FFF,
 	link-active-font-weight: $font-weight-semi-bold,
 	toggler-font-size-mobile: 0.875rem,
 	toggler-font-weight-mobile: $font-weight-semi-bold
-) !default;
+), $menubar-vertical-transparent-md);
 
 // Menubar Vertical LG
 
-$menubar-vertical-transparent-lg: (
+$menubar-vertical-transparent-lg: () !default;
+$menubar-vertical-transparent-lg: map-merge((
 	bg-mobile: #FFF,
 	link-active-font-weight: $font-weight-semi-bold,
 	toggler-font-size-mobile: 0.875rem,
 	toggler-font-weight-mobile: $font-weight-semi-bold
-) !default;
+), $menubar-vertical-transparent-lg);
