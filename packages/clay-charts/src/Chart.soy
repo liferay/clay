@@ -8,12 +8,13 @@
 	{@param? id: string}
 
   {let $attrs kind="attributes"}
+    class="metal-chart-container"
 		{if $id}
-			id="{$id}"
+			{sp}id="{$id}"
 		{/if}
   {/let}
 
-	<div class="metal-chart-container"{$attrs}>
+	<div {$attrs}>
 		{let $chartAttrs kind="attributes"}
 			{if $_loading}
 				hidden
