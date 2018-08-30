@@ -5,6 +5,7 @@ import {
 	actionItemsValidator,
 	creationMenuItemsValidator,
 	filterItemsValidator,
+	filterLabelsValidator,
 } from 'clay-management-toolbar';
 import {Config} from 'metal-state';
 import ClayComponent from 'clay-component';
@@ -375,6 +376,15 @@ ClayDatasetDisplay.STATE = {
 	 * @type {?(array|undefined)}
 	 */
 	filterItems: filterItemsValidator,
+
+	/**
+	 * List of filter label items.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDatasetDisplay
+	 * @type {?(array|undefined)}
+	 */
+	filterLabels: filterLabelsValidator,
 
 	/**
 	 * Id to be applied to the element.
