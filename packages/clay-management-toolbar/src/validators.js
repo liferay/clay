@@ -49,8 +49,16 @@ const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
 
 filterItemShape.items = filterItemsValidator;
 
+const filterLabelsValidator = Config.arrayOf(
+	Config.shapeOf({
+		closeable: Config.bool().value(true),
+		label: Config.string(),
+	})
+);
+
 export {
 	actionItemsValidator,
 	creationMenuItemsValidator,
 	filterItemsValidator,
+	filterLabelsValidator,
 };
