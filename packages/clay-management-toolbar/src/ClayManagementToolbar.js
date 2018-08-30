@@ -19,6 +19,7 @@ import {
 	actionItemsValidator,
 	creationMenuItemsValidator,
 	filterItemsValidator,
+	filterLabelsValidator
 } from './validators';
 import templates from './ClayManagementToolbar.soy.js';
 
@@ -312,12 +313,7 @@ ClayManagementToolbar.STATE = {
 	 * @memberof ClayManagementToolbar
 	 * @type {?(array|undefined)}
 	 */
-	filterLabels: Config.arrayOf(
-		Config.shapeOf({
-			closeable: Config.bool().value(true),
-			label: Config.string(),
-		})
-	),
+	filterLabels: filterLabelsValidator,
 
 	/**
 	 * Id to be applied to the element.

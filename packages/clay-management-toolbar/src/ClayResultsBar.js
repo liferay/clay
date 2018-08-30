@@ -6,6 +6,8 @@ import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
+import {filterLabelsValidator} from './validators';
+
 import templates from './ClayResultsBar.soy.js';
 
 /**
@@ -54,12 +56,7 @@ ClayResultsBar.STATE = {
 	 * @memberof ClayResultsBar
 	 * @type {?(array|undefined)}
 	 */
-	filterLabels: Config.arrayOf(
-		Config.shapeOf({
-			closeable: Config.bool().value(true),
-			label: Config.any(),
-		})
-	),
+	filterLabels: filterLabelsValidator,
 
 	/**
 	 * Value of the search input.

@@ -4,6 +4,7 @@ import {
 	actionItemsValidator,
 	creationMenuItemsValidator,
 	filterItemsValidator,
+	filterLabelsValidator,
 } from '../validators';
 
 export {
@@ -12,4 +13,5 @@ export {
 	ClayResultsBar,
 	creationMenuItemsValidator,
 	filterItemsValidator,
+	filterLabelsValidator,
 };
