@@ -56,6 +56,7 @@ ClayResultsBar.STATE = {
 	 */
 	filterLabels: Config.arrayOf(
 		Config.shapeOf({
+			closeable: Config.bool().value(true),
 			label: Config.any(),
 		})
 	),

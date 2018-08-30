@@ -314,6 +314,7 @@ ClayManagementToolbar.STATE = {
 	 */
 	filterLabels: Config.arrayOf(
 		Config.shapeOf({
+			closeable: Config.bool().value(true),
 			label: Config.string(),
 		})
 	),
