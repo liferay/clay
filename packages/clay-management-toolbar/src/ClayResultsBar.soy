@@ -10,7 +10,8 @@
     {@param? _handleFilterLabelCloseClicked: any}
 	{@param? clearResultsURL: string}
 	{@param? filterLabels: list<[
-		label: string
+		closeable: bool,
+        label: string
 	]>}
 	{@param? searchValue: string}
 
@@ -83,7 +84,8 @@
  */
 {template .filterLabels}
 	{@param filterLabels: list<[
-		label: string
+		closeable: bool,
+        label: string
 	]>}
 	{@param spritemap: string}
     {@param? _handleFilterLabelCloseClicked: any}
@@ -92,7 +94,7 @@
         <div class="tbar-section">
             {foreach $filterLabel in $filterLabels}
                 {call ClayLabel.render}
-                    {param closeable: true /}
+                    {param closeable: $filterLabel.closeable == false ? false : true /}
                     {param events: ['close': $_handleFilterLabelCloseClicked] /}
                     {param label kind="text"}
                         {$filterLabel.label}
