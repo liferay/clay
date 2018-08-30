@@ -77,6 +77,10 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? filterLabels: list<[
+		closeable: bool,
+		label: string
+	]>}
 	{@param? id: string}
 	{@param? items: ?}
 	{@param? searchActionURL: string}
@@ -128,6 +132,7 @@
 					'viewTypeItemClicked': $_handleViewTypeItemClicked
 				] /}
 				{param filterItems: $filterItems /}
+				{param filterLabels: $filterLabels /}
 				{param ref: 'managementToolbar' /}
 				{param searchActionURL: $searchActionURL /}
 				{param searchFormName: $searchFormName /}
