@@ -13,16 +13,8 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
       </li>
       <li class="tbar-item tbar-item-expand">
         <div class="tbar-section">
-          <span class="label label-secondary label-dismissible label-lg">
+          <span class="label label-secondary label-lg">
             <span class="label-item label-item-expand">Label 1</span>
-            <span class="label-item label-item-after">
-              <button class="btn close btn-unstyled" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-            </span>
           </span>
           <span class="label label-secondary label-dismissible label-lg">
             <span class="label-item label-item-expand">Label 2</span>
@@ -69,16 +61,8 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
       </li>
       <li class="tbar-item tbar-item-expand">
         <div class="tbar-section">
-          <span class="label label-secondary label-dismissible label-lg">
+          <span class="label label-secondary label-lg">
             <span class="label-item label-item-expand">Label 1</span>
-            <span class="label-item label-item-after">
-              <button class="btn close btn-unstyled" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-            </span>
           </span>
           <span class="label label-secondary label-dismissible label-lg">
             <span class="label-item label-item-expand">Label 2</span>
