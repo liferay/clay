@@ -1,3 +1,4 @@
+import {Align} from 'metal-position';
 import ClayDropdownBase from '../ClayDropdownBase';
 
 let clayDropdownBase;
@@ -738,5 +739,41 @@ describe('ClayDropdownBase', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));
+	});
+
+	it('should render a dropdown with preferred align and set a number with base in Align API', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+			preferredAlign: 'BottomCenter',
+		});
+
+		expect(clayDropdownBase.preferredAlign).toBe(Align.BottomCenter);
+
+		clayDropdownBase.preferredAlign = 'BottomLeft';
+		expect(clayDropdownBase.preferredAlign).toBe(Align.BottomLeft);
+
+		clayDropdownBase.preferredAlign = 'BottomRight';
+		expect(clayDropdownBase.preferredAlign).toBe(Align.BottomRight);
+
+		clayDropdownBase.preferredAlign = 'LeftCenter';
+		expect(clayDropdownBase.preferredAlign).toBe(Align.LeftCenter);
+
+		clayDropdownBase.preferredAlign = 'RightCenter';
+		expect(clayDropdownBase.preferredAlign).toBe(Align.RightCenter);
+
+		clayDropdownBase.preferredAlign = 'TopCenter';
+		expect(clayDropdownBase.preferredAlign).toBe(Align.TopCenter);
+
+		clayDropdownBase.preferredAlign = 'TopLeft';
+		expect(clayDropdownBase.preferredAlign).toBe(Align.TopLeft);
+
+		clayDropdownBase.preferredAlign = 'TopRight';
+		expect(clayDropdownBase.preferredAlign).toBe(Align.TopRight);
 	});
 });

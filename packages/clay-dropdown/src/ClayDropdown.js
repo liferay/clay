@@ -129,6 +129,24 @@ ClayDropdown.STATE = {
 	label: Config.any(),
 
 	/**
+	 * The preferred alignment for the dropdown content.
+	 * @default BottomLeft
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?(string|undefined)}
+	 */
+	preferredAlign: Config.oneOf([
+		'BottomCenter',
+		'BottomLeft',
+		'BottomRight',
+		'LeftCenter',
+		'RightCenter',
+		'TopCenter',
+		'TopLeft',
+		'TopRight',
+	]).value('BottomLeft'),
+
+	/**
 	 * Flag to indicate if menu has a search field and search through elements
 	 * is possible.
 	 * @default false

@@ -123,10 +123,28 @@ ClayActionsDropdown.STATE = {
 	 * Position in which item icon will be placed. Needed if any item has icons.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayDropdown
+	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
 	 */
 	itemsIconAlignment: Config.oneOf(['left', 'right']),
+
+	/**
+	 * The preferred alignment for the dropdown content.
+	 * @default BottomLeft
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?(string|undefined)}
+	 */
+	preferredAlign: Config.oneOf([
+		'BottomCenter',
+		'BottomLeft',
+		'BottomRight',
+		'LeftCenter',
+		'RightCenter',
+		'TopCenter',
+		'TopLeft',
+		'TopRight',
+	]).value('BottomLeft'),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

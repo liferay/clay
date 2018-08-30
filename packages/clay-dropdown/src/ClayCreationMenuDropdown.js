@@ -139,6 +139,24 @@ ClayCreationMenuDropdown.STATE = {
 	maxTotalItems: Config.number().value(15),
 
 	/**
+	 * The preferred alignment for the dropdown content.
+	 * @default BottomLeft
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?(string|undefined)}
+	 */
+	preferredAlign: Config.oneOf([
+		'BottomCenter',
+		'BottomLeft',
+		'BottomRight',
+		'LeftCenter',
+		'RightCenter',
+		'TopCenter',
+		'TopLeft',
+		'TopRight',
+	]).value('BottomLeft'),
+
+	/**
 	 * List of primary menu items.
 	 * @default undefined
 	 * @instance
