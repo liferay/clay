@@ -19,7 +19,7 @@ import {
 	actionItemsValidator,
 	creationMenuItemsValidator,
 	filterItemsValidator,
-	filterLabelsValidator
+	filterLabelsValidator,
 } from './validators';
 import templates from './ClayManagementToolbar.soy.js';
 
