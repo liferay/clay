@@ -19,12 +19,12 @@ describe('ClayCollapse', () => {
 			'<button aria-controls="collapseExample1" class="btn btn-primary">Read more &raquo;</button><button aria-controls="collapseExample3" aria-expanded="false" class="btn btn-warning" id="toggle2">Toggle2</button>'
 		);
 		dom.enterDocument(
-			'<div class="collapse in" id="collapseExample1"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea qui sint distinctio recusandae quo ut eaque provident eius eos commodi natus labore culpa modi soluta quia repudiandae nulla ex. Reiciendis cupiditate quis voluptatum atque veniam assumenda itaque perferendis eos voluptatem dolores aut eum. Ut voluptatum amet earum delectus totam unde!</div></div>'
+			'<div class="collapse show" id="collapseExample1"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea qui sint distinctio recusandae quo ut eaque provident eius eos commodi natus labore culpa modi soluta quia repudiandae nulla ex. Reiciendis cupiditate quis voluptatum atque veniam assumenda itaque perferendis eos voluptatem dolores aut eum. Ut voluptatum amet earum delectus totam unde!</div></div>'
 		);
 	});
 
 	function checkClosedClasses(component) {
-		expect(!dom.hasClass(component.content, 'in')).toBeTruthy();
+		expect(!dom.hasClass(component.content, 'show')).toBeTruthy();
 		expect(!dom.hasClass(component.content, 'collapsing')).toBeTruthy();
 		expect(dom.hasClass(component.content, 'collapse')).toBeTruthy();
 		expect(
@@ -35,7 +35,7 @@ describe('ClayCollapse', () => {
 	function checkOpenClasses(component) {
 		expect(!dom.hasClass(component.content, 'collapsing')).toBeTruthy();
 		expect(dom.hasClass(component.content, 'collapse')).toBeTruthy();
-		expect(dom.hasClass(component.content, 'in')).toBeTruthy();
+		expect(dom.hasClass(component.content, 'show')).toBeTruthy();
 		expect(
 			component.content.getAttribute('aria-expanded') === 'true'
 		).toBeTruthy();
