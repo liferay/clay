@@ -60,15 +60,6 @@ ClayUserCard.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Group Index the card belongs to.
-	 * @default undefined
-	 * @instance
-	 * @memberof ClayUserCard
-	 * @type {?(string|undefined)}
-	 */
-	groupName: Config.string(),
-
-	/**
 	 * Url to be applied to the title of the card.
 	 * @default undefined
 	 * @instance

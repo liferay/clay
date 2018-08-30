@@ -14,7 +14,6 @@
 	{@param? contentRenderer: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
-	{@param? groupName: string}
 	{@param? href: string}
 	{@param? icon: string}
 	{@param? id: string}
@@ -81,7 +80,6 @@
 			<div class="card">
 				<div class="aspect-ratio card-item-first">
 					{call ClayCheckbox.render}
-						{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
 						{param checked: $selected /}
 						{param disabled: $disabled /}
 						{param events: ['change': $_handleItemCheckboxClick] /}

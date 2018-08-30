@@ -111,7 +111,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -150,7 +150,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -194,7 +194,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -240,7 +240,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -281,7 +281,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -322,7 +322,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -368,7 +368,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -409,7 +409,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -458,7 +458,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-danger sticker-xl">
@@ -494,7 +494,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -532,7 +532,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -1012,7 +1012,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <div class="autofit-col">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox" aria-labelledby="group-0">
                 <span class="custom-control-label">
                   <span class="custom-control-label-text sr-only">deselect</span>
                 </span>
@@ -1061,7 +1061,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <div class="autofit-col">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox" aria-labelledby="group-0">
                 <span class="custom-control-label">
                   <span class="custom-control-label-text sr-only">deselect</span>
                 </span>
@@ -2784,7 +2784,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -2813,7 +2813,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -3086,7 +3086,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox" checked="">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox" checked="">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -3115,7 +3115,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -3620,7 +3620,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -3659,7 +3659,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -3703,7 +3703,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -3749,7 +3749,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -3790,7 +3790,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -3831,7 +3831,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -3877,7 +3877,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -3918,7 +3918,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -3967,7 +3967,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-danger sticker-xl">
@@ -4003,7 +4003,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -4041,7 +4041,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -6377,7 +6377,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -6416,7 +6416,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -6460,7 +6460,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" checked="" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
+                    <input checked="" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -6506,7 +6506,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -6547,7 +6547,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -6588,7 +6588,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -6634,7 +6634,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -6675,7 +6675,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -6724,7 +6724,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-danger sticker-xl">
@@ -6760,7 +6760,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -6798,7 +6798,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -8170,7 +8170,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -8209,7 +8209,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -8253,7 +8253,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -8299,7 +8299,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -8340,7 +8340,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -8381,7 +8381,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -8427,7 +8427,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -8468,7 +8468,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -8517,7 +8517,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-danger sticker-xl">
@@ -8553,7 +8553,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -8591,7 +8591,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -9023,7 +9023,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox" checked="">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox" checked="">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -9062,7 +9062,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox" checked="">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox" checked="">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -9106,7 +9106,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -9152,7 +9152,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -9193,7 +9193,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -9234,7 +9234,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -9280,7 +9280,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -9321,7 +9321,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -9370,7 +9370,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="chef" value="9" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-danger sticker-xl">
@@ -9406,7 +9406,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="chef" value="10" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -9444,7 +9444,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox" checked="">
+                    <input class="custom-control-input" name="chef" value="11" ref="input" type="checkbox" checked="">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -9759,7 +9759,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -9798,7 +9798,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
             <div class="custom-control custom-checkbox">
               <label>
-                <input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+                <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
                 <span class="custom-control-label"></span>
                 <div class="card card-horizontal">
                   <div class="card-body">
@@ -9842,7 +9842,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -9888,7 +9888,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -9929,7 +9929,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -9970,7 +9970,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -10016,7 +10016,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
                     <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
@@ -10057,7 +10057,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
@@ -10106,7 +10106,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="9" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-danger sticker-xl">
@@ -10142,7 +10142,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="10" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
@@ -10180,7 +10180,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
               <div class="aspect-ratio card-item-first">
                 <div class="custom-control custom-checkbox">
                   <label>
-                    <input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
+                    <input class="custom-control-input" name="chef" value="11" ref="input" type="checkbox">
                     <span class="custom-control-label"></span>
                     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
                       <span class="sticker sticker-circle sticker-primary sticker-xl">
