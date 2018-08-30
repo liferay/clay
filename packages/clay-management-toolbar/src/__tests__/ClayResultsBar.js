@@ -4,6 +4,7 @@ let resultsBar;
 
 const filterLabels = [
 	{
+		closeable: false,
 		label: 'Label 1',
 	},
 	{
@@ -90,7 +91,7 @@ describe('ClayResultsBar', function() {
 
 		const spy = jest.spyOn(resultsBar, 'emit');
 
-		resultsBar.refs.label0.refs.closeButton.element.click();
+		resultsBar.refs.label1.refs.closeButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
