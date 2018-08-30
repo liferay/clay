@@ -105,7 +105,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Folders</h4>
+          <h1 class="card-section-header">Folders</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -186,7 +186,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Recipes</h4>
+          <h1 class="card-section-header">Recipes</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
@@ -450,7 +450,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Chefs</h4>
+          <h1 class="card-section-header">Chefs</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left">
@@ -2778,7 +2778,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Group</h4>
+          <h1 class="card-section-header">Group</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -3080,7 +3080,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Group</h4>
+          <h1 class="card-section-header">Group</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -3614,7 +3614,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Folders</h4>
+          <h1 class="card-section-header">Folders</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -3695,7 +3695,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Recipes</h4>
+          <h1 class="card-section-header">Recipes</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
@@ -3959,7 +3959,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Chefs</h4>
+          <h1 class="card-section-header">Chefs</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left">
@@ -6371,7 +6371,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Folders</h4>
+          <h1 class="card-section-header">Folders</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -6452,7 +6452,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Recipes</h4>
+          <h1 class="card-section-header">Recipes</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
@@ -6716,7 +6716,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Chefs</h4>
+          <h1 class="card-section-header">Chefs</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left">
@@ -8164,7 +8164,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Folders</h4>
+          <h1 class="card-section-header">Folders</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -8245,7 +8245,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Recipes</h4>
+          <h1 class="card-section-header">Recipes</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
@@ -8509,7 +8509,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Chefs</h4>
+          <h1 class="card-section-header">Chefs</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left">
@@ -9017,7 +9017,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Folders</h4>
+          <h1 class="card-section-header">Folders</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -9098,7 +9098,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Recipes</h4>
+          <h1 class="card-section-header">Recipes</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
@@ -9362,7 +9362,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Chefs</h4>
+          <h1 class="card-section-header">Chefs</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left">
@@ -9753,7 +9753,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
     <form>
       <ul class="card-page">
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Folders</h4>
+          <h1 class="card-section-header">Folders</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-directory form-check form-check-card form-check-middle-left">
@@ -9834,7 +9834,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Recipes</h4>
+          <h1 class="card-section-header">Recipes</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
@@ -10098,7 +10098,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           </div>
         </li>
         <li class="card-page-item-header">
-          <h4 class="card-section-header">Chefs</h4>
+          <h1 class="card-section-header">Chefs</h1>
         </li>
         <li class="card-page-item-directory">
           <div class="card-type-asset form-check form-check-card form-check-top-left">
