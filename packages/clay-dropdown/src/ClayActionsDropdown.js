@@ -5,7 +5,7 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import itemsValidator from './items_validator';
+import {itemsValidator, preferredAlign} from './validators';
 import templates from './ClayActionsDropdown.soy.js';
 
 /**
@@ -135,16 +135,7 @@ ClayActionsDropdown.STATE = {
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
 	 */
-	preferredAlign: Config.oneOf([
-		'BottomCenter',
-		'BottomLeft',
-		'BottomRight',
-		'LeftCenter',
-		'RightCenter',
-		'TopCenter',
-		'TopLeft',
-		'TopRight',
-	]).value('BottomLeft'),
+	preferredAlign: preferredAlign.value('BottomLeft'),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

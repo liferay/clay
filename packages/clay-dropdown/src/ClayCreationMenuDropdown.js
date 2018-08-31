@@ -5,7 +5,7 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import itemsValidator from './items_validator';
+import {itemsValidator, preferredAlign} from './validators';
 import templates from './ClayCreationMenuDropdown.soy.js';
 
 /**
@@ -145,16 +145,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
 	 */
-	preferredAlign: Config.oneOf([
-		'BottomCenter',
-		'BottomLeft',
-		'BottomRight',
-		'LeftCenter',
-		'RightCenter',
-		'TopCenter',
-		'TopLeft',
-		'TopRight',
-	]).value('BottomLeft'),
+	preferredAlign: preferredAlign.value('BottomLeft'),
 
 	/**
 	 * List of primary menu items.

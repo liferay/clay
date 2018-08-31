@@ -11,7 +11,7 @@ import {Align} from 'metal-position';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 
-import itemsValidator from './items_validator';
+import {itemsValidator, preferredAlign} from './validators';
 import templates from './ClayDropdownBase.soy.js';
 
 const KEY_CODE_ESC = 27;
@@ -431,16 +431,7 @@ ClayDropdownBase.STATE = {
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
 	 */
-	preferredAlign: Config.oneOf([
-		'BottomCenter',
-		'BottomLeft',
-		'BottomRight',
-		'LeftCenter',
-		'RightCenter',
-		'TopCenter',
-		'TopLeft',
-		'TopRight',
-	]).setter('_setPreferredAlign'),
+	preferredAlign: preferredAlign.setter('_setPreferredAlign').value('BottomLeft'),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements

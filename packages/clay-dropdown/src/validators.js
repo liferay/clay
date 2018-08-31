@@ -21,5 +21,18 @@ const itemsValidator = Config.arrayOf(Config.shapeOf(itemShape));
 
 itemShape.items = itemsValidator;
 
-export {itemsValidator};
-export default itemsValidator;
+const preferredAlign = Config.oneOf([
+	'BottomCenter',
+	'BottomLeft',
+	'BottomRight',
+	'LeftCenter',
+	'RightCenter',
+	'TopCenter',
+	'TopLeft',
+	'TopRight',
+]);
+
+export {
+	itemsValidator,
+	preferredAlign,
+};
