@@ -11,7 +11,7 @@ const filterLabels = [
 		label: 'Label 2',
 	},
 	{
-		label: 'Label 3',
+		label: '<strong>Category:</strong>Label 3',
 	},
 ];
 
