@@ -110,6 +110,11 @@ class ClayDropdownBase extends ClayComponent {
 		);
 	}
 
+	/**
+	 * Returns the dropdown menu element.
+	 * @private
+	 * @return {!Node} element
+	 */
 	_getMenuElement() {
 		if (this.usePortal) {
 			return this.refs.portal.refs.menu;
