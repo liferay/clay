@@ -255,8 +255,22 @@
 								<li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="{index($item)}" data-onclick="{$_handleQuickActionClicked}">
 									{if isNonnull($item.href)}
 										{call ClayLink.render}
-											{param elementClasses: 'nav-link nav-link-monospaced' /}
-											{param href: $item.href /}
+											{param elementClasses kind="text"}
+												nav-link nav-link-monospaced
+
+												{if $item.disabled}
+													{sp}disabled
+												{/if}
+											{/param}
+
+											{param href kind="text"}
+												{if $item.disabled}
+													javascript:;
+												{else}
+													{$item.href}
+												{/if}
+											{/param}
+
 											{param icon: $item.icon /}
 											{param ref: 'quickAction' + index($item) /}
 											{param spritemap: $spritemap /}
@@ -264,6 +278,7 @@
 										{/call}
 									{else}
 										{call ClayButton.render}
+											{param disabled: $item.disabled /}
 											{param elementClasses: 'nav-link nav-link-monospaced' /}
 											{param icon: $item.icon /}
 											{param ref: 'quickAction' + index($item) /}
