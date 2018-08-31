@@ -61,7 +61,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 </nav>
 
 ```soy
-{call ClayNavbar.render}
+{call ClayNavigationBar.render}
 	{param items: [
 		[
 			'title': 'App Section 1',
@@ -97,7 +97,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 {/call}
 ```
 ```html
-<clay-navbar
+<clay-navigation-bar
 	items='[
 		{"title": "App Section 1", "url": "#1"},
 		{"title": "App Section 2", "url": "#1"},
@@ -108,7 +108,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 		{"title": "App Section 7", "url": "#1"}
 	]'
 	spritemap="/images/icons/icons.svg">
-</clay-navbar>
+</clay-navigation-bar>
 ```
 ```html
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
@@ -213,7 +213,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 </nav>
 
 ```soy
-{call ClayNavbar.render}
+{call ClayNavigationBar.render}
 	{param inverted: true /}
 	{param items: [
 		[
@@ -250,7 +250,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 {/call}
 ```
 ```html
-<clay-navbar
+<clay-navigation-bar
 	inverted="true"
 	items='[
 		{"title": "App Section 1", "url": "#1"},
@@ -262,7 +262,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 		{"title": "App Section 7", "url": "#1"}
 	]'
 	spritemap="/images/icons/icons.svg">
-</clay-navbar>
+</clay-navigation-bar>
 ```
 ```html
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
