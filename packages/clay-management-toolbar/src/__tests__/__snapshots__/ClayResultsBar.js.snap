@@ -28,7 +28,8 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
             </span>
           </span>
           <span class="label label-secondary label-dismissible label-lg">
-            <span class="label-item label-item-expand">Label 3</span>
+            <span class="label-item label-item-expand">
+              <strong>Category:</strong>Label 3</span>
             <span class="label-item label-item-after">
               <button class="btn close btn-unstyled" aria-label="close" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -76,7 +77,8 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
             </span>
           </span>
           <span class="label label-secondary label-dismissible label-lg">
-            <span class="label-item label-item-expand">Label 3</span>
+            <span class="label-item label-item-expand">
+              <strong>Category:</strong>Label 3</span>
             <span class="label-item label-item-after">
               <button class="btn close btn-unstyled" aria-label="close" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
