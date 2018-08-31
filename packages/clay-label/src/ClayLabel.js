@@ -68,9 +68,9 @@ ClayLabel.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?(string|undefined)}
+	 * @type {?(html|string|undefined)}
 	 */
-	label: Config.string(),
+	label: Config.any(),
 
 	/**
 	 * The size of the label element.
