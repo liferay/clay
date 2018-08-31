@@ -25,6 +25,7 @@
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
 	{@param? triggerTitle: string}
+	{@param? usePortal: bool}
 
 	{let $attributes kind="attributes"}
 		class="dropdown
@@ -67,6 +68,7 @@
 			{param portalElementId: $portalElementId /}
 			{param searchable: $searchable /}
 			{param spritemap: $spritemap /}
+			{param usePortal: $usePortal ?: true /}
 		{/call}
 	</div>
 {/template}
@@ -158,6 +160,7 @@
 	{@param? portalElementId: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
+	{@param? usePortal: bool}
 
 	{let $dropdownMenu kind="html"}
 		{let $listAttributes kind="attributes"}
@@ -243,13 +246,17 @@
 		</div>
 	{/let}
 
-	{call ClayPortal.render}
-		{param content kind="html"}
-			{$dropdownMenu}
-		{/param}
-		{param portalElement: '#' + $portalElementId /}
-		{param ref: 'portal' /}
-	{/call}
+	{if $usePortal}
+		{call ClayPortal.render}
+			{param content kind="html"}
+				{$dropdownMenu}
+			{/param}
+			{param portalElement: '#' + $portalElementId /}
+			{param ref: 'portal' /}
+		{/call}
+	{else}
+		{$dropdownMenu}
+	{/if}
 {/template}
 
 /**

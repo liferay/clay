@@ -24,15 +24,26 @@ class ClayDropdownBase extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	attached() {
-		this.refs.portal.on('rendered', this._handleRenderedPortal.bind(this));
+	created() {
+		this._eventHandler = new EventHandler();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	created() {
-		this._eventHandler = new EventHandler();
+	attached() {
+		if (this.usePortal) {
+			this.refs.portal.on('rendered', this._alignAndFocusDropdown.bind(this));
+		}
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	rendered() {
+		if (!this.usePortal) {
+			this._alignAndFocusDropdown();
+		}
 	}
 
 	/**
@@ -47,6 +58,30 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	disposed() {
 		this._eventHandler.removeAllListeners();
+	}
+
+	/**
+	 * Align dropdown menu.
+	 * @protected
+	 */
+	_alignAndFocusDropdown() {
+		if (this.expanded && this._alignElementSelector) {
+			let alignElement = this.element.querySelector(
+				this._alignElementSelector
+			);
+
+			let bodyElement = this._getMenuElement();
+
+			if (alignElement) {
+				this._alignedPosition = Align.align(
+					bodyElement,
+					alignElement,
+					Align.BottomLeft
+				);
+			}
+
+			bodyElement.querySelector('li a, li input').focus();
+		}
 	}
 
 	/**
@@ -73,6 +108,14 @@ class ClayDropdownBase extends ClayComponent {
 			),
 			element
 		);
+	}
+
+	_getMenuElement() {
+		if (this.usePortal) {
+			return this.refs.portal.refs.menu;
+		}
+
+		return this.refs.menu;
 	}
 
 	/**
@@ -131,27 +174,6 @@ class ClayDropdownBase extends ClayComponent {
 	_handleKeyup(event) {
 		if (event.keyCode === KEY_CODE_ESC) {
 			this._close();
-		}
-	}
-
-	/**
-	 * Handle when the lifecycle `rendered` is called in ClayPortal.
-	 * @protected
-	 */
-	_handleRenderedPortal() {
-		if (this.expanded && this._alignElementSelector) {
-			let alignElement = this.element.querySelector(
-				this._alignElementSelector
-			);
-			if (alignElement) {
-				let bodyElement = this.refs.portal.refs.menu;
-
-				this._alignedPosition = Align.align(
-					bodyElement,
-					alignElement,
-					Align.BottomLeft
-				);
-			}
 		}
 	}
 
@@ -451,6 +473,15 @@ ClayDropdownBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerTitle: Config.string(),
+
+	/**
+	 * Flag to indicate if Clay Portal should be used or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?bool}
+	 */
+	usePortal: Config.bool().value(true),
 };
 
 Soy.register(ClayDropdownBase, templates);
