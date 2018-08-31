@@ -431,7 +431,9 @@ ClayDropdownBase.STATE = {
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
 	 */
-	preferredAlign: preferredAlign.setter('_setPreferredAlign').value('BottomLeft'),
+	preferredAlign: preferredAlign
+		.setter('_setPreferredAlign')
+		.value('BottomLeft'),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements

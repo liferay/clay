@@ -32,7 +32,4 @@ const preferredAlign = Config.oneOf([
 	'TopRight',
 ]);
 
-export {
-	itemsValidator,
-	preferredAlign,
-};
+export {itemsValidator, preferredAlign};
