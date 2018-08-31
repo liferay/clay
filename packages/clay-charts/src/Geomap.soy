@@ -6,5 +6,23 @@
 {template .render}
 	{@param? _height: string}
 	{@param? _width: string}
-	<div style="width:{$_width};height:{$_height}"></div>
+	{@param? id: string}
+
+	{let $attributes kind="attributes"}
+		{if $id}
+			id="{$id}"
+		{/if}
+
+		style="
+			{if $_width}
+				width: {$_width};
+			{/if}
+
+			{if $_height}
+				height: {$_height};
+			{/if}
+		"
+	{/let}
+
+	<div {$attributes}></div>
 {/template}
