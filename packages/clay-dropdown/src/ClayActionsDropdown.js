@@ -145,6 +145,15 @@ ClayActionsDropdown.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerClasses: Config.string(),
+
+	/**
+	 * Flag to indicate if Clay Portal should be used or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?bool}
+	 */
+	usePortal: Config.bool().value(true),
 };
 
 defineWebComponent('clay-actions-dropdown', ClayActionsDropdown);

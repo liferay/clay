@@ -21,6 +21,7 @@
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
 	{@param? triggerTitle: string}
+	{@param? usePortal: bool}
 
 	{let $trigger kind="html"}
 		{if $icon}
@@ -64,5 +65,6 @@
 		{param triggerClasses: $triggerClasses /}
 		{param triggerSize: $triggerSize /}
 		{param triggerTitle: $triggerTitle /}
+		{param usePortal: $usePortal ?: true /}
 	{/call}
 {/template}
