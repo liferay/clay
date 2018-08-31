@@ -278,6 +278,18 @@ let defaultConfig = {
 			type: 'radiogroup',
 		},
 	],
+	filterLabels: [
+		{
+			closeable: false,
+			label: 'Label 1',
+		},
+		{
+			label: 'Label 2',
+		},
+		{
+			label: '<strong>Category:</strong>Label 3',
+		},
+	],
 	items: groupedItems,
 	selectedView: 0,
 	searchActionURL: 'mySearchURL',

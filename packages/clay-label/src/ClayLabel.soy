@@ -9,7 +9,7 @@
 	{@param? elementClasses: string}
 	{@param? href: string}
 	{@param? id: string}
-	{@param? label: string}
+	{@param? label: html|string}
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: string}
@@ -54,7 +54,7 @@
 	{@param? _handleCloseButtonClick: any}
 	{@param? closeable: bool}
 	{@param? href: string}
-	{@param? label: string}
+	{@param? label: html|string}
 	{@param? spritemap: string}
 
 	{let $labelContent kind="html"}
@@ -85,6 +85,7 @@
 				{param events: [ 'click': $_handleCloseButtonClick] /}
 				{param icon: 'times' /}
 				{param iconAlignment: 'right' /}
+				{param ref: 'closeButton' /}
 				{param spritemap: $spritemap /}
 				{param style: 'unstyled' /}
 				{param type: 'button' /}

@@ -96,15 +96,29 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With search results bar</h2>
+			<h2>With search results</h2>
 			<div id="search-results-bar"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With search results bar with active state</h2>
+			<h2>With search results with active state</h2>
 			<div id="search-results-bar-active-state"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With search results and filter labels</h4>
+			<div id="search-results-filter-labels"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With filter labels</h4>
+			<div id="filter-labels"></div>
 		</div>
 	</div>
 
@@ -143,6 +157,19 @@
 				type: 'group',
 			},
 		];
+
+		const filterLabels = [
+			{
+				closeable: false,
+				label: 'Filter 1',
+			},
+			{
+				label: 'Filter 2',
+			},
+			{
+				label: '<strong>Category:</strong>Label 3',
+			}
+		]
 
 		const viewTypes= [
 			{
@@ -185,7 +212,6 @@
 
 		//Default State
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -278,6 +304,7 @@
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
+			searchInputPlaceholder: 'Search thread...',
 			selectable: true,
 			showInfoButton: true,
 			sortingOrder: 'asc',
@@ -468,6 +495,7 @@
 		new metal.ClayManagementToolbar({
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
+			showCreationMenu: false,
 			spritemap: spritemap,
 		},
 		'#only-search-block');
@@ -477,13 +505,13 @@
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
 			showAdvancedSearch: true,
+			showCreationMenu: false,
 			spritemap: spritemap,
 		},
 		'#advanced-search-block');
 
 		//Without Search
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
 			filterItems: filterItems,
 			showSearch: false,
 			selectable: true,
@@ -504,7 +532,9 @@
 
 		//With search results bar
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
+			events: {
+				'clearButtonClicked': handleClearButton
+			},
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -517,11 +547,15 @@
 		},
 		'#search-results-bar');
 
+		function handleClearButton(event) {
+			this.searchValue = null;
+			this.totalItems = null;
+		}
+
 		//With search results bar with active state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
 			clearResultsURL: '#clear',
-			creationMenu: true,
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -534,6 +568,39 @@
 			viewTypes: viewTypes,
 		},
 		'#search-results-bar-active-state');
+
+		//With search results and filter labels
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			clearResultsURL: '#clear',
+			filterItems: filterItems,
+			filterLabels: filterLabels,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			searchValue: 'red',
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+		},
+		'#search-results-filter-labels');
+
+		//With filter labels and no search results
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			clearResultsURL: '#clear',
+			filterItems: filterItems,
+			filterLabels: filterLabels,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+		},
+		'#filter-labels');
 	</script>
 </body>
 </html>

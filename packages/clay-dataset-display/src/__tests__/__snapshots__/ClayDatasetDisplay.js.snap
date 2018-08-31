@@ -100,6 +100,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-view">
     <form>
@@ -997,6 +1043,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>
@@ -2040,6 +2132,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
@@ -2773,6 +2911,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">2-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-view">
     <form>
@@ -3075,6 +3259,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">2-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-view">
     <form>
@@ -3258,6 +3488,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">2-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>
@@ -3605,6 +3881,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>
@@ -4506,6 +4828,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>
@@ -5549,6 +5917,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-no-gutters-sm-down container-view">
     <form>
@@ -6232,6 +6646,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">2-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-view">
     <form>
@@ -6362,6 +6822,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>
@@ -7054,6 +7560,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">6-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-view">
     <form>
@@ -7519,6 +8071,52 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">6-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>
@@ -8155,6 +8753,52 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>
@@ -9012,6 +9656,52 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
         </ul>
       </div>
     </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="container-fluid container-fluid-max-xl container-view">
     <form>
@@ -9744,6 +10434,52 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
                 </svg>
               </button>
             </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+      <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+          <li class="tbar-item">
+            <div class="tbar-section">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">11-results-for</span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item tbar-item-expand">
+            <div class="tbar-section">
+              <span class="label label-secondary label-lg">
+                <span class="label-item label-item-expand">Label 1</span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <span class="label label-secondary label-dismissible label-lg">
+                <span class="label-item label-item-expand">
+                  <strong>Category:</strong>Label 3</span>
+                <span class="label-item label-item-after">
+                  <button class="btn close btn-unstyled" aria-label="close" type="button">
+                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                      <title>times</title>
+                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="tbar-item">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </li>
         </ul>
       </div>

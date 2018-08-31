@@ -625,23 +625,35 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with search results bar only when totalItems is greater than zero', () => {
-		managementToolbar = new ClayManagementToolbar({
-			id: 'myId',
-			searchValue: 'foo',
-			selectable: true,
-			spritemap: spritemap,
-		});
-
-		expect(managementToolbar).toMatchSnapshot();
-	});
-
 	it('should render a management toolbar with search results bar when state is active', () => {
 		managementToolbar = new ClayManagementToolbar({
 			id: 'myId',
 			searchValue: 'foo',
 			selectable: true,
 			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with search results bar with filter labels', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterLabels: [
+				{
+					label: 'Label 1',
+				},
+				{
+					label: 'Label 2',
+				},
+				{
+					label: '<strong>Category:</strong>Label 3',
+				},
+			],
+			id: 'myId',
+			searchValue: 'foo',
+			selectable: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -1077,7 +1089,7 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
-		managementToolbar.refs.clearSearch.element.click();
+		managementToolbar.refs.resultsBar.refs.clearSearch.element.click();
 
 		expect(spy).toHaveBeenCalledWith(
 			'clearButtonClicked',
@@ -1095,7 +1107,7 @@ describe('ClayManagementToolbar', function() {
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
-		managementToolbar.refs.clearSearch.element.click();
+		managementToolbar.refs.resultsBar.refs.clearSearch.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
