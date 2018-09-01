@@ -4,7 +4,12 @@
 		"node": true,
 		"es6": true,
 		"jest": true
-	},
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "extends": "liferay",
   "plugins": [
     "no-for-of-loops"
