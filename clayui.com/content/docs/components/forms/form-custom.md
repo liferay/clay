@@ -182,6 +182,15 @@ title: "Form Elements (Custom)"
 
 </article>
 
+<article id="clay-checkbox-api">
+
+### API
+
+<div>
+	[APITable "clay-checkbox/src/ClayCheckBox.js"]
+</div>
+
+</article>
 
 <article id="custom-radio">
 <h3 class="component-title">
@@ -259,7 +268,6 @@ title: "Form Elements (Custom)"
 
 </article>
 
-
 <article id="custom-controls-inline">
 <h3 class="component-title">
 	<a href="#custom-controls-inline">Custom Controls Inline</a>
@@ -332,5 +340,15 @@ title: "Form Elements (Custom)"
 	</label>
 </div>
 ```
+
+</article>
+
+<article id="clay-radio-api">
+
+### API
+
+<div>
+	[APITable "clay-radio/src/ClayRadio.js"]
+</div>
 
 </article>
