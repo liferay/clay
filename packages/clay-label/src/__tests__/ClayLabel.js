@@ -107,4 +107,19 @@ describe('ClayLabel', function() {
 
 		expect(label).toMatchSnapshot();
 	});
+
+	it('should render a closeable label and emit an event on close button click', () => {
+		label = new ClayLabel({
+			label: 'Foo',
+			closeable: true,
+			spritemap: 'icons.svg',
+		});
+
+		const spy = jest.spyOn(label, 'emit');
+
+		label.refs.closeButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith('close');
+	});
 });

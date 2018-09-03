@@ -5,7 +5,7 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import itemsValidator from './items_validator';
+import {itemsValidator, preferredAlign} from './validators';
 import templates from './ClayDropdown.soy.js';
 
 /**
@@ -127,6 +127,15 @@ ClayDropdown.STATE = {
 	 * @type {?(html|string|undefined)}
 	 */
 	label: Config.any(),
+
+	/**
+	 * The preferred alignment for the dropdown content.
+	 * @default BottomLeft
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?(string|undefined)}
+	 */
+	preferredAlign: preferredAlign.value('BottomLeft'),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements

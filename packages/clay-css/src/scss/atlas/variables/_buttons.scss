@@ -42,7 +42,8 @@ $btn-group-item-margin-right: 1rem !default;
 
 // Button Variants
 
-$btn-primary: (
+$btn-primary: () !default;
+$btn-primary: map-merge((
 	hover-bg: darken($primary, 5.10),
 	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($primary, 5.10), 0.5),
@@ -50,9 +51,10 @@ $btn-primary: (
 	active-bg: darken($primary, 10.00),
 	active-border-color: transparent,
 	active-box-shadow: none
-) !default;
+), $btn-primary);
 
-$btn-secondary: (
+$btn-secondary: () !default;
+$btn-secondary: map-merge((
 	bg: #FFF,
 	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
 	color: $secondary,
@@ -69,9 +71,10 @@ $btn-secondary: (
 	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61),
 	active-box-shadow: none,
 	loading-animation: null
-) !default;
+), $btn-secondary);
 
-$btn-success: (
+$btn-success: () !default;
+$btn-success: map-merge((
 	hover-bg: darken($success, 4%),
 	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($success, 4%), 0.5),
@@ -79,9 +82,10 @@ $btn-success: (
 	active-bg: darken($success, 8%),
 	active-border-color: transparent,
 	active-box-shadow: none
-) !default;
+), $btn-success);
 
-$btn-info: (
+$btn-info: () !default;
+$btn-info: map-merge((
 	hover-bg: darken($info, 4%),
 	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($info, 4%), 0.5),
@@ -89,9 +93,10 @@ $btn-info: (
 	active-bg: darken($info, 8%),
 	active-border-color: transparent,
 	active-box-shadow: none
-) !default;
+), $btn-info);
 
-$btn-warning: (
+$btn-warning: () !default;
+$btn-warning: map-merge((
 	hover-bg: darken($warning, 4%),
 	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($warning, 4%), 0.5),
@@ -100,9 +105,10 @@ $btn-warning: (
 	active-border-color: transparent,
 	active-box-shadow: none,
 	loading-animation: 'loading-animation-light'
-) !default;
+), $btn-warning);
 
-$btn-danger: (
+$btn-danger: () !default;
+$btn-danger: map-merge((
 	hover-bg: darken($danger, 4%),
 	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($danger, 4%), 0.5),
@@ -110,9 +116,10 @@ $btn-danger: (
 	active-bg: darken($danger, 8%),
 	active-border-color: transparent,
 	active-box-shadow: none
-) !default;
+), $btn-danger);
 
-$btn-light: (
+$btn-light: () !default;
+$btn-light: map-merge((
 	color: $body-color,
 	hover-bg: darken($light, 4%),
 	hover-border-color: transparent,
@@ -121,9 +128,10 @@ $btn-light: (
 	active-bg: darken($light, 8%),
 	active-border-color: transparent,
 	active-box-shadow: none
-) !default;
+), $btn-light);
 
-$btn-dark: (
+$btn-dark: () !default;
+$btn-dark: map-merge((
 	hover-bg: darken($dark, 4%),
 	hover-border-color: transparent,
 	focus-box-shadow: 0 0 0 2px rgba(darken($dark, 4%), 0.5),
@@ -131,11 +139,12 @@ $btn-dark: (
 	active-bg: darken($dark, 8%),
 	active-border-color: transparent,
 	active-box-shadow: none
-) !default;
+), $btn-dark);
 
 // Button Outline Variant
 
-$btn-outline-primary: (
+$btn-outline-primary: () !default;
+$btn-outline-primary: map-merge((
 	hover-bg: lighten($primary, 44.90),
 	hover-color: $primary,
 	focus-bg: lighten($primary, 44.90),
@@ -147,9 +156,10 @@ $btn-outline-primary: (
 	active-bg: lighten(desaturate($primary, 42.05), 41.76),
 	active-color: $primary,
 	active-box-shadow: map-get($btn-primary, active-box-shadow)
-) !default;
+), $btn-outline-primary);
 
-$btn-outline-secondary: (
+$btn-outline-secondary: () !default;
+$btn-outline-secondary: map-merge((
 	bg: null,
 	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
 	color: null,
@@ -167,9 +177,10 @@ $btn-outline-secondary: (
 	active-border-color: transparent,
 	active-box-shadow: map-get($btn-secondary, active-box-shadow),
 	active-color: map-get($btn-secondary, active-color)
-) !default;
+), $btn-outline-secondary);
 
-$btn-outline-info: (
+$btn-outline-info: () !default;
+$btn-outline-info: map-merge((
 	hover-bg: map-get($btn-info, hover-bg),
 	focus-box-shadow: map-get($btn-info, focus-box-shadow),
 	focus-color: #FFF,
@@ -178,9 +189,10 @@ $btn-outline-info: (
 	disabled-color: map-get($btn-info, bg),
 	active-bg: map-get($btn-info, active-bg),
 	active-box-shadow: map-get($btn-info, active-box-shadow)
-) !default;
+), $btn-outline-info);
 
-$btn-outline-success: (
+$btn-outline-success: () !default;
+$btn-outline-success: map-merge((
 	hover-bg: map-get($btn-success, hover-bg),
 	focus-box-shadow: map-get($btn-success, focus-box-shadow),
 	focus-color: #FFF,
@@ -189,9 +201,10 @@ $btn-outline-success: (
 	disabled-color: map-get($btn-success, bg),
 	active-bg: map-get($btn-success, active-bg),
 	active-box-shadow: map-get($btn-success, active-box-shadow)
-) !default;
+), $btn-outline-success);
 
-$btn-outline-warning: (
+$btn-outline-warning: () !default;
+$btn-outline-warning: map-merge((
 	hover-bg: map-get($btn-warning, hover-bg),
 	focus-box-shadow: map-get($btn-warning, focus-box-shadow),
 	focus-color: #FFF,
@@ -200,9 +213,10 @@ $btn-outline-warning: (
 	disabled-color: map-get($btn-warning, bg),
 	active-bg: map-get($btn-warning, active-bg),
 	active-box-shadow: map-get($btn-warning, active-box-shadow)
-) !default;
+), $btn-outline-warning);
 
-$btn-outline-danger: (
+$btn-outline-danger: () !default;
+$btn-outline-danger: map-merge((
 	hover-bg: map-get($btn-danger, hover-bg),
 	focus-box-shadow: map-get($btn-danger, focus-box-shadow),
 	focus-color: #FFF,
@@ -211,9 +225,10 @@ $btn-outline-danger: (
 	disabled-color: map-get($btn-danger, bg),
 	active-bg: map-get($btn-danger, active-bg),
 	active-box-shadow: map-get($btn-danger, active-box-shadow)
-) !default;
+), $btn-outline-danger);
 
-$btn-outline-light: (
+$btn-outline-light: () !default;
+$btn-outline-light: map-merge((
 	hover-bg: map-get($btn-light, hover-bg),
 	focus-box-shadow: map-get($btn-light, focus-box-shadow),
 	focus-color: $body-color,
@@ -222,9 +237,10 @@ $btn-outline-light: (
 	disabled-color: map-get($btn-light, bg),
 	active-bg: map-get($btn-light, active-bg),
 	active-box-shadow: map-get($btn-light, active-box-shadow)
-) !default;
+), $btn-outline-light);
 
-$btn-outline-dark: (
+$btn-outline-dark: () !default;
+$btn-outline-dark: map-merge((
 	hover-bg: map-get($btn-dark, hover-bg),
 	focus-box-shadow: map-get($btn-dark, focus-box-shadow),
 	focus-color: #FFF,
@@ -233,4 +249,4 @@ $btn-outline-dark: (
 	disabled-color: map-get($btn-dark, bg),
 	active-bg: map-get($btn-dark, active-bg),
 	active-box-shadow: map-get($btn-dark, active-box-shadow)
-) !default;
+), $btn-outline-dark);

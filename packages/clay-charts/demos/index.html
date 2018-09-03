@@ -383,6 +383,7 @@
 
 		var lineChartWithData = new metal.LineChart({
 			data: lineChartData.columns_1,
+			id: 'line-chart-with-data',
 			tooltip: {
 				format: {
 					value(d) {
@@ -398,45 +399,53 @@
 		createChartControls(lineChartWithData, 'line', lineChartData);
 
 		var splineChart = new metal.SplineChart({
-			data: dummyData.columns_1
+			data: dummyData.columns_1,
+			id: 'spline-chart'
 		}, '#spline');
 		createChartControls(splineChart, 'spline');
 
 		var stepChart = new metal.StepChart({
-			data: dummyData.columns_1
+			data: dummyData.columns_1,
+			id: 'step-chart'
 		}, '#step');
 		createChartControls(stepChart, 'step');
 
 		var areaLineChart = new metal.AreaLineChart({
-			data: dummyData.columns_1
+			data: dummyData.columns_1,
+			id: 'area-line-chart'
 		}, '#area');
 		createChartControls(areaLineChart, 'area');
 
 		var areaSplineChart = new metal.AreaSplineChart({
-			data: dummyData.columns_2
+			data: dummyData.columns_2,
+			id: 'area-spline-chart'
 		}, '#area-spline');
 		createChartControls(areaSplineChart, 'area-spline');
 
 		var areaStepChart = new metal.AreaStepChart({
-			data: dummyData.columns_3
+			data: dummyData.columns_3,
+			id: 'area-step-chart'
 		}, '#area-step');
 		createChartControls(areaStepChart, 'area-step');
 
 		var barChart = new metal.BarChart({
-			data: dummyData.columns_1
+			data: dummyData.columns_1,
+			id: 'bar-chart'
 		}, '#bar');
 		createChartControls(barChart, 'bar');
 
 		var scatterChart = new metal.ScatterChart({
-			data: dummyData.columns_1
+			data: dummyData.columns_1,
+			id: 'scatter-chart'
 		}, '#scatter');
 		createChartControls(scatterChart, 'scatter');
 
 		var pieChart = new metal.PieChart({
-			data: dummyPercentData.columns_1,
 			color: {
 				tiles: true
 			},
+			data: dummyPercentData.columns_1,
+			id: 'pie-chart',
 			legend: {
 				contents: {
 					bindto: '.pie-legend',
@@ -453,11 +462,13 @@
 
 		var donutChart = new metal.DonutChart({
 			data: dummyPercentData.columns_1,
+			id: 'donut-chart'
 		}, '#donut');
 		createChartControls(donutChart, 'donut', dummyPercentData);
 
 		var gaugeChart = new metal.GaugeChart({
-			data: dummyGaugeData.columns_1
+			data: dummyGaugeData.columns_1,
+			id: 'gauge-chart'
 		}, '#gauge');
 		createChartControls(gaugeChart, 'gauge', dummyGaugeData);
 
@@ -466,6 +477,7 @@
 				maxR: 50
 			},
 			data: dummyData.columns_1,
+			id: 'bubble-chart',
 			labels: false,
 			point: {
 				pattern: ['circle']
@@ -511,6 +523,7 @@
 					id: 'Product 2'
 				}
 			],
+			id: 'predictive-chart',
 			predictionDate: new Date('2018-07-01'),
 			timeseries: [
 				'2018-01-01',
@@ -550,6 +563,7 @@
 					id: 'x',
 				},
 			],
+			id: 'radar-chart',
 			labels: true,
 			x: 'x',
 		}, '#radar');

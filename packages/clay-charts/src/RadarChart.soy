@@ -4,5 +4,9 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{call ClayChart.render /}
+	{@param? id: string}
+
+	{call ClayChart.render}
+		{param id: $id /}
+	{/call}
 {/template}

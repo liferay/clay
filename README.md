@@ -158,7 +158,7 @@ npm run site
 ```
 
 ### Important
-Since travis is failing on executing a11y tests due to out of date suid you need to execute `npm run a11y` locally before sending any pr to verify we're following accessibility standars.
+Since travis is failing on executing a11y tests due to out of date suid you need to execute `npm run pa11y` locally before sending any pr to verify we're following accessibility standars.
 
 ## License
 

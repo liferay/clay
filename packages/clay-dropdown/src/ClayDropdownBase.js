@@ -11,7 +11,7 @@ import {Align} from 'metal-position';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 
-import itemsValidator from './items_validator';
+import {itemsValidator, preferredAlign} from './validators';
 import templates from './ClayDropdownBase.soy.js';
 
 const KEY_CODE_ESC = 27;
@@ -149,7 +149,7 @@ class ClayDropdownBase extends ClayComponent {
 				this._alignedPosition = Align.align(
 					bodyElement,
 					alignElement,
-					Align.BottomLeft
+					this.preferredAlign
 				);
 			}
 		}
@@ -215,6 +215,35 @@ class ClayDropdownBase extends ClayComponent {
 		const activeElement = document.activeElement;
 		if (activeElement != null && activeElement.nodeName === 'IFRAME') {
 			this._close();
+		}
+	}
+
+	/**
+	 * Set preferred alignment with Align API.
+	 * @private
+	 * @param {!string} value
+	 * @return {number}
+	 */
+	_setPreferredAlign(value) {
+		switch (value) {
+		case 'TopCenter':
+			return Align.TopCenter;
+		case 'RightCenter':
+			return Align.RightCenter;
+		case 'BottomCenter':
+			return Align.BottomCenter;
+		case 'LeftCenter':
+			return Align.LeftCenter;
+		case 'TopRight':
+			return Align.TopRight;
+		case 'BottomRight':
+			return Align.BottomRight;
+		case 'BottomLeft':
+			return Align.BottomLeft;
+		case 'TopLeft':
+			return Align.TopLeft;
+		default:
+			return Align.BottomLeft;
 		}
 	}
 
@@ -394,6 +423,17 @@ ClayDropdownBase.STATE = {
 	portalElementId: Config.string()
 		.value('clay_dropdown_portal')
 		.internal(),
+
+	/**
+	 * The preferred alignment for the dropdown content.
+	 * @default BottomLeft
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?(string|undefined)}
+	 */
+	preferredAlign: preferredAlign
+		.setter('_setPreferredAlign')
+		.value('BottomLeft'),
 
 	/**
 	 * Flag to indicate if menu has a search field and search through elements
