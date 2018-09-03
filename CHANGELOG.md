@@ -1,5 +1,51 @@
 # Change Log
 
+## [v2.3.2](https://github.com/liferay/clay/tree/v2.3.2) (2018-09-03)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.3.1...v2.3.2)
+
+## [v2.3.1](https://github.com/liferay/clay/tree/v2.3.1) (2018-09-03)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.3.0...v2.3.1)
+
+**Implemented enhancements:**
+
+- ClayActionsDropdown is not align the dropdown correctly [\#1118](https://github.com/liferay/clay/issues/1118)
+
+**Fixed bugs:**
+
+- Can't disable/hide ActionItems inside ManagementToolbar Quick Actions [\#1150](https://github.com/liferay/clay/issues/1150)
+- Accessibility a11y test fails [\#1143](https://github.com/liferay/clay/issues/1143)
+- out of date docs ? [\#1128](https://github.com/liferay/clay/issues/1128)
+
+**Closed issues:**
+
+- Clay Card Grid - Checkbox does not need attribute "name" [\#1148](https://github.com/liferay/clay/issues/1148)
+- Clay Card Grid - Label / Input issue [\#1133](https://github.com/liferay/clay/issues/1133)
+- Clay card grid header [\#1131](https://github.com/liferay/clay/issues/1131)
+- Clay collapse does not works correctly [\#1127](https://github.com/liferay/clay/issues/1127)
+- ClayCSS Atlas Theme Form should set $input-border-width using individual border-width variables [\#1125](https://github.com/liferay/clay/issues/1125)
+- ClayCSS use map-merge pattern for any Sass map variable with default values [\#1123](https://github.com/liferay/clay/issues/1123)
+- General accessibility issues in demo pages HTML [\#1121](https://github.com/liferay/clay/issues/1121)
+- Component demo page - General accessibility header issue [\#1119](https://github.com/liferay/clay/issues/1119)
+
+**Merged pull requests:**
+
+- v2.3.1 CHANGELOG [\#1163](https://github.com/liferay/clay/pull/1163) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1150 - Disable actionItems inside ManagementToolbar Quick Actions [\#1159](https://github.com/liferay/clay/pull/1159) ([carloslancha](https://github.com/carloslancha))
+- Use pa11y instead metal-a11y-checker | Fixes \#1143 [\#1145](https://github.com/liferay/clay/pull/1145) ([carloslancha](https://github.com/carloslancha))
+- Extract preferredAlign config | Fixes \#1118 [\#1142](https://github.com/liferay/clay/pull/1142) ([carloslancha](https://github.com/carloslancha))
+- Fix the names of Navbar for Navigation Bar in snippets | Fixes \#1128 [\#1137](https://github.com/liferay/clay/pull/1137) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- General accessibility fixes \(Fixes: \#1121\) [\#1136](https://github.com/liferay/clay/pull/1136) ([marcoscv-work](https://github.com/marcoscv-work))
+- Remove aria-labelledBy | Fixes \#1133 [\#1135](https://github.com/liferay/clay/pull/1135) ([marcoscv-work](https://github.com/marcoscv-work))
+- General accessibility fixes \(Fixes: \#1121\) [\#1134](https://github.com/liferay/clay/pull/1134) ([marcoscv-work](https://github.com/marcoscv-work))
+- Regenerate snapshots [\#1132](https://github.com/liferay/clay/pull/1132) ([marcoscv-work](https://github.com/marcoscv-work))
+- Add labels to management toolbar results bar | Fixes \#1112 [\#1130](https://github.com/liferay/clay/pull/1130) ([carloslancha](https://github.com/carloslancha))
+- \(Fix \#1127\) Change class [\#1129](https://github.com/liferay/clay/pull/1129) ([marcoscv-work](https://github.com/marcoscv-work))
+- ClayCSS: \(Fixes \#1125\) Atlas Forms changing individual border-widths … [\#1126](https://github.com/liferay/clay/pull/1126) ([pat270](https://github.com/pat270))
+- ClayCSS: \(Fixes \#1123\) Use `map-merge` pattern for any Sass map varia… [\#1124](https://github.com/liferay/clay/pull/1124) ([pat270](https://github.com/pat270))
+- \(Fixes \#1121\) Accessibility general fixes [\#1122](https://github.com/liferay/clay/pull/1122) ([marcoscv-work](https://github.com/marcoscv-work))
+- Change demos headers to h2 \(Fixes \#1119\) [\#1120](https://github.com/liferay/clay/pull/1120) ([marcoscv-work](https://github.com/marcoscv-work))
+- Add id parameter to clay-chart templates | Fixes \#1115 [\#1116](https://github.com/liferay/clay/pull/1116) ([julien](https://github.com/julien))
+
 ## [v2.3.0](https://github.com/liferay/clay/tree/v2.3.0) (2018-08-28)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.2.0...v2.3.0)
 
@@ -15,6 +61,8 @@
 
 **Closed issues:**
 
+- \[clay-charts\] Add 'id' parameter to template [\#1115](https://github.com/liferay/clay/issues/1115)
+- Add labels to management toolbar results bar [\#1112](https://github.com/liferay/clay/issues/1112)
 - ClayCSS: Modal Variant Mixin $footer-border-color is declared twice [\#1090](https://github.com/liferay/clay/issues/1090)
 - ClayCSS: List Group variables $list-group-text-link and $list-group-subtext-link should follow same pattern as $list-group-title-link [\#1088](https://github.com/liferay/clay/issues/1088)
 - ClayCSS: Bootstrap 4's hover focus mixin is deprecated [\#1085](https://github.com/liferay/clay/issues/1085)
