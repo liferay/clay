@@ -50,6 +50,9 @@ module.exports = {
                     },
                     {
                         resolve: 'gatsby-remark-use-clipboard'
+                    },
+                    {
+                        resolve: 'gatsby-remark-api-table'
                     }
                 ]
             }
