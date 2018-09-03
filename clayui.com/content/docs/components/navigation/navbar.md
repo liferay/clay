@@ -313,3 +313,13 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 ```
 
 </article>
+
+<article id="clay-navigation-bar-api">
+
+### API
+
+<div>
+	[APITable "clay-navigation-bar/src/ClayNavigationBar.js"]
+</div>
+
+</article>

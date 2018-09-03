@@ -547,3 +547,13 @@ Buttons communicate an action to happen on user interaction.
 ```
 
 </article>
+
+<article id="clay-button-api">
+
+### API
+
+<div>
+	[APITable "clay-button/src/ClayButton.js"]
+</div>
+
+</article>

@@ -1221,14 +1221,21 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 
 </article>
 
+<article id="clay-table-api">
+
+### API
+
+<div>
+	[APITable "clay-table/src/ClayTable.js"]
+</div>
+
+</article>
 
 <script>
-{literal}
 $(function() {
 	$('.table').on('click', 'input[type="checkbox"]', function(event) {
 		var $this = $(this);
 		$this.closest('tr').toggleClass('table-active');
 	});
 });
-{/literal}
 </script>
