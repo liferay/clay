@@ -193,6 +193,15 @@ ClayDropdown.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerSize: Config.oneOf(['sm']),
+
+	/**
+	 * Flag to indicate if Clay Portal should be used or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?bool}
+	 */
+	usePortal: Config.bool().value(true),
 };
 
 defineWebComponent('clay-dropdown', ClayDropdown);
