@@ -19,7 +19,7 @@
 
 	<script src="../build/globals/clay-charts.js"></script>
 </head>
-<body>
+<body role="main">
 	<h3>Metal Geomap</h3>
 
 	<div class="flex">
@@ -58,6 +58,8 @@
 				return fetch('data/world-low-res.geo.json')
 					.then(res => res.json());
 			},
+
+			id: 'geomap-chart'
 
 		}, '#map');
 

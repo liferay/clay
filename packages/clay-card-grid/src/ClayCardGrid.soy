@@ -74,7 +74,6 @@
 	]}
 	{@param spritemap: string}
 	{@param? _handleItemToggled: any}
-	{@param? groupName: string}
 	{@param? selectable: bool}
 
 	<li class="card-page-item-directory">
@@ -96,7 +95,6 @@
 
 		{delcall ClayCardGrid.Card variant="$variant"}
 			{param _handleItemToggled: $_handleItemToggled /}
-			{param groupName: $groupName /}
 			{param item: $item /}
 			{param schema: $schema /}
 			{param selectable: $selectable /}
@@ -128,26 +126,16 @@
 	]}
 	{@param spritemap: string}
 	{@param? _handleItemToggled: any}
-	{@param? groupName: string}
 	{@param? selectable: bool}
 
 	{foreach $item in $items}
 		{if $item.items}
-			{let $currentgroupName kind="text"}
-				{if $groupName}
-					{$groupName}-
-				{/if}
-
-				{index($item)}
-			{/let}
-
 			<li class="card-page-item-header">
-				<h4 class="card-section-header">{$item.label}</h4>
+				<h1 class="card-section-header">{$item.label}</h1>
 			</li>
 
 			{call .items}
 				{param _handleItemToggled: $_handleItemToggled /}
-				{param groupName: $currentgroupName /}
 				{param items: $item.items /}
 				{param schema:	$schema /}
 				{param selectable: $selectable /}
@@ -156,7 +144,6 @@
 		{else}
 			{call .item}
 				{param _handleItemToggled: $_handleItemToggled /}
-				{param groupName: $groupName /}
 				{param item: $item /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
@@ -188,7 +175,6 @@
 	]}
 	{@param spritemap: string}
 	{@param? _handleItemToggled: any}
-	{@param? groupName: string}
 	{@param? selectable: bool}
 {/deltemplate}
 
@@ -214,7 +200,6 @@
 	]}
 	{@param spritemap: string}
 	{@param? _handleItemToggled: any}
-	{@param? groupName: string}
 	{@param? selectable: bool}
 
 	{let $icon kind="text"}
@@ -233,7 +218,6 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $_handleItemToggled ] /}
-		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $icon != '' ? $icon : null /}
 		{param inputName kind="text"}
@@ -284,7 +268,6 @@
 	]}
 	{@param spritemap: string}
 	{@param? _handleItemToggled: any}
-	{@param? groupName: string}
 	{@param? selectable: bool}
 
 	{let $icon kind="text"}
@@ -303,7 +286,6 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $_handleItemToggled ] /}
-		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $icon != '' ? $icon : null /}
 		{param inputName kind="text"}
@@ -348,7 +330,6 @@
 	]}
 	{@param spritemap: string}
 	{@param? _handleItemToggled: any}
-	{@param? groupName: string}
 	{@param? selectable: bool}
 
 	{let $icon kind="text"}
@@ -367,7 +348,6 @@
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $_handleItemToggled ] /}
-		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param icon: $icon != '' ? $icon : null /}
 		{param imageAlt: $item[$schema.fieldsMap.imageAlt] /}
@@ -420,14 +400,12 @@
 	]}
 	{@param spritemap: string}
 	{@param? _handleItemToggled: any}
-	{@param? groupName: string}
 	{@param? selectable: bool}
 
 	{call ClayUserCard.render}
 		{param actionItems: $item.actionItems /}
 		{param disabled: $item.disabled /}
 		{param events: ['itemToggled': $_handleItemToggled ] /}
-		{param groupName: $groupName /}
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param imageAlt: $item[$schema.fieldsMap.imageAlt] /}
 		{param imageSrc: $item[$schema.fieldsMap.imageSrc] /}

@@ -12,6 +12,15 @@ class RadarChart extends Chart {}
 
 RadarChart.STATE = {
 	/**
+	 * Id to be applied to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof RadarChart
+	 * @type {?(string|undefined)}
+	 */
+	id: Config.string(),
+
+	/**
 	 * Labels visibility
 	 * @default true
 	 * @instance

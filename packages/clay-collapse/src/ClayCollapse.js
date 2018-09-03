@@ -305,7 +305,7 @@ ClayCollapse.STATE = {
 	 */
 	openClasses: {
 		validator: validators.string,
-		value: 'collapse in',
+		value: 'collapse show',
 	},
 
 	/**

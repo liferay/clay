@@ -32,6 +32,7 @@ const creationMenuItemsValidator = Config.arrayOf(
 creationMenuItem.items = creationMenuItemsValidator;
 
 let filterItemShape = {
+	active: Config.bool().value(false),
 	checked: Config.bool().value(false),
 	disabled: Config.bool().value(false),
 	href: Config.string(),
@@ -48,8 +49,16 @@ const filterItemsValidator = Config.arrayOf(Config.shapeOf(filterItemShape));
 
 filterItemShape.items = filterItemsValidator;
 
+const filterLabelsValidator = Config.arrayOf(
+	Config.shapeOf({
+		closeable: Config.bool().value(true),
+		label: Config.any(),
+	})
+);
+
 export {
 	actionItemsValidator,
 	creationMenuItemsValidator,
 	filterItemsValidator,
+	filterLabelsValidator,
 };

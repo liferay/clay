@@ -144,6 +144,15 @@ PredictiveChart.STATE = {
 	axisXTickFormat: Config.oneOfType([Config.func(), Config.string()]),
 
 	/**
+	 * Id to be applied to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof PredictiveChart
+	 * @type {?(string|undefined)}
+	 */
+	id: Config.string(),
+
+	/**
 	 * The prediction date used to define the <code>region</code>
 	 * on the X axis.
 	 * @default undefined

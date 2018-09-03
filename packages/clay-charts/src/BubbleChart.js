@@ -11,6 +11,15 @@ class BubbleChart extends Chart {}
 
 BubbleChart.STATE = {
 	/**
+	 * Id to be applied to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof BubbleChart
+	 * @type {?(string|undefined)}
+	 */
+	id: Config.string(),
+
+	/**
 	 * Labels visibility
 	 * @default true
 	 * @instance

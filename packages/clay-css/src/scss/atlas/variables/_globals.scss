@@ -57,7 +57,8 @@ $danger: #DA1414 !default;
 $light: #F1F2F5 !default;
 $dark: #272834 !default;
 
-$theme-colors: (
+$theme-colors: () !default;
+$theme-colors: map-merge((
 	primary: $primary,
 	secondary: $secondary,
 	success: $success,
@@ -66,7 +67,7 @@ $theme-colors: (
 	danger: $danger,
 	light: $light,
 	dark: $dark
-) !default;
+), $theme-colors);
 
 $yiq-text-dark: #272833 !default;
 $yiq-text-light: #FFF !default;

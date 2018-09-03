@@ -19,92 +19,106 @@
 
 	<script src="../build/globals/clay-management-toolbar.js"></script>
 </head>
-<body class="container">
+<body class="container" role="main">
 	<h1 class="page-title">
 		ClayManagementToolbar
 	</h1>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Default State</h4>
+			<h2>Default State</h2>
 			<div id="default-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Active State</h4>
+			<h2>Active State</h2>
 			<div id="active-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Disabled State</h4>
+			<h2>Disabled State</h2>
 			<div id="disabled-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Disabled State with Search Enabled</h4>
+			<h2>Disabled State with Search Enabled</h2>
 			<div id="disabled-with-search-enabledblock"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With links as viewTypes</h4>
+			<h2>With links as viewTypes</h2>
 			<div id="link-view-types-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With only one Creation Menu item</h4>
+			<h2>With only one Creation Menu item</h2>
 			<div id="one-creation-menu-item-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With Only Search</h4>
+			<h2>With Only Search</h2>
 			<div id="only-search-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With Advanced Search</h4>
+			<h2>With Advanced Search</h2>
 			<div id="advanced-search-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Without Search</h4>
+			<h2>Without Search</h2>
 			<div id="without-search-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Without Filters, Sorting and Search</h4>
+			<h2>Without Filters, Sorting and Search</h2>
 			<div id="without-filter-sorting-search-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With search results bar</h4>
+			<h2>With search results</h2>
 			<div id="search-results-bar"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With search results bar with active state</h4>
+			<h2>With search results with active state</h2>
 			<div id="search-results-bar-active-state"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With search results and filter labels</h4>
+			<div id="search-results-filter-labels"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>With filter labels</h4>
+			<div id="filter-labels"></div>
 		</div>
 	</div>
 
@@ -117,9 +131,16 @@
 				quickAction: true,
 			},
 			{
+				disabled: true,
 				href: '#2',
 				icon: 'download',
 				label: 'Download',
+				quickAction: true,
+			},
+			{
+				disabled: true,
+				icon: 'change',
+				label: 'Change',
 				quickAction: true,
 				separator: true,
 			},
@@ -143,6 +164,19 @@
 				type: 'group',
 			},
 		];
+
+		const filterLabels = [
+			{
+				closeable: false,
+				label: 'Filter 1',
+			},
+			{
+				label: 'Filter 2',
+			},
+			{
+				label: '<strong>Category:</strong>Label 3',
+			}
+		]
 
 		const viewTypes= [
 			{
@@ -185,7 +219,6 @@
 
 		//Default State
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -278,6 +311,7 @@
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
+			searchInputPlaceholder: 'Search thread...',
 			selectable: true,
 			showInfoButton: true,
 			sortingOrder: 'asc',
@@ -468,6 +502,7 @@
 		new metal.ClayManagementToolbar({
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
+			showCreationMenu: false,
 			spritemap: spritemap,
 		},
 		'#only-search-block');
@@ -477,13 +512,13 @@
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
 			showAdvancedSearch: true,
+			showCreationMenu: false,
 			spritemap: spritemap,
 		},
 		'#advanced-search-block');
 
 		//Without Search
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
 			filterItems: filterItems,
 			showSearch: false,
 			selectable: true,
@@ -504,7 +539,9 @@
 
 		//With search results bar
 		new metal.ClayManagementToolbar({
-			creationMenu: true,
+			events: {
+				'clearButtonClicked': handleClearButton
+			},
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -517,11 +554,15 @@
 		},
 		'#search-results-bar');
 
+		function handleClearButton(event) {
+			this.searchValue = null;
+			this.totalItems = null;
+		}
+
 		//With search results bar with active state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
 			clearResultsURL: '#clear',
-			creationMenu: true,
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
@@ -534,6 +575,39 @@
 			viewTypes: viewTypes,
 		},
 		'#search-results-bar-active-state');
+
+		//With search results and filter labels
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			clearResultsURL: '#clear',
+			filterItems: filterItems,
+			filterLabels: filterLabels,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			searchValue: 'red',
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+		},
+		'#search-results-filter-labels');
+
+		//With filter labels and no search results
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			clearResultsURL: '#clear',
+			filterItems: filterItems,
+			filterLabels: filterLabels,
+			searchFormName: 'mySearchName',
+			searchInputName: 'mySearchInputName',
+			selectable: true,
+			sortingOrder: 'asc',
+			spritemap: spritemap,
+			totalItems: 6,
+			viewTypes: viewTypes,
+		},
+		'#filter-labels');
 	</script>
 </body>
 </html>

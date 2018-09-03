@@ -4,6 +4,8 @@ $input-border-bottom-width: 0.0625rem !default;
 $input-border-left-width: 0.0625rem !default;
 $input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
 
+$input-border-style: null !default;
+
 $input-font-size: $font-size-base !default;
 $input-font-size-mobile: null !default;
 $input-height-mobile: null !default;

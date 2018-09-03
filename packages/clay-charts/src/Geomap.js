@@ -285,6 +285,15 @@ Geomap.STATE = {
 	data: Config.oneOfType([Config.object(), Config.func(), Config.string()]),
 
 	/**
+	 * Id to be applied to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof Geomap
+	 * @type {?(string|undefined)}
+	 */
+	id: Config.string(),
+
+	/**
 	 * Set an interval (in ms) to fetch the data.
 	 * @default undefined
 	 * @instance

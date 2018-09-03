@@ -19,14 +19,14 @@
 
 	<script src="../build/globals/clay-card.js"></script>
 </head>
-<body class="container">
+<body class="container" role="main">
 	<h1 class="page-title">
 		ClayCards
 	</h1>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Image Card</h4>
+			<h2>Image Card</h2>
 			<div class="row">
 				<div class="col-md-4" id="image-card-block"></div>
 				<div class="col-md-4" id="image-card-icon-block"></div>
@@ -37,7 +37,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Image Card with sticker</h4>
+			<h2>Image Card with sticker</h2>
 			<div class="row">
 				<div class="col-md-4" id="sticker-image-card-block"></div>
 				<div class="col-md-4" id="sticker-image-card-icon-block"></div>
@@ -48,7 +48,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Image Card with sticker shape</h4>
+			<h2>Image Card with sticker shape</h2>
 			<div class="row">
 				<div class="col-md-4" id="sticker-shape-image-card-block"></div>
 				<div class="col-md-4" id="sticker-shape-image-card-icon-block"></div>
@@ -59,7 +59,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Image Card with labels</h4>
+			<h2>Image Card with labels</h2>
 			<div class="row">
 				<div class="col-md-4" id="image-card-one-label-block"></div>
 				<div class="col-md-4" id="image-card-two-labels-block"></div>
@@ -70,7 +70,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Selectable Image Card</h4>
+			<h2>Selectable Image Card</h2>
 			<div class="row">
 					<div class="col-md-4" id="selectable-image-card-block"></div>
 					<div class="col-md-4" id="selectable-image-card-icon-block"></div>
@@ -81,7 +81,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>File card</h4>
+			<h2>File card</h2>
 			<div class="row">
 				<div class="col-md-4" id="file-card-block"></div>
 				<div class="col-md-4" id="file-card-checked-block"></div>
@@ -92,7 +92,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>User card</h4>
+			<h2>User card</h2>
 			<div class="row">
 				<div class="col-md-4" id="user-card-block"></div>
 				<div class="col-md-4" id="user-card-image-block"></div>
@@ -102,7 +102,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Horizontal card</h4>
+			<h2>Horizontal card</h2>
 			<div class="row">
 				<div class="col-md-4" id="directory-block"></div>
 				<div class="col-md-4" id="directory-checkbox-block"></div>
@@ -115,12 +115,12 @@
 		var image = './image1.jpg';
 		var items = [
 			{
-				href: '#1',
+				href: '#image-card-block',
 				label: 'Edit',
 				separator: true,
 			},
 			{
-				href: '#1',
+				href: '#image-card-block',
 				label: 'Save',
 			}
 		];
@@ -130,7 +130,7 @@
 		 */
 		new metal.ClayImageCard({
 			actionItems: items,
-			href: '#1',
+			href: '#image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			spritemap: spritemap,
@@ -163,7 +163,7 @@
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#sticker-image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			spritemap: spritemap,
@@ -201,7 +201,7 @@
 			stickerLabel: 'TT',
 			stickerShape: 'circle',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#sticker-shape-image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			spritemap: spritemap,
@@ -240,7 +240,7 @@
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#image-card-one-label-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			labels: [
@@ -307,7 +307,7 @@
 			actionItems: items,
 			stickerLabel: 'JPG',
 			stickerStyle: 'danger',
-			href: '#1',
+			href: '#selectable-image-card-block',
 			imageAlt: 'thumbnail',
 			imageSrc: image,
 			labels: [
