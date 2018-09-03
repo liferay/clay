@@ -275,24 +275,10 @@
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
 								<li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="{index($item)}" data-onclick="{$_handleQuickActionClicked}">
-									{if isNonnull($item.href)}
+									{if isNonnull($item.href) and (not isNonnull($item.disabled) or $item.disabled == false)}
 										{call ClayLink.render}
-											{param elementClasses kind="text"}
-												nav-link nav-link-monospaced
-
-												{if $item.disabled}
-													{sp}disabled
-												{/if}
-											{/param}
-
-											{param href kind="text"}
-												{if $item.disabled}
-													javascript:;
-												{else}
-													{$item.href}
-												{/if}
-											{/param}
-
+											{param elementClasses: 'nav-link nav-link-monospaced' /}
+											{param href: $item.href /}
 											{param icon: $item.icon /}
 											{param ref: 'quickAction' + index($item) /}
 											{param spritemap: $spritemap /}
