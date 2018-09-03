@@ -592,6 +592,32 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with disabled actions as quick actions in active state', () => {
+		managementToolbar = new ClayManagementToolbar({
+			actionItems: [
+				{
+					disabled: true,
+					icon: 'edit',
+					label: 'Edit',
+					quickAction: true,
+				},
+				{
+					disabled: true,
+					href: '#deleteurl',
+					icon: 'trash',
+					label: 'Delete',
+					quickAction: true,
+				},
+			],
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with info button', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
