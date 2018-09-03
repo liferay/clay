@@ -275,7 +275,7 @@
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
 								<li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="{index($item)}" data-onclick="{$_handleQuickActionClicked}">
-									{if isNonnull($item.href)}
+									{if isNonnull($item.href) and (not isNonnull($item.disabled) or $item.disabled == false)}
 										{call ClayLink.render}
 											{param elementClasses: 'nav-link nav-link-monospaced' /}
 											{param href: $item.href /}
@@ -286,6 +286,7 @@
 										{/call}
 									{else}
 										{call ClayButton.render}
+											{param disabled: $item.disabled /}
 											{param elementClasses: 'nav-link nav-link-monospaced' /}
 											{param icon: $item.icon /}
 											{param ref: 'quickAction' + index($item) /}
