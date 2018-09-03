@@ -193,6 +193,15 @@ ClayCreationMenuDropdown.STATE = {
 	triggerTitle: Config.string(),
 
 	/**
+	 * Flag to indicate if Clay Portal should be used or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @type {?bool}
+	 */
+	usePortal: Config.bool().value(true),
+
+	/**
 	 * The url for the view more button in case is rendered.
 	 * @instance
 	 * @memberof ClayCreationMenuDropdown

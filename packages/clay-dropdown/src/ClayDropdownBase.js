@@ -24,15 +24,17 @@ class ClayDropdownBase extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	attached() {
-		this.refs.portal.on('rendered', this._handleRenderedPortal.bind(this));
+	created() {
+		this._eventHandler = new EventHandler();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	created() {
-		this._eventHandler = new EventHandler();
+	attached() {
+		if (this.usePortal) {
+			this.refs.portal.on('rendered', this._alignDropdown.bind(this));
+		}
 	}
 
 	/**
@@ -47,6 +49,28 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	disposed() {
 		this._eventHandler.removeAllListeners();
+	}
+
+	/**
+	 * Align dropdown menu.
+	 * @protected
+	 */
+	_alignDropdown() {
+		if (this.expanded && this._alignElementSelector) {
+			let alignElement = this.element.querySelector(
+				this._alignElementSelector
+			);
+
+			if (alignElement) {
+				let bodyElement = this._getMenuElement();
+
+				this._alignedPosition = Align.align(
+					bodyElement,
+					alignElement,
+					Align.BottomLeft
+				);
+			}
+		}
 	}
 
 	/**
@@ -73,6 +97,19 @@ class ClayDropdownBase extends ClayComponent {
 			),
 			element
 		);
+	}
+
+	/**
+	 * Returns the dropdown menu element.
+	 * @private
+	 * @return {!Node} element
+	 */
+	_getMenuElement() {
+		if (this.usePortal) {
+			return this.refs.portal.refs.menu;
+		}
+
+		return this.refs.menu;
 	}
 
 	/**
@@ -252,6 +289,10 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	syncExpanded() {
 		if (this.expanded) {
+			if (!this.usePortal) {
+				this._alignDropdown();
+			}
+
 			this._eventHandler.add(
 				dom.on(
 					document,
@@ -491,6 +532,15 @@ ClayDropdownBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerTitle: Config.string(),
+
+	/**
+	 * Flag to indicate if Clay Portal should be used or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?bool}
+	 */
+	usePortal: Config.bool().value(true),
 };
 
 Soy.register(ClayDropdownBase, templates);

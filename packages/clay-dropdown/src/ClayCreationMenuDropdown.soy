@@ -21,6 +21,7 @@
 	{@param? secondaryItems: list<?>}
 	{@param? triggerClasses: string}
 	{@param? triggerTitle: string}
+	{@param? usePortal: bool}
 	{@param? viewMoreURL: string}
 
 	{let $secondaryItemsFirstGroup: 
@@ -225,5 +226,7 @@
 				{/msg}
 			{/if}
 		{/param}
+
+		{param usePortal: $usePortal ?: true /}
 	{/call}
 {/template}
