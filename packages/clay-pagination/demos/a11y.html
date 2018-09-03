@@ -19,7 +19,7 @@
 
 	<script src="../build/globals/clay-pagination.js"></script>
 </head>
-<body class="container" role="main">
+<body class="container" id="container" role="main">
 	<div class="row row-spacing">
 			<h1>ClayPagination</h1>
 		</div>
@@ -101,7 +101,7 @@
 		for (let totalPages = 1; totalPages <= 10; totalPages++) {
 			for (let currentPage=1; currentPage <= totalPages; currentPage++ ) {
 				new metal.ClayPagination({
-					baseHref: '#mySite?curPage=',
+					baseHref: '#container',
 					currentPage: currentPage,
 					spritemap: spritemap,
 					totalPages: totalPages,
