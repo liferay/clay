@@ -592,17 +592,19 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with actions as quick actions in disabled state', () => {
+	it('should render a management toolbar with disabled actions as quick actions in active state', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [
 				{
 					disabled: true,
+					icon: 'edit',
 					label: 'Edit',
 					quickAction: true,
 				},
 				{
 					disabled: true,
 					href: '#deleteurl',
+					icon: 'trash',
 					label: 'Delete',
 					quickAction: true,
 				},
