@@ -20,7 +20,7 @@
 	<script src="../build/globals/clay-management-toolbar.js"></script>
 </head>
 <body class="container" role="main">
-	<h1 class="page-title">
+	<h1 class="page-title"id="pageTitle">
 		ClayManagementToolbar
 	</h1>
 
@@ -125,14 +125,14 @@
 	<script type="text/javascript">
 		const actionItems = [
 			{
-				href: '#1',
+				href: '#pageTitle',
 				icon: 'trash',
 				label: 'Remove',
 				quickAction: true,
 			},
 			{
+				href: '#pageTitle',
 				disabled: true,
-				href: '#2',
 				icon: 'download',
 				label: 'Download',
 				quickAction: true,
@@ -145,7 +145,7 @@
 				separator: true,
 			},
 			{
-				href: '#3',
+				href: '#pageTitle',
 				icon: 'edit',
 				label: 'Edit',
 			},
@@ -156,7 +156,7 @@
 				items: [
 					{
 						label: 'Link 1',
-						href: '#mylink',
+						href: '#pageTitle',
 						type: 'item',
 					},
 				],
@@ -297,7 +297,7 @@
 			searchInputName: 'mySearchInputName',
 			selectable: true,
 			showInfoButton: true,
-			sortingURL: '#sorting',
+			sortingURL: '#pageTitle',
 			sortingOrder: 'asc',
 			spritemap: spritemap,
 			viewTypes: viewTypes,
@@ -340,23 +340,23 @@
 					{
 						items: [
 							{
-								href: '#1',
+								href: '#pageTitle',
 								label: 'Add Content 1',
 							},
 							{
-								href: '#2',
+								href: '#pageTitle',
 								label: 'Add Content 2',
 							},
 							{
-								href: '#3',
+								href: '#pageTitle',
 								label: 'Add Content 3',
 							},
 							{
-								href: '#4',
+								href: '#pageTitle',
 								label: 'Add Content 4',
 							},
 							{
-								href: '#5',
+								href: '#pageTitle',
 								label: 'Add Content 5',
 							},
 						],
@@ -364,15 +364,15 @@
 					{
 						items: [
 							{
-								href: '#6',
+								href: '#pageTitle',
 								label: 'Add Content 6',
 							},
 							{
-								href: '#7',
+								href: '#pageTitle',
 								label: 'Add Content 7',
 							},
 							{
-								href: '#8',
+								href: '#pageTitle',
 								label: 'Add Content 8',
 							},
 						],
@@ -419,23 +419,23 @@
 					{
 						items: [
 							{
-								href: '#1',
+								href: '#pageTitle',
 								label: 'Add Content 1',
 							},
 							{
-								href: '#2',
+								href: '#pageTitle',
 								label: 'Add Content 2',
 							},
 							{
-								href: '#3',
+								href: '#pageTitle',
 								label: 'Add Content 3',
 							},
 							{
-								href: '#4',
+								href: '#pageTitle',
 								label: 'Add Content 4',
 							},
 							{
-								href: '#5',
+								href: '#pageTitle',
 								label: 'Add Content 5',
 							},
 						],
@@ -443,15 +443,15 @@
 					{
 						items: [
 							{
-								href: '#6',
+								href: '#pageTitle',
 								label: 'Add Content 6',
 							},
 							{
-								href: '#7',
+								href: '#pageTitle',
 								label: 'Add Content 7',
 							},
 							{
-								href: '#8',
+								href: '#pageTitle',
 								label: 'Add Content 8',
 							},
 						],
@@ -498,23 +498,23 @@
 					{
 						items: [
 							{
-								href: '#1',
+								href: '#pageTitle',
 								label: 'Add Content 1',
 							},
 							{
-								href: '#2',
+								href: '#pageTitle',
 								label: 'Add Content 2',
 							},
 							{
-								href: '#3',
+								href: '#pageTitle',
 								label: 'Add Content 3',
 							},
 							{
-								href: '#4',
+								href: '#pageTitle',
 								label: 'Add Content 4',
 							},
 							{
-								href: '#5',
+								href: '#pageTitle',
 								label: 'Add Content 5',
 							},
 						],
@@ -522,15 +522,15 @@
 					{
 						items: [
 							{
-								href: '#6',
+								href: '#pageTitle',
 								label: 'Add Content 6',
 							},
 							{
-								href: '#7',
+								href: '#pageTitle',
 								label: 'Add Content 7',
 							},
 							{
-								href: '#8',
+								href: '#pageTitle',
 								label: 'Add Content 8',
 							},
 						],
@@ -554,7 +554,7 @@
 			creationMenu: {
 				primaryItems: [
 					{
-						href: '#primary1',
+						href: '#pageTitle',
 						label: 'Primary 1',
 					}
 				],
@@ -635,7 +635,7 @@
 		//With search results bar with active state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
-			clearResultsURL: '#clear',
+			clearResultsURL: '#pageTitle',
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
