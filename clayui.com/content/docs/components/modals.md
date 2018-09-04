@@ -1436,3 +1436,13 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 > Use classes `modal-item-first`, `modal-item`, and `modal-item-last` inside `modal-footer` to align content left, middle, and right.
 
 </article>
+
+<article id="clay-modal-api">
+
+### API
+
+<div>
+	[APITable "clay-modal/src/ClayModal.js"]
+</div>
+
+</article>

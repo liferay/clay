@@ -352,3 +352,13 @@ Stickers are a visual way to quickly identify content in a different way than ba
 ```
 
 </article>
+
+<article id="clay-stickers-api">
+
+### API
+
+<div>
+	[APITable "clay-sticker/src/ClaySticker.js"]
+</div>
+
+</article>

@@ -1278,9 +1278,17 @@ List is a visual representation of a dataset that provides more flexibility for 
 
 </article>
 
+<article id="clay-list-api">
+
+### API
+
+<div>
+	[APITable "clay-list/src/ClayList.js"]
+</div>
+
+</article>
 
 <script>
-{literal}
 $(function() {
 	$('.list-group .list-group-item input[type="checkbox"]').on(
 		'click',
@@ -1289,5 +1297,4 @@ $(function() {
 		}
 	);
 });
-{/literal}
 </script>

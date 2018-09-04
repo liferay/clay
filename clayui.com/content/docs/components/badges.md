@@ -127,3 +127,13 @@ Badges help highlight important information such as notifications or new and unr
 <div class="alert alert-warning">Badge Sizes have been removed, use the <a href="https://github.com/liferay/clay/blob/master/packages/clay/src/scss/mixins/_badges.scss#L1">clay-badge-size($sassMap) mixin</a> to create custom badges sizes for your app.</div>
 
 </article>
+
+<article id="clay-badge-api">
+
+### API
+
+<div>
+	[APITable "clay-badge/src/ClayBadge.js"]
+</div>
+
+</article>
