@@ -51,7 +51,7 @@ class LayoutNav extends Component {
                     </Link>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link className="nav-link ml-3" to="/docs/getting-started/introduction.html">Getting Started</Link>
+                            <Link className="nav-link ml-3" to="/docs/get-started/introduction.html">Getting Started</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link ml-3" to="/docs/components/alerts.html">

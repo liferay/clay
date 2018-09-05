@@ -8,7 +8,7 @@ Clay Components are made according to Lexicon standards and built on top of the 
 
 ## Jsx
 
-You can import your components as described in [Importing the JS Component](/docs/getting-started/importing-the-js-component.html). Consider the example below:
+You can import your components as described in [Importing the JS Component](/docs/get-started/importing-the-js-component.html). Consider the example below:
 
 
 ```javascript

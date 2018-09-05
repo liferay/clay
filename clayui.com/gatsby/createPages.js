@@ -17,7 +17,7 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 	createRedirect({
 		fromPath: '/docs/',
 		redirectInBrowser: true,
-		toPath: '/docs/getting-started/introduction.html',
+		toPath: '/docs/get-started/introduction.html',
 	});
 
 	createRedirect({
@@ -35,7 +35,7 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 	createRedirect({
 		fromPath: '/docs/getting-started/',
 		redirectInBrowser: true,
-		toPath: '/docs/getting-started/introduction.html',
+		toPath: '/docs/get-started/introduction.html',
 	});
 
 	return graphql(`
