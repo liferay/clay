@@ -191,6 +191,23 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should keep the expanded updated with that of the dropdown base', () => {
+		jest.useFakeTimers();
+		clayDropdown = new ClayDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown.expanded).toBeFalsy();
+
+		clayDropdown.refs.dropdown.toggle();
+		jest.runAllTimers();
+
+		expect(clayDropdown.expanded).toBeTruthy();
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with an icon trigger', () => {
 		clayDropdown = new ClayDropdown({
 			icon: 'list',
