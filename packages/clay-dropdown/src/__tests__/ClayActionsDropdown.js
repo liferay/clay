@@ -139,6 +139,23 @@ describe('ClayActionsDropdown', function() {
 		expect(clayActionsDropdown).toMatchSnapshot();
 	});
 
+	it('should keep the expanded updated with that of the dropdown base', () => {
+		jest.useFakeTimers();
+		clayActionsDropdown = new ClayActionsDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayActionsDropdown.expanded).toBeFalsy();
+
+		clayActionsDropdown.refs.dropdown.toggle();
+		jest.runAllTimers();
+
+		expect(clayActionsDropdown.expanded).toBeTruthy();
+		expect(clayActionsDropdown).toMatchSnapshot();
+	});
+
 	it('should render a dropdown and emit an event on button click', () => {
 		clayActionsDropdown = new ClayActionsDropdown({
 			button: {

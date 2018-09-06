@@ -72,6 +72,22 @@ describe('ClayCreationMenuDropdown', function() {
 			expect(clayCreationMenuDropdown).toMatchSnapshot();
 		});
 
+		it('should keep the expanded updated with that of the dropdown base', () => {
+			jest.useFakeTimers();
+			clayCreationMenuDropdown = new ClayCreationMenuDropdown({
+				primaryItems: getItems(2, 'main'),
+				spritemap: 'icons.svg',
+			});
+
+			expect(clayCreationMenuDropdown.expanded).toBeFalsy();
+
+			clayCreationMenuDropdown.refs.dropdown.toggle();
+			jest.runAllTimers();
+
+			expect(clayCreationMenuDropdown.expanded).toBeTruthy();
+			expect(clayCreationMenuDropdown).toMatchSnapshot();
+		});
+
 		describe('with only primary items', () => {
 			describe('which are less than', () => {
 				it('the default primary and total maximums', () => {
