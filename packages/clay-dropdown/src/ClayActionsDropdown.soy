@@ -7,6 +7,7 @@
 	{@param items: list<?>}
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
+	{@param? _handleExpandedChanged: any}
 	{@param? _handleItemClick: any}
 	{@param? button: ?}
 	{@param? caption: string}
@@ -40,6 +41,7 @@
 		{param elementClasses: $dropdownElementClasses /}
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
+			'expandedChanged': $_handleExpandedChanged,
 			'itemClicked': $_handleItemClick
 		]/}
 		{param expanded: $expanded /}

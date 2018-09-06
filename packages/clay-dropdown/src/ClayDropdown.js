@@ -23,6 +23,15 @@ class ClayDropdown extends ClayComponent {
 	}
 
 	/**
+	 * Handle expandedChanged to manipulate the internal expanded.
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_handleExpandedChanged({newVal}) {
+		this.expanded = newVal;
+	}
+
+	/**
 	 * Continues the propagation of the item clicked event
 	 * @param {!Event} event
 	 * @protected

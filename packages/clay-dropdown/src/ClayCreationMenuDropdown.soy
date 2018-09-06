@@ -7,6 +7,7 @@
 	{@param primaryItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
+	{@param? _handleExpandedChanged: any}
 	{@param? _handleItemClick: any}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
@@ -203,6 +204,7 @@
 		{param elementClasses: $elementClasses /}
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
+			'expandedChanged': $_handleExpandedChanged,
 			'itemClicked': $_handleItemClick
 		] /}
 		{param expanded: $expanded /}
