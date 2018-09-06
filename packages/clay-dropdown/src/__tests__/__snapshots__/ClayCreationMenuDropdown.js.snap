@@ -42,6 +42,27 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown expande
 </div>
 `;
 
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown should keep the expanded updated with that of the dropdown base 1`] = `
+<div class="dropdown show">
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
+  <ul class="list-unstyled">
+    <li>
+      <a class=" dropdown-item" href="#main1">main1</a>
+    </li>
+    <li>
+      <a class=" dropdown-item" href="#main2">main2</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with classes 1`] = `
 <div class="dropdown my-custom-class">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" title="new" type="button">
