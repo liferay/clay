@@ -142,7 +142,7 @@ title: "Class Helpers"
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+					<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
 				</svg>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-right">
@@ -177,7 +177,7 @@ title: "Class Helpers"
 				<button class="btn btn-monospaced btn-outline-primary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#pencil" />
+							<use xlink:href="/images/icons/icons.svg#pencil" />
 						</svg>
 					</span>
 				</button>
