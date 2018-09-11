@@ -1,7 +1,8 @@
 'use strict';
 
-const path = require("path");
+const arrangeIntoTree = require("../src/utils/arrangeIntoTree");
 const fixHtmlAst = require("../src/utils/fixHtmlAst");
+const path = require("path");
 
 module.exports = async ({ boundActionCreators, graphql }) => {
 	const { createPage, createRedirect } = boundActionCreators;
@@ -14,30 +15,6 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 		toPath: '/',
 	});
 
-	createRedirect({
-		fromPath: '/docs/',
-		redirectInBrowser: true,
-		toPath: '/docs/get-started/introduction.html',
-	});
-
-	createRedirect({
-		fromPath: '/docs/layout/',
-		redirectInBrowser: true,
-		toPath: '/docs/layout/grid.html',
-	});
-
-	createRedirect({
-		fromPath: '/docs/advanced-guides/',
-		redirectInBrowser: true,
-		toPath: '/docs/advanced-guides/using-js-components-with-metal.html',
-	});
-
-	createRedirect({
-		fromPath: '/docs/getting-started/',
-		redirectInBrowser: true,
-		toPath: '/docs/get-started/introduction.html',
-	});
-
 	return graphql(`
 		{
 			allMarkdownRemark(limit: 1000) {
@@ -46,6 +23,9 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 						htmlAst
 						fields {
 							slug
+							title
+							weight
+							layout
 						}
 					}
 				}
@@ -56,20 +36,53 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 			return Promise.reject(result.errors);
 		}
 
+		const resolveNode = result.data.allMarkdownRemark.edges.map(({ node }, index) => {
+			const {
+				slug,
+				title,
+				weight,
+				layout
+			} = node.fields;
+			const slugWithoutExtension = slug.replace('.html', '');
+			const pathSplit = slugWithoutExtension.split('/');
+
+			return {
+				id: pathSplit[pathSplit.length - 1],
+				layout,
+				link: '/' + slugWithoutExtension,
+				nightly,
+				title,
+				weight
+			};
+		});
+
+		const tree = arrangeIntoTree(resolveNode);
+
 		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-			const { slug } = node.fields;
+			const { slug, redirect, layout } = node.fields;
 
 			// This is a hook to fix `xlink:href` for xlinkHref, even if we 
 			// switch the docs to xlinkHref the AST passes in small letters. 
 			// We are correcting until we have a solution in the package.
 			const htmlASTTreated = fixHtmlAst(node.htmlAst);
 
-			if (slug.includes('docs/')) {
+			if (redirect) {
+				const toPath = slug.startsWith('/') ? slug : `/${slug}`;
+
+				createRedirect({
+					fromPath: redirect,
+					redirectInBrowser: true,
+					toPath,
+				});
+			}
+
+			if (slug.includes('docs/') && layout !== 'redirect') {
 				createPage({
 					path: slug,
 					component: docsPostTemplate,
 					context: {
 						slug,
+						docsPath: JSON.stringify(tree),
 						htmlASTTreated: JSON.stringify(htmlASTTreated),
 					},
 				});
