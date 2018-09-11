@@ -1,5 +1,6 @@
 ---
 title: "Introduction"
+weight: 5
 ---
 
 <div class="alert alert-info">Anxious to quickly add Clay to your project and start building amazing UIs?</div>

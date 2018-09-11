@@ -1,5 +1,6 @@
 ---
 title: "Importing the JS Component"
+weight: 3
 ---
 
 <article id="importing-the-js-component">

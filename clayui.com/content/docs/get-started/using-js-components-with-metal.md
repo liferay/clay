@@ -1,5 +1,6 @@
 ---
 title: "Using JS Components with Metal.js"
+weight: 2
 ---
 
 <article id="using-js-components-with-metal">

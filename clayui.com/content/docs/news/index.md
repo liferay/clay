@@ -1,5 +1,6 @@
 ---
 title: "News"
+weight: 1
 ---
 
 <time>September 30th, 2017</time>

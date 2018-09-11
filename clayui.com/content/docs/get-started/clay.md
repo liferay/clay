@@ -1,5 +1,6 @@
 ---
 title: "What is Clay"
+weight: 4
 ---
 
 <article id="what-is-clay">

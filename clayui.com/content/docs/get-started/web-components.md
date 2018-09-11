@@ -1,5 +1,6 @@
 ---
 title: "Web Components"
+weight: 1
 ---
 
 <article id="web-components">
