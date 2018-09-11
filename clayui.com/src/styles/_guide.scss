@@ -14,15 +14,15 @@
 	article {
 		> h3 {
 			font-size: $base-size * 0.7;
-			font-weight: 700;
-			margin-bottom: $base-size * 1.2;
+			font-weight: 700 !important;
+			margin-bottom: $base-size * 1.2 !important;
 			padding-top: $base-size * 1.5;
 			text-transform: uppercase;
 		}
 
 		> h4 {
-			font-weight: 600;
-			margin-bottom: $base-size * 1.2;
+			font-weight: 600 !important;
+			margin-bottom: $base-size * 1.2 !important;
 			padding-top: $base-size * 1.1;
 			text-transform: uppercase;
 		}
