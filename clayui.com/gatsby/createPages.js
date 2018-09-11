@@ -50,7 +50,6 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 				id: pathSplit[pathSplit.length - 1],
 				layout,
 				link: '/' + slugWithoutExtension,
-				nightly,
 				title,
 				weight
 			};
