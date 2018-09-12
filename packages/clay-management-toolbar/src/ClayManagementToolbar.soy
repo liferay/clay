@@ -200,15 +200,7 @@
  * This renders the component's active content.
  */
 {template .active}
-	{@param actionItems: list<[
-		disabled: bool,
-		href: string,
-		icon: string,
-		label: string,
-		quickAction: bool,
-		separator: bool,
-		type: string
-	]>}
+	{@param actionItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleActionItemClicked: any}
 	{@param? _handleInfoButtonClicked: any}
