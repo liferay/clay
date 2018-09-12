@@ -1803,6 +1803,32 @@ exports[`ClayManagementToolbar should render a management toolbar with no search
 </div>
 `;
 
+exports[`ClayManagementToolbar should render a management toolbar with not actions when actionsItems is empty in active state 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with search action url 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
