@@ -117,7 +117,7 @@
 	<div {$attributes}>
 		{if $items}
 			{call ClayManagementToolbar.render}
-				{param actionItems: $actionItems ?: [] /}
+				{param actionItems: $actionItems /}
 				{param creationMenu: $creationMenu /}
 				{param events: [
 					'actionItemClicked': $_handleActionItemClicked,
