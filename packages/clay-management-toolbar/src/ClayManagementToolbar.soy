@@ -251,9 +251,9 @@
 				</li>
 			</ul>
 
-			{let $actionsItemsIsEmpty: length($actionItems) > 0 /}
+			{let $hasActionItems: length($actionItems) > 0 /}
 
-			{if $actionsItemsIsEmpty or $showInfoButton}
+			{if $hasActionItems or $showInfoButton}
 				<ul class="navbar-nav">
 					{if $showInfoButton}
 						<li class="nav-item">
@@ -273,7 +273,7 @@
 						</li>
 					{/if}
 
-					{if $actionsItemsIsEmpty}
+					{if $hasActionItems}
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
 								<li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="{index($item)}" data-onclick="{$_handleQuickActionClicked}">
