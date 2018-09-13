@@ -1,6 +1,6 @@
 ---
 layout: "redirect"
 redirect: "/docs/page-examples/card-view-template.html"
-title: "Satellites"
+title: "Satellite Components"
 weight: 1
 ---
