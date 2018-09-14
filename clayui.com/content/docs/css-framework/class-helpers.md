@@ -1,10 +1,11 @@
 ---
 title: "Class Helpers"
+weight: 2
 ---
 
 <article>
 
-<h3>Autofit Row</h3>
+### Autofit Row
 
 <p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.autofit-col</code>, and <code>.autofit-col-expand</code>.</p>
 
@@ -190,7 +191,7 @@ title: "Class Helpers"
 
 <article>
 
-<h3>Autofit Spacing</h3>
+### Autofit Spacing
 
 <p>The class <code>autofit-padded</code> should be added to <code>autofit-row</code> to give padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code>.</p>
 
@@ -216,7 +217,7 @@ title: "Class Helpers"
 
 <article>
 
-<h3>Autofit Float</h3>
+### Autofit Float
 
 <p>The component <code>autofit-float</code> or <code>.autofit-float-{sm|md}-down</code> simulates the behavior of floated elements on <code>.autofit-row</code>. Items that break to a new line will be aligned to the left.</p>
 
@@ -316,7 +317,7 @@ title: "Class Helpers"
 
 <article>
 
-<h3>Autofit Float End</h3>
+### Autofit Float End
 
 <p>Mimic "right floated" elements.</p>
 
@@ -420,7 +421,7 @@ title: "Class Helpers"
 
 <article>
 
-<h3>Nesting Autofit Rows</h3>
+### Nesting Autofit Rows
 
 <div class="card">
 	<div class="card-body">
@@ -578,7 +579,7 @@ title: "Class Helpers"
 
 <article>
 
-<h3>Inline Item</h3>
+### Inline Item
 
 <p>Use <code>inline-item inline-item-before</code>, <code>inline-item inline-item-middle</code>, and <code>inline-item inline-item-after</code> to provide consistent spacing between text and icons in elements such as links or buttons. This can also be used in other components that have inline content (e.g., <code>badge</code> and <code>label</code>).</p>
 
@@ -628,11 +629,11 @@ title: "Class Helpers"
 
 <article>
 
-<h3>Close</h3>
+### Close
 
 <p>Button or Link for closing stuff.</p>
 
-<h6>Anchor</h6>
+#### Anchor
 
 <a aria-label="Close" class="close" href="#1" role="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -651,7 +652,7 @@ title: "Class Helpers"
 	<span aria-hidden="true">×</span>
 </a>
 
-<h6>Button</h6>
+#### Button
 
 <button aria-label="Close" class="close" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
