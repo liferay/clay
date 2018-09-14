@@ -22,6 +22,10 @@
 		}
 	}
 
+	.clay-site-row-spacer {
+		margin-bottom: 20px;
+	}
+
 	header {
 		margin: 0;
 
@@ -303,6 +307,19 @@
 			.arrow {
 				top: 50%;
 			}
+		}
+	}
+
+	// Dropdown
+
+	.clay-site-dropdown-display .dropdown-wide-container {
+		display: flex;
+
+		.dropdown-menu {
+			display: flex;
+			position: static;
+			top: auto;
+			z-index: 0;
 		}
 	}
 }
