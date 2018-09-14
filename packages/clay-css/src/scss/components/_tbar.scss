@@ -8,18 +8,35 @@
 }
 
 .tbar-nav {
-	@extend %autofit-row;
-
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: nowrap;
+	list-style: none;
 	margin-bottom: 0;
+	min-width: 3.125rem;
+	padding-left: 0;
+	word-wrap: break-word;
 
 	> .tbar-item {
 		justify-content: center;
 	}
 }
 
+.tbar-nav-shrink {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: auto;
+}
+
+.tbar-nav-wrap {
+	flex-wrap: wrap;
+}
+
 .tbar-item {
 	@extend %autofit-col;
 
+	max-width: 100%;
 	padding-bottom: $tbar-item-padding-y;
 	padding-left: $tbar-item-padding-x;
 	padding-right: $tbar-item-padding-x;
@@ -44,6 +61,10 @@
 	@extend %autofit-section;
 }
 
+.tbar-link {
+	display: inline-block;
+}
+
 .tbar-btn-monospaced,
 .tbar-link-monospaced {
 	align-items: center;
@@ -58,6 +79,28 @@
 	.lexicon-icon {
 		margin-top: 0;
 	}
+}
+
+// Tbar Inline {xs|sm|md|lg|xl} Down
+
+.tbar-inline-xs-down {
+	@include clay-tbar-inline-down($tbar-inline-xs-down);
+}
+
+.tbar-inline-sm-down {
+	@include clay-tbar-inline-down($tbar-inline-sm-down);
+}
+
+.tbar-inline-md-down {
+	@include clay-tbar-inline-down($tbar-inline-md-down);
+}
+
+.tbar-inline-lg-down {
+	@include clay-tbar-inline-down($tbar-inline-lg-down);
+}
+
+.tbar-inline-xl-down {
+	@include clay-tbar-inline-down($tbar-inline-xl-down);
 }
 
 // Component Tbar
@@ -82,8 +125,14 @@
 	@include clay-tbar-variant($subnav-tbar);
 }
 
+// Subnav Tbar Variants
+
 .subnav-tbar-primary {
 	@include clay-tbar-variant($subnav-tbar-primary);
+
+	&.subnav-tbar-disabled {
+		@include clay-tbar-variant($subnav-tbar-primary-disabled);
+	}
 }
 
 .subnav-tbar-light {

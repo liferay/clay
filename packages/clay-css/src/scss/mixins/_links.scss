@@ -51,6 +51,7 @@
 	$disabled-cursor: map-get($map, disabled-cursor);
 	$disabled-opacity: map-get($map, disabled-opacity);
 	$disabled-pointer-events: map-get($map, disabled-pointer-events);
+	$disabled-text-decoration: map-get($map, disabled-text-decoration);
 
 	$btn-focus-box-shadow: map-get($map, btn-focus-box-shadow);
 	$btn-focus-outline: map-get($map, btn-focus-outline);
@@ -131,6 +132,7 @@
 		cursor: $disabled-cursor;
 		opacity: $disabled-opacity;
 		pointer-events: $disabled-pointer-events;
+		text-decoration: $disabled-text-decoration;
 	}
 
 	.lexicon-icon {
