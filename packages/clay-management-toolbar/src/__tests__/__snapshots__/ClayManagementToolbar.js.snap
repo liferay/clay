@@ -1783,27 +1783,7 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with no search 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav"></ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
-              <title>plus</title>
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with not actions when actionsItems is empty in active state 1`] = `
+exports[`ClayManagementToolbar should render a management toolbar with no actions when actionsItems is empty in active state 1`] = `
 <div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
     <div class="container-fluid container-fluid-max-xl">
@@ -1822,6 +1802,26 @@ exports[`ClayManagementToolbar should render a management toolbar with not actio
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with no search 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+              <title>plus</title>
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
         </li>
       </ul>
     </div>
