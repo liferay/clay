@@ -1,5 +1,5 @@
 ---
 layout: "redirect"
-redirect: "/docs/page-examples/card-view-template.html"
+redirect: "/docs/css-framework/page-examples/card-view-template.html"
 title: "Page Examples"
 ---

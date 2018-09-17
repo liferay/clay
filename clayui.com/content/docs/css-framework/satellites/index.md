@@ -1,6 +1,6 @@
 ---
 layout: "redirect"
-redirect: "/docs/page-examples/card-view-template.html"
+redirect: "/docs/css-framework/satellites/paginations.html"
 title: "Satellite Components"
 weight: 1
 ---
