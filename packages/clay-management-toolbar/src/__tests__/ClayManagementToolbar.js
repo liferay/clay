@@ -570,7 +570,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with not actions when actionsItems is empty in active state', () => {
+	it('should render a management toolbar with no actions when actionsItems is empty in active state', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [],
 			selectable: true,
