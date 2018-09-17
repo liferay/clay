@@ -22,10 +22,11 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 					node {
 						htmlAst
 						fields {
+							layout
+							redirect
 							slug
 							title
 							weight
-							layout
 						}
 					}
 				}
@@ -66,12 +67,13 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 			const htmlASTTreated = fixHtmlAst(node.htmlAst);
 
 			if (redirect) {
-				const toPath = slug.startsWith('/') ? slug : `/${slug}`;
+				const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
+				const fromPath = slugWithBar.endsWith('index.html') ? slugWithBar.replace('index.html', '') : slugWithBar;
 
 				createRedirect({
-					fromPath: redirect,
+					fromPath,
 					redirectInBrowser: true,
-					toPath,
+					toPath: redirect,
 				});
 			}
 
