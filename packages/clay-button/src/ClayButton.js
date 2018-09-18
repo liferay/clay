@@ -142,11 +142,17 @@ ClayButton.STATE = {
 	 * @default primary
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {?(string|undefined)}
+	 * @type {?(bool|string|undefined)}
 	 */
-	style: Config.oneOf(['link', 'primary', 'secondary', 'unstyled']).value(
-		'primary'
-	),
+	style: Config.oneOfType([
+		Config.bool(),
+		Config.oneOf([
+			'link',
+			'primary',
+			'secondary',
+			'unstyled',
+		]),
+	]).value('primary'),
 
 	/**
 	 * The title attribute of the element.
