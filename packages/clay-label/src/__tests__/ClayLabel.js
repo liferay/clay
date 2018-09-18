@@ -49,7 +49,7 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
-	it('should render a label with removable', () => {
+	it('should render a removable label', () => {
 		label = new ClayLabel({
 			label: 'Foo',
 			closeable: true,
@@ -103,6 +103,14 @@ describe('ClayLabel', function() {
 	it('should render a `success color` label', () => {
 		label = new ClayLabel({
 			style: 'success',
+		});
+
+		expect(label).toMatchSnapshot();
+	});
+
+	it('should render a label with no style', () => {
+		label = new ClayLabel({
+			style: false,
 		});
 
 		expect(label).toMatchSnapshot();
