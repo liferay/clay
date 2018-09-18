@@ -95,14 +95,17 @@ ClayLabel.STATE = {
 	 * @default secondary
 	 * @instance
 	 * @memberof ClayLabel
-	 * @type {?string}
+	 * @type {?(bool|string)}
 	 */
-	style: Config.oneOf([
-		'danger',
-		'info',
-		'secondary',
-		'success',
-		'warning',
+	style: Config.oneOfType([
+		Config.bool(),
+		Config.oneOf([
+			'danger',
+			'info',
+			'secondary',
+			'warning',
+			'success',
+		])
 	]).value('secondary'),
 };
 
