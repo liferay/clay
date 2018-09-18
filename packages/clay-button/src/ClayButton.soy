@@ -16,7 +16,7 @@
 	{@param? name: string}
 	{@param? size: string}
 	{@param? spritemap: string}
-	{@param? style: string}
+	{@param? style: bool|string}
 	{@param? title: string}
 	{@param? type: string}
 	{@param? value: string}
@@ -39,9 +39,9 @@
 				{sp}btn-{$size}
 			{/if}
 
-			{if $style}
+			{if isNonnull($style) and $style != true and $style != false}
 				{sp}btn-{$style}
-			{else}
+			{elseif not isNonnull($style) or $style == true}
 				{sp}btn-primary
 			{/if}
 		"
