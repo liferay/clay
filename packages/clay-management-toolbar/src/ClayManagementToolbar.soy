@@ -133,7 +133,7 @@
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
-				{param actionItems: $actionItems /}
+				{param actionItems: $actionItems ?: [] /}
 				{param selectedItems: $selectedItems /}
 				{param showInfoButton: $showInfoButton /}
 				{param spritemap: $spritemap /}
@@ -200,20 +200,12 @@
  * This renders the component's active content.
  */
 {template .active}
+	{@param actionItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleActionItemClicked: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
-	{@param? actionItems: list<[
-		disabled: bool,
-		href: string,
-		icon: string,
-		label: string,
-		quickAction: bool,
-		separator: bool,
-		type: string
-	]>}
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
 	{@param? totalItems: number}
@@ -251,7 +243,9 @@
 				</li>
 			</ul>
 
-			{if $actionItems or $showInfoButton}
+			{let $hasActionItems: length($actionItems) > 0 /}
+
+			{if $hasActionItems or $showInfoButton}
 				<ul class="navbar-nav">
 					{if $showInfoButton}
 						<li class="nav-item">
@@ -271,7 +265,7 @@
 						</li>
 					{/if}
 
-					{if $actionItems}
+					{if $hasActionItems}
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
 								<li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="{index($item)}" data-onclick="{$_handleQuickActionClicked}">

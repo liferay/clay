@@ -224,7 +224,7 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * List of items to display in the actions menu on active state.
-	 * @default undefined
+	 * @default []
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(array|undefined)}

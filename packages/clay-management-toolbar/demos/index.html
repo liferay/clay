@@ -40,6 +40,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Active State with no actions</h2>
+			<div id="active-no-actions-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>Disabled State</h2>
 			<div id="disabled-block"></div>
 		</div>
@@ -314,6 +321,17 @@
 			totalItems: 10,
 		},
 		'#active-block');
+
+		// Active state no actions
+		new metal.ClayManagementToolbar({
+			actionItems: [],
+			selectable: true,
+			selectedItems: 5,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-no-actions-block');
 
 		//Disabled State
 		new metal.ClayManagementToolbar({

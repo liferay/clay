@@ -334,7 +334,7 @@ ClayDatasetDisplay.STATE = {
 
 	/**
 	 * List of items to display in the management toolbar actions menu.
-	 * @default undefined
+	 * @default []
 	 * @instance
 	 * @memberof ClayDatasetDisplay
 	 * @type {?(array|undefined)}

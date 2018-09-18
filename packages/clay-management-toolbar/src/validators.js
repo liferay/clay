@@ -12,7 +12,9 @@ let actionItemShape = {
 	type: Config.oneOf(['group', 'item']).value('item'),
 };
 
-const actionItemsValidator = Config.arrayOf(Config.shapeOf(actionItemShape));
+const actionItemsValidator = Config.arrayOf(
+	Config.shapeOf(actionItemShape)
+).value([]);
 
 actionItemShape.items = actionItemsValidator;
 
