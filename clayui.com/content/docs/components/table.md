@@ -992,9 +992,9 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 </article>
 
 
-<article id="table-in-forms-heirarchy-example">
+<article id="table-in-forms-hierarchy-example">
 <h3 class="component-title">
-	<a href="#table-in-forms-heirarchy-example">Table in Forms Heirarchy Example</a>
+	<a href="#table-in-forms-hierarchy-example">Table in Forms Hierarchy Example</a>
 </h3>
 
 <div class="sheet">
