@@ -3,6 +3,10 @@
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
 	$line-height: map-get($map, line-height);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
 	$padding-x: map-get($map, padding-x);
 	$padding-y: map-get($map, padding-y);
 	$text-transform: map-get($map, text-transform);
@@ -15,6 +19,10 @@
 	font-size: $font-size;
 	height: auto;
 	line-height: $line-height;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
 	min-height: $height;
 	padding-bottom: $padding-y;
 	padding-left: $padding-x;
@@ -34,5 +42,78 @@
 			margin-top: $lexicon-icon-margin-top;
 			width: $lexicon-icon-width;
 		}
+	}
+}
+
+@mixin clay-label-variant($map) {
+	$bg: map-get($map, bg);
+	$border-color: map-get($map, border-color);
+	$color: map-get($map, color);
+	$text-decoration: map-get($map, text-decoration);
+	$hover-bg: map-get($map, hover-bg);
+	$hover-border-color: map-get($map, hover-border-color);
+	$hover-color: map-get($map, hover-color);
+	$hover-text-decoration: map-get($map, hover-text-decoration);
+	$focus-bg: map-get($map, focus-bg);
+	$focus-border-color: map-get($map, focus-border-color);
+	$focus-box-shadow: map-get($map, focus-box-shadow);
+	$focus-color: map-get($map, focus-color);
+	$focus-outline: map-get($map, focus-outline);
+	$focus-text-decoration: map-get($map, focus-text-decoration);
+	$disabled-bg: map-get($map, disabled-bg);
+	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-color: map-get($map, disabled-color);
+	$link-color: map-get($map, link-color);
+	$link-text-decoration: map-get($map, link-text-decoration);
+	$link-hover-color: map-get($map, link-hover-color);
+	$link-hover-text-decoration: map-get($map, link-hover-text-decoration);
+	$close: setter(map-get($map, close), ());
+
+	background-color: $bg;
+	border-color: $border-color;
+	color: $color;
+	text-decoration: $text-decoration;
+
+	@at-root {
+		a#{&},
+		button#{&} {
+			&:hover {
+				background-color: $hover-bg;
+				border-color: $hover-border-color;
+				color: $hover-color;
+				text-decoration: $hover-text-decoration;
+			}
+
+			&:focus {
+				background-color: $focus-bg;
+				border-color: $focus-border-color;
+				box-shadow: $focus-box-shadow;
+				color: $focus-border-color;
+				outline: $focus-outline;
+				text-decoration: $focus-text-decoration;
+			}
+		}
+	}
+
+	&:disabled,
+	&.disabled {
+		background-color: $disabled-bg;
+		border-color: $disabled-border-color;
+		color: $disabled-color;
+	}
+
+	a {
+		color: $link-color;
+		text-decoration: $link-text-decoration;
+
+		&:hover,
+		&:focus {
+			color: $link-hover-color;
+			text-decoration: $link-hover-text-decoration;
+		}
+	}
+
+	.close {
+		@include clay-link($close);
 	}
 }
