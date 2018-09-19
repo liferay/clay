@@ -637,6 +637,7 @@ describe('ClayDropdownBase', function() {
 
 	it('should close dropdown on document click', () => {
 		clayDropdownBase = new ClayDropdownBase({
+			expanded: true,
 			items: [
 				{
 					href: 'item1url',
