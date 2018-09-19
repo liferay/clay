@@ -55,7 +55,6 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	_close() {
 		this.expanded = false;
-		this._eventHandler.removeAllListeners();
 	}
 
 	/**
@@ -268,6 +267,8 @@ class ClayDropdownBase extends ClayComponent {
 				),
 				dom.on(window, 'blur', this._handleWinBlur.bind(this), true)
 			);
+		} else if (this._eventHandler.eventHandles_.length) {
+			this._eventHandler.removeAllListeners();
 		}
 	}
 
