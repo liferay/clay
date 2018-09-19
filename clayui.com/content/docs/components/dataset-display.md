@@ -4,7 +4,7 @@ title: "Dataset Display"
 
 <article id="dataset-display">
 
-A dataset display is the combination of a management bar with one or many data visualization types and a possible mechanism of pagination. The most common visualization types used are <a href="/docs/components/table/table.html">table</a>, <a href="/docs/components/list.html">list</a> and <a href="/docs/components/card.html">card</a>.
+A dataset display is the combination of a <a href="/docs/components/toolbars/management-toolbar.html">management bar</a> with one or many data visualization types and a possible mechanism of pagination. The most common visualization types used are <a href="/docs/components/table/table.html">table</a>, <a href="/docs/components/list.html">list</a> and <a href="/docs/components/card.html">card</a>.
 
 <div class="clay-dataset-display">
     <div>
