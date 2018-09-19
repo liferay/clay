@@ -265,4 +265,28 @@ describe('ClayDropdown', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));
 	});
+
+	it('should render a dropdown and emit an event on toggle', () => {
+		clayDropdown = new ClayDropdown({
+			items: [
+				{
+					label: 'Item 1',
+					href: 'item1url',
+				},
+			],
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		const spy = jest.spyOn(clayDropdown, 'emit');
+
+		clayDropdown.refs.dropdown.refs.triggerButton.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'toggle',
+			})
+		);
+	});
 });
