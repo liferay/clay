@@ -1278,6 +1278,10 @@ List is a visual representation of a dataset that provides more flexibility for 
 
 </article>
 
+<article id="more-examples">
+	More examples can be found in <a href="/docs/components/dataset-display.html">dataset template</a>.
+</article>
+
 <article id="clay-list-api">
 
 ### API

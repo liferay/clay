@@ -8,6 +8,8 @@ A table is a specific pattern for comparing datasets in a very direct an analyti
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Table/table.html">Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
+When a table is used together with management bar, the table entries must include the checkbox, as the selection and actions are reflected in the management bar. You can find these examples in <a href="/docs/components/dataset-display.html">dataset display</a>.
+
 <article id="table-list">
 <h3 class="component-title">
 	<a href="#table-list">Table List</a>
