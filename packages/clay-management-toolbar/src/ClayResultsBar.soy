@@ -4,10 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param filterLabels: list<[
-		closeable: bool,
-		label: html|string
-	]>}
+	{@param filterLabels: list<?>}
 	{@param spritemap: string}
 	{@param totalItems: number}
 	{@param? _handleClearResultsClick: any}
@@ -118,10 +115,7 @@
  * This renders the list of filter labels
  */
 {template .filterLabels}
-	{@param filterLabels: list<[
-		closeable: bool,
-		label: html|string
-	]>}
+	{@param filterLabels: list<?>}
 	{@param spritemap: string}
 	{@param? _handleFilterLabelCloseClicked: any}
 
