@@ -655,6 +655,56 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should render a dropdown and emit an event when click on document', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			expanded: true,
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		const spy = jest.spyOn(clayDropdownBase, 'emit');
+
+		document.body.click();
+		jest.runAllTimers();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'toggle',
+			})
+		);
+	});
+
+	it('should render a dropdown and emit an event when trigger button clicked', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		const spy = jest.spyOn(clayDropdownBase, 'emit');
+
+		clayDropdownBase.refs.triggerButton.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'toggle',
+			})
+		);
+	});
+
 	it('should filter items', () => {
 		let item1 = {
 			href: 'item1url',

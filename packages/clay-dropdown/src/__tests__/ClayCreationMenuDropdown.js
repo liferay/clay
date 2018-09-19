@@ -88,6 +88,24 @@ describe('ClayCreationMenuDropdown', function() {
 			expect(clayCreationMenuDropdown).toMatchSnapshot();
 		});
 
+		it('and emit an event when trigger button clicked', () => {
+			clayCreationMenuDropdown = new ClayCreationMenuDropdown({
+				primaryItems: getItems(2, 'main'),
+				spritemap: 'icons.svg',
+			});
+
+			const spy = jest.spyOn(clayCreationMenuDropdown, 'emit');
+
+			clayCreationMenuDropdown.refs.dropdown.refs.triggerButton.click();
+
+			expect(spy).toHaveBeenCalled();
+			expect(spy).toHaveBeenCalledWith(
+				expect.objectContaining({
+					name: 'toggle',
+				})
+			);
+		});
+
 		describe('with only primary items', () => {
 			describe('which are less than', () => {
 				it('the default primary and total maximums', () => {
