@@ -4,27 +4,29 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param filterLabels: list<[
+		closeable: bool,
+		label: html|string
+	]>}
 	{@param spritemap: string}
 	{@param totalItems: number}
 	{@param? _handleClearResultsClick: any}
 	{@param? _handleFilterLabelCloseClicked: any}
 	{@param? clearResultsURL: string}
-	{@param? filterLabels: list<[
-		closeable: bool,
-		label: html|string
-	]>}
 	{@param? searchValue: string}
 
 	<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
 		<div class="container-fluid container-fluid-max-xl">
 			<ul class="tbar-nav tbar-nav-wrap">
+				{let $hasFilterLabels: length($filterLabels) > 0 /}
+
 				{call .results}
-					{param expand: not ($filterLabels and length($filterLabels) > 0) /}
+					{param expand: not $hasFilterLabels /}
 					{param searchValue: $searchValue /}
 					{param totalItems: $totalItems /}
 				{/call}
 
-				{if $filterLabels}
+				{if $hasFilterLabels}
 					{call .filterLabels}
 						{param _handleFilterLabelCloseClicked: $_handleFilterLabelCloseClicked /}	
 						{param filterLabels: $filterLabels /}	

@@ -308,12 +308,12 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * List of filter label items.
-	 * @default undefined
+	 * @default []
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?(array|undefined)}
+	 * @type {?array}
 	 */
-	filterLabels: filterLabelsValidator,
+	filterLabels: filterLabelsValidator.value([]),
 
 	/**
 	 * Id to be applied to the element.

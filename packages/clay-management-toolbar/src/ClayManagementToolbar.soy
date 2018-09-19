@@ -179,14 +179,14 @@
 			{/call}
 		{/if}
 
-		{let $isResultsBar: isNonnull($totalItems) and ($searchValue or $filterLabels) /}
+		{let $isResultsBar: isNonnull($totalItems) and ($searchValue or ($filterLabels and length($filterLabels) > 0)) /}
 
 		{if $isResultsBar}
 			{call ClayResultsBar.render}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param clearResultsURL: $clearResultsURL /}
 				{param events: ['filterLabelCloseClicked': $_handleFilterLabelCloseClicked] /}
-				{param filterLabels: $filterLabels /}
+				{param filterLabels: $filterLabels ?: [] /}
 				{param ref: 'resultsBar' /}
 				{param searchValue: $searchValue /}
 				{param spritemap: $spritemap /}
