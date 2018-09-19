@@ -146,12 +146,7 @@ ClayButton.STATE = {
 	 */
 	style: Config.oneOfType([
 		Config.bool(),
-		Config.oneOf([
-			'link',
-			'primary',
-			'secondary',
-			'unstyled',
-		]),
+		Config.oneOf(['link', 'primary', 'secondary', 'unstyled']),
 	]).value('primary'),
 
 	/**

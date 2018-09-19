@@ -99,13 +99,7 @@ ClayLabel.STATE = {
 	 */
 	style: Config.oneOfType([
 		Config.bool(),
-		Config.oneOf([
-			'danger',
-			'info',
-			'secondary',
-			'warning',
-			'success',
-		]),
+		Config.oneOf(['danger', 'info', 'secondary', 'warning', 'success']),
 	]).value('secondary'),
 };
 
