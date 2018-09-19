@@ -7,7 +7,6 @@
 	{@param items: list<?>}
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
-	{@param? _handleExpandedChanged: any}
 	{@param? _handleItemClick: any}
 	{@param? button: ?}
 	{@param? disabled: bool}
@@ -20,6 +19,7 @@
 	{@param? preferredAlign: string}
 	{@param? searchable: bool}
 	{@param? style: string}
+	{@param? toggle: any}
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
 	{@param? triggerTitle: string}
@@ -52,8 +52,8 @@
 		{param elementClasses: $elementClasses /}
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
-			'expandedChanged': $_handleExpandedChanged,
-			'itemClicked': $_handleItemClick
+			'itemClicked': $_handleItemClick,
+			'toggle': $toggle
 		]/}
 		{param expanded: $expanded /}
 		{param id: $id /}

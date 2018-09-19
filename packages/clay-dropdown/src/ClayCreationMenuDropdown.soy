@@ -7,7 +7,6 @@
 	{@param primaryItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
-	{@param? _handleExpandedChanged: any}
 	{@param? _handleItemClick: any}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
@@ -20,6 +19,7 @@
 	{@param? maxTotalItems: int}
 	{@param? preferredAlign: string}
 	{@param? secondaryItems: list<?>}
+	{@param? toggle: any}
 	{@param? triggerClasses: string}
 	{@param? triggerTitle: string}
 	{@param? viewMoreURL: string}
@@ -204,8 +204,8 @@
 		{param elementClasses: $elementClasses /}
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
-			'expandedChanged': $_handleExpandedChanged,
-			'itemClicked': $_handleItemClick
+			'itemClicked': $_handleItemClick,
+			'toggle': $toggle
 		] /}
 		{param expanded: $expanded /}
 		{param helpText: $showMoreButton ? $helpText : null /}

@@ -25,6 +25,7 @@ class ClayDropdownBase extends ClayComponent {
 	 * @inheritDoc
 	 */
 	attached() {
+		this.addListener('toggle', this._defaultToggle, true);
 		this.refs.portal.on('rendered', this._handleRenderedPortal.bind(this));
 	}
 
@@ -50,12 +51,20 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
+	 * Toggles the dropdown, closing it when open or opening it when closed.
+	 * @protected
+	 */
+	_defaultToggle() {
+		this.expanded = !this.expanded;
+	}
+
+	/**
 	 * Closes the dropdown.
 	 * @protected
 	 */
 	_close() {
-		this.expanded = false;
 		this._eventHandler.removeAllListeners();
+		this.toggle();
 	}
 
 	/**
@@ -272,14 +281,13 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
-	 * Toggles the dropdown, closing it when open or opening it when closed.
+	 * Propagate the event toggle.
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	toggle() {
-		if (!this.expanded) {
-			this.expanded = true;
-		} else {
-			this.expanded = false;
-		}
+		return !this.emit({
+			name: 'toggle',
+		});
 	}
 }
 

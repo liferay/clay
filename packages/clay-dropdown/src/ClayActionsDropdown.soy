@@ -7,7 +7,6 @@
 	{@param items: list<?>}
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
-	{@param? _handleExpandedChanged: any}
 	{@param? _handleItemClick: any}
 	{@param? button: ?}
 	{@param? caption: string}
@@ -18,6 +17,7 @@
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
 	{@param? preferredAlign: string}
+	{@param? toggle: any}
 	{@param? triggerClasses: string}
 
 	{let $dropdownElementClasses kind="text"}
@@ -41,8 +41,8 @@
 		{param elementClasses: $dropdownElementClasses /}
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
-			'expandedChanged': $_handleExpandedChanged,
-			'itemClicked': $_handleItemClick
+			'itemClicked': $_handleItemClick,
+			'toggle': $toggle
 		]/}
 		{param expanded: $expanded /}
 		{param helpText: $helpText /}
