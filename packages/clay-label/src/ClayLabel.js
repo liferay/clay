@@ -105,7 +105,7 @@ ClayLabel.STATE = {
 			'secondary',
 			'warning',
 			'success',
-		])
+		]),
 	]).value('secondary'),
 };
 
