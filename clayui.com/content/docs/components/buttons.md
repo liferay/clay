@@ -261,6 +261,9 @@ Buttons communicate an action to happen on user interaction.
 ```html
 <clay-button label="Default"></clay-button>
 ```
+```html
+<button class="btn btn-primary" type="button">Default</button>
+```
 
 </article>
 
