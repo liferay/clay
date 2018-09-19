@@ -63,6 +63,14 @@ describe('ClayButton', function() {
 		expect(button).toMatchSnapshot();
 	});
 
+	it('should render a button with no style', function() {
+		button = new ClayButton({
+			style: false,
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
 	it('should render a button with label', function() {
 		button = new ClayButton({
 			label: 'Label',
