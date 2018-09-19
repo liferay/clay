@@ -56,7 +56,7 @@ ClayResultsBar.STATE = {
 	 * @memberof ClayResultsBar
 	 * @type {?(array|undefined)}
 	 */
-	filterLabels: filterLabelsValidator,
+	filterLabels: filterLabelsValidator.required(),
 
 	/**
 	 * Value of the search input.

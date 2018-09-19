@@ -26,6 +26,7 @@ describe('ClayResultsBar', function() {
 
 	it('should render the default markup', () => {
 		resultsBar = new ClayResultsBar({
+			filterLabels: [],
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -35,6 +36,7 @@ describe('ClayResultsBar', function() {
 
 	it('should render a results bar with search value', () => {
 		resultsBar = new ClayResultsBar({
+			filterLabels: [],
 			searchValue: 'my search',
 			spritemap: spritemap,
 			totalItems: 10,
@@ -66,6 +68,7 @@ describe('ClayResultsBar', function() {
 
 	it('should render a results bar and emit an event on clear button click', () => {
 		resultsBar = new ClayResultsBar({
+			filterLabels: [],
 			searchValue: 'my search',
 			spritemap: spritemap,
 			totalItems: 10,

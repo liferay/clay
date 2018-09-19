@@ -12,11 +12,15 @@
 	{@param? label: html|string}
 	{@param? size: string}
 	{@param? spritemap: string}
-	{@param? style: string}
+	{@param? style: bool|string}
 
 	{let $attributes kind="attributes"}
 		class="label
-			{sp}label-{$style ?: 'secondary'}
+			{if isNonnull($style) and $style != true and $style != false}
+				{sp}label-{$style}
+			{elseif not isNonnull($style) or $style == true}
+				{sp}label-secondary
+			{/if}
 
 			{if $closeable}
 				{sp}label-dismissible
@@ -87,7 +91,7 @@
 				{param iconAlignment: 'right' /}
 				{param ref: 'closeButton' /}
 				{param spritemap: $spritemap /}
-				{param style: 'unstyled' /}
+				{param style: false /}
 				{param type: 'button' /}
 			{/call}
 		</span>

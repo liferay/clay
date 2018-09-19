@@ -39,6 +39,7 @@ $label-close: map-merge((
 	hover-color: inherit,
 	hover-opacity: 1,
 	focus-opacity: 1,
+	disabled-opacity: $btn-disabled-opacity,
 	border-radius: 1px,
 	display: inline-flex,
 	font-size: inherit,
