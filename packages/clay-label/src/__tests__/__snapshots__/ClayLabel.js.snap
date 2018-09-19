@@ -56,23 +56,29 @@ exports[`ClayLabel should render a label with link 1`] = `
 </span>
 `;
 
-exports[`ClayLabel should render a label with removable 1`] = `
-<span class="label label-secondary label-dismissible">
-  <span class="label-item label-item-expand">Foo</span>
-  <span class="label-item label-item-after">
-    <button class="btn close btn-unstyled" aria-label="close" type="button">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-        <title>times</title>
-        <use xlink:href="icons.svg#times"></use>
-      </svg>
-    </button>
-  </span>
+exports[`ClayLabel should render a label with no style 1`] = `
+<span class="label">
+  <span class="label-item label-item-expand"></span>
 </span>
 `;
 
 exports[`ClayLabel should render a large label 1`] = `
 <span class="label label-secondary label-lg">
   <span class="label-item label-item-expand"></span>
+</span>
+`;
+
+exports[`ClayLabel should render a removable label 1`] = `
+<span class="label label-secondary label-dismissible">
+  <span class="label-item label-item-expand">Foo</span>
+  <span class="label-item label-item-after">
+    <button class="btn close" aria-label="close" type="button">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+        <title>times</title>
+        <use xlink:href="icons.svg#times"></use>
+      </svg>
+    </button>
+  </span>
 </span>
 `;
 
