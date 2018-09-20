@@ -22,9 +22,12 @@ class ClayActionsDropdown extends ClayComponent {
 
 	/**
 	 * Toggles the dropdown, closing it when open or opening it when closed.
+	 * @param {!Event} event
 	 * @protected
 	 */
-	_defaultToggle() {
+	_defaultToggle(event) {
+		event.preventDefault();
+
 		this.expanded = !this.expanded;
 	}
 
@@ -53,16 +56,13 @@ class ClayActionsDropdown extends ClayComponent {
 
 	/**
 	 * Continues the propagation of the toggle event.
-	 * @param {?Event} event
+	 * @param {!Event} event
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	toggle(event) {
-		if (event) {
-			event.preventDefault();
-		}
-
 		return !this.emit({
 			name: 'toggle',
+			originalEvent: event,
 		});
 	}
 }

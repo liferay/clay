@@ -283,11 +283,13 @@ class ClayDropdownBase extends ClayComponent {
 
 	/**
 	 * Propagate the event toggle.
+	 * @param {!Event} event
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	toggle() {
+	toggle(event) {
 		return !this.emit({
 			name: 'toggle',
+			originalEvent: event,
 		});
 	}
 }
