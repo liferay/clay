@@ -776,4 +776,41 @@ describe('ClayDropdownBase', function() {
 		clayDropdownBase.preferredAlign = 'TopRight';
 		expect(clayDropdownBase.preferredAlign).toBe(Align.TopRight);
 	});
+
+	it('should attach the events from EventHandler when expanded is true', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		clayDropdownBase.toggle();
+		jest.runAllTimers();
+
+		const {eventHandles_} = clayDropdownBase._eventHandler;
+
+		expect(eventHandles_.length).toBeGreaterThan(0);
+	});
+
+	it('should remove the events of the EventHandler when expanded is false', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			expanded: true,
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		clayDropdownBase.toggle();
+		jest.runAllTimers();
+
+		expect(clayDropdownBase._eventHandler.eventHandles_.length).toBe(0);
+	});
 });
