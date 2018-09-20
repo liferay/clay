@@ -191,6 +191,23 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should keep the expanded updated with that of the dropdown base', () => {
+		jest.useFakeTimers();
+		clayDropdown = new ClayDropdown({
+			items: items,
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown.expanded).toBeFalsy();
+
+		clayDropdown.refs.dropdown.toggle();
+		jest.runAllTimers();
+
+		expect(clayDropdown.expanded).toBeTruthy();
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with an icon trigger', () => {
 		clayDropdown = new ClayDropdown({
 			icon: 'list',
@@ -247,5 +264,29 @@ describe('ClayDropdown', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith('buttonClicked', expect.any(Object));
+	});
+
+	it('should render a dropdown and emit an event on toggle', () => {
+		clayDropdown = new ClayDropdown({
+			items: [
+				{
+					label: 'Item 1',
+					href: 'item1url',
+				},
+			],
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		const spy = jest.spyOn(clayDropdown, 'emit');
+
+		clayDropdown.refs.dropdown.refs.triggerButton.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'toggle',
+			})
+		);
 	});
 });

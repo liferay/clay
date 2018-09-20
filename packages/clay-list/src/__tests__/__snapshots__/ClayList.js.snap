@@ -117,7 +117,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
     <div class="autofit-col">
       <div class="quick-action-menu"></div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -143,7 +143,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
     <div class="autofit-col">
       <div class="quick-action-menu"></div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -925,7 +925,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </a>
       </div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -972,7 +972,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </a>
       </div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -1019,7 +1019,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </a>
       </div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -1066,7 +1066,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </a>
       </div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -1113,7 +1113,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </a>
       </div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
@@ -1160,7 +1160,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
         </a>
       </div>
       <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" title="actions" type="button">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
