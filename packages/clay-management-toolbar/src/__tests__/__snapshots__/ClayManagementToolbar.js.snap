@@ -286,7 +286,9 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          <div class="tbar-section">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -428,7 +430,9 @@ exports[`ClayManagementToolbar should render a management toolbar with a clear r
           </div>
         </li>
         <li class="tbar-item">
-          <a class=" component-link tbar-link" href="#clear">clear</a>
+          <div class="tbar-section">
+            <a class=" component-link tbar-link" href="#clear">clear</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -2049,7 +2053,9 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          <div class="tbar-section">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -2091,7 +2097,9 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          <div class="tbar-section">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -2217,7 +2225,9 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           </div>
         </li>
         <li class="tbar-item">
-          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          <div class="tbar-section">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </div>
         </li>
       </ul>
     </div>

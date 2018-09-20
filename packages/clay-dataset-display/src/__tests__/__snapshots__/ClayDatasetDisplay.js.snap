@@ -149,7 +149,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -1104,7 +1106,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -2197,7 +2201,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -2984,7 +2990,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -3340,7 +3348,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -3581,7 +3591,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -3982,7 +3994,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -4937,7 +4951,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -6030,7 +6046,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -6767,7 +6785,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -6955,7 +6975,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -7697,7 +7719,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -8220,7 +8244,9 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -8910,7 +8936,9 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -9817,7 +9845,9 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -10607,7 +10637,9 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             </div>
           </li>
           <li class="tbar-item">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <div class="tbar-section">
+              <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            </div>
           </li>
         </ul>
       </div>

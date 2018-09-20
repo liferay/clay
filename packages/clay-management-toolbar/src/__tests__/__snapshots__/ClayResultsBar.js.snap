@@ -50,7 +50,9 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>
@@ -107,7 +109,9 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>
@@ -126,7 +130,9 @@ exports[`ClayResultsBar should render a results bar with search value 1`] = `
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>
@@ -145,7 +151,9 @@ exports[`ClayResultsBar should render the default markup 1`] = `
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>
