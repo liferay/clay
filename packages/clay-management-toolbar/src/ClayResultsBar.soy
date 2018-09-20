@@ -48,33 +48,35 @@
 	{@param? clearResultsURL: string}
 
 	<li class="tbar-item">
-		{if $clearResultsURL}
-			{call ClayLink.render}
-				{param elementClasses: 'component-link tbar-link' /}
-				{param events: ['click': $_handleClearResultsClick] /}
-				{param href: $clearResultsURL /}
-				{param label kind="text"}
-					{msg desc="Label for clear results link"}
-						clear
-					{/msg}
-				{/param}
+		<div class="tbar-section">
+			{if $clearResultsURL}
+				{call ClayLink.render}
+					{param elementClasses: 'component-link tbar-link' /}
+					{param events: ['click': $_handleClearResultsClick] /}
+					{param href: $clearResultsURL /}
+					{param label kind="text"}
+						{msg desc="Label for clear results link"}
+							clear
+						{/msg}
+					{/param}
 
-				{param ref: 'clearSearch' /}
-			{/call}
-		{else}
-			{call ClayButton.render}
-				{param elementClasses: 'component-link tbar-link' /}
-				{param events: ['click': $_handleClearResultsClick] /}
-				{param label kind="text"}
-					{msg desc="Label for clear results button"}
-						clear
-					{/msg}
-				{/param}
+					{param ref: 'clearSearch' /}
+				{/call}
+			{else}
+				{call ClayButton.render}
+					{param elementClasses: 'component-link tbar-link' /}
+					{param events: ['click': $_handleClearResultsClick] /}
+					{param label kind="text"}
+						{msg desc="Label for clear results button"}
+							clear
+						{/msg}
+					{/param}
 
-				{param ref: 'clearSearch' /}
-				{param style: 'unstyled' /}
-			{/call}
-		{/if}
+					{param ref: 'clearSearch' /}
+					{param style: 'unstyled' /}
+				{/call}
+			{/if}
+		</div>
 	</li>
 {/template}
 
