@@ -637,6 +637,7 @@ describe('ClayDropdownBase', function() {
 
 	it('should close dropdown on document click', () => {
 		clayDropdownBase = new ClayDropdownBase({
+			expanded: true,
 			items: [
 				{
 					href: 'item1url',
@@ -652,6 +653,56 @@ describe('ClayDropdownBase', function() {
 
 		expect(clayDropdownBase.expanded).toBeFalsy();
 		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
+	it('should render a dropdown and emit an event when click on document', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			expanded: true,
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		const spy = jest.spyOn(clayDropdownBase, 'emit');
+
+		document.body.click();
+		jest.runAllTimers();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'toggle',
+			})
+		);
+	});
+
+	it('should render a dropdown and emit an event when trigger button clicked', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+			spritemap: 'icons.svg',
+		});
+
+		const spy = jest.spyOn(clayDropdownBase, 'emit');
+
+		clayDropdownBase.refs.triggerButton.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'toggle',
+			})
+		);
 	});
 
 	it('should filter items', () => {
@@ -775,5 +826,42 @@ describe('ClayDropdownBase', function() {
 
 		clayDropdownBase.preferredAlign = 'TopRight';
 		expect(clayDropdownBase.preferredAlign).toBe(Align.TopRight);
+	});
+
+	it('should attach the events from EventHandler when expanded is true', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		clayDropdownBase.toggle();
+		jest.runAllTimers();
+
+		const {eventHandles_} = clayDropdownBase._eventHandler;
+
+		expect(eventHandles_.length).toBeGreaterThan(0);
+	});
+
+	it('should remove the events of the EventHandler when expanded is false', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			expanded: true,
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		clayDropdownBase.toggle();
+		jest.runAllTimers();
+
+		expect(clayDropdownBase._eventHandler.eventHandles_.length).toBe(0);
 	});
 });

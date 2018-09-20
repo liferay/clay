@@ -14,6 +14,24 @@ import templates from './ClayDropdown.soy.js';
  */
 class ClayDropdown extends ClayComponent {
 	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this.addListener('toggle', this._defaultToggle, true);
+	}
+
+	/**
+	 * Toggles the dropdown, closing it when open or opening it when closed.
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_defaultToggle(event) {
+		event.preventDefault();
+
+		this.expanded = !this.expanded;
+	}
+
+	/**
 	 * Handles footer button click.
 	 * @param {!Event} event
 	 * @protected
@@ -32,6 +50,18 @@ class ClayDropdown extends ClayComponent {
 		return !this.emit({
 			data: event.data,
 			name: 'itemClicked',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the toggle event.
+	 * @param {!Event} event
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	toggle(event) {
+		return !this.emit({
+			name: 'toggle',
 			originalEvent: event,
 		});
 	}

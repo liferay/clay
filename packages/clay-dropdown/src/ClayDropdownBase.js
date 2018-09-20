@@ -25,6 +25,7 @@ class ClayDropdownBase extends ClayComponent {
 	 * @inheritDoc
 	 */
 	attached() {
+		this.addListener('toggle', this._defaultToggle, true);
 		this.refs.portal.on('rendered', this._handleRenderedPortal.bind(this));
 	}
 
@@ -50,12 +51,11 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
-	 * Closes the dropdown.
+	 * Toggles the dropdown, closing it when open or opening it when closed.
 	 * @protected
 	 */
-	_close() {
-		this.expanded = false;
-		this._eventHandler.removeAllListeners();
+	_defaultToggle() {
+		this.expanded = !this.expanded;
 	}
 
 	/**
@@ -88,7 +88,7 @@ class ClayDropdownBase extends ClayComponent {
 		) {
 			return;
 		}
-		this._close();
+		this.toggle();
 	}
 
 	/**
@@ -130,7 +130,7 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	_handleKeyup(event) {
 		if (event.keyCode === KEY_CODE_ESC) {
-			this._close();
+			this.toggle();
 		}
 	}
 
@@ -214,7 +214,7 @@ class ClayDropdownBase extends ClayComponent {
 	_handleWinBlur() {
 		const activeElement = document.activeElement;
 		if (activeElement != null && activeElement.nodeName === 'IFRAME') {
-			this._close();
+			this.toggle();
 		}
 	}
 
@@ -268,18 +268,21 @@ class ClayDropdownBase extends ClayComponent {
 				),
 				dom.on(window, 'blur', this._handleWinBlur.bind(this), true)
 			);
+		} else if (this._eventHandler.eventHandles_.length) {
+			this._eventHandler.removeAllListeners();
 		}
 	}
 
 	/**
-	 * Toggles the dropdown, closing it when open or opening it when closed.
+	 * Propagate the event toggle.
+	 * @param {!Event} event
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	toggle() {
-		if (!this.expanded) {
-			this.expanded = true;
-		} else {
-			this.expanded = false;
-		}
+	toggle(event) {
+		return !this.emit({
+			name: 'toggle',
+			originalEvent: event,
+		});
 	}
 }
 
