@@ -1,5 +1,6 @@
 ---
 title: "Web Components"
+weight: 1
 ---
 
 <article id="web-components">
@@ -12,7 +13,7 @@ Clay is highly flexible, so you can use the components in different applications
 
 ## Installation
 
-You can start by choosing how to import your component: by [npm](/docs/getting-started/importing-the-js-component.html) or [CDN](/docs/getting-started/introduction.html). You need to import the javascript of the component into your application in order for Clay to be included and rendered as a WebComponent component.
+You can start by choosing how to import your component: by [npm](/docs/get-started/importing-the-js-component.html) or [CDN](/docs/get-started/introduction.html). You need to import the javascript of the component into your application in order for Clay to be included and rendered as a WebComponent component.
 
 ## Using
 

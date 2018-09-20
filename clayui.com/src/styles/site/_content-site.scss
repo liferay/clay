@@ -3,17 +3,27 @@
 		margin-bottom: 1rem;
 	}
 
-	h1, h2, h3 {
-		color: $gray-800;
-		font-weight: 800;
-		margin: $base-size 0;
-		line-height: 1.25;
-		letter-spacing: 0.4px;
+	.clay-site-container.container-fluid,
+	.container-fluid > .row > .col-md-12 > div,
+	article {
+		> h1, 
+		> h2, 
+		> h3 {
+			color: $gray-800;
+			font-weight: 800;
+			margin: $base-size 0;
+			line-height: 1.25;
+			letter-spacing: 0.4px;
 
-		@media (min-width: $grid-float-breakpoint) {
-			margin-bottom: $base-size;
-			margin-top: $base-size * 2;
+			@media (min-width: $grid-float-breakpoint) {
+				margin-bottom: $base-size;
+				margin-top: $base-size * 2;
+			}
 		}
+	}
+
+	.clay-site-row-spacer {
+		margin-bottom: 20px;
 	}
 
 	header {
@@ -23,7 +33,7 @@
 			margin-top: 80px;
 		}
 
-		.container-fluid > h1 {
+		.clay-site-container.container-fluid > h1 {
 			margin: 0;
 		}
 	}
@@ -89,7 +99,6 @@
 	.clay-site-dropdown-menu-container {
 		display: inline-block;
 		margin-right: 15px;
-		overflow: hidden;
 		vertical-align: top;
 
 		.dropdown-menu {
@@ -299,5 +308,22 @@
 				top: 50%;
 			}
 		}
+	}
+
+	// Dropdown
+
+	.clay-site-dropdown-display .dropdown-wide-container {
+		display: flex;
+
+		.dropdown-menu {
+			display: flex;
+			position: static;
+			top: auto;
+			z-index: 0;
+		}
+	}
+
+	.clay-site-progress-bar-page .progress {
+		margin-bottom: 15px;
 	}
 }

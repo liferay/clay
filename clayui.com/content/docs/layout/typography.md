@@ -87,7 +87,7 @@ title: "Typography"
     <a href="#reference-mark">Reference Mark</a>
 </h3>
 
-> Add a reference mark next to some text with <code><span class="reference-mark"></span></code>.
+> Add a reference mark next to some text with <code>&lt;span class="reference-mark"&gt;&lt;/span&gt;</code>.
 
 <div class="sheet">
     <div>Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span> with text.</div>
