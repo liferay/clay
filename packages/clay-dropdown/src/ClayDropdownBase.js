@@ -59,14 +59,6 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
-	 * Closes the dropdown.
-	 * @protected
-	 */
-	_close() {
-		this.expanded = false;
-	}
-
-	/**
 	 * Returns the dropdown index of the element.
 	 * @param {!Node} element
 	 * @private
@@ -96,7 +88,7 @@ class ClayDropdownBase extends ClayComponent {
 		) {
 			return;
 		}
-		this._close();
+		this.toggle();
 	}
 
 	/**
@@ -138,7 +130,7 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	_handleKeyup(event) {
 		if (event.keyCode === KEY_CODE_ESC) {
-			this._close();
+			this.toggle();
 		}
 	}
 
@@ -222,7 +214,7 @@ class ClayDropdownBase extends ClayComponent {
 	_handleWinBlur() {
 		const activeElement = document.activeElement;
 		if (activeElement != null && activeElement.nodeName === 'IFRAME') {
-			this._close();
+			this.toggle();
 		}
 	}
 
