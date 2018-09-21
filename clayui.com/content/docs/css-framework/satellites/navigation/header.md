@@ -6,7 +6,7 @@ title: "Header"
 
 Header is toolbar that allows identification, navigation and display actions.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Navigation/header.html">Header Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/satellites/Navigation/header.html">Header Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="header">
 <h3 class="component-title">
