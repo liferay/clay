@@ -6,8 +6,6 @@ Also known as hyperlink, the link is a clickable (text or image) element used fo
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/link.html">Link Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-link">
-
 <article id="types">
 
 ## Types
@@ -19,7 +17,6 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 ```soy
 {call ClayLink}
     {param ariaLabel: 'inline link'}
-    {param buttonStyle: 'link' /}
     {param href: '#link-styles' /}
     {param label: 'inline link' /}
 {/call}
@@ -27,7 +24,6 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 ```html
 <clay-link
     ariaLabel="inline link"
-    buttonStyle="link"
     href="#link-styles"
     label="inline link"
 ></clay-link>
@@ -36,16 +32,15 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 This is a <a aria-label="inline link" href="#link-styles">inline link</a> example.
 ```
 
-#### Single Link
+### Single Link
 
-##### Default
+#### Default
 
 <h5><a aria-label="Default Link" href="#link-styles">Default</a></h5>
 
 ```soy
 {call ClayLink}
     {param ariaLabel: 'Default Link' /}
-    {param buttonStyle: 'link' /}
     {param href: '#link-styles' /}
     {param label: 'Default' /}
 {/call}
@@ -53,7 +48,6 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 ```html
 <clay-link
     ariaLabel="Default Link"
-    buttonStyle="link"
     href="#link-styles"
     label="Default"
 ></clay-link>
@@ -62,14 +56,13 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 <h5><a aria-label="Default Link" href="#link-styles">Default</a></h5>
 ```
 
-##### Secondary
+#### Secondary
 
 <h5><a aria-label="Secondary Link" class="link-secondary" href="#link-styles">Secondary</a></h5>
 
 ```soy
 {call ClayLink}
     {param ariaLabel: 'Secondary Link' /}
-    {param buttonStyle: 'link' /}
     {param href: '#link-styles' /}
     {param label: 'Secondary' /}
     {param style: 'secondary' /}
@@ -78,7 +71,6 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 ```html
 <clay-link
     ariaLabel="Secondary Link"
-    buttonStyle="link"
     href="#link-styles"
     label="Secondary"
     style="secondary"
@@ -88,13 +80,12 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 <h5><a aria-label="Secondary Link" class="link-secondary" href="#link-styles">Secondary</a></h5>
 ```
 
-##### Title Link
+#### Title Link
 
 <h5><a aria-label="Title Link" class="component-title link-secondary" href="#title-link">Title</a></h5>
 
 ```soy
 {call ClayLink}
-    {param buttonStyle: 'link' /}
     {param elementClasses: 'component-title' /}
     {param href: '#link-styles' /}
     {param label: 'Title' /}
@@ -104,7 +95,6 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 ```html
 <clay-link
     ariaLabel="Title Link"
-    buttonStyle="link"
     elementClasses="component-title"
     href="#link-styles"
     label="Title"
@@ -115,14 +105,13 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 <h5><a aria-label="Title Link" class="component-title link-secondary" href="#title-link" title="Title">Title</a></h5>
 ```
 
-##### External Link
+#### External Link
 
 <h5><a aria-label="External Link" class="link-secondary" href="#link-styles" title="External Link">External Link</a></h5>
 
 ```soy
 {call ClayLink}
-    {param aria-label: 'External Link' /}
-    {param buttonStyle: 'link' /}
+    {param ariaLabel: 'External Link' /}
     {param href: '#link-styles' /}
     {param label: 'External Link' /}
     {param style: 'secondary' /}
@@ -152,7 +141,5 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 <div>
     [APITable "clay-link/src/ClayLink.js"]
 </div>
-
-</article>
 
 </article>
