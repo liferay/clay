@@ -2,7 +2,11 @@
 title: "Inline Edit Table"
 ---
 
-<article id="inline-edit-table">
+### Description
+
+A table variation that allows user to modify certain values of the entry without going to the detail page.
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Table/inlineEditTable.html">Inline Edit Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="table-list-inline-edit-table-example">
 <h3 class="component-title">
@@ -386,14 +390,3 @@ title: "Inline Edit Table"
 ```
 
 </article>
-
-</article>
-
-<script>
-$(function() {
-	$('.table').on('click', 'input[type="checkbox"]', function(event) {
-		var $this = $(this);
-		$this.closest('tr').toggleClass('table-active');
-	});
-});
-</script>
