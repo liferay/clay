@@ -104,7 +104,10 @@
 				{param closeable: $closeable /}
 				{param elementClasses: 'component-label tbar-label' /}
 				{param events: ['close': $_handleFilterLabelCloseClicked] /}
-				{param label: $label /}
+				{param label kind="html"}
+					<div class="label-section">{$label}</div>
+				{/param}
+
 				{param ref: 'label' + $index /}
 				{param spritemap: $spritemap /}
 				{param style: false /}
