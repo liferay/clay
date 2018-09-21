@@ -6,9 +6,12 @@
 	$color: map-get($map, color);
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
+	$padding-x: map-get($map, padding-x);
+	$padding-y: map-get($map, padding-y);
 
 	$strong-font-weight: map-get($map, strong-font-weight);
 
+	$item-justify-content: map-get($map, item-justify-content);
 	$item-padding-x: map-get($map, item-padding-x);
 	$item-padding-y: map-get($map, item-padding-y);
 
@@ -24,6 +27,8 @@
 	$btn-monospaced-border-radius: map-get($map, btn-monospaced-border-radius);
 	$btn-monospaced-border-width: map-get($map, btn-monospaced-border-width);
 	$btn-monospaced-font-size: map-get($map, btn-monospaced-font-size);
+	$btn-monospaced-margin-x: map-get($map, btn-monospaced-margin-x);
+	$btn-monospaced-margin-y: map-get($map, btn-monospaced-margin-y);
 	$btn-monospaced-padding: map-get($map, btn-monospaced-padding);
 	$btn-monospaced-size: setter(map-get($map, btn-monospaced-size), $btn-height);
 
@@ -35,6 +40,8 @@
 	$link-monospaced-border-radius: map-get($map, link-monospaced-border-radius);
 	$link-monospaced-border-width: map-get($map, link-monospaced-border-width);
 	$link-monospaced-font-size: map-get($map, link-monospaced-font-size);
+	$link-monospaced-margin-x: map-get($map, link-monospaced-margin-x);
+	$link-monospaced-margin-y: map-get($map, link-monospaced-margin-y);
 	$link-monospaced-padding: map-get($map, link-monospaced-padding);
 	$link-monospaced-size: map-get($map, link-monospaced-size);
 
@@ -48,6 +55,10 @@
 
 	$component-text: setter(map-get($map, component-text), ());
 
+	$component-label: setter(map-get($map, component-label), ());
+
+	$tbar-label-size: setter(map-get($map, tbar-label-size), ());
+
 	background-color: $bg-color;
 	border-color: $border-color;
 	border-style: $border-style;
@@ -55,6 +66,10 @@
 	color: $color;
 	font-size: $font-size;
 	height: $height;
+	padding-bottom: $padding-y;
+	padding-left: $padding-x;
+	padding-right: $padding-x;
+	padding-top: $padding-y;
 
 	strong {
 		font-weight: $strong-font-weight;
@@ -69,6 +84,7 @@
 	}
 
 	.tbar-item {
+		justify-content: $item-justify-content;
 		padding-bottom: $item-padding-y;
 		padding-left: $item-padding-x;
 		padding-right: $item-padding-x;
@@ -106,6 +122,10 @@
 		border-width: $btn-monospaced-border-width;
 		font-size: $btn-monospaced-font-size;
 		height: $btn-monospaced-size;
+		margin-bottom: $btn-monospaced-margin-y;
+		margin-left: $btn-monospaced-margin-x;
+		margin-right: $btn-monospaced-margin-x;
+		margin-top: $btn-monospaced-margin-y;
 		padding: $btn-monospaced-padding;
 		width: $btn-monospaced-size;
 
@@ -119,6 +139,10 @@
 		border-width: $link-monospaced-border-width;
 		font-size: $link-monospaced-font-size;
 		height: $link-monospaced-size;
+		margin-bottom: $link-monospaced-margin-y;
+		margin-left: $link-monospaced-margin-x;
+		margin-right: $link-monospaced-margin-x;
+		margin-top: $link-monospaced-margin-y;
 		padding: $link-monospaced-padding;
 		width: $link-monospaced-size;
 
@@ -137,5 +161,42 @@
 
 	.component-text {
 		@include clay-text-typography($component-text);
+	}
+
+	.component-label {
+		@include clay-label-variant($component-label);
+	}
+
+	.tbar-label {
+		@include clay-label-size($tbar-label-size);
+	}
+}
+
+@mixin clay-tbar-inline-down($map) {
+	$breakpoint-down: map-get($map, breakpoint-down);
+	$item-padding-left: map-get($map, item-padding-left);
+	$item-padding-right: map-get($map, item-padding-right);
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			display: block;
+
+			.container,
+			.container-fluid {
+				display: block;
+			}
+
+			.component-title,
+			.tbar-nav,
+			.tbar-section {
+				display: inline;
+			}
+
+			.tbar-item {
+				display: inline;
+				padding-left: $item-padding-left;
+				padding-right: $item-padding-right;
+			}
+		}
 	}
 }
