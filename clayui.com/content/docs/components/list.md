@@ -1291,14 +1291,3 @@ List is a visual representation of a dataset that provides more flexibility for 
 </div>
 
 </article>
-
-<script>
-$(function() {
-	$('.list-group .list-group-item input[type="checkbox"]').on(
-		'click',
-		function(event) {
-			$(this).closest('.list-group-item').toggleClass('active');
-		}
-	);
-});
-</script>
