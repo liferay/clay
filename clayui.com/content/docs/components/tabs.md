@@ -2,15 +2,13 @@
 title: "Tabs"
 ---
 
-<article id="tabs">
-
-### Tabs
-
 Tabs are used to distribute content of a same nature in the same page without providing navigation.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/tabs.html">Tabs Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-#### Classic Tabs
+<article id="classic-tabs">
+
+### Classic Tabs
 
 <ul class="nav nav-tabs" role="tablist">
 	<li class="nav-item">
@@ -123,7 +121,12 @@ Tabs are used to distribute content of a same nature in the same page without pr
 	</div>
 </div>
 ```
-#### Modern Tab
+
+</article>
+
+<article id="modern-tab">
+
+### Modern Tab
 
 <ul class="nav nav-underline" role="tablist">
 	<li class="nav-item">
