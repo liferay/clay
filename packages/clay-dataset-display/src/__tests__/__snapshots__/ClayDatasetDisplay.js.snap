@@ -113,14 +113,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -136,7 +140,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1070,14 +1075,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -1093,7 +1102,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2165,14 +2175,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2188,7 +2202,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2954,14 +2969,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -2977,7 +2996,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -3312,14 +3332,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -3335,7 +3359,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -3555,14 +3580,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -3578,7 +3607,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -3958,14 +3988,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -3981,7 +4015,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -4915,14 +4950,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -4938,7 +4977,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -6010,14 +6050,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -6033,7 +6077,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -6749,14 +6794,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -6772,7 +6821,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -6939,14 +6989,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -6962,7 +7016,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -7683,14 +7738,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -7706,7 +7765,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -8208,14 +8268,18 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -8231,7 +8295,8 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -8900,14 +8965,18 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -8923,7 +8992,8 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -9809,14 +9879,18 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -9832,7 +9906,8 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -10601,14 +10676,18 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">Label 1</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 1</div>
+                </span>
               </span>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">Label 2</span>
+                <span class="label-item label-item-expand">
+                  <div class="label-section">Label 2</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
@@ -10624,7 +10703,8 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             <div class="tbar-section">
               <span class="label label-dismissible component-label tbar-label">
                 <span class="label-item label-item-expand">
-                  <strong>Category:</strong>Label 3</span>
+                  <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                </span>
                 <span class="label-item label-item-after">
                   <button class="btn close" aria-label="close" type="button">
                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
