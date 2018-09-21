@@ -2,9 +2,13 @@
 title: "Dataset Display"
 ---
 
+A dataset display is the combination of a <a href="/docs/components/toolbars/management-toolbar.html">management bar</a> with one or many data visualization types and a possible mechanism of pagination. The most common visualization types used are <a href="/docs/components/table/table.html">table</a>, <a href="/docs/components/list.html">list</a> and <a href="/docs/components/card.html">card</a>.
+
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/components/dataset-display.html">Dataset Display Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
 <article id="dataset-display">
 
-A dataset display is the combination of a <a href="/docs/components/toolbars/management-toolbar.html">management bar</a> with one or many data visualization types and a possible mechanism of pagination. The most common visualization types used are <a href="/docs/components/table/table.html">table</a>, <a href="/docs/components/list.html">list</a> and <a href="/docs/components/card.html">card</a>.
+### Example
 
 <div class="clay-dataset-display">
     <div>
@@ -18,26 +22,26 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <div class="dropdown">
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
                                 <span class="navbar-breakpoint-down-d-none">
-                                    filter-and-order
+                                    Filter and Order
                                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                                         <title>caret-bottom</title>
-                                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"></use>
+                                        <use xlink:href="/images/icons/icons.svg#caret-bottom"></use>
                                     </svg>
                                 </span>
                                 <span class="navbar-breakpoint-d-none">
                                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                                         <title>filter</title>
-                                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#filter"></use>
+                                        <use xlink:href="/images/icons/icons.svg#filter"></use>
                                     </svg>
                                 </span>
                             </button>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="order" type="button">
+                        <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="Order" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                                 <title>order-arrow</title>
-                                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
+                                <use xlink:href="/images/icons/icons.svg#order-arrow"></use>
                             </svg>
                         </button>
                     </li>
@@ -47,18 +51,18 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <form action="mySearchURL" method="GET" name="mySearchName" role="search">
                             <div class="input-group">
                                 <div class="input-group-item">
-                                    <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                                    <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
                                     <span class="input-group-inset-item input-group-inset-item-after">
                                         <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                                                 <title>times</title>
-                                                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                                                <use xlink:href="/images/icons/icons.svg#times"></use>
                                             </svg>
                                         </button>
                                         <button class="btn btn-unstyled" aria-label="search" type="submit">
                                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                                                 <title>search</title>
-                                                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                                                <use xlink:href="/images/icons/icons.svg#search"></use>
                                             </svg>
                                         </button>
                                     </span>
@@ -72,26 +76,26 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                                 <title>search</title>
-                                <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                                <use xlink:href="/images/icons/icons.svg#search"></use>
                             </svg>
                         </button>
                     </li>
                     <li class="dropdown nav-item">
                         <div class="dropdown">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" title="display-style" type="button">
+                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" title="Display Style" type="button">
                                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                                     <title>table</title>
-                                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
+                                    <use xlink:href="/images/icons/icons.svg#table"></use>
                                 </svg>
                             </button>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" title="new" type="button">
+                            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" title="New" type="button">
                                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                                     <title>plus</title>
-                                    <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+                                    <use xlink:href="/images/icons/icons.svg#plus"></use>
                                 </svg>
                             </button>
                         </div>
@@ -113,7 +117,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                     <span class="inline-item inline-item-after">
                                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                                             <title>order-arrow-up</title>
-                                            <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
+                                            <use xlink:href="/images/icons/icons.svg#order-arrow-up"></use>
                                         </svg>
                                     </span>
                                 </button>
