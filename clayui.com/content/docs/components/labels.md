@@ -195,3 +195,13 @@ Labels are a mechanism to categorize information providing quick recognition.
 ```
 
 </article>
+
+<article id="clay-labels-api">
+
+### API
+
+<div>
+	[APITable "clay-label/src/ClayLabel.js"]
+</div>
+
+</article>

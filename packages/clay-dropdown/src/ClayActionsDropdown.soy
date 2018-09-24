@@ -17,6 +17,7 @@
 	{@param? id: string}
 	{@param? itemsIconAlignment: string}
 	{@param? preferredAlign: string}
+	{@param? toggle: any}
 	{@param? triggerClasses: string}
 
 	{let $dropdownElementClasses kind="text"}
@@ -40,7 +41,8 @@
 		{param elementClasses: $dropdownElementClasses /}
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
-			'itemClicked': $_handleItemClick
+			'itemClicked': $_handleItemClick,
+			'toggle': $toggle
 		]/}
 		{param expanded: $expanded /}
 		{param helpText: $helpText /}

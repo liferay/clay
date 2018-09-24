@@ -560,3 +560,27 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 ```
 
 </article>
+
+<article id="clay-alert-api">
+
+### API
+
+#### ClayAlert
+
+<div>
+	[APITable "clay-alert/src/ClayAlert.js"]
+</div>
+
+#### ClayStripe
+
+<div>
+	[APITable "clay-alert/src/ClayStripe.js"]
+</div>
+
+#### ClayToast
+
+<div>
+	[APITable "clay-alert/src/ClayToast.js"]
+</div>
+
+</article>

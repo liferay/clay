@@ -621,6 +621,15 @@ Cards are a very specific visual representation of data.
 
 </article>
 
+<article id="clay-image-card-api">
+
+#### API
+
+<div>
+	[APITable "clay-card/src/ClayImageCard.js"]
+</div>
+
+</article>
 
 <article id="clay-user-card">
 
@@ -804,6 +813,16 @@ Cards are a very specific visual representation of data.
 	</div>
 </div>
 ```
+
+</article>
+
+<article id="clay-user-card-api">
+
+#### API
+
+<div>
+	[APITable "clay-card/src/ClayUserCard.js"]
+</div>
 
 </article>
 
@@ -1034,6 +1053,16 @@ Cards are a very specific visual representation of data.
 
 </article>
 
+<article id="clay-file-card-api">
+
+#### API
+
+<div>
+	[APITable "clay-card/src/ClayFileCard.js"]
+</div>
+
+</article>
+
 <article id="clay-folder-card">
 
 ### Folder card
@@ -1208,5 +1237,15 @@ Cards are a very specific visual representation of data.
 	</div>
 </div>
 ```
+
+</article>
+
+<article id="clay-horizontal-card-api">
+
+#### API
+
+<div>
+	[APITable "clay-card/src/ClayHorizontalCard.js"]
+</div>
 
 </article>

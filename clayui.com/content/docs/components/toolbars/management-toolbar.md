@@ -619,3 +619,13 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 ```
 
 </article>
+
+<article id="clay-management-toolbar-api">
+
+### API
+
+<div>
+	[APITable "clay-management-toolbar/src/ClayManagementToolbar.js"]
+</div>
+
+</article>

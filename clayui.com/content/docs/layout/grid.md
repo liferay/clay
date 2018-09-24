@@ -196,7 +196,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 
 > Use <code>.container-form-lg</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
 
-<div class="alert alert-warning">If you need additional breakpoints such as <code>.container-form-{literal}{{/literal}sm|md|xl{literal}}{/literal}</code> you will need to define them yourself.</div>
+<div class="alert alert-warning">If you need additional breakpoints such as <code>.container-form-sm|md|xl</code> you will need to define them yourself.</div>
 
 <div>
 	<nav class="application-bar application-bar-dark navbar navbar-expand-md">

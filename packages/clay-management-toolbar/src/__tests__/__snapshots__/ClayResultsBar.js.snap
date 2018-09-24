@@ -1,37 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
-<nav class="tbar subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
-    <ul class="tbar-nav">
+    <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item">
         <div class="tbar-section">
-          <span class="text-truncate-inline">
+          <span class="component-text text-truncate-inline">
             <span class="text-truncate">10-results-for</span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <div class="tbar-section">
+          <span class="label component-label tbar-label">
+            <span class="label-item label-item-expand">
+              <div class="label-section">Label 1</div>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <div class="tbar-section">
+          <span class="label label-dismissible component-label tbar-label">
+            <span class="label-item label-item-expand">
+              <div class="label-section">Label 2</div>
+            </span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
         </div>
       </li>
       <li class="tbar-item tbar-item-expand">
         <div class="tbar-section">
-          <span class="label label-secondary label-lg">
-            <span class="label-item label-item-expand">Label 1</span>
-          </span>
-          <span class="label label-secondary label-dismissible label-lg">
-            <span class="label-item label-item-expand">Label 2</span>
-            <span class="label-item label-item-after">
-              <button class="btn close btn-unstyled" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-            </span>
-          </span>
-          <span class="label label-secondary label-dismissible label-lg">
+          <span class="label label-dismissible component-label tbar-label">
             <span class="label-item label-item-expand">
-              <strong>Category:</strong>Label 3</span>
+              <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+            </span>
             <span class="label-item label-item-after">
-              <button class="btn close btn-unstyled" aria-label="close" type="button">
+              <button class="btn close" aria-label="close" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                   <title>times</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -42,7 +55,9 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>
@@ -50,37 +65,50 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
 `;
 
 exports[`ClayResultsBar should render a results bar with filter labels and search value 1`] = `
-<nav class="tbar subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
-    <ul class="tbar-nav">
+    <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item">
         <div class="tbar-section">
-          <span class="text-truncate-inline">
+          <span class="component-text text-truncate-inline">
             <span class="text-truncate">10-results-for-my search</span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <div class="tbar-section">
+          <span class="label component-label tbar-label">
+            <span class="label-item label-item-expand">
+              <div class="label-section">Label 1</div>
+            </span>
+          </span>
+        </div>
+      </li>
+      <li class="tbar-item">
+        <div class="tbar-section">
+          <span class="label label-dismissible component-label tbar-label">
+            <span class="label-item label-item-expand">
+              <div class="label-section">Label 2</div>
+            </span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" type="button">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                  <title>times</title>
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
         </div>
       </li>
       <li class="tbar-item tbar-item-expand">
         <div class="tbar-section">
-          <span class="label label-secondary label-lg">
-            <span class="label-item label-item-expand">Label 1</span>
-          </span>
-          <span class="label label-secondary label-dismissible label-lg">
-            <span class="label-item label-item-expand">Label 2</span>
-            <span class="label-item label-item-after">
-              <button class="btn close btn-unstyled" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
-              </button>
-            </span>
-          </span>
-          <span class="label label-secondary label-dismissible label-lg">
+          <span class="label label-dismissible component-label tbar-label">
             <span class="label-item label-item-expand">
-              <strong>Category:</strong>Label 3</span>
+              <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+            </span>
             <span class="label-item label-item-after">
-              <button class="btn close btn-unstyled" aria-label="close" type="button">
+              <button class="btn close" aria-label="close" type="button">
                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                   <title>times</title>
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
@@ -91,7 +119,9 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>
@@ -99,18 +129,20 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
 `;
 
 exports[`ClayResultsBar should render a results bar with search value 1`] = `
-<nav class="tbar subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
-    <ul class="tbar-nav">
+    <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item tbar-item-expand">
         <div class="tbar-section">
-          <span class="text-truncate-inline">
+          <span class="component-text text-truncate-inline">
             <span class="text-truncate">10-results-for-my search</span>
           </span>
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>
@@ -118,18 +150,20 @@ exports[`ClayResultsBar should render a results bar with search value 1`] = `
 `;
 
 exports[`ClayResultsBar should render the default markup 1`] = `
-<nav class="tbar subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
-    <ul class="tbar-nav">
+    <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item tbar-item-expand">
         <div class="tbar-section">
-          <span class="text-truncate-inline">
+          <span class="component-text text-truncate-inline">
             <span class="text-truncate">10-results-for</span>
           </span>
         </div>
       </li>
       <li class="tbar-item">
-        <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        <div class="tbar-section">
+          <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+        </div>
       </li>
     </ul>
   </div>

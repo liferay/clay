@@ -19,6 +19,7 @@
 	{@param? maxTotalItems: int}
 	{@param? preferredAlign: string}
 	{@param? secondaryItems: list<?>}
+	{@param? toggle: any}
 	{@param? triggerClasses: string}
 	{@param? triggerTitle: string}
 	{@param? viewMoreURL: string}
@@ -203,7 +204,8 @@
 		{param elementClasses: $elementClasses /}
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
-			'itemClicked': $_handleItemClick
+			'itemClicked': $_handleItemClick,
+			'toggle': $toggle
 		] /}
 		{param expanded: $expanded /}
 		{param helpText: $showMoreButton ? $helpText : null /}

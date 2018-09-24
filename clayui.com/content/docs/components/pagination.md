@@ -226,3 +226,21 @@ title: "Pagination"
 ```
 
 </article>
+
+<article id="clay-pagination-api">
+
+### API
+
+#### ClayPagination
+
+<div>
+	[APITable "clay-pagination/src/ClayPagination.js"]
+</div>
+
+#### ClayPaginationBar
+
+<div>
+	[APITable "clay-pagination-bar/src/ClayPaginationBar.js"]
+</div>
+
+</article>

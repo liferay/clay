@@ -109,3 +109,13 @@ Progress bar is a progress indicator used to show the completion percentage of a
 ```
 
 </article>
+
+<article id="clay-progress-bar-api">
+
+### API
+
+<div>
+	[APITable "clay-progress-bar/src/ClayProgressBar.js"]
+</div>
+
+</article>

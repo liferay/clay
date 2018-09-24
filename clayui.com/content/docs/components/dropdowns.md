@@ -1266,3 +1266,27 @@ A dropdown is a list of options related to the element that triggers it.
 ```
 
 </article>
+
+<article id="clay-dropdowns-api">
+
+### API
+
+#### ClayActionsDropdown
+
+<div>
+	[APITable "clay-dropdown/src/ClayActionsDropdown.js"]
+</div>
+
+#### ClayCreationMenuDropdown
+
+<div>
+	[APITable "clay-dropdown/src/ClayCreationMenuDropdown.js"]
+</div>
+
+#### ClayDropdown
+
+<div>
+	[APITable "clay-dropdown/src/ClayDropdown.js"]
+</div>
+
+</article>

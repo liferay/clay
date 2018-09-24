@@ -4,27 +4,26 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param filterLabels: list<?>}
 	{@param spritemap: string}
 	{@param totalItems: number}
 	{@param? _handleClearResultsClick: any}
 	{@param? _handleFilterLabelCloseClicked: any}
 	{@param? clearResultsURL: string}
-	{@param? filterLabels: list<[
-		closeable: bool,
-		label: html|string
-	]>}
 	{@param? searchValue: string}
 
-	<nav class="tbar subnav-tbar subnav-tbar-primary">
+	<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
 		<div class="container-fluid container-fluid-max-xl">
-			<ul class="tbar-nav">
+			<ul class="tbar-nav tbar-nav-wrap">
+				{let $hasFilterLabels: length($filterLabels) > 0 /}
+
 				{call .results}
-					{param expand: not ($filterLabels and length($filterLabels) > 0) /}
+					{param expand: not $hasFilterLabels /}
 					{param searchValue: $searchValue /}
 					{param totalItems: $totalItems /}
 				{/call}
 
-				{if $filterLabels}
+				{if $hasFilterLabels}
 					{call .filterLabels}
 						{param _handleFilterLabelCloseClicked: $_handleFilterLabelCloseClicked /}	
 						{param filterLabels: $filterLabels /}	
@@ -49,33 +48,71 @@
 	{@param? clearResultsURL: string}
 
 	<li class="tbar-item">
-		{if $clearResultsURL}
-			{call ClayLink.render}
-				{param elementClasses: 'component-link tbar-link' /}
-				{param events: ['click': $_handleClearResultsClick] /}
-				{param href: $clearResultsURL /}
-				{param label kind="text"}
-					{msg desc="Label for clear results link"}
-						clear
-					{/msg}
-				{/param}
+		<div class="tbar-section">
+			{if $clearResultsURL}
+				{call ClayLink.render}
+					{param elementClasses: 'component-link tbar-link' /}
+					{param events: ['click': $_handleClearResultsClick] /}
+					{param href: $clearResultsURL /}
+					{param label kind="text"}
+						{msg desc="Label for clear results link"}
+							clear
+						{/msg}
+					{/param}
 
-				{param ref: 'clearSearch' /}
-			{/call}
-		{else}
-			{call ClayButton.render}
-				{param elementClasses: 'component-link tbar-link' /}
-				{param events: ['click': $_handleClearResultsClick] /}
-				{param label kind="text"}
-					{msg desc="Label for clear results button"}
-						clear
-					{/msg}
-				{/param}
+					{param ref: 'clearSearch' /}
+				{/call}
+			{else}
+				{call ClayButton.render}
+					{param elementClasses: 'component-link tbar-link' /}
+					{param events: ['click': $_handleClearResultsClick] /}
+					{param label kind="text"}
+						{msg desc="Label for clear results button"}
+							clear
+						{/msg}
+					{/param}
 
-				{param ref: 'clearSearch' /}
-				{param style: 'unstyled' /}
-			{/call}
+					{param ref: 'clearSearch' /}
+					{param style: 'unstyled' /}
+				{/call}
+			{/if}
+		</div>
+	</li>
+{/template}
+
+/**
+ *
+*/
+{template .filterLabel}
+	{@param index: number}
+	{@param label: html|string}
+	{@param spritemap: string}
+	{@param? _handleFilterLabelCloseClicked: any}
+	{@param? closeable: bool}
+	{@param? expand: bool}
+
+	{let $elementClasses kind="text"}
+		tbar-item
+		{if $expand}
+			{sp}tbar-item-expand
 		{/if}
+	{/let}
+
+	<li class="{$elementClasses}">
+		<div class="tbar-section">
+			{call ClayLabel.render}
+				{param closeable: $closeable /}
+				{param elementClasses: 'component-label tbar-label' /}
+				{param events: ['close': $_handleFilterLabelCloseClicked] /}
+				{param label kind="html"}
+					<div class="label-section">{$label}</div>
+				{/param}
+
+				{param ref: 'label' + $index /}
+				{param spritemap: $spritemap /}
+				{param style: false /}
+			{/call}
+		</div>
 	</li>
 {/template}
 
@@ -83,30 +120,20 @@
  * This renders the list of filter labels
  */
 {template .filterLabels}
-	{@param filterLabels: list<[
-		closeable: bool,
-		label: html|string
-	]>}
+	{@param filterLabels: list<?>}
 	{@param spritemap: string}
 	{@param? _handleFilterLabelCloseClicked: any}
 
-	<li class="tbar-item tbar-item-expand">
-		<div class="tbar-section">
-			{foreach $filterLabel in $filterLabels}
-				{call ClayLabel.render}
-					{param closeable: $filterLabel.closeable ?: true /}
-					{param events: ['close': $_handleFilterLabelCloseClicked] /}
-					{param label kind="text"}
-						{$filterLabel.label}
-					{/param}
-
-					{param ref: 'label' + index($filterLabel) /}
-					{param size: 'lg' /}
-					{param spritemap: $spritemap /}
-				{/call}
-			{/foreach}
-		</div>
-	</li>
+	{foreach $filterLabel in $filterLabels}
+		{call .filterLabel}
+			{param _handleFilterLabelCloseClicked: $_handleFilterLabelCloseClicked /}
+			{param closeable: $filterLabel.closeable ?: true /}
+			{param expand: isLast($filterLabel) /}
+			{param index: index($filterLabel) /}
+			{param label: $filterLabel.label /}
+			{param spritemap: $spritemap /}
+		{/call}
+	{/foreach}
 {/template}
 
 /**
@@ -126,7 +153,7 @@
 
 	<li class="{$elementClasses}">
 		<div class="tbar-section">
-			<span class="text-truncate-inline">
+			<span class="component-text text-truncate-inline">
 				<span class="text-truncate">
 					{if $searchValue}
 						{msg desc="Says how many results there are for a search"}

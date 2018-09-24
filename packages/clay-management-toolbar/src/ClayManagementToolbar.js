@@ -224,7 +224,7 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * List of items to display in the actions menu on active state.
-	 * @default undefined
+	 * @default []
 	 * @instance
 	 * @memberof ClayManagementToolbar
 	 * @type {?(array|undefined)}
@@ -308,12 +308,12 @@ ClayManagementToolbar.STATE = {
 
 	/**
 	 * List of filter label items.
-	 * @default undefined
+	 * @default []
 	 * @instance
 	 * @memberof ClayManagementToolbar
-	 * @type {?(array|undefined)}
+	 * @type {?array}
 	 */
-	filterLabels: filterLabelsValidator,
+	filterLabels: filterLabelsValidator.value([]),
 
 	/**
 	 * Id to be applied to the element.

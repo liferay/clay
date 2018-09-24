@@ -1,5 +1,6 @@
 ---
 title: "Introduction"
+weight: 5
 ---
 
 <div class="alert alert-info">Anxious to quickly add Clay to your project and start building amazing UIs?</div>
@@ -153,7 +154,7 @@ And it opens `http://localhost:8080` in the browser. You should see `Hello World
 
 ### Step 2: Install Clay component
 
-You can install Clay packages individually or install all packages at once. See [Importing the JS Component](/docs/getting_started/importing-the-js-component.html) for more information. In this example, we will install only the `ClayBadge` package, using the command below:
+You can install Clay packages individually or install all packages at once. See [Importing the JS Component](/docs/get-started/importing-the-js-component.html) for more information. In this example, we will install only the `ClayBadge` package, using the command below:
 
 ```bash
 npm install --save clay-badge

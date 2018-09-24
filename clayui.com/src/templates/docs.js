@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import rehypeReact from "rehype-react";
 import Helmet from 'react-helmet';
 
-import docsSidebar from '../data/sidebars/doc-links.yaml';
 import Sidebar from '../components/Sidebar';
 import CodeTabs from '../components/CodeTabs';
 import Graph from '../components/Graph';
@@ -26,7 +25,8 @@ export default class Docs extends Component {
 
     render() {
         const { data, location, pathContext } = this.props;
-        const { htmlASTTreated } = pathContext;
+        const { htmlASTTreated, docsPath } = pathContext;
+        const sectionList = JSON.parse(docsPath);
         const { markdownRemark } = data;
         const { frontmatter, htmlAst, excerpt, timeToRead } = markdownRemark;
         const title = `${frontmatter.title} - Clay`;
@@ -47,7 +47,7 @@ export default class Docs extends Component {
                     />
                 </Helmet>
                 <main className="content">
-                    <Sidebar sectionsList={docsSidebar} location={location} />
+                    <Sidebar sectionsList={sectionList[0].items} location={location} />
                     <div className="sidebar-offset">
                         <header>
                             <div className="clay-site-container container-fluid">

@@ -20,7 +20,7 @@
 	<script src="../build/globals/clay-management-toolbar.js"></script>
 </head>
 <body class="container" role="main">
-	<h1 class="page-title">
+	<h1 class="page-title"id="pageTitle">
 		ClayManagementToolbar
 	</h1>
 
@@ -110,14 +110,14 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With search results and filter labels</h4>
+			<h2>With search results and filter labels</h2>
 			<div id="search-results-filter-labels"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>With filter labels</h4>
+			<h2>With filter labels</h2>
 			<div id="filter-labels"></div>
 		</div>
 	</div>
@@ -125,14 +125,14 @@
 	<script type="text/javascript">
 		const actionItems = [
 			{
-				href: '#1',
+				href: '#pageTitle',
 				icon: 'trash',
 				label: 'Remove',
 				quickAction: true,
 			},
 			{
 				disabled: true,
-				href: '#2',
+				href: '#pageTitle',
 				icon: 'download',
 				label: 'Download',
 				quickAction: true,
@@ -145,7 +145,7 @@
 				separator: true,
 			},
 			{
-				href: '#3',
+				href: '#pageTitle',
 				icon: 'edit',
 				label: 'Edit',
 			},
@@ -156,13 +156,86 @@
 				items: [
 					{
 						label: 'Link 1',
-						href: '#mylink',
+						href: '#pageTitle',
 						type: 'item',
 					},
 				],
 				label: 'Filter By (Links)',
 				type: 'group',
 			},
+			{
+				items: [
+					{
+						label: 'Item 1',
+						inputName: 'filteritem1checkbox',
+						inputValue: '1',
+						type: 'checkbox',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputName: 'filteritem2checkbox',
+						inputValue: '2',
+						type: 'checkbox',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputName: 'filteritem3checkbox',
+						inputValue: '3',
+						type: 'checkbox',
+					},
+				],
+				label: 'Filter By',
+				type: 'group',
+			},
+			{
+				items: [
+					{
+						label: 'Item 1',
+						inputName: 'orderitem1checkbox',
+						inputValue: '1',
+						type: 'checkbox',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputName: 'orderitem2checkbox',
+						inputValue: '2',
+						type: 'checkbox',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputName: 'orderitem3checkbox',
+						inputValue: '3',
+						type: 'checkbox',
+					},
+				],
+				label: 'Order By',
+				type: 'group',
+			},
+			{
+				items: [
+					{
+						label: 'Item 1',
+						inputValue: '1',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputValue: '2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputValue: '3',
+					},
+				],
+				inputName: 'item1radio',
+				label: 'Group 1',
+				type: 'radiogroup',
+			}
 		];
 
 		const filterLabels = [
@@ -174,7 +247,7 @@
 				label: 'Filter 2',
 			},
 			{
-				label: '<strong>Category:</strong>Label 3',
+				label: 'Category: Label 3',
 			}
 		]
 
@@ -224,7 +297,7 @@
 			searchInputName: 'mySearchInputName',
 			selectable: true,
 			showInfoButton: true,
-			sortingURL: '#sorting',
+			sortingURL: '#pageTitle',
 			sortingOrder: 'asc',
 			spritemap: spritemap,
 			viewTypes: viewTypes,
@@ -267,23 +340,23 @@
 					{
 						items: [
 							{
-								href: '#1',
+								href: '#pageTitle',
 								label: 'Add Content 1',
 							},
 							{
-								href: '#2',
+								href: '#pageTitle',
 								label: 'Add Content 2',
 							},
 							{
-								href: '#3',
+								href: '#pageTitle',
 								label: 'Add Content 3',
 							},
 							{
-								href: '#4',
+								href: '#pageTitle',
 								label: 'Add Content 4',
 							},
 							{
-								href: '#5',
+								href: '#pageTitle',
 								label: 'Add Content 5',
 							},
 						],
@@ -291,15 +364,15 @@
 					{
 						items: [
 							{
-								href: '#6',
+								href: '#pageTitle',
 								label: 'Add Content 6',
 							},
 							{
-								href: '#7',
+								href: '#pageTitle',
 								label: 'Add Content 7',
 							},
 							{
-								href: '#8',
+								href: '#pageTitle',
 								label: 'Add Content 8',
 							},
 						],
@@ -346,23 +419,23 @@
 					{
 						items: [
 							{
-								href: '#1',
+								href: '#pageTitle',
 								label: 'Add Content 1',
 							},
 							{
-								href: '#2',
+								href: '#pageTitle',
 								label: 'Add Content 2',
 							},
 							{
-								href: '#3',
+								href: '#pageTitle',
 								label: 'Add Content 3',
 							},
 							{
-								href: '#4',
+								href: '#pageTitle',
 								label: 'Add Content 4',
 							},
 							{
-								href: '#5',
+								href: '#pageTitle',
 								label: 'Add Content 5',
 							},
 						],
@@ -370,15 +443,15 @@
 					{
 						items: [
 							{
-								href: '#6',
+								href: '#pageTitle',
 								label: 'Add Content 6',
 							},
 							{
-								href: '#7',
+								href: '#pageTitle',
 								label: 'Add Content 7',
 							},
 							{
-								href: '#8',
+								href: '#pageTitle',
 								label: 'Add Content 8',
 							},
 						],
@@ -425,23 +498,23 @@
 					{
 						items: [
 							{
-								href: '#1',
+								href: '#pageTitle',
 								label: 'Add Content 1',
 							},
 							{
-								href: '#2',
+								href: '#pageTitle',
 								label: 'Add Content 2',
 							},
 							{
-								href: '#3',
+								href: '#pageTitle',
 								label: 'Add Content 3',
 							},
 							{
-								href: '#4',
+								href: '#pageTitle',
 								label: 'Add Content 4',
 							},
 							{
-								href: '#5',
+								href: '#pageTitle',
 								label: 'Add Content 5',
 							},
 						],
@@ -449,15 +522,15 @@
 					{
 						items: [
 							{
-								href: '#6',
+								href: '#pageTitle',
 								label: 'Add Content 6',
 							},
 							{
-								href: '#7',
+								href: '#pageTitle',
 								label: 'Add Content 7',
 							},
 							{
-								href: '#8',
+								href: '#pageTitle',
 								label: 'Add Content 8',
 							},
 						],
@@ -481,7 +554,7 @@
 			creationMenu: {
 				primaryItems: [
 					{
-						href: '#primary1',
+						href: '#pageTitle',
 						label: 'Primary 1',
 					}
 				],
@@ -562,7 +635,7 @@
 		//With search results bar with active state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
-			clearResultsURL: '#clear',
+			clearResultsURL: '#pageTitle',
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',

@@ -1,5 +1,6 @@
 ---
 title: "Importing the JS Component"
+weight: 3
 ---
 
 <article id="importing-the-js-component">
@@ -72,7 +73,7 @@ const badge = new ClayBadge(
 
 Once added to your page, the Clay components are accessible globally on the page with all components.
 
-> See [Introduction](/docs/getting-started/introduction.html).
+> See [Introduction](/docs/get-started/introduction.html).
 
 ```html
 <div id="element"></div>
@@ -89,6 +90,6 @@ Once added to your page, the Clay components are accessible globally on the page
 
 ## Using Clay in soy and jsx
 
-See advanced guides for [more](/docs/advanced-guides/using-js-components-with-metal.html).
+See advanced guides for [more](/docs/get-started/using-js-components-with-metal.html).
 
 </article>
