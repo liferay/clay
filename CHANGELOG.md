@@ -1,5 +1,42 @@
 # Change Log
 
+## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
+
+[Full Changelog](https://github.com/liferay/clay/compare/v2.3.2...HEAD)
+
+**Implemented enhancements:**
+
+- Styles and markup for results bar [\#1105](https://github.com/liferay/clay/issues/1105)
+
+**Fixed bugs:**
+
+- When you close the dropdown by the button it does not remove the added events when opening [\#1189](https://github.com/liferay/clay/issues/1189)
+- Link https://clayui.com/docs/components causes 404 [\#1180](https://github.com/liferay/clay/issues/1180)
+- ManagementToolbar ActionItems show if an empty array is passed [\#1178](https://github.com/liferay/clay/issues/1178)
+- Missing Icons in clayui.com [\#1177](https://github.com/liferay/clay/issues/1177)
+- ClayActionsDropdown, ClayCreationMenuDropdown and ClayDropdown do not keep the expanded updated with ClayDropdownBase [\#1172](https://github.com/liferay/clay/issues/1172)
+- Claycss.com charts errors [\#638](https://github.com/liferay/clay/issues/638)
+
+**Closed issues:**
+
+- Clay Modal does not render properly  [\#1183](https://github.com/liferay/clay/issues/1183)
+- Add Legend Data for Stacked Bar Chart. [\#1138](https://github.com/liferay/clay/issues/1138)
+- ClayCSS: Update and add table utilities to allow for better sizing and alignment [\#1065](https://github.com/liferay/clay/issues/1065)
+- ManagementToolbar message should be `select-items` instead of `select-page` [\#1025](https://github.com/liferay/clay/issues/1025)
+- Icon Button needs to show a tooltip on hover [\#858](https://github.com/liferay/clay/issues/858)
+- Card stickers are not rounded [\#718](https://github.com/liferay/clay/issues/718)
+- Add favicon [\#520](https://github.com/liferay/clay/issues/520)
+
+**Merged pull requests:**
+
+- v2.3.3 CHANGELOG [\#1194](https://github.com/liferay/clay/pull/1194) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1172 - ClayActionsDropdown, ClayCreationMenuDropdown and ClayDropdown do not keep the expanded updated with ClayDropdownBase [\#1191](https://github.com/liferay/clay/pull/1191) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1105 - Update styles and markup for results bar [\#1188](https://github.com/liferay/clay/pull/1188) ([carloslancha](https://github.com/carloslancha))
+- Move some the files from pat270.github.io to clayui.com and some fixes [\#1185](https://github.com/liferay/clay/pull/1185) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Change the default value of actionItems to \[\] | Fixes \#1178 [\#1181](https://github.com/liferay/clay/pull/1181) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1121 - General accessibility fixes [\#1169](https://github.com/liferay/clay/pull/1169) ([carloslancha](https://github.com/carloslancha))
+- Adding plugin to create a JSDOC-based component API table | Fixes \#1111 [\#1166](https://github.com/liferay/clay/pull/1166) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.3.2](https://github.com/liferay/clay/tree/v2.3.2) (2018-09-03)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.3.1...v2.3.2)
 
