@@ -49,29 +49,20 @@ function arrangeIntoTree(paths) {
 	return tree;
 }
 
-function compareName(a, b) {
-	let nameA = a.title.toUpperCase();
-	let nameB = b.title.toUpperCase();
-
-	if (nameA < nameB) {
-		return -1;
-	}
-
-	if (nameA > nameB) {
-		return 1;
-	}
-
-	return 0;
-}
-
-function compareWeight(a, b) {
-	return b.weight - a.weight;
-}
+const regexSpace = /\s+/g;
 
 function sortBy(tree) {
 	if (tree.items) {
-		tree.items.sort(compareName);
-		tree.items.sort(compareWeight);
+		tree.items = tree.items.sort((a, b) => {
+			let titleA = a.title.toUpperCase().replace(regexSpace, '');
+			let titleB = b.title.toUpperCase().replace(regexSpace, '');
+
+			if (a.weight < b.weight) return 1;
+			if (a.weight > b.weight) return -1;
+
+			if (titleA > titleB) return 1;
+			if (titleA < titleB) return -1;
+		});
 
 		tree.items.map((item) => sortBy(item));
 	}
