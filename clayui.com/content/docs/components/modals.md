@@ -16,7 +16,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 > 300px wide modal window, expands full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
+<button class="btn btn-primary" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -69,7 +69,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
+<button class="btn btn-primary" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -105,7 +105,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 > 500px wide modal window, expands full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -156,7 +156,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -194,7 +194,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 > 500px wide modal in window sizes between 576px and 991px.
 > Full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
+<button class="btn btn-primary" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -247,7 +247,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
+<button class="btn btn-primary" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -283,7 +283,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 > A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.
 
-<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
 		<div class="modal-content">
@@ -496,7 +496,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
 		<div class="modal-content">
@@ -612,7 +612,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 > Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the browser window at screen widths 767px and below.
 
-<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
+<button class="btn btn-primary" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -654,7 +654,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </div>
 
 ```html
-<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
+<button class="btn btn-primary" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -715,7 +715,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 > This is the classic composition of a modal window with its three main parts: header, body and footer.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -766,7 +766,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -802,7 +802,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 > This is the case when you don't need a footer bar to place your icons.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -839,7 +839,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -863,7 +863,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 > This case is thought for those cases where you need to just show text and buttons to agree or cancel.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -904,7 +904,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -936,7 +936,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 <div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
-<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -985,7 +985,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -1057,7 +1057,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 		</div>
 	</div>
 </div>
-<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>
+<button class="btn btn-primary" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>
 <div aria-labelledby="clayModalInfoLabel" class="fade modal" id="clayModalInfo" role="dialog" tabindex="-1">
 	<div class="modal-info modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
