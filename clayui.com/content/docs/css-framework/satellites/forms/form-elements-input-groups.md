@@ -2,16 +2,10 @@
 title: "Form Elements (Input Groups)"
 ---
 
-### Description
-
-An Input Group is a text field with extra elements that makes the pattern more complete for a common or frequent use case.
-
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input_group.html">Form Elements (Input Groups) Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
-
 <article id="input-group-separated">
-<h3 class="component-title">
-	<a href="#input-group-separated">Input Group (Separated)</a>
-</h3>
+
+### Input Group (Separated)
+
 <div class="alert alert-warning">
 	Clay Input Group markup deviates from Bootstrap 4's Input Groups.
 </div>
@@ -81,9 +75,8 @@ An Input Group is a text field with extra elements that makes the pattern more c
 
 
 <article id="input-group-connected">
-<h3 class="component-title">
-	<a href="#input-group-connected">Input Group (Connected)</a>
-</h3>
+
+### Input Group (Connected)
 
 > Create connected <code>.input-group</code>'s by adding <code>.input-group-prepend</code> to every <code>.input-group-item</code> and <code>.input-group-append</code> to the last <code>.input-group-item</code>.
 
@@ -223,9 +216,8 @@ An Input Group is a text field with extra elements that makes the pattern more c
 
 
 <article id="input-group-mixed">
-<h3 class="component-title">
-	<a href="#input-group-mixed">Input Group (Mixed)</a>
-</h3>
+
+### Input Group (Mixed)
 
 > Mix the two.
 
@@ -466,9 +458,8 @@ An Input Group is a text field with extra elements that makes the pattern more c
 
 
 <article id="input-group-inset">
-<h3 class="component-title">
-	<a href="#input-group-inset">Input Group Inset</a>
-</h3>
+
+### Input Group Inset
 
 > <code>.input-group-inset</code>, <code>.input-group-inset-before</code>, <code>.input-group-inset-after</code>, <code>.input-group-inset-item</code>, <code>.input-group-inset-item-before</code>, and <code>.input-group-inset-item-after</code>.
 
@@ -628,9 +619,8 @@ An Input Group is a text field with extra elements that makes the pattern more c
 
 
 <article id="input-group-text-secondary">
-<h3 class="component-title">
-	<a href="#input-group-text-secondary">Input Group Text Secondary</a>
-</h3>
+
+### Input Group Text Secondary
 
 <div class="sheet">
 	<div class="form-group">
@@ -756,9 +746,8 @@ An Input Group is a text field with extra elements that makes the pattern more c
 
 
 <article id="input-group-buttons">
-<h3 class="component-title">
-	<a href="#input-group-buttons">Input Group Buttons</a>
-</h3>
+
+### Input Group Buttons
 
 <div class="sheet">
 	<div class="form-group">
@@ -991,9 +980,8 @@ An Input Group is a text field with extra elements that makes the pattern more c
 
 
 <article id="input-group-sizes">
-<h3 class="component-title">
-	<a href="#input-group-sizes">Input Group Sizes</a>
-</h3>
+
+### Input Group Sizes
 
 <div class="sheet">
 	<div class="form-group">

@@ -1,17 +1,10 @@
 ---
-title: Form Elements (Validation)
+title: "Form Elements (Validation)"
 ---
 
-### Description
-
-Forms have inline validation. All form fields that can be checked against a set of rules while filling them must show success or error state to the user.
-
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/forms.html">Form Elements (Validation) Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
-
 <article id="input-validation-states-non-html5">
-<h3 class="component-title">
-	<a href="#input-validation-states-non-html5">Input Validation States (Non HTML5)</a>
-</h3>
+
+### Input Validation States (Non HTML5)
 
 <div class="sheet">
 	<div class="form-group">
@@ -194,9 +187,8 @@ Forms have inline validation. All form fields that can be checked against a set 
 
 
 <article id="custom-checkbox-and-radio-validation-states">
-<h3 class="component-title">
-	<a href="#custom-checkbox-and-radio-validation-states">Custom Checkbox and Radio Validation States</a>
-</h3>
+
+### Custom Checkbox and Radio Validation States
 
 <div class="sheet">
 	<div class="row">
@@ -379,9 +371,8 @@ Forms have inline validation. All form fields that can be checked against a set 
 
 
 <article id="select-element-validation-states">
-<h3 class="component-title">
-	<a href="#select-element-validation-states">Select Element Validation States</a>
-</h3>
+
+### Select Element Validation States
 
 <div class="sheet">
 	<div class="has-success">
@@ -489,9 +480,8 @@ Forms have inline validation. All form fields that can be checked against a set 
 
 
 <article id="multiple-select-element-validation-states">
-<h3 class="component-title">
-	<a href="#multiple-select-element-validation-states">Multiple Select Element Validation States</a>
-</h3>
+
+### Multiple Select Element Validation States
 
 <div class="sheet">
 	<div class="has-success">
