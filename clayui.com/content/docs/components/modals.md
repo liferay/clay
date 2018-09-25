@@ -16,7 +16,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 > 300px wide modal window, expands full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
+<button class="btn btn-primary" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -69,7 +69,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
+<button class="btn btn-primary" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -105,7 +105,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 > 500px wide modal window, expands full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -156,7 +156,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -194,7 +194,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 > 500px wide modal in window sizes between 576px and 991px.
 > Full width of screen at 575px and below.
 
-<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
+<button class="btn btn-primary" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -247,7 +247,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
+<button class="btn btn-primary" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -283,7 +283,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 > A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.
 
-<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
 		<div class="modal-content">
@@ -496,7 +496,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen">
 		<div class="modal-content">
@@ -612,7 +612,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 > Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the browser window at screen widths 767px and below.
 
-<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
+<button class="btn btn-primary" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -654,7 +654,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </div>
 
 ```html
-<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
+<button class="btn btn-primary" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -715,7 +715,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 > This is the classic composition of a modal window with its three main parts: header, body and footer.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -766,7 +766,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -802,7 +802,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 > This is the case when you don't need a footer bar to place your icons.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -839,7 +839,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -863,7 +863,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 > This case is thought for those cases where you need to just show text and buttons to agree or cancel.
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -904,7 +904,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -936,7 +936,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 
 <div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
-<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -985,7 +985,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 </clay-modal>
 ```
 ```html
-<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
+<button class="btn btn-primary" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -1057,7 +1057,7 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 		</div>
 	</div>
 </div>
-<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>
+<button class="btn btn-primary" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>
 <div aria-labelledby="clayModalInfoLabel" class="fade modal" id="clayModalInfo" role="dialog" tabindex="-1">
 	<div class="modal-info modal-dialog modal-full-screen-sm-down">
 		<div class="modal-content">
@@ -1320,120 +1320,6 @@ A modal is a box with content displayed on top of the page to capture the user‚Ä
 	</div>
 </div>
 ```
-
-</article>
-
-<article id="inline-scroller">
-
-### Inline Scroller
-
-`inline-scroller` is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.
-
-<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal" type="button">Small Modal Inline Scroller</button>
-<div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/images/icons/icons.svg#times" />
-					</svg>
-				</button>
-			</div>
-			<div class="modal-body inline-scroller">
-				<h4>Modal Body</h4>
-				<div>
-					<p>
-						<a href="#1">Crema coffee</a> a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-					</p>
-					<p>
-						Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf√© au lait whipped extra at percolator.
-					</p>
-					<p>
-						Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf√© au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-					</p>
-					<p>
-						Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-					</p>
-					<p>
-						Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf√© au lait whipped extra at percolator.
-					</p>
-					<p>
-						Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf√© au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-					</p>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<div class="modal-item-last">
-					<div class="btn-group"><div class="btn-group-item"><button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button></div><div class="btn-group-item"><button class="btn btn-primary" type="button">Primary</button></div></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-```html
-<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal" type="button">Small Modal Inline Scroller</button>
-<div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
-				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/images/icons/icons.svg#times" />
-					</svg>
-				</button>
-			</div>
-			<div class="modal-body inline-scroller">
-				<h4>Modal Body</h4>
-				<div>
-					<p>
-						<a href="#1">Crema coffee</a> a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-					</p>
-					<p>
-						Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf√© au lait whipped extra at percolator.
-					</p>
-					<p>
-						Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf√© au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-					</p>
-					<p>
-						Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-					</p>
-					<p>
-						Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf√© au lait whipped extra at percolator.
-					</p>
-					<p>
-						Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf√© au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-					</p>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<div class="modal-item-last">
-					<div class="btn-group">
-						<div class="btn-group-item">
-							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-						</div>
-						<div class="btn-group-item">
-							<button class="btn btn-primary" type="button">Primary</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-```
-
-</article>
-
-<article id="modal-helpers">
-
-### Modal Helpers
-
-> Use classes `modal-item-first`, `modal-item`, and `modal-item-last` inside `modal-footer` to align content left, middle, and right.
 
 </article>
 

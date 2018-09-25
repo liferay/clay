@@ -2,7 +2,9 @@
 title: "Modals"
 ---
 
-<article>
+<article id="modals">
+
+<article id="modals-inline-scroller">
 
 ### Inline Scroller
 
@@ -59,5 +61,14 @@ title: "Modals"
 		</div>
 	</div>
 </div>
+
+</article>
+
+<article id="modal-helpers">
+
+### Modal Helpers
+Use classes <code>modal-item-first</code>, <code>modal-item</code>, and <code>modal-item-last</code> inside <code>modal-footer</code> to align content left, middle, and right.
+
+</article>
 
 </article>

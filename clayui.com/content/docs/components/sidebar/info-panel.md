@@ -4,14 +4,13 @@ title: "Info Panel"
 
 ### Description
 
-Information panel is an information container where to display relevant information that does not fit into the table, list, card or any other visualization. This information can be the type you want. Usually it is used to show detail information of an element without navigating deeper in the navigation hierarchy.
+An information container that displays additional data from the one shown in the main visualization pattern.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Sidebar/infopanel.html">Info Panel Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/satellites/Sidebar/infopanel.html">Info Panel Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="sidebar-light">
-<h3 class="component-title">
-	<a href="#sidebar-light">Sidebar Light</a>
-</h3>
+
+### Sidebar light
 
 > Add classes `sidebar-light` to `sidebar` to apply a light theme.
 

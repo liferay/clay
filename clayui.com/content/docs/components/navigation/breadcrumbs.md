@@ -9,9 +9,8 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Navigation/breadcrumb.html">Breadcrumbs Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="breadcrumbs">
-<h3 class="component-title">
-	<a href="#breadcrumbs">Breadcrumbs</a>
-</h3>
+
+### Breadcrumbs
 
 > A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.
 

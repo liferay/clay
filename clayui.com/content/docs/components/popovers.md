@@ -2,6 +2,10 @@
 title: "Popovers and Tooltips"
 ---
 
+### Description
+
+Popovers and Tooltips are patterns used to show helpful information in two different ways.
+
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/popovers_tooltips.html">Popovers and Tooltips Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <article id="popovers">

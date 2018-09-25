@@ -1249,3 +1249,7 @@ Cards are a very specific visual representation of data.
 </div>
 
 </article>
+
+<article id="more-examples">
+	More examples can be found in <a href="/docs/components/dataset-display.html">dataset template</a>.
+</article>
