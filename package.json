@@ -9,10 +9,10 @@
     "jest": "cross-env NODE_ENV=test jest",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "link": "lerna run link",
-    "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
+    "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js' && npm run mcritic",
     "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay,clayui.com,generator-metal-clay,node_modules}/**'",
     "pa11y": "pa11y-ci ./packages/clay-*/demos/a11y.html",
-    "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
+    "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js'",
     "soy": "lerna run soy",
     "start": "http-server . -p 4000",
     "test": "npm run build && npm run jest && npm run pa11y",
@@ -48,7 +48,8 @@
     ],
     "testPathIgnorePatterns": [
       "browserslist-config-clay",
-      "fixtures"
+      "fixtures",
+      "<rootDir>/examples"
     ],
     "transformIgnorePatterns": [
       "<rootDir>.*(node_modules)(?!.*clay.*).*$"
