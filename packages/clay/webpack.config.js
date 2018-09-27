@@ -7,7 +7,7 @@ module.exports = Object.assign(webpackCommonConfig, {
 	output: {
 		library: 'clay',
 		libraryTarget: 'this',
-		filename: './lib/js/clay.js',
+		filename: './lib/clay.js',
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
