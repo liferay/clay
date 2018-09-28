@@ -5,90 +5,90 @@ const globby = require('globby');
 const langs = require('languages');
 
 const alternateCodes = {
-    'in': 'id',
-    'iw': 'he',
-    'nb': 'no',
+	'in': 'id',
+	'iw': 'he',
+	'nb': 'no',
 };
 
 function replaceValue(array) {
-    const htmlValue = array.map(item => `<li>
+	const htmlValue = array.map(item => `<li>
         <svg class="lexicon-icon lexicon-icon-${item.icon}">
             <use xlink:href="/images/icons/icons.svg#${item.icon}" />
         </svg>
         <span>${item.name}</span>
     </li>`);
 
-    return htmlValue.join(' ');
-};
+	return htmlValue.join(' ');
+}
 
 function getFiles(dir, glob) {
-    const files = globby.sync(dir, {
-        expandDirectories: {
-            files: glob || [],
-            extensions: ['svg']
-        }
-    });
-    const filelist = [];
+	const files = globby.sync(dir, {
+		expandDirectories: {
+			files: glob || [],
+			extensions: ['svg'],
+		},
+	});
+	const filelist = [];
 
-    files.forEach(file => {
-        const name = file.replace(/\.svg$/, '');
-        const nameWithoutExtension = name.replace(dir + '/', '');
+	files.forEach(file => {
+		const name = file.replace(/\.svg$/, '');
+		const nameWithoutExtension = name.replace(dir + '/', '');
 
-        filelist.push({
-            name: nameWithoutExtension,
-            icon: nameWithoutExtension
-        });
-    });
+		filelist.push({
+			name: nameWithoutExtension,
+			icon: nameWithoutExtension,
+		});
+	});
 
-    return filelist;
-};
+	return filelist;
+}
 
 module.exports = ({markdownAST}) => {
-    visit(markdownAST, 'html', node => {
-        const foreachFlags = '[foreach Flags]';
-        const foreachIcons = '[foreach Icons]';
-        const path = resolve(__dirname, '../../static/images/icons');
+	visit(markdownAST, 'html', node => {
+		const foreachFlags = '[foreach Flags]';
+		const foreachIcons = '[foreach Icons]';
+		const path = resolve(__dirname, '../../static/images/icons');
 
-        if (node.value.includes(foreachFlags)) {
-            let dataFlags = getFiles(path, ['flags-*']);
+		if (node.value.includes(foreachFlags)) {
+			let dataFlags = getFiles(path, ['flags-*']);
 
-            dataFlags = dataFlags.map(item => {
-                const parts = item.name.split('-');
+			dataFlags = dataFlags.map(item => {
+				const parts = item.name.split('-');
 
-                const langCode = parts[1];
-                const countryCode = parts[2];
-                
-                let lang = langs.getLanguageInfo(alternateCodes[langCode] || langCode).name;
+				const langCode = parts[1];
+				const countryCode = parts[2];
 
-                if (countryCode) {
-                    const country = countries[countryCode.toUpperCase()];
+				let lang = langs.getLanguageInfo(alternateCodes[langCode] || langCode).name;
 
-                    if (country) {
-                        lang += ' (' + country.name + ')';
-                    }
-                }
+				if (countryCode) {
+					const country = countries[countryCode.toUpperCase()];
 
-                let icon = langCode + '-' + countryCode;
+					if (country) {
+						lang += ' (' + country.name + ')';
+					}
+				}
 
-                return {
-                    name: lang + ` (${icon.toLowerCase()})`,
-                    icon: icon.toLowerCase()
-                };
-            });
+				let icon = langCode + '-' + countryCode;
 
-            node.value = node.value.replace(foreachFlags, replaceValue(dataFlags));
-        }
+				return {
+					name: lang + ` (${icon.toLowerCase()})`,
+					icon: icon.toLowerCase(),
+				};
+			});
 
-        if (node.value.includes(foreachIcons)) {
-            let dataIcons = getFiles(path, ['*']);
+			node.value = node.value.replace(foreachFlags, replaceValue(dataFlags));
+		}
 
-            dataIcons = dataIcons.map(item => {
-                if (!item.name.includes('flags') && item.name !== 'icons') {
-                    return item;
-                }
-            }).filter(value => typeof value !== 'undefined');
+		if (node.value.includes(foreachIcons)) {
+			let dataIcons = getFiles(path, ['*']);
 
-            node.value = node.value.replace(foreachIcons, replaceValue(dataIcons));
-        }
-    });
+			dataIcons = dataIcons.map(item => {
+				if (!item.name.includes('flags') && item.name !== 'icons') {
+					return item;
+				}
+			}).filter(value => typeof value !== 'undefined');
+
+			node.value = node.value.replace(foreachIcons, replaceValue(dataIcons));
+		}
+	});
 };
