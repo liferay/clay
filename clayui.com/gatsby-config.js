@@ -25,44 +25,36 @@ module.exports = {
 				name: 'packages',
 				path: `${__dirname}/content`,
 			},
-        },
-        {
-            resolve: 'gatsby-transformer-remark',
-            options: {
-                plugins: [
-                    {
-                        resolve: 'gatsby-remark-foreach-icons'
-                    },
-                    {
-                        resolve: 'gatsby-remark-component',
-                        options: {
-                            components: ['clay-chart']
-                        }
-                    },
-                    {
-                        resolve: 'gatsby-remark-images',
-                    },
-                    {
-                        resolve: 'gatsby-remark-prismjs',
-                        options: {
-                            classPrefix: 'gatsby-code-'
-                        }
-                    },
-                    {
-                        resolve: 'gatsby-remark-use-clipboard'
-                    },
-                    {
-                        resolve: 'gatsby-remark-api-table'
-                    }
-                ]
-            }
-        },
-        {
-            resolve: 'gatsby-plugin-google-analytics',
-            options: {
-                trackingId: 'UA-37033501-10',
-            },
-        },
-        'gatsby-plugin-react-helmet'
-    ]
-}
+		},
+		{
+			resolve: 'gatsby-mdx',
+			options: {
+				extensions: ['.mdx', '.md'],
+				gatsbyRemarkPlugins: [
+					{
+						resolve: path.resolve(__dirname, './plugins/gatsby-remark-foreach-icons'),
+					},
+					{
+						resolve: 'gatsby-remark-prismjs',
+						pluginOptions: {
+							classPrefix: 'gatsby-code-',
+						},
+					},
+					{
+						resolve: path.resolve(__dirname, './plugins/gatsby-remark-use-clipboard'),
+					},
+					{
+						resolve: path.resolve(__dirname, './plugins/gatsby-remark-api-table'),
+					},
+				],
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-google-analytics',
+			options: {
+				trackingId: 'UA-37033501-10',
+			},
+		},
+		'gatsby-plugin-react-helmet',
+	],
+};
