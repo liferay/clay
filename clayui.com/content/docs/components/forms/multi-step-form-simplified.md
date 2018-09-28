@@ -8,8 +8,6 @@ Multi step form simplified is used as a progressive disclosure method to guide t
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/multiStepFormSimplified.html">Multi Step Form Simplified Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="subnav-tbar-light">
-
 ### Subnav Tbar Light
 
 <div class="tbar subnav-tbar subnav-tbar-light">
@@ -48,4 +46,3 @@ Multi step form simplified is used as a progressive disclosure method to guide t
 </div>
 ```
 
-</article>

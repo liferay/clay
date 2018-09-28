@@ -8,8 +8,6 @@ Checkboxes, radios and toggles provide users with different selection and activa
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/radio_check_toggle.html">Checkbox, Radio, Toggle Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="checkbox">
-
 ### Checkbox
 
 #### States
@@ -18,7 +16,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 	<div class="form-group">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input checked class="custom-control-input" type="checkbox">
+				<input checked class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On</span>
 				</span>
@@ -26,7 +24,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="custom-control-input" type="checkbox">
+				<input class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off</span>
 				</span>
@@ -34,7 +32,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input checked class="custom-control-input" disabled type="checkbox">
+				<input checked class="custom-control-input" disabled type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On disabled</span>
 				</span>
@@ -42,7 +40,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="custom-control-input" disabled type="checkbox">
+				<input class="custom-control-input" disabled type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off disabled</span>
 				</span>
@@ -50,7 +48,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Indeterminate</span>
 				</span>
@@ -124,7 +122,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 ```html
 <div class="custom-control custom-checkbox">
 	<label>
-		<input class="custom-control-input" type="checkbox">
+		<input class="custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Unchecked</span>
 		</span>
@@ -133,7 +131,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 
 <div class="custom-control custom-checkbox">
 	<label>
-		<input checked class="custom-control-input" type="checkbox">
+		<input checked class="custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Checked</span>
 		</span>
@@ -142,7 +140,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 
 <div class="custom-control custom-checkbox">
 	<label>
-		<input class="custom-control-input" type="checkbox">
+		<input class="custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Indeterminate</span>
 		</span>
@@ -151,7 +149,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 
 <div class="custom-control custom-checkbox">
 	<label>
-		<input class="custom-control-input" disabled type="checkbox">
+		<input class="custom-control-input" disabled type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Unchecked Disabled</span>
 		</span>
@@ -160,7 +158,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 
 <div class="custom-control custom-checkbox">
 	<label>
-		<input checked class="custom-control-input" disabled type="checkbox">
+		<input checked class="custom-control-input" disabled type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Checked Disabled</span>
 		</span>
@@ -169,7 +167,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 
 <div class="custom-control custom-checkbox">
 	<label>
-		<input class="custom-control-input" disabled type="checkbox">
+		<input class="custom-control-input" disabled type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Indeterminate Disabled</span>
 		</span>
@@ -177,9 +175,9 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 ```
 
-</article>
 
-<article>
+
+>
 
 #### Checkbox inline
 
@@ -187,7 +185,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 	<div class="form-group">
 		<div class="custom-control custom-checkbox custom-control-inline">
 			<label>
-				<input checked class="custom-control-input" type="checkbox">
+				<input checked class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On</span>
 				</span>
@@ -195,7 +193,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox custom-control-inline">
 			<label>
-				<input class="custom-control-input" type="checkbox">
+				<input class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off</span>
 				</span>
@@ -203,7 +201,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox custom-control-inline">
 			<label>
-				<input checked class="custom-control-input" disabled type="checkbox">
+				<input checked class="custom-control-input" disabled type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On disabled</span>
 				</span>
@@ -211,7 +209,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox custom-control-inline">
 			<label>
-				<input class="custom-control-input" disabled type="checkbox">
+				<input class="custom-control-input" disabled type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off disabled</span>
 				</span>
@@ -219,7 +217,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-checkbox custom-control-inline">
 			<label>
-				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Indeterminate</span>
 				</span>
@@ -304,7 +302,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 ```html
 <div class="custom-control custom-checkbox custom-control-inline">
 	<label>
-		<input checked class="custom-control-input" type="checkbox">
+		<input checked class="custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">On</span>
 		</span>
@@ -312,7 +310,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-checkbox custom-control-inline">
 	<label>
-		<input class="custom-control-input" type="checkbox">
+		<input class="custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Off</span>
 		</span>
@@ -320,7 +318,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-checkbox custom-control-inline">
 	<label>
-		<input checked class="custom-control-input" disabled type="checkbox">
+		<input checked class="custom-control-input" disabled type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">On disabled</span>
 		</span>
@@ -328,7 +326,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-checkbox custom-control-inline">
 	<label>
-		<input class="custom-control-input" disabled type="checkbox">
+		<input class="custom-control-input" disabled type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Off disabled</span>
 		</span>
@@ -336,7 +334,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-checkbox custom-control-inline">
 	<label>
-		<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+		<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Indeterminate</span>
 		</span>
@@ -344,19 +342,11 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 ```
 
-</article>
-
-<article id="clay-checkbox-api">
-
 #### API
 
 <div>
 	[APITable "clay-checkbox/src/ClayCheckBox.js"]
 </div>
-
-</article>
-
-<article id="radio">
 
 ### Radio
 
@@ -366,7 +356,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 	<div class="form-group">
 		<div class="custom-control custom-radio">
 			<label>
-				<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
+				<input checked class="custom-control-input" id="radio1" name="radio" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On</span>
 				</span>
@@ -374,7 +364,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-radio">
 			<label>
-				<input class="custom-control-input" id="radio2" name="radio" type="radio">
+				<input class="custom-control-input" id="radio2" name="radio" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off</span>
 				</span>
@@ -382,7 +372,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-radio">
 			<label>
-				<input checked disabled class="custom-control-input" id="radio3" name="radio1" type="radio">
+				<input checked disabled class="custom-control-input" id="radio3" name="radio1" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On disabled</span>
 				</span>
@@ -390,7 +380,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-radio">
 			<label>
-				<input class="custom-control-input" disabled id="radio3" name="radio1" type="radio">
+				<input class="custom-control-input" disabled id="radio3" name="radio1" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off disabled</span>
 				</span>
@@ -460,7 +450,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 ```html
 <div class="custom-control custom-radio">
 	<label>
-		<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
+		<input checked class="custom-control-input" id="radio1" name="radio" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">On</span>
 		</span>
@@ -468,7 +458,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-radio">
 	<label>
-		<input class="custom-control-input" id="radio2" name="radio" type="radio">
+		<input class="custom-control-input" id="radio2" name="radio" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Off</span>
 		</span>
@@ -476,7 +466,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-radio">
 	<label>
-		<input checked disabled class="custom-control-input" id="radio3" name="radio1" type="radio">
+		<input checked disabled class="custom-control-input" id="radio3" name="radio1" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">On disabled</span>
 		</span>
@@ -484,17 +474,13 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-radio">
 	<label>
-		<input class="custom-control-input" disabled id="radio3" name="radio1" type="radio">
+		<input class="custom-control-input" disabled id="radio3" name="radio1" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Off disabled</span>
 		</span>
 	</label>
 </div>
 ```
-
-</article>
-
-<article id="radio-inline">
 
 #### Radio inline
 
@@ -502,7 +488,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 	<div class="form-group">
 		<div class="custom-control custom-radio custom-control-inline">
 			<label>
-				<input checked class="custom-control-input" id="radio1" name="radio2" type="radio">
+				<input checked class="custom-control-input" id="radio1" name="radio2" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On</span>
 				</span>
@@ -510,7 +496,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-radio custom-control-inline">
 			<label>
-				<input class="custom-control-input" id="radio2" name="radio2" type="radio">
+				<input class="custom-control-input" id="radio2" name="radio2" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off</span>
 				</span>
@@ -518,7 +504,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-radio custom-control-inline">
 			<label>
-				<input checked disabled class="custom-control-input" id="radio3" name="radio3" type="radio">
+				<input checked disabled class="custom-control-input" id="radio3" name="radio3" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">On disabled</span>
 				</span>
@@ -526,7 +512,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 		</div>
 		<div class="custom-control custom-radio custom-control-inline">
 			<label>
-				<input class="custom-control-input" disabled id="radio3" name="radio3" type="radio">
+				<input class="custom-control-input" disabled id="radio3" name="radio3" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Off disabled</span>
 				</span>
@@ -604,7 +590,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 ```html
 <div class="custom-control custom-radio custom-control-inline">
 	<label>
-		<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
+		<input checked class="custom-control-input" id="radio1" name="radio" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">On</span>
 		</span>
@@ -612,7 +598,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-radio custom-control-inline">
 	<label>
-		<input class="custom-control-input" id="radio2" name="radio" type="radio">
+		<input class="custom-control-input" id="radio2" name="radio" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Off</span>
 		</span>
@@ -620,7 +606,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-radio custom-control-inline">
 	<label>
-		<input checked disabled class="custom-control-input" id="radio3" name="radio1" type="radio">
+		<input checked disabled class="custom-control-input" id="radio3" name="radio1" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">On disabled</span>
 		</span>
@@ -628,7 +614,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-radio custom-control-inline">
 	<label>
-		<input class="custom-control-input" disabled id="radio3" name="radio1" type="radio">
+		<input class="custom-control-input" disabled id="radio3" name="radio1" type="radio"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Off disabled</span>
 		</span>
@@ -636,19 +622,11 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 ```
 
-</article>
-
-<article id="clay-radio-api">
-
 #### API
 
 <div>
 	[APITable "clay-radio/src/ClayRadio.js"]
 </div>
-
-</article>
-
-<article id="toggle">
 
 ### Toggle
 
@@ -657,7 +635,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 <div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" checked type="checkbox">
+			<input class="toggle-switch-check" checked type="checkbox"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -665,7 +643,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 	</div>
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" type="checkbox"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -673,7 +651,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 	</div>
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" checked disabled type="checkbox">
+			<input class="toggle-switch-check" checked disabled type="checkbox"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -681,7 +659,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 	</div>
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" disabled type="checkbox">
+			<input class="toggle-switch-check" disabled type="checkbox"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -692,7 +670,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 ```html
 <div class="form-group">
 	<label class="toggle-switch">
-		<input class="toggle-switch-check" checked type="checkbox">
+		<input class="toggle-switch-check" checked type="checkbox"/>
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle"></span>
 		</span>
@@ -700,7 +678,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="form-group">
 	<label class="toggle-switch">
-		<input class="toggle-switch-check" type="checkbox">
+		<input class="toggle-switch-check" type="checkbox"/>
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle"></span>
 		</span>
@@ -708,7 +686,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="form-group">
 	<label class="toggle-switch">
-		<input class="toggle-switch-check" checked disabled type="checkbox">
+		<input class="toggle-switch-check" checked disabled type="checkbox"/>
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle"></span>
 		</span>
@@ -716,7 +694,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="form-group">
 	<label class="toggle-switch">
-		<input class="toggle-switch-check" disabled type="checkbox">
+		<input class="toggle-switch-check" disabled type="checkbox"/>
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle"></span>
 		</span>
@@ -731,7 +709,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 <div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" type="checkbox"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 					<span class="button-icon button-icon-on toggle-switch-icon">
@@ -753,7 +731,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 ```html
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox"/>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="">
                 <span class="button-icon button-icon-on toggle-switch-icon">
@@ -772,4 +750,3 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 ```
 
-</article>

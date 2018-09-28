@@ -8,8 +8,6 @@ Loading indicator shows the user that an external process, like a connection, is
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/loading_indicator.html">Loading Indicator Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="size">
-
 ### Size
 
 <div class="row">
@@ -25,10 +23,6 @@ Loading indicator shows the user that an external process, like a connection, is
 <span aria-hidden="true" class="loading-animation loading-animation-sm"></span>
 <span aria-hidden="true" class="loading-animation"></span>
 ```
-
-</article>
-
-<article id="variations">
 
 ### Variations
 
@@ -50,4 +44,3 @@ Loading indicator shows the user that an external process, like a connection, is
 <span aria-hidden="true" class="loading-animation loading-animation-light"></span>
 ```
 
-</article>

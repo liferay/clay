@@ -10,8 +10,6 @@ title: "Tables"
 	<code>show-quick-actions-on-hover</code> will need Javascript to add class <code>table-focus</code> on the table row when an item inside is focused to make it keyboard accessible.
 </div>
 
-<article>
-
 ### Table List
 
 <div class="table-responsive">
@@ -23,13 +21,13 @@ title: "Tables"
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/images/icons/icons.svg#drag" />
+								<use href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span><a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="ID">ID</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
+								<use href="/images/icons/icons.svg#order-arrow-down" />
 							</svg>
 						</span>
 					</a>
@@ -38,13 +36,13 @@ title: "Tables"
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/images/icons/icons.svg#drag" />
+								<use href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span><a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
+								<use href="/images/icons/icons.svg#order-arrow-down" />
 							</svg>
 						</span>
 					</a>
@@ -54,7 +52,7 @@ title: "Tables"
 					<span class="inline-item inline-item-before">
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use xlink:href="/images/icons/icons.svg#drag" />
+								<use href="/images/icons/icons.svg#drag" />
 							</svg>
 						</a>
 					</span><a class="inline-item text-truncate-inline" href="#1">
@@ -66,7 +64,7 @@ title: "Tables"
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Author">Author</span><span class="inline-item inline-item-after">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
-								<use xlink:href="/images/icons/icons.svg#order-arrow-up" />
+								<use href="/images/icons/icons.svg#order-arrow-up" />
 							</svg>
 						</span>
 					</a>
@@ -83,7 +81,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -109,24 +107,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -141,7 +139,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input checked class="custom-control-input" type="checkbox">
+							<input checked class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -165,24 +163,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -197,7 +195,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -219,24 +217,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -251,7 +249,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -273,24 +271,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -304,10 +302,6 @@ title: "Tables"
 		</tbody>
 	</table>
 </div>
-
-</article>
-
-<article>
 
 ### Table List with Table Striped
 
@@ -332,7 +326,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -351,24 +345,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -383,7 +377,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -402,24 +396,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -434,7 +428,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -453,24 +447,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -485,7 +479,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -504,24 +498,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -558,7 +552,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -577,24 +571,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -609,7 +603,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -628,24 +622,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -660,7 +654,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -679,24 +673,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -711,7 +705,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -730,24 +724,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -762,10 +756,6 @@ title: "Tables"
 	</table>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Table List with Table Hover
 
@@ -790,7 +780,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -809,24 +799,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -841,7 +831,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input checked class="custom-control-input" type="checkbox">
+							<input checked class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -860,24 +850,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -892,7 +882,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -911,24 +901,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -943,7 +933,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -962,24 +952,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1000,10 +990,6 @@ title: "Tables"
 	</table>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Table List with Table Bordered
 
@@ -1028,7 +1014,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -1047,24 +1033,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1079,7 +1065,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input checked class="custom-control-input" type="checkbox">
+							<input checked class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -1098,24 +1084,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1130,7 +1116,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -1149,24 +1135,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1181,7 +1167,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -1200,24 +1186,24 @@ title: "Tables"
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use xlink:href="/images/icons/icons.svg#trash" />
+								<use href="/images/icons/icons.svg#trash" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use xlink:href="/images/icons/icons.svg#download" />
+								<use href="/images/icons/icons.svg#download" />
 							</svg>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-								<use xlink:href="/images/icons/icons.svg#expand" />
+								<use href="/images/icons/icons.svg#expand" />
 							</svg>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1238,10 +1224,6 @@ title: "Tables"
 	</table>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Table Helpers
 
@@ -1275,7 +1257,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -1329,7 +1311,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -1384,7 +1366,7 @@ title: "Tables"
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox" />
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -1414,10 +1396,6 @@ title: "Tables"
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Vertical Alignment
 
 <p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>```<table>```</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
@@ -1426,17 +1404,9 @@ title: "Tables"
 
 <p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table body.</p>
 
-</article>
-
-<article>
-
 ### Table Column Text-{start|center|end}
 
 <p>We have added some classes to help horizontally align contents inside a table column. The classes <code>table-column-text-start</code>, <code>table-column-text-center</code>, and <code>table-column-text-end</code> will align text left, center, and right respectively.</p>
-
-</article>
-
-<article>
 
 ### Table
 
@@ -1469,7 +1439,7 @@ title: "Tables"
 					<a href="#1">link</a>,
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-							<use xlink:href="/images/icons/icons.svg#share" />
+							<use href="/images/icons/icons.svg#share" />
 						</svg>
 					</a>(.table-action-link),
 					<span>and some regular text</span>
@@ -1477,7 +1447,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<button class="btn btn-unstyled table-action-link" type="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</button>
 				</td>
@@ -1494,7 +1464,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</a>
 				</td>
@@ -1511,7 +1481,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</a>
 				</td>
@@ -1528,7 +1498,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</a>
 				</td>
@@ -1563,7 +1533,7 @@ title: "Tables"
 					<a href="#1">link</a>,
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-							<use xlink:href="/images/icons/icons.svg#share" />
+							<use href="/images/icons/icons.svg#share" />
 						</svg>
 					</a>(.table-action-link),
 					<span>and some regular text</span>
@@ -1571,7 +1541,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<button class="btn btn-unstyled table-action-link" type="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</button>
 				</td>
@@ -1588,7 +1558,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</a>
 				</td>
@@ -1605,7 +1575,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</a>
 				</td>
@@ -1622,7 +1592,7 @@ title: "Tables"
 				<td class="table-column-text-center">
 					<a class="table-action-link" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-							<use xlink:href="/images/icons/icons.svg#times-circle" />
+							<use href="/images/icons/icons.svg#times-circle" />
 						</svg>
 					</a>
 				</td>
@@ -1724,10 +1694,6 @@ title: "Tables"
 	</table>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Table Striped
 
@@ -1824,10 +1790,6 @@ title: "Tables"
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Table Bordered
 
 <div class="table-responsive">
@@ -1923,10 +1885,6 @@ title: "Tables"
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Table Hover
 
 <div class="table-responsive">
@@ -2021,5 +1979,3 @@ title: "Tables"
 	</table>
 </div>
 ```
-
-</article>

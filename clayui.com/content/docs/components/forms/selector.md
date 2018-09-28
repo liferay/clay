@@ -8,8 +8,6 @@ A form control element used to select and entry data within several provided opt
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/selector.html">Selectors Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="selector">
-
 <div class="sheet">
 	<div class="form-group">
 		<select class="form-control" id="regularSelectElement">
@@ -32,4 +30,3 @@ A form control element used to select and entry data within several provided opt
 </div>
 ```
 
-</article>

@@ -2,8 +2,6 @@
 title: "Dropdown Menu"
 ---
 
-<article>
-
 ### Dropdown wide / full
 
 <p>Use <code>.dropdown-wide</code> with <code>.dropdown</code> to make the dropdown menu big. The default width is 500px. Use <code class="code">.dropdown-full</code> to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
@@ -108,10 +106,6 @@ title: "Dropdown Menu"
 </div>
 ```
 
-</article>
-
-<article>
-
 #### Dropdown with Other Form Elements
 
 <div class="clay-site-dropdown-menu-container">
@@ -120,7 +114,7 @@ title: "Dropdown Menu"
 			<label for="basicInputTypeText1">
 				Text 1
 			</label>
-			<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text">
+			<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text"/>
 		</li>
 		<li class="dropdown-subheader">Form Section</li>
 		<li class="dropdown-section">
@@ -128,7 +122,7 @@ title: "Dropdown Menu"
 				<label for="basicInputTypeText2">
 					Text 2
 				</label>
-				<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text">
+				<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text"/>
 			</div>
 		</li>
 		<li class="dropdown-section">
@@ -136,7 +130,7 @@ title: "Dropdown Menu"
 				<label for="basicInputTypeText3">
 					Text 3
 				</label>
-				<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text">
+				<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text"/>
 			</div>
 			<div class="form-group">
 				<label for="basicInputTypeTextarea">Textarea</label>
@@ -155,7 +149,7 @@ title: "Dropdown Menu"
 		<label for="basicInputTypeText1">
 			Text 1
 		</label>
-		<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text">
+		<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text"/>
 	</li>
 	<li class="dropdown-subheader">Form Section</li>
 	<li class="dropdown-section">
@@ -163,7 +157,7 @@ title: "Dropdown Menu"
 			<label for="basicInputTypeText2">
 				Text 2
 			</label>
-			<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text">
+			<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text"/>
 		</div>
 	</li>
 	<li class="dropdown-section">
@@ -171,7 +165,7 @@ title: "Dropdown Menu"
 			<label for="basicInputTypeText3">
 				Text 3
 			</label>
-			<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text">
+			<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeTextarea">Textarea</label>
@@ -183,10 +177,6 @@ title: "Dropdown Menu"
 	<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
 </ul>
 ```
-
-</article>
-
-<article>
 
 ### Dropdown Alignment
 
@@ -397,5 +387,3 @@ title: "Dropdown Menu"
 		<li><a class="dropdown-item" href="#1">Scope</a></li>
 	</ul>
 </div>
-
-</article>

@@ -2,8 +2,6 @@
 title: "Nav"
 ---
 
-<article id="base-nav">
-
 ### Base Nav
 
 <ul class="nav">
@@ -21,11 +19,6 @@ title: "Nav"
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 ```
-
-</article>
-
-
-<article id="nav-stacked">
 
 ### Nav Stacked
 
@@ -53,11 +46,6 @@ title: "Nav"
 </ul>
 ```
 
-</article>
-
-
-<article id="nav-nested">
-
 ### Nav Nested
 
 > Add class `nav-nested` to the outermost nav to use padding to indent each nested nav.
@@ -72,12 +60,12 @@ title: "Nav"
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -90,12 +78,12 @@ title: "Nav"
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-										<use xlink:href="/images/icons/icons.svg#caret-right" />
+										<use href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-										<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+										<use href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
 							</a>
@@ -117,12 +105,12 @@ title: "Nav"
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -138,12 +126,12 @@ title: "Nav"
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -167,12 +155,12 @@ title: "Nav"
 			Basic Information
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/images/icons/icons.svg#caret-right" />
+					<use href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -185,12 +173,12 @@ title: "Nav"
 						Documents and Media
 						<span class="collapse-icon-closed">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-								<use xlink:href="/images/icons/icons.svg#caret-right" />
+								<use href="/images/icons/icons.svg#caret-right" />
 							</svg>
 						</span>
 						<span class="collapse-icon-open">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-								<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+								<use href="/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</span>
 					</a>
@@ -212,12 +200,12 @@ title: "Nav"
 			SEO
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/images/icons/icons.svg#caret-right" />
+					<use href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -233,12 +221,12 @@ title: "Nav"
 			Advanced
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/images/icons/icons.svg#caret-right" />
+					<use href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -254,11 +242,6 @@ title: "Nav"
 </ul>
 ```
 
-</article>
-
-
-<article id="nav-nested-margins">
-
 ### Nav Nested Margins
 
 > `nav-nested-margins` uses margins instead of padding to indent.
@@ -271,12 +254,12 @@ title: "Nav"
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -289,12 +272,12 @@ title: "Nav"
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-										<use xlink:href="/images/icons/icons.svg#caret-right" />
+										<use href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-										<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+										<use href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
 							</a>
@@ -316,12 +299,12 @@ title: "Nav"
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -337,12 +320,12 @@ title: "Nav"
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -366,12 +349,12 @@ title: "Nav"
 			Basic Information
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/images/icons/icons.svg#caret-right" />
+					<use href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -384,12 +367,12 @@ title: "Nav"
 						Documents and Media
 						<span class="collapse-icon-closed">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-								<use xlink:href="/images/icons/icons.svg#caret-right" />
+								<use href="/images/icons/icons.svg#caret-right" />
 							</svg>
 						</span>
 						<span class="collapse-icon-open">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-								<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+								<use href="/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</span>
 					</a>
@@ -411,12 +394,12 @@ title: "Nav"
 			SEO
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/images/icons/icons.svg#caret-right" />
+					<use href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -432,12 +415,12 @@ title: "Nav"
 			Advanced
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-					<use xlink:href="/images/icons/icons.svg#caret-right" />
+					<use href="/images/icons/icons.svg#caret-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</span>
 		</a>
@@ -452,5 +435,3 @@ title: "Nav"
 	</li>
 </ul>
 ```
-
-</article>

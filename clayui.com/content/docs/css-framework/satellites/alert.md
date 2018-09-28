@@ -2,8 +2,6 @@
 title: "Alerts"
 ---
 
-<article>
-
 ### Colors
 
 Alerts like to colors is available for you.
@@ -51,25 +49,13 @@ Alerts like to colors is available for you.
 	</div>
 </div>
 
-</article>
-
-<article>
-
 ### Alert Notifications Fixed
 
 A fixed positioned container for placing alerts on the top right corner of the page. This component can generally be placed anywhere on the page.
 
-</article>
-
-<article>
-
 ### Alert Notifications Absolute
 
 <p>An absolute positioned container for placing alerts on the top right corner relative to <code>.alert-container</code>. Use this to create sticky positioned alerts with javascript, modifying the CSS property <code>transform: translateY();</code> or <code>margin-top</code> when <code>scrollY</code> reaches a specific threshold. This component should generally be placed at the top of the page for sticky alerts aligned at the top.</p>
-
-</article>
-
-<article>
 
 ### Alert Lists
 
@@ -81,7 +67,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 					<div class="autofit-section">
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+								<use href="/images/icons/icons.svg#exclamation-full" />
 							</svg>
 						</span><strong class="lead">1 Files</strong> couldn't upload.
 					</div>
@@ -90,7 +76,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 					<div class="autofit-section">
 						<button class="btn btn-secondary btn-sm" type="button">
 							<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-								<use xlink:href="/images/icons/icons.svg#reload" />
+								<use href="/images/icons/icons.svg#reload" />
 							</svg></span>Retry all
 						</button>
 					</div>
@@ -98,7 +84,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
@@ -116,7 +102,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 						</h4>
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+								<use href="/images/icons/icons.svg#exclamation-full" />
 							</svg>
 						</span><strong class="lead">Error:</strong> couldn't upload.
 					</div>
@@ -124,14 +110,14 @@ A fixed positioned container for placing alerts on the top right corner of the p
 				<div class="autofit-col">
 					<button class="btn btn-secondary btn-sm" type="button">
 						<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-							<use xlink:href="/images/icons/icons.svg#reload" />
+							<use href="/images/icons/icons.svg#reload" />
 						</svg></span>Retry
 					</button>
 				</div>
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
@@ -151,7 +137,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
@@ -183,7 +169,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
@@ -199,7 +185,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 					<div class="autofit-section">
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+								<use href="/images/icons/icons.svg#exclamation-full" />
 							</svg>
 						</span><strong class="lead">1 Files</strong> couldn't upload.
 					</div>
@@ -208,7 +194,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 					<div class="autofit-section">
 						<button class="btn btn-secondary btn-sm" type="button">
 							<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-								<use xlink:href="/images/icons/icons.svg#reload" />
+								<use href="/images/icons/icons.svg#reload" />
 							</svg></span>Retry all
 						</button>
 					</div>
@@ -216,7 +202,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
@@ -234,7 +220,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 						</h4>
 						<span class="alert-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+								<use href="/images/icons/icons.svg#exclamation-full" />
 							</svg>
 						</span><strong class="lead">Error:</strong> couldn't upload.
 					</div>
@@ -242,14 +228,14 @@ A fixed positioned container for placing alerts on the top right corner of the p
 				<div class="autofit-col">
 					<button class="btn btn-secondary btn-sm" type="button">
 						<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-							<use xlink:href="/images/icons/icons.svg#reload" />
+							<use href="/images/icons/icons.svg#reload" />
 						</svg></span>Retry
 					</button>
 				</div>
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
@@ -269,7 +255,7 @@ A fixed positioned container for placing alerts on the top right corner of the p
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
@@ -301,12 +287,10 @@ A fixed positioned container for placing alerts on the top right corner of the p
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
 		</div>
 	</li>
 </ul>
 ```
-
-</article>

@@ -3,8 +3,6 @@ title: "What is Clay"
 weight: 4
 ---
 
-<article id="what-is-clay">
-
 ### What is Clay?
 
 Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
@@ -18,5 +16,3 @@ Because Clay is modeled after Lexicon's pattern library, you can rest assured, t
 ### Component Library
 
 Browse Clay's extensive [Component Library](/docs/components), where you'll find useful components—with extensive code examples—for your web application.
-
-</article>

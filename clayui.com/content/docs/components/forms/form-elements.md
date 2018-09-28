@@ -8,8 +8,6 @@ Forms obtain user data and transmits it to the system either to store, produce a
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/forms.html">Forms Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="layout">
-
 ### Layout
 
 #### One single form
@@ -25,31 +23,31 @@ Forms obtain user data and transmits it to the system either to store, produce a
 				Screen Name
 				<span class="reference-mark">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeEmail">Email</label>
-			<input class="form-control" id="basicInputTypeEmail" type="email">
+			<input class="form-control" id="basicInputTypeEmail" type="email"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Name</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Birthday</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970">
+			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Gender</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Job Title</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text"/>
 		</div>
 	</div>
 	<div class="sheet-footer sheet-footer-btn-block-sm-down">
@@ -76,31 +74,31 @@ Forms obtain user data and transmits it to the system either to store, produce a
 				Screen Name
 				<span class="reference-mark">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeEmail">Email</label>
-			<input class="form-control" id="basicInputTypeEmail" type="email">
+			<input class="form-control" id="basicInputTypeEmail" type="email"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Name</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Birthday</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970">
+			<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Gender</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text"/>
 		</div>
 		<div class="form-group">
 			<label for="basicInputTypeText">Job Title</label>
-			<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text">
+			<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text"/>
 		</div>
 	</div>
 	<div class="sheet-footer sheet-footer-btn-block-sm-down">
@@ -130,35 +128,35 @@ Forms obtain user data and transmits it to the system either to store, produce a
 					Screen Name
 					<span class="reference-mark">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-							<use xlink:href="/images/icons/icons.svg#asterisk" />
+							<use href="/images/icons/icons.svg#asterisk" />
 						</svg>
 					</span>
 				</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 			</div>
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Birthday</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970">
+				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970"/>
 			</div>
 		</div>
 		<div class="form-group-autofit">
 			<div class="form-group-item">
 				<label for="basicInputTypeEmail">Email</label>
-				<input class="form-control" id="basicInputTypeEmail" type="email">
+				<input class="form-control" id="basicInputTypeEmail" type="email"/>
 			</div>
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Gender</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text"/>
 			</div>
 		</div>
 		<div class="form-group-autofit">
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Name</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text"/>
 			</div>
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Job Title</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text"/>
 			</div>
 		</div>
 	</div>
@@ -187,35 +185,35 @@ Forms obtain user data and transmits it to the system either to store, produce a
 					Screen Name
 					<span class="reference-mark">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-							<use xlink:href="/images/icons/icons.svg#asterisk" />
+							<use href="/images/icons/icons.svg#asterisk" />
 						</svg>
 					</span>
 				</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 			</div>
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Birthday</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970">
+				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970"/>
 			</div>
 		</div>
 		<div class="form-group-autofit">
 			<div class="form-group-item">
 				<label for="basicInputTypeEmail">Email</label>
-				<input class="form-control" id="basicInputTypeEmail" type="email">
+				<input class="form-control" id="basicInputTypeEmail" type="email"/>
 			</div>
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Gender</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text"/>
 			</div>
 		</div>
 		<div class="form-group-autofit">
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Name</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text"/>
 			</div>
 			<div class="form-group-item">
 				<label for="basicInputTypeText">Job Title</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text">
+				<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text"/>
 			</div>
 		</div>
 	</div>
@@ -232,4 +230,3 @@ Forms obtain user data and transmits it to the system either to store, produce a
 </div>
 ```
 
-</article>

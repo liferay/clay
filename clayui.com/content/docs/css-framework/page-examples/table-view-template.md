@@ -8,7 +8,7 @@ title: "Table View Template"
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
+						<use href="/images/icons/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
 			</li>
@@ -18,7 +18,7 @@ title: "Table View Template"
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
@@ -38,7 +38,7 @@ title: "Table View Template"
 		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">App Section 2</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
@@ -63,7 +63,7 @@ title: "Table View Template"
 						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 							<span class="navbar-text-truncate">More</span>
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-								<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+								<use href="/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu">
@@ -85,7 +85,7 @@ title: "Table View Template"
 			<li class="nav-item">
 				<div class="custom-control custom-checkbox">
 					<label>
-						<input class="custom-control-input" type="checkbox">
+						<input class="custom-control-input" type="checkbox"/>
 						<span class="custom-control-label"></span>
 					</label>
 				</div>
@@ -94,12 +94,12 @@ title: "Table View Template"
 				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
 					<span class="navbar-text-truncate">Filter and Order</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+						<use href="/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
-						<use xlink:href="/images/icons/icons.svg#filter" />
+						<use href="/images/icons/icons.svg#filter" />
 					</svg>
 				</a>
 				<ul class="dropdown-menu">
@@ -111,7 +111,7 @@ title: "Table View Template"
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced order-arrow-up-active" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
-						<use xlink:href="/images/icons/icons.svg#order-arrow" />
+						<use href="/images/icons/icons.svg#order-arrow" />
 					</svg>
 				</a>
 			</li>
@@ -121,16 +121,16 @@ title: "Table View Template"
 				<form role="search">
 					<div class="input-group">
 						<div class="input-group-item">
-							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 							<span class="input-group-inset-item input-group-inset-item-after">
 								<button class="btn btn-unstyled" type="submit">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-										<use xlink:href="/images/icons/icons.svg#search" />
+										<use href="/images/icons/icons.svg#search" />
 									</svg>
 								</button>
 								<button class="btn btn-unstyled d-none" type="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-										<use xlink:href="/images/icons/icons.svg#times" />
+										<use href="/images/icons/icons.svg#times" />
 									</svg>
 								</button>
 							</span>
@@ -143,21 +143,21 @@ title: "Table View Template"
 			<li class="nav-item navbar-breakpoint-d-none">
 				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-						<use xlink:href="/images/icons/icons.svg#search" />
+						<use href="/images/icons/icons.svg#search" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#uniqueSidenavCollapseId1" id="uniqueSidenavToggler1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-						<use xlink:href="/images/icons/icons.svg#table" />
+						<use href="/images/icons/icons.svg#table" />
 					</svg>
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
@@ -165,7 +165,7 @@ title: "Table View Template"
 						<a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-									<use xlink:href="/images/icons/icons.svg#list" />
+									<use href="/images/icons/icons.svg#list" />
 								</svg>
 							</span>
 							List View
@@ -175,7 +175,7 @@ title: "Table View Template"
 						<a class="active dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-									<use xlink:href="/images/icons/icons.svg#table" />
+									<use href="/images/icons/icons.svg#table" />
 								</svg>
 							</span>
 							Table View
@@ -185,7 +185,7 @@ title: "Table View Template"
 						<a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-									<use xlink:href="/images/icons/icons.svg#cards2" />
+									<use href="/images/icons/icons.svg#cards2" />
 								</svg>
 							</span>
 							Card View
@@ -196,7 +196,7 @@ title: "Table View Template"
 			<li class="nav-item">
 				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-						<use xlink:href="/images/icons/icons.svg#plus" />
+						<use href="/images/icons/icons.svg#plus" />
 					</svg>
 				</a>
 			</li>
@@ -230,7 +230,7 @@ title: "Table View Template"
 						<li class="tbar-item">
 							<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-									<use xlink:href="/images/icons/icons.svg#angle-left" />
+									<use href="/images/icons/icons.svg#angle-left" />
 								</svg>
 							</a>
 						</li>
@@ -244,14 +244,14 @@ title: "Table View Template"
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-									<use xlink:href="/images/icons/icons.svg#angle-right" />
+									<use href="/images/icons/icons.svg#angle-right" />
 								</svg>
 							</a>
 						</li>
 						<li class="tbar-item">
 							<a class="component-action sidenav-close" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="/images/icons/icons.svg#times" />
+									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</a>
 						</li>
@@ -272,7 +272,7 @@ title: "Table View Template"
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<ul class="dropdown-menu">
@@ -292,7 +292,7 @@ title: "Table View Template"
 					<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 						<span class="navbar-text-truncate">Details</span>
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</a>
 					<div class="collapse navbar-collapse" id="sidebarLightCollapse00">
@@ -313,7 +313,7 @@ title: "Table View Template"
 				<div class="tab-content">
 					<div aria-labelledby="sidebarLightDetailsTab" class="active fade show tab-pane" id="sidebarLightDetails" role="tabpanel">
 						<div class="aspect-ratio aspect-ratio-16-to-9 sidebar-panel" style="margin-top:1.5rem;">
-							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg">
+							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg" />
 							<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 						</div>
 						<dl class="sidebar-dl sidebar-section">
@@ -372,7 +372,7 @@ title: "Table View Template"
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-														<use xlink:href="/images/icons/icons.svg#folder" />
+														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
 											</div>
@@ -390,7 +390,7 @@ title: "Table View Template"
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-														<use xlink:href="/images/icons/icons.svg#folder" />
+														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
 											</div>
@@ -419,7 +419,7 @@ title: "Table View Template"
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
@@ -443,7 +443,7 @@ title: "Table View Template"
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">
@@ -474,11 +474,11 @@ title: "Table View Template"
 								<span class="inline-item inline-item-before">
 									<a href="#1">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-											<use xlink:href="/images/icons/icons.svg#drag" />
+											<use href="/images/icons/icons.svg#drag" />
 										</svg>
 									</a></span><a class="inline-item text-truncate-inline" href="#1"><span class="text-truncate" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span><span class="inline-item inline-item-after">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-											<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
+											<use href="/images/icons/icons.svg#order-arrow-down" />
 										</svg>
 									</span>
 								</a>
@@ -495,7 +495,7 @@ title: "Table View Template"
 							<td>
 								<div class="custom-control custom-checkbox">
 									<label>
-										<input class="custom-control-input" type="checkbox">
+										<input class="custom-control-input" type="checkbox"/>
 										<span class="custom-control-label"></span>
 									</label>
 								</div>
@@ -526,24 +526,24 @@ title: "Table View Template"
 								<div class="quick-action-menu">
 									<a class="component-action quick-action-item" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-											<use xlink:href="/images/icons/icons.svg#trash" />
+											<use href="/images/icons/icons.svg#trash" />
 										</svg>
 									</a>
 									<a class="component-action quick-action-item" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-											<use xlink:href="/images/icons/icons.svg#download" />
+											<use href="/images/icons/icons.svg#download" />
 										</svg>
 									</a>
 									<a class="component-action quick-action-item" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-											<use xlink:href="/images/icons/icons.svg#expand" />
+											<use href="/images/icons/icons.svg#expand" />
 										</svg>
 									</a>
 								</div>
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
 									<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -570,12 +570,12 @@ title: "Table View Template"
 							<span class="inline-item inline-item-before">
 								<a href="#1">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-										<use xlink:href="/images/icons/icons.svg#drag" />
+										<use href="/images/icons/icons.svg#drag" />
 									</svg>
 								</a>
 							</span><a class="inline-item text-truncate-inline" href="#1"><span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
-										<use xlink:href="/images/icons/icons.svg#order-arrow-up" />
+										<use href="/images/icons/icons.svg#order-arrow-up" />
 									</svg>
 								</span>
 							</a>
@@ -596,7 +596,7 @@ title: "Table View Template"
 						<td>
 							<div class="custom-control custom-checkbox">
 								<label>
-									<input class="custom-control-input" type="checkbox">
+									<input class="custom-control-input" type="checkbox"/>
 									<span class="custom-control-label"></span>
 								</label>
 							</div>
@@ -635,24 +635,24 @@ title: "Table View Template"
 							<div class="quick-action-menu">
 								<a class="component-action quick-action-item" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-										<use xlink:href="/images/icons/icons.svg#trash" />
+										<use href="/images/icons/icons.svg#trash" />
 									</svg>
 								</a>
 								<a class="component-action quick-action-item" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-										<use xlink:href="/images/icons/icons.svg#download" />
+										<use href="/images/icons/icons.svg#download" />
 									</svg>
 								</a>
 								<a class="component-action quick-action-item" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-										<use xlink:href="/images/icons/icons.svg#expand" />
+										<use href="/images/icons/icons.svg#expand" />
 									</svg>
 								</a>
 							</div>
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -667,4 +667,4 @@ title: "Table View Template"
 			</table>
 		</div>
 	</div>
-<div>
+</div>

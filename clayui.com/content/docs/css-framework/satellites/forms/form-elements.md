@@ -2,8 +2,6 @@
 title: "Form Elements"
 ---
 
-<article id="basic-form-elements">
-
 ### Basic Form Elements
 
 <div class="sheet">
@@ -12,15 +10,15 @@ title: "Form Elements"
 			Text
 			<span class="reference-mark">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-					<use xlink:href="/images/icons/icons.svg#asterisk" />
+					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</span>
 		</label>
-		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypePassword">Password</label>
-		<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="password">
+		<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="password"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeTextarea">Textarea</label>
@@ -28,27 +26,27 @@ title: "Form Elements"
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeUrl">Url</label>
-		<input class="form-control" id="basicInputTypeUrl" type="url">
+		<input class="form-control" id="basicInputTypeUrl" type="url"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeTel">Tel</label>
-		<input class="form-control" id="basicInputTypeTel" type="tel">
+		<input class="form-control" id="basicInputTypeTel" type="tel"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeEmail">Email</label>
-		<input class="form-control" id="basicInputTypeEmail" type="email">
+		<input class="form-control" id="basicInputTypeEmail" type="email"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeSearch">Search</label>
-		<input class="form-control" id="basicInputTypeSearch" type="search">
+		<input class="form-control" id="basicInputTypeSearch" type="search"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeNumber">Number</label>
-		<input class="form-control" id="basicInputTypeNumber" type="number">
+		<input class="form-control" id="basicInputTypeNumber" type="number"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeRange">Range</label>
-		<input class="form-control" id="basicInputTypeRange" type="range">
+		<input class="form-control" id="basicInputTypeRange" type="range"/>
 	</div>
 </div>
 
@@ -58,16 +56,16 @@ title: "Form Elements"
 		Text
 		<span class="reference-mark">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</span>
 	</label>
-	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 </div>
 
 <div class="form-group">
 	<label for="basicInputTypePassword">Password</label>
-	<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="password">
+	<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="password"/>
 </div>
 
 <div class="form-group">
@@ -77,39 +75,34 @@ title: "Form Elements"
 
 <div class="form-group">
 	<label for="basicInputTypeUrl">Url</label>
-	<input class="form-control" id="basicInputTypeUrl" type="url">
+	<input class="form-control" id="basicInputTypeUrl" type="url"/>
 </div>
 
 <div class="form-group">
 	<label for="basicInputTypeTel">Tel</label>
-	<input class="form-control" id="basicInputTypeTel" type="tel">
+	<input class="form-control" id="basicInputTypeTel" type="tel"/>
 </div>
 
 <div class="form-group">
 	<label for="basicInputTypeEmail">Email</label>
-	<input class="form-control" id="basicInputTypeEmail" type="email">
+	<input class="form-control" id="basicInputTypeEmail" type="email"/>
 </div>
 
 <div class="form-group">
 	<label for="basicInputTypeSearch">Search</label>
-	<input class="form-control" id="basicInputTypeSearch" type="search">
+	<input class="form-control" id="basicInputTypeSearch" type="search"/>
 </div>
 
 <div class="form-group">
 	<label for="basicInputTypeNumber">Number</label>
-	<input class="form-control" id="basicInputTypeNumber" type="number">
+	<input class="form-control" id="basicInputTypeNumber" type="number"/>
 </div>
 
 <div class="form-group">
 	<label for="basicInputTypeRange">Range</label>
-	<input class="form-control" id="basicInputTypeRange" type="range">
+	<input class="form-control" id="basicInputTypeRange" type="range"/>
 </div>
 ```
-
-</article>
-
-
-<article id="clay-select-element">
 
 ### Select Element
 
@@ -226,31 +219,21 @@ title: "Form Elements"
 </div>
 ```
 
-</article>
-
-
-<article id="file-upload">
-
 ### File Upload
 
 <div class="sheet">
 	<div class="form-group">
 		<label class="sr-only" for="inputFile">FILE UPLOAD</label>
-		<input class="form-control-file" id="inputFile" type="file">
+		<input class="form-control-file" id="inputFile" type="file"/>
 	</div>
 </div>
 
 ```html
 <div class="form-group">
 	<label class="sr-only" for="inputFile">FILE UPLOAD</label>
-	<input id="inputFile" type="file">
+	<input id="inputFile" type="file"/>
 </div>
 ```
-
-</article>
-
-
-<article id="disabled-inputs">
 
 ### Disabled Inputs
 
@@ -259,11 +242,11 @@ title: "Form Elements"
 <div class="sheet">
 	<div class="form-group">
 		<label class="disabled" for="disabledTextInput">Text Input</label>
-		<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+		<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte"/>
 	</div>
 	<div class="form-group">
 		<label class="disabled" for="disabledPasswordInput">Password Input</label>
-		<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password">
+		<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password"/>
 	</div>
 	<div class="form-group">
 		<label class="disabled" for="disabledTextarea">Textarea</label>
@@ -346,12 +329,12 @@ title: "Form Elements"
 ```html
 <div class="form-group">
 	<label class="disabled" for="disabledTextInput">Text Input</label>
-	<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+	<input class="form-control" disabled id="disabledTextInput" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte"/>
 </div>
 
 <div class="form-group">
 	<label class="disabled" for="disabledPasswordInput">Password Input</label>
-	<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password">
+	<input class="form-control" disabled id="disabledPasswordInput" placeholder="Enter password" type="password" value="password"/>
 </div>
 
 <div class="form-group">
@@ -384,23 +367,18 @@ title: "Form Elements"
 </div>
 ```
 
-</article>
-
-
-<article id="disabled-fieldset">
-
 ### Disabled Fieldset
 
 <div class="sheet">
 	<fieldset disabled>
 		<div class="form-group">
 			<label>Use fieldset to group related elements in a form and ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
-				<input class="form-control" type="text" value="Plunger pot, extra siphon latte">
+				<input class="form-control" type="text" value="Plunger pot, extra siphon latte"/>
 			</label>
 		</div>
 		<div class="form-group">
 			<label for="disabledFieldsetTextInput2">Disabled Input</label>
-			<input class="form-control" id="disabledFieldsetTextInput2" type="text" value="Plunger pot, extra siphon latte">
+			<input class="form-control" id="disabledFieldsetTextInput2" type="text" value="Plunger pot, extra siphon latte"/>
 		</div>
 		<div class="form-group">
 			<label for="disabledFieldsetSelectElement">Disabled Select Element</label>
@@ -421,12 +399,12 @@ title: "Form Elements"
 <fieldset disabled>
 	<div class="form-group">
 		<label>Use fieldset to group related elements in a form and ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
-			<input class="form-control" type="text" value="Plunger pot, extra siphon latte">
+			<input class="form-control" type="text" value="Plunger pot, extra siphon latte"/>
 		</label>
 	</div>
 	<div class="form-group">
 		<label for="disabledFieldsetTextInput2">Disabled Input</label>
-		<input class="form-control" id="disabledFieldsetTextInput2" type="text" value="Plunger pot, extra siphon latte">
+		<input class="form-control" id="disabledFieldsetTextInput2" type="text" value="Plunger pot, extra siphon latte"/>
 	</div>
 	<div class="form-group">
 		<label for="disabledFieldsetSelectElement">Disabled Select Element</label>
@@ -443,17 +421,12 @@ title: "Form Elements"
 </fieldset>
 ```
 
-</article>
-
-
-<article id="read-only-states">
-
 ### Read Only States
 
 <div class="sheet">
 	<div class="form-group">
 		<label for="readonlyTextInput">Text Input (Read Only)</label>
-		<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+		<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java."/>
 	</div>
 	<div class="form-group">
 		<label for="readonlyTextarea">Textarea (Read Only)</label>
@@ -464,7 +437,7 @@ title: "Form Elements"
 ```html
 <div class="form-group">
 	<label for="readonlyTextInput">Text Input (Read Only)</label>
-	<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+	<input class="form-control" id="readonlyTextInput" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java."/>
 </div>
 
 <div class="form-group">
@@ -473,49 +446,39 @@ title: "Form Elements"
 </div>
 ```
 
-</article>
-
-
-<article id="form-element-sizes">
-
 ### Form Element Sizes
 
 <div class="sheet">
 	<div class="form-group">
 		<label for="smallTextInput">Small text input</label>
-		<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
+		<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text"/>
 	</div>
 	<div class="form-group">
 		<label for="normalTextInput">Normal text input</label>
-		<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text">
+		<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text"/>
 	</div>
 	<div class="form-group">
 		<label for="largeTextInput">Large text input</label>
-		<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text">
+		<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text"/>
 	</div>
 </div>
 
 ```html
 <div class="form-group">
 	<label for="smallTextInput">Small text input</label>
-	<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text">
+	<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text"/>
 </div>
 
 <div class="form-group">
 	<label for="normalTextInput">Normal text input</label>
-	<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text">
+	<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text"/>
 </div>
 
 <div class="form-group">
 	<label for="largeTextInput">Large text input</label>
-	<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text">
+	<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text"/>
 </div>
 ```
-
-</article>
-
-
-<article id="form-group-autofit">
 
 ### Form Group Autofit
 
@@ -535,7 +498,7 @@ title: "Form Elements"
 					<span class="text-truncate" title="Form Inline Autofit">Form Inline Autofit</span>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
+			<input class="form-control" id="formInlineAutofitTextInput1" type="text"/>
 		</div>
 		<div class="form-group-item" style="max-width: 200px;">
 			<label for="formInlineAutofitSelectElement1">
@@ -557,7 +520,7 @@ title: "Form Elements"
 					<span class="text-truncate" title="First Name">First Name</span>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
+			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text"/>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitLastName">
@@ -565,7 +528,7 @@ title: "Form Elements"
 					<span class="text-truncate" title="Last Name">Last Name</span>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
+			<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text"/>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitInputGroup">
@@ -578,7 +541,7 @@ title: "Form Elements"
 					<span class="input-group-text">$</span>
 				</div>
 				<div class="input-group-item input-group-prepend">
-					<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
+					<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount"/>
 				</div>
 				<div class="input-group-append input-group-item input-group-item-shrink">
 					<span class="input-group-text">.00</span>
@@ -598,7 +561,7 @@ title: "Form Elements"
 			</label>
 		</div>
 		<div class="form-group-item form-group-item-label-spacer">
-			<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
+			<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text"/>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitState">
@@ -621,7 +584,7 @@ title: "Form Elements"
 					<span class="text-truncate" title="Zip Code">Zip Code</span>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
+			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text"/>
 			<div class="form-feedback-group">
 				<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
 			</div>
@@ -637,7 +600,7 @@ title: "Form Elements"
 					<span class="input-group-text">$</span>
 				</div>
 				<div class="input-group-item input-group-prepend">
-					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
+					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount"/>
 				</div>
 				<div class="input-group-append input-group-item input-group-item-shrink">
 					<span class="input-group-text">.00</span>
@@ -665,7 +628,7 @@ title: "Form Elements"
 				<span class="text-truncate" title="Form Inline Autofit">Form Inline Autofit</span>
 			</span>
 		</label>
-		<input class="form-control" id="formInlineAutofitTextInput1" type="text">
+		<input class="form-control" id="formInlineAutofitTextInput1" type="text"/>
 	</div>
 	<div class="form-group-item" style="max-width: 200px;">
 		<label for="formInlineAutofitSelectElement1">
@@ -688,7 +651,7 @@ title: "Form Elements"
 				<span class="text-truncate" title="First Name">First Name</span>
 			</span>
 		</label>
-		<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
+		<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text"/>
 	</div>
 	<div class="form-group-item">
 		<label for="formInlineAutofitLastName">
@@ -696,7 +659,7 @@ title: "Form Elements"
 				<span class="text-truncate" title="Last Name">Last Name</span>
 			</span>
 		</label>
-		<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
+		<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text"/>
 	</div>
 	<div class="form-group-item">
 		<label for="formInlineAutofitInputGroup">
@@ -709,7 +672,7 @@ title: "Form Elements"
 				<span class="input-group-text">$</span>
 			</div>
 			<div class="input-group-item input-group-prepend">
-				<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
+				<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount"/>
 			</div>
 			<div class="input-group-append input-group-item input-group-item-shrink">
 				<span class="input-group-text">.00</span>
@@ -730,7 +693,7 @@ title: "Form Elements"
 		</label>
 	</div>
 	<div class="form-group-item form-group-item-label-spacer">
-		<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
+		<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text"/>
 	</div>
 	<div class="form-group-item">
 		<label for="formInlineAutofitState">
@@ -753,7 +716,7 @@ title: "Form Elements"
 				<span class="text-truncate" title="Zip Code">Zip Code</span>
 			</span>
 		</label>
-		<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
+		<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
 		</div>
@@ -769,7 +732,7 @@ title: "Form Elements"
 				<span class="input-group-text">$</span>
 			</div>
 			<div class="input-group-item input-group-prepend">
-				<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
+				<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount"/>
 			</div>
 			<div class="input-group-append input-group-item input-group-item-shrink">
 				<span class="input-group-text">.00</span>
@@ -790,15 +753,11 @@ title: "Form Elements"
 </div>
 ```
 
-</article>
-
-
-<article id="form-group-autofit-horizontal-form">
-
 ### Form Group Autofit (Horizontal Form)
 
 > Create horizontal forms by placing each `input` inside `form-group-item` and `label` inside `form-group-item form-group-item-label form-group-item-shrink` and set a min-width on `.form-group-item-label`.
-{literal}
+
+```html
 <style>
 	@media (min-width: 576px) {
 		.my-custom-form .form-group-item-label {
@@ -806,7 +765,7 @@ title: "Form Elements"
 		}
 	}
 </style>
-{/literal}
+```
 
 <div class="sheet">
 	<form class="my-custom-form">
@@ -815,16 +774,16 @@ title: "Form Elements"
 				<label>Name ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</label>
 			</div>
 			<div class="form-group-item">
-				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+				<input aria-label="First Name" class="form-control" placeholder="First" type="text"/>
 				<div class="form-feedback-group">
 					<div class="form-text">Your first name.</div>
 				</div>
 			</div>
 			<div class="form-group-item">
-				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+				<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text"/>
 			</div>
 			<div class="form-group-item">
-				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+				<input aria-label="Last Name" class="form-control" placeholder="Last" type="text"/>
 				<div class="form-feedback-group">
 					<div class="form-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
 				</div>
@@ -835,7 +794,7 @@ title: "Form Elements"
 				<label for="formInlineAutofitCustomAddress1">Address 1</label>
 			</div>
 			<div class="form-group-item">
-				<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+				<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text"/>
 			</div>
 		</div>
 		<div class="form-group-autofit">
@@ -843,7 +802,7 @@ title: "Form Elements"
 				<label for="formInlineAutofitCustomAddress2">Address 2</label>
 			</div>
 			<div class="form-group-item">
-				<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+				<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text"/>
 			</div>
 		</div>
 		<div class="form-group">
@@ -874,16 +833,16 @@ title: "Form Elements"
 			<label>Name ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</label>
 		</div>
 		<div class="form-group-item">
-			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+			<input aria-label="First Name" class="form-control" placeholder="First" type="text"/>
 			<div class="form-feedback-group">
 				<div class="form-text">Your first name.</div>
 			</div>
 		</div>
 		<div class="form-group-item">
-			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text"/>
 		</div>
 		<div class="form-group-item">
-			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text"/>
 			<div class="form-feedback-group">
 				<div class="form-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</div>
 			</div>
@@ -894,7 +853,7 @@ title: "Form Elements"
 			<label for="formInlineAutofitCustomAddress1">Address 1</label>
 		</div>
 		<div class="form-group-item">
-			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text"/>
 		</div>
 	</div>
 	<div class="form-group-autofit">
@@ -902,7 +861,7 @@ title: "Form Elements"
 			<label for="formInlineAutofitCustomAddress2">Address 2</label>
 		</div>
 		<div class="form-group-item">
-			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text"/>
 		</div>
 	</div>
 	<div class="form-group">
@@ -917,5 +876,3 @@ title: "Form Elements"
 	</div>
 </form>
 ```
-
-</article>

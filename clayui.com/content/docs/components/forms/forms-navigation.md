@@ -8,8 +8,6 @@ Forms can have navigation and this can appear in two different ways: left naviga
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/formsNavigation.html">Forms Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article>
-
 ### Left navigation menu
 
 For more information and how to use the component, see the [Vertical Navigation](/docs/components/navigation/vertical-navigation.html) page.
@@ -20,7 +18,7 @@ For more information and how to use the component, see the [Vertical Navigation]
 			<a aria-controls="menubarVerticalLgCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalLgCollapse01" role="button">
 				Details
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div class="collapse menubar-collapse" id="menubarVerticalLgCollapse01">
@@ -30,12 +28,12 @@ For more information and how to use the component, see the [Vertical Navigation]
 							Basic Information
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -48,12 +46,12 @@ For more information and how to use the component, see the [Vertical Navigation]
 										Documents and Media
 										<span class="collapse-icon-closed">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-												<use xlink:href="/images/icons/icons.svg#caret-right" />
+												<use href="/images/icons/icons.svg#caret-right" />
 											</svg>
 										</span>
 										<span class="collapse-icon-open">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-												<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+												<use href="/images/icons/icons.svg#caret-bottom" />
 											</svg>
 										</span>
 									</a>
@@ -75,12 +73,12 @@ For more information and how to use the component, see the [Vertical Navigation]
 							SEO
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -96,12 +94,12 @@ For more information and how to use the component, see the [Vertical Navigation]
 							Advanced
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -120,9 +118,9 @@ For more information and how to use the component, see the [Vertical Navigation]
 	</div>
 </div>
 
-</article>
 
-<article>
+
+>
 
 ### Wizards
 
@@ -166,7 +164,7 @@ For more information and how to use the component, see the [Multi Step Form](/do
 				<div class="multi-step-indicator-label">Step 05</div>
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
+						<use href="/images/icons/icons.svg#ellipsis-h"></use>
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -174,7 +172,7 @@ For more information and how to use the component, see the [Multi Step Form](/do
 						5. Step Five
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/images/icons/icons.svg#check" />
+								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -182,7 +180,7 @@ For more information and how to use the component, see the [Multi Step Form](/do
 						6. Step Six
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/images/icons/icons.svg#check" />
+								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -190,7 +188,7 @@ For more information and how to use the component, see the [Multi Step Form](/do
 						7. Step Seven
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/images/icons/icons.svg#check" />
+								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -198,7 +196,7 @@ For more information and how to use the component, see the [Multi Step Form](/do
 						8. Step Eight
 						<span aria-hidden="true" class="dropdown-item-indicator">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="/images/icons/icons.svg#check" />
+								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
 					</a>
@@ -247,4 +245,3 @@ For more information and how to use the component, see the [Multi Step form Simp
 	</div>
 </div>
 
-</article>

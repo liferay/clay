@@ -2,8 +2,6 @@
 title: "Popovers and Tooltips"
 ---
 
-<article>
-
 ### Clay Popovers (Doesn't use Bootstrap JS or Popper JS)
 
 #### Clay Popover Top
@@ -254,10 +252,6 @@ title: "Popovers and Tooltips"
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Clay Tooltips (Doesn't use Bootstrap JS or Popper JS)
 
 #### Clay Tooltip Right
@@ -435,5 +429,3 @@ title: "Popovers and Tooltips"
 	</div>
 </div>
 ```
-
-</article>

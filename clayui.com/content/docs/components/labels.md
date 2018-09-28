@@ -8,8 +8,6 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/labels.html">Labels Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-labels">
-
 ### Labels
 
 <span class="label label-secondary"><span class="label-item label-item-expand">Label Text</span></span>
@@ -76,10 +74,6 @@ Labels are a mechanism to categorize information providing quick recognition.
 </span>
 ```
 
-</article>
-
-<article id="clay-labels-size">
-
 ### Sizes
 
 > Use `label-lg` to make the label larger or use the mixin `label-size($sassMap)` to create a custom sized label.
@@ -112,10 +106,6 @@ Labels are a mechanism to categorize information providing quick recognition.
 </span>
 ```
 
-</article>
-
-<article id="clay-labels-variations">
-
 ### Variations
 
 #### Label simple
@@ -146,7 +136,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 	<span class="label-item label-item-expand">Label Text</span>
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times"><use xlink:href="/images/icons/icons.svg#times"></use></svg>
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times"><use href="/images/icons/icons.svg#times"></use></svg>
 		</button>
 	</span>
 </span>
@@ -166,7 +156,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times"></use>
+				<use href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>
 	</span>
@@ -194,14 +184,9 @@ Labels are a mechanism to categorize information providing quick recognition.
 </a>
 ```
 
-</article>
-
-<article id="clay-labels-api">
-
 ### API
 
 <div>
 	[APITable "clay-label/src/ClayLabel.js"]
 </div>
 
-</article>

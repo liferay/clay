@@ -2,8 +2,6 @@
 title: "Form Elements (Validation)"
 ---
 
-<article id="input-validation-states-non-html5">
-
 ### Input Validation States (Non HTML5)
 
 <div class="sheet">
@@ -11,16 +9,16 @@ title: "Form Elements (Validation)"
 		<label for="inputNormal1">
 			normal
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputNormal1" type="text">
+		<input class="form-control" id="inputNormal1" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
-						<use xlink:href="/images/icons/icons.svg#question-circle-full" />
+						<use href="/images/icons/icons.svg#question-circle-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -32,16 +30,16 @@ title: "Form Elements (Validation)"
 		<label for="inputSuccess1">
 			has-success
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputSuccess1" type="text">
+		<input class="form-control" id="inputSuccess1" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-						<use xlink:href="/images/icons/icons.svg#check-circle-full" />
+						<use href="/images/icons/icons.svg#check-circle-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -53,16 +51,16 @@ title: "Form Elements (Validation)"
 		<label for="inputWarning1">
 			has-warning
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputWarning1" type="text">
+		<input class="form-control" id="inputWarning1" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-						`<use xlink:href="/images/icons/icons.svg#warning-full" />
+						`<use href="/images/icons/icons.svg#warning-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -74,16 +72,16 @@ title: "Form Elements (Validation)"
 		<label for="inputError1">
 			has-error
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputError1" type="text">
+		<input class="form-control" id="inputError1" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-						<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+						<use href="/images/icons/icons.svg#exclamation-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -98,16 +96,16 @@ title: "Form Elements (Validation)"
 	<label for="inputNormal1">
 		normal
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/images/icons/icons.svg#asterisk" />
+			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputNormal1" type="text">
+	<input class="form-control" id="inputNormal1" type="text"/>
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
-					<use xlink:href="/images/icons/icons.svg#question-circle-full" />
+					<use href="/images/icons/icons.svg#question-circle-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
@@ -120,16 +118,16 @@ title: "Form Elements (Validation)"
 	<label for="inputSuccess1">
 		has-success
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/images/icons/icons.svg#asterisk" />
+			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputSuccess1" type="text">
+	<input class="form-control" id="inputSuccess1" type="text"/>
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-					<use xlink:href="/images/icons/icons.svg#check-circle-full" />
+					<use href="/images/icons/icons.svg#check-circle-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
@@ -142,16 +140,16 @@ title: "Form Elements (Validation)"
 	<label for="inputWarning1">
 		has-warning
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/images/icons/icons.svg#asterisk" />
+			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputWarning1" type="text">
+	<input class="form-control" id="inputWarning1" type="text"/>
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-					<use xlink:href="/images/icons/icons.svg#warning-full" />
+					<use href="/images/icons/icons.svg#warning-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
@@ -164,16 +162,16 @@ title: "Form Elements (Validation)"
 	<label for="inputError1">
 		has-error
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/images/icons/icons.svg#asterisk" />
+			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputError1" type="text">
+	<input class="form-control" id="inputError1" type="text"/>
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-					<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+					<use href="/images/icons/icons.svg#exclamation-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
@@ -182,11 +180,6 @@ title: "Form Elements (Validation)"
 	</div>
 </div>
 ```
-
-</article>
-
-
-<article id="custom-checkbox-and-radio-validation-states">
 
 ### Custom Checkbox and Radio Validation States
 
@@ -197,11 +190,11 @@ title: "Form Elements (Validation)"
 				<div class="has-success">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Custom Checkbox with Success</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
@@ -210,11 +203,11 @@ title: "Form Elements (Validation)"
 				<div class="has-warning">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Custom Checkbox with Warning</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
@@ -223,11 +216,11 @@ title: "Form Elements (Validation)"
 				<div class="has-error">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+							<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Custom Checkbox with Error</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
@@ -240,11 +233,11 @@ title: "Form Elements (Validation)"
 				<div class="has-success">
 					<div class="custom-control custom-radio">
 						<label>
-							<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
+							<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Custom Radio with Success</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
@@ -253,11 +246,11 @@ title: "Form Elements (Validation)"
 				<div class="has-warning">
 					<div class="custom-control custom-radio">
 						<label>
-							<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
+							<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Custom Radio with Warning</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
@@ -266,11 +259,11 @@ title: "Form Elements (Validation)"
 				<div class="has-error">
 					<div class="custom-control custom-radio">
 						<label>
-							<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
+							<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Custom Radio with Error</span>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
@@ -286,11 +279,11 @@ title: "Form Elements (Validation)"
 	<div class="has-success">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="custom-control-input" type="checkbox">
+				<input class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Checkbox with Success</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
@@ -299,11 +292,11 @@ title: "Form Elements (Validation)"
 	<div class="has-warning">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="custom-control-input" type="checkbox">
+				<input class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Checkbox with Warning</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
@@ -312,11 +305,11 @@ title: "Form Elements (Validation)"
 	<div class="has-error">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Checkbox with Error</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
@@ -328,11 +321,11 @@ title: "Form Elements (Validation)"
 	<div class="has-success">
 		<div class="custom-control custom-radio">
 			<label>
-				<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio">
+				<input class="custom-control-input" id="validationRadioCustom1" name="validationRadioCustom" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Radio with Success</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
@@ -341,11 +334,11 @@ title: "Form Elements (Validation)"
 	<div class="has-warning">
 		<div class="custom-control custom-radio">
 			<label>
-				<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio">
+				<input class="custom-control-input" id="validationRadioCustom2" name="validationRadioCustom" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Radio with Warning</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
@@ -354,11 +347,11 @@ title: "Form Elements (Validation)"
 	<div class="has-error">
 		<div class="custom-control custom-radio">
 			<label>
-				<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio">
+				<input class="custom-control-input" id="validationRadioCustom3" name="validationRadioCustom" type="radio"/>
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Custom Radio with Error</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-						<use xlink:href="/images/icons/icons.svg#asterisk" />
+						<use href="/images/icons/icons.svg#asterisk" />
 					</svg>
 				</span>
 			</label>
@@ -366,11 +359,6 @@ title: "Form Elements (Validation)"
 	</div>
 </div>
 ```
-
-</article>
-
-
-<article id="select-element-validation-states">
 
 ### Select Element Validation States
 
@@ -380,7 +368,7 @@ title: "Form Elements (Validation)"
 			<label for="selectElementSuccess">
 				Select Element with Success
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-					<use xlink:href="/images/icons/icons.svg#asterisk" />
+					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
 			<select class="form-control" id="selectElementSuccess">
@@ -396,7 +384,7 @@ title: "Form Elements (Validation)"
 			<label for="selectElementWarning">
 				Select Box with Warning
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-					<use xlink:href="/images/icons/icons.svg#asterisk" />
+					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
 			<select class="form-control" id="selectElementWarning">
@@ -412,7 +400,7 @@ title: "Form Elements (Validation)"
 			<label for="selectElementError">
 				Select Box with Error
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-					<use xlink:href="/images/icons/icons.svg#asterisk" />
+					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
 			<select class="form-control" id="selectElementError">
@@ -431,7 +419,7 @@ title: "Form Elements (Validation)"
 		<label for="selectElementSuccess">
 			Select Element with Success
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<select class="form-control" id="selectElementSuccess">
@@ -447,7 +435,7 @@ title: "Form Elements (Validation)"
 		<label for="selectElementWarning">
 			Select Box with Warning
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<select class="form-control" id="selectElementWarning">
@@ -463,7 +451,7 @@ title: "Form Elements (Validation)"
 		<label for="selectElementError">
 			Select Box with Error
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<select class="form-control" id="selectElementError">
@@ -476,11 +464,6 @@ title: "Form Elements (Validation)"
 </div>
 ```
 
-</article>
-
-
-<article id="multiple-select-element-validation-states">
-
 ### Multiple Select Element Validation States
 
 <div class="sheet">
@@ -489,7 +472,7 @@ title: "Form Elements (Validation)"
 			<label for="multipleSelectElementSuccess">
 				Multiple Select Element with Success
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-					<use xlink:href="/images/icons/icons.svg#asterisk" />
+					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
 			<select class="form-control" id="multipleSelectElementSuccess" multiple>
@@ -505,7 +488,7 @@ title: "Form Elements (Validation)"
 			<label for="multipleSelectElementWarning">
 				Multiple Select Element with Warning
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-					<use xlink:href="/images/icons/icons.svg#asterisk" />
+					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
 			<select class="form-control" id="multipleSelectElementWarning" multiple>
@@ -521,7 +504,7 @@ title: "Form Elements (Validation)"
 			<label for="multipleSelectElementError">
 				Multiple Select Element with Error
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-					<use xlink:href="/images/icons/icons.svg#asterisk" />
+					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
 			<select class="form-control" id="multipleSelectElementError" multiple>
@@ -540,7 +523,7 @@ title: "Form Elements (Validation)"
 		<label for="multipleSelectElementSuccess">
 			Multiple Select Element with Success
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<select class="form-control" id="multipleSelectElementSuccess" multiple>
@@ -557,7 +540,7 @@ title: "Form Elements (Validation)"
 		<label for="multipleSelectElementWarning">
 			Multiple Select Element with Warning
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<select class="form-control" id="multipleSelectElementWarning" multiple>
@@ -574,7 +557,7 @@ title: "Form Elements (Validation)"
 		<label for="multipleSelectElementError">
 			Multiple Select Element with Error
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
 		<select class="form-control" id="multipleSelectElementError" multiple>
@@ -586,5 +569,3 @@ title: "Form Elements (Validation)"
 	</div>
 </div>
 ```
-
-</article>

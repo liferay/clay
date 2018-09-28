@@ -2,8 +2,6 @@
 title: "Stickers"
 ---
 
-<article>
-
 ### Sticker Overlay
 		
 <p>Overlay content over stickers by nesting <code>sticker-overlay</code> inside <code>sticker</code>.</p>
@@ -12,25 +10,25 @@ title: "Stickers"
 
 <span class="sticker sticker-primary sticker-sm">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_coffee.jpg">
+		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_coffee.jpg"/>
 	</span>
 	<span class="sticker-overlay">JB</span>
 </span>
 <span class="sticker sticker-primary">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_hot_air_ballon.jpg">
+		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_hot_air_ballon.jpg"/>
 	</span>
 	<span class="sticker-overlay">TT</span>
 </span>
 <span class="sticker sticker-primary sticker-lg">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/tv-at-beach.png">
+		<img alt="thumbnail" class="sticker-img" src="/images/tv-at-beach.png"/>
 	</span>
 	<span class="sticker-overlay">SP</span>
 </span>
 <span class="sticker sticker-primary sticker-xl">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/long_user_image.png">
+		<img alt="thumbnail" class="sticker-img" src="/images/long_user_image.png"/>
 	</span>
 	<span class="sticker-overlay">BC</span>
 </span>
@@ -40,33 +38,29 @@ title: "Stickers"
 ```html
 <span class="sticker sticker-primary sticker-sm">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_coffee.jpg">
+		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_coffee.jpg"/>
 	</span>
 	<span class="sticker-overlay">JB</span>
 </span>
 <span class="sticker sticker-primary">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_hot_air_ballon.jpg">
+		<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_hot_air_ballon.jpg"/>
 	</span>
 	<span class="sticker-overlay">TT</span>
 </span>
 <span class="sticker sticker-primary sticker-lg">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/tv-at-beach.png">
+		<img alt="thumbnail" class="sticker-img" src="/images/tv-at-beach.png"/>
 	</span>
 	<span class="sticker-overlay">SP</span>
 </span>
 <span class="sticker sticker-primary sticker-xl">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="sticker-img" src="/images/long_user_image.png">
+		<img alt="thumbnail" class="sticker-img" src="/images/long_user_image.png"/>
 	</span>
 	<span class="sticker-overlay">BC</span>
 </span>
 ```
-
-</article>
-
-<article>
 
 ### Sticker Outside
 
@@ -134,13 +128,13 @@ title: "Stickers"
 	<span class="sticker sticker-dark">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-left">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
-					<use xlink:href="/images/icons/icons.svg#sun" />
+					<use href="/images/icons/icons.svg#sun" />
 				</svg>
 			</span>
 		</span>
@@ -150,13 +144,13 @@ title: "Stickers"
 	<span class="sticker sticker-info">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-left">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/images/icons/icons.svg#magic" />
+					<use href="/images/icons/icons.svg#magic" />
 				</svg>
 			</span>
 		</span>
@@ -166,13 +160,13 @@ title: "Stickers"
 	<span class="sticker sticker-danger">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-right">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
-					<use xlink:href="/images/icons/icons.svg#transform" />
+					<use href="/images/icons/icons.svg#transform" />
 				</svg>
 			</span>
 		</span>
@@ -182,13 +176,13 @@ title: "Stickers"
 	<span class="sticker sticker-success">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-right">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
-					<use xlink:href="/images/icons/icons.svg#undo" />
+					<use href="/images/icons/icons.svg#undo" />
 				</svg>
 			</span>
 		</span>
@@ -202,13 +196,13 @@ title: "Stickers"
 	<span class="sticker sticker-dark">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-left">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
-					<use xlink:href="/images/icons/icons.svg#sun" />
+					<use href="/images/icons/icons.svg#sun" />
 				</svg>
 			</span>
 		</span>
@@ -218,13 +212,13 @@ title: "Stickers"
 	<span class="sticker sticker-info">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-left">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/images/icons/icons.svg#magic" />
+					<use href="/images/icons/icons.svg#magic" />
 				</svg>
 			</span>
 		</span>
@@ -234,13 +228,13 @@ title: "Stickers"
 	<span class="sticker sticker-danger">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-right">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
-					<use xlink:href="/images/icons/icons.svg#transform" />
+					<use href="/images/icons/icons.svg#transform" />
 				</svg>
 			</span>
 		</span>
@@ -250,18 +244,16 @@ title: "Stickers"
 	<span class="sticker sticker-success">
 		<span class="inline-item">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="/images/icons/icons.svg#picture" />
+				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-right">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
-					<use xlink:href="/images/icons/icons.svg#undo" />
+					<use href="/images/icons/icons.svg#undo" />
 				</svg>
 			</span>
 		</span>
 	</span>
 </div>
 ```
-
-</article>

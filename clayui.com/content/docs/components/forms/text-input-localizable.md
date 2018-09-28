@@ -8,8 +8,6 @@ A text input viaration used in those fields that can be translated into multiple
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input_localizable.html">Text Input Localizable Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="variations">
-
 ### Variations
 
 #### Text area localizable
@@ -25,7 +23,7 @@ A text input viaration used in those fields that can be translated into multiple
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-							<use xlink:href="/images/icons/icons.svg#es-es"></use>
+							<use href="/images/icons/icons.svg#es-es"></use>
 						</svg>
 					</span>
 					<span class="btn-section">es-ES</span>
@@ -37,7 +35,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-											<use xlink:href="/images/icons/icons.svg#en-us"></use>
+											<use href="/images/icons/icons.svg#en-us"></use>
 										</svg>
 									</span>
 									en-US
@@ -56,7 +54,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-											<use xlink:href="/images/icons/icons.svg#en-gb"></use>
+											<use href="/images/icons/icons.svg#en-gb"></use>
 										</svg>
 									</span>
 									en-GB
@@ -75,7 +73,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-											<use xlink:href="/images/icons/icons.svg#es-es"></use>
+											<use href="/images/icons/icons.svg#es-es"></use>
 										</svg>
 									</span>
 									es-ES
@@ -94,7 +92,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-											<use xlink:href="/images/icons/icons.svg#fr-fr"></use>
+											<use href="/images/icons/icons.svg#fr-fr"></use>
 										</svg>
 									</span>
 									fr-FR
@@ -125,7 +123,7 @@ A text input viaration used in those fields that can be translated into multiple
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-						<use xlink:href="/images/icons/icons.svg#es-es"></use>
+						<use href="/images/icons/icons.svg#es-es"></use>
 					</svg>
 				</span>
 				<span class="btn-section">es-ES</span>
@@ -137,7 +135,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-										<use xlink:href="/images/icons/icons.svg#en-us"></use>
+										<use href="/images/icons/icons.svg#en-us"></use>
 									</svg>
 								</span>
 								en-US
@@ -156,7 +154,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-										<use xlink:href="/images/icons/icons.svg#en-gb"></use>
+										<use href="/images/icons/icons.svg#en-gb"></use>
 									</svg>
 								</span>
 								en-GB
@@ -175,7 +173,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-										<use xlink:href="/images/icons/icons.svg#es-es"></use>
+										<use href="/images/icons/icons.svg#es-es"></use>
 									</svg>
 								</span>
 								es-ES
@@ -194,7 +192,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-										<use xlink:href="/images/icons/icons.svg#fr-fr"></use>
+										<use href="/images/icons/icons.svg#fr-fr"></use>
 									</svg>
 								</span>
 								fr-FR
@@ -225,13 +223,13 @@ A text input viaration used in those fields that can be translated into multiple
 				<span class="input-group-text">/</span>
 			</div>
 			<div class="input-group-append input-group-item">
-				<input class="form-control" id="localizableInput1" placeholder="es-es/clay" type="text" value="es-es/clay">
+				<input class="form-control" id="localizableInput1" placeholder="es-es/clay" type="text" value="es-es/clay" />
 			</div>
 			<div class="input-group-item input-group-item-shrink">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-							<use xlink:href="/images/icons/icons.svg#es-es"></use>
+							<use href="/images/icons/icons.svg#es-es"></use>
 						</svg>
 					</span>
 					<span class="btn-section">es-ES</span>
@@ -243,7 +241,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-											<use xlink:href="/images/icons/icons.svg#en-us"></use>
+											<use href="/images/icons/icons.svg#en-us"></use>
 										</svg>
 									</span>
 									en-US
@@ -262,7 +260,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-											<use xlink:href="/images/icons/icons.svg#en-gb"></use>
+											<use href="/images/icons/icons.svg#en-gb"></use>
 										</svg>
 									</span>
 									en-GB
@@ -281,7 +279,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-											<use xlink:href="/images/icons/icons.svg#es-es"></use>
+											<use href="/images/icons/icons.svg#es-es"></use>
 										</svg>
 									</span>
 									es-ES
@@ -300,7 +298,7 @@ A text input viaration used in those fields that can be translated into multiple
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-											<use xlink:href="/images/icons/icons.svg#fr-fr"></use>
+											<use href="/images/icons/icons.svg#fr-fr"></use>
 										</svg>
 									</span>
 									fr-FR
@@ -329,13 +327,13 @@ A text input viaration used in those fields that can be translated into multiple
 			<span class="input-group-text">/</span>
 		</div>
 		<div class="input-group-append input-group-item">
-			<input class="form-control" id="localizableInput1" placeholder="es-es/clay" type="text" value="es-es/clay">
+			<input class="form-control" id="localizableInput1" placeholder="es-es/clay" type="text" value="es-es/clay"/>
 		</div>
 		<div class="input-group-item input-group-item-shrink">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-						<use xlink:href="/images/icons/icons.svg#es-es"></use>
+						<use href="/images/icons/icons.svg#es-es"></use>
 					</svg>
 				</span>
 				<span class="btn-section">es-ES</span>
@@ -347,7 +345,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-										<use xlink:href="/images/icons/icons.svg#en-us"></use>
+										<use href="/images/icons/icons.svg#en-us"></use>
 									</svg>
 								</span>
 								en-US
@@ -366,7 +364,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-										<use xlink:href="/images/icons/icons.svg#en-gb"></use>
+										<use href="/images/icons/icons.svg#en-gb"></use>
 									</svg>
 								</span>
 								en-GB
@@ -385,7 +383,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-										<use xlink:href="/images/icons/icons.svg#es-es"></use>
+										<use href="/images/icons/icons.svg#es-es"></use>
 									</svg>
 								</span>
 								es-ES
@@ -404,7 +402,7 @@ A text input viaration used in those fields that can be translated into multiple
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-										<use xlink:href="/images/icons/icons.svg#fr-fr"></use>
+										<use href="/images/icons/icons.svg#fr-fr"></use>
 									</svg>
 								</span>
 								fr-FR
@@ -424,4 +422,3 @@ A text input viaration used in those fields that can be translated into multiple
 </div>
 ```
 
-</article>
