@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import Sidebar from '../components/Sidebar';
 import CodeTabs from '../components/CodeTabs';
 import CodeClipboard from '../components/CodeClipboard';
+import Typography from '../components/Typography';
 
 export default class Docs extends Component {
     componentDidMount() {
@@ -52,6 +53,11 @@ export default class Docs extends Component {
                             <div className="row">
                                 <div className="col-md-12">
                                     <MDXRenderer
+                                        components={{
+                                            h3: Typography.H3,
+                                            h4: Typography.H4,
+                                            p: Typography.P,
+                                        }}
                                     >
                                         {code.body}
                                     </MDXRenderer>
