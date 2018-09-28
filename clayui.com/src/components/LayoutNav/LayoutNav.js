@@ -1,6 +1,6 @@
 import { window, document } from 'browser-monads';
 import React, { Component } from 'react';
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import classnames from 'classnames';
 
 class LayoutNav extends Component {
@@ -11,10 +11,10 @@ class LayoutNav extends Component {
     }
 
     _getScrollTop() {
-        if (this._rootNode == window) {
+        if (this._rootNode === window) {
             return this._rootNode.pageYOffset;
         }
-        if (this._rootNode == document) {
+        if (this._rootNode === document) {
             return this._rootNode.defaultView.pageYOffset;
         }
     }

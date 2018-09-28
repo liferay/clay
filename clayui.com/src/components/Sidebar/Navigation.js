@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import Link from "gatsby-link"
+import { Link } from "gatsby"
 
 class Navigation extends Component {
     _handleOnClick(index, depth, section, event) {

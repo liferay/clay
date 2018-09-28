@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
 import rehypeReact from "rehype-react";
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+import React, { Component } from 'react';
 
 import Sidebar from '../components/Sidebar';
 import CodeTabs from '../components/CodeTabs';
