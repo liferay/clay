@@ -52,15 +52,17 @@ export default class Docs extends Component {
                         <div className="clay-site-container container-fluid">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <MDXRenderer
-                                        components={{
-                                            h3: Typography.H3,
-                                            h4: Typography.H4,
-                                            p: Typography.P,
-                                        }}
-                                    >
-                                        {code.body}
-                                    </MDXRenderer>
+                                    <article>
+                                        <MDXRenderer
+                                            components={{
+                                                h3: Typography.H3,
+                                                h4: Typography.H4,
+                                                p: Typography.P,
+                                            }}
+                                        >
+                                            {code.body}
+                                        </MDXRenderer>
+                                    </article>
                                 </div>
                             </div>
                         </div>
