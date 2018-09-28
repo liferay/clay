@@ -32,7 +32,7 @@ class Graph extends Component {
 
         if (typeof window !== 'undefined') {
             const Chart = ClayCharts[component];
-            this._chart = new Chart(JSON.parse(props), this.refs[`clay-charts-${component}`]);
+            this._chart = new Chart(props, this.refs[`clay-charts-${component}`]);
         }
     }
 
