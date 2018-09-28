@@ -2,27 +2,27 @@ const clay = require('clay-css');
 const path = require('path');
 
 module.exports = {
-    plugins: [
-        'gatsby-plugin-react-next',
-        'gatsby-transformer-try-examples',
-        {
-            resolve: 'gatsby-plugin-sass',
-            options: {
-                precision: 8,
-                includePaths: clay
-                    .includePaths
-                    .concat(
-                        path.join(
-                            clay.includePaths[0],
-                            'node_modules'
-                        )
-                    )
-            },
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-				name: "packages",
+	plugins: [
+		'gatsby-plugin-meta-redirect',
+		'gatsby-transformer-try-examples',
+		{
+			resolve: 'gatsby-plugin-sass',
+			options: {
+				precision: 8,
+				includePaths: clay
+					.includePaths
+					.concat(
+						path.join(
+							clay.includePaths[0],
+							'node_modules'
+						)
+					),
+			},
+		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'packages',
 				path: `${__dirname}/content`,
 			},
         },
