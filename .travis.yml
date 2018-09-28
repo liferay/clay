@@ -2,7 +2,7 @@ after_success: npm run coveralls
 
 before_install:
   - nvm install 8
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.2.0
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.10.1
   - export PATH=$HOME/.yarn/bin:$PATH
   - npm install -g lerna@3.4.0
 
