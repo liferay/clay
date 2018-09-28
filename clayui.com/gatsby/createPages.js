@@ -1,26 +1,54 @@
 'use strict';
 
-const arrangeIntoTree = require("../src/utils/arrangeIntoTree");
-const fixHtmlAst = require("../src/utils/fixHtmlAst");
-const path = require("path");
+const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope');
+const path = require('path');
 
-module.exports = async ({ boundActionCreators, graphql }) => {
-	const { createPage, createRedirect } = boundActionCreators;
+const createDocs = (actions, edges) => {
+	const {createPage, createRedirect} = actions;
 
-	const docsPostTemplate = path.resolve(__dirname, '../src/templates/docs.js');
+	edges.forEach(({node}) => {
+		const {slug, redirect, layout} = node.fields;
 
-	createRedirect({
+		if (redirect) {
+			const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
+			const fromPath = slugWithBar.endsWith('index.html') ? slugWithBar.replace('index.html', '') : slugWithBar;
+
+			createRedirect({
+				fromPath,
+				isPermanent: true,
+				redirectInBrowser: true,
+				toPath: redirect,
+			});
+		}
+
+		if (slug.includes('docs/') && layout !== 'redirect') {
+			createPage({
+				path: slug,
+				component: componentWithMDXScope(
+					path.resolve(__dirname, '../src/templates/docs.js'),
+					node.code.scope,
+					__dirname,
+				),
+				context: {
+					slug,
+				},
+			});
+		}
+	});
+};
+
+module.exports = async ({actions, graphql}) => {
+	actions.createRedirect({
 		fromPath: '/index.html',
 		redirectInBrowser: true,
 		toPath: '/',
 	});
 
 	return graphql(`
-		{
-			allMarkdownRemark(limit: 1000) {
+		query {
+			allMdx {
 				edges {
 					node {
-						htmlAst
 						fields {
 							layout
 							redirect
@@ -28,66 +56,20 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 							title
 							weight
 						}
+						code {
+							scope
+						}
 					}
 				}
 			}
 		}
-	`).then(result => {
-		if (result.errors) {
-			return Promise.reject(result.errors);
+	`).then(({data, errors}) => {
+		if (errors) {
+			return Promise.reject(errors);
 		}
 
-		const resolveNode = result.data.allMarkdownRemark.edges.map(({ node }, index) => {
-			const {
-				slug,
-				title,
-				weight,
-				layout
-			} = node.fields;
-			const slugWithoutExtension = slug.replace('.html', '');
-			const pathSplit = slugWithoutExtension.split('/');
+		const {edges} = data.allMdx;
 
-			return {
-				id: pathSplit[pathSplit.length - 1],
-				layout,
-				link: '/' + slugWithoutExtension,
-				title,
-				weight
-			};
-		});
-
-		const tree = arrangeIntoTree(resolveNode);
-
-		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-			const { slug, redirect, layout } = node.fields;
-
-			// This is a hook to fix `xlink:href` for xlinkHref, even if we 
-			// switch the docs to xlinkHref the AST passes in small letters. 
-			// We are correcting until we have a solution in the package.
-			const htmlASTTreated = fixHtmlAst(node.htmlAst);
-
-			if (redirect) {
-				const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
-				const fromPath = slugWithBar.endsWith('index.html') ? slugWithBar.replace('index.html', '') : slugWithBar;
-
-				createRedirect({
-					fromPath,
-					redirectInBrowser: true,
-					toPath: redirect,
-				});
-			}
-
-			if (slug.includes('docs/') && layout !== 'redirect') {
-				createPage({
-					path: slug,
-					component: docsPostTemplate,
-					context: {
-						slug,
-						docsPath: JSON.stringify(tree),
-						htmlASTTreated: JSON.stringify(htmlASTTreated),
-					},
-				});
-			}
-		});
+		createDocs(actions, edges);
 	});
 };
