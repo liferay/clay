@@ -6,9 +6,10 @@
 	.clay-site-container.container-fluid,
 	.container-fluid > .row > .col-md-12 > div,
 	article {
-		> h1, 
-		> h2, 
-		> h3 {
+		> h1,
+		.clay-h1, 
+		.clay-h2, 
+		.clay-h3 {
 			color: $gray-800;
 			font-weight: 800;
 			margin: $base-size 0;

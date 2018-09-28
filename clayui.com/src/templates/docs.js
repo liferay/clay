@@ -55,6 +55,8 @@ export default class Docs extends Component {
                                     <article>
                                         <MDXRenderer
                                             components={{
+                                                h1: Typography.H1,
+                                                h2: Typography.H2,
                                                 h3: Typography.H3,
                                                 h4: Typography.H4,
                                                 p: Typography.P,
