@@ -1,8 +1,8 @@
 const {readdirSync, readFileSync} = require('fs');
 const {join, resolve} = require('path');
 
-exports.sourceNodes = ({graphql, boundActionCreators}) => {
-    const {createNode} = boundActionCreators;
+exports.sourceNodes = ({graphql, actions}) => {
+    const {createNode} = actions;
 
     const path = resolve(__dirname, '../../examples');
     const files = readdirSync(path);
