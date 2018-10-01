@@ -2,8 +2,6 @@
 title: "Panels"
 ---
 
-<article>
-
 <p>Panels help separate your content.</p>
 
 <div class="panel panel-secondary">
@@ -42,10 +40,6 @@ title: "Panels"
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Panel States
 
 <p>Different colors for different states. Create your own variant using the <code>panel-variant($map)</code> mixin.</p>
@@ -82,27 +76,15 @@ title: "Panels"
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Accordions with Panels and Collapse Plugin
 
 <p>Combine the panel component with collapse to create accordions. Collapsible panels must be wrapped inside a <code>panel-group</code> element to avoid styling issues related to the collapsing body.</p>
-
-</article>
-
-<article>
 
 ### Accordions with Open and Close Icon
 
 <p>Add icons to the open and close states in an accordion. The class <code>collapse-icon-closed</code> displays the icon in the collapsed state. The class <code>collapse-icon-open</code> displays the icon in the open state.</p>
 
 <p>Add class <code>collapse-icon</code> to the [data-toggle="collapse"] element to create space for the icons and vertically center it with the class <code>collapse-icon-middle</code>.</p>
-
-</article>
-
-<article>
 
 ### Panel Group Flush
 
@@ -115,12 +97,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 				<span>Password</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/images/icons/icons.svg#angle-down" />
+						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -131,33 +113,33 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 							Current Password
 							<span class="reference-mark">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
-						<input class="form-control" placeholder="Current Password" type="password" value="my-secret">
+						<input class="form-control" placeholder="Current Password" type="password" value="my-secret"/>
 					</div>
 					<div class="form-group">
 						<label>
 							New Password
 							<span class="reference-mark">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
-						<input class="form-control" placeholder="New Password" type="password" value="my-new-secret">
+						<input class="form-control" placeholder="New Password" type="password" value="my-new-secret"/>
 					</div>
 					<div class="form-group">
 						<label>
 							Confirm New Password
 							<span class="reference-mark">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-									<use xlink:href="/images/icons/icons.svg#asterisk" />
+									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
 						</label>
-						<input class="form-control" placeholder="Confirm New Password" type="password" value="my-new-secret">
+						<input class="form-control" placeholder="Confirm New Password" type="password" value="my-new-secret"/>
 					</div>
 				</div>
 			</div>
@@ -167,12 +149,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 				<span>Organizations</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/images/icons/icons.svg#angle-down" />
+						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -187,12 +169,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 				<span>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual User Groups</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/images/icons/icons.svg#angle-down" />
+						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -207,12 +189,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 				<span>Roles</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/images/icons/icons.svg#angle-down" />
+						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -232,12 +214,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 			<span>Password</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/images/icons/icons.svg#angle-down" />
+					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -248,33 +230,33 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 						Current Password
 						<span class="reference-mark">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-								<use xlink:href="/images/icons/icons.svg#asterisk" />
+								<use href="/images/icons/icons.svg#asterisk" />
 							</svg>
 						</span>
 					</label>
-					<input class="form-control" placeholder="Current Password" type="password" value="my-secret">
+					<input class="form-control" placeholder="Current Password" type="password" value="my-secret"/>
 				</div>
 				<div class="form-group">
 					<label>
 						New Password
 						<span class="reference-mark">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-								<use xlink:href="/images/icons/icons.svg#asterisk" />
+								<use href="/images/icons/icons.svg#asterisk" />
 							</svg>
 						</span>
 					</label>
-					<input class="form-control" placeholder="New Password" type="password" value="my-new-secret">
+					<input class="form-control" placeholder="New Password" type="password" value="my-new-secret"/>
 				</div>
 				<div class="form-group">
 					<label>
 						Confirm New Password
 						<span class="reference-mark">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-								<use xlink:href="/images/icons/icons.svg#asterisk" />
+								<use href="/images/icons/icons.svg#asterisk" />
 							</svg>
 						</span>
 					</label>
-					<input class="form-control" placeholder="Confirm New Password" type="password" value="my-new-secret">
+					<input class="form-control" placeholder="Confirm New Password" type="password" value="my-new-secret"/>
 				</div>
 			</div>
 		</div>
@@ -284,12 +266,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 			<span>Organizations</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/images/icons/icons.svg#angle-down" />
+					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -304,12 +286,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 			<span>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual User Groups</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/images/icons/icons.svg#angle-down" />
+					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -324,12 +306,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 			<span>Roles</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/images/icons/icons.svg#angle-down" />
+					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</a>
@@ -342,17 +324,9 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Panel Group Helpers
 
 <p>Use <code>.panel-group-fluid</code>, <code>.panel-group-fluid-first</code>, or <code>.panel-group-fluid-last</code> on a panel-group to remove borders from the left and right side and rounded borders from first and last, first, or last panel. The classes generally should be used inside <code>card</code> or <code>sheet</code>.</p>
-
-</article>
-
-<article>
 
 ### With Buttons
 
@@ -362,12 +336,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 			<span class="panel-title">Collapsible Group Item #1</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/images/icons/icons.svg#angle-down" />
+					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</button>
@@ -382,12 +356,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 			<span class="panel-title">Collapsible Group Item #2</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/images/icons/icons.svg#angle-down" />
+					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</button>
@@ -402,12 +376,12 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 			<span class="panel-title">Collapsible Group Item #3</span>
 			<span class="collapse-icon-closed">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-					<use xlink:href="/images/icons/icons.svg#angle-down" />
+					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
 		</button>
@@ -418,5 +392,3 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 		</div>
 	</div>
 </div>
-
-</article>

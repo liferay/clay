@@ -8,10 +8,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/designPrinciples/grid.html">Grid Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="container">
-<h3 class="component-title">
-	<a href="#container">Container</a>
-</h3>
+### Container
 
 > <code>.container</code> has a specific <code>max-width</code> for each grid breakpoint (e.g., Atlas 540px wide, 720px wide, 960px wide, and 1248px wide).
 
@@ -85,13 +82,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 <div class="container"></div>
 ```
 
-</article>
-
-
-<article id="container-fluid">
-<h3 class="component-title">
-	<a href="#container-fluid">Container Fluid</a>
-</h3>
+### Container Fluid
 
 > <a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a>
 
@@ -186,13 +177,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 <div class="container-fluid container-fluid-max-xl"></div>
 ```
 
-</article>
-
-
-<article id="container-form-lg">
-<h3 class="component-title">
-	<a href="#container-form-lg">Container Form Lg</a>
-</h3>
+### Container Form Lg
 
 > Use <code>.container-form-lg</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
 
@@ -205,14 +190,14 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-							<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
+							<use href="/images/icons/icons.svg#product-menu-closed" />
 						</svg>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-							<use xlink:href="/images/icons/icons.svg#angle-left" />
+							<use href="/images/icons/icons.svg#angle-left" />
 						</svg>
 					</a>
 				</li>
@@ -222,7 +207,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 				<li class="dropdown nav-item">
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+							<use href="/images/icons/icons.svg#ellipsis-v" />
 						</svg>
 					</a>
 					<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
@@ -247,13 +232,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 <div class="container-fluid container-fluid-max-xl container-form-lg"></div>
 ```
 
-</article>
-
-
-<article id="container-view">
-<h3 class="component-title">
-	<a href="#container-view">Container View</a>
-</h3>
+### Container View
 
 > Use <code>.container-view</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and view pages (e.g., Card View, Table View, or List View). This class only modifies the <code>padding</code> on the container.
 
@@ -264,14 +243,14 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-							<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
+							<use href="/images/icons/icons.svg#product-menu-closed" />
 						</svg>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-							<use xlink:href="/images/icons/icons.svg#angle-left" />
+							<use href="/images/icons/icons.svg#angle-left" />
 						</svg>
 					</a>
 				</li>
@@ -281,7 +260,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 				<li class="dropdown nav-item">
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+							<use href="/images/icons/icons.svg#ellipsis-v" />
 						</svg>
 					</a>
 					<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
@@ -305,10 +284,10 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 							<th colspan="2">
 								Item Title
 								<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
-									<use xlink:href="/images/icons/icons.svg#order-arrow-up" />
+									<use href="/images/icons/icons.svg#order-arrow-up" />
 								</svg>
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-									<use xlink:href="/images/icons/icons.svg#order-arrow-down" />
+									<use href="/images/icons/icons.svg#order-arrow-down" />
 								</svg>
 							</th>
 							<th>Size</th>
@@ -323,7 +302,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 							<td>
 								<div class="custom-control custom-checkbox">
 									<label>
-										<input class="custom-control-input" type="checkbox">
+										<input class="custom-control-input" type="checkbox"/>
 										<span class="custom-control-label"></span>
 									</label>
 								</div>
@@ -346,24 +325,24 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 								<div class="quick-action-menu">
 									<a class="component-action quick-action-item" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-											<use xlink:href="/images/icons/icons.svg#trash" />
+											<use href="/images/icons/icons.svg#trash" />
 										</svg>
 									</a>
 									<a class="component-action quick-action-item" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-											<use xlink:href="/images/icons/icons.svg#download" />
+											<use href="/images/icons/icons.svg#download" />
 										</svg>
 									</a>
 									<a class="component-action quick-action-item" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-											<use xlink:href="/images/icons/icons.svg#expand" />
+											<use href="/images/icons/icons.svg#expand" />
 										</svg>
 									</a>
 								</div>
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
 									<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -384,5 +363,3 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 ```html
 <div class="container-fluid container-fluid-max-xl container-view"></div>
 ```
-
-</article>

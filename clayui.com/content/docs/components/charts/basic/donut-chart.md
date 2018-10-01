@@ -2,10 +2,23 @@
 title: "Donut Chart"
 ---
 
-<article id="1">
+import Graph from "$components/Graph";
 
-<clay-chart component="DonutChart"
-	props='{"data": [{"id": "data1", "data": [30]}, {"id": "data2", "data": [70]}]}'></clay-chart>
+<Graph
+	component="DonutChart"
+	props={{
+		data: [
+			{
+				id: 'data1',
+				data: [30]
+			},
+			{
+				id: 'data2',
+				data: [70]
+			}
+		]
+	}}
+/>
 
 ```soy
 {call ClayDonutChart.render}
@@ -35,5 +48,3 @@ title: "Donut Chart"
 	]}
 />
 ```
-
-</article>

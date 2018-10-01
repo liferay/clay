@@ -3,8 +3,6 @@ title: "Class Helpers"
 weight: 2
 ---
 
-<article>
-
 ### Autofit Row
 
 <p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.autofit-col</code>, and <code>.autofit-col-expand</code>.</p>
@@ -21,7 +19,7 @@ weight: 2
 	<div class="autofit-col">
 		<div class="form-check">
 			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox" value="">
+				<input class="form-check-input" type="checkbox" value=""/>
 			</label>
 		</div>
 	</div>
@@ -45,7 +43,7 @@ weight: 2
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+					<use href="/images/icons/icons.svg#ellipsis-v" />
 				</svg>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-right">
@@ -62,10 +60,6 @@ weight: 2
 		</div>
 	</div>
 </div>
-
-</article>
-
-<article>
 
 <div class="autofit-row autofit-padded">
 	<div class="autofit-col autofit-col-expand" style="background-color: aliceblue;">
@@ -143,7 +137,7 @@ weight: 2
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+					<use href="/images/icons/icons.svg#ellipsis-v" />
 				</svg>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-right">
@@ -161,10 +155,6 @@ weight: 2
 	</div>
 </div>
 
-</article>
-
-<article>
-
 <div class="card">
 	<div class="card-body">
 		<div class="autofit-padded-no-gutters-x autofit-row">
@@ -178,7 +168,7 @@ weight: 2
 				<button class="btn btn-monospaced btn-outline-primary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
-							<use xlink:href="/images/icons/icons.svg#pencil" />
+							<use href="/images/icons/icons.svg#pencil" />
 						</svg>
 					</span>
 				</button>
@@ -186,10 +176,6 @@ weight: 2
 		</div>
 	</div>
 </div>
-
-</article>
-
-<article>
 
 ### Autofit Spacing
 
@@ -201,10 +187,6 @@ weight: 2
 
 <p>The class <code>autofit-padded-no-gutters</code> gives padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code> and has negative margins on the top, right, bottom, and left to offset the padding (Generally used if nesting <code>.autofit-row</code>).</p>
 
-</article>
-
-<article>
-
 <h3>Autofit Row Vertical Alignment</h3>
 
 <p>Autofit Row vertically aligns to the top by default.</p>
@@ -212,10 +194,6 @@ weight: 2
 <p>The class <code>autofit-row-center</code> will vertically align items in <code>autofit-row</code> to the middle.</p>
 
 <p>The class <code>autofit-row-end</code> will vertically align items in <code>autofit-row</code> to the bottom.</p>
-
-</article>
-
-<article>
 
 ### Autofit Float
 
@@ -239,7 +217,7 @@ weight: 2
 				<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-							<use xlink:href="/images/icons/icons.svg#check-circle" />
+							<use href="/images/icons/icons.svg#check-circle" />
 						</svg>
 					</span>Subscribe
 				</button>
@@ -255,7 +233,7 @@ weight: 2
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-							<use xlink:href="/images/icons/icons.svg#shortcut" />
+							<use href="/images/icons/icons.svg#shortcut" />
 						</svg>
 					</span>RSS
 				</button>
@@ -264,7 +242,7 @@ weight: 2
 				<button class="btn btn-primary btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-							<use xlink:href="/images/icons/icons.svg#plus" />
+							<use href="/images/icons/icons.svg#plus" />
 						</svg>
 					</span>Add Content
 				</button>
@@ -275,7 +253,7 @@ weight: 2
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-							<use xlink:href="/images/icons/icons.svg#shortcut" />
+							<use href="/images/icons/icons.svg#shortcut" />
 						</svg>
 					</span>View in context
 				</button>
@@ -284,7 +262,7 @@ weight: 2
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-							<use xlink:href="/images/icons/icons.svg#thumbs-up" />
+							<use href="/images/icons/icons.svg#thumbs-up" />
 						</svg>
 					</span>Like (25)
 				</button>
@@ -294,7 +272,7 @@ weight: 2
 					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 						<span class="inline-item inline-item-before">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
-								<use xlink:href="/images/icons/icons.svg#flag-empty" />
+								<use href="/images/icons/icons.svg#flag-empty" />
 							</svg>
 						</span>Flag
 					</button>
@@ -304,7 +282,7 @@ weight: 2
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-							<use xlink:href="/images/icons/icons.svg#share" />
+							<use href="/images/icons/icons.svg#share" />
 						</svg>
 					</span>Share
 				</button>
@@ -312,10 +290,6 @@ weight: 2
 		</div>
 	</div>
 </div>
-
-</article>
-
-<article>
 
 ### Autofit Float End
 
@@ -341,7 +315,7 @@ weight: 2
 				<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-							<use xlink:href="/images/icons/icons.svg#check-circle" />
+							<use href="/images/icons/icons.svg#check-circle" />
 						</svg>
 					</span>Subscribe
 				</button>
@@ -357,7 +331,7 @@ weight: 2
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-							<use xlink:href="/images/icons/icons.svg#shortcut" />
+							<use href="/images/icons/icons.svg#shortcut" />
 						</svg>
 					</span>RSS
 				</button>
@@ -366,7 +340,7 @@ weight: 2
 				<button class="btn btn-primary btn-sm" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-							<use xlink:href="/images/icons/icons.svg#plus" />
+							<use href="/images/icons/icons.svg#plus" />
 						</svg>
 					</span>Add Content
 				</button>
@@ -379,7 +353,7 @@ weight: 2
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-									<use xlink:href="/images/icons/icons.svg#shortcut" />
+									<use href="/images/icons/icons.svg#shortcut" />
 								</svg>
 							</span>View in context
 						</button>
@@ -388,7 +362,7 @@ weight: 2
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-									<use xlink:href="/images/icons/icons.svg#thumbs-up" />
+									<use href="/images/icons/icons.svg#thumbs-up" />
 								</svg>
 							</span>Like (25)
 						</button>
@@ -397,7 +371,7 @@ weight: 2
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
-									<use xlink:href="/images/icons/icons.svg#flag-empty" />
+									<use href="/images/icons/icons.svg#flag-empty" />
 								</svg>
 							</span>Flag
 						</button>
@@ -408,7 +382,7 @@ weight: 2
 				<button class="btn btn-secondary" type="button">
 					<span class="inline-item inline-item-before">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-							<use xlink:href="/images/icons/icons.svg#share" />
+							<use href="/images/icons/icons.svg#share" />
 						</svg>
 					</span>Share
 				</button>
@@ -416,10 +390,6 @@ weight: 2
 		</div>
 	</div>
 </div>
-
-</article>
-
-<article>
 
 ### Nesting Autofit Rows
 
@@ -433,7 +403,7 @@ weight: 2
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					Order by: newest<span class="inline-item inline-item-after">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</button>
@@ -466,7 +436,7 @@ weight: 2
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-right">
@@ -486,7 +456,7 @@ weight: 2
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
-									<use xlink:href="/images/icons/icons.svg#redo" />
+									<use href="/images/icons/icons.svg#redo" />
 								</svg>
 							</span>Reply to Comment
 						</button>
@@ -495,7 +465,7 @@ weight: 2
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-									<use xlink:href="/images/icons/icons.svg#thumbs-up" />
+									<use href="/images/icons/icons.svg#thumbs-up" />
 								</svg>
 							</span>10
 						</button>
@@ -504,7 +474,7 @@ weight: 2
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
-									<use xlink:href="/images/icons/icons.svg#thumbs-down" />
+									<use href="/images/icons/icons.svg#thumbs-down" />
 								</svg>
 							</span>03
 						</button>
@@ -524,7 +494,7 @@ weight: 2
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right">
@@ -544,7 +514,7 @@ weight: 2
 								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
-											<use xlink:href="/images/icons/icons.svg#redo" />
+											<use href="/images/icons/icons.svg#redo" />
 										</svg>
 									</span>Reply to Comment
 								</button>
@@ -553,7 +523,7 @@ weight: 2
 								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-											<use xlink:href="/images/icons/icons.svg#thumbs-up" />
+											<use href="/images/icons/icons.svg#thumbs-up" />
 										</svg>
 									</span>10
 								</button>
@@ -562,7 +532,7 @@ weight: 2
 								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 									<span class="inline-item inline-item-before">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
-											<use xlink:href="/images/icons/icons.svg#thumbs-down" />
+											<use href="/images/icons/icons.svg#thumbs-down" />
 										</svg>
 									</span>03
 								</button>
@@ -575,10 +545,6 @@ weight: 2
 	</div>
 </div>
 
-</article>
-
-<article>
-
 ### Inline Item
 
 <p>Use <code>inline-item inline-item-before</code>, <code>inline-item inline-item-middle</code>, and <code>inline-item inline-item-after</code> to provide consistent spacing between text and icons in elements such as links or buttons. This can also be used in other components that have inline content (e.g., <code>badge</code> and <code>label</code>).</p>
@@ -590,7 +556,7 @@ weight: 2
 <div>
 	<h5>Link without Whitespace</h5>
 	<a href="#1">
-		<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-share"><use xlink:href="/images/icons/icons.svg#share" /></svg></span>link<span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="/images/icons/icons.svg#question-circle" /></svg></span>why, but ok.<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use xlink:href="/images/icons/icons.svg#add-cell" /></svg></span>
+		<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-share"><use href="/images/icons/icons.svg#share" /></svg></span>link<span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span>why, but ok.<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use href="/images/icons/icons.svg#add-cell" /></svg></span>
 	</a>
 </div>
 <div>
@@ -598,36 +564,32 @@ weight: 2
 	<a href="#1">
 		<span class="inline-item inline-item-before">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-				<use xlink:href="/images/icons/icons.svg#share" /></svg>
+				<use href="/images/icons/icons.svg#share" /></svg>
 		</span>
 		link
 		<span class="inline-item inline-item-after">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use xlink:href="/images/icons/icons.svg#add-cell" /></svg>
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use href="/images/icons/icons.svg#add-cell" /></svg>
 		</span>
 	</a>
 </div>
 <div>
 	<h5>Button without Whitespace</h5>
-	<button class="btn btn-secondary" type="button"><span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus"><use xlink:href="/images/icons/icons.svg#plus" /></svg></span>Secondary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera"><use xlink:href="/images/icons/icons.svg#camera" /></svg></span></button>
+	<button class="btn btn-secondary" type="button"><span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus"><use href="/images/icons/icons.svg#plus" /></svg></span>Secondary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera"><use href="/images/icons/icons.svg#camera" /></svg></span></button>
 </div>
 <div>
 	<h5>Button with Whitespace</h5>
 	<button class="btn btn-secondary" type="button">
 		<span class="inline-item inline-item-before">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-				<use xlink:href="/images/icons/icons.svg#plus" /></svg>
+				<use href="/images/icons/icons.svg#plus" /></svg>
 		</span>
 		Secondary
 		<span class="inline-item inline-item-after">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-				<use xlink:href="/images/icons/icons.svg#camera" /></svg>
+				<use href="/images/icons/icons.svg#camera" /></svg>
 		</span>
 	</button>
 </div>
-
-</article>
-
-<article>
 
 ### Close
 
@@ -637,12 +599,12 @@ weight: 2
 
 <a aria-label="Close" class="close" href="#1" role="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use xlink:href="/images/icons/icons.svg#times" />
+		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </a>
 <a aria-label="Close" class="close disabled" href="#1" role="button" tabindex="-1">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use xlink:href="/images/icons/icons.svg#times" />
+		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </a>
 <a aria-label="Close" class="close" href="#1" role="button">
@@ -656,12 +618,12 @@ weight: 2
 
 <button aria-label="Close" class="close" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use xlink:href="/images/icons/icons.svg#times" />
+		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </button>
 <button aria-label="Close" class="close" disabled type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use xlink:href="/images/icons/icons.svg#times" />
+		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </button>
 <button aria-label="Close" class="close" type="button">
@@ -670,5 +632,3 @@ weight: 2
 <button aria-label="Close" class="close" disabled type="button">
 	<span aria-hidden="true">×</span>
 </button>
-
-</article>

@@ -6,8 +6,6 @@ Tabs are used to distribute content of a same nature in the same page without pr
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/tabs.html">Tabs Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="classic-tabs">
-
 ### Classic Tabs
 
 <ul class="nav nav-tabs" role="tablist">
@@ -24,7 +22,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -32,7 +30,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -40,7 +38,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -80,7 +78,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -88,7 +86,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -96,7 +94,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -121,10 +119,6 @@ Tabs are used to distribute content of a same nature in the same page without pr
 	</div>
 </div>
 ```
-
-</article>
-
-<article id="modern-tab">
 
 ### Modern Tab
 
@@ -142,7 +136,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -150,7 +144,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -158,7 +152,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -198,7 +192,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
@@ -206,7 +200,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -214,7 +208,7 @@ Tabs are used to distribute content of a same nature in the same page without pr
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</span>
 			</a>
@@ -240,4 +234,3 @@ Tabs are used to distribute content of a same nature in the same page without pr
 </div>
 ```
 
-</article>

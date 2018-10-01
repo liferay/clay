@@ -2,8 +2,6 @@
 title: "Links"
 ---
 
-<article>
-
 ### Links
 
 These elements should be used to style links based on the global link, primary, and secondary colors.
@@ -29,10 +27,6 @@ These elements should be used to style links based on the global link, primary, 
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Single Link
 
 Use <code>.single-link</code> on an anchor to add a semi-bold style to the link and should be used for stand alone links defined by https://lexicondesign.io/docs/patterns/link.html.
@@ -54,10 +48,6 @@ Use <code>.single-link</code> on an anchor to add a semi-bold style to the link 
     </a>
 </div>
 ```
-
-</article>
-
-<article class="clay-site-row-spacer">
 
 ### Component Links
 
@@ -81,10 +71,6 @@ Use these patterns for links, titles, subtitles in components.
 <p class="component-subtitle">.component-subtitle</p>
 <p class="component-subtitle"><a href="#1">.component-subtitle a</a></p>
 ```
-
-</article>
-
-<article>
 
 ### Component Action
 
@@ -119,7 +105,6 @@ Use these patterns for actions in components.
 </a>
 ```
 
-
 #### Button
 
 <button class="component-action" type="button">
@@ -148,10 +133,6 @@ Use these patterns for actions in components.
 </button>
 ```
 
-</article>
-
-<article>
-
 ### Link Outline
 
 <a class="link-outline link-outline-primary" href="#1">Primary</a>
@@ -162,10 +143,6 @@ Use these patterns for actions in components.
 <a class="link-outline link-outline-secondary" href="#1">Secondary</a>
 ```
 
-</article>
-
-<article>
-
 ### Link Outline Borderless
 
 <a class="link-outline link-outline-borderless link-outline-primary" href="#1">Primary</a>
@@ -175,10 +152,6 @@ Use these patterns for actions in components.
 <a class="link-outline link-outline-borderless link-outline-primary" href="#1">Primary</a>
 <a class="link-outline link-outline-borderless link-outline-secondary" href="#1">Secondary</a>
 ```
-
-</article>
-
-<article>
 
 ### Link Monospaced
 
@@ -267,4 +240,3 @@ Use these patterns for actions in components.
     </span>
 </a>
 ```
-</article>

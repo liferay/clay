@@ -9,8 +9,6 @@ Clay CSS Framework provides some utilitarios for you to work with [SCSS](https:/
 - [Mixins](#mixins)
 - [Functions](#functions)
 
-<article id="variables">
-
 ## Variables
 
 > Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol to make something a variable. [SASS](https://sass-lang.com/guide)
@@ -26,10 +24,6 @@ $alert-dismissible-padding-top: null !default;
 ```
 
 > [All **variables** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/variables)
-
-</article>
-
-<article id="mixins">
 
 ## Mixins
 
@@ -50,10 +44,6 @@ $map: (
 You can find all mixins available by component if you want to create a component extension.
 
 > [All **mixins** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/mixins)
-
-</article>
-
-<article id="functions">
 
 ## Functions
 
@@ -78,5 +68,3 @@ required($var, $msg);
 ```
 
 > [All **functions** available](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss)
-
-</article>

@@ -2,8 +2,6 @@
 title: "Tbar (Toolbar)"
 ---
 
-<article>
-
 ### Tbar
 
 <nav class="tbar">
@@ -11,7 +9,7 @@ title: "Tbar (Toolbar)"
 		<li class="tbar-item">
 			<a class="component-action disabled" href="#1" role="button" tabindex="-1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/images/icons/icons.svg#angle-left" />
+					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
 			</a>
 		</li>
@@ -28,14 +26,14 @@ title: "Tbar (Toolbar)"
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</a>
 		</li>
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</a>
 		</li>
@@ -48,7 +46,7 @@ title: "Tbar (Toolbar)"
 		<li class="tbar-item">
 			<a class="component-action disabled" href="#1" role="button" tabindex="-1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/images/icons/icons.svg#angle-left" />
+					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
 			</a>
 		</li>
@@ -65,24 +63,20 @@ title: "Tbar (Toolbar)"
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/images/icons/icons.svg#angle-right" />
+					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</a>
 		</li>
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times" />
+					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</a>
 		</li>
 	</ul>
 </nav>
 ```
-
-</article>
-
-<article>
 
 ### Component Tbar
 
@@ -94,7 +88,7 @@ title: "Tbar (Toolbar)"
 			<li class="tbar-item">
 				<a class="component-action disabled" href="#1" role="button" tabindex="-1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use xlink:href="/images/icons/icons.svg#angle-left" />
+						<use href="/images/icons/icons.svg#angle-left" />
 					</svg>
 				</a>
 			</li>
@@ -108,14 +102,14 @@ title: "Tbar (Toolbar)"
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</a>
 			</li>
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/images/icons/icons.svg#times" />
+						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</a>
 			</li>
@@ -130,7 +124,7 @@ title: "Tbar (Toolbar)"
 			<li class="tbar-item">
 				<a class="component-action disabled" href="#1" role="button" tabindex="-1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use xlink:href="/images/icons/icons.svg#angle-left" />
+						<use href="/images/icons/icons.svg#angle-left" />
 					</svg>
 				</a>
 			</li>
@@ -144,14 +138,14 @@ title: "Tbar (Toolbar)"
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</a>
 			</li>
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/images/icons/icons.svg#times" />
+						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</a>
 			</li>
@@ -159,10 +153,6 @@ title: "Tbar (Toolbar)"
 	</div>
 </nav>
 ```
-
-</article>
-
-<article>
 
 ### Subnav Tbar
 
@@ -210,10 +200,6 @@ title: "Tbar (Toolbar)"
 </nav>
 ```
 
-</article>
-
-<article>
-
 ### Subnav Tbar Light
 
 <p>Sub Navigation used in Modals</p>
@@ -253,10 +239,6 @@ title: "Tbar (Toolbar)"
 	</div>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Subnav Tbar Primary
 
@@ -337,5 +319,3 @@ title: "Tbar (Toolbar)"
 	</div>
 </nav>
 ```
-
-</article>

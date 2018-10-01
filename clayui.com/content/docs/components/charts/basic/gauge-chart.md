@@ -2,10 +2,19 @@
 title: "Gauge Chart"
 ---
 
-<article id="1">
+import Graph from "$components/Graph";
 
-<clay-chart component="GaugeChart"
-	props='{"data": [{"id": "data1", "data": [87.4]}]}'></clay-chart>
+<Graph 
+	component="GaugeChart"
+	props={{
+		data: [
+			{
+				id: 'data1',
+				data: [87.4]
+			}
+		]
+	}}
+/>
 
 ```soy
 {call ClayGaugeChart.render}
@@ -27,5 +36,3 @@ title: "Gauge Chart"
 	]}
 />
 ```
-
-</article>

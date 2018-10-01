@@ -6,8 +6,6 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/components/dataset-display.html">Dataset Display Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="dataset-display">
-
 ### Example
 
 <div class="clay-dataset-display">
@@ -16,7 +14,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
             <div class="container-fluid container-fluid-max-xl">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <div class="custom-control custom-checkbox"><label><input class="custom-control-input" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">select-items</span></span></label></div>
+                        <div class="custom-control custom-checkbox"><label><input class="custom-control-input" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">select-items</span></span></label></div>
                     </li>
                     <li class="dropdown nav-item">
                         <div class="dropdown">
@@ -25,13 +23,13 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                     Filter and Order
                                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                                         <title>caret-bottom</title>
-                                        <use xlink:href="/images/icons/icons.svg#caret-bottom"></use>
+                                        <use href="/images/icons/icons.svg#caret-bottom"></use>
                                     </svg>
                                 </span>
                                 <span class="navbar-breakpoint-d-none">
                                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                                         <title>filter</title>
-                                        <use xlink:href="/images/icons/icons.svg#filter"></use>
+                                        <use href="/images/icons/icons.svg#filter"></use>
                                     </svg>
                                 </span>
                             </button>
@@ -41,7 +39,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="Order" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                                 <title>order-arrow</title>
-                                <use xlink:href="/images/icons/icons.svg#order-arrow"></use>
+                                <use href="/images/icons/icons.svg#order-arrow"></use>
                             </svg>
                         </button>
                     </li>
@@ -51,18 +49,18 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <form action="mySearchURL" method="GET" name="mySearchName" role="search">
                             <div class="input-group">
                                 <div class="input-group-item">
-                                    <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." ref="search" type="text">
+                                    <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." type="text"/>
                                     <span class="input-group-inset-item input-group-inset-item-after">
                                         <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                                                 <title>times</title>
-                                                <use xlink:href="/images/icons/icons.svg#times"></use>
+                                                <use href="/images/icons/icons.svg#times"></use>
                                             </svg>
                                         </button>
                                         <button class="btn btn-unstyled" aria-label="search" type="submit">
                                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                                                 <title>search</title>
-                                                <use xlink:href="/images/icons/icons.svg#search"></use>
+                                                <use href="/images/icons/icons.svg#search"></use>
                                             </svg>
                                         </button>
                                     </span>
@@ -76,7 +74,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                                 <title>search</title>
-                                <use xlink:href="/images/icons/icons.svg#search"></use>
+                                <use href="/images/icons/icons.svg#search"></use>
                             </svg>
                         </button>
                     </li>
@@ -85,7 +83,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" title="Display Style" type="button">
                                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                                     <title>table</title>
-                                    <use xlink:href="/images/icons/icons.svg#table"></use>
+                                    <use href="/images/icons/icons.svg#table"></use>
                                 </svg>
                             </button>
                         </div>
@@ -95,7 +93,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" title="New" type="button">
                                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                                     <title>plus</title>
-                                    <use xlink:href="/images/icons/icons.svg#plus"></use>
+                                    <use href="/images/icons/icons.svg#plus"></use>
                                 </svg>
                             </button>
                         </div>
@@ -117,7 +115,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                     <span class="inline-item inline-item-after">
                                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                                             <title>order-arrow-up</title>
-                                            <use xlink:href="/images/icons/icons.svg#order-arrow-up"></use>
+                                            <use href="/images/icons/icons.svg#order-arrow-up"></use>
                                         </svg>
                                     </span>
                                 </button>
@@ -135,7 +133,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" value="1" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Photos</span></span></h1>
@@ -155,7 +153,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" value="2" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Videos</span></span></h1>
@@ -178,7 +176,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="3" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
@@ -198,7 +196,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="4" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
@@ -218,7 +216,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="5" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
@@ -238,7 +236,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="6" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
@@ -258,7 +256,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="7" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
@@ -278,7 +276,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" value="8" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
@@ -301,7 +299,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" value="9" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ferrán Adriá</span></span></h1>
@@ -321,7 +319,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" value="10" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Gordon Ramsay</span></span></h1>
@@ -341,7 +339,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" value="11" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Alberto Chicote</span></span></h1>
@@ -405,7 +403,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
             <div class="container-fluid container-fluid-max-xl">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <div class="custom-control custom-checkbox"><label><input class="custom-control-input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">select-items</span></span></label></div>
+                        <div class="custom-control custom-checkbox"><label><input class="custom-control-input" type="checkbox"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">select-items</span></span></label></div>
                     </li>
                     <li class="dropdown nav-item">
                         <div class="dropdown">
@@ -414,13 +412,13 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                     filter-and-order
                                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
                                         <title>caret-bottom</title>
-                                        <use xlink:href="/images/icons/icons.svg#caret-bottom"></use>
+                                        <use href="/images/icons/icons.svg#caret-bottom"></use>
                                     </svg>
                                 </span>
                                 <span class="navbar-breakpoint-d-none">
                                     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
                                         <title>filter</title>
-                                        <use xlink:href="/images/icons/icons.svg#filter"></use>
+                                        <use href="/images/icons/icons.svg#filter"></use>
                                     </svg>
                                 </span>
                             </button>
@@ -430,7 +428,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="order" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
                                 <title>order-arrow</title>
-                                <use xlink:href="/images/icons/icons.svg#order-arrow"></use>
+                                <use href="/images/icons/icons.svg#order-arrow"></use>
                             </svg>
                         </button>
                     </li>
@@ -440,18 +438,18 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <form action="mySearchURL" method="GET" name="mySearchName" role="search">
                             <div class="input-group">
                                 <div class="input-group-item">
-                                    <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" type="text">
+                                    <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" type="text"/>
                                     <span class="input-group-inset-item input-group-inset-item-after">
                                         <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
                                                 <title>times</title>
-                                                <use xlink:href="/images/icons/icons.svg#times"></use>
+                                                <use href="/images/icons/icons.svg#times"></use>
                                             </svg>
                                         </button>
                                         <button class="btn btn-unstyled" aria-label="search" type="submit">
                                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                                                 <title>search</title>
-                                                <use xlink:href="/images/icons/icons.svg#search"></use>
+                                                <use href="/images/icons/icons.svg#search"></use>
                                             </svg>
                                         </button>
                                     </span>
@@ -465,7 +463,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
                             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
                                 <title>search</title>
-                                <use xlink:href="/images/icons/icons.svg#search"></use>
+                                <use href="/images/icons/icons.svg#search"></use>
                             </svg>
                         </button>
                     </li>
@@ -474,7 +472,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" title="display-style" type="button">
                                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
                                     <title>table</title>
-                                    <use xlink:href="/images/icons/icons.svg#table"></use>
+                                    <use href="/images/icons/icons.svg#table"></use>
                                 </svg>
                             </button>
                         </div>
@@ -484,7 +482,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" title="new" type="button">
                                 <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
                                     <title>plus</title>
-                                    <use xlink:href="/images/icons/icons.svg#plus"></use>
+                                    <use href="/images/icons/icons.svg#plus"></use>
                                 </svg>
                             </button>
                         </div>
@@ -506,7 +504,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                     <span class="inline-item inline-item-after">
                                         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                                             <title>order-arrow-up</title>
-                                            <use xlink:href="/images/icons/icons.svg#order-arrow-up"></use>
+                                            <use href="/images/icons/icons.svg#order-arrow-up"></use>
                                         </svg>
                                     </span>
                                 </button>
@@ -524,7 +522,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" type="checkbox" value="1"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" type="checkbox" value="1"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Photos</span></span></h1>
@@ -544,7 +542,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" type="checkbox" value="2"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-0" class="custom-control-input" name="folder" type="checkbox" value="2"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Videos</span></span></h1>
@@ -567,7 +565,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" type="checkbox" value="3"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-1" class="custom-control-input" name="recipe" type="checkbox" value="3"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
@@ -590,7 +588,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                         </tr>
                         <tr>
                             <td>
-                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" type="checkbox" value="9"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
+                                <div class="custom-control custom-checkbox"><label><input aria-labelledby="group-2" class="custom-control-input" name="chef" type="checkbox" value="9"/><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
                             </td>
                             <td class="table-cell-expand">
                                 <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ferrán Adriá</span></span></h1>
@@ -616,14 +614,9 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
 </div>
 ```
 
-</article>
-
-<article id="clay-dataset-display-api">
-
 #### API
 
 <div>
 	[APITable "clay-dataset-display/src/ClayDatasetDisplay.js"]
 </div>
 
-</article>

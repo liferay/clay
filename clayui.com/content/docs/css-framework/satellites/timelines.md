@@ -2,8 +2,6 @@
 title: Timelines
 ---
 
-<article id="timeline">
-
 > Place `timeline-increment` inside whatever element you want it to be aligned to. The element must be positioned relative. For the example below, we place it inside the `panel-heading` element. This vertically centers the icon and label relative to the panel-heading.
 
 > The icon can be any size as long as it is wrapped inside `timeline-increment`. For larger icons, the spacing between the content and increment (<a href="#timeline-spacing">Timeline Spacing</a>) must be adjusted to accomodate it.
@@ -122,10 +120,6 @@ title: Timelines
 </ul>
 ```
 
-</article>
-
-<article id="timeline-increment-with-text">
-
 ### Timeline Increment with Text
 
 > Place text inside `timeline-increment` by wrapping the text with `<span class="timeline-increment-text"></span>`
@@ -202,10 +196,6 @@ title: Timelines
 </ul>
 ```
 
-</article>
-
-<article id="timeline-right">
-
 ### Timeline Right
 
 > Align increments to the right with `timeline-right`.
@@ -217,7 +207,7 @@ title: Timelines
 				Panel Text #1
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-radio-button">
-						<use xlink:href="/images/icons/icons.svg#radio-button" />
+						<use href="/images/icons/icons.svg#radio-button" />
 					</svg>
 				</div>
 			</div>
@@ -229,7 +219,7 @@ title: Timelines
 				Panel Text #2
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-remove-role">
-						<use xlink:href="/images/icons/icons.svg#remove-role" />
+						<use href="/images/icons/icons.svg#remove-role" />
 					</svg>
 				</div>
 			</div>
@@ -241,7 +231,7 @@ title: Timelines
 				Panel Text #3
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-repository">
-						<use xlink:href="/images/icons/icons.svg#repository" />
+						<use href="/images/icons/icons.svg#repository" />
 					</svg>
 				</div>
 			</div>
@@ -257,7 +247,7 @@ title: Timelines
 				Panel Text #1
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-radio-button">
-						<use xlink:href="/images/icons/icons.svg#radio-button" />
+						<use href="/images/icons/icons.svg#radio-button" />
 					</svg>
 				</div>
 			</div>
@@ -269,7 +259,7 @@ title: Timelines
 				Panel Text #2
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-remove-role">
-						<use xlink:href="/images/icons/icons.svg#remove-role" />
+						<use href="/images/icons/icons.svg#remove-role" />
 					</svg>
 				</div>
 			</div>
@@ -281,7 +271,7 @@ title: Timelines
 				Panel Text #3
 				<div class="timeline-increment">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-repository">
-						<use xlink:href="/images/icons/icons.svg#repository" />
+						<use href="/images/icons/icons.svg#repository" />
 					</svg>
 				</div>
 			</div>
@@ -289,10 +279,6 @@ title: Timelines
 	</li>
 </ul>
 ```
-
-</article>
-
-<article id="timeline-center">
 
 ### Timeline Center
 
@@ -394,10 +380,6 @@ title: Timelines
 </ul>
 ```
 
-</article>
-
-<article id="timeline-even">
-
 ### Timeline Even
 
 > Alternate every other timeline item on the left with class `timeline-even`.
@@ -487,10 +469,6 @@ title: Timelines
 	</li>
 </ul>
 ```
-
-</article>
-
-<article id="timeline-odd">
 
 ### Timeline Odd
 
@@ -582,10 +560,6 @@ title: Timelines
 </ul>
 ```
 
-</article>
-
-<article id="timeline-right-xs-only">
-
 ### Timeline Right XS Only
 
 > Align timeline to the right at screen widths 767px and below with `timeline-right-xs-only`.
@@ -675,10 +649,6 @@ title: Timelines
 	</li>
 </ul>
 ```
-
-</article>
-
-<article id="timeline-spacing">
 
 ### Timeline Spacing
 
@@ -789,5 +759,3 @@ title: Timelines
 	</li>
 </ul>
 ```
-
-</article>

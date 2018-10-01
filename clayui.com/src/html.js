@@ -1,25 +1,7 @@
 import React, { Component } from 'react';
 
-let stylesStr
-if (process.env.NODE_ENV === `production`) {
-    try {
-        stylesStr = require(`!raw-loader!../public/styles.css`)
-    } catch (e) {
-        console.log(e)
-    }
-}
-
 class HTML extends Component {
     render() {
-        let css
-        if (process.env.NODE_ENV === `production`) {
-            css = (
-                <style
-                    id="gatsby-inlined-css"
-                    dangerouslySetInnerHTML={{ __html: stylesStr }}
-                />
-            )
-        }
         return(
             <html lang="en">
                 <head>
@@ -33,7 +15,6 @@ class HTML extends Component {
                     {this.props.headComponents}
 
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-                    {css}
                     <script type="text/javascript" src="/js/jquery.min.js"></script>
                     <script type="text/javascript" src="/js/popper.js"></script>
                     <script type="text/javascript" src="/js/bootstrap.js"></script>

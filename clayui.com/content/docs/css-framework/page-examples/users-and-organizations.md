@@ -8,7 +8,7 @@ title: "Users and Organizations"
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use xlink:href="/images/icons/icons.svg#product-menu-closed" />
+						<use href="/images/icons/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
 			</li>
@@ -18,7 +18,7 @@ title: "Users and Organizations"
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
@@ -38,7 +38,7 @@ title: "Users and Organizations"
 		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">Users</span>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="collapse navbar-collapse" id="navigationBarCollapse01">
@@ -84,12 +84,12 @@ title: "Users and Organizations"
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="/images/icons/icons.svg#info-circle"></use>
+			<use href="/images/icons/icons.svg#info-circle"></use>
 		</svg>
 		<strong class="lead">Error:</strong> This is an error message.
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
@@ -102,12 +102,12 @@ title: "Users and Organizations"
 				<div class="sheet sheet-lg">
 					<div class="alert alert-dismissible alert-info" role="alert">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-							<use xlink:href="/images/icons/icons.svg#info-circle"></use>
+							<use href="/images/icons/icons.svg#info-circle"></use>
 						</svg>
 						<strong class="lead">Info:</strong> Street 1 and City are required fields. Postal Code could be required in some countries.
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/images/icons/icons.svg#times" />
+								<use href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -117,17 +117,17 @@ title: "Users and Organizations"
 								Street 1
 								<span class="reference-mark">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-										<use xlink:href="/images/icons/icons.svg#asterisk" />
+										<use href="/images/icons/icons.svg#asterisk" />
 									</svg>
 								</span>
 							</label>
-							<input class="form-control" placeholder="Street 1" type="text" value="1400 Montefino Ave">
+							<input class="form-control" placeholder="Street 1" type="text" value="1400 Montefino Ave"/>
 						</div>
 						<div class="form-group-item">
 							<label>
 								Street 2
 							</label>
-							<input class="form-control" placeholder="Street 2" type="text">
+							<input class="form-control" placeholder="Street 2" type="text"/>
 						</div>
 					</div>
 					<div class="form-group-autofit">
@@ -136,36 +136,36 @@ title: "Users and Organizations"
 								City
 								<span class="reference-mark">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-										<use xlink:href="/images/icons/icons.svg#asterisk" />
+										<use href="/images/icons/icons.svg#asterisk" />
 									</svg>
 								</span>
 							</label>
-							<input class="form-control" placeholder="City" type="text" value="Diamond Bar">
+							<input class="form-control" placeholder="City" type="text" value="Diamond Bar"/>
 						</div>
 						<div class="form-group-item">
 							<label>
 								State
 							</label>
-							<input class="form-control" placeholder="State" type="text" value="CA">
+							<input class="form-control" placeholder="State" type="text" value="CA"/>
 						</div>
 						<div class="form-group-item">
 							<label>
 								Postal Code
 							</label>
-							<input class="form-control" placeholder="Postal Code" type="text" value="91765">
+							<input class="form-control" placeholder="Postal Code" type="text" value="91765"/>
 						</div>
 					</div>
 					<h4 class="sheet-subtitle">Sheet Subtitle ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
 					<div class="form-group-autofit">
 						<div class="form-group-item">
 							<label>Input Label 1</label>
-							<input class="form-control" type="text">
+							<input class="form-control" type="text"/>
 						</div>
 					</div>
 					<div class="form-group-autofit">
 						<div class="form-group-item">
 							<label>Input Label 2</label>
-							<input class="form-control" type="text">
+							<input class="form-control" type="text"/>
 						</div>
 					</div>
 					<h5 class="sheet-tertiary-title">Sheet Tertiary Title</h5>
@@ -173,7 +173,7 @@ title: "Users and Organizations"
 						<div class="form-group-item">
 							<div class="custom-control custom-radio">
 								<label>
-									<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
+									<input checked class="custom-control-input" id="radio1" name="radio" type="radio"/>
 									<span class="custom-control-label">
 										<span class="custom-control-label-text">Radio 1 Label</span>
 									</span>
@@ -181,7 +181,7 @@ title: "Users and Organizations"
 							</div>
 							<div class="custom-control custom-radio">
 								<label>
-									<input class="custom-control-input" id="radio2" name="radio" type="radio">
+									<input class="custom-control-input" id="radio2" name="radio" type="radio"/>
 									<span class="custom-control-label">
 										<span class="custom-control-label-text">Radio 2 Label</span>
 									</span>
@@ -189,7 +189,7 @@ title: "Users and Organizations"
 							</div>
 							<div class="custom-control custom-radio">
 								<label>
-									<input checked class="custom-control-input" id="radio3" name="radio" type="radio">
+									<input checked class="custom-control-input" id="radio3" name="radio" type="radio"/>
 									<span class="custom-control-label">
 										<span class="custom-control-label-text">Radio 3 Label</span>
 									</span>
@@ -203,12 +203,12 @@ title: "Users and Organizations"
 								<span class="panel-title">Password</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-										<use xlink:href="/images/icons/icons.svg#angle-right" />
+										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-										<use xlink:href="/images/icons/icons.svg#angle-down" />
+										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>
 							</a>
@@ -219,33 +219,33 @@ title: "Users and Organizations"
 											Current Password
 											<span class="reference-mark">
 												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-													<use xlink:href="/images/icons/icons.svg#asterisk" />
+													<use href="/images/icons/icons.svg#asterisk" />
 												</svg>
 											</span>
 										</label>
-										<input class="form-control" placeholder="Current Password" type="password" value="my-secret">
+										<input class="form-control" placeholder="Current Password" type="password" value="my-secret"/>
 									</div>
 									<div class="form-group">
 										<label>
 											New Password
 											<span class="reference-mark">
 												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-													<use xlink:href="/images/icons/icons.svg#asterisk" />
+													<use href="/images/icons/icons.svg#asterisk" />
 												</svg>
 											</span>
 										</label>
-										<input class="form-control" placeholder="New Password" type="password" value="my-new-secret">
+										<input class="form-control" placeholder="New Password" type="password" value="my-new-secret"/>
 									</div>
 									<div class="form-group">
 										<label>
 											Confirm New Password
 											<span class="reference-mark">
 												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-													<use xlink:href="/images/icons/icons.svg#asterisk" />
+													<use href="/images/icons/icons.svg#asterisk" />
 												</svg>
 											</span>
 										</label>
-										<input class="form-control" placeholder="Confirm New Password" type="password" value="my-new-secret">
+										<input class="form-control" placeholder="Confirm New Password" type="password" value="my-new-secret"/>
 									</div>
 								</div>
 							</div>
@@ -255,12 +255,12 @@ title: "Users and Organizations"
 								<span class="panel-title">Organizations</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-										<use xlink:href="/images/icons/icons.svg#angle-right" />
+										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-										<use xlink:href="/images/icons/icons.svg#angle-down" />
+										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>
 							</a>
@@ -275,12 +275,12 @@ title: "Users and Organizations"
 								<span class="panel-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual User Groups</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-										<use xlink:href="/images/icons/icons.svg#angle-right" />
+										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-										<use xlink:href="/images/icons/icons.svg#angle-down" />
+										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>
 							</a>
@@ -295,12 +295,12 @@ title: "Users and Organizations"
 								<span class="panel-title">Roles</span>
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-										<use xlink:href="/images/icons/icons.svg#angle-right" />
+										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-										<use xlink:href="/images/icons/icons.svg#angle-down" />
+										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>
 							</a>

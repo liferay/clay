@@ -8,10 +8,7 @@ A table variation that allows user to modify certain values of the entry without
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Table/inlineEditTable.html">Inline Edit Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="table-list-inline-edit-table-example">
-<h3 class="component-title">
-	<a href="#table-list-inline-edit-table-example">Inline Edit Table</a>
-</h3>
+### Inline Edit Table
 
 <div class="table-responsive">
 	<table class="table table-autofit table-list table-nowrap">
@@ -46,7 +43,7 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -75,7 +72,7 @@ A table variation that allows user to modify certain values of the entry without
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -89,7 +86,7 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -118,7 +115,7 @@ A table variation that allows user to modify certain values of the entry without
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -132,16 +129,16 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
 				</td>
 				<td class="table-cell-expand">
-					<input class="form-control form-control-sm" type="text" value="Web Content B">
+					<input class="form-control form-control-sm" type="text" value="Web Content B"/>
 				</td>
 				<td class="table-cell-expand">
-					<input class="form-control form-control-sm" type="text" value="Matthew Richards">
+					<input class="form-control form-control-sm" type="text" value="Matthew Richards"/>
 				</td>
 				<td class="table-cell-expand">
 					<span class="text-truncate-inline">
@@ -157,7 +154,7 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -186,7 +183,7 @@ A table variation that allows user to modify certain values of the entry without
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -234,7 +231,7 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -263,7 +260,7 @@ A table variation that allows user to modify certain values of the entry without
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -277,7 +274,7 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -306,7 +303,7 @@ A table variation that allows user to modify certain values of the entry without
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -320,16 +317,16 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
 				</td>
 				<td class="table-cell-expand">
-					<input class="form-control form-control-sm" type="text" value="Web Content B">
+					<input class="form-control form-control-sm" type="text" value="Web Content B"/>
 				</td>
 				<td class="table-cell-expand">
-					<input class="form-control form-control-sm" type="text" value="Matthew Richards">
+					<input class="form-control form-control-sm" type="text" value="Matthew Richards"/>
 				</td>
 				<td class="table-cell-expand">
 					<span class="text-truncate-inline">
@@ -345,7 +342,7 @@ A table variation that allows user to modify certain values of the entry without
 				<td>
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 						</label>
 					</div>
@@ -374,7 +371,7 @@ A table variation that allows user to modify certain values of the entry without
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -389,4 +386,3 @@ A table variation that allows user to modify certain values of the entry without
 </div>
 ```
 
-</article>

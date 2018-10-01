@@ -8,10 +8,7 @@ Definition of the content hierarchy inside a form structure and the components u
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/formsHierarchy.html">Forms Hierarchy Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="sheet-lg">
-<h3 class="component-title">
-	<a href="#sheet-lg">Sheet Lg</a>
-</h3>
+### Sheet Lg
 
 <div class="sheet sheet-lg">
 	<div class="sheet-header">
@@ -39,12 +36,12 @@ Definition of the content hierarchy inside a form structure and the components u
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/images/icons/icons.svg#angle-down" />
+						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -94,12 +91,12 @@ Definition of the content hierarchy inside a form structure and the components u
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
+						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use xlink:href="/images/icons/icons.svg#angle-down" />
+						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -123,4 +120,4 @@ Definition of the content hierarchy inside a form structure and the components u
 </div>
 ```
 
-</article>
+

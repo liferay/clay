@@ -2,10 +2,23 @@
 title: "Spline Chart"
 ---
 
-<article id="1">
+import Graph from "$components/Graph";
 
-<clay-chart component="SplineChart"
-	props='{"data": [{"id": "data1", "data": [100, 20, 30]}, {"id": "data2", "data": [20, 70, 100]}]}'></clay-chart>
+<Graph
+	component="SplineChart"
+	props={{
+		data: [
+			{
+				id: 'data1',
+				data: [100, 20, 30]
+			},
+			{
+				id: 'data2',
+				data: [20, 70, 100]
+			}
+		]
+	}}
+/>
 
 ```soy
 {call ClaySplineChart.render}
@@ -35,5 +48,3 @@ title: "Spline Chart"
 	]}
 />
 ```
-
-</article>

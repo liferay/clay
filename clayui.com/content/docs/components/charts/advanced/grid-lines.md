@@ -2,10 +2,31 @@
 title: "Gridlines"
 ---
 
-<article id="1">
+import Graph from "$components/Graph";
 
-<clay-chart component="Chart"
-	props='{"data": [{"id": "data1", "data": [10, 70, 30, 120, 20, 10]}, {"id": "data2", "data": [100, 150, 120, 90, 10, 55]}], "grid": {"x": {"show": true}, "y": {"show": false}}}'></clay-chart>
+<Graph
+	component="Chart"
+	props={{
+		data: [
+			{
+				id: 'data1',
+				data: [10, 70, 30, 120, 20, 10]
+			},
+			{
+				id: 'data2',
+				data: [100, 150, 120, 90, 10, 55]
+			}
+		],
+		grid: {
+			x: {
+				show: true
+			},
+			y: {
+				show: true
+			}
+		}
+	}}
+/>
 
 ```soy
 {call ClayChart.render}
@@ -52,4 +73,3 @@ title: "Gridlines"
 	}
 />
 ```
-</article>

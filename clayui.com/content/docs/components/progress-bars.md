@@ -8,8 +8,6 @@ Progress bar is a progress indicator used to show the completion percentage of a
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/progress_bars.html">Progress Bars Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-progress-bar">
-
 ### States
 
 > Place an addon on either side of a progress component with `progress-group` and `progress-group-addon`.
@@ -38,7 +36,7 @@ Progress bar is a progress indicator used to show the completion percentage of a
 		<div class="progress-group-addon">
 			<div class="progress-group-feedback">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-					<use xlink:href="/images/icons/icons.svg#check-circle" />
+					<use href="/images/icons/icons.svg#check-circle" />
 				</svg>
 			</div>
 		</div>
@@ -101,21 +99,15 @@ Progress bar is a progress indicator used to show the completion percentage of a
 	<div class="progress-group-addon">
 		<div class="progress-group-feedback">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-				<use xlink:href="/images/icons/icons.svg#check-circle" />
+				<use href="/images/icons/icons.svg#check-circle" />
 			</svg>
 		</div>
 	</div>
 </div>
 ```
 
-</article>
-
-<article id="clay-progress-bar-api">
-
 ### API
 
 <div>
 	[APITable "clay-progress-bar/src/ClayProgressBar.js"]
 </div>
-
-</article>

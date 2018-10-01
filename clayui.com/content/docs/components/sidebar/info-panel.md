@@ -8,8 +8,6 @@ An information container that displays additional data from the one shown in the
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/satellites/Sidebar/infopanel.html">Info Panel Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="sidebar-light">
-
 ### Sidebar light
 
 > Add classes `sidebar-light` to `sidebar` to apply a light theme.
@@ -23,7 +21,7 @@ An information container that displays additional data from the one shown in the
 						<li class="tbar-item">
 							<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-									<use xlink:href="/images/icons/icons.svg#angle-left" />
+									<use href="/images/icons/icons.svg#angle-left" />
 								</svg>
 							</a>
 						</li>
@@ -37,14 +35,14 @@ An information container that displays additional data from the one shown in the
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-									<use xlink:href="/images/icons/icons.svg#angle-right" />
+									<use href="/images/icons/icons.svg#angle-right" />
 								</svg>
 							</a>
 						</li>
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="/images/icons/icons.svg#times" />
+									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</a>
 						</li>
@@ -65,7 +63,7 @@ An information container that displays additional data from the one shown in the
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<ul class="dropdown-menu">
@@ -85,7 +83,7 @@ An information container that displays additional data from the one shown in the
 					<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 						<span class="navbar-text-truncate">Details</span>
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</a>
 					<div class="collapse navbar-collapse" id="sidebarLightCollapse00">
@@ -106,7 +104,7 @@ An information container that displays additional data from the one shown in the
 				<div class="tab-content">
 					<div aria-labelledby="sidebarLightDetailsTab" class="active fade show tab-pane" id="sidebarLightDetails" role="tabpanel">
 						<div class="aspect-ratio aspect-ratio-16-to-9 sidebar-panel" style="margin-top:1.5rem;">
-							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg">
+							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg" />
 							<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 						</div>
 						<dl class="sidebar-dl sidebar-section">
@@ -165,7 +163,7 @@ An information container that displays additional data from the one shown in the
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-														<use xlink:href="/images/icons/icons.svg#folder" />
+														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
 											</div>
@@ -183,7 +181,7 @@ An information container that displays additional data from the one shown in the
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-														<use xlink:href="/images/icons/icons.svg#folder" />
+														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
 											</div>
@@ -212,7 +210,7 @@ An information container that displays additional data from the one shown in the
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
@@ -236,7 +234,7 @@ An information container that displays additional data from the one shown in the
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">
@@ -266,7 +264,7 @@ An information container that displays additional data from the one shown in the
 				<li class="tbar-item">
 					<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-							<use xlink:href="/images/icons/icons.svg#angle-left" />
+							<use href="/images/icons/icons.svg#angle-left" />
 						</svg>
 					</a>
 				</li>
@@ -280,14 +278,14 @@ An information container that displays additional data from the one shown in the
 				<li class="tbar-item">
 					<a class="component-action" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-							<use xlink:href="/images/icons/icons.svg#angle-right" />
+							<use href="/images/icons/icons.svg#angle-right" />
 						</svg>
 					</a>
 				</li>
 				<li class="tbar-item">
 					<a class="component-action" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/images/icons/icons.svg#times" />
+							<use href="/images/icons/icons.svg#times" />
 						</svg>
 					</a>
 				</li>
@@ -308,7 +306,7 @@ An information container that displays additional data from the one shown in the
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+							<use href="/images/icons/icons.svg#ellipsis-v" />
 						</svg>
 					</a>
 					<ul class="dropdown-menu">
@@ -328,7 +326,7 @@ An information container that displays additional data from the one shown in the
 			<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 				<span class="navbar-text-truncate">Details</span>
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div class="collapse navbar-collapse" id="sidebarLightCollapse00">
@@ -349,7 +347,7 @@ An information container that displays additional data from the one shown in the
 		<div class="tab-content">
 			<div aria-labelledby="sidebarLightDetailsTab" class="active fade show tab-pane" id="sidebarLightDetails" role="tabpanel">
 				<div class="aspect-ratio aspect-ratio-16-to-9 sidebar-panel" style="margin-top:1.5rem;">
-					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg">
+					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg" />
 					<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 				</div>
 				<dl class="sidebar-dl sidebar-section">
@@ -408,7 +406,7 @@ An information container that displays additional data from the one shown in the
 									<div class="sticker sticker-secondary">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/images/icons/icons.svg#folder" />
+												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</div>
@@ -426,7 +424,7 @@ An information container that displays additional data from the one shown in the
 									<div class="sticker sticker-secondary">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/images/icons/icons.svg#folder" />
+												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</div>
@@ -455,7 +453,7 @@ An information container that displays additional data from the one shown in the
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
@@ -479,7 +477,7 @@ An information container that displays additional data from the one shown in the
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">
@@ -500,4 +498,3 @@ An information container that displays additional data from the one shown in the
 </div>
 ```
 
-</article>

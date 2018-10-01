@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import LayoutNav from '../components/LayoutNav';
 import {WOW} from 'wowjs';
 

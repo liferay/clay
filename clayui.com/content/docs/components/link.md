@@ -6,8 +6,6 @@ Also known as hyperlink, the link is a clickable (text or image) element used fo
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/link.html">Link Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="types">
-
 ## Types
 
 ### Inline Link
@@ -132,14 +130,9 @@ This is a <a aria-label="inline link" href="#link-styles">inline link</a> exampl
 <h5><a aria-label="External Link" class="link-secondary" href="#link-styles" title="External Link">External Link</a></h5>
 ```
 
-</article>
-
-<article id="link-api">
-
 ## API
 
 <div>
     [APITable "clay-link/src/ClayLink.js"]
 </div>
 
-</article>

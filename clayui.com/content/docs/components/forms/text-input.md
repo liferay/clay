@@ -8,27 +8,21 @@ A description of the different text input types, including usage and validation 
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input.html">Text Input Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="text-field">
-
 ### Text Field
 
 <div class="sheet">
 	<div class="form-group">
 		<label for="basicInputTypeText">Name</label>
-		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 	</div>
 </div>
 
 ```html
 <div class="form-group">
 	<label for="basicInputTypeText">Name</label>
-	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 </div>
 ```
-
-</article>
-
-<article id="states">
 
 ### States
 
@@ -37,30 +31,30 @@ A description of the different text input types, including usage and validation 
 <div class="sheet">
 	<div class="form-group">
 		<label for="basicInputTypeText">Name</label>
-		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeEmail">Email</label>
-		<input class="form-control" id="basicInputTypeEmail" placeholder="name@example.com" type="text">
+		<input class="form-control" id="basicInputTypeEmail" placeholder="name@example.com" type="text"/>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypePassword">Password</label>
-		<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="text">
+		<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="text"/>
 	</div>
 </div>
 
 ```html
 <div class="form-group">
 	<label for="basicInputTypeText">Name</label>
-	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
 </div>
 <div class="form-group">
 	<label for="basicInputTypeEmail">Email</label>
-	<input class="form-control" id="basicInputTypeEmail" placeholder="name@example.com" type="text">
+	<input class="form-control" id="basicInputTypeEmail" placeholder="name@example.com" type="text"/>
 </div>
 <div class="form-group">
 	<label for="basicInputTypePassword">Password</label>
-	<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="text">
+	<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="text"/>
 </div>
 ```
 
@@ -69,14 +63,14 @@ A description of the different text input types, including usage and validation 
 <div class="sheet">
 	<div class="form-group">
 		<label class="disabled" for="basicInputTypeTextDisabled">Name</label>
-		<input disabled class="form-control" id="basicInputTypeTextDisabled" placeholder="Placeholder" type="text">
+		<input disabled class="form-control" id="basicInputTypeTextDisabled" placeholder="Placeholder" type="text"/>
 	</div>
 </div>
 
 ```html
 <div class="form-group">
 	<label class="disabled" for="basicInputTypeTextDisabled">Name</label>
-	<input disabled class="form-control" id="basicInputTypeTextDisabled" placeholder="Placeholder" type="text">
+	<input disabled class="form-control" id="basicInputTypeTextDisabled" placeholder="Placeholder" type="text"/>
 </div>
 ```
 
@@ -85,20 +79,16 @@ A description of the different text input types, including usage and validation 
 <div class="sheet">
 	<div class="form-group">
 		<label for="basicInputTypeTextReadOnly">User ID</label>
-		<input readonly class="form-control" id="basicInputTypeTextReadOnly" type="text" value="59432">
+		<input readonly class="form-control" id="basicInputTypeTextReadOnly" type="text" value="59432"/>
 	</div>
 </div>
 
 ```html
 <div class="form-group">
 	<label for="basicInputTypeTextReadOnly">User ID</label>
-	<input readonly class="form-control" id="basicInputTypeTextReadOnly" type="text" value="59432">
+	<input readonly class="form-control" id="basicInputTypeTextReadOnly" type="text" value="59432"/>
 </div>
 ```
-
-</article>
-
-<article id="validations">
 
 ### Validations
 
@@ -109,16 +99,16 @@ A description of the different text input types, including usage and validation 
 		<label for="inputSuccess1">
 			has-success
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputSuccess1" type="text">
+		<input class="form-control" id="inputSuccess1" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-						<use xlink:href="/images/icons/icons.svg#check-circle-full" />
+						<use href="/images/icons/icons.svg#check-circle-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -133,16 +123,16 @@ A description of the different text input types, including usage and validation 
 	<label for="inputSuccess1">
 		has-success
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/images/icons/icons.svg#asterisk" />
+			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputSuccess1" type="text">
+	<input class="form-control" id="inputSuccess1" type="text"/>
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-					<use xlink:href="/images/icons/icons.svg#check-circle-full" />
+					<use href="/images/icons/icons.svg#check-circle-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
@@ -159,16 +149,16 @@ A description of the different text input types, including usage and validation 
 		<label for="inputWarning1">
 			has-warning
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputWarning1" type="text">
+		<input class="form-control" id="inputWarning1" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-						`<use xlink:href="/images/icons/icons.svg#warning-full" />
+						`<use href="/images/icons/icons.svg#warning-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -183,16 +173,16 @@ A description of the different text input types, including usage and validation 
 	<label for="inputWarning1">
 		has-warning
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/images/icons/icons.svg#asterisk" />
+			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputWarning1" type="text">
+	<input class="form-control" id="inputWarning1" type="text"/>
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-					`<use xlink:href="/images/icons/icons.svg#warning-full" />
+					`<use href="/images/icons/icons.svg#warning-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
@@ -209,16 +199,16 @@ A description of the different text input types, including usage and validation 
 		<label for="inputError1">
 			has-error
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use xlink:href="/images/icons/icons.svg#asterisk" />
+				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputError1" type="text">
+		<input class="form-control" id="inputError1" type="text"/>
 		<div class="form-feedback-group">
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-						<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+						<use href="/images/icons/icons.svg#exclamation-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -233,16 +223,16 @@ A description of the different text input types, including usage and validation 
 	<label for="inputError1">
 		has-error
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use xlink:href="/images/icons/icons.svg#asterisk" />
+			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputError1" type="text">
+	<input class="form-control" id="inputError1" type="text"/>
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-					<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+					<use href="/images/icons/icons.svg#exclamation-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
@@ -251,10 +241,6 @@ A description of the different text input types, including usage and validation 
 	</div>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Textarea
 
@@ -271,5 +257,3 @@ A description of the different text input types, including usage and validation 
 	<textarea class="form-control" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
 </div>
 ```
-
-</article>

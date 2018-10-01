@@ -11,26 +11,20 @@
 		}
 	}
 
-	article {
-		> h3 {
-			font-size: $base-size * 0.7;
-			font-weight: 700 !important;
-			margin-bottom: $base-size * 1.2 !important;
-			padding-top: $base-size * 1.5;
-			text-transform: uppercase;
-		}
+	.clay-h3 {
+		font-weight: 700 !important;
+		margin-bottom: $base-size * 1.2 !important;
+	}
 
-		> h4 {
-			font-weight: 600 !important;
-			margin-bottom: $base-size * 1.2 !important;
-			padding-top: $base-size * 1.1;
-			text-transform: uppercase;
-		}
+	.clay-h4 {
+		font-weight: 600 !important;
+		margin-bottom: $base-size * 1.2 !important;
+		padding-top: $base-size * 1.1;
+	}
 
-		> p {
-			line-height: 1.5;
-			margin-bottom: $base-size * 0.5;
-		}
+	.clay-p {
+		line-height: 1.5;
+		margin-bottom: $base-size * 0.5;
 	}
 
 	blockquote {

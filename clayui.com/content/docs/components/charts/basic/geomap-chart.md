@@ -2,11 +2,23 @@
 title: "Geomap Chart"
 ---
 
-<article id="1">
+import Graph from "$components/Graph";
 
-<div style="width:100%;height:380px;">
-	<clay-chart component="Geomap"
-	props='{"color": {"range": {"min": "#b1d4ff", "max": "#0065e4"}, "selected": "#4b9bff", "value": "gdp_md_est"}, "data": "/world-low-res.geo.json"}'></clay-chart>
+<div style={{width: "100%", height: "380px"}}>
+	<Graph
+		component="Geomap"
+		props={{
+			color: {
+				range: {
+					min: '#b1d4ff',
+					max: '#0065e4'
+				},
+				selected: '#4b9bff',
+				value: 'gdp_md_est'
+			},
+			data: '/world-low-res.geo.json',
+		}}
+	/>
 </div>
 
 ```soy
@@ -19,7 +31,7 @@ title: "Geomap Chart"
 			'selected': '#4b9bff',
 			'value': 'gdp_md_est'
 	] /}
-	{param data: '/assets/world-low-res.geo.json' /}
+	{param data: '/world-low-res.geo.json' /}
 {/call}
 ```
 ```jsx
@@ -32,8 +44,6 @@ title: "Geomap Chart"
 			selected: '#4b9bff',
 			value: 'gdp_md_est'
 	}}
-	data='/assets/world-low-res.geo.json'
+	data='/world-low-res.geo.json'
 />
 ```
-
-</article>

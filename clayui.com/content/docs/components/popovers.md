@@ -8,8 +8,6 @@ Popovers and Tooltips are patterns used to show helpful information in two diffe
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/popovers_tooltips.html">Popovers and Tooltips Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="popovers">
-
 ### Popovers
 
 > Popovers and Tooltips are patterns to show help text in two different ways.
@@ -97,11 +95,6 @@ Popovers and Tooltips are patterns used to show helpful information in two diffe
 </div>
 ```
 
-</article>
-
-
-<article id="tooltips">
-
 ### Tooltips
 
 > Tooltips are brief pieces of information that appear on hover state over an element to clarify the meaning or use of an interaction element for the user.
@@ -163,4 +156,3 @@ Popovers and Tooltips are patterns used to show helpful information in two diffe
 </div>
 ```
 
-</article>

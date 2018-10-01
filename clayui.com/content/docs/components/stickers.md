@@ -8,8 +8,6 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/stickers.html">Stickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-sticker-sizes">
-
 ### Sizes
 
 > Stickers come in 4 sizes sm, normal, lg, and xl . Create your own custom size with the `sticker-size` mixin.
@@ -70,10 +68,6 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-lg sticker-success">133</span>
 <span class="sticker sticker-danger sticker-xl">133</span>
 ```
-
-</article>
-
-<article id="clay-sticker-colors">
 
 ### Colors
 
@@ -137,10 +131,6 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-danger">133</span>
 ```
 
-</article>
-
-<article id="clay-stickers-variantions">
-
 ### Variations
 
 ### Square
@@ -151,7 +141,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary">
 	<span class="inline-item">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-			<use xlink:href="/images/icons/icons.svg#picture" />
+			<use href="/images/icons/icons.svg#picture" />
 		</svg>
 	</span>
 </span>
@@ -185,7 +175,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary">
 	<span class="inline-item">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-			<use xlink:href="/images/icons/icons.svg#picture" />
+			<use href="/images/icons/icons.svg#picture" />
 		</svg>
 	</span>
 </span>
@@ -198,7 +188,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary rounded-circle">JP</span>
 <span class="sticker sticker-primary rounded-circle">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+		<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg" />
 	</span>
 </span>
 
@@ -232,14 +222,10 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary rounded-circle">JP</span>
 <span class="sticker sticker-primary rounded-circle">
 	<span class="sticker-overlay">
-		<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+		<img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg" />
 	</span>
 </span>
 ```
-
-</article>
-
-<article id="clay-sticker-position">
 
 ### Position
 
@@ -251,7 +237,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	<div class="col-md-3 col-6">
 		<div class="clay-site-positional-sticker">
 			<div class="aspect-ratio">
-				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 				<span class="sticker sticker-danger sticker-top-left">PDF</span>
 			</div>
 		</div>
@@ -259,7 +245,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	<div class="col-md-3 col-6">
 		<div class="clay-site-positional-sticker">
 			<div class="aspect-ratio">
-				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 				<span class="sticker sticker-bottom-left sticker-danger">PDF</span>
 			</div>
 		</div>
@@ -267,7 +253,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	<div class="col-md-3 col-6">
 		<div class="clay-site-positional-sticker">
 			<div class="aspect-ratio">
-				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 				<span class="sticker sticker-danger sticker-top-right">PDF</span>
 			</div>
 		</div>
@@ -275,7 +261,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 	<div class="col-md-3 col-6">
 		<div class="clay-site-positional-sticker">
 			<div class="aspect-ratio">
-				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 				<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
 			</div>
 		</div>
@@ -334,31 +320,25 @@ Stickers are a visual way to quickly identify content in a different way than ba
 ```
 ```html
 <div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 	<span class="sticker sticker-danger sticker-top-left">PDF</span>
 </div>
 <div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 	<span class="sticker sticker-bottom-left sticker-danger">PDF</span>
 </div>
 <div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 	<span class="sticker sticker-danger sticker-top-right">PDF</span>
 </div>
 <div class="aspect-ratio">
-	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+	<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 	<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
 </div>
 ```
-
-</article>
-
-<article id="clay-stickers-api">
 
 ### API
 
 <div>
 	[APITable "clay-sticker/src/ClaySticker.js"]
 </div>
-
-</article>
