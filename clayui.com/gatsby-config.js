@@ -29,7 +29,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-mdx',
 			options: {
-				extensions: ['.mdx', '.md'],
+				extensions: ['.mdx'],
 				gatsbyRemarkPlugins: [
 					{
 						resolve: path.resolve(__dirname, './plugins/gatsby-remark-foreach-icons'),
@@ -45,6 +45,28 @@ module.exports = {
 					},
 					{
 						resolve: path.resolve(__dirname, './plugins/gatsby-remark-api-table'),
+					},
+				],
+			},
+		},
+		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				plugins: [
+					{
+						resolve: 'gatsby-remark-foreach-icons',
+					},
+					{
+						resolve: 'gatsby-remark-prismjs',
+						options: {
+							classPrefix: 'gatsby-code-',
+						},
+					},
+					{
+						resolve: 'gatsby-remark-use-clipboard',
+					},
+					{
+						resolve: 'gatsby-remark-api-table',
 					},
 				],
 			},

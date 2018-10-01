@@ -20,8 +20,9 @@ export default class Docs extends Component {
     }
 
     render() {
-        const { data, location } = this.props;
-        const { mdx: { code, frontmatter, excerpt, timeToRead } } = data;
+        const { data, location, pageContext: { markdownJsx } } = this.props;
+        const { mdx, markdownRemark } = data;
+        const { code, frontmatter, excerpt, timeToRead, html } = mdx || markdownRemark;
 
         const title = `${frontmatter.title} - Clay`;
 
@@ -53,17 +54,21 @@ export default class Docs extends Component {
                             <div className="row">
                                 <div className="col-md-12">
                                     <article>
-                                        <MDXRenderer
-                                            components={{
-                                                h1: Typography.H1,
-                                                h2: Typography.H2,
-                                                h3: Typography.H3,
-                                                h4: Typography.H4,
-                                                p: Typography.P,
-                                            }}
-                                        >
-                                            {code.body}
-                                        </MDXRenderer>
+                                        {markdownJsx ? (
+                                            <MDXRenderer
+                                                components={{
+                                                    h1: Typography.H1,
+                                                    h2: Typography.H2,
+                                                    h3: Typography.H3,
+                                                    h4: Typography.H4,
+                                                    p: Typography.P,
+                                                }}
+                                            >
+                                                {code.body}
+                                            </MDXRenderer>
+                                        ) : (
+                                            <div dangerouslySetInnerHTML={{ __html: html }} />
+                                        )}
                                     </article>
                                 </div>
                             </div>
@@ -109,6 +114,15 @@ export const pageQuery = graphql`
             }
             code {
                 body
+            }
+        }
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            excerpt
+            timeToRead
+            html
+            htmlAst
+            frontmatter {
+                title
             }
         }
     }

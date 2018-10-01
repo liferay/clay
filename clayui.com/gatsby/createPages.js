@@ -9,8 +9,9 @@ const path = require('path');
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
-const createDocs = (actions, edges) => {
+const createDocs = (actions, edges, mdx) => {
 	const {createPage, createRedirect} = actions;
+	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
 
 	edges
 		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
@@ -29,15 +30,21 @@ const createDocs = (actions, edges) => {
 				});
 			}
 
+			const component =
+				mdx ?
+					componentWithMDXScope(
+						docsTemplate,
+						node.code.scope,
+						__dirname,
+					) :
+					docsTemplate;
+
 			if (slug.includes('docs/') && layout !== 'redirect') {
 				createPage({
 					path: slug,
-					component: componentWithMDXScope(
-						path.resolve(__dirname, '../src/templates/docs.js'),
-						node.code.scope,
-						__dirname,
-					),
+					component,
 					context: {
+						markdownJsx: mdx,
 						slug,
 					},
 				});
@@ -58,9 +65,7 @@ module.exports = async ({actions, graphql}) => {
 				edges {
 					node {
 						fields {
-							layout
 							nightly
-							redirect
 							slug
 							title
 							weight
@@ -71,14 +76,27 @@ module.exports = async ({actions, graphql}) => {
 					}
 				}
 			}
+			allMarkdownRemark {
+				edges {
+					node {
+						fields {
+							layout
+							nightly
+							redirect
+							slug
+							title
+							weight
+						}
+					}
+				}
+			}
 		}
 	`).then(({data, errors}) => {
 		if (errors) {
 			return Promise.reject(errors);
 		}
 
-		const {edges} = data.allMdx;
-
-		createDocs(actions, edges);
+		createDocs(actions, data.allMdx.edges, true);
+		createDocs(actions, data.allMarkdownRemark.edges, false);
 	});
 };

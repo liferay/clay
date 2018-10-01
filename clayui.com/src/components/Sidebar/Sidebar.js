@@ -13,8 +13,8 @@ const onClick = () => {
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
-const getSection = ({allMdx: {edges}}) => {
-	const resolveNode = edges
+const getMap = (edges) => {
+	return edges
 		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
 		.map(({node}) => {
 			const {
@@ -34,8 +34,12 @@ const getSection = ({allMdx: {edges}}) => {
 				weight,
 			};
 		});
+}
 
-	return arrangeIntoTree(resolveNode)[0].items;
+const getSection = (data) => {
+	const array = [...getMap(data.allMarkdownRemark.edges), ...getMap(data.allMdx.edges)];
+
+	return arrangeIntoTree(array)[0].items;
 }
 
 let scrollTop = 0;
@@ -70,6 +74,18 @@ export default props => (
 					edges {
 						node {
 							fields {
+								nightly
+								slug
+								title
+								weight
+							}
+						}
+					}
+				}
+				allMarkdownRemark {
+					edges {
+						node {
+							fields {
 								layout
 								nightly
 								redirect
@@ -78,7 +94,7 @@ export default props => (
 								weight
 							}
 						}
-					}
+					}	
 				}
 			}
 		`}
