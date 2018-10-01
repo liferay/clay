@@ -65,10 +65,10 @@ module.exports = async ({actions, graphql}) => {
 				edges {
 					node {
 						fields {
+							layout
 							nightly
+							redirect
 							slug
-							title
-							weight
 						}
 						code {
 							scope
@@ -84,8 +84,6 @@ module.exports = async ({actions, graphql}) => {
 							nightly
 							redirect
 							slug
-							title
-							weight
 						}
 					}
 				}
