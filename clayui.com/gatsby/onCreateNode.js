@@ -4,6 +4,7 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 	if (node.internal.type === 'Mdx') {
 		const {
 			layout,
+			nightly,
 			path,
 			redirect,
 			title,
@@ -18,6 +19,12 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 				slug = relativePath.replace('.md', '.html');
 			}
 		}
+
+		createNodeField({
+			name: 'nightly',
+			node,
+			value: nightly ? true : false,
+		});
 
 		createNodeField({
 			name: 'title',

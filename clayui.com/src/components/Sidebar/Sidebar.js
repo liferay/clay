@@ -11,25 +11,29 @@ const onClick = () => {
 	SidebarRef.current.classList.toggle('toggler-expanded');
 }
 
-const getSection = ({allMdx: {edges}}) => {
-	const resolveNode = edges.map(({node}) => {
-		const {
-			slug,
-			title,
-			weight,
-			layout,
-		} = node.fields;
-		const slugWithoutExtension = slug.replace('.html', '');
-		const pathSplit = slugWithoutExtension.split('/');
+const {GATSBY_CLAY_NIGHTLY} = process.env;
 
-		return {
-			id: pathSplit[pathSplit.length - 1],
-			layout,
-			link: '/' + slugWithoutExtension,
-			title,
-			weight,
-		};
-	});
+const getSection = ({allMdx: {edges}}) => {
+	const resolveNode = edges
+		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
+		.map(({node}) => {
+			const {
+				slug,
+				title,
+				weight,
+				layout,
+			} = node.fields;
+			const slugWithoutExtension = slug.replace('.html', '');
+			const pathSplit = slugWithoutExtension.split('/');
+
+			return {
+				id: pathSplit[pathSplit.length - 1],
+				layout,
+				link: '/' + slugWithoutExtension,
+				title,
+				weight,
+			};
+		});
 
 	return arrangeIntoTree(resolveNode)[0].items;
 }
@@ -67,6 +71,7 @@ export default props => (
 						node {
 							fields {
 								layout
+								nightly
 								redirect
 								slug
 								title
