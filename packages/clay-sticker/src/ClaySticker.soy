@@ -16,6 +16,7 @@
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: string}
+	{@param? title: string}
 
 	{let $attributes kind="attributes"}
 		class="sticker
@@ -41,6 +42,10 @@
 
 		{if $id}
 			id="{$id}"
+		{/if}
+
+		{if $title}
+			title="{$title}"
 		{/if}
 	{/let}
 
