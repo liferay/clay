@@ -1153,4 +1153,37 @@ describe('ClayManagementToolbar', function() {
 			expect.any(Object)
 		);
 	});
+
+	it('should render a management toolbar and emit an event on close label click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			clearResultsURL: '#clear',
+			searchValue: 'foo',
+			selectable: true,
+			spritemap: spritemap,
+			totalItems: 10,
+			filterLabels: [
+				{
+					closeable: false,
+					label: 'Filter 1',
+				},
+				{
+					label: 'Filter 2',
+				},
+				{
+					label: 'Category: Label 3',
+				},
+			],
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		// eslint-disable-next-line
+		managementToolbar.refs.resultsBar.refs.label1.refs.closeButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			'filterLabelCloseClicked',
+			expect.any(Object)
+		);
+	});
 });

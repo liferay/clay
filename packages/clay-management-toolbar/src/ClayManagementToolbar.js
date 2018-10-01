@@ -120,7 +120,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleFilterLabelCloseClicked(event) {
-		this.emit('infoButtonClicked', event);
+		this.emit('filterLabelCloseClicked', event);
 	}
 
 	/**
