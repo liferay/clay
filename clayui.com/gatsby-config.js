@@ -68,6 +68,9 @@ module.exports = {
 					{
 						resolve: 'gatsby-remark-api-table',
 					},
+					{
+						resolve: 'gatsby-remark-typography',
+					},
 				],
 			},
 		},
