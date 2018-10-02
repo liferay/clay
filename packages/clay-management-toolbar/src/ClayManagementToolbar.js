@@ -48,7 +48,10 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleClearResultsClick(event) {
-		this.emit('clearButtonClicked', event);
+		return !this.emit({
+			name: 'clearButtonClicked',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -65,7 +68,10 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleCreationButtonClicked(event) {
-		this.emit('creationButtonClicked', event);
+		return !this.emit({
+			name: 'creationButtonClicked',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -88,7 +94,10 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleCreationMenuMoreButtonClicked(event) {
-		this.emit('creationMenuMoreButtonClicked', event);
+		return !this.emit({
+			name: 'creationMenuMoreButtonClicked',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -97,7 +106,10 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleFilterDoneButtonClick(event) {
-		this.emit('filterDoneClicked', event);
+		return !this.emit({
+			name: 'filterDoneClicked',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -120,7 +132,10 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleFilterLabelCloseClicked(event) {
-		this.emit('filterLabelCloseClicked', event);
+		return !this.emit({
+			name: 'filterLabelCloseClicked',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -129,7 +144,10 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleInfoButtonClicked(event) {
-		this.emit('infoButtonClicked', event);
+		return !this.emit({
+			name: 'infoButtonClicked',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -167,7 +185,10 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSearchSearchClick(event) {
-		return !this.emit('search', event);
+		return !this.emit({
+			name: 'search',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -176,16 +197,26 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @private
 	 */
 	_handleSelectPageCheckboxChanged(event) {
-		this.emit('selectPageCheckboxChanged', event);
+		return !this.emit({
+			data: {
+				checked: event.target.checked,
+			},
+			name: 'selectPageCheckboxChanged',
+			originalEvent: event
+		});
 	}
 
 	/**
 	 * Continues the propagation of the sorting button clicked event
 	 * @private
 	 */
-	_handleSortingButtonClicked() {
-		this.emit('sortingButtonClicked', {
-			sortingOrder: this.sortingOrder,
+	_handleSortingButtonClicked(event) {
+		return !this.emit({
+			data: {
+				sortingOrder: this.sortingOrder,
+			},
+			name: 'sortingButtonClicked',
+			originalEvent: event
 		});
 	}
 
