@@ -576,7 +576,12 @@ describe('ClayDatasetDisplay', function() {
 		jest.runAllTimers();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('filterDoneClicked', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'filterDoneClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar creation menu button click', () => {
@@ -592,8 +597,10 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'creationButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'creationButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -648,8 +655,10 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'creationMenuMoreButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'creationMenuMoreButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -663,7 +672,12 @@ describe('ClayDatasetDisplay', function() {
 		jest.runAllTimers();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('search', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'search',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 
 	it('should render a ClayDatasetDisplay and emit an event on management toolbar sorting button click', () => {
@@ -677,8 +691,11 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'sortingButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'sortingButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
