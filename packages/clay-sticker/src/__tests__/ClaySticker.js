@@ -236,4 +236,12 @@ describe('ClaySticker', function() {
 
 		expect(sticker).toMatchSnapshot();
 	});
+
+	it('should render a sticker with title', () => {
+		sticker = new ClaySticker({
+			title: 'My awesome title',
+		});
+
+		expect(sticker).toMatchSnapshot();
+	});
 });

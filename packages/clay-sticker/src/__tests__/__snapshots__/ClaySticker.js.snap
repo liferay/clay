@@ -137,6 +137,12 @@ exports[`ClaySticker should render a sticker with label 1`] = `
 </span>
 `;
 
+exports[`ClaySticker should render a sticker with title 1`] = `
+<span class="sticker sticker-rounded sticker-primary" title="My awesome title">
+  <span class="sticker-overlay"></span>
+</span>
+`;
+
 exports[`ClaySticker should render a top left positioned sticker 1`] = `
 <span class="sticker sticker-rounded sticker-primary sticker-top-left">
   <span class="sticker-overlay"></span>
