@@ -105,6 +105,7 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the plus button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationButtonClicked(event) {
 		return !this.emit({
@@ -131,6 +132,7 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the creation menu more button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationMenuMoreButtonClicked(event) {
 		return !this.emit({
@@ -143,6 +145,7 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the filter done clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilterDoneClicked(event) {
 		return !this.emit({
@@ -244,6 +247,7 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the search event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSearch(event) {
 		return !this.emit({
@@ -256,6 +260,7 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the sorting button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSortingButtonClicked(event) {
 		return !this.emit({

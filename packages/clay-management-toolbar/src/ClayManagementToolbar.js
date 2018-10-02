@@ -46,6 +46,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the clear button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleClearResultsClick(event) {
 		return !this.emit({
@@ -66,6 +67,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the plus button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationButtonClicked(event) {
 		return !this.emit({
@@ -92,6 +94,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the creation menu more button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationMenuMoreButtonClicked(event) {
 		return !this.emit({
@@ -104,6 +107,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilterDoneButtonClick(event) {
 		return !this.emit({
@@ -130,6 +134,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the filter label close clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilterLabelCloseClicked(event) {
 		return !this.emit({
@@ -142,6 +147,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the Info button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleInfoButtonClicked(event) {
 		return !this.emit({
@@ -195,6 +201,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSelectPageCheckboxChanged(event) {
 		return !this.emit({
@@ -208,7 +215,9 @@ class ClayManagementToolbar extends ClayComponent {
 
 	/**
 	 * Continues the propagation of the sorting button clicked event
+	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSortingButtonClicked(event) {
 		return !this.emit({
