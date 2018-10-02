@@ -50,7 +50,7 @@ class ClayManagementToolbar extends ClayComponent {
 	_handleClearResultsClick(event) {
 		return !this.emit({
 			name: 'clearButtonClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -70,7 +70,7 @@ class ClayManagementToolbar extends ClayComponent {
 	_handleCreationButtonClicked(event) {
 		return !this.emit({
 			name: 'creationButtonClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -96,7 +96,7 @@ class ClayManagementToolbar extends ClayComponent {
 	_handleCreationMenuMoreButtonClicked(event) {
 		return !this.emit({
 			name: 'creationMenuMoreButtonClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -108,7 +108,7 @@ class ClayManagementToolbar extends ClayComponent {
 	_handleFilterDoneButtonClick(event) {
 		return !this.emit({
 			name: 'filterDoneClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -134,7 +134,7 @@ class ClayManagementToolbar extends ClayComponent {
 	_handleFilterLabelCloseClicked(event) {
 		return !this.emit({
 			name: 'filterLabelCloseClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -146,7 +146,7 @@ class ClayManagementToolbar extends ClayComponent {
 	_handleInfoButtonClicked(event) {
 		return !this.emit({
 			name: 'infoButtonClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -187,7 +187,7 @@ class ClayManagementToolbar extends ClayComponent {
 	_handleSearchSearchClick(event) {
 		return !this.emit({
 			name: 'search',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -202,7 +202,7 @@ class ClayManagementToolbar extends ClayComponent {
 				checked: event.target.checked,
 			},
 			name: 'selectPageCheckboxChanged',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -216,7 +216,7 @@ class ClayManagementToolbar extends ClayComponent {
 				sortingOrder: this.sortingOrder,
 			},
 			name: 'sortingButtonClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 

@@ -248,7 +248,7 @@ class ClayDatasetDisplay extends ClayComponent {
 	_handleSearch(event) {
 		return !this.emit({
 			name: 'search',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -261,7 +261,7 @@ class ClayDatasetDisplay extends ClayComponent {
 		return !this.emit({
 			data: event.data,
 			name: 'sortingButtonClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
