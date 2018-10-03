@@ -2550,12 +2550,12 @@ bignumber.js@^2.1.0:
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-2.4.0.tgz#838a992da9f9d737e0f4b2db0be62bb09dd0c5e8"
   integrity sha1-g4qZLan51zfg9LLbC+YrsJ3Qxeg=
 
-billboard.js@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/billboard.js/-/billboard.js-1.4.1.tgz#30f302685f65988b73d22e63a275e1d580f4b2f8"
-  integrity sha512-6YkW3R0Kkbvb8Bm06bCfANabenTK1SDdrcdRzBptHQbDclHmHfB0OJf68ZctnHv3ddAqssOCD99Gnii1tuILcA==
+billboard.js@1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/billboard.js/-/billboard.js-1.5.1.tgz#856aabe7fb8dbd0328cd25d32f0c6a7480857ff3"
+  integrity sha512-MXaDZLcjoPlCSVY6qkFChZS6YE9u+oxVetu6ifa1mR74s0EUyacZW/3CJQcMt1GF8B7ddtDakUEZ2v44BvsfXw==
   dependencies:
-    d3 "^5.0.0"
+    d3 "^5.5.0"
 
 bin-build@^2.2.0:
   version "2.2.0"
@@ -3345,12 +3345,12 @@ clay-button@^2.2.0:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-charts@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/clay-charts/-/clay-charts-2.2.0.tgz#f80a13e26e814ab16c0b3042b611bf7c00f28938"
-  integrity sha1-+AoT4m6BSrFsCzBCthG/fADyiTg=
+clay-charts@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/clay-charts/-/clay-charts-2.3.3.tgz#dd76f2afeae39a42a0f4e856ceef994a5f96723c"
+  integrity sha512-FPwAyr1d1taTEy50LtnfqiseXRgLOp25lJB6H96RQnX0Aho6nyuMYXdJIPcO6dw8MmI6z1N4zMNppiO14OJL6g==
   dependencies:
-    billboard.js "1.4.1"
+    billboard.js "1.5.1"
     d3 "5.0.0"
     metal "^2.16.2"
     metal-component "^2.13.2"
@@ -3379,10 +3379,10 @@ clay-component@^2.2.0:
     metal-dom "^2.16.0"
     metal-state "^2.16.0"
 
-clay-css@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.2.0.tgz#56a6105ba49884555e4841efb7da04de6aa2f84f"
-  integrity sha1-VqYQW6SYhFVeSEHvt9oE3mqi+E8=
+clay-css@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.3.3.tgz#8747006f2462c640ef52d02c488aa9c551349125"
+  integrity sha512-fplvas0QQGBsVKg3Sv1SQ4Swd9a8idpPAEg+5FOtz5t7YEJRvpScvgmACphojktC9HaBuFEU5M1MF3WbhS66uw==
 
 clay-dropdown@^2.2.0:
   version "2.2.0"
@@ -4555,10 +4555,10 @@ d3@5.0.0:
     d3-voronoi "1"
     d3-zoom "1"
 
-d3@^5.0.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/d3/-/d3-5.5.0.tgz#948413b91b988a6597f3e4c3e941d3b530bfee63"
-  integrity sha512-HRDSYvT3n7kMvJH7Avp7iR0Xsz97bkCFka9aOg04EdyXyiAP8yQzUpLH3712y9R7ffVo1g94t1OYFHBB0yI9vQ==
+d3@^5.5.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-5.7.0.tgz#f189d338bdde62acf02f308918e0ec34dd7568f9"
+  integrity sha512-8KEIfx+dFm8PlbJN9PI0suazrZ41QcaAufsKE9PRcqYPWLngHIyWJZX96n6IQKePGgeSu0l7rtlueSSNq8Zc3g==
   dependencies:
     d3-array "1"
     d3-axis "1"
