@@ -8,10 +8,7 @@ Vertical navigation allows the navigation between the different pages.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Navigation/verticalNav.html">Vertical Navigation Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="menubar-vertical-expand-lg">
-<h3 class="component-title">
-	<a href="#menubar-vertical-expand-lg">Menubar Vertical Expand Lg</a>
-</h3>
+### Menubar Vertical Expand Lg
 
 > A pattern for collapsing vertical navigations, collapses at 991px. For vertical navigations that don't collapse use <a href="nav.html#nav-stacked">Nav Stacked</a> or <a href="nav.html#nav-nested">Nav Nested</a>.
 
@@ -21,7 +18,7 @@ Vertical navigation allows the navigation between the different pages.
 			<a aria-controls="menubarVerticalLgCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalLgCollapse01" role="button">
 				Details
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div class="collapse menubar-collapse" id="menubarVerticalLgCollapse01">
@@ -31,12 +28,12 @@ Vertical navigation allows the navigation between the different pages.
 							Basic Information
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -49,12 +46,12 @@ Vertical navigation allows the navigation between the different pages.
 										Documents and Media
 										<span class="collapse-icon-closed">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-												<use xlink:href="/images/icons/icons.svg#caret-right" />
+												<use href="/images/icons/icons.svg#caret-right" />
 											</svg>
 										</span>
 										<span class="collapse-icon-open">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-												<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+												<use href="/images/icons/icons.svg#caret-bottom" />
 											</svg>
 										</span>
 									</a>
@@ -76,12 +73,12 @@ Vertical navigation allows the navigation between the different pages.
 							SEO
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -97,12 +94,12 @@ Vertical navigation allows the navigation between the different pages.
 							Advanced
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -126,7 +123,7 @@ Vertical navigation allows the navigation between the different pages.
 	<a aria-controls="menubarVerticalLgCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalLgCollapse01" role="button">
 		Details
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+			<use href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</a>
 	<div class="collapse menubar-collapse" id="menubarVerticalLgCollapse01">
@@ -136,12 +133,12 @@ Vertical navigation allows the navigation between the different pages.
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -154,12 +151,12 @@ Vertical navigation allows the navigation between the different pages.
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-										<use xlink:href="/images/icons/icons.svg#caret-right" />
+										<use href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-										<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+										<use href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
 							</a>
@@ -181,12 +178,12 @@ Vertical navigation allows the navigation between the different pages.
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -202,12 +199,12 @@ Vertical navigation allows the navigation between the different pages.
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -225,12 +222,7 @@ Vertical navigation allows the navigation between the different pages.
 </nav>
 ```
 
-</article>
-
-<article id="menubar-vertical-expand-md">
-<h3 class="component-title">
-	<a href="#menubar-vertical-expand-md">Menubar Vertical Expand Md</a>
-</h3>
+### Menubar Vertical Expand Md
 
 > A pattern for collapsing vertical navigations, collapses at 767px. For vertical navigations that don't collapse use <a href="nav.html#nav-stacked">Nav Stacked</a> or <a href="nav.html#nav-nested">Nav Nested</a>.
 
@@ -240,7 +232,7 @@ Vertical navigation allows the navigation between the different pages.
 			<a aria-controls="menubarVerticalCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalCollapse01" role="button">
 				Details
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div class="collapse menubar-collapse" id="menubarVerticalCollapse01">
@@ -250,12 +242,12 @@ Vertical navigation allows the navigation between the different pages.
 							Basic Information
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -268,12 +260,12 @@ Vertical navigation allows the navigation between the different pages.
 										Documents and Media
 										<span class="collapse-icon-closed">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-												<use xlink:href="/images/icons/icons.svg#caret-right" />
+												<use href="/images/icons/icons.svg#caret-right" />
 											</svg>
 										</span>
 										<span class="collapse-icon-open">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-												<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+												<use href="/images/icons/icons.svg#caret-bottom" />
 											</svg>
 										</span>
 									</a>
@@ -295,12 +287,12 @@ Vertical navigation allows the navigation between the different pages.
 							SEO
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -316,12 +308,12 @@ Vertical navigation allows the navigation between the different pages.
 							Advanced
 							<span class="collapse-icon-closed">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-									<use xlink:href="/images/icons/icons.svg#caret-right" />
+									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-									<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
 						</a>
@@ -345,7 +337,7 @@ Vertical navigation allows the navigation between the different pages.
 	<a aria-controls="menubarVerticalCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalCollapse01" role="button">
 		Details
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+			<use href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</a>
 	<div class="collapse menubar-collapse" id="menubarVerticalCollapse01">
@@ -355,12 +347,12 @@ Vertical navigation allows the navigation between the different pages.
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -373,12 +365,12 @@ Vertical navigation allows the navigation between the different pages.
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-										<use xlink:href="/images/icons/icons.svg#caret-right" />
+										<use href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-										<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+										<use href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
 							</a>
@@ -400,12 +392,12 @@ Vertical navigation allows the navigation between the different pages.
 					SEO
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -421,12 +413,12 @@ Vertical navigation allows the navigation between the different pages.
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
-							<use xlink:href="/images/icons/icons.svg#caret-right" />
+							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
 				</a>
@@ -443,4 +435,3 @@ Vertical navigation allows the navigation between the different pages.
 	</div>
 </nav>
 ```
-</article>

@@ -8,10 +8,7 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Navigation/breadcrumb.html">Breadcrumbs Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="breadcrumbs">
-<h3 class="component-title">
-	<a href="#breadcrumbs">Breadcrumbs</a>
-</h3>
+### Breadcrumbs
 
 > A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.
 
@@ -89,10 +86,10 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb2Dropdown1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
+				<use href="/images/icons/icons.svg#ellipsis-h"></use>
 			</svg>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom"></use>
+				<use href="/images/icons/icons.svg#caret-bottom"></use>
 			</svg>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
@@ -121,10 +118,10 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use xlink:href="/images/icons/icons.svg#ellipsis-h"></use>
+				<use href="/images/icons/icons.svg#ellipsis-h"></use>
 			</svg>
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/images/icons/icons.svg#caret-bottom"></use>
+				<use href="/images/icons/icons.svg#caret-bottom"></use>
 			</svg>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
@@ -149,4 +146,4 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 </ol>
 ```
 
-</article>
+

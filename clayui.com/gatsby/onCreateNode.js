@@ -1,15 +1,17 @@
-const {createFilePath} = require(`gatsby-source-filesystem`);
+module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
+	const {createNodeField} = actions;
 
-module.exports = exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
-	const {createNodeField} = boundActionCreators;
-
-	if (node.internal.type === 'MarkdownRemark') {
+	if (
+		node.internal.type === 'Mdx' ||
+		node.internal.type === 'MarkdownRemark'
+	) {
 		const {
 			layout,
+			nightly,
 			path,
 			redirect,
 			title,
-			weight
+			weight,
 		} = node.frontmatter;
 		const {relativePath} = getNode(node.parent);
 
@@ -17,9 +19,25 @@ module.exports = exports.onCreateNode = ({node, boundActionCreators, getNode}) =
 
 		if (!slug) {
 			if (relativePath.includes('docs')) {
-				slug = relativePath.replace('.md', '.html');
+				if (relativePath.endsWith('.md')) {
+					slug = relativePath.replace('.md', '.html');
+				} else {
+					slug = relativePath.replace('.mdx', '.html');
+				}
 			}
 		}
+
+		createNodeField({
+			name: 'nightly',
+			node,
+			value: nightly ? true : false,
+		});
+
+		createNodeField({
+			name: 'title',
+			node,
+			value: node.frontmatter.title,
+		});
 
 		createNodeField({
 			node,

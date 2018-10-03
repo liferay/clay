@@ -105,9 +105,13 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the plus button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationButtonClicked(event) {
-		this.emit('creationButtonClicked', event);
+		return !this.emit({
+			name: 'creationButtonClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -128,18 +132,26 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the creation menu more button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationMenuMoreButtonClicked(event) {
-		this.emit('creationMenuMoreButtonClicked', event);
+		return !this.emit({
+			name: 'creationMenuMoreButtonClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
 	 * Continues the propagation of the filter done clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilterDoneClicked(event) {
-		this.emit('filterDoneClicked', event);
+		return !this.emit({
+			name: 'filterDoneClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -235,18 +247,27 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * Continues the propagation of the search event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSearch(event) {
-		this.emit('search', event);
+		return !this.emit({
+			name: 'search',
+			originalEvent: event,
+		});
 	}
 
 	/**
 	 * Continues the propagation of the sorting button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSortingButtonClicked(event) {
-		this.emit('sortingButtonClicked', event);
+		return !this.emit({
+			data: event.data,
+			name: 'sortingButtonClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -256,7 +277,7 @@ class ClayDatasetDisplay extends ClayComponent {
 	 * @private
 	 */
 	_handleSelectPageCheckboxChanged(event) {
-		let checkboxStatus = event.target.checked;
+		let checkboxStatus = event.data.checked;
 
 		if (checkboxStatus) {
 			this._selectAllItems();

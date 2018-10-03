@@ -2,17 +2,11 @@
 title: "Badges"
 ---
 
-<article>
-
 ### Badge Sizes
 
 <div class="alert alert-warning">
 	Badge Sizes have been removed, use the <a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_badges.scss#L1">clay-badge-size($sassMap) mixin</a> to create custom badges sizes for your app.
 </div>
-
-</article>
-
-<article>
 
 ### Badge Pill
 
@@ -70,10 +64,6 @@ title: "Badges"
 </span>
 ```
 
-</article>
-
-<article>
-
 ### Badges as Anchor Tag
 
 <a class="badge badge-primary" href="#1">
@@ -107,156 +97,142 @@ title: "Badges"
 </a>
 ```
 
-</article>
-
-<article>
-
 ### Badge with Links Inside
 
 <span class="badge badge-primary">
-		<span class="badge-item badge-item-before">
-			<a href="#1">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-					<use xlink:href="/images/icons/icons.svg#times-circle"></use>
-				</svg>
-			</a>
-		</span>
-		<span class="badge-item badge-item-before">
-			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use xlink:href="/images/icons/icons.svg#picture"></use>
-				</svg>
-			</button>
-		</span>
-		<span class="badge-item badge-item-expand">
-			<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</a>
-		</span>
-		<span class="badge-item badge-item-after">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-				<use xlink:href="/images/icons/icons.svg#camera"></use>
+	<span class="badge-item badge-item-before">
+		<a href="#1">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
-		</span>
-		<span class="badge-item badge-item-after">
-			<button aria-label="Close" class="close" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times"></use>
-				</svg>
-			</button>
-		</span>
+		</a>
 	</span>
-</div>
+	<span class="badge-item badge-item-before">
+		<button class="btn btn-unstyled" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use href="/images/icons/icons.svg#picture"></use>
+			</svg>
+		</button>
+	</span>
+	<span class="badge-item badge-item-expand">
+		<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</a>
+	</span>
+	<span class="badge-item badge-item-after">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+			<use href="/images/icons/icons.svg#camera"></use>
+		</svg>
+	</span>
+	<span class="badge-item badge-item-after">
+		<button aria-label="Close" class="close" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use href="/images/icons/icons.svg#times"></use>
+			</svg>
+		</button>
+	</span>
+</span>
 
 ```html
 <span class="badge badge-primary">
-		<span class="badge-item badge-item-before">
-			<a href="#1">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-					<use xlink:href="/images/icons/icons.svg#times-circle"></use>
-				</svg>
-			</a>
-		</span>
-		<span class="badge-item badge-item-before">
-			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use xlink:href="/images/icons/icons.svg#picture"></use>
-				</svg>
-			</button>
-		</span>
-		<span class="badge-item badge-item-expand">
-			<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</a>
-		</span>
-		<span class="badge-item badge-item-after">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-				<use xlink:href="/images/icons/icons.svg#camera"></use>
+	<span class="badge-item badge-item-before">
+		<a href="#1">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
-		</span>
-		<span class="badge-item badge-item-after">
-			<button aria-label="Close" class="close" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times"></use>
-				</svg>
-			</button>
-		</span>
+		</a>
 	</span>
-</div>
+	<span class="badge-item badge-item-before">
+		<button class="btn btn-unstyled" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use href="/images/icons/icons.svg#picture"></use>
+			</svg>
+		</button>
+	</span>
+	<span class="badge-item badge-item-expand">
+		<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</a>
+	</span>
+	<span class="badge-item badge-item-after">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+			<use href="/images/icons/icons.svg#camera"></use>
+		</svg>
+	</span>
+	<span class="badge-item badge-item-after">
+		<button aria-label="Close" class="close" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use href="/images/icons/icons.svg#times"></use>
+			</svg>
+		</button>
+	</span>
+</span>
 ```
-
-</article>
-
-<article>
 
 ### Badge with Text Truncate
 
 <span class="badge badge-success">
-		<span class="badge-item badge-item-before">
-			<a href="#1">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-					<use xlink:href="/images/icons/icons.svg#times-circle"></use>
-				</svg>
-			</a>
-		</span>
-		<span class="badge-item badge-item-before">
-			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use xlink:href="/images/icons/icons.svg#picture"></use>
-				</svg>
-			</button>
-		</span>
-		<span class="badge-item badge-item-expand">
-			<a class="text-truncate-inline" href="#1">
-				<span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span>
-			</a>
-		</span>
-		<span class="badge-item badge-item-after">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-				<use xlink:href="/images/icons/icons.svg#camera"></use>
+	<span class="badge-item badge-item-before">
+		<a href="#1">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
-		</span>
-		<span class="badge-item badge-item-after">
-			<button aria-label="Close" class="close" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times"></use>
-				</svg>
-			</button>
-		</span>
+		</a>
 	</span>
-</div>
+	<span class="badge-item badge-item-before">
+		<button class="btn btn-unstyled" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use href="/images/icons/icons.svg#picture"></use>
+			</svg>
+		</button>
+	</span>
+	<span class="badge-item badge-item-expand">
+		<a class="text-truncate-inline" href="#1">
+			<span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span>
+		</a>
+	</span>
+	<span class="badge-item badge-item-after">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+			<use href="/images/icons/icons.svg#camera"></use>
+		</svg>
+	</span>
+	<span class="badge-item badge-item-after">
+		<button aria-label="Close" class="close" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use href="/images/icons/icons.svg#times"></use>
+			</svg>
+		</button>
+	</span>
+</span>
 
 ```html
 <span class="badge badge-success">
-		<span class="badge-item badge-item-before">
-			<a href="#1">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-					<use xlink:href="/images/icons/icons.svg#times-circle"></use>
-				</svg>
-			</a>
-		</span>
-		<span class="badge-item badge-item-before">
-			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use xlink:href="/images/icons/icons.svg#picture"></use>
-				</svg>
-			</button>
-		</span>
-		<span class="badge-item badge-item-expand">
-			<a class="text-truncate-inline" href="#1">
-				<span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span>
-			</a>
-		</span>
-		<span class="badge-item badge-item-after">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-				<use xlink:href="/images/icons/icons.svg#camera"></use>
+	<span class="badge-item badge-item-before">
+		<a href="#1">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
-		</span>
-		<span class="badge-item badge-item-after">
-			<button aria-label="Close" class="close" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="/images/icons/icons.svg#times"></use>
-				</svg>
-			</button>
-		</span>
+		</a>
 	</span>
-</div>
+	<span class="badge-item badge-item-before">
+		<button class="btn btn-unstyled" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use href="/images/icons/icons.svg#picture"></use>
+			</svg>
+		</button>
+	</span>
+	<span class="badge-item badge-item-expand">
+		<a class="text-truncate-inline" href="#1">
+			<span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span>
+		</a>
+	</span>
+	<span class="badge-item badge-item-after">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+			<use href="/images/icons/icons.svg#camera"></use>
+		</svg>
+	</span>
+	<span class="badge-item badge-item-after">
+		<button aria-label="Close" class="close" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use href="/images/icons/icons.svg#times"></use>
+			</svg>
+		</button>
+	</span>
+</span>
 ```
-
-</article>

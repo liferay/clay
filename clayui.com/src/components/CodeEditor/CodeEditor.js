@@ -19,6 +19,7 @@ import * as ClayCharts from 'clay-charts';
 
 import {LiveEditor, LiveProvider} from 'react-live';
 
+// eslint-disable-next-line
 const compileES6 = code => Babel.transform(code, {presets: [BabelPresetMetalJsx]}).code;
 
 class CodeEditor extends Component {

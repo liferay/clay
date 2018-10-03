@@ -1,70 +1,22 @@
 'use strict';
 
-const arrangeIntoTree = require("../src/utils/arrangeIntoTree");
-const fixHtmlAst = require("../src/utils/fixHtmlAst");
-const path = require("path");
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`,
+});
 
-module.exports = async ({ boundActionCreators, graphql }) => {
-	const { createPage, createRedirect } = boundActionCreators;
+const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope');
+const path = require('path');
 
-	const docsPostTemplate = path.resolve(__dirname, '../src/templates/docs.js');
+const {GATSBY_CLAY_NIGHTLY} = process.env;
 
-	createRedirect({
-		fromPath: '/index.html',
-		redirectInBrowser: true,
-		toPath: '/',
-	});
+const createDocs = (actions, edges, mdx) => {
+	const {createPage, createRedirect} = actions;
+	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
 
-	return graphql(`
-		{
-			allMarkdownRemark(limit: 1000) {
-				edges {
-					node {
-						htmlAst
-						fields {
-							layout
-							redirect
-							slug
-							title
-							weight
-						}
-					}
-				}
-			}
-		}
-	`).then(result => {
-		if (result.errors) {
-			return Promise.reject(result.errors);
-		}
-
-		const resolveNode = result.data.allMarkdownRemark.edges.map(({ node }, index) => {
-			const {
-				slug,
-				title,
-				weight,
-				layout
-			} = node.fields;
-			const slugWithoutExtension = slug.replace('.html', '');
-			const pathSplit = slugWithoutExtension.split('/');
-
-			return {
-				id: pathSplit[pathSplit.length - 1],
-				layout,
-				link: '/' + slugWithoutExtension,
-				title,
-				weight
-			};
-		});
-
-		const tree = arrangeIntoTree(resolveNode);
-
-		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-			const { slug, redirect, layout } = node.fields;
-
-			// This is a hook to fix `xlink:href` for xlinkHref, even if we 
-			// switch the docs to xlinkHref the AST passes in small letters. 
-			// We are correcting until we have a solution in the package.
-			const htmlASTTreated = fixHtmlAst(node.htmlAst);
+	edges
+		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
+		.forEach(({node}) => {
+			const {slug, redirect, layout} = node.fields;
 
 			if (redirect) {
 				const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
@@ -72,22 +24,77 @@ module.exports = async ({ boundActionCreators, graphql }) => {
 
 				createRedirect({
 					fromPath,
+					isPermanent: true,
 					redirectInBrowser: true,
 					toPath: redirect,
 				});
 			}
 
+			const component =
+				mdx ?
+					componentWithMDXScope(
+						docsTemplate,
+						node.code.scope,
+						__dirname,
+					) :
+					docsTemplate;
+
 			if (slug.includes('docs/') && layout !== 'redirect') {
 				createPage({
 					path: slug,
-					component: docsPostTemplate,
+					component,
 					context: {
+						markdownJsx: mdx,
 						slug,
-						docsPath: JSON.stringify(tree),
-						htmlASTTreated: JSON.stringify(htmlASTTreated),
 					},
 				});
 			}
 		});
+};
+
+module.exports = async ({actions, graphql}) => {
+	actions.createRedirect({
+		fromPath: '/index.html',
+		redirectInBrowser: true,
+		toPath: '/',
+	});
+
+	return graphql(`
+		query {
+			allMdx {
+				edges {
+					node {
+						fields {
+							layout
+							nightly
+							redirect
+							slug
+						}
+						code {
+							scope
+						}
+					}
+				}
+			}
+			allMarkdownRemark {
+				edges {
+					node {
+						fields {
+							layout
+							nightly
+							redirect
+							slug
+						}
+					}
+				}
+			}
+		}
+	`).then(({data, errors}) => {
+		if (errors) {
+			return Promise.reject(errors);
+		}
+
+		createDocs(actions, data.allMdx.edges, true);
+		createDocs(actions, data.allMarkdownRemark.edges, false);
 	});
 };

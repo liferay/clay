@@ -144,6 +144,15 @@ ClaySticker.STATE = {
 		'unstyled',
 		'warning',
 	]).value('primary'),
+
+	/**
+	 * Title to be applied to the sticker element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClaySticker
+	 * @type {?(string|undefined)}
+	 */
+	title: Config.string(),
 };
 
 defineWebComponent('clay-sticker', ClaySticker);

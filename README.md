@@ -70,9 +70,9 @@ See the [Getting Started](https://clayui.com/docs/getting-started/introduction.h
 
 Even if your application does not use the framework [Metal.js](https://metaljs.com/) Clay is flexible and can be used as WebComponents see some examples with:
 
-* [Angular](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/angular-with-clay)
-* [React](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/react-with-clay)
-* [Vue](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/vue-with-clay)
+* [Angular](examples/angular-with-clay)
+* [React](examples/react-with-clay)
+* [Vue](examples/vue-with-clay)
 
 ## Contributing
 

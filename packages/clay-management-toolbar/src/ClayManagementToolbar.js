@@ -46,9 +46,13 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the clear button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleClearResultsClick(event) {
-		this.emit('clearButtonClicked', event);
+		return !this.emit({
+			name: 'clearButtonClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -63,9 +67,13 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the plus button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationButtonClicked(event) {
-		this.emit('creationButtonClicked', event);
+		return !this.emit({
+			name: 'creationButtonClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -86,18 +94,26 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the creation menu more button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationMenuMoreButtonClicked(event) {
-		this.emit('creationMenuMoreButtonClicked', event);
+		return !this.emit({
+			name: 'creationMenuMoreButtonClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilterDoneButtonClick(event) {
-		this.emit('filterDoneClicked', event);
+		return !this.emit({
+			name: 'filterDoneClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -118,18 +134,26 @@ class ClayManagementToolbar extends ClayComponent {
 	 * Continues the propagation of the filter label close clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilterLabelCloseClicked(event) {
-		this.emit('infoButtonClicked', event);
+		return !this.emit({
+			name: 'filterLabelCloseClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
 	 * Continues the propagation of the Info button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleInfoButtonClicked(event) {
-		this.emit('infoButtonClicked', event);
+		return !this.emit({
+			name: 'infoButtonClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -167,25 +191,41 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSearchSearchClick(event) {
-		return !this.emit('search', event);
+		return !this.emit({
+			name: 'search',
+			originalEvent: event,
+		});
 	}
 
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleSelectPageCheckboxChanged(event) {
-		this.emit('selectPageCheckboxChanged', event);
+		return !this.emit({
+			data: {
+				checked: event.target.checked,
+			},
+			name: 'selectPageCheckboxChanged',
+			originalEvent: event,
+		});
 	}
 
 	/**
 	 * Continues the propagation of the sorting button clicked event
+	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleSortingButtonClicked() {
-		this.emit('sortingButtonClicked', {
-			sortingOrder: this.sortingOrder,
+	_handleSortingButtonClicked(event) {
+		return !this.emit({
+			data: {
+				sortingOrder: this.sortingOrder,
+			},
+			name: 'sortingButtonClicked',
+			originalEvent: event,
 		});
 	}
 

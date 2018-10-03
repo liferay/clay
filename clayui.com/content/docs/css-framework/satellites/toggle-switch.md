@@ -2,13 +2,11 @@
 title: "Toggle Switch"
 ---
 
-<article>
-
 ### Toggle Switch with Checkbox
 
 <div class="sheet">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle"></span>
         </span>
@@ -17,34 +15,30 @@ title: "Toggle Switch"
 
 ```html
 <label class="toggle-switch">
-    <input class="toggle-switch-check" type="checkbox">
+    <input class="toggle-switch-check" type="checkbox" />
     <span aria-hidden="true" class="toggle-switch-bar">
         <span class="toggle-switch-handle"></span>
     </span>
 </label>
 ```
-
-</article>
-
-<article>
 
 ### Toggle Switch with Radio
 
 <div class="sheet">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1">
+        <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1"/>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle"></span>
         </span>
     </label>
     <label class="toggle-switch">
-        <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option2">
+        <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option2"/>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle"></span>
         </span>
     </label>
     <label class="toggle-switch">
-        <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option3">
+        <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option3"/>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle"></span>
         </span>
@@ -53,28 +47,24 @@ title: "Toggle Switch"
 
 ```html
 <label class="toggle-switch">
-    <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1">
+    <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1"/>
     <span aria-hidden="true" class="toggle-switch-bar">
         <span class="toggle-switch-handle"></span>
     </span>
 </label>
 <label class="toggle-switch">
-    <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option2">
+    <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option2"/>
     <span aria-hidden="true" class="toggle-switch-bar">
         <span class="toggle-switch-handle"></span>
     </span>
 </label>
 <label class="toggle-switch">
-    <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option3">
+    <input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option3"/>
     <span aria-hidden="true" class="toggle-switch-bar">
         <span class="toggle-switch-handle"></span>
     </span>
 </label>
 ```
-
-</article>
-
-<article>
 
 ### Toggle Switch with Data Attributes
 
@@ -83,7 +73,7 @@ Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</c
 <div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" type="checkbox" />
 			<span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -93,7 +83,7 @@ Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</c
 	</div>
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" type="checkbox" />
 			<span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
@@ -106,7 +96,7 @@ Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</c
 ```html
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Toggle Switch with data-label-on</span>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -116,7 +106,7 @@ Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</c
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
@@ -126,10 +116,6 @@ Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</c
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Toggle Switch Text
 
 Add additional text with class <code>toggle-switch-text</code>.
@@ -137,7 +123,7 @@ Add additional text with class <code>toggle-switch-text</code>.
 <div class="sheet">
     <div class="form-group">
         <label class="toggle-switch">
-            <input class="toggle-switch-check" type="checkbox">
+            <input class="toggle-switch-check" type="checkbox" />
             <span class="toggle-switch-label">Adding Required Text</span>
             <span class="toggle-switch-text">Required *</span>
             <span aria-hidden="true" class="toggle-switch-bar">
@@ -148,7 +134,7 @@ Add additional text with class <code>toggle-switch-text</code>.
     </div>
     <div class="form-group">
         <label class="toggle-switch">
-            <input class="toggle-switch-check" type="checkbox">
+            <input class="toggle-switch-check" type="checkbox" />
             <span class="toggle-switch-label">Adding Required Text</span>
             <span aria-hidden="true" class="toggle-switch-bar">
                 <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -159,7 +145,7 @@ Add additional text with class <code>toggle-switch-text</code>.
     </div>
     <div class="form-group">
         <label class="toggle-switch">
-            <input class="toggle-switch-check" type="checkbox">
+            <input class="toggle-switch-check" type="checkbox" />
             <span class="toggle-switch-label">Required Text on Right</span>
             <span aria-hidden="true" class="toggle-switch-bar">
                 <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -170,7 +156,7 @@ Add additional text with class <code>toggle-switch-text</code>.
     </div>
     <div class="form-group">
         <label class="toggle-switch">
-            <input class="toggle-switch-check" type="checkbox">
+            <input class="toggle-switch-check" type="checkbox" />
             <span class="toggle-switch-label">Required Text on Left</span>
             <span class="toggle-switch-text toggle-switch-text-left">Required *</span>
             <span aria-hidden="true" class="toggle-switch-bar">
@@ -181,7 +167,7 @@ Add additional text with class <code>toggle-switch-text</code>.
     </div>
     <div class="form-group">
         <label class="toggle-switch">
-            <input class="toggle-switch-check" type="checkbox">
+            <input class="toggle-switch-check" type="checkbox" />
             <span class="toggle-switch-label">The Kitchen Sink</span>
             <span class="toggle-switch-text">Top Text</span>
             <span class="toggle-switch-text toggle-switch-text-left">Error</span>
@@ -198,7 +184,7 @@ Add additional text with class <code>toggle-switch-text</code>.
 ```html
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Adding Required Text</span>
         <span class="toggle-switch-text">Required *</span>
         <span aria-hidden="true" class="toggle-switch-bar">
@@ -209,7 +195,7 @@ Add additional text with class <code>toggle-switch-text</code>.
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Adding Required Text</span>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -220,7 +206,7 @@ Add additional text with class <code>toggle-switch-text</code>.
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Required Text on Right</span>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -231,7 +217,7 @@ Add additional text with class <code>toggle-switch-text</code>.
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Required Text on Left</span>
         <span class="toggle-switch-text toggle-switch-text-left">Required *</span>
         <span aria-hidden="true" class="toggle-switch-bar">
@@ -242,7 +228,7 @@ Add additional text with class <code>toggle-switch-text</code>.
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">The Kitchen Sink</span>
         <span class="toggle-switch-text">Top Text</span>
         <span class="toggle-switch-text toggle-switch-text-left">Error</span>
@@ -256,10 +242,6 @@ Add additional text with class <code>toggle-switch-text</code>.
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Toggle Switches with Icons
 
 Add an icon to the switch for the on position with <code>&lt;span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"&gt;&lt;/span&gt;</code>.
@@ -269,7 +251,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 <div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" type="checkbox" />
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 					<span class="button-icon button-icon-on toggle-switch-icon">
@@ -288,7 +270,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 	</div>
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" type="checkbox" />
 			<span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
@@ -322,7 +304,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 	</div>
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" type="checkbox" />
 			<span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
@@ -352,7 +334,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 ```html
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="">
                 <span class="button-icon button-icon-on toggle-switch-icon">
@@ -371,7 +353,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Toggle Switch with data-label-on</span>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
@@ -405,7 +387,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
@@ -432,10 +414,6 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Toggle Switches with Icons (Alternate)
 
 Add an icon to the switch for the on position with <code>&lt;span class="icon-ok toggle-switch-icon toggle-switch-icon-on"&gt;&lt;/span&gt;</code>.
@@ -445,7 +423,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="icon-r
 <div class="sheet">
     <div class="form-group">
         <label class="toggle-switch">
-            <input class="toggle-switch-check" type="checkbox">
+            <input class="toggle-switch-check" type="checkbox" />
             <span aria-hidden="true" class="toggle-switch-bar">
                 <span class="toggle-switch-handle">
                     <span class="toggle-switch-icon toggle-switch-icon-on">
@@ -467,7 +445,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="icon-r
 ```html
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
                 <span class="toggle-switch-icon toggle-switch-icon-on">
@@ -486,10 +464,6 @@ Add an icon to the switch for the off position with <code>&lt;span class="icon-r
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Disabled Toggle Switches
 
 Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&lt;input type="checkbox"&gt;</code>.
@@ -497,7 +471,7 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
 <div class="sheet">
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input class="toggle-switch-check" disabled="" type="checkbox">
+			<input class="toggle-switch-check" disabled="" type="checkbox"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 					<span class="button-icon button-icon-on toggle-switch-icon">
@@ -516,7 +490,7 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
 	</div>
 	<div class="form-group">
 		<label class="disabled toggle-switch">
-			<input class="toggle-switch-check" disabled="" type="checkbox">
+			<input class="toggle-switch-check" disabled="" type="checkbox"/>
 			<span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
@@ -550,7 +524,7 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
 	</div>
 	<div class="form-group">
 		<label class="toggle-switch">
-			<input checked="" class="toggle-switch-check" disabled="" type="checkbox">
+			<input checked="" class="toggle-switch-check" disabled="" type="checkbox"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
 					<span class="button-icon button-icon-on toggle-switch-icon">
@@ -579,7 +553,7 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
 ```html
 <div class="form-group">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" disabled="" type="checkbox">
+        <input class="toggle-switch-check" disabled="" type="checkbox"/>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="">
                 <span class="button-icon button-icon-on toggle-switch-icon">
@@ -598,7 +572,7 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
 </div>
 <div class="form-group">
     <label class="disabled toggle-switch">
-        <input class="toggle-switch-check" disabled="" type="checkbox">
+        <input class="toggle-switch-check" disabled="" type="checkbox"/>
         <span class="toggle-switch-label">Toggle Switch with data-label-on</span>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
@@ -632,7 +606,7 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
 </div>
 <div class="form-group">
     <label class="toggle-switch">
-        <input checked="" class="toggle-switch-check" disabled="" type="checkbox">
+        <input checked="" class="toggle-switch-check" disabled="" type="checkbox"/>
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
                 <span class="button-icon button-icon-on toggle-switch-icon">
@@ -657,10 +631,6 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
     </label>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Extending Toggles
 
@@ -688,84 +658,9 @@ the **toggle-switch bar in the on** position with <code>.toggle-switch-check:che
 
 the **toggle-switch bar icon in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {}</code>.
 
-<style>
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-        background-color: transparent;
-        background-image: url(/images/switch_button.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        border-width: 0;
-        bottom: 0;
-        height: auto;
-        left: 2px;
-        top: 1px;
-        width: 22px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-        background-color: transparent;
-        background-image: url(/images/switch_base.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        border-radius: 20px;
-        border-width: 0;
-        width: 51px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-        background-image: url(/images/switch_off_icon.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 15px;
-        left: 28px;
-        top: 4px;
-        width: 15px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-        left: 26px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-        background-image: url(/images/switch_on_icon.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 17px;
-        left: 5px;
-        top: 4px;
-        width: 17px;
-    }
-
-    @media (min-width: 768px) {
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-            width: 30px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-            width: 68px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-            height: 17px;
-            left: 40px;
-            top: 7px;
-            width: 17px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-            left: 35px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-            left: 12px;
-            top: 8px;
-        }
-    }
-</style>
-
 <div class="form-group" id="demoToggleSwitch" style="margin-bottom:0;">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
                     <span class="toggle-switch-icon toggle-switch-icon-on"></span>
@@ -853,7 +748,7 @@ the **toggle-switch bar icon in the on** position with <code>.toggle-switch-chec
 
 <div class="form-group" id="demoToggleSwitch" style="margin-bottom:0;">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
                     <span class="toggle-switch-icon toggle-switch-icon-on"></span>
@@ -868,14 +763,14 @@ iOS Style Toggle Switches
 
 <div class="form-group ios-toggle-switch" style="margin-bottom:0;">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
             </span>
         </span>
     </label>
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
                 <span class="toggle-switch-icon toggle-switch-icon-on">|</span>
@@ -888,14 +783,14 @@ iOS Style Toggle Switches
 ```html
 <div class="form-group ios-toggle-switch" style="margin-bottom:0;">
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
             </span>
         </span>
     </label>
     <label class="toggle-switch">
-        <input class="toggle-switch-check" type="checkbox">
+        <input class="toggle-switch-check" type="checkbox" />
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
                 <span class="toggle-switch-icon toggle-switch-icon-on">|</span>
@@ -905,6 +800,3 @@ iOS Style Toggle Switches
     </label>
 </div>
 ```
-
-
-</article>

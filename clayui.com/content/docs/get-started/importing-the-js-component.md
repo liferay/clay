@@ -3,8 +3,6 @@ title: "Importing the JS Component"
 weight: 3
 ---
 
-<article id="importing-the-js-component">
-
 Clay is available as the `clay` package in [npm](https://www.npmjs.com/). The components are packaged as Component/Metal.js classes that provide a high fidelity component. You can import the Clay components in several ways depending on your Stack.
 
 ## Installation from NPM
@@ -91,5 +89,3 @@ Once added to your page, the Clay components are accessible globally on the page
 ## Using Clay in soy and jsx
 
 See advanced guides for [more](/docs/get-started/using-js-components-with-metal.html).
-
-</article>

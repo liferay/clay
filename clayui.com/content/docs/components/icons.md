@@ -8,8 +8,6 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/icons.html">Icons Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-lexicon-icons">
-
 ### Lexicon Icons
 
 <div class="alert alert-info">
@@ -36,7 +34,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 ```
 ```html
 <svg class="lexicon-icon">
-	<use xlink:href="path/to/icons.svg#add-column" />
+	<use href="path/to/icons.svg#add-column" />
 </svg>
 ```
 
@@ -47,11 +45,6 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 <ul class="lexicon-icon-list list-unstyled">
 	[foreach Icons]
 </ul>
-
-</article>
-
-
-<article id="language-flags">
 
 ### Language Flags
 
@@ -67,11 +60,6 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 	[foreach Flags]
 </ul>
 
-</article>
-
-
-<article id="svg-icons-as-background-images">
-
 ### SVG Icons as Background Images
 
 > We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to include them as a background-image on an HTML element. The Sass function `lx-icon(icon-name, color)` takes the name of a Lexicon SVG Icon and color takes a color. The Sass rule set `.site-add-cell {lb} background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; {rb}` will place the SVG icon add-cell as a background-image on any element with class site-add-cell.
@@ -85,11 +73,6 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 <span class="clay-site-svg-bg clay-site-times-circle">times-circle</span>
 <span class="clay-site-svg-bg clay-site-workflow">workflow</span>
 
-</article>
-
-
-<article id="svg-url">
-
 ### Svg-url()
 
 > You can turn your custom SVG into a data uri using the Sass function `svg-url($svg)` where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
@@ -99,11 +82,6 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 </div>
 
 <span class="clay-site-linux-tux clay-site-svg-bg">Linux Tux</span>
-
-</article>
-
-
-<article id="why-do-we-use-svg">
 
 ### Why do we use SVG?
 
@@ -115,14 +93,12 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 
 <div class="lexicon-icon-examples">
 	<svg class="lexicon-icon lexicon-icon-asterisk">
-		<use xlink:href="/images/icons/icons.svg#asterisk" />
+		<use href="/images/icons/icons.svg#asterisk" />
 	</svg>
 	<svg class="lexicon-icon lexicon-icon-logout">
-		<use xlink:href="/images/icons/icons.svg#logout" />
+		<use href="/images/icons/icons.svg#logout" />
 	</svg>
 	<svg class="lexicon-icon lexicon-icon-exclamation-full">
-		<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+		<use href="/images/icons/icons.svg#exclamation-full" />
 	</svg>
 </div>
-
-</article>

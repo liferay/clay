@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import LayoutNav from '../components/LayoutNav';
-import CodeEditor from '../components/CodeEditor';
 import loadScript from '../utils/loadScript';
 import mountCodeEditor from '../utils/mountCodeEditor';
+import React, { Component } from 'react';
 
 class Try extends Component {
     constructor(props, context) {
@@ -86,7 +86,7 @@ class Try extends Component {
 };
 
 export const query = graphql`
-    query TryExamplesQuery {
+    {
         list: allExampleCode {
             edges {
                 node {

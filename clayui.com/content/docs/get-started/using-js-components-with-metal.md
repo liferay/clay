@@ -3,8 +3,6 @@ title: "Using JS Components with Metal.js"
 weight: 2
 ---
 
-<article id="using-js-components-with-metal">
-
 Clay Components are made according to Lexicon standards and built on top of the [Metal.js](https://metaljs.com/) framework, so you can use Clay Components in your JSX and SOY templates.
 
 ## Jsx
@@ -46,7 +44,7 @@ You can call Clay components in your SOY templates the same way you would call a
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="/images/icons/icons.svg#warning-full"></use>
+			<use href="/images/icons/icons.svg#warning-full"></use>
 		</svg>
 	</span>
 	<strong class="lead">Warning:</strong> Make sure you import the Clay component where you want to use it.
@@ -73,5 +71,3 @@ class App extends Component {}
     {/call}
 {/template}
 ```
-
-</article>

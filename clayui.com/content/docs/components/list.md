@@ -8,8 +8,6 @@ List is a visual representation of a dataset that provides more flexibility for 
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/list.html">List Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-list">
-
 ### Row states
 
 #### Default states
@@ -18,7 +16,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="custom-control-input" type="checkbox">
+				<input class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label"></span>
 			</label>
 		</div>
@@ -27,7 +25,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/images/icons/icons.svg#folder" />
+					<use href="/images/icons/icons.svg#folder" />
 				</svg>
 			</span>
 		</div>
@@ -42,24 +40,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/images/icons/icons.svg#trash" />
+					<use href="/images/icons/icons.svg#trash" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use xlink:href="/images/icons/icons.svg#download" />
+					<use href="/images/icons/icons.svg#download" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+					<use href="/images/icons/icons.svg#info-circle-open" />
 				</svg>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+					<use href="/images/icons/icons.svg#ellipsis-v" />
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -207,7 +205,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="custom-control-input" type="checkbox">
+				<input class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-indicator"></span>
 			</label>
 		</div>
@@ -216,7 +214,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/images/icons/icons.svg#folder" />
+					<use href="/images/icons/icons.svg#folder" />
 				</svg>
 			</span>
 		</div>
@@ -231,24 +229,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/images/icons/icons.svg#trash" />
+					<use href="/images/icons/icons.svg#trash" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use xlink:href="/images/icons/icons.svg#download" />
+					<use href="/images/icons/icons.svg#download" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+					<use href="/images/icons/icons.svg#info-circle-open" />
 				</svg>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+					<use href="/images/icons/icons.svg#ellipsis-v" />
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -270,7 +268,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input checked class="custom-control-input" type="checkbox">
+				<input checked class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label"></span>
 			</label>
 		</div>
@@ -279,7 +277,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/images/icons/icons.svg#folder" />
+					<use href="/images/icons/icons.svg#folder" />
 				</svg>
 			</span>
 		</div>
@@ -294,24 +292,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/images/icons/icons.svg#trash" />
+					<use href="/images/icons/icons.svg#trash" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use xlink:href="/images/icons/icons.svg#download" />
+					<use href="/images/icons/icons.svg#download" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+					<use href="/images/icons/icons.svg#info-circle-open" />
 				</svg>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+					<use href="/images/icons/icons.svg#ellipsis-v" />
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -461,7 +459,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input checked class="custom-control-input" type="checkbox">
+				<input checked class="custom-control-input" type="checkbox"/>
 				<span class="custom-control-label"></span>
 			</label>
 		</div>
@@ -470,7 +468,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/images/icons/icons.svg#folder" />
+					<use href="/images/icons/icons.svg#folder" />
 				</svg>
 			</span>
 		</div>
@@ -485,24 +483,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use xlink:href="/images/icons/icons.svg#trash" />
+					<use href="/images/icons/icons.svg#trash" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use xlink:href="/images/icons/icons.svg#download" />
+					<use href="/images/icons/icons.svg#download" />
 				</svg>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+					<use href="/images/icons/icons.svg#info-circle-open" />
 				</svg>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+					<use href="/images/icons/icons.svg#ellipsis-v" />
 				</svg>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -518,10 +516,6 @@ List is a visual representation of a dataset that provides more flexibility for 
 </li>
 ```
 
-</article>
-
-<article id="clay-list-sections">
-
 ### Sections
 
 > List sections help to separate different contents by a certain categorization or typology.
@@ -534,7 +528,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -543,7 +537,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use xlink:href="/images/icons/icons.svg#folder" />
+						<use href="/images/icons/icons.svg#folder" />
 					</svg>
 				</span>
 			</div>
@@ -558,24 +552,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/images/icons/icons.svg#trash" />
+						<use href="/images/icons/icons.svg#trash" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/images/icons/icons.svg#download" />
+						<use href="/images/icons/icons.svg#download" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -739,7 +733,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -748,7 +742,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use xlink:href="/images/icons/icons.svg#folder" />
+						<use href="/images/icons/icons.svg#folder" />
 					</svg>
 				</span>
 			</div>
@@ -763,24 +757,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/images/icons/icons.svg#trash" />
+						<use href="/images/icons/icons.svg#trash" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/images/icons/icons.svg#download" />
+						<use href="/images/icons/icons.svg#download" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -817,7 +811,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -826,7 +820,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use xlink:href="/images/icons/icons.svg#folder" />
+						<use href="/images/icons/icons.svg#folder" />
 					</svg>
 				</span>
 			</div>
@@ -846,24 +840,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/images/icons/icons.svg#trash" />
+						<use href="/images/icons/icons.svg#trash" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/images/icons/icons.svg#download" />
+						<use href="/images/icons/icons.svg#download" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -881,7 +875,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input checked class="custom-control-input" type="checkbox">
+					<input checked class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -890,7 +884,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use xlink:href="/images/icons/icons.svg#folder" />
+						<use href="/images/icons/icons.svg#folder" />
 					</svg>
 				</span>
 			</div>
@@ -910,24 +904,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/images/icons/icons.svg#trash" />
+						<use href="/images/icons/icons.svg#trash" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/images/icons/icons.svg#download" />
+						<use href="/images/icons/icons.svg#download" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1149,7 +1143,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -1158,7 +1152,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use xlink:href="/images/icons/icons.svg#folder" />
+						<use href="/images/icons/icons.svg#folder" />
 					</svg>
 				</span>
 			</div>
@@ -1178,24 +1172,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/images/icons/icons.svg#trash" />
+						<use href="/images/icons/icons.svg#trash" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/images/icons/icons.svg#download" />
+						<use href="/images/icons/icons.svg#download" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1213,7 +1207,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input checked class="custom-control-input" type="checkbox">
+					<input checked class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -1222,7 +1216,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use xlink:href="/images/icons/icons.svg#folder" />
+						<use href="/images/icons/icons.svg#folder" />
 					</svg>
 				</span>
 			</div>
@@ -1242,24 +1236,24 @@ List is a visual representation of a dataset that provides more flexibility for 
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use xlink:href="/images/icons/icons.svg#trash" />
+						<use href="/images/icons/icons.svg#trash" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use xlink:href="/images/icons/icons.svg#download" />
+						<use href="/images/icons/icons.svg#download" />
 					</svg>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use xlink:href="/images/icons/icons.svg#info-circle-open" />
+						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
@@ -1276,25 +1270,10 @@ List is a visual representation of a dataset that provides more flexibility for 
 </ul>
 ```
 
-</article>
-
-<article id="clay-list-api">
+More examples can be found in <a href="/docs/components/dataset-display.html">dataset template</a>.
 
 ### API
 
 <div>
 	[APITable "clay-list/src/ClayList.js"]
 </div>
-
-</article>
-
-<script>
-$(function() {
-	$('.list-group .list-group-item input[type="checkbox"]').on(
-		'click',
-		function(event) {
-			$(this).closest('.list-group-item').toggleClass('active');
-		}
-	);
-});
-</script>

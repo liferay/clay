@@ -713,8 +713,13 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'selectPageCheckboxChanged',
-			expect.any(Object)
+			expect.objectContaining({
+				data: {
+					checked: expect.any(Boolean),
+				},
+				name: 'selectPageCheckboxChanged',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -734,8 +739,13 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'selectPageCheckboxChanged',
-			expect.any(Object)
+			expect.objectContaining({
+				data: {
+					checked: expect.any(Boolean),
+				},
+				name: 'selectPageCheckboxChanged',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -751,8 +761,13 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'sortingButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				data: {
+					sortingOrder: expect.any(String),
+				},
+				name: 'sortingButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -767,8 +782,10 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'creationButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'creationButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -834,8 +851,10 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'creationMenuMoreButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'creationMenuMoreButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -865,8 +884,10 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'filterDoneClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'filterDoneClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -880,7 +901,12 @@ describe('ClayManagementToolbar', function() {
 		managementToolbar.refs.searchButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('search', expect.any(Object));
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'search',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 
 	it('should render a management toolbar with creation menu with options and emit an event on creation menu item click', () => {
@@ -1089,8 +1115,10 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'infoButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'infoButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -1109,8 +1137,10 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'infoButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'infoButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -1130,8 +1160,10 @@ describe('ClayManagementToolbar', function() {
 		managementToolbar.refs.resultsBar.refs.clearSearch.element.click();
 
 		expect(spy).toHaveBeenCalledWith(
-			'clearButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'clearButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -1149,8 +1181,45 @@ describe('ClayManagementToolbar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'clearButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'clearButtonClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
+	it('should render a management toolbar and emit an event on close label click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			clearResultsURL: '#clear',
+			searchValue: 'foo',
+			selectable: true,
+			spritemap: spritemap,
+			totalItems: 10,
+			filterLabels: [
+				{
+					closeable: false,
+					label: 'Filter 1',
+				},
+				{
+					label: 'Filter 2',
+				},
+				{
+					label: 'Category: Label 3',
+				},
+			],
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		// eslint-disable-next-line
+		managementToolbar.refs.resultsBar.refs.label1.refs.closeButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'filterLabelCloseClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 });

@@ -8,8 +8,6 @@ A dropdown is a list of options related to the element that triggers it.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/dropdowns.html">Dropdown Menu Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-dropdown">
-
 ### Types
 
 #### Default
@@ -168,7 +166,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<li class="active dropdown-item">
 				<div class="custom-control custom-checkbox">
 					<label>
-						<input checked class="custom-control-input" type="checkbox">
+						<input checked class="custom-control-input" type="checkbox"/>
 						<span class="custom-control-label">
 							<span class="custom-control-label-text">Selected Option</span>
 						</span>
@@ -178,7 +176,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<li class="dropdown-item">
 				<div class="custom-control custom-checkbox">
 					<label>
-						<input class="custom-control-input" type="checkbox">
+						<input class="custom-control-input" type="checkbox"/>
 						<span class="custom-control-label">
 							<span class="custom-control-label-text">Normal Option</span>
 						</span>
@@ -188,7 +186,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<li class="disabled dropdown-item">
 				<div class="custom-control custom-checkbox">
 					<label>
-						<input disabled="disabled" class="custom-control-input" type="checkbox">
+						<input disabled="disabled" class="custom-control-input" type="checkbox"/>
 						<span class="custom-control-label">
 							<span class="custom-control-label-text">Disabled Option</span>
 						</span>
@@ -241,7 +239,7 @@ A dropdown is a list of options related to the element that triggers it.
 		<li class="active dropdown-item">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input checked class="custom-control-input" type="checkbox">
+					<input checked class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label">
 						<span class="custom-control-label-text">Selected Option</span>
 					</span>
@@ -251,7 +249,7 @@ A dropdown is a list of options related to the element that triggers it.
 		<li class="dropdown-item">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label">
 						<span class="custom-control-label-text">Normal Option</span>
 					</span>
@@ -261,7 +259,7 @@ A dropdown is a list of options related to the element that triggers it.
 		<li class="disabled dropdown-item">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input disabled="disabled" class="custom-control-input" type="checkbox">
+					<input disabled="disabled" class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label">
 						<span class="custom-control-label-text">Disabled Option</span>
 					</span>
@@ -270,78 +268,6 @@ A dropdown is a list of options related to the element that triggers it.
 		</li>
 	</ul>
 </div>
-```
-
-#### Dropdown with Other Form Elements
-
-<div class="clay-site-dropdown-menu-container">
-	<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-		<li class="dropdown-section form-group">
-			<label for="basicInputTypeText1">
-				Text 1
-			</label>
-			<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text">
-		</li>
-		<li class="dropdown-subheader">Form Section</li>
-		<li class="dropdown-section">
-			<div class="form-group">
-				<label for="basicInputTypeText2">
-					Text 2
-				</label>
-				<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text">
-			</div>
-		</li>
-		<li class="dropdown-section">
-			<div class="form-group">
-				<label for="basicInputTypeText3">
-					Text 3
-				</label>
-				<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text">
-			</div>
-			<div class="form-group">
-				<label for="basicInputTypeTextarea">Textarea</label>
-				<textarea class="form-control form-control-sm" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
-			</div>
-		</li>
-		<li class="dropdown-subheader">Order by</li>
-		<li><a class="active dropdown-item" href="#1">Author</a></li>
-		<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
-	</ul>
-</div>
-
-```html
-<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
-	<li class="dropdown-section form-group">
-		<label for="basicInputTypeText1">
-			Text 1
-		</label>
-		<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text">
-	</li>
-	<li class="dropdown-subheader">Form Section</li>
-	<li class="dropdown-section">
-		<div class="form-group">
-			<label for="basicInputTypeText2">
-				Text 2
-			</label>
-			<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text">
-		</div>
-	</li>
-	<li class="dropdown-section">
-		<div class="form-group">
-			<label for="basicInputTypeText3">
-				Text 3
-			</label>
-			<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text">
-		</div>
-		<div class="form-group">
-			<label for="basicInputTypeTextarea">Textarea</label>
-			<textarea class="form-control form-control-sm" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
-		</div>
-	</li>
-	<li class="dropdown-subheader">Order by</li>
-	<li><a class="active dropdown-item" href="#1">Author</a></li>
-	<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
-</ul>
 ```
 
 #### Dropdown with search field
@@ -354,11 +280,11 @@ A dropdown is a list of options related to the element that triggers it.
 			<div class="dropdown-section">
 				<div class="input-group input-group-sm">
 					<div class="input-group-item">
-						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 						<span class="input-group-inset-item input-group-inset-item-after">
 							<button class="btn btn-unstyled" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use xlink:href="/images/icons/icons.svg#search" />
+									<use href="/images/icons/icons.svg#search" />
 								</svg>
 							</button>
 						</span>
@@ -410,11 +336,11 @@ A dropdown is a list of options related to the element that triggers it.
 		<div class="dropdown-section">
 			<div class="input-group input-group-sm">
 				<div class="input-group-item">
-					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 					<span class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/images/icons/icons.svg#search" />
+								<use href="/images/icons/icons.svg#search" />
 							</svg>
 						</button>
 					</span>
@@ -441,7 +367,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<a class="dropdown-item" href="#1">
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/images/icons/icons.svg#check" />
+							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 					Normal Option
@@ -451,7 +377,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<a class="dropdown-item" href="#1">
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/images/icons/icons.svg#check" />
+							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 					Second Option
@@ -503,7 +429,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<a class="dropdown-item" href="#1">
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 				Normal Option
@@ -513,7 +439,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<a class="dropdown-item" href="#1">
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 				Second Option
@@ -538,7 +464,7 @@ A dropdown is a list of options related to the element that triggers it.
 					Selected Option
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/images/icons/icons.svg#check" />
+							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 				</a>
@@ -548,7 +474,7 @@ A dropdown is a list of options related to the element that triggers it.
 					Regular Option
 					<div class="dropdown-item-indicator">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/images/icons/icons.svg#check" />
+							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</div>
 				</a>
@@ -601,7 +527,7 @@ A dropdown is a list of options related to the element that triggers it.
 				Selected Option
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 			</a>
@@ -611,7 +537,7 @@ A dropdown is a list of options related to the element that triggers it.
 				Regular Option
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
+						<use href="/images/icons/icons.svg#check" />
 					</svg>
 				</div>
 			</a>
@@ -635,11 +561,11 @@ A dropdown is a list of options related to the element that triggers it.
 			<div class="dropdown-section">
 				<div class="input-group input-group-sm">
 					<div class="input-group-item">
-						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 						<span class="input-group-inset-item input-group-inset-item-after">
 							<button class="btn btn-unstyled" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use xlink:href="/images/icons/icons.svg#search" />
+									<use href="/images/icons/icons.svg#search" />
 								</svg>
 							</button>
 						</span>
@@ -654,7 +580,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<li class="active dropdown-item">
 						<div class="custom-control custom-checkbox">
 							<label>
-								<input checked class="custom-control-input" type="checkbox">
+								<input checked class="custom-control-input" type="checkbox"/>
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Selected Option</span>
 								</span>
@@ -664,7 +590,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<li class="dropdown-item">
 						<div class="custom-control custom-checkbox">
 							<label>
-								<input class="custom-control-input" type="checkbox">
+								<input class="custom-control-input" type="checkbox"/>
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Normal Option</span>
 								</span>
@@ -674,7 +600,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<li class="disabled dropdown-item">
 						<div class="custom-control custom-checkbox">
 							<label>
-								<input disabled="disabled" class="custom-control-input" type="checkbox">
+								<input disabled="disabled" class="custom-control-input" type="checkbox"/>
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Disabled Option</span>
 								</span>
@@ -685,7 +611,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<li class="active dropdown-item">
 						<div class="custom-control custom-radio">
 							<label>
-								<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
+								<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio"/>
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Selected Option</span>
 								</span>
@@ -695,7 +621,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<li class="dropdown-item">
 						<div class="custom-control custom-radio">
 							<label>
-								<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
+								<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio"/>
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Normal Option</span>
 								</span>
@@ -705,7 +631,7 @@ A dropdown is a list of options related to the element that triggers it.
 					<li class="disabled dropdown-item">
 						<div class="custom-control custom-radio">
 							<label>
-								<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+								<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio"/>
 								<span class="custom-control-label">
 									<span class="custom-control-label-text">Disabled Option</span>
 								</span>
@@ -851,11 +777,11 @@ A dropdown is a list of options related to the element that triggers it.
 		<div class="dropdown-section">
 			<div class="input-group input-group-sm">
 				<div class="input-group-item">
-					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 					<span class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/images/icons/icons.svg#search" />
+								<use href="/images/icons/icons.svg#search" />
 							</svg>
 						</button>
 					</span>
@@ -870,7 +796,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<li class="active dropdown-item">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input checked class="custom-control-input" type="checkbox">
+							<input checked class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Selected Option</span>
 							</span>
@@ -880,7 +806,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<li class="dropdown-item">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Normal Option</span>
 							</span>
@@ -890,7 +816,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<li class="disabled dropdown-item">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input disabled="disabled" class="custom-control-input" type="checkbox">
+							<input disabled="disabled" class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Disabled Option</span>
 							</span>
@@ -901,7 +827,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<li class="active dropdown-item">
 					<div class="custom-control custom-radio">
 						<label>
-							<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
+							<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Selected Option</span>
 							</span>
@@ -911,7 +837,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<li class="dropdown-item">
 					<div class="custom-control custom-radio">
 						<label>
-							<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
+							<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Normal Option</span>
 							</span>
@@ -921,7 +847,7 @@ A dropdown is a list of options related to the element that triggers it.
 				<li class="disabled dropdown-item">
 					<div class="custom-control custom-radio">
 						<label>
-							<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+							<input disabled="disabled" class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio"/>
 							<span class="custom-control-label">
 								<span class="custom-control-label-text">Disabled Option</span>
 							</span>
@@ -937,10 +863,6 @@ A dropdown is a list of options related to the element that triggers it.
 </div>
 ```
 
-</article>
-
-<article id="clay-dropdown-sorting-actions">
-
 ### Sorting actions
 
 #### Dropdown menu from actions button
@@ -950,7 +872,7 @@ A dropdown is a list of options related to the element that triggers it.
 <div class="dropdown dropdown-action">
 	<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-			<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+			<use href="/images/icons/icons.svg#ellipsis-v" />
 		</svg>
 	</button>
 	<div aria-labelledby="dropdownAction1" class="dropdown-menu">
@@ -1111,7 +1033,7 @@ A dropdown is a list of options related to the element that triggers it.
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-			<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+			<use href="/images/icons/icons.svg#ellipsis-v" />
 		</svg>
 	</button>
 	<div aria-labelledby="dropdownAction1" class="dropdown-menu">
@@ -1265,10 +1187,6 @@ A dropdown is a list of options related to the element that triggers it.
 </div>
 ```
 
-</article>
-
-<article id="clay-dropdowns-api">
-
 ### API
 
 #### ClayActionsDropdown
@@ -1288,5 +1206,3 @@ A dropdown is a list of options related to the element that triggers it.
 <div>
 	[APITable "clay-dropdown/src/ClayDropdown.js"]
 </div>
-
-</article>

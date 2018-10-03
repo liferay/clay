@@ -11,7 +11,7 @@ title: "Document Upload"
 						<div class="modal-title">Documents Upload</div>
 						<button aria-label="Close" class="close" data-dismiss="modal" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/images/icons/icons.svg#times" />
+								<use href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -24,7 +24,7 @@ title: "Document Upload"
 											<div class="autofit-section">
 												<span class="alert-indicator">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-														<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+														<use href="/images/icons/icons.svg#exclamation-full" />
 													</svg>
 												</span><strong class="lead">1 Files</strong> couldn't upload.
 											</div>
@@ -33,7 +33,7 @@ title: "Document Upload"
 											<div class="autofit-section">
 												<button class="btn btn-secondary btn-sm" type="button">
 													<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-														<use xlink:href="/images/icons/icons.svg#reload" />
+														<use href="/images/icons/icons.svg#reload" />
 													</svg></span>Retry all
 												</button>
 											</div>
@@ -41,7 +41,7 @@ title: "Document Upload"
 									</div>
 									<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-											<use xlink:href="/images/icons/icons.svg#times" />
+											<use href="/images/icons/icons.svg#times" />
 										</svg>
 									</button>
 								</div>
@@ -59,7 +59,7 @@ title: "Document Upload"
 												</h4>
 												<span class="alert-indicator">
 													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-														<use xlink:href="/images/icons/icons.svg#exclamation-full" />
+														<use href="/images/icons/icons.svg#exclamation-full" />
 													</svg>
 												</span><strong class="lead">Error:</strong> couldn't upload.
 											</div>
@@ -67,14 +67,14 @@ title: "Document Upload"
 										<div class="autofit-col">
 											<button class="btn btn-secondary btn-sm" type="button">
 												<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-													<use xlink:href="/images/icons/icons.svg#reload" />
+													<use href="/images/icons/icons.svg#reload" />
 												</svg></span>Retry
 											</button>
 										</div>
 									</div>
 									<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-											<use xlink:href="/images/icons/icons.svg#times" />
+											<use href="/images/icons/icons.svg#times" />
 										</svg>
 									</button>
 								</div>
@@ -94,7 +94,7 @@ title: "Document Upload"
 									</div>
 									<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-											<use xlink:href="/images/icons/icons.svg#times" />
+											<use href="/images/icons/icons.svg#times" />
 										</svg>
 									</button>
 								</div>
@@ -126,7 +126,7 @@ title: "Document Upload"
 									</div>
 									<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-											<use xlink:href="/images/icons/icons.svg#times" />
+											<use href="/images/icons/icons.svg#times" />
 										</svg>
 									</button>
 								</div>

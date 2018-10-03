@@ -3,8 +3,6 @@ title: "Web Components"
 weight: 1
 ---
 
-<article id="web-components">
-
 Clay is highly flexible, so you can use the components in different applications with frameworks such as Angular, Vue, and React. Feel free to apply the Clay standards in your application.
 
 ## Introduction
@@ -27,8 +25,6 @@ Once you import your component into your application, you just use it as an HTML
 
 We have created some example use cases in applications for `React`, `Vue`, and `Angular` for you to follow.
 
-* [Angular](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/angular-with-clay)
-* [React](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/react-with-clay)
-* [Vue](https://github.com/matuzalemsteles/clay-examples/blob/master/examples/vue-with-clay)
-
-</article>
+* [Angular](https://github.com/liferay/clay/tree/master/examples/angular-with-clay)
+* [React](https://github.com/liferay/clay/tree/master/examples/react-with-clay)
+* [Vue](https://github.com/liferay/clay/tree/master/examples/vue-with-clay)

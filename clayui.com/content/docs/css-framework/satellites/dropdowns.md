@@ -2,8 +2,6 @@
 title: "Dropdown Menu"
 ---
 
-<article>
-
 ### Dropdown wide / full
 
 <p>Use <code>.dropdown-wide</code> with <code>.dropdown</code> to make the dropdown menu big. The default width is 500px. Use <code class="code">.dropdown-full</code> to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
@@ -108,9 +106,77 @@ title: "Dropdown Menu"
 </div>
 ```
 
-</article>
+#### Dropdown with Other Form Elements
 
-<article>
+<div class="clay-site-dropdown-menu-container">
+	<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+		<li class="dropdown-section form-group">
+			<label for="basicInputTypeText1">
+				Text 1
+			</label>
+			<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text"/>
+		</li>
+		<li class="dropdown-subheader">Form Section</li>
+		<li class="dropdown-section">
+			<div class="form-group">
+				<label for="basicInputTypeText2">
+					Text 2
+				</label>
+				<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text"/>
+			</div>
+		</li>
+		<li class="dropdown-section">
+			<div class="form-group">
+				<label for="basicInputTypeText3">
+					Text 3
+				</label>
+				<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text"/>
+			</div>
+			<div class="form-group">
+				<label for="basicInputTypeTextarea">Textarea</label>
+				<textarea class="form-control form-control-sm" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+			</div>
+		</li>
+		<li class="dropdown-subheader">Order by</li>
+		<li><a class="active dropdown-item" href="#1">Author</a></li>
+		<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
+	</ul>
+</div>
+
+```html
+<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+	<li class="dropdown-section form-group">
+		<label for="basicInputTypeText1">
+			Text 1
+		</label>
+		<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text"/>
+	</li>
+	<li class="dropdown-subheader">Form Section</li>
+	<li class="dropdown-section">
+		<div class="form-group">
+			<label for="basicInputTypeText2">
+				Text 2
+			</label>
+			<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text"/>
+		</div>
+	</li>
+	<li class="dropdown-section">
+		<div class="form-group">
+			<label for="basicInputTypeText3">
+				Text 3
+			</label>
+			<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text"/>
+		</div>
+		<div class="form-group">
+			<label for="basicInputTypeTextarea">Textarea</label>
+			<textarea class="form-control form-control-sm" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+		</div>
+	</li>
+	<li class="dropdown-subheader">Order by</li>
+	<li><a class="active dropdown-item" href="#1">Author</a></li>
+	<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
+</ul>
+```
 
 ### Dropdown Alignment
 
@@ -321,5 +387,3 @@ title: "Dropdown Menu"
 		<li><a class="dropdown-item" href="#1">Scope</a></li>
 	</ul>
 </div>
-
-</article>

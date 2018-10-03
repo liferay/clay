@@ -2,8 +2,6 @@
 title: "Progress Bars"
 ---
 
-<article>
-
 ### Progress Groups
 
 Place an addon on either side of a progress component with <code>progress-group</code> and <code>progress-group-addon</code>.
@@ -125,10 +123,6 @@ Place an addon on either side of a progress component with <code>progress-group<
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Progress Group Stacked
 
 Add <code>progress-group-stacked</code> to <code>progress-group</code> stack the addons and progress component.
@@ -204,10 +198,6 @@ Add <code>progress-group-stacked</code> to <code>progress-group</code> stack the
     </div>
 </div>
 ```
-
-</article>
-
-<article class="clay-site-progress-bar-page clay-site-row-spacer">
 
 ### Progress Variants
 
@@ -407,10 +397,6 @@ Add <code>progress-danger</code>, <code>progress-info</code>, <code>progress-suc
 </div>
 ```
 
-</article>
-
-<article class="clay-site-progress-bar-page clay-site-row-spacer">
-
 ###### Multiple Progress Bars
 
 If you need multiple progress bars, use Bootstrap 4's background utilities, <code>bg-primary</code>, <code>bg-success</code>, <code>bg-info</code>, <code>bg-warning</code>, and <code>bg-danger</code> on <code>progress-bar</code>.
@@ -483,10 +469,6 @@ If you need multiple progress bars, use Bootstrap 4's background utilities, <cod
 </div>
 ```
 
-</article>
-
-<article class="clay-site-progress-bar-page clay-site-row-spacer">
-
 ### Progress Sizes
 
 ###### Normal
@@ -541,10 +523,6 @@ If you need multiple progress bars, use Bootstrap 4's background utilities, <cod
 </div>
 ```
 
-</article>
-
-<article>
-
 ### Progress with Bootstrap 4 Background Utility
 
 <div class="progress">
@@ -585,5 +563,3 @@ If you need multiple progress bars, use Bootstrap 4's background utilities, <cod
     <div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="bg-danger progress-bar" role="progressbar" style="width: 80%;">80% (Danger)</div>
 </div>
 ```
-
-</article>

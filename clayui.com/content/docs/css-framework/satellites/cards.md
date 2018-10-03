@@ -2,8 +2,6 @@
 title: "Cards"
 ---
 
-<article>
-
 ### Horizontal Card with autofit-col-*
 
 <p>Use <code>card-row</code> with <code>autofit-col-expand</code> and <code>autofit-col</code> to create a number of custom horizontal cards. <code>autofit-col-expand</code> fills the remaining space and <code>autofit-col</code> is only as wide as its content inside.</p>
@@ -27,7 +25,7 @@ title: "Cards"
 					<span class="sticker">
 						<span class="inline-item">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-								<use xlink:href="/images/icons/icons.svg#folder" />
+								<use href="/images/icons/icons.svg#folder" />
 							</svg>
 						</span>
 					</span>
@@ -63,7 +61,7 @@ title: "Cards"
 					<span class="sticker">
 						<span class="inline-item">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-								<use xlink:href="/images/icons/icons.svg#folder" />
+								<use href="/images/icons/icons.svg#folder" />
 							</svg>
 						</span>
 					</span>
@@ -98,7 +96,7 @@ title: "Cards"
 						<span class="sticker">
 							<span class="inline-item">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/images/icons/icons.svg#folder" />
+									<use href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
 						</span>
@@ -113,10 +111,6 @@ title: "Cards"
 		</div>
 	</div>
 </div>
-
-</article>
-
-<article>
 
 ### Padded Horizontal Cards
 
@@ -133,7 +127,7 @@ title: "Cards"
 		<div class="card-body">
 			<div class="card-row">
 				<div class="autofit-col">
-					<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif" style="width: 121px;">
+					<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif" style="width: 121px;" />
 				</div>
 				<div class="autofit-col autofit-col-expand autofit-col-gutters">
 					<section class="autofit-section">
@@ -146,10 +140,6 @@ title: "Cards"
 	</div>
 </div>
 
-</article>
-
-<article>
-
 ### Truncating Text Inside Card
 
 <p>Add class <code>text-truncate</code> on whatever text you want to be truncated.</p>
@@ -159,7 +149,7 @@ title: "Cards"
 		<div class="card-body">
 			<div class="card-row">
 				<div class="autofit-col">
-					<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif" style="width: 150px;">
+					<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif" style="width: 150px;" />
 				</div>
 				<div class="autofit-col autofit-col-expand autofit-col-gutters">
 					<section class="autofit-section">
@@ -186,7 +176,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -204,7 +194,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -229,7 +219,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -243,7 +233,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -268,7 +258,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -286,7 +276,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -311,7 +301,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -329,7 +319,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -348,10 +338,6 @@ title: "Cards"
 		</li>
 	</ul>
 </div>
-
-</article>
-
-<article>
 
 ### Card Row Content Alignment Helpers
 
@@ -407,7 +393,7 @@ title: "Cards"
 	<div class="card card-horizontal">
 		<div class="card-row">
 			<div class="autofit-col">
-				<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif" style="width: 150px;">
+				<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif" style="width: 150px;" />
 			</div>
 			<div class="autofit-col autofit-col-expand autofit-col-gutters">
 				<section class="autofit-section">
@@ -418,10 +404,6 @@ title: "Cards"
 		</div>
 	</div>
 </div>
-
-</article>
-
-<article>
 
 ### Card Helper Classes
 
@@ -449,7 +431,7 @@ title: "Cards"
 			<div class="card-row">
 				<div class="autofit-col autofit-col-expand" style="overflow:hidden;">
 					<section class="autofit-section">
-						<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif">
+						<img alt="thumbnail" class="card-item-first" src="/images/thumbnail_placeholder.gif" />
 					</section>
 				</div>
 				<div class="autofit-col autofit-col-expand">
@@ -484,7 +466,7 @@ title: "Cards"
 	<div class="col-md-4 col-6">
 		<div class="card card-rounded">
 			<div class="aspect-ratio card-item-first">
-				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
 			</div>
 			<div class="card-body" style="text-align:center;">
 				<h3 class="card-title">Joe Bloggs</h3>
@@ -511,10 +493,6 @@ title: "Cards"
 	</div>
 </div>
 
-</article>
-
-<article>
-
 ### Card Dividers
 
 <p>Use <code>`<div class="card-divider"></div>`</code> to create a horizontal division between content inside a card.</p>
@@ -538,10 +516,6 @@ title: "Cards"
 	</div>
 </div>
 
-</article>
-
-<article>
-
 ### Clickable Checkbox Card
 
 <p>To make the whole card clickable just wrap the checkbox and card in:</p>
@@ -552,7 +526,7 @@ title: "Cards"
 			<div class="card">
 				<div class="aspect-ratio card-item-first">
 					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox">
+						<input class="form-check-input" type="checkbox"/>
 						<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 					</label>
 				</div>
@@ -581,7 +555,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -602,7 +576,7 @@ title: "Cards"
 	<div class="col-8">
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox">
+				<input class="form-check-input" type="checkbox"/>
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
@@ -610,7 +584,7 @@ title: "Cards"
 								<span class="sticker">
 									<span class="inline-item">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-											<use xlink:href="/images/icons/icons.svg#folder" />
+											<use href="/images/icons/icons.svg#folder" />
 										</svg>
 									</span>
 								</span>
@@ -628,7 +602,7 @@ title: "Cards"
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right">
@@ -651,11 +625,11 @@ title: "Cards"
 		<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<div class="card">
 						<div class="aspect-ratio card-item-first">
-							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 							<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 						</div>
 						<div class="card-body">
@@ -683,7 +657,7 @@ title: "Cards"
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul class="dropdown-menu dropdown-menu-right">
@@ -707,7 +681,7 @@ title: "Cards"
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<div class="card card-horizontal">
 						<div class="card-body">
@@ -716,7 +690,7 @@ title: "Cards"
 									<span class="sticker">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/images/icons/icons.svg#folder" />
+												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</span>
@@ -734,7 +708,7 @@ title: "Cards"
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul class="dropdown-menu dropdown-menu-right">
@@ -759,15 +733,11 @@ title: "Cards"
 ```html
 <div class="form-check form-check-card form-check-top-left">
     <label class="form-check-label">
-        <input class="form-check-input" type="checkbox">
+        <input class="form-check-input" type="checkbox"/>
         <div class="card">...</div>
     </label>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Clickable Radio Card
 
@@ -777,10 +747,10 @@ title: "Cards"
 	<div class="col-4">
 		<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
 			<label class="form-check-label">
-				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
+				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1"/>
 				<div class="card">
 					<div class="aspect-ratio card-item-first">
-						<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+						<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 						<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 					</div>
 					<div class="card-body">
@@ -808,7 +778,7 @@ title: "Cards"
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right">
@@ -830,7 +800,7 @@ title: "Cards"
 	<div class="col-8">
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<label class="form-check-label">
-				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption2">
+				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption2"/>
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
@@ -838,7 +808,7 @@ title: "Cards"
 								<span class="sticker">
 									<span class="inline-item">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-											<use xlink:href="/images/icons/icons.svg#folder" />
+											<use href="/images/icons/icons.svg#folder" />
 										</svg>
 									</span>
 								</span>
@@ -856,7 +826,7 @@ title: "Cards"
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right">
@@ -879,11 +849,11 @@ title: "Cards"
 		<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
 			<div class="custom-control custom-radio">
 				<label>
-					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption1">
+					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption1"/>
 					<span class="custom-control-label"></span>
 					<div class="card">
 						<div class="aspect-ratio card-item-first">
-							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 							<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 						</div>
 						<div class="card-body">
@@ -911,7 +881,7 @@ title: "Cards"
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul class="dropdown-menu dropdown-menu-right">
@@ -935,7 +905,7 @@ title: "Cards"
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<div class="custom-control custom-radio">
 				<label>
-					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption2">
+					<input class="custom-control-input" name="cardCustomRadios" type="radio" value="cardCustomRadioOption2"/>
 					<span class="custom-control-label"></span>
 					<div class="card card-horizontal">
 						<div class="card-body">
@@ -944,7 +914,7 @@ title: "Cards"
 									<span class="sticker">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/images/icons/icons.svg#folder" />
+												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</span>
@@ -962,7 +932,7 @@ title: "Cards"
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<ul class="dropdown-menu dropdown-menu-right">
@@ -987,15 +957,11 @@ title: "Cards"
 ```html
 <div class="form-check form-check-card form-check-top-left">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio">
+        <input class="form-check-input" type="radio"/>
         <div class="card">...</div>
     </label>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Checkbox Card
 
@@ -1009,11 +975,11 @@ title: "Cards"
 	<div class="col-4">
 		<div class="active card-type-asset form-check form-check-card form-check-top-left image-card">
 			<label class="form-check-label">
-				<input checked class="form-check-input" type="checkbox">
+				<input checked class="form-check-input" type="checkbox"/>
 			</label>
 			<div class="card">
 				<div class="aspect-ratio card-item-first">
-					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 					<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 				</div>
 				<div class="card-body">
@@ -1041,7 +1007,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -1062,7 +1028,7 @@ title: "Cards"
 	<div class="col-8">
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox">
+				<input class="form-check-input" type="checkbox"/>
 			</label>
 			<div class="card card-horizontal">
 				<div class="card-body">
@@ -1071,7 +1037,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -1089,7 +1055,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -1109,7 +1075,7 @@ title: "Cards"
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -1120,7 +1086,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -1138,7 +1104,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -1161,15 +1127,11 @@ title: "Cards"
 ```html
 <div class="form-check form-check-card form-check-top-left">
     <label class="form-check-label">
-        <input class="form-check-input" type="checkbox">
+        <input class="form-check-input" type="checkbox"/>
     </label>
     <div class="card">...</div>
 </div>
 ```
-
-</article>
-
-<article>
 
 ### Radio Card
 
@@ -1183,11 +1145,11 @@ title: "Cards"
 	<div class="col-4">
 		<div class="active card-type-asset form-check form-check-card form-check-top-left image-card">
 			<label class="form-check-label">
-				<input checked class="form-check-input" name="cardRadios1" type="radio" value="cardOption1">
+				<input checked class="form-check-input" name="cardRadios1" type="radio" value="cardOption1"/>
 			</label>
 			<div class="card">
 				<div class="aspect-ratio card-item-first">
-					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 					<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 				</div>
 				<div class="card-body">
@@ -1215,7 +1177,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -1236,7 +1198,7 @@ title: "Cards"
 	<div class="col-8">
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<label class="form-check-label">
-				<input class="form-check-input" name="cardRadios1" type="radio" value="cardOption2">
+				<input class="form-check-input" name="cardRadios1" type="radio" value="cardOption2"/>
 			</label>
 			<div class="card card-horizontal">
 				<div class="card-body">
@@ -1245,7 +1207,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -1263,7 +1225,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -1283,7 +1245,7 @@ title: "Cards"
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<div class="custom-control custom-radio">
 				<label>
-					<input class="custom-control-input" name="cardRadios1" type="radio" value="cardOption3">
+					<input class="custom-control-input" name="cardRadios1" type="radio" value="cardOption3"/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -1294,7 +1256,7 @@ title: "Cards"
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -1312,7 +1274,7 @@ title: "Cards"
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -1335,10 +1297,8 @@ title: "Cards"
 ```html
 <div class="form-check form-check-card form-check-top-left">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio">
+        <input class="form-check-input" type="radio"/>
     </label>
     <div class="card">...</div>
 </div>
 ```
-
-</article>

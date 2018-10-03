@@ -8,8 +8,6 @@ Cards are a very specific visual representation of data.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/cards.html">Cards Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
-<article id="clay-image-card">
-
 ### Image card
 
 > Used in image/document galleries.
@@ -23,9 +21,9 @@ Cards are a very specific visual representation of data.
 				<div class="aspect-ratio card-item-first">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
-							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 							<span class="sticker sticker-bottom-left sticker-danger rounded-circle">JPG</span>
 						</label>
 					</div>
@@ -45,7 +43,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -116,9 +114,9 @@ Cards are a very specific visual representation of data.
 		<div class="aspect-ratio card-item-first">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
-					<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+					<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 					<span class="sticker sticker-bottom-left sticker-danger rounded-circle">JPG</span>
 				</label>
 			</div>
@@ -138,7 +136,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -166,9 +164,9 @@ Cards are a very specific visual representation of data.
 				<div class="aspect-ratio card-item-first">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox" checked="true">
+							<input class="custom-control-input" type="checkbox" checked="true"/>
 							<span class="custom-control-label"></span>
-							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 							<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 						</label>
 					</div>
@@ -188,7 +186,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -259,9 +257,9 @@ Cards are a very specific visual representation of data.
 		<div class="aspect-ratio card-item-first">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox" checked="true">
+					<input class="custom-control-input" type="checkbox" checked="true"/>
 					<span class="custom-control-label"></span>
-					<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+					<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 					<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 				</label>
 			</div>
@@ -281,7 +279,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -323,7 +321,7 @@ Cards are a very specific visual representation of data.
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -401,7 +399,7 @@ Cards are a very specific visual representation of data.
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+							<use href="/images/icons/icons.svg#ellipsis-v" />
 						</svg>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
@@ -430,11 +428,11 @@ Cards are a very specific visual representation of data.
 				<div class="aspect-ratio card-item-first">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-									<use xlink:href="/images/icons/icons.svg#camera" />
+									<use href="/images/icons/icons.svg#camera" />
 								</svg>
 							</div>
 							<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
@@ -456,7 +454,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -477,7 +475,7 @@ Cards are a very specific visual representation of data.
 	<div class="col-md-4">
 		<div class="card card-type-asset image-card">
 			<div class="aspect-ratio bg-checkered card-item-first">
-				<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+				<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 				<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 			</div>
 			<div class="card-body">
@@ -559,11 +557,11 @@ Cards are a very specific visual representation of data.
 		<div class="aspect-ratio card-item-first">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-							<use xlink:href="/images/icons/icons.svg#camera" />
+							<use href="/images/icons/icons.svg#camera" />
 						</svg>
 					</div>
 					<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
@@ -585,7 +583,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -605,7 +603,7 @@ Cards are a very specific visual representation of data.
 
 <div class="card card-type-asset">
 	<div class="aspect-ratio bg-checkered card-item-first">
-		<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+		<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
 		<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 	</div>
 	<div class="card-body">
@@ -619,19 +617,11 @@ Cards are a very specific visual representation of data.
 </div>
 ```
 
-</article>
-
-<article id="clay-image-card-api">
-
 #### API
 
 <div>
 	[APITable "clay-card/src/ClayImageCard.js"]
 </div>
-
-</article>
-
-<article id="clay-user-card">
 
 ### User card
 
@@ -663,7 +653,7 @@ Cards are a very specific visual representation of data.
 				<div class="aspect-ratio card-item-first">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<span class="sticker sticker-danger sticker-xl">
@@ -683,7 +673,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -775,7 +765,7 @@ Cards are a very specific visual representation of data.
 		<div class="aspect-ratio card-item-first">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 						<span class="sticker sticker-danger sticker-xl">
@@ -795,7 +785,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -814,19 +804,12 @@ Cards are a very specific visual representation of data.
 </div>
 ```
 
-</article>
-
-<article id="clay-user-card-api">
-
 #### API
 
 <div>
 	[APITable "clay-card/src/ClayUserCard.js"]
 </div>
 
-</article>
-
-<article id="clay-file-card">
 
 ### File card
 
@@ -838,7 +821,7 @@ Cards are a very specific visual representation of data.
 			<div class="aspect-ratio card-item-first">
 				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-						<use xlink:href="/images/icons/icons.svg#documents-and-media" />
+						<use href="/images/icons/icons.svg#documents-and-media" />
 					</svg>
 				</div>
 				<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -864,11 +847,11 @@ Cards are a very specific visual representation of data.
 				<div class="aspect-ratio card-item-first">
 					<div class="custom-control custom-checkbox">
 						<label>
-							<input class="custom-control-input" type="checkbox">
+							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-									<use xlink:href="/images/icons/icons.svg#documents-and-media" />
+									<use href="/images/icons/icons.svg#documents-and-media" />
 								</svg>
 							</div>
 							<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -890,7 +873,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -981,7 +964,7 @@ Cards are a very specific visual representation of data.
 	<div class="aspect-ratio card-item-first">
 		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-				<use xlink:href="/images/icons/icons.svg#documents-and-media" />
+				<use href="/images/icons/icons.svg#documents-and-media" />
 			</svg>
 		</div>
 		<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -1010,7 +993,7 @@ Cards are a very specific visual representation of data.
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-							<use xlink:href="/images/icons/icons.svg#documents-and-media" />
+							<use href="/images/icons/icons.svg#documents-and-media" />
 						</svg>
 					</div>
 					<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
@@ -1032,7 +1015,7 @@ Cards are a very specific visual representation of data.
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+								<use href="/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
@@ -1051,19 +1034,11 @@ Cards are a very specific visual representation of data.
 </div>
 ```
 
-</article>
-
-<article id="clay-file-card-api">
-
 #### API
 
 <div>
 	[APITable "clay-card/src/ClayFileCard.js"]
 </div>
-
-</article>
-
-<article id="clay-folder-card">
 
 ### Folder card
 
@@ -1078,7 +1053,7 @@ Cards are a very specific visual representation of data.
 						<span class="sticker">
 							<span class="inline-item">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use xlink:href="/images/icons/icons.svg#folder" />
+									<use href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
 						</span>
@@ -1094,7 +1069,7 @@ Cards are a very specific visual representation of data.
 		<div class="card-type-directory form-check form-check-card form-check-middle-left">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox">
+					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<div class="card card-horizontal">
 						<div class="card-body">
@@ -1103,7 +1078,7 @@ Cards are a very specific visual representation of data.
 									<span class="sticker">
 										<span class="inline-item">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use xlink:href="/images/icons/icons.svg#folder" />
+												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
 									</span>
@@ -1115,7 +1090,7 @@ Cards are a very specific visual representation of data.
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
 										<div class="dropdown-menu dropdown-menu-right">
@@ -1181,7 +1156,7 @@ Cards are a very specific visual representation of data.
 				<span class="sticker">
 					<span class="inline-item">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="/images/icons/icons.svg#folder" />
+							<use href="/images/icons/icons.svg#folder" />
 						</svg>
 					</span>
 				</span>
@@ -1196,7 +1171,7 @@ Cards are a very specific visual representation of data.
 <div class="card-type-directory form-check form-check-card form-check-middle-left">
 	<div class="custom-control custom-checkbox">
 		<label>
-			<input class="custom-control-input" type="checkbox">
+			<input class="custom-control-input" type="checkbox"/>
 			<span class="custom-control-label"></span>
 			<div class="card card-horizontal">
 				<div class="card-body">
@@ -1205,7 +1180,7 @@ Cards are a very specific visual representation of data.
 							<span class="sticker">
 								<span class="inline-item">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use xlink:href="/images/icons/icons.svg#folder" />
+										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
 							</span>
@@ -1217,7 +1192,7 @@ Cards are a very specific visual representation of data.
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -1238,14 +1213,10 @@ Cards are a very specific visual representation of data.
 </div>
 ```
 
-</article>
-
-<article id="clay-horizontal-card-api">
-
 #### API
 
 <div>
 	[APITable "clay-card/src/ClayHorizontalCard.js"]
 </div>
 
-</article>
+More examples can be found in <a href="/docs/components/dataset-display.html">dataset template</a>.

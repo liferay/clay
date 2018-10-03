@@ -80,8 +80,10 @@ describe('ClayResultsBar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'clearButtonClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'clearButtonClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 
@@ -98,8 +100,10 @@ describe('ClayResultsBar', function() {
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
-			'filterLabelCloseClicked',
-			expect.any(Object)
+			expect.objectContaining({
+				name: 'filterLabelCloseClicked',
+				originalEvent: expect.any(Object),
+			})
 		);
 	});
 });

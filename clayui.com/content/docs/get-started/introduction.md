@@ -5,8 +5,6 @@ weight: 5
 
 <div class="alert alert-info">Anxious to quickly add Clay to your project and start building amazing UIs?</div>
 
-<article id="introduction">
-
 ## Quick Start
 
 To test the Clay components for web with a minimal configuration, load the CSS and JS from the JSDelivr.
@@ -238,10 +236,8 @@ If you look at the browser now, you can see our first Clay component rendered. I
 
 This demo is available on github, feel free to tinker.
 
-> [Getting started with Clay](https://github.com/matuzalemsteles/clay-examples/tree/master/examples/getting-started-clay)
+> [Getting started with Clay](https://github.com/liferay/clay/tree/master/examples/getting-started-clay)
 
 ## Components
 
 Go to our [components section](/docs/components) to see what you can build with Clay!
-
-</article>

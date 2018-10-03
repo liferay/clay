@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
-import rehypeReact from "rehype-react";
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import React, { Component } from 'react';
 
 import Sidebar from '../components/Sidebar';
 import CodeTabs from '../components/CodeTabs';
-import Graph from '../components/Graph';
 import CodeClipboard from '../components/CodeClipboard';
-
-const renderAst = new rehypeReact({
-    createElement: React.createElement,
-    components: { "clay-chart": Graph }
-}).Compiler;
+import Typography from '../components/Typography';
 
 export default class Docs extends Component {
     componentDidMount() {
@@ -24,11 +20,10 @@ export default class Docs extends Component {
     }
 
     render() {
-        const { data, location, pathContext } = this.props;
-        const { htmlASTTreated, docsPath } = pathContext;
-        const sectionList = JSON.parse(docsPath);
-        const { markdownRemark } = data;
-        const { frontmatter, htmlAst, excerpt, timeToRead } = markdownRemark;
+        const { data, location, pageContext: { markdownJsx } } = this.props;
+        const { mdx, markdownRemark } = data;
+        const { code, frontmatter, excerpt, timeToRead, html } = mdx || markdownRemark;
+
         const title = `${frontmatter.title} - Clay`;
 
         return (
@@ -47,7 +42,7 @@ export default class Docs extends Component {
                     />
                 </Helmet>
                 <main className="content">
-                    <Sidebar sectionsList={sectionList[0].items} location={location} />
+                    <Sidebar location={location} />
                     <div className="sidebar-offset">
                         <header>
                             <div className="clay-site-container container-fluid">
@@ -58,7 +53,23 @@ export default class Docs extends Component {
                         <div className="clay-site-container container-fluid">
                             <div className="row">
                                 <div className="col-md-12">
-                                    {renderAst(JSON.parse(htmlASTTreated))}
+                                    <article>
+                                        {markdownJsx ? (
+                                            <MDXRenderer
+                                                components={{
+                                                    h1: Typography.H1,
+                                                    h2: Typography.H2,
+                                                    h3: Typography.H3,
+                                                    h4: Typography.H4,
+                                                    p: Typography.P,
+                                                }}
+                                            >
+                                                {code.body}
+                                            </MDXRenderer>
+                                        ) : (
+                                            <div dangerouslySetInnerHTML={{ __html: html }} />
+                                        )}
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -94,11 +105,22 @@ export default class Docs extends Component {
 }
 
 export const pageQuery = graphql`
-    query TemplateDocsMarkdown($slug: String!) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-            htmlAst
+    query($slug: String!) {
+        mdx(fields: { slug: { eq: $slug } }) {
             excerpt
             timeToRead
+            frontmatter {
+                title
+            }
+            code {
+                body
+            }
+        }
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            excerpt
+            timeToRead
+            html
+            htmlAst
             frontmatter {
                 title
             }

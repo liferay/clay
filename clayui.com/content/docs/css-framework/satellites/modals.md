@@ -2,8 +2,6 @@
 title: "Modals"
 ---
 
-<article>
-
 ### Inline Scroller
 
 <p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
@@ -17,7 +15,7 @@ title: "Modals"
 				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
 				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/images/icons/icons.svg#times" />
+						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -60,4 +58,5 @@ title: "Modals"
 	</div>
 </div>
 
-</article>
+### Modal Helpers
+Use classes <code>modal-item-first</code>, <code>modal-item</code>, and <code>modal-item-last</code> inside <code>modal-footer</code> to align content left, middle, and right.
