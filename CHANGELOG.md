@@ -6,10 +6,12 @@
 
 **Implemented enhancements:**
 
+- Migrate Gatsby version on clayui.com from 1.x to 2.x [\#1205](https://github.com/liferay/clay/issues/1205)
 - Styles and markup for results bar [\#1105](https://github.com/liferay/clay/issues/1105)
 
 **Fixed bugs:**
 
+- ManagementToolbar is emitting wrong event on filter label item close button click [\#1197](https://github.com/liferay/clay/issues/1197)
 - When you close the dropdown by the button it does not remove the added events when opening [\#1189](https://github.com/liferay/clay/issues/1189)
 - Link https://clayui.com/docs/components causes 404 [\#1180](https://github.com/liferay/clay/issues/1180)
 - ManagementToolbar ActionItems show if an empty array is passed [\#1178](https://github.com/liferay/clay/issues/1178)
@@ -19,8 +21,16 @@
 
 **Closed issues:**
 
+- Versions of the clay-css and clay-charts packages are outdated at clayui.com [\#1215](https://github.com/liferay/clay/issues/1215)
+- Event emitting is not consistent in Management Toolbar [\#1213](https://github.com/liferay/clay/issues/1213)
+- Add title to clay-sticker [\#1209](https://github.com/liferay/clay/issues/1209)
+- clayui.com - Stickers type user \(circle\) [\#1204](https://github.com/liferay/clay/issues/1204)
+- Main file of Clay package doesn't exists [\#1201](https://github.com/liferay/clay/issues/1201)
+- clayui.com - Incorrect space in sidebar navigation [\#1199](https://github.com/liferay/clay/issues/1199)
+- Update to lerna@3.x.x [\#1193](https://github.com/liferay/clay/issues/1193)
 - Clay Modal does not render properly  [\#1183](https://github.com/liferay/clay/issues/1183)
 - Add Legend Data for Stacked Bar Chart. [\#1138](https://github.com/liferay/clay/issues/1138)
+- Clayui.com documentation, how enhance it? 🤔 [\#1111](https://github.com/liferay/clay/issues/1111)
 - ClayCSS: Update and add table utilities to allow for better sizing and alignment [\#1065](https://github.com/liferay/clay/issues/1065)
 - ManagementToolbar message should be `select-items` instead of `select-page` [\#1025](https://github.com/liferay/clay/issues/1025)
 - Icon Button needs to show a tooltip on hover [\#858](https://github.com/liferay/clay/issues/858)
@@ -29,6 +39,18 @@
 
 **Merged pull requests:**
 
+- v2.3.4 CHANGELOG [\#1218](https://github.com/liferay/clay/pull/1218) ([carloslancha](https://github.com/carloslancha))
+-  Fixes \#1215 - Update clay-css and clay-charts from 2.2.0 to 2.3.3 at clayui.com [\#1216](https://github.com/liferay/clay/pull/1216) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1213 - Emit all events consistently [\#1214](https://github.com/liferay/clay/pull/1214) ([carloslancha](https://github.com/carloslancha))
+- Proposal for the Nightly Environment [\#1212](https://github.com/liferay/clay/pull/1212) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1209 - Add title to clay-sticker [\#1210](https://github.com/liferay/clay/pull/1210) ([boton](https://github.com/boton))
+- Fixes \#1197 - Replace event name from infoButtonClicked to filterLabelCloseClicked [\#1208](https://github.com/liferay/clay/pull/1208) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1193 - Update lerna from 2.4.0 to 3.4.0 and update yarn in travis from 1.2.0 to 1.10.1 [\#1207](https://github.com/liferay/clay/pull/1207) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1205, \#1204, \#1180 - Migrate Gatsby version on clayui.com from 1.x to 2.x and some fixes [\#1206](https://github.com/liferay/clay/pull/1206) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1201 | Fix clay package's main file [\#1202](https://github.com/liferay/clay/pull/1202) ([diegonvs](https://github.com/diegonvs))
+- clayui.com: \(Fixes: \#1199\) Fix sidebar navigation margin [\#1200](https://github.com/liferay/clay/pull/1200) ([marcoscv-work](https://github.com/marcoscv-work))
+- Add examples [\#1196](https://github.com/liferay/clay/pull/1196) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Organize the Lexicon Core Components session according to the proposal in clayui.com | Fixes \#1111 [\#1195](https://github.com/liferay/clay/pull/1195) ([matuzalemsteles](https://github.com/matuzalemsteles))
 - v2.3.3 CHANGELOG [\#1194](https://github.com/liferay/clay/pull/1194) ([carloslancha](https://github.com/carloslancha))
 - Fixes \#1172 - ClayActionsDropdown, ClayCreationMenuDropdown and ClayDropdown do not keep the expanded updated with ClayDropdownBase [\#1191](https://github.com/liferay/clay/pull/1191) ([carloslancha](https://github.com/carloslancha))
 - Fixes \#1105 - Update styles and markup for results bar [\#1188](https://github.com/liferay/clay/pull/1188) ([carloslancha](https://github.com/carloslancha))
