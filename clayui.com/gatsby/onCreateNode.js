@@ -60,13 +60,13 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 		createNodeField({
 			node,
 			name: 'redirect',
-			value: redirect,
+			value: redirect || '',
 		});
 
 		createNodeField({
 			node,
 			name: 'layout',
-			value: layout,
+			value: layout || '',
 		});
 	}
 };

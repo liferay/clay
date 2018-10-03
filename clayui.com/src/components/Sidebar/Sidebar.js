@@ -74,6 +74,7 @@ export default props => (
 					edges {
 						node {
 							fields {
+								layout
 								nightly
 								slug
 								title
@@ -88,7 +89,6 @@ export default props => (
 							fields {
 								layout
 								nightly
-								redirect
 								slug
 								title
 								weight
