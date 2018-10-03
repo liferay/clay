@@ -11,27 +11,35 @@ const onClick = () => {
 	SidebarRef.current.classList.toggle('toggler-expanded');
 }
 
-const getSection = ({allMdx: {edges}}) => {
-	const resolveNode = edges.map(({node}) => {
-		const {
-			slug,
-			title,
-			weight,
-			layout,
-		} = node.fields;
-		const slugWithoutExtension = slug.replace('.html', '');
-		const pathSplit = slugWithoutExtension.split('/');
+const {GATSBY_CLAY_NIGHTLY} = process.env;
 
-		return {
-			id: pathSplit[pathSplit.length - 1],
-			layout,
-			link: '/' + slugWithoutExtension,
-			title,
-			weight,
-		};
-	});
+const getMap = (edges) => {
+	return edges
+		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
+		.map(({node}) => {
+			const {
+				slug,
+				title,
+				weight,
+				layout,
+			} = node.fields;
+			const slugWithoutExtension = slug.replace('.html', '');
+			const pathSplit = slugWithoutExtension.split('/');
 
-	return arrangeIntoTree(resolveNode)[0].items;
+			return {
+				id: pathSplit[pathSplit.length - 1],
+				layout,
+				link: '/' + slugWithoutExtension,
+				title,
+				weight,
+			};
+		});
+}
+
+const getSection = (data) => {
+	const array = [...getMap(data.allMarkdownRemark.edges), ...getMap(data.allMdx.edges)];
+
+	return arrangeIntoTree(array)[0].items;
 }
 
 let scrollTop = 0;
@@ -66,14 +74,27 @@ export default props => (
 					edges {
 						node {
 							fields {
-								layout
-								redirect
+								nightly
 								slug
 								title
 								weight
 							}
 						}
 					}
+				}
+				allMarkdownRemark {
+					edges {
+						node {
+							fields {
+								layout
+								nightly
+								redirect
+								slug
+								title
+								weight
+							}
+						}
+					}	
 				}
 			}
 		`}

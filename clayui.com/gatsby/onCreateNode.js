@@ -1,9 +1,13 @@
 module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 	const {createNodeField} = actions;
 
-	if (node.internal.type === 'Mdx') {
+	if (
+		node.internal.type === 'Mdx' ||
+		node.internal.type === 'MarkdownRemark'
+	) {
 		const {
 			layout,
+			nightly,
 			path,
 			redirect,
 			title,
@@ -15,9 +19,19 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 
 		if (!slug) {
 			if (relativePath.includes('docs')) {
-				slug = relativePath.replace('.md', '.html');
+				if (relativePath.endsWith('.md')) {
+					slug = relativePath.replace('.md', '.html');
+				} else {
+					slug = relativePath.replace('.mdx', '.html');
+				}
 			}
 		}
+
+		createNodeField({
+			name: 'nightly',
+			node,
+			value: nightly ? true : false,
+		});
 
 		createNodeField({
 			name: 'title',
