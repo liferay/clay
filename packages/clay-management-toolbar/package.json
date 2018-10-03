@@ -1,6 +1,6 @@
 {
   "name": "clay-management-toolbar",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Metal Clay Management Toolbar component",
   "license": "BSD",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-management-toolbar",
@@ -28,13 +28,13 @@
     "metal"
   ],
   "dependencies": {
-    "clay-button": "^2.3.3",
-    "clay-checkbox": "^2.3.3",
-    "clay-component": "^2.3.3",
-    "clay-dropdown": "^2.3.3",
-    "clay-icon": "^2.3.3",
-    "clay-label": "^2.3.3",
-    "clay-link": "^2.3.3",
+    "clay-button": "^2.3.4",
+    "clay-checkbox": "^2.3.4",
+    "clay-component": "^2.3.4",
+    "clay-dropdown": "^2.3.4",
+    "clay-icon": "^2.3.4",
+    "clay-label": "^2.3.4",
+    "clay-link": "^2.3.4",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
@@ -47,11 +47,11 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay": "^2.3.3",
-    "clay-css": "^2.3.3",
+    "browserslist-config-clay": "^2.3.4",
+    "clay-css": "^2.3.4",
     "metal-tools-soy": "^6.0.0",
     "webpack": "^3.0.0",
-    "webpack-config-clay": "^2.3.3"
+    "webpack-config-clay": "^2.3.4"
   },
   "browserslist": [
     "extends browserslist-config-clay"
