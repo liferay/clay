@@ -21,7 +21,10 @@ class ClayResultsBar extends ClayComponent {
 	 * @private
 	 */
 	_handleClearResultsClick(event) {
-		this.emit('clearButtonClicked', event);
+		return !this.emit({
+			name: 'clearButtonClicked',
+			originalEvent: event
+		});
 	}
 
 	/**
@@ -30,7 +33,10 @@ class ClayResultsBar extends ClayComponent {
 	 * @private
 	 */
 	_handleFilterLabelCloseClicked(event) {
-		this.emit('filterLabelCloseClicked', event);
+		return !this.emit({
+			name: 'filterLabelCloseClicked',
+			originalEvent: event
+		});
 	}
 }
 
