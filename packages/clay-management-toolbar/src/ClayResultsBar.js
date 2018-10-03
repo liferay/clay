@@ -19,11 +19,12 @@ class ClayResultsBar extends ClayComponent {
 	 * Continues the propagation of the clear button clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleClearResultsClick(event) {
 		return !this.emit({
 			name: 'clearButtonClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 
@@ -31,11 +32,12 @@ class ClayResultsBar extends ClayComponent {
 	 * Continues the propagation of the filter label close clicked event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilterLabelCloseClicked(event) {
 		return !this.emit({
 			name: 'filterLabelCloseClicked',
-			originalEvent: event
+			originalEvent: event,
 		});
 	}
 }
