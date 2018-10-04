@@ -33,62 +33,74 @@ $modal-close-spacer-x: 0.3125rem !default; // 5px
 
 // Modal Success
 
+$modal-success-header-close: () !default;
+$modal-success-header-close: map-merge((
+	color: theme-color-level(success, 6),
+	hover-color: inherit,
+	focus-color: inherit,
+	disabled-color: inherit
+), $modal-success-header-close);
+
 $modal-success: () !default;
 $modal-success: map-merge((
 	header-bg: theme-color-level(success, -10),
 	header-border-color: theme-color-level(success, -9),
 	header-color: theme-color-level(success, 6),
-	header-close: (
-		color: theme-color-level(success, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
+	header-close: $modal-success-header-close
 ), $modal-success);
 
 // Modal Info
+
+$modal-info-header-close: () !default;
+$modal-info-header-close: map-merge((
+	color: theme-color-level(info, 6),
+	hover-color: inherit,
+	focus-color: inherit,
+	disabled-color: inherit
+), $modal-info-header-close);
 
 $modal-info: () !default;
 $modal-info: map-merge((
 	header-bg: theme-color-level(info, -10),
 	header-border-color: theme-color-level(info, -9),
 	header-color: theme-color-level(info, 6),
-	header-close: (
-		color: theme-color-level(info, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
+	header-close: $modal-info-header-close
 ), $modal-info);
 
 // Modal Warning
+
+$modal-warning-header-close: () !default;
+$modal-warning-header-close: map-merge((
+	color: theme-color-level(warning, 6),
+	hover-color: inherit,
+	focus-color: inherit,
+	disabled-color: inherit
+), $modal-warning-header-close);
 
 $modal-warning: () !default;
 $modal-warning: map-merge((
 	header-bg: theme-color-level(warning, -10),
 	header-border-color: theme-color-level(warning, -9),
 	header-color: theme-color-level(warning, 6),
-	header-close: (
-		color: theme-color-level(warning, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
+	header-close: $modal-warning-header-close
 ), $modal-warning);
 
 // Modal Danger
+
+$modal-danger-header-close: () !default;
+$modal-danger-header-close: map-merge((
+	color: theme-color-level(danger, 6),
+	hover-color: inherit,
+	focus-color: inherit,
+	disabled-color: inherit
+), $modal-danger-header-close);
 
 $modal-danger: () !default;
 $modal-danger: map-merge((
 	header-bg: theme-color-level(danger, -10),
 	header-border-color: theme-color-level(danger, -9),
 	header-color: theme-color-level(danger, 6),
-	header-close: (
-		color: theme-color-level(danger, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
+	header-close: $modal-danger-header-close
 ), $modal-danger);
 
 $modal-palette: () !default;
