@@ -5,9 +5,6 @@ $nav-link-disabled-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23
 $nav-link-padding-x: 1rem !default; // 16px
 $nav-link-padding-y: 0.625rem !default; // 10px
 
-$nav-collapse-icon-closed: "\f0da" !default;
-$nav-collapse-icon-open: "\f0d7" !default;
-
 // Nav Nested
 
 $nav-nested-spacer-x: 1rem !default; // 16px
