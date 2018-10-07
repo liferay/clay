@@ -48,9 +48,7 @@
 
 		{if $ariaLabel}
 			aria-label="{$ariaLabel}"
-		{elseif $label}
-			aria-label="{$label}"
-		{elseif $icon}
+		{elseif $icon and not $label}
 			aria-label="{$icon}"
 		{/if}
 
