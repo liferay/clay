@@ -4,7 +4,7 @@ title: "Forms Hierarchy"
 
 ### Description
 
-Definition of the content hierarchy inside a form structure and the components used to identify the different content blocks. This page contemplates the visual definition of the hierarchy, the measurements and the definition of the components that establish that hierarchy"
+The definition of the content hierarchy inside a form structure and the components used to identify the different content blocks. This page contemplates the visual definition of the hierarchy and the measurements and the definition of the components that establish that hierarchy.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/formsHierarchy.html">Forms Hierarchy Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

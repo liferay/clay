@@ -8,7 +8,7 @@ title: "Form Elements (Input Groups)"
 	Clay Input Group markup deviates from Bootstrap 4's Input Groups.
 </div>
 
-> Wrap each item in a <code>.input-group</code> with <code>.input-group-item</code>. The class <code>.input-group-item</code> splits the space evenly by default, add <code>.input-group-item-shrink</code> to make an item shrink to fit.
+> Wrap each item in an <code>.input-group</code> div with an <code>.input-group-item</code> div. The class <code>.input-group-item</code> splits the space evenly by default. Add the <code>.input-group-item-shrink</code> class to a group item to make it shrink to fit, as shown in the example below for the @ and .com input group items:
 
 <div class="sheet">
 	<div class="form-group">
@@ -71,7 +71,7 @@ title: "Form Elements (Input Groups)"
 
 ### Input Group (Connected)
 
-> Create connected <code>.input-group</code>'s by adding <code>.input-group-prepend</code> to every <code>.input-group-item</code> and <code>.input-group-append</code> to the last <code>.input-group-item</code>.
+> By default, input group items are separated. To connect input group items together, add the <code>.input-group-prepend</code> class to every <code>.input-group-item</code> except the last one, and add the <code>.input-group-append</code> class to the last <code>.input-group-item</code>:
 
 <div class="sheet">
 	<div class="form-group">
@@ -207,7 +207,7 @@ title: "Form Elements (Input Groups)"
 
 ### Input Group (Mixed)
 
-> Mix the two.
+> You can of course mix separated and connected input group items in your forms, as shown in the example below:
 
 <div class="sheet">
 	<div class="form-group">
@@ -444,10 +444,10 @@ title: "Form Elements (Input Groups)"
 
 ### Input Group Inset
 
-> <code>.input-group-inset</code>, <code>.input-group-inset-before</code>, <code>.input-group-inset-after</code>, <code>.input-group-inset-item</code>, <code>.input-group-inset-item-before</code>, and <code>.input-group-inset-item-after</code>.
+> You can insert buttons and links into input group items with the following helper classes: <code>.input-group-inset</code>, <code>.input-group-inset-before</code>, <code>.input-group-inset-after</code>, <code>.input-group-inset-item</code>, <code>.input-group-inset-item-before</code>, and <code>.input-group-inset-item-after</code>. Use the <code>-before</code> classes to inset the button/link at the beginning of the input group, or use the <code>-after</code> classes to inset the button/link at the end of the input group.
 
 <div class="alert alert-warning">
-	To retain the focus styles around the <code>.input-group-inset</code> component when a button or link inside is focused, add the <code>focus</code> class on <code>.input-group-item</code>. Focus Box Shadows are only supported in <code>.input-group-inset</code> with <code>.input-group-item.focus</code>. <code>.input-prepend</code> and <code>.input-append</code> aren't supported with <code>.input-group-inset</code>.
+	To retain the focus styles around the <code>.input-group-inset</code> component when a button or link inside is focused, add the <code>focus</code> class to the <code>.input-group-item</code>. Focus Box Shadows are only supported in <code>.input-group-inset</code> with <code>.input-group-item.focus</code>. <code>.input-prepend</code> and <code>.input-append</code> aren't supported with <code>.input-group-inset</code>.
 </div>
 
 <div class="sheet">

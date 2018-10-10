@@ -4,7 +4,7 @@ title: "Loading Indicator"
 
 ### Description
 
-Loading indicator shows the user that an external process, like a connection, is being executed.
+The loading indicator shows the user that	an external process, like a connection, is being executed.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/loading_indicator.html">Loading Indicator Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

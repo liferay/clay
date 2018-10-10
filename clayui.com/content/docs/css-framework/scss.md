@@ -3,7 +3,7 @@ title: "SCSS"
 weight: 3
 ---
 
-Clay CSS Framework provides some utilitarios for you to work with [SCSS](https://sass-lang.com) and be able to reuse in your classes.
+Clay CSS Framework provides some utilities for you to work with [SCSS](https://sass-lang.com) and reuse it in your classes.
 
 - [Variables](#variables)
 - [Mixins](#mixins)
@@ -47,7 +47,7 @@ You can find all mixins available by component if you want to create a component
 
 ## Functions
 
-Clay CSS provides some **SCSS** functions that help you to be more productive. understand more about **functions** at [sass-lang.com](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives).
+Clay CSS provides some **SCSS** functions that help you be more productive. To learn more about **functions** see [sass-lang.com](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives).
 
 Sass ternary shorthand: `if($variable-name, true, false);`. See [setter#L5](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#L5)
 

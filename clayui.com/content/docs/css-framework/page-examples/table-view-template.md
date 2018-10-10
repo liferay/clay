@@ -559,7 +559,7 @@ title: "Table View Template"
 			</div>
 		</form>
 		<div class="alert alert-warning">
-			Because of the dynamic nature of content in tables, we left it to the developer to size and align columns inside tables. Add a unique class to each column and use min-width / max-width to space the tables to your specific requirements.
+			Because of the dynamic nature of content in tables, we left it to the developer to size and align columns inside tables. Add a unique class to each column, and use min-width / max-width to space the tables to your specific requirements.
 		</div>
 		<div class="table-responsive">
 			<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">

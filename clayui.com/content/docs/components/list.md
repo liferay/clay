@@ -4,7 +4,7 @@ title: "List"
 
 ### Description
 
-List is a visual representation of a dataset that provides more flexibility for arranging the data to display than a table and that is less visual explicit than a card view.
+List is a visual representation of a dataset that provides more flexibility for arranging the data than a table and is less visually explicit than a card view.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/list.html">List Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -518,7 +518,7 @@ List is a visual representation of a dataset that provides more flexibility for 
 
 ### Sections
 
-> List sections help to separate different contents by a certain categorization or typology.
+> List sections help separate content by a specific category or type.
 
 <ul class="list-group show-quick-actions-on-hover">
 	<li class="list-group-header">
@@ -793,14 +793,14 @@ List is a visual representation of a dataset that provides more flexibility for 
 
 #### Example of use
 
-> Align content inside `.list-group-item` with flexbox with `.list-group-item-flex`.
+> Align content inside a `.list-group-item` element with a flexbox with `.list-group-item-flex`.
 
 > Use a combination of `.flex-col` and `.flex-col.flex-col-expand` to control the size of each cell.
 
-> Add the class `show-dropdown-action-on-active` to display `dropdown-menu`'s on active in List Groups.
+> Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when active in List Groups.
 
 <div class="alert alert-warning">
-	Direct descendants of <code>flex-col</code> become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with a block level element such as a div.
+	Direct descendants of <code>flex-col</code> become block level elements by default. See <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code>, wrap the content with a block level element such as a div.
 </div>
 
 <ul class="list-group show-quick-actions-on-hover">

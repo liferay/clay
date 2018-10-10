@@ -4,9 +4,9 @@ title: "Images (Aspect Ratios)"
 
 ### Image Aspect Ratios
 
-> Sometimes you can't control the size of an image, constrain your images with aspect-ratios. The base class `aspect-ratio` maintains a 1 to 1 ratio relative to its container's width.
+> Sometimes you can't control the size of an image. Constrain your images with aspect-ratios. The base class `aspect-ratio` maintains a one-to-one ratio relative to its container's width.
 
-> Use `aspect-ratio-3-to-2`, `aspect-ratio-4-to-3`, `aspect-ratio-8-to-5`, or `aspect-ratio-16-to-9` to maintain the specific ratio relative to its container or create your own by setting `padding-bottom` to the ratio you want e.g. 2 to 1 `{literal}.aspect-ratio-2-to-1 { padding-bottom: 50% }{/literal}`.
+> Use `aspect-ratio-3-to-2`, `aspect-ratio-4-to-3`, `aspect-ratio-8-to-5`, or `aspect-ratio-16-to-9` to maintain the specific ratio relative to its container, or set `padding-bottom` to the ratio you want to create your own aspect ratio, e.g. 2 to 1 `{literal}.aspect-ratio-2-to-1 { padding-bottom: 50% }{/literal}`.
 
 ### Aspect Ratio Item Fluid
 
@@ -128,7 +128,7 @@ title: "Images (Aspect Ratios)"
 
 ### Aspect Ratio Item
 
-> Use `aspect-ratio-item` if you want to keep the content's original size and crop the visible area.
+> Add the `aspect-ratio-item` class to an image to keep the content's original size and crop the visible area.
 
 <div class="row">
 	<div class="col-3">

@@ -4,7 +4,7 @@ title: "Images and Thumbnails"
 
 ### Responsive Image
 
-<p>Use <code>.img-fluid</code> to make an image fit with its container.</p>
+<p>Add the <code>.img-fluid</code> class to an image to make it expand to the width of its container.</p>
 
 <div class="row">
 	<div class="col-6 col-sm-3">
@@ -26,9 +26,9 @@ title: "Images and Thumbnails"
 
 ### Image Shapes
 
-<p>Use <code>.rounded</code>, <code>.rounded-circle</code>, or <code>.img-thumbnail</code> on <code>img</code> to quickly style the borders.</p>
+<p>Add the <code>.rounded</code>, <code>.rounded-circle</code>, or <code>.img-thumbnail</code> classes to an <code>img</code> to quickly style the borders.</p>
 
-<p><code>.rounded-0</code> will remove the <code>border-radius</code> styles.</p>
+<p>The <code>.rounded-0</code> class removes the <code>border-radius</code> styles.</p>
 
 <div class="row">
 	<div class="col-4">

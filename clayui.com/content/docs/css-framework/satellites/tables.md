@@ -7,7 +7,7 @@ title: "Tables"
 </div>
 
 <div class="alert alert-warning">
-	<code>show-quick-actions-on-hover</code> will need Javascript to add class <code>table-focus</code> on the table row when an item inside is focused to make it keyboard accessible.
+	The <code>show-quick-actions-on-hover</code> class requires JavaScript to add the <code>table-focus</code> class to the table row when an item inside is focused. This makes it keyboard accessible.
 </div>
 
 ### Table List
@@ -1227,13 +1227,13 @@ title: "Tables"
 
 ### Table Helpers
 
-<p><code>table-autofit</code> constrains table columns to be only as wide as its content, but must be used with <code>table-cell-expand</code>. <code>table-cell-expand</code> will fill the remaining space.</p>
+<p>The <code>table-autofit</code> class constrains table columns to be the same width as its content, but it must be used with the <code>table-cell-expand</code> class. The <code>table-cell-expand</code> class fills the remaining space.</p>
 
-<p>Use <code>table-cell-expand-small</code>, <code>table-cell-expand-smaller</code>, <code>table-cell-expand-smallest</code> with <code>table-cell-expand</code> to size columns smaller relative to the widest column.</p>
+<p>Use the <code>table-cell-expand-small</code>, <code>table-cell-expand-smaller</code>, or <code>table-cell-expand-smallest</code> class with the <code>table-cell-expand</code> class to size columns smaller relative to the widest column.</p>
 
-<p>We have added <code>table-cell-minw-50</code>, <code>table-cell-minw-75</code>, <code>table-cell-minw-100</code>, <code>table-cell-minw-150</code>, <code>table-cell-minw-200</code>, <code>table-cell-minw-250</code>, <code>table-cell-minw-300</code>, <code>table-cell-minw-350</code>, <code>table-cell-minw-400</code> to set <code>min-width</code> 50px, 75px, 100px, 150px, 200px, 250px, 300px, 350px, 400px on a specific table column, respectively.</p>
+<p>Use the <code>table-cell-minw-50</code>, <code>table-cell-minw-75</code>, <code>table-cell-minw-100</code>, <code>table-cell-minw-150</code>, <code>table-cell-minw-200</code>, <code>table-cell-minw-250</code>, <code>table-cell-minw-300</code>, <code>table-cell-minw-350</code>, and <code>table-cell-minw-400</code> utility classes to set the table cell's <code>min-width</code> to 50px, 75px, 100px, 150px, 200px, 250px, 300px, 350px, and 400px on a specific table column, respectively.</p>
 
-<p>The helpers <code>table-cell-ws-normal</code> and <code>table-cell-ws-nowrap</code> sets <code>white-space</code> to normal or nowrap on a specific table column, respectively.</p>
+<p>The <code>table-cell-ws-normal</code> and <code>table-cell-ws-nowrap</code> helper classes set the <code>white-space</code> to normal or nowrap on a specific table column, respectively.</p>
 
 <div class="table-responsive">
 	<table class="table table-autofit">
@@ -1286,7 +1286,7 @@ title: "Tables"
 </div>
 ```
 
-<p><code>table-heading-nowrap</code> keeps headings on one line.</p>
+<p>The <code>table-heading-nowrap</code> class keeps headings on one line.</p>
 
 <div class="table-responsive">
 	<table class="table table-autofit table-heading-nowrap">
@@ -1341,7 +1341,7 @@ title: "Tables"
 </div>
 ```
 
-<p><code>table-nowrap</code> keeps everything on one line.</p>
+<p>The <code>table-nowrap</code> class keeps everything on one line.</p>
 
 <div class="table-responsive">
 	<table class="table table-autofit table-nowrap">
@@ -1398,15 +1398,15 @@ title: "Tables"
 
 ### Vertical Alignment
 
-<p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>```<table>```</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
+<p>We have added some classes to help vertically align contents inside a table. Use the <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> classes on <code>```<table>```</code> to vertically align table cell contents on the bottom, middle, and top, respectively.</p>
 
-<p>The classes <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table head.</p>
+<p>Use the <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> classes on <code>```<table>```</code> to vertically align the contents inside the table head.</p>
 
-<p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table body.</p>
+<p>Use the <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> classes on <code>```<table>```</code> to vertically align the contents inside the table body.</p>
 
 ### Table Column Text-{start|center|end}
 
-<p>We have added some classes to help horizontally align contents inside a table column. The classes <code>table-column-text-start</code>, <code>table-column-text-center</code>, and <code>table-column-text-end</code> will align text left, center, and right respectively.</p>
+<p>We have added some classes to help horizontally align contents inside a table column. The <code>table-column-text-start</code>, <code>table-column-text-center</code>, and <code>table-column-text-end</code> classes align text left, center, and right, respectively.</p>
 
 ### Table
 

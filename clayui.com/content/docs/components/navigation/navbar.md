@@ -10,7 +10,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 
 ### DEFAULT
 
-> Positive navigation bar is defined for Sites.
+> The positive navigation bar is defined for Sites. It displays navigation items in a light background with dark text.
 
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
 	<div class="container">
@@ -158,7 +158,7 @@ A navigation bar, navbar, is an horizontal bar that provides several access poin
 
 ### INVERTED
 
-> Negative navigation bar is defined for Admin. It is always placed right below the header.
+> The negative navigation bar is defined for Admin controls. It displays navigation items in a dark background with light text. It is always placed right below the header.
 
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
 	<div class="container">

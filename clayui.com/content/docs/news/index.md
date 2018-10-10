@@ -7,4 +7,4 @@ weight: 1
 
 ## Clay site release
 
-Clay launches its documentation site to provide developer envolved in the CSS system process. This guideline is created to let you understand the boundaries of this pattern library a help using the interactions patterns created by Liferay.
+Clay launches its documentation site to provide developer involvement in the CSS system process. This guideline is created to explain the boundaries of this pattern library and to help you use the interaction patterns created by Liferay.

@@ -3,7 +3,7 @@ title: "Using JS Components with Metal.js"
 weight: 2
 ---
 
-Clay Components are made according to Lexicon standards and built on top of the [Metal.js](https://metaljs.com/) framework, so you can use Clay Components in your JSX and SOY templates.
+Clay Components are made according to Lexicon standards and built on top of the [Metal.js](https://metaljs.com/) framework. This means that you can use Clay Components in your JSX and SOY templates.
 
 ## Jsx
 

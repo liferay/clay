@@ -4,7 +4,7 @@ title: "Cards"
 
 ### Horizontal Card with autofit-col-*
 
-<p>Use <code>card-row</code> with <code>autofit-col-expand</code> and <code>autofit-col</code> to create a number of custom horizontal cards. <code>autofit-col-expand</code> fills the remaining space and <code>autofit-col</code> is only as wide as its content inside.</p>
+<p>Use <code>card-row</code> with <code>autofit-col-expand</code> and <code>autofit-col</code> to create a number of custom horizontal cards. <code>autofit-col-expand</code> fills the remaining space, and <code>autofit-col</code> matches the width of its content.</p>
 
 ```html
 <div class="card-row">
@@ -40,7 +40,7 @@ title: "Cards"
 	</div>
 </div>
 
-<p>Two <code>.autofit-col</code>'s no <code>.autofit-col-expand</code>.</p>
+<p>The example below only uses two <code>.autofit-col</code>s.</p>
 
 ```html
 <div class="card-row">
@@ -74,7 +74,7 @@ title: "Cards"
 	</div>
 </div>
 
-<p>Two <code>.autofit-col-expand</code>'s no <code>.autofit-col</code>.</p>
+<p>The example below only uses two <code>.autofit-col-expand</code>s.</p>
 
 ```html
 <div class="card-row">
@@ -114,7 +114,7 @@ title: "Cards"
 
 ### Padded Horizontal Cards
 
-<p>Nest <code>card-row</code> in <code>card-body</code> on to add some spacing around a horizontal card.</p>
+<p>Nest a <code>card-row</code> element inside a <code>card-body</code> element to add some spacing around a horizontal card.</p>
 
 ```html
 <div class="card-body">
@@ -142,7 +142,7 @@ title: "Cards"
 
 ### Truncating Text Inside Card
 
-<p>Add class <code>text-truncate</code> on whatever text you want to be truncated.</p>
+<p>Add the <code>text-truncate</code> class to text elements to truncate their text.</p>
 
 <div class="col-md-6">
 	<div class="card card-horizontal">
@@ -345,7 +345,7 @@ title: "Cards"
 
 <p>Horizontally align content by setting <code>text-align</code> to <code>left</code>, <code>center</code>, or <code>right</code> on <code>autofit-col</code>.</p>
 
-<p>You can also use the Bootstrap 4's helper classes <code>justify-content-start</code>, <code>justify-content-center</code>, or <code>justify-content-end</code> on <code>card-row</code> to align content in all columns inside the row.</p>
+<p>You can also use Bootstrap 4's helper classes <code>justify-content-start</code>, <code>justify-content-center</code>, or <code>justify-content-end</code> on <code>card-row</code> elements to align content in the row's columns.</p>
 
 <div class="col-md-6">
 	<div class="card card-horizontal">
@@ -387,7 +387,7 @@ title: "Cards"
 	</div>
 </div>
 
-<p>Add gutters to a specific card card column by using the class <code>autofit-col-gutters</code>.</p>
+<p>Add the <code>autofit-col-gutters</code> class to a card column to add gutters to it.</p>
 
 <div class="col-md-6">
 	<div class="card card-horizontal">
@@ -407,7 +407,7 @@ title: "Cards"
 
 ### Card Helper Classes
 
-<p>Use classes <code>rounded</code>, <code>rounded-circle</code>, or <code>rounded-0</code> on the card to quickly shape the borders.</p>
+<p>Use the <code>rounded</code>, <code>rounded-circle</code>, or <code>rounded-0</code> classes on the card to quickly shape the borders.</p>
 
 <div class="row">
 	<div class="clay-site-horizontal-card col-md-4">
@@ -460,7 +460,7 @@ title: "Cards"
 	</div>
 </div>
 
-<p>Use classes <code>card-item-first</code> and <code>card-item-last</code> on elements that appear at the beginning or ending of your card. It styles the border-radius to match the card's border-radius. These classes work similar to Bootstrap 4's <code>.card-img-top</code> and <code>.card-img-bottom</code> but also covers left and right.</p>
+<p>To style the border-radius to match the card's border-radius, add the <code>card-item-first</code> and <code>card-item-last</code> classes to elements that appear at the beginning or end of the card, respectively. These classes work similar to Bootstrap 4's <code>.card-img-top</code> and <code>.card-img-bottom</code> classes, but they also cover the left and right.</p>
 
 <div class="row">
 	<div class="col-md-4 col-6">
@@ -518,7 +518,7 @@ title: "Cards"
 
 ### Clickable Checkbox Card
 
-<p>To make the whole card clickable just wrap the checkbox and card in:</p>
+<p>To make the whole card clickable, Wrap the checkbox and card in the markup shown below:</p>
 
 <div class="row">
 	<div class="col-4">
@@ -741,7 +741,7 @@ title: "Cards"
 
 ### Clickable Radio Card
 
-<p>To make the whole card clickable just wrap the radio input and card in:</p>
+<p>To make the whole card clickable, wrap the radio input and card in the markup shown below:</p>
 
 <div class="row">
 	<div class="col-4">
@@ -965,10 +965,10 @@ title: "Cards"
 
 ### Checkbox Card
 
-<p>We have created a pattern to add checkboxes to cards, just wrap the checkbox and card in:</p>
+<p>Follow the pattern below to add checkboxes to cards:</p>
 
 <div class="alert alert-warning">
-	Requires javascript to add and remove the <code>active</code> class when the input is checked/unchecked.
+	This pattern requires JavaScript to add and remove the <code>active</code> class when the input is checked/unchecked.
 </div>
 
 <div class="row">
@@ -1135,10 +1135,10 @@ title: "Cards"
 
 ### Radio Card
 
-<p>We have created a pattern to add radio inputs to cards, just wrap the radio input and card in:</p>
+<p>Follow the pattern below to add radio inputs to cards:</p>
 
 <div class="alert alert-warning">
-	Requires javascript to add and remove the <code>active</code> class when the input is checked/unchecked.
+	This pattern requires JavaScript to add and remove the <code>active</code> class when the input is checked/unchecked.
 </div>
 
 <div class="row">

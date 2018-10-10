@@ -4,7 +4,7 @@ title: "Inline Edit Table"
 
 ### Description
 
-A table variation that allows user to modify certain values of the entry without going to the detail page.
+A table variation that lets users modify certain values of the entry without going to the detail page.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Table/inlineEditTable.html">Inline Edit Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

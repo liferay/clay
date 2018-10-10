@@ -4,7 +4,7 @@ title: "Multi Step Form"
 
 ### Description
 
-A multi step form, also known as wizard, is a determinate progress bar. This progress bar is used in long processes dividing the main task in subtasks that will help your users completing the process.
+A multi step form, also known as a wizard, is a determinate progress bar used in long processes that divides the main task into subtasks. The wizard lets the user quickly identify their current progress in completing the task and navigate forwards and backwards between steps if needed.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/multiStepForm.html">Multi Step Form Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
