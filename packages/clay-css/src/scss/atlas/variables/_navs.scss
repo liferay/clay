@@ -44,5 +44,5 @@ $nav-underline-link-highlight-right: 0 !default;
 $nav-underline-link-disabled-color: $nav-link-disabled-color !default;
 
 $nav-underline-link-active-color: $body-color !default;
-$nav-underline-link-active-highlight: lighten($component-active-bg, 22.94) !default;
-$nav-underline-link-active-highlight-height: 0.25rem !default; // 4px
+$nav-underline-link-active-highlight: $component-active-bg !default;
+$nav-underline-link-active-highlight-height: 0.125rem !default; // 2px
