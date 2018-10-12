@@ -66,7 +66,10 @@ label {
 	background-clip: border-box;
 	border-color: $input-border-color;
 	border-style: $input-border-style;
-	border-width: $input-border-width;
+	border-bottom-width: $input-border-bottom-width;
+	border-left-width: $input-border-left-width;
+	border-right-width: $input-border-right-width;
+	border-top-width: $input-border-top-width;
 
 	@if not ($input-font-size == $font-size-base) {
 		font-size: $input-font-size;
@@ -121,7 +124,10 @@ label {
 
 .form-control-plaintext {
 	background-clip: border-box;
-	border-width: $input-border-width;
+	border-bottom-width: $input-border-bottom-width;
+	border-left-width: $input-border-left-width;
+	border-right-width: $input-border-right-width;
+	border-top-width: $input-border-top-width;
 
 	@if not ($input-font-size == $font-size-base) {
 		font-size: $input-font-size;

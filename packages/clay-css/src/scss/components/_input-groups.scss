@@ -106,7 +106,10 @@
 
 .input-group-text {
 	align-items: center;
-	border-width: $input-border-width;
+	border-bottom-width: $input-border-bottom-width;
+	border-left-width: $input-border-left-width;
+	border-right-width: $input-border-right-width;
+	border-top-width: $input-border-top-width;
 	color: $input-group-addon-color;
 	display: flex;
 	font-weight: $input-group-addon-font-weight;
@@ -205,9 +208,12 @@
 .input-group-inset-item {
 	align-items: center;
 	background-color: $input-bg;
+	border-bottom-width: $input-border-bottom-width;
 	border-color: $input-border-color;
+	border-left-width: $input-border-left-width;
+	border-right-width: $input-border-right-width;
 	border-style: solid;
-	border-width: $input-border-width;
+	border-top-width: $input-border-top-width;
 	display: flex;
 	padding-left: 5px;
 	padding-right: 5px;
