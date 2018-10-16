@@ -1,7 +1,7 @@
 body {
-	-moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: $body-moz-osx-font-smoothing;
 	-ms-overflow-style: scrollbar;
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: $body-webkit-font-smoothing;
 
 	@include clay-scale-component {
 		font-size: $font-size-base-mobile;

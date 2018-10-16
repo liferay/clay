@@ -32,6 +32,9 @@ $container-view: map-merge((
 
 // Fonts
 
+$moz-osx-font-smoothing: null !default;
+$webkit-font-smoothing: null !default;
+
 $font-import-url: null !default;
 
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
@@ -48,6 +51,9 @@ $h3-font-size-mobile: null !default;
 $h4-font-size-mobile: null !default;
 $h5-font-size-mobile: null !default;
 $h6-font-size-mobile: null !default;
+
+$body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
+$body-webkit-font-smoothing: $webkit-font-smoothing !default;
 
 // Z-Index Variables
 
