@@ -68,7 +68,7 @@ title: "Toggle Switch"
 
 ### Toggle Switch with Data Attributes
 
-Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>&lt;span class="toggle-switch-handle"&gt;&lt;/span&gt;</code> to display specific text when the switch is on and off.
+Use the <code>data-label-on=""</code> and <code>data-label-off=""</code> data attributes for the <code>&lt;span class="toggle-switch-handle"&gt;&lt;/span&gt;</code> element to display custom text when the switch is on and off.
 
 <div class="sheet">
 	<div class="form-group">
@@ -118,7 +118,7 @@ Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</c
 
 ### Toggle Switch Text
 
-Add additional text with class <code>toggle-switch-text</code>.
+You can display additional text with the toggle switch by adding the <code>toggle-switch-text</code> class to the text element. Use the `toggle-switch-text-left` and `toggle-switch-text-right` classes to position the text on the left and right side of the toggle switch, respectively.
 
 <div class="sheet">
     <div class="form-group">
@@ -244,9 +244,9 @@ Add additional text with class <code>toggle-switch-text</code>.
 
 ### Toggle Switches with Icons
 
-Add an icon to the switch for the on position with <code>&lt;span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"&gt;&lt;/span&gt;</code>.
+Add <code>&lt;span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"&gt;&lt;/span&gt;</code> to add an icon to the switch for the on position.
 
-Add an icon to the switch for the off position with <code>&lt;span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"&gt;&lt;/span&gt;</code>.
+Add <code>&lt;span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"&gt;&lt;/span&gt;</code> to add an icon to the switch for the off position.
 
 <div class="sheet">
 	<div class="form-group">
@@ -416,9 +416,9 @@ Add an icon to the switch for the off position with <code>&lt;span class="button
 
 ### Toggle Switches with Icons (Alternate)
 
-Add an icon to the switch for the on position with <code>&lt;span class="icon-ok toggle-switch-icon toggle-switch-icon-on"&gt;&lt;/span&gt;</code>.
+Alternatively, you can add <code>&lt;span class="icon-ok toggle-switch-icon toggle-switch-icon-on"&gt;&lt;/span&gt;</code> to add an icon to the switch for the on position.
 
-Add an icon to the switch for the off position with <code>&lt;span class="icon-remove toggle-switch-icon toggle-switch-icon-off"&gt;&lt;/span&gt;</code>.
+Alternatively, you can add <code>&lt;span class="icon-remove toggle-switch-icon toggle-switch-icon-off"&gt;&lt;/span&gt;</code> to add an icon to the switch for the off position.
 
 <div class="sheet">
     <div class="form-group">
@@ -466,7 +466,7 @@ Add an icon to the switch for the off position with <code>&lt;span class="icon-r
 
 ### Disabled Toggle Switches
 
-Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&lt;input type="checkbox"&gt;</code>.
+To disable a toggle-switch, add the <code>disabled</code> attribute to <code>&lt;input type="checkbox"&gt;</code>.
 
 <div class="sheet">
 	<div class="form-group">
@@ -634,29 +634,27 @@ Disable a toggle-switch by adding the attribute <code>disabled</code> to <code>&
 
 ### Extending Toggles
 
-This section is used to explain how customize toggles, use at your own risk.
+This section explains how to customize toggles. Use at your own risk.
 
 <img alt="explaining how switch works" style="width: 700px;" src="/images/switch_components.png"></img>
 
 #### Custom Toggle Switch using Images
 
-Customize:
+Customize the **toggle-switch button in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar:after {}</code>.
 
-the **toggle-switch button in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar:after {}</code>.
+Customize the **toggle-switch button icon in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {}</code>.
 
-the **toggle-switch button icon in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {}</code>.
+Customize the **toggle-switch bar in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar:before {}</code>.
 
-the **toggle-switch bar in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar:before {}</code>.
+Customize the **toggle-switch bar icon in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {}</code>.
 
-the **toggle-switch bar icon in the off** position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {}</code>.
+Customize the **toggle-switch button in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar:after {}</code>.
 
-the **toggle-switch button in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar:after {}</code>.
+Customize the **toggle-switch button icon in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon</code>.
 
-the **toggle-switch button icon in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon</code>.
+Customize the **toggle-switch bar in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar:before {}</code>.
 
-the **toggle-switch bar in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar:before {}</code>.
-
-the **toggle-switch bar icon in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {}</code>.
+Customize the **toggle-switch bar icon in the on** position with <code>.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {}</code>.
 
 <div class="form-group" id="demoToggleSwitch" style="margin-bottom:0;">
     <label class="toggle-switch">

@@ -48,9 +48,9 @@ title: "Nav"
 
 ### Nav Nested
 
-> Add class `nav-nested` to the outermost nav to use padding to indent each nested nav.
+> Add the `nav-nested` class to the outermost nav to indent each nested nav with padding.
 
-> Also collapsible when used with (http://getbootstrap.com/javascript/#collapse)[Bootstrap Collapse Plugin].
+> You can also use the (http://getbootstrap.com/javascript/#collapse)[Bootstrap Collapse Plugin] to make the nav collapsible.
 
 <div class="row">
 	<div class="col-md-6">
@@ -244,7 +244,7 @@ title: "Nav"
 
 ### Nav Nested Margins
 
-> `nav-nested-margins` uses margins instead of padding to indent.
+> Add the `nav-nested-margins` class to the outermost nav to indent each nested nav with margins instead of padding.
 
 <div class="row">
 	<div class="col-md-6">

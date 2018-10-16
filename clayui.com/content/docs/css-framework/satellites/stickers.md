@@ -62,7 +62,7 @@ Overlay content over stickers by nesting <code>sticker-overlay</code> inside <co
 
 ### Sticker Outside
 
-Add class <code>sticker-outside</code> in conjunction with sticker positions to position the sticker on the outside corners.
+Use the <code>sticker-outside</code> class along with sticker positions to position the sticker on the outside corners.
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-3 col-6">

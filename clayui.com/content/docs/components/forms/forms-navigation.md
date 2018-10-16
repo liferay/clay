@@ -4,13 +4,13 @@ title: "Forms Navigation"
 
 ### Description
 
-Forms can have navigation and this can appear in two different ways: left navigation menu or wizard.
+Form navigation can be displayed in two different ways: a left navigation menu or a wizard.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/formsNavigation.html">Forms Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Left navigation menu
 
-For more information and how to use the component, see the [Vertical Navigation](/docs/components/navigation/vertical-navigation.html) page.
+For more information on this component and how to use it, see the [Vertical Navigation](/docs/components/navigation/vertical-navigation.html) page.
 
 <div class="sheet">
 	<div class="form-group">
@@ -126,7 +126,7 @@ For more information and how to use the component, see the [Vertical Navigation]
 
 #### Multi Step Form
 
-For more information and how to use the component, see the [Multi Step Form](/docs/components/forms/multi-step-form.html) page.
+For more information on this component and how to use it, see the [Multi Step Form](/docs/components/forms/multi-step-form.html) page.
 
 <div class="sheet">
 	<ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top">
@@ -222,7 +222,7 @@ For more information and how to use the component, see the [Multi Step Form](/do
 
 #### Multi Step form Simplified
 
-For more information and how to use the component, see the [Multi Step form Simplified](/docs/components/forms/multi-step-form-simplified.html) page.
+For more information on this component and how to use it, see the [Multi Step form Simplified](/docs/components/forms/multi-step-form-simplified.html) page.
 
 <div class="sheet">
 	<div class="form-group">

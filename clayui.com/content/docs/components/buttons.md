@@ -259,7 +259,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Icon button
 
-> Buttons can icons instead of text and for that icons need to be monospaced inside the button. Lexicon do not use buttons with text and icon, or text and loading indicator. Icon buttons are used intensively in management bars. This button variation can be primary, secondary or borderless type.
+> Buttons can display icons instead of text. The icons, however, must be monospaced inside the button. Lexicon doesn't use buttons with text and icons or text and loading indicators. Icon buttons are used primarily in management bars. This button variation can be primary, secondary, or borderless type.
 
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
@@ -306,7 +306,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Icon and text button
 
-> This button type is used only in sites and not in administration. The icon emphasizes and helps to understand the action. The label must be the same icon purpose.
+> This button type is only used in sites, outside of administration. The icon emphasizes and helps communicate the action. The label must match the icon's purpose.
 
 <button class="btn btn-secondary" type="button">
 	<span class="inline-item inline-item-before">
@@ -346,7 +346,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Block level button
 
-> All buttons can also be configured at block level. Use this configuration in those cases that you need the user to realize there is an important action to be done. It could be used as a load more action below a list, as an example. Please do not use it in forms. Be always careful with the type button to use, primary is not always the best choice neither the only configuration.
+> Buttons can also be configured at block level. Use this configuration when you need to communicate an important action is required for the user. For example, it can be used as a load more action below a list. Please do not use it in forms. Choose the button type carefully. Primary is not always the best choice, nor is it the only configuration.
 
 <button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
 <button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
@@ -376,7 +376,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Dropdown button
 
-> Dropdown buttons are always used together with a dropdown menu. This button variation can be secondary or borderless type.
+> Dropdown buttons are always used with a dropdown menu. This button variation can be secondary or borderless type.
 
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
@@ -465,7 +465,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Split button
 
-> Split buttons are used in those cases where you need to offer the user a quick main action but also secondary actions.
+> Split buttons are used when you need to offer the user a quick main action along with secondary actions.
 
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
@@ -525,7 +525,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Button group
 
-> Button groups are used to switch between complementary views for example, but they must never be used for complementary actions and "Change and Cancel" or "Save and Cancel". In those cases the use of single buttons is the correct solution.
+> Button groups are used to switch between complementary views for example, but they must never be used for complementary actions, "Change and Cancel" actions, or "Save and Cancel" actions. In those cases, single buttons are the correct solution.
 
 <div class="btn-group" role="group">
 	<button class="btn btn-secondary" type="button">Day</button>
@@ -545,7 +545,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Plus button
 
-> Normally placed in toolbars, allows to have adding actions over a dataset. The kind of elements to add with this button are of the same nature and folders. Sometimes it only has a unique action, some others it has more. Visit Dropdown menu > Sorting actions to know more.
+> Plus buttons provide add actions for a dataset and are normally placed in toolbars. The add button lets you add entities, such as a blog post for a blog, a message board thread for a message board, or a folder. It can have one action or multiple. Visit Dropdown menu > Sorting actions to learn more.
 
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
@@ -574,7 +574,7 @@ Buttons communicate an action to happen on user interaction.
 
 #### Action button
 
-> It is used when a set of contextual actions are needed over an element or a dataset. This button displays a set of actions inside a dropdown menu. The actions must be sorted in an specific way, please visit Dropdown menu > Sorting actions to know more.
+> Action buttons are used when a set of contextual actions are needed for an element or a dataset. This button displays a set of actions inside a dropdown menu. The actions must be sorted in a specific way. please visit Dropdown menu > Sorting actions to learn more.
 
 <button class="btn btn-monospaced btn-sm btn-unstyled" type="button">
 	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">

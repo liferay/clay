@@ -4,7 +4,7 @@ title: "Progress Bars"
 
 ### Progress Groups
 
-Place an addon on either side of a progress component with <code>progress-group</code> and <code>progress-group-addon</code>.
+Add the <code>progress-group</code> and <code>progress-group-addon</code> classes to a progress component to place an addon on either side of it.
 
 <div class="progress-group">
 	<div class="progress">
@@ -125,7 +125,7 @@ Place an addon on either side of a progress component with <code>progress-group<
 
 ### Progress Group Stacked
 
-Add <code>progress-group-stacked</code> to <code>progress-group</code> stack the addons and progress component.
+Add the <code>progress-group-stacked</code> class to a <code>progress-group</code> element to stack the addons and progress component.
 
 <div class="progress-group progress-group-stacked">
     <div class="progress-group-addon">60% Completed</div>
@@ -201,10 +201,10 @@ Add <code>progress-group-stacked</code> to <code>progress-group</code> stack the
 
 ### Progress Variants
 
-Add <code>progress-danger</code>, <code>progress-info</code>, <code>progress-success</code>, or <code>progress-warning</code> to <code>progress-group</code> or <code>progress</code> to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with <code>progress-group-feedback</code>.
+Add the <code>progress-danger</code>, <code>progress-info</code>, <code>progress-success</code>, or <code>progress-warning</code> class to a <code>progress-group</code> or <code>progress</code> element to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with the <code>progress-group-feedback</code> class.
 
 <div class="alert alert-warning">
-	Using the variant classes will set the <code>background-color</code> on <code>progress-bar</code>, no need to use Bootstrap 4 background utility classes.
+	The variant classes set the <code>background-color</code> for a <code>progress-bar</code>, so Bootstrap 4 background utility classes are not required.
 </div>
 
 ###### Progress
@@ -399,7 +399,7 @@ Add <code>progress-danger</code>, <code>progress-info</code>, <code>progress-suc
 
 ###### Multiple Progress Bars
 
-If you need multiple progress bars, use Bootstrap 4's background utilities, <code>bg-primary</code>, <code>bg-success</code>, <code>bg-info</code>, <code>bg-warning</code>, and <code>bg-danger</code> on <code>progress-bar</code>.
+If you need multiple progress bars, use Bootstrap 4's background utilities: <code>bg-primary</code>, <code>bg-success</code>, <code>bg-info</code>, <code>bg-warning</code>, and <code>bg-danger</code> on <code>progress-bar</code>.
 
 <div class="progress">
     <div class="bg-success progress-bar progress-bar-striped" style="width: 25%">25%</div>

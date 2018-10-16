@@ -10,7 +10,7 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 
 ### Breadcrumbs
 
-> A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.
+> A navigation aid for your site that provides a quick way to jump back to previously viewed pages or sections.
 
 > Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to truncate text based on a max-width.
 

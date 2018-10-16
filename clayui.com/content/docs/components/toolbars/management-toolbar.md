@@ -4,7 +4,7 @@ title: "Management Toolbar"
 
 ### Description
 
-Management toolbar is an extension of Toolbar. A combination of different components as filters, orders, search, visualization select and other actions, that allow to manage dataset.
+Management toolbar is an extension of Toolbar. It is a combination of different components as filters, orders, search, visualization select, and other actions that let users manage a dataset.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Toolbars/management_bar.html">Management Toolbar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

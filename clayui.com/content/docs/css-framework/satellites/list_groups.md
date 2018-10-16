@@ -246,7 +246,7 @@ title: "List Groups"
 
 ### List Group Bordered
 
-<p>Use <code>.list-group-bordered</code> on <code>.list-group</code> to style <code>.list-group-item-flex</code> like a table.</p>
+<p>Add the <code>.list-group-bordered</code> class to a <code>.list-group</code> element to style <code>.list-group-item-flex</code> like a table.</p>
 
 <ul class="list-group list-group-bordered show-quick-actions-on-hover">
 	<li class="list-group-item list-group-item-flex">

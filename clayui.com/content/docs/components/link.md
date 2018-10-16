@@ -10,7 +10,7 @@ Also known as hyperlink, the link is a clickable (text or image) element used fo
 
 ### Inline Link
 
-This is a <a aria-label="inline link" href="#link-styles">inline link</a> example.
+This is an <a aria-label="inline link" href="#link-styles">inline link</a> example.
 
 ```soy
 {call ClayLink}

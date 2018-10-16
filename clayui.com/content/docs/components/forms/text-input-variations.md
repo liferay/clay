@@ -4,7 +4,7 @@ title: "Text Input Variations"
 
 ### Description
 
-A description of the search, autocomplete, labels input, date, numeric and password input variations.
+This section demonstrates the search, autocomplete, labels input, date, numeric, and password input variations.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input_variations.html">Text Input Variations</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

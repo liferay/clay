@@ -4,7 +4,7 @@ title: "Modals"
 
 ### Description
 
-A modal is a box with content displayed on top of the page to capture the userâ€™s attention for an specific action inside the same process. Modals are subordinated to pages.
+A modal displays content in a box on top of the page to capture the userâ€™s attention for a specific action inside the same process. Modals are subordinated to pages.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/modals.html">Modals Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -12,7 +12,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Small Modal
 
-> 300px wide modal window, expands full width of screen at 575px and below.
+> The small modal is a 300px wide window that expands full screen width on displays 575px and below.
 
 <button class="btn btn-primary" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
@@ -101,7 +101,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Default Modal
 
-> 500px wide modal window, expands full width of screen at 575px and below.
+> The default modal is a 500px wide window that expands full screen width on displays 575px and below.
 
 <button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
@@ -188,9 +188,9 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Large Modal
 
-> 800px wide modal in window sizes greater than 992px.
-> 500px wide modal in window sizes between 576px and 991px.
-> Full width of screen at 575px and below.
+> The large modal is an 800px wide window on displays greater than 992px.
+> It is a 500px wide modal on displays between 576px and 991px.
+> It expands full screen width on displays 575px and below.
 
 <button class="btn btn-primary" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
@@ -279,7 +279,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Full Screen Modal
 
-> A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.
+> The full screen modal stretches to fit the browser window, with 45px spacing on every side, and expands to fill the screen on displays 767px and below.
 
 <button class="btn btn-primary" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
@@ -608,7 +608,7 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Modal Full Screen Sm Down
 
-> Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the browser window at screen widths 767px and below.
+> Add the `modal-full-screen-sm-down` class to any `modal-dialog` element to make it stretch to fit the browser window on displays 767px and below.
 
 <button class="btn btn-primary" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
 <div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
@@ -703,11 +703,11 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 ### Configurations
 
-> Lexicon allows your modal window to have different configurations related to your needs. These needs vary from case to case and that is why not every modal in the system needs to be equal, but needs to follow certain rules.
+> Lexicon allows your modal window to have different configurations to suite your needs. Because these needs can vary greatly, there are certain rules your modal must follow.
 
 #### Header, body and footer
 
-> This is the classic composition of a modal window with its three main parts: header, body and footer.
+> A classic modal window is composed of three main parts: header, body, and footer.
 
 <button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
@@ -794,14 +794,14 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Header and body
 
-> This is the case when you don't need a footer bar to place your icons.
+> When you don't need a footer bar to place your icons, you can just have a header and body element in your modal, as shown below:
 
-<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
-<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
+<button class="btn btn-primary" data-target="#clayHeaderBodyModal" data-toggle="modal" type="button">Default Modal</button>
+<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayHeaderBodyModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
+				<div class="modal-title" id="clayHeaderBodyModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use href="/images/icons/icons.svg#times" />
@@ -833,12 +833,12 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
-<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
+<button class="btn btn-primary" data-target="#clayHeaderBodyModal" data-toggle="modal" type="button">Default Modal</button>
+<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayHeaderBodyModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
+				<div class="modal-title" id="clayHeaderBodyModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use href="/images/icons/icons.svg#times" />
@@ -855,10 +855,10 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Body and footer
 
-> This case is thought for those cases where you need to just show text and buttons to agree or cancel.
+> When you just need to show text and buttons to agree or cancel, you can just have a body and footer element in your modal, as shown below:.
 
-<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
-<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
+<button class="btn btn-primary" data-target="#clayBodyFooterModal" data-toggle="modal" type="button">Default Modal</button>
+<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayBodyFooterModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -898,8 +898,8 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 </clay-modal>
 ```
 ```html
-<button class="btn btn-primary" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
-<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
+<button class="btn btn-primary" data-target="#clayBodyFooterModal" data-toggle="modal" type="button">Default Modal</button>
+<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayBodyFooterModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -924,11 +924,11 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Iframe in the body
 
-> It is always possible to bring an iFrame inside the body.
+> You can add an iFrame to the modal body.
 
-> `modal-body-iframe` is a `modal-body` helper class that sizes and styles an iframe nested inside modal-body. Add it to modal-body when you want the iframe to be the same width and height as modal-body.
+> Add the `modal-body-iframe` class to a `modal-body` element when you want the iframe to be the same width and height as the `modal-body` element.
 
-<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
+<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow causes the iframe to scroll to the top.</div>
 
 <button class="btn btn-primary" data-target="#clayFullScreenModalIframe" data-toggle="modal" type="button">Full Screen Modal Iframe</button>
 <div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
@@ -1013,9 +1013,9 @@ A modal is a box with content displayed on top of the page to capture the userâ€
 
 #### Modal for status messages
 
-> Modal headers can be configured to use modals as status messages. This solution is proposed to give more emphasis on blocking actions that the use must read and pay careful attention.
+> Modal headers can be configured to use modals as status messages. This emphasizes blocking actions that the user must read and pay careful attention to.
 
-`modal-danger`, `modal-info`, `modal-success`, or `modal-warning` are helper classes that style a modal based on that state, add it to modal-dialog.
+Add one of the following helper classes to the `modal-dialog` element to style is with corresponding state: `modal-danger`, `modal-info`, `modal-success`, or `modal-warning`.
 
 <button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>
 <div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">

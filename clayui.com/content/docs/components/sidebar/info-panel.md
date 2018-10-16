@@ -4,7 +4,7 @@ title: "Info Panel"
 
 ### Description
 
-An information container that displays additional data from the one shown in the main visualization pattern.
+An information container that displays additional data for the content displayed in the main visual area.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/satellites/Sidebar/infopanel.html">Info Panel Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
