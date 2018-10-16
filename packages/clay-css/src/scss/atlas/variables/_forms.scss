@@ -6,11 +6,12 @@ $input-label-margin-bottom: 0.25rem !default; // 4px
 
 $input-label-reference-mark-font-size: 6px !default;
 
-$input-border-bottom-width: 0.0625rem !default; // 1px
-$input-border-left-width: 0.0625rem !default; // 1px
-$input-border-right-width: 0.0625rem !default; // 1px
-$input-border-top-width: 0.0625rem !default; // 1px
-$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
+$input-border-width: 0.0625rem !default; // 1px
+
+$input-border-bottom-width: $input-border-width !default; // 1px
+$input-border-left-width: $input-border-width !default; // 1px
+$input-border-right-width: $input-border-width !default; // 1px
+$input-border-top-width: $input-border-width !default; // 1px
 
 $input-border-style: solid !default;
 
