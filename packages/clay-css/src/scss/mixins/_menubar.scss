@@ -140,12 +140,18 @@
 
 	// .nav-link
 
+	$link-bg: map-get($map, link-bg);
+	$link-border-radius: map-get($map, link-border-radius);
 	$link-color: setter(map-get($map, link-color), $navbar-light-color);
+	$link-hover-bg: map-get($map, link-hover-bg);
 	$link-hover-color: setter(map-get($map, link-hover-color), $navbar-light-hover-color);
+	$link-active-bg: map-get($map, link-active-bg);
 	$link-active-color: setter(map-get($map, link-active-color), $navbar-light-active-color);
 	$link-active-font-weight: map-get($map, link-active-font-weight);
+	$link-disabled-bg: map-get($map, link-disabled-bg);
 	$link-disabled-color: setter(map-get($map, link-disabled-color), $navbar-light-disabled-color);
 
+	$link-border-radius-mobile: map-get($map, link-border-radius-mobile);
 	$link-color-mobile: setter(map-get($map, link-color-mobile), $dropdown-link-color);
 
 	$link-hover-bg-mobile: setter(map-get($map, link-hover-bg-mobile), $dropdown-link-hover-bg);
@@ -208,14 +214,17 @@
 	}
 
 	.nav-link {
+		background-color: $link-bg;
+		border-radius: $link-border-radius;
 		color: $link-color;
 
-		&:hover,
-		&:focus {
+		&:hover {
+			background-color: $link-hover-bg;
 			color: $link-hover-color;
 		}
 
 		@include media-breakpoint-down($breakpoint-down) {
+			border-radius: $link-border-radius-mobile;
 			color: $link-color-mobile;
 
 			&:hover {
@@ -225,6 +234,7 @@
 		}
 
 		&.active {
+			background-color: $link-active-bg;
 			color: $link-active-color;
 			font-weight: $link-active-font-weight;
 
@@ -236,6 +246,7 @@
 		}
 
 		&.disabled {
+			background-color: $link-disabled-bg;
 			color: $link-disabled-color;
 
 			@include media-breakpoint-down($breakpoint-down) {

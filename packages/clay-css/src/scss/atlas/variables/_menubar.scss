@@ -3,6 +3,10 @@
 $menubar-vertical-transparent-md: () !default;
 $menubar-vertical-transparent-md: map-merge((
 	bg-mobile: #FFF,
+	link-border-radius: 0.375rem,
+	link-border-radius-mobile: 0,
+	link-hover-bg: rgba(#272833, 0.03),
+	link-hover-color: #272833,
 	link-active-font-weight: $font-weight-semi-bold,
 	toggler-font-size-mobile: 0.875rem,
 	toggler-font-weight-mobile: $font-weight-semi-bold
@@ -13,6 +17,10 @@ $menubar-vertical-transparent-md: map-merge((
 $menubar-vertical-transparent-lg: () !default;
 $menubar-vertical-transparent-lg: map-merge((
 	bg-mobile: #FFF,
+	link-border-radius: 0.375rem,
+	link-border-radius-mobile: 0,
+	link-hover-bg: rgba(#272833, 0.03),
+	link-hover-color: #272833,
 	link-active-font-weight: $font-weight-semi-bold,
 	toggler-font-size-mobile: 0.875rem,
 	toggler-font-weight-mobile: $font-weight-semi-bold
