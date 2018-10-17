@@ -237,10 +237,21 @@
 // Dropdown Menu with Indicators
 
 .dropdown-menu-indicator-start {
+	// `.dropdown-item-indicator` is deprecated in v2.3.5 use
+	// `.dropdown-item-indicator-start` instead
 	.dropdown-item-indicator {
 		height: $dropdown-item-indicator-size;
 		left: $dropdown-item-padding-x;
 		position: absolute;
+		top: $dropdown-item-padding-y;
+		width: $dropdown-item-indicator-size;
+	}
+
+	.dropdown-item-indicator-start {
+		height: $dropdown-item-indicator-size;
+		left: $dropdown-item-padding-x;
+		position: absolute;
+		right: auto;
 		top: $dropdown-item-padding-y;
 		width: $dropdown-item-indicator-size;
 	}
@@ -254,7 +265,16 @@
 }
 
 .dropdown-menu-indicator-end {
+	// `.dropdown-item-indicator` is deprecated in v2.3.5 use
+	// `.dropdown-item-indicator-end` instead
 	.dropdown-item-indicator {
+		position: absolute;
+		right: $dropdown-item-padding-x;
+		top: $dropdown-item-padding-y;
+	}
+
+	.dropdown-item-indicator-end {
+		left: auto;
 		position: absolute;
 		right: $dropdown-item-padding-x;
 		top: $dropdown-item-padding-y;
