@@ -45,7 +45,9 @@ button.link-outline {
 		text-decoration: none;
 	}
 
+	.inline-item .lexicon-icon-container,
 	.inline-item .lexicon-icon,
+	.lexicon-icon-container,
 	.lexicon-icon {
 		margin-top: 0;
 	}
@@ -73,7 +75,9 @@ button.link-outline {
 	vertical-align: middle;
 	width: $link-monospaced-size;
 
+	.inline-item .lexicon-icon-container,
 	.inline-item .lexicon-icon,
+	.lexicon-icon-container,
 	.lexicon-icon {
 		margin-top: 0;
 	}

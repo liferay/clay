@@ -75,7 +75,9 @@
 	padding: 0;
 	text-align: center;
 
+	.inline-item .lexicon-icon-container,
 	.inline-item .lexicon-icon,
+	.lexicon-icon-container,
 	.lexicon-icon {
 		margin-top: 0;
 	}

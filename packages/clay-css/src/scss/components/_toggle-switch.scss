@@ -13,6 +13,14 @@
 	.toggle-switch-icon {
 		font-size: $toggle-switch-bar-font-size;
 
+		.lexicon-icon-container {
+			margin-top: -0.2em;
+
+			.lexicon-icon {
+				margin-top: 0;
+			}
+		}
+
 		.lexicon-icon {
 			margin-top: -0.2em;
 		}

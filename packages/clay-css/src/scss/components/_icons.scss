@@ -1,9 +1,21 @@
+.lexicon-icon-container {
+	display: inline-block;
+	height: $lexicon-icon-size;
+	margin-top: -3px;
+	vertical-align: middle;
+	width: $lexicon-icon-size;
+
+	.lexicon-icon {
+		display: block;
+		margin-top: 0;
+	}
+}
+
 .lexicon-icon {
 	display: inline-block;
 	fill: currentColor;
 	height: $lexicon-icon-size;
 	margin-top: -3px;
-	pointer-events: none;
 	vertical-align: middle;
 	width: $lexicon-icon-size;
 }
@@ -43,6 +55,7 @@ a.collapse-icon {
 .collapse-icon-open {
 	.lexicon-icon {
 		display: block;
+		margin-top: 0;
 	}
 }
 
@@ -52,14 +65,11 @@ a.collapse-icon {
 		bottom: $collapse-icon-position-bottom;
 		height: 1em;
 		left: $collapse-icon-position-left;
+		line-height: 1;
 		position: absolute;
 		right: $collapse-icon-position-right;
 		top: $collapse-icon-position-top;
 		width: 1em;
-
-		.lexicon-icon {
-			margin-top: 0;
-		}
 	}
 
 	.collapse-icon-closed {

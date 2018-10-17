@@ -59,6 +59,8 @@
 			color: $asset-icon-color;
 			width: $asset-icon-width;
 
+			> .lexicon-icon-container,
+			> .lexicon-icon-container .lexicon-icon,
 			> .lexicon-icon {
 				height: 100%;
 				width: 100%;

@@ -21,6 +21,9 @@
 	padding-right: $padding-x;
 	padding-top: $padding-y;
 
+
+	// Inline Item in Badges are deprecated in v2.0.0-rc.11 use .badge-item
+	// pattern instead
 	.inline-item {
 		a,
 		.btn-unstyled,
@@ -32,6 +35,15 @@
 			}
 		}
 
+		.lexicon-icon {
+			height: $lexicon-icon-height;
+			margin-top: $lexicon-icon-margin-top;
+			width: $lexicon-icon-width;
+		}
+	}
+
+	.badge-item {
+		.lexicon-icon-container,
 		.lexicon-icon {
 			height: $lexicon-icon-height;
 			margin-top: $lexicon-icon-margin-top;

@@ -110,6 +110,7 @@ a.label {
 		@include clay-link($label-close);
 	}
 
+	.lexicon-icon-container,
 	.lexicon-icon {
 		height: $label-lexicon-icon-height;
 		margin-top: $label-lexicon-icon-margin-top;

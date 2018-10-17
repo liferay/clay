@@ -30,6 +30,8 @@
 	padding-top: $padding-y;
 	text-transform: $text-transform;
 
+	// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
+	// pattern instead
 	.inline-item {
 		a,
 		.btn-unstyled,
@@ -37,6 +39,15 @@
 			margin-top: $lexicon-icon-margin-top;
 		}
 
+		.lexicon-icon {
+			height: $lexicon-icon-height;
+			margin-top: $lexicon-icon-margin-top;
+			width: $lexicon-icon-width;
+		}
+	}
+
+	.label-item {
+		.lexicon-icon-container,
 		.lexicon-icon {
 			height: $lexicon-icon-height;
 			margin-top: $lexicon-icon-margin-top;

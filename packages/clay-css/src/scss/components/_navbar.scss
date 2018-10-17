@@ -132,6 +132,10 @@
 	padding: $navbar-brand-padding-y $navbar-nav-link-padding-x;
 	position: relative;
 
+	.lexicon-icon-container {
+		margin-top: 0;
+	}
+
 	.lexicon-icon {
 		min-width: 1em;
 		margin-left: 3px;

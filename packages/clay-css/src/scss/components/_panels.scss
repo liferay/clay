@@ -47,6 +47,13 @@
 		right: $panel-header-collapse-icon-right;
 		top: $panel-header-collapse-icon-top;
 	}
+
+	&.collapse-icon-middle {
+		.collapse-icon-closed,
+		.collapse-icon-open {
+			top: 50%;
+		}
+	}
 }
 
 .panel-header-link {

@@ -180,8 +180,11 @@
 		}
 	}
 
-	&.btn .lexicon-icon {
-		margin-top: 0;
+	&.btn {
+		.lexicon-icon-container,
+		.lexicon-icon {
+			margin-top: 0;
+		}
 	}
 }
 

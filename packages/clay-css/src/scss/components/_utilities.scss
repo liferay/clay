@@ -268,8 +268,13 @@
 		display: inline;
 	}
 
+	.lexicon-icon-container,
 	.lexicon-icon {
 		margin-top: $inline-item-lexicon-icon-margin-top;
+	}
+
+	.lexicon-icon-container .lexicon-icon {
+		margin-top: 0;
 	}
 }
 
