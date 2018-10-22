@@ -274,6 +274,11 @@
 		margin: 0;
 	}
 
+	.management-bar-item-inline-block {
+		display: inline-block;
+		float: left;
+	}
+
 	> li {
 		@media (min-width: $grid-float-breakpoint) {
 			float: left;
