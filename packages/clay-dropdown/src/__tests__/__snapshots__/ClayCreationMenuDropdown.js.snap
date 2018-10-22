@@ -609,6 +609,54 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 `;
 
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only secondary items and less than default secondary maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" ref="triggerButton" title="new" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li class="dropdown-subheader" role="presentation">primary1</li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only secondary items and more than default secondary maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" ref="triggerButton" title="new" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li class="dropdown-subheader" role="presentation">primary1</li>
+  </ul>
+</div>
+`;
+
+exports[`ClayCreationMenuDropdown should render a creation menu dropdown with only secondary items and the same as default secondary maximum 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" ref="triggerButton" title="new" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+      <title>plus</title>
+      <use xlink:href="icons.svg#plus"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li class="dropdown-subheader" role="presentation">primary1</li>
+  </ul>
+</div>
+`;
+
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown with primary and secondary items with only one group and primary items are less than default primary maximum and secondary items are less than default secondary maximum and together less than default total maximum 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-primary" ref="triggerButton" title="new" type="button">
