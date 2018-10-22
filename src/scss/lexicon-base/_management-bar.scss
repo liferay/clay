@@ -274,6 +274,17 @@
 		margin: 0;
 	}
 
+	.management-bar-item-xs-inline-block {
+		@media (max-width: $grid-float-breakpoint-max) {
+			display: inline-block;
+			vertical-align: top;
+
+			+ .management-bar-item-xs-inline-block {
+				margin-left: -4px;
+			}
+		}
+	}
+
 	> li {
 		@media (min-width: $grid-float-breakpoint) {
 			float: left;
