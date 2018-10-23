@@ -1,19 +1,29 @@
 import React from 'react';
 import BillboardChart from 'react-billboardjs';
-import GeoMap from './react/GeoMap';
+import GeoMap from './GeoMap';
+import Predictive from './Predictive';
 
-import {
+import {config} from 'clay-chart-shared';
+
+const {
 	DEFAULT_COLORS,
 	DEFAULT_GRID_OBJECT,
 	DEFAULT_LINE_CLASSES,
 	DEFAULT_POINT_PATTERNS,
-} from '../ChartBase';
+} = config;
 
 import '../scss/main.scss';
 
 export default class extends React.Component {
 	render() {
-		const {color, data, grid, line, point, ...otherProps} = this.props;
+		const {
+			color,
+			data,
+			grid,
+			line,
+			point,
+			...otherProps
+		} = this.props;
 
 		let ChartComponent;
 		let props = {data, ...otherProps};
@@ -21,6 +31,9 @@ export default class extends React.Component {
 		switch (data.type) {
 			case 'geo-map':
 				ChartComponent = GeoMap;
+				break;
+			case 'predictive':
+				ChartComponent = Predictive;
 				break;
 			default:
 				ChartComponent = BillboardChart;
@@ -31,8 +44,14 @@ export default class extends React.Component {
 				{...otherProps}
 				data={data}
 				grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
-				color={Object.assign({pattern: DEFAULT_COLORS}, color)}
-				line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
+				color={Object.assign(
+					{pattern: DEFAULT_COLORS},
+					color
+				)}
+				line={Object.assign(
+					{classes: DEFAULT_LINE_CLASSES},
+					line
+				)}
 				point={Object.assign(
 					{
 						pattern: DEFAULT_POINT_PATTERNS,

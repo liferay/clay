@@ -1,0 +1,16 @@
+{
+  "name": "clay-charts-shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/all.js",
+  "scripts": {
+    "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/ -s --ignore src/__tests__"
+  },
+  "author": "Bryce Osterhaus",
+  "license": "BSD",
+  "dependencies": {
+    "d3": "^5.7.0",
+    "metal": "^2.16.6"
+  }
+}

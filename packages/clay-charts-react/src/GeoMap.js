@@ -1,5 +1,5 @@
 import React from 'react';
-import {Geomap} from '../util/geo-map';
+import {geomap} from 'clay-charts-shared';
 
 export default class GeomapReact extends React.Component {
 	constructor(props) {
@@ -8,7 +8,7 @@ export default class GeomapReact extends React.Component {
 		this._containerRef = React.createRef();
 	}
 	componentDidMount() {
-		this._geoMapInstance = new Geomap({
+		this._geoMapInstance = new geomap.Geomap({
 			...this.props,
 			element: this._containerRef.current,
 		});
