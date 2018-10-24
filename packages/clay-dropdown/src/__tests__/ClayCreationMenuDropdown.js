@@ -234,111 +234,181 @@ describe('ClayCreationMenuDropdown', function() {
 						describe('and secondary items are less', () => {
 							describe('than default secondary maximum', () => {
 								it('and together less than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										primaryItems: getItems(5, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(5, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											primaryItems: getItems(
+												5,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														5,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together less than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxTotalItems: 12,
-										primaryItems: getItems(5, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(6, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxTotalItems: 12,
+											primaryItems: getItems(
+												5,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														6,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxTotalItems: 10,
-										primaryItems: getItems(5, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(6, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxTotalItems: 10,
+											primaryItems: getItems(
+												5,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														6,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 							});
 
 							describe('than passed secondary maximum', () => {
 								it('and together less than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 9,
-										primaryItems: getItems(5, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(8, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 9,
+											primaryItems: getItems(
+												5,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														8,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together less than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 9,
-										maxTotalItems: 14,
-										primaryItems: getItems(5, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(8, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 9,
+											maxTotalItems: 14,
+											primaryItems: getItems(
+												5,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														8,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 10,
-										primaryItems: getItems(7, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(9, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 10,
+											primaryItems: getItems(
+												7,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														9,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 11,
-										maxTotalItems: 16,
-										primaryItems: getItems(7, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(10, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 11,
+											maxTotalItems: 16,
+											primaryItems: getItems(
+												7,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														10,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 							});
 						});
@@ -358,125 +428,205 @@ describe('ClayCreationMenuDropdown', function() {
 						describe('and secondary items are less', () => {
 							describe('than default secondary maximum', () => {
 								it('and together less than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										primaryItems: getItems(9, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(5, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											primaryItems: getItems(
+												9,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														5,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together less than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxTotalItems: 17,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(6, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxTotalItems: 17,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														6,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(6, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														6,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxTotalItems: 12,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(6, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxTotalItems: 12,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														6,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 							});
 
 							describe('than passed secondary maximum', () => {
 								it('and together less than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 5,
-										primaryItems: getItems(9, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(4, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 5,
+											primaryItems: getItems(
+												9,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														4,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together less than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 5,
-										maxTotalItems: 17,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(4, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 5,
+											maxTotalItems: 17,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														4,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 8,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(6, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 8,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														6,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 8,
-										maxTotalItems: 12,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(6, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 8,
+											maxTotalItems: 12,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														6,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 							});
 						});
@@ -484,111 +634,181 @@ describe('ClayCreationMenuDropdown', function() {
 						describe('and secondary items are more', () => {
 							describe('than default secondary maximum', () => {
 								it('and together less than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxTotalItems: 19,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(8, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxTotalItems: 19,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														8,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(8, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														8,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxTotalItems: 17,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(8, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxTotalItems: 17,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														8,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 							});
 
 							describe('than passed secondary maximum', () => {
 								it('and together less than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 4,
-										primaryItems: getItems(9, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(5, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 4,
+											primaryItems: getItems(
+												9,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														5,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together less than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 4,
-										maxTotalItems: 19,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(8, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 4,
+											maxTotalItems: 19,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														8,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than default total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 10,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(12, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 10,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														12,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 
 								it('and together more than passed total maximum', () => {
-									clayCreationMenuDropdown = new ClayCreationMenuDropdown({
-										maxSecondaryItems: 10,
-										maxTotalItems: 20,
-										primaryItems: getItems(10, 'primary'),
-										secondaryItems: [
-											{
-												items: getItems(12, 'secondary'),
-											},
-										],
-										spritemap: 'icons.svg',
-									});
+									clayCreationMenuDropdown = new ClayCreationMenuDropdown(
+										{
+											maxSecondaryItems: 10,
+											maxTotalItems: 20,
+											primaryItems: getItems(
+												10,
+												'primary'
+											),
+											secondaryItems: [
+												{
+													items: getItems(
+														12,
+														'secondary'
+													),
+												},
+											],
+											spritemap: 'icons.svg',
+										}
+									);
 
-									expect(clayCreationMenuDropdown).toMatchSnapshot();
+									expect(
+										clayCreationMenuDropdown
+									).toMatchSnapshot();
 								});
 							});
 						});
@@ -656,8 +876,8 @@ describe('ClayCreationMenuDropdown', function() {
 				const spy = jest.spyOn(clayCreationMenuDropdown, 'emit');
 
 				const element =
-					clayCreationMenuDropdown.refs.dropdown.refs.portal.refs.dropdownButton
-						.element;
+					clayCreationMenuDropdown.refs.dropdown.refs.portal.refs
+						.dropdownButton.element;
 				element.click();
 
 				expect(spy).toHaveBeenCalled();

@@ -3,7 +3,7 @@ import BillboardChart from 'react-billboardjs';
 import GeoMap from './GeoMap';
 import Predictive from './Predictive';
 
-import {config} from 'clay-charts-shared';
+import { config } from 'clay-charts-shared';
 
 const {
 	DEFAULT_COLORS,
@@ -14,10 +14,10 @@ const {
 
 export default class extends React.Component {
 	render() {
-		const {color, data, grid, line, point, ...otherProps} = this.props;
+		const { color, data, grid, line, point, ...otherProps } = this.props;
 
 		let ChartComponent;
-		let props = {data, ...otherProps};
+		let props = { data, ...otherProps };
 
 		switch (data.type) {
 			case 'geo-map':
@@ -35,8 +35,8 @@ export default class extends React.Component {
 				{...otherProps}
 				data={data}
 				grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
-				color={Object.assign({pattern: DEFAULT_COLORS}, color)}
-				line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
+				color={Object.assign({ pattern: DEFAULT_COLORS }, color)}
+				line={Object.assign({ classes: DEFAULT_LINE_CLASSES }, line)}
 				point={Object.assign(
 					{
 						pattern: DEFAULT_POINT_PATTERNS,

@@ -14,13 +14,23 @@ class Geomap extends Component {
 	attached() {
 		const config = this.getInitialConfig();
 
-		console.log(Object.assign({
-			element: this.element,
-		}, config))
+		console.log(
+			Object.assign(
+				{
+					element: this.element,
+				},
+				config
+			)
+		);
 
-		this._geoMapInstance = new geomap.Geomap(Object.assign({
-			element: this.element,
-		}, config));
+		this._geoMapInstance = new geomap.Geomap(
+			Object.assign(
+				{
+					element: this.element,
+				},
+				config
+			)
+		);
 
 		this._geoMapInstance.attached();
 	}

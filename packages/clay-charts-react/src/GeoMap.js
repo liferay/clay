@@ -1,5 +1,5 @@
 import React from 'react';
-import {geomap} from 'clay-charts-shared';
+import { geomap } from 'clay-charts-shared';
 
 export default class GeomapReact extends React.Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ export default class GeomapReact extends React.Component {
 	}
 
 	componentDidMount() {
-		const {data, ...otherProps} = this.props;
+		const { data, ...otherProps } = this.props;
 
 		this._geoMapInstance = new geomap.Geomap({
 			...otherProps,
@@ -33,13 +33,13 @@ export default class GeomapReact extends React.Component {
 			...otherProps
 		} = this.props;
 
-		const {height = '100%', width = '100%'} = this._geoMapInstance
+		const { height = '100%', width = '100%' } = this._geoMapInstance
 			? this._geoMapInstance.getSize()
 			: {};
 
 		return (
 			<div
-				style={{height, width}}
+				style={{ height, width }}
 				{...otherProps}
 				ref={this._containerRef}
 			/>

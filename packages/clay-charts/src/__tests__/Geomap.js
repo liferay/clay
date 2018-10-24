@@ -21,7 +21,9 @@ describe('Geomap', () => {
 	beforeEach(() => {
 		global.fetch = jest.fn().mockImplementation(() =>
 			Promise.resolve({
-				json: jest.fn().mockImplementation(() => Promise.resolve(mockData)),
+				json: jest
+					.fn()
+					.mockImplementation(() => Promise.resolve(mockData)),
 			})
 		);
 	});

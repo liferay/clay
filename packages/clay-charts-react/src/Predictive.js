@@ -1,5 +1,5 @@
 import React from 'react';
-import {isDefAndNotNull, isString, isNumber} from 'metal';
+import { isDefAndNotNull, isString, isNumber } from 'metal';
 import BillboardChart from 'react-billboardjs';
 
 /**
@@ -47,8 +47,8 @@ export default class PredictiveChart extends React.Component {
 	}
 
 	render() {
-		const {columns, regions} = this.state;
-		const {data, predictionDate, ...otherProps} = this.props;
+		const { columns, regions } = this.state;
+		const { data, predictionDate, ...otherProps } = this.props;
 
 		return (
 			<BillboardChart
