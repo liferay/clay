@@ -13,8 +13,16 @@ const {
 	DEFAULT_LINE_CLASSES,
 	DEFAULT_POINT_PATTERNS,
 	DEFAULT_TILES,
-	PROP_NAME_MAP,
 } = config;
+
+const PROP_NAME_MAP = {
+	axis: 'axes',
+	class: 'classes',
+	color: 'colors',
+	name: 'names',
+	regions: 'regions',
+	type: 'types',
+};
 
 /**
  * Chart Base prototype.

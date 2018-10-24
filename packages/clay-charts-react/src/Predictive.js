@@ -4,12 +4,9 @@ import BillboardChart from 'react-billboardjs';
 
 /**
  * Predictive Chart component.
- * @augments Chart
+ * @augments React.Component
  */
 export default class PredictiveChart extends React.Component {
-	/**
-	 * @inheritDoc
-	 */
 	constructor(props) {
 		super(props);
 

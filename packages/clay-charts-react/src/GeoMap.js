@@ -9,17 +9,17 @@ export default class GeomapReact extends React.Component {
 	}
 
 	componentDidMount() {
+		const {data, ...otherProps} = this.props;
+
 		this._geoMapInstance = new geomap.Geomap({
-			...this.props,
+			...otherProps,
+			data: data.data,
 			element: this._containerRef.current,
 		});
 
 		this._geoMapInstance.attached();
 	}
 
-	/**
-	 * @inheritDoc
-	 */
 	componentWillUnmount() {
 		this._geoMapInstance.disposed();
 	}

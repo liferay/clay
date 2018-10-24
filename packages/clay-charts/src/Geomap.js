@@ -1,12 +1,8 @@
-import * as d3 from 'd3';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import templates from './Geomap.soy.js';
 import {Config} from 'metal-state';
-import {isServerSide} from 'metal';
-import {data, geomap} from 'clay-charts-shared';
-
-const {resolveData} = data;
+import {geomap} from 'clay-charts-shared';
 
 /**
  * Geomap component
@@ -18,10 +14,13 @@ class Geomap extends Component {
 	attached() {
 		const config = this.getInitialConfig();
 
-		this._geoMapInstance = new geomap.Geomap({
-			...config,
-			element: this.element
-		});
+		console.log(Object.assign({
+			element: this.element,
+		}, config))
+
+		this._geoMapInstance = new geomap.Geomap(Object.assign({
+			element: this.element,
+		}, config));
 
 		this._geoMapInstance.attached();
 	}

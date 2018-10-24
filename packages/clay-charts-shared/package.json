@@ -4,8 +4,9 @@
 	"description": "",
 	"main": "lib/all.js",
 	"scripts": {
+		"build": "npm run sass && npm run compile && npm run copyAssets",
 		"compile": "./node_modules/.bin/babel -d lib/ src/ -s",
-		"prepublish": "npm run sass && npm run compile && npm run copyAssets",
+		"prepublish": "npm run build",
 		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
 		"copyAssets": "ncp src/svg lib/svg"
 	},

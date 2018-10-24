@@ -11,7 +11,6 @@ const DEFAULT_COLOR = {
 	value: 'pop_est',
 };
 
-
 /**
  * Geomap Base class.
  * @class Geomap
@@ -21,7 +20,7 @@ export class Geomap {
 	 * @inheritDoc
 	 */
 	constructor(config) {
-		this._data = config.data.data;
+		this._data = config.data;
 		this._element = config.element;
 		this._color = config.color || DEFAULT_COLOR;
 		this._id = config.id;
@@ -30,8 +29,9 @@ export class Geomap {
 		this._height = '100%';
 		this._width = '100%';
 	}
+
 	/**
-	 * @inheritDoc
+	 * Function to call when component is first mounting/attaching
 	 */
 	attached() {
 		if (isServerSide()) {
@@ -41,7 +41,9 @@ export class Geomap {
 		const w =
 			typeof this._width === 'string' ? this._width : `${this._width}px`;
 		const h =
-			typeof this._height === 'string' ? this._height : `${this._height}px`;
+			typeof this._height === 'string'
+				? this._height
+				: `${this._height}px`;
 
 		this.svg = d3
 			.select(this._element)
@@ -92,7 +94,7 @@ export class Geomap {
 	}
 
 	/**
-	 * @inheritDoc
+	 * Function to call when disposing instance
 	 */
 	disposed() {
 		if (isServerSide()) {

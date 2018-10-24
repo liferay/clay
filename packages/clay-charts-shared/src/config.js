@@ -1,12 +1,3 @@
-export const PROP_NAME_MAP = {
-	axis: 'axes',
-	class: 'classes',
-	color: 'colors',
-	name: 'names',
-	regions: 'regions',
-	type: 'types',
-};
-
 export const DEFAULT_COLORS = [
 	'#4B9BFF',
 	'#FFB46E',
