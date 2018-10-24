@@ -24,7 +24,13 @@ export default class GeomapReact extends React.Component {
 	}
 
 	render() {
-		const {data, element, color, pollingInterval, ...otherProps} = this.props;
+		const {
+			data,
+			element,
+			color,
+			pollingInterval,
+			...otherProps
+		} = this.props;
 
 		const {height = '100%', width = '100%'} = this._geoMapInstance
 			? this._geoMapInstance.getSize()

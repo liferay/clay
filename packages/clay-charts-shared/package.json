@@ -1,16 +1,24 @@
 {
-  "name": "clay-charts-shared",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/all.js",
-  "scripts": {
-    "build": "npm run soy && webpack",
-    "compile": "babel -d lib/ src/ -s --ignore src/__tests__"
-  },
-  "author": "Bryce Osterhaus",
-  "license": "BSD",
-  "dependencies": {
-    "d3": "^5.7.0",
-    "metal": "^2.16.6"
-  }
+	"name": "clay-charts-shared",
+	"version": "1.0.0",
+	"description": "",
+	"main": "lib/all.js",
+	"scripts": {
+		"compile": "./node_modules/.bin/babel -d lib/ src/ -s",
+		"prepublish": "npm run sass && npm run compile && npm run copyAssets",
+		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
+		"copyAssets": "ncp src/svg lib/svg"
+	},
+	"author": "Bryce Osterhaus",
+	"license": "BSD",
+	"dependencies": {
+		"d3": "^5.7.0",
+		"metal": "^2.16.6"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.1.2",
+		"@babel/core": "^7.1.2",
+		"ncp": "^2.0.0",
+		"node-sass": "^4.9.4"
+	}
 }

@@ -2,17 +2,6 @@ import React from 'react';
 import {isDefAndNotNull, isString, isNumber} from 'metal';
 import BillboardChart from 'react-billboardjs';
 
-const DEFAULT_AXIS_X = {
-	tick: {
-		culling: {
-			max: 1,
-		},
-		fit: true,
-		format: '%Y-%m-%d',
-	},
-	type: 'timeseries',
-};
-
 /**
  * Predictive Chart component.
  * @augments Chart
