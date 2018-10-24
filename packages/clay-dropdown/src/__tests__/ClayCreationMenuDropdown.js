@@ -210,6 +210,35 @@ describe('ClayCreationMenuDropdown', function() {
 			});
 		});
 
+		describe('with only secondary items', () => {
+			it('and less than default secondary maximum', () => {
+				clayCreationMenuDropdown = new ClayCreationMenuDropdown({
+					secondaryItems: getItems(4, 'primary'),
+					spritemap: 'icons.svg',
+				});
+
+				expect(clayCreationMenuDropdown).toMatchSnapshot();
+			});
+
+			it('and the same as default secondary maximum', () => {
+				clayCreationMenuDropdown = new ClayCreationMenuDropdown({
+					secondaryItems: getItems(7, 'primary'),
+					spritemap: 'icons.svg',
+				});
+
+				expect(clayCreationMenuDropdown).toMatchSnapshot();
+			});
+
+			it('and more than default secondary maximum', () => {
+				clayCreationMenuDropdown = new ClayCreationMenuDropdown({
+					secondaryItems: getItems(27, 'primary'),
+					spritemap: 'icons.svg',
+				});
+
+				expect(clayCreationMenuDropdown).toMatchSnapshot();
+			});
+		});
+
 		describe('with primary and secondary items', () => {
 			describe('with no groups', () => {});
 
