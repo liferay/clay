@@ -1,6 +1,6 @@
 # clay-charts-shared
 
-React.js implementation of Clay built on [react-billboardjs](https://github.com/planttheidea/react-billboardjs)
+Shared config between [clay-charts-react](../clay-charts-react) and [clay-charts](../clay-charts)
 
 ## Setup
 
@@ -18,19 +18,3 @@ npm install
 ```
 npm run compile
 ```
-
-## Running Demos
-
-1. Install local dependencies:
-
-```
-npm install
-```
-
-2. Start development server
-
-```
-npm run start
-```
-
-3. Navigate to `localhost:8080`

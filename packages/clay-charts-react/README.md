@@ -1,6 +1,6 @@
 # clay-charts-react
 
-Shared config between [clay-charts-react](../clay-charts-react) and [clay-charts](../clay-charts)
+React.js implementation of Clay built on [react-billboardjs](https://github.com/planttheidea/react-billboardjs)
 
 ## Setup
 
@@ -17,4 +17,35 @@ npm install
 
 ```
 npm run compile
+```
+
+## Running Demos
+
+1. Install local dependencies:
+
+```
+npm install
+```
+
+2. Start development server
+
+```
+npm run start
+```
+
+3. Navigate to `localhost:8080`
+
+## Basic Usage
+
+See [billboard.js](https://naver.github.io/billboard.js/release/latest/doc/) and [react-billboardjs](https://github.com/planttheidea/react-billboardjs) for a more in depth API
+
+```jsx
+import ClayCharts from 'clay-charts-react';
+
+<ClayCharts
+	data={{
+		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]],
+		type: 'bar'
+	}}
+/>;
 ```
