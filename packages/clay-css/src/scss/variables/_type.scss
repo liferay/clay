@@ -4,3 +4,6 @@ $strong-font-weight: null !default;
 
 $reference-mark-font-size: 0.75rem !default;
 $reference-mark-vertical-align: super !default;
+
+$highlight-bg-color: theme-color-level(warning, -10) !default;
+$highlight-text-color: $body-color !default;
