@@ -1,5 +1,6 @@
 ---
 title: "Grid"
+redirectFrom: "/docs/layout/grid.html"
 ---
 
 ### Description
