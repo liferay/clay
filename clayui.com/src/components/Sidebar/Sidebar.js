@@ -16,13 +16,18 @@ const {GATSBY_CLAY_NIGHTLY} = process.env;
 const getMap = (edges) => {
 	return edges
 		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
-		.map(({node}) => {
-			const {
-				slug,
-				title,
-				weight,
-				layout,
-			} = node.fields;
+		.map((
+			{
+				node: {
+					fields: {
+						layout,
+						slug,
+						title,
+						weight,
+					},
+				},
+			}
+		) => {
 			const slugWithoutExtension = slug.replace('.html', '');
 			const pathSplit = slugWithoutExtension.split('/');
 
@@ -75,7 +80,6 @@ export default props => (
 						node {
 							fields {
 								layout
-								nightly
 								slug
 								title
 								weight
@@ -88,7 +92,6 @@ export default props => (
 						node {
 							fields {
 								layout
-								nightly
 								slug
 								title
 								weight
