@@ -7,6 +7,7 @@ export default class GeomapReact extends React.Component {
 
 		this._containerRef = React.createRef();
 	}
+
 	componentDidMount() {
 		this._geoMapInstance = new geomap.Geomap({
 			...this.props,
