@@ -16,7 +16,6 @@ export default function(props) {
 	const { color, data, grid, line, point, ...otherProps } = props;
 
 	let ChartComponent;
-	let props = { data, ...otherProps };
 
 	switch (data.type) {
 		case 'geo-map':

@@ -45,7 +45,17 @@ import ClayCharts from 'clay-charts-react';
 <ClayCharts
 	data={{
 		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]],
-		type: 'bar'
+		type: 'bar',
+	}}
+/>;
+
+// or
+
+import { BarChart } from 'clay-charts-react';
+
+<BarChart
+	data={{
+		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]],
 	}}
 />;
 ```

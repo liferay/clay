@@ -64,8 +64,7 @@ class App extends React.Component {
 				<div style={{height: 380}}>
 					<ClayCharts
 						data={{
-							data:
-								'https://raw.githubusercontent.com/liferay/clay/master/clayui.com/static/world-low-res.geo.json',
+							data: './demo/public/world-low-res.geo.json',
 							type: 'geo-map',
 						}}
 						color={{

@@ -1,5 +1,5 @@
 import React from 'react';
-import BillboardChart from 'react-billboardjs';
+import * as ReactBillboard from 'react-billboardjs';
 import ClayChart from './Chart';
 
 const setType = type => ({ data, ...otherProps }) => (
@@ -21,6 +21,6 @@ export const RadarChart = setType('radar');
 export const ScatterChart = setType('scatter');
 export const SplineChart = setType('spline');
 export const StepChart = setType('step');
-export default ClayChart;
+export { ReactBillboard };
 
-export { BillboardChart };
+export default ClayChart;

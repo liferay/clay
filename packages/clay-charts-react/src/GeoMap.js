@@ -26,9 +26,12 @@ export default class GeomapReact extends React.Component {
 
 	render() {
 		const {
+			color,
 			data,
 			element,
-			color,
+			grid,
+			line,
+			point,
 			pollingInterval,
 			...otherProps
 		} = this.props;
