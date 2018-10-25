@@ -334,7 +334,7 @@ Checkboxes, radios, and toggles provide users with different selection and activ
 </div>
 <div class="custom-control custom-checkbox custom-control-inline">
 	<label>
-		<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox"/>
+		<input class="custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Indeterminate</span>
 		</span>
@@ -749,4 +749,3 @@ Checkboxes, radios, and toggles provide users with different selection and activ
     </label>
 </div>
 ```
-
