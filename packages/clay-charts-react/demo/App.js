@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClayCharts from '../src/index';
+import ClayCharts, {BarChart, BubbleChart} from '../src/index';
 
 import 'clay-charts-shared/lib/css/main.css';
 
@@ -16,17 +16,15 @@ class App extends React.Component {
 			<div style={{maxWidth: 700, margin: '0 auto'}}>
 				<h1>BASIC:</h1>
 				<h3>Bar</h3>
-				<ClayCharts
+				<BarChart
 					data={{
 						columns: COLUMNS,
-						type: 'bar',
 					}}
 				/>
 				<h3>Bubble</h3>
-				<ClayCharts
+				<BubbleChart
 					data={{
 						columns: COLUMNS,
-						type: 'bubble',
 					}}
 				/>
 				<h3>Combo</h3>

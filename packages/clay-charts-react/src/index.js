@@ -1,49 +1,26 @@
 import React from 'react';
 import BillboardChart from 'react-billboardjs';
-import GeoMap from './GeoMap';
-import Predictive from './Predictive';
+import ClayChart from './Chart';
 
-import { config } from 'clay-charts-shared';
+const setType = type => ({ data, ...otherProps }) => (
+	<ClayChart {...otherProps} data={{ ...data, type }} />
+);
 
-const {
-	DEFAULT_COLORS,
-	DEFAULT_GRID_OBJECT,
-	DEFAULT_LINE_CLASSES,
-	DEFAULT_POINT_PATTERNS,
-} = config;
+export const AreaLineChart = setType('area-line');
+export const AreaSplineChart = setType('area-spline');
+export const AreaStepChart = setType('area-step');
+export const BarChart = setType('bar');
+export const BubbleChart = setType('bubble');
+export const DonutChart = setType('donut');
+export const GaugeChart = setType('gauge');
+export const Geomap = setType('geomap');
+export const LineChart = setType('line');
+export const PieChart = setType('pie');
+export const PredictiveChart = setType('predictive');
+export const RadarChart = setType('radar');
+export const ScatterChart = setType('scatter');
+export const SplineChart = setType('spline');
+export const StepChart = setType('step');
+export default ClayChart;
 
-export default class extends React.Component {
-	render() {
-		const { color, data, grid, line, point, ...otherProps } = this.props;
-
-		let ChartComponent;
-		let props = { data, ...otherProps };
-
-		switch (data.type) {
-			case 'geo-map':
-				ChartComponent = GeoMap;
-				break;
-			case 'predictive':
-				ChartComponent = Predictive;
-				break;
-			default:
-				ChartComponent = BillboardChart;
-		}
-
-		return (
-			<ChartComponent
-				{...otherProps}
-				data={data}
-				grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
-				color={Object.assign({ pattern: DEFAULT_COLORS }, color)}
-				line={Object.assign({ classes: DEFAULT_LINE_CLASSES }, line)}
-				point={Object.assign(
-					{
-						pattern: DEFAULT_POINT_PATTERNS,
-					},
-					point
-				)}
-			/>
-		);
-	}
-}
+export { BillboardChart };
