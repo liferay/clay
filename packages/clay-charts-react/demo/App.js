@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClayCharts, {BarChart, BubbleChart} from '../src/index';
+import ClayChart, {BarChart, BubbleChart} from '../src/index';
 
 import 'clay-charts-shared/lib/css/main.css';
 
@@ -28,7 +28,7 @@ class App extends React.Component {
 					}}
 				/>
 				<h3>Combo</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: [
 							['data1', 30, 20, 50, 40, 60, 50],
@@ -47,14 +47,14 @@ class App extends React.Component {
 					}}
 				/>
 				<h3>Donut</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: [['data1', 30], ['data2', 70]],
 						type: 'donut',
 					}}
 				/>
 				<h3>Gauge</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: [['data1', 87.4]],
 						type: 'gauge',
@@ -62,7 +62,7 @@ class App extends React.Component {
 				/>
 				<h3>Geo Map</h3>
 				<div style={{height: 380}}>
-					<ClayCharts
+					<ClayChart
 						data={{
 							data: './demo/public/world-low-res.geo.json',
 							type: 'geo-map',
@@ -78,21 +78,21 @@ class App extends React.Component {
 					/>
 				</div>
 				<h3>Line</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: COLUMNS,
 						type: 'line',
 					}}
 				/>
 				<h3>Pie</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: [['data1', 30], ['data2', 70]],
 						type: 'pie',
 					}}
 				/>
 				<h3>Scatter</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: [
 							['data1', 100, 20, 30, 50, 40, 80, 220, 300],
@@ -102,14 +102,14 @@ class App extends React.Component {
 					}}
 				/>
 				<h3>Spline</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: COLUMNS,
 						type: 'spline',
 					}}
 				/>
 				<h3>Area Step</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: COLUMNS,
 						type: 'area-step',
@@ -118,7 +118,7 @@ class App extends React.Component {
 
 				<h1>ADVANCED:</h1>
 				<h3>Axis Label</h3>
-				<ClayCharts
+				<ClayChart
 					axis={{
 						y: {label: 'Y Axis Label'},
 						y2: {
@@ -135,7 +135,7 @@ class App extends React.Component {
 					}}
 				/>
 				<h3>Axis Range</h3>
-				<ClayCharts
+				<ClayChart
 					axis={{
 						y2: {
 							max: 500,
@@ -156,7 +156,7 @@ class App extends React.Component {
 					}}
 				/>
 				<h3>Data Color</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						colors: {
 							data1: 'hotpink',
@@ -170,7 +170,7 @@ class App extends React.Component {
 					}}
 				/>
 				<h3>Predictive Forecast</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						x: 'x',
 						columns: [
@@ -234,7 +234,7 @@ class App extends React.Component {
 					}}
 				/>
 				<h3>Regions</h3>
-				<ClayCharts
+				<ClayChart
 					data={{
 						columns: [
 							['data1', 30, 20, 50, 40, 60, 50],
@@ -256,7 +256,7 @@ class App extends React.Component {
 					]}
 				/>
 				<h3>X Axis Format</h3>
-				<ClayCharts
+				<ClayChart
 					axis={{
 						x: {
 							localtime: false,
