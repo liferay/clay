@@ -59,15 +59,16 @@ th {
 		vertical-align: $table-data-vertical-align;
 	}
 
-	td,
-	th {
-		&:first-child {
-			padding-left: $table-cell-gutters;
-		}
+	td:first-child,
+	th:first-child,
+	.table-cell-start {
+		padding-left: $table-cell-gutters;
+	}
 
-		&:last-child {
-			padding-right: $table-cell-gutters;
-		}
+	td:last-child,
+	th:last-child,
+	.table-cell-end {
+		padding-right: $table-cell-gutters;
 	}
 
 	tbody,
