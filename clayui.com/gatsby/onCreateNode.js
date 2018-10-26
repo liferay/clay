@@ -10,6 +10,7 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			nightly,
 			path,
 			redirect,
+			redirectFrom,
 			title,
 			weight,
 		} = node.frontmatter;
@@ -61,6 +62,12 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			node,
 			name: 'redirect',
 			value: redirect || '',
+		});
+
+		createNodeField({
+			node,
+			name: 'redirectFrom',
+			value: redirectFrom || '',
 		});
 
 		createNodeField({

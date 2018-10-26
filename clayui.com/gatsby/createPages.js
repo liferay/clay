@@ -9,18 +9,32 @@ const path = require('path');
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
+const slugWithBar = (path) => {
+	return path.startsWith('/') ? path : `/${path}`;
+};
+
 const createDocs = (actions, edges, mdx) => {
 	const {createPage, createRedirect} = actions;
 	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
 
 	edges
 		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
-		.forEach(({node}) => {
-			const {slug, redirect, layout} = node.fields;
-
+		.forEach((
+			{
+				node: {
+					fields: {
+						layout,
+						redirect,
+						redirectFrom,
+						slug,
+					},
+					code,
+				},
+			}
+		) => {
 			if (redirect) {
-				const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
-				const fromPath = slugWithBar.endsWith('index.html') ? slugWithBar.replace('index.html', '') : slugWithBar;
+				const slugBar = slugWithBar(slug);
+				const fromPath = slugBar.endsWith('index.html') ? slugBar.replace('index.html', '') : slugBar;
 
 				createRedirect({
 					fromPath,
@@ -30,11 +44,20 @@ const createDocs = (actions, edges, mdx) => {
 				});
 			}
 
+			if (redirectFrom) {
+				createRedirect({
+					fromPath: redirectFrom,
+					isPermanent: true,
+					redirectInBrowser: true,
+					toPath: slugWithBar(slug),
+				});
+			}
+
 			const component =
 				mdx ?
 					componentWithMDXScope(
 						docsTemplate,
-						node.code.scope,
+						code.scope,
 						__dirname,
 					) :
 					docsTemplate;
@@ -68,6 +91,7 @@ module.exports = async ({actions, graphql}) => {
 							layout
 							nightly
 							redirect
+							redirectFrom
 							slug
 						}
 						code {
@@ -83,6 +107,7 @@ module.exports = async ({actions, graphql}) => {
 							layout
 							nightly
 							redirect
+							redirectFrom
 							slug
 						}
 					}
