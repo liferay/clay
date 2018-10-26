@@ -59,15 +59,16 @@ th {
 		vertical-align: $table-data-vertical-align;
 	}
 
-	td,
-	th {
-		&:first-child {
-			padding-left: $table-cell-gutters;
-		}
+	td:first-child,
+	th:first-child,
+	.table-cell-start {
+		padding-left: $table-cell-gutters;
+	}
 
-		&:last-child {
-			padding-right: $table-cell-gutters;
-		}
+	td:last-child,
+	th:last-child,
+	.table-cell-end {
+		padding-right: $table-cell-gutters;
 	}
 
 	tbody,
@@ -250,18 +251,19 @@ th {
 	tfoot {
 		&:first-child {
 			tr:first-child {
-				th,
-				td {
-					&:first-child {
-						@if $enable-rounded {
-							border-top-left-radius: $table-list-border-radius;
-						}
+				th:first-child,
+				td:first-child,
+				.table-cell-start {
+					@if $enable-rounded {
+						border-top-left-radius: $table-list-border-radius;
 					}
+				}
 
-					&:last-child {
-						@if $enable-rounded {
-							border-top-right-radius: $table-list-border-radius;
-						}
+				th:last-child,
+				td:last-child,
+				.table-cell-end {
+					@if $enable-rounded {
+						border-top-right-radius: $table-list-border-radius;
 					}
 				}
 			}
@@ -269,20 +271,49 @@ th {
 
 		&:last-child {
 			tr:last-child {
-				th,
-				td {
-					&:first-child {
-						@if $enable-rounded {
-							border-bottom-left-radius: $table-list-border-radius;
-						}
-					}
-
-					&:last-child {
-						@if $enable-rounded {
-							border-bottom-right-radius: $table-list-border-radius;
-						}
+				th:first-child,
+				td:first-child,
+				.table-cell-start {
+					@if $enable-rounded {
+						border-bottom-left-radius: $table-list-border-radius;
 					}
 				}
+
+				th:last-child,
+				td:last-child,
+				.table-cell-end {
+					@if $enable-rounded {
+						border-bottom-right-radius: $table-list-border-radius;
+					}
+				}
+			}
+		}
+	}
+
+	.table-row-start {
+		.table-cell-start {
+			@if $enable-rounded {
+				border-top-left-radius: $table-list-border-radius;
+			}
+		}
+
+		.table-cell-end {
+			@if $enable-rounded {
+				border-top-right-radius: $table-list-border-radius;
+			}
+		}
+	}
+
+	.table-row-end {
+		.table-cell-start {
+			@if $enable-rounded {
+				border-bottom-left-radius: $table-list-border-radius;
+			}
+		}
+
+		.table-cell-end {
+			@if $enable-rounded {
+				border-bottom-right-radius: $table-list-border-radius;
 			}
 		}
 	}
@@ -318,6 +349,22 @@ th {
 			padding-right: $table-list-border-x-width + $table-cell-padding;
 			padding-top: $table-list-border-y-width + $table-cell-padding;
 		}
+	}
+
+	.table-cell-start {
+		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
+					0 #{$table-list-border-y-width} $table-list-border-color, // bottom
+					inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
+		padding-left: $table-list-border-x-width + $table-cell-padding;
+		padding-top: $table-list-border-y-width + $table-cell-padding;
+	}
+
+	.table-cell-end {
+		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
+					inset #{-$table-list-border-x-width} 0 $table-list-border-color, // right
+					0 #{$table-list-border-y-width} $table-list-border-color; // bottom
+		padding-right: $table-list-border-x-width + $table-cell-padding;
+		padding-top: $table-list-border-y-width + $table-cell-padding;
 	}
 
 	thead {
