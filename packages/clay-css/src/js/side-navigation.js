@@ -934,6 +934,8 @@
 
 				instance._renderNav();
 			}
+
+			container.css({display: ''});
 		},
 
 		_setScreenSize: function() {
