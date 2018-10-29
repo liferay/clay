@@ -1,7 +1,7 @@
 import 'clay-dropdown';
 import 'clay-pagination';
 import {Config} from 'metal-state';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -11,7 +11,39 @@ import templates from './ClayPaginationBar.soy.js';
  * Metal ClayPaginationBar component.
  * @extends Component
  */
-class ClayPaginationBar extends Component {}
+class ClayPaginationBar extends ClayComponent {
+	/**
+	 * Continues the propagation of the page clicked event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handlePageClick(event) {
+		return !this.emit({
+			data: {
+				page: event.data.page,
+			},
+			name: 'pageClicked',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the item per page clicked event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleItemsPerPageClicked(event) {
+		return !this.emit({
+			data: {
+				item: event.data.item,
+			},
+			name: 'itemsPerPageClicked',
+			originalEvent: event,
+		});
+	}
+}
 
 /**
  * State definition.
