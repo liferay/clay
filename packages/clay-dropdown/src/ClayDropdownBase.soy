@@ -339,6 +339,7 @@
 	{@param? _handleItemClick: any}
 	{@param? active: bool}
 	{@param? checked: bool}
+	{@param? data: any}
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
@@ -388,6 +389,7 @@
 
 		{if $href}
 			{call ClayLink.render}
+				{param data: $data /}
 				{param elementClasses: $elementClasses /}
 				{param href kind="text"}
 					{if $disabled}
@@ -403,6 +405,7 @@
 		{else}
 			{call ClayButton.render}
 				{param ariaLabel: $label /}
+				{param data: $data /}
 				{param disabled: $disabled /}
 				{param elementClasses: $elementClasses /}
 				{param label: $labelContent /}
