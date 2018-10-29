@@ -845,6 +845,8 @@
 
 				instance._renderNav();
 			}
+
+			container.css('display', ''); // Force Reflow for IE11 Browser Bug
 		},
 
 		_setScreenSize: function() {
