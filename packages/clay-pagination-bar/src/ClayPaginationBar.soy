@@ -4,10 +4,13 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param? _handleItemsPerPageClicked: any}
+	{@param? _handlePageClick: any}
 	{@param currentPage: int}
 	{@param entries: list<[
 		href: string,
-		label: int
+		label: int,
+		itemsPerPage: int
 	]>}
 	{@param selectedEntry: int}
 	{@param spritemap: string}
@@ -41,6 +44,7 @@
 
         {call ClayDropdown.render}
             {param elementClasses: 'pagination-items-per-page' /}
+			{param events: ['itemClicked': $_handleItemsPerPageClicked] /}
             {param items: $entries /}
             {param label: $selectedEntryLabel /}
             {param spritemap: $spritemap /}
@@ -52,13 +56,14 @@
 			{let $lastShowingEntry: $currentPage * $selectedEntryItem.label < $totalEntries ? $currentPage * $selectedEntryItem.label : $totalEntries /}
 
 			{msg desc="Says which range of pages of the total are being showed"}
-				showing-{$firstShowingEntry}-to-{$lastShowingEntry}of-{$totalEntries}-entries
+				showing-{$firstShowingEntry}-to-{$lastShowingEntry}-of-{$totalEntries}-entries
 			{/msg}
 		</div>
 
 		{call ClayPagination.render}
 			{param baseHref: $baseHref /}
 			{param currentPage: $currentPage /}
+			{param events: ['pageClicked': $_handlePageClick] /}
 			{param spritemap: $spritemap /}
 			{param totalPages: ceiling($totalEntries / $selectedEntryItem.label) /}
 		{/call}
