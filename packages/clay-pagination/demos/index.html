@@ -105,7 +105,10 @@
 					currentPage: currentPage,
 					spritemap: spritemap,
 					totalPages: totalPages,
-				}, '#container' + totalPages);
+				}, '#container' + totalPages)
+				.on('pageClicked', function(e) {
+					console.log("Selected page: " + e.data.page);
+				});
 			}
 		}
 	</script>

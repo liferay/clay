@@ -34,32 +34,44 @@
 	<script type="text/javascript">
 		const spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
 
-		new metal.ClayPaginationBar({
-			baseHref: 'container',
+		var clayPaginationBar = new metal.ClayPaginationBar({
+			baseHref: '#container',
 			currentPage: 2,
 			entries: [
 				{
-					href: 'container',
+					href: '#container',
 					label: 5,
+					itemsPerPage: 5,
 				},
 				{
 					active: true,
-					href: 'container',
+					href: '#container',
 					label: 10,
+					itemsPerPage: 10,
 				},
 				{
-					href: 'container',
+					href: '#container',
 					label: 15,
+					itemsPerPage: 15
 				},
 				{
-					href: 'container',
+					href: '#container',
 					label: 20,
+					itemsPerPage: 20
 				},
 			],
 			selectedEntry: 1,
 			spritemap: spritemap,
 			totalEntries: 21,
 		}, '#container1');
+
+		clayPaginationBar.on('pageClicked', function(e) {
+			console.log("Selected page: " + e.data.page);
+		});
+		
+		clayPaginationBar.on('itemsPerPageClicked', function(e) {
+			console.log("Items per page: " + e.data.item.itemsPerPage);
+		});
 
 	</script>
 </body>
