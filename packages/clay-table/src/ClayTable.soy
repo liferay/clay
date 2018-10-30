@@ -36,11 +36,11 @@
 	{let $table kind="html"}
 		{let $tableAttributes kind="attributes"}
 			class="
-				{if $useDefaultClasses}
+				{if $useDefaultClasses != false}
 					table table-autofit table-hover table-list show-quick-actions-on-hover
 				{/if}
 
-				{if not $wrapTable and $elementClasses}
+				{if $wrapTable == false and $elementClasses}
 					{sp}{$elementClasses}
 				{/if}
 
@@ -74,7 +74,7 @@
 
 	{let $wrapperAttributes kind="attributes"}
 		class="
-			{if $useDefaultClasses}
+			{if $useDefaultClasses != false}
 				table-responsive
 				{if $size}
 					-{$size}
