@@ -6,7 +6,7 @@ section: Visual Tests
 <header class="header-toolbar header-toolbar-default">
 	<div class="toolbar-group">
 		<div class="toolbar-group-content">
-			<a class="sidenav-toggler" href="#1">
+			<a class="sidenav-toggler" href="#1" role="button">
 				<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-product-menu-closed">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
 				</svg>
@@ -14,7 +14,7 @@ section: Visual Tests
 		</div>
 
 		<div class="toolbar-group-content">
-			<a href="#1">
+			<a href="#1" role="button">
 				<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-angle-left">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -25,7 +25,7 @@ section: Visual Tests
 	<div class="toolbar-group-right">
 		<div class="toolbar-group-content">
 			<div class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 					</svg>
@@ -318,8 +318,8 @@ section: Visual Tests
 					<li><a href="#1">Mine</a></li>
 				</ul>
 			</li>
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+			<li class="dropdown management-bar-item-xs-inline-block">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 					<span class="management-bar-item-title">Order By: Modified Date</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
@@ -333,11 +333,11 @@ section: Visual Tests
 					<li><a href="#1">Size</a></li>
 				</ul>
 			</li>
-			<li>
-				<a class="btn btn-default hidden-xs" href="#1"><span aria-hidden="true" class="icon-caret-up icon-monospaced"></span></a>
+			<li class="management-bar-item-xs-inline-block">
+				<a class="btn btn-default" href="#1" role="button"><span aria-hidden="true" class="icon-caret-up icon-monospaced"></span></a>
 			</li>
-			<li>
-				<a class="btn btn-default hidden-xs" href="#1"><span aria-hidden="true" class="icon-caret-down icon-monospaced"></span></a>
+			<li class="management-bar-item-xs-inline-block">
+				<a class="btn btn-default" href="#1" role="button"><span aria-hidden="true" class="icon-caret-down icon-monospaced"></span></a>
 			</li>
 		</ul>
 	</div>
