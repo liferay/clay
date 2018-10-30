@@ -1,3 +1,7 @@
+### v1.0.29 - October 30, 2018
+* Fixes [#1266](https://github.com/liferay/clay/issues/1266) - (1.x) Force reflow sidenav to prevent issue in IE11
+* Fixes [#1252](https://github.com/liferay/clay/issues/1252) - Management Bar added `.management-bar-item-xs-inline-block`
+
 ### v1.0.28 - May 23, 2018
 * Update: ([#926](https://github.com/liferay/clay/issues/926)) Adds `pointer-events: none` to `.lexicon-icon` to prevent SVG title attributes from overriding HTML title attribute
 
