@@ -47,13 +47,15 @@ class ClayComponent extends Component {
 	rendered(...args) {
 		super.rendered(...args);
 
-		for (let dataKey in this.data) {
-			if (Object.prototype.hasOwnProperty.call(this.data, dataKey)) {
-				this.element.setAttribute(
-					'data-' + dataKey,
-					this.data[dataKey]
-				);
-			}
+		this._renderDataAttributes();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncData(newVal, prevVal) {
+		if (newVal != prevVal) {
+			this._renderDataAttributes();
 		}
 	}
 
@@ -120,6 +122,17 @@ class ClayComponent extends Component {
 
 		this.runListeners_(listeners, args, facade);
 		return true;
+	}
+
+	_renderDataAttributes() {
+		for (let dataKey in this.data) {
+			if (Object.prototype.hasOwnProperty.call(this.data, dataKey)) {
+				this.element.setAttribute(
+					'data-' + dataKey,
+					this.data[dataKey]
+				);
+			}
+		}
 	}
 }
 
