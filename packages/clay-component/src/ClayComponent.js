@@ -124,6 +124,9 @@ class ClayComponent extends Component {
 		return true;
 	}
 
+	/**
+	 * Places the data attributes in the dom.
+	 */
 	_renderDataAttributes() {
 		for (let dataKey in this.data) {
 			if (Object.prototype.hasOwnProperty.call(this.data, dataKey)) {
