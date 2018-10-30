@@ -1,12 +1,15 @@
 import React from 'react';
-import { isDefAndNotNull, isString, isNumber } from 'metal';
+import {isDefAndNotNull, isNumber} from 'metal';
 import BillboardChart from 'react-billboardjs';
 
 /**
  * Predictive Chart component.
- * @augments React.Component
+ * @extends React.Component
+ * @param {Object} props
+ * @return {ReactElement}
  */
 export default class PredictiveChart extends React.Component {
+	/** @inheritdoc */
 	constructor(props) {
 		super(props);
 
@@ -18,9 +21,9 @@ export default class PredictiveChart extends React.Component {
 					dataSeries = dataSeries.map(element => {
 						return isNumber(element)
 							? {
-									low: element,
-									mid: element,
-									high: element,
+								low: element,
+								mid: element,
+								high: element,
 							  }
 							: element;
 					});
@@ -46,9 +49,10 @@ export default class PredictiveChart extends React.Component {
 		};
 	}
 
+	/** @inheritdoc */
 	render() {
-		const { columns, regions } = this.state;
-		const { data, predictionDate, ...otherProps } = this.props;
+		const {columns, regions} = this.state;
+		const {data, predictionDate, ...otherProps} = this.props;
 
 		return (
 			<BillboardChart
