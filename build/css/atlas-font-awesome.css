@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.28
+* Lexicon 1.0.29
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.
@@ -11389,6 +11389,16 @@ button.list-group-heading {
   .management-bar-nav {
     float: left;
     margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .management-bar-nav .management-bar-item-xs-inline-block {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .management-bar-nav .management-bar-item-xs-inline-block + .management-bar-item-xs-inline-block {
+    margin-left: -4px;
   }
 }
 
