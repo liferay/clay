@@ -193,6 +193,34 @@ ClayTable.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	spritemap: Config.string(),
+
+	/**
+	 * CSS classes to be applied to the table.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?(string|undefined)}
+	 */
+	tableClasses: Config.string(),
+
+	/**
+	 * Flag to indicate if the wrapper and the table should use default css
+	 * classes or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?string}
+	 */
+	useDefaultClasses: Config.bool().value(true),
+
+	/**
+	 * Flag to indicate if the table is wraped inside a div or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?string}
+	 */
+	wrapTable: Config.bool().value(true),
 };
 
 defineWebComponent('clay-table', ClayTable);
