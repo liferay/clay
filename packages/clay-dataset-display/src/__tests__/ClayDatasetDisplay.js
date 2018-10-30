@@ -570,8 +570,7 @@ describe('ClayDatasetDisplay', function() {
 
 		const spy = jest.spyOn(component, 'emit');
 
-		let filtersDropdown =
-			component.refs.managementToolbar.refs.filtersDropdown;
+		let filtersDropdown = component.refs.managementToolbar.refs.filtersDropdown;
 		filtersDropdown.refs.portal.refs.dropdownButton.element.click();
 
 		jest.runAllTimers();
@@ -611,8 +610,8 @@ describe('ClayDatasetDisplay', function() {
 		const spy = jest.spyOn(component, 'emit');
 
 		const element =
-			component.refs.managementToolbar.refs.creationMenuDropdown.refs
-				.dropdown.refs.portal.element;
+			component.refs.managementToolbar.refs.creationMenuDropdown.refs.dropdown
+				.refs.portal.element;
 		element.querySelector('ul li').click();
 
 		expect(spy).toHaveBeenCalled();
@@ -631,8 +630,7 @@ describe('ClayDatasetDisplay', function() {
 		const spy = jest.spyOn(component, 'emit');
 
 		const element =
-			component.refs.managementToolbar.refs.filtersDropdown.refs.portal
-				.element;
+			component.refs.managementToolbar.refs.filtersDropdown.refs.portal.element;
 		element.querySelector('ul li:not(.dropdown-subheader)').click();
 
 		expect(spy).toHaveBeenCalled();
@@ -723,9 +721,7 @@ describe('ClayDatasetDisplay', function() {
 
 		jest.runAllTimers();
 
-		expect(component.getSelectedItems().length).toEqual(
-			component._totalItems
-		);
+		expect(component.getSelectedItems().length).toEqual(component._totalItems);
 	});
 
 	it('should render a ClayDatasetDisplay with selected items and deselect all items on management toolbar checked checkbox click', () => {

@@ -23,9 +23,7 @@ const DEFAULT_TOOLTIP = {
 		const value =
 			isObject(datum.value) && datum.value.hasOwnProperty('mid')
 				? datum.value.mid
-				: Array.isArray(datum.value)
-					? datum.value[1]
-					: datum.value;
+				: Array.isArray(datum.value) ? datum.value[1] : datum.value;
 
 		return `<table class="bb-tooltip">
 			<tbody>
