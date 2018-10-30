@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "Implementation of clay-charts in React.js",
 	"main": "lib/index.js",
+	"jsnext:main": "src/index.js",
 	"scripts": {
 		"compile": "./node_modules/.bin/babel -d lib/ src/ -s --ignore src/__tests__",
 		"prepublish": "npm run compile && npm run copyAssets",
