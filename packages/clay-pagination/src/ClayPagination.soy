@@ -152,17 +152,6 @@
 	{@param? page: int}
 	{@param? spritemap: string}
 
-	{let $classes kind="text"}
-		page-item
-		{if $active}
-			{sp}active
-		{/if}
-
-		{if not $page}
-			{sp}disabled
-		{/if}
-	{/let}
-
 	{let $href kind="text"}
 		{if $baseHref}
 			{$baseHref}
@@ -175,12 +164,24 @@
 		{/if}
 	{/let}
 
-	<li class="{$classes}">
+	{let $elementAttributes kind="attributes"}
+		class="page-item
+			{if $active}
+				{sp}active
+			{/if}
+
+			{if not $page}
+				{sp}disabled
+			{/if}
+		"
+		data-page="{$page}"
+		data-onclick="{$_handlePageClick}"
+	{/let}
+
+	<li {$elementAttributes}>
 		{call ClayLink.render}
 			{param ariaLabel: $ariaLabel /}
-			{param data: [ 'page': $page ] /}
 			{param elementClasses: 'page-link' /}
-			{param events: ['click': $_handlePageClick] /}
 			{param href: $href /}
 			{param icon: $icon /}
 			{param label: $label /}
@@ -234,12 +235,12 @@
 
 		<ul class="list-unstyled">
 			{for $page in range($initPage, $endPage)}
-				{delcall ClayDropdownBase.Item variant="'item'"}
+				{call ClayDropdownItem.render}
 					{param _handleItemClick: $_handleItemClick /}
 					{param data: [ 'page': $page ] /}
 					{param href: $baseHref + $page /}
 					{param label: '' + $page /}
-				{/delcall}
+				{/call}
 			{/for}
 		</ul>
 	{/if}

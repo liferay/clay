@@ -1,7 +1,7 @@
 import 'clay-link';
 // eslint-disable-next-line
 import ClayComponent from 'clay-component';
-import {ClayDropdownBase} from 'clay-dropdown';
+import {ClayDropdownBase, ClayDropdownItem} from 'clay-dropdown';
 import {Config} from 'metal-state';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -22,7 +22,7 @@ class ClayPagination extends ClayComponent {
 	_handlePageClick(event) {
 		return !this.emit({
 			data: {
-				page: event.target.getAttribute('data-page'),
+				page: event.delegateTarget.getAttribute('data-page'),
 			},
 			name: 'pageClicked',
 			originalEvent: event,
