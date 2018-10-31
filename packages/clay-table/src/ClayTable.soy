@@ -29,25 +29,28 @@
 	{@param? showActionsMenu: bool}
 	{@param? size: string}
 	{@param? spritemap: string}
+	{@param? tableClasses: string}
+	{@param? useDefaultClasses: bool}
+	{@param? wrapTable: bool}
 
-	{let $attributes kind="attributes"}
-		class="table-responsive
-			{if $size}
-				-{$size}
-			{/if}
+	{let $table kind="html"}
+		{let $tableAttributes kind="attributes"}
+			class="
+				{if $useDefaultClasses != false}
+					table table-autofit table-hover table-list show-quick-actions-on-hover
+				{/if}
 
-			{if $elementClasses}
-				{sp}{$elementClasses}
-			{/if}
-		"
+				{if $wrapTable == false and $elementClasses}
+					{sp}{$elementClasses}
+				{/if}
 
-		{if $id}
-			id="{$id}"
-		{/if}
-	{/let}
+				{if $tableClasses}
+					{sp}{$tableClasses}
+				{/if}
+			"
+		{/let}
 
-	<div {$attributes}>
-		<table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+		<table {$tableAttributes}>
 			{call .header}
 				{param _handleSortingClick: $_handleSortingClick /}
 				{param schema: $schema /}
@@ -67,7 +70,34 @@
 				{param spritemap: $spritemap /}
 			{/call}
 		</table>
-	</div>
+	{/let}
+
+	{let $wrapperAttributes kind="attributes"}
+		class="
+			{if $useDefaultClasses != false}
+				table-responsive
+				{if $size}
+					-{$size}
+				{/if}
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	{if $wrapTable != false}
+		<div {$wrapperAttributes}>
+			{$table}
+		</div>
+	{else}
+		{$table}
+	{/if}	
 {/template}
 
 /**

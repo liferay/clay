@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayTable should render a ClayTable not using default classes 1`] = `
+<div class="">
+  <table class="">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+`;
+
 exports[`ClayTable should render a ClayTable with a basic schema and grouped items 1`] = `
 <div class="table-responsive">
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -1300,6 +1311,17 @@ exports[`ClayTable should render a ClayTable with classes 1`] = `
 </div>
 `;
 
+exports[`ClayTable should render a ClayTable with classes not using default classes 1`] = `
+<div class=" my-custom-class">
+  <table class="">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+`;
+
 exports[`ClayTable should render a ClayTable with id 1`] = `
 <div class="table-responsive" id="myId">
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
@@ -1347,6 +1369,17 @@ exports[`ClayTable should render a ClayTable with size \`sm\` 1`] = `
 exports[`ClayTable should render a ClayTable with size \`xl\` 1`] = `
 <div class="table-responsive-xl">
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable should render a ClayTable with table classes 1`] = `
+<div class="table-responsive">
+  <table class="table table-autofit table-hover table-list show-quick-actions-on-hover my-custom-table-class">
     <thead>
       <tr></tr>
     </thead>
@@ -1480,6 +1513,50 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
         </td>
       </tr>
     </tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable should render a wrapped ClayTable 1`] = `
+<div class="table-responsive">
+  <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable should render a wrapped ClayTable not using default classes 1`] = `
+<div class="">
+  <table class="">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable should render a wrapped ClayTable with classes 1`] = `
+<div class="table-responsive my-custom-class">
+  <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable should render a wrapped ClayTable with classes not using default classes 1`] = `
+<div class=" my-custom-class">
+  <table class="">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody></tbody>
   </table>
 </div>
 `;
