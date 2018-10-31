@@ -60,19 +60,20 @@
 					itemsPerPage: 20
 				},
 			],
+			events: {
+				'pageClicked': (event) => {
+					event.preventDefault();
+					console.log(`Selected page: ${event.data.page}`);
+				},
+				'itemsPerPageClicked': (event) => {
+					event.preventDefault();
+					console.log(`Selected items per page: ${event.data.item.itemsPerPage}`);
+				},
+			},
 			selectedEntry: 1,
 			spritemap: spritemap,
 			totalEntries: 21,
 		}, '#container1');
-
-		clayPaginationBar.on('pageClicked', function(e) {
-			console.log("Selected page: " + e.data.page);
-		});
-		
-		clayPaginationBar.on('itemsPerPageClicked', function(e) {
-			console.log("Items per page: " + e.data.item.itemsPerPage);
-		});
-
 	</script>
 </body>
 </html>
