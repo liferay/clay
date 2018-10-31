@@ -549,6 +549,112 @@ A dropdown is a list of options related to the element that triggers it.
 </div>
 ```
 
+#### Dropdown with Left and Right Icons
+
+<div class="clay-site-dropdown-menu-container">
+	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start">
+		<ul class="list-unstyled">
+			<li>
+				<a class="dropdown-item" href="#1">
+					<span class="dropdown-item-indicator-start">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+							<use xlink:href="/images/icons/icons.svg#pencil" />
+						</svg>
+					</span>
+					Normal Option
+					<span class="dropdown-item-indicator-end">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#1">
+					<span class="dropdown-item-indicator-start">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+							<use xlink:href="/images/icons/icons.svg#view" />
+						</svg>
+					</span>
+					Second Option
+					<span class="dropdown-item-indicator-end">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#1">
+					<span class="dropdown-item-indicator-start">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use xlink:href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
+					Third Option
+					<span class="dropdown-item-indicator-end">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+```html
+<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start">
+	<ul class="list-unstyled">
+		<li>
+			<a class="dropdown-item" href="#1">
+				<span class="dropdown-item-indicator-start">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+						<use xlink:href="/images/icons/icons.svg#pencil" />
+					</svg>
+				</span>
+				Normal Option
+				<span class="dropdown-item-indicator-end">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-item" href="#1">
+				<span class="dropdown-item-indicator-start">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+						<use xlink:href="/images/icons/icons.svg#view" />
+					</svg>
+				</span>
+				Second Option
+				<span class="dropdown-item-indicator-end">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-item" href="#1">
+				<span class="dropdown-item-indicator-start">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="/images/icons/icons.svg#check" />
+					</svg>
+				</span>
+				Third Option
+				<span class="dropdown-item-indicator-end">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
+			</a>
+		</li>
+	</ul>
+</div>
+```
+
 #### Dropdown with groups
 
 > This dropdown menu variation is for use with the management bar Filter and Order dropdown button. This configuration is used to refine the management bar UI options, providing the user with more specific mechanisms to find data.
