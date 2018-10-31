@@ -1,9 +1,19 @@
 import {bb} from 'billboard.js';
 import {Config} from 'metal-state';
 import {isDefAndNotNull, isServerSide} from 'metal';
-import {resolveData} from './utils/data';
+import {config, data} from 'clay-charts-shared';
 import types from './utils/types';
 import * as d3 from 'd3';
+
+const {resolveData} = data;
+
+const {
+	DEFAULT_COLORS,
+	DEFAULT_GRID_OBJECT,
+	DEFAULT_LINE_CLASSES,
+	DEFAULT_POINT_PATTERNS,
+	DEFAULT_TILES,
+} = config;
 
 const PROP_NAME_MAP = {
 	axis: 'axes',
@@ -13,54 +23,6 @@ const PROP_NAME_MAP = {
 	regions: 'regions',
 	type: 'types',
 };
-
-const DEFAULT_COLORS = [
-	'#4B9BFF',
-	'#FFB46E',
-	'#FF5F5F',
-	'#50D2A0',
-	'#FF73C3',
-	'#9CE269',
-	'#AF78FF',
-	'#FFD76E',
-	'#5FC8FF',
-];
-
-const DEFAULT_LINE_CASSES = [
-	'bb-line-dashed-2-2',
-	'bb-line-dashed-2-3',
-	'bb-line-dashed-2-4',
-	'bb-line-dashed-3-2',
-	'bb-line-dashed-3-3',
-	'bb-line-dashed-3-4',
-	'bb-line-dashed-4-2',
-	'bb-line-dashed-4-3',
-	'bb-line-dashed-4-4',
-];
-
-const DEFAULT_TILES = [
-	'circles',
-	'diagonal-left-large',
-	'diagonal-left-small',
-	'diagonal-right-large',
-	'diagonal-right-small',
-	'horizontal-large',
-	'horizontal-small',
-	'vertical-large',
-	'vertical-small',
-];
-
-const DEFAULT_POINT_PATTERNS = [
-	'circle',
-	'rectangle',
-	'<polygon points="2.5 0 0 5 5 5"></polygon>',
-	'<polygon points="2.5 0 0 2.5 2.5 5 5 2.5"></polygon>',
-	'<polygon points="0 0 2.5 5 5 0"></polygon>',
-	'<path d="M5,5 a1,1 0 1,1 5,0">',
-	'<path d="M0,0 a1,1 0 0,0 5,0">',
-	'<rect width="5" height="2.5"></rect>',
-	'<rect width="2.5" height="5"></rect>',
-];
 
 /**
  * Chart Base prototype.
@@ -1012,14 +974,7 @@ ChartBase.STATE = {
 			),
 		}),
 		ticks: Config.number(),
-	}).value({
-		x: {
-			show: true,
-		},
-		y: {
-			show: true,
-		},
-	}),
+	}).value(DEFAULT_GRID_OBJECT),
 
 	/**
 	 * Sets billboard's data.groups config.
@@ -1151,7 +1106,7 @@ ChartBase.STATE = {
 			type: Config.oneOf(['step', 'step-after', 'step-before']),
 		}),
 	}).value({
-		classes: DEFAULT_LINE_CASSES,
+		classes: DEFAULT_LINE_CLASSES,
 	}),
 
 	/**
