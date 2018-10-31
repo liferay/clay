@@ -55,7 +55,8 @@
       "<rootDir>.*(node_modules)(?!.*clay.*).*$"
     ]
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "workspaces": {
+    "packages":["packages/*"],
+    "nohoist": ["**/clay-charts-shared"]
+  }
 }

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Clay Charts</title>
 
 	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
-	<link rel="stylesheet" href="../build/clay-charts.css">
+	<link rel="stylesheet" href="../build/main.css">
 
 	<script src="../build/globals/clay-charts.js"></script>
 
@@ -53,6 +54,7 @@
 
 
 </head>
+
 <body role="main">
 	<h1>Clay Charts - Color Palette</h1>
 
@@ -115,7 +117,7 @@
 		];
 
 		var typeSelect = document.querySelector('.chart-selector');
-		typeSelect.addEventListener('change', function(event) {
+		typeSelect.addEventListener('change', function (event) {
 			chart.type = typeSelect.value;
 		});
 
@@ -125,4 +127,5 @@
 		}, '#chart');
 	</script>
 </body>
+
 </html>
