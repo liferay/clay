@@ -96,12 +96,12 @@
 		{/let}
 
 		{call ClayDropdownItem.render}
-			{param _handleItemClick: $_handleItemClick /}
 			{param active: $item.active /}
 			{param checked: $item.checked /}
 			{param contentRenderer: $variant /}
 			{param data: $item.data /}
 			{param disabled: $item.disabled /}
+			{param events: ['itemClicked' : $_handleItemClick ] /}
 			{param href: $item.href /}
 			{param icon: $item.icon /}
 			{param inputName: $item.inputName /}
