@@ -4,8 +4,6 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param? _handleItemsPerPageClicked: any}
-	{@param? _handlePageClick: any}
 	{@param currentPage: int}
 	{@param entries: list<[
 		href: string,
@@ -15,6 +13,8 @@
 	{@param selectedEntry: int}
 	{@param spritemap: string}
 	{@param totalEntries: int}
+	{@param? _handleItemsPerPageClicked: any}
+	{@param? _handlePageClick: any}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}

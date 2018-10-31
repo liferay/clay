@@ -105,17 +105,8 @@ class ClayDropdownBase extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemClick(event) {
-		const element = event.delegateTarget;
-		const elementIndex = this._getDropdownItemIndex(element);
-		const flatenItems = this.items
-			.map(item => item.items || item)
-			.reduce((acc, cur) => acc.concat(cur), []);
-		const item = flatenItems[elementIndex];
-
 		return !this.emit({
-			data: {
-				item: item,
-			},
+			data: event.data,
 			name: 'itemClicked',
 			originalEvent: event,
 		});

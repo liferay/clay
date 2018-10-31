@@ -9,13 +9,37 @@ import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
+import {itemShape} from './validators';
 import templates from './ClayDropdownItem.soy.js';
 
 /**
  * Implementation of the Metal Clay Icon.
  * @extends Component
  */
-class ClayDropdownItem extends ClayComponent {}
+class ClayDropdownItem extends ClayComponent {
+	/**
+	 * Continues the propagation of the item clicked event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleItemClick(event) {
+		const element = event.delegateTarget;
+		const elementIndex = this._getDropdownItemIndex(element);
+		const flatenItems = this.items
+			.map(item => item.items || item)
+			.reduce((acc, cur) => acc.concat(cur), []);
+		const item = flatenItems[elementIndex];
+
+		return !this.emit({
+			data: {
+				item: item,
+			},
+			name: 'itemClicked',
+			originalEvent: event,
+		});
+	}
+}
 
 /**
  * State definition.
@@ -24,6 +48,33 @@ class ClayDropdownItem extends ClayComponent {}
  */
 ClayDropdownItem.STATE = {
 	/**
+	 * Flag to indicate if the item is active or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?bool}
+	 */
+	active: itemShape.active,
+
+	/**
+	 * Flag to indicate if the item is checked or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?bool}
+	 */
+	checked: itemShape.checked,
+
+	/**
+	 * Name of the contentrendere for the different deltempaltes.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	contentRenderer: Config.string(),
+
+	/**
 	 * Data to add to the element.
 	 * @default undefined
 	 * @instance
@@ -31,6 +82,114 @@ ClayDropdownItem.STATE = {
 	 * @type {?object}
 	 */
 	data: Config.object(),
+
+	/**
+	 * Flag to indicate if the item is disabled or not
+	 * @default false
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?bool}
+	 */
+	disabled: itemShape.disabled,
+
+	/**
+	 * Href of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	href: itemShape.href,
+
+	/**
+	 * Icon of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	icon: itemShape.icon,
+
+	/**
+	 * Name of the item input in case is selectable.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	inputName: itemShape.inputName,
+
+	/**
+	 * Value of the item input in case is selectable.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	inputValue: itemShape.inputValue,
+
+	/**
+	 * List of child items of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(array|undefined)}
+	 */
+	items: itemShape.items,
+
+	/**
+	 * Position in which item icons will be placed. Needed if any item has icons.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?(string|undefined)}
+	 */
+	itemsIconAlignment: Config.oneOf(['left', 'right']),
+
+	/**
+	 * Label of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	label: itemShape.label.required(),
+
+	/**
+	 * Number of max child items of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(number|undefined)}
+	 */
+	maxItems: itemShape.maxItems,
+
+	/**
+	 * Flag to indicate if the item has a separator or not.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(bool|undefined)}
+	 */
+	separator: itemShape.separator,
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	spritemap: Config.string(),
+
+	/**
+	 * Title of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	title: itemShape.title,
 };
 
 defineWebComponent('clay-dropdown-item', ClayDropdownItem);

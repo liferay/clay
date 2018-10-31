@@ -1,6 +1,7 @@
+import 'clay-dropdown';
 import 'clay-link';
-// eslint-disable-next-line
 import ClayComponent from 'clay-component';
+// eslint-disable-next-line
 import {ClayDropdownBase, ClayDropdownItem} from 'clay-dropdown';
 import {Config} from 'metal-state';
 import defineWebComponent from 'metal-web-component';
