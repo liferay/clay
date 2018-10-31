@@ -54,10 +54,10 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Edit</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Save</a>
     </li>
   </ul>

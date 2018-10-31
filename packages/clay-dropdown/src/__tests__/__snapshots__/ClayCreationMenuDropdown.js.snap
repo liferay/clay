@@ -11,10 +11,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown disable
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main1">main1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
@@ -32,10 +32,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown expande
 </div>
 <div class="dropdown-menu show" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main1">main1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
@@ -53,10 +53,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown should 
 </div>
 <div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main1">main1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
@@ -74,10 +74,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with cl
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main1">main1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
@@ -95,10 +95,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with id
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main1">main1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>
@@ -116,19 +116,19 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
   </ul>
@@ -146,19 +146,19 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
   </ul>
@@ -176,19 +176,19 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
   </ul>
@@ -206,19 +206,19 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
   </ul>
@@ -238,64 +238,64 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary9">primary9</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary10">primary10</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary11">primary11</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary12">primary12</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary13">primary13</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary14">primary14</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary15">primary15</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary16">primary16</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary17">primary17</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary18">primary18</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary19">primary19</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary20">primary20</a>
         </li>
       </ul>
@@ -321,49 +321,49 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary9">primary9</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary10">primary10</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary11">primary11</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary12">primary12</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary13">primary13</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary14">primary14</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary15">primary15</a>
         </li>
       </ul>
@@ -387,34 +387,34 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary6">primary6</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary7">primary7</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary8">primary8</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary9">primary9</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary10">primary10</a>
     </li>
   </ul>
@@ -432,58 +432,58 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary6">primary6</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary7">primary7</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary8">primary8</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary9">primary9</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary10">primary10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary11">primary11</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary12">primary12</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary13">primary13</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary14">primary14</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary15">primary15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary16">primary16</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary17">primary17</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary18">primary18</a>
     </li>
   </ul>
@@ -503,49 +503,49 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary9">primary9</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary10">primary10</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary11">primary11</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary12">primary12</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary13">primary13</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary14">primary14</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary15">primary15</a>
         </li>
       </ul>
@@ -569,40 +569,40 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with on
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary6">primary6</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary7">primary7</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary8">primary8</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary9">primary9</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary10">primary10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary11">primary11</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary12">primary12</a>
     </li>
   </ul>
@@ -668,35 +668,35 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary1">secondary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary2">secondary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary3">secondary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary4">secondary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary5">secondary5</a>
     </li>
   </ul>
@@ -714,38 +714,38 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary1">secondary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary2">secondary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary3">secondary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary4">secondary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary5">secondary5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary6">secondary6</a>
     </li>
   </ul>
@@ -765,35 +765,35 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
       </ul>
@@ -817,44 +817,44 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary1">secondary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary2">secondary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary3">secondary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary4">secondary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary5">secondary5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary6">secondary6</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary7">secondary7</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary8">secondary8</a>
     </li>
   </ul>
@@ -872,44 +872,44 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary1">secondary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary2">secondary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary3">secondary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary4">secondary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary5">secondary5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary6">secondary6</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary7">secondary7</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary8">secondary8</a>
     </li>
   </ul>
@@ -929,50 +929,50 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary7">secondary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary8">secondary8</a>
         </li>
       </ul>
@@ -998,53 +998,53 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary7">secondary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary8">secondary8</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary9">secondary9</a>
         </li>
       </ul>
@@ -1070,44 +1070,44 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
       </ul>
@@ -1133,47 +1133,47 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
       </ul>
@@ -1199,47 +1199,47 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
       </ul>
@@ -1265,41 +1265,41 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
       </ul>
@@ -1325,41 +1325,41 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
       </ul>
@@ -1385,41 +1385,41 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
       </ul>
@@ -1445,47 +1445,47 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
       </ul>
@@ -1511,41 +1511,41 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
       </ul>
@@ -1571,50 +1571,50 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary7">secondary7</a>
         </li>
       </ul>
@@ -1640,50 +1640,50 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary7">secondary7</a>
         </li>
       </ul>
@@ -1709,50 +1709,50 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary7">secondary7</a>
         </li>
       </ul>
@@ -1778,41 +1778,41 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
       </ul>
@@ -1838,41 +1838,41 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
       </ul>
@@ -1898,50 +1898,50 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary7">secondary7</a>
         </li>
       </ul>
@@ -1967,59 +1967,59 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary1">primary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary2">primary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary3">primary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary4">primary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary5">primary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary6">primary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary7">primary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#primary8">primary8</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary1">secondary1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary2">secondary2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary3">secondary3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary4">secondary4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary5">secondary5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary6">secondary6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary7">secondary7</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary8">secondary8</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary9">secondary9</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#secondary10">secondary10</a>
         </li>
       </ul>
@@ -2043,36 +2043,36 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with pr
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary1">primary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary2">primary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary3">primary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary4">primary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#primary5">primary5</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
     <li class="dropdown-subheader" role="presentation">Secondary</li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary1">secondary1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary2">secondary2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary3">secondary3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary4">secondary4</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#secondary5">secondary5</a>
     </li>
   </ul>
@@ -2090,10 +2090,10 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown with th
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main1">main1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#main2">main2</a>
     </li>
   </ul>

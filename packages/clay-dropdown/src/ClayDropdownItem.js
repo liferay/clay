@@ -25,6 +25,15 @@ class ClayDropdownItem extends ClayComponent {
 	_handleItemClick(event) {
 		return !this.emit('itemClicked', event);
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncActive() {
+		if (this.active) {
+			this.element.focus();
+		}
+	}
 }
 
 /**

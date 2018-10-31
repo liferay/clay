@@ -632,7 +632,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -642,7 +642,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -652,7 +652,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -663,7 +663,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -673,7 +673,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -683,7 +683,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -696,7 +696,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -706,7 +706,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -716,7 +716,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -737,7 +737,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -746,7 +746,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -755,7 +755,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -770,32 +770,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -808,154 +808,154 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -1732,7 +1732,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -1742,7 +1742,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -1752,7 +1752,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -1763,7 +1763,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -1773,7 +1773,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -1783,7 +1783,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -1796,7 +1796,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -1806,7 +1806,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -1816,7 +1816,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -1837,7 +1837,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -1846,7 +1846,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -1855,7 +1855,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -1870,32 +1870,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -1908,154 +1908,154 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -2678,7 +2678,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -2688,7 +2688,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -2698,7 +2698,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -2709,7 +2709,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -2719,7 +2719,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -2729,7 +2729,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -2742,7 +2742,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -2752,7 +2752,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -2762,7 +2762,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -2783,7 +2783,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -2792,7 +2792,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -2801,7 +2801,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -2816,32 +2816,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -3091,7 +3091,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -3101,7 +3101,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -3111,7 +3111,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -3122,7 +3122,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -3132,7 +3132,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -3142,7 +3142,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -3155,7 +3155,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -3165,7 +3165,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -3175,7 +3175,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -3196,7 +3196,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -3205,7 +3205,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -3214,7 +3214,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -3229,32 +3229,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -3451,14 +3451,14 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -3699,7 +3699,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -3709,7 +3709,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -3719,7 +3719,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -3730,7 +3730,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -3740,7 +3740,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -3750,7 +3750,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -3763,7 +3763,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -3773,7 +3773,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -3783,7 +3783,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -3804,7 +3804,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -3813,7 +3813,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -3822,7 +3822,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -3837,32 +3837,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -4507,7 +4507,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -4517,7 +4517,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -4527,7 +4527,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -4538,7 +4538,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -4548,7 +4548,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -4558,7 +4558,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -4571,7 +4571,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -4581,7 +4581,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -4591,7 +4591,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -4612,7 +4612,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -4621,7 +4621,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -4630,7 +4630,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -4645,32 +4645,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -4683,154 +4683,154 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -5607,7 +5607,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -5617,7 +5617,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -5627,7 +5627,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -5638,7 +5638,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -5648,7 +5648,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -5658,7 +5658,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -5671,7 +5671,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -5681,7 +5681,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -5691,7 +5691,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -5712,7 +5712,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -5721,7 +5721,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -5730,7 +5730,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -5745,32 +5745,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -5783,154 +5783,154 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -6553,7 +6553,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -6563,7 +6563,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -6573,7 +6573,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -6584,7 +6584,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -6594,7 +6594,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -6604,7 +6604,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -6617,7 +6617,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -6627,7 +6627,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -6637,7 +6637,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -6658,7 +6658,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -6667,7 +6667,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -6676,7 +6676,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -6691,32 +6691,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -6910,14 +6910,14 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -7505,168 +7505,168 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -8057,98 +8057,98 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -8590,7 +8590,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -8600,7 +8600,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -8610,7 +8610,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -8621,7 +8621,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -8631,7 +8631,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -8641,7 +8641,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -8654,7 +8654,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -8664,7 +8664,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -8674,7 +8674,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -8695,7 +8695,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -8704,7 +8704,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -8713,7 +8713,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -8728,32 +8728,32 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -8766,84 +8766,84 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -9484,7 +9484,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -9494,7 +9494,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -9504,7 +9504,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -9515,7 +9515,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -9525,7 +9525,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -9535,7 +9535,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -9548,7 +9548,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -9558,7 +9558,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -9568,7 +9568,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -9589,7 +9589,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -9598,7 +9598,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -9607,7 +9607,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -9622,32 +9622,32 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -9660,154 +9660,154 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -10395,168 +10395,168 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
@@ -11195,7 +11195,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
     <div class="inline-scroller">
       <ul class="list-unstyled">
         <li class="dropdown-subheader" role="presentation">Filter By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="filteritem1checkbox" value="1" ref="input" type="checkbox">
@@ -11205,7 +11205,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="filteritem2checkbox" value="2" ref="input" type="checkbox">
@@ -11215,7 +11215,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="filteritem3checkbox" value="3" ref="input" type="checkbox">
@@ -11226,7 +11226,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           </div>
         </li>
         <li class="dropdown-subheader" role="presentation">Order By</li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input class="custom-control-input" name="orderitem1checkbox" value="1" ref="input" type="checkbox">
@@ -11236,7 +11236,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" name="orderitem2checkbox" value="2" ref="input" type="checkbox">
@@ -11246,7 +11246,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" name="orderitem3checkbox" value="3" ref="input" type="checkbox">
@@ -11259,7 +11259,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
         <li class="dropdown-subheader" role="presentation">Group 1</li>
         <li aria-label="Group 1" role="radiogroup">
           <ul class="list-unstyled">
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -11269,7 +11269,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
                 </label>
               </div>
             </li>
-            <li class="dropdown-item active">
+            <li class="dropdown-item active" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -11279,7 +11279,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
                 </label>
               </div>
             </li>
-            <li class="dropdown-item">
+            <li class="dropdown-item" tabindex="-1">
               <div class="custom-control custom-radio custom-control-inline">
                 <label>
                   <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -11300,7 +11300,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#cards">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
@@ -11309,7 +11309,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           </svg>
         </span>Cards</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
@@ -11318,7 +11318,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           </svg>
         </span>List</button>
     </li>
-    <li>
+    <li tabindex="-1">
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="Table" type="button">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
@@ -11333,32 +11333,32 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#1">Add Content 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#2">Add Content 2</a>
         </li>
         <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav1">Favorite 1</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav2">Favorite 2</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav3">Favorite 3</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav4">Favorite 4</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav5">Favorite 5</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav6">Favorite 6</a>
         </li>
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="#fav7">Favorite 7</a>
         </li>
       </ul>
@@ -11371,154 +11371,154 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Edit</a>
     </li>
   </ul>
