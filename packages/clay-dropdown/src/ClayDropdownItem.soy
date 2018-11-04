@@ -20,8 +20,10 @@
 	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? title: string}
+
+	{let $variant: $contentRenderer ?: 'item' /}
     
-    {delcall ClayDropdownItem.Item variant="$contentRenderer"}
+	{delcall ClayDropdownItem.Item variant="$variant"}
         {param _handleItemClick: $_handleItemClick /}
         {param active: $active /}
         {param checked: $checked /}

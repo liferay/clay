@@ -202,7 +202,7 @@
 	<li>
 		{call ClayDropdownBase.render}
 			{param _handleItemClick: $_handlePageClick /}
-			{param contentRenderer: 'paginationdropdownitems' /}
+			{param contentRenderer: 'pagination' /}
 			{param elementClasses: 'page-item' /}
 			{param items: [[
 				'initPage': $initPage,
@@ -221,7 +221,7 @@
 /**
  * Renders a dropdown list of items
  */
-{deltemplate ClayDropdownBase.Content variant="'paginationdropdownitems'"}
+{deltemplate ClayDropdownBase.Content variant="'pagination'"}
 	{@param? _handleItemClick: any}
 	{@param? contentRenderer: string}
 	{@param? items: list<?>}
