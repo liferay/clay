@@ -140,7 +140,7 @@ ClayDropdownItem.STATE = {
 	 * @memberof ClayDropdownItem
 	 * @type {?(string|undefined)}
 	 */
-	label: itemShape.label.required(),
+	label: itemShape.label,
 
 	/**
 	 * Number of max child items of the item.

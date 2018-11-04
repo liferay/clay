@@ -4,7 +4,6 @@
  *
  */
 {template .render}
-	{@param label: string}
 	{@param? _handleItemClick: any}
 	{@param? active: bool}
 	{@param? checked: bool}
@@ -16,6 +15,7 @@
 	{@param? inputValue: string}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
+	{@param? label: string}
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
@@ -131,10 +131,6 @@
 	<li {$itemAttributes}>
 		{$itemContent}
 	</li>
-
-	{if $separator}
-		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-	{/if}
 {/deltemplate}
 
 /**
@@ -181,10 +177,6 @@
 	<li {$itemAttributes}>
 		{$checkbox}
 	</li>
-
-	{if $separator}
-		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-	{/if}
 {/deltemplate}
 
 /**
@@ -221,10 +213,6 @@
 			{param maxItems: $maxItems /}
 			{param spritemap: $spritemap /}
 		{/call}
-	{/if}
-
-	{if $separator}
-		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 	{/if}
 {/deltemplate}
 
@@ -272,10 +260,6 @@
 	<li {$itemAttributes}>
 		{$radio}
 	</li>
-
-	{if $separator}
-		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-	{/if}
 {/deltemplate}
 
 
@@ -319,8 +303,27 @@
 			</ul>
 		{/if}
 	</li>
+{/deltemplate}
 
-	{if $separator}
-		<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-	{/if}
+/**
+ * Renders list separator
+ */
+{deltemplate ClayDropdownItem.Item variant="'separator'"}
+	{@param label: string}
+	{@param? _handleItemClick: any}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? items: list<?>}
+	{@param? itemsIconAlignment: string}
+	{@param? maxItems: int}
+	{@param? separator: bool}
+	{@param? spritemap: string}
+	{@param? title: string}
+
+	<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 {/deltemplate}

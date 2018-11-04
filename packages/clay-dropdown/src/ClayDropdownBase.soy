@@ -114,6 +114,12 @@
 			{param spritemap: $spritemap /}
 			{param title: $item.title /}
 		{/call}
+
+		{if $item.separator}
+			{call ClayDropdownItem.render}
+				{param contentRenderer: 'separator' /}
+			{/call}
+		{/if}
 	{/for}
 {/template}
 
