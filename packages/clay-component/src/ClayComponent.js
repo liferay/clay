@@ -14,7 +14,7 @@ class ClayComponent extends Component {
 	attached(...args) {
 		super.attached(...args);
 
-		if (isServerSide()) {
+		if (isServerSide() || !this.element) {
 			return;
 		}
 
