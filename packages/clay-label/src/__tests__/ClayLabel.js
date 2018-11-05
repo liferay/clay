@@ -128,6 +128,14 @@ describe('ClayLabel', function() {
 		label.refs.closeButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith('close');
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: {
+					label: expect.any(String),
+				},
+				name: 'close',
+				originalEvent: expect.any(Object),
+			})
+		);
 	});
 });
