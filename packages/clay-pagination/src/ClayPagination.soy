@@ -7,6 +7,7 @@
 	{@param currentPage: int}
 	{@param spritemap: string}
 	{@param totalPages: int}
+	{@param? _handlePageClick: any}
 	{@param? baseHref: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
@@ -25,6 +26,7 @@
 
 	<ul {$attributes}>
 		{call .item}
+			{param _handlePageClick: $_handlePageClick /}
 			{param ariaLabel kind="text"}
 				{msg desc="Help text to indicate that this link goes to the previous page"}
 					previous-page
@@ -40,6 +42,7 @@
 		{if $totalPages <= 5}
 			{for $page in range(1, $totalPages+1)}
 				{call .item}
+					{param _handlePageClick: $_handlePageClick /}
 					{param active: $page == $currentPage /}
 					{param baseHref: $baseHref /}
 					{param label: '' + $page/}
@@ -51,6 +54,7 @@
 			{let $fromCurrentToLast: $totalPages - $currentPage /}
 
 			{call .item}
+				{param _handlePageClick: $_handlePageClick /}
 				{param active: $currentPage == 1 /}
 				{param baseHref: $baseHref /}
 				{param label: '1' /}
@@ -60,6 +64,7 @@
 			{if $fromOneToCurrent < 4}
 				{for $page in range(2, $currentPage == 1 ? 4 : $currentPage)}
 					{call .item}
+						{param _handlePageClick: $_handlePageClick /}
 						{param baseHref: $baseHref /}
 						{param label: '' + $page/}
 						{param page: $page/}
@@ -67,6 +72,7 @@
 				{/for}
 			{else}
 				{call .range}
+					{param _handlePageClick: $_handlePageClick /}
 					{param baseHref: $baseHref /}
 					{param endPage: $currentPage == $totalPages ? $currentPage - 3 : $currentPage - 1 /}
 					{param initPage: 2 /}
@@ -79,6 +85,7 @@
 
 				{for $page in range($currentRangeInit, $currentRangeEnd)}
 					{call .item}
+						{param _handlePageClick: $_handlePageClick /}
 						{param active: $page == $currentPage /}
 						{param baseHref: $baseHref /}
 						{param label: '' + $page /}
@@ -90,6 +97,7 @@
 			{if $fromCurrentToLast <= 3}
 				{for $page in range($currentPage + 1, $totalPages)}
 					{call .item}
+						{param _handlePageClick: $_handlePageClick /}
 						{param baseHref: $baseHref /}
 						{param label: '' + $page/}
 						{param page: $page/}
@@ -97,6 +105,7 @@
 				{/for}
 			{else}
 				{call .range}
+					{param _handlePageClick: $_handlePageClick /}
 					{param baseHref: $baseHref /}
 					{param endPage: $totalPages /}
 					{param initPage: $currentPage == 1 ? 4 : $currentPage + 2 /}
@@ -105,6 +114,7 @@
 
 			{for $page in range($currentPage == $totalPages ? $totalPages -3 : $totalPages, $totalPages + 1)}
 				{call .item}
+					{param _handlePageClick: $_handlePageClick /}
 					{param active: $page == $currentPage /}
 					{param baseHref: $baseHref /}
 					{param label: '' + $page/}
@@ -114,6 +124,7 @@
 		{/if}
 
 		{call .item}
+			{param _handlePageClick: $_handlePageClick /}
 			{param ariaLabel kind="text"}
 				{msg desc="Help text to indicate that this link goes to the next page"}
 					next-page
@@ -132,6 +143,7 @@
  * Renders a page item
  */
 {template .item}
+	{@param? _handlePageClick: any}
 	{@param? active: bool}
 	{@param? ariaLabel: string}
 	{@param? baseHref: string}
@@ -139,17 +151,6 @@
 	{@param? label: string}
 	{@param? page: int}
 	{@param? spritemap: string}
-
-	{let $classes kind="text"}
-		page-item
-		{if $active}
-			{sp}active
-		{/if}
-
-		{if not $page}
-			{sp}disabled
-		{/if}
-	{/let}
 
 	{let $href kind="text"}
 		{if $baseHref}
@@ -163,7 +164,21 @@
 		{/if}
 	{/let}
 
-	<li class="{$classes}">
+	{let $elementAttributes kind="attributes"}
+		class="page-item
+			{if $active}
+				{sp}active
+			{/if}
+
+			{if not $page}
+				{sp}disabled
+			{/if}
+		"
+		data-page="{$page}"
+		data-onclick="{$_handlePageClick}"
+	{/let}
+
+	<li {$elementAttributes}>
 		{call ClayLink.render}
 			{param ariaLabel: $ariaLabel /}
 			{param elementClasses: 'page-link' /}
@@ -181,11 +196,13 @@
 {template .range}
 	{@param endPage: int}
 	{@param initPage: int}
+	{@param? _handlePageClick: any}
 	{@param? baseHref: string}
 
 	<li>
 		{call ClayDropdownBase.render}
-			{param contentRenderer: 'paginationdropdownitems' /}
+			{param _handleItemClick: $_handlePageClick /}
+			{param contentRenderer: 'pagination' /}
 			{param elementClasses: 'page-item' /}
 			{param items: [[
 				'initPage': $initPage,
@@ -204,7 +221,7 @@
 /**
  * Renders a dropdown list of items
  */
-{deltemplate ClayDropdownBase.Content variant="'paginationdropdownitems'"}
+{deltemplate ClayDropdownBase.Content variant="'pagination'"}
 	{@param? _handleItemClick: any}
 	{@param? contentRenderer: string}
 	{@param? items: list<?>}
@@ -218,10 +235,12 @@
 
 		<ul class="list-unstyled">
 			{for $page in range($initPage, $endPage)}
-				{delcall ClayDropdownBase.Item variant="'item'"}
+				{call ClayDropdownItem.render}
+					{param _handleItemClick: $_handleItemClick /}
+					{param data: [ 'page': $page ] /}
 					{param href: $baseHref + $page /}
 					{param label: '' + $page /}
-				{/delcall}
+				{/call}
 			{/for}
 		</ul>
 	{/if}

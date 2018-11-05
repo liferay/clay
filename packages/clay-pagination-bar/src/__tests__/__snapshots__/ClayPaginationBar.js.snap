@@ -10,7 +10,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
       </svg>
     </button>
   </div>
-  <div class="pagination-results">showing-1-to-10of-20-entries</div>
+  <div class="pagination-results">showing-1-to-10-of-20-entries</div>
   <ul class="clay-pagination pagination">
     <li class="page-item disabled">
       <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
@@ -20,13 +20,13 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
         </svg>
       </a>
     </li>
-    <li class="page-item active">
+    <li class="page-item active" data-page="1">
       <a class=" page-link" href="#mySite?curPage=1">1</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a class=" page-link" href="#mySite?curPage=2">2</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
@@ -64,7 +64,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
       </svg>
     </button>
   </div>
-  <div class="pagination-results">showing-1-to-10of-20-entries</div>
+  <div class="pagination-results">showing-1-to-10-of-20-entries</div>
   <ul class="clay-pagination pagination">
     <li class="page-item disabled">
       <a aria-label="previous-page" class=" page-link" href="#">
@@ -74,13 +74,13 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
         </svg>
       </a>
     </li>
-    <li class="page-item active">
+    <li class="page-item active" data-page="1">
       <a class=" page-link" href="#1">1</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a class=" page-link" href="#2">2</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a aria-label="next-page" class=" page-link" href="#2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
@@ -118,7 +118,7 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
       </svg>
     </button>
   </div>
-  <div class="pagination-results">showing-1-to-10of-20-entries</div>
+  <div class="pagination-results">showing-1-to-10-of-20-entries</div>
   <ul class="clay-pagination pagination">
     <li class="page-item disabled">
       <a aria-label="previous-page" class=" page-link" href="#">
@@ -128,13 +128,13 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
         </svg>
       </a>
     </li>
-    <li class="page-item active">
+    <li class="page-item active" data-page="1">
       <a class=" page-link" href="#1">1</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a class=" page-link" href="#2">2</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a aria-label="next-page" class=" page-link" href="#2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
@@ -172,9 +172,9 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
       </svg>
     </button>
   </div>
-  <div class="pagination-results">showing-11-to-19of-19-entries</div>
+  <div class="pagination-results">showing-11-to-19-of-19-entries</div>
   <ul class="clay-pagination pagination">
-    <li class="page-item">
+    <li class="page-item" data-page="1">
       <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
@@ -182,10 +182,10 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
         </svg>
       </a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="1">
       <a class=" page-link" href="#mySite?curPage=1">1</a>
     </li>
-    <li class="page-item active">
+    <li class="page-item active" data-page="2">
       <a class=" page-link" href="#mySite?curPage=2">2</a>
     </li>
     <li class="page-item disabled">
@@ -226,9 +226,9 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
       </svg>
     </button>
   </div>
-  <div class="pagination-results">showing-11-to-20of-21-entries</div>
+  <div class="pagination-results">showing-11-to-20-of-21-entries</div>
   <ul class="clay-pagination pagination">
-    <li class="page-item">
+    <li class="page-item" data-page="1">
       <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
@@ -236,16 +236,16 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
         </svg>
       </a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="1">
       <a class=" page-link" href="#mySite?curPage=1">1</a>
     </li>
-    <li class="page-item active">
+    <li class="page-item active" data-page="2">
       <a class=" page-link" href="#mySite?curPage=2">2</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="3">
       <a class=" page-link" href="#mySite?curPage=3">3</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="3">
       <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>
@@ -283,9 +283,9 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
       </svg>
     </button>
   </div>
-  <div class="pagination-results">showing-21-to-21of-21-entries</div>
+  <div class="pagination-results">showing-21-to-21-of-21-entries</div>
   <ul class="clay-pagination pagination">
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
           <title>angle-left</title>
@@ -293,13 +293,13 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
         </svg>
       </a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="1">
       <a class=" page-link" href="#mySite?curPage=1">1</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a class=" page-link" href="#mySite?curPage=2">2</a>
     </li>
-    <li class="page-item active">
+    <li class="page-item active" data-page="3">
       <a class=" page-link" href="#mySite?curPage=3">3</a>
     </li>
     <li class="page-item disabled">
@@ -340,7 +340,7 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
       </svg>
     </button>
   </div>
-  <div class="pagination-results">showing-1-to-10of-20-entries</div>
+  <div class="pagination-results">showing-1-to-10-of-20-entries</div>
   <ul class="clay-pagination pagination">
     <li class="page-item disabled">
       <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
@@ -350,13 +350,13 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
         </svg>
       </a>
     </li>
-    <li class="page-item active">
+    <li class="page-item active" data-page="1">
       <a class=" page-link" href="#mySite?curPage=1">1</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a class=" page-link" href="#mySite?curPage=2">2</a>
     </li>
-    <li class="page-item">
+    <li class="page-item" data-page="2">
       <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
         <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
           <title>angle-right</title>

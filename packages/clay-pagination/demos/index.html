@@ -103,6 +103,12 @@
 				new metal.ClayPagination({
 					baseHref: '#container',
 					currentPage: currentPage,
+					events: {
+						'pageClicked': (event) => {
+							event.preventDefault();
+							console.log(`Selected page: ${event.data.page}`);
+						},
+					},
 					spritemap: spritemap,
 					totalPages: totalPages,
 				}, '#container' + totalPages);

@@ -1,9 +1,7 @@
 import 'clay-button';
-import 'clay-checkbox';
-import 'clay-icon';
 import 'clay-link';
 import 'clay-portal';
-import 'clay-radio';
+import './ClayDropdownItem';
 import ClayComponent from 'clay-component';
 import Soy from 'metal-soy';
 import dom from 'metal-dom';
