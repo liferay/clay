@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Clay Charts</title>
 
 	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
-	<link rel="stylesheet" href="../build/main.css">
+	<link rel="stylesheet" href="../build/clay-charts.css">
 
 	<script src="../build/globals/clay-charts-jsx.js"></script>
 
@@ -28,53 +27,52 @@
 		}
 	</style>
 </head>
-
 <body role="main">
 	<svg style="display:none">
 		<defs>
 			<pattern id="circles" patternUnits="userSpaceOnUse" width="16" height="16" style="fill:rgba(0,0,0,0.3)">
-				<circle cx="4" cy="4" r="2" />
-				<circle cx="12" cy="12" r="2" />
+				<circle cx="4" cy="4" r="2"/>
+				<circle cx="12" cy="12" r="2"/>
 			</pattern>
 
 			<pattern id="diagonal-left-large" patternUnits="userSpaceOnUse" width="10" height="10" style="fill:rgba(0,0,0,0.3)">
-				<polygon points="9.3,0 10,0.7 10,0 " />
-				<polygon points="0,0 0,0.7 9.3,10 10,10 10,9.3 0.7,0 " />
-				<polygon points="0,9.3 0,10 0.7,10 " />
+				<polygon points="9.3,0 10,0.7 10,0 "/>
+				<polygon points="0,0 0,0.7 9.3,10 10,10 10,9.3 0.7,0 "/>
+				<polygon points="0,9.3 0,10 0.7,10 "/>
 			</pattern>
 
 			<pattern id="diagonal-left-small" patternUnits="userSpaceOnUse" width="5" height="5" style="fill:rgba(0,0,0,0.3)">
-				<polygon points="5,0 4.3,0 5,0.7 " />
-				<polygon points="0.7,0 0,0 0,0.7 4.3,5 5,5 5,4.3 " />
-				<polygon points="0,4.3 0,5 0.7,5 " />
+				<polygon points="5,0 4.3,0 5,0.7 "/>
+				<polygon points="0.7,0 0,0 0,0.7 4.3,5 5,5 5,4.3 "/>
+				<polygon points="0,4.3 0,5 0.7,5 "/>
 			</pattern>
 
 			<pattern id="diagonal-right-large" patternUnits="userSpaceOnUse" width="10" height="10" style="fill:rgba(0,0,0,0.3)">
-				<polygon points="10,9.3 9.3,10 10,10 " />
-				<polygon points="10,0 9.3,0 0,9.3 0,10 0.7,10 10,0.7 " />
-				<polygon points="0.7,0 0,0 0,0.7 " />
+				<polygon points="10,9.3 9.3,10 10,10 "/>
+				<polygon points="10,0 9.3,0 0,9.3 0,10 0.7,10 10,0.7 "/>
+				<polygon points="0.7,0 0,0 0,0.7 "/>
 			</pattern>
 
 			<pattern id="diagonal-right-small" patternUnits="userSpaceOnUse" width="5" height="5" style="fill:rgba(0,0,0,0.3)">
-				<polygon points="5,4.3 4.3,5 5,5 " />
-				<polygon points="5,0 4.3,0 0,4.3 0,5 0.7,5 5,0.7 " />
-				<polygon points="0.7,0 0,0 0,0.7 " />
+				<polygon points="5,4.3 4.3,5 5,5 "/>
+				<polygon points="5,0 4.3,0 0,4.3 0,5 0.7,5 5,0.7 "/>
+				<polygon points="0.7,0 0,0 0,0.7 "/>
 			</pattern>
 
 			<pattern id="horizontal-large" patternUnits="userSpaceOnUse" width="8" height="8" style="fill:rgba(0,0,0,0.3)">
-				<rect y="7" width="8" height="1" />
+				<rect y="7" width="8" height="1"/>
 			</pattern>
 
 			<pattern id="horizontal-small" patternUnits="userSpaceOnUse" width="4" height="4" style="fill:rgba(0,0,0,0.3)">
-				<rect y="3" width="4" height="1" />
+				<rect y="3" width="4" height="1"/>
 			</pattern>
 
 			<pattern id="vertical-large" patternUnits="userSpaceOnUse" width="8" height="8" style="fill:rgba(0,0,0,0.3)">
-				<rect x="7" y="0" width="1" height="8" />
+				<rect x="7" y="0" width="1" height="8"/>
 			</pattern>
 
 			<pattern id="vertical-small" patternUnits="userSpaceOnUse" width="4" height="4" style="fill:rgba(0,0,0,0.3)">
-				<rect x="3" width="1" height="4" />
+				<rect x="3" width="1" height="4"/>
 			</pattern>
 		</defs>
 	</svg>
@@ -433,11 +431,11 @@
 						230,
 						110,
 						90,
-						{ low: 170, mid: 200, high: 230 },
-						{ low: 10, mid: 40, high: 70 },
-						{ low: 350, mid: 380, high: 410 },
-						{ low: 260, mid: 290, high: 320 },
-						{ low: 30, mid: 70, high: 100 }
+						{low: 170, mid: 200, high: 230},
+						{low: 10, mid: 40, high: 70},
+						{low: 350, mid: 380, high: 410},
+						{low: 260, mid: 290, high: 320},
+						{low: 30, mid: 70, high: 100}
 					],
 					id: 'Product 2'
 				}
@@ -499,13 +497,13 @@
 
 			typeSelect.value = type;
 
-			typeSelect.addEventListener('change', function (event) {
+			typeSelect.addEventListener('change', function(event) {
 				chart.type = typeSelect.value;
 			});
 
 			var dataSelect = chartControls.querySelector('.data');
 
-			dataSelect.addEventListener('change', function (event) {
+			dataSelect.addEventListener('change', function(event) {
 				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
 			});
 
@@ -513,5 +511,4 @@
 		}
 	</script>
 </body>
-
 </html>

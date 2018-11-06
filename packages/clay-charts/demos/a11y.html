@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demo: Clay Charts</title>
 
 	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
-	<link rel="stylesheet" href="../build/main.css">
+	<link rel="stylesheet" href="../build/clay-charts.css">
 
 	<script src="../build/globals/clay-charts.js"></script>
 
@@ -30,9 +29,8 @@
 
 
 </head>
-
 <body role="main">
-	<!--
+<!--
 	<svg style="display:none">
 		<defs>
 			<pattern id="circles" patternUnits="userSpaceOnUse" width="16" height="16" style="fill:rgba(0,0,0,0.3)">
@@ -278,10 +276,10 @@
 					data: [20],
 					id: 'data3'
 				},
-				{
-					data: [15],
-					id: 'data4'
-				},
+        {
+          data: [15],
+          id: 'data4'
+        },
 				{
 					data: [5],
 					id: 'data5'
@@ -361,17 +359,17 @@
 
 		var pieChart = new metal.PieChart({
 			columns: dummyPercentData.columns_1,
-			/*
-						color: {
-							tiles() {
-								return [
-									document.querySelector('#circles'),
-									document.querySelector('#horizontal-large'),
-									document.querySelector('#vertical-small'),
-								];
-							}
-						}
-			*/
+/*
+			color: {
+				tiles() {
+					return [
+						document.querySelector('#circles'),
+						document.querySelector('#horizontal-large'),
+						document.querySelector('#vertical-small'),
+					];
+				}
+			}
+*/
 		}, '#pie');
 		createChartControls(pieChart, 'pie', dummyPercentData);
 
@@ -397,14 +395,14 @@
 
 			typeSelect.value = type;
 
-			typeSelect.addEventListener('change', function (event) {
+			typeSelect.addEventListener('change', function(event) {
 				chart.loading = false;
 				chart.type = typeSelect.value;
 			});
 
 			var dataSelect = chartControls.querySelector('.data');
 
-			dataSelect.addEventListener('change', function (event) {
+			dataSelect.addEventListener('change', function(event) {
 				chart.loading = false;
 				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
 			});
@@ -413,5 +411,4 @@
 		}
 	</script>
 </body>
-
 </html>

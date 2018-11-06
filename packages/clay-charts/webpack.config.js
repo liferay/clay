@@ -1,9 +1,11 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: {
 		'charts': './src/charts.js',
 		'charts-jsx': './src/jsx/charts.js',
+		'styles': './src/scss/main.scss',
 	},
 	module: {
 		rules: [
@@ -19,6 +21,13 @@ module.exports = {
 					},
 				},
 			},
+			{
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: ['css-loader', 'sass-loader'],
+				}),
+			},
 		],
 	},
 	devtool: 'cheap-module-source-map',
@@ -28,6 +37,7 @@ module.exports = {
 		filename: './build/globals/clay-[name].js',
 	},
 	plugins: [
-		new webpack.optimize.ModuleConcatenationPlugin()
+		new webpack.optimize.ModuleConcatenationPlugin(),
+		new ExtractTextPlugin('./build/clay-charts.css'),
 	],
 };
