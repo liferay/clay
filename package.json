@@ -56,7 +56,11 @@
     ]
   },
   "workspaces": {
-    "packages":["packages/*"],
-    "nohoist": ["**/clay-charts-shared"]
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/clay-charts-shared"
+    ]
   }
 }
