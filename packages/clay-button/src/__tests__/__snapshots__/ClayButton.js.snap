@@ -5,31 +5,24 @@ exports[`ClayButton should render a block button 1`] = `<button class="btn btn-b
 exports[`ClayButton should render a button with classes 1`] = `<button class="btn my-custom-class btn-primary" type="button"></button>`;
 
 exports[`ClayButton should render a button with icon 1`] = `
-<button class="btn btn-primary" aria-label="plus" type="button">
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+<button class="btn btn-primary" aria-label="plus" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
-  </svg>
-</button>
+  </svg></button>
 `;
 
 exports[`ClayButton should render a button with icon and label 1`] = `
-<button class="btn btn-primary" type="button">
-  <span class="inline-item inline-item-before">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+<button class="btn btn-primary" type="button"><span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
-    </svg>
-  </span>Label</button>
+    </svg></span>Label</button>
 `;
 
 exports[`ClayButton should render a button with icon and monospaced true 1`] = `
-<button class="btn btn-monospaced btn-primary" aria-label="plus" type="button">
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+<button class="btn btn-monospaced btn-primary" aria-label="plus" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
-  </svg>
-</button>
+  </svg></button>
 `;
 
 exports[`ClayButton should render a button with id 1`] = `<button class="btn btn-primary" id="myId" type="button"></button>`;
@@ -39,24 +32,17 @@ exports[`ClayButton should render a button with label 1`] = `<button class="btn 
 exports[`ClayButton should render a button with label and ariaLabel 1`] = `<button class="btn btn-primary" aria-label="My Description" type="button">Visit Liferay.com</button>`;
 
 exports[`ClayButton should render a button with label and icon 1`] = `
-<button class="btn btn-primary" type="button">
-  <span class="inline-item inline-item-before">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+<button class="btn btn-primary" type="button"><span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
-    </svg>
-  </span>Label</button>
+    </svg></span>Label</button>
 `;
 
 exports[`ClayButton should render a button with label and icon on right side 1`] = `
-<button class="btn btn-primary" type="button">Label
-  <span class="inline-item inline-item-after">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+<button class="btn btn-primary" type="button">Label<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
       <title>plus</title>
       <use xlink:href="icons.svg#plus"></use>
-    </svg>
-  </span>
-</button>
+    </svg></span></button>
 `;
 
 exports[`ClayButton should render a button with name 1`] = `<button class="btn btn-primary" name="myButton" type="button"></button>`;

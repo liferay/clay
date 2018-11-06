@@ -67,14 +67,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text sr-only">deselect</span>
-          </span>
-        </label>
-      </div>
+      <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
     </div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
@@ -82,14 +75,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
-      <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text sr-only">deselect</span>
-          </span>
-        </label>
-      </div>
+      <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
     </div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
@@ -101,77 +87,49 @@ exports[`ClayList should render a selectable ClayList 1`] = `
 exports[`ClayList should render a selectable ClayList with action menu 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
     <div class="autofit-col">
       <div class="quick-action-menu"></div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
     <div class="autofit-col">
       <div class="quick-action-menu"></div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
@@ -183,31 +141,19 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
@@ -216,110 +162,62 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Hamburger</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Hamburger</a></h4>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Ramen</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Ramen</a></h4>
       <p class="list-group-subtitle text-truncate">China</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Paella</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Paella</a></h4>
       <p class="list-group-subtitle text-truncate">Spain</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Pizza</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Pizza</a></h4>
       <p class="list-group-subtitle text-truncate">Italy</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Carcamusas</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Carcamusas</a></h4>
       <p class="list-group-subtitle text-truncate">Toledo</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Tacos</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Tacos</a></h4>
       <p class="list-group-subtitle text-truncate">Mexico</p>
     </div>
   </li>
@@ -327,46 +225,28 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
     <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
     </div>
@@ -394,49 +274,37 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Hamburger</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Hamburger</a></h4>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Ramen</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Ramen</a></h4>
       <p class="list-group-subtitle text-truncate">China</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Paella</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Paella</a></h4>
       <p class="list-group-subtitle text-truncate">Spain</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Pizza</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Pizza</a></h4>
       <p class="list-group-subtitle text-truncate">Italy</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Carcamusas</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Carcamusas</a></h4>
       <p class="list-group-subtitle text-truncate">Toledo</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Tacos</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Tacos</a></h4>
       <p class="list-group-subtitle text-truncate">Mexico</p>
     </div>
   </li>
@@ -467,31 +335,19 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
@@ -500,110 +356,62 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Hamburger</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Hamburger</a></h4>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Ramen</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Ramen</a></h4>
       <p class="list-group-subtitle text-truncate">China</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Paella</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Paella</a></h4>
       <p class="list-group-subtitle text-truncate">Spain</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Pizza</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Pizza</a></h4>
       <p class="list-group-subtitle text-truncate">Italy</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Carcamusas</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Carcamusas</a></h4>
       <p class="list-group-subtitle text-truncate">Toledo</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Tacos</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Tacos</a></h4>
       <p class="list-group-subtitle text-truncate">Mexico</p>
     </div>
   </li>
@@ -611,46 +419,28 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
     <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
     </div>
@@ -664,31 +454,19 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     <h3 class="list-group-header-title" id="group-0">Folders</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Photos</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-rounded sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
             <title>folder</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Videos</h4>
     </div>
@@ -697,187 +475,97 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     <h3 class="list-group-header-title" id="group-1">Recipes</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Hamburger</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Hamburger</a></h4>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
-      <div class="list-group-detail">
-        <span class="label label-success">
-          <span class="label-item label-item-expand">No Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Ramen</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Ramen</a></h4>
       <p class="list-group-subtitle text-truncate">China</p>
-      <div class="list-group-detail">
-        <span class="label label-warning">
-          <span class="label-item label-item-expand">Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-warning"><span class="label-item label-item-expand">Spicy</span></span></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Paella</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Paella</a></h4>
       <p class="list-group-subtitle text-truncate">Spain</p>
-      <div class="list-group-detail">
-        <span class="label label-success">
-          <span class="label-item label-item-expand">No Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Pizza</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Pizza</a></h4>
       <p class="list-group-subtitle text-truncate">Italy</p>
-      <div class="list-group-detail">
-        <span class="label label-success">
-          <span class="label-item label-item-expand">No Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Carcamusas</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Carcamusas</a></h4>
       <p class="list-group-subtitle text-truncate">Toledo</p>
-      <div class="list-group-detail">
-        <span class="label label-warning">
-          <span class="label-item label-item-expand">Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-warning"><span class="label-item label-item-expand">Spicy</span></span></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Tacos</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Tacos</a></h4>
       <p class="list-group-subtitle text-truncate">Mexico</p>
-      <div class="list-group-detail">
-        <span class="label label-danger">
-          <span class="label-item label-item-expand">Very Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-danger"><span class="label-item label-item-expand">Very Spicy</span></span></div>
     </div>
   </li>
   <li class="list-group-header">
     <h3 class="list-group-header-title" id="group-2">Chefs</h3>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
       <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
     </div>
@@ -888,351 +576,189 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
 exports[`ClayList should render a selectable ClayList with quick action menu 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Hamburger</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Hamburger</a></h4>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
-      <div class="list-group-detail">
-        <span class="label label-success">
-          <span class="label-item label-item-expand">No Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></div>
     </div>
     <div class="autofit-col">
-      <div class="quick-action-menu">
-        <a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+      <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
             <title>trash</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-          </svg>
-        </a>
-        <a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+          </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
             <title>download</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          </svg></a></div>
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Ramen</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Ramen</a></h4>
       <p class="list-group-subtitle text-truncate">China</p>
-      <div class="list-group-detail">
-        <span class="label label-warning">
-          <span class="label-item label-item-expand">Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-warning"><span class="label-item label-item-expand">Spicy</span></span></div>
     </div>
     <div class="autofit-col">
-      <div class="quick-action-menu">
-        <a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+      <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
             <title>trash</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-          </svg>
-        </a>
-        <a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+          </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
             <title>download</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          </svg></a></div>
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Paella</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Paella</a></h4>
       <p class="list-group-subtitle text-truncate">Spain</p>
-      <div class="list-group-detail">
-        <span class="label label-success">
-          <span class="label-item label-item-expand">No Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></div>
     </div>
     <div class="autofit-col">
-      <div class="quick-action-menu">
-        <a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+      <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
             <title>trash</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-          </svg>
-        </a>
-        <a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+          </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
             <title>download</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          </svg></a></div>
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Pizza</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Pizza</a></h4>
       <p class="list-group-subtitle text-truncate">Italy</p>
-      <div class="list-group-detail">
-        <span class="label label-success">
-          <span class="label-item label-item-expand">No Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></div>
     </div>
     <div class="autofit-col">
-      <div class="quick-action-menu">
-        <a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+      <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
             <title>trash</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-          </svg>
-        </a>
-        <a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+          </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
             <title>download</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          </svg></a></div>
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Carcamusas</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Carcamusas</a></h4>
       <p class="list-group-subtitle text-truncate">Toledo</p>
-      <div class="list-group-detail">
-        <span class="label label-warning">
-          <span class="label-item label-item-expand">Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-warning"><span class="label-item label-item-expand">Spicy</span></span></div>
     </div>
     <div class="autofit-col">
-      <div class="quick-action-menu">
-        <a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+      <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
             <title>trash</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-          </svg>
-        </a>
-        <a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+          </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
             <title>download</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          </svg></a></div>
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+    <div class="autofit-col"><span class="sticker sticker-circle sticker-primary"><span class="inline-item"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
             <title>exclamation-circle</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
+          </svg></span></span></div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
-        <a href="#">Tacos</a>
-      </h4>
+      <h4 class="list-group-title text-truncate"><a href="#">Tacos</a></h4>
       <p class="list-group-subtitle text-truncate">Mexico</p>
-      <div class="list-group-detail">
-        <span class="label label-danger">
-          <span class="label-item label-item-expand">Very Spicy</span>
-        </span>
-      </div>
+      <div class="list-group-detail"><span class="label label-danger"><span class="label-item label-item-expand">Very Spicy</span></span></div>
     </div>
     <div class="autofit-col">
-      <div class="quick-action-menu">
-        <a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+      <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1" title="Remove"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
             <title>trash</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-          </svg>
-        </a>
-        <a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+          </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2" title="Download"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
             <title>download</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="dropdown dropdown-action">
-        <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          </svg></a></div>
+      <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
             <title>ellipsis-v</title>
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-          </svg>
-        </button>
-      </div>
+          </svg></button></div>
     </div>
   </li>
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>

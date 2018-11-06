@@ -9,26 +9,18 @@ exports[`ClayImageCard should render a ClayImageCard with actionItems 1`] = `
         <div class="card-title text-truncate">My Title</div>
       </div>
       <div class="autofit-col">
-        <div class="dropdown dropdown-action">
-          <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+        <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
               <title>ellipsis-v</title>
               <use xlink:href="icons.svg#ellipsis-v"></use>
-            </svg>
-          </button>
-        </div>
+            </svg></button></div>
       </div>
     </div>
   </div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Edit</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#1">Save</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Edit</a></li>
+    <li><a class=" dropdown-item" href="#1">Save</a></li>
   </ul>
 </div>
 `;
@@ -51,9 +43,7 @@ exports[`ClayImageCard should render a ClayImageCard with href 1`] = `
   <div class="aspect-ratio card-item-first"></div>
   <div class="card-body">
     <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <a class=" card-title text-truncate" href="#1">My Title</a>
-      </div>
+      <div class="autofit-col autofit-col-expand"><a class=" card-title text-truncate" href="#1">My Title</a></div>
     </div>
   </div>
 </div>
@@ -62,12 +52,10 @@ exports[`ClayImageCard should render a ClayImageCard with href 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with icon 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents" focusable="false">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents" focusable="false">
         <title>documents</title>
         <use xlink:href="icons.svg#documents"></use>
-      </svg>
-    </div>
+      </svg></div>
   </div>
   <div class="card-body">
     <div class="card-row">
@@ -107,9 +95,7 @@ exports[`ClayImageCard should render a ClayImageCard with imageAlt 1`] = `
 
 exports[`ClayImageCard should render a ClayImageCard with imageSrc 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <img alt="" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="thumbnail_coffee.jpg">
-  </div>
+  <div class="aspect-ratio card-item-first"><img alt="" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="thumbnail_coffee.jpg"></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -127,11 +113,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`danger co
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-danger">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-danger"><span class="label-item label-item-expand">Approved</span></span></div>
       </div>
     </div>
   </div>
@@ -145,11 +127,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`info colo
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-info">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-info"><span class="label-item label-item-expand">Approved</span></span></div>
       </div>
     </div>
   </div>
@@ -163,11 +141,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`secondary
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-secondary"><span class="label-item label-item-expand">Approved</span></span></div>
       </div>
     </div>
   </div>
@@ -181,11 +155,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`success c
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-success">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-success"><span class="label-item label-item-expand">Approved</span></span></div>
       </div>
     </div>
   </div>
@@ -199,11 +169,7 @@ exports[`ClayImageCard should render a ClayImageCard with labelStyle \`warning c
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-warning">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-warning"><span class="label-item label-item-expand">Approved</span></span></div>
       </div>
     </div>
   </div>
@@ -217,17 +183,7 @@ exports[`ClayImageCard should render a ClayImageCard with labels with styles map
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-success">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-          <span class="label label-warning">
-            <span class="label-item label-item-expand">Pending</span>
-          </span>
-          <span class="label label-danger">
-            <span class="label-item label-item-expand">Error</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-success"><span class="label-item label-item-expand">Approved</span></span> <span class="label label-warning"><span class="label-item label-item-expand">Pending</span></span> <span class="label label-danger"><span class="label-item label-item-expand">Error</span></span></div>
       </div>
     </div>
   </div>
@@ -241,11 +197,7 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-secondary"><span class="label-item label-item-expand">Approved</span></span></div>
       </div>
     </div>
   </div>
@@ -254,11 +206,7 @@ exports[`ClayImageCard should render a ClayImageCard with one label 1`] = `
 
 exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-primary sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -271,11 +219,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker 1`] = `
 
 exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-circle sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-circle sticker-primary sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -288,11 +232,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker shape \`circle
 
 exports[`ClayImageCard should render a ClayImageCard with sticker shape \`rounded\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-primary sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -305,11 +245,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker shape \`rounde
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`danger color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-danger sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -322,11 +258,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`danger
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`dark color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-dark sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-dark sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -339,11 +271,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`dark c
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`info color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-info sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-info sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -356,11 +284,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`info c
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`light color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-light sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-light sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -373,11 +297,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`light 
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`primary color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-primary sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -390,11 +310,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`primar
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`secondary color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-secondary sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-secondary sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -407,11 +323,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`second
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`success color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-success sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-success sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -424,11 +336,7 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`succes
 
 exports[`ClayImageCard should render a ClayImageCard with sticker style \`warning color\` 1`] = `
 <div class="card-type-asset card image-card">
-  <div class="aspect-ratio card-item-first">
-    <span class="sticker sticker-rounded sticker-warning sticker-bottom-left">
-      <span class="sticker-overlay">DOC</span>
-    </span>
-  </div>
+  <div class="aspect-ratio card-item-first"><span class="sticker sticker-rounded sticker-warning sticker-bottom-left"><span class="sticker-overlay">DOC</span></span></div>
   <div class="card-body">
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
@@ -460,14 +368,7 @@ exports[`ClayImageCard should render a ClayImageCard with two labels 1`] = `
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">Pending</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-secondary"><span class="label-item label-item-expand">Approved</span></span> <span class="label label-secondary"><span class="label-item label-item-expand">Pending</span></span></div>
       </div>
     </div>
   </div>
@@ -481,14 +382,7 @@ exports[`ClayImageCard should render a ClayImageCard with two labels with styles
     <div class="card-row">
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">My Title</div>
-        <div class="card-detail">
-          <span class="label label-warning">
-            <span class="label-item label-item-expand">Approved</span>
-          </span>
-          <span class="label label-danger">
-            <span class="label-item label-item-expand">Peding</span>
-          </span>
-        </div>
+        <div class="card-detail"><span class="label label-warning"><span class="label-item label-item-expand">Approved</span></span> <span class="label label-danger"><span class="label-item label-item-expand">Peding</span></span></div>
       </div>
     </div>
   </div>
@@ -499,12 +393,7 @@ exports[`ClayImageCard should render a disabled ClayImageCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
   <div class="card">
     <div class="aspect-ratio card-item-first">
-      <div class="custom-control custom-checkbox">
-        <label>
-          <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
-      </div>
+      <div class="custom-control custom-checkbox"><label><input disabled="disabled" class="custom-control-input" ref="input" type="checkbox"><span class="custom-control-label"></span></label></div>
     </div>
     <div class="card-body">
       <div class="card-row">
@@ -521,12 +410,7 @@ exports[`ClayImageCard should render a selectable ClayImageCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
   <div class="card">
     <div class="aspect-ratio card-item-first">
-      <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
-      </div>
+      <div class="custom-control custom-checkbox"><label><input class="custom-control-input" ref="input" type="checkbox"><span class="custom-control-label"></span></label></div>
     </div>
     <div class="card-body">
       <div class="card-row">
@@ -543,12 +427,7 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`nam
 <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
   <div class="card">
     <div class="aspect-ratio card-item-first">
-      <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
-      </div>
+      <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="checkbox01" ref="input" type="checkbox"><span class="custom-control-label"></span></label></div>
     </div>
     <div class="card-body">
       <div class="card-row">
@@ -565,12 +444,7 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`val
 <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
   <div class="card">
     <div class="aspect-ratio card-item-first">
-      <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="checkbox" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
-      </div>
+      <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="checkbox" ref="input" type="checkbox"><span class="custom-control-label"></span></label></div>
     </div>
     <div class="card-body">
       <div class="card-row">
@@ -587,12 +461,7 @@ exports[`ClayImageCard should render a selected ClayImageCard 1`] = `
 <div class="card-type-asset form-check form-check-card form-check-top-left image-card">
   <div class="card">
     <div class="aspect-ratio card-item-first">
-      <div class="custom-control custom-checkbox">
-        <label>
-          <input checked="" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
-      </div>
+      <div class="custom-control custom-checkbox"><label><input checked="" class="custom-control-input" ref="input" type="checkbox"><span class="custom-control-label"></span></label></div>
     </div>
     <div class="card-body">
       <div class="card-row">

@@ -19,17 +19,14 @@ exports[`ClayLink should render a link with classes 1`] = `<a class=" my-custom-
 exports[`ClayLink should render a link with href 1`] = `<a href="http://www.liferay.com"></a>`;
 
 exports[`ClayLink should render a link with icon 1`] = `
-<a>
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+<a><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
-  </svg>
-</a>
+  </svg></a>
 `;
 
 exports[`ClayLink should render a link with icon and label 1`] = `
-<a>
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus inline-item inline-item-before" focusable="false">
+<a><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus inline-item inline-item-before" focusable="false">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
   </svg>My Link</a>
@@ -37,25 +34,15 @@ exports[`ClayLink should render a link with icon and label 1`] = `
 
 exports[`ClayLink should render a link with id 1`] = `<a id="myId"></a>`;
 
-exports[`ClayLink should render a link with image 1`] = `
-<a>
-  <img class="img-fluid" src="image.jpg">
-</a>
-`;
+exports[`ClayLink should render a link with image 1`] = `<a><img class="img-fluid" src="image.jpg"></a>`;
 
-exports[`ClayLink should render a link with image and image alt 1`] = `
-<a>
-  <img alt="my image" class="img-fluid" src="image.jpg">
-</a>
-`;
+exports[`ClayLink should render a link with image and image alt 1`] = `<a><img alt="my image" class="img-fluid" src="image.jpg"></a>`;
 
 exports[`ClayLink should render a link with label and icon 1`] = `
-<a>My Link
-  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus inline-item inline-item-after" focusable="false">
+<a>My Link<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus inline-item inline-item-after" focusable="false">
     <title>plus</title>
     <use xlink:href="icons.svg#plus"></use>
-  </svg>
-</a>
+  </svg></a>
 `;
 
 exports[`ClayLink should render a link with secondary style 1`] = `<a class="link-secondary"></a>`;

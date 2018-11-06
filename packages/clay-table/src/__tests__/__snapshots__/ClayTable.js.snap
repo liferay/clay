@@ -26,141 +26,75 @@ exports[`ClayTable should render a ClayTable with a basic schema and grouped ite
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Photos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Photos</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate"></span>
-        </td>
+        <td><span class="text-truncate"></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Videos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Videos</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate"></span>
-        </td>
+        <td><span class="text-truncate"></span></td>
       </tr>
       <tr class="table-divider" id="group-1">
         <td colspan="2">Recipes</td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">U.S.A</span>
-        </td>
+        <td><span class="text-truncate">U.S.A</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">China</span>
-        </td>
+        <td><span class="text-truncate">China</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Spain</span>
-        </td>
+        <td><span class="text-truncate">Spain</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Italy</span>
-        </td>
+        <td><span class="text-truncate">Italy</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Toledo</span>
-        </td>
+        <td><span class="text-truncate">Toledo</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Mexico</span>
-        </td>
+        <td><span class="text-truncate">Mexico</span></td>
       </tr>
       <tr class="table-divider" id="group-2">
         <td colspan="2">Chefs</td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ferrán Adriá</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ferrán Adriá</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate"></span>
-        </td>
+        <td><span class="text-truncate"></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Gordon Ramsay</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Gordon Ramsay</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate"></span>
-        </td>
+        <td><span class="text-truncate"></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Alberto Chicote</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Alberto Chicote</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate"></span>
-        </td>
+        <td><span class="text-truncate"></span></td>
       </tr>
     </tbody>
   </table>
@@ -179,75 +113,39 @@ exports[`ClayTable should render a ClayTable with a basic schema and items 1`] =
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">U.S.A</span>
-        </td>
+        <td><span class="text-truncate">U.S.A</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">China</span>
-        </td>
+        <td><span class="text-truncate">China</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Spain</span>
-        </td>
+        <td><span class="text-truncate">Spain</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Italy</span>
-        </td>
+        <td><span class="text-truncate">Italy</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Toledo</span>
-        </td>
+        <td><span class="text-truncate">Toledo</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Mexico</span>
-        </td>
+        <td><span class="text-truncate">Mexico</span></td>
       </tr>
     </tbody>
   </table>
@@ -259,84 +157,46 @@ exports[`ClayTable should render a ClayTable with a basic schema and items and a
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
     <thead>
       <tr>
-        <th class="table-cell-expand">
-          <button class="btn btn-unstyled" type="button">Name</button>
-        </th>
+        <th class="table-cell-expand"><button class="btn btn-unstyled" type="button">Name</button></th>
         <th>Origin</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">U.S.A</span>
-        </td>
+        <td><span class="text-truncate">U.S.A</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">China</span>
-        </td>
+        <td><span class="text-truncate">China</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Spain</span>
-        </td>
+        <td><span class="text-truncate">Spain</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Italy</span>
-        </td>
+        <td><span class="text-truncate">Italy</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Toledo</span>
-        </td>
+        <td><span class="text-truncate">Toledo</span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
-        <td>
-          <span class="text-truncate">Mexico</span>
-        </td>
+        <td><span class="text-truncate">Mexico</span></td>
       </tr>
     </tbody>
   </table>
@@ -362,16 +222,10 @@ exports[`ClayTable should render a ClayTable with a basic schema with sortable f
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
     <thead>
       <tr>
-        <th class="table-cell-expand">
-          <button class="btn btn-unstyled" type="button">Name
-            <span class="inline-item inline-item-after">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
+        <th class="table-cell-expand"><button class="btn btn-unstyled" type="button">Name<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
                 <title>order-arrow-up</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
-              </svg>
-            </span>
-          </button>
-        </th>
+              </svg></span></button></th>
         <th>Origin</th>
       </tr>
     </thead>
@@ -392,75 +246,39 @@ exports[`ClayTable should render a ClayTable with an schema with button field an
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
-        <td>
-          <button class="btn btn-sm btn-secondary" type="button">Download</button>
-        </td>
+        <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
-        <td>
-          <button class="btn btn-sm btn-secondary" type="button">Download</button>
-        </td>
+        <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
-        <td>
-          <button class="btn btn-sm btn-secondary" type="button">Download</button>
-        </td>
+        <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
-        <td>
-          <button class="btn btn-sm btn-secondary" type="button">Download</button>
-        </td>
+        <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
-        <td>
-          <button class="btn btn-sm btn-secondary" type="button">Download</button>
-        </td>
+        <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
-        <td>
-          <button class="btn btn-sm btn-secondary" type="button">Download</button>
-        </td>
+        <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
       </tr>
     </tbody>
   </table>
@@ -479,87 +297,39 @@ exports[`ClayTable should render a ClayTable with an schema with label field and
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
-        <td>
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">No Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-secondary"><span class="label-item label-item-expand">No Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
-        <td>
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-secondary"><span class="label-item label-item-expand">Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
-        <td>
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">No Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-secondary"><span class="label-item label-item-expand">No Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
-        <td>
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">No Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-secondary"><span class="label-item label-item-expand">No Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
-        <td>
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-secondary"><span class="label-item label-item-expand">Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
-        <td>
-          <span class="label label-secondary">
-            <span class="label-item label-item-expand">Very Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-secondary"><span class="label-item label-item-expand">Very Spicy</span></span></td>
       </tr>
     </tbody>
   </table>
@@ -578,87 +348,39 @@ exports[`ClayTable should render a ClayTable with an schema with label field wit
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
-        <td>
-          <span class="label label-success">
-            <span class="label-item label-item-expand">No Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
-        <td>
-          <span class="label label-warning">
-            <span class="label-item label-item-expand">Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-warning"><span class="label-item label-item-expand">Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
-        <td>
-          <span class="label label-success">
-            <span class="label-item label-item-expand">No Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
-        <td>
-          <span class="label label-success">
-            <span class="label-item label-item-expand">No Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
-        <td>
-          <span class="label label-warning">
-            <span class="label-item label-item-expand">Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-warning"><span class="label-item label-item-expand">Spicy</span></span></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
-        <td>
-          <span class="label label-danger">
-            <span class="label-item label-item-expand">Very Spicy</span>
-          </span>
-        </td>
+        <td><span class="label label-danger"><span class="label-item label-item-expand">Very Spicy</span></span></td>
       </tr>
     </tbody>
   </table>
@@ -677,75 +399,39 @@ exports[`ClayTable should render a ClayTable with an schema with link field and 
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
-        <td>
-          <a class=" text-truncate" href="#">U.S.A</a>
-        </td>
+        <td><a class=" text-truncate" href="#">U.S.A</a></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
-        <td>
-          <a class=" text-truncate" href="#">China</a>
-        </td>
+        <td><a class=" text-truncate" href="#">China</a></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
-        <td>
-          <a class=" text-truncate" href="#">Spain</a>
-        </td>
+        <td><a class=" text-truncate" href="#">Spain</a></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
-        <td>
-          <a class=" text-truncate" href="#">Italy</a>
-        </td>
+        <td><a class=" text-truncate" href="#">Italy</a></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
-        <td>
-          <a class=" text-truncate" href="#">Toledo</a>
-        </td>
+        <td><a class=" text-truncate" href="#">Toledo</a></td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
-        <td>
-          <a class=" text-truncate" href="#">Mexico</a>
-        </td>
+        <td><a class=" text-truncate" href="#">Mexico</a></td>
       </tr>
     </tbody>
   </table>
@@ -764,61 +450,37 @@ exports[`ClayTable should render a ClayTable with an schema with number field an
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
         <td class="text-right">10 min.</td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
         <td class="text-right">90 min.</td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
         <td class="text-right">90 min.</td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
         <td class="text-right">30 min.</td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
         <td class="text-right">50 min.</td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
         <td class="text-right">30 min.</td>
       </tr>
@@ -839,11 +501,7 @@ exports[`ClayTable should render a ClayTable with an schema with progress bar fi
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
         <td>
           <div class="progress-group progress-info">
@@ -856,11 +514,7 @@ exports[`ClayTable should render a ClayTable with an schema with progress bar fi
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
         <td>
           <div class="progress-group progress-info">
@@ -873,11 +527,7 @@ exports[`ClayTable should render a ClayTable with an schema with progress bar fi
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
         <td>
           <div class="progress-group progress-info">
@@ -890,11 +540,7 @@ exports[`ClayTable should render a ClayTable with an schema with progress bar fi
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
         <td>
           <div class="progress-group progress-info">
@@ -907,11 +553,7 @@ exports[`ClayTable should render a ClayTable with an schema with progress bar fi
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
         <td>
           <div class="progress-group progress-info">
@@ -924,11 +566,7 @@ exports[`ClayTable should render a ClayTable with an schema with progress bar fi
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
         <td>
           <div class="progress-group progress-info">
@@ -956,42 +594,26 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Photos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Photos</span></span></h1>
         </td>
         <td>
           <div class="quick-action-menu"></div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Videos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Videos</span></span></h1>
         </td>
         <td>
           <div class="quick-action-menu"></div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
     </tbody>
@@ -999,23 +621,15 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
@@ -1033,200 +647,110 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
     <tbody>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
         <td>
-          <div class="quick-action-menu">
-            <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+          <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
-            </a>
-            <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+              </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+              </svg></a></div>
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
         <td>
-          <div class="quick-action-menu">
-            <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+          <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
-            </a>
-            <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+              </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+              </svg></a></div>
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
         <td>
-          <div class="quick-action-menu">
-            <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+          <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
-            </a>
-            <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+              </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+              </svg></a></div>
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
         <td>
-          <div class="quick-action-menu">
-            <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+          <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
-            </a>
-            <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+              </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+              </svg></a></div>
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
         <td>
-          <div class="quick-action-menu">
-            <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+          <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
-            </a>
-            <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+              </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+              </svg></a></div>
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
       <tr>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
         <td>
-          <div class="quick-action-menu">
-            <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+          <div class="quick-action-menu"><a aria-label="Remove" class=" component-action quick-action-item" href="#1"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
                 <title>trash</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
-            </a>
-            <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+              </svg></a><a aria-label="Download" class=" component-action quick-action-item" href="#2"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
                 <title>download</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+              </svg></a></div>
+          <div class="dropdown dropdown-action"><button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
                 <title>ellipsis-v</title>
                 <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
+              </svg></button></div>
         </td>
       </tr>
     </tbody>
@@ -1234,67 +758,43 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
-      <a class=" dropdown-item" href="#1">Remove</a>
-    </li>
-    <li>
-      <a class=" dropdown-item" href="#2">Download</a>
-    </li>
+    <li><a class=" dropdown-item" href="#1">Remove</a></li>
+    <li><a class=" dropdown-item" href="#2">Download</a></li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
 </div>
@@ -1400,116 +900,50 @@ exports[`ClayTable should render a selectable ClayTable with an schema and items
     <tbody>
       <tr>
         <td>
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">deselect</span>
-              </span>
-            </label>
-          </div>
+          <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="recipe" value="3" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
         </td>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Hamburger</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Hamburger</span></span></h1>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">deselect</span>
-              </span>
-            </label>
-          </div>
+          <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="recipe" value="4" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
         </td>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Ramen</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Ramen</span></span></h1>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">deselect</span>
-              </span>
-            </label>
-          </div>
+          <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="recipe" value="5" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
         </td>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Paella</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Paella</span></span></h1>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">deselect</span>
-              </span>
-            </label>
-          </div>
+          <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="recipe" value="6" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
         </td>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Pizza</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Pizza</span></span></h1>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">deselect</span>
-              </span>
-            </label>
-          </div>
+          <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="recipe" value="7" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
         </td>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Carcamusas</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Carcamusas</span></span></h1>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">deselect</span>
-              </span>
-            </label>
-          </div>
+          <div class="custom-control custom-checkbox"><label><input class="custom-control-input" name="recipe" value="8" ref="input" type="checkbox"><span class="custom-control-label"><span class="custom-control-label-text sr-only">deselect</span></span></label></div>
         </td>
         <td class="table-cell-expand">
-          <h1 class="table-list-title">
-            <span class="text-truncate-inline">
-              <span class="text-truncate">Tacos</span>
-            </span>
-          </h1>
+          <h1 class="table-list-title"><span class="text-truncate-inline"><span class="text-truncate">Tacos</span></span></h1>
         </td>
       </tr>
     </tbody>

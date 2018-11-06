@@ -2,21 +2,14 @@
 
 exports[`ClayNavigationBar should render a navigatiom bar with classes 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light my-custom-class">
-  <div class="container-fluid container-fluid-max-xl">
-    <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+  <div class="container-fluid container-fluid-max-xl"><a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
-      </svg>
-    </a>
+      </svg></a>
     <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
-          <li class="nav-item" data-nav-item-index="0">
-            <a class=" nav-link" href="#1">
-              <span class="navbar-text-truncate">Page 1</span>
-            </a>
-          </li>
+          <li class="nav-item" data-nav-item-index="0"><a class=" nav-link" href="#1"><span class="navbar-text-truncate">Page 1</span></a></li>
         </ul>
       </div>
     </div>
@@ -26,21 +19,14 @@ exports[`ClayNavigationBar should render a navigatiom bar with classes 1`] = `
 
 exports[`ClayNavigationBar should render a navigatiom bar with id 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light" id="myId">
-  <div class="container-fluid container-fluid-max-xl">
-    <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+  <div class="container-fluid container-fluid-max-xl"><a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
-      </svg>
-    </a>
+      </svg></a>
     <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
-          <li class="nav-item" data-nav-item-index="0">
-            <a class=" nav-link" href="#1">
-              <span class="navbar-text-truncate">Page 1</span>
-            </a>
-          </li>
+          <li class="nav-item" data-nav-item-index="0"><a class=" nav-link" href="#1"><span class="navbar-text-truncate">Page 1</span></a></li>
         </ul>
       </div>
     </div>
@@ -50,26 +36,15 @@ exports[`ClayNavigationBar should render a navigatiom bar with id 1`] = `
 
 exports[`ClayNavigationBar should render a navigatiom bar with more than one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
-  <div class="container-fluid container-fluid-max-xl">
-    <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+  <div class="container-fluid container-fluid-max-xl"><a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
-      </svg>
-    </a>
+      </svg></a>
     <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
-          <li class="nav-item" data-nav-item-index="0">
-            <a class=" nav-link" href="#1">
-              <span class="navbar-text-truncate">Page 1</span>
-            </a>
-          </li>
-          <li class="nav-item" data-nav-item-index="1">
-            <a class=" nav-link" href="#2">
-              <span class="navbar-text-truncate">Page 2</span>
-            </a>
-          </li>
+          <li class="nav-item" data-nav-item-index="0"><a class=" nav-link" href="#1"><span class="navbar-text-truncate">Page 1</span></a></li>
+          <li class="nav-item" data-nav-item-index="1"><a class=" nav-link" href="#2"><span class="navbar-text-truncate">Page 2</span></a></li>
         </ul>
       </div>
     </div>
@@ -79,21 +54,14 @@ exports[`ClayNavigationBar should render a navigatiom bar with more than one ele
 
 exports[`ClayNavigationBar should render a navigatiom bar with one active element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
-  <div class="container-fluid container-fluid-max-xl">
-    <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">Page 1
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+  <div class="container-fluid container-fluid-max-xl"><a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">Page 1<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
-      </svg>
-    </a>
+      </svg></a>
     <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
-          <li class="nav-item" data-nav-item-index="0">
-            <a aria-label="current-page" class=" nav-link active" href="#1">
-              <span class="navbar-text-truncate">Page 1</span>
-            </a>
-          </li>
+          <li class="nav-item" data-nav-item-index="0"><a aria-label="current-page" class=" nav-link active" href="#1"><span class="navbar-text-truncate">Page 1</span></a></li>
         </ul>
       </div>
     </div>
@@ -103,21 +71,14 @@ exports[`ClayNavigationBar should render a navigatiom bar with one active elemen
 
 exports[`ClayNavigationBar should render a navigatiom bar with one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
-  <div class="container-fluid container-fluid-max-xl">
-    <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+  <div class="container-fluid container-fluid-max-xl"><a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
-      </svg>
-    </a>
+      </svg></a>
     <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
-          <li class="nav-item" data-nav-item-index="0">
-            <a class=" nav-link" href="#1">
-              <span class="navbar-text-truncate">Page 1</span>
-            </a>
-          </li>
+          <li class="nav-item" data-nav-item-index="0"><a class=" nav-link" href="#1"><span class="navbar-text-truncate">Page 1</span></a></li>
         </ul>
       </div>
     </div>
@@ -127,21 +88,14 @@ exports[`ClayNavigationBar should render a navigatiom bar with one element 1`] =
 
 exports[`ClayNavigationBar should render an inverted colored navigatiom bar with one element 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
-  <div class="container-fluid container-fluid-max-xl">
-    <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+  <div class="container-fluid container-fluid-max-xl"><a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
         <title>caret-bottom</title>
         <use xlink:href="icons.svg#caret-bottom"></use>
-      </svg>
-    </a>
+      </svg></a>
     <div class="navbar-collapse collapse" ref="content">
       <div class="container-fluid container-fluid-max-xl">
         <ul class="navbar-nav">
-          <li class="nav-item" data-nav-item-index="0">
-            <a class=" nav-link" href="#1">
-              <span class="navbar-text-truncate">Page 1</span>
-            </a>
-          </li>
+          <li class="nav-item" data-nav-item-index="0"><a class=" nav-link" href="#1"><span class="navbar-text-truncate">Page 1</span></a></li>
         </ul>
       </div>
     </div>

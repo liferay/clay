@@ -6,12 +6,10 @@ exports[`ClayProgressBar should render a completed progress bar 1`] = `
     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
   </div>
   <div class="progress-group-addon">
-    <div class="progress-group-feedback">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
+    <div class="progress-group-feedback"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
         <title>check-circle</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle"></use>
-      </svg>
-    </div>
+      </svg></div>
   </div>
 </div>
 `;
@@ -22,12 +20,10 @@ exports[`ClayProgressBar should render a completed progress bar 2`] = `
     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
   </div>
   <div class="progress-group-addon">
-    <div class="progress-group-feedback">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
+    <div class="progress-group-feedback"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
         <title>check-circle</title>
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle"></use>
-      </svg>
-    </div>
+      </svg></div>
   </div>
 </div>
 `;
