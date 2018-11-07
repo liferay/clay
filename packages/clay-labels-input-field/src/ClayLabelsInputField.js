@@ -77,8 +77,9 @@ class ClayLabelsInputField extends ClayComponent {
 
 		if (
 			label.trim() &&
-			!this.selectedLabels
-				.find((labelSelected) => labelSelected.label === label)
+			!this.selectedLabels.find(
+				labelSelected => labelSelected.label === label
+			)
 		) {
 			return !this.emit({
 				data: {
@@ -102,7 +103,9 @@ class ClayLabelsInputField extends ClayComponent {
 	_handleLabelFocus(event, direction) {
 		if (this.selectedLabels.length) {
 			const {formGroupInput} = this.refs;
-			const items = formGroupInput.querySelectorAll('span[id="item-tag"]');
+			const items = formGroupInput.querySelectorAll(
+				'span[id="item-tag"]'
+			);
 
 			if (this._labelFocused) {
 				const index = this._labelFocused.getAttribute('data-tag');
@@ -110,7 +113,7 @@ class ClayLabelsInputField extends ClayComponent {
 					? Number(index) - 1
 					: Number(index) + 1;
 
-				if (condition > (items.length - 1)) {
+				if (condition > items.length - 1) {
 					this.refs.input.focus();
 					this._removeFocusedLabel();
 					return false;
@@ -242,15 +245,17 @@ class ClayLabelsInputField extends ClayComponent {
 	 */
 	_setFocusItemDropdown(direction) {
 		if (this.filteredItems.length) {
-			const elements = this.refs.dropdown.querySelectorAll('a[id="item"]');
+			const elements = this.refs.dropdown.querySelectorAll(
+				'a[id="item"]'
+			);
 
 			if (direction && this._dropdownItemFocused === 0) {
 				this.refs.input.focus();
 				this._dropdownItemFocused = null;
 			} else {
 				this._dropdownItemFocused =
-					this._dropdownItemFocused === null
-					|| (elements.length - 1) === this._dropdownItemFocused
+					this._dropdownItemFocused === null ||
+					elements.length - 1 === this._dropdownItemFocused
 						? 0
 						: direction
 							? this._dropdownItemFocused - 1
@@ -378,12 +383,12 @@ ClayLabelsInputField.STATE = {
 	helpText: Config.string().required(),
 
 	/**
-     * Id to be applied to the element.
-     * @default undefined
-     * @instance
-     * @memberof ClayLabelsInputField
-     * @type {?(string|undefined)}
-     */
+	 * Id to be applied to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayLabelsInputField
+	 * @type {?(string|undefined)}
+	 */
 	id: Config.string(),
 
 	/**

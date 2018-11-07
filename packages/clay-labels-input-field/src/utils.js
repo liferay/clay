@@ -32,7 +32,7 @@ export const match = (query, string) => {
 	}
 
 	if (queryIndex === query.length) {
-		totalScore = (string === query) ? Infinity : totalScore;
+		totalScore = string === query ? Infinity : totalScore;
 		return {values: result, score: totalScore};
 	}
 
