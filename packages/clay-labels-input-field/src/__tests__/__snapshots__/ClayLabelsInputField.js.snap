@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayLabelsInputField should render a ClayLabelsInputField with classes 1`] = `
+<div class="from-group my-custom-class">
+  <div class="input-group input-group-stacked-sm-down">
+    <div class="input-group-item">
+      <div ref="formGroupInput" class="form-control dropdown-full form-control-tag-group">
+        <input class="form-control-inset" ref="input" type="text">
+        <ul class="dropdown-menu" ref="dropdown"></ul>
+      </div>
+      <div class="form-feedback-group">
+        <div class="form-text">You can use a comma to enter tags</div>
+      </div>
+    </div>
+    <div class="input-group-item input-group-item-shrink">
+      <button class="btn btn-secondary" type="button">select</button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayLabelsInputField should render a ClayLabelsInputField with id 1`] = `
+<div class="from-group" id="myId">
+  <div class="input-group input-group-stacked-sm-down">
+    <div class="input-group-item">
+      <div ref="formGroupInput" class="form-control dropdown-full form-control-tag-group">
+        <input class="form-control-inset" ref="input" type="text">
+        <ul class="dropdown-menu" ref="dropdown"></ul>
+      </div>
+      <div class="form-feedback-group">
+        <div class="form-text">You can use a comma to enter tags</div>
+      </div>
+    </div>
+    <div class="input-group-item input-group-item-shrink">
+      <button class="btn btn-secondary" type="button">select</button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayLabelsInputField should render the default markup 1`] = `
+<div class="from-group">
+  <div class="input-group input-group-stacked-sm-down">
+    <div class="input-group-item">
+      <div ref="formGroupInput" class="form-control dropdown-full form-control-tag-group">
+        <input class="form-control-inset" ref="input" type="text">
+        <ul class="dropdown-menu" ref="dropdown"></ul>
+      </div>
+      <div class="form-feedback-group">
+        <div class="form-text">You can use a comma to enter tags</div>
+      </div>
+    </div>
+    <div class="input-group-item input-group-item-shrink">
+      <button class="btn btn-secondary" type="button">select</button>
+    </div>
+  </div>
+</div>
+`;
