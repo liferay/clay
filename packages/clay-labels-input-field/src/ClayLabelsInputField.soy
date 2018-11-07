@@ -1,0 +1,171 @@
+{namespace ClayLabelsInputField}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param spritemap: string}
+	{@param? _handleButtonClicked: any}
+	{@param? _handleCloseButtonClick: any}
+	{@param? _handleDropdownItemClick: any}
+	{@param? _handleOnInput: any}
+	{@param? _handleOnKeydown: any}
+	{@param? _removeFocusedLabel: any}
+	{@param? contentRenderer: string}
+	{@param? elementClasses: string}
+	{@param? filteredItems: list<?>}
+	{@param? helpText: string}
+	{@param? id: string}
+	{@param? label: string}
+	{@param? selectedLabels: list<?>}
+
+	{let $attributes kind="attributes"}
+		class="from-group
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<div {$attributes}>
+		{if $label}
+			<label>{$label}</label>
+		{/if}
+
+		{call .content}
+			{param _handleButtonClicked: $_handleButtonClicked /}
+			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+			{param _handleOnInput: $_handleOnInput /}
+			{param _handleOnKeydown: $_handleOnKeydown /}
+			{param _removeFocusedLabel: $_removeFocusedLabel /}
+			{param contentRenderer: $contentRenderer /}
+			{param filteredItems: $filteredItems /}
+			{param helpText: $helpText /}
+			{param selectedLabels: $selectedLabels /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</div>
+{/template}
+
+{template .content}
+	{@param spritemap: string}
+	{@param? _handleButtonClicked: any}
+	{@param? _handleCloseButtonClick: any}
+	{@param? _handleDropdownItemClick: any}
+	{@param? _handleOnInput: any}
+	{@param? _handleOnKeydown: any}
+	{@param? _removeFocusedLabel: any}
+	{@param? contentRenderer: string}
+	{@param? filteredItems: list<?>}
+	{@param? helpText: string}
+	{@param? selectedLabels: list<?>}
+
+	<div class="input-group input-group-stacked-sm-down">
+		<div class="input-group-item">
+			<div data-keydown="{$_handleOnKeydown}" ref="formGroupInput" class="form-control dropdown-full form-control-tag-group">
+				{if $selectedLabels}
+					{foreach $item in $selectedLabels}
+						{delcall ClayInputField.Label variant="$contentRenderer" allowemptydefault="true"}
+							{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+							{param data: $item /}
+							{param index: index($item) /}
+							{param spritemap: $spritemap /}
+						{/delcall}
+					{/foreach}
+				{/if}
+
+				<input
+					class="form-control-inset"
+					onBlur="{$_removeFocusedLabel}"
+					onFocus="{$_removeFocusedLabel}"
+					onInput="{$_handleOnInput}"
+					onKeydown="{$_handleOnKeydown}"
+					ref="input"
+					type="text"
+				/>
+
+				{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
+
+				{let $classes kind="text"}
+					dropdown-menu
+					{if $isVisible}
+						{sp}show
+					{/if}
+				{/let}
+
+				<ul onkeydown="{$_handleOnKeydown}" class="{$classes}" ref="dropdown">
+					{if $filteredItems}
+						{foreach $item in $filteredItems}
+							{delcall ClayInputField.ItemDropdown variant="$contentRenderer" allowemptydefault="true"}
+								{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+								{param data: $item /}
+								{param index: index($item) /}
+							{/delcall}
+						{/foreach}
+					{/if}
+				</ul>
+			</div>
+
+			{if $helpText and not $isVisible}
+				<div class="form-feedback-group">
+					<div class="form-text">
+						{$helpText}
+					</div>
+				</div>
+			{/if}
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			{call ClayButton.render}
+				{param events: ['click': $_handleButtonClicked] /}
+				{param label kind="text"}
+					{msg desc="Select items"}
+						select
+					{/msg}
+				{/param}
+
+				{param style: 'secondary' /}
+			{/call}
+		</div>
+	</div>
+{/template}
+
+{deltemplate ClayInputField.Label}
+	{@param data: ?}
+	{@param index: int}
+	{@param spritemap: string}
+	{@param? _handleCloseButtonClick: any}
+
+	{call ClayLabel.render}
+		{param closeable: true /}
+		{param data: ['tag': $index] /}
+		{param events: ['close': $_handleCloseButtonClick] /}
+		{param id: 'item-tag' /}
+		{param label: $data.label /}
+		{param spritemap: $spritemap /}
+	{/call}
+{/deltemplate}
+
+{deltemplate ClayInputField.ItemDropdown}
+	{@param data: ?}
+	{@param index: number}
+	{@param? _handleDropdownItemClick: any}
+
+	<li>
+		<a data-onclick="{$_handleDropdownItemClick}" data-dropdown-item-index="{$index}" id="item" class="dropdown-item" href="javascript:;">
+			{if $data.matches and length($data.matches) > 0}
+				{foreach $char in $data.matches}
+					{if $char.match}
+						<strong>{$char.value}</strong>
+					{else}
+						{$char.value}
+					{/if}
+				{/foreach}
+			{/if}
+		</a>
+	</li>
+{/deltemplate}
