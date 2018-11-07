@@ -18,8 +18,9 @@
 		"metal": "^2.16.6"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.1.2",
-		"@babel/core": "^7.1.2",
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-preset-env": "^1.6.0",
 		"ncp": "^2.0.0",
 		"node-sass": "^4.9.4"
 	}
