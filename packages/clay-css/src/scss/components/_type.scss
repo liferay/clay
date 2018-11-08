@@ -79,7 +79,7 @@ strong {
 
 mark,
 .mark {
-	@include clay-highlight-text;
+	@include clay-highlight-text($mark-bg, $mark-color);
 }
 
 // Text Truncate
