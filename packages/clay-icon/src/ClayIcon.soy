@@ -6,19 +6,36 @@
 {template .render}
 	{@param spritemap: string}
 	{@param symbol: string}
+	{@param? ariaLabel: string}
+	{@param? decorative: bool}
 	{@param? elementClasses: string}
 	{@param? focusable: bool}
 	{@param? id: string}
 	{@param? title: string}
 
 	{let $attributes kind="attributes"}
-		aria-hidden="true"
-		class="lexicon-icon
-			{sp}lexicon-icon-{$symbol}
+		{if $decorative}
+			aria-hidden="true"
+		{/if}
 
+		{if $ariaLabel}
+			aria-label="{$ariaLabel}"
+		{else}
+			aria-label="icon-{$symbol}"
+		{/if}
+
+		class="lexicon-icon-container
 			{if $elementClasses}
 				{sp}{$elementClasses}
 			{/if}
+		"
+		role="img"
+	{/let}
+
+	{let $svgAttributes kind="attributes"}
+		aria-hidden="true"
+		class="lexicon-icon
+			{sp}lexicon-icon-{$symbol}
 		"
 
 		{if $focusable}
@@ -32,8 +49,12 @@
 		{/if}
 	{/let}
 
-	<svg {$attributes}>
-		<title>{$title ?: $id ?: $symbol}</title>
-		<use xlink:href="{$spritemap}#{$symbol}" />
-	</svg>
+	<span {$attributes}>
+		<svg {$svgAttributes}>
+			{if $title}
+				<title>{$title}</title>
+			{/if}
+			<use xlink:href="{$spritemap}#{$symbol}" />
+		</svg>
+	</span>
 {/template}

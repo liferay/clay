@@ -18,6 +18,27 @@ class ClayIcon extends Component {}
  */
 ClayIcon.STATE = {
 	/**
+	 * Aria Label on the icon container.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayIcon
+	 * @type {?(string|undefined)}
+	 */
+	ariaLabel: Config.string(),
+
+	/**
+	 * Flag to indicate whether the icon is decorative or standalone for
+	 * accessibility. Decorative icons are accompanied by text and shouldn't be
+	 * read aloud by screen readers. Standalone icons should have a
+	 * description via the ariaLabel attribute.
+	 * @default false
+	 * @instance
+	 * @memberof ClayIcon
+	 * @type {?bool}
+	 */
+	decorative: Config.bool().value(false),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance
