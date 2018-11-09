@@ -79,4 +79,33 @@ describe('ClayIcon', function() {
 
 		expect(clayIcon).toMatchSnapshot();
 	});
+
+	it('should render an icon with attribute aria-hidden="true" on the container when decorative is true', () => {
+		clayIcon = new ClayIcon({
+			decorative: true,
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
+
+	it('should render an icon without aria-hidden="true" on the container by default', () => {
+		clayIcon = new ClayIcon({
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
+
+	it('should render an icon with specified ariaLabel', () => {
+		clayIcon = new ClayIcon({
+			ariaLabel: 'my-custom-aria-label',
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(clayIcon).toMatchSnapshot();
+	});
 });
