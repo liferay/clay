@@ -86,7 +86,15 @@
 		{let $labelContent kind="html"}
 			{let $iconContent kind="html"}
 				{if $icon and $spritemap}
-					<span class="dropdown-item-indicator">
+					{let $classes kind="text"}
+						{if $itemsIconAlignment == 'left'}
+							dropdown-item-indicator-start
+						{elseif $itemsIconAlignment == 'right'}
+							dropdown-item-indicator-end
+						{/if}
+					{/let}
+
+					<span class="{$classes}">
 						{call ClayIcon.render}
 							{param spritemap: $spritemap /}
 							{param symbol: $icon /}
